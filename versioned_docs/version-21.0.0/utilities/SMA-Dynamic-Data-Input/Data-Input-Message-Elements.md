@@ -605,63 +605,27 @@ rule associated with a defined job pattern.
     <exception\>&lt;Exception&gt;&lt;FieldCode&gt;**n**&lt;/FieldCode&gt;\
     &lt;NewValue&gt;**x**&lt;/NewValue&gt;&lt;NewValueIsExpression&gt;**false**&lt;/NewValueIsExpression&gt;&lt;ToReplace&gt;**m**&lt;/ToReplace&gt;&lt;/Exception&gt;</exception\>
 
-  - Where *n* = Field code of the field to modify. Valid values
-        (integer) include:
-        +----------------------+----------------------+----------------------+
-        | -   904 - Department | -   1006 -           | -   5009 - Job       |
-        |                      |     Destination File |     Description      |
-        |                      |                      |     Library          |
-        +----------------------+----------------------+----------------------+
-        | -   905 - Access     | -   1016 -           | -   5010 - Batch     |
-        |     Code             |     Destination      |     Queue Name       |
-        |                      |     Machine          |                      |
-        +----------------------+----------------------+----------------------+
-        | -   907 - Primary    | -   3001 - User ID   | -   5011 - Batch     |
-        |     Machine          |                      |     Queue Library    |
-        +----------------------+----------------------+----------------------+
-        | -   908 - Alternate  | -   3003 - Command   | -   5012 - Output    |
-        |     Machine1         |     Line             |     Queue Name       |
-        +----------------------+----------------------+----------------------+
-        | -   909 - Alternate  | -   3004 - Working   | -   5013 - Output    |
-        |     Machine2         |     Directory        |     Queue Library    |
-        +----------------------+----------------------+----------------------+
-        | -   910 - Alternate  | -   3006 - Prerun    | -   5022 - Call      |
-        |     Machine3         |     Command Line     |                      |
-        +----------------------+----------------------+----------------------+
-        | -   911- Machine     | -   3007 - Prerun    | -   6001 - Start     |
-        |     Group            |     Working          |     Image            |
-        |                      |     Directory        |                      |
-        +----------------------+----------------------+----------------------+
-        | -   913 - Start      | -   3018 - Prerun    | -   6002 -           |
-        |     Offset           |     Exit Code        |     Parameters       |
-        |                      |     Operator         |                      |
-        +----------------------+----------------------+----------------------+
-        | -   914 - Start      | -   3019 - Prerun    | -   6003 - Prerun    |
-        |     Offset Abs/Rel   |     Exit Code Value  |                      |
-        |     Indicator        |                      |                      |
-        +----------------------+----------------------+----------------------+
-        | -   915 - Latest     | -   5002 - User ID   | -   6004 - User ID   |
-        |     Start            |                      |                      |
-        +----------------------+----------------------+----------------------+
-        | -   916 - Latest     | -   5003 - JOBQ      | -   6005 - Group ID  |
-        |     Start Abs/Rel    |     Priority         |                      |
-        |     Indicator        |                      |                      |
-        +----------------------+----------------------+----------------------+
-        | -   933 - Job Build  | -   5004 - Job Date  | -   6007 Exit        |
-        |     Status           |                      |     Operator         |
-        +----------------------+----------------------+----------------------+
-        | -   1001- Source     | -   5005 -           | -   6008 - Exit      |
-        |     Machine          |     Accounting Code  |     Value            |
-        +----------------------+----------------------+----------------------+
-        | -   1003 - User      | -   5006 - mCurrent  | -   122 - Tags       |
-        |     (Source)         |     Library          |                      |
-        +----------------------+----------------------+----------------------+
-        | -   1004 - mSource   | -   5007 -           |                      |
-        |     File             |     mInit.Lib.List   |                      |
-        +----------------------+----------------------+----------------------+
-        | -   1005 - User      | -   5008 - Job       |                      |
-        |     (Destination)    |     Description Name |                      |
-        +----------------------+----------------------+----------------------+
+  - Where *n* = Field code of the field to modify. Valid values (integer) include:
+
+    ||||
+    |--- |--- |--- |
+    |904 - Department|1006 - Destination File|5009 - Job Description Library|
+    |905 - Access Code|1016 - Destination Machine|5010 - Batch Queue Name|
+    |907 - Primary Machine|3001 - User ID|5011 - Batch Queue Library|
+    |908 - Alternate Machine1|3003 - Command Line|5012 - Output Queue Name|
+    |909 - Alternate Machine2|3004 - Working Directory|5013 - Output Queue Library|
+    |910 - Alternate Machine3|3006 - Prerun Command Line|5022 - Call|
+    |911- Machine Group|3007 - Prerun Working Directory|6001 - Start Image|
+    |913 - Start Offset|3018 - Prerun Exit Code Operator|6002 - Parameters|
+    |914 - Start Offset Abs/Rel Indicator|3019 - Prerun Exit Code Value|6003 - Prerun|
+    |915 - Latest Start|5002 - User ID|6004 - User ID|
+    |916 - Latest Start Abs/Rel Indicator|5003 - JOBQ Priority|6005 - Group ID|
+    |933 - Job Build Status|5004 - Job Date|6007 Exit Operator|
+    |1001- Source Machine|5005 - Accounting Code|6008 - Exit Value|
+    |1003 - User (Source)|5006 - mCurrent Library|122 - Tags|
+    |1004 - mSource File|5007 - mInit.Lib.List||
+    |1005 - User (Destination)|5008 - Job Description Name||
+
   - Where *m* = Substring in the current value to replace.
     - If the field code is for Job Build Status (933), valid
             values are: "On Hold", "Released", or "To Be Skipped".
@@ -1314,27 +1278,17 @@ add_dependency.
 
 **Valid Values**: The valid data for this element include:
 
-+----------------------------------+----------------------------------+
-| -   Container Job                | -   SAP BW                       |
-+----------------------------------+----------------------------------+
-| -   File Transfer                | -   SAP R/3 and CRM              |
-+----------------------------------+----------------------------------+
-| -   IBM i                        | -   SQL                          |
-+----------------------------------+----------------------------------+
-| -   i5/OS (for backward          | -   Tuxedo ART                   |
-|     compatibility only)          |                                  |
-+----------------------------------+----------------------------------+
-| -   Java                         | -   Unisys Exec (for backward    |
-|                                  |     compatibility)               |
-+----------------------------------+----------------------------------+
-| -   MCP                          | -   UNIX                         |
-+----------------------------------+----------------------------------+
-| -   Null Job                     | -   Windows                      |
-+----------------------------------+----------------------------------+
-| -   OpenVMS                      | -   z/OS                         |
-+----------------------------------+----------------------------------+
-| -   OS 2200                      |                                  |
-+----------------------------------+----------------------------------+
+|||
+|--- |--- |
+|Container Job|SAP BW|
+|File Transfer|SAP R/3 and CRM|
+|IBM i|SQL|
+|i5/OS (for backward compatibility only)|Tuxedo ART|
+|Java|Unisys Exec (for backward compatibility)|
+|MCP|UNIX|
+|Null Job|Windows|
+|OpenVMS|z/OS|
+|OS 2200||
 
 #### <jobsubtype\></jobsubtype\>
 
@@ -1350,31 +1304,21 @@ in the <platform\> element.
 
 If <platform\> is Windows, the valid values include:
 
-+--------------------------+----------------------------+
-| -   Command: File Copy   | -   Corelation             |
-+--------------------------+----------------------------+
-| -   Command: File Delete | -   MS Orchestrator        |
-+--------------------------+----------------------------+
-| -   Command: File Move   | -   Web Services (RESTful) |
-+--------------------------+----------------------------+
-| -   Command: File Rename | -   WS_FTP Pro             |
-+--------------------------+----------------------------+
+|||
+|--- |--- |
+|Command: File Copy|Corelation|
+|Command: File Delete|MS Orchestrator|
+|Command: File Move|Web Services (RESTful)|
+|Command: File Rename|WS_FTP Pro|
 
 If <platform\> is UNIX, the valid values include:
 
-+----------------------------------+----------------------------------+
-| -   Episys: Run JobFile          | -   Episys: Find Report from     |
-|                                  |     Episys Reports               |
-+----------------------------------+----------------------------------+
-| -   Episys: Answer Prompts       | -   Episys: Find Report from RSJ |
-|                                  |     Output                       |
-+----------------------------------+----------------------------------+
-| -   Episys: Compare ACH Totals   | -   Episys: FTP all Reports in   |
-|                                  |     List                         |
-+----------------------------------+----------------------------------+
-| -   Episys: Find Batch Output    |                                  |
-|     Sequence Number              |                                  |
-+----------------------------------+----------------------------------+
+|||
+|--- |--- |
+|Episys: Run JobFile|Episys: Find Report from Episys Reports|
+|Episys: Answer Prompts|Episys: Find Report from RSJ Output|
+|Episys: Compare ACH Totals|Episys: FTP all Reports in List|
+|Episys: Find Batch Output Sequence Number||
 
 #### <dname\></dname\>
 
@@ -2046,112 +1990,81 @@ Completion Complex Expression**.
 
 For **Windows** jobs, the valid values are:
 
-+------------------------------+----------------------------+
-| -   I/O Data Bytes/Sec       | -   Job End Time           |
-+------------------------------+----------------------------+
-| -   I/O Data Operations/Sec  | -   Job Status Description |
-+------------------------------+----------------------------+
-| -   I/O Other Bytes/Sec      | -   Physical Memory Size   |
-+------------------------------+----------------------------+
-| -   I/O Other Operations/Sec | -   Processor Usage        |
-+------------------------------+----------------------------+
-| -   I/O Read Bytes/Sec       | -   Total Processor Time   |
-+------------------------------+----------------------------+
-| -   I/O Read Operations/Sec  | -   User Processor Time    |
-+------------------------------+----------------------------+
-| -   I/O Write Bytes/Sec      | -   Virtual Memory Size    |
-+------------------------------+----------------------------+
-| -   I/O Write Operations/Sec |                            |
-+------------------------------+----------------------------+
+|||
+|--- |--- |
+|I/O Data Bytes/Sec|Job End Time|
+|I/O Data Operations/Sec|Job Status Description|
+|I/O Other Bytes/Sec|Physical Memory Size|
+|I/O Other Operations/Sec|Processor Usage|
+|I/O Read Bytes/Sec|Total Processor Time|
+|I/O Read Operations/Sec|User Processor Time|
+|I/O Write Bytes/Sec|Virtual Memory Size|
+|I/O Write Operations/Sec||
 
 For **UNIX** jobs, the valid values are:
 
-+----------------------------------+--------------------------------+
-| -   Block Input Operations       | -   Max Resident Set Size Used |
-+----------------------------------+--------------------------------+
-| -   Block Output Operations      | -   Messages Received          |
-+----------------------------------+--------------------------------+
-| -   Characters Read/Written      | -   Messages Sent              |
-+----------------------------------+--------------------------------+
-| -   CPU Usage (System Code)      | -   Page Faults                |
-+----------------------------------+--------------------------------+
-| -   CPU Usage (User Code)        | -   Page Reclaims              |
-+----------------------------------+--------------------------------+
-| -   Integral Shared Memory Size  | -   Signals Received           |
-+----------------------------------+--------------------------------+
-| -   Integral Unshared Data       | -   Swaps                      |
-+----------------------------------+--------------------------------+
-| -   Integral Unshared Stack      | -   Voluntary Context Switch   |
-+----------------------------------+--------------------------------+
-| -   Involuntary Context Switches | -   Wall-clock Run Time        |
-+----------------------------------+--------------------------------+
-| -   Job Status Description       |                                |
-+----------------------------------+--------------------------------+
+|||
+|--- |--- |
+|Block Input Operations|Max Resident Set Size Used|
+|Block Output Operations|Messages Received|
+|Characters Read/Written|Messages Sent|
+|CPU Usage (System Code)|Page Faults|
+|CPU Usage (User Code)|Page Reclaims|
+|Integral Shared Memory Size|Signals Received|
+|Integral Unshared Data|Swaps|
+|Integral Unshared Stack|Voluntary Context Switch|
+|Involuntary Context Switches|Wall-clock Run Time|
+|Job Status Description||
 
 For **SAP R/3 and CRM**, the valid values are:
 
-+----------------------------+
-| -   Child Process          |
-+----------------------------+
-| -   Job Status Description |
-+----------------------------+
+||
+|--- |
+|Child Process|
+|Job Status Description|
 
 For **SAP BW**, the valid values are:
 
-+----------------------------+
-| -   Job Status Description |
-+----------------------------+
-| -   Process                |
-+----------------------------+
-| -   Process Chain Log      |
-+----------------------------+
+||
+|--- |
+|Job Status Description|
+|Process|
+|Process Chain Log|
 
 For **MCP**, the valid values are:
 
-+-----------------------------+----------------------------+
-| -   Accum Elapsed Time      | -   Process Name           |
-+-----------------------------+----------------------------+
-| -   Accum Elapsed Wait Time | -   Task Elapsed Time      |
-+-----------------------------+----------------------------+
-| -   Accum I/O Time          | -   Task Elapsed Wait Time |
-+-----------------------------+----------------------------+
-| -   Accum Print Lines       | -   Task I/O Time          |
-+-----------------------------+----------------------------+
-| -   Accu Processor Time     | -   Task Print Lines       |
-+-----------------------------+----------------------------+
-| -   Accum Ready Q Time      | -   Task Processor Time    |
-+-----------------------------+----------------------------+
-| -   Job Status Description  | -   Task Ready Q Time      |
-+-----------------------------+----------------------------+
-| -   Mix Number              |                            |
-+-----------------------------+----------------------------+
+|||
+|--- |--- |
+|Accum Elapsed Time|Process Name|
+|Accum Elapsed Wait Time|Task Elapsed Time|
+|Accum I/O Time|Task Elapsed Wait Time|
+|Accum Print Lines|Task I/O Time|
+|Accu Processor Time|Task Print Lines|
+|Accum Ready Q Time|Task Processor Time|
+|Job Status Description|Task Ready Q Time|
+|Mix Number||
 
 For **File Transfer**, the valid values are:
 
-+----------------------+-----------------------------+
-| -   Bandwidth Used   | -   File Size               |
-+----------------------+-----------------------------+
-| -   Compression Used | -   File Transfer Mode Used |
-+----------------------+-----------------------------+
-| -   Encryption Used  | -   Job Status Description  |
-+----------------------+-----------------------------+
+|||
+|--- |--- |
+|Bandwidth Used|File Size|
+|Compression Used|File Transfer Mode Used|
+|Encryption Used|Job Status Description|
 
 For **IBM i**, the valid values are:
 
-+-------------------------------+-------------------------------------+
-| -   Active Job in MSGW Status | -   User-defined text from          |
-|                               |     LFEEDBACK command               |
-+-------------------------------+-------------------------------------+
-| -   Job Status Description    |                                     |
-+-------------------------------+-------------------------------------+
+|||
+|--- |--- |
+|Active Job in MSGW Status|User-defined text from LFEEDBACK command|
+|Job Status Description||
 
 For **z/OS**, the valid values are:
 
-+----------------------------+----------------------+
-| -   Job Status Description | -   Trigger Messages |
-+----------------------------+----------------------+
-| -   Step Completion        | -   User Message     |
-+----------------------------+----------------------+
+|||
+|--- |--- |
+|Job Status Description|Trigger Messages|
+|Step Completion|User Message|
 
 #### <ppefeedbackval\></ppefeedbackval\>
 
@@ -3232,4 +3145,3 @@ despite all other frequency settings.
 - **EM field label**: Exclude Month from Schedule
 - **Valid Values**: Valid data for this element is the full name of a
     month in English (e.g., January, February, etc.).
-:::
