@@ -425,66 +425,71 @@ The syntax for all SMA Resource Monitor variables is:
 The following predefined variables are available for File Monitor
 Actions:
 
-- \[\[\@FileName\]\] - This is the name of the file which caused the     OpCon event.
-- \[\[\@FileNameRegEx\]\] - This is the name of the file which caused     the event. It is detected by specifying a regular expression to
+- \[\[@FileName\]\] - This is the name of the file which caused the     OpCon event.
+- \[\[@FileNameRegEx\]\] - This is the name of the file which caused     the event. It is detected by specifying a regular expression to
     match the file name.
-- \[\[\@EventType\]\] - This is the type of file event     (Create/delete/Modify etc.) which caused the OpCon event.
-- \[\[\@FullPath\]\] - This is the complete path to the file which     caused the OpCon event.
-- \[\[\@FullPathRegEx\]\] - This is the complete path to the file     which caused this event. It is detected by specifying a regular
+- \[\[@EventType\]\] - This is the type of file event     (Create/delete/Modify etc.) which caused the OpCon event.
+- \[\[@FullPath\]\] - This is the complete path to the file which     caused the OpCon event.
+- \[\[@FullPathRegEx\]\] - This is the complete path to the file     which caused this event. It is detected by specifying a regular
     expression to match the file name. For information on creating
     regular expressions, refer to
     <http://www.regular-expressions.info/>.
-- \[\[\@FullFileName\]\] - This is the fully qualified file name     including path and extension.
-- \[\[\@FullFileNameRegEx\]\] - This is the fully qualified file name     including path and extension which caused the event. It is detected
+- \[\[@FullFileName\]\] - This is the fully qualified file name     including path and extension.
+- \[\[@FullFileNameRegEx\]\] - This is the fully qualified file name     including path and extension which caused the event. It is detected
     by specifying a regular expression to match the file name. For
     information on creating regular expressions, refer to
     <http://www.regular-expressions.info/>.
-- \[\[\@CreateStamp\]\] - This is the creation time stamp for the     file.
-- \[\[\@CreateStampformat\]\] - This is the creation time stamp for     the file in the defined format. (: \[\[\@CreateStampyyyymmdd\]\]
-- \[\[\@ModStamp\]\] - This is the modification time stamp for the     file.
-- \[\[\@ModStampformat\]\] - This is the modification time stamp for     the file in the defined format. (: \[\[\@ModStampyyyymmdd\]\]
-- \[\[\@FileRoot\]\] - This is the file name without the path or     extension (leaves the name as is in mixed case).
-- \[\[\@FileRootUpper\]\] - This is the same as \@FileRoot, but it is     forced to all upper case.
-- \[\[\@DATE\]\] - Resolves to short date format setting (ccyy/mm/dd). -   \[\[\@Dateformat\]\] - This is the date the file was detected in the
+- \[\[@CreateStamp\]\] - This is the creation time stamp for the     file.
+- \[\[@CreateStampformat\]\] - This is the creation time stamp for     the file in the defined format. (: \[\[@CreateStampyyyymmdd\]\]
+- \[\[@ModStamp\]\] - This is the modification time stamp for the     file.
+- \[\[@ModStampformat\]\] - This is the modification time stamp for     the file in the defined format. (: \[\[@ModStampyyyymmdd\]\]
+- \[\[@FileRoot\]\] - This is the file name without the path or     extension (leaves the name as is in mixed case).
+- \[\[@FileRootUpper\]\] - This is the same as @FileRoot, but it is     forced to all upper case.
+- \[\[@DATE\]\] - Resolves to short date format setting (ccyy/mm/dd).
+- \[\[@Dateformat\]\] - This is the date the file was detected in the
     defined format (YYYYMMDD).
-- \[\[\@FileCriteria\]\] - This is the string SMA Resource Monitor was     checking for when the file was detected (e.g., c:\\temp\\\*.txt).
+- \[\[@FileCriteria\]\] - This is the string SMA Resource Monitor was     checking for when the file was detected (e.g., c:\\temp\\\*.txt).
 
 ##### Variables for Counter Monitor Actions
 
 The following predefined tokens are available for Counter Monitor
 Actions:
 
-- \[\[\@CounterName\]\] - Name of the counter that was monitored and     caused the action to fire.
-- \[\[\@CurrentValue\]\] - The current reading of the Counter. -   \[\[\@EventType\]\] - Type of Counter Monitor event
+- \[\[@CounterName\]\] - Name of the counter that was monitored and     caused the action to fire.
+- \[\[@CurrentValue\]\] - The current reading of the Counter.
+- \[\[@EventType\]\] - Type of Counter Monitor event
     (HighValue/LowValue/MeanValue, etc.).
-- \[\[\@HighCutOff\]\] - High water mark. -   \[\[\@LowCutOff\]\] - Low water mark.
-- \[\[\@MachineName\]\] - The machine name on which the counter was     monitored.
-- \[\[\@MeanCutOff\]\] - Mean level cut off (for samples defined in     the Rule).
-- \[\[\@MeanValue\]\] - The current MeanValue reading (for the samples     defined in the Rule file).
-- \[\[\@UniqueID\]\] - A unique identifying number that is associated     with each action fired.
+- \[\[@HighCutOff\]\] - High water mark.
+- \[\[@LowCutOff\]\] - Low water mark.
+- \[\[@MachineName\]\] - The machine name on which the counter was     monitored.
+- \[\[@MeanCutOff\]\] - Mean level cut off (for samples defined in     the Rule).
+- \[\[@MeanValue\]\] - The current MeanValue reading (for the samples     defined in the Rule file).
+- \[\[@UniqueID\]\] - A unique identifying number that is associated     with each action fired.
 
 ##### Variables for Service Monitor Actions
 
 The following predefined tokens are available for Service Monitor
 Actions:
 
-- \[\[\@CurrentStatus\]\] - This is the current status of the Service. -   \[\[\@MACHINENAME\]\] - This is the machine name on which the
+- \[\[@CurrentStatus\]\] - This is the current status of the Service.
+- \[\[@MACHINENAME\]\] - This is the machine name on which the
     service was monitored.
-- \[\[\@SERVICENAME\]\] - This is the display name of the service that     was monitored and caused the action to fire.
-- \[\[\@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired.
-- \[\[\@ServiceLogon\]\] - This is the name of the user the services     is "running as" or "Local System".
+- \[\[@SERVICENAME\]\] - This is the display name of the service that     was monitored and caused the action to fire.
+- \[\[@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired.
+- \[\[@ServiceLogon\]\] - This is the name of the user the services     is "running as" or "Local System".
 
 ##### Variables for Process Monitor Actions
 
 The following predefined tokens are available for Process Monitor
 Actions:
 
-- \[\[\@CurrentStatus\]\] - This is the current status of the Process. -   \[\[\@MACHINENAME\]\] - This is the machine name on which the
+- \[\[@CurrentStatus\]\] - This is the current status of the Process.
+- \[\[@MACHINENAME\]\] - This is the machine name on which the
     process was monitored.
-- \[\[\@PROCESSNAME\]\] - This is the name of the process that was     monitored and caused the action to fire.
-- \[\[\@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired.
-- \[\[\@PID\]\] - This is the process ID number (PID) for the process     that caused the action to fire.
-- \[\[\@ProcessUser\]\] - This is the user that is executing the     process that caused the action to fire.
+- \[\[@PROCESSNAME\]\] - This is the name of the process that was     monitored and caused the action to fire.
+- \[\[@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired.
+- \[\[@PID\]\] - This is the process ID number (PID) for the process     that caused the action to fire.
+- \[\[@ProcessUser\]\] - This is the user that is executing the     process that caused the action to fire.
 
 ### Third Screen: Finalize
 
@@ -497,82 +502,24 @@ location as the Rule files.
 
 ## Date and Time Format Examples
 
-+----------------+----------------+----------------+----------------+
-| Letter         | Date or Time   | Presentation   | Re             |
-|                | Component      |                | sults/Examples |
-+================+================+================+================+
-| The format     |                |                |                |
-| letters and    |                |                |                |
-| examples below |                |                |                |
-| refer to this  |                |                |                |
-| Long Date      |                |                |                |
-| example:       |                |                |                |
-| **Monday,      |                |                |                |
-| August 8,      |                |                |                |
-| 2011**         |                |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |                |                |                |
-| The example    |                |                |                |
-| date would be  |                |                |                |
-| created in the |                |                |                |
-| EM with the    |                |                |                |
-| following      |                |                |                |
-| string for the |                |                |                |
-| Long Date      |                |                |                |
-| Format:        |                |                |                |
-| **EEEE, MMMM   |                |                |                |
-| d, yyyy**      |                |                |                |
-+----------------+----------------+----------------+----------------+
-| yy             | Year           | Year           | 11             |
-+----------------+----------------+----------------+----------------+
-| yyyy           | Year           | Year           | 2011           |
-+----------------+----------------+----------------+----------------+
-| M              | Month          | Month number   | 8 (does not    |
-|                |                |                | include the    |
-|                |                |                | leading zero)  |
-+----------------+----------------+----------------+----------------+
-| MM             | Month          | Month number   | 08 (does       |
-|                |                |                | include the    |
-|                |                |                | leading zero)  |
-+----------------+----------------+----------------+----------------+
-| MMM            | Month          | Month text     | Aug            |
-|                |                |                | (abbreviates   |
-|                |                |                | the month      |
-|                |                |                | name)          |
-+----------------+----------------+----------------+----------------+
-| MMMM           | Month          | Month text     | August         |
-|                |                |                | (includes the  |
-|                |                |                | full the month |
-|                |                |                | name)          |
-+----------------+----------------+----------------+----------------+
-| d              | Day in Month   | Day Number     | 8 (does not    |
-|                |                |                | include the    |
-|                |                |                | leading zero)  |
-+----------------+----------------+----------------+----------------+
-| dd             | Day in Month   | Day Number     | 08 (does       |
-|                |                |                | include the    |
-|                |                |                | leading zero)  |
-+----------------+----------------+----------------+----------------+
-| E              | Day in week    | Day Text       | Wed            |
-|                |                |                | (abbreviates   |
-|                |                |                | the day name)  |
-+----------------+----------------+----------------+----------------+
-| EEEE           | Day in week    | Day Text       | Wednesday      |
-|                |                |                | (includes the  |
-|                |                |                | full day name) |
-+----------------+----------------+----------------+----------------+
-| a              | AM/PM marker   | AM or PM text  | AM/PM          |
-+----------------+----------------+----------------+----------------+
-| H              | Hour in Day    | 24-hour clock  | 16:00          |
-|                | (0-23)         | number         |                |
-+----------------+----------------+----------------+----------------+
-| h              | Hour in Day    | Hour in AM/PM  | 4:00           |
-|                | (1-12)         |                |                |
-+----------------+----------------+----------------+----------------+
-| mm             | Minute in hour | Number         | 30             |
-+----------------+----------------+----------------+----------------+
-| s              | Second in      | Number         | 55             |
-|                | minute         |                |                |
-+----------------+----------------+----------------+----------------+
-:::
+The format letters and examples below refer to this Long Date example: `Monday, August 8, 2011`
+
+The example date would be created with the following string for the Long Date Format: `EEEE, MMMM d, yyyy`
+
+|Letter|Date or Time Component|Presentation|Results/Examples|
+|--- |--- |--- |--- |
+|yy|Year|Year|11|
+|yyyy|Year|Year|2011|
+|M|Month|Month number|8 (does not include the leading zero)|
+|MM|Month|Month number|08 (does include the leading zero)|
+|MMM|Month|Month text|Aug (abbreviates the month name)|
+|MMMM|Month|Month text|August (includes the full the month name)|
+|d|Day in Month|Day Number|8 (does not include the leading zero)|
+|dd|Day in Month|Day Number|08 (does include the leading zero)|
+|E|Day in week|Day Text|Wed (abbreviates the day name)|
+|EEEE|Day in week|Day Text|Wednesday (includes the full day name)|
+|a|AM/PM marker|AM or PM text|AM/PM|
+|H|Hour in Day (0-23)|24-hour clock number|16:00|
+|h|Hour in Day (1-12)|Hour in AM/PM|4:00|
+|mm|Minute in hour|Number|30|
+|s|Second in minute|Number|55|
