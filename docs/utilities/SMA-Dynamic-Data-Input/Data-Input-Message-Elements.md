@@ -609,6 +609,7 @@ rule associated with a defined job pattern.
 
     ||||
     |--- |--- |--- |
+    |122 - Tags|1005 - User (Destination)|5008 - Job Description Name|
     |904 - Department|1006 - Destination File|5009 - Job Description Library|
     |905 - Access Code|1016 - Destination Machine|5010 - Batch Queue Name|
     |907 - Primary Machine|3001 - User ID|5011 - Batch Queue Library|
@@ -622,9 +623,8 @@ rule associated with a defined job pattern.
     |916 - Latest Start Abs/Rel Indicator|5003 - JOBQ Priority|6005 - Group ID|
     |933 - Job Build Status|5004 - Job Date|6007 Exit Operator|
     |1001- Source Machine|5005 - Accounting Code|6008 - Exit Value|
-    |1003 - User (Source)|5006 - mCurrent Library|122 - Tags|
+    |1003 - User (Source)|5006 - mCurrent Library||
     |1004 - mSource File|5007 - mInit.Lib.List||
-    |1005 - User (Destination)|5008 - Job Description Name||
 
   - Where *m* = Substring in the current value to replace.
     - If the field code is for Job Build Status (933), valid
