@@ -211,56 +211,12 @@ The Debug Options section contains information about logging. All of the
 following settings are dynamic. The SMADDI service automatically detects
 any changes.
 
-+--------------------+---------+-------------------------------------+
-| Debug Options      | Default | Description                         |
-+====================+=========+=====================================+
-| ArchiveDaysToKeep  | 7       | -   Sets the number of days of log  |
-|                    |         |     history to keep.                |
-|                    |         | -   SMADDI only cleans out files    |
-|                    |         |     when active. Consequently,      |
-|                    |         |     archive files may exist beyond  |
-|                    |         |     this defined day range. For     |
-|                    |         |     example, if SMADDI is inactive  |
-|                    |         |     for 60 days, archive files may  |
-|                    |         |     exist for two months before     |
-|                    |         |     cleanup.                        |
-|                    |         | -   Automatic cleanup reduces the   |
-|                    |         |     disk storage required for       |
-|                    |         |     logging.                        |
-+--------------------+---------+-------------------------------------+
-| MaximumLogFileSize | 150000  | Sets the maximum size in bytes for  |
-|                    |         | each log file.                      |
-+--------------------+---------+-------------------------------------+
-| CreateOutputFile   | Yes     | -   Determines if an output file    |
-|                    |         |     should be written for each file |
-|                    |         |     that is processed.              |
-|                    |         | -   If No, output files are not     |
-|                    |         |     written.                        |
-|                    |         | -   If Yes, output files are        |
-|                    |         |     written.                        |
-|                    |         | -   Output files are written to the |
-|                    |         |     Output subdirectory of the      |
-|                    |         |     respective directory being      |
-|                    |         |     monitored by the SMADDI         |
-|                    |         |     Service.                        |
-|                    |         | -   Output filenames are the same   |
-|                    |         |     as the output filename with     |
-|                    |         |     **--Out** appended. For         |
-|                    |         |     example, the input file of      |
-|                    |         |     NewMaster.txt would be called   |
-|                    |         |     NewMaster-Out.txt.              |
-+--------------------+---------+-------------------------------------+
-| Trace              | OFF     | -   Determines if the SMADDI        |
-|                    |         |     service writes the string       |
-|                    |         |     passed to the stored procedures |
-|                    |         |     to the SMADDI.log file.         |
-|                    |         | -   If OFF, stored procedure data   |
-|                    |         |     is not traced.                  |
-|                    |         | -   If ON, stored procedure data is |
-|                    |         |     written to the log file.        |
-+--------------------+---------+-------------------------------------+
-
-: SMADDI Configuration: Debug Options
+|Debug Options|Default|Description|
+|--- |--- |--- |
+|ArchiveDaysToKeep|7|Sets the number of days of log history to keep. SMADDI only cleans out files when active. Consequently, archive files may exist beyond this defined day range. For example, if SMADDI is inactive for 60 days, archive files may exist for two months before cleanup. Automatic cleanup reduces the disk storage required for logging.|
+|MaximumLogFileSize|150000|Sets the maximum size in bytes for each log file.|
+|CreateOutputFile|Yes|Determines if an output file should be written for each file that is processed. Output files are written to the Output subdirectory of the respective directory being monitored by the SMADDI Service. Output filenames are the same as the output filename with –Out appended. For example, the input file of NewMaster.txt would be called NewMaster-Out.txt.|
+|Trace|OFF|Determines if the SMADDI service writes the string passed to the stored procedures to the SMADDI.log file.|
 
 ### Directories to Monitor
 
@@ -269,9 +225,6 @@ be monitored by the SMADDI service. Up to 20 different directories may
 be monitored. The following settings are NOT dynamic. The SMADDI service
 must be stopped and restarted to detect any changes.
 
-  Directories to Monitor   Default     Description
-  ------------------------ ----------- --------------------------------------------
-  Dir1                     C:\\temp1   An input directory for the SMADDI service.
-
-  : SMADDI Configuration: Directories to Monitor Settings
-:::
+|Directories to Monitor|Default|Description|
+|--- |--- |--- |
+|Dir1|C:\temp1|An input directory for the SMADDI service.|
