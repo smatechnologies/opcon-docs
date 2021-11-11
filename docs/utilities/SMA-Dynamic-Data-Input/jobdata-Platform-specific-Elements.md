@@ -5619,28 +5619,15 @@ last time.
 The event_type can be any value. Wild cards cannot be used with File
 Exists conditions. Valid values are:
 
-+----------------------------------+----------------------------------+
-| -   Exists/While/As Scheduled    | -   Deleted /Continuous          |
-|     Only                         |     Monitoring                   |
-+----------------------------------+----------------------------------+
-| -   Exists/Continuous Monitoring | -   Referenced /While/As         |
-|                                  |     Scheduled Only               |
-+----------------------------------+----------------------------------+
-| -   Created /While/As Scheduled  | -   Referenced /Continuous       |
-|     Only                         |     Monitoring                   |
-+----------------------------------+----------------------------------+
-| -   Created /Continuous          | -   Cataloged /While/As          |
-|     Monitoring                   |     Scheduled Only               |
-+----------------------------------+----------------------------------+
-| -   Updated /While/As Scheduled  | -   Cataloged /Continuous        |
-|     Only                         |     Monitoring                   |
-+----------------------------------+----------------------------------+
-| -   Updated /Continuous          | -   Uncataloged /While/As        |
-|     Monitoring                   |     Scheduled Only               |
-+----------------------------------+----------------------------------+
-| -   Deleted /While/As Scheduled  | -   Uncataloged /Continuous      |
-|     Only                         |     Monitoring                   |
-+----------------------------------+----------------------------------+
+|||
+|--- |--- |
+|Cataloged /Continuous Monitoring|Exists/While/As Scheduled Only|
+|Cataloged /While/As Scheduled Only|Referenced /Continuous Monitoring|
+|Created /Continuous Monitoring|Referenced /While/As Scheduled Only|
+|Created /While/As Scheduled Only|Uncataloged /Continuous Monitoring|
+|Deleted /Continuous Monitoring|Uncataloged /While/As Scheduled Only|
+|Deleted /While/As Scheduled Only|Updated /Continuous Monitoring|
+|Exists/Continuous Monitoring|Updated /While/As Scheduled Only|
 
 #### <dsn_jobname\></dsn_jobname\>
 
@@ -5917,4 +5904,3 @@ REXX procedure.
   - Valid Characters: All
   - Minimum Characters: 1
   - Maximum Characters: 128
-:::
