@@ -46,7 +46,7 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/smatechnologies/opcon-docs/blob/develop',
+            'https://github.com/smatechnologies/opcon-docs/blob/main',
           lastVersion: 'current',
           versions: {
             'current': {
