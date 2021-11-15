@@ -36,7 +36,9 @@ options:
 - **Minimum**: Allows you to specify the minimum value allowed.
 - **Maximum**: Allows you to specify the maximum value allowed.
 
-:::note User inputs are limited to the regular integer range of -2147483648 to 2147483647. :::
+:::note
+User inputs are limited to the regular integer range of -2147483648 to 2147483647.
+:::
 
 Click the **OK** button to confirm User Input configuration, or click
 the **Cancel** button to discard changes. This will return you to the
