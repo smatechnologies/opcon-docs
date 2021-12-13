@@ -52,6 +52,12 @@ module.exports = {
             'current': {
               label: 'current',
             },
+            '21.1.0': {
+              label: '21.1.0',
+              path: 'v21.1',
+              banner: 'none'
+
+            },
             '21.0.0': {
               label: '21.0.0',
               path: 'v21.0',

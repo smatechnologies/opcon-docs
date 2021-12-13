@@ -4,6 +4,50 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.1.0
+
+2021 December
+
+#### Enterprise Manager
+
+:white_check_mark: **OPCON-15949**: Fixed an issue that occurred while using export Daily Job Audit Management.
+
+#### REST API
+
+:eight_spoked_asterisk: **OPCON-15870**: - Added api/deleteActions endpoint to handle deletion of dailyJobs & schedules.
+
+:white_check_mark: **OPCON-15809**: Fixed an issue with Vision processing occurring when no cards were defined in the database and further performance improvement on Vision statistics queries
+
+:white_check_mark: **OPCON-15779**: - Fixed an issue causing tokens containing parameters to be parsed incorrectly.
+- Improved parameter validation for events using tokens.
+- Simplified handling of start and endvalue parameters for exit description analysis event triggers.
+
+:white_check_mark: **OPCON-15737**: Fixed a memory issue where expired tokens were not removed from cache.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-15807**: Solution Manager now allows users to view and edit IBMi job details for the 'Batch job' type.
+
+:eight_spoked_asterisk: **OPCON-15759**: Solution Manager now allows users to create/edit/delete note(s) on a job's historical run.
+
+:eight_spoked_asterisk: **OPCON-15318**: Solution Manager now allows users to monitofy daily job events.
+
+:eight_spoked_asterisk: **OPCON-14523**: Solution Manager now allows users to view a job's historical runs along with their properties for that run.
+
+:eight_spoked_asterisk: **OPCON-15105**: Solution Manager now allows users to manage resources (view, add, edit, delete).
+
+:white_check_mark: **OPCON-15950**: Fixed French translations in the screens for Schedule, Resources, Thresholds, Global Properties, and Daily Jobs.
+
+:white_check_mark: **OPCON-15947**: Fixed an issue where multiple daily jobs referencing the same resource showed an invalid date in resource dependencies in Solution Manager.
+
+:white_check_mark: **OPCON-15782**: Fixed an isue with the migration page redirect for updating variables needed in self service.
+
+:white_check_mark: **OPCON-15757**: Fixed an issue with the date selector on the Processes page during Daylight Savings Time changes.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-15723**: Changed script mapping during deployment process to use names instead of numeric id values. The script-name, type-name and runner-name is a unique combination.
+
 ## OpCon 21.0.0
 
 2021 October
