@@ -58,8 +58,8 @@ module.exports = {
               banner: 'none'
 
             },
-            '21.0.0': {
-              label: '21.0.0',
+            '21.0.1': {
+              label: '21.0.1',
               path: 'v21.0',
               banner: 'none'
 

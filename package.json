@@ -1,6 +1,6 @@
 {
   "name": "opcon-docs",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
