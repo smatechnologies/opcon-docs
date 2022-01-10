@@ -1,12 +1,12 @@
 {
-  "version-21.1.0/mySidebar": [
+  "version-21.0/mySidebar": [
     {
       "type": "doc",
-      "id": "version-21.1.0/index"
+      "id": "version-21.0/index"
     },
     {
       "type": "doc",
-      "id": "version-21.1.0/release-notes"
+      "id": "version-21.0/release-notes"
     },
     {
       "type": "category",
@@ -15,11 +15,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/components"
+          "id": "version-21.0/components"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/file-locations"
+          "id": "version-21.0/file-locations"
         },
         {
           "type": "category",
@@ -28,54 +28,54 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/master-vs-daily"
+              "id": "version-21.0/automation-concepts/master-vs-daily"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/editing-master-vs-daily"
+              "id": "version-21.0/automation-concepts/editing-master-vs-daily"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/named-schedule-instances"
+              "id": "version-21.0/automation-concepts/named-schedule-instances"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/frequencies"
+              "id": "version-21.0/automation-concepts/frequencies"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/property-expressions"
+              "id": "version-21.0/automation-concepts/property-expressions"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/time-zones"
+              "id": "version-21.0/automation-concepts/time-zones"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/machine-groups"
+              "id": "version-21.0/automation-concepts/machine-groups"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/null-jobs"
+              "id": "version-21.0/automation-concepts/null-jobs"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/file-transfer-jobs"
+              "id": "version-21.0/automation-concepts/file-transfer-jobs"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/job-tracking"
+              "id": "version-21.0/automation-concepts/job-tracking"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/automation-concepts/embedded-scripts"
+              "id": "version-21.0/automation-concepts/embedded-scripts"
             }
           ],
           "collapsible": true
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/administration/server-options"
+          "id": "version-21.0/administration/server-options"
         },
         {
           "type": "category",
@@ -84,15 +84,15 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/administration/user-accounts"
+              "id": "version-21.0/administration/user-accounts"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/administration/roles"
+              "id": "version-21.0/administration/roles"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/administration/privileges"
+              "id": "version-21.0/administration/privileges"
             }
           ],
           "collapsible": true
@@ -104,23 +104,23 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/schedules"
+              "id": "version-21.0/objects/schedules"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/jobs"
+              "id": "version-21.0/objects/jobs"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/machines"
+              "id": "version-21.0/objects/machines"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/machine-groups"
+              "id": "version-21.0/objects/machine-groups"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/remote-instances"
+              "id": "version-21.0/objects/remote-instances"
             },
             {
               "type": "category",
@@ -129,38 +129,38 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/objects/properties"
+                  "id": "version-21.0/objects/properties"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/objects/defining-properties"
+                  "id": "version-21.0/objects/defining-properties"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/objects/using-properties"
+                  "id": "version-21.0/objects/using-properties"
                 }
               ],
               "collapsible": true
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/thresholds"
+              "id": "version-21.0/objects/thresholds"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/resources"
+              "id": "version-21.0/objects/resources"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/calendars"
+              "id": "version-21.0/objects/calendars"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/access-codes"
+              "id": "version-21.0/objects/access-codes"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/objects/departments"
+              "id": "version-21.0/objects/departments"
             }
           ],
           "collapsible": true
@@ -172,43 +172,43 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/overview"
+              "id": "version-21.0/job-components/overview"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/instances"
+              "id": "version-21.0/job-components/instances"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/frequency"
+              "id": "version-21.0/job-components/frequency"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/events"
+              "id": "version-21.0/job-components/events"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/threshold-resource-updates"
+              "id": "version-21.0/job-components/threshold-resource-updates"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/job-dependencies"
+              "id": "version-21.0/job-components/job-dependencies"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/threshold-resource-dependencies"
+              "id": "version-21.0/job-components/threshold-resource-dependencies"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/expression-dependencies"
+              "id": "version-21.0/job-components/expression-dependencies"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/documentation"
+              "id": "version-21.0/job-components/documentation"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-components/tags"
+              "id": "version-21.0/job-components/tags"
             }
           ],
           "collapsible": true
@@ -220,63 +220,63 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/bis"
+              "id": "version-21.0/job-types/bis"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/container"
+              "id": "version-21.0/job-types/container"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/file-transfer"
+              "id": "version-21.0/job-types/file-transfer"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/ibm-i"
+              "id": "version-21.0/job-types/ibm-i"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/java"
+              "id": "version-21.0/job-types/java"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/mcp"
+              "id": "version-21.0/job-types/mcp"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/null"
+              "id": "version-21.0/job-types/null"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/os-2200"
+              "id": "version-21.0/job-types/os-2200"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/sap-bw"
+              "id": "version-21.0/job-types/sap-bw"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/sap"
+              "id": "version-21.0/job-types/sap"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/sql"
+              "id": "version-21.0/job-types/sql"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/tuxedo-art"
+              "id": "version-21.0/job-types/tuxedo-art"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/unix"
+              "id": "version-21.0/job-types/unix"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/windows"
+              "id": "version-21.0/job-types/windows"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/job-types/zos"
+              "id": "version-21.0/job-types/zos"
             }
           ],
           "collapsible": true
@@ -288,59 +288,59 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/schedule-dates"
+              "id": "version-21.0/operations/schedule-dates"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/schedule-names"
+              "id": "version-21.0/operations/schedule-names"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/job-names"
+              "id": "version-21.0/operations/job-names"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/status-descriptions"
+              "id": "version-21.0/operations/status-descriptions"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/status-change-commands"
+              "id": "version-21.0/operations/status-change-commands"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/building-schedules"
+              "id": "version-21.0/operations/building-schedules"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/checking-schedules"
+              "id": "version-21.0/operations/checking-schedules"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/deleting-schedules"
+              "id": "version-21.0/operations/deleting-schedules"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/editing-schedules"
+              "id": "version-21.0/operations/editing-schedules"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/adding-jobs"
+              "id": "version-21.0/operations/adding-jobs"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/containers"
+              "id": "version-21.0/operations/containers"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/job-output"
+              "id": "version-21.0/operations/job-output"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/window-to-host"
+              "id": "version-21.0/operations/window-to-host"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/operations/SAP-Job-Menu-Options"
+              "id": "version-21.0/operations/SAP-Job-Menu-Options"
             }
           ],
           "collapsible": true
@@ -352,19 +352,19 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/notifications/Components"
+              "id": "version-21.0/notifications/Components"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/notifications/Escalation"
+              "id": "version-21.0/notifications/Escalation"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/notifications/Notification-Triggers"
+              "id": "version-21.0/notifications/Notification-Triggers"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/notifications/Notification-Configuration"
+              "id": "version-21.0/notifications/Notification-Configuration"
             }
           ],
           "collapsible": true
@@ -379,39 +379,39 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/whats-new"
+          "id": "version-21.0/installation/whats-new"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/breaking-changes"
+          "id": "version-21.0/installation/breaking-changes"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/system-requirements"
+          "id": "version-21.0/installation/system-requirements"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/install"
+          "id": "version-21.0/installation/install"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/upgrade"
+          "id": "version-21.0/installation/upgrade"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/configuration"
+          "id": "version-21.0/installation/configuration"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/components"
+          "id": "version-21.0/installation/components"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/docker"
+          "id": "version-21.0/installation/docker"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/installation/database-scripts"
+          "id": "version-21.0/installation/database-scripts"
         }
       ],
       "collapsible": true
@@ -423,31 +423,31 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/Failover-Scenarios"
+          "id": "version-21.0/Files/Database-Information/Failover-Scenarios"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/Manual-Setup-for-Microsoft-SQL-Replication"
+          "id": "version-21.0/Files/Database-Information/Manual-Setup-for-Microsoft-SQL-Replication"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/Setup-for-Automatic-Microsoft-SQL-Replication"
+          "id": "version-21.0/Files/Database-Information/Setup-for-Automatic-Microsoft-SQL-Replication"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/Failover-and-Recovery-with-Replication"
+          "id": "version-21.0/Files/Database-Information/Failover-and-Recovery-with-Replication"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/Setup-for-Automatic-Microsoft-SQL-Mirroring"
+          "id": "version-21.0/Files/Database-Information/Setup-for-Automatic-Microsoft-SQL-Mirroring"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/Manual-Database-Backups-and-Restoration"
+          "id": "version-21.0/Files/Database-Information/Manual-Database-Backups-and-Restoration"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/Files/Database-Information/OpCon-Data-Maintenance"
+          "id": "version-21.0/Files/Database-Information/OpCon-Data-Maintenance"
         },
         {
           "type": "category",
@@ -456,11 +456,11 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/Database-Information/Database-Mirroring-Checklist"
+              "id": "version-21.0/Files/Database-Information/Database-Mirroring-Checklist"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/Database-Information/Database-Replication-Checklist"
+              "id": "version-21.0/Files/Database-Information/Database-Replication-Checklist"
             }
           ],
           "collapsible": true
@@ -475,15 +475,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/events/introduction"
+          "id": "version-21.0/events/introduction"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/events/defining"
+          "id": "version-21.0/events/defining"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/events/types"
+          "id": "version-21.0/events/types"
         }
       ],
       "collapsible": true
@@ -495,15 +495,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/reports/overview"
+          "id": "version-21.0/reports/overview"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/reports/predefined"
+          "id": "version-21.0/reports/predefined"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/reports/custom"
+          "id": "version-21.0/reports/custom"
         }
       ],
       "collapsible": true
@@ -515,47 +515,47 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/introduction"
+          "id": "version-21.0/server-programs/introduction"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/licensing"
+          "id": "version-21.0/server-programs/licensing"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/service-manager"
+          "id": "version-21.0/server-programs/service-manager"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/schedule-activity-monitor"
+          "id": "version-21.0/server-programs/schedule-activity-monitor"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/network-communications"
+          "id": "version-21.0/server-programs/network-communications"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/notify-handler"
+          "id": "version-21.0/server-programs/notify-handler"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/request-router"
+          "id": "version-21.0/server-programs/request-router"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/start-time-calculator"
+          "id": "version-21.0/server-programs/start-time-calculator"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/optional"
+          "id": "version-21.0/server-programs/optional"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/configuration"
+          "id": "version-21.0/server-programs/configuration"
         },
         {
           "type": "doc",
-          "id": "version-21.1.0/server-programs/logging"
+          "id": "version-21.0/server-programs/logging"
         }
       ],
       "collapsible": true
@@ -572,7 +572,7 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Enterprise-Manager/Logging-In"
+              "id": "version-21.0/Files/UI/Enterprise-Manager/Logging-In"
             },
             {
               "type": "category",
@@ -581,23 +581,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/EM-UI-Layout"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/EM-UI-Layout"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Menus"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Menus"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Navigation-Panel"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Navigation-Panel"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Information-Bar"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Information-Bar"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Keyboard-Shortcuts"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Keyboard-Shortcuts"
                 }
               ],
               "collapsible": true
@@ -609,19 +609,19 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Connection-Profiles"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Connection-Profiles"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Setting-Preferences"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Setting-Preferences"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Setting-Language"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Setting-Language"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Receiving-Installation-Details"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Receiving-Installation-Details"
                 }
               ],
               "collapsible": true
@@ -633,27 +633,27 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Solution-Manager"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Solution-Manager"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Home"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Home"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Operations"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Operations"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Vision"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Vision"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Self-Service"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Self-Service"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Profile"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Profile"
                 }
               ],
               "collapsible": true
@@ -665,59 +665,59 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Administration"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Administration"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Quick-Search"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Quick-Search"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Schedule-Master"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Schedule-Master"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Job-Master"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Job-Master"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Workflow-Designer"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Workflow-Designer"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Calendars"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Calendars"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Global-Properties"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Global-Properties"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Thresholds"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Thresholds"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Resources"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Resources"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Machines"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Machines"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Machine-Groups"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Machine-Groups"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Remote-Instances"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Remote-Instances"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Server-Options"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Server-Options"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Administration-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Administration-Tools"
                 }
               ],
               "collapsible": true
@@ -729,59 +729,59 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Operation"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Operation"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-List-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-List-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Matrix-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Matrix-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Gantt-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Gantt-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-PERT-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-PERT-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Bar-Chart-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Bar-Chart-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Pie-Chart-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Pie-Chart-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Workload-Chart-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Workload-Chart-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Machines-Status-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Machines-Status-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Daily-Maintenance-View"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Daily-Maintenance-View"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Schedule-Build"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Schedule-Build"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Escalation-Acknowlegement"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Escalation-Acknowlegement"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Secondary-Windows"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Secondary-Windows"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Operation-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Operation-Tools"
                 }
               ],
               "collapsible": true
@@ -793,35 +793,35 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Security"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Security"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Roles"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Roles"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-User-Accounts"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-User-Accounts"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Batch-Users"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Batch-Users"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Departments"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Departments"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Access-Codes"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Access-Codes"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Privileges"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Privileges"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Security-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Security-Tools"
                 }
               ],
               "collapsible": true
@@ -833,39 +833,39 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Management"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Management"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Audit-Management"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Audit-Management"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-History-Management"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-History-Management"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Notification-Manager"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Notification-Manager"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Escalation-Manager"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Escalation-Manager"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Schedule-Extract"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Schedule-Extract"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Tag-Manager"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Tag-Manager"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Frequency-Manager"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Frequency-Manager"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Management-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Management-Tools"
                 }
               ],
               "collapsible": true
@@ -877,23 +877,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-External-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-External-Tools"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Configuring-the-Installation-Directory"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Configuring-the-Installation-Directory"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Opening-Import-Export"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Opening-Import-Export"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Opening-Windows-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Opening-Windows-Tools"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Adding-External-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Adding-External-Tools"
                 }
               ],
               "collapsible": true
@@ -905,19 +905,19 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Enterprise-Information"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Enterprise-Information"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Reports"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Reports"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Logs"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Logs"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Information-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Information-Tools"
                 }
               ],
               "collapsible": true
@@ -929,23 +929,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Scripts"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Scripts"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Script-Repository"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Script-Repository"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Script-Runners"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Script-Runners"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Managing-Script-Types"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Managing-Script-Types"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Using-Scripts-Tools"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Using-Scripts-Tools"
                 }
               ],
               "collapsible": true
@@ -957,19 +957,19 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Working-with-Enterprise-Support"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Working-with-Enterprise-Support"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Getting-Support-Information"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Getting-Support-Information"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Reporting-Problems"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Reporting-Problems"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Enterprise-Manager/Accessing-Application-Logs"
+                  "id": "version-21.0/Files/UI/Enterprise-Manager/Accessing-Application-Logs"
                 }
               ],
               "collapsible": true
@@ -984,19 +984,19 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Getting-Started"
+              "id": "version-21.0/Files/UI/Solution-Manager/Getting-Started"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Application-Help"
+              "id": "version-21.0/Files/UI/Solution-Manager/Application-Help"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Logging-In"
+              "id": "version-21.0/Files/UI/Solution-Manager/Logging-In"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Migrating-Data"
+              "id": "version-21.0/Files/UI/Solution-Manager/Migrating-Data"
             },
             {
               "type": "category",
@@ -1005,23 +1005,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/SM-UI-Layout"
+                  "id": "version-21.0/Files/UI/Solution-Manager/SM-UI-Layout"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/URL-Shortcuts"
+                  "id": "version-21.0/Files/UI/Solution-Manager/URL-Shortcuts"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Keyboard-Shortcuts"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Keyboard-Shortcuts"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Responsive-Platform"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Responsive-Platform"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Notification-Acknowledgement"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Notification-Acknowledgement"
                 }
               ],
               "collapsible": true
@@ -1033,23 +1033,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Accessing-and-Updating-Profile-Settings"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Accessing-and-Updating-Profile-Settings"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Configuring-Account-Settings"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Configuring-Account-Settings"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Generating-External-Tokens"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Generating-External-Tokens"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Configuring-Settings"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Configuring-Settings"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Configuring-Application-Settings"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Configuring-Application-Settings"
                 }
               ],
               "collapsible": true
@@ -1061,23 +1061,23 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Working-with-Self-Service"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Working-with-Self-Service"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Working-in-Admin-Mode"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Working-in-Admin-Mode"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Working-in-User-Mode"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Working-in-User-Mode"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Filtering-Service-Requests"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Filtering-Service-Requests"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators"
                 }
               ],
               "collapsible": true
@@ -1089,7 +1089,7 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Working-with-Vision"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Working-with-Vision"
                 },
                 {
                   "type": "category",
@@ -1103,27 +1103,27 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Working-in-Admin-Mode_Vision"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Working-in-Admin-Mode_Vision"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Enabling-Admin-Mode-Editing_Vision"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Enabling-Admin-Mode-Editing_Vision"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Managing-Vision-Settings"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Managing-Vision-Settings"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Managing-Vision-Frequencies"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Managing-Vision-Frequencies"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Managing-Vision-Actions"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Managing-Vision-Actions"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Managing-Vision-Remote-Instances"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Managing-Vision-Remote-Instances"
                         }
                       ],
                       "collapsible": true
@@ -1135,11 +1135,11 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Working-in-User-Mode_Vision"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Working-in-User-Mode_Vision"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Cards-in-Vision-Live"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Cards-in-Vision-Live"
                         }
                       ],
                       "collapsible": true
@@ -1154,7 +1154,7 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Vision-Health"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Vision-Health"
                     }
                   ],
                   "collapsible": true
@@ -1169,39 +1169,39 @@
               "items": [
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Working-with-Operations"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Working-with-Operations"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Performing-Schedule-Status-Changes"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Performing-Schedule-Status-Changes"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Performing-Job-Status-Changes"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Performing-Job-Status-Changes"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Schedule-Level"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Schedule-Level"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Date-Level"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Date-Level"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Performing-Agent-Status-Updates"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Performing-Agent-Status-Updates"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Job-Output"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Job-Output"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Accessing-Job-Summary"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Accessing-Job-Summary"
                 },
                 {
                   "type": "doc",
-                  "id": "version-21.1.0/Files/UI/Solution-Manager/Accessing-Job-Executions-History"
+                  "id": "version-21.0/Files/UI/Solution-Manager/Accessing-Job-Executions-History"
                 },
                 {
                   "type": "category",
@@ -1210,15 +1210,15 @@
                   "items": [
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Accessing-Daily-Job-Definition"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Accessing-Daily-Job-Definition"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-General-Info"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-General-Info"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Documentation"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Documentation"
                     },
                     {
                       "type": "category",
@@ -1227,58 +1227,58 @@
                       "items": [
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Job-Task-Details"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Job-Task-Details"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Null-Job-Details"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Null-Job-Details"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-Container-Job-Details"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Viewing-Container-Job-Details"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Updating-Windows-Job-Details"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Updating-Windows-Job-Details"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Updating-UNIX-Job-Details"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Updating-UNIX-Job-Details"
                         },
                         {
                           "type": "doc",
-                          "id": "version-21.1.0/Files/UI/Solution-Manager/Updating-File-Transfer-Job-Details"
+                          "id": "version-21.0/Files/UI/Solution-Manager/Updating-File-Transfer-Job-Details"
                         }
                       ],
                       "collapsible": true
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Job-Frequencies"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Job-Frequencies"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Instance-Properties"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Instance-Properties"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Expression-Dependencies"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Expression-Dependencies"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Dependencies"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Dependencies"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Dependencies"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Dependencies"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Updates"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Updates"
                     },
                     {
                       "type": "doc",
-                      "id": "version-21.1.0/Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Updates"
+                      "id": "version-21.0/Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Updates"
                     }
                   ],
                   "collapsible": true
@@ -1288,15 +1288,15 @@
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Using-PERT-View"
+              "id": "version-21.0/Files/UI/Solution-Manager/Using-PERT-View"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Managing-Daily-Processes"
+              "id": "version-21.0/Files/UI/Solution-Manager/Managing-Daily-Processes"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/Files/UI/Solution-Manager/Using-Schedule-Build"
+              "id": "version-21.0/Files/UI/Solution-Manager/Using-Schedule-Build"
             }
           ],
           "collapsible": true
@@ -1311,7 +1311,7 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-21.1.0/utilities/overview"
+          "id": "version-21.0/utilities/overview"
         },
         {
           "type": "category",
@@ -1320,75 +1320,75 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Introduction"
+              "id": "version-21.0/utilities/Command-line-Utilities/Introduction"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Adminstrative-Stored-Procedures"
+              "id": "version-21.0/utilities/Command-line-Utilities/Adminstrative-Stored-Procedures"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Audit-History-Cleanup"
+              "id": "version-21.0/utilities/Command-line-Utilities/Audit-History-Cleanup"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/BIRT-Report-Generator"
+              "id": "version-21.0/utilities/Command-line-Utilities/BIRT-Report-Generator"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Check-Job-Termination"
+              "id": "version-21.0/utilities/Command-line-Utilities/Check-Job-Termination"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Check-Schedule-and-Job-Status"
+              "id": "version-21.0/utilities/Command-line-Utilities/Check-Schedule-and-Job-Status"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Chronoman"
+              "id": "version-21.0/utilities/Command-line-Utilities/Chronoman"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/DoBatch"
+              "id": "version-21.0/utilities/Command-line-Utilities/DoBatch"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Job-History-Cleanup"
+              "id": "version-21.0/utilities/Command-line-Utilities/Job-History-Cleanup"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Pingman"
+              "id": "version-21.0/utilities/Command-line-Utilities/Pingman"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Schedule-Extract-Command-line-Interface"
+              "id": "version-21.0/utilities/Command-line-Utilities/Schedule-Extract-Command-line-Interface"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/SMA-Evaluate-Expression"
+              "id": "version-21.0/utilities/Command-line-Utilities/SMA-Evaluate-Expression"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/SMADirectory"
+              "id": "version-21.0/utilities/Command-line-Utilities/SMADirectory"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/SMAGetServiceStatus"
+              "id": "version-21.0/utilities/Command-line-Utilities/SMAGetServiceStatus"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/SMAHoliday"
+              "id": "version-21.0/utilities/Command-line-Utilities/SMAHoliday"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/SMALogEvent"
+              "id": "version-21.0/utilities/Command-line-Utilities/SMALogEvent"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/SMASetRMFileName"
+              "id": "version-21.0/utilities/Command-line-Utilities/SMASetRMFileName"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Command-line-Utilities/Synch-SAP"
+              "id": "version-21.0/utilities/Command-line-Utilities/Synch-SAP"
             }
           ],
           "collapsible": true
@@ -1400,19 +1400,19 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Graphical-Utilities/Introduction"
+              "id": "version-21.0/utilities/Graphical-Utilities/Introduction"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Graphical-Utilities/Legacy-Audit-Management"
+              "id": "version-21.0/utilities/Graphical-Utilities/Legacy-Audit-Management"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Graphical-Utilities/Schedule-Import_Export"
+              "id": "version-21.0/utilities/Graphical-Utilities/Schedule-Import_Export"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/Graphical-Utilities/SMA-OpCon-Configuration-Utility"
+              "id": "version-21.0/utilities/Graphical-Utilities/SMA-OpCon-Configuration-Utility"
             }
           ],
           "collapsible": true
@@ -1424,27 +1424,27 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Dynamic-Data-Input/Introduction"
+              "id": "version-21.0/utilities/SMA-Dynamic-Data-Input/Introduction"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Dynamic-Data-Input/Configuration"
+              "id": "version-21.0/utilities/SMA-Dynamic-Data-Input/Configuration"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Dynamic-Data-Input/Creating-Data-Input-Files"
+              "id": "version-21.0/utilities/SMA-Dynamic-Data-Input/Creating-Data-Input-Files"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Dynamic-Data-Input/SMADDI-Message-Types"
+              "id": "version-21.0/utilities/SMA-Dynamic-Data-Input/SMADDI-Message-Types"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Dynamic-Data-Input/Data-Input-Message-Elements"
+              "id": "version-21.0/utilities/SMA-Dynamic-Data-Input/Data-Input-Message-Elements"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Dynamic-Data-Input/jobdata-Platform-specific-Elements"
+              "id": "version-21.0/utilities/SMA-Dynamic-Data-Input/jobdata-Platform-specific-Elements"
             }
           ],
           "collapsible": true
@@ -1456,23 +1456,23 @@
           "items": [
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Resource-Monitor/Introduction"
+              "id": "version-21.0/utilities/SMA-Resource-Monitor/Introduction"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Resource-Monitor/Summary-Information"
+              "id": "version-21.0/utilities/SMA-Resource-Monitor/Summary-Information"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Resource-Monitor/Wizards"
+              "id": "version-21.0/utilities/SMA-Resource-Monitor/Wizards"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Resource-Monitor/Tools"
+              "id": "version-21.0/utilities/SMA-Resource-Monitor/Tools"
             },
             {
               "type": "doc",
-              "id": "version-21.1.0/utilities/SMA-Resource-Monitor/Service"
+              "id": "version-21.0/utilities/SMA-Resource-Monitor/Service"
             }
           ],
           "collapsible": true
