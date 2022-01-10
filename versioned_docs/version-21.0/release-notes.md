@@ -4,6 +4,40 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.1
+
+2022 January
+
+#### Installation
+
+#### Enterprise Manager
+
+:white_check_mark: **OPCON-15949**: Fixed a bug that occurred while using export Daily Job Audit Management.
+
+#### REST API
+
+:white_check_mark: **OPCON-15737**: Fixed memory issue where expired tokens were not removed from cache.
+
+:white_check_mark: **OPCON-15809**: Fixed issue with Vision processing occurring when no cards were defined in the database and further performance improvement on Vision statistics queries.
+
+:white_check_mark: **OPCON-16031**: Fixed an issue in the API where a port specified in the INI file was not checked for a valid TLS certificate.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-15782**: Added fix to the migration page redirect to update variables needed in self service.
+
+:white_check_mark: **OPCON-15951**: Fixed an issue in Solution Manager where editing job dependencies in daily had performance issues when the list of total schedules and named instances for each of those was very large.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-15836**: Corrected a problem when changing a Null Job to a Windows Job during deployment.
+
+white_check_mark: **OPCON-15723**: Changed script mapping during deployment process to use names instead of numeric id values. The script-name, type-name and runner-name is a unique combination.
+
+#### Utilities
+
+white_check_mark: **OPCON-16024**: Fixed a bug where selecting a different drive to install the configuration utility did not affect it and it was installed on the system drive.
+
 ## OpCon 21.0.0
 
 2021 October
