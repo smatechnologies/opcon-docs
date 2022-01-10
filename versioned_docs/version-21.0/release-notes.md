@@ -32,11 +32,11 @@ sidebar_label: 'Release Notes'
 
 :white_check_mark: **OPCON-15836**: Corrected a problem when changing a Null Job to a Windows Job during deployment.
 
-white_check_mark: **OPCON-15723**: Changed script mapping during deployment process to use names instead of numeric id values. The script-name, type-name and runner-name is a unique combination.
+:white_check_mark: **OPCON-15723**: Changed script mapping during deployment process to use names instead of numeric id values. The script-name, type-name and runner-name is a unique combination.
 
 #### Utilities
 
-white_check_mark: **OPCON-16024**: Fixed a bug where selecting a different drive to install the configuration utility did not affect it and it was installed on the system drive.
+:white_check_mark: **OPCON-16024**: Fixed a bug where selecting a different drive to install the configuration utility did not affect it and it was installed on the system drive.
 
 ## OpCon 21.0.0
 
