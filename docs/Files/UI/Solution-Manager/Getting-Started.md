@@ -10,7 +10,7 @@ Solution Manager utilizes global application links. Each page URL contains infor
 
 The SMA Solution Manager application currently supports the following web browsers and versions:
 
-- Firefox 57.0 and later
-- Google Chrome 62.0 and later
-- Microsoft Edge (Chromium-based, Blink Engine) 79.0 and later
+- Firefox 77.0 and later
+- Google Chrome 85.0 and later
+- Microsoft Edge (Chromium-based, Blink Engine) 85.0 and later
 - Safari (OSX/MacOS or iOS only) 12.0 and later
