@@ -10,6 +10,7 @@ For a IBM i job, you can:
 - [Update Job Type: Restricted Mode](#updating-job-type-restricted-mode)
 - [Update Job Type: FTP](#updating-job-type-ftp)
 - [Update Job Type: File Arrival](#updating-job-type-file-arrival)
+- [Update Tables](#updating-tables)
 
 
 For conceptual information, refer to [IBM i Job Details](../../../job-types/ibm-i.md) in the
@@ -589,7 +590,7 @@ User has the option to utilize a token, instead of using the 'seconds' input fie
 
 ![File Arrival: job information](../../../Resources/Images/SM/IBMi_FileArrival_JobInformation.png "File Arrival: job information")
 
-<!-- ![File Arrival: job information additional fields](../../../Resources/Images/SM/IBMi_FileArrival_Continued_JobInformation.png "File Arrival: job information additional fields") -->
+![File Arrival: job information additional fields](../../../Resources/Images/SM/IBMi_FileArrival_JobInformation_Continued.png "File Arrival: job information additional fields")
 
 
 **In the Additional Information frame:**
@@ -694,7 +695,7 @@ To edit the values of the grid, the user must press the edit button besides the 
 ![Spool File Dialog: Spool File Dialog Information](../../../Resources/Images/SM/IBMi_SpoolFiles_Dialog.png "Spool File Dialog: Spool File Dialog Information")
 
 :::note
-The Spool Files information can be defined for all Job Types, except Restricted Mode.
+The Spool Files information can be defined for all Job Types, except Restricted Mode, and File Arrival.
 :::
 
 **In the Variables frame:**
