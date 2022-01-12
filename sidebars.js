@@ -513,6 +513,7 @@ module.exports = {
                       items: [
                         "Files/UI/Solution-Manager/Viewing-and-Updating-Job-Task-Details",
                         "Files/UI/Solution-Manager/Viewing-Null-Job-Details",
+                        "Files/UI/Solution-Manager/Updating-IBMi-Job-Details",
                         "Files/UI/Solution-Manager/Viewing-Container-Job-Details",
                         "Files/UI/Solution-Manager/Updating-Windows-Job-Details",
                         "Files/UI/Solution-Manager/Updating-UNIX-Job-Details",
