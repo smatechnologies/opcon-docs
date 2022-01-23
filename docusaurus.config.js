@@ -53,13 +53,13 @@ module.exports = {
               label: 'current',
             },
             '21.1': {
-              label: '21.1.0',
+              label: '21.1',
               path: 'v21.1',
               banner: 'none'
 
             },
             '21.0': {
-              label: '21.0.1',
+              label: '21.0',
               path: 'v21.0',
               banner: 'none'
 
