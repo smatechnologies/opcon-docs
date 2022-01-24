@@ -14,5 +14,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - run: export NODE_OPTIONS="--max-old-space-size=8192"
       - run: yarn install
       - run: yarn build
