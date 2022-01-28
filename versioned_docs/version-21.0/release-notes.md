@@ -4,6 +4,14 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.2
+
+2022 January
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-15951**: Fixed an issue in Solution Manager where editing job dependencies in daily had performance issues when the list of total schedules and named instances for each of those was very large.
+
 ## OpCon 21.0.1
 
 2022 January
@@ -25,8 +33,6 @@ sidebar_label: 'Release Notes'
 #### Solution Manager
 
 :white_check_mark: **OPCON-15782**: Added fix to the migration page redirect to update variables needed in self service.
-
-:white_check_mark: **OPCON-15951**: Fixed an issue in Solution Manager where editing job dependencies in daily had performance issues when the list of total schedules and named instances for each of those was very large.
 
 #### ImpEx2 Web Service
 
