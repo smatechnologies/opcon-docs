@@ -213,7 +213,7 @@ For mathematical operations, the result will never exceed 15 numbers.
 | 4                         | \>=       | **Greater than or         |
 |                           |           | equals**: This function   |
 |                           |           | is similar to             |
-|                           |           | "GreaterThan" except    |
+|                           |           | "GreaterThan" except      |
 |                           |           | that it returns true even |
 |                           |           | if the operands are       |
 |                           |           | equal. All else being     |
