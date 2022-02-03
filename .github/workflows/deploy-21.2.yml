@@ -1,4 +1,4 @@
-name: deploy
+name: deploy-21.2
 
 on:
   push:
