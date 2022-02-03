@@ -535,6 +535,7 @@ module.exports = {
                   collapsed: true,
                   items: [
                     "Files/UI/Solution-Manager/Performing-Schedule-Checks",
+                    "Files/UI/Solution-Manager/Deleting-Schedules-and-Jobs",
                   ],
                 },
               ],
