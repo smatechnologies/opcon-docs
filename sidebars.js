@@ -529,6 +529,13 @@ module.exports = {
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Updates",
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Updates",
                   ],
+                },{
+                  type: "category",
+                  label: "Daily Maintenance",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Performing-Schedule-Checks",
+                  ],
                 },
               ],
             },
