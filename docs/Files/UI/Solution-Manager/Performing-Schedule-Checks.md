@@ -10,7 +10,6 @@ To perform schedule check:
 
    ![Schedule Checks section](../../../Resources/Images/SM/Performing-Schedule-Checks1.png "Schedule Checks section")
 
-
 3. Click the **Check** button to open a Schedule Check dialog
 
    ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks2.png "Sample Service Request buttons")
@@ -22,16 +21,13 @@ To perform schedule check:
 Please be aware that the Slow (Circular) option activates a very intensive process to check for circular dependencies and depending on the number of jobs, schedules, and schedule dates to be checked, this process may take hours.
 :::
 
-
 5. You will see a list of Schedule Checks inside the Schedule Check section on the right-side panel. You can click **Reload** button to refresh the status of Schedule Checks
 
    ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks4.png "Sample Service Request buttons")
 
-
 6. After the Schedule Check is completed, the processing icon will change to **✓**
 
    ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks5.png "Sample Service Request buttons")
-
 
 7. Double click the **Schedule Check** to see the Schedule Check details
 
