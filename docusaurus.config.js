@@ -3,7 +3,7 @@ module.exports = {
   title: 'SMA Technologies Help',
   tagline: 'OpCon',
   url: 'https://help.smatechnologies.com',
-  baseUrl: '/opcon/core/',
+  baseUrl: '/opcon/core/v21.1/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -34,7 +34,7 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/smatechnologies/opcon-docs/blob/main',
+            'https://github.com/smatechnologies/opcon-docs/blob/release/21.1',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
