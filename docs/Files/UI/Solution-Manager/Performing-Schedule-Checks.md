@@ -13,11 +13,11 @@ To perform schedule check:
 
 3. Click the **Check** button to open a Schedule Check dialog
 
-   ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks2.png "Sample Service Request buttons")
+   ![Schedule Check button](../../../Resources/Images/SM/Performing-Schedule-Checks2.png "Schedule Check button")
 
 4. Select a type of check you want to perform and click OK
 
-   ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks3.png "Sample Service Request buttons")
+   ![Schedule Check dialog](../../../Resources/Images/SM/Performing-Schedule-Checks3.png "Schedule Check dialog")
 :::note
 Please be aware that the Slow (Circular) option activates a very intensive process to check for circular dependencies and depending on the number of jobs, schedules, and schedule dates to be checked, this process may take hours.
 :::
@@ -25,14 +25,14 @@ Please be aware that the Slow (Circular) option activates a very intensive proce
 
 5. You will see a list of Schedule Checks inside the Schedule Check section on the right-side panel. You can click **Reload** button to refresh the status of Schedule Checks
 
-   ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks4.png "Sample Service Request buttons")
+   ![Reload Schedule Checks button](../../../Resources/Images/SM/Performing-Schedule-Checks4.png "Reload Schedule Checks button")
 
 
 6. After the Schedule Check is completed, the processing icon will change to **✓**
 
-   ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks5.png "Sample Service Request buttons")
+   ![Schedule Checks results list](../../../Resources/Images/SM/Performing-Schedule-Checks5.png "Schedule Checks results list")
 
 
 7. Double click the **Schedule Check** to see the Schedule Check details
 
-   ![Sample Service Request buttons](../../../Resources/Images/SM/Performing-Schedule-Checks6.png "Sample Service Request buttons")
+   ![Schedule Check result details](../../../Resources/Images/SM/Performing-Schedule-Checks6.png "Schedule Check result details")
