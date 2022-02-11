@@ -9,7 +9,9 @@ This section contains the syntax, definition, and parameter descriptions for all
 The $CALENDAR:ADD event adds one or more dates to an existing calendar. If the calendar does not exist, the event will fail.
 
 :::caution
+
 Adding and removing dates on a calendar can have a direct impact to whether jobs will run or not.
+
 :::
 
 **Syntax**:
@@ -47,7 +49,9 @@ $CALENDAR:ADD,<calendar name>,<calendar dates>
 The $CALENDAR:DEL event deletes one or more dates a calendar. If the calendar does not exist, the event will fail.
 
 :::caution
+
 Adding and removing dates on a calendar can have a direct impact to whether jobs will run or not.
+
 :::
 
 **Syntax**:
@@ -422,7 +426,9 @@ $JOBMASTER:TAGDEL,<schedule name>,<job name>,<frequency name>,<tags>
 The $RESOURCE:DEL event deletes the resource from the administrative tables. This event will only succeed if a cross reference check reveals that there are no jobs in the Master or Daily using this resource for a Resource Dependency or Resource Update.
 
 :::warning
+
 When you delete a resource, internal and external events that reference the resource will begin failing unless you modify them.
+
 :::
 
 **Syntax**:
@@ -456,7 +462,9 @@ $RESOURCE:DEL,<resource name>
 The $RESOURCE:RENAME event renames a resource in the administrative tables.
 
 :::warning
+
 When you rename a resource, internal and external events that reference the resource will begin failing unless you modify them.
+
 :::
 
 **Syntax**:
@@ -492,7 +500,9 @@ $RESOURCE:RENAME,<old resource name>, <new resource name>
 The $THRESHOLD:DEL event deletes the threshold from the administrative tables. This event will only succeed if a cross reference check reveals that there are no jobs in the Master or Daily using this resource for a Threshold Dependency or Threshold Update.
 
 :::warning
+
 When you delete a threshold, internal and external events that reference the threshold will begin failing unless you modify them.
+
 :::
 
 **Syntax**:
@@ -526,7 +536,9 @@ $THRESHOLD:DEL,<threshold name>
 The $THRESHOLD:RENAME event renames a threshold in the administrative tables.
 
 :::warning
+
 When you rename a threshold, internal and external events that reference the threshold will begin failing unless you modify them.
+
 :::
 
 **Syntax**:
@@ -583,9 +595,11 @@ $JOB:ADD,<schedule date>,<schedule name>,<job name>,<frequency name>,\[job insta
     PropertyName1=PropertyValue1;PropertyName2=PropertyName2
     ```
 
-    :::note
-    If the job is configured to "Run on Each Machine" in a group, the MACHINENAME=<machine name\> property can be defined as the first property to add only an instance of the job for one machine.
-    :::
+:::note
+    
+If the job is configured to "Run on Each Machine" in a group, the MACHINENAME=<machine name\> property can be defined as the first property to add only an instance of the job for one machine.
+
+:::
     
 - **\[reopen schedule: Y/N\]**: Indicates whether or not a completed parent schedule is reopened. This parameter is optional. Valid values are:
   - **Y**: Reopen a parent schedule that is closed (has run and is completed) so that any new jobs that are added via the $JOB:ADD event will run. When set to Yes (Y), this new parameter will override the "Job Events to Restart Schedules" setting in the Server Options if it is set to False.
@@ -644,9 +658,11 @@ $JOB:ADDHLD,<schedule date>,<schedule name>,<job name>,<frequency name>,\[job in
     PropertyName1=PropertyValue1;PropertyName2=PropertyName2
     ```
 
-    :::note
+:::note
+
     If the job is configured to "Run on Each Machine" in a group, the MACHINENAME=<machine name\> property can be defined as the first property to add only an instance of the job for one machine.
-    :::
+    
+:::
    
 - **\[reopen schedule: Y/N\]**: Indicates whether or not a completed parent schedule is reopened. This parameter is optional. Valid values are:
   - **Y**: Reopen a parent schedule that is closed (has run and is completed) so that any new jobs that are added via the $JOB:ADD event will run. When set to Yes (Y), this new parameter will override the "Job Events to Restart Schedules" setting in the Server Options if it is set to False.
@@ -943,7 +959,9 @@ $JOB:KILL,<schedule date>,<schedule name>,<job name>
 The $JOB:QUEUED event tracks user-submitted jobs on the IBM i and z/OS platforms. This event is only passed between the LSAM and the SAM. If a running job is requested, the multi-instance setting on the job is honored. By default, this event must be submitted to an active schedule, or the event is rejected.
 
 :::note
+
 If the job is not multi-instance and it is already associated with an OpCon job in Operations that is Waiting or Running, the SAM rejects the event. If the job is Finished OK or Failed, SAM accepts the event for processing.
+
 :::
 
 **Parameters**:
@@ -971,9 +989,11 @@ None
 ```
 
 :::info More Info
+
 For IBM i, visit the following section in the **IBM i LSAM** online help: [Adding New Schedule Frequencies](../Files/UI/Enterprise-Manager/Adding-Schedule-Frequencies.md#Adding_New_Schedule_Frequency)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#Tracking)
+
 :::
 
 ### $JOB:RELEASE
@@ -1065,9 +1085,11 @@ The $JOB:RESCHEDULE reschedules the job start time after the number of minutes s
 Skipped status.
 
 :::note
+
 If the job should reschedule itself on a Finished OK or Failed status, SMA Technologies recommends using the [Job Frequency](../job-components/frequency.md) and [Other Job Details](../job-components/frequency.md#other-job-details) features in the Concepts online help.
 
 The Job Recurrence and Retry on Job Failure features are much more efficient than the $JOB:RESCHEDULE event when used in those scenarios.
+
 :::
 
 By default if a schedule is Completed, the reschedule event will not automatically re-open the schedule. For information on changing the setting to "Allow Job Events to Restart Schedules", refer to [Time Settings](../administration/server-options.md#time-settings) in the **Concepts** online help.
@@ -1278,6 +1300,7 @@ The $JOB:TRACK event tracks user-submitted jobs on the IBM i, MCP, and z/OS plat
 Tracked jobs can be controlled by the multi-instance box to prevent or allow duplicate jobs.
 
 :::info
+
 Provided here are references for implementing the Job Tracking concept.
 
 For IBM i, visit the following section in the **IBM i LSAM** online help: [Adding New Schedule Frequencies](../Files/UI/Enterprise-Manager/Adding-Schedule-Frequencies.md#Adding_New_Schedule_Frequency)
@@ -1285,6 +1308,7 @@ For IBM i, visit the following section in the **IBM i LSAM** online help: [Addin
 For MCP, visit the following section in the **MCP LSAM** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#tracking)
+
 :::
 
 **Parameters**:
@@ -1345,7 +1369,9 @@ $JOB:UNDERREVIEW,<schedule date>,<schedule name>,<job name>
 The $MACHINE:STATUS event changes the communication status of a machine.
 
 :::note
+
 Placing a machine in a down state instructs the SAM to stop communicating with the specified machine. Jobs currently active on the specified machine run until completion.
+
 :::
 
 **Syntax**:
@@ -1386,7 +1412,9 @@ $MACHINE:STATUS,<machine name>,<U/D/L>
 The $NOTIFY:COMMAND event runs a command.
 
 :::note
+
 This notification event is disabled on Linux. Events defined prior to Release 20.0.0 will be disabled.
+
 :::
 
 **Syntax**:
@@ -1439,9 +1467,11 @@ $NOTIFY:EMAIL,<to>,\[cc\],\[ccc\],<subject>,<message>,\[attachments\],\[exclude 
 - **\[attachments\]**: Defines the full UNC path to one or more attachments. This parameter is optional. Separate multiple attachments using pipes (\|) (e.g., \\\\server1\\file1\|\\\\Server1\\file2).
 - **\[exclude prefix information from header: Y/N\]**: Specifies whether or not to include all prefix (system-generated) information in the header of the notification. This parameter is optional.
 
-  :::note
+:::note
+
   By default, this parameter is set to N (No). This means that the SMA Notify Handler will insert the system-generated information , which includes a Notification ID, before any other information in the message so users can look up the source of a notification. For more information, refer to [Looking up Notification Sources](../Files/UI/Enterprise-Manager/Looking-up-Notification-Sources.md) in the **Enterprise Manager** online help.
-  :::
+
+:::
 
 **XML Syntax**:
 
@@ -1467,7 +1497,9 @@ $NOTIFY:EMAIL,<to>,\[cc\],\[ccc\],<subject>,<message>,\[attachments\],\[exclude 
 The $NOTIFY:LOG event logs a notification message to the Windows Event Log.
 
 :::note
+
 This notification event is disabled on Linux. Events defined prior to Release 20.0.0 will be disabled.
+
 :::
 
 **Syntax**:
@@ -1510,7 +1542,9 @@ $NOTIFY:LOG,<severity>,<eventid>,<message>,\[event source\],\[exclude prefix inf
 The $NOTIFY:NETSEND event sends a network pop-up message.
 
 :::note
+
 This notification event is disabled on Linux. Events defined prior to Release 20.0.0 will be disabled.
+
 :::
 
 **Syntax**:
@@ -1543,7 +1577,9 @@ $NOTIFY:NETSEND,<machine>,<message>,\[exclude prefix information from header: Y/
 The $NOTIFY:SNMP event sends an SNMP trap to an SNMP Trap manager. The SMA Notify Handler must be configured for SNMP notifications.
 
 :::note
+
 This notification event is disabled on Linux. Events defined prior to Release 20.0.0 will be disabled.
+
 :::
 
 **Syntax**:
@@ -1578,7 +1614,9 @@ $NOTIFY:SNMP,<severity>,<eventid>,<message>,\[exclude notification id from heade
 The $NOTIFY:SPOAL event sends and AL event report to SPO. The SMA Notify Handler must be configured for SPO notifications.
 
 :::note
+
 This notification event is disabled on Linux. Events defined prior to Release 20.0.0 will be disabled.
+
 :::
 
 **Syntax**:
@@ -1615,7 +1653,9 @@ $NOTIFY:SPOAL,<text\>,<severity>,<alarmid>,<alarmqual>,\[exclude notification id
 The $NOTIFY:SPOCO event sends a CO event report to SPO. The SMA Notify Handler must be configured for SPO notifications.
 
 :::note
+
 This notification event is disabled on Linux. Events defined prior to Release 20.0.0 will be disabled.
+
 :::
 
 **Syntax**:
@@ -1737,9 +1777,11 @@ $NOTIFY:TEXTMSG,<to>,<message>,\[exclude notification id from header: Y/N\]
 For each of the property events, the specified Property Name must completely identify the property. The syntax for identifying a property depends on whether the property is an OpCon Instance, Machine Instance, Schedule Instance, or Job Instance property. Machine, Schedule, and Job Instance properties have optional qualifiers to specifically identify an instance. For additional information, refer to [Fully Qualified Property Name Syntax](../objects/using-properties.md#Fully) in the **Concepts** online help. For more information on creating valid property definitions, refer to [Defining Properties](../objects/defining-properties.md) in the **Concepts** online help.
 
 :::note
+
 If the property name or any of the qualifiers contain periods (.), square brackets ( [ or ] ), or curly brackets ( { or } ) in their names, the name must be enclosed in quotes to preserve the syntax of the property name. For example, a JI property could look like this:
 
 JI."File.Name"."08.01.2010"."Sched[Name]"."Job{Name}"
+
 :::
 
 ### $PROPERTY:ADD
@@ -1747,7 +1789,9 @@ JI."File.Name"."08.01.2010"."Sched[Name]"."Job{Name}"
 The $PROPERTY:ADD event adds a new property (of any type) to the database with the value specified. If the event attempts to add a property that already exists, the event merely sets the property value.
 
 :::note
+
 This replaced $TOKEN:ADD.
+
 :::
 
 **Syntax**:
@@ -1762,6 +1806,7 @@ $PROPERTY:ADD,<property name>,<initial value>
 - **<initial value\>**: The initial value given to the property name.
 
 :::tip Example
+
 For a $PROPERTY:ADD event attached to a Schedule or Job (internal event), the following are valid for adding a property to a subschedule whose parent schedule is a multi-instance schedule:
 
 $PROPERTY:ADD,JI.FileName.[[$SCHEDULE DATE]]."
@@ -1780,6 +1825,7 @@ $PROPERTY:ADD,JI.FileName.[[$DATE]]."Schedule.Name_InstanceName
 
 $PROPERTY:ADD,JI.FileName.SpecificDate.Schedule.Name_InstanceName
 [SubSched].Job Name,Value
+
 :::
 
 **Required Privileges**:
@@ -1804,7 +1850,9 @@ $PROPERTY:ADD,JI.FileName.SpecificDate.Schedule.Name_InstanceName
 The $PROPERTY:DELETE event deletes an existing property from the database.
 
 :::note
+
 This replaced $TOKEN:DELETE.
+
 :::
 
 **Syntax**:
@@ -1838,11 +1886,15 @@ $PROPERTY:DELETE,<property name
 The $PROPERTY:SET event sets the value of any existing property to the specified value.
 
 :::note
+
 This replaced $TOKEN:SET.
+
 :::
 
 :::note
+
 If a $PROPERTY:SET event is created for a global property that is encrypted, then the value of the property will get updated and stored as a clear text value and NOT as an encrypted value.
+
 :::
 
 **Syntax**:
@@ -1918,9 +1970,13 @@ $SCHEDULE:BUILD,<schedule date>,<schedule name>,\[log file\],<Y/N>,\[schedule in
 **Parameters**:
 
 - **<schedule date\>**: The date for which to build the schedule.
-  :::note
-  By default, if the date resolves to a date in the past, the schedule will be built On Hold.
-  :::
+
+:::note
+
+By default, if the date resolves to a date in the past, the schedule will be built On Hold.
+  
+:::
+  
 - **<schedule name\>**: The name of the schedule to build.
 - **\[log file\]**: An optional argument specifying the path and/or file name for creating a detailed log file of the build. The default path and filename is: <Output Directory\>\\SAM\\Log\\SMASchedMan\\ScheduleName_Build_ScheduleDate_RequestID.log
 - **<Y/N\>**: Determines whether to overwrite an existing schedule or not. Valid entries include:
@@ -1933,24 +1989,31 @@ define properties in the event:
   PropertyName1=value;PropertyName2=value,etc...
   ```
 
-  :::tip Example
-  $SCHEDULE:BUILD,[[$DATE]],ProcessCreditCards,,Y,StoreNumber=2682;FileDate=123456,batchuser,batchpassword
-  :::
+:::tip Example
+  
+$SCHEDULE:BUILD,[[$DATE]],ProcessCreditCards,,Y,StoreNumber=2682;FileDate=123456,batchuser,batchpassword
+  
+:::
   
   - If the schedule has Schedule Instance definitions, and all instances should be built, do not specify Schedule Instance Property Definitions on the event. By default, all predefined instances will build.
   - If the schedule is configured to "Build an instance for each machine in Machine Group," and the build is intended for only one specific Machine, specify the machine by adding a property named MACHINENAME as the first property definition.
-    :::tip Example
-    $SCHEDULE:BUILD,[[$DATE]],NightlyBackup,,Y,MACHINENAME=WinServer2,batchuser,batchpassword
-    :::
+
+:::tip Example
+
+$SCHEDULE:BUILD,[[$DATE]],NightlyBackup,,Y,MACHINENAME=WinServer2,batchuser,batchpassword
+:::
+    
 - **\[Named Instance to build\]**: Defines the named instance of the schedule to build. This parameter is optional. If not specified, the comma preceding this parameter is not required. For information on referencing valid named instances, refer to [Named Schedule Instances](../automation-concepts/named-schedule-instances.md) in the **Concepts** online help. Use the following syntax to define the instance name in the event:
 
   ```shell
   InstanceName=value
   ```
   
-  :::tip Example
-  $SCHEDULE:BUILD,[[$DATE]],ProcessCreditCards,,Y,,InstanceName=WinServer2
-  :::
+:::tip Example
+  
+$SCHEDULE:BUILD,[[$DATE]],ProcessCreditCards,,Y,,InstanceName=WinServer2
+  
+:::
   
   - If the instance name is specified in the event string, SMASchedMan will build the named instance of the schedule, copy all properties defined for that instance, and copy any user-defined properties in the event string.
   - If the instance name specified in the event string, but the schedule being built is not associated with any named instances, then the build will fail.
@@ -2002,24 +2065,32 @@ define properties in the event:
   PropertyName1=value;PropertyName2=value,etc...
   ```
 
-  :::tip Example
-  $SCHEDULE:BUILDHLD,[[$DATE]],ProcessCreditCards,,Y,StoreNumber=2682;FileDate=123456,batchuser,batchpassword
-  :::
+:::tip Example
+  
+$SCHEDULE:BUILDHLD,[[$DATE]],ProcessCreditCards,,Y,StoreNumber=2682;FileDate=123456,batchuser,batchpassword
+  
+:::
   
   - If the schedule has Schedule Instance definitions, and all instances should be built, do not specify Schedule Instance Property Definitions on the event. By default, all predefined instances will build.
   - If the schedule is configured to "Build an instance for each machine in Machine Group," and the build is intended for only one specific Machine, specify the machine by adding a property named MACHINENAME as the first property definition.
-    :::tip Example
-    $SCHEDULE:BUILDHLD,[[$DATE]],NightlyBackup,,Y,MACHINENAME=WinServer2,batchuser,batchpassword
-    :::
+
+:::tip Example
+
+$SCHEDULE:BUILDHLD,[[$DATE]],NightlyBackup,,Y,MACHINENAME=WinServer2,batchuser,batchpassword
+
+:::
+
 - **\[Named Instance to build\]**: Defines the named instance of the schedule to build. This parameter is optional. If not specified, the comma preceding this parameter is not required. For information on referencing valid named instances, refer to [Named Schedule Instances](../automation-concepts/named-schedule-instances.md) in the **Concepts** online help. Use the following syntax to define the instance name in the event:
 
   ```shell
   InstanceName=value
   ```
   
-  :::tip Example
-  $SCHEDULE:BUILDHLD,[[$DATE]],ProcessCreditCards,,Y,,InstanceName=WinServer2
-  :::
+:::tip Example
+
+$SCHEDULE:BUILDHLD,[[$DATE]],ProcessCreditCards,,Y,,InstanceName=WinServer2
+
+:::
   
   - If the instance name is specified in the event string, SMASchedMan will build the named instance of the schedule, copy all properties defined for that instance, and copy any user-defined properties in the event string.
   - If the instance name specified in the event string, but the schedule being built is not associated with any named instances, then the build will fail.
