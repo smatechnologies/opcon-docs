@@ -439,6 +439,7 @@ module.exports = {
               items: [
                 "Files/UI/Solution-Manager/Library/Resources/Resources",
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
+                "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
               ],
             },
             {
