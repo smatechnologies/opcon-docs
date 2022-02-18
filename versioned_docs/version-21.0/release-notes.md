@@ -4,6 +4,18 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.3
+
+2022 February
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-15995**: Implemented removal of roles for ImpEx2, that are no longer required during deployment of existing schedule/package.
+
+:white_check_mark: **OPCON-16111**: Fixed an issue in ImpEx2 where connections to the database were not getting disposed and eventually all TCP dynamic ports were getting used up.
+
+:white_check_mark: **OPCON-16123**: When adding a new role to a schedule, the role must be defined in the target OpCon system. If the role is not defined, the deployment will fail with an error message, Role not defined in destination opCon system.
+
 ## OpCon 21.0.2
 
 2022 January
