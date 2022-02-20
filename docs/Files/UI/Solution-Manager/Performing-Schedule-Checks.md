@@ -36,3 +36,10 @@ Please be aware that the Slow (Circular) option activates a very intensive proce
 7. Double click the **Schedule Check** to see the Schedule Check details
 
    ![Schedule Check result details](../../../Resources/Images/SM/Performing-Schedule-Checks6.png "Schedule Check result details")
+
+
+![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
+Related Topics
+
+- [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
+- [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
