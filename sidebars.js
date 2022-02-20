@@ -538,6 +538,7 @@ module.exports = {
                   items: [
                     "Files/UI/Solution-Manager/Performing-Schedule-Checks",
                     "Files/UI/Solution-Manager/Deleting-Schedules-and-Jobs",
+                    "Files/UI/Solution-Manager/Adding-Jobs-to-Daily-Schedules",
                   ],
                 },
               ],
