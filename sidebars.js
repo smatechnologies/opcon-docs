@@ -439,6 +439,7 @@ module.exports = {
               items: [
                 "Files/UI/Solution-Manager/Library/Resources/Resources",
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
+                "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
               ],
             },
@@ -514,6 +515,7 @@ module.exports = {
                       items: [
                         "Files/UI/Solution-Manager/Viewing-and-Updating-Job-Task-Details",
                         "Files/UI/Solution-Manager/Viewing-Null-Job-Details",
+                        "Files/UI/Solution-Manager/Updating-IBMi-Job-Details",
                         "Files/UI/Solution-Manager/Viewing-Container-Job-Details",
                         "Files/UI/Solution-Manager/Updating-Windows-Job-Details",
                         "Files/UI/Solution-Manager/Updating-UNIX-Job-Details",
@@ -528,6 +530,14 @@ module.exports = {
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Dependencies",
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Updates",
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Updates",
+                  ],
+                },{
+                  type: "category",
+                  label: "Daily Maintenance",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Performing-Schedule-Checks",
+                    "Files/UI/Solution-Manager/Deleting-Schedules-and-Jobs",
                   ],
                 },
               ],
@@ -611,7 +621,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/21-0.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/21-2.html",
     },
   ],
 };

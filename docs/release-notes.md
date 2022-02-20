@@ -4,6 +4,55 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.2.0
+
+2022 January
+
+#### REST API
+
+:eight_spoked_asterisk: **OPCON-15895**: Fixed an API issue where the calendar type was incorrect for new calendars.
+
+:eight_spoked_asterisk: **OPCON-15894**: Added calendar associations to the API response for calendars.
+
+:eight_spoked_asterisk: **OPCON-15857**: Added the PUT functionality for IBM i  job type "Operator Reply".
+
+:white_check_mark: **OPCON-16031**: Fixed an issue in the API where a port specified in the INI file was not checked for a valid TLS certificate.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-15890**: Solution Manager now allows  users to edit IBM i "Tracked Jobs" job type.
+
+:eight_spoked_asterisk: **OPCON-15847**: Added the feature to edit IBM i job details for the 'Operator Replay' job type.
+
+:eight_spoked_asterisk: **OPCON-15844**: Added List of previous Schedule Check results under Schedule Check section of Daily Schedule's and Date's right panel.
+
+:eight_spoked_asterisk: **OPCON-15842**: Added Schedule Check section to Daily Schedule's and Date's right panel, that allows user to perform a Schedule Check.
+
+:eight_spoked_asterisk: **OPCON-15537**: Added the display feature for IBM i job task details for "Operator Replay Job" job type.
+
+:eight_spoked_asterisk: **OPCON-15119**: Solution Manager now allows users to manage job tags - create, associate to jobs at job/frequency level, or delete them.
+
+:eight_spoked_asterisk: **OPCON-15106**: Solution Manager now allows users to view and maintain calendars. This includes adding new calendars, editing, deleting and copying existing calendars and deleting old dates (greater than 30 days) on existing calendars. It also fixes minor bugs on the API for calendars that existed before regarding calendar description length and description of all errors returned.
+
+:white_check_mark: **OPCON-16102**: Fixed issue with using period '.' in Self Service Variable names
+
+:white_check_mark: **OPCON-16032**: Fixed an issue with Windows authentication where a pop-up occurred on expired logins.
+
+:white_check_mark: **OPCON-16025**: Fixed the flickering issue of when user cache is reset
+
+:white_check_mark: **OPCON-15951**: Fixed an issue in Solution Manager where editing job dependencies in daily had performance issues when the list of total schedules and named instances for each of those was very large.
+
+:white_check_mark: **OPCON-15793**: Fixed bug where select all was ignoring filtered records in Thresholds and Resources screen.
+
+#### Utilities
+
+:white_check_mark: **OPCON-16024**: Fixed a bug where selecting a different drive to install the configuration utility did not affect it and it was installed on the system drive.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-15836**: Corrected a problem in ImpEx2 when changing a Null Job to a Windows Job during deployment. 
+
+
 ## OpCon 21.1.0
 
 2021 December

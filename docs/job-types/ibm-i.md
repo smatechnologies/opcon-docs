@@ -109,31 +109,13 @@ The Call Information is required for all Job Types, except Tracked Job
 and File Arrival. Depending on the job type, different fields are
 required for the Call Information.
 
-+---------------------+----------------------+
-| Job Type            | Required Information |
-+=====================+======================+
-| Batch Job           | Prerun               |
-|                     |                      |
-|                     | Call                 |
-+---------------------+----------------------+
-| Queued Job          | Prerun               |
-+---------------------+----------------------+
-| Operator Replay Job | Prerun               |
-|                     |                      |
-|                     | Script name          |
-+---------------------+----------------------+
-| Restricted Mode     | Prerun               |
-|                     |                      |
-|                     | Script name          |
-+---------------------+----------------------+
-| FTP                 | Remote System        |
-|                     |                      |
-|                     | Transfer Information |
-|                     |                      |
-|                     | Local Information    |
-|                     |                      |
-|                     | Remote Information   |
-+---------------------+----------------------+
+| Job Type            | Required Information                                                                         |
+| ------------------- | -------------------------------------------------------------------------------------------- |
+| Batch Job           | Prerun <br /> Call                                                                           |
+| Queued Job          | Prerun                                                                                       |
+| Operator Replay Job | Prerun <br />Script name                                                                     |
+| Restricted Mode     | Prerun <br /> Script name                                                                    |
+| FTP                 | Remote System <br /> Transfer Information <br /> Local Information <br /> Remote Information |
 
 :::note
 All the rules for the IBM i FTP command and sub-commands apply to the FTP Job Type. For additional information, consult the IBM documentation.
@@ -706,18 +688,18 @@ variable name by prefixing the characters '$@' to the keyword, e.g.,
 the keyword for "Re-check frequency" is registered in the Variables tab
 as '$\@RECHKFREQ'.
 
-  CHKFILE      CHKIFSFIL
-  ------------ ------------
-  LOCK
-  NUMRECPROP   FILSIZPROP
-  FAILCDPROP   FAILCDPROP
-  FAILCODEDV   FAILCODEDV
-  FAILIFZERO   FAILIFZERO
-  CRTREFDATE   CRTREFDATE
-  JOBENDTIME   JOBENDTIME
-  JOBREFDATE   JOBREFDATE
-  RECHKFREQ    RECHKFREQ
-  AUT
+|CHKFILE     | CHKIFSFIL |
+| ---------- | --------- | 
+|LOCK        |           |
+|NUMRECPROP  | FILSIZPROP|
+|FAILCDPROP  | FAILCDPROP|
+|FAILCODEDV  | FAILCODEDV|
+|FAILIFZERO  | FAILIFZERO|
+|CRTREFDATE  | CRTREFDATE|
+|JOBENDTIME  | JOBENDTIME|
+|JOBREFDATE  | JOBREFDATE|
+|RECHKFREQ   | RECHKFREQ |
+|AUT         |           |
 
   : IBM i File Arrival Job Parameters Supported only by $@-Variable
   Names
