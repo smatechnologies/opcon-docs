@@ -439,6 +439,8 @@ module.exports = {
               items: [
                 "Files/UI/Solution-Manager/Library/Resources/Resources",
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
+                "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
+                "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
               ],
             },
             {
@@ -537,6 +539,7 @@ module.exports = {
                   items: [
                     "Files/UI/Solution-Manager/Performing-Schedule-Checks",
                     "Files/UI/Solution-Manager/Deleting-Schedules-and-Jobs",
+                    "Files/UI/Solution-Manager/Adding-Jobs-to-Daily-Schedules",
                   ],
                 },
               ],
