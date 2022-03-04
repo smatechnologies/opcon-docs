@@ -20,6 +20,7 @@ Supported platforms include:
 
 -   [Null Job](Viewing-Null-Job-Details.md)
 -   [IBMi](Updating-IBMi-Job-Details)
+-   [SAP BW](Updating-SAP-BW-Job-Details)
 -   [Container](Viewing-Container-Job-Details.md)
 -   [Windows](Updating-Windows-Job-Details.md)
 -   [UNIX](Updating-UNIX-Job-Details.md)
