@@ -46,9 +46,9 @@ Select from the **Machines or Machine Group** drop-down list the **machine** whe
 **In the SAP BW Definition frame:**
 
 - **Process Chain Name**: Defines the name of the Business Warehouse job as defined in the SAP Business Warehouse system.
-- Click on the search button ![Search Button](../../../Resources/Images/SM/SAP/Search_Sap_Button.png "Search Button") to open the SAP Query dialog.
+- Click on the search button ![Search Button](../../../Resources/Images/SM/Search_Sap_Button.png "Search Button") to open the SAP Query dialog.
 
-![SAP BW Definition](../../../Resources/Images/SM/SAP/SAP-BW-Job-Definition.png "SAP BW Definition")
+![SAP BW Definition](../../../Resources/Images/SM/SAP-BW-Job-Definition.png "SAP BW Definition")
 
 **In the SAP Query dialog:**
 
@@ -57,14 +57,14 @@ Select from the **Machines or Machine Group** drop-down list the **machine** whe
 - **Chain**: Defines text matching the name of the desired Process Chain in the SAP Business Warehouse system. If unsure of the whole process chain name, use wildcards (\*) to expand the search.
 - **Description**: Defines text matching the description of the desired Process Chain in the SAP Business Warehouse system. If unsure of the whole description, use wildcards (\*) to expand the search.
 
-![SAP Query Dialog](../../../Resources/Images/SM/SAP/SAP-Query-Dialog.png "SAP Query Dialog")
+![SAP Query Dialog](../../../Resources/Images/SM/SAP-Query-Dialog.png "SAP Query Dialog")
 
-- Click on the search button ![Query SAP Button](../../../Resources/Images/SM/SAP/Query-SAP-Button.png "Query SAP Button")to initiates a request to the SAP BW system to retrieve all Process Chain names matching the search criteria.
+- Click on the search button ![Query SAP Button](../../../Resources/Images/SM/Query-SAP-Button.png "Query SAP Button")to initiates a request to the SAP BW system to retrieve all Process Chain names matching the search criteria.
 - Select a process chain from the list and click Ok to assign it to the process chain name in the SAB BW job  Daily Job Definition.
 
-![Process Chain List](../../../Resources/Images/SM/SAP/Proccess-Chain-List.png "Process Chain List")
+![Process Chain List](../../../Resources/Images/SM/Proccess-Chain-List.png "Process Chain List")
 
-![Process Chain Name](../../../Resources/Images/SM/SAP/Process_Chain_Name.png "Process Chain Name")
+![Process Chain Name](../../../Resources/Images/SM/Process_Chain_Name.png "Process Chain Name")
 
 :::note
 Click the **Undo** button if you wish to undo your changes for any reason.
