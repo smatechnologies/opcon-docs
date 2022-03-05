@@ -27,3 +27,10 @@ Please note if the job is in the Running state this delete icon will be <ins>dis
 :::
 
 2. Repeat the steps 2 and 3 above
+
+
+![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
+Related Topics
+
+- [Performing Schedule Checks](Performing-Schedule-Checks.md)
+- [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
