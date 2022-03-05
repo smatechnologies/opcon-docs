@@ -532,7 +532,8 @@ module.exports = {
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Updates",
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Updates",
                   ],
-                },{
+                },
+                {
                   type: "category",
                   label: "Daily Maintenance",
                   collapsed: true,
@@ -623,7 +624,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/21-2.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/21-3.html",
     },
   ],
-};
+}
