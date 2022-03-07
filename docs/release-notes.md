@@ -4,6 +4,34 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.3.0
+
+2022 March
+
+#### Installation
+
+:white_check_mark: **OPCON-16206**: Ampersand is now allowed as a characters in DB user passwords when running the OpCon installer.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-15121**: Solution Manager now allows management of frequencies in OpCon. You can edit an existing frequency to update its settings, associate a calendar to it, and also see the resulting forecast for it. NOTE: The forecast in the frequency manager does not account for any schedule calendar holidays, so it may be different from the actual days on which the schedule or job will be build as there are additional holiday calendars that are considered when building a schedule.
+
+:eight_spoked_asterisk: **OPCON-15099**: Solution Manager now allows management of Departments. Users can add, edit, copy and delete departments. They can view any references for a selected department to master/daily jobs and/or roles that have a function privilege defined on that department.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-16123**: When adding a new role to a schedule, the role must be defined in the target OpCon system.
+If the role is not defined, the deployment will fail with an error message, Role not defined in destination opCon system.
+
+:eight_spoked_asterisk: **OPCON-16167**: Include Role checking during deployment simulation
+
+:white_check_mark: **OPCON-16313**: Fixed an issue in ImpEx2 with SQL jobs where the User ID did not get deployed or updated for Windows authentication.  
+
+:white_check_mark: **OPCON-16111**: Fixed an issue in ImpEx2 where connections to the database were not getting disposed and eventually all TCP dynamic ports were getting used up.
+
+:white_check_mark: **OPCON-15995**: Implemented removal of roles for ImpEx2, that are no longer required during deployment of existing schedule/package 
+
+
 ## OpCon 21.2.0
 
 2022 January
