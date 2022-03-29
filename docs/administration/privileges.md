@@ -49,45 +49,26 @@ The following data information applies to defining Function Privileges:
 Grants privileges to perform the following functions in
 OpCon:
 
-Grant and Revoke Access Code Privileges
-
-Grant and Revoke Schedule Privileges
-
-Grant and Revoke Function Privileges
-
-Grant and Revoke Batch User Privileges
-
-Grant and Revoke Machine Privileges
-
-Grant and Revoke Machine Group Privileges
-
-[Import and Export Schedules](#Import)
-
-[Maintain Access Codes](#Maintain)
-
-[Maintain Audit History](#Maintain10)
-
-[Maintain Calendars](#Maintain2)
-
-[Maintain Departments](#Maintain3)
-
-[Maintain Embedded Script](#Maintain13)
-
-[Maintain Global Properties](#Maintain6)
-
-[Maintain Job History](#Maintain11)
-
-[Maintain Machine Groups](#Maintain4)
-
-[Maintain Machines](#Maintain5)
-
-[Maintain Reports](#Maintain12)
-
-[Maintain Schedules](#Maintain7)
-
-[Maintain Service Request](#Maintain8)
-
-[Maintain Thresholds/Resources](#Maintain9)
+- Grant and Revoke Access Code Privileges
+- Grant and Revoke Schedule Privileges
+- Grant and Revoke Function Privileges
+- Grant and Revoke Batch User Privileges
+- Grant and Revoke Machine Privileges
+- Grant and Revoke Machine Group Privileges
+- [Import and Export Schedules](#import-and-export-schedules)
+- [Maintain Access Codes](#maintain-access-codes)
+- [Maintain Audit History](#maintain-audit-history)
+- [Maintain Calendars](#maintain-calendars)
+- [Maintain Departments](#maintain-departments)
+- [Maintain Embedded Scripts](#maintain-embedded-script)
+- [Maintain Global Properties](#maintain-global-properties)
+- [Maintain Job History](#maintain-job-history)
+- [Maintain Machine Groups](#maintain-machine-groups)
+- [Maintain Machines](#maintain-machines)
+- [Maintain Reports](#maintain-reports)
+- [Maintain Schedules](#maintain-schedules)
+- [Maintain Service Request](#maintain-service-request)
+- [Maintain Thresholds/Resources](#maintain-thresholdsresources)
 
 Manage OpCon Roles
 
