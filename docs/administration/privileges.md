@@ -367,8 +367,8 @@ Grants access to functions related to maintaining Vision cards.
 
 Grants users, who are not already members of a role with Maintain
 Embedded Scripts or All Administrative Functions or All Function
-Privileges, the permissions to view the contents of the embedded scripts
-from the Job Details screen in the Enterprise Manager.
+Privileges, the permissions to view list of embedded scripts, script types, 
+script runners, and the contents of the embedded scripts.
 
 ## View License Information
 
