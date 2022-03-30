@@ -4,6 +4,24 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.4
+
+2022 March
+
+#### Installation
+
+:white_check_mark: **OPCON-16206**: Ampersand is now allowed as a characters in DB user passwords when running the OpCon installer.
+
+#### Server
+
+:white_check_mark: **OPCON-15619**: Added fix in ENS to prevent error when saving records in the EscalaitonRecipientHistory table.
+
+#### ImpEx2 Web Service
+
+:eight_spoked_asterisk: **OPCON-16167**: Include Role checking during deployment simulation.
+
+:white_check_mark: **OPCON-16313**: Fixed an issue in ImpEx2 with SQL jobs where the User ID did not get deployed or updated for Windows authentication.
+
 ## OpCon 21.0.3
 
 2022 February
