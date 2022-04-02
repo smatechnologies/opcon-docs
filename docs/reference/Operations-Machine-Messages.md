@@ -103,10 +103,7 @@ The table below presents LSAM status messages forwarded to the SAM and supportin
 |--- |--- |
 |ADOPTED|Indicates a tracking request has been received by the LSAM.|
 |ALREADY RUNNING|An OpCon job initiation request (TX1) was received for this job and the job is running on the ClearPath MCP.|
-|ATTRIBUTE ERR|Assignment of task attributes was attempted on a job initiated with a RUN.
-                                    One of the task attributes is erroneous.
-                                    Refer to the system log for a display of the error message from the HANDLEATTRIBUTES procedure.
-                                    Verify the job definition details.|
+|ATTRIBUTE ERR|Assignment of task attributes was attempted on a job initiated with a RUN.  One of the task attributes is erroneous. Refer to the system log for a display of the error message from the HANDLEATTRIBUTES procedure.  Verify the job definition details.|
 |COMPLETED|The job completed successfully.|
 |COMPLETED–ADOPT|A tracked job has completed successfully.|
 |DS|The job terminated abnormally.|
@@ -114,108 +111,48 @@ The table below presents LSAM status messages forwarded to the SAM and supportin
 |F DS|The job experienced a fault and was terminated abnormally.|
 |FAIL MSG|The WFL displayed a message that matched one of the Fail Codes, causing the job to be reported as failed in Schedule Operations.|
 |FAILED –ADOPT|A tracked job has failed. (The HISTORY task attribute indicates job finished in error.)|
-|JJJJJ/TTTTTCOMP OK|The task completed successfully.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTDS|The task terminated abnormally.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTFAILCODE|The task displayed a message that matched one of the Fail Codes, causing the task to be reported as failed in Schedule Operations.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTF DS|The task experienced a fault and was terminated abnormally.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTO DS|The system operator terminated the task abnormally.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTP DS|The task was terminated abnormally because of a program fault.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTQ DS|The task was terminated abnormally because of an improper job queue definition or a job queue error.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTRESETCODE|The task displayed a message that matched one of the Fail Reset codes, causing the task to be reported as Finished OK in Schedule Operations.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JJJJJ/TTTTTSNTX/SCRY|An OpCon task initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of an invalid syntax used in the construction of the file title.
-                                    JJJJJ is the job number.
-                                    TTTTT is the task number.|
-|JOB ARRAY FULL|This message is sent in response to an OpCon job initiation request (TX1).
-                                    The message occurs when the number of active jobs, according to the OS handler (SMA/MCP/INTERFACE), has reached the maximum defined in the LSAM configuration file.
-                                    OpCon attempts job initiation again.|
-|JOB NOT ACTIVE|This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3).
-                                    Although the job was found in the tracking file, the record is not available because the job is no longer active.|
-|JOB NOT FOUND|This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3).
-                                    The job was not found in the tracking file.
-                                    This can be the result of any number of situations (multiple SAMs connected to a single LSAM, delayed delivery of a TX1 for a job on which a JOB:TRACK event was sent to SAM, etc.).|
-|JOB Q FULL|This message is sent in response to any OpCon job initiation request (TX1) that is received when the number of active jobs, determined by the COMM Handler (SMA/COMM), has reached the maximum.
-                                    The maximum number is defined in the LSAM configuration file.
-                                    OpCon attempts job initiation again.|
-|LSAMRESTARTING|This message is sent following a restart/recovery of the LSAM modules.
-                                    The job was present in the LSAM arrays before the LSAM terminated.
-                                    This is the initial status following an LSAM recovery.
-                                    It is followed by a current status of the job.|
-|MISSING OBJECT|The Details screen in the Enterprise Manager contains the RUN command, but the file named in the File Title is not present.
-                                    Verify the USERCODE, FAMILY, and spelling.
-                                    The usercode does not have a family assignment and the Job Details File Title does not include the family name of the program.|
-|NO JOB TITLE|No file title was defined on the Details screen in the Enterprise Manager.
-                                 
-                                Note: The PARAM/ATTR ERR message replaces NO JOB TITLE when the "Contemporary, XML" protocol is in use.|
-|NO WFL FILE|The Details screen in the Enterprise Manager contains the START command, but the file named in the File Title is not present. Verify the user code, family, and spelling.
-                                    The mix number of this status description belongs to the LSAM task that initiates the WFL compile. It is not the mix number for the WFL compile itself.
-                                    The usercode does not have a family assignment and the Job Details File Title does not include the family name of the WFL.
-                                
-                                 
-                                Note: The PARAM/ATTR ERR message replaces NO WFL FILE when the "Contemporary, XML" protocol is in use.|
+|JJJJJ/TTTTTCOMP OK|The task completed successfully. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTDS|The task terminated abnormally. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTFAILCODE|The task displayed a message that matched one of the Fail Codes, causing the task to be reported as failed in Schedule Operations. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTF DS|The task experienced a fault and was terminated abnormally. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTO DS|The system operator terminated the task abnormally. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTP DS|The task was terminated abnormally because of a program fault. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTQ DS|The task was terminated abnormally because of an improper job queue definition or a job queue error. JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTRESETCODE|The task displayed a message that matched one of the Fail Reset codes, causing the task to be reported as Finished OK in Schedule Operations.  JJJJJ is the job number. TTTTT is the task number.|
+|JJJJJ/TTTTTSNTX/SCRY|An OpCon task initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of an invalid syntax used in the construction of the file title. JJJJJ is the job number. TTTTT is the task number.|
+|JOB ARRAY FULL|This message is sent in response to an OpCon job initiation request (TX1). The message occurs when the number of active jobs, according to the OS handler (SMA/MCP/INTERFACE), has reached the maximum defined in the LSAM configuration file. OpCon attempts job initiation again.|
+|JOB NOT ACTIVE|This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3). Although the job was found in the tracking file, the record is not available because the job is no longer active.|
+|JOB NOT FOUND|This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3). The job was not found in the tracking file.  This can be the result of any number of situations (multiple SAMs connected to a single LSAM, delayed delivery of a TX1 for a job on which a JOB:TRACK event was sent to SAM, etc.).|
+|JOB Q FULL|This message is sent in response to any OpCon job initiation request (TX1) that is received when the number of active jobs, determined by the COMM Handler (SMA/COMM), has reached the maximum. The maximum number is defined in the LSAM configuration file.  OpCon attempts job initiation again.|
+|LSAMRESTARTING|This message is sent following a restart/recovery of the LSAM modules. The job was present in the LSAM arrays before the LSAM terminated. This is the initial status following an LSAM recovery. It is followed by a current status of the job.|
+|MISSING OBJECT|The Details screen in the Enterprise Manager contains the RUN command, but the file named in the File Title is not present. Verify the USERCODE, FAMILY, and spelling. The usercode does not have a family assignment and the Job Details File Title does not include the family name of the program.|
+|NO JOB TITLE|No file title was defined on the Details screen in the Enterprise Manager. Note: The PARAM/ATTR ERR message replaces NO JOB TITLE when the "Contemporary, XML" protocol is in use.|
+|NO WFL FILE|The Details screen in the Enterprise Manager contains the START command, but the file named in the File Title is not present. Verify the user code, family, and spelling. The mix number of this status description belongs to the LSAM task that initiates the WFL compile. It is not the mix number for the WFL compile itself. The usercode does not have a family assignment and the Job Details File Title does not include the family name of the WFL. Note: The PARAM/ATTR ERR message replaces NO WFL FILE when the "Contemporary, XML" protocol is in use.|
 |NOT CODE FILE|The Details screen in the Enterprise Manager contains the RUN command, but the File Title is not the name of an existing executable file.|
-|NOT DSED|A "Kill" was requested for this job, but the job was not O-DSed.
-                                    This message often occurs when the kill was attempted after the job's completion.|
+|NOT DSED|A "Kill" was requested for this job, but the job was not O-DSed. This message often occurs when the kill was attempted after the job's completion.|
 |NOT FOUND-ARRAY|This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3) when an OpCon Job ID is not in the OS Handler (SMA/MCP/INTERFACE) tables.|
 |NOT JOB FILE|The Details screen in the Enterprise Manager contains the START command, but the File Title is not the name of an existing WFL file.|
-|NOT VALID|The job could not be located and the status is unknown.
-                                    This message may be received following a restart/recovery of the LSAM modules.
-                                    This message usually indicates the job has completed (normally or abnormally).|
+|NOT VALID|The job could not be located and the status is unknown. This message may be received following a restart/recovery of the LSAM modules. This message usually indicates the job has completed (normally or abnormally).|
 |O DS|The system operator terminated the job abnormally.|
 |P DS|The job was terminated abnormally because of a program fault.|
-|PARAM/ATTR ERR|An OpCon job initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of a parameter mismatch or invalid attribute (job name does not conform to the rules for entity names).
-                                    If the START command was used, the mix number of this status description belongs to the LSAM task initiating the WFL compile, and not to the mix number for the WFL compile itself.
-                                    A possible cause for this error is that the Details screen in the Enterprise Manager contains the START or RUN command, but the file named in the File Title is not present. Verify the USERCODE, FAMILY, and spelling.|
-|PARAMETER ERR|The Details screen in the Enterprise Manager contains the RUN command, but a parameter is erroneous.
-                                    Verify the parameter length and type.|
+|PARAM/ATTR ERR|An OpCon job initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of a parameter mismatch or invalid attribute (job name does not conform to the rules for entity names). If the START command was used, the mix number of this status description belongs to the LSAM task initiating the WFL compile, and not to the mix number for the WFL compile itself. A possible cause for this error is that the Details screen in the Enterprise Manager contains the START or RUN command, but the file named in the File Title is not present. Verify the USERCODE, FAMILY, and spelling.|
+|PARAMETER ERR|The Details screen in the Enterprise Manager contains the RUN command, but a parameter is erroneous. Verify the parameter length and type.|
 |PRERUN ACTIVE|The Prerun job is active.|
-|PRERUN FAILED|The Prerun job failed.
-                                    OpCon attempts job initiation again.|
+|PRERUN FAILED|The Prerun job failed. OpCon attempts job initiation again.|
 |PRERUN WAITING|The Prerun job is in the waiting mix.|
-|QUEUED|The job has been placed in a system queue.
-                                    This is the first status for a WFL job that compiled successfully.
-                                    When the job is released from the queue, the status changes to RUNNING.|
-|RESTART H_ER nnn|Following a restart of the LSAM, the job's status could not be determined due to a GETSTATUS hard error "nnn".
-                                    A description of the specific hard error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual.|
-|RESTART S_ER nnn|Following a restart of the LSAM, the job's status could not be determined due to a GETSTATUS soft error "nnn".
-                                    A description of the specific soft error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual.|
-|RUNNING|This job is active.
-                                    This message is also seen if a WFL has been DSed and is waiting for tasks to complete.|
+|QUEUED|The job has been placed in a system queue. This is the first status for a WFL job that compiled successfully. When the job is released from the queue, the status changes to RUNNING.|
+|RESTART H_ER nnn|Following a restart of the LSAM, the job's status could not be determined due to a GETSTATUS hard error "nnn". A description of the specific hard error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual.|
+|RESTART S_ER nnn|Following a restart of the LSAM, the job's status could not be determined due to a GETSTATUS soft error "nnn". A description of the specific soft error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual.|
+|RUNNING|This job is active. This message is also seen if a WFL has been DSed and is waiting for tasks to complete.|
 |RUNNING –ADOPT|OpCon has received the tracking request and responded with a TX1 message. SMA/COMM has received the TX1 message and the job is running.|
-|SCHEDULED|This job has been scheduled by the system.
-                                    This message can be expected during periods of high processor usage.|
+|SCHEDULED|This job has been scheduled by the system. This message can be expected during periods of high processor usage.|
 |SNTX/SECRTY ERR|An OpCon job initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of an invalid syntax used in the construction of the file title.|
 |TASK(S) FAILED|The job completed successfully, but one or more of the subordinate tasks within the WFL failed.|
-|TASK FAILED JOB|The configuration option Fail Job if Task Fails has been set to Y.
-                                    A subordinate task of the WFL has failed and consequently OpCon has reported the job as failed.|
-|UNKNOWN ERROR|This message occurs when a specific reason for the job's failure could not be identified.
-                                    In most cases, the WFL job has failed queue insertion. The mix number is the one most recently identified with the OpCon job. If the job has failed queue insertion, this is the mix number of the WFL compile.|
-|USERCODE ERROR|The LSAM was unable to completely assume the identity (e.g., batch user privileges, family assignments, and so forth) of the usercode specified on the Details screen in the Enterprise Manager.
-                                    Verify the spelling.|
-|WAITING|The job is in the waiting mix.
-                                    The mix number shown is the mix number of the waiting process, not necessarily the number of the parent WFL.
-                                    This message is displayed momentarily even if Automated Response has been set up for the situation.
-                                    When the task becomes active, again, a status of RUNNING is displayed.|
-|WFL SYNTAX ERR|The WFL source file contains syntax errors.
-                                    Correct the WFL source.
-                                    The File Title field on the Details screen in the Enterprise Manager may contain extraneous characters, such as CR/LF, START, or RUN.
-                                    The File Title field should contain only the file title of the process to be initiated; furthermore, if the job is being initiated using a RUN command, the appropriate task attributes should also be included.
-                                    The WFL source file contains an "INCLUDE" statement that references a file that cannot be found. The WFL compile was DS'ed.|
+|TASK FAILED JOB|The configuration option Fail Job if Task Fails has been set to Y. A subordinate task of the WFL has failed and consequently OpCon has reported the job as failed.|
+|UNKNOWN ERROR|This message occurs when a specific reason for the job's failure could not be identified. In most cases, the WFL job has failed queue insertion. The mix number is the one most recently identified with the OpCon job. If the job has failed queue insertion, this is the mix number of the WFL compile.|
+|USERCODE ERROR|The LSAM was unable to completely assume the identity (e.g., batch user privileges, family assignments, and so forth) of the usercode specified on the Details screen in the Enterprise Manager. Verify the spelling.|
+|WAITING|The job is in the waiting mix. The mix number shown is the mix number of the waiting process, not necessarily the number of the parent WFL. This message is displayed momentarily even if Automated Response has been set up for the situation. When the task becomes active, again, a status of RUNNING is displayed.|
+|WFL SYNTAX ERR|The WFL source file contains syntax errors. Correct the WFL source. The File Title field on the Details screen in the Enterprise Manager may contain extraneous characters, such as CR/LF, START, or RUN. The File Title field should contain only the file title of the process to be initiated; furthermore, if the job is being initiated using a RUN command, the appropriate task attributes should also be included. The WFL source file contains an "INCLUDE" statement that references a file that cannot be found. The WFL compile was DS'ed.|
 
 ## OS 2200 Job Messages
 
@@ -223,40 +160,28 @@ The table below presents OS 2200 LSAM status messages forwarded to the SAM. The 
 
 |Message|Description|
 |--- |--- |
-|<run's-termination-word\>|The run's condition word value at termination.
-                                Used to determine a successful or error termination.|
+|<run's-termination-word\>|The run's condition word value at termination. Used to determine a successful or error termination.|
 |<ST-failed-message\>|The "ST" failed message returned by the Exec when an "ST" statement is rejected.|
-|*ASSIGN FAILED ON FILE-NAME FAC=ssssssssssss|This message is displayed when SAM has repeatedly tried to assign a file that should be available.
-                                    The "sss" field contains the octal facility status code used to determine the cause of the reject.
-                                    This message does not stop the processing and may be encountered repeatedly until the file becomes available.|
-|*ASSUME ABORTED*|Displayed when a job has been submitted to the Exec, but has never started and is not detected in backlog.
-                                    The job may have errored during the start process.
-                                    The LSAM can only assume the job aborted during startup, without ever becoming active.
-                                    This message is the result of LSAM's RSI (DEMAND) userid not allowed @@CONS RC commands, or the DEMAND session cannot be started.|
+|*ASSIGN FAILED ON FILE-NAME FAC=ssssssssssss|This message is displayed when SAM has repeatedly tried to assign a file that should be available. The "sss" field contains the octal facility status code used to determine the cause of the reject. This message does not stop the processing and may be encountered repeatedly until the file becomes available.|
+|*ASSUME ABORTED*|Displayed when a job has been submitted to the Exec, but has never started and is not detected in backlog. The job may have errored during the start process. The LSAM can only assume the job aborted during startup, without ever becoming active. This message is the result of LSAM's RSI (DEMAND) userid not allowed @@CONS RC commands, or the DEMAND session cannot be started.|
 |AS <runid\>|Displayed once a job has started and the unique Exec Run-ID has been identified.|
-|AWAITING ECL FILE|Displayed when a job's ECL file is exclusively assigned to another EXEC run.
-                                    The job is not able to start until the LSAM is able to retrieve the ECL, the LSAM continues attempting to retrieve the file.|
+|AWAITING ECL FILE|Displayed when a job's ECL file is exclusively assigned to another EXEC run. The job is not able to start until the LSAM is able to retrieve the ECL, the LSAM continues attempting to retrieve the file.|
 |ECL FILE ERROR|Displayed when the ECL cannot be retrieved, often due to an empty file/element.|
 |ECL FILE INVALID|Displayed when the ECL file identified for the job is not a valid file.|
 |ECL NOT FOUND|Displayed when the ECL identified for the job is not found in the ECL file.|
 |ECL READ ERROR|Displayed when a job's ECL cannot be read, often due to a corrupted ECL file/element.|
 |FILE DEPEND NOT MET|Displayed when one or more file dependencies for the job are not satisfied.|
-|JOB IN BACKLOG|The job has been detected in the Exec's backlog.
-                                    May be due to the Exec's Batch Limit setting, or resources required by the job are not yet available.|
+|JOB IN BACKLOG|The job has been detected in the Exec's backlog. May be due to the Exec's Batch Limit setting, or resources required by the job are not yet available.|
 |PRERUN COMPLETED|The job's prerun has completed successfully, the actual job is started next.|
-|RC= FINNED|Displayed when an "@@CONS RC" command for the job returns a "FINNED" response.
-                                    Indicates the job terminated without providing status information to LSAM, or when the job fails to start, often due to an invalid account code rejected by the system console operator.|
-|RC= NOT FOUND|Displayed when an "@@CONS RC" command for the job returns a "NOT FOUND" response.
-                                    Indicates the job is no longer active, but termination status was not communicated to the LSAM, or when the job fails to start.|
+|RC= FINNED|Displayed when an "@@CONS RC" command for the job returns a "FINNED" response. Indicates the job terminated without providing status information to LSAM, or when the job fails to start, often due to an invalid account code rejected by the system console operator.|
+|RC= NOT FOUND|Displayed when an "@@CONS RC" command for the job returns a "NOT FOUND" response. Indicates the job is no longer active, but termination status was not communicated to the LSAM, or when the job fails to start.|
 |RSI RUN NOT ACTIVE|Displayed when the LSAM RSI (DEMAND) session is not active. This may be due to an invalid userid and password. The LSAM requires the job with a later start time. Investigate and correct the RSI issue to re-enable the LSAM to start jobs. Note: The LSAM attempts to use the @START command for jobs with the same ACCT/User-ID as the LSAM.|
 |ST key Error - INVALID USERID|This error occurs when SECOPT1 is installed and the User ID used for starting an Exec job is invalid.|
 |ST STMT SUBMITTED|Displayed when the "ST" (start) statement has been submitted to the Exec, but the job has not yet become active.|
 |START CMD FAILED|Displayed when the "@START" command has failed for an unidentifiable reason.|
-|START FILE PROBLEM|Displayed when the LSAM is unable to manipulate the job's tracking file.
-                                    Additional information is displayed on the system console.|
+|START FILE PROBLEM|Displayed when the LSAM is unable to manipulate the job's tracking file. Additional information is displayed on the system console.|
 |START STMT SUBMITTED|Displayed when the "@START" statement has been submitted to the Exec, but the job has not yet become active.|
-|TRACKING FILE GONE|Displayed when a job terminates without providing termination status to the LSAM, causing the job's tracking file to be deleted.
-                                    This indicates a job error termination, or an ECL issue involving the premature releasing of the tracking file.|
+|TRACKING FILE GONE|Displayed when a job terminates without providing termination status to the LSAM, causing the job's tracking file to be deleted. This indicates a job error termination, or an ECL issue involving the premature releasing of the tracking file.|
 
 ### OS 2200 LSAM Messages Displayed at System Console
 
@@ -264,89 +189,53 @@ The following messages are displayed by the LSAM at the Unisys OS 2200 system co
 
 |Message|Description|
 |--- |--- |
-|INIT ERROR STATUS = <xxxx\>|The program is unable to initialize a TIP connection. The <xxxx\> field contains the four-character TIP status code identifying the error
-                                    Refer to Unisys TIP documentation for the meaning of the status code.|
+|INIT ERROR STATUS = <xxxx\>|The program is unable to initialize a TIP connection. The <xxxx\> field contains the four-character TIP status code identifying the error Refer to Unisys TIP documentation for the meaning of the status code.|
 |DEMAND SESSION NOT ESTABLISHED DUE TO: MISSING OR INVALID USERID/PASSWORD|The LSAM is unable to start a DEMAND run due to incorrect sign-on information.|
 |DEMAND SESSION NOT ESTABLISHED DUE TO: DEMAND QUOTA EXCEEDED|The LSAM is unable to start a DEMAND run due QUOTA restrictions.|
 |DEMAND SESSION NOT ESTABLISHED DUE TO: RESOURCES NOT AVAILABLE|The LSAM is unable to start a DEMAND run due to lack of system resources (e.g., exceeds the number of DEMAND runs allowed).|
-|* INVALID REALTIME PRIORITY: RAISED TO REALTIME LVL 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive).
-                                    The program assumes the priority of 35.|
-|* INVALID REALTIME PRIORITY: RAISED TO REALTIME LVL: <param-RT-level\>|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive).
-                                    The program assumes the priority of 35.|
-|* REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\>
-                                * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive).
-                                    The program assumes the priority of 35.
-                                    The <xx\> field displays the invalid priority provided.|
+|* INVALID REALTIME PRIORITY: RAISED TO REALTIME LVL 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive). The program assumes the priority of 35.|
+|* INVALID REALTIME PRIORITY: RAISED TO REALTIME LVL: <param-RT-level\>|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive). The program assumes the priority of 35.|
+|* REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\>* ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive). The program assumes the priority of 35. The <xx\> field displays the invalid priority provided.|
 |LSAM INITIALIZATION COMPLETE|The LSAM has properly initialized and is ready to process batch jobs.|
 |LSAM on duty at <hh:mm\> ON <mm/dd/yyyy\>|The LSAM has started (on duty) at time on date.|
-|** REG KEYIN ERROR, STATUS= <xxxxx\>|The program received an error while attempting to register a console keyin reserved word.
-                                    The <xxxxx\> field contains the error code returned by the registration procedure; refer to Unisys documentation to identify the meaning of the error code.|
+|** REG KEYIN ERROR, STATUS= <xxxxx\>|The program received an error while attempting to register a console keyin reserved word. The <xxxxx\> field contains the error code returned by the registration procedure; refer to Unisys documentation to identify the meaning of the error code.|
 |Keyin <key-word\> Registered for <console-mode\> users|The program has successfully registered the <key-word\> as a console command available to users with the <console-mode\> capabilities, or higher.|
 |LSAM SHUTDOWN IN PROCESS|The LSAM is in process of terminating.|
 |LSAM off duty at <hh:mm\> ON <mm/dd/yyyy\>|The LSAM is no longer active (off duty) at time on date.|
-|TROUBLE <xxxx\>|The program has encountered trouble while attempting to manipulate TIP file data.
-                                    The <xxxx\> field contains the TIP error code; refer to Unisys documentation to identify the meaning of the error code.|
-|* UNAUTHORIZED @@CONS KEYIN: and<keyin-data-received\> andRECEIVED FROM: <source-of-keyin\>|A console keyin from an unauthorized source has been received.
-                                    The <keyin-data-received\> field contains the keyin received.
-                                    The <source-of-keyin\> field contains the terminal identification the keyin was received from.|
-|LSAM JOB RECORD WRITE FAILURE|The LSAM encountered an error while attempting to write job data to the TIP file.
-                                    The breakpoint file of the run contains additional error information.|
-|LSAM ARRAY RECORD READ FAILURE|The LSAM encountered an error while attempting to read pointer array data from the TIP file.
-                                    The breakpoint file of the run contains additional error information.|
-|LSAM ARRAY RECORD WRITE FAILURE|The LSAM encountered an error while attempting to write pointer array data to the TIP file.
-                                    The breakpoint file of the run contains additional error information.|
+|TROUBLE <xxxx\>|The program has encountered trouble while attempting to manipulate TIP file data. The <xxxx\> field contains the TIP error code; refer to Unisys documentation to identify the meaning of the error code.|
+|* UNAUTHORIZED @@CONS KEYIN: and<keyin-data-received\> andRECEIVED FROM: <source-of-keyin\>|A console keyin from an unauthorized source has been received. The <keyin-data-received\> field contains the keyin received. The <source-of-keyin\> field contains the terminal identification the keyin was received from.|
+|LSAM JOB RECORD WRITE FAILURE|The LSAM encountered an error while attempting to write job data to the TIP file. The breakpoint file of the run contains additional error information.|
+|LSAM ARRAY RECORD READ FAILURE|The LSAM encountered an error while attempting to read pointer array data from the TIP file. The breakpoint file of the run contains additional error information.|
+|LSAM ARRAY RECORD WRITE FAILURE|The LSAM encountered an error while attempting to write pointer array data to the TIP file. The breakpoint file of the run contains additional error information.|
 |<OpCon/xps-Job-ID\> is currently running|The OpCon job has been started and is processing, a run-id for the job has not yet been identified.|
 |<OpCon/xps-Job-ID\> (<Exec-Run-ID\>) is currently running|The OpCon job has been started and is processing with the <Exec-Run-ID\>.|
 |<OpCon/xps-Job-ID\> Pre-run errored <hh:mm mm/dd/yyyy\>|The Pre-run for OpCon job has errored at time date.|
 |<OpCon/xps-Job-ID\> errored <hh:mm mm/dd/yyyy\>|The OpCon job has errored at time date.|
 |<OpCon/xps-Job-ID\> (<Exec-Run-ID\>) errored <hh:mm mm/dd/yyyy\>|The OpCon job with Exec-Run-ID errored at time date.|
-|<OpCon/xps-Job-ID\> Pre-run no status...assume aborted|The Pre-run for OpCon job has been started, but status information is not available.
-                                    The LSAM assumes the pre-run has aborted. This is the result of the pre-run job not providing status to LSAM and the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration.|
-|<OpCon/xps-Job-ID\> no status...assume aborted|The OpCon job has been started, but status information is not available.
-                                    The LSAM assumes the job has aborted. This is the result of the job not providing status to LSAM and the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration.|
-|<OpCon/xps-Job-ID\> (<Exec-Run-ID\>) no status...assume aborted|The OpCon job, with Exec-Run-ID, has been started, but status information is not available.
-                                    The LSAM assumes the job has aborted. This is the result the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration.|
+|<OpCon/xps-Job-ID\> Pre-run no status...assume aborted|The Pre-run for OpCon job has been started, but status information is not available. The LSAM assumes the pre-run has aborted. This is the result of the pre-run job not providing status to LSAM and the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration.|
+|<OpCon/xps-Job-ID\> no status...assume aborted|The OpCon job has been started, but status information is not available. The LSAM assumes the job has aborted. This is the result of the job not providing status to LSAM and the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration.|
+|<OpCon/xps-Job-ID\> (<Exec-Run-ID\>) no status...assume aborted|The OpCon job, with Exec-Run-ID, has been started, but status information is not available. The LSAM assumes the job has aborted. This is the result the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration.|
 |CANT ESTABLISH JOB REC LOCK|The LSAM is unable to lock a job record in the TIP file for exclusive use.|
-|LSAM JOB RECORD WRITE FAILURE|The LSAM attempted to write job information in the TIP file, but the write failed.
-                                    Most likely a problem with the TIP file definition.|
-|LSAM ARRAY RECORD READ FAILURE|The LSAM attempted to read a pointer array record from the TIP file, but the read failed.
-                                    Most likely TIP file corruption, a failure to properly initialize the TIP file, or a problem with the TIP file definition.|
-|LSAM POST RUN JOBID NOT FOUND <OpCon/xps-Job-ID\>|The OpCon job related to a pre-run job cannot be found in the TIP file.
-                                    Most likely a TIP file corruption.|
-|<OpCon/xps-Job-ID\> ECL LINE TRUNCATED TO 80 CHARACTERS|The LSAM has detected an ECL command (beginning with @) exceeding 80 characters in length. The ECL line is truncated to 80 characters.
-                                    ECL command lines longer than 80 characters (without a continuation) are invalid.
-                                    Most likely a comment on the line caused it to exceed 80 characters.|
-|<RSI-error-message-returned\> and SHUT DOWN OF RSI IN PROCESS|While accessing the DEMAND run, the LSAM received the RSI-error-message-returned.
-                                    The DEMAND run is terminated.
-                                    The LSAM attempts to restart the DEMAND run.|
-|<OpCon/xps-Job-ID\> duplicated, running as <Exec-Run-ID\>|The Exec Run-ID for OpCon job has been duplicated.
-                                    The Exec has assigned Exec-Run-ID to the job.|
-|*ST FAIL:<OpCon/xps-Job-ID\> ERR=<xx\> STAT=<start-error-message\>|The @@CON ST command for the OpCon job failed.
-                                    The ERR field contains an LSAM assigned error code, the STAT field contains the error message returned by the Exec in response to the ST command.|
-|<OpCon/xps-Job-ID\> (<Exec-Run-ID\>) is waiting in backlog|The OpCon job, with Exec-Run-ID, has been detected in the Exec backlog.
-                                    This is the result of the Exec batch limit set lower than the OpCon concurrent job limit, or facilities required by the job are not available, or a batch hold (CS H) on the system.|
+|LSAM JOB RECORD WRITE FAILURE|The LSAM attempted to write job information in the TIP file, but the write failed. Most likely a problem with the TIP file definition.|
+|LSAM ARRAY RECORD READ FAILURE|The LSAM attempted to read a pointer array record from the TIP file, but the read failed. Most likely TIP file corruption, a failure to properly initialize the TIP file, or a problem with the TIP file definition.|
+|LSAM POST RUN JOBID NOT FOUND <OpCon/xps-Job-ID\>|The OpCon job related to a pre-run job cannot be found in the TIP file. Most likely a TIP file corruption.|
+|<OpCon/xps-Job-ID\> ECL LINE TRUNCATED TO 80 CHARACTERS|The LSAM has detected an ECL command (beginning with @) exceeding 80 characters in length. The ECL line is truncated to 80 characters. ECL command lines longer than 80 characters (without a continuation) are invalid. Most likely a comment on the line caused it to exceed 80 characters.|
+|<RSI-error-message-returned\> and SHUT DOWN OF RSI IN PROCESS|While accessing the DEMAND run, the LSAM received the RSI-error-message-returned. The DEMAND run is terminated. The LSAM attempts to restart the DEMAND run.|
+|<OpCon/xps-Job-ID\> duplicated, running as <Exec-Run-ID\>|The Exec Run-ID for OpCon job has been duplicated. The Exec has assigned Exec-Run-ID to the job.|
+|*ST FAIL:<OpCon/xps-Job-ID\> ERR=<xx\> STAT=<start-error-message\>|The @@CON ST command for the OpCon job failed. The ERR field contains an LSAM assigned error code, the STAT field contains the error message returned by the Exec in response to the ST command.|
+|<OpCon/xps-Job-ID\> (<Exec-Run-ID\>) is waiting in backlog|The OpCon job, with Exec-Run-ID, has been detected in the Exec backlog. This is the result of the Exec batch limit set lower than the OpCon concurrent job limit, or facilities required by the job are not available, or a batch hold (CS H) on the system.|
 |<OpCon/xps-Job-ID\> SUBMITTED AT <hh:mm\> ON <mm/dd/yyyy\>|The OpCon job start command has been submitted at time on date.|
 |<OpCon/xps-Job-ID\> STARTING AS EXEC JOB <Exec-Run-ID\>|The OpCon job has been assigned the Exec-Run-ID.|
 |<OpCon/xps-Job-ID\> IS A PRE-RUN JOB|The OpCon job started is a pre-run job.|
 |<OpCon/xps-Job-ID\>-NO START DATA AVAILABLE|The LSAM has received a start command from OpCon for a job without ECL location data.|
-|ECL FILE NOT FOUND FOR JOB: <OpConxps-Job-ID\>|The ECL file for the OpCon job cannot be found on the system.
-                                    Most likely an invalid ECL location has been entered for the job.|
-|START-FILE NOT AVAILABLE FOR JOB.....<OpConxps-Job-ID\>|The LSAM cannot assign the ECL file for the OpCon job.
-                                    The Exec has rejected the file assignment for a reason other than "not catalogued".
-                                    The file may be "unloaded", or the LSAM is not authorized to access the file.|
-|ECL NOT IN FILE, JOB:<OpConxps-Job-ID\>|The file element is not in the ECL file identified for OpCon job.
-                                    Either the element name is incorrect, or the file name is incorrect.|
-|ECL IS EXCL ASGED BY ANOTHER RUN and RETRYING START OF <OpConxps-Job-ID\>|The ECL file for OpCon job is exclusively assigned to another run.
-                                    The LSAM continues attempting to assign the ECL file.|
-|*START FAIL:<OpCon/xps-Job-ID> ERR=<xx\> STAT=<start-error-message\>|The @START command for OpCon job failed.
-                                    The ERR field contains an LSAM assigned error code.
-                                    The STAT field contains the error message.|
-|SDFIO SYNTAX ERR: <SDFIO-data\>|A syntax error has been returned by the EXEC SDF services module when LSAM attempted to access an ECL file.
-                                    The SDFIO-data contains the information used when the error occurred.|
-|SDFIO ASG ERR, FAC.......<facility-status\>|The EXEC SDF services module returned an error while attempting to assign an ECL file.
-                                    The facility-status contains the FAC error code.|
-|LSAM IS UNABLE TO SIGN ON THE SYSTEM|The LSAM is unable to sign-on a DEMAND run.
-                                    May be due to improper privileges for the LSAM, or system resources are not available.|
+|ECL FILE NOT FOUND FOR JOB: <OpConxps-Job-ID\>|The ECL file for the OpCon job cannot be found on the system. Most likely an invalid ECL location has been entered for the job.|
+|START-FILE NOT AVAILABLE FOR JOB.....<OpConxps-Job-ID\>|The LSAM cannot assign the ECL file for the OpCon job. The Exec has rejected the file assignment for a reason other than "not catalogued". The file may be "unloaded", or the LSAM is not authorized to access the file.|
+|ECL NOT IN FILE, JOB:<OpConxps-Job-ID\>|The file element is not in the ECL file identified for OpCon job. Either the element name is incorrect, or the file name is incorrect.|
+|ECL IS EXCL ASGED BY ANOTHER RUN and RETRYING START OF <OpConxps-Job-ID\>|The ECL file for OpCon job is exclusively assigned to another run. The LSAM continues attempting to assign the ECL file.|
+|*START FAIL:<OpCon/xps-Job-ID> ERR=<xx\> STAT=<start-error-message\>|The @START command for OpCon job failed. The ERR field contains an LSAM assigned error code. The STAT field contains the error message.|
+|SDFIO SYNTAX ERR: <SDFIO-data\>|A syntax error has been returned by the EXEC SDF services module when LSAM attempted to access an ECL file. The SDFIO-data contains the information used when the error occurred.|
+|SDFIO ASG ERR, FAC.......<facility-status\>|The EXEC SDF services module returned an error while attempting to assign an ECL file. The facility-status contains the FAC error code.|
+|LSAM IS UNABLE TO SIGN ON THE SYSTEM|The LSAM is unable to sign-on a DEMAND run. May be due to improper privileges for the LSAM, or system resources are not available.|
 
 ## OS 2200 LMAM Messages
 
@@ -366,57 +255,31 @@ The table below presents OS 2200 LMAM status messages forwarded to the SAM. The 
 ||The LMAM has properly initialized and is ready to process BIS runs.|
 |LMAM on duty at <hh:mm\> on <mm/dd/yyyy\>|The LMAM has started (on duty) at time on date.|
 |Keyin <keyin\> Registered for <console-mode\> users|The program has successfully registered the <key-word\> as a console command available to users with the <console-mode\> capabilities, or higher.|
-|* INVALID REALTIME PRIORITY: <xx\> and * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive).
-                                    The program assumes the priority of 35.|
-|* REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\> and * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive).
-                                    The program assumes the priority of 35.
-                                    The <xx\> field displays the invalid priority provided.|
-|INIT ERROR STATUS = <TIP-status-code\>|The program is unable to initialize a TIP connection.
-                                    The <TIP-status-code\> field contains the four-character TIP status code identifying the error; refer to Unisys TIP documentation for the meaning of the status code.|
-|MAM PARAMETERS NOT AVAILABLE|Parameters necessary to activate MAM have not been defined.
-                                    Use LSAMCFG/ECL to define MAM parameters.|
-|NO BIS SITES ARE ACTIVE|There are no MAMs active.
-                                    BIS jobs cannot be processed until the MAM(s) are activated with a console keyin.|
-|** REG KEYIN ERROR, STATUS= <keyin-registration-error-code\>|The program received an error while attempting to register a console keyin reserved word.
-                                    The <keyin-registration-error-code\> field contains the error code returned by the registration procedure; refer to Unisys documentation to identify the meaning of the error code.|
-|* UNAUTHORIZED @@CONS KEYIN: and <keyin-received\> and RECEIVED FROM: <terminal-id\>|A console keyin from an unauthorized source has been received.
-                                    The <keyin-data-received\> field contains the keyin received.
-                                    The <source-of-keyin\> field contains the terminal identification the keyin was received from.|
-|JOBS EXIST FOR AN INACTIVE BIS SITE and Mam-<site-id\> is Down and WILL UP MAM <site-id\> TO ALLOW PROCESSING|OpCon jobs exist for a MAM that has been detected as inactive.
-                                    The LMAM attempts to activate the MAM.|
-|DO AN UPMAM<site-id\> TO ALLOW PROCESSING|OpCon jobs exist for a MAM that has been terminated with a console keyin.
-                                    The MAM must be activated with a console keyin before jobs are processed.|
+|* INVALID REALTIME PRIORITY: <xx\> and * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive). The program assumes the priority of 35.|
+|* REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\> and * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive). The program assumes the priority of 35. The <xx\> field displays the invalid priority provided.|
+|INIT ERROR STATUS = <TIP-status-code\>|The program is unable to initialize a TIP connection. The <TIP-status-code\> field contains the four-character TIP status code identifying the error; refer to Unisys TIP documentation for the meaning of the status code.|
+|MAM PARAMETERS NOT AVAILABLE|Parameters necessary to activate MAM have not been defined. Use LSAMCFG/ECL to define MAM parameters.|
+|NO BIS SITES ARE ACTIVE|There are no MAMs active. BIS jobs cannot be processed until the MAM(s) are activated with a console keyin.|
+|** REG KEYIN ERROR, STATUS= <keyin-registration-error-code\>|The program received an error while attempting to register a console keyin reserved word. The <keyin-registration-error-code\> field contains the error code returned by the registration procedure; refer to Unisys documentation to identify the meaning of the error code.|
+|* UNAUTHORIZED @@CONS KEYIN: and <keyin-received\> and RECEIVED FROM: <terminal-id\>|A console keyin from an unauthorized source has been received. The <keyin-data-received\> field contains the keyin received. The <source-of-keyin\> field contains the terminal identification the keyin was received from.|
+|JOBS EXIST FOR AN INACTIVE BIS SITE and Mam-<site-id\> is Down and WILL UP MAM <site-id\> TO ALLOW PROCESSING|OpCon jobs exist for a MAM that has been detected as inactive. The LMAM attempts to activate the MAM.|
+|DO AN UPMAM<site-id\> TO ALLOW PROCESSING|OpCon jobs exist for a MAM that has been terminated with a console keyin. The MAM must be activated with a console keyin before jobs are processed.|
 |<OpConxps-job-id\> submitted (MAM<site-id\>) <hh:mm\> on <mm/dd/yyyy\>|The OpCon job has been submitted to MAM at time on date.|
-|BIS SYSTEM NOT AVAILABLE FOR MAM-<site-id\> START UP|The LMAM detected the BIS system for the MAM is not processing.
-                                    The BIS must be running prior to starting MAM.|
-|ERROR SENDING TO BATCH PORT <batchport-name\>|The LMAM received an error when attempting to submit (@SYM) a file to the identified batchport queue.
-                                    Most likely the batchport defined to LMAM is invalid.|
-|LMAM JOB RECORD WRITE FAILURE and <TIP-FCSS-status- information \>|The LMAM attempted to write job information in the TIP file, but the write failed.
-                                    The <TIP-FCSS-status-information\> field contains the TIP status error code. Refer to Unisys documentation for the error code meaning.
-                                    Most likely a problem with the TIP file definition.|
-|LMAM ARRAY RECORD READ FAILURE
-                                and <TIP-FCSS-status-information\>|The LMAM encountered an error while attempting to read pointer array data from the TIP file.
-                                    The TIP-FCSS-status-information field contains the TIP error code. Refer to Unisys documentation for the error code meaning.|
-|LMAM ARRAY RECORD WRITE FAILURE
-                                And <TIP-FCSS-status-information\>|The LMAM encountered an error while attempting to write pointer array data to the TIP file.
-                                    The TIP-FCSS-status-information field contains the TIP status code. Refer to Unisys documentation for the status code meaning.|
-|JOB RECORD READ FAILURE 
-                                And <TIP-FCSS-status-information\>|The LMAM encountered an error while attempting to read job data from the TIP file.
-                                    The TIP-FCSS-status-information field contains the TIP error code. Refer to Unisys documentation for the error code meaning.|
+|BIS SYSTEM NOT AVAILABLE FOR MAM-<site-id\> START UP|The LMAM detected the BIS system for the MAM is not processing. The BIS must be running prior to starting MAM.|
+|ERROR SENDING TO BATCH PORT <batchport-name\>|The LMAM received an error when attempting to submit (@SYM) a file to the identified batchport queue. Most likely the batchport defined to LMAM is invalid.|
+|LMAM JOB RECORD WRITE FAILURE and <TIP-FCSS-status- information \>|The LMAM attempted to write job information in the TIP file, but the write failed. The <TIP-FCSS-status-information\> field contains the TIP status error code. Refer to Unisys documentation for the error code meaning. Most likely a problem with the TIP file definition.|
+|LMAM ARRAY RECORD READ FAILURE and <TIP-FCSS-status-information\>|The LMAM encountered an error while attempting to read pointer array data from the TIP file. The TIP-FCSS-status-information field contains the TIP error code. Refer to Unisys documentation for the error code meaning.|
+|LMAM ARRAY RECORD WRITE FAILURE And <TIP-FCSS-status-information\>|The LMAM encountered an error while attempting to write pointer array data to the TIP file. The TIP-FCSS-status-information field contains the TIP status code. Refer to Unisys documentation for the status code meaning.|
+|JOB RECORD READ FAILURE And <TIP-FCSS-status-information\>|The LMAM encountered an error while attempting to read job data from the TIP file. The TIP-FCSS-status-information field contains the TIP error code. Refer to Unisys documentation for the error code meaning.|
 |CANT ESTABLISH JOB REC LOCK|The LMAM is unable to lock a job record in the TIP file for exclusive use.|
-|WILL RETRY JOB <OpConxps-job-id\>|The LMAM has submitted a job to MAM which has not yet been started.
-                                    The LMAM resubmits the job for starting.
-                                    Occurs after MAM has been detected as not operating after a job submit has occurred.|
-|<OpConxps-job-id\> CAUSED MAM TO ABORT|The BIS run for OpCon job caused MAM to abort.
-                                    MAM is restarted, the job is identified as "errored".|
+|WILL RETRY JOB <OpConxps-job-id\>|The LMAM has submitted a job to MAM which has not yet been started. The LMAM resubmits the job for starting. Occurs after MAM has been detected as not operating after a job submit has occurred.|
+|<OpConxps-job-id\> CAUSED MAM TO ABORT|The BIS run for OpCon job caused MAM to abort. MAM is restarted, the job is identified as "errored".|
 |<OpConxps-job-id\> IS RUNNING|The MAM has identified the job as "running".|
 |<OpConxps-job-id\> HAS FINNED|The MAM has identified the job as terminated successfully.|
 |<OpConxps-job-id\> HAS ERRORED|The MAM has identified the job as terminated in error.|
-|JOB EXISTS FOR A BIS SITE THAT IS NOT RESPONDING and WILL ATTEMPT TO UP MAM SITE <site-id\>|The MAM has stopped communicating and has been detected as not operational.
-                                    The LMAM attempts to activate the MAM.|
+|JOB EXISTS FOR A BIS SITE THAT IS NOT RESPONDING and WILL ATTEMPT TO UP MAM SITE <site-id\>|The MAM has stopped communicating and has been detected as not operational. The LMAM attempts to activate the MAM.|
 |MAM-<site-id\> DOWNED|The MAM has been intentionally terminated with a console keyin.|
-|LMAM POST RUN JOBID NOT FOUND <OpConxps-job-id\>|The OpCon job related to a pre-run job cannot be found in the TIP file.
-                                    Most likely a TIP file corruption.|
+|LMAM POST RUN JOBID NOT FOUND <OpConxps-job-id\>|The OpCon job related to a pre-run job cannot be found in the TIP file. Most likely a TIP file corruption.|
 |LMAM SHUTDOWN IN PROCESS|The LMAM is in process of terminating.|
 |LMAM off duty at <hh:mm\> on <mm/dd/yyyy\>|The LMAM is no longer active (off duty) at time on date.|
 
@@ -424,51 +287,28 @@ The table below presents OS 2200 LMAM status messages forwarded to the SAM. The 
 
 |Message|Description|
 |--- |--- |
-|MULTIPLE MAMS STARTED - EXTRA TERMINATED|A MAM has been started while another MAM is already processing.
-                                    Most likely a MAM configuration error.|
-|501-COM FILE ERROR RET STATUS CODE = <status-code\>, MAM GOING DOWN|The MAM detected an error while attempting to retrieve the LMAM communications file.
-                                    The status-code field contains the RET error code. MAM terminates.|
-|502-COM FILE ERROR -- ELT STATUS CODE = <status-code\>, MAM GOING DOWN|The MAM encountered an error while attempting to ELT the LMAM communications file.
-                                    The status-code field contains the ELT error code.
-                                    MAM terminates.|
-|503-COM FILE ERROR - NO CONTROL LINE, MAM GOING DOWN|The MAM has retrieved an LMAM communications file which does not contain a valid control line.
-                                    MAM terminates.
-                                    Most likely cause is the communications file being catalogued by a process other than LMAM.|
-|NO COMMUNICATION WITH SAM/LMAM FOR 75 CYCLES and  DOWN MAM AND UP MAM AGAIN – 183|The MAM is unable to retrieve the LMAM communications file after 75 attempts.
-                                    Most likely the LMAM is unable to detect the MAM as active.
-                                    Using LMAM commands to "down" and then "up" the MAM forces LMAM to start communications with MAM.|
-|MAM-<site-id\> FILE NOT AVAILABLE, STAT=<status-code\> - 196|The MAM has detected the LMAM communications file is not available for retrieving.
-                                    The status-code field contains the RET status received.|
-|JOB <OpConxps-job-id\> RUN <BIS-run-name\> CANNOT BE STARTED|The MAM is unable to start the BIS-run-name associated with OpCon/xps-job-id.
-                                    Most likely an invalid run name, or an error in the registration of run.|
-|JOBID <OpConxps-job-id\> HAS NO STATION NUMBER and  JOBID <OpConxps-job-id\> STATUS IS UNPREDICTABLE|The MAM is unable to identify the station number (terminal) of a background run.
-                                    The station number is required for monitoring the run, the reported status may be inaccurate due to the inability to monitor the terminal.|
-|SAM/LMAM IS DOWN - MAM IS TERMINATING|The MAM has detected that LMAM is not processing. MAM terminates.
-                                    Occurs when LMAM terminates.|
+|MULTIPLE MAMS STARTED - EXTRA TERMINATED|A MAM has been started while another MAM is already processing. Most likely a MAM configuration error.|
+|501-COM FILE ERROR RET STATUS CODE = <status-code\>, MAM GOING DOWN|The MAM detected an error while attempting to retrieve the LMAM communications file. The status-code field contains the RET error code. MAM terminates.|
+|502-COM FILE ERROR -- ELT STATUS CODE = <status-code\>, MAM GOING DOWN|The MAM encountered an error while attempting to ELT the LMAM communications file. The status-code field contains the ELT error code. MAM terminates.|
+|503-COM FILE ERROR - NO CONTROL LINE, MAM GOING DOWN|The MAM has retrieved an LMAM communications file which does not contain a valid control line. MAM terminates. Most likely cause is the communications file being catalogued by a process other than LMAM.|
+|NO COMMUNICATION WITH SAM/LMAM FOR 75 CYCLES and  DOWN MAM AND UP MAM AGAIN – 183|The MAM is unable to retrieve the LMAM communications file after 75 attempts. Most likely the LMAM is unable to detect the MAM as active. Using LMAM commands to "down" and then "up" the MAM forces LMAM to start communications with MAM.|
+|MAM-<site-id\> FILE NOT AVAILABLE, STAT=<status-code\> - 196|The MAM has detected the LMAM communications file is not available for retrieving. The status-code field contains the RET status received.|
+|JOB <OpConxps-job-id\> RUN <BIS-run-name\> CANNOT BE STARTED|The MAM is unable to start the BIS-run-name associated with OpCon/xps-job-id. Most likely an invalid run name, or an error in the registration of run.|
+|JOBID <OpConxps-job-id\> HAS NO STATION NUMBER and  JOBID <OpConxps-job-id\> STATUS IS UNPREDICTABLE|The MAM is unable to identify the station number (terminal) of a background run. The station number is required for monitoring the run, the reported status may be inaccurate due to the inability to monitor the terminal.|
+|SAM/LMAM IS DOWN - MAM IS TERMINATING|The MAM has detected that LMAM is not processing. MAM terminates. Occurs when LMAM terminates.|
 
 ## OS 2200 JORS Messages Displayed at System Console
 
 |Message|Description|
 |--- |--- |
-|TIP FILE NUMBER EXPECTED|The SMAJOR/ECL does not contain the TIPFILE statement after the @XQT SMAJOR statement.
-                                    Indicates a corrupted SMAJOR/ECL element.|
-|INVALID REALTIME PRIORITY: <xx\> and * ASSUMING REALTIME PRIORITY 35|The program's XQT statement activated the RealTime option, but the runstream did not provide a valid priority.
-                                    The <xx\> field displays the invalid priority. Valid priority values range from 02 to 35.
-                                    The program's priority defaults to 35.|
-|REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\> and * ASSUMING REALTIME PRIORITY 35|The program's XQT statement activated the RealTime option, but the runstream did not provide a valid priority.
-                                    The <xx\> field displays the invalid priority. Valid priority values range from 02 to 35.
-                                    The program's priority defaults to 35.|
-|** REG KEYIN ERROR, STATUS= <keyin-registration-status-code\>|The program received an error while attempting to register a console keyin reserved word.
-                                    The <keyin-registration-status-code\> field contains the error code returned by the registration procedure.
-                                    Refer to Unisys documentation for the error code's meaning.|
+|TIP FILE NUMBER EXPECTED|The SMAJOR/ECL does not contain the TIPFILE statement after the @XQT SMAJOR statement. Indicates a corrupted SMAJOR/ECL element.|
+|INVALID REALTIME PRIORITY: <xx\> and * ASSUMING REALTIME PRIORITY 35|The program's XQT statement activated the RealTime option, but the runstream did not provide a valid priority. The <xx\> field displays the invalid priority. Valid priority values range from 02 to 35. The program's priority defaults to 35.|
+|REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\> and * ASSUMING REALTIME PRIORITY 35|The program's XQT statement activated the RealTime option, but the runstream did not provide a valid priority. The <xx\> field displays the invalid priority. Valid priority values range from 02 to 35. The program's priority defaults to 35.|
+|** REG KEYIN ERROR, STATUS= <keyin-registration-status-code\>|The program received an error while attempting to register a console keyin reserved word. The <keyin-registration-status-code\> field contains the error code returned by the registration procedure. Refer to Unisys documentation for the error code's meaning.|
 |SMA JOB OUTPUT RETRIEVAL ACTIVE - hh:mm:ss.tt|The Job Output Retrieval System (JORS) is ready to accept requests.|
-|Keyin <keyin-word\> Registered for <console-mode\> users|The program successfully registered the <key-word\> as a console command.
-                                    The command is available to users with the <console-mode\> capabilities, or higher.|
-|* UNAUTHORIZED @@CONS KEYIN: and   <Keyin-received\> and RECEIVED FROM:   <terminal-id\>|The program received a console keyin from an unauthorized source.
-                                    The <keyin-received\> field contains the unauthorized keyin.
-                                    The <terminal-id\> field contains the keyin's terminal identification.|
-|JORS RCD READ LOCK FAILURE|The SMAJOR is unable to establish a lock on the JORS record in the TIP file.
-                                    A problem with the TIP file definition is the most likely cause.|
+|Keyin <keyin-word\> Registered for <console-mode\> users|The program successfully registered the <key-word\> as a console command. The command is available to users with the <console-mode\> capabilities, or higher.|
+|* UNAUTHORIZED @@CONS KEYIN: and   <Keyin-received\> and RECEIVED FROM:   <terminal-id\>|The program received a console keyin from an unauthorized source. The <keyin-received\> field contains the unauthorized keyin. The <terminal-id\> field contains the keyin's terminal identification.|
+|JORS RCD READ LOCK FAILURE|The SMAJOR is unable to establish a lock on the JORS record in the TIP file. A problem with the TIP file definition is the most likely cause.|
 |*SMAJOR IS STOPPING*|SMAJOR is in the process of terminating.|
 |**SMAJOR IS TERMINATING*|SMAJOR is terminating.|
 
@@ -476,34 +316,21 @@ The table below presents OS 2200 LMAM status messages forwarded to the SAM. The 
 
 |Message|Description|
 |--- |--- |
-|TIP FILE NUMBER EXPECTED|The XFRTCP/ECL does not contain the TIPFILE statement after the @XQT XFRTCP statement.
-                                    Indicates a corrupted XFRTCP/ECL element.|
-|INVALID REALTIME PRIORITY: <xx\> and    * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive).
-                                    The program assumes the priority of 35.|
-|REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\> and    * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive).
-                                    The program assumes the priority of 35. The <xx\> field displays the invalid priority provided.|
-|** REG KEYIN ERROR, STATUS= <keyin-registration-status-code\>|The program received an error while attempting to register a console keyin reserved word.
-                                    The <keyin-registration-status-code\> field contains the error code returned by the registration procedure. Refer to Unisys documentation to identify the meaning of the error code.|
+|TIP FILE NUMBER EXPECTED|The XFRTCP/ECL does not contain the TIPFILE statement after the @XQT XFRTCP statement. Indicates a corrupted XFRTCP/ECL element.|
+|INVALID REALTIME PRIORITY: <xx\> and    * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive). The program assumes the priority of 35.|
+|REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\> and    * ASSUMING REALTIME PRIORITY 35|The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive). The program assumes the priority of 35. The <xx\> field displays the invalid priority provided.|
+|** REG KEYIN ERROR, STATUS= <keyin-registration-status-code\>|The program received an error while attempting to register a console keyin reserved word. The <keyin-registration-status-code\> field contains the error code returned by the registration procedure. Refer to Unisys documentation to identify the meaning of the error code.|
 |Keyin <keyin-word\> Registered for <console-mode\> users|The program has successfully registered the <key-word\> as a console command available to users with the <console-mode\> capabilities, or higher.|
-|ATTACH TO TSAM AS TSU <TSU-name\> WAS SUCCESSFUL|The XFRTCP has successfully attached to the communications software TSU process.
-                                    The TSU-name field contains the name of the process.|
-|ATTACH TO TSAM AS TSU < TSU-name\> FAILED|The XFRTCP has failed to attach to the communications software TSU process.
-                                    Most often related to an invalid TSU Process name or password.|
+|ATTACH TO TSAM AS TSU <TSU-name\> WAS SUCCESSFUL|The XFRTCP has successfully attached to the communications software TSU process. The TSU-name field contains the name of the process.|
+|ATTACH TO TSAM AS TSU < TSU-name\> FAILED|The XFRTCP has failed to attach to the communications software TSU process. Most often related to an invalid TSU Process name or password.|
 |OPCON COMM HANDLER (XFERIF<xx\>/<version\>) READY|The XFRTCP has successfully initialized and is ready for network communications.|
-|* UNAUTHORIZED @@CONS KEYIN: and<Keyin-received\> and	RECEIVED FROM: <terminal-id\>|A console keyin from an unauthorized source has been received.
-                                    The <keyin-data-received\> field contains the keyin received.
-                                    The <source-of-keyin\> field contains the terminal identification the keyin was received from.|
-|SAM / NETCOM USING LEGACY PROTOCOL|The SAM/NETCOM is configured to communicate in LEGACY protocol.
-                                    The configuration must be "Contemporary, Non-XML".|
+|* UNAUTHORIZED @@CONS KEYIN: and<Keyin-received\> and	RECEIVED FROM: <terminal-id\>|A console keyin from an unauthorized source has been received. The <keyin-data-received\> field contains the keyin received. The <source-of-keyin\> field contains the terminal identification the keyin was received from.|
+|SAM / NETCOM USING LEGACY PROTOCOL|The SAM/NETCOM is configured to communicate in LEGACY protocol. The configuration must be "Contemporary, Non-XML".|
 |JOB <OpConxps-job-id\> ERRORED ON <mm/dd/yyyy\> AT  <hh:mm:ss\> and  JOB <OpConxps-job-id\> ECL: <qual*file.element/version\>|The configuration option is set to display the job's ECL location on error terminations.|
-|LSAM NO LONGER ACTIVE|The XFRTCP has detected the LSAM is not processing.
-                                    Start the LSAM to resolve.|
-|LSAM-LOCK FILE NOT FOUND **|The XFRTCP has detected the LSAM-LOCK file is not catalogued.
-                                    Catalogue the <lsam-qualifier\>*LSAM-LOCK file to resolve.|
-|REQUESTS EXCEED OUTWARD FLOW|The XFRTCP is receiving more requests than can be processed.
-                                    Most likely a network communications problem between NETCOM and XFRTCP.|
-|CANT ESTABLISH EVENT REC LOCK|The XFRTCP is unable to establish a lock on an Event record in the TIP file.
-                                    Most likely a problem with the TIP file definition.|
+|LSAM NO LONGER ACTIVE|The XFRTCP has detected the LSAM is not processing. Start the LSAM to resolve.|
+|LSAM-LOCK FILE NOT FOUND **|The XFRTCP has detected the LSAM-LOCK file is not catalogued. Catalogue the <lsam-qualifier\>*LSAM-LOCK file to resolve.|
+|REQUESTS EXCEED OUTWARD FLOW|The XFRTCP is receiving more requests than can be processed. Most likely a network communications problem between NETCOM and XFRTCP.|
+|CANT ESTABLISH EVENT REC LOCK|The XFRTCP is unable to establish a lock on an Event record in the TIP file. Most likely a problem with the TIP file definition.|
 |*XFRTCP IS STOPPING*|XFRTCP is in the process of terminating.|
 |**XFRTCP IS TERMINATING*|XFRTCP is terminating.|
 
@@ -601,139 +428,138 @@ Windows exit codes).
 
 ### SAP BAPI Errors
 
-The following table contains error numbers and descriptions of SAP BAPI
-Error Codes.
+The following table contains error numbers and descriptions of SAP BAPI Error Codes.
 
-   Message Number  Description
-  ---------------- --------------------------------
-   value 'XM',   xmi_messages
-    value '9',   msg_logon_gen
-   value '010'   msg_logon
-   value '011'   msg_logoff_gen
-   value '012'   msg_logoff
-   value '013'   msg_auditlevel_set
-   value '014'   msg_versions_get_gen
-   value '015'   msg_versions_get
-   value '016'   msg_version_check
-   value '017'   msg_interface_describe
-   value '018'   msg_logmsg_enter
-   value '019'   msg_log_select
-   value '020'   msg_message_formats_upload
-   value '021',  msg_already_logged_on_gen
-   value '022',  msg_already_logged_on
-   value '023',  msg_unknown_interface
-   value '024',  msg_unknown_version
-   value '025',  msg_logon_denied_gen
-   value '026',  msg_logon_denied
-   value '027',  msg_not_logged_on_gen
-   value '028',  msg_not_logged_on
-   value '029',  msg_invalid_range
-   value '030',  msg_cant_select
-   value '031',  msg_cant_log
-   value '032',  msg_cant_upload
-   value '033',  msg_invalid_parameters
-   value '034',  msg_problem_detected
-   value '035',  msg_reorg
-   value '037',  msg_reorg_gen
-   value '046',  msg_jobname_missing
-   value '047',  msg_jobid_missing
-   value '048',  msg_ext_user_missing
-   value '049',  msg_job_does_not_exist
-   value '050',  msg_progname_missing
-   value '051'   msg_no_archive_info
-   value '052',  msg_invalid_print_params
-   value '053',  msg_invalid_archive_params
-   value '054',  msg_no_release_privilege
-   value '055',  msg_job_not_active
-   value '056',  msg_no_abort_privilege
-   value '057',  msg_no_job_found
-   value '058'   msg_targethost_missing
-   value '059',  msg_no_jobsteps
-   value '060',  msg_no_job_protocol
-   value '061',  msg_empty_job_protocol
-   value '062',  msg_step_count_missing
-   value '063',  msg_no_spoollist
-   value '064',  msg_privilege_missing
-   value '065',  msg_invalid_spoolid
-   value '066',  msg_no_immediate_start_poss
-   value '067',  msg_no_resources_found
-   value '068',  msg_invalid_date_time
-   value '069',  msg_invalid_server_name
-   value '070',  msg_prog_has_no_variant
-   value '071',  msg_prog_does_not_exist
-   value '072',  msg_no_execute_privilege
-   value '073',  msg_prog_not_executable
-   value '074'   msg_no_variants_defined
-   value '075'   msg_invalid_select_option
-   value '076'   msg_select_param_missing
-   value '077'   msg_trace_before_call
-   value '078'   msg_select_jobname_missing
-   value '079'   msg_select_username_missing
-   value '080'   msg_cant_del_in_jobtable
-   value '081'   msg_cant_del_joblog
-   value '082'   msg_problem_pred_succ
-   value '083'   msg_commit_failed
-   value '084'   msg_no_delete_privilege
-   value '085'   msg_job_running
-   value '086'   msg_interface_reorg
-   value '087'   msg_interface_reorg_gen
-   value '088'   msg_parent_child_inconsistency
-   value '089'   msg_child_register_error
-   value '090'   msg_mask_error
-   value '091'   msg_param_missing
-   value '092'   msg_event_does_not_exist
-   value '093'   msg_event_raise_failed
-   value '094'   msg_job_confirmation_failed
-   value '095'   msg_wrong_confirmation_type
-   value '096'   msg_wrong_selection_par
-   value '097'   msg_parentchild_inactive
-   value '098'   msg_interception_inactive
-   value '099'   msg_wrong_counter
-   value '100'   msg_wrong_printer_name
-   value '101'   msg_selection_finished
-   value '194'   msg_cant_enq_job
-   value '195'   msg_cant_read_jobdata
-   value '196'   msg_cant_release_job
-   value '197'   msg_cant_set_jobstatus_in_db
-   value '198'   msg_cant_start_job_immediately
-   value '199'   msg_cant_update_jobdata
-   value '200'   msg_eventcnt_generation_error
-   value '201'   msg_invalid_dialog_type
-   value '202'   msg_invalid_new_jobdata
-   value '203'   msg_invalid_new_jobstatus
-   value '204'   msg_invalid_startdate
-   value '205'   msg_job_edit_failed
-   value '206'   msg_job_modify_canceled
-   value '207'   msg_job_not_modifiable_anymore
-   value '208'   msg_nothing_to_do
-   value '209'   msg_no_batch_on_target_host
-   value '210'   msg_no_batch_server_found
-   value '211'   msg_no_batch_wp_for_jobclass
-   value '212'   msg_no_modify_privilege_given
-   value '213'   msg_no_release_privilege_given
-   value '214'   msg_no_startdate_no_release
-   value '216'   msg_invalid_targetgroup
-   value '217'   msg_conflicting_targets
-   value '218'   msg_job_doesnt_have_steps
-   value '219'   msg_wrong_step_type
-   value '220'   msg_job_doesnt_have_this_step
-   value '221'   msg_cannot_get_priarc_params
-   value '222'   msg_cannot_read_job
-   value '223'   msg_cannot_modify_job
-   value '224'   msg_wrong_step_number
-   value '225'   msg_error_modifying_worktable
-   value '227'   msg_job_nosteps
-   value '228'   msg_jobcount_missing
-   value '229'   msg_invalid_target
-   value '230'   msg_error_reading_worktable
-   value '231'   msg_delete_line_error
-   value '232'   msg_no_step_info
-   value '233'   msg_wrong_action
-   value '234'   msg_no_change_authority
-   value '235'   msg_invalid_jobclass
-   value '236'   msg_wrong_client
+   Message Number     Description
+  ----------------    ------------------------------------------------------------------------------------------
+    value 'XM'        xmi_messages
+    value '9'         msg_logon_gen
+    value '010'       msg_logon
+    value '011'       msg_logoff_gen
+    value '012'       msg_logoff
+    value '013'       msg_auditlevel_set
+    value '014'       msg_versions_get_gen
+    value '015'       msg_versions_get
+    value '016'       msg_version_check
+    value '017'       msg_interface_describe
+    value '018'       msg_logmsg_enter
+    value '019'       msg_log_select
+    value '020'       msg_message_formats_upload
+    value '021'       msg_already_logged_on_gen
+    value '022'       msg_already_logged_on
+    value '023'       msg_unknown_interface
+    value '024'       msg_unknown_version
+    value '025'       msg_logon_denied_gen
+    value '026'       msg_logon_denied
+    value '027'       msg_not_logged_on_gen
+    value '028'       msg_not_logged_on
+    value '029'       msg_invalid_range
+    value '030'       msg_cant_select
+    value '031'       msg_cant_log
+    value '032'       msg_cant_upload
+    value '033'       msg_invalid_parameters
+    value '034'       msg_problem_detected
+    value '035'       msg_reorg
+    value '037'       msg_reorg_gen
+    value '046'       msg_jobname_missing
+    value '047'       msg_jobid_missing
+    value '048'       msg_ext_user_missing
+    value '049'       msg_job_does_not_exist
+    value '050'       msg_progname_missing
+    value '051'       msg_no_archive_info
+    value '052'       msg_invalid_print_params
+    value '053'       msg_invalid_archive_params
+    value '054'       msg_no_release_privilege
+    value '055'       msg_job_not_active
+    value '056'       msg_no_abort_privilege
+    value '057'       msg_no_job_found
+    value '058'       msg_targethost_missing
+    value '059'       msg_no_jobsteps
+    value '060'       msg_no_job_protocol
+    value '061'       msg_empty_job_protocol
+    value '062'       msg_step_count_missing
+    value '063'       msg_no_spoollist
+    value '064'       msg_privilege_missing
+    value '065'       msg_invalid_spoolid
+    value '066'       msg_no_immediate_start_poss
+    value '067'       msg_no_resources_found
+    value '068'       msg_invalid_date_time
+    value '069'       msg_invalid_server_name
+    value '070'       msg_prog_has_no_variant
+    value '071'       msg_prog_does_not_exist
+    value '072'       msg_no_execute_privilege
+    value '073'       msg_prog_not_executable
+    value '074'       msg_no_variants_defined
+    value '075'       msg_invalid_select_option
+    value '076'       msg_select_param_missing
+    value '077'       msg_trace_before_call
+    value '078'       msg_select_jobname_missing
+    value '079'       msg_select_username_missing
+    value '080'       msg_cant_del_in_jobtable
+    value '081'       msg_cant_del_joblog
+    value '082'       msg_problem_pred_succ
+    value '083'       msg_commit_failed
+    value '084'       msg_no_delete_privilege
+    value '085'       msg_job_running
+    value '086'       msg_interface_reorg
+    value '087'       msg_interface_reorg_gen
+    value '088'       msg_parent_child_inconsistency
+    value '089'       msg_child_register_error
+    value '090'       msg_mask_error
+    value '091'       msg_param_missing
+    value '092'       msg_event_does_not_exist
+    value '093'       msg_event_raise_failed
+    value '094'       msg_job_confirmation_failed
+    value '095'       msg_wrong_confirmation_type
+    value '096'       msg_wrong_selection_par
+    value '097'       msg_parentchild_inactive
+    value '098'       msg_interception_inactive
+    value '099'       msg_wrong_counter
+    value '100'       msg_wrong_printer_name
+    value '101'       msg_selection_finished
+    value '194'       msg_cant_enq_job
+    value '195'       msg_cant_read_jobdata
+    value '196'       msg_cant_release_job
+    value '197'       msg_cant_set_jobstatus_in_db
+    value '198'       msg_cant_start_job_immediately
+    value '199'       msg_cant_update_jobdata
+    value '200'       msg_eventcnt_generation_error
+    value '201'       msg_invalid_dialog_type
+    value '202'       msg_invalid_new_jobdata
+    value '203'       msg_invalid_new_jobstatus
+    value '204'       msg_invalid_startdate
+    value '205'       msg_job_edit_failed
+    value '206'       msg_job_modify_canceled
+    value '207'       msg_job_not_modifiable_anymore
+    value '208'       msg_nothing_to_do
+    value '209'       msg_no_batch_on_target_host
+    value '210'       msg_no_batch_server_found
+    value '211'       msg_no_batch_wp_for_jobclass
+    value '212'       msg_no_modify_privilege_given
+    value '213'       msg_no_release_privilege_given
+    value '214'       msg_no_startdate_no_release
+    value '216'       msg_invalid_targetgroup
+    value '217'       msg_conflicting_targets
+    value '218'       msg_job_doesnt_have_steps
+    value '219'       msg_wrong_step_type
+    value '220'       msg_job_doesnt_have_this_step
+    value '221'       msg_cannot_get_priarc_params
+    value '222'       msg_cannot_read_job
+    value '223'       msg_cannot_modify_job
+    value '224'       msg_wrong_step_number
+    value '225'       msg_error_modifying_worktable
+    value '227'       msg_job_nosteps
+    value '228'       msg_jobcount_missing
+    value '229'       msg_invalid_target
+    value '230'       msg_error_reading_worktable
+    value '231'       msg_delete_line_error
+    value '232'       msg_no_step_info
+    value '233'       msg_wrong_action
+    value '234'       msg_no_change_authority
+    value '235'       msg_invalid_jobclass
+    value '236'       msg_wrong_client
 
-  : SAP BAPI Errors
+: SAP BAPI Errors
 
 **Source:** *BC-XBP 6.10 Background Scheduling Job Scheduling System WAS
 6.10 (Version 2.0) Documentation*. Walldorf, Germany: Systems,
@@ -753,27 +579,27 @@ Sometimes it is possible to receive non-numeric characters in the return
 code. When this happens, the return code is 9999 and the original return
 code can be found in the job output.
 
-  Return Code     Description
-  --------------- ------------------------------------------------------------------------
-  0 - 9999        Job completion code (prefixed by C, e.g., C0000 -- C9999)
-  9999            Job completion code contained non-numeric characters, refer to job log
-  10000 -19999    Job completion code System Abend (prefixed by S, e.g., U0000 -- S9999)
-  19999           Job completion code contained non-numeric characters, refer to job log
-  20000 - 29999   Job completion code User Abend (prefixed by U, e.g., U0000 -- S9999)
-  29999           Job completion code contained non numeric characters, refer to job log
-  30000           artjesadmin : Job completed successfully
-  30001           artjesadmin : Utility command failed
-  30003           artjesadmin : Job failed
-  30004           artjesadmin : Job was cancelled
-  30005           artjesadmin : Job is in conversion state
-  30006           artjesadmin : Job is executing
-  30007           artjesadmin : Job is queued waiting for conversion process
-  30008           artjesadmin : Job has been placed on hold
-  30009           artjesadmin : Job is queued waiting for processing to start
-  30010           artjesadmin : Job has been discarded
-  30011           artjesadmin : Execution of job is in unknown state
-  30022           artjesadmin : Job does not exist in Tuxedo ART environment
-  30099           Job initialization error
+  Return Code         Description
+  ---------------     -------------------------------------------------------------------------------------
+    0 - 9999          Job completion code (prefixed by C, e.g., C0000 -- C9999)
+    9999              Job completion code contained non-numeric characters, refer to job log
+    10000 -19999      Job completion code System Abend (prefixed by S, e.g., U0000 -- S9999)
+    19999             Job completion code contained non-numeric characters, refer to job log
+    20000 - 29999     Job completion code User Abend (prefixed by U, e.g., U0000 -- S9999)
+    29999             Job completion code contained non numeric characters, refer to job log
+    30000             artjesadmin : Job completed successfully
+    30001             artjesadmin : Utility command failed
+    30003             artjesadmin : Job failed
+    30004             artjesadmin : Job was cancelled
+    30005             artjesadmin : Job is in conversion state
+    30006             artjesadmin : Job is executing
+    30007             artjesadmin : Job is queued waiting for conversion process
+    30008             artjesadmin : Job has been placed on hold
+    30009             artjesadmin : Job is queued waiting for processing to start
+    30010             artjesadmin : Job has been discarded
+    30011             artjesadmin : Execution of job is in unknown state
+    30022             artjesadmin : Job does not exist in Tuxedo ART environment
+    30099             Job initialization error
 
   : Tuxedo artjesadmin Job Return Codes
 
@@ -825,359 +651,54 @@ Process ID (pid) number or any optional status messages.
 Scripts using the sma_status utility can use the 20-character message area to display any desired text; otherwise, the PID displays in the message area. For further information, refer to [sma_status](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_status.md) in the **UNIX LSAM** online help.
 :::
 
-+----------------------------------+----------------------------------+
-| Message Text                     | Explanation and/or Corrective    |
-|                                  | Action                           |
-+==================================+==================================+
-| \[x\] multiply-defined           | The indicated step               | |                                  | \[STARTING_STEP, ENDING_STEP,    |
-|                                  | RESTART_STEP\] was found to be   |
-|                                  | included more than once. Check   |
-|                                  | "Start Image" and              |
-|                                  | "Parameters" in the job's Job |
-|                                  | Details screen.                  |
-|                                  |                                  |
-|                                  |                                  |
-|                                  |                                  |
-|                                  | **Note:** The \[x\]              | |                                  | multiply-defined message text    |
-|                                  | applies only to jobs based on    |
-|                                  | the [SMA                         | |                                  | Technologie                      |
-|                                  | s]{.GeneralCompanyName}-supplied |
-|                                  | template job script discussed in |
-|                                  | [UNIX Job                        | |                                  | Details](U                       |
-|                                  | NIX-Job-Details.md) |
-|                                  | .                          |
-+----------------------------------+----------------------------------+
-| Invalid job step \[x\]           | Shell variable 'next_step' set | |                                  | to a non-existent job Step Label |
-|                                  | as displayed. Check all settings |
-|                                  | of 'next_step' -- especially   |
-|                                  | for use of incorrect letter      |
-|                                  | case.                            |
-|                                  |                                  |
-|                                  |                                  |
-|                                  |                                  |
-|                                  | **Note:** The Invalid job step   |
-|                                  | \[x\] applies only to jobs based | |                                  | on the [SMA                      |
-|                                  | Technologie                      |
-|                                  | s]{.GeneralCompanyName}-supplied |
-|                                  | template job script discussed in |
-|                                  | [UNIX Job                        | |                                  | Details](U                       |
-|                                  | NIX-Job-Details.md) |
-|                                  | .                          |
-+----------------------------------+----------------------------------+
-| Infinite loop detected           | The job experienced              |
-|                                  | 'number_of_steps' iterations   |
-|                                  | and was terminated. Check the    |
-|                                  | following:                       |
-|                                  |                                  |
-|                                  | -   Starting or Restart Step     |
-|                                  |     comes after Ending step in   |
-|                                  |     script                       |
-|                                  | -   Step gets repeated, possibly |
-|                                  |     via intervening steps        |
-|                                  | -   Job logic correct but        |
-|                                  |     'number_of_step' set too   |
-|                                  |     small                        |
-|                                  |                                  |
-|                                  | **Note:** The Infinite loop      |
-|                                  | detected applies only to jobs    |
-|                                  | based on the [SMA                | |                                  | Technologie                      |
-|                                  | s]{.GeneralCompanyName}-supplied |
-|                                  | template job script discussed in |
-|                                  | [UNIX Job                        | |                                  | Details](U                       |
-|                                  | NIX-Job-Details.md) |
-|                                  | .                          |
-+----------------------------------+----------------------------------+
-| Unable to change access for      | Access permissions for the       |
-| \[x\]                            | indicated job stdout/dtderr      | |                                  | output file could not be         |
-|                                  | restricted per the LSAM          |
-|                                  | Configuration setting.           |
-+----------------------------------+----------------------------------+
-| Unable to change ownership for   | Ownership of the indicated job   |
-| \[x\]                            | stdout/dtderr output file could  | |                                  | not be changed from              |
-|                                  | 'root/root' per the LSAM       |
-|                                  | Configuration setting.           |
-+----------------------------------+----------------------------------+
-| Process \[x\] did not start      | The LSAM health monitor has      | |                                  | determined that the indicated    |
-|                                  | LSAM process did not start (or   |
-|                                  | started but them immediately     |
-|                                  | terminated). Stop the LSAM. If   |
-|                                  | the cause for the lost process   |
-|                                  | cannot be determined from other  |
-|                                  | error messages, corrected, and   |
-|                                  | the LSAM successfully            |
-|                                  | re-started, then wait five       |
-|                                  | minutes and re-start the LSAM.   |
-|                                  | It should then start and run     |
-|                                  | properly if the cause was of a   |
-|                                  | momentary nature.                |
-+----------------------------------+----------------------------------+
-| Process \[x\] has terminated     | The LSAM health monitor has      | |                                  | determined that the indicated    |
-|                                  | LSAM process abnormally          |
-|                                  | terminated. Stop the LSAM. If    |
-|                                  | the cause for the lost process   |
-|                                  | cannot be determined from other  |
-|                                  | error messages, corrected, and   |
-|                                  | the LSAM successfully            |
-|                                  | re-started, then wait five       |
-|                                  | minutes and re-start the LSAM.   |
-|                                  | It should then start and run     |
-|                                  | properly if the cause was of a   |
-|                                  | momentary nature.                |
-+----------------------------------+----------------------------------+
-| Sending SIGUSR1 (die) to all     | The "bin/lsam\<*SAM_Socket*\>   |
-| LSAM processes                   | stop" command was given; this   |
-|                                  | message is confirmation that the |
-|                                  | LSAM is in normal termination    |
-|                                  | processing.                      |
-+----------------------------------+----------------------------------+
-| Unable to find \[x\]             | "\[x\]" cannot be located for  | |                                  | processing.                      |
-+----------------------------------+----------------------------------+
-| Unable to create \[x\]           | "\[x\]" cannot be created for  | |                                  | processing.                      |
-+----------------------------------+----------------------------------+
-| Unable to open \[x\]             | "\[x\]" cannot be opened for   | |                                  | processing.                      |
-+----------------------------------+----------------------------------+
-| Unable to read \[x\]             | Data cannot be read from         | |                                  | "\[x\]".                       |
-+----------------------------------+----------------------------------+
-| Unable to write \[x\]            | Data cannot be written to        | |                                  | "\[x\]".                       |
-+----------------------------------+----------------------------------+
-| Deleting \[x\]                   | "\[x\]" was deleted. This is   | |                                  | normally just an informational   |
-|                                  | message, and not indicative of a |
-|                                  | problem unless "\[x\]" is      | |                                  | later referenced in an "Unable  |
-|                                  | to \..." message.               |
-+----------------------------------+----------------------------------+
-| Unable to connect to \[x\]       | A socket-based connection cannot | |                                  | be made to the indicated remote  |
-|                                  | service or system. Determine if  |
-|                                  | the indicated system or service  |
-|                                  | is up-and-running, and/or if the |
-|                                  | network is operational, and      |
-|                                  | correct the condition.           |
-+----------------------------------+----------------------------------+
-| Unable to send \[x1\] to \[x2\]  | A message "\[x1\]" cannot be   | |                                  | sent over the socket-based       |
-|                                  | connection to the indicated      |
-|                                  | remote service or system         |
-|                                  | ("\[x2\]"). Determine if the   | |                                  | indicated system or service is   |
-|                                  | up-and-running, and/or if the    |
-|                                  | network is operational, and      |
-|                                  | correct the condition.           |
-+----------------------------------+----------------------------------+
-| LSAM health monitor operating    | Informational message to confirm |
-|                                  | that the LSAM started with the   |
-|                                  | LSAM health monitor in proper    |
-|                                  | operation.                       |
-+----------------------------------+----------------------------------+
-| No LSAM health monitor           | Informational message to confirm |
-|                                  | that the LSAM started without    |
-|                                  | the LSAM health monitor in       |
-|                                  | proper operation. Execute the    |
-|                                  | LSAM Configuration program to    |
-|                                  | confirm that LSAM health         |
-|                                  | monitoring has been disabled.    |
-+----------------------------------+----------------------------------+
-| LSAM health monitor disabled     | The LSAM health monitor has      |
-|                                  | ceased operation. This is normal |
-|                                  | after issuance of the "LSAM     |
-|                                  | stop" command.                  |
-+----------------------------------+----------------------------------+
-| Sender not allowed by the LSAM   | The portion of the LSAM which    |
-| configuration                    | communicates with the SAM has    |
-|                                  | received a message over a        |
-|                                  | socket-based connection from an  |
-|                                  | address not configured to be     |
-|                                  | acceptable. The received message |
-|                                  | was ignored. It may be necessary |
-|                                  | to run the LSAM Configuration    |
-|                                  | program to update the LSAM's    |
-|                                  | configuration.                   |
-+----------------------------------+----------------------------------+
-| Received unauthorized message    | Some portion of the LSAM has     |
-|                                  | received a message over a        |
-|                                  | socket-based connection from an  |
-|                                  | unexpected address. The received |
-|                                  | message was ignored. It may be   |
-|                                  | necessary to run the LSAM        |
-|                                  | Configuration program to update  |
-|                                  | the LSAM's configuration.       |
-+----------------------------------+----------------------------------+
-| Received a message with a blank  | The portion of the LSAM which    |
-| machine name                     | communicates with the SAM has    |
-|                                  | received a message without the   |
-|                                  | required machine name which      |
-|                                  | identifies to the LSAM the       |
-|                                  | intended recipient for the       |
-|                                  | message. Mark the LSAM down in a |
-|                                  | graphical interface and stop the |
-|                                  | LSAM. Wait five minutes, then    |
-|                                  | re-start the LSAM and mark it    |
-|                                  | back up in a graphical           |
-|                                  | interface.                       |
-+----------------------------------+----------------------------------+
-| Received a message from SAM with | The portion of the LSAM which    |
-| invalid action specified         | communicates with the SAM has    |
-|                                  | received a message with an       |
-|                                  | invalid action specified. Mark   |
-|                                  | the LSAM down in a graphical     |
-|                                  | interface and stop the LSAM.     |
-|                                  | Wait five minutes, then re-start |
-|                                  | the LSAM and mark it back up in  |
-|                                  | a graphical interface.           |
-+----------------------------------+----------------------------------+
-| Received a duplicate message     | The LSAM has received a          |
-| from SAM                         | duplicate message from SAM. If   |
-|                                  | this happens only occasionally,  |
-|                                  | it indicates timing issues which |
-|                                  | sometimes arise in distributed   |
-|                                  | processing systems like          |
-|                                  | [                                | |                                  | OpCon]{.GeneralOpConGlobalName}, |
-|                                  | and is not indicative of a       |
-|                                  | problem. If it happens in a      |
-|                                  | series over a few minutes, it    |
-|                                  | indicates an acute problem with  |
-|                                  | the SAM or the intervening       |
-|                                  | network hardware.                |
-+----------------------------------+----------------------------------+
-| Missing environment variable     | The indicated UNIX shell         |
-| \[x\]                            | environment variable is not      | |                                  | defined. The variable may be     |
-|                                  | either expected to be defined at |
-|                                  | the system level, or it may be   |
-|                                  | an LSAM-defined variable which   |
-|                                  | is not getting passed around as  |
-|                                  | required.                        |
-+----------------------------------+----------------------------------+
-| Environment variable \[x\] is    | The indicated UNIX shell         | | not defined                      | environment variable is not      |
-|                                  | defined. The variable may be     |
-|                                  | either expected to be defined at |
-|                                  | the system level, or it may be   |
-|                                  | an LSAM-defined variable which   |
-|                                  | is not getting passed around as  |
-|                                  | required.                        |
-+----------------------------------+----------------------------------+
-| Received a SIGUSR1               | Each process in the LSAM should  |
-|                                  | output this message during       |
-|                                  | normal termination of the LSAM.  |
-|                                  | If the                           |
-|                                  | "bin/lsam\<*SAM_Socket*\>       |
-|                                  | stop" command was not given,    |
-|                                  | then some process or user on the |
-|                                  | system issued a "kill" command |
-|                                  | on the indicated process.        |
-+----------------------------------+----------------------------------+
-| Received order to stop LSAM      | This message is output during    |
-| Health Monitor                   | normal termination processing.   |
-+----------------------------------+----------------------------------+
-| \[x\] Operational                | Each process in the LSAM should  | |                                  | output this message during       |
-|                                  | normal startup of the LSAM.      |
-+----------------------------------+----------------------------------+
-| Too many arguments for \[x\]     | The addition of the text for     | |                                  | "Start Image" and              |
-|                                  | "Parameters" in the job        |
-|                                  | definition resulted in \> 100    |
-|                                  | arguments. An "argument" is    |
-|                                  | any text but a space. For        |
-|                                  | example, the Start               |
-|                                  | Image/Parameters combination     |
-|                                  | "/usr/john/job x y abc123 1",  |
-|                                  | the start image is               |
-|                                  | "/usr/john/job", and the four  |
-|                                  | arguments are "x", "y",      |
-|                                  | "abc123", and "1". (It is    |
-|                                  | possible to include parameters   |
-|                                  | in the "Start Image" text box  |
-|                                  | in the EM.)                      |
-+----------------------------------+----------------------------------+
-| Blank start image for \[x\]      | The indicated job contained no   | |                                  | start image, i.e., script or     |
-|                                  | program to execute. Check the    |
-|                                  | Job Details screen in the EM.    |
-+----------------------------------+----------------------------------+
-| Job \[x\] contained no UID       | The indicated job had no User    | |                                  | ID.                              |
-+----------------------------------+----------------------------------+
-| Job \[x\] contained no GID       | The indicated job had no Group   | |                                  | ID.                              |
-+----------------------------------+----------------------------------+
-| Job \[x1\] contained an invalid  | The indicate User ID for the     | | UID \[x2\]                       | indicated job was either         |
-|                                  | non-existent or incorrectly      |
-|                                  | formatted.                       |
-+----------------------------------+----------------------------------+
-| Job \[x1\] contained an invalid  | The indicate Group ID for the    | | GID \[x2\]                       | indicated job was either         |
-|                                  | non-existent or incorrectly      |
-|                                  | formatted.                       |
-+----------------------------------+----------------------------------+
-| Not allowed to start job \[x\]   | The LSAM is configured to not    | | as 'root'                      | allow jobs to execute with       |
-|                                  | 'root' privileges. This can be |
-|                                  | changed by running the LSAM      |
-|                                  | Configuration program.           |
-+----------------------------------+----------------------------------+
-| Unable to access start image     | The indicated Start Image could  |
-| \[x1\] for \[x2\]                | not be executed for the          | |                                  | indicated job. The parenthesized |
-|                                  | portion of the message provides  |
-|                                  | additional details, on which     |
-|                                  | corrective action can be based.  |
-+----------------------------------+----------------------------------+
-| Unable to execute \[x1\] for     | The indicated item could not be  | | \[x2\]                           | executed for the indicated job.  |
-|                                  | The parenthesized portion of the |
-|                                  | message provides additional      |
-|                                  | details, on which corrective     |
-|                                  | action can be based.             |
-+----------------------------------+----------------------------------+
-| Unable to exec() \[x1\] to start | The indicated Start Image could  | | \[x2\]                           | not be executed for the          |
-|                                  | indicated job. The parenthesized |
-|                                  | portion of the message provides  |
-|                                  | additional details, on which     |
-|                                  | corrective action can be based.  |
-|                                  | If the LSAM determines that this |
-|                                  | was caused by an invalid         |
-|                                  | reference to a                   |
-|                                  | shell/interpreter, e.g., the     |
-|                                  | first line of the job script     |
-|                                  | reads, "!\#/bin/bogus", an     |
-|                                  | additional message will be       |
-|                                  | generated to indicate this       |
-|                                  | possibility.                     |
-+----------------------------------+----------------------------------+
-| Unable to 'cd' to $HOME for   | LSAM configuration parameter     |
-| \[x\]                            | *require_HOME_directory* is      | |                                  | enabled and the indicated job    |
-|                                  | cannot be executed within the    |
-|                                  | associated user's HOME          |
-|                                  | directory. The most likely cause |
-|                                  | is an error defining the HOME    |
-|                                  | directory when the user was      |
-|                                  | added to the system, or that the |
-|                                  | HOME directory was either never  |
-|                                  | created or it was deleted.       |
-+----------------------------------+----------------------------------+
-| Received TX0 for pid = \[x\] -   | This is an informational message | | \[x\]                            | output to confirm receipt of a   |
-|                                  | command from SAM to terminate    |
-|                                  | the indicated job after the user |
-|                                  | executed the "Kill Job"        |
-|                                  | command from a graphical         |
-|                                  | interface. This does not         |
-|                                  | indicate that the job actually   |
-|                                  | was terminated; that             |
-|                                  | event/inability will be          |
-|                                  | confirmed in a subsequent        |
-|                                  | message.                         |
-+----------------------------------+----------------------------------+
-| Can't fork() for \[x\] -        | The LSAM is unable to create a   | | decrementing max jobs to \[x\]   | process in which to run the      |
-|                                  | indicated job, and is decreasing |
-|                                  | the number of jobs it will       |
-|                                  | attempt to simultaneously run in |
-|                                  | an effort to preclude further    |
-|                                  | fork() errors. If this is a      |
-|                                  | recurring problem, the LSAM      |
-|                                  | Configuration program can be     |
-|                                  | executed to lower the number of  |
-|                                  | allowed jobs and/or the OS may   |
-|                                  | need tuning to handle the load.  |
-+----------------------------------+----------------------------------+
-| Job \[x\] completed              | Informational message upon       | |                                  | proper termination of an         |
-|                                  | OpCon |
-|                                  | job -- does not reflect the      |
-|                                  | OK/Failed termination status.    |
-+----------------------------------+----------------------------------+
-| Data has not arrived in \[x\]    | The LSAM has not received any    | | seconds - closing socket         | communication from the SAM in    |
-|                                  | the indicated amount of time.    |
-|                                  | The LSAM will close the          |
-|                                  | connection in preparation for    |
-|                                  | SAM initiating a new connection. |
-|                                  | "\[x\]" can be set with the    | |                                  | LSAM Configuration program.      |
-+----------------------------------+----------------------------------+
+
+| Message Text                     | Explanation and/or Corrective Action     |
+|--- |--- |
+| \[x\] multiply-defined           | The indicated step \[STARTING_STEP, ENDING_STEP, RESTART_STEP\] was found to be included more than once. Check "Start Image" and "Parameters" in the job's Job Details screen.    **Note:** The \[x\] multiply-defined message text applies only to jobs based on the [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md).|
+| Invalid job step \[x\]           | Shell variable 'next_step' set to a non-existent job Step Label as displayed. Check all settings  of 'next_step' -- especially   for use of incorrect letter case.    **Note:** The Invalid job step \[x\] applies only to jobs based  on the [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in  [UNIX Job Details](../job-types/unix.md)     |
+| Infinite loop detected           | The job experienced 'number_of_steps' iterations and was terminated. Check the following:    -   Starting or Restart Step comes after Ending step in script    -   Step gets repeated, possibly via intervening steps    -   Job logic correct but 'number_of_step' set too small   **Note:** The Infinite loop detected applies only to jobs based on the  [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md)|
+| Unable to change access for \[x\]     | Access permissions for the indicated job stdout/dtderr  output file could not be restricted per the LSAM Configuration setting.    |
+| Unable to change ownership for \[x\]  | Ownership of the indicated job stdout/dtderr output file could not be changed from  'root/root' per the LSAM  Configuration setting.           |
+| Process \[x\] did not start      | The LSAM health monitor has determined that the indicated LSAM process did not start (or started but then immediately terminated). Stop the LSAM. If the cause for the lost process cannot be determined from other error messages, corrected, and  the LSAM successfully re-started, then wait five minutes and re-start the LSAM.  It should then start and run properly if the cause was of a momentary nature.    |
+| Process \[x\] has terminated     | The LSAM health monitor has  determined that the indicated LSAM process abnormally terminated. Stop the LSAM. If  the cause for the lost process cannot be determined from other error messages, corrected, and the LSAM successfully re-started, then wait five  minutes and re-start the LSAM. It should then start and run  properly if the cause was of a  momentary nature.                |
+| Sending SIGUSR1 (die) to all LSAM processes     | The "bin/lsam\<*SAM_Socket*\>  stop" command was given; this  message is confirmation that the   LSAM is in normal termination processing.                      |
+| Unable to find \[x\]             | "\[x\]" cannot be located for   processing.                      |
+| Unable to create \[x\]           | "\[x\]" cannot be created for  processing.                      |
+| Unable to open \[x\]             | "\[x\]" cannot be opened for   processing.                      |
+| Unable to read \[x\]             | Data cannot be read from   "\[x\]".                       |
+| Unable to write \[x\]            | Data cannot be written to     "\[x\]".                       |
+| Deleting \[x\]                   | "\[x\]" was deleted. This is normally just an informational  message, and not indicative of a problem unless "\[x\]" is later referenced in an "Unable to \..." message.               |
+| Unable to connect to \[x\]       | A socket-based connection cannot be made to the indicated remote service or system. Determine if   the indicated system or service is up-and-running, and/or if the network is operational, and  correct the condition.           |
+| Unable to send \[x1\] to \[x2\]  | A message "\[x1\]" cannot be   sent over the socket-based connection to the indicated  remote service or system  ("\[x2\]"). Determine if the  indicated system or service is   up-and-running, and/or if the  network is operational, and correct the condition.           |
+| LSAM health monitor operating    | Informational message to confirm that the LSAM started with the  LSAM health monitor in proper   operation.    |
+| No LSAM health monitor           | Informational message to confirm that the LSAM started without the LSAM health monitor in  proper operation. Execute the   LSAM Configuration program to confirm that LSAM health  monitoring has been disabled.    |
+| LSAM health monitor disabled     | The LSAM health monitor has ceased operation. This is normal after issuance of the "LSAM stop" command.                  |
+| Sender not allowed by the LSAM configuration  | The portion of the LSAM which communicates with the SAM has received a message over a  socket-based connection from an address not configured to be acceptable. The received message was ignored. It may be necessary to run the LSAM Configuration    program to update the LSAM's configuration.                   |
+| Received unauthorized message    | Some portion of the LSAM has received a message over a socket-based connection from an unexpected address. The received message was ignored. It may be necessary to run the LSAM  Configuration program to update the LSAM's configuration.       |
+| Received a message with a blank machine name  | The portion of the LSAM which communicates with the SAM has received a message without the   required machine name which  identifies to the LSAM the intended recipient for the  message. Mark the LSAM down in a graphical interface and stop the  LSAM. Wait five minutes, then re-start the LSAM and mark it back up in a graphical interface.                       |
+| Received a message from SAM with invalid action specified | The portion of the LSAM which communicates with the SAM has received a message with an  invalid action specified. Mark the LSAM down in a graphical interface and stop the LSAM.  Wait five minutes, then re-start the LSAM and mark it back up in a graphical interface.           |
+| Received a duplicate message from SAM    | The LSAM has received a duplicate message from SAM. If this happens only occasionally, it indicates timing issues which sometimes arise in distributed  processing systems like  [OpCon]{.GeneralOpConGlobalName}, and is not indicative of a problem.  If it happens in a series over a few minutes, it indicates an acute problem with the SAM or the intervening network hardware.                |
+| Missing environment variable \[x\]      | The indicated UNIX shell environment variable is not  defined. The variable may be either expected to be defined at the system level, or it may be an LSAM-defined variable which is not getting passed around as required.                        |
+| Environment variable \[x\] is    | The indicated UNIX shell not defined environment variable is not defined. The variable may be  either expected  to be defined at the system level, or it may be an LSAM-defined variable which is not getting passed around as required.                        |
+| Received a SIGUSR1               | Each process in the LSAM should  output this message during normal termination of the LSAM.  If the  "bin/lsam\<*SAM_Socket*\> stop" command was not given, then some process or user on the  system issued a "kill" command on the indicated process.        |
+| Received order to stop LSAM Health Monitor   | This message is output during normal termination processing.   |
+| \[x\] Operational                | Each process in the LSAM should output this message during normal startup of the LSAM.      |
+| Too many arguments for \[x\]     | The addition of the text for "Start Image" and "Parameters" in the job definition resulted in \> 100 arguments.  An "argument" is any text but a space. For    example, the Start Image/Parameters combination     "/usr/john/job x y abc123 1", the start image is "/usr/john/job", and the four   arguments are "x", "y", "abc123", and "1".  (It is possible to include parameters   in the "Start Image" text box in the EM.)           |
+| Blank start image for \[x\]      | The indicated job contained no start image, i.e., script or program to execute. Check the Job Details screen in the EM.    |
+| Job \[x\] contained no UID       | The indicated job had no User ID.      |
+| Job \[x\] contained no GID       | The indicated job had no Group ID.     |
+| Job \[x1\] contained an invalid  | The indicate User ID for the UID \[x2\] indicated job was either non-existent or incorrectly formatted.      |
+| Job \[x1\] contained an invalid  | The indicate Group ID for the  GID \[x2\]  indicated job was either non-existent or incorrectly formatted.    |
+| Not allowed to start job \[x\]   | The LSAM is configured to not as 'root' allow jobs to execute with 'root' privileges.  This can be changed by running the LSAM Configuration program.           |
+| Unable to access start image  \[x1\] for \[x2\]      | The indicated Start Image could not be executed for the indicated job. The parenthesized   portion of the message provides additional details, on which corrective action can be based.  |
+| Unable to execute \[x1\] for     | The indicated item could not be  \[x2\] executed for the indicated job.  The parenthesized portion of the  message provides additional details, on which corrective action can be based.             |
+| Unable to exec() \[x1\] to start | The indicated Start Image could \[x2\]  not be executed for the indicated job. The parenthesized portion of the message  provides additional details, on which corrective action can be based. If the LSAM determines that this was caused by an invalid  reference to a shell/interpreter, e.g., the first line of the job script reads, "!\#/bin/bogus", an additional message will be generated to indicate this possibility.   |
+| Unable to 'cd' to $HOME for  \[x\]  | LSAM configuration parameter  *require_HOME_directory* is  enabled and the indicated job cannot be executed within the associated user's HOME directory. The most likely cause is an error defining the HOME directory when the user was added to the system, or that theHOME directory was either never created or it was deleted.       |
+| Received TX0 for pid = \[x\] -   | This is an informational message \[x\] output to confirm receipt of a  command from SAM to terminate  the indicated job after the user  executed the "Kill Job"  command from a graphical  interface. This does not indicate that the job actually was terminated; that  event/inability will be confirmed in a subsequent message.         |
+| Can't fork() for \[x\] -        | The LSAM is unable to create a decrementing max jobs to \[x\] process in which to run the indicated job, and is decreasing  the number of jobs it will  attempt to simultaneously run in an effort to preclude further fork() errors.  If this is a recurring problem, the LSAM Configuration program can be executed to lower the number of allowed jobs and/or the OS may need tuning to handle the load.  |
+| Job \[x\] completed              | Informational message upon proper termination of an OpCon job -- does not reflect the OK/Failed termination status.    |
+| Data has not arrived in \[x\]    | The LSAM has not received any seconds - closing socket communication from the SAM in the indicated amount of time.  The LSAM will close the connection in preparation for SAM initiating a new connection.  "\[x\]" can be set with the  LSAM Configuration program.     |
+
 
 : UNIX LSAM Messages
 
