@@ -596,11 +596,11 @@ $JOB:ADD,<schedule date>,<schedule name>,<job name>,<frequency name>,\[job insta
     ```
 
 :::note
-    
+
 If the job is configured to "Run on Each Machine" in a group, the MACHINENAME=<machine name\> property can be defined as the first property to add only an instance of the job for one machine.
 
 :::
-    
+
 - **\[reopen schedule: Y/N\]**: Indicates whether or not a completed parent schedule is reopened. This parameter is optional. Valid values are:
   - **Y**: Reopen a parent schedule that is closed (has run and is completed) so that any new jobs that are added via the $JOB:ADD event will run. When set to Yes (Y), this new parameter will override the "Job Events to Restart Schedules" setting in the Server Options if it is set to False.
   - **N**: Do not reopen a parent schedule that is closed (has run and is completed). Any new jobs that are added via the $JOB:ADD event will remain in a Qualifying state and never run. When set to No (N), this new parameter will override the "Job Events to Restart Schedules" setting in the Server Options if it is set to True.
@@ -660,10 +660,10 @@ $JOB:ADDHLD,<schedule date>,<schedule name>,<job name>,<frequency name>,\[job in
 
 :::note
 
-    If the job is configured to "Run on Each Machine" in a group, the MACHINENAME=<machine name\> property can be defined as the first property to add only an instance of the job for one machine.
-    
+If the job is configured to "Run on Each Machine" in a group, the MACHINENAME=<machine name\> property can be defined as the first property to add only an instance of the job for one machine.
+
 :::
-   
+
 - **\[reopen schedule: Y/N\]**: Indicates whether or not a completed parent schedule is reopened. This parameter is optional. Valid values are:
   - **Y**: Reopen a parent schedule that is closed (has run and is completed) so that any new jobs that are added via the $JOB:ADD event will run. When set to Yes (Y), this new parameter will override the "Job Events to Restart Schedules" setting in the Server Options if it is set to False.
   - **N**: Do not reopen a parent schedule that is closed (has run and is completed). Any new jobs that are added via the $JOB:ADD event will remain in a Qualifying state and never run. When set to No (N), this new parameter will override the "Job Events to Restart Schedules" setting in the Server Options if it is set to True.
@@ -1994,15 +1994,15 @@ define properties in the event:
 $SCHEDULE:BUILD,[[$DATE]],ProcessCreditCards,,Y,StoreNumber=2682;FileDate=123456,batchuser,batchpassword
   
 :::
-  
-  - If the schedule has Schedule Instance definitions, and all instances should be built, do not specify Schedule Instance Property Definitions on the event. By default, all predefined instances will build.
-  - If the schedule is configured to "Build an instance for each machine in Machine Group," and the build is intended for only one specific Machine, specify the machine by adding a property named MACHINENAME as the first property definition.
+
+- If the schedule has Schedule Instance definitions, and all instances should be built, do not specify Schedule Instance Property Definitions on the event. By default, all predefined instances will build.
+- If the schedule is configured to "Build an instance for each machine in Machine Group," and the build is intended for only one specific Machine, specify the machine by adding a property named MACHINENAME as the first property definition.
 
 :::tip Example
 
 $SCHEDULE:BUILD,[[$DATE]],NightlyBackup,,Y,MACHINENAME=WinServer2,batchuser,batchpassword
 :::
-    
+
 - **\[Named Instance to build\]**: Defines the named instance of the schedule to build. This parameter is optional. If not specified, the comma preceding this parameter is not required. For information on referencing valid named instances, refer to [Named Schedule Instances](../automation-concepts/named-schedule-instances.md) in the **Concepts** online help. Use the following syntax to define the instance name in the event:
 
   ```shell
@@ -2015,9 +2015,9 @@ $SCHEDULE:BUILD,[[$DATE]],ProcessCreditCards,,Y,,InstanceName=WinServer2
   
 :::
   
-  - If the instance name is specified in the event string, SMASchedMan will build the named instance of the schedule, copy all properties defined for that instance, and copy any user-defined properties in the event string.
-  - If the instance name specified in the event string, but the schedule being built is not associated with any named instances, then the build will fail.
-  - If no instance name is specified in the event and the schedule is associated with named instances, then all named instances will get built (with any user-defined properties added to each instance).
+- If the instance name is specified in the event string, SMASchedMan will build the named instance of the schedule, copy all properties defined for that instance, and copy any user-defined properties in the event string.
+- If the instance name specified in the event string, but the schedule being built is not associated with any named instances, then the build will fail.
+- If no instance name is specified in the event and the schedule is associated with named instances, then all named instances will get built (with any user-defined properties added to each instance).
 
 **Required Privileges**:
 
@@ -2070,9 +2070,9 @@ define properties in the event:
 $SCHEDULE:BUILDHLD,[[$DATE]],ProcessCreditCards,,Y,StoreNumber=2682;FileDate=123456,batchuser,batchpassword
   
 :::
-  
-  - If the schedule has Schedule Instance definitions, and all instances should be built, do not specify Schedule Instance Property Definitions on the event. By default, all predefined instances will build.
-  - If the schedule is configured to "Build an instance for each machine in Machine Group," and the build is intended for only one specific Machine, specify the machine by adding a property named MACHINENAME as the first property definition.
+
+- If the schedule has Schedule Instance definitions, and all instances should be built, do not specify Schedule Instance Property Definitions on the event. By default, all predefined instances will build.
+- If the schedule is configured to "Build an instance for each machine in Machine Group," and the build is intended for only one specific Machine, specify the machine by adding a property named MACHINENAME as the first property definition.
 
 :::tip Example
 
@@ -2091,10 +2091,10 @@ $SCHEDULE:BUILDHLD,[[$DATE]],NightlyBackup,,Y,MACHINENAME=WinServer2,batchuser,b
 $SCHEDULE:BUILDHLD,[[$DATE]],ProcessCreditCards,,Y,,InstanceName=WinServer2
 
 :::
-  
-  - If the instance name is specified in the event string, SMASchedMan will build the named instance of the schedule, copy all properties defined for that instance, and copy any user-defined properties in the event string.
-  - If the instance name specified in the event string, but the schedule being built is not associated with any named instances, then the build will fail.
-  - If no instance name is specified in the event and the schedule is associated with named instances, then all named instances will get built (with any user-defined properties added to each instance).
+
+- If the instance name is specified in the event string, SMASchedMan will build the named instance of the schedule, copy all properties defined for that instance, and copy any user-defined properties in the event string.
+- If the instance name specified in the event string, but the schedule being built is not associated with any named instances, then the build will fail.
+- If no instance name is specified in the event and the schedule is associated with named instances, then all named instances will get built (with any user-defined properties added to each instance).
 
 **Required Privileges**:
 
