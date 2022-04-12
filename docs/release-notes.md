@@ -4,6 +4,33 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.4.0
+
+2022 April
+
+#### Enterprise Manager
+
+:white_check_mark: **OPCON-16476**: Corrected Enterprise Manager environment switching problem by removing database connection pool from Enterprise Manager connections and only using database connection pool for ImpEx2 connections.
+
+#### Installation
+
+:white_check_mark: **OPCON-15798**: Fixed an issue where new OpCon installs did not work for non-contained databases. Going forward, only contained databases will be allowed as it is a requirement when supporting Azure SQL because security related information like users can't exist outside the database in the cloud. Existing installs without containment will keep working as they are.
+
+#### REST API
+
+:white_check_mark: **OPCON-16477**: Fixed error in  Machine Groups endpoint where it was trying to validate Machines in each group.
+
+#### Server
+
+:white_check_mark: **OPCON-15619**: Added fix in ENS to prevent error when saving records in the EscalaitonRecipientHistory table.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-16442**: Added functionality so that the back button takes the user back to the Agent's page when appropriate. 
+
+:white_check_mark: **OPCON-15792**: Modified Frequency parameter in JOB:ADD events in Solution Manager to no longer be required.
+
+
 ## OpCon 21.3.0
 
 2022 March
