@@ -62,6 +62,5 @@ You can create a new script version based on an existing version.
 Related Topics
 
 - [Managing Scripts](Managing-Scripts.md)
-- [Deploying Scripts](Deploying-Scripts.md)
 - [Managing Script Types](Managing-Script-Types.md)
 - [Managing Script Runners](Managing-Script-Runners.md)

@@ -44,5 +44,4 @@ Related Topics
 
 - [Managing Scripts](Managing-Scripts.md)
 - [Managing Script Versions](Managing-Script-Versions.md)
-- [Deploying Scripts](Deploying-Scripts.md)
 - [Managing Script Runners](Managing-Script-Runners.md)

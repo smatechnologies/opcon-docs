@@ -58,6 +58,5 @@ Delete operation is not allowed if Script has any cross-references.
 Related Topics
 
 - [Managing Script Versions](Managing-Script-Versions.md)
-- [Deploying Scripts](Deploying-Scripts.md)
 - [Managing Script Types](Managing-Script-Types.md)
 - [Managing Script Runners](Managing-Script-Runners.md)
