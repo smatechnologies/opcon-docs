@@ -441,6 +441,17 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
+                {
+                  type: "category",
+                  label: "Scripts",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Scripts",
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Versions",
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Types",
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Runners",
+                  ],
+                }
               ],
             },
             {
