@@ -4,6 +4,44 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.5
+
+2022 March
+
+#### Installation
+
+:white_check_mark: **OPCON-15798**: Fixed an issue where new OpCon installs did not work for non-contained databases. Going forward, only contained databases will be allowed as it is a requirement when supporting Azure SQL because security related information like users can't exist outside the database in the cloud. Existing installs without containment will keep working as they are.
+
+:white_check_mark: **OPCON-16513**: Fixed an issue with the database migration during a minor upgrade where if the Windows Domain user running the upgrade did not have the correct permissions to the database, the migration failed. The installer should have used the SQL user from the database config file (DAT file) for the migration, instead.
+
+#### REST API
+
+:white_check_mark: **OPCON-16687**: Fixed an issue in OpCon API where concurrent access to its authentication end point sometimes caused issues with the token management and the API stopped running.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-16012**: Fixed a performance issue in Solution Manager PERT view of the Operations page, where the request timed out in some instances resulting in the PERT view not being displayed.
+
+:white_check_mark: **OPCON-16701**: Fixed an issue in Solution Manager where Resource In Use label did not allow more than 5 digits.
+
+#### Server
+
+:white_check_mark: **OPCON-15863**: Fixed an issue where SMALDAPMon service sometimes resulting in primary key violations or other errors when inserting new users in the OpCon database.
+
+#### Enterprise Manager
+
+:white_check_mark: **OPCON-16476**: Corrected Enterprise Manager environment switching problem by removing database connection pool from Enterprise Manager connections and only using database connection pool for ImpEx2 connections.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-16321**: Fixed an issue in ImpEx2 where external job dependencies between named instance schedules and a normal schedule was not extracted correctly and subsequently not deployed correctly. The named instance schedule id of the normal schedule was incorrectly set to 0 when it should have been set to 1.
+
+:white_check_mark: **OPCON-16074**: Fixed an issue in ImpEx2 service where a new import exception message is now added if a duplicate script type name is detected because script type name must be unique.
+
+:white_check_mark: **OPCON-16336**: Fixed an issue in ImpEx2 service where validation was not done for missing batch users for Windows, Unix, IBM i, and MCP file transfer jobs before deploying them to the target environment.
+
+:white_check_mark: **OPCON-16498**: Fixed an issue in ImpEx2 service where it did not support LSAM feedback and Job Status Description for events.
+
 ## OpCon 21.0.4
 
 2022 March
