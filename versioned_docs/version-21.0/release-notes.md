@@ -6,7 +6,7 @@ sidebar_label: 'Release Notes'
 
 ## OpCon 21.0.5
 
-2022 March
+2022 May
 
 #### Installation
 
