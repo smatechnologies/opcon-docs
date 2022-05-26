@@ -4,6 +4,52 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.5.0
+
+2022 May
+
+#### Installation
+
+:white_check_mark: **OPCON-16513**: Fixed an issue with the database migration during a minor upgrade where if the Windows Domain user running the upgrade did not have the correct permissions to the database, the migration failed. The installer should have used the SQL user from the database config file (DAT file) for the migration, instead.
+
+#### REST API
+
+:white_check_mark: **OPCON-16687**: Fixed an issue in OpCon API where concurrent access to its authentication end point sometimes caused issues with the token management and the API stopped running.
+
+:white_check_mark: **OPCON-16793**: Fixed an issue in the OpCon API where fetching calendars and frequencies (GET) required the user to have 'maintain' privileges to those resources, when they are only needed to add/update/delete them.
+
+:eight_spoked_asterisk: **OPCON-16604**: The OpCon API now allows users to fetch basic job details from master, without any dependencies, events, etc. It also allows the user to fetch cross references to these jobs from other master jobs.
+
+:eight_spoked_asterisk: **OPCON-16613**: The OpCon API now allows maintaining notification escalation groups. A user can call the API to fetch, create, edit and delete escalation groups with either OpCon users and/or global properties that contain the user name. API documentation has more details (api/escalationGroups).
+
+:eight_spoked_asterisk: **OPCON-16656**: The OpCon API now allows users to edit a null job in master with only basic details, without any dependencies, events, etc.
+
+:eight_spoked_asterisk: **OPCON-16855**: The OpCon API now allows users to view cross references to master jobs from other master jobs (jobs that depend on this job).
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-16012**: Fixed a performance issue in Solution Manager PERT view of the Operations page, where the request timed out in some instances resulting in the PERT view not being displayed.
+
+:white_check_mark: **OPCON-16702**: Fixed an issue in Solution Manager with calendars, where saving dates on a system with the French date format caused calendars to throw 'invalid date format' errors.
+
+:white_check_mark: **OPCON-15595**: Fixed an issue in Solution Manager where a dependency on a named instance schedule's job from a different named instance, did not show the instance name as part of the schedule name built in daily in the job dependencies section.
+
+:eight_spoked_asterisk: **OPCON-15100**: Solution Manager now allows a user to manage batch users via the Library. You may add, edit and delete batch users and you can view cross references for them.
+
+:eight_spoked_asterisk: **OPCON-16126**: Solution Manager now allows users to maintain machines. From the agents page, a user can select machines and edit them, add new machines, copy settings to new a machine and check the cross references for them.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-16321**: Fixed an issue in ImpEx2 where external job dependencies from named instance schedule to regular schedule were not extracted correctly.
+
+:white_check_mark: **OPCON-16074**: Fixed ImpEx2 to stop schedule/script import and display an exception message if a duplicate script type name is detected.
+
+:white_check_mark: **OPCON-16336**: Fixed an issue in ImpEx2 service where validation was not done for missing batch users for Windows, Unix, IBM i, and MCP file transfer jobs before deploying them to the target environment.
+
+:white_check_mark: **OPCON-16345**: Fixed ImpEx2 to fail the deploy if batch user for SQL jobs does not exist in the target system.
+
+:white_check_mark: **OPCON-16498**: Fixed an issue in ImpEx2 where "Job Status Description" LSAM feedback events were not supported.
+
 ## OpCon 21.4.0
 
 2022 April
