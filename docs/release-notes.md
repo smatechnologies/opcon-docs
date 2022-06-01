@@ -34,8 +34,6 @@ sidebar_label: 'Release Notes'
 
 :white_check_mark: **OPCON-15595**: Fixed an issue in Solution Manager where a dependency on a named instance schedule's job from a different named instance, did not show the instance name as part of the schedule name built in daily in the job dependencies section.
 
-:eight_spoked_asterisk: **OPCON-15100**: Solution Manager now allows a user to manage batch users via the Library. You may add, edit and delete batch users and you can view cross references for them.
-
 :eight_spoked_asterisk: **OPCON-16126**: Solution Manager now allows users to maintain machines. From the agents page, a user can select machines and edit them, add new machines, copy settings to new a machine and check the cross references for them.
 
 #### ImpEx2 Web Service
