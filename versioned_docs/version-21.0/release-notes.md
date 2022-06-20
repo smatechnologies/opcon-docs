@@ -4,6 +4,22 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.6
+
+2022 June
+
+#### Server
+
+:white_check_mark: **OPCON-16723**: Fixed an issue in expression evaluator, where Windows file arrival paths were incorrectly resolved when running OpCon on Docker.
+
+:white_check_mark: **OPCON-16980**: Fixed an issue where Netcom tracking files were getting populated with machine up/down messages that would never get cleared.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-16749**: Fixed an issue in ImpEx2 service where an SAP job import and deploy caused problem with certain header types in the XML request to the SAP system. The XML headers are now cleared before the request is made.
+
+:white_check_mark: **OPCON-16345**: Fixed ImpEx2 to fail the deploy if batch user for SQL jobs does not exist in the target system.
+
 ## OpCon 21.0.5
 
 2022 May
