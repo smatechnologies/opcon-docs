@@ -43,6 +43,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          breadcrumbs: false,
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
@@ -62,6 +63,9 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-7XYMFXX81Y',
+        },
       },
     ],
   ],
@@ -69,7 +73,6 @@ module.exports = {
     [
       require.resolve('@cmfcmf/docusaurus-search-local'), 
       {
-        docsRouteBasePath: '/', 
       }
     ],
   ],
