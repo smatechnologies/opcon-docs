@@ -65,9 +65,13 @@ how to define and send that notification type:
 
 **Lookup Dialog** To conduct the reverse look up of an event, you will need to have the Notification ID. You can obtain the Notification ID (when available) from a notification message or retrieve the Notification ID from the SMANotifyHandler.log.
 
-Clicking on the lookup button will open the Lookup dialog ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source")
+Clicking on the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source") button will open the Lookup dialog 
 
-- [Lookup](./NotificationTypes/Looking-up-Notification-Sources)
+- [Lookup Dialog](./NotificationTypes/Looking-up-Notification-Sources)
+
+
+Clicking on the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Lookup Notification Source") button will open the copy dialog
+- [Copy Dialog](./NotificationTypes/Copy-Notification-Trigger)
 
 
 **Advanced Filtering** To perform advanced filtering of the notification triggers, use the Advanced Filters located at the top right of the screen.
