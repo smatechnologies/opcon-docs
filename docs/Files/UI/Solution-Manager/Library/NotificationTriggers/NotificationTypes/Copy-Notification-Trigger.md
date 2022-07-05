@@ -7,7 +7,7 @@
 
  You can select any groups available, if no groups are available for this trigger configuration the following  message will appear:
  
-![Copy Message](../../../../../../Resources/Images/SM/Library/NotificationTriggers/Copy-Message.png "Copy Message")
+![Copy Message](../../../../../../Resources/Images/SM/Library/NotificationTriggers/copy-message.png "Copy Message")
 
 
 
