@@ -4,6 +4,33 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.6.0
+
+2022 July
+
+#### Server
+
+:white_check_mark: **OPCON-16723**: Fixed an issue in the expression evaluator, where Windows file arrival paths were incorrectly resolved when running OpCon on Docker.
+
+:white_check_mark: **OPCON-17069**: Fixed an issue where Netcom tracking files were getting populated with machine up/down messages that would never get cleared.
+
+#### REST API
+
+:white_check_mark: **OPCON-16939**: Fixed an issue where Posting Roles to its endpoint with batch users caused an error.
+
+:white_check_mark: **OPCON-16185**: Fixed an issue in OpCon API where new machines were shown as created by Unknown user in Audit Management.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-15100**: Solution Manager now allows a user to manage batch users via the Library. You may add, edit and delete batch users and you can view cross references for them.
+
+:white_check_mark: **OPCON-17029**: Fixed a sorting error with calendars screen when there are two or more pages.
+
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-16749**: Fixed an issue in ImpEx2 service where an SAP job import and deploy caused problem with certain header types in the XML request to the SAP system. The XML headers are now cleared before the request is made.
+
 ## OpCon 21.5.0
 
 2022 May
@@ -33,6 +60,8 @@ sidebar_label: 'Release Notes'
 :white_check_mark: **OPCON-16702**: Fixed an issue in Solution Manager with calendars, where saving dates on a system with the French date format caused calendars to throw 'invalid date format' errors.
 
 :white_check_mark: **OPCON-15595**: Fixed an issue in Solution Manager where a dependency on a named instance schedule's job from a different named instance, did not show the instance name as part of the schedule name built in daily in the job dependencies section.
+
+:eight_spoked_asterisk: **OPCON-15120**: Solution Manager now allows users to maintain scripts. Users can add, edit, copy and delete scripts and their types and runners. They can view cross references for the script, manage their versions, and deploy specific versions to defined jobs.
 
 :eight_spoked_asterisk: **OPCON-16126**: Solution Manager now allows users to maintain machines. From the agents page, a user can select machines and edit them, add new machines, copy settings to new a machine and check the cross references for them.
 
