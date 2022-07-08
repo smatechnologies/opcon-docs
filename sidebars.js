@@ -448,6 +448,8 @@ module.exports = {
                   label: "Notification Types",
                   collapsed: true,
                   items: [
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Copy-Notification-Trigger",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Look-up-Notification-Sources",
                     "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Email",
                     "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Text-Message",
                     "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/OpCon-Events",
