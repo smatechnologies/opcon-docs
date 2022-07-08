@@ -22,10 +22,13 @@ sidebar_label: 'Release Notes'
 
 #### Solution Manager
 
+:eight_spoked_asterisk: **OPCON-15118**: Solution Manager now allows users to configure notifications in OpCon for machines, schedules and jobs, when any actionable change occurs to them. Notification triggers belong to a group, but in the new notification system, groups are flat structures instead of hierarchical ones like Enterprise Manager used to have. So, each notification trigger belongs to a single root group. Any pre-defined hierarchical groups will stay as they are, but only the lowest level of the group is visible in Solution Manager. Instead, users can define a 'Category' for each trigger as a way to tag them for a purpose. A trigger can have multiple categories assigned. The new system makes it easy to understand and categorize triggers.
+
+:eight_spoked_asterisk: **OPCON-15117**: Solution Manager now allows users to define and configure escalation rules for different notification triggers. Users can create and associate the rules to each trigger, and also to a group of users who will receive the escalation based on the defined rules provided they have an email address defined. The escalation manager allows users to be associated to the rules and notification manager allows them to be associated with the triggers.
+
 :eight_spoked_asterisk: **OPCON-15100**: Solution Manager now allows a user to manage batch users via the Library. You may add, edit and delete batch users and you can view cross references for them.
 
 :white_check_mark: **OPCON-17029**: Fixed a sorting error with calendars screen when there are two or more pages.
-
 
 #### ImpEx2 Web Service
 
