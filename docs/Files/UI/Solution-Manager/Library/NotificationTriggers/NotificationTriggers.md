@@ -67,7 +67,7 @@ how to define and send that notification type:
 
 Clicking on the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source") button will open the Lookup dialog 
 
-- [Lookup Dialog](./NotificationTypes/Looking-up-Notification-Sources)
+- [Lookup Dialog](./NotificationTypes/Looking-Up-Notification-Sources)
 
 
 Clicking on the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Lookup Notification Source") button will open the copy dialog
