@@ -18,7 +18,7 @@ notification to a pager, phone, or other SMS-capable device.
     characters.
 
 :::note
-The SMA Notify Handler will insert a Notification ID using the format ID=nnn before any other information in the message so users can look up the source of a notification. For more information, refer to [Looking up Notification Sources](Looking-up-Notification-Sources).
+The SMA Notify Handler will insert a Notification ID using the format ID=nnn before any other information in the message so users can look up the source of a notification. For more information, refer to [Looking up Notification Sources](Look-up-Notification-Sources).
 :::
 
 The resulting message contains only the user-defined message.
