@@ -67,22 +67,22 @@ how to define and send that notification type:
 
 Clicking on the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source") button will open the Lookup dialog 
 
-- [Lookup Dialog](./NotificationTypes/Looking-Up-Notification-Sources)
+- [Lookup Dialog](./NotificationTypes/Look-up-Notification-Sources)
 
 
-Clicking on the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Lookup Notification Source") button will open the copy dialog
+Clicking on the ![Copy Dialog](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Copy Dialog") button will open the copy dialog
 - [Copy Dialog](./NotificationTypes/Copy-Notification-Trigger)
 
 
 **Advanced Filtering** To perform advanced filtering of the notification triggers, use the Advanced Filters located at the top right of the screen.
 
-![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/advanced-filtering.png "Lookup Notification Source")
+![Advanced Filtering](../../../../../Resources/Images/SM/Library/NotificationTriggers/advanced-filtering.png "Advanced Filtering")
 
 Filtering by **Contents** will filter by showing the notification triggers which contain the specified text in any of the notifications.
 
 Filtering by **Notification Type** will filter by showing the notification triggers that have all of the selected notification types from the selection drop down configured.
 
-![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-notification-type.png "Lookup Notification Source")
+![Filter By Notification Type](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-notification-type.png "Filter By Notification Type")
 
 
 Filtering by **Categories** will filter by showing the notification triggers that are associated with all of the selected categories in the selection drop down.
@@ -93,9 +93,9 @@ For customers who migrated from versions previous to 21.6, the way to reach a sp
 
 **Using Enterprise Manager**
 
-![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/notification-manager-em.png "Lookup Notification Source")
+![Notification Manager EM](../../../../../Resources/Images/SM/Library/NotificationTriggers/notification-manager-em.png "Notification Manager EM")
 
 
 **Using Solution Manager**
 
-![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-categories.png "Lookup Notification Source")
+![Filter By Categories](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-categories.png "Filter By Categories")
