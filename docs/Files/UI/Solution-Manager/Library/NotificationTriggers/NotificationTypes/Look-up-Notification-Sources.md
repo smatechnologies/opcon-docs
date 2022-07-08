@@ -1,4 +1,4 @@
-# Looking up Notification Sources
+# Look up Notification Sources
 
 ![Lookup Notification Source](../../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup-dialog.png "Lookup Notification Source")
 
