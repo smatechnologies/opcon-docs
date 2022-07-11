@@ -442,6 +442,15 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
                 "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
+                {
+                  type: "category",
+                  label: "Escalation Manager",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Rules",
+                    "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups",
+                  ],
+                }
               ],
             },
             {
