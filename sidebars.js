@@ -441,6 +441,7 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
+                "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
                 {
                   type: "category",
                   label: "Escalation Manager",
