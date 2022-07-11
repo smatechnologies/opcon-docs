@@ -460,6 +460,16 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/SPO-Event-Report",
                   ],
                 },
+                "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
+                {
+                  type: "category",
+                  label: "Escalation Manager",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Rules",
+                    "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups",
+                  ],
+                },
                 {
                   type: "category",
                   label: "Scripts",
