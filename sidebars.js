@@ -441,6 +441,25 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
+                "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",
+                "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers",
+                {
+                  type: "category",
+                  label: "Notification Types",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Copy-Notification-Trigger",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Look-up-Notification-Sources",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Email",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Text-Message",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/OpCon-Events",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Windows-Event-Log",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Network-Message",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/SNMP-Trap",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Run-Command",
+                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/SPO-Event-Report",
+                  ],
+                },
                 "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
                 {
                   type: "category",
@@ -449,6 +468,17 @@ module.exports = {
                   items: [
                     "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Rules",
                     "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Scripts",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Scripts",
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Versions",
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Types",
+                    "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Runners",
                   ],
                 }
               ],
