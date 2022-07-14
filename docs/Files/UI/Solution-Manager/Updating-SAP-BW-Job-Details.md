@@ -60,7 +60,7 @@ Select from the **Machines or Machine Group** drop-down list the **machine** whe
 ![SAP Query Dialog](../../../Resources/Images/SM/SAP-Query-Dialog.png "SAP Query Dialog")
 
 - Click on the search button ![Query SAP Button](../../../Resources/Images/SM/Query-SAP-Button.png "Query SAP Button")to initiates a request to the SAP BW system to retrieve all Process Chain names matching the search criteria.
-- Select a process chain from the list and click Ok to assign it to the process chain name in the SAB BW job  Daily Job Definition.
+- Select a process chain from the list and click Ok to assign it to the process chain name in the SAP BW Daily Job Definition.
 
 ![Process Chain List](../../../Resources/Images/SM/Proccess-Chain-List.png "Process Chain List")
 
