@@ -169,145 +169,23 @@ the job(s) the card monitors.
 
 Vision cards use the following icon and color combinations:
 
-+----------------------------------+----------------------------------+
-| ![Vision Card Finished           | **Finished OK**: A white check   | | OK](../../../Resources/Images    | mark icon on a green background  |
-| /SM/Vision-Card-Finished-O | indicates the job(s) have        |
-| K.png "Vision Card Finished OK") | completed without error in the   |
-|                                  | following possible job statuses: |
-|                                  |                                  |
-|                                  | -   Finished OK                  |
-|                                  | -   Marked Finished OK           |
-+----------------------------------+----------------------------------+
-| ![Vision Card Finished with      | **Finished with Error(s)**: A    | | Error(s)](../../../Resource      | white X icon on a red background |
-| s/Images/SM/Vision-Card-Fini | indicates that the job(s) have   |
-| shed-with-Error(s).png "Visi | completed with one or more       |
-| on Card Finished with Error(s)") | errors in the following possible |
-|                                  | job statuses:                    |
-|                                  |                                  |
-|                                  | -   Failed                       |
-|                                  | -   Initialization Error         |
-|                                  | -   Marked Failed                |
-+----------------------------------+----------------------------------+
-| ![Vision Card Finished with      | **Finished with Warning(s)**: A  | | W                                | white exclamation point icon on  |
-| arning(s)](../../../Resources/Im | an orange background indicates   |
-| ages/SM/Vision-Card-Finished | that the job(s) have finished    |
-| -with-Warning(s).png "Vision | with one or more warnings in the |
-|  Card Finished with Warning(s)") | following possible job statuses: |
-|                                  |                                  |
-|                                  | -   Missed Start Time            |
-|                                  | -   Skipped                      |
-|                                  | -   Cancelled                    |
-+----------------------------------+----------------------------------+
-| ![Vision Card In                 | **In Process**: A blue gear icon | | Process](../../../Resources/Imag | on a white background indicates  |
-| es/SM/Vision-Card-In-Proce | that the job(s) are running      |
-| ss.png "Vision Card In Process") | without error(s) in the          |
-|                                  | following possible job statuses: |
-|                                  |                                  |
-|                                  | -   Attempt to Start             |
-|                                  | -   Job Running                  |
-|                                  | -   Job Running; To be           |
-|                                  |     Terminated                   |
-|                                  | -   Prerun Active                |
-|                                  | -   Start Attempted              |
-|                                  | -   Still Attempting Start       |
-+----------------------------------+----------------------------------+
-| ![Vision Card In Process with    | **In Process**: A red gear icon  | | E                                | on a white background indicates  |
-| rror(s)](../../../Resources/Imag | that one or more underlying jobs |
-| es/SM/Vision-Card-In-Proce | is in process and at least one   |
-| ss-with-Error(s).png "Vision | job is in a failed category      |
-|  Card In Process with Error(s)") | state in the following possible  |
-|                                  | job statuses:                    |
-|                                  |                                  |
-|                                  | -   In Process Category:         |
-|                                  |     -   Attempt to Start         |
-|                                  |     -   Job Running              |
-|                                  |     -   Job Running; To be       |
-|                                  |         Terminated               |
-|                                  |     -   Prerun Active            |
-|                                  |     -   Start Attempted          |
-|                                  |     -   Still Attempting Start   |
-|                                  | -   Failed Category:             |
-|                                  |     -   Failed                   |
-|                                  |     -   Initialization Error     |
-|                                  |     -   Marked Failed            |
-+----------------------------------+----------------------------------+
-| ![Vision Card In Process with    | **In Process**: An orange gear   | | Warning                          | icon on a white background       |
-| (s)](../../../Resources/Images/S | indicates that one or more       |
-| M/Vision-Card-In-Process%2 | underlying jobs is in process    |
-| 0with-Warning(s).png "Vision C | and at least one job is in a     |
-| ard In Process with Warning(s)") | warning category state in the    |
-|                                  | following possible job statuses: |
-|                                  |                                  |
-|                                  | -   In Process Category:         |
-|                                  |     -   Attempt to Start         |
-|                                  |     -   Job Running              |
-|                                  |     -   Job Running; To be       |
-|                                  |         Terminated               |
-|                                  |     -   Prerun Active            |
-|                                  |     -   Start Attempted          |
-|                                  |     -   Still Attempting Start   |
-|                                  | -   Warning Category:            |
-|                                  |     -   Missed Start Time        |
-|                                  |     -   Skipped                  |
-|                                  |     -   Cancelled                |
-+----------------------------------+----------------------------------+
-| ![Vision Card                    | **Waiting**: A gray hourglass    | | Waiting](../../../Resour         | icon on a white background       |
-| ces/Images/SM/Vision-Card-Wa | indicates the job(s) are in a    |
-| iting.png "Vision Card Waiting") | waiting category state in the    |
-|                                  | following possible job statuses: |
-|                                  |                                  |
-|                                  | -   Job to be Skipped            |
-|                                  | -   Late to Start                |
-|                                  | -   On Hold                      |
-|                                  | -   Prerun Failed                |
-|                                  | -   Qualifying                   |
-|                                  | -   Released                     |
-|                                  | -   Wait Expression Dependency   |
-|                                  | -   Wait Job Conflict            |
-|                                  | -   Wait Job Dependency          |
-|                                  | -   Wait Machine                 |
-|                                  | -   Wait Start Time              |
-|                                  | -   Wait Threshold/Resource      |
-|                                  |     Dependency                   |
-|                                  | -   Wait to Start                |
-|                                  | -   Wait to Start; Forced        |
-+----------------------------------+----------------------------------+
-| ![Vision Card                    | **None**: A purple question mark | | None](../../../                  | icon on a white background       |
-| Resources/Images/SM/Vision-Car | indicates the job(s) have not    |
-| d-None.png "Vision Card None") | been found in OpCon daily for    |
-|                                  | the specific day.                |
-+----------------------------------+----------------------------------+
-| ![Vision Card                    | **Computing**: A spinning purple | | Computing](../../../Resources/   | line icon on a white background  |
-| Images/SM/Vision-Card-Comput | indicates the status of the card |
-| ing.png "Vision Card Computing") | is being calculated by OpCon.    |
-+----------------------------------+----------------------------------+
-| ![Vision Card Different Vision   | A white unlocked padlock icon on | | Fr                               | a gray background indicates the  |
-| equency](../../../Resources/Imag | card does not match the Vision   |
-| es/SM/Vision-Card_Different- | Frequency. This card only        |
-| Vision-Frequency.png "Vision C | appears in Admin mode.           |
-| ard Different Vision Frequency") |                                  |
-+----------------------------------+----------------------------------+
-| ![Vision Badge                   | **Badge**: The badge icon        | | Icon](../../../Re                | indicates the card is defined to |
-| sources/Images/SM/Vision-Badge | a remote instance. For more      |
-| -Icon.png "Vision Badge Icon") | information on the badge field,  |
-|                                  | refer to [Managing Vision Remote | |                                  | Instances](Managing-Vision%2   |
-|                                  | 0Remote-Instances.md) |
-|                                  |  in the **Solution         |
-|                                  | Manager** online help.           |
-+----------------------------------+----------------------------------+
-| ![Vision SLA Icon                | **SLA**: The gray SLA icon       | | Gray](../../../Resources/        | indicates there is a problem     |
-| Images/SM/Vision-SLA-Icon- | with a child of the group.       |
-| Gray.png "Vision SLA Icon Gray") |                                  |
-+----------------------------------+----------------------------------+
-| ![Vision SLA Icon                | **SLA**: The orange SLA icon     | | Yellow](../../../Resources/Imag  | indicates there is a problem     |
-| es/SM/Vision-SLA-Icon-Yell | with a group (or a tag if on a   |
-| ow.png "Vision SLA Icon Yellow") | tag card).                       |
-+----------------------------------+----------------------------------+
-| ![Vision Edit                    | **Edit**: The blue edit button   | | Button](../../../Reso            | allows you to edit a card.       |
-| urces/Images/SM/Vision-Edit- |                                  |
-| Button.png "Vision Edit Button") |                                  |
-+----------------------------------+----------------------------------+
-| ![Vision Delete                  | **Delete**: The red delete       | | Button](../../../Resource        | button allows you to delete a    |
-| s/Images/SM/Vision-Delete-Bu | card.                            |
-| tton.png "Vision Delete Button") |                                  |
-+----------------------------------+----------------------------------+
+|||
+|---|---|
+| ![Vision Card Finished OK](../../../Resources/Images/SM/Vision-Card-Finished-OK.png "Vision Card Finished OK") | **Finished OK**: A white check mark icon on a green background indicates all jobs have completed with a *Finished OK* or *Marked Finished OK* job status. |
+| ![Vision Card Finished with Error(s)](../../../Resources/Images/SM/Vision-Card-Finished-with-Error(s).png "Vision Card Finished with Error(s)") | **Finished with Error(s)**: A white X icon on a red background indicates that all jobs have completed and at least one job has completed with a *Failed*, *Initiailization Error* or *Marked Failed* job status. |
+| ![Vision Card Finished with Warning(s)](../../../Resources/Images/SM/Vision-Card-Finished-with-Warning(s).png "Vision  Card Finished with Warning(s)") | **Finished with Warning(s)**: A white exclamation point icon on an orange background indicates that all jobs have completed and at least one job has completed with a *Missed Start Time*, *Skipped*, or *Cancelled* job status. |
+| ![Vision Card In Process](../../../Resources/Images/SM/Vision-Card-In-Process.png "Vision Card In Process") | **In Process**: A blue gear icon on a white background indicates that at least one job is in an *Attempt to Start*, *Job Running*, *Job Running; To be Terminated*, *Prerun Active*, *Start Attempted*, or *Still Attempting Start* job status and no jobs are in a failed or warning status. |
+| ![Vision Card In Process with Error(s)](../../../Resources/Images/SM/Vision-Card-In-Process-with-Error(s).png "Vision Card In Process with Error(s)") | **In Process**: A red gear icon on a white background indicates that at least one job is in an *Attempt to Start*, *Job Running*, *Job Running; To be Terminated*, *Prerun Active*, *Start Attempted*, or *Still Attempting Start* job status and another job is in a *Failed*, *Initialization Error*, or *Marked Failed* job status. |
+| ![Vision Card In Process with Warning(s)](../../../Resources/Images/SM/Vision-Card-In-Process-with-Warning(s).png "Vision Card In Process with Warning(s)") | **In Process**: An orange gear icon on a white background indicates that one or more underlying jobs is in process in an *Attempt to Start*, *Job Running*, *Job Running; To be Terminated*, *Prerun Active*, *Start Attempted*, or *Still Attempting Start* job status and at least one job is in a warning category state in a *Missed Start Time*, *Skipped*, or *Cancelled* job status. |
+| ![Vision Card Waiting](../../../Resources/Images/SM/Vision-Card-Waiting.png "Vision Card Waiting") | **Waiting**: A gray hourglass icon on a white background indicates all jobs are in waiting category states with a *Job to be Skipped*, *Late to Start*, *On Hold*, *Prerun Failed*, *Qualifying*, *Released*, *Wait Expression Dependency*, *Wait Job Conflict*, *Wait Job Dependency*, *Wait Machine*, *Wait Start Time*, *Wait Threshold/Resource Dependency*, *Wait to Start*, or *Wait to Start; Forced* job status. |
+| ![Vision Card None](../../../Resources/Images/SM/Vision-Card-None.png "Vision Card None") | **None**: A purple question mark icon on a white background indicates the job(s) have not been found for the specified day. |
+| ![Vision Card Computing](../../../Resources/Images/SM/Vision-Card-Computing.png "Vision Card Computing") | **Computing**: A spinning purple line icon on a white background indicates the status of the card is currently being calculated. This is a temporary status that gets replaced at the next processing interval. |
+| ![Vision Card Different Vision Frequency](../../../Resources/Images/SM/Vision-Card_Different-Vision-Frequency.png "Vision Card Different Vision Frequency") | A white unlocked padlock icon on a gray background indicates the card does not match the Vision Frequency. This card only appears in Admin mode. |
+
+|||
+|---|---|
+| ![Vision Badge Icon](../../../Resources/Images/SM/Vision-Badge-Icon.png "Vision Badge Icon") | **Badge**: The badge icon indicates the card is defined to a remote instance. For more information on the badge field, refer to [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md). |
+| ![Vision SLA Icon Gray](../../../Resources/Images/SM/Vision-SLA-Icon-Gray.png "Vision SLA Icon Gray") | **SLA**: The gray SLA icon indicates there is a problem with a child of the group. |
+| ![Vision SLA Icon Yellow](../../../Resources/Images/SM/Vision-SLA-Icon-Yellow.png "Vision SLA Icon Yellow") | **SLA**: The orange SLA icon indicates there is a problem with a group (or a tag if on a tag card). |
+| ![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button") | **Edit**: The blue edit button allows you to edit a card. |
+| ![Vision Delete Button](../../../Resources/Images/SM/Vision-Delete-Button.png "Vision Delete Button") | **Delete**: The red delete button allows you to delete a card. |
