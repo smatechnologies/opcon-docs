@@ -4,6 +4,18 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.0.7
+
+2022 August
+
+#### Server
+
+:white_check_mark: **OPCON-17343**: Fixed an issue in Notify Handler with SSL and TLS based Email and text message notifications.
+
+#### REST API
+
+:white_check_mark: **OPCON-16185**: Fixed an issue in OpCon API where new machines were shown as created by Unknown user in Audit Management.
+
 ## OpCon 21.0.6
 
 2022 June
