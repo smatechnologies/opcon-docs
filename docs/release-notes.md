@@ -10,17 +10,35 @@ sidebar_label: 'Release Notes'
 
 #### Server
 
-:white_check_mark: **OPCON-16723**: Fixed an issue in the expression evaluator, where Windows file arrival paths were incorrectly resolved when running OpCon on Docker.
-
-:white_check_mark: **OPCON-17069**: Fixed an issue where Netcom tracking files were getting populated with machine up/down messages that would never get cleared.
+:white_check_mark: **OPCON-17121**: Fixed an issue with SSL and TLS based Email and text message notifications.
 
 #### REST API
 
-:white_check_mark: **OPCON-16939**: Fixed an issue where Posting Roles to its endpoint with batch users caused an error.
+:white_check_mark: **OPCON-16932**: Fixed issue where single quotes in a batch user name caused an error.
 
-:white_check_mark: **OPCON-16185**: Fixed an issue in OpCon API where new machines were shown as created by Unknown user in Audit Management.
+:white_check_mark: **OPCON-17178**: Migration for Notification Triggers was moved from 21.4 and 21.6 to 21.7.
+
+:white_check_mark: **OPCON-17190**: Fixed an issue where adding/updating a daily schedule instance property inserted a backslash.
+
+:white_check_mark: **OPCON-17204**: Fixed an internal server error bug in /api/jobinstanceactions when retrieving JORS output for historical jobs.
+
+:white_check_mark: **OPCON-17296**: Fixed performance issue in dailyJobs endpoint when includeDetails=true and there are a lot of container jobs.
+
+:white_check_mark: **OPCON-17447**: Fixed a bug that allowed all-whitespace tag names in /api/jobtags and errored on an empty tag name.
 
 #### Solution Manager
+
+:white_check_mark: **OPCON-15633**: Fixed a bug with tooltips on expression dependencies.
+
+:white_check_mark: **OPCON-17047**: Fixed issue with scripts timing out when a large amount of cross references exist.
+
+:white_check_mark: **OPCON-17195**: Fixed an issue where File Transfer Jobs threw an unexpected error.
+
+:white_check_mark: **OPCON-17291**: Fixed an issue in the scripts page where HTML inside a comment was being rendered to screen.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-17433**: Fixed issues with schedule level frequencies when performing a deployment update. The errors included duplicate keys if jobs added during the deployment, or missing frequencies for job if new schedule level frequencies were added.
 
 
 ## OpCon 21.6.0
