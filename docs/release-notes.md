@@ -4,6 +4,25 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.7.0
+
+2022 August
+
+#### Server
+
+:white_check_mark: **OPCON-16723**: Fixed an issue in the expression evaluator, where Windows file arrival paths were incorrectly resolved when running OpCon on Docker.
+
+:white_check_mark: **OPCON-17069**: Fixed an issue where Netcom tracking files were getting populated with machine up/down messages that would never get cleared.
+
+#### REST API
+
+:white_check_mark: **OPCON-16939**: Fixed an issue where Posting Roles to its endpoint with batch users caused an error.
+
+:white_check_mark: **OPCON-16185**: Fixed an issue in OpCon API where new machines were shown as created by Unknown user in Audit Management.
+
+#### Solution Manager
+
+
 ## OpCon 21.6.0
 
 2022 July
