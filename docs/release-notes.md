@@ -14,27 +14,27 @@ sidebar_label: 'Release Notes'
 
 #### REST API
 
-:white_check_mark: **OPCON-16932**: Fixed issue where single quotes in a batch user name caused an error.
-
-:white_check_mark: **OPCON-17178**: Migration for Notification Triggers was moved from 21.4 and 21.6 to 21.7.
-
-:white_check_mark: **OPCON-17190**: Fixed an issue where adding/updating a daily schedule instance property inserted a backslash.
-
-:white_check_mark: **OPCON-17204**: Fixed an internal server error bug in /api/jobinstanceactions when retrieving JORS output for historical jobs.
+:white_check_mark: **OPCON-17447**: Fixed a bug that allowed all-whitespace tag names in /api/jobtags and errored on an empty tag name.
 
 :white_check_mark: **OPCON-17296**: Fixed performance issue in dailyJobs endpoint when includeDetails=true and there are a lot of container jobs.
 
-:white_check_mark: **OPCON-17447**: Fixed a bug that allowed all-whitespace tag names in /api/jobtags and errored on an empty tag name.
+:white_check_mark: **OPCON-17204**: Fixed an internal server error bug in /api/jobinstanceactions when retrieving JORS output for historical jobs.
+
+:white_check_mark: **OPCON-17190**: Fixed an issue where adding/updating a daily schedule instance property inserted a backslash.
+
+:white_check_mark: **OPCON-17178**: Migration for Notification Triggers was moved from 21.4 and 21.6 to 21.7.
+
+:white_check_mark: **OPCON-16932**: Fixed issue where single quotes in a batch user name caused an error.
 
 #### Solution Manager
 
-:white_check_mark: **OPCON-15633**: Fixed a bug with tooltips on expression dependencies.
-
-:white_check_mark: **OPCON-17047**: Fixed issue with scripts timing out when a large amount of cross references exist.
+:white_check_mark: **OPCON-17291**: Fixed an issue in the scripts page where HTML inside a comment was being rendered to screen.
 
 :white_check_mark: **OPCON-17195**: Fixed an issue where File Transfer Jobs threw an unexpected error.
 
-:white_check_mark: **OPCON-17291**: Fixed an issue in the scripts page where HTML inside a comment was being rendered to screen.
+:white_check_mark: **OPCON-17047**: Fixed issue with scripts timing out when a large amount of cross references exist.
+
+:white_check_mark: **OPCON-15633**: Fixed a bug with tooltips on expression dependencies.
 
 #### ImpEx2 Web Service
 
