@@ -354,10 +354,10 @@ The following is a list of SAP BW LSAM exit conditions for failed jobs.
 If an exit condition is not in this list, the LSAM Exit Code position of
 the return status is a Windows error code (refer to [Windows Machine Messages](#Windows) for a list of Windows exit codes).
 
-  SAP BW LSAM Exit Condition Number   Description
-  ----------------------------------- --------------------------------------------------
-  70001                               Error in trying to start the BW Process Chain
-  70002                               Error in retrieving the log for BW Process Chain
+|SAP BW LSAM Exit Condition Number|Description|
+|---|---|
+|70001|Error in trying to start the BW Process Chain|
+|70002|Error in retrieving the log for BW Process Chain|
 
   : SAP BW LSAM Exit Codes
 
@@ -407,22 +407,22 @@ Code position of the return status is a Windows error code (refer to
 [Windows Machine Messages](#Windows) for a list of
 Windows exit codes).
 
-   SAP R/3 and CRM LSAM Exit Condition Number  Description
-  -------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-                     70001                     The Job Name the LSAM is trying to send to the SAP system is null.
-                     70002                     The Job Number the LSAM is trying to send to the SAP system is null.
-                     70003                     The USER setting in the SAPLSAM.ini file is blank.
-                     70004                     Error in logging on to SAP system: bad User ID, password, or TCP/IP address.
-                     70005                     Error in checking existing job status: could not find the job on the SAP system.
-                     70006                     Error in job copy: The LSAM could not copy the job to run it in SAP.
-                     70007                     Error in Job definition get: after the job was copied for execution, the LSAM couldn't retrieve the copied job's details; therefore, the job could not run.
-                     70008                     Error in starting the copied job: the job copy and job retrieve were successful, but the LSAM could not start the job.
-                     70009                     Error in getting the job's current status
-                     70010                     Error in reading the job log
-                     70011                     Error in getting the children job information for the current job
-                     70012                     Error in aborting job
-                     70013                     Error in reading the spool list for the job
-                     70017                     Error in starting the job immediately because no background processes were available
+|SAP R/3 and CRM LSAM Exit Condition Number|  Description|
+|---|---|
+|70001|The Job Name the LSAM is trying to send to the SAP system is null.|
+|70002|The Job Number the LSAM is trying to send to the SAP system is null.|
+|70003|The USER setting in the SAPLSAM.ini file is blank.|
+|70004|Error in logging on to SAP system: bad User ID, password, or TCP/IP address.|
+|70005|Error in checking existing job status: could not find the job on the SAP system.|
+|70006|Error in job copy: The LSAM could not copy the job to run it in SAP.|
+|70007|Error in Job definition get: after the job was copied for execution, the LSAM couldn't retrieve the copied job's details; therefore, the job could not run.|
+|70008|Error in starting the copied job: the job copy and job retrieve were successful, but the LSAM could not start the job.|
+|70009|Error in getting the job's current status|
+|70010|Error in reading the job log|
+|70011|Error in getting the children job information for the current job|
+|70012|Error in aborting job|
+|70013|Error in reading the spool list for the job|
+|70017|Error in starting the job immediately because no background processes were available|
 
   : SAP R/3 and CRM LSAM Exit Codes
 
@@ -579,27 +579,27 @@ Sometimes it is possible to receive non-numeric characters in the return
 code. When this happens, the return code is 9999 and the original return
 code can be found in the job output.
 
-  Return Code         Description
-  ---------------     -------------------------------------------------------------------------------------
-    0 - 9999          Job completion code (prefixed by C, e.g., C0000 -- C9999)
-    9999              Job completion code contained non-numeric characters, refer to job log
-    10000 -19999      Job completion code System Abend (prefixed by S, e.g., U0000 -- S9999)
-    19999             Job completion code contained non-numeric characters, refer to job log
-    20000 - 29999     Job completion code User Abend (prefixed by U, e.g., U0000 -- S9999)
-    29999             Job completion code contained non numeric characters, refer to job log
-    30000             artjesadmin : Job completed successfully
-    30001             artjesadmin : Utility command failed
-    30003             artjesadmin : Job failed
-    30004             artjesadmin : Job was cancelled
-    30005             artjesadmin : Job is in conversion state
-    30006             artjesadmin : Job is executing
-    30007             artjesadmin : Job is queued waiting for conversion process
-    30008             artjesadmin : Job has been placed on hold
-    30009             artjesadmin : Job is queued waiting for processing to start
-    30010             artjesadmin : Job has been discarded
-    30011             artjesadmin : Execution of job is in unknown state
-    30022             artjesadmin : Job does not exist in Tuxedo ART environment
-    30099             Job initialization error
+|Return Code|Description|
+|---|---|
+|0 - 9999|Job completion code (prefixed by C, e.g., C0000 -- C9999)|
+|9999|Job completion code contained non-numeric characters, refer to job log|
+|10000 -19999|Job completion code System Abend (prefixed by S, e.g., U0000 -- S9999)|
+|19999|Job completion code contained non-numeric characters, refer to job log|
+|20000 - 29999|Job completion code User Abend (prefixed by U, e.g., U0000 -- S9999)|
+|29999|Job completion code contained non numeric characters, refer to job log|
+|30000|artjesadmin : Job completed successfully|
+|30001|artjesadmin : Utility command failed|
+|30003|artjesadmin : Job failed|
+|30004|artjesadmin : Job was cancelled|
+|30005|artjesadmin : Job is in conversion state|
+|30006|artjesadmin : Job is executing|
+|30007|artjesadmin : Job is queued waiting for conversion process|
+|30008|artjesadmin : Job has been placed on hold|
+|30009|artjesadmin : Job is queued waiting for processing to start|
+|30010|artjesadmin : Job has been discarded|
+|30011|artjesadmin : Execution of job is in unknown state|
+|30022|artjesadmin : Job does not exist in Tuxedo ART environment|
+|30099|Job initialization error|
 
   : Tuxedo artjesadmin Job Return Codes
 
@@ -758,152 +758,38 @@ error. SMA Technologies recommends:
 - Reference the MAN page for the system call to get more information
     on the causes of this failure type.
 
-+---------------------+-------------+--------------------------------+
-| UNIX LSAM Exit Code | Failed      | Description                    |
-|                     |             |                                |
-|                     | System Call |                                |
-+=====================+=============+================================+
-| 000010000           | \<none\>    | The job definition does not    |
-|                     |             | contain a User ID.             |
-+---------------------+-------------+--------------------------------+
-| 000010001           | \<none\>    | The job definition does not    |
-|                     |             | contain a Group ID.            |
-+---------------------+-------------+--------------------------------+
-| 000010002           | \<none\>    | The job definition contains an |
-|                     |             | invalid User ID.               |
-+---------------------+-------------+--------------------------------+
-| 000010003           | \<none\>    | The job definition contains an |
-|                     |             | invalid Group ID.              |
-+---------------------+-------------+--------------------------------+
-| 000010004           | \<none\>    | The SMANetCom sent a job       |
-|                     |             | status request (TX2) for a job |
-|                     |             | or for a prerun process to the |
-|                     |             | LSAM.                          |
-|                     |             |                                |
-|                     |             | The LSAM checked to see if the |
-|                     |             | job was still running. The job |
-|                     |             | was [not]{.ul} running, but    | |                     |             | was marked as running in the   |
-|                     |             | tracking file.                 |
-+---------------------+-------------+--------------------------------+
-| 000010005           | \<none\>    | The LSAM was started and the   |
-|                     |             | job was shown in the tracking  |
-|                     |             | file to be running; however,   |
-|                     |             | the job was not actually       |
-|                     |             | running on the machine.        |
-+---------------------+-------------+--------------------------------+
-| 000010006           | \<none\>    | The LSAM was started and the   |
-|                     |             | prerun was shown in the        |
-|                     |             | tracking file to be running;   |
-|                     |             | however, the prerun was not    |
-|                     |             | actually running on the        |
-|                     |             | machine.                       |
-+---------------------+-------------+--------------------------------+
-| 000010007           | \<none\>    | The job was not found in       |
-|                     |             | tracking file.                 |
-+---------------------+-------------+--------------------------------+
-| 000010008           | fork()      | The system function fork()     |
-|                     |             | failed when attempting to      |
-|                     |             | create a child process.        |
-+---------------------+-------------+--------------------------------+
-| 000010009           | \<none\>    | Privileged runs are not        |
-|                     |             | allowed.                       |
-|                     |             |                                |
-|                     |             | The LSAM configuration does    |
-|                     |             | not allow jobs to be submitted |
-|                     |             | as root.                       |
-+---------------------+-------------+--------------------------------+
-| 000010010           | \<none\>    | Job was killed by user or      |
-|                     |             | system administrator.          |
-+---------------------+-------------+--------------------------------+
-| 000010100           | fork()      | Unable to fork() a process     |
-|                     |             | space for the prerun process.  |
-+---------------------+-------------+--------------------------------+
-| 000010101           | setuid()    | Unable to setuid() to the      |
-|                     |             | specified User ID for the      |
-|                     |             | prerun process.                |
-+---------------------+-------------+--------------------------------+
-| 000010102           | setgid()    | Unable to setgid() to the      |
-|                     |             | specified Group ID for the     |
-|                     |             | prerun process.                |
-+---------------------+-------------+--------------------------------+
-| 000010103           | setpgid()   | The system function setpgid()  |
-|                     |             | failed when attempting to set  |
-|                     |             | the parent Group ID for a      |
-|                     |             | prerun process.                |
-+---------------------+-------------+--------------------------------+
-| 000010104           | \<none\>    | Start Image not found or       |
-|                     |             | insufficient privileges for    |
-|                     |             | the prerun process.            |
-+---------------------+-------------+--------------------------------+
-| 000010105           | exec()      | The system function exec()     |
-|                     |             | failed when attempting to      |
-|                     |             | initialize the process space   |
-|                     |             | for a prerun process.          |
-+---------------------+-------------+--------------------------------+
-| 000010200           | fork()      | Unable to fork() a process     |
-|                     |             | space for the job.             |
-+---------------------+-------------+--------------------------------+
-| 000010201           | setuid()    | Unable to setuid() to the      |
-|                     |             | specified User ID.             |
-+---------------------+-------------+--------------------------------+
-| 000010202           | setgid()    | Unable to setgid() to the      |
-|                     |             | specified Group ID.            |
-+---------------------+-------------+--------------------------------+
-| 000010203           | setpgid()   | The system function setpgid()  |
-|                     |             | failed when attempting to set  |
-|                     |             | the parent Group ID for a job. |
-+---------------------+-------------+--------------------------------+
-| 000010204           | \<none\>    | Start Image not found or       |
-|                     |             | insufficient privileges for    |
-|                     |             | the job.                       |
-+---------------------+-------------+--------------------------------+
-| 000010205           | exec()      | The system function exec()     |
-|                     |             | failed when attempting to      |
-|                     |             | initialize the process space   |
-|                     |             | for a job.                     |
-+---------------------+-------------+--------------------------------+
-| 000010299           | open()      | The system function open()     |
-|                     |             | failed when the LSAM attempted |
-|                     |             | to open the post-processing    |
-|                     |             | script. For more information   |
-|                     |             | on the *post-processing        |
-|                     |             | script,* refer to              |
-|                     |             | [sma_ppscript](<https://hel>     |
-|                     |             | p.smatechnologies.com/opcon/ag |
-|                     |             | ents/unix/latest/Files/Agents/ |
-|                     |             | UNIX/sma_ppscript.md) |
-|                     |             |  in the **UNIX LSAM**    |
-|                     |             | online help.                   |
-+---------------------+-------------+--------------------------------+
-| 000010300           | fork()      | The system function fork()     |
-|                     |             | failed when attempting to      |
-|                     |             | create a process for a         |
-|                     |             | post-processing script.        |
-+---------------------+-------------+--------------------------------+
-| 000010301           | setuid()    | The system function setuid()   |
-|                     |             | failed when attempting to set  |
-|                     |             | the User ID for a              |
-|                     |             | post-processing script.        |
-+---------------------+-------------+--------------------------------+
-| 000010302           | setgid()    | The system function setgid()   |
-|                     |             | failed when attempting to set  |
-|                     |             | the Group ID for a             |
-|                     |             | post-processing script.        |
-+---------------------+-------------+--------------------------------+
-| 000010303           | setpgid()   | The system function setpgid()  |
-|                     |             | failed when attempting to set  |
-|                     |             | the parent Group ID for a      |
-|                     |             | post-processing script.        |
-+---------------------+-------------+--------------------------------+
-| 000010304           | \<none\>    | Start Image not found or       |
-|                     |             | insufficient privileges for    |
-|                     |             | the post-processing script.    |
-+---------------------+-------------+--------------------------------+
-| 000010305           | exec()      | The system function exec()     |
-|                     |             | failed when attempting to      |
-|                     |             | initialize the process space   |
-|                     |             | for a post-processing script.  |
-+---------------------+-------------+--------------------------------+
+| UNIX LSAM Exit Code  | Failed<br>System Call  | Description  |
+| ------------ | ------------ | ------------ |
+| 000010000|<none\>|The job definition does not contain a User ID.|
+| 000010001|<none\>|The job definition does not contain a Group ID.|
+| 000010002|<none\>|The job definition contains an  invalid User ID.|
+| 000010003|<none\>|The job definition contains an invalid Group ID.|
+| 000010004|<none\>|The SMANetCom sent a job status request (TX2) for a job or for a prerun process to the LSAM. The LSAM checked to see if the job was still running. The job was [not]{.ul} running, but was marked as running in the tracking file.|
+| 000010005|<none\>| The LSAM was started and the job was shown in the tracking file to be running; however, the job was not actually running on the machine.|
+| 000010006| <none\>| The LSAM was started and the prerun was shown in the tracking file to be running; however, the prerun was not actually running on the  machine.|
+| 000010007| <none\>| The job was not found in tracking file.|
+| 000010008| fork()| The system function fork() failed when attempting to create a child process.|
+| 000010009| <none\>| Privileged runs are not allowed. The LSAM configuration does not allow jobs to be submitted as root.|
+| 000010010| <none\>| Job was killed by user or system administrator.|
+| 000010100| fork()| Unable to fork() a process space for the prerun process.|
+| 000010101| setuid()| Unable to setuid() to the specified User ID for the prerun process.|
+| 000010102| setgid()| Unable to setgid() to the specified Group ID for the prerun process.|
+| 000010103| setpgid()|The system function setpgid() failed when attempting to set the parent Group ID for a prerun process.|
+| 000010104| <none\>| Start Image not found or insufficient privileges for the prerun process.|
+| 000010105| exec()| The system function exec() failed when attempting to initialize the process space for a prerun process.|
+| 000010200| fork()| Unable to fork() a process space for the job.|
+| 000010201| setuid()| Unable to setuid() to the specified User ID.|
+| 000010202| setgid()| Unable to setgid() to the specified Group ID.|
+| 000010203| setpgid()|The system function setpgid() failed when attempting to set the parent Group ID for a job.|
+| 000010204| <none\>| Start Image not found or nsufficient privileges for the job.|
+| 000010205| exec()| The system function exec() failed when attempting to initialize the process space for a job.|
+| 000010299| open()| The system function open() failed when the LSAM attempted to open the post-processing script. For more information on the *post-processing script,* refer to [sma_ppscript](<https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_ppscript.md>) in the **UNIX LSAM** online help.|
+| 000010300| fork()| The system function fork() failed when attempting to create a process for a post-processing script.|
+| 000010301| setuid()| The system function setuid() failed when attempting to set the User ID for a post-processing script.|
+| 000010302| setgid()| The system function setgid() failed when attempting to set the Group ID for a post-processing script.|
+| 000010303| setpgid()| The system function setpgid() failed when attempting to set the parent Group ID for a post-processing script.|
+| 000010304| <none\>| Start Image not found or insufficient privileges for  the post-processing script.|
+| 000010305| exec()| The system function exec() failed when attempting to initialize the process space for a post-processing script.|
 
 : UNIX LSAM Exit Codes
 
@@ -946,91 +832,37 @@ Arrival jobs.
 This next table is a list of MSLSAM exit conditions for failed jobs. If
 an exit condition is not in this list, it is a Windows exit code.
 
-+------------------+--------------------------------------------------+
-| MSLSAM Exit      | Description                                      |
-|                  |                                                  |
-| Condition Number |                                                  |
-+==================+==================================================+
-| 31000            | This is the initial state when the job is        |
-|                  | created. No error code has been set.             |
-+------------------+--------------------------------------------------+
-| 31001            | The path entered for the command line on the     |
-|                  | details screen is invalid.                       |
-+------------------+--------------------------------------------------+
-| 31002            | The path entered for the prerun command line on  |
-|                  | the details screen is invalid.                   |
-+------------------+--------------------------------------------------+
-| 31003            | -   The prerun command line entered in the       |
-|                  |     details screen for this job contains too     |
-|                  |     many characters.                             |
-|                  | -   The maximum length of the prerun is:         |
-|                  |     -   3276 characters                          |
-+------------------+--------------------------------------------------+
-| 31004            | -   The command line entered in the details      |
-|                  |     screen for this job contains too many        |
-|                  |     characters.                                  |
-|                  | -   The maximum length of the command line is:   |
-|                  |     -   4000 characters                          |
-+------------------+--------------------------------------------------+
-| 31005            | -   The prerun working directory entered in the  |
-|                  |     details screen for this job contains too     |
-|                  |     many characters.                             |
-|                  | -   The maximum length of the prerun working     |
-|                  |     directory is:                                |
-|                  |     -   255 characters                           |
-+------------------+--------------------------------------------------+
-| 31006            | -   The working directory entered in the details |
-|                  |     screen for this job contains too many        |
-|                  |     characters.                                  |
-|                  | -   The maximum length of the working directory  |
-|                  |     is:                                          |
-|                  |     -   255 characters                           |
-+------------------+--------------------------------------------------+
-| 31007            | The LSAM could not create a process for this     |
-|                  | job.                                             |
-+------------------+--------------------------------------------------+
-| 31008            | The LSAM was unable to obtain the rights for the |
-|                  | user submitted with the job.                     |
-+------------------+--------------------------------------------------+
-| 31009            | The LSAM was unable to grant the user rights to  |
-|                  | the process.                                     |
-+------------------+--------------------------------------------------+
-| 31010            | The LSAM was unable to log on as the user        |
-|                  | submitted with the job.                          |
-+------------------+--------------------------------------------------+
-| 31011            | The LSAM was unable to load the environment for  |
-|                  | the user submitted with the job.                 |
-+------------------+--------------------------------------------------+
-| 31012            | The LSAM was unable to load the Windows profile  |
-|                  | for the user submitted with the job.             |
-+------------------+--------------------------------------------------+
-| 31013            | The LSAM was unable to unload the Windows        |
-|                  | profile for the user submitted with the job.     |
-+------------------+--------------------------------------------------+
-| 31014            | The LSAM was unable to find the E.C.O.F.         |
-|                  | specified.                                       |
-+------------------+--------------------------------------------------+
-| 31015            | The LSAM was unable to start the job in the      |
-|                  | specified user-security context (unable to       |
-|                  | impersonate the user).                           |
-+------------------+--------------------------------------------------+
-| 31016            | The LSAM was unable to find the user name for    |
-|                  | this user. This may be because the user has      |
-|                  | never logged onto this machine.                  |
-+------------------+--------------------------------------------------+
+| MSLSAM Exit<br></brCondition>Condition Number  |  Description |
+| ------------ | ------------ |
+| 31000            | This is the initial state when the job is  created. No error code has been set.             |
+| 31001            | The path entered for the command line on the  details screen is invalid.                       |
+| 31002            | The path entered for the prerun command line on the details screen is invalid.                   |
+| 31003            |   The prerun command line entered in the  details screen for this job contains too many characters.   The maximum length of the prerun is:   3276 characters                          |
+| 31004            |    The command line entered in the details screen for this job contains too many characters. The maximum length of the command line is: 4000 characters                          |
+| 31005            |    The prerun working directory entered in the details screen for this job contains too many characters. The maximum length of the prerun working directory is: 255 characters                           |
+| 31006            |   The working directory entered in the details screen for this job contains too many characters. The maximum length of the working directory is: 255 characters                           |
+| 31007            | The LSAM could not create a process for this job.                                             |
+| 31008            | The LSAM was unable to obtain the rights for the user submitted with the job.                     |
+| 31009            | The LSAM was unable to grant the user rights to the process.                                     |
+| 31010            | The LSAM was unable to log on as the user submitted with the job.                          |
+| 31011            | The LSAM was unable to load the environment for the user submitted with the job.                 |
+| 31012            | The LSAM was unable to load the Windows profile for the user submitted with the job.             |
+| 31013            | The LSAM was unable to unload the Windows profile for the user submitted with the job.     |
+| 31014            | The LSAM was unable to find the E.C.O.F. specified.                                       |
+| 31015            | The LSAM was unable to start the job in the specified user-security context (unable to impersonate the user).                           |
+| 31016            | The LSAM was unable to find the user name for this user. This may be because the user has never logged onto this machine.                  |
 | 31017            | Unable to get user token.                        |
-+------------------+--------------------------------------------------+
 
 : Microsoft LSAM Exit Codes
 
 The following is a list of Microsoft LSAM exit codes specifically for
 File Arrival jobs.
 
-  Exit Code   Description
-  ----------- ------------------------------------------------------------------------------------------------------------
-  1           The file is not found. Reasons include an invalid file name, the file has not arrived yet, or permissions.
-  2           The path is not found. Reasons include an invalid path or permissions.
-  3           A file is found but the creation date is out of range.
+|Exit Code|Description|
+|---|---|
+|1|The file is not found. Reasons include an invalid file name, the file has not arrived yet, or permissions.|
+|2|The path is not found. Reasons include an invalid path or permissions.|
+|3|A file is found but the creation date is out of range.|
 
   : Microsoft LSAM Exit Codes for File Arrival
 
@@ -1065,39 +897,18 @@ XPS*nnnc*
 - **nnn**: The message reference number
 - **c**: A message type indicator
 
-+--------------+------------------------------------------------------+
 | Message Type | Explanation                                          |
-+==============+======================================================+
+|--- |--- |
 | I            | The message is Informational only.                   |
-+--------------+------------------------------------------------------+
-| A            | The message indicates a possible or probable         |
-|              | operator Action is required.                         |
-+--------------+------------------------------------------------------+
-| W            | -   The message is a Warning message.                |
-|              | -   Some operation or process may need review.       |
-+--------------+------------------------------------------------------+
-| E            | -   The message indicates an Error condition.        |
-|              | -   Corrective action is probable.                   |
-+--------------+------------------------------------------------------+
-| None         | If type is none of the above, the message is         |
-|              | Informational, and the type indicator represents the |
-|              | MODULE that issued the message:                      |
-|              |                                                      |
-|              | -   B=XPSUBMIT                                       |
-|              | -   T=XPSTATUS                                       |
-|              | -   X=XPSPLEX                                        |
-|              | -   V=XPSSUPV                                        |
-|              | -   O=XPSYSOUT                                       |
-|              | -   S=XPSERVER                                       |
-+--------------+------------------------------------------------------+
+| A            | The message indicates a possible or probable operator Action is required.
+| W            | The message is a Warning message. Some operation or process may need review. The message indicates an Error condition. Corrective action is probable.                   |
+| None         | If type is none of the above, the message is Informational, and the type indicator represents the MODULE that issued the message:<br>B=XPSUBMIT<br>T=XPSTATUS<br>X=XPSPLEX<br>V=XPSSUPV<br>O=XPSYSOUT<br>S=XPSERVER |
 
 : IBM Message Type Explanations
 
 ### Messages Displayed on the MVS SYSLOG by XPR390
 
-+----------------------------------+----------------------------------+
 | Message                          | Description                      |
-+==================================+==================================+
 | XPR001I Restart: From *start     | Indicates a restart was          |
 | step* \[to *end step*\]          | requested from step *start       | |                                  | step*, optionally ending in *end |
 |                                  | step*.                           |
@@ -1169,7 +980,6 @@ XPS*nnnc*
 
 ### Messages Displayed on the MVS SYSLOG by XPS390
 
-+----------------------------------+----------------------------------+
 | Message                          | Description                      |
 +==================================+==================================+
 | XPS000W - Another LSAM is        | -   Indicates the new duplicate  |
