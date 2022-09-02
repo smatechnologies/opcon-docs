@@ -359,8 +359,6 @@ the return status is a Windows error code (refer to [Windows Machine Messages](#
 |70001|Error in trying to start the BW Process Chain|
 |70002|Error in retrieving the log for BW Process Chain|
 
-  : SAP BW LSAM Exit Codes
-
 ## SAP R/3 and CRM Machine Messages
 
 To the right of the OpCon Job Status in
@@ -423,8 +421,6 @@ Windows exit codes).
 |70012|Error in aborting job|
 |70013|Error in reading the spool list for the job|
 |70017|Error in starting the job immediately because no background processes were available|
-
-  : SAP R/3 and CRM LSAM Exit Codes
 
 ### SAP BAPI Errors
 
@@ -559,8 +555,6 @@ The following table contains error numbers and descriptions of SAP BAPI Error Co
     value '235'       msg_invalid_jobclass
     value '236'       msg_wrong_client
 
-: SAP BAPI Errors
-
 **Source:** *BC-XBP 6.10 Background Scheduling Job Scheduling System WAS
 6.10 (Version 2.0) Documentation*. Walldorf, Germany: Systems,
 Applications & Products in Data Processing (SAP), 2002.
@@ -600,8 +594,6 @@ code can be found in the job output.
 |30011|artjesadmin : Execution of job is in unknown state|
 |30022|artjesadmin : Job does not exist in Tuxedo ART environment|
 |30099|Job initialization error|
-
-  : Tuxedo artjesadmin Job Return Codes
 
 ## UNIX LSAM Messages
 
@@ -651,7 +643,6 @@ Process ID (pid) number or any optional status messages.
 Scripts using the sma_status utility can use the 20-character message area to display any desired text; otherwise, the PID displays in the message area. For further information, refer to [sma_status](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_status.md) in the **UNIX LSAM** online help.
 :::
 
-
 | Message Text                     | Explanation and/or Corrective Action     |
 |--- |--- |
 | \[x\] multiply-defined           | The indicated step \[STARTING_STEP, ENDING_STEP, RESTART_STEP\] was found to be included more than once. Check "Start Image" and "Parameters" in the job's Job Details screen.    **Note:** The \[x\] multiply-defined message text applies only to jobs based on the [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md).|
@@ -699,9 +690,6 @@ Scripts using the sma_status utility can use the 20-character message area to di
 | Job \[x\] completed              | Informational message upon proper termination of an OpCon job -- does not reflect the OK/Failed termination status.    |
 | Data has not arrived in \[x\]    | The LSAM has not received any seconds - closing socket communication from the SAM in the indicated amount of time.  The LSAM will close the connection in preparation for SAM initiating a new connection.  "\[x\]" can be set with the  LSAM Configuration program.     |
 
-
-: UNIX LSAM Messages
-
 :::tip Example
 The following shows UNIX job (Ujob1) running in Schedule Operations without a user-defined status message:
 
@@ -739,8 +727,6 @@ Do not confuse these codes with UNIX System Exit Codes. LSAM Exit Codes come fro
   **B**                                                                                                               Signals          0000 to 9999               If the job terminated due to the receipt of a signal from the operating system or through user intervention, the four-digit numeric value of that signal is specified here.
   **C**                                                                                                               Core Dumped      Y/N                        Indicates whether or not (Y/N) a core file was created due to the termination of a job.
 
-  : UNIX LSAM Exit Code Explanation
-
 #### LSAM-Specific Error Codes
 
 The following is a list of the UNIX LSAM job error codes. If an exit
@@ -758,7 +744,7 @@ error. SMA Technologies recommends:
 - Reference the MAN page for the system call to get more information
     on the causes of this failure type.
 
-| UNIX LSAM Exit Code  | Failed<br>System Call  | Description  |
+| UNIX LSAM Exit Code  | Failed System Call  | Description  |
 | ------------ | ------------ | ------------ |
 | 000010000|<none\>|The job definition does not contain a User ID.|
 | 000010001|<none\>|The job definition does not contain a Group ID.|
@@ -790,8 +776,6 @@ error. SMA Technologies recommends:
 | 000010303| setpgid()| The system function setpgid() failed when attempting to set the parent Group ID for a post-processing script.|
 | 000010304| <none\>| Start Image not found or insufficient privileges for  the post-processing script.|
 | 000010305| exec()| The system function exec() failed when attempting to initialize the process space for a post-processing script.|
-
-: UNIX LSAM Exit Codes
 
 In many cases, a specific failure message is returned from the LSAM and
 viewable as field "LSAM Error Message" under the "General" tab of
@@ -832,7 +816,7 @@ Arrival jobs.
 This next table is a list of MSLSAM exit conditions for failed jobs. If
 an exit condition is not in this list, it is a Windows exit code.
 
-| MSLSAM Exit<br></brCondition>Condition Number  |  Description |
+| MSLSAM Exit Condition Number  |  Description |
 | ------------ | ------------ |
 | 31000            | This is the initial state when the job is  created. No error code has been set.             |
 | 31001            | The path entered for the command line on the  details screen is invalid.                       |
@@ -852,8 +836,6 @@ an exit condition is not in this list, it is a Windows exit code.
 | 31015            | The LSAM was unable to start the job in the specified user-security context (unable to impersonate the user).                           |
 | 31016            | The LSAM was unable to find the user name for this user. This may be because the user has never logged onto this machine.                  |
 | 31017            | Unable to get user token.                        |
-
-: Microsoft LSAM Exit Codes
 
 The following is a list of Microsoft LSAM exit codes specifically for
 File Arrival jobs.
@@ -902,9 +884,7 @@ XPS*nnnc*
 | I            | The message is Informational only.                   |
 | A            | The message indicates a possible or probable operator Action is required.
 | W            | The message is a Warning message. Some operation or process may need review. The message indicates an Error condition. Corrective action is probable.                   |
-| None         | If type is none of the above, the message is Informational, and the type indicator represents the MODULE that issued the message:<br>B=XPSUBMIT<br>T=XPSTATUS<br>X=XPSPLEX<br>V=XPSSUPV<br>O=XPSYSOUT<br>S=XPSERVER |
-
-: IBM Message Type Explanations
+| None         | If type is none of the above, the message is Informational, and the type indicator represents the MODULE that issued the message:<ul><li>B=XPSUBMIT</li><li>T=XPSTATUS</li><li>X=XPSPLEX</li><li>V=XPSSUPV</li><li>O=XPSYSOUT</li><li>S=XPSERVER</li></ul> |
 
 ### Messages Displayed on the MVS SYSLOG by XPR390
 
