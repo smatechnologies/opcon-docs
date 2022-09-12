@@ -1,10 +1,26 @@
 ---
-sidebar_label: 'Release Notes'
+sidebar_label: "Release Notes"
 ---
 
 # OpCon Release Notes
 
-## OpCon 21.0.7
+## OpCon 21.0.9
+
+2022 September
+
+#### Server
+
+:white_check_mark: **OPCON-17629**: Fixed an issue in the notification system where a SMTP server that does not require authentication could not send notification emails as Notify Handler was forcing authentication.
+
+#### REST API
+
+:white_check_mark: **OPCON-17292**: Fixed performance issue in dailyJobs endpoint when includeDetails=true and there are a lot of container jobs.
+
+#### Installation
+
+:white_check_mark: **OPCON-17234**: Updated Installer to allow users to set a default (initial) password for database users 'opconsam' and 'opconui'. Please note that if these users already exist in the database, no changes will be made to their passwords.
+
+## OpCon 21.0.8
 
 2022 August
 
@@ -146,7 +162,7 @@ sidebar_label: 'Release Notes'
 
 #### Documentation
 
-:eight_spoked_asterisk: **OPCON-14481**: Added Overview chapter to the OpCon Installation section of documentation.  The new chapter contains updates to the installation and update process and highlights any breaking changes requiring action as part of upgrading.
+:eight_spoked_asterisk: **OPCON-14481**: Added Overview chapter to the OpCon Installation section of documentation. The new chapter contains updates to the installation and update process and highlights any breaking changes requiring action as part of upgrading.
 
 :white_check_mark: **OPCON-15505**: Removed OpCon.UserDefindFunctions.pdf from the distributed Database Scripts.
 
@@ -168,7 +184,7 @@ sidebar_label: 'Release Notes'
 
 :white_check_mark: **OPCON-14816**: Fixed an issue where a SQL job using the SQL DTExec job action did not display the batch user that the job ran as.
 
-:white_check_mark: **OPCON-14777**: Fixed an issue where the machine options "Use Schedule Instance Machine" and "Run on Least Tasked Machine" were not save-able on Windows and UNIX jobs. 
+:white_check_mark: **OPCON-14777**: Fixed an issue where the machine options "Use Schedule Instance Machine" and "Run on Least Tasked Machine" were not save-able on Windows and UNIX jobs.
 
 :white_check_mark: **OPCON-14706**: Fix display error where command line showing up in "Other Options" instead of "Files To Delete".
 
@@ -178,7 +194,7 @@ sidebar_label: 'Release Notes'
 
 :white_check_mark: **OPCON-14583**: Updated the SMA Customer Community link in the user interfaces.
 
-:white_check_mark: **OPCON-15525**: Fixed an issue where job output requests would error with a code of 36235 in EM and a general error in Solution Manager. 
+:white_check_mark: **OPCON-15525**: Fixed an issue where job output requests would error with a code of 36235 in EM and a general error in Solution Manager.
 
 #### Installation
 
@@ -225,9 +241,9 @@ A new endpoint has been added to the API to delete global properties.
 
 :eight_spoked_asterisk: **OPCON-15308**: Added the functionality to create exit description events by using the following endpoint: api/dailyjobs/{dailyJobId}/events
 
-:eight_spoked_asterisk: **OPCON-15307**: Added the functionality to create LSAM Feedback events by using the following endpoint: api/dailyjobs/{dailyJobId}/events 
+:eight_spoked_asterisk: **OPCON-15307**: Added the functionality to create LSAM Feedback events by using the following endpoint: api/dailyjobs/{dailyJobId}/events
 
-:eight_spoked_asterisk: **OPCON-15306**: Added the functionality to retrieve job status and exit code events by using the following endpoint: api/dailyjobs/{dailyJobId}/events 
+:eight_spoked_asterisk: **OPCON-15306**: Added the functionality to retrieve job status and exit code events by using the following endpoint: api/dailyjobs/{dailyJobId}/events
 
 :eight_spoked_asterisk: **OPCON-15297**: Added the functionality POST/PUT/DELETE daily job events through the PUT endpoint for daily jobs.
 
@@ -241,13 +257,13 @@ A new endpoint has been added to the API to delete global properties.
 
 :eight_spoked_asterisk: **OPCON-14790**: Added a new endpoint for adding a job dependency to a daily job, POST api/dailyjobs/{dailyJobId}/dependencies.
 
-:eight_spoked_asterisk: **OPCON-14789**: Added the ability to modify job dependencies as part of the daily jobs endpoint.  Added an endpoint to update an individual job dependencies.
+:eight_spoked_asterisk: **OPCON-14789**: Added the ability to modify job dependencies as part of the daily jobs endpoint. Added an endpoint to update an individual job dependencies.
 
 :eight_spoked_asterisk: **OPCON-14788**: Added a new endpoint for deleting a job dependency on a daily job, DELETE api/dailyjobs/{dailyJobId}/dependencies/{id}.
 
 :eight_spoked_asterisk: **OPCON-14785**: Added a new endpoint for retrieving daily job dependencies.
 
-:eight_spoked_asterisk: **OPCON-14680**: Added the ability for the OpCon API to filter machines by file transfer role.  The criterial "fileTransferRole"accepts values of "both", "none", "source", "destination", and "any".
+:eight_spoked_asterisk: **OPCON-14680**: Added the ability for the OpCon API to filter machines by file transfer role. The criterial "fileTransferRole"accepts values of "both", "none", "source", "destination", and "any".
 
 :eight_spoked_asterisk: **OPCON-14670**: The OpCon API can now create new incident tickets in the Daily Job Definitions.
 
@@ -284,7 +300,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :white_check_mark: **OPCON-14871**: Fixed NullReference exception with 20.0 migration when Service Requests were missing information.
 
-:white_check_mark: **OPCON-14843**: Fixed an issue where the user's role was removed and the password was changed after attempting to retrieve a token. 
+:white_check_mark: **OPCON-14843**: Fixed an issue where the user's role was removed and the password was changed after attempting to retrieve a token.
 
 :white_check_mark: **OPCON-14808**: Fixed an issue where acknowledging a collection of escalating notifications with multiple notifications already acknowledged gave a 500 response code.
 
@@ -292,7 +308,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :white_check_mark: **OPCON-14713**: Fixed an issue where Service Request event definitions would be incorrect when using a system variable more than once in the definition.
 
-:white_check_mark: **OPCON-14666**: /api/roles offset and limit query string parameters have been fixed. 
+:white_check_mark: **OPCON-14666**: /api/roles offset and limit query string parameters have been fixed.
 
 :white_check_mark: **OPCON-14663**: Fixed an issue where changing daily job statuses as a user with no defined external token would throw a System.NullReferenceException error.
 
@@ -346,15 +362,15 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :eight_spoked_asterisk: **OPCON-14774**: DailyJob Definition Page section menu redesigned. It was moved on the left, is always visible and can be reduced
 
-:eight_spoked_asterisk: **OPCON-14770**: Added the number of pending and exhausted notifications to the escalation indicator.  Escalated notifications may now be acknowledged even if any of the selected notifications were already acknowledged.
+:eight_spoked_asterisk: **OPCON-14770**: Added the number of pending and exhausted notifications to the escalation indicator. Escalated notifications may now be acknowledged even if any of the selected notifications were already acknowledged.
 
-:eight_spoked_asterisk: **OPCON-14752**: Updated the Property Selector to show all properties, Global, Job Instance, Schedule Instance, and Machine Instance.  An icon was added to differentiate the type.  Properties may also be filtered by value in addition to name.
+:eight_spoked_asterisk: **OPCON-14752**: Updated the Property Selector to show all properties, Global, Job Instance, Schedule Instance, and Machine Instance. An icon was added to differentiate the type. Properties may also be filtered by value in addition to name.
 
 :eight_spoked_asterisk: **OPCON-14654**: The Operations Processes and Agents grids can be modified to only display the desired columns for Schedules, Jobs, or Machines. This selection is automatically saved in the user's profile.
 
-:eight_spoked_asterisk: **OPCON-14605**: Added Filter Profiles to the Operation Summary page for viewing statistics directly in the dashboard.  Added the ability to navigate to the processes page with the selected Filter Profile already applied.
+:eight_spoked_asterisk: **OPCON-14605**: Added Filter Profiles to the Operation Summary page for viewing statistics directly in the dashboard. Added the ability to navigate to the processes page with the selected Filter Profile already applied.
 
-:eight_spoked_asterisk: **OPCON-14575**: Escalated notifications can now be acknowledged from Solution Manager or through the OpCon API. A pop-up notification will appear within Solution Manager when new notifications enter escalation. An indicator was added to the bar at the bottom of the screen by the Agent Status icon when there are escalating notifications which need to be acknowledge. Finally a dialog was added allowing users to acknowledge the escalated notifications. 
+:eight_spoked_asterisk: **OPCON-14575**: Escalated notifications can now be acknowledged from Solution Manager or through the OpCon API. A pop-up notification will appear within Solution Manager when new notifications enter escalation. An indicator was added to the bar at the bottom of the screen by the Agent Status icon when there are escalating notifications which need to be acknowledge. Finally a dialog was added allowing users to acknowledge the escalated notifications.
 
 :eight_spoked_asterisk: **OPCON-14574**: File Transfer Jobs can now be consulted / changed from the DailyJob Definition screen.
 
@@ -380,7 +396,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :white_check_mark: **OPCON-15255**: Fixed Solution Manager to correctly display multiple choices in a Self Service even if they represent the same value.
 
-:white_check_mark: **OPCON-15226**: Fixed a bug that wiped the entire screen when a filter profile was shared with a role that had the id of 0. 
+:white_check_mark: **OPCON-15226**: Fixed a bug that wiped the entire screen when a filter profile was shared with a role that had the id of 0.
 
 :white_check_mark: **OPCON-14949**: Fixed an issue where a Schedule Build request could be submitted for the incorrect day if opening the date picker but selecting no values.
 
@@ -402,7 +418,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :white_check_mark: **OPCON-14567**: Fixed an issue in Schedule Build where the pre-defined properties on a Named Instance schedule were not able to be updated.
 
-:white_check_mark: **OPCON-13063**: Requesting output for an invalid job in Solution Manager no longer displays an error. The option is now correctly disabled when the job has no output. 
+:white_check_mark: **OPCON-13063**: Requesting output for an invalid job in Solution Manager no longer displays an error. The option is now correctly disabled when the job has no output.
 
 #### Utilities
 
@@ -412,7 +428,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :white_check_mark: **OPCON-15337**: Fixed the transaction log backup file in the backup utility scripts to be initialized so it does not keep appending to it and grow forever.
 
-:white_check_mark: **OPCON-12473**: Fixed an issue with History.exe to purge/archive the correct amount of records according to the documentation.  
+:white_check_mark: **OPCON-12473**: Fixed an issue with History.exe to purge/archive the correct amount of records according to the documentation.
 
 #### ImpEx2 Web Service
 
@@ -422,7 +438,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 
 :white_check_mark: **OPCON-15450**: Fixed an issue in ImpEx2 where deploying a schedule with a frequency having the same name but different case in the name deployed the schedule to target with some missing properties and missing job level frequencies.
 
-:white_check_mark: **OPCON-15436**: Fixed an error with deployment when calendars associated with the schedule or package to be deployed does not exist in target server. 
+:white_check_mark: **OPCON-15436**: Fixed an error with deployment when calendars associated with the schedule or package to be deployed does not exist in target server.
 
 :white_check_mark: **OPCON-15401**: Fixed an issue where multiple embedded script versions referenced from jobs in the deployed schedule resulted in null pointer exceptions, as only one of those script versions was getting imported into Deploy.
 
@@ -439,7 +455,7 @@ Standardized default false values in the database for TOKEN.TKNENCRYPTED to be '
 :white_check_mark: **OPCON-15136**: Fixed an issue where SAM reused an id for a job instance due to a race condition with Deploy
 
 :white_check_mark: **OPCON-15089**: Fixed an issue where wildcard named job and schedule transformation rules that have the same "current value" caused incorrect transformation rules to be applied to them. Also,
-added suffix wildcard. "*job" will match if job/schedule ends with "job". "j*ob" and "job*" will continue behaving as normal and will match if the job/schedule starts with "job"
+added suffix wildcard. "*job" will match if job/schedule ends with "job". "j*ob" and "job\*" will continue behaving as normal and will match if the job/schedule starts with "job"
 
 :white_check_mark: **OPCON-15080**: Fixed an issue where only one of multiple external dependencies to the same schedule and job were imported into Deploy.
 
@@ -457,7 +473,7 @@ added suffix wildcard. "*job" will match if job/schedule ends with "job". "j*ob"
 
 :white_check_mark: **OPCON-15010**: Fixed an issue where scheduling options of the frequencies were not updated correctly if there was changes to them in the schedule that was deployed.
 
-:white_check_mark: **OPCON-15001**: Fixed an issue where deploying a schedule with no documentation would not remove any existing documentation.  
+:white_check_mark: **OPCON-15001**: Fixed an issue where deploying a schedule with no documentation would not remove any existing documentation.
 
 :white_check_mark: **OPCON-15000**: Fixed an issue in ImpEx2 service where checking available machine features sometimes resulted in a null pointer exception.
 
