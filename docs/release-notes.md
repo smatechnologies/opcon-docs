@@ -4,6 +4,39 @@ sidebar_label: 'Release Notes'
 
 # OpCon Release Notes
 
+## OpCon 21.8.0
+
+2022 October
+
+#### Server
+
+:white_check_mark: **OPCON-17624**: Fixed an issue in the notification system where an SMTP server that does not require authentication could not send notification emails as Notify Handler was forcing authentication.
+
+#### Installation
+
+:white_check_mark: **OPCON-17234**: Updated Installer to allow users to set a default (initial) password for database users 'opconsam' and 'opconui'. Please note that if these users already exist in the database, no changes will be made to their passwords.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-16312**: Fixed issues with self service where migration would fail and service requests would not execute for some input types (Date, Choice, etc.) if user-defined variable name contains dot.
+
+:white_check_mark: **OPCON-16337**: Added the options to disable builds for schedule named instances without parameters.
+
+:white_check_mark: **OPCON-16973**: Added "With Error(s)" message to jobs that have failed jobs.
+
+:white_check_mark: **OPCON-17185**: Fixed the Escalation screen to allow special characters.
+
+:white_check_mark: **OPCON-17601**: Fixed an error that affected Enterprise Manager that was caused by deleting notification groups inside Solution Manager.
+
+:white_check_mark: **OPCON-17602**: Fixed a bug in Solution Manager that caused an error in Enterprise Manager when users tried to delete a group that was associated with a category.
+
+:white_check_mark: **OPCON-17603**: Added improvements to the retrieval and posting actions for triggers inside Notification Manager.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-17766**: Fixed an issue where schedule import failed to extract the thresholds/resources used in the complex expressions for Job Expression Events.
+
+
 ## OpCon 21.7.0
 
 2022 August
