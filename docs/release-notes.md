@@ -10,13 +10,38 @@ sidebar_label: 'Release Notes'
 
 #### Server
 
+:white_check_mark: **OPCON-17121**: Fixed an issue with SSL and TLS based Email and text message notifications.
+
 :white_check_mark: **OPCON-17624**: Fixed an issue in the notification system where an SMTP server that does not require authentication could not send notification emails as Notify Handler was forcing authentication.
+
+#### REST API
+
+:white_check_mark: **OPCON-17447**: Fixed a bug that allowed all-whitespace tag names in /api/jobtags and errored on an empty tag name.
+
+:white_check_mark: **OPCON-17296**: Fixed performance issue in dailyJobs endpoint when includeDetails=true and there are a lot of container jobs.
+
+:white_check_mark: **OPCON-17204**: Fixed an internal server error bug in /api/jobinstanceactions when retrieving JORS output for historical jobs.
+
+:white_check_mark: **OPCON-17190**: Fixed an issue where adding/updating a daily schedule instance property inserted a backslash.
+
+:white_check_mark: **OPCON-17178**: Migration for Notification Triggers was moved from 21.4 and 21.6 to 21.8.
+
+:white_check_mark: **OPCON-16932**: Fixed issue where single quotes in a batch user name caused an error.
+
 
 #### Installation
 
 :white_check_mark: **OPCON-17234**: Updated Installer to allow users to set a default (initial) password for database users 'opconsam' and 'opconui'. Please note that if these users already exist in the database, no changes will be made to their passwords.
 
 #### Solution Manager
+
+:white_check_mark: **OPCON-17291**: Fixed an issue in the scripts page where HTML inside a comment was being rendered to screen.
+
+:white_check_mark: **OPCON-17195**: Fixed an issue where File Transfer Jobs threw an unexpected error.
+
+:white_check_mark: **OPCON-17047**: Fixed issue with scripts timing out when a large amount of cross references exist.
+
+:white_check_mark: **OPCON-15633**: Fixed a bug with tooltips on expression dependencies.
 
 :white_check_mark: **OPCON-16312**: Fixed issues with self service where migration would fail and service requests would not execute for some input types (Date, Choice, etc.) if user-defined variable name contains dot.
 
@@ -34,45 +59,9 @@ sidebar_label: 'Release Notes'
 
 #### ImpEx2 Web Service
 
-:white_check_mark: **OPCON-17766**: Fixed an issue where schedule import failed to extract the thresholds/resources used in the complex expressions for Job Expression Events.
-
-
-## OpCon 21.7.0
-
-2022 August
-
-#### Server
-
-:white_check_mark: **OPCON-17121**: Fixed an issue with SSL and TLS based Email and text message notifications.
-
-#### REST API
-
-:white_check_mark: **OPCON-17447**: Fixed a bug that allowed all-whitespace tag names in /api/jobtags and errored on an empty tag name.
-
-:white_check_mark: **OPCON-17296**: Fixed performance issue in dailyJobs endpoint when includeDetails=true and there are a lot of container jobs.
-
-:white_check_mark: **OPCON-17204**: Fixed an internal server error bug in /api/jobinstanceactions when retrieving JORS output for historical jobs.
-
-:white_check_mark: **OPCON-17190**: Fixed an issue where adding/updating a daily schedule instance property inserted a backslash.
-
-:white_check_mark: **OPCON-17178**: Migration for Notification Triggers was moved from 21.4 and 21.6 to 21.7.
-
-:white_check_mark: **OPCON-16932**: Fixed issue where single quotes in a batch user name caused an error.
-
-#### Solution Manager
-
-:white_check_mark: **OPCON-17291**: Fixed an issue in the scripts page where HTML inside a comment was being rendered to screen.
-
-:white_check_mark: **OPCON-17195**: Fixed an issue where File Transfer Jobs threw an unexpected error.
-
-:white_check_mark: **OPCON-17047**: Fixed issue with scripts timing out when a large amount of cross references exist.
-
-:white_check_mark: **OPCON-15633**: Fixed a bug with tooltips on expression dependencies.
-
-#### ImpEx2 Web Service
-
 :white_check_mark: **OPCON-17433**: Fixed issues with schedule level frequencies when performing a deployment update. The errors included duplicate keys if jobs added during the deployment, or missing frequencies for job if new schedule level frequencies were added.
 
+:white_check_mark: **OPCON-17766**: Fixed an issue where schedule import failed to extract the thresholds/resources used in the complex expressions for Job Expression Events.
 
 ## OpCon 21.6.0
 
@@ -93,7 +82,7 @@ sidebar_label: 'Release Notes'
 #### Solution Manager
 
 :eight_spoked_asterisk: **OPCON-15118**: Solution Manager now allows users to configure notifications in OpCon for machines, schedules and jobs, when any actionable change occurs to them. Notification triggers belong to a group, but in the new notification system, groups are flat structures instead of hierarchical ones like Enterprise Manager used to have. So, each notification trigger belongs to a single root group. Any pre-defined hierarchical groups will stay as they are, but only the lowest level of the group is visible in Solution Manager. Instead, users can define a 'Category' for each trigger as a way to tag them for a purpose. A trigger can have multiple categories assigned. The new system makes it easy to understand and categorize triggers.
-NOTE: A bug in the latest release (21.6) may cause Notification Manager to not work for customers whose upgrade or install path had included version 21.4.  Notification Manager does work for new installs or upgrades from other versions. If you are experiencing issues with Notification Manager, please upgrade to 21.7 when available.
+NOTE: A bug in the latest release (21.6) may cause Notification Manager to not work for customers whose upgrade or install path had included version 21.4.  Notification Manager does work for new installs or upgrades from other versions. If you are experiencing issues with Notification Manager, please upgrade to 21.8 when available.
 
 :eight_spoked_asterisk: **OPCON-15117**: Solution Manager now allows users to define and configure escalation rules for different notification triggers. Users can create and associate the rules to each trigger, and also to a group of users who will receive the escalation based on the defined rules provided they have an email address defined. The escalation manager allows users to be associated to the rules and notification manager allows them to be associated with the triggers.
 
