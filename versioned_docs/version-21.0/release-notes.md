@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.10
+
+2022 October
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-16312**: Fixed issues with self service where migration would fail and service requests would not execute for some input types (Date, Choice, etc.) if user-defined variable name contains dot.
+
+:white_check_mark: **OPCON-16337**: Added the options to disable builds for schedule named instances without parameters.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-17766**: Fixed an issue where schedule import failed to extract the thresholds/resources used in the complex expressions for Job Expression Events.
+
 ## OpCon 21.0.9
 
 2022 September
