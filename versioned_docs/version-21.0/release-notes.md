@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.11
+
+2022 November
+
+#### REST API
+
+:white_check_mark: **OPCON-17814**: Improved query performance for the HistoryJob endpoint to efficiently manage large amounts of data.
+
+:white_check_mark: **OPCON-18286**: Fixed the OpCon API that used to deadlock with SAM or SMASchedMan during periods of high activity especially during schedule builds, while the API fetched data.
+
+#### ImpEx2 Web Service
+
+:eight_spoked_asterisk: **OPCON-18274**: Added Windows Authentication to Impex2 Server.
+
 ## OpCon 21.0.10
 
 2022 October
