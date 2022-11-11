@@ -480,7 +480,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Types",
                     "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Runners",
                   ],
-                }
+                },
               ],
             },
             {
@@ -665,7 +665,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/21-8.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/21-9.html",
     },
   ],
-}
+};
