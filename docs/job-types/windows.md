@@ -540,7 +540,7 @@ destination file.
 Options. For more information, please consult the WS_FTP Pro Tools Guide
 under the heading "File Transfer Options". You can download the manual
 from
-<http://docs.ipswitch.com/WS_FTP-124/Manuals/English/WS_FTP_Tools_Guide.pdf>.
+<https://docs.ipswitch.com/WS_FTP%20124/Manuals/English/WS_FTP_Tools_Guide.pdf>.
 
 - Be sure to use the appropriate syntax as defined by the WS_FTP Pro
     Tools Guide. Remember to use quotes to enclose any parameters with
