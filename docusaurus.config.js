@@ -19,7 +19,7 @@ module.exports = {
         href: 'https://help.smatechnologies.com',
       },
       items:
-      [],
+        [],
     },
     footer: {
       style: 'dark',
@@ -36,7 +36,6 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/smatechnologies/opcon-docs/blob/release/21.8',
-          }
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -49,7 +48,7 @@ module.exports = {
   ],
   plugins: [
     [
-      require.resolve('@cmfcmf/docusaurus-search-local'), 
+      require.resolve('@cmfcmf/docusaurus-search-local'),
       {
       }
     ],
