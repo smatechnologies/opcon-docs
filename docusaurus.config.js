@@ -1,10 +1,9 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require('./versionsArchived.json');
 module.exports = {
   title: 'SMA Technologies Help',
   tagline: 'OpCon',
   url: 'https://help.smatechnologies.com',
-  baseUrl: '/opcon/core/',
+  baseUrl: '/opcon/core/v21.9/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -18,20 +17,8 @@ module.exports = {
         src: 'img/logo.svg',
         href: 'https://help.smatechnologies.com',
       },
-      items: [
-        {
-          type: 'docsVersionDropdown',
-          position: 'right',
-          dropdownItemsAfter: [
-            ...Object.entries(VersionsArchived).map(
-              ([versionName, versionUrl]) => ({
-                label: versionName,
-                href: versionUrl,
-              }),
-            ),
-          ],
-        },
-      ],
+      items: 
+      [],
     },
     footer: {
       style: 'dark',
@@ -47,18 +34,7 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/smatechnologies/opcon-docs/blob/main',
-          lastVersion: 'current',
-          versions: {
-            'current': {
-              label: 'current',
-            },
-            '21.0': {
-              label: '21.0',
-              path: 'v21.0',
-              banner: 'none'
-            }
-          }
+            'https://github.com/smatechnologies/opcon-docs/blob/release/21.9',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
