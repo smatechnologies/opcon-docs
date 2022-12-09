@@ -1,5 +1,4 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require('./versionsArchived.json');
 module.exports = {
   title: 'SMA Technologies Help',
   tagline: 'OpCon',
