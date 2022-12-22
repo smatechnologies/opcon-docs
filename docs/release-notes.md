@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.10.0
+
+2022 December
+
+#### Server
+
+:eight_spoked_asterisk: **OPCON-17772**: OpCon Core services now use self-contained .Net 6 Core instead of self-contained .Net 3.1.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17594**: Solution Manager now allows users to view, add, edit, copy and delete master jobs from a link on the "library" page, for the following types: Null, Windows, UNIX, SQL, SAP R/3, Container, File Transfer, OpCon MFT.
+
+:eight_spoked_asterisk: **OPCON-16236**: Solution Manager now allows users to create a new OpCon MFT agent and job type. Details are in the documentation.
+
 ## OpCon 21.9.0
 
 2022 November
