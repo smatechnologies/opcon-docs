@@ -441,6 +441,18 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
+                {
+                  type: "category",
+                  label: "Master Jobs",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Adding-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Copying-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Deleting-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-Master-Jobs-Cross-References",
+                  ],
+                },
                 "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",
                 "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers",
                 {

@@ -1,19 +1,27 @@
-# Adding Jobs
+# Adding Master Jobs
 
-To add a Master Job, go to **Library** > **Master Jobs** and select **Add**.
+To add a Master Job, go to **Library** > **Master Jobs**.
 
-The Master Job Details page is displayed:
+Select **Add**. The Master Job Details page is displayed:
 
-![Master Job Details](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-details.png 'Master Job Details')
+![Master Job Details](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-details.png "Master Job Details")
 
 1. Select a Schedule.
+
 1. Enter a Job Name.
+
 1. Select a Job Type.
+
 1. Select a Department.
+
 1. Select an Access Code.
+
 1. _(Optional)_ Select the **Disable Build** checkbox. For more information, refer to [Jobs](../../../../../objects/jobs.md) in the **Concepts** online help.
+
 1. _(Optional)_ Select the **Allow Multi-Instance** checkbox. For more information, refer to [Multi-Instance Jobs](../../../../../operations/job-names.md#multi-instance-jobs) in the **Concepts** online help.
+
 1. Expand the **Task Details** section and enter the **Task Details** according to the **Job Type**.
+
 1. Select **Save**.
 
 ---
