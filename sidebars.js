@@ -586,7 +586,7 @@ module.exports = {
                         "Files/UI/Solution-Manager/Updating-IBMi-Job-Details",
                         "Files/UI/Solution-Manager/Updating-SAP-BW-Job-Details",
                         "Files/UI/Solution-Manager/Updating-SAP-R3-Job-Details",
-                        "Files/UI/Solution-Manager/Viewing-And-Updating-Container-Job-Details",
+                        "Files/UI/Solution-Manager/Viewing-Container-Job-Details",
                         "Files/UI/Solution-Manager/Updating-Windows-Job-Details",
                         "Files/UI/Solution-Manager/Updating-UNIX-Job-Details",
                         "Files/UI/Solution-Manager/Updating-File-Transfer-Job-Details",
