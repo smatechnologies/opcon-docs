@@ -39,7 +39,7 @@ or have at least all of the following privileges:
 - **Machine / Machine Group Privilege**: User must be at least in a role that has
   access to the assigned job machine or machines in the machine group.
 - **Departmental Function Privilege**: User must be at least in a role
-  that has All Function Privileges, or Modify Jobs In MasterSchedules or All Job Master Functions privileges and departmentn privilege.
+  that has All Function Privileges, or Modify Jobs In MasterSchedules or All Job Master Functions privileges and department privilege.
 - **Department Privilege**: User must be at least in a role that has
   access to the assigned job department or All Departments.
 
