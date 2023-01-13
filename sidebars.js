@@ -446,10 +446,27 @@ module.exports = {
                   label: "Master Jobs",
                   collapsed: true,
                   items: [
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Add-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Copy-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Delete-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Edit-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Adding-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Copying-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Deleting-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-Master-Jobs-Cross-References",
+                    {
+                      type: "category",
+                      label: "Viewing and Updating Master Jobs",
+                      collapsed: true,
+                      items: [
+                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Accessing-Master-Jobs",
+                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-General-Info",
+                        {
+                          type: "category",
+                          label: "Job Task Details",
+                          collapsed: true,
+                          items: [
+                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Viewing-And-Updating-Null-Jobs",
+                          ],
+                        },
+                      ],
+                    },
                   ],
                 },
                 "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",

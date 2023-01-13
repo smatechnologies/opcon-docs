@@ -1,19 +1,38 @@
-# Adding Jobs
+# Adding Master Jobs
 
-To add a Master Job, go to **Library** > **Master Jobs** and select **Add**.
+## Required Privileges
 
-The Master Job Details page is displayed:
+In order to add a master job, you must have at least all of the following privileges:
 
-![Master Job Details](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-details.png 'Master Job Details')
+- **Departmental Function Privilege**: User must be at least in a role
+  that has All Function Privileges, Add Jobs To Master Schedules or All Job Master Functions.
 
-1. Select a Schedule.
-1. Enter a Job Name.
-1. Select a Job Type.
-1. Select a Department.
-1. Select an Access Code.
+---
+
+## Adding a Job
+
+To add a Master Job, go to **Library** > **Master Jobs**.
+
+Select **Add**. The Master Job Details page is displayed:
+
+![Master Job Details](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-details.png "Master Job Details")
+
+1. Select a **Schedule**.
+
+1. Enter a **Name**.
+
+1. Select a **Job Type**.
+
+1. Select a **Department**.
+
+1. Select an **Access Code**.
+
 1. _(Optional)_ Select the **Disable Build** checkbox. For more information, refer to [Jobs](../../../../../objects/jobs.md) in the **Concepts** online help.
+
 1. _(Optional)_ Select the **Allow Multi-Instance** checkbox. For more information, refer to [Multi-Instance Jobs](../../../../../operations/job-names.md#multi-instance-jobs) in the **Concepts** online help.
+
 1. Expand the **Task Details** section and enter the **Task Details** according to the **Job Type**.
+
 1. Select **Save**.
 
 ---
