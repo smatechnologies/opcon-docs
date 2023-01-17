@@ -10,7 +10,7 @@ expression dependencies relating to the job and frequencies of the job.
 - When the panel contains defined properties, a blue circular
   indicator containing a number (![Job Properties     Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator"))
   will appear to the right of the panel name to indicate the number of
-  tags that have been defined.
+  properties that have been defined.
 
 ## Adding or Updating Expression Dependencies
 
