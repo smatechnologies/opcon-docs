@@ -1,7 +1,5 @@
 # Viewing and Updating General Info
 
-# Viewing and Updating General Info
-
 The section at the top of the **Master Job Definition** page displays
 general job details which include:
 
@@ -19,8 +17,7 @@ section for instructions on updating these such properties.
 
 ## Updating General Information
 
-In **Admin** mode, the job name, department, access code, disable build, and allow multi-instance properties can
-be updated.
+In **Admin** mode, the job name, department, access code, disable build, and allow multi-instance properties can be updated.
 
 :::note
 Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Jobs** topic.
