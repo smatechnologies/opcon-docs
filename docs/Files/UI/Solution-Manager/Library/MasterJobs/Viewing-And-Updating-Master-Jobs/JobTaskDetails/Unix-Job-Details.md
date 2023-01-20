@@ -264,9 +264,9 @@ Defining Multiple Failure Criteria:
 2. Use the **Fail on Core Dump** switch to configure how the
    LSAM should report the status of the job when the job does or does not create a core file.
 
-- If the **Fail on Core Dump** switch is enabled ![Green Enabled     Switch](../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
+- If the **Fail on Core Dump** switch is enabled ![Green Enabled     Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
   and a core dump is produced, then the job status will return a failed exit code.
-- If the **Fail on Core Dump** switch is enabled ![Green Enabled     Switch](../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
+- If the **Fail on Core Dump** switch is enabled ![Green Enabled     Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
   and a core dump is not produced, then the job succeeds (assuming all other exit code processing is good).
 
 :::note
