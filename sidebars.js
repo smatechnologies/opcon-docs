@@ -536,6 +536,26 @@ module.exports = {
             },
             {
               type: 'category',
+              label: 'Studio',
+              collapsed: true,
+              items: [
+                {
+                  type: 'category',
+                  label: 'Canvas',
+                  collapsed: true,
+                  items: [
+                    'Files/UI/Solution-Manager/Studio/Canvas/Adding-Master-Schedules',
+                    'Files/UI/Solution-Manager/Studio/Canvas/Copying-Master-Schedules',
+                    'Files/UI/Solution-Manager/Studio/Canvas/Deleting-Master-Schedules',
+                    'Files/UI/Solution-Manager/Studio/Canvas/Editing-Master-Schedules',
+                    'Files/UI/Solution-Manager/Studio/Canvas/Viewing-Master-Schedules/Viewing-Master-Schedules',
+                  ],
+                },
+
+              ],
+            },
+            {
+              type: 'category',
               label: 'Vision',
               collapsed: true,
               items: [
