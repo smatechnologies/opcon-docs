@@ -956,7 +956,7 @@ $JOB:KILL,<schedule date>,<schedule name>,<job name>
 
 ### $JOB:QUEUED
 
-The $JOB:QUEUED event tracks user-submitted jobs on the IBM i and z/OS platforms. This event is only passed between the LSAM and the SAM. If a running job is requested, the multi-instance setting on the job is honored. By default, this event must be submitted to an active schedule, or the event is rejected.
+The $JOB:QUEUED event tracks user-submitted jobs on the IBM i and z/OS platforms. This event is only passed between the LSAM and the SAM. If a running job is requested, the multi-instance setting on the job is honored. This event must be submitted to an active schedule, or the event is rejected, unless the AdHoc schedule name is used.  See additional notes about the AdHoc job under the event [$JOB:TRACK](./types#jobtrack).
 
 :::note
 
@@ -990,7 +990,7 @@ None
 
 :::info More Info
 
-For IBM i, visit the following section in the **IBM i LSAM** online help: [Adding New Schedule Frequencies](../Files/UI/Enterprise-Manager/Adding-Schedule-Frequencies.md#Adding_New_Schedule_Frequency)
+For IBM i, visit the following section in the **IBM i LSAM** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#Tracking)
 
@@ -1297,13 +1297,29 @@ $JOB:START,<schedule date>,<schedule name>,<job name>
 
 The $JOB:TRACK event tracks user-submitted jobs on the IBM i, MCP, and z/OS platforms. This event is only passed between the LSAM and the SAM. By default, this event must be submitted to an active schedule, or the event is rejected.
 
-Tracked jobs can be controlled by the multi-instance box to prevent or allow duplicate jobs.
+:::note EXCEPTION
+**The AdHoc Schedule**
+
+Although a pre-defined job on a named OpCon schedule enables more job dependencies and other job control features, it may sometimes be convenient to perform simple job tracking without a pre-defined and active schedule.  For those cases the AdHoc schedule may be specified by the agents.
+
+The AdHoc schedule supports the following characteristics:
+ 
+- The schedule is dynamically added to the Daily Tables when SAM-SS is informed of a job on the schedule
+that is to be tracked.
+- Once active, the schedule remains open until midnight when it is allowed to go to a completed state. All
+jobs on the schedule must finish before the schedule closes.
+
+If jobs to be tracked are on named schedules, those schedules must be built and must be active in the Daily Tables for the SAM-SS to track or queue the job(s). However, the jobs to be tracked should not be allowed to be built in advance when the schedule is built.  Tracked jobs will appear on named schedules only when the agents send one of the job tracking external event commands, including $JOB:TRACK and $JOB:QUEUED.  See specific notes about Job Tracking in the individual agent references listed below.
+:::
+
+Pre-defined tracked jobs can be controlled by the multi-instance box to prevent or allow duplicate jobs.
 
 :::info
 
 Provided here are references for implementing the Job Tracking concept.
 
-For IBM i, visit the following section in the **IBM i LSAM** online help: [Adding New Schedule Frequencies](../Files/UI/Enterprise-Manager/Adding-Schedule-Frequencies.md#Adding_New_Schedule_Frequency)
+For IBM i, visit the following section in the **IBM i LSAM** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
+
 
 For MCP, visit the following section in the **MCP LSAM** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
 
