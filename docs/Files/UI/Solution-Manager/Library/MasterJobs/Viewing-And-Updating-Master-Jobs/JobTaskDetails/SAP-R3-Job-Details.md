@@ -159,7 +159,7 @@ Click on the Add button under **List of Steps** to open the Add SAP Step Dialog.
   - **External Program Name**: Defines text matching the name of the desired **External Program** in the SAP Business Warehouse system.  
     ![External Program Dialog](../../../../../../../Resources/Images/SM/Operations/SapR3/External-Program-Query.png 'External Program Dialog')
   - Enter **External Program Name** and click **OK** to add step to SAP Job.  
-     ![External Program](../../../../../../Resources/Images/SM/Operations/SapR3/Entered-External-Program-Name.png 'External Program')  
+     ![External Program](../../../../../../../Resources/Images/SM/Operations/SapR3/Entered-External-Program-Name.png 'External Program')  
      ![Create Dialog Result](../../../../../../../Resources/Images/SM/Operations/SapR3/External-Program-Select-Result.png 'Create Dialog Result')
 
 :::note
