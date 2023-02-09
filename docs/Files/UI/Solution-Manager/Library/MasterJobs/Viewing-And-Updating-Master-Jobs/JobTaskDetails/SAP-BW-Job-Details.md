@@ -6,7 +6,7 @@ To view an SAP BW job, you must have the required privileges as defined in [Requ
 
 1. To view a Unix job, go to **Library** > **Master Jobs**.
 1. Select a SAP BW job in the list.
-1. Select **View**.
+1. Select **Edit**.
 1. Expand the **Task Details** panel to expose its content.
 
 ---
