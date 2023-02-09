@@ -6,7 +6,7 @@ To view, add, or edit a Container job, you must have the required privileges as 
 
 1. To view a container job, go to **Library** > **Master Jobs**.
 1. Select a container job in the list.
-1. Select **View**.
+1. Select **Edit**.
 1. Expand the **Task Details** panel to expose its content.
 
 ---
@@ -33,7 +33,7 @@ To view, add, or edit a Container job, you must have the required privileges as 
 
 1. To update a container job, go to **Library** > **Master Jobs**.
 1. Select a container job.
-1. Select **View**.
+1. Select **Edit**.
 1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button'))
    when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button'))
    when in **Admin** mode.
