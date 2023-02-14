@@ -10,37 +10,24 @@ When a mapped drive or UNC path is specified in File Name Path, the Resource Mon
 
 ## Configure the SMA Resource Monitor Service Log On
 
-Use menu path: **Start \> Settings \> Control Panel**.
-
-Double-click the **Administrative Tools** icon.
-
-Double-click the **Services** icon to run the Service Control Manager.
-
-Double-click the **SMA Microsoft Resource Monitor** in the **Services**
-list.
-
-If not selected already, select **Automatic (Delayed Start)** from the
-**Startup Type** drop-down list box.
-
-:::warning
-SMA Technologies recommends leaving the SMA Microsoft Resource Monitor service set to Automatic (Delayed Start) to avoid potential issues at startup time while other services and programs start up.
-:::
-
-Click the **Log On** tab.
-
-To run the service as the Local System Account:
-
-a.  Click **Local System** account radio button.
-b.  Click **OK**.
-
-To run the service as a Domain User:
-
-a.  Click **This account** radio button.
-b.  Click **Browse** to find the *Domain User*.
-c.  Click the **Domain User**.
-d.  Click **OK**.
-
-**Close ☒** the **Services** window.
+1. Use menu path: **Start \> Settings \> Control Panel**.
+2. Double-click the **Administrative Tools** icon.
+3. Double-click the **Services** icon to run the Service Control Manager.
+4. Double-click the **SMA Microsoft Resource Monitor** in the **Services** list.
+    - If not selected already, select **Automatic (Delayed Start)** from the **Startup Type** drop-down list box.
+    :::warning
+    SMA Technologies recommends leaving the SMA Microsoft Resource Monitor service set to Automatic (Delayed Start) to avoid potential issues at startup time while other services and programs start up.
+    :::
+5. Click the **Log On** tab.
+6. To run the service as the Local System Account:
+    - Click **Local System** account radio button.
+    - Click **OK**.
+7. To run the service as a Domain User:
+    - Click **This account** radio button.
+    - Click **Browse** to find the *Domain User*. 
+    - Click the **Domain User**.
+    - Click **OK**.
+8. **Close ☒** the **Services** window.
 
 ## Start the SMA Resource Monitor Service
 
@@ -141,24 +128,26 @@ file resides. The INI file contains the following major sections:
 
 The General table contains basic information for SMA Resource Monitor processing.
 
-||||||
-|--- |--- |--- |--- |--- |
-|ShortServiceName=|SMA_MSRESOURCE_MONITOR|Defines the hidden internal (e.g., registry) service name Windows refers to.|N|Y|
-|DisplayServiceName=|SMA Microsoft Resource Monitor|Defines the service name displayed in the Service Control Manager.|N|Y|
-|PathToRuleAndActionFiles|".\Rules"|Defines the full path to the directory containing the Rules and Actions files. The default path is a relative path from your <Configuration Directory\> to a sub folder named "Rules".|N|Y|
-|MSGINDirectory|N/A|Defines the path to the <Configuration Directory\>\MSLSAM\MSGIN directory for placing OpCon Events.|N|Y|
-|ExternalEventUser|<blank\>|Defines the OpCon user for all events sent by the SMA Resource Monitor. You may specify a clear- text password and if the SMAResourceMonitor service reads the INI file and finds an unencrypted password, it will encrypt the password and update the ini file. To manually encrypt the password, use the Password encryption tool in the Enterprise Manager. Then, copy and paste the encrypted password for the value of this setting. For more information, refer to Encrypting Passwords in the Enterprise Manager online help. Maximum characters allowed: 15|N|Y|
-|ExternalEventPassword|<blank\>|Defines the OpCon External Event Password for the OpCon User. This password is used for all events sent by the SMA Resource Monitor. You may specify a clear- text password and if the SMAResourceMonitor service reads the INI file and finds an unencrypted password, it will encrypt the password and update the ini file. To manually encrypt the password, use the Password encryption tool in the Enterprise Manager. Then, copy and paste the encrypted password for the value of this setting. For more information, refer to Encrypting Passwords in the Enterprise Manager online help. Maximum characters allowed: 20|N|Y|
-|SampleFrequency|5|Defines (in seconds) how often samples are taken for Counter Monitors in order to establish an average. Minimum Value: -1, Maximum Value: - 300|N|Y|
-|NetworkRetryTimer|30|Defines the number of seconds to wait before retrying a network connection that is down (this is a connection on which the SMA Resource Monitor is monitoring a file.)|N|Y|
-|InitializationScript|Blank|The full path to the initialization script. The initialization script executes when the SMAResourceMonitor service starts. SMA Technologies recommends using this script to map network drives or to perform any other required initialization procedure. Enclose the path in double quotes ("<path\>").|N|N|
-|TerminationScript|Blank|The full path to the termination script. The termination script executes when the SMAResourceMonitor service stops. SMA Technologies recommends using this script to disconnect network drives or to perform any other required termination procedure. Enclose the path in double quotes ("<path\>").|N|N|
-|WebServiceURL|Blank|Defines the web services URL for the OpCon Web Services. Example: `http://localhost:85`|N|N|
+| General | Default | Description | Dynamic (Y \| N) | Required |
+| --- | --- | --- | --- | --- |
+| ShortServiceName= | SMA_MSRESOURCE_MONITOR | - Defines the hidden internal (e.g., registry) service name Windows refers to. | N | Y |
+| DisplayServiceName= | SMA Microsoft Resource Monitor | - Defines the service name displayed in the Service Control Manager. | N | Y |
+| PathToRuleAndActionFiles | ".\Rules" | - Defines the full path to the directory containing the Rules and Actions files.<br />- The default path is a relative path from your <Configuration Directory\> to a sub folder named "Rules".|N|Y|
+| MSGINDirectory | N/A | - Defines the path to the ```<Configuration Directory\>\MSLSAM\MSGIN```directory for placing OpCon Events. | N | Y |
+| ExternalEventUser | Blank | - Defines the OpCon user for all events sent by the SMA Resource Monitor.<br />**- Maximum characters allowed: 15**<br /><br />**NOTE** <br />- You may specify a cleartext password. Then restart the SMAResourceMonitor service. When the service reads the INI file and finds an unencrypted password, it will encrypt the password and update the ini file. <br />- To manually encrypt the password, use the Password encryption tool in the Enterprise Manager. Then, copy and paste the encrypted password for the value of this setting. *For more information, refer to Encrypting Passwords in the Enterprise Manager online help.* | N | Y |
+| ExternalEventPassword | Blank | - Defines the OpCon External Event Password for the OpCon User. This password is used for all events sent by the SMA Resource Monitor. <br />**- Maximum characters allowed: 20**<br /><br />**NOTE** <br />- You may specify a cleartext password. Then restart the SMAResourceMonitor service. When the service reads the INI file and finds an unencrypted password, it will encrypt the password and update the ini file. <br />- To manually encrypt the password, use the Password encryption tool in the Enterprise Manager. Then, copy and paste the encrypted password for the value of this setting. *For more information, refer to Encrypting Passwords in the Enterprise Manager online help.* | N | Y |
+| SampleFrequency | 5 | - Defines (in seconds) how often samples are taken for Counter Monitors in order to establish an average.<br />**- Minimum Value: -1<br />- Maximum Value: - 300** | N | Y |
+| NetworkRetryTimer | 30 | - Defines the number of seconds to wait before retrying a network connection that is down (this is a connection on which the SMA Resource Monitor is monitoring a file.) | N | Y |
+| InitializationScript | Blank | - The full path to the initialization script. The initialization script executes when the SMAResourceMonitor service starts. SMA Technologies recommends using this script to map network drives or to perform any other required initialization procedure. Enclose the path in double quotes ("<path\>"). | N | N | 
+| TerminationScript | Blank | - The full path to the termination script which executes when the SMAResourceMonitor service stops. SMA Technologies recommends using this script to disconnect network drives or to perform any other required termination procedure. Enclose the path in double quotes ("<path\>"). | N | N |
+| WebServiceURL | Blank | - Defines the web services URL for the OpCon Web Services. Example: ```http://localhost:85``` | N | N |
 
 #### Debug Options
 
-|Debug Options|Default|Description|Dynamic (Y/N)|Required|
-|--- |--- |--- |--- |--- |
-|ArchiveDaysToKeep|10|Determines the number of days of history (i.e., archive folders) to keep. Each Time it archives a log, the SMA Resource Monitor checks for expired archive folders to delete.|Y|N|
-|MaximumLogFileSize|15000|Defines the maximum size in bytes for each log file. Determines when the current log file is closed and a new file is started. When the file reaches this maximum size, it is "rolled over". This setting creates small manageable log files. SMAResourceMonitor.log resides in the <Output Directory\>\SMAResourceMonitor\Log directory.  Once per day the SMA Resource Monitor deletes old archive folders.|Y|N|
-|TraceLevel|0|Determines the detail of debug trace logs. Valid Values:0 = None 1 = Basic (non-detailed trace)2 = Detailed3 = Very Detailed (Traces all the possible debug information in the application.)|Y|N|
+| Debug Options | Default | Description | Dynamic (Y \| N) | Required |
+| --- | --- | --- | --- | --- |
+| ArchiveDaysToKeep | 10 | Determines the number of days of history (i.e., archive folders) to keep. Each Time it archives a log, the SMA Resource Monitor checks for expired archive folders to delete. | Y | N |
+| MaximumLogFileSize | 15000 | Defines the maximum size in bytes for each log file. Determines when the current log file is closed and a new file is started. When the file reaches this maximum size, it is "rolled over". This setting creates small manageable log files. SMAResourceMonitor.log resides in the ```<Output Directory\>\SMAResourceMonitor\Log``` directory.  Once per day the SMA Resource Monitor deletes old archive folders. | Y | N | 
+| TraceLevel | 0 | Determines the detail of debug trace logs. Valid Values:<ul><li>0 = None</li><li>1 = Basic (non-detailed trace)</li><li>2 = Detailed</li><li>3 = Very Detailed (Traces all the possible debug information in the application.)</li></ul> | Y | N | 
+
+
