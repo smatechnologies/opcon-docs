@@ -7,12 +7,12 @@ To open the Schedule Import Export utility:
 - Use menu path: **Start \> All Programs \> OpConxps \> Utilities \> Schedule Import Export**. This utility requires the same User Login ID and password as the Enterprise Manager. For information on logging in to the Enterprise Manager, refer to [Logging In/Out](../../Files/UI/Enterprise-Manager/Logging-In.md) in the **Enterprise Manager** online help.
 - The Schedule Import/Export utility uses a Microsoft Access database (.mdb) file as the transport medium between the source and target databases. This mechanism allows the two databases to be physically detached. Even if the databases are on the same network, the transport database is still necessary.
 - To make schedule transfers, the Schedule Import Export utility requires the appropriate ODBC drivers for the SQL database. OpCon installation does not provide SQL ODBC drivers; however, the installation does include Microsoft Access ODBC drivers for the transport database.
-- For information on configuring the SQL and Access DSNs, refer to [Create System DSNs](../../installation/configuration.md#create-system-dsns) in the **OpCon Installation** online help.
+- For information on configuring the SQL and Access DSNs, refer to [Create System DSNs](../../installation/configuration.md) in the **OpCon Installation** online help.
 
 ## Menus
 
 The menus available are File and Help.
-
+b
 ### File
 
 - **Select ODBC DSN**: Allows users to change the SQL database connection.
@@ -60,7 +60,7 @@ For procedures on creating OpCon User Accounts, refer to [Adding User Accounts](
     :::note
     For automatic login, Schedule Import/Export utility remembers your profile and automatically logs in the next time you start the program.
     :::
-3. Select the **OpCon database** in the **Data Source** field. If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md#create-system-dsns) in the **OpCon Installation** online help.
+3. Select the **OpCon database** in the **Data Source** field. If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md) in the **OpCon Installation** online help.
 4. Select the **Save Settings** checkbox to save the connection information for the next login and click **OK**.
 
 :::note
@@ -133,7 +133,7 @@ If the Master Holiday Dates from the source database should not be retained in t
 5. [Log in to Schedule Import/Export](#Log_in_to_Schedule_Import/Export).
 6. Select the **desired data source** in the **Data Source Name** list box.
     :::note
-    If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md#create-system-dsns) in the **OpCon Installation** online help.
+    If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md) in the **OpCon Installation** online help.
     :::
 7. Click **OK**.
 8. In the ODBC Database section on the lower part of the window:
@@ -237,7 +237,7 @@ User Tab
 ### Import Schedules
 
 1. [Log in to Schedule Import/Export](#Log_in_to_Schedule_Import/Export).
-2. Select the **desired data source** in the **Data Source Name** list box. If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md#create-system-dsns) in the **OpCon Installation** online help.
+2. Select the **desired data source** in the **Data Source Name** list box. If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md) in the **OpCon Installation** online help.
 3. Click **OK**.
 4. In the Transport Database section on the upper part of the window:
     - Click one schedule to automatically select all schedules to import.
