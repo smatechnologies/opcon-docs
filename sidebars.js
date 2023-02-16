@@ -448,6 +448,7 @@ module.exports = {
                   items: [
                     "Files/UI/Solution-Manager/Library/MasterJobs/Adding-Master-Jobs",
                     "Files/UI/Solution-Manager/Library/MasterJobs/Copying-Master-Jobs",
+                    "Files/UI/Solution-Manager/Library/MasterJobs/Moving-Master-Jobs",
                     "Files/UI/Solution-Manager/Library/MasterJobs/Deleting-Master-Jobs",
                     "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-Master-Jobs-Cross-References",
                     {
