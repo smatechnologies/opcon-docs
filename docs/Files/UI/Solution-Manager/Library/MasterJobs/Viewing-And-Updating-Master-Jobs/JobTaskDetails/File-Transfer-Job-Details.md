@@ -6,7 +6,7 @@ To view, add, or edit a File Transfer job, you must have the required privileges
 
 1. To view a Unix job, go to **Library** > **Master Jobs**.
 1. Select a File Transfer job in the list.
-1. Select **View**.
+1. Select **Edit**.
 1. Expand the **Task Details** panel to expose its content.
 
 ---
@@ -22,7 +22,7 @@ To view, add, or edit a File Transfer job, you must have the required privileges
 
 1. To edit File Transfer job details, go to **Library** > **Master Jobs**.
 1. Select a File Transfer job.
-1. Select **View**.
+1. Select **Edit**.
 1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button'))
    when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button'))
    when in **Admin** mode.

@@ -6,7 +6,7 @@ To view, add, or edit a Null job, you must have the required privileges as defin
 
 1. To view a null job, go to **Library** > **Master Jobs**.
 1. Select a null job in the list.
-1. Select **View**.
+1. Select **Edit**.
 1. Expand the **Task Details** panel to expose its content.
 
 ---

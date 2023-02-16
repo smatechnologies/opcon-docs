@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.12
+
+2023 February
+
+#### ImpEx2 Web Service
+
+:eight_spoked_asterisk: **OPCON-18323**: Added Windows Authentication logic when establishing a connection to the OpCon Database from the OpCon ImpEx2 server.
+
+:white_check_mark: **OPCON-18382**: Fixed an issue in deploy simulation where the schedule comparison section would not show the actual results.
+
+:white_check_mark: **OPCON-18546**: Corrected invalid check for Conflict dependency when retrieving job master key.
+
+:white_check_mark: **OPCON-18846**: Fixed an issue in deploy simulation check where ocadm role displayed as missing.
+
 ## OpCon 21.0.11
 
 2022 November
