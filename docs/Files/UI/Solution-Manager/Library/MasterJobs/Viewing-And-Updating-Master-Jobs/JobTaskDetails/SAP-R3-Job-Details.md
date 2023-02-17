@@ -4,9 +4,9 @@ To view, add, or edit a SAP R/3 and CRM job, you must have the required privileg
 
 ## Viewing SAP R/3 and CRM Job Details
 
-1. To view a Unix job, go to **Library** > **Master Jobs**.
+1. To view a SAP R/3 and CRM job, go to **Library** > **Master Jobs**.
 1. Select a SAP R/3 and CRM job in the list.
-1. Select **View**.
+1. Select **Edit**.
 1. Expand the **Task Details** panel to expose its content.
 
 ---
@@ -22,7 +22,7 @@ To view, add, or edit a SAP R/3 and CRM job, you must have the required privileg
 
 1. To edit SAP R/3 and CRM job details, go to **Library** > **Master Jobs**.
 1. Select a SAP R/3 and CRM job.
-1. Select **View**.
+1. Select **Edit**.
 1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button'))
    when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button'))
    when in **Admin** mode.
@@ -60,7 +60,7 @@ Click on the search button next to **Job Name** to open the SAP Query dialog.
 
 - **Machine**: Defines the SAP R3 LSAM Machine name.
 - **Language**: Defines the two-character language abbreviation (e.g., enter EN for English).
-- **Job Name**: Defines text matching the name of the desired job name in the SAP Business Warehouse system. If unsure of the whole job name, use wildcards (\*) to expand the search.
+- **Job Name**: Defines text matching the name of the desired job name in the SAP Business Warehouse system. If unsure of the whole job name, use partial job name with wildcards (\*) to expand the search. Do not use only wildcards (\*) for the job name. If the SAP system has a lot of jobs, the query will take a long time to respond causing the SAPQueryProcessor to get stuck.
 - **User ID**: Defines Username for SAP Credentials.
 - **Password**: Defines Password for SAP Credentials.
 
