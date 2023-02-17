@@ -466,7 +466,7 @@ module.exports = {
                           items: [
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Container-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/File-Transfer-Job-Details",
-                            //'Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/IBMi-Job-Details',
+                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/IBMi-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Null-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-BW-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-R3-Job-Details",
