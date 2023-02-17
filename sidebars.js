@@ -425,11 +425,11 @@ module.exports = {
               label: "Self Service",
               collapsed: true,
               items: [
-                "Files/UI/Solution-Manager/Working-with-Self-Service",
-                "Files/UI/Solution-Manager/Working-in-Admin-Mode",
-                "Files/UI/Solution-Manager/Working-in-User-Mode",
-                "Files/UI/Solution-Manager/Filtering-Service-Requests",
-                "Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators",
+                //'Files/UI/Solution-Manager/Working-with-Self-Service',
+                'Files/UI/Solution-Manager/Working-in-Admin-Mode',
+                'Files/UI/Solution-Manager/Working-in-User-Mode',
+                'Files/UI/Solution-Manager/Filtering-Service-Requests',
+                'Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators',
               ],
             },
             {
