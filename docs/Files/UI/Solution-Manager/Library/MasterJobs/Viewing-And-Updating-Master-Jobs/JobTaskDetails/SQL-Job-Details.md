@@ -76,7 +76,7 @@ Running a MS SQL DTExec job requires the DTExec utility to be installed for runn
       execute the package on Integration Services Server.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### MS SQL DTExec Package Tab
 
@@ -106,7 +106,7 @@ MS SQL Job does not require any special tools to be installed.
   server fails initially.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### SQL Job Tab
 
@@ -146,7 +146,7 @@ Running a MS SQL Script job requires SQLCMD to be installed on the agent machine
   manager to use this option.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### SQL Script Tab
 
@@ -203,7 +203,7 @@ Running a MySQL job requires the MySQL command line tool to be installed.
 - **Port**: Defines the TCP/IP port number for the connection.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### MySQL Script Tab
 
@@ -241,7 +241,7 @@ Running an Oracle job requires SQL\*Plus to be installed.
   server.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### Oracle Script Tab
 
@@ -274,7 +274,7 @@ Running an Oracle job requires SQL\*Plus to be installed.
   server.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### Oracle Script Tab
 
@@ -315,7 +315,7 @@ Running an Other DB job through ODBC/OLE DB connections requires the appropriate
 - **User Id**: Defines the SQL or Windows Authentication user name.
 - **Advanced Failure Criteria**: _(Optional)_ SQL jobs
   can make use of the Advanced Failure Criteria feature for the
-  defined job. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+  defined job. For more information, refer to [Advanced Failure Criteria](../../../../../../../objects/jobs.md#advanced-failure-criteria).
 
 #### SQL Script Tab
 
