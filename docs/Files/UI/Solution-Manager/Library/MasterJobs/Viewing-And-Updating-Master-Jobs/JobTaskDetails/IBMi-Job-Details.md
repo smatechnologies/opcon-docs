@@ -14,7 +14,7 @@ To view, add, or edit a IBMi job, you must have the required privileges as defin
 ## Adding IBMi Job Details
 
 1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md).
-1. Expand the **Task Details** section. See [IBMi Job Details](#IBMi-Job-Details) for details.
+1. Expand the **Task Details** section. See [IBMi Job Details](#ibmi-job-details) for details.
 
 ---
 
@@ -26,7 +26,7 @@ To view, add, or edit a IBMi job, you must have the required privileges as defin
 1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Master Job Definition Read-only Button"))
    when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Job Definition Admin Button"))
    when in **Admin** mode.
-1. Expand the **Task Details** panel. See See [IBMi Job Details](#IBMi-Job-Details) for details.
+1. Expand the **Task Details** panel. See See [IBMi Job Details](#ibmi-job-details) for details.
 
 ---
 
@@ -617,8 +617,3 @@ Click the **Undo** button if you wish to undo your changes for any reason.
 :::
 
 Click the **Save** button to update any changes on this screen.
-
-### More Information
-
-<!-- For conceptual information, refer to [Null Jobs](../../../../../../../../../../../../../../../job-types/null.md) in
-the **Concepts** online help. -->
