@@ -426,10 +426,10 @@ module.exports = {
               collapsed: true,
               items: [
                 //'Files/UI/Solution-Manager/Working-with-Self-Service',
-                'Files/UI/Solution-Manager/Working-in-Admin-Mode',
-                'Files/UI/Solution-Manager/Working-in-User-Mode',
-                'Files/UI/Solution-Manager/Filtering-Service-Requests',
-                'Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators',
+                "Files/UI/Solution-Manager/Working-in-Admin-Mode",
+                "Files/UI/Solution-Manager/Working-in-User-Mode",
+                "Files/UI/Solution-Manager/Filtering-Service-Requests",
+                "Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators",
               ],
             },
             {
@@ -470,7 +470,7 @@ module.exports = {
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Null-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-BW-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-R3-Job-Details",
-                            //'Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SQL-Job-Details',
+                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SQL-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Unix-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Windows-Job-Details",
                           ],
