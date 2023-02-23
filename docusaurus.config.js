@@ -1,10 +1,9 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require('./versionsArchived.json');
 module.exports = {
   title: 'SMA Technologies Help',
   tagline: 'OpCon',
   url: 'https://help.smatechnologies.com',
-  baseUrl: '/opcon/core/',
+  baseUrl: '/opcon/core/v22.0/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -16,27 +15,14 @@ module.exports = {
       logo: {
         alt: 'SMA Technologies Help Logo',
         src: 'img/logo.svg',
-        href: 'https://help.smatechnologies.com',
+        href: 'https://help.smatechnologies.com'
       },
-      items: [
-        {
-          type: 'docsVersionDropdown',
-          position: 'right',
-          dropdownItemsAfter: [
-            ...Object.entries(VersionsArchived).map(
-              ([versionName, versionUrl]) => ({
-                label: versionName,
-                href: versionUrl,
-              }),
-            ),
-          ],
-        },
-      ],
+      items: []
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} SMA Technologies.`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} SMA Technologies.`
+    }
   },
   presets: [
     [
@@ -47,33 +33,22 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/smatechnologies/opcon-docs/blob/main',
-          lastVersion: 'current',
-          versions: {
-            'current': {
-              label: 'current',
-            },
-            '21.0': {
-              label: '21.0',
-              path: 'v21.0',
-              banner: 'none'
-            }
-          }
+            'https://github.com/smatechnologies/opcon-docs/blob/release/22.0'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.css')
         },
         gtag: {
-          trackingID: 'G-7XYMFXX81Y',
-        },
-      },
-    ],
+          trackingID: 'G-7XYMFXX81Y'
+        }
+      }
+    ]
   ],
   plugins: [
     [
-      require.resolve('@cmfcmf/docusaurus-search-local'), 
+      require.resolve('@cmfcmf/docusaurus-search-local'),
       {
       }
-    ],
-  ],
+    ]
+  ]
 };
