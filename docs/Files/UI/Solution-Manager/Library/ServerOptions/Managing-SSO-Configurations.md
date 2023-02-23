@@ -2,33 +2,33 @@
 
 ## Required Privileges
 
-In order to access Server Options page and configure the Single Sign-On setting, you must have the following:
+In order to access the Server Options page and configure the Single Sign-On setting, you must have the following:
 
 - **Role**: User must be assigned to the Role_ocadm.
 
 ---
 
-## Configuring SSO Settings
+## Configuring SSO
 
-To configure SSO Setting, go to **Library** > **Server Options** > click on the **SSO Setting** panel.
+To configure SSO Settings, go to **Library** > **Server Options** > click on the **SSO** panel.
 
 #### SSO Configuration Fields
 
-![Server Options - SSO Settings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-overall.png "SSO Settings Panel")
+![Server Options - SSO Settings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-overall.png "SSO Panel")
 
 1. Click on the **Switch** to enable access to the SSO login button.
 
-1. Enter a **Provider**: the identity provider (IdP) for the client. Options include **Okta**, **Azure**, and **Other**.
+1. Enter a **Provider**. The identity provider (IdP) for the client should be selected from the **Provider** dropdown. Options include **Okta**, **Azure**, and **Other**.
 
-1. Enter a **Authority**: the URL of the OIDC/OAuth2 provider.
+1. Enter an **Authority**. **Authority** is the URL of the OIDC/OAuth2 provider.
 
-1. Enter a **Client ID**: your client application's identifier as registered with the OIDC/OAuth2.
+1. Enter a **Client ID**. This is your client application's identifier as registered with the OIDC/OAuth2.
 
-1. Enter a **Hostname**: the hostname property of the URL interface is a string containing the domain name of the URL (include the port number if applicable). For example, https://**hostname:443**.com.
+1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL (include the port number if applicable). For example, https://**hostname:443**.com.
 
-1. Enter an **Audience**: this identifies the recipients that the JWT is intended for.
+1. Enter an **Audience**. The **Audience** identifies the recipients that the JWT is intended for.
 
-1. Enter an **Scope**: the scopes being requested from the OIDC/OAuth2 provider (default: "openid").
+1. Enter a **Scope**. The **Scopes** being requested from the OIDC/OAuth2 provider (default: "openid"). You can enter various scopes separated by an empty space. For example, **openid** **email**.
 
 #### Group Mappings
 
@@ -42,8 +42,9 @@ To configure SSO Setting, go to **Library** > **Server Options** > click on the 
 
 :::note
 
-1.  If the switch is the **On** position, the user must input values in all fields including values for **Group Mappings**.
-2.  Examples of how to gather these requirements will be posted below (for [**Okta Application**](#okta-application), and [**Azure Application**](#azure-application)).
+1.  If the switch is in the **On** position, the user must input values in all fields including values for **Group Mappings**.
+2.  Examples of how to gather these requirements will be posted below (for the [**Okta Application**](#okta-application) and the [**Azure Application**](#azure-application)).
+3.  SSO can be implemented with any IdP as long as the required values are provided.
 
 :::
 
@@ -73,9 +74,9 @@ The following are a list of actions that will take place when a user logs in thr
 The following is an example of filling out the required fields:
 
 1. SSO Settings:
-   ![Server Options - SSO Settings Sample](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-sample.png "SSO Settings Sample")
+   ![Server Options - SSO Sample](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-sample.png "SSO Sample")
 1. Group Mappings:
-   ![Server Options - SSO Settings Sample](../../../../../Resources/Images/SM/Library/ServerOptions/sso-group-mappings-sample.png "SSO Settings Sample")
+   ![Server Options - SSO Group Mapping Sample](../../../../../Resources/Images/SM/Library/ServerOptions/sso-group-mappings-sample.png "SSO Group Mapping Sample")
 
 :::
 
@@ -87,7 +88,7 @@ The following is an example of filling out the required fields:
 
 This document will describe the steps needed to create a custom application in Okta to return custom optional claims in a access token that will be used by SMAOpConRestApi.
 
-1.  After you’ve logged in to Okta, click Admin in the upper right corner to go to the administration dashboard
+1.  After you’ve logged in to Okta, click "Admin" in the upper right corner to go to the administration dashboard
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-initial.png "Okta - Landing Page")
 1.  Once on the administration dashboard, click “Applications” from the left navigation to go to Applications
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-application-start.png "Okta - Dashboard")
@@ -98,16 +99,16 @@ This document will describe the steps needed to create a custom application in O
     1. Click on "Next"
     1. Set the following options:
        1. Grant type: Authorization
-       1. Sign-in redirects URIs:(sample) `https://<hostaname:443>/login/callback`
-          1. The **hostname** will be used in the SSO Configuration page in Solution Manager. Make sure to include the **port number** if applicable
-       1. The value for URL to access Solution Manager will be used in the configuration settings
+       1. Sign-in redirects URIs:(sample) `https://<hostname:443>/login/callback`
+          1. The **hostname** will be used on the SSO Configuration page in Solution Manager. Make sure to include the **port number** if applicable
+       1. The value for the URL to access Solution Manager will be used in the SSO Configuration page
        1. Sign-out redirects URIs: This value is not necessary
        1. Controlled access: Allow everyone in your organization access (for this example)
        1. If an option was not listed, you may select the one that is more convenient for your organization
        1. Set controlled access based on your organizations needs
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-newpageapp.png "Okta- Integration Grant Type")
     1. Click on "Save".
-    1. Note down the “Client ID” value, this will be used to configure SSO in solution manager
+    1. Note down the “Client ID” value, this will be used to configure SSO in Solution Manager
 1.  After creating the application, go the newly created application and go to "Assignments"
     1. Assign the users from your organization to the new application
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-user-assignments.png "Okta- User Assignments")
@@ -125,17 +126,17 @@ This document will describe the steps needed to create a custom application in O
           1. Make sure to add **appuser.email** in the **Value** text field
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-claim-email.png "Okta - Add Email Claim")
     1. Click on the “Settings” tab and take notes of the following values:
-       1. Audience will be used in the configuration settings page inside Solution Manager
-       1. Issuer will be used as the “Authority” value inside Solution Manager
+       1. Audience, this will be used in the SSO Configuration page inside Solution Manager
+       1. Issuer, this will be used as the “Authority” value in the SSO Configuration page
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-server-settings.png "Okta - Default Server Settings")
     1. Go to the "Token Preview" tab
-       1. Select your new created application
+       1. Type the name your newly created application
        1. Select **Authorization Code** for the "Grant Type"
        1. Select a user that has access to this application
        1. Type "**openid**" in the "Scopes" textbox. These scopes are required for SSO implementation in Solution Manager
-       1. Click on "Preview Token" to make sure the “group” and “email” claims are displayed
+       1. Click on "Preview Token" then click on the "token" tab to view the access token. Make sure the “group” and “email” claims are displayed
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-token-preview.png "Okta - Token Preview")
-1.  Verify that the "default" authorization server "Access Policies" has the following values checked
+1.  Then click on the "Access Policies" tab
 
 - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-access-policies.png "Okta - Access Policies")
   1. Click on "Edit" in the "Default Policy Rule" row. Make sure that the "Authorization Code" option is selected, the rest are optional:
