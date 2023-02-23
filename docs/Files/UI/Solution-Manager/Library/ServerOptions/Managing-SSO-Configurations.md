@@ -24,7 +24,7 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 1. Enter a **Client ID**. This is your client application's identifier as registered with the OIDC/OAuth2.
 
-1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL (include the port number if applicable). For example, https://**hostname:443**.com.
+1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL (make sure to include **HTTP** or **HTTPS** and the **port number** if applicable). For example, **https://host.com:80443**.
 
 1. Enter an **Audience**. The **Audience** identifies the recipients that the JWT is intended for.
 
@@ -100,7 +100,7 @@ This document will describe the steps needed to create a custom application in O
     1. Set the following options:
        1. Grant type: Authorization
        1. Sign-in redirects URIs:(sample) `https://<hostname:443>/login/callback`
-          1. The **hostname** will be used on the SSO Configuration page in Solution Manager. Make sure to include the **port number** if applicable
+          1. The **hostname** will be used on the SSO Configuration page in Solution Manager. Make sure to include **HTTP** or **HTTPS** and the **port number** if applicable
        1. The value for the URL to access Solution Manager will be used in the SSO Configuration page
        1. Sign-out redirects URIs: This value is not necessary
        1. Controlled access: Allow everyone in your organization access (for this example)
@@ -163,7 +163,7 @@ This document describes the steps needed to create a custom application in Azure
       1. Select the redirect URL
          1. For example, `https://<yourhostname>:8080/login/callback`
          1. Make sure to add “**login/callback**”
-      1. The **Hostname** used in the redirect URL will be used in the SSO Configuration page inside Solution Manager. Make sure to include the **port number** if applicable
+      1. The **Hostname** used in the redirect URL will be used in the SSO Configuration page inside Solution Manager. Make sure to include **HTTP** or **HTTPS** and the **port number** if applicable
    1. Register Application
 1. Select the newly created application
    1. From the “Home” menu go to Azure Active Directory => App registrations => Select your new application
