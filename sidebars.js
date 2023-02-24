@@ -533,6 +533,14 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Runners",
                   ],
                 },
+                {
+                  type: "category",
+                  label: "Server Options",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations",
+                  ],
+                },
               ],
             },
             {
