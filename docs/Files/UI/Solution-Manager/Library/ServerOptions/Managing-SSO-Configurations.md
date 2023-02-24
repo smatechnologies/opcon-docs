@@ -24,11 +24,13 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 1. Enter a **Client ID**. This is your client application's identifier as registered with the OIDC/OAuth2.
 
-1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL (make sure to include **HTTP** or **HTTPS** and the **port number** if applicable). For example, **https://host.com:80443**.
+1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL. Make sure to include the scheme, which can be **HTTP** or **HTTPS**, and the **port number**, if applicable. For example, **https://host:80443**.
 
 1. Enter an **Audience**. The **Audience** identifies the recipients that the JWT is intended for.
 
 1. Enter a **Scope**. The **Scopes** being requested from the OIDC/OAuth2 provider (default: "openid"). You can enter various scopes separated by an empty space. For example, **openid** **email**.
+
+\* OpenID Connect (OIDC) is an open authentication protocol that works on top of the OAuth 2.0 (OAuth2) framework.
 
 #### Group Mappings
 
@@ -44,7 +46,7 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 1.  If the switch is in the **On** position, the user must input values in all fields including values for **Group Mappings**.
 2.  Examples of how to gather these requirements will be posted below (for the [**Okta Application**](#okta-application) and the [**Azure Application**](#azure-application)).
-3.  SSO can be implemented with any IdP as long as the required values are provided.
+3.  SSO can be implemented with any IdP as long as the required values are provided and they follow the OpenID Connect authentication protocol.
 
 :::
 
@@ -86,7 +88,7 @@ The following is an example of filling out the required fields:
 
 #### Okta Application
 
-This document will describe the steps needed to create a custom application in Okta to return custom optional claims in a access token that will be used by SMAOpConRestApi.
+This document will describe the steps needed to create a custom application in Okta to return custom optional claims in a access token that will be used by SMAOpConRestApi. Ensure the user following these steps has enough privileges to create an application, assign users to that application, and create custom claims.
 
 1.  After you’ve logged in to Okta, click "Admin" in the upper right corner to go to the administration dashboard
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-initial.png "Okta - Landing Page")
@@ -94,27 +96,30 @@ This document will describe the steps needed to create a custom application in O
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-application-start.png "Okta - Dashboard")
 1.  Click the "Create App Integration" button
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-app-integration.png "Okta - Applications")
-    1.  Inside the modal, select the following options: 1. Sign-in method: OIDC - OpenID Connect 1. Application type: Single-Page Application
-    - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-app-integration.png "Okta - Integration Options")
+    1.  Inside the modal, select the following options:
+        1. Sign-in method: OIDC - OpenID Connect
+        1. Application type: Single-Page Application
+    - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-signinmethod-applicationtype.png "Okta - Integration Options")
     1. Click on "Next"
     1. Set the following options:
-       1. Grant type: Authorization
+       1. Grant type: Authorization Code
        1. Sign-in redirects URIs:(sample) `https://<hostname:443>/login/callback`
-          1. The **hostname** will be used on the SSO Configuration page in Solution Manager. Make sure to include **HTTP** or **HTTPS** and the **port number** if applicable
-       1. The value for the URL to access Solution Manager will be used in the SSO Configuration page
+          1. Make sure to include **/login/callback**
+          1. The **hostname** will be used on the SSO configuration panel in Solution Manager. Make sure to include the scheme, which can be **HTTP** or **HTTPS**, and the **port number**, if applicable.
+       1. The value for the URL to access Solution Manager will be used in the SSO configuration panel
        1. Sign-out redirects URIs: This value is not necessary
        1. Controlled access: Allow everyone in your organization access (for this example)
        1. If an option was not listed, you may select the one that is more convenient for your organization
        1. Set controlled access based on your organizations needs
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-newpageapp.png "Okta- Integration Grant Type")
     1. Click on "Save".
-    1. Note down the “Client ID” value, this will be used to configure SSO in Solution Manager
+    1. Note down the **Client ID** value, this will be used to configure SSO in Solution Manager
 1.  After creating the application, go the newly created application and go to "Assignments"
     1. Assign the users from your organization to the new application
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-user-assignments.png "Okta- User Assignments")
 1.  Go to the "Security" section in the main menu and select "API"
     1. In the "Authorization Server" tab select the "default" server
-       1. Note down the Issuer URI for the “default” row, this value will be the “authority” which will be used in the configuration screen for SSO
+       1. Note down the Issuer URI for the “default” row, this value will be the **Authority** which will be used in the configuration screen for SSO
     1. Inside the "default" authorization server select the "Claims" tab
     - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-default-server.png "Okta - Claims Tab")
     1. Click on "Add Claim"
@@ -126,8 +131,8 @@ This document will describe the steps needed to create a custom application in O
           1. Make sure to add **appuser.email** in the **Value** text field
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-claim-email.png "Okta - Add Email Claim")
     1. Click on the “Settings” tab and take notes of the following values:
-       1. Audience, this will be used in the SSO Configuration page inside Solution Manager
-       1. Issuer, this will be used as the “Authority” value in the SSO Configuration page
+       1. **Audience**, this will be used in the SSO configuration panel inside Solution Manager
+       1. Issuer, this will be used as the **Authority** value in the SSO configuration panel
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-server-settings.png "Okta - Default Server Settings")
     1. Go to the "Token Preview" tab
        1. Type the name your newly created application
@@ -144,17 +149,17 @@ This document will describe the steps needed to create a custom application in O
 
 :::note
 
-- Make sure to the values of “**openid**“ in the Scope textbox inside the SSO Configuration page inside Solution Manager.
+- Make sure to the values of “**openid**“ in the Scope textbox inside the SSO configuration panel inside Solution Manager.
 - Make sure the **email** for the users allowed to access the application matches the username. This value will be used to pair with an existing OpCon user or it will be used to create a new user in the OpCon environment.
 
 :::
 
 #### Azure Application
 
-This document describes the steps needed to create a custom application in Azure AD that will grant SMAOpConRestApi access to Microsoft Graph API to retrieve user information.
+This document describes the steps needed to create a custom application in Azure AD that will grant SMAOpConRestApi access to Microsoft Graph API to retrieve user information. Ensure the user following these steps has enough privileges to create an application, assign users to that application, and assign permissions to Microsoft Graph API.
 
 1. Go to "Azure Active Directory"
-1. Go to "App registration"
+1. Go to "App registrations"
    1. Select new registrations
       1. Add a name to the new application
       1. Select who can access the application
@@ -162,8 +167,9 @@ This document describes the steps needed to create a custom application in Azure
       1. Select Single-page application (SPA)
       1. Select the redirect URL
          1. For example, `https://<yourhostname>:8080/login/callback`
-         1. Make sure to add “**login/callback**”
-      1. The **Hostname** used in the redirect URL will be used in the SSO Configuration page inside Solution Manager. Make sure to include **HTTP** or **HTTPS** and the **port number** if applicable
+         1. Make sure to add “**/login/callback**”
+      1. The **Hostname** used in the redirect URL will be used in the SSO configuration panel inside Solution Manager. Make sure to include the scheme, which can be **HTTP** or **HTTPS**, and the **port number**, if applicable
+      - ![Azure- Register Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-register-application.png "Azure - Register Application")
    1. Register Application
 1. Select the newly created application
    1. From the “Home” menu go to Azure Active Directory => App registrations => Select your new application
@@ -172,11 +178,12 @@ This document describes the steps needed to create a custom application in Azure
    - ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-platform-configuration.png "Azure - Platform Configuration")
 1. Go to “Overview” in the left navigation menu
    1. Note down the following information, you will need it later:
-   1. The application (client) ID will be used as the Client ID in the configuration screen inside Solution Manager
+   1. The application (client) ID will be used as the **Client ID** in the SSO configuration panel inside Solution Manager
    1. Click on “Endpoints” and note down the OpenID Connect value
    1. Copy this value and paste it on a browser and find the issuer value inside the JSON
       1. It is highly recommended that you copy this text from the browser and paste it into an application that can format the JSON value
       - ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-formatted-json.png "Azure - Formatted JSON")
+      1. Note down the Issuer URI, this value will be used in the **Authority** field in the SSO configuration panel inside Solution Manager
 1. Go to “API permissions” which is found on the left navigation menu
    1. Select Add a permission
    1. Click on “Add a permission” and select Microsoft Graph
@@ -189,7 +196,7 @@ This document describes the steps needed to create a custom application in Azure
 1. Go to “Manifest” on the left navigation menu
    1. Search for “**accessTokenAcceptedVersion**” and set the value to **2**
    - ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-access-token.png "Azure - Manifest Access Token Version")
-   1. Then search of the term “**resourceAppId**” and note down the value. This will be used as the **Audience** value in the SSO Configuration page in Solution Manager
+   1. Then search of the term “**resourceAppId**” and note down the value. This will be used as the **Audience** value in the SSO configuration panel in Solution Manager
    - ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-audience-manifest.png "Azure - Manifest Audience Value")
 1. Restrict access to the application (optional).
    1. Go to Azure Active Directory -> Enterprise Applications > All applications and select the application you want to configure
@@ -201,7 +208,7 @@ This document describes the steps needed to create a custom application in Azure
 
 :::note
 
-- Make sure to add the “**openid**” Scope in the SSO Configuration page inside Solution Manager
+- Make sure to add the “**openid**” Scope in the SSO configuration panel inside Solution Manager
 
 :::
 
