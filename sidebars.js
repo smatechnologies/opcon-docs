@@ -558,6 +558,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Studio/Canvas/Deleting-Master-Schedules",
                     "Files/UI/Solution-Manager/Studio/Canvas/Editing-Master-Schedules",
                     "Files/UI/Solution-Manager/Studio/Canvas/Viewing-Master-Schedules/Viewing-Master-Schedules",
+                    "Files/UI/Solution-Manager/Studio/Canvas/Isolate-Dependency-Chain",
                   ],
                 },
               ],
