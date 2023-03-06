@@ -745,7 +745,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/22-0.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/22-1.html",
     },
   ],
 };
