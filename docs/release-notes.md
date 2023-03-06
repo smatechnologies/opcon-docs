@@ -4,6 +4,22 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.1.0
+
+2023 March
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17687**: Added a mini-map on the canvas for a high level overview and quick navigation of the selected schedule.
+
+:eight_spoked_asterisk: **OPCON-17688**: Animated lines between nodes have been replaced with static lines for easier viewing of the displayed items.
+
+:eight_spoked_asterisk: **OPCON-18383**: Authorized users will be able to see Single Sign On (SSO) configuration page within Server Options.
+
+#### REST API
+
+:white_check_mark: **OPCON-15392**: Fixed an issue where the replicated OpCon database did not have all tables reseeded for unique ids and hence had a primary key violation error when building or adding jobs to the Daily.
+
 ## OpCon 22.0.0
 
 2023 February
