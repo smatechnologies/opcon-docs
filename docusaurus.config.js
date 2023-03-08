@@ -1,10 +1,9 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require('./versionsArchived.json');
 module.exports = {
   title: 'SMA Technologies Help',
   tagline: 'OpCon',
   url: 'https://help.smatechnologies.com',
-  baseUrl: '/opcon/core/v22.1',
+  baseUrl: '/opcon/core/v22.1/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
