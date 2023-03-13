@@ -4,6 +4,14 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.13
+
+2023 March
+
+#### REST API
+
+:white_check_mark: **OPCON-15392**: Fixed an issue where the replicated OpCon database did not have all tables reseeded for unique ids and hence had a primary key violation error when building or adding jobs to daily.
+
 ## OpCon 21.0.12
 
 2023 February
