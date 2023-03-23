@@ -9,11 +9,7 @@ to affect schedules.
 The following information applies to defining thresholds:
 
 - **Name**: Defines the name for the threshold.
-- **Documentation**: Provides an area for descriptions, explanations,
-    and notes that can be updated for the threshold. For information on
-    inserting hyperlinks into the Documentation area, refer to [Entering     and Opening Hyperlinks in the Documentation
-    Frame](../Files/UI/Enterprise-Manager/Entering-and-Opening-Hyperlinks.md)
-     in the **Enterprise Manager** online help.
+- **Documentation**: Provides an area for descriptions, explanations, and notes that can be updated for the threshold. For information on inserting hyperlinks into the Documentation area, refer to [Entering and Opening Hyperlinks in the Documentation Frame](../Files/UI/Enterprise-Manager/Entering-and-Opening-Hyperlinks.md) in the **Enterprise Manager** online help.
 - **Threshold Value**: Defines a numeric value for a threshold.
 
 :::tip Example

@@ -166,71 +166,71 @@ The following table lists the LSAM platforms supporting SMA File Transfer and th
 
 ### IBM i File Transfer Options Support
 
-|Supported Options|Supported Values|
-|---|---|
-|Source Data Type|ASCII,EBCDIC,Default Text,Binary|
-|Destination Data Type|ASCII,EBCDIC,Default Text,Binary|
-|If File Exists|All|
-|Delete Source File|All|
-|Maximum Transfer Rate|All|
-|Start Transfer On|All|
+| Supported Options | Supported Values |
+| --- | --- |
+| Source Data Type | <ul><li>ASCII</li><li>EBCDIC</li><li>Default Text</li><li>Binary</li></ul> |
+| Destination Data Type | <ul><li>ASCII</li><li>EBCDIC</li><li>Default Text</li><li>Binary</li></ul> |
+| If File Exists | All |
+| Delete Source File | All |
+| Maximum Transfer Rate | All |
+| Start Transfer On | All |
 
 ### MCP File Transfer Options Support
 
-|Supported Options|Supported Values|
-|---|---|
-|Source Data Type|ASCII,EBCDIC,Default Text,Binary|
-|Destination Data Type|ASCII,EBCDIC,Default Text,Binary|
-|If File Exists|All|
-|Maximum Transfer Rate|All|
-|Start Transfer On|All|
+| Supported Options | Supported Values |
+| --- | --- |
+| Source Data Type | <ul><li>ASCII</li><li>EBCDIC</li><li>Default Text</li><li>Binary</li></ul> |
+| Destination Data Type | <ul><li>ASCII</li><li>EBCDIC</li><li>Default Text</li><li>Binary</li></ul> |
+| If File Exists | All |
+| Maximum Transfer Rate | All |
+| Start Transfer On | All |
 
 ### OS220 File Transfer Options Support
 
-|Supported Options|Supported Values|
-|---|---|
-|Source Data Type|ASCII,Default Text|
-|Destination Data Type|ASCII,Default Text|
-|If File Exists|All|
-|Maximum Transfer Rate|All|
-|Start Transfer On|Destination|
+| Supported Options | Supported Values |
+| --- | --- |
+| Source Data Type | <ul><li>ASCII</li><li>Default Text</li></ul>|
+| Destination Data Type | <ul><li>ASCII</li><li>Default Text</li></ul>|
+| If File Exists | All |
+| Maximum Transfer Rate | All |
+| Start Transfer On | Destination |
 
 ### UNIX File Transfer Options Support
 
-|Supported Options|Supported Values|
-|---|---|
-|Source Data Type|ASCII,Default Text,Binary|
-|Destination Data Type|ASCII,Default Text,Binary|
-|If File Exists|Single File: All, Wild Card: Overwrite|
-|Delete Source File|All|
-|Maximum Transfer Rate|All|
-|Compression|Single File: All, Wild Card: None|
-|Encryption|Single File: All, Wild Card: None|
-|Start Transfer On|All|
+| Supported Options|Supported Values|
+| ---|---|
+| Source Data Type | <ul><li>ASCII</li><li>Default Text</li><li>Binary</li></ul> |
+| Destination Data Type | <ul><li>ASCII</li><li>Default Text</li><li>Binary</li></ul> |
+| If File Exists | <ul><li>Single File: All</li><li>Wild Card: Overwrite</li></ul> |
+| Delete Source File | All |
+| Maximum Transfer Rate | All |
+| Compression | <ul><li>Single File: All</li><li>Wild Card: None</li></ul> |
+| Encryption | <ul><li>Single File: All</li><li>Wild Card: None</li></ul> |
+| Start Transfer On | All |
 
 ### Windows File Transfer Options Support
 
-|Supported Options|Supported Values|
-|---|---|
-|Source Data Type|ASCII,Default Text,Binary|
-|Destination Data Type|ASCII,Default Text,Binary|
-|If File Exists|All|
-|Delete Source File|All|
-|Maximum Transfer Rate|All|
-|Compression|All|
-|Encryption|All|
-|Start Transfer On|All|
-|TLS Security Overwrite|All|
+| Supported Options | Supported Values |
+| --- | --- |
+| Source Data Type | <ul><li>ASCII</li><li>Default Text</li><li>Binary</li></ul> |
+| Destination Data Type | <ul><li>ASCII</li><li>Default Text</li><li>Binary</li></ul> |
+| If File Exists | All |
+| Delete Source File | All |
+| Maximum Transfer Rate | All |
+| Compression | All |
+| Encryption | All |
+| Start Transfer On | All |
+| TLS Security Overwrite | All |
 
 ### z/OS File Transfer Options Support
 
-|Supported Options|Supported Values|
-|---|---|
-|Source Data Type|ASCII,EBCDIC,Default Text,Binary|
-|Destination Data Type|ASCII,EBCDIC,Default Text,Binary|
-|If File Exists|All|
-|Maximum Transfer Rate|All|
-|Start Transfer On|Destination|
+| Supported Options | Supported Values |
+| --- | --- |
+| Source Data Type | <ul><li>ASCII</li><li>EBCDIC</li><li>Default Text</li><li>Binary</li></ul> |
+| Destination Data Type | <ul><li>ASCII</li><li>EBCDIC</li><li>Default Text</li><li>Binary</li></ul> |
+| If File Exists | All |
+| Maximum Transfer Rate | All |
+| Start Transfer On | Destination |
 
 ## Failure Criteria
 

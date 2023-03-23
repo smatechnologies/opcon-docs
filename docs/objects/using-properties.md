@@ -4,13 +4,9 @@ The values of properties can be retrieved by tokenizing the property name and us
 
 ## Tokens
 
-A *token* is a placeholder for the value of a property.
-OpCon will resolve tokens to their property
-values before processing.
+A *token* is a placeholder for the value of a property. OpCon will resolve tokens to their property values before processing.
 
-Properties are tokenized (turned into tokens) by placing the supported
-token delimiters around the desired property name. The supported token
-delimiters are either double brackets (e.g., \[\[name\]\]) or double braces (e.g., {{name}}).
+Properties are tokenized (turned into tokens) by placing the supported token delimiters around the desired property name. The supported token delimiters are either double brackets (e.g., \[\[name\]\]) or double braces (e.g., {{name}}).
 
 :::note
 Tokens using encrypted properties cannot be decrypted in OpCon, they can only be decrypted by an agent. It is recommended to only use encrypted tokens when they can be sent to an agent for decryption, e.g., using an encrypted token in a command line.
@@ -18,10 +14,7 @@ Tokens using encrypted properties cannot be decrypted in OpCon, they can only be
 
 ### Recursive Tokens and Property Expressions
 
-Just like each property field can itself be a property, it can also be a
-complete property expression. The only requirement for this is to
-enclose the property expression that is specified in place of a property
-filed with "\[\[=" and "\]\]". For more information, refer to [Property Expressions API Syntax](../reference/property-expressions-syntax.md).
+Just like each property field can itself be a property, it can also be a complete property expression. The only requirement for this is to enclose the property expression that is specified in place of a property filed with "\[\[=" and "\]\]". For more information, refer to [Property Expressions API Syntax](../reference/property-expressions-syntax.md).
 
 :::tip Example
 The following is a valid property name:
@@ -37,8 +30,7 @@ This will resolve to the value of a schedule instance property whose property na
 
 ObjectType.PropertyName.Qualifier.Qualifier...
 
-- The ObjectType tells OpCon where the
-    property belongs.
+- The ObjectType tells OpCon where the property belongs.
   - **RI** = Remote Instance (This is the remote instance of OpCon.)
   - **OI** = OpCon Instance
   - **MI** = Machine Instance
@@ -50,15 +42,15 @@ ObjectType.PropertyName.Qualifier.Qualifier...
   - If the property name contains a period, the name must be enclosed in quotes (e.g., "File.Name").
 - The *qualifiers* are additional descriptions of the object for unique identification. The Property Name and each qualifier can be filled by a token or property expression if desired. The object types can use the qualifiers specified in the table.
 
-|Object Type|Qualifiers|Notes|
-|--- |--- |--- |
-|RI|Remote Instance Name|The primary use for this feature is to define a token to reference a property in a remote OpCon environment.|
-|OI|None|Defined for future use.|
-|MI|Machine Name||
-|SI|Schedule Date, Schedule Name||
-|JI|Schedule Date, Schedule Name, Job Name||
-|SSI|None|The primary use for this feature is to define a token in a job of a subschedule to access a Schedule Instance property of the direct parent schedule of the parent Container job. There is no practical use for SSI properties with external events.|
-|SJI|None|The primary use for this feature is to define a token in a job of a subschedule to access a Job Instance property of the direct parent Container job. Although Container job properties are passed down to the subschedule at build time so they can be referenced as SI properties in the child jobs, new properties can still be added to the parent Container job after build time. The SJI object type provides access to these properties. There is no practical use for SJI properties with external events.|
+| Object Type | Qualifiers | Notes |
+| --- | --- | --- |
+| RI | Remote Instance Name | The primary use for this feature is to define a token to reference a property in a remote OpCon environment. |
+| OI | None | Defined for future use. |
+| MI | Machine Name |  | 
+| SI | Schedule Date, Schedule Name |  |
+| JI | Schedule Date, Schedule Name, Job Name |  |
+| SSI | None | The primary use for this feature is to define a token in a job of a subschedule to access a Schedule Instance property of the direct parent schedule of the parent Container job. There is no practical use for SSI properties with external events. |
+| SJI | None | The primary use for this feature is to define a token in a job of a subschedule to access a Job Instance property of the direct parent Container job. Although Container job properties are passed down to the subschedule at build time so they can be referenced as SI properties in the child jobs, new properties can still be added to the parent Container job after build time. The SJI object type provides access to these properties. There is no practical use for SJI properties with external events. |
 
 ## Simple Property Name Syntax
 
@@ -67,12 +59,7 @@ The simplest references to property names require no qualifiers. Simple property
 - Job Detail Definitions when the desired property is associated with the current Job Definition's schedule, machine, or job.
 - OpCon events associated with a job when the desired property is associated with the current job's schedule, machine, or job.
 - Schedule Completion Events when the desired property is associated with the current schedule.
-- Notifications in the [Export Records to CSV](../Files/UI/Enterprise-Manager/Viewing-and-Exporting-History-Records.md#Exportin)
-    button (to the right of Run Dates) will open the Export to CSV file
-    pop-up in order to provide the export comma-separated value format
-    and export information when the desired property is associated with
-    a different job, schedule, or machine than the one that triggered
-    the OpCon event.
+- Notifications in the [Export Records to CSV](../Files/UI/Enterprise-Manager/Viewing-and-Exporting-History-Records.md#Exportin) button (to the right of Run Dates) will open the Export to CSV file pop-up in order to provide the export comma-separated value format and export information when the desired property is associated with a different job, schedule, or machine than the one that triggered the OpCon event.
 
 The complete simple syntax for each object is the following:
 
@@ -115,11 +102,14 @@ SJI.PropertyName
 If the desired property is **not** associated with the job, schedule, or machine in the above locations, use the fully qualified property name syntax.
 
 :::caution
-If the property name contain periods (.), square brackets ( \[ or \] ),\ or curly brackets ( { or } ) in their names, the name must be enclosed in quotes to preserve the syntax of the property name. For example, a JI property could look like this: [JI."File.Name"].
+If the property name contain periods ( . ), square brackets ( \[ or \] ), backslash ( \ ) or curly brackets ( { or } ) in their names, the name must be enclosed in quotes to preserve the syntax of the property name. 
+
+**Example**<br />
+A Job Instance property would look like this: [[JI.<property name\>]].
 :::
 
 :::tip Example
-The command line below is defined for a job named CrunchNumbers on a Subschedule called by a Container job named MainProcessing. CrunchNumbers has a parameter that needs the value of the "Numbers" property on Parent schedule name for the MainProcessing job. Because more than one parent schedule can call the same subschedule, we choose to use the SSI object type.
+The command line below is defined for a job named CrunchNumbers in a Subschedule called by a Container job whose name is MainProcessing. CrunchNumbers has a parameter that needs the value of the "Numbers" property on Parent schedule name for the MainProcessing job. Because more than one parent schedule can call the same subschedule, we choose to use the SSI object type.
 
 ```shell
 C:\\Progra~1\\CoolProgram\\crunch.exe [[SSI.Numbers]]

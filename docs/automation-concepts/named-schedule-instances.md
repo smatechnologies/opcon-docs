@@ -39,7 +39,7 @@ The following information applies to defining exception rules:
 
 String replacement can be used to change a string value, for instance, on the command line or of a machine or department name. Here are some practical examples.
 
-##### Example \#1
+:::tip Example #1
 
 To change the command line from "C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 secondArg" to "C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 secondArg -arg3 thirdArg":
 
@@ -50,8 +50,9 @@ To change the command line from "C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 se
 **New Value**: C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 secondArg -arg3 thirdArg
 
 **Is Expression**: false
+:::
 
-##### Example \#2
+:::tip Example #2
 
 To change the command line from "<CurrentValue\>" to "<CurrentValue\> -arg3 thirdArg":
 
@@ -62,8 +63,9 @@ To change the command line from "<CurrentValue\>" to "<CurrentValue\> -arg3 thir
 **New Value**: \[\[\@current\]\] -arg3 thirdArg
 
 **Is Expression**: false
+:::
 
-##### Example \#3
+:::tip Example #3
 
 To change the machine from "MyMachine" to "My<Property\>Machine":
 
@@ -74,8 +76,9 @@ To change the machine from "MyMachine" to "My<Property\>Machine":
 **New Value**: My\[\[$this.Property\]\]Machine
 
 **Is Expression**: false
+:::
 
-##### Example \#4
+:::tip Example #4
 
 To change the department from "<CurrentValue\>" to "<CurrentValue\><InstanceName\>":
 
@@ -86,12 +89,13 @@ To change the department from "<CurrentValue\>" to "<CurrentValue\><InstanceName
 **New Value**: \[\[\@current\]\]\[\[\@name\]\]
 
 **Is Expression**: false
+:::
 
 ### When to Use True Expressions
 
 Expressions can be used to change a numeric field, for instance, the job start offset. Here are some practical examples.
 
-#### Expression Example \#1
+:::tip Expression Example #1
 
 To change the job start offset from "<CurrentValue\>" by adding 20 minutes to it:
 
@@ -102,8 +106,9 @@ To change the job start offset from "<CurrentValue\>" by adding 20 minutes to it
 **New Value**: \[\[\@current\]\] + ToOaTime("00:20")
 
 **Is Expression**: true
+:::
 
-#### Expression Example \#2
+:::tip Expression Example #2
 
 To change the job start offset from "<CurrentValue\>" by adding 15% of the current offset to it:
 
@@ -114,3 +119,4 @@ To change the job start offset from "<CurrentValue\>" by adding 15% of the curre
 **New Value**: \[\[\@current\]\] + (\[\[\@current\]\] \* 0.15)
 
 **Is Expression**: true
+:::
