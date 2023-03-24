@@ -81,7 +81,7 @@ If the job finishes OK, any configured OpCon automation features for Finished OK
 For jobs that have the ability to restart at a step (e.g., z/OS jobs), a job that is automatically restarted after a failure starts at whatever restart step is specified at the time.
 :::
 
-**Retry Information**: Determines if a job is automatically restarted after a job failure. If the job fails because of an initialization error, OpCon does not restart the job. Initialization errors usually occur because the information to start the job is invalid. SMA Technologies recommends using Event Notification to trigger a notification for Job Initialization errors. For more information, refer to [Event Notification](../events/introduction.md).
+- **Retry Information**: Determines if a job is automatically restarted after a job failure. If the job fails because of an initialization error, OpCon does not restart the job. Initialization errors usually occur because the information to start the job is invalid. SMA Technologies recommends using Event Notification to trigger a notification for Job Initialization errors. For more information, refer to [Event Notification](../events/introduction.md).
 
 :::note
 If the job is a "Container" type job, the SAM restarts all jobs on the subschedule when the Container job qualifies to "Retry on Failure."
@@ -98,36 +98,36 @@ The Job Recurrence feature is useful for situations where a job needs to run at 
 If the job fails, any configured OpCon automation features for Failed jobs will process.
 :::
 
-**Run Again**: Determines if a job is automatically rescheduled after a successful run. Available options are: None, Recurring Instances, or Restart Offset.
+- **Run Again**: Determines if a job is automatically rescheduled after a successful run. Available options are: None, Recurring Instances, or Restart Offset.
 
 :::note
 If the job is a "Container" type job, the SAM restarts all jobs on the subschedule when the Container job qualifies to "Run Again" when the job finishes OK.
 :::
 
-**None**: Specifies that no job reschedule will take place after a successful run.
+- **None**: Specifies that no job reschedule will take place after a successful run.
 
-**Recurring Instances**: Allows you to reschedule a successful job to run at fixed times throughout the day. Available options are:
+- **Recurring Instances**: Allows you to reschedule a successful job to run at fixed times throughout the day. Available options are:
 
-- **Add**: Adds new restart times in days, hours, and minutes. Specified times appear in the Recurring Instance Time(s) list box in chronological order.
-  :::tip Example
-  If you want a particular restart time to execute two additional days, then enter "2" in the field to the left of day(s) at, enter the absolute hour and/or minutes in the entry field to the right of days at, and click **Add**.
-  :::
-- **Remove**: Deletes existing restart times.
-- **Update**: Updates existing restart times.
-- **Action on Overlap of Job Recurrence**: Indicates what happens if a previous job run time overlaps the next scheduled start time. Available options are:
-  - **Start on Completion** (Default): Starts the next scheduled time as soon as the previous run finishes successfully.
-  - **Skip**: Skips the run for \[that\] scheduled time after the previous run finishes successfully.
+  - **Add**: Adds new restart times in days, hours, and minutes. Specified times appear in the Recurring Instance Time(s) list box in chronological order.
+    :::tip Example
+    If you want a particular restart time to execute two additional days, then enter "2" in the field to the left of day(s) at, enter the absolute hour and/or minutes in the entry field to the right of days at, and click **Add**.
+    :::
+  - **Remove**: Deletes existing restart times.
+  - **Update**: Updates existing restart times.
+  - **Action on Overlap of Job Recurrence**: Indicates what happens if a previous job run time overlaps the next scheduled start time. Available options are:
+    - **Start on Completion** (Default): Starts the next scheduled time as soon as the previous run finishes successfully.
+    - **Skip**: Skips the run for \[that\] scheduled time after the previous run finishes successfully.
 
-**Restart Offset**: Allows you to reschedule a successful job to run at regular intervals throughout the day. Available options are:
+- **Restart Offset**: Allows you to reschedule a successful job to run at regular intervals throughout the day. Available options are:
 
-- **Minutes from Start to Start**: Defines the number of minutes from the start time of one iteration of the job to the start time for the next iteration of the job.
-  :::caution
-  Minutes from Start to Start should be longer than the run time of the job. If the job runs for longer than this interval, the job restarts immediately upon a successful completion. As a consequence, reoccurring jobs may not start consistently over time.
-  :::
-- **Minutes from End to Start**: Defines the number of minutes from the end of one iteration of the job to the start time for the next iteration of the job.
-- **Latest Run Time**: Defines the latest possible start time for the recurring job based on the schedule's start time. This value is an offset that will be added to the schedule's defined Schedule Date and scheduled Start Time in the Daily tables.
-- **Number of Runs**: Defines the total number of times for the recurring job to run.
+  - **Minutes from Start to Start**: Defines the number of minutes from the start time of one iteration of the job to the start time for the next iteration of the job.
+    :::caution
+    Minutes from Start to Start should be longer than the run time of the job. If the job runs for longer than this interval, the job restarts immediately upon a successful completion. As a consequence, reoccurring jobs may not start consistently over time.
+    :::
+  - **Minutes from End to Start**: Defines the number of minutes from the end of one iteration of the job to the start time for the next iteration of the job.
+  - **Latest Run Time**: Defines the latest possible start time for the recurring job based on the schedule's start time. This value is an offset that will be added to the schedule's defined Schedule Date and scheduled Start Time in the Daily tables.
+  - **Number of Runs**: Defines the total number of times for the recurring job to run.
 
   :::note
-  If both the Latest Run Time and Number of Runs are configured for a job, the one that occurs first will cause the end of the recurring job for that day.
+  If both the **Latest Run Time** and **Number of Runs** are configured for a job, the one that occurs first will cause the end of the recurring job for that day.
   :::
