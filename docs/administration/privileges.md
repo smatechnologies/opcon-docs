@@ -77,6 +77,8 @@ OpCon:
 - [View License Information](#view-license-information)
 - [View Service Requests](#view-service-requests)
 - [View Standard Reports](#view-standard-reports)
+- [View Schedule Build Log](#view-schedule-build-log)
+- [View Application Logs](#view-application-logs)
 
 ### All Notification Manager Functions
 
@@ -396,6 +398,14 @@ OpCon Reports.
 :::note
 To view administrative reports, the All Function Privileges privilege must also be granted.
 :::
+
+### View Schedule Build Log
+
+Grants privileges to view Schedule Build Logs.
+
+### View Application Logs
+
+Grants privileges to view Application Logs.
 
 ### All Schedule Operation Functions
 
