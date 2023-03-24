@@ -18,7 +18,7 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 1. Click on the **Switch** to enable access to the SSO login button.
 
-1. Enter a **Provider**. The identity provider (IdP) for the client should be selected from the **Provider** dropdown. Options include **Okta**, **Azure**, and **Other**.
+1. Enter a **Provider**. The identity provider (IdP) for the client should be selected from the **Provider** dropdown. Options include **Okta**, **Azure AD**, and **Other**.
 
 1. Enter an **Authority**. **Authority** is the URL of the OIDC/OAuth2 provider.
 
@@ -26,9 +26,9 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL. Make sure to include the scheme, which can be **HTTP** or **HTTPS**, and the **port number**, if applicable. For example, **https://host:80443**.
 
-1. Enter an **Audience**. The **Audience** identifies the recipients that the JWT is intended for.
+1. Enter an **Audience**. The **Audience** identifies the recipients that the JWT is intended for. This field will not be required if the provider is **Azure AD**
 
-1. Enter a **Scope**. The **Scopes** being requested from the OIDC/OAuth2 provider (default: "openid"). You can enter various scopes separated by an empty space. For example, **openid** **email**.
+1. Enter a **Scope**. The **Scopes** being requested from the OIDC/OAuth2 provider (default: **openid**). You can enter various scopes separated by an empty space.
 
 \* OpenID Connect (OIDC) is an open authentication protocol that works on top of the OAuth 2.0 (OAuth2) framework.
 
@@ -45,8 +45,9 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 :::note
 
 1.  If the switch is in the **On** position, the user must input values in all fields including values for **Group Mappings**.
-2.  Examples of how to gather these requirements will be posted below (for the [**Okta Application**](#okta-application) and the [**Azure Application**](#azure-application)).
-3.  SSO can be implemented with any IdP as long as the required values are provided and they follow the OpenID Connect authentication protocol.
+1.  Examples of how to gather these requirements will be posted below (for the [**Okta Application**](#okta-application) and the [**Azure AD Application**](#azure-application)).
+1.  SSO can be implemented with any IdP as long as the required values are provided and they follow the OpenID Connect authentication protocol.
+    1.  The IdP must return a token with a **groups** claim that contains the authenticated user's group memberships. It must also return an **opconid** claim, that should be composed of the authenticated user's email.
 
 :::
 
@@ -127,9 +128,9 @@ This document will describe the steps needed to create a custom application in O
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-group-claim.png "Okta - Add Group Claim")
        1. Make sure the token type is Access Token and that you enter **`.*`** for the regex logic
        1. Make sure to name claims “**groups**”
-       1. Repeat the process to add an “**email**” claim
+       1. Repeat the process to add an “**opconid**” claim
           1. Make sure to add **appuser.email** in the **Value** text field
-       - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-claim-email.png "Okta - Add Email Claim")
+       - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta_opconid_claim.png "Okta - Add Email Claim")
     1. Click on the “Settings” tab and take notes of the following values:
        1. **Audience**, this will be used in the SSO configuration panel inside Solution Manager
        1. Issuer, this will be used as the **Authority** value in the SSO configuration panel
@@ -139,7 +140,7 @@ This document will describe the steps needed to create a custom application in O
        1. Select **Authorization Code** for the "Grant Type"
        1. Select a user that has access to this application
        1. Type "**openid**" in the "Scopes" textbox. These scopes are required for SSO implementation in Solution Manager
-       1. Click on "Preview Token" then click on the "token" tab to view the access token. Make sure the “group” and “email” claims are displayed
+       1. Click on "Preview Token" then click on the "token" tab to view the access token. Make sure the **“groups”** and **“opconid”** claims are displayed
        - ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-token-preview.png "Okta - Token Preview")
 1.  Then click on the "Access Policies" tab
 
@@ -150,11 +151,11 @@ This document will describe the steps needed to create a custom application in O
 :::note
 
 - Make sure to the values of “**openid**“ in the Scope textbox inside the SSO configuration panel inside Solution Manager.
-- Make sure the **email** for the users allowed to access the application matches the username. This value will be used to pair with an existing OpCon user or it will be used to create a new user in the OpCon environment.
+- Make sure the **email** for the users allowed to access the application matches their username. This value will be used to pair with an existing OpCon user or it will be used to create a new user in the OpCon environment.
 
 :::
 
-#### Azure Application
+#### Azure AD Application
 
 This document describes the steps needed to create a custom application in Azure AD that will grant SMAOpConRestApi access to Microsoft Graph API to retrieve user information. Ensure the user following these steps has enough privileges to create an application, assign users to that application, and assign permissions to Microsoft Graph API.
 
@@ -196,8 +197,6 @@ This document describes the steps needed to create a custom application in Azure
 1. Go to “Manifest” on the left navigation menu
    1. Search for “**accessTokenAcceptedVersion**” and set the value to **2**
    - ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-access-token.png "Azure - Manifest Access Token Version")
-   1. Then search of the term “**resourceAppId**” and note down the value. This will be used as the **Audience** value in the SSO configuration panel in Solution Manager
-   - ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-audience-manifest.png "Azure - Manifest Audience Value")
 1. Restrict access to the application (optional).
    1. Go to Azure Active Directory -> Enterprise Applications > All applications and select the application you want to configure
    1. Select Properties and set "Yes" in the Assignment Required field and save the changes
@@ -209,6 +208,11 @@ This document describes the steps needed to create a custom application in Azure
 :::note
 
 - Make sure to add the “**openid**” Scope in the SSO configuration panel inside Solution Manager
+- The token retrieve from this application will be used to make calls to Microsoft Graph Api
+  - The calls include:
+    - https://graph.microsoft.com/v1.0/me : From this call, we will retrieve the property **userPrincipalName** which is the value of the authenticated user's username (email). This will be used as the opcon identifier inside Solution Manager.
+    - https://graph.microsoft.com/v1.0/me/getMemberGroups : From this call, we will be able to retrieve a list of IDs of groups that the authenticated user belongs to.
+    - https://graph.microsoft.com/v1.0/groups/{group-guid} : From this call, we will retrieve the **displayName** property which will be mapped against an existing group.
 
 :::
 
