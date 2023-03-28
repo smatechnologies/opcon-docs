@@ -475,7 +475,6 @@ module.exports = {
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Windows-Job-Details",
                           ],
                         },
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Accessing-Master-Jobs",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-General-Info",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Documentation",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Tags",
