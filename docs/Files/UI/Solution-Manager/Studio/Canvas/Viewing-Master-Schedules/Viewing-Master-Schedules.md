@@ -196,9 +196,16 @@ Job nodes represented as container jobs have the ability to contain subschedules
 
 ### Controls
 
-The controls are located in the lower left hand corner of the studio canvas page. Here, you can zoom in, zoom out, fit the page to the screen, lock panning and refetch schedule information.
+The controls are located in the lower left hand corner of the studio canvas page. Here, you can zoom in, zoom out, fit the page to the screen, lock panning, opening/closing the legend, and refetch schedule information.
 
 ![Studio View Controls](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-controls.png "Studio View Controls")
+
+### Legend
+
+Open/Close the legend by clicking on the info button in the controls. Here, you could see the details for each dependency line.  
+![Studio Open/Close Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-open-close-legend-button.png "Studio Open/Close Legend")  
+The Legend will be located in the lower left corner next to the controls, Click the info button again to close the legend.  
+![Studio Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-legend.png "Studio Legend")  
 
 ### Mini-Map
 
