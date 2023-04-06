@@ -4,6 +4,32 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.2
+
+2023 April
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-18823**: Added performance improvements inside the Processes page in Solution Manager to efficiently handle large databases.
+
+:white_check_mark: **OPCON-18842**: Fixed an issue where Start Time and End Time were not properly displayed for IBMi File Arrival jobs.
+
+:white_check_mark: **OPCON-19143**: Fixed an issue where File Transfer job type was not visible when adding a new master job.
+
+#### REST API
+
+:white_check_mark: **OPCON-18942**: Fixed a potential issue with log rollovers when clock changes.
+
+#### Server
+
+:white_check_mark: **OPCON-19202**: Return job initialization failure when OpCon MFT job start fails.
+
+#### ImpEx2 Web Service
+
+:eight_spoked_asterisk: **OPCON-19514**: For OpCon Deploy new import feature, separate auto delete days reset from auto build days reset. This feature requires OpCon Deploy 22.2.
+
+:white_check_mark: **OPCON-19164**: Fixed an issue in Deploy simulation where role check failed to list missing roles.
+
 ## OpCon 22.0.1
 
 2023 March
