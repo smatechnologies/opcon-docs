@@ -1,36 +1,23 @@
 # Container Job Type
 
-OpCon Container jobs are used to run a
-subschedule. Some reasons for choosing to use a Container job and
-subschedule include:
+OpCon Container jobs are used to run a subschedule. Some reasons for choosing to use a Container job and subschedule include:
 
 - Needing a job to be dependent on a schedule
 - Needing one schedule to be dependent on another schedule
 - Organizing very large schedules
 
-Once built into a Daily schedule, Container jobs and subschedules have
-different processing rules than other jobs in
-OpCon. For additional information regarding
-the Container job and subschedule relationship, refer to [Container Jobs and SubSchedules](../operations/containers.md#container-jobs-and-subschedules).
+Once built into a Daily schedule, Container jobs and subschedules have different processing rules than other jobs in OpCon. For additional information regarding the Container job and subschedule relationship, refer to [Container Jobs and SubSchedules](../operations/containers.md#container-jobs-and-subschedules).
 
 :::caution
 If renaming a Container job, events referring to the \[JobName\] will become invalid. If the Container job is built in the Daily tables and it will be rebuilt on the same days with the new name, the Container jobs in the Daily tables with the old name should be deleted before renaming the Container job.
 :::
 
-OpCon creates subschedules and Container jobs
-based on the instance definitions:
+OpCon creates subschedules and Container jobs based on the instance definitions:
 
-- A single-instance Container job causes a single-instance subschedule
-    to build and run.
-- A single-instance Container job causes a multi-instance subschedule
-    to build and run for each subschedule instance.
-    OpCon automatically creates a copy of the
-    Container job for each instance of the subschedule.
-- A multi-instance Container job causes a single-instance subschedule
-    to build and run for each instance of the Container.
-- A multi-instance Container job causes a multi-instance subschedule
-    to build and run for every instance of the Container job that called
-    it.
+- A single-instance Container job causes a single-instance subschedule to build and run.
+- A single-instance Container job causes a multi-instance subschedule to build and run for each subschedule instance. OpCon automatically creates a copy of the Container job for each instance of the subschedule.
+- A multi-instance Container job causes a single-instance subschedule to build and run for each instance of the Container.
+- A multi-instance Container job causes a multi-instance subschedule to build and run for every instance of the Container job that called it.
 
 :::tip Example
 A schedule named Inventory has a Container job named Process Stores. Process Stores is defined with two instances:
@@ -57,15 +44,9 @@ When the Inventory schedule builds, the Process Stores Container job ends up wit
 
 The following information applies to defining a Container job.
 
-**Schedule to Run as a SubSchedule**: Defines the subschedule for the
-Container job to manage. Users can specify any subschedule they have
-privileges to. For information on configuring a schedule as a
-subschedule, refer to [Schedules](../objects/schedules.md).
+**Schedule to Run as a SubSchedule**: Defines the subschedule for the Container job to manage. Users can specify any subschedule they have privileges to. For information on configuring a schedule as a subschedule, refer to [Schedules](../objects/schedules.md).
 
-**SubSchedule Name**: Contains the most basic subschedule name that
-would appear in Schedule Operations. The graphical interfaces show this
-name so users have an idea of what the full schedule name will be when
-it builds. The syntax is:
+**SubSchedule Name**: Contains the most basic subschedule name that would appear in Schedule Operations. The graphical interfaces show this name so users have an idea of what the full schedule name will be when it builds. The syntax is:
 
 Parent Schedule Name_Container Job Name\[Schedule to Run as a SubSchedule\]
 
@@ -75,43 +56,28 @@ A Schedule named "Daily Process 1" has a Container job named "First Backup" that
 SubSchedule Name: Daily Process 1_First Backup\[Backups\]
 :::
 
-When the schedule builds, there are several factors that can change the
-name of the subschedule:
+When the schedule builds, there are several factors that can change the name of the subschedule:
 
-- SubSchedules inside other SubSchedules: Another Parent Schedule name
-    and Container Job Name would precede the original subschedule name.
-- Multi-Instance Schedules: The Parent schedule could be a
-    multi-instance schedule and have multiple copies with no predefined
-    properties **- or -**
-- The Parent schedule could be a multi-instance schedule and have
-    multiple copies with several instance definitions where the first
-    predefined property name is the same across multiple definitions.
-- Multi-Instance Jobs: The Container job could be a multi-instance
-    job, and have multiple copies with no Job Instance properties **-
-    or -**
-- The Container job could be a multi-instance job and have multiple
-    copies with Job Instance properties where the first predefined
-    property name is the same across multiple definitions.
-- Schedule Instance Properties: The parent multi-instance schedule
-    could be built with Schedule Instance property definitions where the
-    first property name is unique for each instance.
-- Job Instance Properties: The Container job could be added to the
-    Daily tables with Job Instance property definitions **- or -**
-- The subschedule could be a multi-instance schedule and have multiple
-    copies with several instance definitions where the first predefined
-    property name is unique for each definition.
+- SubSchedules inside other SubSchedules
+    - Another Parent Schedule name and Container Job Name would precede the original subschedule name.
+- Multi-Instance Schedules
+    - The Parent schedule could be a multi-instance schedule and have multiple copies with no predefined properties 
+    - **OR**
+    - The Parent schedule could be a multi-instance schedule and have multiple copies with several instance definitions where the first predefined property name is the same across multiple definitions.
+- Multi-Instance Jobs
+    - The Container job could be a multi-instance job, and have multiple copies with no Job Instance properties 
+    - **OR**
+    - The Container job could be a multi-instance job and have multiple copies with Job Instance properties where the first predefined property name is the same across multiple definitions.
+- Schedule Instance Properties
+    - The parent multi-instance schedule could be built with Schedule Instance property definitions where the first property name is unique for each instance.
+- Job Instance Properties
+    - The Container job could be added to the Daily tables with Job Instance property definitions 
+    - **OR**
+    - The subschedule could be a multi-instance schedule and have multiple copies with several instance definitions where the first predefined property name is unique for each definition.
 
 ## Accessing a Container Job's Properties
 
-When OpCon adds a Container job to a schedule
-in Operations and it has Job Instance properties, those properties are
-also passed on to the subschedule as Schedule Instance properties. This
-is necessary because the jobs on its subschedule often need to access
-those properties. You can predefine the Job Instance properties on the
-Container job (refer to [Instance Definition](../job-components/instances)), in the
-[$JOB:ADD event](../events/types.md#$JOB:ADD), or with
-the [Adding Jobs to Daily Schedules](../operations/adding-jobs.md)
-feature.
+When OpCon adds a Container job to a schedule in Operations and it has Job Instance properties, those properties are also passed on to the subschedule as Schedule Instance properties. This is necessary because the jobs on its subschedule often need to access those properties. You can predefine the Job Instance properties on the Container job (refer to [Instance Definition](../job-components/instances)), in the [$JOB:ADD event](../events/types.md#$JOB:ADD), or with the [Adding Jobs to Daily Schedules](../operations/adding-jobs.md) feature.
 
 :::tip Example
 Every day there are several files that arrive on a Windows machine, and each file must be processed exactly the same way with a schedule named "ProcessFiles" containing three (3) jobs. Because a copy of "ProcessFiles" must run each time a file arrives, the administrator makes "ProcessFiles" into a subschedule and uses a multi-instance Container job to run that subschedule. To make this possible, the administrator completes the following steps:
@@ -143,8 +109,7 @@ Every day there are several files that arrive on a Windows machine, and each fil
 
 ## Container Job and SubSchedule Examples
 
-The examples in this section provide ideas for using Container jobs in
-OpCon.
+The examples in this section provide ideas for using Container jobs in OpCon.
 
 ### Setting up Schedule Dependencies
 

@@ -47,7 +47,7 @@ To configure this setting:
 1. Enter **about:config** in the search field and press **Enter** on your keyboard.
 2. Click **Show All**.
 3. Enter **network.automatic-ntlm-auth.trusted-uris** in the **Search
-    preference name** search field.
+   preference name** search field.
 4. Click the **Edit** button then enter the Solution Manager URL (e.g., `https://<servername\>:<portnumber\>`) in the text field.
 5. Click **Save**.
 6. Enter **network.negotiate-auth.delegation-uris** in the **Search preference name** search field.
@@ -67,12 +67,22 @@ If the automatic logon fails, then the login screen will display so that you can
 
 The **Login with Windows** button is available to allow you to log into the application using Windows Authentication and bypass entering OpCon login credentials. When activated, your Windows credentials are sent to the server for authentication.
 
-![Solution Manager Login with Windows Buttton](../../../Resources/Images/SM/Login-with-Windows.png "Solution Manager Login with Windows Button")
+![Solution Manager Login with Windows Button](../../../Resources/Images/SM/Login-with-Windows.png "Solution Manager Login with Windows Button")
 
 In order for the button to display on the login screen, you will need to ensure that a few settings are configured.
 
 - **Enable Windows Authentication** option should be enabled in the **Server Options** editor in the Enterprise Manager. Alternatively, Windows Authentication can be enabled by the API.
 - **Windows Pass-Through Authentication** should be enabled in the [Application Settings](Configuring-Application-Settings.md) in the Solution Manager.
+
+### Single Sign On Login
+
+The **Single Sign On (SSO)** button is available to allow you to log into the application using an identity provider (IdP) to authenticate and bypass entering OpCon login credentials. When activated, the user's IdP credentials are authenticated to gain access to the Solution Manager application.
+
+![Solution Manager Login with SSO Button](../../../Resources/Images/SM/Login-with-SSO.png "Solution Manager Login with SSO Button")
+
+In order for the button to display on the login screen, you will need to ensure that a few settings are configured.
+
+- **Enable SSO Authentication** option alongside other values must be configured in the [Server Options](../Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations.md) page inside Solution Manager.
 
 ### Session Expiration
 

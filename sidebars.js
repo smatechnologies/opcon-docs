@@ -475,7 +475,6 @@ module.exports = {
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Windows-Job-Details",
                           ],
                         },
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Accessing-Master-Jobs",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-General-Info",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Documentation",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Tags",
@@ -533,6 +532,15 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Runners",
                   ],
                 },
+                {
+                  type: "category",
+                  label: "Server Options",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations",
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Logging-Settings",
+                  ],
+                },
               ],
             },
             {
@@ -550,6 +558,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Studio/Canvas/Deleting-Master-Schedules",
                     "Files/UI/Solution-Manager/Studio/Canvas/Editing-Master-Schedules",
                     "Files/UI/Solution-Manager/Studio/Canvas/Viewing-Master-Schedules/Viewing-Master-Schedules",
+                    "Files/UI/Solution-Manager/Studio/Canvas/Isolate-Dependency-Chain",
                   ],
                 },
               ],
@@ -736,7 +745,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/22-0.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/22-2.html",
     },
   ],
 };

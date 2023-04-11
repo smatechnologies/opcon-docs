@@ -4,6 +4,32 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.14
+
+2023 April
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-18823**: Added performance improvements inside the Processes page in Solution Manager to efficiently handle large databases.
+
+#### REST API
+
+:white_check_mark: **OPCON-18942**: Fixed a potential issue with log rollovers when clock changes.
+
+#### ImpEx2 Web Service
+
+:eight_spoked_asterisk: **OPCON-19514**: For OpCon Deploy new import feature, separate auto delete days reset from auto build days reset. This feature requires OpCon Deploy 22.2.
+
+:white_check_mark: **OPCON-19164**: Fixed an issue in Deploy simulation where role check failed to list missing roles.
+
+## OpCon 21.0.13
+
+2023 March
+
+#### REST API
+
+:white_check_mark: **OPCON-15392**: Fixed an issue where the replicated OpCon database did not have all tables reseeded for unique ids and hence had a primary key violation error when building or adding jobs to daily.
+
 ## OpCon 21.0.12
 
 2023 February

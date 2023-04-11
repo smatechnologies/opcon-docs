@@ -4,11 +4,11 @@ Studio Canvas functionality renders on-demand diagrams that show job nodes and j
 
 ![Studio View in Solution Manager](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-in-solution-manager.png "Studio View in Solution Manager")
 
-## Studio Concepts 
+## Studio Concepts
 
 ### Nodes
 
-Nodes represent job, threshold, resource, or expression entities. 
+Nodes represent job, threshold, resource, or expression entities.
 
 The color on the left-hand side of the node is dependent upon the type of node, as indicated below:
 
@@ -47,7 +47,7 @@ Job nodes contain different pieces of information relating to it's specific Mast
 
 ### Edges
 
-Edges represent dependencies. Specifically, they can represent job dependencies, threshold dependencies and threshold updates, resource dependencies and resource updates, and expression dependencies. 
+Edges represent dependencies. Specifically, they can represent job dependencies, threshold dependencies and threshold updates, resource dependencies and resource updates, and expression dependencies.
 
 The color of the edge and the style (i.e., dotted vs solid) is dependent upon the type of dependency as well as (if applicable, in the case of job dependencies) the type of job dependency, as indicated below:
 
@@ -64,8 +64,8 @@ Job Dependencies:
     excludes: pink
     conflict: dotted magenta
 
-Threshold (Dependencies and Updates): 
-    
+Threshold (Dependencies and Updates):
+
     solid dark blue
 
 Resource (Dependencies and Updates):
@@ -73,13 +73,12 @@ Resource (Dependencies and Updates):
     solid gold
 
 Job Name Like Dependencies:
-    
+
     solid magenta
 
-Expression Dependencies: 
+Expression Dependencies:
 
     orange
-
 
 #### Cross Schedule Dependencies
 
@@ -99,7 +98,7 @@ When no selection is made in the canvas (i.e., no edge or node selection), the d
 
 ![Studio View Dependency Disambiguator](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-default-right-panel.png "Studio View Dependency Disambiguator")
 
-From this view, the user can perform the following actions: 
+From this view, the user can perform the following actions:
 
 - Click the **Back** button to navigate out of the current schedule and go back into the studio schedule list page.
 - Search the canvas (See [Search](./Viewing-Master-Schedules.md#search) for more details).
@@ -109,7 +108,7 @@ From this view, the user can perform the following actions:
 
 #### Selecting a Node
 
-Left clicking a node will make a node selection. When a node selection is made, the right panel will display details corresponding to the selected node. 
+Left clicking a node will make a node selection. When a node selection is made, the right panel will display details corresponding to the selected node.
 
 ##### Selecting a Job Node:
 
@@ -138,7 +137,7 @@ In the lower footer container:
 
 ##### Selecting a Threshold/Resource Node:
 
-When selecting a threshold or resource node, the view of the right panel will be updated. Since a threshold or resource can be designated as either a dependency or an update, selecting a threshold/resource node will provide a list of all jobs that have threshold/resource job connections (dependencies or updates). 
+When selecting a threshold or resource node, the view of the right panel will be updated. Since a threshold or resource can be designated as either a dependency or an update, selecting a threshold/resource node will provide a list of all jobs that have threshold/resource job connections (dependencies or updates).
 
 ![Studio View Selected Threshold/Resource Node](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-selected-threshold-resource-node.png "Studio View Selected Threshold/Resource Node")
 
@@ -170,19 +169,19 @@ The filter feature is set of filter selections used to narrow down rendered node
 
 ![Studio View Filter](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-filter.png "Studio View Filter")
 
-
 ### Subschedules
 
 Container jobs have the ability to represent subschedules as nodes in the canvas. If a selected schedule is a subschedule itself (i.e., it has parent scehdules), relevant subschedule and parent schedule information will be render in the bottom bar.
 
 #### Breadcrumbs
 
-If a selected schedule is itself a subschedule, the bottom bar will render a breadcrumbs component in the lower left hand corner. The breadcrumbs will indicate two pieces of information: 
+If a selected schedule is itself a subschedule, the bottom bar will render a breadcrumbs component in the lower left hand corner. The breadcrumbs will indicate two pieces of information:
 
 1. An list/array comprising all parent schedules that reference the currently selected scehdule
 1. The currently selected schedule (which can be represented as the subschedule to each of the listed parent schedules)
 
 ![Studio View Schedule Breadcrumbs](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-schedule-breadcrumbs.png "Studio View Schedule Breadcrumbs")
+
 #### Selecting a Parent Schedule
 
 Listed parent scehdules in the breadcrumbs are selectable elements (note that the currently selected schedule is non-selectabled). Clicking a parent schedule from the breadcrumbs list will re-direct the user to a view of the newly selected schedule. By default, only one parent schedule is displayed; if there is more than one parent schedule, the list will initially render a collapsed list with an ellipses (...), which , when clicked, will fully expand the parent list.
@@ -197,6 +196,19 @@ Job nodes represented as container jobs have the ability to contain subschedules
 
 ### Controls
 
-The controls are located in the lower left hand corner of the studio canvas page. Here, you can zoom in, zoom out, fit the page to the screen, lock panning and refetch schedule information.
+The controls are located in the lower left hand corner of the studio canvas page. Here, you can zoom in, zoom out, fit the page to the screen, lock panning, opening/closing the legend, and refetch schedule information.
 
 ![Studio View Controls](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-controls.png "Studio View Controls")
+
+### Legend
+
+Open/Close the legend by clicking on the info button in the controls. Here, you could see the details for each dependency line.  
+![Studio Open/Close Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-open-close-legend-button.png "Studio Open/Close Legend")  
+The Legend will be located in the lower left corner next to the controls, Click the info button again to close the legend.  
+![Studio Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-legend.png "Studio Legend")  
+
+### Mini-Map
+
+The minimap is located in the lower right hand corner of the studio canvas page. Here, you can see and move the viewport of what is current on the studio canvas page.
+
+![Studio View Mini-Map](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-minimap.png "Studio View Mini-Map")

@@ -2,49 +2,29 @@
 
 ## Access Code Privileges
 
-To implement Access Codes for securing jobs, each user must have the
-appropriate Access Code privileges through one or more
-[roles](./roles.md) to view and update jobs.
+To implement Access Codes for securing jobs, each user must have the appropriate Access Code privileges through one or more [roles](./roles.md) to view and update jobs.
 
-Because '<None\>' is an Access Code and is applied to all jobs by
-default, all roles automatically have privileges to update jobs with the
-'<None\>' Access Code. As additional Access Codes are created, the
-administrator must grant privileges for the Access Codes to the
-appropriate Role Name.
+Because '<None\>' is an Access Code and is applied to all jobs by default, all roles automatically have privileges to update jobs with the '<None\>' Access Code. As additional Access Codes are created, the administrator must grant privileges for the Access Codes to the appropriate Role Name.
 
-A user must be a member of a role with All Administrative Functions, All
-Function Privileges, or must be in the ocadm role to manage Access Code
-Privileges.
+A user must be a member of a role with All Administrative Functions, All Function Privileges, or must be in the ocadm role to manage Access Code Privileges.
 
 The following information applies to defining Access Code Privileges.
 
 - **Role Name**: Defines the unique name of the Role.
-- **Allow job updates?**: Determines if users in the Role can update
-    jobs defined with an Access Code. If allowed, users can modify and
-    delete the job definition in the Master and Daily. If not allowed,
-    users can only view the job definition in the Master and Daily.
-- **Revoked**: Provides the Access Codes not assigned to the Role
-    Name.
-- **Granted**: Provides the Access Codes assigned to the Role Name.
-    Users will be able to see jobs with any of the granted access codes
-    in the Master, Daily, and Schedule Operations.
+- **Allow job updates?**: Determines if users in the Role can update jobs defined with an Access Code. If allowed, users can modify and delete the job definition in the Master and Daily. If not allowed, users can only view the job definition in the Master and Daily.
+- **Revoked**: Provides the Access Codes not assigned to the Role Name.
+- **Granted**: Provides the Access Codes assigned to the Role Name. Users will be able to see jobs with any of the granted access codes in the Master, Daily, and Schedule Operations.
 
 ## Function Privileges
 
-Function Privileges are used to grant access to functions not related to
-jobs. Each user must have function privileges via one or more
-[roles](./roles.md) to perform actions within OpCon. By default, a new
-role has no privileges. A user must be a member of a role with All
-Administrative Functions, All Function Privileges, or must be in the
-ocadm role to manage roles.
+Function Privileges are used to grant access to functions not related to jobs. Each user must have function privileges via one or more [roles](./roles.md) to perform actions within OpCon. By default, a new role has no privileges. A user must be a member of a role with All Administrative Functions, All Function Privileges, or must be in the ocadm role to manage roles.
 
 The following data information applies to defining Function Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Granted Function Privileges**: Provides the Function Privileges
-    assigned to the Role Name.
+- **Granted Function Privileges**: Provides the Function Privileges assigned to the Role Name.
 
-## All Administrative Functions
+### All Administrative Functions
 
 Grants privileges to perform the following functions in
 OpCon:
@@ -82,7 +62,7 @@ Manage User Accounts
 - Delete User Accounts
 - Modify User Accounts
 
-## All Function Privileges
+### All Function Privileges
 
 Grants privileges to perform the following functions in
 OpCon:
@@ -97,8 +77,10 @@ OpCon:
 - [View License Information](#view-license-information)
 - [View Service Requests](#view-service-requests)
 - [View Standard Reports](#view-standard-reports)
+- [View Schedule Build Log](#view-schedule-build-log)
+- [View Application Logs](#view-application-logs)
 
-## All Notification Manager Functions
+### All Notification Manager Functions
 
 Grants access to all functions in Notification Manager including:
 
@@ -119,7 +101,7 @@ Grants access to all functions in Notification Manager including:
 No other privileges are verified in Notification Manager. If granted access to this utility, users in the role can set up notifications for any machine, schedule, or job.
 :::
 
-## Build Daily Schedules
+### Build Daily Schedules
 
 Grants privileges to build and check schedules:
 
@@ -131,10 +113,9 @@ Grants privileges to build and check schedules:
 Users in the role must also have Schedule Privileges to perform these functions.
 :::
 
-## Delete Daily Schedules
+### Delete Daily Schedules
 
-Grants privileges to perform the following functions in the Daily
-schedules:
+Grants privileges to perform the following functions in the Daily schedules:
 
 - View schedules to delete
 - Delete schedules for defined dates
@@ -144,34 +125,31 @@ schedules:
 Users in the role must also have Schedule Privileges to perform these functions.
 :::
 
-## Force-Start Schedules
+### Force-Start Schedules
 
-Grants privileges to execute the Start command for schedules in the
-Daily schedules.
-
-:::note
-Users in the role must also have Schedule Privileges to perform this function.
-:::
-
-## Hold Schedules
-
-Grants privileges to execute the Hold command for schedules in the Daily
-schedules.
+Grants privileges to execute the Start command for schedules in the Daily schedules.
 
 :::note
 Users in the role must also have Schedule Privileges to perform this function.
 :::
 
-## Release Schedules
+### Hold Schedules
 
-Grants privileges to execute the Release command for schedules in the
-Daily schedules.
+Grants privileges to execute the Hold command for schedules in the Daily schedules.
 
 :::note
 Users in the role must also have Schedule Privileges to perform this function.
 :::
 
-## Import and Export Schedules
+### Release Schedules
+
+Grants privileges to execute the Release command for schedules in the Daily schedules.
+
+:::note
+Users in the role must also have Schedule Privileges to perform this function.
+:::
+
+### Import and Export Schedules
 
 Grants access to all functions in the Schedule Import Export utility.
 
@@ -179,7 +157,7 @@ Grants access to all functions in the Schedule Import Export utility.
 When mapping machines to a destination database on import, Machine Privileges are validated for the destination database.
 :::
 
-## Maintain Access Codes
+### Maintain Access Codes
 
 Grants access to functions related to maintaining Access Codes.
 
@@ -188,10 +166,9 @@ Grants access to functions related to maintaining Access Codes.
 - Delete Access Codes
 - Modify Access Codes
 
-## Maintain Audit History
+### Maintain Audit History
 
-Grants access to all functions in the Audit Management plugin and Audit
-Cleanup utility including:
+Grants access to all functions in the Audit Management plugin and Audit Cleanup utility including:
 
 - View all audit records
 - Filter all audit records
@@ -201,7 +178,7 @@ Cleanup utility including:
 No other privileges are verified in the Audit Management utility. If granted access to this utility, users in the role can all audit records.
 :::
 
-## Maintain Calendars
+### Maintain Calendars
 
 Grants access to functions related to maintaining Calendars.
 
@@ -210,7 +187,7 @@ Grants access to functions related to maintaining Calendars.
 - Delete Calendars
 - Modify Calendars
 
-## Maintain Departments
+### Maintain Departments
 
 Grants access to functions related to maintaining Departments.
 
@@ -219,7 +196,7 @@ Grants access to functions related to maintaining Departments.
 - Delete Departments
 - Modify Departments
 
-## Maintain Embedded Script
+### Maintain Embedded Script
 
 Grants access to functions related to maintaining Embedded Scripts:
 
@@ -240,7 +217,7 @@ Grants access to functions related to maintaining Embedded Scripts:
 - Delete Script Runners
 - Modify Script Runners
 
-## Maintain Global Properties
+### Maintain Global Properties
 
 Grants access to related to maintaining Global Properties.
 
@@ -249,10 +226,9 @@ Grants access to related to maintaining Global Properties.
 - Delete Global Properties
 - Modify Global Properties
 
-## Maintain Job History
+### Maintain Job History
 
-Grants access to all functions in the History Management plugin and
-History Cleanup utility including:
+Grants access to all functions in the History Management plugin and History Cleanup utility including:
 
 - View all job history records
 - Filter all job history records
@@ -262,7 +238,7 @@ History Cleanup utility including:
 No other privileges are verified in the History Management utility. If granted access to this utility, users in the role can manage history for any schedule or job.
 :::
 
-## Maintain Machine Groups
+### Maintain Machine Groups
 
 Grants access to functions related to maintaining Machine Groups.
 
@@ -271,7 +247,7 @@ Grants access to functions related to maintaining Machine Groups.
 - Delete Machine Groups
 - Modify Machine Groups
 
-## Maintain Machines
+### Maintain Machines
 
 Grants access to functions related to maintaining Machines.
 
@@ -288,10 +264,9 @@ Grants access to functions related to maintaining Machines.
 To stop and to start communication with the LSAM from the Machine Information screen in Schedule Operations, the View Jobs in Schedule Operations privilege must also be granted.
 :::
 
-## Maintain Reports
+### Maintain Reports
 
-Grants access to all functions (except locking and unlocking reports) in
-the Report Management tool in the Reports view:
+Grants access to all functions (except locking and unlocking reports) in the Report Management tool in the Reports view:
 
 - Add new report specifications
 - Copy report specifications
@@ -304,7 +279,7 @@ the Report Management tool in the Reports view:
 Only users in the ocadm role can manage locked reports.
 :::
 
-## Maintain Schedules
+### Maintain Schedules
 
 Grants access to all functions related to the Schedule Master including:
 
@@ -316,26 +291,24 @@ Grants access to all functions related to the Schedule Master including:
 When a schedule is added, only the creator is automatically granted privileges to the new schedule; otherwise, the user must have Schedule Privileges to perform the Delete and Modify functions.
 :::
 
-## Maintain Service Request
+### Maintain Service Request
 
-Grants access to functions related to maintaining Service Requests in
-the SMA Self Service solution.
+Grants access to functions related to maintaining Service Requests in the SMA Self Service solution.
 
 - Add new Service Requests
 - Delete Service Requests
 - Modify Service Requests
 
-## Maintain Thresholds/Resources
+### Maintain Thresholds/Resources
 
-Grants access to functions related to maintaining thresholds and
-resources.
+Grants access to functions related to maintaining thresholds and resources.
 
 - View all defined Thresholds/Resources
 - Add new Thresholds/Resources
 - Delete Thresholds/Resources
 - Modify Thresholds/Resources
 
-## Maintain Vision Actions
+### Maintain Vision Actions
 
 Grants access to functions related to maintaining Vision actions.
 
@@ -347,7 +320,7 @@ All events for Actions are submitted in the ocadm role.
 - Delete Vision Actions
 - Modify Vision Actions
 
-## Maintain Vision Frequencies
+### Maintain Vision Frequencies
 
 Grants access to functions related to maintaining Vision frequencies.
 
@@ -355,7 +328,7 @@ Grants access to functions related to maintaining Vision frequencies.
 - Delete Vision Frequencies
 - Modify Vision Frequencies
 
-## Maintain Vision Workspaces
+### Maintain Vision Workspaces
 
 Grants access to functions related to maintaining Vision cards.
 
@@ -363,37 +336,25 @@ Grants access to functions related to maintaining Vision cards.
 - Delete Vision Cards
 - Modify Vision Cards
 
-## View Embedded Script Contents
+### View Embedded Script Contents
 
-Grants users, who are not already members of a role with Maintain
-Embedded Scripts or All Administrative Functions or All Function
-Privileges, the permissions to view list of embedded scripts, script types, 
-script runners, and the contents of the embedded scripts.
+Grants users, who are not already members of a role with Maintain Embedded Scripts or All Administrative Functions or All Function Privileges, the permissions to view list of embedded scripts, script types, script runners, and the contents of the embedded scripts.
 
-## View License Information
+### View License Information
 
-Grants access to the **License Information** tab in the **About
-OpCon Enterprise Manager** window accessible from the **Help** menu
-in the Enterprise Manager.
+Grants access to the **License Information** tab in the **About OpCon Enterprise Manager** window accessible from the **Help** menu in the Enterprise Manager.
 
-## View Service Requests
+### View Service Requests
 
-Grants users, who are not already members of a role with Maintain
-Service Request or All Administrative Functions or All Function
-Privileges, the permissions to use the Self Service solution and view
-and trigger Service Requests.
+Grants users, who are not already members of a role with Maintain Service Request or All Administrative Functions or All Function Privileges, the permissions to use the Self Service solution and view and trigger Service Requests.
 
-## View Vision Workspaces
+### View Vision Workspaces
 
 Grants users the permissions to view the Vision solution.
 
 ## Departmental Function Privileges
 
-The Departmental Function Privileges are used to grant privileges
-related to jobs based on individual departments. For all of the
-privileges in this section, to affect a specific existing job, the role
-must have the function privilege for the department and all of the
-following privileges:
+The Departmental Function Privileges are used to grant privileges related to jobs based on individual departments. For all of the privileges in this section, to affect a specific existing job, the role must have the function privilege for the department and all of the following privileges:
 
 - [Schedule Privileges](#schedule-privileges) to the schedule containing the job
 - [Access Code Privileges](#access-code-privileges) to the job's Access Code
@@ -403,19 +364,15 @@ following privileges:
 The following data information applies to defining Function Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Granted Departmental Privileges**: Provides the Departmental
-    Privileges assigned to the Role Name. Departmental privileges are
-    associated with <All Departments\>, the <General\> department, or
-    user defined departments.
+- **Granted Departmental Privileges**: Provides the Departmental Privileges assigned to the Role Name. Departmental privileges are     associated with <All Departments\>, the <General\> department, or user defined departments.
 
 :::note
 The <General\> department is the default department for all jobs.
 :::
 
-## All Daily Schedule Functions
+### All Daily Schedule Functions
 
-Grants access to all functions related to daily Schedule maintenance
-including:
+Grants access to all functions related to daily Schedule maintenance including:
 
 - [Add Jobs to Daily Schedules](#Add)
 - [Build Daily Schedules](#build-daily-schedules)
@@ -424,7 +381,7 @@ including:
 - [Modify Jobs in Daily Schedules](#Modify)
 - [View Jobs in Daily Schedules](#View2)
 
-## All Job Master Functions
+### All Job Master Functions
 
 Grants access to all functions related to the Job Master including:
 
@@ -433,7 +390,7 @@ Grants access to all functions related to the Job Master including:
 - [Modify Jobs in Master Schedules](#Modify2)
 - [View Jobs in Master Schedules](#View3)
 
-## View Standard Reports
+### View Standard Reports
 
 Grants privileges to view all non-administrative
 OpCon Reports.
@@ -442,7 +399,15 @@ OpCon Reports.
 To view administrative reports, the All Function Privileges privilege must also be granted.
 :::
 
-## All Schedule Operation Functions
+### View Schedule Build Log
+
+Grants privileges to view Schedule Build Logs.
+
+### View Application Logs
+
+Grants privileges to view Application Logs.
+
+### All Schedule Operation Functions
 
 Grants access to functions related to Schedule Operations including:
 
@@ -466,35 +431,32 @@ Grants access to functions related to Schedule Operations including:
 To Delete Old Schedules, the Delete Daily Schedules privilege must also be granted. To modify Machine Status from Schedule Operations, the Maintain Machines privilege must also be granted.
 :::
 
-## Add Jobs to Daily Schedules
+### Add Jobs to Daily Schedules
 
-Grants privileges to add jobs from the Job Master to the Daily
-schedules.
+Grants privileges to add jobs from the Job Master to the Daily schedules.
 
 :::note
 Users in the role must also have View Jobs in Master Schedules and View Jobs in Daily Schedules to perform this function.
 :::
 
-## Add Jobs to Master Schedules
+### Add Jobs to Master Schedules
 
-Grants access to functions related to adding jobs to the Job Master
-including:
+Grants access to functions related to adding jobs to the Job Master including:
 
 - Add new jobs
 - Copy Jobs
 - View History
 - View Job Master PERT
 
-## Cancel Jobs
+### Cancel Jobs
 
-Grants privileges to execute the Cancel status change command for Jobs
-in Operations.
+Grants privileges to execute the Cancel status change command for Jobs in Operations.
 
 :::note
 Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
 :::
 
-## Delete Jobs from Daily Schedules
+### Delete Jobs from Daily Schedules
 
 Grants privileges to Delete Jobs in the Daily schedules.
 
@@ -502,10 +464,9 @@ Grants privileges to Delete Jobs in the Daily schedules.
 Users in the role must also have View Jobs in Daily Schedules and Modify Jobs in Daily Schedules to perform this function in graphical interfaces.
 :::
 
-## Delete Jobs from Master Schedules
+### Delete Jobs from Master Schedules
 
-Grants privileges to functions related to deleting jobs from the Job
-Master including:
+Grants privileges to functions related to deleting jobs from the Job Master including:
 
 - Delete Jobs
 - View History
@@ -515,55 +476,49 @@ Master including:
 Users in the role must also have View Jobs in Master Schedules and Modify Jobs in Job Master to perform this function in graphical interfaces.
 :::
 
-## Force-Start Jobs
+### Force-Start Jobs
 
-Grants privileges to execute the Start status change command for Jobs in
-Operations.
-
-:::note
-Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
-:::
-
-## Hold Jobs
-
-Grants privileges to execute the Hold status change command for Jobs in
-Operations.
+Grants privileges to execute the Start status change command for Jobs in Operations.
 
 :::note
 Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
 :::
 
-## Kill Jobs
+### Hold Jobs
 
-Grants privileges to execute the Kill status change command for Jobs in
-Operations.
-
-:::note
-Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
-:::
-
-## Mark Jobs Failed
-
-Grants privileges to execute the Mark Jobs Failed status change command
-for Jobs in Operations.
+Grants privileges to execute the Hold status change command for Jobs in Operations.
 
 :::note
 Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
 :::
 
-## Mark Jobs Finished OK
+### Kill Jobs
 
-Grants privileges to execute the Mark Jobs Finished OK status change
-command for Jobs in Operations.
+Grants privileges to execute the Kill status change command for Jobs in Operations.
 
 :::note
 Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
 :::
 
-## Modify Jobs in Daily Schedules
+### Mark Jobs Failed
 
-Grants access to functions related to modifying jobs in the Daily
-Schedules including:
+Grants privileges to execute the Mark Jobs Failed status change command for Jobs in Operations.
+
+:::note
+Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
+:::
+
+### Mark Jobs Finished OK
+
+Grants privileges to execute the Mark Jobs Finished OK status change command for Jobs in Operations.
+
+:::note
+Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
+:::
+
+### Modify Jobs in Daily Schedules
+
+Grants access to functions related to modifying jobs in the Daily Schedules including:
 
 - Modify Job Details
 - Add/Modify/Delete Documentation
@@ -579,10 +534,9 @@ Schedules including:
 Users in the role must also have View Jobs in Daily Schedules to perform this function in graphical interfaces.
 :::
 
-## Modify Jobs in Master Schedules
+### Modify Jobs in Master Schedules
 
-Grants access to functions related to modifying jobs in the Job Master
-including:
+Grants access to functions related to modifying jobs in the Job Master including:
 
 - Modify Job Details
 - Add/Modify/Delete Documentation
@@ -598,37 +552,33 @@ including:
 Users in the role must also have View Jobs in Master Schedules to perform this function in graphical interfaces.
 :::
 
-## Release Jobs
+### Release Jobs
 
-Grants privileges to execute the Release status change command for Jobs
-in Operations.
-
-:::note
-Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
-:::
-
-## Restart Jobs
-
-Grants privileges to execute the Restart status change command for Jobs
-in Operations.
+Grants privileges to execute the Release status change command for Jobs in Operations.
 
 :::note
 Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
 :::
 
-## Skip Jobs
+### Restart Jobs
 
-Grants privileges to execute the Skip status change command for Jobs in
-Operations.
+Grants privileges to execute the Restart status change command for Jobs in Operations.
 
 :::note
 Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
 :::
 
-## View Jobs in Daily Schedules
+### Skip Jobs
 
-Grants access to functions related to viewing jobs in the daily
-Schedules including:
+Grants privileges to execute the Skip status change command for Jobs in Operations.
+
+:::note
+Users in the role must also have View Jobs in Schedule Operations to perform this function in graphical interfaces.
+:::
+
+### View Jobs in Daily Schedules
+
+Grants access to functions related to viewing jobs in the daily Schedules including:
 
 - View Job Details
 - View Documentation
@@ -639,10 +589,9 @@ Schedules including:
 - View Threshold/Resource Updates
 - Check Daily Schedules
 
-## View Jobs in Master Schedules
+### View Jobs in Master Schedules
 
-Grants access to functions related to viewing jobs in the Job Master
-including:
+Grants access to functions related to viewing jobs in the Job Master including:
 
 - View Job Details
 - View Documentation
@@ -654,10 +603,9 @@ including:
 - View Threshold/Resource Dependencies
 - View Threshold/Resource Updates
 
-## View Jobs in Schedule Operations
+### View Jobs in Schedule Operations
 
-Grants access to functions related to viewing jobs in the following
-Enterprise Manager Operation views:
+Grants access to functions related to viewing jobs in the following Enterprise Manager Operation views:
 
 - List
 - Matrix
@@ -668,49 +616,25 @@ Enterprise Manager Operation views:
 
 ## Machine Privileges
 
-Machine privileges are used to control the machines for users in a
-[role](./roles.md) that have privileges to create and edit jobs. Within
-Job Master and Job Daily, users will only see Machines based on their
-role privileges. In Schedule Operations, the machine privileges are not
-applied.
+Machine privileges are used to control the machines for users in a [role](./roles.md) that have privileges to create and edit jobs. Within Job Master and Job Daily, users will only see Machines based on their role privileges. In Schedule Operations, the machine privileges are not applied.
 
-A user must be a member of a role with All Administrative Functions, All
-Function Privileges, or must be in the ocadm role to manage Machine
-Privileges. The following information applies to defining Machine
-Privileges:
+A user must be a member of a role with All Administrative Functions, All Function Privileges, or must be in the ocadm role to manage Machine Privileges. The following information applies to defining Machine Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Allow job updates?**: Determines if users in the Role can update
-    jobs defined with a Machine. If allowed, users can modify and delete
-    the job definition in the Master and Daily. If not allowed, users
-    can only view the job definition in the Master and Daily.
+- **Allow job updates?**: Determines if users in the Role can update jobs defined with a Machine. If allowed, users can modify and delete the job definition in the Master and Daily. If not allowed, users can only view the job definition in the Master and Daily.
 - **Revoked**: Provides the machines not assigned to the Role Name.
-- **Granted**: Provides the machines assigned to the Role Name. Users
-    will be able to see jobs with any of the granted machines in the
-    Master and Daily.
+- **Granted**: Provides the machines assigned to the Role Name. Users will be able to see jobs with any of the granted machines in the Master and Daily.
 
 ## Machine Group Privileges
 
-Machine Group privileges are used to control the machine groups that
-users in a [role](./roles.md) have privileges to maintain jobs on. Within
-Job Master Maintenance and Daily Schedule Maintenance, users will only
-see Machine Groups based on their role privileges. In Schedule
-Operations, the machine group privileges are not applied.
+Machine Group privileges are used to control the machine groups that users in a [role](./roles.md) have privileges to maintain jobs on. Within Job Master Maintenance and Daily Schedule Maintenance, users will only see Machine Groups based on their role privileges. In Schedule Operations, the machine group privileges are not applied.
 
-A user must be a member of a role with All Administrative Functions, All
-Function Privileges, or must be in the ocadm role to manage Machine
-Group Privileges. The following information applies to defining Machine
-Group Privileges:
+A user must be a member of a role with All Administrative Functions, All Function Privileges, or must be in the ocadm role to manage Machine Group Privileges. The following information applies to defining Machine Group Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Allow job updates?**: Determines if users in the Role can update
-    jobs defined with a Machine Group. If allowed, users can modify and
-    delete the job definition in the Master and Daily. If not allowed,
-    users can only view the job definition in the Master and Daily.
+- **Allow job updates?**: Determines if users in the Role can update jobs defined with a Machine Group. If allowed, users can modify and delete the job definition in the Master and Daily. If not allowed, users can only view the job definition in the Master and Daily.
 - **Revoked**: Provides the Machines not assigned to the Role Name.
-- **Granted**: Provides the Machines assigned to the Role Name. Users
-    will be able to see jobs with any of the granted machine groups in
-    the Master and Daily.
+- **Granted**: Provides the Machines assigned to the Role Name. Users will be able to see jobs with any of the granted machine groups in the Master and Daily.
 
 :::note
 Machine Group Privileges do not automatically grant privileges to the individual Machines in the group. To grant privileges to individual machines, refer to [Machine Privileges](#machine-privileges).
@@ -718,14 +642,7 @@ Machine Group Privileges do not automatically grant privileges to the individual
 
 ## Schedule Privileges
 
-Each user must have schedule privileges via one or more
-[roles](./roles.md) to access schedules within
-OpCon. By default, a new role has privileges
-to no schedules. If a role is not granted privileges to a schedule,
-users in that role will not see that schedule listed in the graphical
-interfaces. A user must be a member of a role with All Administrative
-Functions, All Function Privileges, or must be in the ocadm role to
-manage roles.
+Each user must have schedule privileges via one or more [roles](./roles.md) to access schedules within OpCon. By default, a new role has privileges to no schedules. If a role is not granted privileges to a schedule, users in that role will not see that schedule listed in the graphical interfaces. A user must be a member of a role with All Administrative Functions, All Function Privileges, or must be in the ocadm role to manage roles.
 
 :::note
 Schedule Privileges for individual users are not dynamically granted if they are logged in. If the user is logged into the account when an administrator grants a Schedule Privilege to this user's role, then it is required for the user to log out and log back in for the privilege to be granted.
@@ -739,47 +656,29 @@ The following information applies to defining Schedule Privileges:
 
 ## Batch User Privileges
 
-Most platforms require a valid user ID to be associated with each job
-submitted by OpCon. Valid user IDs for each
-of those platforms must be defined in OpCon.
-The following platforms do not require a user ID to be defined: OS 2200,
-BIS, and z/OS.
+Most platforms require a valid user ID to be associated with each job submitted by OpCon. Valid user IDs for each of those platforms must be defined in OpCon.
 
-The Batch User Privileges in OpCon contain
-the user ID definitions for each platform. Additionally, the Batch User
-Privileges define which OpCon roles are
-allowed to use which user ID's for the jobs.
+The following platforms do not require a user ID to be defined: OS 2200, BIS, and z/OS.
+
+The Batch User Privileges in OpCon contain the user ID definitions for each platform. Additionally, the Batch User Privileges define which OpCon roles are allowed to use which user ID's for the jobs.
 
 The following information applies to defining Batch User Privileges:
 
 - **Select Role**: Defines the unique name of the Role.
-- **Target Operating System**: Provides the operating systems that
-    require Batch User Privileges which includes MCP, IBM i, UNIX, VMS,
-    and Windows.
-- **Revoked**: Provides the Batch User IDs not assigned to the Role
-    Name.
+- **Target Operating System**: Provides the operating systems that require Batch User Privileges which includes MCP, IBM i, UNIX, VMS, and Windows.
+- **Revoked**: Provides the Batch User IDs not assigned to the Role Name.
 - **Granted**: Provides the Batch User IDs assigned to the Role Name.
 
 ## Embedded Script Privileges
 
-Each user must have embedded script privileges via one or more
-[roles](./roles.md) to access embedded scripts within
-OpCon. By default, a new role has privileges
-to no embedded scripts. If a role is not granted privileges to an
-embedded script, users in that role will not see that embedded script
-listed in the graphical interfaces. A user must be a member of a role
-with All Administrative Functions, All Function Privileges, or must be
-in the ocadm role to manage roles.
+Each user must have embedded script privileges via one or more [roles](./roles.md) to access embedded scripts within OpCon. By default, a new role has privileges to no embedded scripts. If a role is not granted privileges to an embedded script, users in that role will not see that embedded script listed in the graphical interfaces. A user must be a member of a role with All Administrative Functions, All Function Privileges, or must be in the ocadm role to manage roles.
 
 :::note
 Embedded Script Privileges for individual users are not dynamically granted if they are logged in. If the user is logged into the account when an administrator grants an Embedded Script Privilege to this user's role, then it is required for the user to log out and log back in for the privilege to be granted.
 :::
 
-The following information applies to defining Embedded Script
-Privileges:
+The following information applies to defining Embedded Script Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Revoked**: Provides the Embedded Scripts not assigned to the Role
-    Name.
-- **Granted**: Provides the Embedded Scripts assigned to the Role
-    Name.
+- **Revoked**: Provides the Embedded Scripts not assigned to the Role Name.
+- **Granted**: Provides the Embedded Scripts assigned to the Role Name.

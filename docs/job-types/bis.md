@@ -17,21 +17,20 @@ The information in this section applies to defining a BIS job to OpCon. The text
 
 All file dependencies must be met before the BIS job is started.
 
-**Qualifier**: Defines the qualifier for the file dependency. Placing \# before or after the qualifier directs the LSAM to search the SHARED File Directory for the file; without the \# indicates the STD File Directory is to be searched.
+- **Qualifier**: Defines the qualifier for the file dependency. Placing \# before or after the qualifier directs the LSAM to search the SHARED File Directory for the file; without the \# indicates the STD File Directory is to be searched.
 
-**Filename**: Defines the filename the job is dependent on.
+- **Filename**: Defines the filename the job is dependent on.
 
-**Type**: Defines the type of dependency the job has on the file. The types of dependencies are:
+- **Type**: Defines the type of dependency the job has on the file. The types of dependencies are:
 
-- **Exists**: The file must exist.
-- **Created**: The file must exist and was cataloged today.
-- **Deleted**: The file must not exist.
-- **Size**: The file exceeds the value entered for the file size.
-  :::note
-  When Size is set as the Type, enter the size in thousands of tracks (e.g., Enter a 5 to test for a file greater than 5000 tracks).
-  :::
-- **Referenced**: The file has been referenced today.
-- **Assigned**: The file is currently assigned.
-- **BackedUp**: The file has a current backup (Backed up and not yet
-    modified).
-- **Unloaded**: The file is currently unloaded.
+  - **Exists**: The file must exist.
+  - **Created**: The file must exist and was cataloged today.
+  - **Deleted**: The file must not exist.
+  - **Size**: The file exceeds the value entered for the file size.
+    :::note
+    When Size is set as the Type, enter the size in thousands of tracks (e.g., Enter a 5 to test for a file greater than 5000 tracks).
+    :::
+  - **Referenced**: The file has been referenced today.
+  - **Assigned**: The file is currently assigned.
+  - **BackedUp**: The file has a current backup (Backed up and not yet modified).
+  - **Unloaded**: The file is currently unloaded.
