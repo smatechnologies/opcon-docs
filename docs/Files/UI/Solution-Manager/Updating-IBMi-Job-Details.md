@@ -578,9 +578,9 @@ The following fields (Job End Time) are for machines with "fileWatcher.v3" capab
 
 **In the Job End Time sub-frame:**
 
-- **Re Check Frequency**: This parameter is used, usually in combination with the Job End Time (or the Create End Time, if no Job End Time was provided), to enable a continuous loop of checking until a matching file is found.
+- **Re Check Frequency**: This parameter is used, usually in combination with the Job End Time (or the Create End Time, if no Job End Time was provided), to enable a continuous loop of checking until a matching file is found. When this value is zero, a one-time check will be performed and the Job End Time is ignored.
 
-- **Time**: Defines the jobs end time for looped file arrival checks, used when a file arrival happens in a certain directory.
+- **Time**: Defines the job's end time for looped file arrival checks, used when a file arrival happens in a certain directory.
 
 **In the LSAM Dynamics Variable sub-frame:**
 
@@ -592,13 +592,13 @@ The following fields (Job End Time) are for machines with "fileWatcher.v3" capab
 The following fields (Failure Code to LSAM Dynamic Variable & OpCon Properties) are for machines with "fileWatcher.v3" capabilities
 :::
 
-- **Failure Code to LSAM Dynamic Variable**: This completion code, as well as interim status or other information codes are automatically sent to the OpCon Detail Job Messages table, as well as to the LSAM Feedback codes collected by an OpCon job for possible Event processing.
+- **Failure Code to LSAM Dynamic Variable**: The IBM i Agent will store a job failure code to the LSAM local Dynamic Variables table when a Variable name is provided in this field.  At the same time, the Agent will send this code and other interim status information to the OpCon Detailed Job Messages table (under Job Information -> Configuration) and it will send LSAM Feedback codes that can be used to enable optional Event processing within the OpCon server for the File Arrival job.
 
 **In the OpCon Properties sub-frame:**
 
 - **File Size to Property**: The Number of Records for DB2 tables and the total number of bytes in IBM i file systems outside of the DB2 database are sent to OpCon for storage into an OpCon property, with a default value of zero for file not found or an empty file.
 
-- **Failure Code to Property**: The IBM i Agent sends a failure code to OpCon for File Arrival job failures, with failure codes formatted with three letters and four numbers, which can be interpreted using the IBM i command DSPMSGD and referencing the IBM i principle message file named QCPFMSG.
+- **Failure Code to Property**: The IBM i Agent sends a failure code to OpCon for File Arrival job failures when the job detects either an expected exception condition, or it is interrupted by an unexpected program failure. The failure code can be stored into an OpCon property for use in end-of-job Event processing. A summary of File Arrival job failure codes can be found in the IBM i Agent documentation here: [Job Completion Codes](https://help.smatechnologies.com/opcon/agents/ibm-i/commands-utilities/file-arrival#command-feedback-methods)
 
 ![File Arrival: job information](../../../Resources/Images/SM/IBMi_FileArrival_JobInformation.png "File Arrival: job information")
 
