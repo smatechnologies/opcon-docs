@@ -578,9 +578,9 @@ The following fields (Job End Time) are for machines with "fileWatcher.v3" capab
 
 **In the Job End Time sub-frame:**
 
-- **Re Check Frequency**: Defines the...
+- **Re Check Frequency**: This parameter is used, usually in combination with the Job End Time (or the Create End Time, if no Job End Time was provided), to enable a continuous loop of checking until a matching file is found.
 
-- **Time**: Defines the...
+- **Time**: Defines the jobs end time for looped file arrival checks, used when a file arrival happens in a certain directory.
 
 **In the LSAM Dynamics Variable sub-frame:**
 
@@ -592,7 +592,7 @@ The following fields (Job End Time) are for machines with "fileWatcher.v3" capab
 The following fields (Failure Code to LSAM Dynamic Variable & OpCon Properties) are for machines with "fileWatcher.v3" capabilities
 :::
 
-- **Failure Code to LSAM Dynamic Variable**: Defines the....
+- **Failure Code to LSAM Dynamic Variable**: This completion code, as well as interim status or other information codes are automatically sent to the OpCon Detail Job Messages table, as well as to the LSAM Feedback codes collected by an OpCon job for possible Event processing.
 
 **In the OpCon Properties sub-frame:**
 
