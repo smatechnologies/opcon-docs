@@ -494,11 +494,33 @@ User has the option to utilize a token, instead of using the 'End Day/End Time' 
 User has the option to utilize a token, instead of using the 'seconds' input field.
 :::
 
+:::note
+The following fields (Job End Time) are for machines with "fileWatcher.v3" capabilities
+:::
+
+**In the Job End Time sub-frame:**
+
+- **Re Check Frequency**: Defines the...
+
+- **Time**: Defines the...
+
 **In the LSAM Dynamics Variable sub-frame:**
 
 - **\*File Variable Name**: Defines the root name of the file (including an extension, if any, from an IFS stream file) that is stored, similar to the OpCon system property $ARRIVED FILE SHORT NAME.
 
 - **Record Count Variable**: Defines the number of records (for DB2 files/tables), or the number of data bytes (for IFS non-DB2 file systems) is stored when a file is found.
+
+:::note
+The following fields (Failure Code to LSAM Dynamic Variable & OpCon Properties) are for machines with "fileWatcher.v3" capabilities
+:::
+
+- **Failure Code to LSAM Dynamic Variable**: Defines the....
+
+**In the OpCon Properties sub-frame:**
+
+- **File Size to Property**: Defines the....
+
+- **Failure Code to Property**: Defines the....
 
 **In the Additional Information frame:**
 
