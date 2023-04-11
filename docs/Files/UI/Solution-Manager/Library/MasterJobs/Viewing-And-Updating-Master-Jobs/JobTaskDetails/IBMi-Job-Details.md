@@ -346,10 +346,10 @@ All required fields are designated by a red asterisk.
 
 :::note
 This job type does not have access to:
+:::
 
 - **Messages**
 - **Spool Files**
-  :::
 
 ### Updating Job Type: FTP
 
@@ -518,9 +518,9 @@ The following fields (Failure Code to LSAM Dynamic Variable & OpCon Properties) 
 
 **In the OpCon Properties sub-frame:**
 
-- **File Size to Property**: Defines the....
+- **File Size to Property**: The Number of Records for DB2 tables and the total number of bytes in IBM i file systems outside of the DB2 database are sent to OpCon for storage into an OpCon property, with a default value of zero for file not found or an empty file.
 
-- **Failure Code to Property**: Defines the....
+- **Failure Code to Property**: The IBM i Agent sends a failure code to OpCon for File Arrival job failures, with failure codes formatted with three letters and four numbers, which can be interpreted using the IBM i command DSPMSGD and referencing the IBM i principle message file named QCPFMSG.
 
 **In the Additional Information frame:**
 
