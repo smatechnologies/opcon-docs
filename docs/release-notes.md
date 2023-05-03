@@ -4,7 +4,7 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
-## OpCon 22.3.0
+## OpCon 22.3.1
 
 2023 May
 
