@@ -20,10 +20,6 @@ defining event details. Once you choose a template, the screen
 dynamically changes to provide UI assistance for filling out the event
 details.
 
-:::note
-<!-- The **Event Template** drop-down contains several Administrative Events for advanced operations. For more information on these type of events, refer to [Administrative Events](../../../events/types.md#Administ) in the **OpCon Events** online help. -->
-:::
-
 Insert *variable(s)* into any part of the Event using the following
 notation: **${variable}**
 
