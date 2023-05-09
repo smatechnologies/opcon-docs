@@ -4,6 +4,36 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.3.1
+
+2023 May
+
+#### Server
+
+:white_check_mark: **OPCON-19758**: Fixed an issue where multiple SMANetcom instances tried to write to the same API agent log file and was stopped by Servman as it kept getting locked out from writing to it.
+
+:white_check_mark: **OPCON-12035**: Fixed an issue with wrong calculation of start time for daily jobs
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-18775**: Master Jobs: IMBi users are provided with additional field codes improving the usability of the IBMi Agent.  These field codes allow for more efficient and accurate data entry by providing shortcuts for commonly used values in IBMi systems.
+
+:eight_spoked_asterisk: **OPCON-19224**: Studio Canvas: Users are provided with the capability of copying an existing schedule.  In addition, the user will have the option to include or exclude jobs that are associated with schedule chosen to copy.  
+
+:white_check_mark: **OPCON-16104**: Fixed "key not found" issue on Deployment Info section of Daily Schedule Definition page.
+
+:white_check_mark: **OPCON-19126**: Fixes issue with slow performance when trying to load tag manager filter results.
+
+:white_check_mark: **OPCON-19224**: Fixed an issue with daily schedule operations where no jobs would appear when trying to add jobs to sub-schedules. 
+
+:white_check_mark: **OPCON-19224**: Fixes issue with start time, end time, and job end time not saving correctly from Daily Job maintenance when days were set to '0' for all three fields.
+
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-19570**: Fixed an issue with schedule import where autoBuildTime was missing from the schedule definition if import a schedule with auto build time of 00:00.
+
+
 ## OpCon 22.2.0
 
 2023 April

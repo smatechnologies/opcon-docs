@@ -4,6 +4,22 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.15
+
+2023 May
+
+#### Server
+
+:white_check_mark: **OPCON-14393**: Fixed an issue when using DDI to create new jobs, the DependentScheduleInstance column was being affected due to the day offset.
+
+#### REST API
+
+:white_check_mark: **OPCON-16731**: Fixed an issue where migration was timing out due to large AUDITRECSVIEW table.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-19570**: Fixed an issue with schedule import where autoBuildTime was missing from the schedule definition if import a schedule with auto build time of 00:00.
+
 ## OpCon 21.0.14
 
 2023 April

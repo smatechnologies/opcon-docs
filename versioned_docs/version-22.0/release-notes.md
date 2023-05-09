@@ -4,6 +4,52 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.3
+
+2023 May
+
+#### Server
+
+:white_check_mark: **OPCON-14393**: Fixed an issue when using DDI to create new jobs, the DependentScheduleInstance column was being affected due to the day offset.
+
+:white_check_mark: **OPCON-16015**: Fixed an issue in SMA_REMAPSQLUSERSTOLOGINS.sql related to database mirroring.
+
+:white_check_mark: **OPCON-19758**: Fixed an issue where multiple SMANetCom instances tried to write to the same API agent log file and was stopped by SMAServMan as it kept getting locked out from writing to it.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-16104**: Fixed "key not found" issue on Deployment Info section of Daily Schedule Definition page.
+
+:white_check_mark: **OPCON-18939**: Fixed an issue where Edit, Copy, Delete, Cross References and View were still enabled when returning to Studio page.
+
+:white_check_mark: **OPCON-18941**: Fixed an issue with empty schedule name in Studio right action panel.
+
+:white_check_mark: **OPCON-18950**: Fixed an issue in Studio page where nodes were not displayed after copying a job from another schedule.
+
+:white_check_mark: **OPCON-18953**: Fixed an error in Studio when right clicking on a threshold, resource or expression dependency.
+
+:white_check_mark: **OPCON-19070**: The list of Master Jobs on the Master Jobs page is now sorted alphabetically by job name by default.
+
+:white_check_mark: **OPCON-19224**: Fixed an issue in Schedule Operations where no jobs would appear when trying to add jobs to sub-schedules.
+
+:white_check_mark: **OPCON-19426**: The Master Jobs Definition page now displays the Schedules list in alphabetical order.
+
+:white_check_mark: **OPCON-19427**: Departments are now sorted by name on the Master Job Definition Page.
+
+:white_check_mark: **OPCON-19428**: Machines are now sorted by name on the Master Job Definition Page and on the Agents Page.
+
+:white_check_mark: **OPCON-19513**: Fixed Job Type dropdown in Master Job Details page to only show job types with available Machines in the Agents page.
+
+:white_check_mark: **OPCON-19562**: Changed a label in Server Options Logging section to "Log critical messages to NT events".
+
+#### REST API
+
+:white_check_mark: **OPCON-19003**: Removed error message and added informational message for empty schedules in Studio.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-19570**: Fixed an issue with schedule import where autoBuildTime was missing from the schedule definition if import a schedule with auto build time of 00:00.
+
 ## OpCon 22.0.2
 
 2023 April
