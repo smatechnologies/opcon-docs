@@ -17,7 +17,7 @@ Select a schedule and select **Copy**.
 
 ![Master Schedule Copy Button](../../../../../Resources/Images/SM/Studio/MasterSchedules/master-schedule-copy-button.png "Master Schedule Copy Button")
 
-A dialog will open to define *new* **Schedule Name** with an option to **Copy Master Jobs**.
+A dialog will open to define *new* **Schedule Name** with options to **Copy Master Jobs** and **Copy Schedule Privileges**.  
 
 ![Master Schedule Copy Dialog](../../../../../Resources/Images/SM/Studio/MasterSchedules/master-schedule-copy-dialog.png "Master Schedule Copy Dialog")
 
