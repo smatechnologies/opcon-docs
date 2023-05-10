@@ -469,6 +469,7 @@ module.exports = {
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/IBMi-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Null-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-BW-Job-Details",
+                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Os2200-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-R3-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SQL-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Unix-Job-Details",
