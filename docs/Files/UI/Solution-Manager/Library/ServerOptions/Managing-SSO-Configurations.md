@@ -30,6 +30,12 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 \* OpenID Connect (OIDC) is an open authentication protocol that works on top of the OAuth 2.0 (OAuth2) framework.
 
+#### Test Connection Button
+
+![Server Options - Authority Test Connection](../../../../../Resources/Images/SM/Library/ServerOptions/sso-test-connection.png "Authority Test Connection Button")
+
+The **test connection button** retrieves metadata from the identity provider (IdP) by using the value specified in the **Authority** field. The **Authority** field is vital to establish a proper configuration with the IdP and enable successful communication with the OpenID Connect application.
+
 #### Group Mappings
 
 ![Server Options - SSO Group Mappings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-group-mappings.png "SSO Group Mappings")
@@ -216,6 +222,19 @@ This document describes the steps needed to create a custom application in Azure
     - https://graph.microsoft.com/v1.0/me : From this call, we will retrieve the property **userPrincipalName** which is the value of the authenticated user's username (email). This will be used as the opcon identifier inside Solution Manager.
     - https://graph.microsoft.com/v1.0/me/getMemberGroups : From this call, we will be able to retrieve a list of IDs of groups that the authenticated user belongs to.
     - https://graph.microsoft.com/v1.0/groups/{group-guid} : From this call, we will retrieve the **displayName** property which will be mapped against an existing group.
+
+:::
+
+:::note
+Common errors when connection to your identity provider (IdP) OpenID Connection (OIDC) applications:
+
+- Invalid Redirect URI: Ensure that the redirect URI specified in the SSO configuration matches the redirect URI configured in the OIDC application for your IdP provider. Mismatched or incorrect redirect URIs can prevent successful authentication.
+
+- Incorrect Authority: Validate that the authority (OIDC provider URL) is specified in your application's configuration for your IdP. Any mismatch in the authority value will result in connection errors and authentication failures.
+
+- Invalid Client ID: Verify that the client ID assigned in the SSO configuration is correct and matches the client ID expected by your IdP. Using an incorrect client ID will lead to authentication errors and prevent successful interaction with the OIDC application.
+
+By addressing these common errors related to redirect URI, authority, and client ID, you can enhance the connectivity and authentication experience with your OIDC application.
 
 :::
 
