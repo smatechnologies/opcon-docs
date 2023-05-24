@@ -542,6 +542,14 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Logging-Settings",
                   ],
                 },
+                {
+                  type: "category",
+                  label: "Logs",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/Logs/List-Log-Files",
+                  ],
+                },
               ],
             },
             {
