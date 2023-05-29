@@ -4,6 +4,49 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.4.0
+
+2023 May
+
+#### General
+
+:eight_spoked_asterisk: **OPCON-18766**: A new licensed feature - MFT Server is available. You must request a new license with this MFT Server feature to turn it on for a new MFT agent that includes the server component in it.
+
+#### Installation
+
+:white_check_mark: **OPCON-20073**: Fixed an issue in the installer that caused MFT agent system records to be removed from the database during upgrades that needed a SQL script to fix and re-add them.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-16963**: Master Jobs: Users are provided with the ability to view, add, modify, delete, copy and move SAP BW master jobs within Solution Manager.
+
+:eight_spoked_asterisk: **OPCON-18814**: Added two new privileges to view and manage CloudEvents associations
+
+:eight_spoked_asterisk: **OPCON-19227**: Single Sign On: Authorized Users will be able to validate their connection to the IDP via a test connection button presented on the SSO configuration screen.
+
+:eight_spoked_asterisk: **OPCON-19793**: Logging: Licensing requirements added enabling the use the Single Sign On feature in Solution Manager. 
+
+:white_check_mark: **OPCON-19586**: Fix frequency and job dependency issues with master jobs copy.
+
+:white_check_mark: **OPCON-19777**: Fixes issue where single machine selection was being ignored and schedule build was running for each machine in the machine group.
+
+:white_check_mark: **OPCON-19783**: Fix issue where IBMi File Arrival jobs fail to copy.
+
+#### REST API
+
+:white_check_mark: **OPCON-19763**: Fixes issue with self service executions when using the 'Choice' type with dynamic schedule names not being able to be used with the API.
+
+:white_check_mark: **OPCON-20048**: Fixed an issue with Schedule Copy Endpoint which was creating duplicates if new name has an underscore.
+
+:white_check_mark: **OPCON-20664**: Fixed an issue with API where posted CloudEvents will not get deleted from History table when there are no filters defined causing a PRIMARY KEY VIOLATION in CloudEventsArchive table when same event gets reprocessed repeatedly.
+
+:white_check_mark: **OPCON-20078**: Allow users with ocadm role or AllFunctionPrivileges to view or maintain CloudEvents associations.
+
+#### Utilities
+
+:white_check_mark: **OPCON-15703**: Fixed bug where look ahead and look behind tokens weren't working.
+
+
 ## OpCon 22.3.1
 
 2023 May
@@ -27,7 +70,6 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-19224**: Fixed an issue with daily schedule operations where no jobs would appear when trying to add jobs to sub-schedules. 
 
 :white_check_mark: **OPCON-19224**: Fixes issue with start time, end time, and job end time not saving correctly from Daily Job maintenance when days were set to '0' for all three fields.
-
 
 #### ImpEx2 Web Service
 
