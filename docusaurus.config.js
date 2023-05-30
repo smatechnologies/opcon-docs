@@ -32,8 +32,7 @@ module.exports = {
           breadcrumbs: false,
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/smatechnologies/opcon-docs/blob/release/22.3",
-          },
+          editUrl: "https://github.com/smatechnologies/opcon-docs/blob/release/22.4",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
