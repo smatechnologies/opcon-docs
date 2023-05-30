@@ -10,7 +10,9 @@ sidebar_label: "Release Notes"
 
 #### General
 
-:eight_spoked_asterisk: **OPCON-18766**: A new licensed feature - MFT Server is available. You must request a new license with this MFT Server feature to turn it on for a new MFT agent that includes the server component in it.
+:eight_spoked_asterisk: **OPCON-18766**: Managed File Transfer (MFT) Server is now available and comes with the ability to run a secure file transfer server and trigger actions based on events that occur on the server. MFT Server is distributed with the existing OpConMFT installer.
+
+:eight_spoked_asterisk: **OPCON-18814**: Added two new privileges to view and manage Cloud Event Trigger associations, "View CloudEvents Associations" and "Maintain CloudEvents Associations".
 
 #### Installation
 
@@ -18,13 +20,13 @@ sidebar_label: "Release Notes"
 
 #### Solution Manager
 
-:eight_spoked_asterisk: **OPCON-16963**: Master Jobs: Users are provided with the ability to view, add, modify, delete, copy and move SAP BW master jobs within Solution Manager.
+:eight_spoked_asterisk: **OPCON-17657**: Solution Manager now supports Single Sign-On with identity providers using the OpenID Connect (OIDC) protocol. Configuration options are provided for Okta and Azure AD, and an 'Other' option for all other implementers of OIDC. Learn more here: [Managing SSO](https://help.smatechnologies.com/opcon/core/Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations).
 
-:eight_spoked_asterisk: **OPCON-18814**: Added two new privileges to view and manage CloudEvents associations
+:eight_spoked_asterisk: **OPCON-19555**: Master schedules, including their jobs and privileges, may now be copied to new schedules within Solution Manager. 
 
-:eight_spoked_asterisk: **OPCON-19227**: Single Sign On: Authorized Users will be able to validate their connection to the IDP via a test connection button presented on the SSO configuration screen.
+:eight_spoked_asterisk: **OPCON-16963**: Added the ability to view, add, modify, delete, copy and move SAP BW master jobs within Solution Manager.
 
-:eight_spoked_asterisk: **OPCON-19793**: Logging: Licensing requirements added enabling the use the Single Sign On feature in Solution Manager. 
+:eight_spoked_asterisk: **OPCON-16961**: Added the ability to view, add, modify, delete, copy and move OS2200 master jobs within Solution Manager.
 
 :white_check_mark: **OPCON-19586**: Fix frequency and job dependency issues with master jobs copy.
 
@@ -44,7 +46,7 @@ sidebar_label: "Release Notes"
 
 #### Utilities
 
-:white_check_mark: **OPCON-15703**: Fixed bug where look ahead and look behind tokens weren't working.
+:white_check_mark: **OPCON-15703**: Fixed an issue in SMArt Email where look ahead and look behind tokens were not working.
 
 
 ## OpCon 22.3.1
