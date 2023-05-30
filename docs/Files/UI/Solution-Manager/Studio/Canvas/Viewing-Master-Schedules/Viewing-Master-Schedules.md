@@ -12,12 +12,17 @@ Nodes represent job, threshold, resource, or expression entities.
 
 The color on the left-hand side of the node is dependent upon the type of node, as indicated below:
 
-Light Blue: Job Node
-Dark/Royal Blue: Threshold Node
-Yellow: Resource Node
+Light Blue: Job Node  
+Dark/Royal Blue: Threshold Node  
+Yellow: Resource Node  
 Orange: Expression Node
 
 Hovering over a node will highlight the node with a solid yellow border effect. Selecting a node will highlight the selected node with a solid blue border effect.
+
+Upon opening studio the coordinate of all nodes will be saved and their positions will be updated when any node is moved.  
+Newly added nodes will be placed in the coordinate (0,0) and will be displayed with a green border.
+
+![Coordinate (0,0) Node](../../../../../../Resources/Images/SM/Studio/Canvas/studio-default-coordinate-node.png "Coordinate (0,0) Node")
 
 All nodes contain two handles - a target handle and a source handle. The target handle represents incoming edge dependencies, whereas the source handle represents outgoing edge dependencies.
 
@@ -205,7 +210,7 @@ The controls are located in the lower left hand corner of the studio canvas page
 Open/Close the legend by clicking on the info button in the controls. Here, you could see the details for each dependency line.  
 ![Studio Open/Close Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-open-close-legend-button.png "Studio Open/Close Legend")  
 The Legend will be located in the lower left corner next to the controls, Click the info button again to close the legend.  
-![Studio Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-legend.png "Studio Legend")  
+![Studio Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-legend.png "Studio Legend")
 
 ### Mini-Map
 
