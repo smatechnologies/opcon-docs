@@ -10,7 +10,7 @@ sidebar_label: "Release Notes"
 
 #### General
 
-:eight_spoked_asterisk: **OPCON-18766**: Managed File Transfer (MFT) Server is now available and comes with the ability to run a secure file transfer server and trigger actions based on events that occur on the server. MFT Server is distributed with the existing OpConMFT installer
+:eight_spoked_asterisk: **OPCON-18766**: Managed File Transfer (MFT) Server is now available and comes with the ability to run a secure file transfer server and trigger actions based on events that occur on the server. MFT Server is distributed with the existing OpConMFT installer.
 
 :eight_spoked_asterisk: **OPCON-18814**: Added two new privileges to view and manage Cloud Event Trigger associations, "View CloudEvents Associations" and "Maintain CloudEvents Associations".
 
