@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.16
+
+2023 June
+
+#### Server
+
+:white_check_mark: **OPCON-20073**: Fixed an issue in the installer that caused MFT agent system records to be removed from the database during upgrades that needed a SQL script to fix and re-add them.
+
+:white_check_mark: **OPCON-12035**: Fixed an issue where StartTimeCalculator was doing wrong calculation of start time for daily jobs.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19777**: Fixes issue where single machine selection was being ignored and schedule build was running for each machine in the machine group.
+
 ## OpCon 21.0.15
 
 2023 May

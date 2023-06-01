@@ -4,6 +4,28 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.4
+
+2023 June
+
+#### Server
+
+:white_check_mark: **OPCON-20073**: Fixed an issue in the installer that caused MFT agent system records to be removed from the database during upgrades that needed a SQL script to fix and re-add them.
+
+:white_check_mark: **OPCON-16499**: Fixed an issue with "Under Review" job status for not being added to job history.
+
+:white_check_mark: **OPCON-12035**: Fixed an issue where StartTimeCalculator was doing wrong calculation of start time for daily jobs.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19777**: Fixes issue where single machine selection was being ignored and schedule build was running for each machine in the machine group.
+
+:white_check_mark: **OPCON-19356**: Fix Required User Permissions to view Studio page.
+
+#### REST API
+
+:white_check_mark: **OPCON-16731**: Fixed migration timing out due to large AUDITRECSVIEW table.
+
 ## OpCon 22.0.3
 
 2023 May
