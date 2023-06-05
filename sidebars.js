@@ -440,6 +440,7 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Resources/Resources",
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
+                "Files/UI/Solution-Manager/Library/AccessManagement/AccessManagement",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
                 {
                   type: "category",
