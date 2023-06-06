@@ -440,6 +440,7 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Resources/Resources",
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
+                "Files/UI/Solution-Manager/Library/AccessManagement/AccessManagement",
                 "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
                 {
                   type: "category",
@@ -469,13 +470,13 @@ module.exports = {
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/IBMi-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Null-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-BW-Job-Details",
+                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Os2200-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-R3-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SQL-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Unix-Job-Details",
                             "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Windows-Job-Details",
                           ],
                         },
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Accessing-Master-Jobs",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-General-Info",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Documentation",
                         "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Tags",
@@ -539,6 +540,15 @@ module.exports = {
                   collapsed: true,
                   items: [
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations",
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Logging-Settings",
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Logs",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/Logs/List-Log-Files",
                   ],
                 },
               ],
@@ -745,7 +755,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/22-0.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/22-4.html",
     },
   ],
 };

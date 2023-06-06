@@ -4,6 +4,62 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.16
+
+2023 June
+
+#### Server
+
+:white_check_mark: **OPCON-20073**: Fixed an issue in the installer that caused MFT agent system records to be removed from the database during upgrades that needed a SQL script to fix and re-add them.
+
+:white_check_mark: **OPCON-12035**: Fixed an issue where StartTimeCalculator was doing wrong calculation of start time for daily jobs.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19777**: Fixes issue where single machine selection was being ignored and schedule build was running for each machine in the machine group.
+
+## OpCon 21.0.15
+
+2023 May
+
+#### Server
+
+:white_check_mark: **OPCON-14393**: Fixed an issue when using DDI to create new jobs, the DependentScheduleInstance column was being affected due to the day offset.
+
+#### REST API
+
+:white_check_mark: **OPCON-16731**: Fixed an issue where migration was timing out due to large AUDITRECSVIEW table.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-19570**: Fixed an issue with schedule import where autoBuildTime was missing from the schedule definition if import a schedule with auto build time of 00:00.
+
+## OpCon 21.0.14
+
+2023 April
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-18823**: Added performance improvements inside the Processes page in Solution Manager to efficiently handle large databases.
+
+#### REST API
+
+:white_check_mark: **OPCON-18942**: Fixed a potential issue with log rollovers when clock changes.
+
+#### ImpEx2 Web Service
+
+:eight_spoked_asterisk: **OPCON-19514**: For OpCon Deploy new import feature, separate auto delete days reset from auto build days reset. This feature requires OpCon Deploy 22.2.
+
+:white_check_mark: **OPCON-19164**: Fixed an issue in Deploy simulation where role check failed to list missing roles.
+
+## OpCon 21.0.13
+
+2023 March
+
+#### REST API
+
+:white_check_mark: **OPCON-15392**: Fixed an issue where the replicated OpCon database did not have all tables reseeded for unique ids and hence had a primary key violation error when building or adding jobs to daily.
+
 ## OpCon 21.0.12
 
 2023 February

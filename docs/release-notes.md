@@ -4,6 +4,158 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.4.0
+
+2023 May
+
+#### General
+
+:eight_spoked_asterisk: **OPCON-18766**: Managed File Transfer (MFT) Server is now available and comes with the ability to run a secure file transfer server and trigger actions based on events that occur on the server. MFT Server is distributed with the existing OpConMFT installer.
+
+:eight_spoked_asterisk: **OPCON-18814**: Added two new privileges to view and manage Cloud Event Trigger associations, "View CloudEvents Associations" and "Maintain CloudEvents Associations".
+
+#### Installation
+
+:white_check_mark: **OPCON-20073**: Fixed an issue in the installer that caused MFT agent system records to be removed from the database during upgrades that needed a SQL script to fix and re-add them.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17657**: Solution Manager now supports Single Sign-On with identity providers using the OpenID Connect (OIDC) protocol. Configuration options are provided for Okta and Azure AD, and an 'Other' option for all other implementers of OIDC. Learn more here: [Managing SSO](https://help.smatechnologies.com/opcon/core/Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations).
+
+:eight_spoked_asterisk: **OPCON-19555**: Master schedules, including their jobs and privileges, may now be copied to new schedules within Solution Manager. 
+
+:eight_spoked_asterisk: **OPCON-16963**: Added the ability to view, add, modify, delete, copy and move SAP BW master jobs within Solution Manager.
+
+:eight_spoked_asterisk: **OPCON-16961**: Added the ability to view, add, modify, delete, copy and move OS2200 master jobs within Solution Manager.
+
+:white_check_mark: **OPCON-19586**: Fix frequency and job dependency issues with master jobs copy.
+
+:white_check_mark: **OPCON-19777**: Fixes issue where single machine selection was being ignored and schedule build was running for each machine in the machine group.
+
+:white_check_mark: **OPCON-19783**: Fix issue where IBMi File Arrival jobs fail to copy.
+
+#### REST API
+
+:white_check_mark: **OPCON-19763**: Fixes issue with self service executions when using the 'Choice' type with dynamic schedule names not being able to be used with the API.
+
+:white_check_mark: **OPCON-20048**: Fixed an issue with Schedule Copy Endpoint which was creating duplicates if new name has an underscore.
+
+:white_check_mark: **OPCON-20664**: Fixed an issue with API where posted CloudEvents will not get deleted from History table when there are no filters defined causing a PRIMARY KEY VIOLATION in CloudEventsArchive table when same event gets reprocessed repeatedly.
+
+:white_check_mark: **OPCON-20078**: Allow users with ocadm role or AllFunctionPrivileges to view or maintain CloudEvents associations.
+
+#### Utilities
+
+:white_check_mark: **OPCON-15703**: Fixed an issue in SMArt Email where look ahead and look behind tokens were not working.
+
+
+## OpCon 22.3.1
+
+2023 May
+
+#### Server
+
+:white_check_mark: **OPCON-19758**: Fixed an issue where multiple SMANetcom instances tried to write to the same API agent log file and was stopped by Servman as it kept getting locked out from writing to it.
+
+:white_check_mark: **OPCON-12035**: Fixed an issue with wrong calculation of start time for daily jobs
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-18775**: Master Jobs: IMBi users are provided with additional field codes improving the usability of the IBMi Agent.  These field codes allow for more efficient and accurate data entry by providing shortcuts for commonly used values in IBMi systems.
+
+:eight_spoked_asterisk: **OPCON-19224**: Studio Canvas: Users are provided with the capability of copying an existing schedule.  In addition, the user will have the option to include or exclude jobs that are associated with schedule chosen to copy.  
+
+:white_check_mark: **OPCON-16104**: Fixed "key not found" issue on Deployment Info section of Daily Schedule Definition page.
+
+:white_check_mark: **OPCON-19126**: Fixes issue with slow performance when trying to load tag manager filter results.
+
+:white_check_mark: **OPCON-19224**: Fixed an issue with daily schedule operations where no jobs would appear when trying to add jobs to sub-schedules. 
+
+:white_check_mark: **OPCON-19224**: Fixes issue with start time, end time, and job end time not saving correctly from Daily Job maintenance when days were set to '0' for all three fields.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-19570**: Fixed an issue with schedule import where autoBuildTime was missing from the schedule definition if import a schedule with auto build time of 00:00.
+
+
+## OpCon 22.2.0
+
+2023 April
+
+#### Server
+
+:white_check_mark: **OPCON-12756**: After an error during the deletion of messages to SAM, netcom will check connection to database and reconnect if it has been lost.
+
+:white_check_mark: **OPCON-16015**: Fixed an issue in SMA_REMAPSQLUSERSTOLOGINS.sql related to database mirroring
+
+:white_check_mark: **OPCON-19202**: Return job initialization failure when OpCon MFT job start fails.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17771**: Master Jobs: Users are provided with the capability of resetting a Master Job type.  Resetting a job type allows the user reset the job type while keeping the characteristics of the job such as dependencies, schedule, frequency etc..
+
+:eight_spoked_asterisk: **OPCON-17781**: Master Jobs: Users are provided with the ability to view Job Execution History from the Master Jobs page.
+
+:eight_spoked_asterisk: **OPCON-18528**: Studio Canvas: Users are provided an informational icon that provides a legend for referencing the dependency color lines and relationships.
+
+:eight_spoked_asterisk: **OPCON-18819**: Adds the ability to active Server functionality on an OpConMFT Agent with a valid license. To enable Server functionality, the Agent must already be authenticated and the webhook must be registered with the Agent.
+
+:eight_spoked_asterisk: **OPCON-19026**: Studio Canvas: Users are provided the option to isolate a jobs dependencies on the canvas.  By right clicking a job node, the user can select to see previous dependencies, subsequent dependencies, see a jobs dependency chain and show a jobs shortest path.
+
+:eight_spoked_asterisk: **OPCON-19250**: Studio Canvas: Users are provided the option to isolate the threshold dependencies on the canvas.  By right clicking a threshold dependency, the user can select to see previous dependencies, subsequent dependencies, see a threshold dependency chain and show a thresholds shortest path.
+
+:eight_spoked_asterisk: **OPCON-19272**: Studio Canvas: Users are provided the option to isolate the resource dependencies on the canvas.  By right clicking a resource dependency, the user can select to see previous dependencies, subsequent dependencies, see resource dependency chain and show a resources shortest path.
+
+:white_check_mark: **OPCON-18823**: Added performance improvements inside the processes page in Solution Manager to efficiently handle large databases. 
+
+:white_check_mark: **OPCON-18842**: Fixed an issue where Start Time and End Time were not properly displayed for IBMi File Arrival jobs.
+
+:white_check_mark: **OPCON-18941**: Fixed empty schedule name with new grid.
+
+:white_check_mark: **OPCON-18950**: Fixed nodes not showing after copying a job from another schedule.
+
+:white_check_mark: **OPCON-19003**: Removed error message and added info message for empty schedule.
+
+:white_check_mark: **OPCON-19125**: Fixed an error in Tag Manager filter when the database contains job types that are not yet supported.
+
+:white_check_mark: **OPCON-19143**: Fixed an issue where File Transfer job type was not visible when adding a new master job.
+
+:white_check_mark: **OPCON-19169**: Fixed a bug that prevented non ocadm users from retrieving master transfer jobs.
+
+:white_check_mark: **OPCON-19426**: The Master Jobs Definition page now displays the Schedules list in alphabetical order.
+
+#### REST API
+
+:eight_spoked_asterisk: **OPCON-18820**: Add two new properties on the Machine model - opconMftServerEnabled and opconMftServerEventsWebhook
+
+:eight_spoked_asterisk: **OPCON-18821**: Allows enabling MFT Server functionality on an OpConMFT Agent granted that there is a valid license.
+
+:white_check_mark: **OPCON-19842**: Fixed potential issue with log rollovers when clock changes.
+
+:white_check_mark: **OPCON-19135**: Fixed issue where adding a calendars with an id higher than the maximum small integer would error.
+
+:white_check_mark: **OPCON-19558**: Fixed database migration error with ClouldEvents
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-19164**: Fixed an issue in Deploy simulation where role check failed to list missing roles.
+
+## OpCon 22.1.0
+
+2023 March
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17687**: Added a mini-map on the canvas for a high level overview and quick navigation of the selected schedule.
+
+:eight_spoked_asterisk: **OPCON-17688**: Animated lines between nodes have been replaced with static lines for easier viewing of the displayed items.
+
+:eight_spoked_asterisk: **OPCON-18383**: Authorized users will be able to see Single Sign On (SSO) configuration page within Server Options.
+
+#### REST API
+
+:white_check_mark: **OPCON-15392**: Fixed an issue where the replicated OpCon database did not have all tables reseeded for unique ids and hence had a primary key violation error when building or adding jobs to the Daily.
+
 ## OpCon 22.0.0
 
 2023 February

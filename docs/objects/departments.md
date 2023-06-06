@@ -5,5 +5,4 @@ Departments can be used to secure function privileges associated with individual
 The following information applies to defining departments:
 
 - **Name**: Defines the name for the defined department.
-- **Documentation**: Provides an area for descriptions, explanations,
-    and notes that can be updated for the department.
+- **Documentation**: Provides an area for descriptions, explanations, and notes that can be updated for the department.

@@ -12,9 +12,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: yarn install
-      - run: yarn build
       - uses: kheiakiyama/install-azcopy-action@v1
         with:
           version: 'v10'
+      # copy content to new app 
+      - run: azcopy_v10 copy './docs' '${{ secrets.HELP_CONTENT_URL }}/content/${{ github.repository }}?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
+      - run: azcopy_v10 copy './static' '${{ secrets.HELP_CONTENT_URL }}/content/${{ github.repository }}?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
+      - run: azcopy_v10 copy './sidebars.js' '${{ secrets.HELP_CONTENT_URL }}/content/${{ github.repository }}?${{ secrets.HELP_CONTENT_TOKEN }}'
+      # publish compiled output to existing app
+      - run: yarn install
+      - run: yarn build
       - run: azcopy_v10 copy 'build/*' '${{ secrets.DOCS_STORAGE_URL }}/${{ secrets.DOCS_STORAGE_PATH }}?${{ secrets.DOCS_STORAGE_KEY }}' --recursive
