@@ -201,7 +201,7 @@ Job nodes represented as container jobs have the ability to contain subschedules
 
 ### Controls
 
-The controls are located in the lower left hand corner of the studio canvas page. Here, you can zoom in, zoom out, fit the page to the screen, lock panning, opening/closing the legend, and refetch schedule information.
+The controls are located in the lower left hand corner of the studio canvas page. Here, you can zoom in, zoom out, center to root node, fit to screen and download canvas page image.
 
 ![Studio View Controls](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-controls.png "Studio View Controls")
 
