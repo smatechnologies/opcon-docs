@@ -1,17 +1,21 @@
 # Managing Logging Settings
-The Logging settings contains log and trace settings for the SAM.
 
-:::note
-Only the OpCon administrative users in the **ocadm** role can access the logging options.
-:::
+## Required Privileges
+
+In order to access the Server Options page and configure the **Logging** setting, you must have the following:
+
+- **Role**: User must be assigned to the Role_ocadm.
+
+---
 
 ## Configuring Logging
 
-To configure Logging Settings, go to **Library** > **Server Options** > click on the **Logging** panel.
+To configure Logging Settings, go to **Library** > **Server Options** > click on the **LOGGING** tab.
 
 ![A screen showing logging settings under server options](../../../../../Resources/Images/SM/Library/ServerOptions/Logging-Settings.png "Configuring Logging Settings")
 
 ### Reset Values to Default
+
 1. Click **Reset to Default** button to reset the settings to their default.
 2. Click **Save** button to save your changes.
 
@@ -19,6 +23,8 @@ To configure Logging Settings, go to **Library** > **Server Options** > click on
 
 
 ### Configuration Options
+
+The Logging settings contains log and trace settings for the SAM.
 
 | Setting | Default Value | Required | Description |
 | --- | --- | --- | --- |

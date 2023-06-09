@@ -2,7 +2,7 @@
 
 ## Required Privileges
 
-In order to access the Server Options page and configure the Single Sign-On setting, you must have the following:
+In order to access the Server Options page and configure the **Single Sign-On** setting, you must have the following:
 
 - **Role**: User must be assigned to the Role_ocadm.
 
@@ -10,11 +10,11 @@ In order to access the Server Options page and configure the Single Sign-On sett
 
 ## Configuring SSO
 
-To configure SSO Settings, go to **Library** > **Server Options** > click on the **SSO** panel.
+To configure SSO Settings, go to **Library** > **Server Options** > click on the **SSO** tab.
 
 #### SSO Configuration Fields
 
-![Server Options - SSO Settings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-overall.png "SSO Panel")
+![Server Options - SSO Settings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-overall.png "SSO Tab")
 
 1. Click on the **Switch** to enable access to the SSO login button.
 
@@ -115,9 +115,9 @@ This document will describe the steps needed to create a custom application in O
     1.  Set the following options:
         1.  Grant type: Authorization Code
         1.  Sign-in redirects URIs:(sample) `https://<hostname:443>/login/callback`
-            1. The **Redirect URI** will be used on the SSO configuration panel in Solution Manager.
+            1. The **Redirect URI** will be used on the SSO configuration tab in Solution Manager.
             1. Make sure to include **/login/callback**.
-        1.  The value for the URL to access Solution Manager will be used in the SSO configuration panel
+        1.  The value for the URL to access Solution Manager will be used in the SSO configuration tab
         1.  Sign-out redirects URIs: This value is not necessary
         1.  Controlled access: Allow everyone in your organization access (for this example)
         1.  If an option was not listed, you may select the one that is more convenient for your organization
@@ -143,7 +143,7 @@ This document will describe the steps needed to create a custom application in O
           1. Make sure to add **appuser.email** in the **Value** text field
              ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta_opconid_claim.png "Okta - Add Email Claim")
     1. Click on the “Settings” tab and take notes of the following values:
-       1. Issuer, this will be used as the **Authority** value in the SSO configuration panel
+       1. Issuer, this will be used as the **Authority** value in the SSO configuration tab
           ![Okta-Application](../../../../../Resources/Images/SM/Library/ServerOptions/okta-server-settings.png "Okta - Default Server Settings")
     1. Go to the "Token Preview" tab
        1. Type the name your newly created application
@@ -159,7 +159,7 @@ This document will describe the steps needed to create a custom application in O
 
 :::note
 
-- Make sure to the values of “**openid**“ in the Scope textbox inside the SSO configuration panel inside Solution Manager.
+- Make sure to the values of “**openid**“ in the Scope textbox inside the SSO configuration tab inside Solution Manager.
 - Make sure the **email** for the users allowed to access the application matches their username. This value will be used to pair with an existing OpCon user or it will be used to create a new user in the OpCon environment.
 
 :::
@@ -177,7 +177,7 @@ This document describes the steps needed to create a custom application in Azure
       1. Select Single-page application (SPA)
       1. Set the Redirect URI
          1. For example, `https://<yourhostname>:8080/login/callback`
-      1. The **Redirect URI** value will be used on the SSO configuration panel in Solution Manager.
+      1. The **Redirect URI** value will be used on the SSO configuration tab in Solution Manager.
          1. Make sure to include **/login/callback** as part of the URI.
             ![Azure- Register Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-register-application.png "Azure - Register Application")
    1. Register Application
@@ -188,12 +188,12 @@ This document describes the steps needed to create a custom application in Azure
       ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-platform-configuration.png "Azure - Platform Configuration")
 1. Go to “Overview” in the left navigation menu
    1. Note down the following information, you will need it later:
-   1. The application (client) ID will be used as the **Client ID** in the SSO configuration panel inside Solution Manager
+   1. The application (client) ID will be used as the **Client ID** in the SSO configuration tab inside Solution Manager
    1. Click on “Endpoints” and note down the OpenID Connect value
    1. Copy this value and paste it on a browser and find the issuer value inside the JSON
       1. It is highly recommended that you copy this text from the browser and paste it into an application that can format the JSON value
          ![Azure-Application](../../../../../Resources/Images/SM/Library/ServerOptions/azure-formatted-json.png "Azure - Formatted JSON")
-      1. Note down the Issuer URI, this value will be used in the **Authority** field in the SSO configuration panel inside Solution Manager
+      1. Note down the Issuer URI, this value will be used in the **Authority** field in the SSO configuration tab inside Solution Manager
 1. Go to “API permissions” which is found on the left navigation menu
    1. Select Add a permission
    1. Click on “Add a permission” and select Microsoft Graph
@@ -216,7 +216,7 @@ This document describes the steps needed to create a custom application in Azure
 
 :::note
 
-- Make sure to add the “**openid**” Scope in the SSO configuration panel inside Solution Manager
+- Make sure to add the “**openid**” Scope in the SSO configuration tab inside Solution Manager
 - The token retrieve from this application will be used to make calls to Microsoft Graph Api
   - The calls include:
     - https://graph.microsoft.com/v1.0/me : From this call, we will retrieve the property **userPrincipalName** which is the value of the authenticated user's username (email). This will be used as the opcon identifier inside Solution Manager.

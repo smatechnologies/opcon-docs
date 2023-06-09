@@ -540,6 +540,7 @@ module.exports = {
                   collapsed: true,
                   items: [
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations",
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-General-Settings",
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Logging-Settings",
                   ],
                 },
