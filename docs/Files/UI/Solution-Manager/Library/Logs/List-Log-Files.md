@@ -14,4 +14,4 @@ Click a row to open the Log File Details Page and see more detailed information 
 
 ### Download File
 
-Click the ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
+Click the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
