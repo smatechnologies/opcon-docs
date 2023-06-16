@@ -8,4 +8,4 @@ viewport: width=device-width, initial-scale=1.0
 
 The Access Management page is found in Library -> Access Management, and provides the views to manage User Accounts, Privileges, and Roles.
 
-![Access Management Page](../../../../../Resources/Images/SM/Library/AccessManagement/access-management-page.png 'Access Management Page')
+![Access Management Page](../../../../../Resources/Images/SM/Library/AccessManagement/accessManagementPage.png 'Access Management Page')
