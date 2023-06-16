@@ -2,7 +2,7 @@
 
 ## Required Privileges
 
-In order to access the Server Options page and configure the **Logging** setting, you must have the following:
+In order to access the Server Options page and configure the **Notifications** settings, you must have the following:
 
 - **Role**: User must be assigned to the Role_ocadm.
 
