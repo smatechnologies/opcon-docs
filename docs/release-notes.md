@@ -4,6 +4,36 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.5.0
+
+2023 June
+
+#### Server
+
+:white_check_mark: **OPCON-16073**: License is now recognized and applied automatically in OpCon on Linux.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17784**: Users, Roles and Permissions: Users will be provided with a link from the Library providing access to the new Access Management page. This page will be the foundation for the management of users, roles and their permissions within Solution Manager. This first offering provides the user with the initial view into the management of roles.
+
+:eight_spoked_asterisk: **OPCON-17790**: Server Options: This feature will launch a new landing page for Server Options. This initial release will introduce the user to the General Details tab, the first of many, providing the user access to configurations related to your Solution Manager setup.
+
+:eight_spoked_asterisk: **OPCON-19799**: Logging: This feature will deliver authorized users the ability to download the contents of a base log file directly from Solution Manager. With this new capability, you can obtain log file data for in-depth analysis or archival purposes.
+
+:eight_spoked_asterisk: **OPCON-19803**: Logging: This feature will deliver authorized users the ability to view the contents of the base log files directly within Solution Manager. With this new capability, you can gain valuable insights, track system behavior and troubleshoot issues effectively.
+
+:eight_spoked_asterisk: **OPCON-20676**: Users, Roles and Permissions: This release will provide users with an improved and convenient way to manage roles within our application. With the initial view of a list of roles, you can now have a clear overview of existing roles and their descriptions.
+
+:white_check_mark: **OPCON-20725**: [[$EXTERNAL]] properties are now populated in the Job Instance Property Suggestion tooltip.
+
+:white_check_mark: **OPCON-20828**: Fixed error where under some circumstances a user is unable to save a CloudEvents Trigger Association.
+
+:white_check_mark: **OPCON-20865**: Fixed an issue in Notification Triggers Manage Groups page where filtering by selected jobs sometimes gave a job not found error.
+
+:white_check_mark: **OPCON-20873**: Fixed an issue in Notification Triggers Manage Groups page where scrolling through the pages and selecting jobs sometimes gave a job not found error.
+
+:white_check_mark: **OPCON-20971**: Updated Job Type filter on Master Jobs page to include only supported job types.
+
 ## OpCon 22.4.0
 
 2023 May
@@ -22,7 +52,7 @@ sidebar_label: "Release Notes"
 
 :eight_spoked_asterisk: **OPCON-17657**: Solution Manager now supports Single Sign-On with identity providers using the OpenID Connect (OIDC) protocol. Configuration options are provided for Okta and Azure AD, and an 'Other' option for all other implementers of OIDC. Learn more here: [Managing SSO](https://help.smatechnologies.com/opcon/core/Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations).
 
-:eight_spoked_asterisk: **OPCON-19555**: Master schedules, including their jobs and privileges, may now be copied to new schedules within Solution Manager. 
+:eight_spoked_asterisk: **OPCON-19555**: Master schedules, including their jobs and privileges, may now be copied to new schedules within Solution Manager.
 
 :eight_spoked_asterisk: **OPCON-16963**: Added the ability to view, add, modify, delete, copy and move SAP BW master jobs within Solution Manager.
 
@@ -48,7 +78,6 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OPCON-15703**: Fixed an issue in SMArt Email where look ahead and look behind tokens were not working.
 
-
 ## OpCon 22.3.1
 
 2023 May
@@ -61,22 +90,21 @@ sidebar_label: "Release Notes"
 
 #### Solution Manager
 
-:eight_spoked_asterisk: **OPCON-18775**: Master Jobs: IMBi users are provided with additional field codes improving the usability of the IBMi Agent.  These field codes allow for more efficient and accurate data entry by providing shortcuts for commonly used values in IBMi systems.
+:eight_spoked_asterisk: **OPCON-18775**: Master Jobs: IMBi users are provided with additional field codes improving the usability of the IBMi Agent. These field codes allow for more efficient and accurate data entry by providing shortcuts for commonly used values in IBMi systems.
 
-:eight_spoked_asterisk: **OPCON-19224**: Studio Canvas: Users are provided with the capability of copying an existing schedule.  In addition, the user will have the option to include or exclude jobs that are associated with schedule chosen to copy.  
+:eight_spoked_asterisk: **OPCON-19224**: Studio Canvas: Users are provided with the capability of copying an existing schedule. In addition, the user will have the option to include or exclude jobs that are associated with schedule chosen to copy.
 
 :white_check_mark: **OPCON-16104**: Fixed "key not found" issue on Deployment Info section of Daily Schedule Definition page.
 
 :white_check_mark: **OPCON-19126**: Fixes issue with slow performance when trying to load tag manager filter results.
 
-:white_check_mark: **OPCON-19224**: Fixed an issue with daily schedule operations where no jobs would appear when trying to add jobs to sub-schedules. 
+:white_check_mark: **OPCON-19224**: Fixed an issue with daily schedule operations where no jobs would appear when trying to add jobs to sub-schedules.
 
 :white_check_mark: **OPCON-19224**: Fixes issue with start time, end time, and job end time not saving correctly from Daily Job maintenance when days were set to '0' for all three fields.
 
 #### ImpEx2 Web Service
 
 :white_check_mark: **OPCON-19570**: Fixed an issue with schedule import where autoBuildTime was missing from the schedule definition if import a schedule with auto build time of 00:00.
-
 
 ## OpCon 22.2.0
 
@@ -92,7 +120,7 @@ sidebar_label: "Release Notes"
 
 #### Solution Manager
 
-:eight_spoked_asterisk: **OPCON-17771**: Master Jobs: Users are provided with the capability of resetting a Master Job type.  Resetting a job type allows the user reset the job type while keeping the characteristics of the job such as dependencies, schedule, frequency etc..
+:eight_spoked_asterisk: **OPCON-17771**: Master Jobs: Users are provided with the capability of resetting a Master Job type. Resetting a job type allows the user reset the job type while keeping the characteristics of the job such as dependencies, schedule, frequency etc..
 
 :eight_spoked_asterisk: **OPCON-17781**: Master Jobs: Users are provided with the ability to view Job Execution History from the Master Jobs page.
 
@@ -100,13 +128,13 @@ sidebar_label: "Release Notes"
 
 :eight_spoked_asterisk: **OPCON-18819**: Adds the ability to active Server functionality on an OpConMFT Agent with a valid license. To enable Server functionality, the Agent must already be authenticated and the webhook must be registered with the Agent.
 
-:eight_spoked_asterisk: **OPCON-19026**: Studio Canvas: Users are provided the option to isolate a jobs dependencies on the canvas.  By right clicking a job node, the user can select to see previous dependencies, subsequent dependencies, see a jobs dependency chain and show a jobs shortest path.
+:eight_spoked_asterisk: **OPCON-19026**: Studio Canvas: Users are provided the option to isolate a jobs dependencies on the canvas. By right clicking a job node, the user can select to see previous dependencies, subsequent dependencies, see a jobs dependency chain and show a jobs shortest path.
 
-:eight_spoked_asterisk: **OPCON-19250**: Studio Canvas: Users are provided the option to isolate the threshold dependencies on the canvas.  By right clicking a threshold dependency, the user can select to see previous dependencies, subsequent dependencies, see a threshold dependency chain and show a thresholds shortest path.
+:eight_spoked_asterisk: **OPCON-19250**: Studio Canvas: Users are provided the option to isolate the threshold dependencies on the canvas. By right clicking a threshold dependency, the user can select to see previous dependencies, subsequent dependencies, see a threshold dependency chain and show a thresholds shortest path.
 
-:eight_spoked_asterisk: **OPCON-19272**: Studio Canvas: Users are provided the option to isolate the resource dependencies on the canvas.  By right clicking a resource dependency, the user can select to see previous dependencies, subsequent dependencies, see resource dependency chain and show a resources shortest path.
+:eight_spoked_asterisk: **OPCON-19272**: Studio Canvas: Users are provided the option to isolate the resource dependencies on the canvas. By right clicking a resource dependency, the user can select to see previous dependencies, subsequent dependencies, see resource dependency chain and show a resources shortest path.
 
-:white_check_mark: **OPCON-18823**: Added performance improvements inside the processes page in Solution Manager to efficiently handle large databases. 
+:white_check_mark: **OPCON-18823**: Added performance improvements inside the processes page in Solution Manager to efficiently handle large databases.
 
 :white_check_mark: **OPCON-18842**: Fixed an issue where Start Time and End Time were not properly displayed for IBMi File Arrival jobs.
 
