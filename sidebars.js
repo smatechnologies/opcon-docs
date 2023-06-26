@@ -553,7 +553,6 @@ module.exports = {
                   items: [
                     "Files/UI/Solution-Manager/Library/Logs/List-Log-Files",
                     "Files/UI/Solution-Manager/Library/Logs/Log-File-Details",
-
                   ],
                 },
               ],
@@ -760,7 +759,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/22-4.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/22-5.html",
     },
   ],
 };
