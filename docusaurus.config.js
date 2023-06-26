@@ -3,7 +3,7 @@ module.exports = {
   title: "SMA Technologies Help",
   tagline: "OpCon",
   url: "https://help.smatechnologies.com",
-  baseUrl: "/opcon/core/v22.5",
+  baseUrl: "/opcon/core/v22.5/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
