@@ -4,6 +4,30 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.5
+
+2023 July
+
+#### Server
+
+:white_check_mark: **OPCON-16073**: License is now recognized and applied automatically in OpCon on Linux.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19766**: Fixed an issue in Studio Canvas where long labels would overflow the job boxes.
+
+:white_check_mark: **OPCON-20586**: Fixed an issue in Studio Canvas where expression dependencies could not be added.
+
+:white_check_mark: **OPCON-20865**: Fixed an issue in Notification Triggers Manage Groups page where filtering by selected jobs in a group would sometimes display incorrect jobs.
+
+:white_check_mark: **OPCON-20873**: Fixed an issue in Notification Triggers Manage Groups page where scrolling through the pages and selecting jobs would sometimes give a job not found error.
+
+:white_check_mark: **OPCON-20971**: Updated Job Type filter on Master Jobs page to include only supported job types.
+
+#### Documentation
+
+:white_check_mark: **OPCON-19422**: Fixed an issue with Swagger documentation where URLs for endpoint actions were not displayed.
+
 ## OpCon 22.0.4
 
 2023 June
