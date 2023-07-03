@@ -4,6 +4,14 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.17
+
+2023 July
+
+#### Server
+
+:white_check_mark: **OPCON-16073**: License is now recognized and applied automatically in OpCon on Linux.
+
 ## OpCon 21.0.16
 
 2023 June
