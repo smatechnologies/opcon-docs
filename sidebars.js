@@ -544,6 +544,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-General-Settings",
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Logging-Settings",
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Notification-Settings",
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Reset-Settings",
                   ],
                 },
                 {
