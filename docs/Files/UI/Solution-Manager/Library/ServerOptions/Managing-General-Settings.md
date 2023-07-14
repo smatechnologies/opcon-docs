@@ -8,7 +8,7 @@ In order to access the Server Options page and configure the **General** setting
 
 ---
 
-## General Settings
+## Configuring General
 
 To configure General Settings, go to **Library** > **Server Options** > click on the **GENERAL** tab.
 
