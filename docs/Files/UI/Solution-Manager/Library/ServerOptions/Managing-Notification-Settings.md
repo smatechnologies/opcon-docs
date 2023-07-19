@@ -8,9 +8,9 @@ In order to access the Server Options page and configure the **Notifications** s
 
 ---
 
-## Configuring Notification Settings
+## Configuring Notification
 
-To configure Notifications Settings, go to **Library** > **Server Options** > click on the **Notifications** tab.
+To configure Notifications Settings, go to **Library** > **Server Options** > click on the **NOTIFICATIONS** tab.
 
 ![A screen showing notification settings under server options](../../../../../Resources/Images/SM/Library/ServerOptions/Notification-Settings.png "Configuring Notification Settings")
 

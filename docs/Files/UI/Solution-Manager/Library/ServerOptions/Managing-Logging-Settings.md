@@ -10,14 +10,9 @@ In order to access the Server Options page and configure the **Logging** setting
 
 ## Configuring Logging
 
-To configure Logging Settings, go to **Library** > **Server Options** > click on the **LOGGING** tab.
+To configure Logging Settings, go to **Library** > **Server Options** > click on the **LOGGIGN** tab.
 
 ![A screen showing logging settings under server options](../../../../../Resources/Images/SM/Library/ServerOptions/Logging-Settings.png "Configuring Logging Settings")
-
-### Reset Values to Default
-
-1. Click **Reset to Default** button to reset the settings to their default.
-2. Click **Save** button to save your changes.
 
 **The table below shows default values for each settings. If user changes the default value of a setting, ![An user icon representing value changed by user](../../../../../Resources/Images/SM/Library/ServerOptions/Logging-User-Defined.png "User defined icon") icon will show next to the field.*
 
