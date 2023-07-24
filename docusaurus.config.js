@@ -34,7 +34,6 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/smatechnologies/opcon-docs/blob/release/22.6",
           },
-        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
