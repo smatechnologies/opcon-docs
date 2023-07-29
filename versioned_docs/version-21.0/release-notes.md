@@ -4,6 +4,18 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.18
+
+2023 July
+
+#### Server
+
+:white_check_mark: **OPCON-15037**: Fixed issue of incorrect estimate start time of a daily job that depends on multi-instance jobs.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-20706**: A null pointer exception occurred during the Simulation process when checking the batch user associated with a File Transfer task definition and the source or destination machine is not defined in the target OpCon system. A message has been included indicating that the batch user could not be checked as the File Transfer machine was not defined.
+
 ## OpCon 21.0.17
 
 2023 July
