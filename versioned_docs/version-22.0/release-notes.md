@@ -4,6 +4,30 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.6
+
+2023 July
+
+#### Server
+
+:white_check_mark: **OPCON-21275**: Fixed an issue in schedule builds where a named instance schedule having job exceptions defined on it failed if the exception had a property expression with global properties referenced.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19738**: Fixed an issue where 'Use Schedule Instance Machine', 'Run on Least Tasked Machine', and 'Run on Each Machine' were missing for some job types in Master Jobs page.
+
+#### REST API
+
+:white_check_mark: **OPCON-19733**: Fixed an issue where OpCon API didn't verify machine group features.
+
+:white_check_mark: **OPCON-21272**: Fixed a performance issue in the OpCon API where a container job timed out fetching details if there were a large number of schedules built in daily tables.
+
+:white_check_mark: **OPCON-21282**: Fixed an issue in OpCon API where the 20.0 database migration failed if the database had 2100 user or more defined.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-20706**: A null pointer exception occurred during the Simulation process when checking the batch user associated with a File Transfer task definition and the source or destination machine is not defined in the target OpCon system. A message has been included indicating that the batch user could not be checked as the File Transfer machine was not defined.
+
 ## OpCon 22.0.5
 
 2023 July
