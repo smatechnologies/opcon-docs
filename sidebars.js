@@ -546,6 +546,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Notification-Settings",
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings",
                     "Files/UI/Solution-Manager/Library/ServerOptions/Reset-Settings",
+                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Vision-Settings",
                     "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations",
                   ],
                 },
