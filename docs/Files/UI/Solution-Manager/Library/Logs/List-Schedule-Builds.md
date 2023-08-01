@@ -1,6 +1,9 @@
 # List Schedule Build Logs
 
-The **Schedule Build** tab allows you to view list of log files for scheduled builds. User must have the **ViewScheduleBuildLogs** permission to view this page.
+The **Schedule Build** tab allows you to view list of log files for scheduled builds. User must be a member of a role with a least one of the following privileges to view this tab:
+
+- All Function Privileges
+- View Schedule Build Log
 
 ![A screen showing list of schedule build files](../../../../../Resources/Images/SM/Library/Logs/ScheduleBuildLog.png "List of schedule build logs")
 

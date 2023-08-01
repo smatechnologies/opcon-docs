@@ -2,7 +2,7 @@
 
 The **Log File Details** page allows you to view the description and content of the selected log file.
 
-![A screen showing log file details](../../../../../Resources/Images/SM/Library/Logs/Log-File-Details.png "Log File Details")
+![A screen showing log file details](../../../../../Resources/Images/SM/Library/Logs/LogDetails.png "Log File Details")
 
 ### Search
 
