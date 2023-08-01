@@ -1,12 +1,12 @@
-# List Log Files
+# List Application Logs
 
-The **Logs** module allows you to view list of current log files.
+The **Application Logs** tab allows you to view list of current log files. User must have the **ViewScheduleBuildLogs** permission to view this page.
 
-![A screen showing list of log files](../../../../../Resources/Images/SM/Library/Logs/Logs-List-Log-Files.png "List of Log Files")
+![A screen showing list of log files](../../../../../Resources/Images/SM/Library/Logs/ApplicationLogs.png "List of Log Files")
 
 ### Filtering & Sorting
 
-You can filter and sort log files by using the column headers in the list.
+You can filter and sort log files by using the column headers in the list. You can also filter by entering text in the **Name** or **Size** field, case insensitive.
 
 ### Log File Details
 
