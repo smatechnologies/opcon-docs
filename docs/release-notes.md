@@ -4,6 +4,48 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.6.0
+
+2023 July
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17793**: Server Options: This feature delivers the addition of the SMTP server settings configuration tab within Server Options. This new feature will allows administrators to easily setup and manage email notifications, enhancing communication to keep you up to date with system activities.
+
+:eight_spoked_asterisk: **OPCON-17794**: Server Options: This feature delivers a new notification tab within Server Options. This function empowers the administrator to fine tune their preferences for receiving notifications.
+
+:eight_spoked_asterisk: **OPCON-17796**: Server Options: This feature delivers a new security tab within Server Options. This function empowers the administrator to enhance the security of their users accounts with various options to enforce password rules.
+
+:eight_spoked_asterisk: **OPCON-19759**: Studio Canvas: This feature enhancement optimizes the process of storing and retrieving node positions on the canvas, resulting in a smoother and more responsive user experience.
+
+:eight_spoked_asterisk: **OPCON-19801**: Logging: This feature will deliver authorized users the ability to view the contents of the archived log files directly within Solution Manager. This capability is aimed at improving log management efficiency and facilitating easier log analysis.
+
+:eight_spoked_asterisk: **OPCON-19844**: Logging: This feature will deliver authorized users the ability to download the contents of a archived log file directly from Solution Manager. This new capability will improve log management workflows and provide users with more control over their archived logs.
+
+:eight_spoked_asterisk: **OPCON-20241**: Users, Roles and Permissions: This feature delivers the addition of a read-only General tab within Access Management. This new feature provides administrators the capability to view details related to existing roles and the privileges assigned to that role.
+
+:eight_spoked_asterisk: **OPCON-20603**: Logging: Authorized users will have access to a list of archived log files with the ability to see additional details such as the file name, type of file, size and date/time of capture.
+
+:eight_spoked_asterisk: **OPCON-20679**: Users, Roles and Permissions: This feature delivers the addition of a read-only Activities tab within Access Management. Administrators will be able to view the activities and functions assigned to existing roles allowing for better visibility over assigned permissions.
+
+:eight_spoked_asterisk: **OPCON-20804**: Server Options: This feature provides administrators with a convenient way to revert the settings to the default system settings on a single tab or for all changes made on multiple tabs. We believe this addition will enhance usability and flexibility, allowing you to fine tune your setting with ease.
+
+:white_check_mark: **OPCON-20590**: Fixed an issue where copying a job in Studio Canvas would display the message "Job is read only" on the right hand panel.
+
+:white_check_mark: **OPCON-20720**: Fixed an issue in Master Jobs page where not all target schedules were displayed when moving a job from one schedule to another.
+
+:white_check_mark: **OPCON-20722**: Fixed an issue where certain special characters in the new job name were being removed or replaced when copying a master job.
+
+:white_check_mark: **OPCON-20909**: Fixed an issue in the Logs page where sorting log files by size was not working correctly.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-20706**: A null pointer exception occurred during the Simulation process when checking the batch user associated with a File Transfer task definition and the source or destination machine is not defined in the target OpCon system. A message has been included indicating that the batch user could not be checked as the File Transfer machine was not defined.
+
+#### Utilities
+
+:eight_spoked_asterisk: **OPCON-20926**: Added SMA Check Identity Limit job to the SMAUtility schedule when creating a new database.
+
 ## OpCon 22.5.0
 
 2023 June
