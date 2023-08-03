@@ -21,7 +21,7 @@ Click the download ![Download button](../../../../../Resources/Images/SM/Library
 
 ### List of collected logs:
 
-Following are logs that being picked up and are available in the **Application Logs** tab. This list does not represent all the logs that are available in the application.
+The following logs are available in the **Application Logs** tab. This list does not represent all the logs that are available in the application.
 
 - SAM - The SAM Log includes all processing information relating to Schedule and Job starts, Schedule and Job completions, Event processing, etc. The SAM also writes all configuration information to the log when it starts up or when it regenerates.
 
@@ -29,7 +29,7 @@ Following are logs that being picked up and are available in the **Application L
 
 - Netcom - The SMANetCom Log includes configuration type information relating to configuration parameters, basic communication information and the configuration for each LSAM machine. If the default value for a parameter is changed, the default value will be listed in parentheses next to the relevant parameter.
 
-- Netcom Trace - The SMANetCom will write all processing information into the SMANetComTrace.log. The trace records written to this log will include detailed TCP/IP messages as well as socket connection errors to help with any debugging process.
+- NetcomTrace - The SMANetCom will write all processing information into the SMANetComTrace.log. The trace records written to this log will include detailed TCP/IP messages as well as socket connection errors to help with any debugging process.
 
 - ServMan - The SMAServMan Log includes all information relating to the management of all listed applications.
 
@@ -41,9 +41,11 @@ Following are logs that being picked up and are available in the **Application L
 
 - SMAApiAgentNetcom
 
+- SMALsamDataRetriever - The Data Retriever Log captures information related to the requests from the Job Output Retrieval System (JORS).
+
 - NotifyHandler (also referred to as ENS) - The ENS Log or the SMANotifyHandler.log records all information relating to notification processing.
 
-- Start Time Calculator - The Start Time Calculator will log any recalculated start times for active jobs.
+- StartTimeCalculator - The Start Time Calculator will log any recalculated start times for active jobs.
 
 - SMABIRTProcessor.log - Includes information related to general program errors in the SMA Processor handler.
 
