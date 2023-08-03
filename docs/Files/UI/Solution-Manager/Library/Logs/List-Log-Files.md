@@ -1,6 +1,9 @@
 # List Application Logs
 
-The **Application Logs** tab allows you to view list of current log files. User must have the **ViewScheduleBuildLogs** permission to view this page.
+The **Application Logs** tab allows you to view list of current log files. User must be a member of a role with a least one of the following privileges to view this tab:
+
+- All Function Privileges
+- View Application Logs
 
 ![A screen showing list of log files](../../../../../Resources/Images/SM/Library/Logs/ApplicationLogs.png "List of Log Files")
 
