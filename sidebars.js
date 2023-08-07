@@ -556,6 +556,7 @@ module.exports = {
                   collapsed: true,
                   items: [
                     "Files/UI/Solution-Manager/Library/Logs/List-Log-Files",
+                    "Files/UI/Solution-Manager/Library/Logs/List-Schedule-Builds",
                     "Files/UI/Solution-Manager/Library/Logs/List-Archive-Files",
                     "Files/UI/Solution-Manager/Library/Logs/Log-File-Details",
                   ],
