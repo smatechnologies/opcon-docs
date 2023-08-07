@@ -19,9 +19,9 @@ jobs:
       - run: azcopy_v10 copy './docs' '${{ secrets.HELP_CONTENT_URL }}/content/${{ github.repository }}?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
       - run: azcopy_v10 copy './static' '${{ secrets.HELP_CONTENT_URL }}/content/${{ github.repository }}?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
       - run: azcopy_v10 copy './sidebars.js' '${{ secrets.HELP_CONTENT_URL }}/content/${{ github.repository }}?${{ secrets.HELP_CONTENT_TOKEN }}'
-      - run: azcopy_v10 copy './versioned_docs' '${{ secrets.HELP_CONTENT_URL }}/versioned_content/opcon-docs_versioned_docs?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
-      - run: azcopy_v10 copy './versioned_sidebars' '${{ secrets.HELP_CONTENT_URL }}/versioned_content/opcon-docs_versioned_sidebars?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
-      - run: azcopy_v10 copy './versions.json' '${{ secrets.HELP_CONTENT_URL }}/versioned_content/opcon-docs_versions.json?${{ secrets.HELP_CONTENT_TOKEN }}'
+      - run: azcopy_v10 copy './versioned_docs' '${{ secrets.HELP_CONTENT_URL }}/versioned-content/opcon-docs_versioned_docs?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
+      - run: azcopy_v10 copy './versioned_sidebars' '${{ secrets.HELP_CONTENT_URL }}/versioned-content/opcon-docs_versioned_sidebars?${{ secrets.HELP_CONTENT_TOKEN }}' --recursive
+      - run: azcopy_v10 copy './versions.json' '${{ secrets.HELP_CONTENT_URL }}/versioned-content/opcon-docs_versions.json?${{ secrets.HELP_CONTENT_TOKEN }}'
       # publish compiled output to existing app
       - run: yarn install
       - run: yarn build
