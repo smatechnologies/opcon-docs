@@ -50,7 +50,7 @@ sidebar_label: "Release Notes"
 
 #### REST API
 
-:white_check_mark: **OPCON-20967**: Fixed and issue which prevented users from using Regular Expression escapes when defining a CloudEvents Trigger filter
+:white_check_mark: **OPCON-20967**: Fixed an issue which prevented users from using Regular Expression escapes when defining a CloudEvents Trigger filter
 
 :white_check_mark: **OPCON-21272**: Fixed a performance issue in the OpCon API where a container job timed out fetching details if there were a large number of schedules built in daily tables.
 
