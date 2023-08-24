@@ -4,6 +4,26 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.7
+
+2023 August
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-20059**: Fixed a display issue where the AutoBuild checkbox was incorrectly selected on the Master Schedule Definition page.
+
+:white_check_mark: **OPCON-20956**: Fixed an issue in Vision Settings where the page header displayed "Page Not Found".
+
+:white_check_mark: **OPCON-21144**: Fixed an issue in Self Service where comma was reported as invalid character when it was present in characters to strip.
+
+:white_check_mark: **OPCON-21190**: Fixed an issue where users could see schedules outside of their permissions scope when adding a tag.
+
+:white_check_mark: **OPCON-21204**: Fixed an issue where grid pages displayed overlapping rows.
+
+:white_check_mark: **OPCON-21333**: Fixed an issue in Self Service where characters to strip were not working as intended.
+
+:white_check_mark: **OPCON-21391**: Fixed an issue where changing the sub-schedule of a Container job was not saved.
+
 ## OpCon 22.0.6
 
 2023 July
