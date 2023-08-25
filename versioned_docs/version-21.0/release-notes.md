@@ -10,6 +10,8 @@ sidebar_label: "Release Notes"
 
 #### Solution Manager
 
+:white_check_mark: **OPCON-17189**: Modified the Job Status component to show the correct job status. This will allow the user to view the correct job status when selecting a job in PERT or in Processes.
+
 :white_check_mark: **OPCON-21144**: Fixed an issue in Self Service where comma was reported as invalid character when it was present in characters to strip.
 
 :white_check_mark: **OPCON-21333**: Fixed an issue in Self Service where characters to strip were not working as intended.
