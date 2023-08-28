@@ -4,6 +4,22 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.19
+
+2023 August
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-17189**: Modified the Job Status component to show the correct job status. This will allow the user to view the correct job status when selecting a job in PERT or in Processes.
+
+:white_check_mark: **OPCON-21144**: Fixed an issue in Self Service where comma was reported as invalid character when it was present in characters to strip.
+
+:white_check_mark: **OPCON-21333**: Fixed an issue in Self Service where characters to strip were not working as intended.
+
+#### REST API
+
+:white_check_mark: **OPCON-21489**: Fixed a performance issue in the OpCon API where a container job timed out fetching details if there were a large number of schedules built in daily tables.
+
 ## OpCon 21.0.18
 
 2023 July
