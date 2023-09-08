@@ -2,9 +2,10 @@
 
 ## Required Privileges
 
-In order to access the Server Options page and configure the **Security** setting, you must have the following:
+In order to configure the **Security** setting, you must have one of the following:
 
-- **Role**: User must be assigned to the Role_ocadm.
+- **Role**: Role_ocadm.
+- **Function Privilege**: Maintian server options.
 
 ---
 

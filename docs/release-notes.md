@@ -4,6 +4,64 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.7.0
+
+2023 August
+
+#### Server
+
+:white_check_mark: **OPCON-16777**: Fixed an issue where estimated start times were not honoring predecessor job run times when Container jobs used instance properties.
+
+:white_check_mark: **OPCON-21275**: Fixed an issue in schedule builds where a named instance schedule having job exceptions defined on it failed if the exception had a property expression with global properties referenced.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-17792**: Server Options: This feature delivers a new time settings tab within server options. This capability gives administrators the ability to customize time settings for schedules and jobs so the workflow can be tailored to your preferences and requirements.
+
+:eight_spoked_asterisk: **OPCON-17798**: Server Options: This feature delivers a new vision tab within Server Options. This capability allows the administrator to define preferences on historical and future data capture on their custom vision cards.
+
+:eight_spoked_asterisk: **OPCON-18523**: Studio Canvas: This new feature will allow users to export a screenshot of a selected schedule's workflow. Now you can capture and save an image of a selected schedule directly from the Studio Canvas.
+
+:eight_spoked_asterisk: **OPCON-20681**: Users, Roles and Permissions: This feature delivers the addition of a read-only Departments tab within Access Management. Administrators will be able to view assigned departments that are aligned to existing roles allowing for better visibility over assigned permissions.
+
+:eight_spoked_asterisk: **OPCON-20986**: Server Options: This feature adds a new layer of precision to server option management. Administrators can now grant write access to users who possess specialized expertise in server options content. Now identified users will not require full administration capabilities to make a valuable contribution.
+
+:eight_spoked_asterisk: **OPCON-21237**: Logging: Added SCHEDULE BUILD LOGS tab to hold schedule build log files. This feature will deliver authorized users the ability to view and download the contents of the logs directly within Solution Manager. This capability is aimed at improving log management efficiency and facilitating easier log analysis.
+
+:eight_spoked_asterisk: **OPCON-21265**: Logging: Included SMALsamDataRetriever.log to base application logs and archives.
+
+:white_check_mark: **OPCON-19806**: Fixed an issue in some pages where right click did not reveal standard browser context menu.
+
+:white_check_mark: **OPCON-19851**: Fixed an issue in Frequencies and Master Jobs where navigating to the next page was not possible.
+
+:white_check_mark: **OPCON-21144**: Fixed an issue in Self Service where comma was reported as invalid character when it was present in characters to strip.
+
+:white_check_mark: **OPCON-21280**: Fixed an issue where Multi-Forecasting frequencies resulted in an error.
+
+:white_check_mark: **OPCON-21333**: Fixed an issue in Self Service where characters to strip were not working as intended.
+
+:white_check_mark: **OPCON-21391**: Fixed an issue where changing the sub-schedule of a Container job was not saved.
+
+:white_check_mark: **OPCON-21472**: Fixed an issue in Server Options page where some empty SMTP settings were saved in the database.
+
+:white_check_mark: **OPCON-21499**: Fixed an issue in Server Options page where numeric SMTP settings were not checked for validity.
+
+:white_check_mark: **OPCON-21503**: Fixed an issue in Server Options where "Save as primary SMTP setting" and "Save as primary SMS setting" checkboxes were not saved.
+
+#### REST API
+
+:white_check_mark: **OPCON-20967**: Fixed an issue which prevented users from using Regular Expression escapes when defining a CloudEvents Trigger filter
+
+:white_check_mark: **OPCON-21272**: Fixed a performance issue in the OpCon API where a container job timed out fetching details if there were a large number of schedules built in daily tables.
+
+:white_check_mark: **OPCON-21282**: Fixed an issue in OpCon API where the 20.0 database migration failed if the database had 2100 user or more defined.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-21194**: Duplicate jobs are created due to case sensitivity. The keys used during existing job matches changed to uppercase to ensure consistent checking avoiding case sensitivity problems. All calls to extract objects from the database have also been updated to ignore case sensitivity.
+
+:white_check_mark: **OPCON-21515**: During schedule deployment when schedule exists, duplicate event records for schedules and jobs can be created. The correction checks for duplicate event records that could be created due to schedule transformation and adjusted the comparison key adding the frequency name to ensure duplicate events are not added to the JEVENTS table.
+
 ## OpCon 22.6.0
 
 2023 July
