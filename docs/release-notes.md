@@ -4,6 +4,80 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.8.0
+
+2023 September
+
+#### Installation
+
+:white_check_mark: **OPCON-17338**: Modified SMA Utility SQL scripts to verify existence of script type and runner before inserting new record. This will avoid duplicate values in the database.
+
+#### Server
+
+:eight_spoked_asterisk: **OPCON-19946**: GuidewireCloud: This feature provides communication between OpCon and our new integration with Guidewire Cloud insurance suite. The delivery of this feature will allow GuidewireCloud users the capability to communicate using OpCon for the scheduling of batch processes within Guidewires BillingCenter, ClaimsCenter and PolicyCenter.
+
+:eight_spoked_asterisk: **OPCON-20051**: GuidewireCloud Agent and MFT Agent: This feature delivers the capability to stop a job within a built schedule. This provides the user with more flexibility to make adaptations to their schedules and workflow allowing for jobs not to be run.
+
+:white_check_mark: **OPCON-21521**: Fixed an issue where a missing predecessor job in the daily caused an error in SMAStartTimeCalculator.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-19452**: Reporting: This feature will provide users with a link to the Reporting page from the Library. The initial offering will direct users to a new Reporting landing page providing a convenient way to access your reports. This will streamline your workflow by providing a quick route to where all your future reports will be housed.
+
+:eight_spoked_asterisk: **OPCON-19940**: GuidewireCloud: This feature will deliver GuidewireCloud users the ability to setup and configure an agent in OpCon. Connections to Guidewires BatchCenter, BillingCenter, and PolicyCenter will be available for users to schedule and orchestrate the available batch processes.
+
+:eight_spoked_asterisk: **OPCON-19942**: GuidewireCloud: This feature will provide the ability for Guidewire users to configure a master job to align with an existing schedule. This will allow users to create a robust schedule to orchestrate their batch processes within the Guidewires insurance cores.
+
+:eight_spoked_asterisk: **OPCON-19944**: GuidewireCloud: This feature will provide the ability for Guidewire users to configure a daily job. This will allow users to view and modify their jobs at a more granular (daily) level.
+
+:eight_spoked_asterisk: **OPCON-20683**: Users, Roles and Permissions: This feature delivers the addition of a read-only Resources and Batch Users tab that is aligned to a selected role within Access Management. This will provide administrators with better visibility into existing roles and their assigned batch users and resource components such as access codes, machines, machine groups, schedules and scripts.
+
+:eight_spoked_asterisk: **OPCON-20965**: Server Options: This feature will provide administrators the option to force a global password reset when any changes are made to security settings. This enhancement is designed to bolster the security of your organization by ensuring that any changes to the security configurations can be immediately reflected in your users passwords.
+
+:eight_spoked_asterisk: **OPCON-21505**: GuidewireCloud: This feature delivers integration of the OAUTH requirements to enhance security interactions with the Guidewire REST API. This ensures that only authorized users are able to access and interact with the API resources.
+
+:eight_spoked_asterisk: **OPCON-21590**: GuidewireCloud: This feature will improve the user experience by supplying details and views tailored to GuidewireCloud users. Administrators will be supplied an agent-specific detail page aligned to GuidewireCloud configuration needs. GuidewireCloud users will receive a tailored experience when setting up jobs with insights on attribute details allowing users to find critical information more easily.
+
+:white_check_mark: **OPCON-17189**: Modified Job Status component to show correct job status. This will allow the user to view the correct job status when selecting a job in PERT or in Processes.
+
+:white_check_mark: **OPCON-19792**: Fixed an issue where changing a machine or machine group in an IBMi File Arrival FileWatcher.v3 daily job were not checked for FileWatcher.v3 support.
+
+:white_check_mark: **OPCON-19818**: Fixed incorrect count displayed when modifying an Agent's Communication Status from the Agents page right sidebar.
+
+:white_check_mark: **OPCON-20598**: Renamed a column header in Agent Details page from "Time Spent" to "Time Sent".
+
+:white_check_mark: **OPCON-20654**: Updated the duration column on the Processes page to update every 30 seconds and displays seconds.
+
+:white_check_mark: **OPCON-20721**: Fixed an issue where editing an IBMi File Arrival FileWatcher.v3 daily job did not display or update FileWatcher.v3 properties.
+
+:white_check_mark: **OPCON-20904**: Fixed an issue in IBM i job details page where some fields were not providing pre-defined selections.
+
+:white_check_mark: **OPCON-20910**: Fixed an issue in Event Configuration where the parameters "Reopen Schedule" and "Apply Exceptions" for $JOB:ADD event did not have Yes and No selections.
+
+:white_check_mark: **OPCON-20959**: Fixed advanced filters not being honored after adding a new trigger in Notification Triggers page.
+
+:white_check_mark: **OPCON-20961**: Fixed advanced filters not working correctly in Notification Triggers page.
+
+:white_check_mark: **OPCON-20972**: Fixed an issue where special characters in logs were not displaying properly.
+
+:white_check_mark: **OPCON-21232**: Fixed an issue in Self Service where error would happen after submitting the service request if user input type was Master Job.
+
+:white_check_mark: **OPCON-21195**: Fixed an issue where "Requires XML Escape" for some Agents was always False.
+
+:white_check_mark: **OPCON-21271**: Fixed an issue with different user sessions having stale server options data. Now users no longer need to log out and log in again to get updated server options data while logged into multiple sessions.
+
+:white_check_mark: **OPCON-21565**: Fixed an issue where Multi-Forecasting schedule frequencies resulted in an error.
+
+:white_check_mark: **OPCON-21826**: Removed 'Guidewire' from the Batch Users Target OS selection field. Batch users are no longer supported on this platform.
+
+#### REST API
+
+:white_check_mark: **OPCON-16320**: Vision Card using Remote Session now updates to show the correct card information.
+
+:white_check_mark: **OPCON-21002**: Removed extraneous data from API responses on the 'machines' endpoint.
+
+:white_check_mark: **OPCON-21640**: Fixed slow updates on requests sent to server options endpoint. This update fixed a problem with requests taking an average of 5 seconds to complete to less than 1 second in the server options page.
+
 ## OpCon 22.7.0
 
 2023 August
