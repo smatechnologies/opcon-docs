@@ -15,3 +15,4 @@ A series of tabs is displayed on the Roles page:
 - [Batch Users](Roles-Batch-Users.md)
 - [Departments](Roles-Departments.md)
 - [Resources](Roles-Resources.md)
+- [Users](Roles-Users.md)
