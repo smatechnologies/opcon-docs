@@ -4,6 +4,36 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.20
+
+2023 September
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-20654**: Updated the Duration column on the Processes page to update every 30 seconds and display seconds.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-21194**: Duplicate jobs are created due to case sensitivity. The keys used during existing job matches changed to uppercase to ensure consistent checking avoiding case sensitivity problems. All calls to extract objects from the database have also been updated to ignore case sensitivity.
+
+:white_check_mark: **OPCON-21515**: During schedule deployment when schedule exists, duplicate event records for schedules and jobs can be created. The correction checks for duplicate event records that could be created due to schedule transformation and adjusted the comparison key adding the frequency name to ensure duplicate events are not added to the JEVENTS table.
+
+## OpCon 21.0.19
+
+2023 August
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-17189**: Modified the Job Status component to show the correct job status. This will allow the user to view the correct job status when selecting a job in PERT or in Processes.
+
+:white_check_mark: **OPCON-21144**: Fixed an issue in Self Service where comma was reported as invalid character when it was present in characters to strip.
+
+:white_check_mark: **OPCON-21333**: Fixed an issue in Self Service where characters to strip were not working as intended.
+
+#### REST API
+
+:white_check_mark: **OPCON-21489**: Fixed a performance issue in the OpCon API where a container job timed out fetching details if there were a large number of schedules built in daily tables.
+
 ## OpCon 21.0.18
 
 2023 July

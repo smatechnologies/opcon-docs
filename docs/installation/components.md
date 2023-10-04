@@ -318,14 +318,14 @@ are installing to** field.
 28. On the Set RestAPI Options screen, configure the settings for the RestAPI service by entering the
 following:
 
-- **TLS Port Number**: Defines the port number to use for the RestAPI.
-    :::note
-    The default port number is 443. You may specify a different port number, but be sure that it is not being used by another service.
-    :::
+- **Port**: Defines the port number to use for the RestAPI.
+  :::note
+  The default port number is 443. You may specify a different port number, but be sure that it is not being used by another service.
+  :::
 - **Certificate Serial Number**: Defines the certificate serial number that the RestAPI will use.
-      :::note
-      If you choose to leave this field blank, then a self-signed certificate will be created and saved in the API configuration file for you. If you already have a certificate installed in the local and trusted certificate stores, then enter the Certificate Serial Number in the field of the same name; after installation, the API, when it starts, will use the stored certificate.
-      :::
+  :::note
+  If you choose to leave this field blank, then a self-signed certificate will be created and saved in the API configuration file for you. If you already have a certificate installed in the local and trusted certificate stores, then enter the Certificate Serial Number in the field of the same name; after installation, the API, when it starts, will use the stored certificate.
+  :::
 - Keep in mind that at any time you may reconfigure the API certificate without running the installer again. To register your own self-signed certificate outside of the installer:
   1. Create a self-signed certificate using IIS.
   2. Open **certmgr** and make sure that the newly-created certificate is copied to (listed in) the **Trusted Root Certificate Authorities** certificate store.
@@ -342,23 +342,21 @@ following:
 
 - To allow the RestAPI to install a self-signed certificate, follow these steps:
   1. Go to **ProgramData\\OpConxps\\SAM** and open the **SMAOpConRestApi.ini** file.
-  2. Make sure **UseTLS=true**.
-  3. Make sure **PortForTLS** has a valid port number.
-  4. Make sure **CertificateSerialNumber** is blank.
-  5. Save and close the configuration file.
-  6. Open the **command prompt** in Administrator mode (*Run as administrator*).
-  7. Change the directory to "SAM" under **OpConxps** installation folder.
-  8. Run the following command: `SMAOpConRestApi.Controllers.exe - setcertificate`
-  9. Go to **ProgramData\\OpConxps\\SAM\\Log** and retrieve the **SMAOpConRestApi.log** file to get the results of the certificate creation.
+  2. Make sure **Port** has a valid port number.
+  3. Make sure **CertificateSerialNumber** is blank.
+  4. Save and close the configuration file.
+  5. Open the **command prompt** in Administrator mode (*Run as administrator*).
+  6. Change the directory to "SAM" under **OpConxps** installation folder.
+  7. Run the following command: `SMAOpConRestApi.Controllers.exe - setcertificate`
+  8. Go to **ProgramData\\OpConxps\\SAM\\Log** and retrieve the **SMAOpConRestApi.log** file to get the results of the certificate creation.
 - To allow the RestAPI to install a custom certificate, follow these steps:
   1. Go to **ProgramData\\OpConxps\\SAM** and open the **SMAOpConRestApi.ini** file.
-  2. Make sure **UseTLS=true**.
-  3. Make sure **PortForTLS** has a valid port number.
-  4. In the **CertificateSerialNumber** field, insert the custom certificate serial number without spaces.
-  5. Save and close the configuration file.
-  6. Open the **command prompt** in Administrator mode *(Run as administrator)*.
-  7. Change the directory to "SAM" under OpConxps installation folder.
-  8. Run the following command: `SMAOpConRestApi.Controllers.exe - setcertificate`
+  2. Make sure **Port** has a valid port number.
+  3. In the **CertificateSerialNumber** field, insert the custom certificate serial number without spaces.
+  4. Save and close the configuration file.
+  5. Open the **command prompt** in Administrator mode *(Run as administrator)*.
+  6. Change the directory to "SAM" under OpConxps installation folder.
+  7. Run the following command: `SMAOpConRestApi.Controllers.exe - setcertificate`
 
   :::note
   Solution Manager is now fully integrated with the SMA OpCon RestAPI. After installation, you can access the Solution Manager application at [https://127.0.0.1](https://127.0.0.1/).
