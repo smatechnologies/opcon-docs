@@ -584,6 +584,15 @@ module.exports = {
                     'Files/UI/Solution-Manager/Library/Logs/Log-File-Details',
                   ],
                 },
+                {
+                  type: 'category',
+                  label: 'Reporting',
+                  collapsed: true,
+                  items: [
+                    'Files/UI/Solution-Manager/Library/Reporting/List-Reports',
+                    'Files/UI/Solution-Manager/Library/Reporting/Audit-History-Report',
+                  ],
+                },
               ],
             },
             {
