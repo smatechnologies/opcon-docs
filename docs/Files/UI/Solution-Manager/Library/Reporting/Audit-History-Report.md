@@ -28,3 +28,7 @@ We recommend filtering by a category, the categories available include:
 - **Schedule Maintenance**: Displays all user-submitted requests for Schedule Build, Schedule Check, and Date level Schedule Deletes.
 - **Threshold/Resource**: Displays all changes made to Threshold and Resource definitions.
 - **User Account**: Displays all changes made to User Account definitions, Last Login, Last Log out, and the version of the Enterprise Manager used.
+
+### Exporting to CSV
+
+Click the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters will be applied when exporting the report.
