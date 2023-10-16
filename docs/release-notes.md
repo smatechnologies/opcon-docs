@@ -4,6 +4,36 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.9.0
+
+2023 October
+
+#### Server
+
+:white_check_mark: **OPCON-21993**: Fix an issue where Guidewire and OpConMFT Jobs would fail to report successful Job Kill execution.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-20685**: Users, Roles and Permissions: This feature delivers the addition of a read-only Users tab within Access Management. Administrators will be able to view a users and user details allowing for better insight into role assignment and permissions.
+
+:white_check_mark: **OPCON-21185**: Fixed an issue where users could not add environment variables to jobs if the value contained '='.
+
+:white_check_mark: **OPCON-21215**: Updated Frequency name to allow special characters. Users will now be able to add and modify Frequency names that contain special characters.
+
+:white_check_mark: **OPCON-21636**: Fixed an issue in Master Schedules page where clicking the Admin button would prompt the user to save the schedule even when there were no changes. This update will bring smoother user experience to the Master Schedules page.
+
+:white_check_mark: **OPCON-21749**: Fixed an issue with reset function in Server Options. 'Reset all to default' and 'Reset current tab to default' will now be enabled when form changes.
+
+:white_check_mark: **OPCON-21824**: Fixed an issue in Master Jobs page where Notification Triggers filter on Group Type did not work.
+
+:white_check_mark: **OPCON-22288**: Added a fix to correct the behavior when an OpCon token expires and the user retries to log in via SSO.
+
+#### REST API
+
+:white_check_mark: **OPCON-21833**: Fixed issue which occurred when re-establishing an authenticated connection with an OpConMFT machine. This operation can now be performed successfully.
+
+:white_check_mark: **OPCON-22292**: Fixed an issue in jobHistories endpoint that caused an error when multiple job status IDs were specified.
+
 ## OpCon 22.8.0
 
 2023 September
