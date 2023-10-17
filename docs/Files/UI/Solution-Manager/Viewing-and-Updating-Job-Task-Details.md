@@ -25,4 +25,5 @@ Supported platforms include:
 - [Windows](Updating-Windows-Job-Details.md)
 - [UNIX](Updating-UNIX-Job-Details.md)
 - [File Transfer](Updating-File-Transfer-Job-Details.md)
+- [MCP](Updating-mcp-Job-Details.md)
   :::
