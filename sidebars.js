@@ -695,6 +695,7 @@ module.exports = {
                         "Files/UI/Solution-Manager/Updating-Windows-Job-Details",
                         "Files/UI/Solution-Manager/Updating-UNIX-Job-Details",
                         "Files/UI/Solution-Manager/Updating-File-Transfer-Job-Details",
+                        "Files/UI/Solution-Manager/Updating-mcp-Job-Details",
                       ],
                     },
                     "Files/UI/Solution-Manager/Viewing-and-Updating-Job-Frequencies",
