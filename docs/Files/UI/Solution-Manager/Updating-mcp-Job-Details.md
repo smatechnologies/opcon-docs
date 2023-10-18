@@ -2,7 +2,7 @@
 
 In **Admin** mode, MCP job type properties can be updated or defined.
 
-For conceptual information, refer to [MCP Job Details](../../../job-types/mcp-job.md) in the **Concepts** online help.
+For conceptual information, refer to [MCP Job Details](../../../job-types/mcp.md) in the **Concepts** online help.
 
 - [Update Job Type: START Job](#updating-job-type-start)
 - [Update Job Type: RUN Job](#updating-job-type-run)
