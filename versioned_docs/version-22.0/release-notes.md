@@ -4,6 +4,36 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.9
+
+2023 October
+
+#### Installation
+
+:white_check_mark: **OPCON-17338**: Modified SMA Utility SQL scripts to verify existence of script type and runner before inserting new record. This will avoid duplicate values in the database.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-12616**: When querying for a SAP r3 job from the daily jobs, the query now inserts a "Daily" tag.
+
+:white_check_mark: **OPCON-19144**: Fixed an issue in Master Jobs where schedule instance names were not displayed when adding a cross schedule dependency.
+
+:white_check_mark: **OPCON-20598**: Renamed a column header in Agent Details page from "Time Spent" to "Time Sent".
+
+:white_check_mark: **OPCON-21185**: Fixed an issue where users could not add environment variables to jobs if the value contained '='.
+
+:white_check_mark: **OPCON-21215**: Updated Frequency name to allow special characters. Users will now be able to add and modify Frequency names that contain special characters.
+
+:white_check_mark: **OPCON-21597**: Fixed an issue where any user can view all embedded scripts in Master Jobs and Scripts page. Now Solution Manager shows only scripts the user has permission to.
+
+:white_check_mark: **OPCON-21636**: Fixed an issue in Master Schedules page where clicking the Admin button would prompt the user to save the schedule even when there were no changes.
+
+:white_check_mark: **OPCON-21727**: Fixed Connection Id field for SQL Oracle Daily and Master jobs to allow a null value.
+
+:white_check_mark: **OPCON-21755**: Changed authentication error message to: "We’re having trouble logging you in, please contact your administrator if the problem persists."
+
+:white_check_mark: **OPCON-21824**: Fixed an issue in Master Jobs page where Notification Triggers filter on Group Type did not work.
+
 ## OpCon 22.0.8
 
 2023 September
