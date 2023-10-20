@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.21
+
+2023 October
+
+#### Installation
+
+:white_check_mark: **OPCON-17338**: Modified SMA Utility SQL scripts to verify existence of script type and runner before inserting new record. This will avoid duplicate values in the database.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-21727**: Fixed Connection Id field for SQL Oracle Daily and Master jobs to allow a null value.
+
+:white_check_mark: **OPCON-21755**: Changed authentication error message to: "We’re having trouble logging you in, please contact your administrator if the problem persists."
+
 ## OpCon 21.0.20
 
 2023 September
