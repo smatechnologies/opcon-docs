@@ -592,6 +592,7 @@ module.exports = {
                   items: [
                     "Files/UI/Solution-Manager/Library/Reporting/List-Reports",
                     "Files/UI/Solution-Manager/Library/Reporting/Audit-History-Report",
+                    "Files/UI/Solution-Manager/Library/Reporting/Schedule-Job-History-Report",
                   ],
                 },
               ],
