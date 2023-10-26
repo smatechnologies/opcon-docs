@@ -9,7 +9,7 @@ updates to the OpCon database.
 
 Because this report contains large amounts of data, 2 filters will be applied by default. The first filters the date to only the current day, and the second filters the category to only 'Master Job' records. You can adjust these or add filters to other columns in the filters panel (shown below). You can open the filters panel by either selecting the filter icon in the header or columns that have an active filter, or by clicking on the menu (three dots) in the header of any column, and selecting 'Filter' (also shown below). Both of the default filters are required for this report, but can be adjusted.
 
- ![A screen showing how to open the filter panel](../../../../../Resources/Images/SM/Library/Reporting/AuditFilterPanel.png "Filter Panel") ![A screen showing how to open the filter panel](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
+ ![A screen showing how to open the filter panel](../../../../../Resources/Images/SM/Library/Reporting/AuditFilterPanel.png "Filter Panel") ![A screen showing how to open the column menu](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
 
 We recommend filtering by a category, the categories available include:
 
