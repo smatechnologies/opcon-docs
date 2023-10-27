@@ -4,6 +4,16 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.22
+
+2023 October
+
+#### Server
+
+:white_check_mark: **OPCON-22276**: Removed verbose-level log messages that wrote the raw event text and had the potential to write sensitive data.
+
+:white_check_mark: **OPCON-22394**: Fixed an issue in OpCon services where a new license file dropped in, was not getting picked up and OpCon kept using the old license file. This prevented from upgrading a license or moving its expiry date. This fix allows OpCon to pick up the new license file and apply it.
+
 ## OpCon 21.0.21
 
 2023 October
