@@ -446,6 +446,7 @@ module.exports = {
                   collapsed: true,
                   items: [
                     "Files/UI/Solution-Manager/Library/AccessManagement/AccessManagement",
+                    "Files/UI/Solution-Manager/Library/AccessManagement/CreateNewRole",
                     {
                       type: "category",
                       label: "Managing Roles and Privileges",
