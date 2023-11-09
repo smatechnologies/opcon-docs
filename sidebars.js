@@ -596,7 +596,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/Reporting/Schedule-Job-History-Report",
                   ],
                 },
-                "Files/UI/Solution-Manager/Library/LicenseSupport/LicenseSupport",
+                "Files/UI/Solution-Manager/Library/LicenseSupport/License-Support",
               ],
             },
             {
