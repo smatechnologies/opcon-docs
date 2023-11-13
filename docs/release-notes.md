@@ -4,13 +4,53 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.10.0
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2023 November
+
+#### Server
+
+:white_check_mark: **OPCON-22276**: Removed verbose-level log messages that wrote the raw event text and had the potential to write sensitive data.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-14710**: MCP: This feature delivers the MCP job type for both master and daily jobs in Solution Manager. Key features include Change, Copy, EAE/AB, Remove, Run, and Start job types for MCP. In addition users can tailor their workflows by defining pre-run and failure criteria for all the job types for MCP. Whether you need to create a new MCP job or modify an existing one, Solution Manager has you covered in its latest feature rollout.
+
+:eight_spoked_asterisk: **OPCON-15115**: Reporting: This feature delivers the Audit History report, previously known as Audit Management, providing a view into the history of user updates in the OpCon database. This report has been redesigned to provide greater flexibility with improved filtering capabilities allowing the user to customize how they want to view the content.
+
+:eight_spoked_asterisk: **OPCON-15373**: Reporting: This feature delivers the Schedule and Job History report, previously known as History Management, providing a view into schedule and job history information. This report has been redesigned to provide greater flexibility with improved filtering capabilities allowing the user to customize how they want to view the content.
+
+:eight_spoked_asterisk: **OPCON-20245**: Users, Roles and Permissions: This feature delivers the modification of an existing role capability within Solution Manager. Administrators can now change permissions associated to a role in the general, activities, batch users, departments, resources, and users tabs improving the security and efficiency of your Solution Manager environment.
+
+:eight_spoked_asterisk: **OPCON-20999**: ACS: This feature brings the user an enhanced Agent and Agent Details page tailored to the integration being defined. This feature is designed to streamline your workflow by providing a more intuitive view into the management of your associated integrations.
+
+:eight_spoked_asterisk: **OPCON-21004**: ACS: This feature provides the view to the daily job screen for integrations created using ACS. Users will be able to make updates to daily jobs providing a consistent experience across the platform.
+
+:eight_spoked_asterisk: **OPCON-21277**: Reporting: This feature delivers the exporting capability for the Schedule and Job History report, previously known as History Management. Users can export a customized view of their schedule and job history.
+
+:eight_spoked_asterisk: **OPCON-21306**: ACS: This feature provides the view to the master job screen for integrations created using ACS. Users will be able to create, view, and update their master jobs providing a consistent experience across the platform.
+
+:eight_spoked_asterisk: **OPCON-21462**: Reporting: This feature delivers the exporting capability for the Audit History report, previously known as Audit Management. Users can export a customized view of the history of user updates in the OpCon database.
+
+:eight_spoked_asterisk: **OPCON-21757**: ACS: This feature delivers improved the tracking functionality of ACS integration jobs, ensuring that job tracking persists even in the face of service disruptions. This enhancement provides our users with increased reliability and resilience when managing ACS integration tasks.
+
+#### REST API
+
+:white_check_mark: **OPCON-21830**: Fixed a race condition which would result in occasional failures to save a Master Job configuration. This will provide a more consistent and less frustrating administration experience.
+
+:white_check_mark: **OPCON-22321**: Fixed an API parsing error which prevented restoration of configured values for OpCon MFT. The detail screen now displays the accurate configuration values.
+
 ## OpCon 22.9.0
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
 2023 October
 
 #### Server
 
-:white_check_mark: **OPCON-21993**: Fix an issue where Guidewire and OpConMFT Jobs would fail to report successful Job Kill execution.
+:white_check_mark: **OPCON-21993**: Fixed an issue where Guidewire and OpConMFT Jobs would fail to report successful Job Kill execution.
 
 #### Solution Manager
 
@@ -35,6 +75,8 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-22292**: Fixed an issue in jobHistories endpoint that caused an error when multiple job status IDs were specified.
 
 ## OpCon 22.8.0
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
 2023 September
 
@@ -110,6 +152,8 @@ sidebar_label: "Release Notes"
 
 ## OpCon 22.7.0
 
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
 2023 August
 
 #### Server
@@ -168,6 +212,8 @@ sidebar_label: "Release Notes"
 
 ## OpCon 22.6.0
 
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
 2023 July
 
 #### Solution Manager
@@ -209,6 +255,8 @@ sidebar_label: "Release Notes"
 :eight_spoked_asterisk: **OPCON-20926**: Added SMA Check Identity Limit job to the SMAUtility schedule when creating a new database.
 
 ## OpCon 22.5.0
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
 2023 June
 
