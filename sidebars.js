@@ -461,7 +461,15 @@ module.exports = {
                         'Files/UI/Solution-Manager/Library/AccessManagement/Roles/Role-Users',
                       ],
                     },
-                    'Files/UI/Solution-Manager/Library/AccessManagement/Users/Managing-Users',
+                    {
+                      type: 'category',
+                      label: 'Managing Users',
+                      collapsed: true,
+                      items: [
+                        'Files/UI/Solution-Manager/Library/AccessManagement/Users/Managing-Users',
+                        'Files/UI/Solution-Manager/Library/AccessManagement/Users/User-General',
+                      ],
+                    },
                   ],
                 },
                 'Files/UI/Solution-Manager/Library/CloudEventsTriggers/CloudEventsTriggers',

@@ -8,7 +8,7 @@ viewport: width=device-width, initial-scale=1.0
 
 The Roles page is found in _Library > Access Management > Roles_, and provides the views to manage Privileges and Roles. When you click on the Roles tab, you will see a list of all the roles that have been created in the system. You can click on the name of a role to view the details of that role.
 
-A series of tabs is displayed on the Roles page. The General tab displays the name of the role, the description, and the inherited privileges that are assigned to the selected role.
+A series of tabs is displayed on the Roles page. The General tab displays the name, description, and inherited privileges that are assigned to the selected role.
 
 To modify a role, edit the preferred fields and click **Save**.
 
