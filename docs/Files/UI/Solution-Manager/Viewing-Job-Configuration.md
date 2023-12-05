@@ -34,7 +34,7 @@ Select the **Configuration** accordion-style tab in the panel.
 
 ![Job Configuration Tab in Operations](../../../Resources/Images/SM/Job-Configuration-Tab.png "Job Configuration Tab in Operations")
 
-The Configuration tab allows an overarching view into the configuration of your daily job details with information regarding operations details, manual status changes, job time details, retry and recurrence information, and additional information based on the job type. Fields without a value will display \<None> and fields that are user defined will have this icon: !["User defined" icon](../../../Resources/Images/user-defined-icon.png "User defined icon"){ width=25 }
+The Configuration tab allows an overarching view into the configuration of your daily job details with information regarding operations details, manual status changes, job time details, retry and recurrence information, and additional information based on the job type. Fields without a value will display \<None\> and fields that are user defined will have this icon: !["User defined" icon](../../../Resources/Images/user-defined-icon.png "User defined icon"){ width=25 }
 
 ![Job Configuration Panel in Operations](../../../Resources/Images/SM/Job-Configuration-Panel.png "Job Configuration Panel in Operations")
 
