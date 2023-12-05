@@ -1,18 +1,13 @@
-# Viewing Job Output
+# Viewing Job Configuration
 
-The **Operations** module allows you to retrieve the output file(s) for
+The **Operations** module allows you to retrieve the configuration for
 a job if it:
 
 - is completed or has started
-- is not a NULL or Container job
 - does not have a status of Waiting, On Hold, Cancelled, Missed
     Start Time, or Skipped
 
-:::note
-Before attempting to view a job's output file, first refer to [Viewing a Job Output File](../../../operations/job-output.md) in the **Concepts** online help.
-:::
-
-To view job output:
+To view job configuration:
 
 Click on the **Failed**, **Running**, or **Completed** operation dial or
 use the **Quick Search** field (type the keyword and click **Enter**) in
@@ -35,34 +30,13 @@ the **Selection** panel.
 As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
 :::
 
-Select the **Job Output** accordion-style tab in the panel.
+Select the **Configuration** accordion-style tab in the panel.
 
-![Job Output Tab in Operations](../../../Resources/Images/SM/Job-Output-Tab.png "Job Output Tab in Operations")
+![Job Configuration Tab in Operations](../../../Resources/Images/SM/Job-Configuration-Tab.png "Job Configuration Tab in Operations")
 
-Click the **Refresh** button to fetch a list both of any existing or new
-job output files for the selected job. When clicked, the button toggles
-to **Cancel**. At any time during the refresh, you can click the
-**Cancel** button to cancel the action.
+The Configuration tab allows an overarching view into the configuration of your daily job details with information regarding operations details, manual status changes, job time details, retry and recurrence information, and additional information based on the job type. Fields without a value will display \<None\> and fields that are user defined will have this icon: !["User defined" icon](../../../Resources/Images/user-defined-icon.png "User defined icon"){ width=25 }
 
-:::note
-The **Refresh** button will be disabled in the panel if no job output is available for the selected job.
-:::
-
-Click on any **Job Output** button that displays after the refresh to
-view the job output file.
-
-![Job Output Button in Operations](../../../Resources/Images/SM/Job-Output-Button.png "Job Output Button in Operations")
-
-The **Job Output** page displays.
-
-Select any of the following options:
-
-- **Refresh/Cancel**: This toggle button allows to refresh the data in
-    the output file or cancel the refresh operation.
-- **Export**: This button allows you to save the job output file
-    locally to your machine.
-
-Click the **Close** button to return to the previous page.
+![Job Configuration Panel in Operations](../../../Resources/Images/SM/Job-Configuration-Panel.png "Job Configuration Panel in Operations")
 
 Close the **Selection** panel when done.
 
@@ -75,4 +49,4 @@ Related Topics
 - [Performing Agent Status     Updates](Performing-Agent-Status-Updates.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
-- [Viewing Job Configuration](Viewing-Job-Configuration.md)
+- [Viewing Job Output](Viewing-Job-Output.md)

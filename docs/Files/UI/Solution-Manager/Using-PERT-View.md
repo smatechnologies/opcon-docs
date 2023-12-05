@@ -298,6 +298,7 @@ Once any schedule is selected, right-click on the mouse to display the **Selecti
 - [Performing Bulk Status Job Updates (Schedule Level)](Performing-Bulk-Job-Status-Updates-Schedule-Level.md)
 - [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
 - [Viewing Job Output](Viewing-Job-Output.md)
+- [Viewing Job Configuration](Viewing-Job-Configuration.md)
 - [Accessing Job Summary](Accessing-Job-Summary.md)
 - [Accessing Daily Job Definition](Accessing-Daily-Job-Definition.md)
 - [Accessing Job Executions History](Accessing-Job-Executions-History.md)
