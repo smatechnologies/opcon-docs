@@ -434,6 +434,24 @@ module.exports = {
             },
             {
               type: 'category',
+              label: 'Operations',
+              collapsed: true,
+              items: [
+                'Files/UI/Solution-Manager/Operations/Working-With-Operations',
+                'Files/UI/Solution-Manager/Using-Schedule-Build',
+                // {
+                //   type: 'category',
+                //   label: 'Sub Category',
+                //   collapsed: true,
+                //   items: [
+                //     'Files/UI/Solution-Manager/tdb',
+                    
+                //   ],
+                // },
+              ],
+            },
+            {
+              type: 'category',
               label: 'Library',
               collapsed: true,
               items: [
@@ -728,7 +746,7 @@ module.exports = {
             },
             'Files/UI/Solution-Manager/Using-PERT-View',
             'Files/UI/Solution-Manager/Managing-Daily-Processes',
-            'Files/UI/Solution-Manager/Using-Schedule-Build',
+            // 'Files/UI/Solution-Manager/Using-Schedule-Build',
           ],
         },
       ],
