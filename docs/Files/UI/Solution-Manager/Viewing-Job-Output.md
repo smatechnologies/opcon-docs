@@ -75,3 +75,4 @@ Related Topics
 - [Performing Agent Status     Updates](Performing-Agent-Status-Updates.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
+- [Viewing Job Configuration](Viewing-Job-Configuration.md)
