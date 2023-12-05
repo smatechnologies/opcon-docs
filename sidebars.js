@@ -675,6 +675,7 @@ module.exports = {
                 'Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Date-Level',
                 'Files/UI/Solution-Manager/Performing-Agent-Status-Updates',
                 'Files/UI/Solution-Manager/Viewing-Job-Output',
+                'Files/UI/Solution-Manager/Viewing-Job-Configuration',
                 'Files/UI/Solution-Manager/Accessing-Job-Summary',
                 'Files/UI/Solution-Manager/Accessing-Job-Executions-History',
                 {
