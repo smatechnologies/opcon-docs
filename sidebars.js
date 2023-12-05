@@ -437,6 +437,7 @@ module.exports = {
               label: 'Library',
               collapsed: true,
               items: [
+                'Files/UI/Solution-Manager/Library/Working-With-Library/Working-With-Library',
                 'Files/UI/Solution-Manager/Library/Resources/Resources',
                 'Files/UI/Solution-Manager/Library/Thresholds/Thresholds',
                 'Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes',
