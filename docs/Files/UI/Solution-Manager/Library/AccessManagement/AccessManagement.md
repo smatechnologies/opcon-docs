@@ -18,6 +18,6 @@ Select the **Users** tab to see a list of all the users that have been created i
 
 For conceptual help, see:
 
-- [Privileges](../../../../../../administration/privileges.md)
-- [Roles](../../../../../../administration/roles.md)
-- [Users](../../../../../../administration/user-accounts.md)
+- [Privileges](../../../../../administration/privileges.md)
+- [Roles](../../../../../administration/roles.md)
+- [Users](../../../../../administration/user-accounts.md)
