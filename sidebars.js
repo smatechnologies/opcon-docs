@@ -606,6 +606,7 @@ module.exports = {
               label: 'Studio',
               collapsed: true,
               items: [
+                'Files/UI/Solution-Manager/Studio/Working-With-Studio',
                 {
                   type: 'category',
                   label: 'Canvas',
