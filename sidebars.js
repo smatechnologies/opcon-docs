@@ -302,7 +302,7 @@ module.exports = {
                 'Files/UI/Enterprise-Manager/Using-Workload-Chart-View',
                 'Files/UI/Enterprise-Manager/Using-Machines-Status-View',
                 'Files/UI/Enterprise-Manager/Using-Daily-Maintenance-View',
-                'Files/UI/Enterprise-Manager/Using-Schedule-Build',
+                'Files/UI/Enterprise-Manager/Working-With-Schedules',
                 'Files/UI/Enterprise-Manager/Using-Escalation-Acknowlegement',
                 'Files/UI/Enterprise-Manager/Using-Secondary-Windows',
                 'Files/UI/Enterprise-Manager/Using-Operation-Tools',
@@ -430,24 +430,6 @@ module.exports = {
                 'Files/UI/Solution-Manager/Working-in-User-Mode',
                 'Files/UI/Solution-Manager/Filtering-Service-Requests',
                 'Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Operations',
-              collapsed: true,
-              items: [
-                'Files/UI/Solution-Manager/Operations/Working-With-Operations',
-                'Files/UI/Solution-Manager/Using-Schedule-Build',
-                // {
-                //   type: 'category',
-                //   label: 'Sub Category',
-                //   collapsed: true,
-                //   items: [
-                //     'Files/UI/Solution-Manager/tdb',
-                    
-                //   ],
-                // },
               ],
             },
             {
@@ -689,6 +671,7 @@ module.exports = {
               collapsed: true,
               items: [
                 'Files/UI/Solution-Manager/Working-with-Operations',
+                'Files/UI/Solution-Manager/Working-With-Schedules',
                 'Files/UI/Solution-Manager/Performing-Schedule-Status-Changes',
                 'Files/UI/Solution-Manager/Performing-Job-Status-Changes',
                 'Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Schedule-Level',
@@ -746,7 +729,6 @@ module.exports = {
             },
             'Files/UI/Solution-Manager/Using-PERT-View',
             'Files/UI/Solution-Manager/Managing-Daily-Processes',
-            // 'Files/UI/Solution-Manager/Using-Schedule-Build',
           ],
         },
       ],
