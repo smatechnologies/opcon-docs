@@ -676,7 +676,7 @@ module.exports = {
               items: [
                 'Files/UI/Solution-Manager/Working-with-Operations',
                 'Files/UI/Solution-Manager/Working-With-Schedules',
-                'Files/UI/Solution-Manager/Working-With-Agents',
+                'Files/UI/Solution-Manager/Managing-Agents',
                 'Files/UI/Solution-Manager/Performing-Schedule-Status-Changes',
                 'Files/UI/Solution-Manager/Performing-Job-Status-Changes',
                 'Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Schedule-Level',
