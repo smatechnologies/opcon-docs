@@ -548,6 +548,7 @@ module.exports = {
                   label: 'Escalation Manager',
                   collapsed: true,
                   items: [
+                    'Files/UI/Solution-Manager/Library/EscalationManager/Escalation-Manager',
                     'Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Rules',
                     'Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups',
                   ],
