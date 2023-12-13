@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Working with Master Jobs TBD
+title: Managing Master Jobs TBD
 viewport: width=device-width, initial-scale=1.0
 ---
 
@@ -8,4 +8,4 @@ viewport: width=device-width, initial-scale=1.0
 
 The Master Jobs tab allows you to perform functions for managing the master jobs.
 
-![Working With master jobs](../../../../Resources/Images/SM/Library/WorkingWithLibrary/WorkingWithMasterJobs.png "Threshold Grid")
+![Managing master jobs](../../../../Resources/Images/SM/Library/WorkingWithLibrary/WorkingWithMasterJobs.png "Threshold Grid")

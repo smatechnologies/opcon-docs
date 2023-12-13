@@ -440,7 +440,7 @@ module.exports = {
                 'Files/UI/Solution-Manager/Library/Managing-Library',
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Jobs',
-                'Files/UI/Solution-Manager/Library/Working-With-Master-Schedules',
+                'Files/UI/Solution-Manager/Library/Managing-Master-Schedules',
                 'Files/UI/Solution-Manager/Library/Resources/Resources',
                 'Files/UI/Solution-Manager/Library/Thresholds/Thresholds',
                 'Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes',

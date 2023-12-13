@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Working with Global Properties TBD
+title: Managing Global Properties TBD
 viewport: width=device-width, initial-scale=1.0
 ---
 
@@ -8,4 +8,4 @@ viewport: width=device-width, initial-scale=1.0
 
 The Global Properties editor also has a toolbar that allows you to perform functions for managing the global properties. Learn to add page to Add or Edit global properties, add user defined system properties.
 
-![Working With Library](../../../../Resources/Images/SM/Library/WorkingWithLibrary/WorkingWithGlobalProperties.png "Threshold Grid")
+![Managing Library](../../../../Resources/Images/SM/Library/WorkingWithLibrary/WorkingWithGlobalProperties.png "Threshold Grid")
