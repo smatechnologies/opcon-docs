@@ -425,7 +425,7 @@ module.exports = {
               label: 'Self Service',
               collapsed: true,
               items: [
-                'Files/UI/Solution-Manager/Working-with-Self-Service',
+                'Files/UI/Solution-Manager/Managing-Self-Service',
                 'Files/UI/Solution-Manager/Working-in-Admin-Mode',
                 'Files/UI/Solution-Manager/Working-in-User-Mode',
                 'Files/UI/Solution-Manager/Filtering-Service-Requests',

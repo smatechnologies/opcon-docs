@@ -1,4 +1,4 @@
-# Working with Schedules
+# Managing Schedules
 
 The **Schedule Build** dialog gives you the ability to generate schedule
 builds manually for selected schedules for a specified day or series of
