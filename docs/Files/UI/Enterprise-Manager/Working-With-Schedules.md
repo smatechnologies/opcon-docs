@@ -73,20 +73,20 @@ If the Define schedule instance checkbox was selected and the schedule is not as
 
 Do the following in the **Define Schedule Instance** dialog:
 
-a. Enter a set of one or more *property definitions* using the
-following format: **PropertyName=PropertyValue**. Separate each
-definition with a semicolon (;).
-b. Skip to Step 13.
+a.  Enter a set of one or more *property definitions* using the
+    following format: **PropertyName=PropertyValue**. Separate each
+    definition with a semicolon (;).
+b.  Skip to Step 13.
 
 If the Define schedule instance checkbox was selected and the schedule is associated with any named instances:
 
 Do the following in the **Define Schedule Instance** dialog:
 
-a. Select the named instance.
-b. Enter a set of one or more *property definitions* using the
-following format: **PropertyName=PropertyValue**. Separate each
-definition with a semicolon (;).
-c. Go to Step 13.
+a.  Select the named instance.
+b.  Enter a set of one or more *property definitions* using the
+    following format: **PropertyName=PropertyValue**. Separate each
+    definition with a semicolon (;).
+c.  Go to Step 13.
 
 Click the **OK** button to save the property definitions or click the
 **Cancel** button to cancel the definitions for that schedule instance.
