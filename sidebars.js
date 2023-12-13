@@ -438,7 +438,7 @@ module.exports = {
               collapsed: true,
               items: [
                 'Files/UI/Solution-Manager/Library/Working-With-Library',
-                'Files/UI/Solution-Manager/Library/Working-With-Global-Properties',
+                'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Working-With-Master-Jobs',
                 'Files/UI/Solution-Manager/Library/Working-With-Master-Schedules',
                 'Files/UI/Solution-Manager/Library/Resources/Resources',
