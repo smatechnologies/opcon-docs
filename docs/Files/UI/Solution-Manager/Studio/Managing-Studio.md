@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Working with Studio
+title: Managing Studio
 viewport: width=device-width, initial-scale=1.0
 ---
 
@@ -8,7 +8,7 @@ viewport: width=device-width, initial-scale=1.0
 
 Studio is where Master Schedules are created and managed. The Master Schedules can contain multiple jobs, use the selection bar on the left side of this screen to learn more about the options.
 
-![Working With Studio](../../../../Resources/Images/SM/Studio/Working-With-Studio.png "Threshold Grid")
+![Managing Studio](../../../../Resources/Images/SM/Studio/Managing-Studio.png "Threshold Grid")
 
 :::note
 Use the bar on the left side of the screen

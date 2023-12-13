@@ -1,10 +1,10 @@
 ---
 lang: en-us
-title: Working with Schedules
+title: Managing Schedules
 viewport: width=device-width, initial-scale=1.0
 ---
 
-# Working With Schedules
+# Managing Schedules
 
 The ![Build Button](../../../Resources/Images/SM/Schedule-Build-Operations-Summary-Build-Button.png "Build Button")
 button on the main **Operations** page takes you to the **Schedule

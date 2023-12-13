@@ -302,7 +302,7 @@ module.exports = {
                 'Files/UI/Enterprise-Manager/Using-Workload-Chart-View',
                 'Files/UI/Enterprise-Manager/Using-Machines-Status-View',
                 'Files/UI/Enterprise-Manager/Using-Daily-Maintenance-View',
-                'Files/UI/Enterprise-Manager/Working-With-Schedules',
+                'Files/UI/Enterprise-Manager/Managing-Schedules',
                 'Files/UI/Enterprise-Manager/Using-Escalation-Acknowlegement',
                 'Files/UI/Enterprise-Manager/Using-Secondary-Windows',
                 'Files/UI/Enterprise-Manager/Using-Operation-Tools',
@@ -675,7 +675,7 @@ module.exports = {
               collapsed: true,
               items: [
                 'Files/UI/Solution-Manager/Managing-Operations',
-                'Files/UI/Solution-Manager/Working-With-Schedules',
+                'Files/UI/Solution-Manager/Managing-Schedules',
                 'Files/UI/Solution-Manager/Managing-Agents',
                 'Files/UI/Solution-Manager/Performing-Schedule-Status-Changes',
                 'Files/UI/Solution-Manager/Performing-Job-Status-Changes',
