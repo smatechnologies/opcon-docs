@@ -734,7 +734,6 @@ module.exports = {
             },
             'Files/UI/Solution-Manager/Using-PERT-View',
             'Files/UI/Solution-Manager/Managing-Daily-Processes',
-            'Files/UI/Solution-Manager/Working-With-Schedules',
           ],
         },
       ],
