@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Managing Agents TBD
+title: Managing Agents
 viewport: width=device-width, initial-scale=1.0
 ---
 

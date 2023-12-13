@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Managing Master Jobs TBD
+title: Managing Master Jobs
 viewport: width=device-width, initial-scale=1.0
 ---
 

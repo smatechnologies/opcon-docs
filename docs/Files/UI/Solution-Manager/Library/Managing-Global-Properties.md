@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Managing Global Properties TBD
+title: Managing Global Properties
 viewport: width=device-width, initial-scale=1.0
 ---
 
