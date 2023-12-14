@@ -583,6 +583,7 @@ module.exports = {
                   ],
                 },
                 'Files/UI/Solution-Manager/Library/Thresholds/Thresholds',
+                'Files/UI/Solution-Manager/Managing-Tags',
                 'Files/UI/Solution-Manager/Managing-Calendar',
                 'Files/UI/Solution-Manager/Managing-Batch-Users',
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
