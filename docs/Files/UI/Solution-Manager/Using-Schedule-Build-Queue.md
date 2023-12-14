@@ -27,7 +27,7 @@ will display the build log.
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
 
--   [Using Schedule Build](Using-Schedule-Build.md)
+-   [Managing Schedules](Managing-Schedules.md)
 :::
 
  
