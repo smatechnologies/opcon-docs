@@ -62,7 +62,7 @@ operation.
 ## Schedule Build Access
 
 The ![Build Button](../../../Resources/Images/SM/Schedule-Build-Operations-Summary-Build-Button.png "Build Button")
-button takes you to the page where you can [view and build](Using-Schedule-Build.md) schedules.
+button takes you to the page where you can [view and build](Managing-Schedules.md) schedules.
 
 ## Filter Profiles
 
@@ -87,5 +87,5 @@ Related Topics
 - [Viewing Job Output](Viewing-Job-Output.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
-- [Using Schedule Build](Using-Schedule-Build.md)
+- [Using Schedule Build](Managing-Schedules.md)
 :::
