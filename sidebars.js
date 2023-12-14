@@ -439,6 +439,7 @@ module.exports = {
               items: [
                 'Files/UI/Solution-Manager/Library/Managing-Library',
                 'Files/UI/Solution-Manager/Managing-Calendar',
+                'Files/UI/Solution-Manager/Managing-Batch-Users',
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Jobs',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Schedules',
