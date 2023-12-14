@@ -8,6 +8,6 @@ viewport: width=device-width, initial-scale=1.0
 
 See [Performing-Agent-Status-Updates](Performing-Agent-Status-Updates.md).
 
-![Managing Agents](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Threshold Grid")
+![Managing Agents](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Managing Agents")
 
 Please check back for more content.

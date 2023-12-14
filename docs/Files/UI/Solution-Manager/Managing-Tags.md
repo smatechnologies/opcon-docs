@@ -8,6 +8,6 @@ viewport: width=device-width, initial-scale=1.0
 
 See [Tag Concepts](../../../job-components/tags.md).
 
-![Managing Tags](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingTags.png "Threshold Grid")
+![Managing Tags](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingTags.png "Managing Tags")
 
 Please check back for more content.

@@ -8,6 +8,6 @@ viewport: width=device-width, initial-scale=1.0
 
 See [Calendar Concepts](../../../objects/calendars.md).
 
-![Managing Calendars](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingCalendars.png  "Threshold Grid")
+![Managing Calendars](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingCalendars.png  "Managing Calendars")
 
 Please check back for more content.
