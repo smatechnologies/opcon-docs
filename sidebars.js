@@ -468,6 +468,8 @@ module.exports = {
                       items: [
                         'Files/UI/Solution-Manager/Library/AccessManagement/Users/Managing-Users',
                         'Files/UI/Solution-Manager/Library/AccessManagement/Users/User-General',
+                        'Files/UI/Solution-Manager/Library/AccessManagement/Users/User-Roles',
+                        'Files/UI/Solution-Manager/Library/AccessManagement/Users/User-Settings',
                       ],
                     },
                   ],
