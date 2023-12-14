@@ -14,4 +14,4 @@ Studio is where Master Schedules are created and managed. The Master Schedules c
 Use the bar on the left side of the screen
 :::
 
-Please check back for more content
+Please check back for more content.

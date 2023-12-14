@@ -10,4 +10,4 @@ See [Calendar Concepts](../../../objects/calendars.md).
 
 ![Managing Calendars](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingCalendars.png  "Threshold Grid")
 
-Please check back for more content
+Please check back for more content.

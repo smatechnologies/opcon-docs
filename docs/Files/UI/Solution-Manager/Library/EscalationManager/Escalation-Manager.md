@@ -6,7 +6,7 @@ viewport: width=device-width, initial-scale=1.0
 
 # Overview
 
-Escalation Manager has options related to escalations.
+Escalation Manager has options related to Escalations.
 
 ![Managing Escalation Manager](../../../../../Resources/Images/SM/Library/EscalationManager/EscalationManager.png "Threshold Grid")
 
@@ -14,4 +14,4 @@ Escalation Manager has options related to escalations.
 Use the bar on the left side of the screen
 :::
 
-Please check back for more content
+Please check back for more content.

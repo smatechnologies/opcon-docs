@@ -10,4 +10,4 @@ See [Frequencies Concepts](../../../automation-concepts/frequencies.md).
 
 ![Managing Frequencies](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingFrequencies.png "Threshold Grid")
 
-Please check back for more content
+Please check back for more content.

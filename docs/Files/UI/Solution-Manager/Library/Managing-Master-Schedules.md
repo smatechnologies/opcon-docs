@@ -12,4 +12,4 @@ See-https://help.smatechnologies.com/opcon/core/v22.10/Files/UI/Solution-Manager
 
 ![Managing master schedules](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingMasterSchedules.png "Threshold Grid")
 
-Please check back for more content
+Please check back for more content.

@@ -10,4 +10,4 @@ The Global Properties editor also has a toolbar that allows you to perform funct
 
 ![Managing Library](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Threshold Grid")
 
-Please check back for more content
+Please check back for more content.
