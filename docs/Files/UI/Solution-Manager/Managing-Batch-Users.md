@@ -22,12 +22,12 @@ functions for managing the batch users. Click on any link about the toolbar belo
 ![White "person reading" icon on blue circular background](<../../../Resources/Images/moreinfo-icon(48x48).png> "More Info icon")
 Related Topics
 
-- [Adding Batch Users](Adding-Batch-Users.md)
-- [Granting Privileges to Batch Users](Granting-Privileges-to-Batch-Users.md)
-- [Revoking Privileges from Batch Users](Revoking-Privileges-from-Batch-Users.md)
-- [Editing Batch Users](Editing-Batch-Users.md)
-- [Deleting Batch Users](Deleting-Batch-Users.md)
-- [Viewing Additional Batch User Information](Viewing-Additional-Batch-User-Info.md)
+- [Adding Batch Users](../Enterprise-Manager/Adding-Batch-Users.md)
+- [Granting Privileges to Batch Users](../Enterprise-Manager/Granting-Privileges-to-Batch-Users.md)
+- [Revoking Privileges from Batch Users](../Enterprise-Manager/Revoking-Privileges-from-Batch-Users.md)
+- [Editing Batch Users](../Enterprise-Manager/Editing-Batch-Users.md)
+- [Deleting Batch Users](../Enterprise-Manager/Deleting-Batch-Users.md)
+- [Viewing Additional Batch User Information](../Enterprise-Manager/Viewing-Additional-Batch-User-Info.md)
   :::
 
   Please check back for more content.
