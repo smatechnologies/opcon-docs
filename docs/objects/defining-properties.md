@@ -96,7 +96,7 @@ PropertyName1=value;PropertyName2=value...
 - Users can define Job Instance Properties from the [Job Instance Definition](../Files/UI/Enterprise-Manager/Job-Instance-Definition.md) frame in the **Enterprise Manager** online help.
 - From Schedule Build, users can define Schedule Instance properties
     when building a schedule. Properties will automatically be
-    associated with the defined schedule when it builds. Refer to [Using Schedule Build](../Files/UI/Enterprise-Manager/Using-Schedule-Build.md)
+    associated with the defined schedule when it builds. Refer to [Managing Schedules](../Files/UI/Enterprise-Manager/Managing-Schedules.md)
     .
 - From Daily Maintenance, users can define Job Instance properties
     when adding a job. Properties will automatically be associated with
