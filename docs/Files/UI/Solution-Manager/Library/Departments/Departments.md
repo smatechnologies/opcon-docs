@@ -4,7 +4,7 @@ title: Managing Departments
 viewport: width=device-width, initial-scale=1.0
 ---
 
-# Overview
+# Managing Departments
 
 Managing Departments has options related to Departments.
 
