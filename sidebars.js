@@ -599,7 +599,7 @@ module.exports = {
                 'Files/UI/Solution-Manager/Managing-Agents',
                 'Files/UI/Solution-Manager/Library/Managing-Batch-Users',
                 'Files/UI/Solution-Manager/Managing-Calendars',
-                'Files/UI/Solution-Manager/Library/Departments/Departments',
+                'Files/UI/Solution-Manager/Library/Managing-Departments',
                 'Files/UI/Solution-Manager/Library/Managing-Frequencies',
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Jobs',
