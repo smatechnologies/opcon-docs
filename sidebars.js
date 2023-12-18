@@ -604,7 +604,7 @@ module.exports = {
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Jobs',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Schedules',
-                'Files/UI/Solution-Manager/Managing-Tags',
+                'Files/UI/Solution-Manager/Library/Managing-Tags',
                 {
                   type: 'category',
                   label: 'Notification Types',
