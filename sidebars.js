@@ -601,7 +601,6 @@ module.exports = {
                 'Files/UI/Solution-Manager/Managing-Calendars',
                 'Files/UI/Solution-Manager/Library/Departments/Departments',
                 'Files/UI/Solution-Manager/Library/Managing-Frequencies',
-                // 'Files/UI/Solution-Manager/Managing-Frequencies',
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Jobs',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Schedules',
