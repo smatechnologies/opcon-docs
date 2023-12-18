@@ -13,7 +13,7 @@ A series of tabs is displayed on the Roles page. The Resources tab displays the 
 To modify the resources granted to a role, edit the preferred fields and click **Save**.
 
 :::note
-If a Role has the **Inherit all** privileges for Machines, Machine Groups, Schedules, or Scripts selected on the **General** tab, the **Resources** tab will display information noting as such and does not allow granting or revoking privileges for specific resources. For information on this checkbox, refer to [Roles](../../../../../../administration/roles.md) in the **Concepts** online help.
+If a Role has the **Inherit all** privileges for Machines, Machine Groups, Schedules, or Scripts selected on the **General** tab, the **Resources** tab will display information noting as such and does not allow granting or revoking privileges for specific resources. For information on this checkbox, refer to [Roles](../../../../../../../administration/roles.md) in the **Concepts** online help.
 :::
 
 ![Role Resources](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-resources-tab.png 'Role Resources')
