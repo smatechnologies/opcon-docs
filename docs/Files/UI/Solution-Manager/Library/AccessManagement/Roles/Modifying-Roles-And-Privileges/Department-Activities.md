@@ -12,16 +12,16 @@ A series of tabs is displayed on the Roles page. The Departments tab displays th
 
 To modify the department activities assigned to a role, edit the preferred fields and click **Save**.
 
-![Role Department Activities](../../../../../../Resources/Images/SM/Library/AccessManagement/roles-departments-tab.png 'Role Department Activities')
+![Role Department Activities](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-departments-tab.png 'Role Department Activities')
 
 ---
 
 For more information see:
 
-- [Managing Roles](Managing-Roles-And-Privileges.md)
+- [Managing Roles](../Managing-Roles-And-Privileges.md)
 
 For conceptual help, see:
 
-- [Privileges](../../../../../../administration/privileges.md)
-- [Roles](../../../../../../administration/roles.md)
-- [Users](../../../../../../administration/user-accounts.md)
+- [Privileges](../../../../../../../administration/privileges.md)
+- [Roles](../../../../../../../administration/roles.md)
+- [Users](../../../../../../../administration/user-accounts.md)

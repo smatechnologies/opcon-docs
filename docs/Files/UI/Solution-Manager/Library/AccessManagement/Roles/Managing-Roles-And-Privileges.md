@@ -1,31 +1,33 @@
 ---
 lang: en-us
-title: Managing Roles
+title: Managing Roles and Privileges
 viewport: width=device-width, initial-scale=1.0
 ---
 
 # Managing Roles and Privileges
 
-The Roles page is found in _Library > Access Management > Roles_, and provides the views to manage Roles and Privileges. A list of all Roles that have been created in the system and a series of tabs is displayed on the Roles page. Select the name of a Role to view the details of that Role.
+The **Roles** page is found in _Library > Access Management > Roles_, and provides the views to manage roles and privileges. A list of all roles that have been created in the system and a series of tabs is displayed on the roles page. Select the name of a role to view the details of that role.
 
 ![Roles](../../../../../../Resources/Images/SM/Library/AccessManagement/roles-page.png 'Roles')
 
-A series of tabs is displayed on the Roles page:
+To sort the roles, select the sort icon ![Sort Icon](../../../../../../Resources/Images/SM/Library/AccessManagement/sort-icon.png 'Sort Icon').
 
-- [General](Role-General.md)
-- [Activities](Role-Activities.md)
-- [Batch Users](Role-Batch-Users.md)
-- [Department Activities](Role-Department-Activities.md)
-- [Resources](Role-Resources.md)
-- [Users](Role-Users.md)
+Selecting a role displays a series of tabs that allow you to view and modify the details of the selected role. The tabs are:
 
-To delete a Role, click the context menu button and select **Delete the selected role**. A confirmation dialog is displayed. Click **Yes** to delete the Role.
+- [General](Modifying-Roles-And-Privileges/General.md)
+- [Activities](Modifying-Roles-And-Privileges/Activities.md)
+- [Batch Users](Modifying-Roles-And-Privileges/Batch-Users.md)
+- [Department Activities](Modifying-Roles-And-Privileges/Department-Activities.md)
+- [Resources](Modifying-Roles-And-Privileges/Resources.md)
+- [Users](Modifying-Roles-And-Privileges/Users.md)
 
-![Delete Role](../../../../../../Resources/Images/SM/Library/AccessManagement/delete-role.png 'Delete Role')
+To add, copy, or delete a role, use the context menu button ![Context Menu Button](../../../../../../Resources/Images/SM/Library/AccessManagement/context-menu.png 'Context Menu Button'). See the following sections for more information:
 
-::: note
-You cannot delete a Role_ocadm.
-:::
+- [Adding Roles](Adding-Roles.md)
+- [Deleting Roles](Deleting-Roles.md)
+- [Copying Roles](Copying-Roles.md)
+
+---
 
 For conceptual help, see:
 

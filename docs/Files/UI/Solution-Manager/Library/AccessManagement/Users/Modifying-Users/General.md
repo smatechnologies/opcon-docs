@@ -12,14 +12,14 @@ A series of tabs is displayed on the Users page. The General tab displays the ge
 
 To modify a User, edit the preferred fields and click **Save**.
 
-![User General](../../../../../../Resources/Images/SM/Library/AccessManagement/users-general-tab.png 'User General')
+![User General](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-general-tab.png 'User General')
 
 ---
 
 For more information see:
 
-- [Managing Users](Managing-Users.md)
+- [Managing Users](../Managing-Users.md)
 
 For conceptual help, see:
 
-- [Users](../../../../../../administration/user-accounts.md)
+- [Users](../../../../../../../administration/user-accounts.md)

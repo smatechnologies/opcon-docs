@@ -12,16 +12,16 @@ A series of tabs is displayed on the Roles page. The Batch Users tab displays th
 
 To modify the batch users assigned to a role, edit the preferred fields and click **Save**.
 
-![Role Batch Users](../../../../../../Resources/Images/SM/Library/AccessManagement/roles-batchusers-tab.png 'Role Batch Users')
+![Role Batch Users](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-batchusers-tab.png 'Role Batch Users')
 
 ---
 
 For more information see:
 
-- [Managing Roles](Managing-Roles-And-Privileges.md)
+- [Managing Roles](../Managing-Roles-And-Privileges.md)
 
 For conceptual help, see:
 
-- [Privileges](../../../../../../administration/privileges.md)
-- [Roles](../../../../../../administration/roles.md)
-- [Users](../../../../../../administration/user-accounts.md)
+- [Privileges](../../../../../../../administration/privileges.md)
+- [Roles](../../../../../../../administration/roles.md)
+- [Users](../../../../../../../administration/user-accounts.md)

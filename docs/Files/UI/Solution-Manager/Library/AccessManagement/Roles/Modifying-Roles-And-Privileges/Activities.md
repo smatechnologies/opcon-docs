@@ -12,16 +12,16 @@ A series of tabs is displayed on the Roles page. The Activities tab displays the
 
 To modify the activities granted to a role, edit the preferred fields and click **Save**.
 
-![Roles Activities](../../../../../../Resources/Images/SM/Library/AccessManagement/roles-activities-tab.png 'Roles Activities')
+![Roles Activities](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-activities-tab.png 'Roles Activities')
 
 ---
 
 For more information see:
 
-- [Managing Roles](Managing-Roles-And-Privileges.md)
+- [Managing Roles](../Managing-Roles-And-Privileges.md)
 
 For conceptual help, see:
 
-- [Privileges](../../../../../../administration/privileges.md)
-- [Roles](../../../../../../administration/roles.md)
-- [Users](../../../../../../administration/user-accounts.md)
+- [Privileges](../../../../../../../administration/privileges.md)
+- [Roles](../../../../../../../administration/roles.md)
+- [Users](../../../../../../../administration/user-accounts.md)

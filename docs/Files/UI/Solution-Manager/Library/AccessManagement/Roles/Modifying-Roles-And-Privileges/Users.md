@@ -12,16 +12,16 @@ A series of tabs is displayed on the Roles page. The Users tab indicates the use
 
 To modify the users granted to a role, edit the preferred fields and click **Save**.
 
-![Role Users](../../../../../../Resources/Images/SM/Library/AccessManagement/roles-users-tab.png 'Role Users')
+![Role Users](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-users-tab.png 'Role Users')
 
 ---
 
 For more information see:
 
-- [Managing Roles](Managing-Roles-And-Privileges.md)
+- [Managing Roles](../Managing-Roles-And-Privileges.md)
 
 For conceptual help, see:
 
-- [Privileges](../../../../../../administration/privileges.md)
-- [Roles](../../../../../../administration/roles.md)
-- [Users](../../../../../../administration/user-accounts.md)
+- [Privileges](../../../../../../../administration/privileges.md)
+- [Roles](../../../../../../../administration/roles.md)
+- [Users](../../../../../../../administration/user-accounts.md)
