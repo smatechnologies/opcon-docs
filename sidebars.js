@@ -598,7 +598,7 @@ module.exports = {
                 'Files/UI/Solution-Manager/Library/Thresholds/Thresholds',
                 'Files/UI/Solution-Manager/Managing-Agents',
                 'Files/UI/Solution-Manager/Managing-Batch-Users',
-                'Files/UI/Solution-Manager/Managing-Calendar',
+                'Files/UI/Solution-Manager/Managing-Calendars',
                 'Files/UI/Solution-Manager/Library/Departments/Departments',
                 'Files/UI/Solution-Manager/Managing-Frequencies',
                 'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
