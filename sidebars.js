@@ -693,7 +693,7 @@ module.exports = {
               label: 'Operations',
               collapsed: true,
               items: [
-                'Files/UI/Solution-Manager/Managing-Operations',
+                'Files/UI/Solution-Manager/Managing-Schedules',
                 'Files/UI/Solution-Manager/Managing-Schedules',
                 'Files/UI/Solution-Manager/Managing-Agents',
                 'Files/UI/Solution-Manager/Performing-Schedule-Status-Changes',
