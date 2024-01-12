@@ -4,6 +4,16 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.24
+
+2024 January
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-22759**: Fixed a problem where job events went missing after a deployment of existing schedules (update).
+
+:white_check_mark: **OPCON-22916**: Fixed a problem in ImpEx2 where deployment of a schedule failed due to a global property not being created.
+
 ## OpCon 21.0.23
 
 2023 December
