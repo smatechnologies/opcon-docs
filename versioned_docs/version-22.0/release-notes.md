@@ -4,6 +4,28 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.12
+
+2024 January
+
+#### Server
+
+:white_check_mark: **OPCON-23027**: Fixed an issue where the Start Time Calculator continues calculating and never displays the time after upgrade.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22679**: Corrected the display of frequency start times when a job has schedule level frequencies.
+
+:white_check_mark: **OPCON-22787**: Fixed an issue where the Agents Machine Groups drawer remains open when multiple Agents are selected and when no Agents are selected. Fixed another issue where filtering Agents based on Status inadvertently selected all Agents in the results.
+
+:white_check_mark: **OPCON-22859**: Corrected the display of server time in master jobs when the schedule has a start offset.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-22759**: Fixed a problem where job events went missing after a deployment of existing schedules (update).
+
+:white_check_mark: **OPCON-22916**: Fixed a problem where deployment of a schedule failed due to a global property not being created.
+
 ## OpCon 22.0.11
 
 2023 December
