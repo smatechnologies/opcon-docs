@@ -8,7 +8,6 @@
       "collapsed": true,
       "items": [
         "components",
-        "file-locations",
         {
           "type": "category",
           "label": "Automation Concepts",
@@ -121,7 +120,6 @@
             "operations/adding-jobs",
             "operations/containers",
             "operations/job-output",
-            "operations/window-to-host",
             "operations/SAP-Job-Menu-Options"
           ]
         },
@@ -134,45 +132,6 @@
             "notifications/Escalation",
             "notifications/Notification-Triggers",
             "notifications/Notification-Configuration"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Installation",
-      "collapsed": true,
-      "items": [
-        "installation/whats-new",
-        "installation/breaking-changes",
-        "installation/system-requirements",
-        "installation/install",
-        "installation/upgrade",
-        "installation/configuration",
-        "installation/components",
-        "installation/docker",
-        "installation/database-scripts"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Database",
-      "collapsed": true,
-      "items": [
-        "Files/Database-Information/Failover-Scenarios",
-        "Files/Database-Information/Manual-Setup-for-Microsoft-SQL-Replication",
-        "Files/Database-Information/Setup-for-Automatic-Microsoft-SQL-Replication",
-        "Files/Database-Information/Failover-and-Recovery-with-Replication",
-        "Files/Database-Information/Setup-for-Automatic-Microsoft-SQL-Mirroring",
-        "Files/Database-Information/Manual-Database-Backups-and-Restoration",
-        "Files/Database-Information/OpCon-Data-Maintenance",
-        {
-          "type": "category",
-          "label": "Reference Information",
-          "collapsed": true,
-          "items": [
-            "Files/Database-Information/Database-Mirroring-Checklist",
-            "Files/Database-Information/Database-Replication-Checklist"
           ]
         }
       ]
@@ -199,190 +158,9 @@
     },
     {
       "type": "category",
-      "label": "Server Programs",
-      "collapsed": true,
-      "items": [
-        "server-programs/introduction",
-        "server-programs/licensing",
-        "server-programs/service-manager",
-        "server-programs/schedule-activity-monitor",
-        "server-programs/network-communications",
-        "server-programs/notify-handler",
-        "server-programs/request-router",
-        "server-programs/start-time-calculator",
-        "server-programs/optional",
-        "server-programs/configuration",
-        "server-programs/logging"
-      ]
-    },
-    {
-      "type": "category",
       "label": "User Interfaces",
       "collapsed": true,
       "items": [
-        {
-          "type": "category",
-          "label": "Enterprise Manager",
-          "collapsed": true,
-          "items": [
-            "Files/UI/Enterprise-Manager/Logging-In",
-            {
-              "type": "category",
-              "label": "Understanding the Layout",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/EM-UI-Layout",
-                "Files/UI/Enterprise-Manager/Menus",
-                "Files/UI/Enterprise-Manager/Navigation-Panel",
-                "Files/UI/Enterprise-Manager/Information-Bar",
-                "Files/UI/Enterprise-Manager/Keyboard-Shortcuts"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Getting Started",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Managing-Connection-Profiles",
-                "Files/UI/Enterprise-Manager/Setting-Preferences",
-                "Files/UI/Enterprise-Manager/Setting-Language",
-                "Files/UI/Enterprise-Manager/Receiving-Installation-Details"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Solution Manager",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Solution-Manager",
-                "Files/UI/Enterprise-Manager/Using-Home",
-                "Files/UI/Enterprise-Manager/Using-Operations",
-                "Files/UI/Enterprise-Manager/Using-Vision",
-                "Files/UI/Enterprise-Manager/Using-Self-Service",
-                "Files/UI/Enterprise-Manager/Using-Profile"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Administration",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Administration",
-                "Files/UI/Enterprise-Manager/Using-Quick-Search",
-                "Files/UI/Enterprise-Manager/Using-Schedule-Master",
-                "Files/UI/Enterprise-Manager/Using-Job-Master",
-                "Files/UI/Enterprise-Manager/Using-Workflow-Designer",
-                "Files/UI/Enterprise-Manager/Managing-Calendars",
-                "Files/UI/Enterprise-Manager/Managing-Global-Properties",
-                "Files/UI/Enterprise-Manager/Managing-Thresholds",
-                "Files/UI/Enterprise-Manager/Managing-Resources",
-                "Files/UI/Enterprise-Manager/Managing-Machines",
-                "Files/UI/Enterprise-Manager/Managing-Machine-Groups",
-                "Files/UI/Enterprise-Manager/Managing-Remote-Instances",
-                "Files/UI/Enterprise-Manager/Managing-Server-Options",
-                "Files/UI/Enterprise-Manager/Using-Administration-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Operation",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Operation",
-                "Files/UI/Enterprise-Manager/Using-List-View",
-                "Files/UI/Enterprise-Manager/Using-Matrix-View",
-                "Files/UI/Enterprise-Manager/Using-Gantt-View",
-                "Files/UI/Enterprise-Manager/Using-PERT-View",
-                "Files/UI/Enterprise-Manager/Using-Bar-Chart-View",
-                "Files/UI/Enterprise-Manager/Using-Pie-Chart-View",
-                "Files/UI/Enterprise-Manager/Using-Workload-Chart-View",
-                "Files/UI/Enterprise-Manager/Using-Machines-Status-View",
-                "Files/UI/Enterprise-Manager/Using-Daily-Maintenance-View",
-                "Files/UI/Enterprise-Manager/Managing-Schedules",
-                "Files/UI/Enterprise-Manager/Using-Escalation-Acknowlegement",
-                "Files/UI/Enterprise-Manager/Using-Secondary-Windows",
-                "Files/UI/Enterprise-Manager/Using-Operation-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Security",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Security",
-                "Files/UI/Enterprise-Manager/Managing-Roles",
-                "Files/UI/Enterprise-Manager/Managing-User-Accounts",
-                "Files/UI/Enterprise-Manager/Managing-Batch-Users",
-                "Files/UI/Enterprise-Manager/Managing-Departments",
-                "Files/UI/Enterprise-Manager/Managing-Access-Codes",
-                "Files/UI/Enterprise-Manager/Managing-Privileges",
-                "Files/UI/Enterprise-Manager/Using-Security-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Management",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Management",
-                "Files/UI/Enterprise-Manager/Using-Audit-Management",
-                "Files/UI/Enterprise-Manager/Using-History-Management",
-                "Files/UI/Enterprise-Manager/Using-Notification-Manager",
-                "Files/UI/Enterprise-Manager/Using-Escalation-Manager",
-                "Files/UI/Enterprise-Manager/Using-Schedule-Extract",
-                "Files/UI/Enterprise-Manager/Using-Tag-Manager",
-                "Files/UI/Enterprise-Manager/Using-Frequency-Manager",
-                "Files/UI/Enterprise-Manager/Using-Management-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "External Tools",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-External-Tools",
-                "Files/UI/Enterprise-Manager/Configuring-the-Installation-Directory",
-                "Files/UI/Enterprise-Manager/Opening-Import-Export",
-                "Files/UI/Enterprise-Manager/Opening-Windows-Tools",
-                "Files/UI/Enterprise-Manager/Adding-External-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Enterprise Information",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Enterprise-Information",
-                "Files/UI/Enterprise-Manager/Using-Reports",
-                "Files/UI/Enterprise-Manager/Using-Logs",
-                "Files/UI/Enterprise-Manager/Using-Information-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Scripts",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Scripts",
-                "Files/UI/Enterprise-Manager/Using-Script-Repository",
-                "Files/UI/Enterprise-Manager/Managing-Script-Runners",
-                "Files/UI/Enterprise-Manager/Managing-Script-Types",
-                "Files/UI/Enterprise-Manager/Using-Scripts-Tools"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Enterprise Support",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Enterprise-Manager/Working-with-Enterprise-Support",
-                "Files/UI/Enterprise-Manager/Getting-Support-Information",
-                "Files/UI/Enterprise-Manager/Reporting-Problems",
-                "Files/UI/Enterprise-Manager/Accessing-Application-Logs"
-              ]
-            }
-          ]
-        },
         {
           "type": "category",
           "label": "Solution Manager",
@@ -770,75 +548,6 @@
             },
             "Files/UI/Solution-Manager/Using-PERT-View",
             "Files/UI/Solution-Manager/Managing-Daily-Processes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Utilities",
-      "collapsed": true,
-      "items": [
-        "utilities/overview",
-        {
-          "type": "category",
-          "label": "Command-line Utilities",
-          "collapsed": true,
-          "items": [
-            "utilities/Command-line-Utilities/Introduction",
-            "utilities/Command-line-Utilities/Adminstrative-Stored-Procedures",
-            "utilities/Command-line-Utilities/Audit-History-Cleanup",
-            "utilities/Command-line-Utilities/BIRT-Report-Generator",
-            "utilities/Command-line-Utilities/Check-Job-Termination",
-            "utilities/Command-line-Utilities/Check-Schedule-and-Job-Status",
-            "utilities/Command-line-Utilities/Chronoman",
-            "utilities/Command-line-Utilities/DoBatch",
-            "utilities/Command-line-Utilities/Job-History-Cleanup",
-            "utilities/Command-line-Utilities/Pingman",
-            "utilities/Command-line-Utilities/Schedule-Extract-Command-line-Interface",
-            "utilities/Command-line-Utilities/SMA-Evaluate-Expression",
-            "utilities/Command-line-Utilities/SMADirectory",
-            "utilities/Command-line-Utilities/SMAGetServiceStatus",
-            "utilities/Command-line-Utilities/SMAHoliday",
-            "utilities/Command-line-Utilities/SMALogEvent",
-            "utilities/Command-line-Utilities/SMASetRMFileName",
-            "utilities/Command-line-Utilities/Synch-SAP"
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Graphical Utilities",
-          "collapsed": true,
-          "items": [
-            "utilities/Graphical-Utilities/Introduction",
-            "utilities/Graphical-Utilities/Legacy-Audit-Management",
-            "utilities/Graphical-Utilities/Schedule-Import_Export",
-            "utilities/Graphical-Utilities/SMA-OpCon-Configuration-Utility"
-          ]
-        },
-        {
-          "type": "category",
-          "label": "SMA Dynamic Data Input",
-          "collapsed": true,
-          "items": [
-            "utilities/SMA-Dynamic-Data-Input/Introduction",
-            "utilities/SMA-Dynamic-Data-Input/Configuration",
-            "utilities/SMA-Dynamic-Data-Input/Creating-Data-Input-Files",
-            "utilities/SMA-Dynamic-Data-Input/SMADDI-Message-Types",
-            "utilities/SMA-Dynamic-Data-Input/Data-Input-Message-Elements",
-            "utilities/SMA-Dynamic-Data-Input/jobdata-Platform-specific-Elements"
-          ]
-        },
-        {
-          "type": "category",
-          "label": "SMA Resource Monitor",
-          "collapsed": true,
-          "items": [
-            "utilities/SMA-Resource-Monitor/Introduction",
-            "utilities/SMA-Resource-Monitor/Summary-Information",
-            "utilities/SMA-Resource-Monitor/Wizards",
-            "utilities/SMA-Resource-Monitor/Tools",
-            "utilities/SMA-Resource-Monitor/Service"
           ]
         }
       ]
