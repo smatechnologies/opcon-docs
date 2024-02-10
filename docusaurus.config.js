@@ -1,5 +1,4 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require("./versionsArchived.json");
 module.exports = {
   title: "SMA Technologies Help",
   tagline: "OpCon",
@@ -22,14 +21,6 @@ module.exports = {
         {
           type: "docsVersionDropdown",
           position: "right",
-          dropdownItemsAfter: [
-            ...Object.entries(VersionsArchived).map(
-              ([versionName, versionUrl]) => ({
-                label: versionName,
-                href: versionUrl,
-              })
-            ),
-          ],
         },
       ],
     },
