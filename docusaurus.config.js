@@ -47,10 +47,12 @@ module.exports = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/smatechnologies/opcon-docs/blob/main",
-          lastVersion: "current",
+          lastVersion: "cloud",
+          includeCurrentVersion: false,
           versions: {
-            current: {
-              label: "current",
+            "cloud": {
+              label: "OpCon Cloud",
+              banner: "none",
             },
             "23.0": {
               label: "23.0",
