@@ -1,4 +1,4 @@
-# Logging In/Out
+# Logging In
 
 ## Logging In
 
@@ -12,12 +12,12 @@ Keep in mind that the OpCon password field permits up to a maximum of 12 charact
 If data migration is required, your login may be rejected. A member of the ocadm role must perform [data migration](Migrating-Data.md) before you can gain access into the application.
 :::
 
-![Solution Manager Login Screen](../../../Resources/Images/SM/Login2.png "Solution Manager Login Screen")
+![Solution Manager Login Screen](../Resources/Images/SM/Login2.png "Solution Manager Login Screen")
 
 :::note
 As a security measure, some users may be presented with a Security message after each manual login or attempt to access the application via automatic login. Those users must Accept or Decline this message. If accepted, then the user may proceed as normal to access the features and data in the application. If declined, then the user will either be returned to the login screen or presented with the security message.
 
-The Security message is configured under the Generals tab of the Server Options editor in the Enterprise Manager. For more information about security message configuration, refer to the [Login Security Message](../../../administration/server-options.md#general) parameter in the Concepts online help.
+The Security message is configured under the Generals tab of the Server Options editor in the Enterprise Manager. For more information about security message configuration, refer to the [Login Security Message](../administration/server-options.md#general) parameter in the Concepts online help.
 :::
 
 ### Automatic Login
@@ -67,7 +67,7 @@ If the automatic logon fails, then the login screen will display so that you can
 
 The **Login with Windows** button is available to allow you to log into the application using Windows Authentication and bypass entering OpCon login credentials. When activated, your Windows credentials are sent to the server for authentication.
 
-![Solution Manager Login with Windows Button](../../../Resources/Images/SM/Login-with-Windows.png "Solution Manager Login with Windows Button")
+![Solution Manager Login with Windows Button](../Resources/Images/SM/Login-with-Windows.png "Solution Manager Login with Windows Button")
 
 In order for the button to display on the login screen, you will need to ensure that a few settings are configured.
 
@@ -78,7 +78,7 @@ In order for the button to display on the login screen, you will need to ensure 
 
 The **Single Sign On (SSO)** button is available to allow you to log into the application using an identity provider (IdP) to authenticate and bypass entering OpCon login credentials. When activated, the user's IdP credentials are authenticated to gain access to the Solution Manager application.
 
-![Solution Manager Login with SSO Button](../../../Resources/Images/SM/Login-with-SSO.png "Solution Manager Login with SSO Button")
+![Solution Manager Login with SSO Button](../Resources/Images/SM/Login-with-SSO.png "Solution Manager Login with SSO Button")
 
 In order for the button to display on the login screen, you will need to ensure that a few settings are configured.
 
@@ -88,7 +88,7 @@ In order for the button to display on the login screen, you will need to ensure 
 
 Should the browser session expire, a pop-up window will display to allow you to log back into the application without having to go to the login screen. Depending on how you initially logged in, the pop-up will either prompt for your login credentials or display the **Login with Windows** button.
 
-![Session Expiration: Login Pop-up Window](../../../Resources/Images/SM/Login-Pop-up.png "Session Expiration: Login Pop-up Window")
+![Session Expiration: Login Pop-up Window](../Resources/Images/SM/Login-Pop-up.png "Session Expiration: Login Pop-up Window")
 
 ## Logging Out
 

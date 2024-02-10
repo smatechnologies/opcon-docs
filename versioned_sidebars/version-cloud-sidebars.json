@@ -1,42 +1,51 @@
 {
   "mySidebar": [
-    "index",
-    "release-notes",
+    "overview",
+    "whats-new",
     {
       "type": "category",
-      "label": "Concepts",
+      "label": "Getting Started",
       "collapsed": true,
       "items": [
-        "components",
-        {
-          "type": "category",
-          "label": "Automation Concepts",
-          "collapsed": true,
-          "items": [
-            "automation-concepts/master-vs-daily",
-            "automation-concepts/editing-master-vs-daily",
-            "automation-concepts/named-schedule-instances",
-            "automation-concepts/frequencies",
-            "automation-concepts/property-expressions",
-            "automation-concepts/time-zones",
-            "automation-concepts/machine-groups",
-            "automation-concepts/null-jobs",
-            "automation-concepts/file-transfer-jobs",
-            "automation-concepts/job-tracking",
-            "automation-concepts/embedded-scripts"
-          ]
-        },
-        "administration/server-options",
-        {
-          "type": "category",
-          "label": "Users and Roles",
-          "collapsed": true,
-          "items": [
-            "administration/user-accounts",
+        "getting-started/accessing-the-solution",
+        "getting-started/authentication",
+        "getting-started/ui-layout",
+        "getting-started/keyboard-shortcuts",
+        "getting-started/url-shortcuts",
+        "getting-started/application-help"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Administrating OpCon",
+      "collapsed": true,
+      "items": [
+        "administration/user-accounts",
             "administration/roles",
-            "administration/privileges"
-          ]
-        },
+            "administration/privileges",
+            "administration/auditing",
+        "administration/system-configuration",
+        "administration/architecture-overview",
+        "administration/agents",
+        "administration/relay"
+      ]
+    },    
+    {
+      "type": "category",
+      "label": "Automation Concepts",
+      "collapsed": true,
+      "items": [
+          "automation-concepts/master-vs-daily",
+          "automation-concepts/editing-master-vs-daily",
+          "automation-concepts/named-schedule-instances",
+          "automation-concepts/frequencies",
+          "automation-concepts/property-expressions",
+          "automation-concepts/time-zones",
+          "automation-concepts/machine-groups",
+          "automation-concepts/null-jobs",
+          "automation-concepts/file-transfer-jobs",
+          "automation-concepts/job-tracking",
+          "automation-concepts/embedded-scripts",
         {
           "type": "category",
           "label": "OpCon Objects",
@@ -165,23 +174,8 @@
           "type": "category",
           "label": "Solution Manager",
           "collapsed": true,
-          "items": [
-            "Files/UI/Solution-Manager/Getting-Started",
-            "Files/UI/Solution-Manager/Application-Help",
-            "Files/UI/Solution-Manager/Logging-In",
-            "Files/UI/Solution-Manager/Migrating-Data",
-            {
-              "type": "category",
-              "label": "Understanding the Layout",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/SM-UI-Layout",
-                "Files/UI/Solution-Manager/URL-Shortcuts",
-                "Files/UI/Solution-Manager/Keyboard-Shortcuts",
-                "Files/UI/Solution-Manager/Responsive-Platform",
-                "Files/UI/Solution-Manager/Viewing-Notification-Acknowledgement"
-              ]
-            },
+          "items": [  
+            "Files/UI/Solution-Manager/Viewing-Notification-Acknowledgement",
             {
               "type": "category",
               "label": "Profile Settings",

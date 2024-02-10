@@ -1,14 +1,10 @@
----
-sidebar_label: Getting Started 
----
-
-# Getting Started with OpCon
+# Architecture Overview
 
 The OpCon Server components include the database and Schedule Activity Monitor (SAM) and supporting services. On user workstations, desktop clients connect to the database and web-based interfaces connect to web services to manage the data for automation. The agents responsible for executing jobs are called Local Schedule Activity Monitors (LSAMs).
 
 ## OpCon Architecture Overview
 
-![OpCon Architecture Overview](./Resources/Images/Concepts/opconarchitecture.png "OpCon Architecture Overview")
+![OpCon Architecture Overview](../Resources/Images/Concepts/opconarchitecture.png "OpCon Architecture Overview")
 
 ## OpCon Components
 
@@ -16,7 +12,7 @@ The OpCon Server components include the database and Schedule Activity Monitor (
 
 OpCon provides two primary graphical user interfaces. One interface is a rich client interface for installation on Windows and Linux operating systems called the Enterprise Manager (EM). The other interface is a browser-based interface called the Solution Manager. These interfaces are the primary means of controlling the data used by OpCon. These applications access the OpCon database to manage the data for automation. These interfaces also manage operations once the automation is configured. For additional information on the Enterprise Manager, refer to the **Enterprise Manager** online help. For additional information on the Solution Manager, refer to the **Solution Manager** online help.
 
-![Graphical User Interfaces](./Resources/Images/Concepts/GUIs.png "Graphical User Interfaces")
+![Graphical User Interfaces](../Resources/Images/Concepts/GUIs.png "Graphical User Interfaces")
 
 ### Database
 
