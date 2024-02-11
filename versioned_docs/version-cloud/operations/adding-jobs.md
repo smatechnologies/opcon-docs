@@ -1,22 +1,24 @@
 # Adding Jobs to Daily Schedules
 
-Adding jobs to Daily schedules is the process of taking a job from the Job Master and adding it to a specific Daily schedule. To add a job, the schedule, job, and desired frequency must be specified and added to a schedule date with the schedule already built. The frequency is defined to add all of the desired frequency-related job components.
 
-:::note
-The only frequency-related component not included in the add of a job is the Job Build Status. The only available default statuses for a manually added job are Released and On Hold.
-:::
+The **Operations** module allows you to add jobs to daily schedules using a few simple steps.
 
-When adding jobs to Daily schedules, you can set specific property definitions for each job instance.
+To add a job to a Daily Schedule
 
-- If the job being added has no defined instances, (refer to [Instance Definition](../job-components/instances.md)), you can enter property definitions for an instance of a specific job in the format:
-- In graphical interfaces, if the job being added is configured to [Run on each Machine](../objects/jobs.md#run) in a machine group , you can select a specific machine from the group.
-- In graphical interfaces, if the job being added has one or more Instance Definitions with predefined user properties (refer to [Instance Definition](../job-components/instances.md)), you can enter property definitions for an instance of a specific job in the format:
+1. Right-click on a Schedule record and click **+** icon to open a Add Job(s) dialog
+   ![Opening Add Job(s) dialog](../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule1.png "Opening Add Job(s) dialog")
 
-:::note
-If specific definitions are not supplied for each job instance, OpCon automatically adds all defined instances for the job.
-:::
+2. Find and select job(s) by using the search or browsing
+   ![Searching and Selecting Jobs](../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule2.png "Searching and Selecting Jobs")
 
-Jobs can be added to Daily schedules using the following methods:
+3. Configure the selected job(s)
+   ![Configuring Jobs to add](../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule3.png "Configuring Jobs to add")
 
-- OpCon events (refer to [Job-Related Events](../events/types.md#job-related-events) in the **OpCon Events** online help)
-- Through the graphical interfaces
+4. Review configured job(s) before submitting
+   ![Reviewing Jobs and configurations](../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule4.png "Reviewing Jobs and configurations")
+
+5. Wait for the results
+   ![Waiting for the Add Job results](../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule5.png "Waiting for the Add Job results")
+
+6. Review the results
+   ![Reviewing Add Job results](../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule6.png "Reviewing Add Job results")
