@@ -20,14 +20,34 @@
       "label": "Administrating OpCon",
       "collapsed": true,
       "items": [
-        "administration/user-accounts",
-            "administration/roles",
-            "administration/privileges",
-            "administration/auditing",
-        "administration/system-configuration",
         "administration/architecture-overview",
-        "administration/agents",
-        "administration/relay"
+        {
+          "type": "category",
+          "label": "Agents",
+          "link": { "type": "doc", "id": "administration/agents" },
+          "collapsed": true,
+          "items": [
+            "administration/configuring-relay",
+            "administration/managing-agents",
+            "administration/managing-machine-groups",
+            "administration/managing-batch-users"
+          ]
+        },        
+        {
+          "type": "category",
+          "label": "Access Management",
+          "link": { "type": "doc", "id": "administration/access-management" },
+          "collapsed": true,
+          "items": [
+            "administration/managing-users",
+            "administration/managing-roles",
+            "administration/managing-departments",
+            "administration/managing-access-codes",
+            "administration/auditing"
+          ]
+        },
+        "administration/system-logs",
+        "administration/system-configuration"
       ]
     },    
     {
@@ -41,7 +61,6 @@
           "automation-concepts/frequencies",
           "automation-concepts/property-expressions",
           "automation-concepts/time-zones",
-          "automation-concepts/machine-groups",
           "automation-concepts/null-jobs",
           "automation-concepts/file-transfer-jobs",
           "automation-concepts/job-tracking",
@@ -53,8 +72,6 @@
           "items": [
             "objects/schedules",
             "objects/jobs",
-            "objects/machines",
-            "objects/machine-groups",
             "objects/remote-instances",
             {
               "type": "category",
@@ -68,9 +85,7 @@
             },
             "objects/thresholds",
             "objects/resources",
-            "objects/calendars",
-            "objects/access-codes",
-            "objects/departments"
+            "objects/calendars"
           ]
         },
         {
@@ -114,27 +129,17 @@
         },
         {
           "type": "category",
-          "label": "Operations",
+          "label": "OpCon Events",
           "collapsed": true,
           "items": [
-            "operations/schedule-dates",
-            "operations/schedule-names",
-            "operations/job-names",
-            "operations/status-descriptions",
-            "operations/status-change-commands",
-            "operations/building-schedules",
-            "operations/checking-schedules",
-            "operations/deleting-schedules",
-            "operations/editing-schedules",
-            "operations/adding-jobs",
-            "operations/containers",
-            "operations/job-output",
-            "operations/SAP-Job-Menu-Options"
+            "events/introduction",
+            "events/defining",
+            "events/types"
           ]
         },
         {
           "type": "category",
-          "label": "Event Notification",
+          "label": "Notifications",
           "collapsed": true,
           "items": [
             "notifications/Components",
@@ -147,14 +152,91 @@
     },
     {
       "type": "category",
-      "label": "OpCon Events",
+      "label": "Building Automation",
       "collapsed": true,
       "items": [
-        "events/introduction",
-        "events/defining",
-        "events/types"
+        "getting-started/accessing-the-solution"
       ]
     },
+    {
+      "type": "category",
+      "label": "Managing Operations",
+      "collapsed": true,
+      "items": [
+        "operations/schedule-dates",
+        "operations/schedule-names",
+        "operations/job-names",
+        "operations/status-descriptions",
+        "operations/status-change-commands",
+        "operations/building-schedules",
+        "operations/checking-schedules",
+        "operations/deleting-schedules",
+        "operations/editing-schedules",
+        "operations/adding-jobs",
+        "operations/containers",
+        "operations/job-output",
+        "operations/SAP-Job-Menu-Options"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Self Service",
+      "collapsed": true,
+      "items": [
+        "Files/UI/Solution-Manager/Managing-Self-Service",
+        "Files/UI/Solution-Manager/Creating-Service-Requests",
+        "Files/UI/Solution-Manager/Working-in-Admin-Mode",
+        "Files/UI/Solution-Manager/Working-in-User-Mode",
+        "Files/UI/Solution-Manager/Filtering-Service-Requests",
+        "Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Vision",
+      "collapsed": true,
+      "items": [
+        "Files/UI/Solution-Manager/Working-with-Vision",
+        {
+          "type": "category",
+          "label": "Live",
+          "collapsed": true,
+          "items": [
+            {
+              "type": "category",
+              "label": "Admin Mode",
+              "collapsed": true,
+              "items": [
+                "Files/UI/Solution-Manager/Working-in-Admin-Mode_Vision",
+                "Files/UI/Solution-Manager/Enabling-Admin-Mode-Editing_Vision",
+                "Files/UI/Solution-Manager/Managing-Vision-Settings",
+                "Files/UI/Solution-Manager/Managing-Vision-Frequencies",
+                "Files/UI/Solution-Manager/Managing-Vision-Actions",
+                "Files/UI/Solution-Manager/Managing-Vision-Remote-Instances"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "User Mode",
+              "collapsed": true,
+              "items": [
+                "Files/UI/Solution-Manager/Working-in-User-Mode_Vision",
+                "Files/UI/Solution-Manager/Viewing-Cards-in-Vision-Live"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Health",
+          "collapsed": true,
+          "items": [
+            "Files/UI/Solution-Manager/Viewing-Vision-Health"
+          ]
+        }
+      ]
+    },
+    "profile",
     {
       "type": "category",
       "label": "Reports",
@@ -178,89 +260,10 @@
             "Files/UI/Solution-Manager/Viewing-Notification-Acknowledgement",
             {
               "type": "category",
-              "label": "Profile Settings",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/Accessing-and-Updating-Profile-Settings",
-                "Files/UI/Solution-Manager/Configuring-Account-Settings",
-                "Files/UI/Solution-Manager/Generating-External-Tokens",
-                "Files/UI/Solution-Manager/Configuring-Settings",
-                "Files/UI/Solution-Manager/Configuring-Application-Settings"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Self Service",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/Managing-Self-Service",
-                "Files/UI/Solution-Manager/Creating-Service-Requests",
-                "Files/UI/Solution-Manager/Working-in-Admin-Mode",
-                "Files/UI/Solution-Manager/Working-in-User-Mode",
-                "Files/UI/Solution-Manager/Filtering-Service-Requests",
-                "Files/UI/Solution-Manager/Viewing-Service-Request-Process-Indicators"
-              ]
-            },
-            {
-              "type": "category",
               "label": "Library",
               "collapsed": true,
               "items": [
                 "Files/UI/Solution-Manager/Library/Managing-Library",
-                "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
-                {
-                  "type": "category",
-                  "label": "Access Management",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/AccessManagement/Access-Management",
-                    {
-                      "type": "category",
-                      "label": "Managing Roles and Privileges",
-                      "collapsed": true,
-                      "items": [
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Managing-Roles-And-Privileges",
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Adding-Roles",
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Copying-Roles",
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Deleting-Roles",
-                        {
-                          "type": "category",
-                          "label": "Modifying Roles and Privileges",
-                          "collapsed": true,
-                          "items": [
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Modifying-Roles-And-Privileges/Activities",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Modifying-Roles-And-Privileges/Batch-Users",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Modifying-Roles-And-Privileges/Department-Activities",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Modifying-Roles-And-Privileges/General",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Modifying-Roles-And-Privileges/Resources",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Roles/Modifying-Roles-And-Privileges/Users"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "category",
-                      "label": "Managing Users",
-                      "collapsed": true,
-                      "items": [
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Users/Managing-Users",
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Users/Adding-Users",
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Users/Copying-Users",
-                        "Files/UI/Solution-Manager/Library/AccessManagement/Users/Deleting-Users",
-                        {
-                          "type": "category",
-                          "label": "Modifying Users",
-                          "collapsed": true,
-                          "items": [
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Users/Modifying-Users/General",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Users/Modifying-Users/Roles",
-                            "Files/UI/Solution-Manager/Library/AccessManagement/Users/Modifying-Users/Settings"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
                 "Files/UI/Solution-Manager/Library/CloudEventsTriggers/CloudEventsTriggers",
                 {
                   "type": "category",
@@ -272,19 +275,6 @@
                     "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups"
                   ]
                 },
-                "Files/UI/Solution-Manager/Library/LicenseSupport/License-Support",
-                {
-                  "type": "category",
-                  "label": "Logs",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/Logs/List-Log-Files",
-                    "Files/UI/Solution-Manager/Library/Logs/List-Schedule-Builds",
-                    "Files/UI/Solution-Manager/Library/Logs/List-Archive-Files",
-                    "Files/UI/Solution-Manager/Library/Logs/Log-File-Details"
-                  ]
-                },
-                "Files/UI/Solution-Manager/Library/MachineGroups/MachineGroups",
                 {
                   "type": "category",
                   "label": "Master Jobs",
@@ -365,28 +355,8 @@
                     "Files/UI/Solution-Manager/Library/Scripts/Managing-Script-Runners"
                   ]
                 },
-                {
-                  "type": "category",
-                  "label": "Server Options",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/ServerOptions/View-ServerOptions",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-General-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Logging-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Security-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Notification-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Vision-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-Time-Settings",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations",
-                    "Files/UI/Solution-Manager/Library/ServerOptions/Reset-Settings"
-                  ]
-                },
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
-                "Files/UI/Solution-Manager/Managing-Agents",
-                "Files/UI/Solution-Manager/Library/Managing-Batch-Users",
                 "Files/UI/Solution-Manager/Library/Managing-Calendars",
-                "Files/UI/Solution-Manager/Library/Managing-Departments",
                 "Files/UI/Solution-Manager/Library/Managing-Frequencies",
                 "Files/UI/Solution-Manager/Library/Managing-Global-Properties",
                 "Files/UI/Solution-Manager/Library/Managing-Master-Jobs",
@@ -434,62 +404,15 @@
             },
             {
               "type": "category",
-              "label": "Vision",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/Working-with-Vision",
-                {
-                  "type": "category",
-                  "label": "Live",
-                  "collapsed": true,
-                  "items": [
-                    {
-                      "type": "category",
-                      "label": "Admin Mode",
-                      "collapsed": true,
-                      "items": [
-                        "Files/UI/Solution-Manager/Working-in-Admin-Mode_Vision",
-                        "Files/UI/Solution-Manager/Enabling-Admin-Mode-Editing_Vision",
-                        "Files/UI/Solution-Manager/Managing-Vision-Settings",
-                        "Files/UI/Solution-Manager/Managing-Vision-Frequencies",
-                        "Files/UI/Solution-Manager/Managing-Vision-Actions",
-                        "Files/UI/Solution-Manager/Managing-Vision-Remote-Instances"
-                      ]
-                    },
-                    {
-                      "type": "category",
-                      "label": "User Mode",
-                      "collapsed": true,
-                      "items": [
-                        "Files/UI/Solution-Manager/Working-in-User-Mode_Vision",
-                        "Files/UI/Solution-Manager/Viewing-Cards-in-Vision-Live"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "category",
-                  "label": "Health",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Viewing-Vision-Health"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "category",
               "label": "Operations",
               "collapsed": true,
               "items": [
                 "Files/UI/Solution-Manager/Managing-Schedules",
                 "Files/UI/Solution-Manager/Managing-Schedules",
-                "Files/UI/Solution-Manager/Managing-Agents",
                 "Files/UI/Solution-Manager/Performing-Schedule-Status-Changes",
                 "Files/UI/Solution-Manager/Performing-Job-Status-Changes",
                 "Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Schedule-Level",
                 "Files/UI/Solution-Manager/Performing-Bulk-Job-Status-Updates-Date-Level",
-                "Files/UI/Solution-Manager/Performing-Agent-Status-Updates",
                 "Files/UI/Solution-Manager/Viewing-Job-Output",
                 "Files/UI/Solution-Manager/Viewing-Job-Configuration",
                 "Files/UI/Solution-Manager/Accessing-Job-Summary",
@@ -547,9 +470,18 @@
       ]
     },
     {
-      "type": "link",
-      "label": "REST API Docs",
-      "href": "https://help.smatechnologies.com/opcon/core/api/23-0.html"
+      "type": "category",
+      "label": "Reference",
+      "collapsed": true,
+      "items": [
+        "reference/privileges",
+        "reference/server-options",
+        {
+          "type": "link",
+          "label": "REST API Docs",
+          "href": "https://help.smatechnologies.com/opcon/core/api/23-0.html"
+        }
+      ]
     }
   ]
 }

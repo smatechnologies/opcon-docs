@@ -2,6 +2,6 @@
 slug: "/"
 ---
 
-# OpCon Overview
+# Overview
 
 Insert Marketing-style introduction here.

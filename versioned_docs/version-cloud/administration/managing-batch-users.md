@@ -16,9 +16,9 @@ batch user privileges.
 The **Batch Users** editor also has a toolbar that allows you to perform
 functions for managing the batch users. Click on any link about the toolbar below to learn more about its functionality.
 
-![Batch Users toolbar](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingBatchUserToolbar.png "Batch Users toolbar")
+![Batch Users toolbar](../Resources/Images/SM/Library/ManagingLibrary/ManagingBatchUserToolbar.png "Batch Users toolbar")
 
-![White "person reading" icon on blue circular background](<../../../../Resources/Images/moreinfo-icon(48x48).png> "More Info icon")
+![White "person reading" icon on blue circular background](<../Resources/Images/moreinfo-icon(48x48).png> "More Info icon")
 Related Topics
 
 - [Adding Batch Users](../../Enterprise-Manager/Adding-Batch-Users.md)
