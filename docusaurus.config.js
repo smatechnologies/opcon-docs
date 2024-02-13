@@ -5,7 +5,7 @@ module.exports = {
   url: "https://help.smatechnologies.com",
   baseUrl: "/opcon/core/",
   onBrokenLinks: "log",
-  onBrokenMarkdownLinks: "log",
+  onBrokenMarkdownLinks: "ignore",
   favicon: "img/favicon.ico",
   organizationName: "smatechnologies",
   projectName: "opcon-docs",
@@ -39,6 +39,7 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/smatechnologies/opcon-docs/blob/main",
           lastVersion: "cloud",
+          onlyIncludeVersions: ["cloud"],
           includeCurrentVersion: false,
           versions: {
             "cloud": {
@@ -46,17 +47,17 @@ module.exports = {
               banner: "none",
             },
             "23.0": {
-              label: "23.0",
+              label: "OpCon 23.0",
               path: "v23.0",
               banner: "none",
             },
             "22.0": {
-              label: "22.0",
+              label: "OpCon 22.0",
               path: "v22.0",
               banner: "none",
             },
             "21.0": {
-              label: "21.0",
+              label: "OpCon 21.0",
               path: "v21.0",
               banner: "none",
             },

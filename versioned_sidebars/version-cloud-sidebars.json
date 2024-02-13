@@ -42,12 +42,20 @@
             "administration/managing-users",
             "administration/managing-roles",
             "administration/managing-departments",
-            "administration/managing-access-codes",
-            "administration/auditing"
+            "administration/managing-access-codes"
           ]
         },
         "administration/system-logs",
-        "administration/system-configuration"
+        "administration/system-configuration",
+        {
+          "type": "category",
+          "label": "Reporting",
+          "collapsed": true,
+          "items": [
+            "administration/audit-report",
+            "administration/history-report"
+          ]
+        }
       ]
     },    
     {
@@ -84,28 +92,6 @@
             "job-components/expression-dependencies",
             "job-components/documentation"
           ]
-        },
-        {
-          "type": "category",
-          "label": "Job Types",
-          "collapsed": true,
-          "items": [
-            "job-types/bis",
-            "job-types/container",
-            "job-types/file-transfer",
-            "job-types/ibm-i",
-            "job-types/java",
-            "job-types/mcp",
-            "job-types/null",
-            "job-types/os-2200",
-            "job-types/sap-bw",
-            "job-types/sap",
-            "job-types/sql",
-            "job-types/tuxedo-art",
-            "job-types/unix",
-            "job-types/windows",
-            "job-types/zos"
-          ]
         }
       ]
     },
@@ -114,8 +100,13 @@
       "label": "Building Automation",
       "collapsed": true,
       "items": [
+        "building-automation/master-schedules",
+        "building-automation/visualizing-on-canvas",
+        "building-automation/master-jobs",
+        "building-automation/master-job-definitions",
         "building-automation/library",
-        "building-automation/embedded-scripts"
+        "building-automation/embedded-scripts",
+        "building-automation/defining-notifications"
       ]
     },
     {
@@ -139,7 +130,34 @@
         "operations/containers",
         "operations/job-output",
         "operations/SAP-Job-Menu-Options",
+        "operations/viewing-job-summary",
+        "operations/viewing-job-configuration",
+        "operations/viewing-job-information",
+        "operations/viewing-job-history",
         "operations/acknowledging-escalating-notifications"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Job Types",
+      "link": { "type": "doc", "id": "job-types/index" },
+      "collapsed": true,
+      "items": [
+        "job-types/bis",
+        "job-types/container",
+        "job-types/file-transfer",
+        "job-types/ibm-i",
+        "job-types/java",
+        "job-types/mcp",
+        "job-types/null",
+        "job-types/os-2200",
+        "job-types/sap-bw",
+        "job-types/sap",
+        "job-types/sql",
+        "job-types/tuxedo-art",
+        "job-types/unix",
+        "job-types/windows",
+        "job-types/zos"
       ]
     },
     {
@@ -164,200 +182,6 @@
       ]
     },
     "profile",
-    {
-      "type": "category",
-      "label": "Reports",
-      "collapsed": true,
-      "items": [
-        "reports/overview",
-        "reports/predefined",
-        "reports/custom"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "User Interfaces",
-      "collapsed": true,
-      "items": [
-        {
-          "type": "category",
-          "label": "Solution Manager",
-          "collapsed": true,
-          "items": [ 
-            {
-              "type": "category",
-              "label": "Library",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/Library/CloudEventsTriggers/CloudEventsTriggers",
-                {
-                  "type": "category",
-                  "label": "Escalation Manager",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/EscalationManager/Escalation-Manager",
-                    "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Rules",
-                    "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups"
-                  ]
-                },
-                {
-                  "type": "category",
-                  "label": "Master Jobs",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Adding-Master-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Copying-Master-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Moving-Master-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Deleting-Master-Jobs",
-                    "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-Master-Jobs-Cross-References",
-                    {
-                      "type": "category",
-                      "label": "Viewing and Updating Master Jobs",
-                      "collapsed": true,
-                      "items": [
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Accessing-Master-Jobs",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-General-Info",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Documentation",
-                        {
-                          "type": "category",
-                          "label": "Job Task Details",
-                          "collapsed": true,
-                          "items": [
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Container-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/File-Transfer-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/IBMi-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Null-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-BW-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Os2200-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SAP-R3-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/SQL-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Unix-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Windows-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/MCP-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/ZOS-Job-Details",
-                            "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/BIS-Job-Details"
-                          ]
-                        },
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-General-Info",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Documentation",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Tags",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Frequencies",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Events",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Instance-Properties",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Job-Dependencies",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Expression-Dependencies",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Resource-Dependencies",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Threshold-Dependencies",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Resource-Updates",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Threshold-Updates",
-                        "Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/Viewing-And-Updating-Notification-Triggers"
-                      ]
-                    }
-                  ]
-                },
-                "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
-                "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",
-                "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers",
-                {
-                  "type": "category",
-                  "label": "Reporting",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/Reporting/List-Reports",
-                    "Files/UI/Solution-Manager/Library/Reporting/Audit-History-Report",
-                    "Files/UI/Solution-Manager/Library/Reporting/Schedule-Job-History-Report"
-                  ]
-                },
-                "Files/UI/Solution-Manager/Library/Managing-Master-Jobs",
-                "Files/UI/Solution-Manager/Library/Managing-Master-Schedules",
-                {
-                  "type": "category",
-                  "label": "Notification Types",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Copy-Notification-Trigger",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Look-up-Notification-Sources",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Email",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Text-Message",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/OpCon-Events",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Windows-Event-Log",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Network-Message",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/SNMP-Trap",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/Run-Command",
-                    "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTypes/SPO-Event-Report"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Studio",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/Studio/Managing-Studio",
-                {
-                  "type": "category",
-                  "label": "Canvas",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Studio/Canvas/Adding-Master-Schedules",
-                    "Files/UI/Solution-Manager/Studio/Canvas/Copying-Master-Schedules",
-                    "Files/UI/Solution-Manager/Studio/Canvas/Deleting-Master-Schedules",
-                    "Files/UI/Solution-Manager/Studio/Canvas/Editing-Master-Schedules",
-                    "Files/UI/Solution-Manager/Studio/Canvas/Viewing-Master-Schedules/Viewing-Master-Schedules",
-                    "Files/UI/Solution-Manager/Studio/Canvas/Isolate-Dependency-Chain"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Operations",
-              "collapsed": true,
-              "items": [
-                "Files/UI/Solution-Manager/Viewing-Job-Configuration",
-                "Files/UI/Solution-Manager/Accessing-Job-Summary",
-                "Files/UI/Solution-Manager/Accessing-Job-Executions-History",
-                {
-                  "type": "category",
-                  "label": "Daily Job Definition",
-                  "collapsed": true,
-                  "items": [
-                    "Files/UI/Solution-Manager/Accessing-Daily-Job-Definition",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-General-Info",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Documentation",
-                    {
-                      "type": "category",
-                      "label": "Job Task Details",
-                      "collapsed": true,
-                      "items": [
-                        "Files/UI/Solution-Manager/Viewing-and-Updating-Job-Task-Details",
-                        "Files/UI/Solution-Manager/Viewing-Null-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-IBMi-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-SAP-BW-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-SAP-R3-Job-Details",
-                        "Files/UI/Solution-Manager/Viewing-Container-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-Windows-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-UNIX-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-File-Transfer-Job-Details",
-                        "Files/UI/Solution-Manager/Updating-mcp-Job-Details"
-                      ]
-                    },
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Job-Frequencies",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Instance-Properties",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Expression-Dependencies",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Dependencies",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Dependencies",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Resource-Updates",
-                    "Files/UI/Solution-Manager/Viewing-and-Updating-Threshold-Updates"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "type": "category",
       "label": "Reference",
