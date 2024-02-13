@@ -1,3 +1,7 @@
+---
+sidebar_label: "Profile Settings"
+---
+
 # Accessing and Updating Profile Settings
 
  ![User Profile Button](./Resources/Images/SM/User-Profile-Button.png "User Profile Button")
