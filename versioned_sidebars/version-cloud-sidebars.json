@@ -1,0 +1,201 @@
+{
+  "mySidebar": [
+    "overview",
+    "whats-new",
+    {
+      "type": "category",
+      "label": "Getting Started",
+      "collapsed": true,
+      "items": [
+        "getting-started/accessing-the-solution",
+        "getting-started/authentication",
+        "getting-started/ui-layout",
+        "getting-started/keyboard-shortcuts",
+        "getting-started/url-shortcuts",
+        "getting-started/application-help"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Administrating OpCon",
+      "collapsed": true,
+      "items": [
+        "administration/architecture-overview",
+        {
+          "type": "category",
+          "label": "Agents",
+          "link": { "type": "doc", "id": "administration/agents" },
+          "collapsed": true,
+          "items": [
+            "administration/configuring-relay",
+            "administration/managing-agents",
+            "administration/managing-machine-groups",
+            "administration/managing-batch-users"
+          ]
+        },        
+        {
+          "type": "category",
+          "label": "Access Management",
+          "link": { "type": "doc", "id": "administration/access-management" },
+          "collapsed": true,
+          "items": [
+            "administration/managing-users",
+            "administration/managing-roles",
+            "administration/managing-departments",
+            "administration/managing-access-codes"
+          ]
+        },
+        "administration/system-logs",
+        "administration/system-configuration",
+        {
+          "type": "category",
+          "label": "Reporting",
+          "collapsed": true,
+          "items": [
+            "administration/audit-report",
+            "administration/history-report"
+          ]
+        }
+      ]
+    },    
+    {
+      "type": "category",
+      "label": "Automation Concepts",
+      "collapsed": true,
+      "items": [
+          "automation-concepts/core-objects",
+          "automation-concepts/supporting-objects",
+          "automation-concepts/master-and-daily",
+          "automation-concepts/dependencies",
+          "automation-concepts/properties",
+          "automation-concepts/instances",
+          "automation-concepts/events",
+          "automation-concepts/notifications",
+          "automation-concepts/named-schedule-instances",
+          "automation-concepts/frequencies",
+          "automation-concepts/time-zones",
+          "automation-concepts/null-jobs",
+          "automation-concepts/file-transfer-jobs",
+          "automation-concepts/job-tracking",
+        {
+          "type": "category",
+          "label": "Job Components",
+          "collapsed": true,
+          "items": [
+            "job-components/overview",
+            "job-components/instances",
+            "job-components/frequency",
+            "job-components/events",
+            "job-components/threshold-resource-updates",
+            "job-components/job-dependencies",
+            "job-components/threshold-resource-dependencies",
+            "job-components/expression-dependencies",
+            "job-components/documentation"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Building Automation",
+      "collapsed": true,
+      "items": [
+        "building-automation/master-schedules",
+        "building-automation/visualizing-on-canvas",
+        "building-automation/master-jobs",
+        "building-automation/master-job-definitions",
+        "building-automation/library",
+        "building-automation/embedded-scripts",
+        "building-automation/defining-notifications"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Managing Operations",
+      "collapsed": true,
+      "items": [
+        "operations/summary",
+        "operations/managing-daily",
+        "operations/viewing-schedule-diagrams",
+        "operations/status-changes",
+        "operations/building-schedules",
+        "operations/schedule-names",
+        "operations/job-names",
+        "operations/status-descriptions",
+        "operations/status-change-commands",
+        "operations/checking-schedules",
+        "operations/deleting-schedules",
+        "operations/editing-schedules",
+        "operations/adding-jobs",
+        "operations/containers",
+        "operations/job-output",
+        "operations/SAP-Job-Menu-Options",
+        "operations/viewing-job-summary",
+        "operations/viewing-job-configuration",
+        "operations/viewing-job-information",
+        "operations/viewing-job-history",
+        "operations/acknowledging-escalating-notifications"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Job Types",
+      "link": { "type": "doc", "id": "job-types/index" },
+      "collapsed": true,
+      "items": [
+        "job-types/bis",
+        "job-types/container",
+        "job-types/file-transfer",
+        "job-types/ibm-i",
+        "job-types/java",
+        "job-types/mcp",
+        "job-types/null",
+        "job-types/os-2200",
+        "job-types/sap-bw",
+        "job-types/sap",
+        "job-types/sql",
+        "job-types/tuxedo-art",
+        "job-types/unix",
+        "job-types/windows",
+        "job-types/zos"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Self Service",
+      "link": { "type": "doc", "id": "self-service/introduction" },
+      "collapsed": true,
+      "items": [
+        "self-service/administration",
+        "self-service/defining-service-requests"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Vision",
+      "link": { "type": "doc", "id": "vision/introduction" },
+      "collapsed": true,
+      "items": [
+        "vision/viewing-live",
+        "vision/viewing-health",
+        "vision/administration"
+      ]
+    },
+    "profile",
+    {
+      "type": "category",
+      "label": "Reference",
+      "collapsed": true,
+      "items": [
+        "reference/event-types",
+        "reference/privileges",
+        "reference/server-options",
+        {
+          "type": "link",
+          "label": "REST API Docs",
+          "href": "https://help.smatechnologies.com/opcon/core/api/23-0.html"
+        }
+      ]
+    }
+  ]
+}

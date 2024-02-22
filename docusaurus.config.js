@@ -1,12 +1,11 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require("./versionsArchived.json");
 module.exports = {
   title: "SMA Technologies Help",
   tagline: "OpCon",
   url: "https://help.smatechnologies.com",
   baseUrl: "/opcon/core/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "log",
+  onBrokenMarkdownLinks: "ignore",
   favicon: "img/favicon.ico",
   organizationName: "smatechnologies",
   projectName: "opcon-docs",
@@ -22,14 +21,6 @@ module.exports = {
         {
           type: "docsVersionDropdown",
           position: "right",
-          dropdownItemsAfter: [
-            ...Object.entries(VersionsArchived).map(
-              ([versionName, versionUrl]) => ({
-                label: versionName,
-                href: versionUrl,
-              })
-            ),
-          ],
         },
       ],
     },
@@ -47,23 +38,26 @@ module.exports = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/smatechnologies/opcon-docs/blob/main",
-          lastVersion: "current",
+          lastVersion: "cloud",
+          onlyIncludeVersions: ["cloud"],
+          includeCurrentVersion: false,
           versions: {
-            current: {
-              label: "current",
+            "cloud": {
+              label: "OpCon Cloud",
+              banner: "none",
             },
             "23.0": {
-              label: "23.0",
+              label: "OpCon 23.0",
               path: "v23.0",
               banner: "none",
             },
             "22.0": {
-              label: "22.0",
+              label: "OpCon 22.0",
               path: "v22.0",
               banner: "none",
             },
             "21.0": {
-              label: "21.0",
+              label: "OpCon 21.0",
               path: "v21.0",
               banner: "none",
             },
