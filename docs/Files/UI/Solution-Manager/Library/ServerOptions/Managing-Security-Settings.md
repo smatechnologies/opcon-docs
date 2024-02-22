@@ -43,3 +43,19 @@ If user changes one of the following settings: Number of times a character can r
 If the user clicks on 'Yes', the changes will be saved and all users will be required to reset their password at next logon.
 If the user clicks on 'No', the changes will be saved and all users will not be required to reset their password at next logon.
 If the user clicks on 'Cancel', the changes will not be saved and all users will not be required to reset their password at next logon.
+
+## Email
+Ask user to enter a recovery email address upon login.  
+Enable to allow users to use the password recovery function.
+### Enabled
+- User email will be required when creating or updating users.
+- Users will be prompted with the "How can we we contact you?" dialog when using Solution Manager. 
+    - Users will not be able to close this dialog until they've set an email.
+
+:::note 
+Users with an email or SSO role will be excluded.
+:::
+
+![A dialog to enter email for the logged in user](../../../../../Resources/Images/SM/Library/ServerOptions/email-contact-dialog.png "How can we contact you?").
+
+
