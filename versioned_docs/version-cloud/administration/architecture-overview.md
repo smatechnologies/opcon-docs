@@ -1,69 +1,32 @@
-# Architecture Overview
+# Architecture
 
 The OpCon Server components include the database and Schedule Activity Monitor (SAM) and supporting services. On user workstations, desktop clients connect to the database and web-based interfaces connect to web services to manage the data for automation. The agents responsible for executing jobs are called Local Schedule Activity Monitors (LSAMs).
-
-## OpCon Architecture Overview
 
 ![OpCon Architecture Overview](../Resources/Images/Concepts/opconarchitecture.png "OpCon Architecture Overview")
 
 ## OpCon Components
 
-### Graphical User Interfaces
+### Solution Manager
 
-OpCon provides two primary graphical user interfaces. One interface is a rich client interface for installation on Windows and Linux operating systems called the Enterprise Manager (EM). The other interface is a browser-based interface called the Solution Manager. These interfaces are the primary means of controlling the data used by OpCon. These applications access the OpCon database to manage the data for automation. These interfaces also manage operations once the automation is configured. For additional information on the Enterprise Manager, refer to the **Enterprise Manager** online help. For additional information on the Solution Manager, refer to the **Solution Manager** online help.
+The web user interface for OpCon is called Solution Manager. 
 
-![Graphical User Interfaces](../Resources/Images/Concepts/GUIs.png "Graphical User Interfaces")
-
-### Database
-
-The OpCon database is installed on Microsoft SQL Server on a Windows Server. This database contains all of the data defining the automation requirements, operational processing, and historical information. For additional information, refer to **Database Information** online help.
-
-#### Auditing
-
-The database installation for OpCon ensures that changes made to all OpCon objects are audited. All OpCon user accounts and many of the core services are tracked through the audit history. The following information is recorded for every change:
-
-- **Date**: The date and time stamp the change occurred.
-- **User**: The user or application that made the change.
-  - If an OpCon user account made the change, that user account is recorded with the change.
-  - If an OpCon application was audited, the name appears with an asterisk in front of the name. For example, SAM entries are recorded under the user of **\*SMASAM**.
-  - If a change was made to the database by an unregistered application (e.g., a user makes an update through a SQL Query window), those entries are recorded under the user **Unknown**.
-- **Data Changed**: The name of the item that changed.
-- **Original Value**: The original value for the data item.
-- **Final Value**: The final value for the item.
-- **Category**: The OpCon object category affected by the change.
-- **Name**: Shows the name of the exact item that was affected. For example, when the Data Changed column shows "Job Record," the value for the Name would show the name of the job that was changed (e.g., ScheduleABC:Job299).
-
-:::info
-For viewing audit records, refer to [Viewing and Exporting Audit Records](./Files/UI/Enterprise-Manager/Viewing-and-Exporting-Audit-Records.md) in the **Enterprise Manager** online help.
-
-For information on cleaning up old audit records, refer to [Audit History Cleanup](./utilities/Command-line-Utilities/Audit-History-Cleanup.md) in the **Utilities** online help.
+:::tip Learn More
+See [Accessing the Solution](../getting-started/accessing-the-solution.md) for more information about getting started in Solution Manager.
 :::
 
-### SAM and Supporting Services (SAM-SS)
+### OpCon REST API
 
-The SAM and supporting services (SAM-SS) are the components that manage all automation processing. For additional information, refer to the [Server Programs](./server-programs/introduction.md) online help.
+All functions that are available through the user interface are also exposed via REST API endpoints. All public endpoints are reachable at a base address of `https://{customeridentifier}.opcon.smatechnologies.com/api`. Authentication is managed by an External Token which is generatable from permitted user accounts. Authorization is determined based on the roles the External Token's user has access to. 
 
-#### Schedule Activity Monitor (SAM)
+:::tip Learn More
 
-The Schedule Activity Monitor (SAM) is the logical processor for OpCon workflow automation. The SAM monitors schedule and job start times, dependencies, and user commands to determine when a particular job will be executed. The SAM also watches for and processes OpCon events that control the event driven nature of OpCon automation. The SAM communicates job and event information with the LSAMs via SMANetCom. For additional information, refer to [Schedule Activity Monitor (SAM)](./server-programs/schedule-activity-monitor.md) in the **Server Programs** online help.
+:::
 
-#### SMA Network Communications Module (SMANetCom)
+:::tip Learn More
+Detailed information about the OpCon REST API and its available endpoints are available in the [OpCon REST API Documentation](https://help.smatechnologies.com/opcon/core/api/23-0.html).
+:::
 
-The SMA Network Communications Module (SMANetCom) is responsible for communication of platform-specific automation information between SAM and all LSAMs. Through tables in the database, SAM and SMANetCom maintain reliable communication and data integrity. SMANetCom communicates with each LSAM independently via TCP/IP. For additional information, refer to [SMA Network Communications Module (SMANetCom)](./server-programs/network-communications.md) in the **Server Programs** online help.
-
-#### SMA Notify Handler
-
-The SMA Notify Handler processes notifications caused by Machine, Schedule, and Job status triggers. The SMA Notify Handler can send e-mails, text messages, write to the Windows Event Log, send SNMP traps, and perform various other notifications. For additional information, refer to [SMA Notify Handler](./server-programs/notify-handler.md) in the **Server Programs** online help.
-
-#### SMA Request Router
-
-The SMA Request Router is the component responsible for sending various requests to designated Request Handlers. The SMA Request Router also writes completion information from the Request Handlers to the OpCon database. Request Handlers are responsible for such things as schedule maintenance processing and job output retrieval. For additional information, refer to [SMA Request Router](./server-programs/request-router.md) in the **Server Programs** online help.
-
-#### SMA Start Time Calculator
-
-The SMA Start Time Calculator component periodically recalculates the estimated start time for all the jobs in the OpCon daily tables. Following its calculations, this service updates the database. For additional information, refer to [SMA Start Time Calculator](./server-programs/start-time-calculator.md) in the **Server Programs** online help.
-
-### Local Schedule Activity Monitors (LSAMs)
+### OpCon Agents
 
 Local Schedule Activity Monitors (LSAMs) are agents that reside on the platform where the jobs are executed. LSAMs are written in the native language of their platforms making them efficient agents for executing jobs. The LSAMs communicate with SMANetCom via TCP/IP for job processing information and sending OpCon events. OpCon supports automation with LSAMs for the following job types:
 
@@ -81,3 +44,9 @@ Local Schedule Activity Monitors (LSAMs) are agents that reside on the platform
 - [UNIX](./job-types/unix.md)
 - [Windows](./job-types/windows.md)
 - [z/OS](./job-types/zos.md)
+
+### OpCon Relay
+
+## High Availability
+
+## Security
