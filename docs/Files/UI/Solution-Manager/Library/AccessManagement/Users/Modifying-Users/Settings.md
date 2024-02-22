@@ -14,6 +14,14 @@ To modify a User, edit the preferred fields and click **Save**.
 
 ![User Settings](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-settings-tab.png 'User Settings')
 
+## Email Dialog
+*If Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled.*
+
+When saving, a dialog to enter a User email will be displayed if user does not have an email set and does not have contain a SSO role.  
+Please enter an email to continue, clicking cancel will cancel the save.
+
+![Email Dialog](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-email-dialog.png 'Email Dialog')
+
 ---
 
 For more information see:

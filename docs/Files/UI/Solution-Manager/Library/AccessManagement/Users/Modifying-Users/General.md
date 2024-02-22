@@ -10,9 +10,13 @@ The Users page is found in _Library > Access Management > Users_, and provides t
 
 A series of tabs is displayed on the Users page. The General tab displays the general information about the selected user. The General tab provides a **Reset User Password** button to reset the selected user's password and optionally to copy it to the clipboard.
 
+:::note
+Email is required if Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled.
+:::
+
 To modify a User, edit the preferred fields and click **Save**.
 
-![User General](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-general-tab.png 'User General')
+![User General](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-general-tab.png "User General")
 
 ---
 

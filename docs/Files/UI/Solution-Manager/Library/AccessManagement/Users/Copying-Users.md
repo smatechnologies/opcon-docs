@@ -20,6 +20,10 @@ In order to add a Users, you must have at least one of the following privileges:
 
 The **Access Management** page is found in _Library > Access Management_, and provides the views to manage user accounts, privileges, and roles.
 
+:::note
+Email is required if Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled. 
+:::
+
 To copy a user:
 
 1. Select the user to copy from the users list

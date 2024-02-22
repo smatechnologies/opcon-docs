@@ -20,6 +20,10 @@ In order to add a Users, you must have at least one of the following privileges:
 
 The **Access Management** page is found in _Library > Access Management_, and provides the views to manage user accounts, privileges, and roles.
 
+:::note
+Email is required if Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled. 
+:::
+
 To add a new user:
 
 1. Select the context menu button ![Context Menu Button](../../../../../../Resources/Images/SM/Library/AccessManagement/context-menu.png 'Context Menu Button').
