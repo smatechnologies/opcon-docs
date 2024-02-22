@@ -2,8 +2,8 @@
 module.exports = {
   title: "SMA Technologies Help",
   tagline: "OpCon",
-  url: "https://help.smatechnologies.com",
-  baseUrl: "/opcon/core/",
+  url: "thankful-stone-036e4f310.4.azurestaticapps.net",
+  baseUrl: "/",
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "ignore",
   favicon: "img/favicon.ico",
