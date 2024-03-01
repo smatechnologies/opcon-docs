@@ -4,6 +4,22 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.25
+
+2024 March
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-23054**: Fixed an issue when adding jobs to a daily schedule, the schedule and job names in results dialog appeared in lowercase.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-22789**: Fixed issues with deployment of schedules that contain SQL jobs where some job definitions would not be updated correctly if schedules to deploy already exist in the target system.
+
+:white_check_mark: **OPCON-23055**: Fixed a problem during schedule deployment removing schedule named instances if the new version of the schedule no longer has any defined schedule named instances.
+
+:white_check_mark: **OPCON-23091**: Fixed an issue during deployment where the global property value was erroneously mixed up when there were other property names with a similar pattern.
+
 ## OpCon 21.0.24
 
 2024 January
