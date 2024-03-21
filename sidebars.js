@@ -713,7 +713,6 @@ module.exports = {
               collapsed: true,
               items: [
                 'Files/UI/Solution-Manager/Managing-Schedules',
-                'Files/UI/Solution-Manager/Managing-Schedules',
                 'Files/UI/Solution-Manager/Managing-Agents',
                 'Files/UI/Solution-Manager/Performing-Schedule-Status-Changes',
                 'Files/UI/Solution-Manager/Performing-Job-Status-Changes',
@@ -730,6 +729,7 @@ module.exports = {
                   collapsed: true,
                   items: [
                     'Files/UI/Solution-Manager/Accessing-Daily-Job-Definition',
+                    'Files/UI/Solution-Manager/Copying-Daily-Job-to-Master',
                     'Files/UI/Solution-Manager/Viewing-and-Updating-General-Info',
                     'Files/UI/Solution-Manager/Viewing-and-Updating-Documentation',
                     {
