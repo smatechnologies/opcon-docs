@@ -49,6 +49,7 @@ OpCon:
 - [Maintain Schedules](#maintain-schedules)
 - [Maintain Service Request](#maintain-service-request)
 - [Maintain Thresholds/Resources](#maintain-thresholdsresources)
+- [Maintain Tags](#maintain-tags)
 
 Manage OpCon Roles
 
@@ -307,6 +308,15 @@ Grants access to functions related to maintaining thresholds and resources.
 - Add new Thresholds/Resources
 - Delete Thresholds/Resources
 - Modify Thresholds/Resources
+
+### Maintain Tags
+
+Grants access to functions related to maintaining tags.
+
+- View all defined Tags
+- Add new Tags
+- Delete Tags
+- Modify Tags
 
 ### Maintain Vision Actions
 
