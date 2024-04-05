@@ -4,6 +4,16 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.14
+
+2024 April
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22994**: Fixed an issue where named instance schedules could not be created when Solution Manager was in French.
+
+:white_check_mark: **OPCON-23015**: Fixed an issue where the Save button in daily jobs definition page was enabled without any changes.
+
 ## OpCon 22.0.13
 
 2024 March
