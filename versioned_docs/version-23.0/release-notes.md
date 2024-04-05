@@ -4,6 +4,42 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.2
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 April
+
+#### Installation
+
+:white_check_mark: **OPCON-23104**: Modified SMADB_Backup script from having WITH NOINIT to having WITH INIT and SMADB_TLog_Backup script from having WITH INIT to having WITH NOINIT.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22994**: Fixed an issue where named instance schedules could not be created when Solution Manager was in French.
+
+:white_check_mark: **OPCON-23015**: Fixed an issue where the Save button in daily jobs definition page was enabled without any changes.
+
+:white_check_mark: **OPCON-23065**: Fixed an issue where users with privilege "Modify Jobs in Master Schedules" could not save changes to master jobs.
+
+:white_check_mark: **OPCON-23072**: Fixed an issue where PERT diagram breadcrumbs for sub-schedules were missing.
+
+:white_check_mark: **OPCON-23106**: Resolved an issue where the parameter "Requires XML Escape Sequences" for some Agents was incorrect.
+
+:white_check_mark: **OPCON-23107**: Resolved a bug that blocked tab navigation on the Access Management page when the interface was set to French.
+
+:white_check_mark: **OPCON-23108**: Fixed an issue where Users and Roles were not correctly displayed in a Firefox browser.
+
+:white_check_mark: **OPCON-23247**: Fixed Master Job validation for IBMi Spool File values.
+
+:white_check_mark: **OPCON-23248**: Fixed an issue causing users to be unable to remove frequencies from schedules.
+
+:white_check_mark: **OPCON-23251**: Fixed an issue where the date user input was incorrect when time zone was set to Central European Time.
+
+#### REST API
+
+:white_check_mark: **OPCON-22270**: Fixed an issue where retrieving data in Schedule and Job History Report was timing out.
+
 ## OpCon 23.0.1
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
