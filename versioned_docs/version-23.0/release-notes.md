@@ -26,15 +26,15 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OPCON-23106**: Resolved an issue where the parameter "Requires XML Escape Sequences" for some Agents was incorrect.
 
-:white_check_mark: **OPCON-23107**: Resolved a bug that blocked tab navigation on the Access Management page when the interface was set to French.
+:white_check_mark: **OPCON-23107**: Resolved an issue that blocked tab navigation on the Access Management page when the interface was set to French.
 
 :white_check_mark: **OPCON-23108**: Fixed an issue where Users and Roles were not correctly displayed in a Firefox browser.
 
-:white_check_mark: **OPCON-23247**: Fixed Master Job validation for IBMi Spool File values.
+:white_check_mark: **OPCON-23247**: Fixed an issue that caused a runtime error when saving IBMi Spool File values in Master Jobs.
 
-:white_check_mark: **OPCON-23248**: Fixed an issue causing users to be unable to remove frequencies from schedules.
+:white_check_mark: **OPCON-23248**: Fixed an issue where users were unable to remove frequencies from schedules.
 
-:white_check_mark: **OPCON-23251**: Fixed an issue where the date user input was incorrect when time zone was set to Central European Time.
+:white_check_mark: **OPCON-23251**: Fixed an issue where the resolved value for the date user input in Self-Service was incorrect when the time zone was set to Central European Time.
 
 #### REST API
 
