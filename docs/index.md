@@ -20,4 +20,4 @@ The following sections contain more information:
 - [Solution Manager](./Files/UI/Solution-Manager/Getting-Started.md)
 - [Enterprise Manager](./Files/UI/Solution-Manager/Logging-In.md)
 - [Utilities](./utilities/overview.md)
-- [REST API](https://help.smatechnologies.com/opcon/core/api/23-0.html)
+- [REST API](https://help.smatechnologies.com/opcon/core/api/24-0.html)
