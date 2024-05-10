@@ -4,9 +4,11 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
-2024 May
-
 ## OpCon 23.0.3
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 May
 
 #### Solution Manager
 
