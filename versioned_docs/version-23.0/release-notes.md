@@ -4,6 +4,30 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.3
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 May
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22674**: Fixed an issue in Audit History report where sorting by Category was not working correctly.
+
+:white_check_mark: **OPCON-23533**: Fixed an issue where some password-related error messages were not correct.
+
+#### REST API
+
+:white_check_mark: **OPCON-21833**: Fixed an issue which occurred when re-establishing an authenticated connection with an OpConMFT machine.
+
+:white_check_mark: **OPCON-23349**: Fixed an issue where some modifications to a role did not take effect immediately for all logged in users.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-23345**: Fixed a problem where the schedule multi-instance values are not reset correctly during deployment when the schedule definition already exists.
+
+:white_check_mark: **OPCON-23521**: Fixed a problem in Frequency Run Limits when fields Number of Runs and Latest Run Time are not reset correctly during deployment update.
+
 ## OpCon 23.0.2
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
@@ -71,6 +95,8 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-23031**: Modified SMADB_TLog_Backup script from having WITH NOINIT to having WITH INIT.
 
 #### Server
+
+:eight_spoked_asterisk: **OPCON-22272**: Updated SMA Connection Config utility that configures the connection string OpCon uses to communicate with the database. It had a vulnerability in the UI part of the application, which is now removed (the UI part) and it only works as a command line utility with all the existing options for configuration, and also added options that can be listed by running SmaConnectionConfig.exe --help. Also, this is now a self-contained .Net 6 application.
 
 :eight_spoked_asterisk: **OPCON-22683**: GuidewireCloud: This feature surfaces the Guidewire job logs in OpCon. Users can now review Guidewire related job log content in a single location allowing for faster action and more informed decisions.
 
