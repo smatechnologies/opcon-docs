@@ -4,11 +4,11 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
-## OpCon 24.1.0
+## Spring 24 (24.1)
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
-2024 April
+2024 May
 
 #### Installation
 
@@ -21,6 +21,8 @@ sidebar_label: "Release Notes"
 :eight_spoked_asterisk: **OPCON-23208**: Added a new 'Relay' for OpCon Datacenter customers, which may be downloaded from the FTP site to run on an elevated command prompt to walk through installation steps. This component is responsible to communicate with OpCon running in the cloud and relaying the messages for on-prem agents. This makes it possible to run OpCon in the cloud without requiring a VPN connection.
 
 :white_check_mark: **OPCON-22260**: Fixed an issue where the OpConMFT agent was reported as being down when the job id of a job status request was not found.
+
+:white_check_mark: **OPCON-23535**: Fixed an issue with the communications component of OpCon, which rarely locked its log file and job processing halted until the lock was released.
 
 #### Solution Manager
 
