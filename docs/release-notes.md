@@ -4,7 +4,7 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
-## Spring 24 (24.1)
+## Spring 24
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
