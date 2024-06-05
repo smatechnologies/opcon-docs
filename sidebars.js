@@ -504,6 +504,7 @@ module.exports = {
                     'Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups',
                   ],
                 },
+                'Files/UI/Solution-Manager/Library/Global-Properties',
                 'Files/UI/Solution-Manager/Library/LicenseSupport/License-Support',
                 {
                   type: 'category',
@@ -620,7 +621,6 @@ module.exports = {
                 'Files/UI/Solution-Manager/Library/Managing-Calendars',
                 'Files/UI/Solution-Manager/Library/Managing-Departments',
                 'Files/UI/Solution-Manager/Library/Managing-Frequencies',
-                'Files/UI/Solution-Manager/Library/Managing-Global-Properties',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Jobs',
                 'Files/UI/Solution-Manager/Library/Managing-Master-Schedules',
                 'Files/UI/Solution-Manager/Library/Managing-Tags',
