@@ -8,6 +8,34 @@ sidebar_label: "Release Notes"
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
+2024 June
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-23392**: OpCon MFT users now have the ability to select an option to “force download” the filtered file or list of files. This ensures that OpCon will always download the specified file(s) at runtime regardless of whether changes have been made to the file or not.
+
+:white_check_mark: **OPCON-17491**: Fixed an issue where permissions to view departments were incorrect.
+
+:white_check_mark: **OPCON-23052**: Fixed an issue in Visions page where clicking the edit button in the bread crumb was redirecting users to page not found. Users will now be redirected to the correct page to edit the group tag.
+
+:white_check_mark: **OPCON-23087**: Fixed issue in Notification Triggers page where removing an email message type also removes all other message types. Users will now be able to remove an email message type without affecting other types.
+
+:white_check_mark: **OPCON-23225**: Fixed an issue in Master Schedule Definition page where the Save button was not enabled after changes were made to instance properties of a named instance schedule.
+
+:white_check_mark: **OPCON-23457**: Fixed an issue where role permissions were inadvertently overwritten by stale data.
+
+:white_check_mark: **OPCON-23519**: Fixed an issue where users and roles were not refreshing.
+
+:white_check_mark: **OPCON-23524**: Fixed an issue where valid regular expressions were considered invalid in Self-Service Requests.
+
+:white_check_mark: **OPCON-23588**: Fixed an issue causing users to timeout when using multiple browser tabs. User activity timeout will now be shared between multiple tabs.
+
+:white_check_mark: **OPCON-23591**: Fixed an issue where an On Request frequency was not able to save with a date of February 29.
+
+#### REST API
+
+:white_check_mark: **OPCON-23540**: Fixed an issue where a user's external event password is corrupted during a migration from OpCon version 19 to 23.
+
 2024 May
 
 #### Installation
