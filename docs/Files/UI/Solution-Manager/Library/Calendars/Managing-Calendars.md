@@ -14,7 +14,7 @@ The **Calendars** page is used to define and maintain OpCon Calendars. The page 
 The **Calendars** page also has a toolbar that allows you to perform
 functions for managing the calendars.
 
-![Calendar Page](../../../../../Resources/Images/SM/Library/Calendars/calendars.png "Calendar Page")
+![Calendar Page](../../../../../Resources/Images/SM/Library/Calendars/Calendars.png "Calendar Page")
 
 Related Topics
 
