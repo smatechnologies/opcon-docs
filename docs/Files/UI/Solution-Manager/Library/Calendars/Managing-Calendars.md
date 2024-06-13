@@ -7,7 +7,7 @@ viewport: width=device-width, initial-scale=1.0
 # Managing Calendars
 
 The **Calendars** page is used to define and maintain OpCon Calendars. The page displays a list of existing calendars. For conceptual information, refer to
-[Calendars](../../../../objects/calendars.md) in the **Concepts** online help.
+[Calendars](../../../../../objects/calendars.md) in the **Concepts** online help.
 
 ## Calendars Toolbar
 
