@@ -18,12 +18,10 @@ The **Name** field must be unique when adding or copying a machine group.
 
 Click the Cross References button to see the list of master and daily jobs that use a particular Machine Group.
 
-![Machine Group CrossReferences](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-CrossReferenceSummary.png "Machine Groups Cross References")
-
-Click on the expansion arrow for **Master Job** to view a list of master jobs that use the selected machine group.
+Click on the tab for **Master Job** to view a list of master jobs that use the selected machine group.
 
 ![Machine Group Master Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-MasterJobCrossReference.png "Machine Group Master Job References Dialog")
 
-Click on the expansion arrow for **Daily Job** to view a list of daily jobs that use the selected machine group.
+Click on the tab for **Daily Job** to view a list of daily jobs that use the selected machine group.
 
 ![Machine Group Daily Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-DailyJobCrossReference.png "Machine Group Daily Job Cross References Dialog")
