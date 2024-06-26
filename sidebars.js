@@ -517,6 +517,16 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/EscalationManager/Managing-Escalation-Groups",
                   ],
                 },
+                {
+                  type: "category",
+                  label: "Frequencies",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/Frequencies/Managing-Frequencies",
+                    "Files/UI/Solution-Manager/Library/Frequencies/Editing-Frequencies",
+                    "Files/UI/Solution-Manager/Library/Frequencies/Forecasting-Frequencies",
+                  ],
+                },
                 "Files/UI/Solution-Manager/Library/Global-Properties",
                 "Files/UI/Solution-Manager/Library/LicenseSupport/License-Support",
                 {
@@ -632,7 +642,6 @@ module.exports = {
                 "Files/UI/Solution-Manager/Managing-Agents",
                 "Files/UI/Solution-Manager/Library/Managing-Batch-Users",
                 "Files/UI/Solution-Manager/Library/Managing-Departments",
-                "Files/UI/Solution-Manager/Library/Managing-Frequencies",
                 "Files/UI/Solution-Manager/Library/Managing-Master-Jobs",
                 "Files/UI/Solution-Manager/Library/Managing-Master-Schedules",
                 "Files/UI/Solution-Manager/Library/Managing-Tags",
