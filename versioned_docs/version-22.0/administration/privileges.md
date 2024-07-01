@@ -20,14 +20,14 @@ The following information applies to defining Access Code Privileges.
 
 - **Role Name**: Defines the unique name of the Role.
 - **Allow job updates?**: Determines if users in the Role can update
-    jobs defined with an Access Code. If allowed, users can modify and
-    delete the job definition in the Master and Daily. If not allowed,
-    users can only view the job definition in the Master and Daily.
+  jobs defined with an Access Code. If allowed, users can modify and
+  delete the job definition in the Master and Daily. If not allowed,
+  users can only view the job definition in the Master and Daily.
 - **Revoked**: Provides the Access Codes not assigned to the Role
-    Name.
+  Name.
 - **Granted**: Provides the Access Codes assigned to the Role Name.
-    Users will be able to see jobs with any of the granted access codes
-    in the Master, Daily, and Schedule Operations.
+  Users will be able to see jobs with any of the granted access codes
+  in the Master, Daily, and Schedule Operations.
 
 ## Function Privileges
 
@@ -42,7 +42,7 @@ The following data information applies to defining Function Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
 - **Granted Function Privileges**: Provides the Function Privileges
-    assigned to the Role Name.
+  assigned to the Role Name.
 
 ## All Administrative Functions
 
@@ -138,7 +138,6 @@ schedules:
 
 - View schedules to delete
 - Delete schedules for defined dates
-- Check schedules for defined dates
 
 :::note
 Users in the role must also have Schedule Privileges to perform these functions.
@@ -367,7 +366,7 @@ Grants access to functions related to maintaining Vision cards.
 
 Grants users, who are not already members of a role with Maintain
 Embedded Scripts or All Administrative Functions or All Function
-Privileges, the permissions to view list of embedded scripts, script types, 
+Privileges, the permissions to view list of embedded scripts, script types,
 script runners, and the contents of the embedded scripts.
 
 ## View License Information
@@ -404,9 +403,9 @@ The following data information applies to defining Function Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
 - **Granted Departmental Privileges**: Provides the Departmental
-    Privileges assigned to the Role Name. Departmental privileges are
-    associated with <All Departments\>, the <General\> department, or
-    user defined departments.
+  Privileges assigned to the Role Name. Departmental privileges are
+  associated with <All Departments\>, the <General\> department, or
+  user defined departments.
 
 :::note
 The <General\> department is the default department for all jobs.
@@ -681,13 +680,13 @@ Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
 - **Allow job updates?**: Determines if users in the Role can update
-    jobs defined with a Machine. If allowed, users can modify and delete
-    the job definition in the Master and Daily. If not allowed, users
-    can only view the job definition in the Master and Daily.
+  jobs defined with a Machine. If allowed, users can modify and delete
+  the job definition in the Master and Daily. If not allowed, users
+  can only view the job definition in the Master and Daily.
 - **Revoked**: Provides the machines not assigned to the Role Name.
 - **Granted**: Provides the machines assigned to the Role Name. Users
-    will be able to see jobs with any of the granted machines in the
-    Master and Daily.
+  will be able to see jobs with any of the granted machines in the
+  Master and Daily.
 
 ## Machine Group Privileges
 
@@ -704,13 +703,13 @@ Group Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
 - **Allow job updates?**: Determines if users in the Role can update
-    jobs defined with a Machine Group. If allowed, users can modify and
-    delete the job definition in the Master and Daily. If not allowed,
-    users can only view the job definition in the Master and Daily.
+  jobs defined with a Machine Group. If allowed, users can modify and
+  delete the job definition in the Master and Daily. If not allowed,
+  users can only view the job definition in the Master and Daily.
 - **Revoked**: Provides the Machines not assigned to the Role Name.
 - **Granted**: Provides the Machines assigned to the Role Name. Users
-    will be able to see jobs with any of the granted machine groups in
-    the Master and Daily.
+  will be able to see jobs with any of the granted machine groups in
+  the Master and Daily.
 
 :::note
 Machine Group Privileges do not automatically grant privileges to the individual Machines in the group. To grant privileges to individual machines, refer to [Machine Privileges](#machine-privileges).
@@ -754,10 +753,10 @@ The following information applies to defining Batch User Privileges:
 
 - **Select Role**: Defines the unique name of the Role.
 - **Target Operating System**: Provides the operating systems that
-    require Batch User Privileges which includes MCP, IBM i, UNIX, VMS,
-    and Windows.
+  require Batch User Privileges which includes MCP, IBM i, UNIX, VMS,
+  and Windows.
 - **Revoked**: Provides the Batch User IDs not assigned to the Role
-    Name.
+  Name.
 - **Granted**: Provides the Batch User IDs assigned to the Role Name.
 
 ## Embedded Script Privileges
@@ -780,6 +779,6 @@ Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
 - **Revoked**: Provides the Embedded Scripts not assigned to the Role
-    Name.
+  Name.
 - **Granted**: Provides the Embedded Scripts assigned to the Role
-    Name.
+  Name.
