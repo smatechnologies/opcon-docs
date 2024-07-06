@@ -8,6 +8,16 @@ sidebar_label: "Release Notes"
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
 
+2024 July
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-17142**: Fixed an issue in Vision Settings page where selecting a tag from a list did not populate the Pattern field with the selected tag.
+
+:white_check_mark: **OPCON-23812**: Fixed an issue where updating an On Request frequency did not give a warning about affected jobs and schedules.
+
+:white_check_mark: **OPCON-23814**: Fixed an issue where master jobs cross references did not display all cross-referenced jobs.
+
 2024 June
 
 #### Solution Manager
