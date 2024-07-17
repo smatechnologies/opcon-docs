@@ -119,7 +119,6 @@ Grants privileges to perform the following functions in the Daily schedules:
 
 - View schedules to delete
 - Delete schedules for defined dates
-- Check schedules for defined dates
 
 :::note
 Users in the role must also have Schedule Privileges to perform these functions.
@@ -364,7 +363,7 @@ The Departmental Function Privileges are used to grant privileges related to job
 The following data information applies to defining Function Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Granted Departmental Privileges**: Provides the Departmental Privileges assigned to the Role Name. Departmental privileges are     associated with <All Departments\>, the <General\> department, or user defined departments.
+- **Granted Departmental Privileges**: Provides the Departmental Privileges assigned to the Role Name. Departmental privileges are associated with <All Departments\>, the <General\> department, or user defined departments.
 
 :::note
 The <General\> department is the default department for all jobs.

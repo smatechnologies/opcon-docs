@@ -6,8 +6,6 @@ viewport: width=device-width, initial-scale=1.0
 
 # Managing Global Properties
 
-The Global Properties editor also has a toolbar that allows you to perform functions for managing the global properties. Learn to add page to Add or Edit global properties, add user defined system properties.
+Available Global Properties in OpCon are shown in the following Grid under Library -> Global Properties. Clicking the add, edit, or copy button will open the Global Property Editor.
 
 ![Managing Library](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Managing Library")
-
-Please check back for more content.
