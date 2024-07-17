@@ -1,4 +1,4 @@
-# Forgot Password / Reset Password for Solution Manager Login
+# Forgot / Reset Password
 
 ## Resetting Password
 
