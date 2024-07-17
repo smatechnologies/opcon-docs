@@ -395,6 +395,7 @@ module.exports = {
             'Files/UI/Solution-Manager/Getting-Started',
             'Files/UI/Solution-Manager/Application-Help',
             'Files/UI/Solution-Manager/Logging-In',
+            'Files/UI/Solution-Manager/Forgot-Password-Login',
             'Files/UI/Solution-Manager/Migrating-Data',
             {
               type: 'category',
@@ -770,6 +771,32 @@ module.exports = {
                   ],
                 },
               ],
+            },
+            {
+              type: 'category',
+              label: 'Otto',
+              collapsed: true,
+              items: [
+                "Files/UI/Solution-Manager/Otto/Otto-Chatbot",
+                {
+                  type: "category",
+                  label: "Skills",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Otto/Skills/Skills-Overview",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Add-Daily-Job",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Build-Schedule",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Delete-Daily-Job",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Get-Failed-Jobs",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Get-Failed-Schedules",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Perform-A-Fast-Schedule-Check",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Restart-Failed-Jobs",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Job-Status",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Machine-Status",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Schedule-Status",
+                  ]
+                }
+              ]
             },
             'Files/UI/Solution-Manager/Using-PERT-View',
             'Files/UI/Solution-Manager/Managing-Daily-Processes',
