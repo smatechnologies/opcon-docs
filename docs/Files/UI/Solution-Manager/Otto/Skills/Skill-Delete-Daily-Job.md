@@ -4,21 +4,19 @@ title: Otto Skill - Delete Daily Job
 viewport: width=device-width, initial-scale=1.0
 ---
 
-# Overview
+# Delete Daily Job
 
 The **Delete Daily Job** skill allows you to delete a specified job from the specified daily schedule for the specified date.
 
 ## Skill Details
 
-- **Skill Name**: `delete-daily-job`
-
 ### Parameters
 
 The **Delete Daily Job** skill requires the following parameters:
 
-- **Date** _(string)_: The specified date of the job that will be deleted.
-- **Job Name** _(string)_: The name of the job to be deleted.
-- **Schedule Name** _(string)_: The name of the daily schedule on which the job name is to be deleted from.
+- **Date**: The specified date of the job that will be deleted.
+- **Job Name**: The name of the job to be deleted.
+- **Schedule Name**: The name of the daily schedule on which the job name is to be deleted from.
 
 ## Example
 

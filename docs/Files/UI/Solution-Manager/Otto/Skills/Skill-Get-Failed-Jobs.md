@@ -4,19 +4,22 @@ title: Otto Skill - Get Failed Jobs
 viewport: width=device-width, initial-scale=1.0
 ---
 
-# Overview
+# Get Failed Jobs
 
 The **Get Failed Jobs** skill allows you to retrieve a list of failed jobs for a specified date.
 
 ## Skill Details
 
-- **Skill Name**: `get-failed-jobs`
-
 ### Parameters
 
 The **Get Failed Jobs** skill requires the following parameters:
 
-- **Date** _(string)_: The date for which the failed jobs will be retrieved.
+- **Date**: The date for which the failed jobs will be retrieved.
+
+### Notes
+
+1. The first ten failures will be displayed with a link to see the rest.
+1. Cannot provide a date range.
 
 ## Example
 
