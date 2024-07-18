@@ -10,8 +10,6 @@ The **Get Failed Schedules** skill allows you to retrieve a list of failed sched
 
 ## Skill Details
 
-- **Skill Name**: `update-schedule-status`
-
 ### Parameters
 
 The **Get Failed Schedules** skill requires the following parameters:

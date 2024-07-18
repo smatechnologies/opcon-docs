@@ -10,6 +10,9 @@ The **Add Daily Job** skill allows you to add a new daily job to a specified dai
 
 ## Skill Details
 
+
+- **Skill Name**: `add-daily-job`
+
 ### Parameters
 
 The **Add Daily Job** skill requires the following parameters:

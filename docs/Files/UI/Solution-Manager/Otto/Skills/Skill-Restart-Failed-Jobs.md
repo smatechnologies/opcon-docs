@@ -10,6 +10,7 @@ The **Restart Failed Jobs** skill allows you to restart all failed jobs in a spe
 
 ## Skill Details
 
+
 ### Parameters
 
 The **Restart Failed Jobs** skill requires the following parameters:
