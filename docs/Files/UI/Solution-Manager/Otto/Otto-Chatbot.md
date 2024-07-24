@@ -20,13 +20,13 @@ Otto has the following features:
 
 - **Search**: Otto can search the OpCon documentation for answers to your questions.
 - **Skills**: Otto can perform certain tasks in OpCon for you:
-  - [Add a Daily Job](Skills/Skill-Add-Daily-Job.md)
-  - [Build a Schedule](Skills/Skill-Build-Schedule.md)
-  - [Delete a Daily Job](Skills/Skill-Delete-Daily-Job.md)
-  - [Get Failed Daily Jobs](Skills/Get-Failed-Jobs.md)
-  - [Get Failed Daily Schedules](Skills/Get-Failed-Schedules.md)
-  - [Perform a Fast Schedule Check](Skills/Perform-A-Fast-Schedule-Check.md)
-  - [Restart Failed Jobs](Skills/Restart-Failed-Jobs.md)
-  - [Update a Job Status](Skills/Update-Job-Status.md)
-  - [Update a Machine Status](Skills/Update-Machine-Status.md)
-  - [Update a Schedule Status](Skills/Update-Schedule-Status.md)
+  - [Add a Daily Job](./Skills/Skill-Add-Daily-Job.md)
+  - [Build a Schedule](./Skills/Skill-Build-Schedule.md)
+  - [Delete a Daily Job](./Skills/Skill-Delete-Daily-Job.md)
+  - [Get Failed Daily Jobs](./Skills/Skill-Get-Failed-Jobs.md)
+  - [Get Failed Daily Schedules](./Skills/Skill-Get-Failed-Schedules.md)
+  - [Perform a Fast Schedule Check](./Skills/Skill-Perform-A-Fast-Schedule-Check.md)
+  - [Restart Failed Jobs](./Skills/Skill-Restart-Failed-Jobs.md)
+  - [Update a Job Status](./Skills/Skill-Update-Job-Status.md)
+  - [Update a Machine Status](./Skills/Skill-Update-Machine-Status.md)
+  - [Update a Schedule Status](./Skills/Skill-Update-Schedule-Status.md)
