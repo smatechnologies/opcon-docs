@@ -4,6 +4,91 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## Summer 24
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 July
+
+#### Server
+
+:eight_spoked_asterisk: **OPCON-23985**: Added the following capabilities to Relay
+1) Support for MFT Job Scheduling and JORS
+2) Interactive MFT machine and Job definition through SM
+3) Interactive SAP Job import and definition through SM
+4) Interactive zOS JCL View/Save through SM
+5) Improved performance by using WebSocket for communication between Relay and OpCon-Cloud
+6) Communication between Relay and OpCon-Cloud restricted to TLS 1.2 and up
+7) Allow multi instance relay installation on a machine
+
+:white_check_mark: **OPCON-20726**: Fixed an issue in SMALDAPMon where it did not recover after losing connection to the LDAP server while fetching roles. SMALDAPMon will now try to reconnect three times.
+
+:white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
+
+:white_check_mark: **OPCON-23632**: Fixed an issue where schedule build and delete logs were not being deleted periodically.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OPCON-23366**: Added AI chatbot skill to perform fast daily schedule checks.
+
+:eight_spoked_asterisk: **OPCON-23367**: Added AI chatbot skill to fetch a list of failed daily jobs.
+
+:eight_spoked_asterisk: **OPCON-23369**: Added AI chatbot skill to build a daily schedule.
+
+:eight_spoked_asterisk: **OPCON-23370**: Added AI chatbot skill to add a job to a daily schedule.
+
+:eight_spoked_asterisk: **OPCON-23371**: Added AI chatbot skill to update the status of a daily schedule
+
+:eight_spoked_asterisk: **OPCON-23372**: Added AI chatbot skill to update the status of a machine.
+
+:eight_spoked_asterisk: **OPCON-23393**: Added ability to use latest script version in ACS jobs.
+
+:eight_spoked_asterisk: **OPCON-23526**: Added AI chatbot skill to fetch a list of failed daily schedules.
+
+:eight_spoked_asterisk: **OPCON-23527**: Added AI chatbot skill to remove a job from a daily schedule.
+
+:eight_spoked_asterisk: **OPCON-23528**: Added AI chatbot skill to update the status of a daily job.
+
+:eight_spoked_asterisk: **OPCON-23529**: Added AI chatbot skill to restart all failed jobs in a daily schedule.
+
+:eight_spoked_asterisk: **OPCON-23662**: Updated Calendars, Global Properties, License and Support, and Frequencies pages to support WCAG accessibility standards.
+
+:white_check_mark: **OPCON-21201**: Fixed an issue in Multi-Forecast where frequencies with "Do Not Schedule" build status were not displayed in purple.
+
+:white_check_mark: **OPCON-21957**: Fixed an issue where users with Maintain Embedded Scripts privilege were not able to delete scripts and script versions.
+
+:white_check_mark: **OPCON-23221**: Fixed an issue where machine settings were not reloaded when the machine was created, copied, or updated.
+
+:white_check_mark: **OPCON-23301**: Fixed an issue in PERT diagram where some dependency lines were missing for some schedules.
+
+:white_check_mark: **OPCON-23343**: Corrected a grammatical error in an error message where certain function privileges are required to access a particular page.
+
+:white_check_mark: **OPCON-23347**: Fixed an issue in the Studio page where icons for job types were missing or broken.
+
+:white_check_mark: **OPCON-23384**: Fixed an error in Notification Triggers when selecting a group type and then clicking on an empty space on the page.
+
+:white_check_mark: **OPCON-23517**: Fixed an error in Master Jobs when selecting a job type and then clicking on an empty space on the page.
+
+:white_check_mark: **OPCON-23530**: Fixed an issue where the Role_ocadm checkbox was incorrectly disabled on the Access Management > Users > Roles tab.
+
+:white_check_mark: **OPCON-23583**: Fixed an issue where double quotes in Episys Answer Prompt jobs were mishandled.
+
+:white_check_mark: **OPCON-23801**: Removed color theme from Application Settings tab.
+
+:white_check_mark: **OPCON-23819**: Fixes an issue in Daily Job Definition page where clicking the Back button reset the selections in the Processes page.
+
+:white_check_mark: **OPCON-23976**: Fixed an issue where Deployment Information section in Master Schedule Definition page was missing.
+
+:white_check_mark: **OPCON-24411**: Fixed an issue with restarting OpconMFT job that was failing with 'bad request error'.
+
+#### REST API
+
+:white_check_mark: **OPCON-23470**: Fixed a potential failure if migrations ran multiple times.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-23521**: Fixed a problem in Frequency Run Limits when fields Number of Runs and Latest Run Time were not reset correctly during deployment update.
+
 ## Spring 24
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
