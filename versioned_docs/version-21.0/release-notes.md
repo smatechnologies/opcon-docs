@@ -8,9 +8,11 @@ sidebar_label: "Release Notes"
 
 2024 July
 
-#### Solution Manager
+#### Server
 
 :white_check_mark: **OPCON-20726**: Fixed an issue in SMALDAPMon where it did not recover after losing connection to the LDAP server while fetching roles. SMALDAPMon will now try to reconnect three times.
+
+#### Solution Manager
 
 :white_check_mark: **OPCON-23301**: Fixed an issue in PERT diagram where some dependency lines were missing for some schedules.
 
