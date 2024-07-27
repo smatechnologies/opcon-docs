@@ -8,6 +8,10 @@ sidebar_label: "Release Notes"
 
 2024 July
 
+#### Server
+
+:white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
+
 #### Solution Manager
 
 :white_check_mark: **OPCON-17142**: Fixed an issue in Vision Settings page where selecting a tag from a list did not populate the Pattern field with the selected tag.
@@ -15,8 +19,6 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-17491**: Fixed an issue where permissions to view departments were incorrect.
 
 :white_check_mark: **OPCON-21201**: Fixed an issue in Multi-Forecast where frequencies with "Do Not Schedule" build status were not displayed in purple.
-
-:white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
 
 :white_check_mark: **OPCON-23087**: Fixed issue in Notification Triggers page where removing an email message type also removes all other message types. Users will now be able to remove an email message type without affecting other types.
 
