@@ -4,6 +4,58 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.4
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 July
+
+#### Server
+
+:white_check_mark: **OPCON-20726**: Fixed an issue in SMALDAPMon where it did not recover after losing connection to the LDAP server while fetching roles. SMALDAPMon will now try to reconnect three times.
+
+:white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
+
+:white_check_mark: **OPCON-23632**: Fixed an issue where schedule build and delete logs were not being deleted periodically.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-17142**: Fixed an issue in Vision Settings page where selecting a tag from a list did not populate the Pattern field with the selected tag.
+
+:white_check_mark: **OPCON-17491**: Fixed an issue where permissions to view departments were incorrect.
+
+:white_check_mark: **OPCON-21201**: Fixed an issue in Multi-Forecast where frequencies with "Do Not Schedule" build status were not displayed in purple.
+
+:white_check_mark: **OPCON-23052**: Fixed an issue in Visions page where clicking the edit button in the bread crumb was redirecting users to page not found. Users will now be redirected to the correct page to edit the group tag.
+
+:white_check_mark: **OPCON-23087**: Fixed issue in Notification Triggers page where removing an email message type also removes all other message types. Users will now be able to remove an email message type without affecting other types.
+
+:white_check_mark: **OPCON-23225**: Fixed an issue in Master Schedule Definition page where the Save button was not enabled after changes were made to instance properties of a named instance schedule.
+
+:white_check_mark: **OPCON-23301**: Fixed an issue in PERT diagram where some dependency lines were missing for some schedules.
+
+:white_check_mark: **OPCON-23343**: Corrected a grammatical error in an error message where certain function privileges are required to access a particular page.
+
+:white_check_mark: **OPCON-23457**: Fixed an issue where role permissions were inadvertently overwritten by stale data.
+
+:white_check_mark: **OPCON-23519**: Fixed an issue where users and roles were not refreshing.
+
+:white_check_mark: **OPCON-23524**: Fixed an issue where valid regular expressions were considered invalid in Self-Service Requests.
+
+:white_check_mark: **OPCON-23530**: Fixed an issue where the Role_ocadm checkbox was incorrectly disabled on the Access Management > Users > Roles tab.
+
+:white_check_mark: **OPCON-23588**: Fixed an issue causing users to timeout when using multiple browser tabs. User activity timeout will now be shared between multiple tabs.
+
+:white_check_mark: **OPCON-23591**: Fixed an issue where an On Request frequency was not able to save with a date of February 29.
+
+:white_check_mark: **OPCON-23814**: Fixed an issue where master jobs cross references did not display all cross-referenced jobs.
+
+:white_check_mark: **OPCON-23976**: Fixed an issue where Deployment Information section in Master Schedule Definition page was missing.
+
+#### REST API
+
+:white_check_mark: **OPCON-23540**: Fixed an issue where a user's external event password is corrupted during a migration from OpCon version 19 to 23.
+
 ## OpCon 23.0.3
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
