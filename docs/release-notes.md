@@ -6,22 +6,29 @@ sidebar_label: "Release Notes"
 
 ## Summer 24
 
-**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher, **Relay** - 24.1 or higher
+
+2024 August
+
+#### Server
+
+:white_check_mark: **OPCON-24460**: Fixed an issue with the relay API, where a broken connection to the database did not recover correctly.
+
+#### REST API
+
+:white_check_mark: **OPCON-24392**: Fixed an issue with database migrations, where a database with a large amount of data caused timeout errors when running a specific migration.
 
 2024 July
 
 #### Server
 
-:eight_spoked_asterisk: **OPCON-23985**: Added the following capabilities to Relay
+:eight_spoked_asterisk: **OPCON-23985**: Added the following capabilities to Relay:
 1) Support for MFT Job Scheduling and JORS
 2) Interactive MFT machine and Job definition through SM
 3) Interactive SAP Job import and definition through SM
 4) Interactive zOS JCL View/Save through SM
 5) Improved performance by using WebSocket for communication between Relay and OpCon-Cloud
 6) Communication between Relay and OpCon-Cloud restricted to TLS 1.2 and up
-7) Allow multi instance relay installation on a machine
-
-:white_check_mark: **OPCON-20726**: Fixed an issue in SMALDAPMon where it did not recover after losing connection to the LDAP server while fetching roles. SMALDAPMon will now try to reconnect three times.
 
 :white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
 
@@ -29,27 +36,9 @@ sidebar_label: "Release Notes"
 
 #### Solution Manager
 
-:eight_spoked_asterisk: **OPCON-23366**: Added AI chatbot skill to perform fast daily schedule checks.
-
-:eight_spoked_asterisk: **OPCON-23367**: Added AI chatbot skill to fetch a list of failed daily jobs.
-
-:eight_spoked_asterisk: **OPCON-23369**: Added AI chatbot skill to build a daily schedule.
-
-:eight_spoked_asterisk: **OPCON-23370**: Added AI chatbot skill to add a job to a daily schedule.
-
-:eight_spoked_asterisk: **OPCON-23371**: Added AI chatbot skill to update the status of a daily schedule
-
-:eight_spoked_asterisk: **OPCON-23372**: Added AI chatbot skill to update the status of a machine.
+:eight_spoked_asterisk: **OPCON-23255**: A new AI chatbot - Otto - is available for cloud users to answer OpCon related questions and also take actions; please refer to the documentation for Otto. NOTE: Otto chatbot has role based access control for security purposes. A new permission is added to control this.
 
 :eight_spoked_asterisk: **OPCON-23393**: Added ability to use latest script version in ACS jobs.
-
-:eight_spoked_asterisk: **OPCON-23526**: Added AI chatbot skill to fetch a list of failed daily schedules.
-
-:eight_spoked_asterisk: **OPCON-23527**: Added AI chatbot skill to remove a job from a daily schedule.
-
-:eight_spoked_asterisk: **OPCON-23528**: Added AI chatbot skill to update the status of a daily job.
-
-:eight_spoked_asterisk: **OPCON-23529**: Added AI chatbot skill to restart all failed jobs in a daily schedule.
 
 :eight_spoked_asterisk: **OPCON-23662**: Updated Calendars, Global Properties, License and Support, and Frequencies pages to support WCAG accessibility standards.
 
