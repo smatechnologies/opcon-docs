@@ -4,6 +4,20 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.5
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 August
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-23523**: Fixed an issue where the forward slash (/) was not allowed in daily OS 2200 jobs.
+
+:white_check_mark: **OPCON-23628**: Fixed an issue where ACS plugins' updates to configuration would not save.
+
+:white_check_mark: **OPCON-23997**: Fixed an issue where a selectedIds query parameter did not select the rows.
+
 ## OpCon 23.0.4
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
