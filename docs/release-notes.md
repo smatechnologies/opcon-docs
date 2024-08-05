@@ -10,10 +10,6 @@ sidebar_label: "Release Notes"
 
 2024 August
 
-#### Server
-
-:white_check_mark: **OPCON-24460**: Fixed an issue with the relay API, where a broken connection to the database did not recover correctly.
-
 #### REST API
 
 :white_check_mark: **OPCON-24392**: Fixed an issue with database migrations, where a database with a large amount of data caused timeout errors when running a specific migration.
@@ -21,14 +17,6 @@ sidebar_label: "Release Notes"
 2024 July
 
 #### Server
-
-:eight_spoked_asterisk: **OPCON-23985**: Added the following capabilities to Relay:
-1) Support for MFT Job Scheduling and JORS
-2) Interactive MFT machine and Job definition through SM
-3) Interactive SAP Job import and definition through SM
-4) Interactive zOS JCL View/Save through SM
-5) Improved performance by using WebSocket for communication between Relay and OpCon-Cloud
-6) Communication between Relay and OpCon-Cloud restricted to TLS 1.2 and up
 
 :white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
 
@@ -138,9 +126,9 @@ sidebar_label: "Release Notes"
 
 #### Solution Manager
 
-:eight_spoked_asterisk: **OPCON-20079**: Provide better formatting for z/OS Job Output menu items. 
+:eight_spoked_asterisk: **OPCON-20079**: Provide better formatting for z/OS Job Output menu items.
 
-:eight_spoked_asterisk: **OPCON-23078**: Require Email for Users: This feature introduces a requirement for the email field to be populated for user accounts in support of the new password recovery process in addition to a new server option setting that gives admins the ability to allow existing users to enter their recovery email upon next login. 
+:eight_spoked_asterisk: **OPCON-23078**: Require Email for Users: This feature introduces a requirement for the email field to be populated for user accounts in support of the new password recovery process in addition to a new server option setting that gives admins the ability to allow existing users to enter their recovery email upon next login.
 
 :eight_spoked_asterisk: **OPCON-23080**: Forgot Password Link: This feature adds a "Forgot Password?" link on the Solution Manager login screen to initiate the password recovery process by confirming their username and email to generate and receive an email with a password recovery code.
 
@@ -200,4 +188,3 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-23091**: Fixed an issue during deployment where global property value was mixed up if there are other property names with a similar pattern.
 
 :white_check_mark: **OPCON-23345**: Fixed a problem where the schedule multi-instance values are not reset correctly during deployment when the schedule definition already exists.
-
