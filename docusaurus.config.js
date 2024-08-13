@@ -1,5 +1,5 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require("./versionsArchived.json");
+const VersionsArchived = require("./versionsArchived.json")
 module.exports = {
   title: "SMA Technologies Help",
   tagline: "OpCon",
@@ -78,5 +78,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [[require.resolve("@cmfcmf/docusaurus-search-local"), {}]],
-};
+  //plugins: [[require.resolve("@cmfcmf/docusaurus-search-local"), {}]],
+}
