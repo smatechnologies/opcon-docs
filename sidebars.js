@@ -392,11 +392,11 @@ module.exports = {
           label: "Solution Manager",
           collapsed: true,
           items: [
-            'Files/UI/Solution-Manager/Getting-Started',
-            'Files/UI/Solution-Manager/Application-Help',
-            'Files/UI/Solution-Manager/Logging-In',
-            'Files/UI/Solution-Manager/Forgot-Password-Login',
-            'Files/UI/Solution-Manager/Migrating-Data',
+            "Files/UI/Solution-Manager/Getting-Started",
+            "Files/UI/Solution-Manager/Application-Help",
+            "Files/UI/Solution-Manager/Logging-In",
+            "Files/UI/Solution-Manager/Forgot-Password-Login",
+            "Files/UI/Solution-Manager/Migrating-Data",
             {
               type: "category",
               label: "Understanding the Layout",
@@ -508,6 +508,17 @@ module.exports = {
                   ],
                 },
                 "Files/UI/Solution-Manager/Library/CloudEventsTriggers/CloudEventsTriggers",
+                "Files/UI/Solution-Manager/Library/Departments/Departments",
+                {
+                  type: "category",
+                  label: "Frequencies",
+                  collapsed: true,
+                  items: [
+                    "Files/UI/Solution-Manager/Library/Frequencies/Managing-Frequencies",
+                    "Files/UI/Solution-Manager/Library/Frequencies/Editing-Frequencies",
+                    "Files/UI/Solution-Manager/Library/Frequencies/Forecasting-Frequencies",
+                  ],
+                },
                 {
                   type: "category",
                   label: "Escalation Manager",
@@ -642,7 +653,6 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Thresholds/Thresholds",
                 "Files/UI/Solution-Manager/Managing-Agents",
                 "Files/UI/Solution-Manager/Library/Managing-Batch-Users",
-                "Files/UI/Solution-Manager/Library/Managing-Departments",
                 "Files/UI/Solution-Manager/Library/Managing-Master-Jobs",
                 "Files/UI/Solution-Manager/Library/Managing-Master-Schedules",
                 "Files/UI/Solution-Manager/Library/Managing-Tags",
@@ -794,8 +804,8 @@ module.exports = {
               ],
             },
             {
-              type: 'category',
-              label: 'Otto',
+              type: "category",
+              label: "Otto",
               collapsed: true,
               items: [
                 "Files/UI/Solution-Manager/Otto/Otto-Chatbot",
@@ -815,12 +825,12 @@ module.exports = {
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Job-Status",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Machine-Status",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Schedule-Status",
-                  ]
-                }
-              ]
+                  ],
+                },
+              ],
             },
-            'Files/UI/Solution-Manager/Using-PERT-View',
-            'Files/UI/Solution-Manager/Managing-Daily-Processes',
+            "Files/UI/Solution-Manager/Using-PERT-View",
+            "Files/UI/Solution-Manager/Managing-Daily-Processes",
           ],
         },
       ],
