@@ -1,6 +1,6 @@
 ---
 lang: en-us
-title: Managing Escalation Manager
+title: Managing Escalations
 viewport: width=device-width, initial-scale=1.0
 ---
 
@@ -14,4 +14,7 @@ Escalation Manager has options related to Escalations.
 Use the bar on the left side of the screen
 :::
 
-Please check back for more content.
+See also:
+
+- [Managing Escalation Rules](Managing-Escalation-Rules.md)
+- [Managing Escalation Groups](Managing-Escalation-Groups.md)
