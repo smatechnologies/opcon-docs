@@ -8,6 +8,12 @@ sidebar_label: "Release Notes"
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher, **Relay** - 24.1 or higher
 
+2024 September
+
+#### Server
+
+:white_check_mark: **OPCON-23654**: Fixed an issue in OpCon where in a cloud environment, the messaging service for the 'relay' that allows users to run jobs on their data center agents, threw exceptions if there were no agents defined to use the 'relay' (like in a VPN setup, or when running all workloads in cloud only).
+
 2024 August
 
 #### REST API
