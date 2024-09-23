@@ -49,20 +49,18 @@ To get the full capability of this utility, SMA Technologies recommends using th
 The next table identifies all the acceptable parameters for this
 argument.
 
-|Parameter|Name|Default|Description|
-|--- |--- |--- |--- |
+| Parameter | Name | Default | Description |
+| --- | --- | --- | --- |
 |-b|Bin|By default, the program will recover the files.|This parameter indicates to recover the files in the default location: `<driveTarget>\ProgramData\OpConxps\MSLSAM\SMADirectory\<directoryTarget>`. If you wish to set a custom location, you may do so using the -o switch.|
 |-B|No Bin||This parameter indicates that no recovery will be performed. If you enter -B (No recycle), then the program will not save a copy of the directory in the default location. You may be explicit about recovery using  -b (recover).|
 |-c|Time to Retain|5D|This parameter specifies the length of time that files should be retained within the timespan. The value must be in the following form: `<Number><TimeSpan>` with TimeSpan  represented as: D (day), H (hour), X (month), M (minute), S (second), or Y (year). For example: `5D` (for 5 days)|
 |-d|Directory Name||This **required** parameter specifies the folder to be cleaned up or moved.|
 |-e|Extensions||This **required** parameter accepts  “|” to separate extensions and / or filters.|
-|-F|TimeType|FM|This parameter specifies the time type information on files for processing. The available values are:
-FA (for last Access date), FM (for last Modification date), or FC (for Creation date)|
+|-F|TimeType|FM|This parameter specifies the time type information on files for processing. The available values are: FA (for last Access date), FM (for last Modification date), or FC (for Creation date)|
 |-h|No Hidden|By default, the program will process hidden and system files.|This parameter specifies not to process system and hidden files.|
 |-m|Move|Null|This parameter specifies the path to which a folder will be moved. If the -m and/or -z switches are entered, then the program will perform a move operation instead of a delete operation.If the zip command was entered, the program will zip the folder. This case is the only scenario where the -x (delete) switch may be entered.|
-|-o|RecoverPath|%ProgramData%/OpConxps/SMADirectory|If recovery is on, this parameter allows you to specify a location for a recovery copy of the Directory to process. This process will only recover qualifying files.|
-|-r|Recursive|The process does not run recursively.|This parameter specifies to process subfolders and files under subfolders.|
-|-u|Debug||This parameter places the program in Debug mode.|
+|-o|RecoverPath|%ProgramData%/<br/>OpConxps/<br/>SMADirectory|If recovery is on, this parameter allows you to specify a location for a recovery copy of the Directory to process. This process will only recover qualifying files.|
+|-r|Recursive|The process does not run recursively.|This parameter specifies to process subfolders and files under subfolders.||-u|Debug||This parameter places the program in Debug mode.|
 |-v|Verbose|No|This parameter to print non-deleted file names.|
 |-x|Delete|By default, moved files are not deleted.|When -m (move) or -z (zip) is specified, the moved files can be also deleted by setting this switch. The user can use the -x command to delete the files after the move path location if desired. The -x command will delete the files under the MOVE path. The -x command is useful when the user only needs a zip file as the result. Since we move the files to the MOVE PATH location, then we create the zip file the files under the MOVE PATH can be deleted using this option.|
 |-z|Zip|By default, no file compression occurs.|This parameter compresses (zips) the files moved. Enter the name of the zip. If the zip command was entered, the program will zip the folder. This program is built with .Net 4.5 for windows; therefore, the compression process requires the compression utility that comes with any Windows operation system. When the user enters the -z command, the user can also include the -m command. The user can only enter the -x command when both -m and -z are included. The -z command requires the name of the file resulted on the compression when there is no -m (move) command entered. If there is no zip filename specified, then the program will use the following naming convention to set the filename: zip.currentdate.zip. For example: `zip.03212016.zip`. The compression only occurs after the Move process is completed and the files are compressed in the -m path entered by the user.|
