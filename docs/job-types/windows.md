@@ -2,7 +2,7 @@
 
 The information in this section applies to defining a Windows Job. For
 additional information about this platform, refer to [Microsoft LSAM Configuration and
-Operation](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Configuration-and-Operation.md)
+Operation](https://help.smatechnologies.com/opcon/agents/windows/administration/configuration)
  in the **Microsoft LSAM** online help.
 
 Jobs can be .exe, .com, .bat, or .cmd type files. If specifying a .com
