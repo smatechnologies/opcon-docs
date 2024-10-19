@@ -4,6 +4,32 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 21.0.28
+
+2024 October
+
+#### Server
+
+:white_check_mark: **OPCON-23582**: Fixed an issue where the estimated start time of a job was incorrect when it depended on a job in a different schedule.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22258**: The Job Execution History now displays the correct duration for skipped jobs.
+
+:white_check_mark: **OPCON-24462**: Updated Arguments field for embedded script jobs to allow up to 2000 characters.
+
+#### REST API
+
+:white_check_mark: **OPCON-23710**: Fixed an issue where fetching the history of a job in a schedule would return the history of all jobs with the same name across all schedules.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-24669**: Fixed a problem when deploying schedules and reset AutoBuild and AutoDelete options selected by Deploy.
+1) In package deployments added reset options to schedules when versions match and schedule contents not updated.
+2) Changed reset to either set new selected values or remove options if values set to 0.
+
+:white_check_mark: **OPCON-25144**: Fixed a problem when importing schedule definitions that contain multiple roles and the role names have been transformed to the same name causing a duplicate key violation. Fix ensures that duplicate roles and no longer inserted.
+
 ## OpCon 21.0.27
 
 2024 July
