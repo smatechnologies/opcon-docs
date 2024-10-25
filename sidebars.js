@@ -825,6 +825,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Job-Status",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Machine-Status",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Schedule-Status",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Retrieve-Job-Output",
                   ],
                 },
               ],
