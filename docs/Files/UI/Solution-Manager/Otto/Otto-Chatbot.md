@@ -56,6 +56,7 @@ Otto has the following features:
   - [Get Failed Daily Schedules](./Skills/Skill-Get-Failed-Schedules.md)
   - [Perform a Fast Schedule Check](./Skills/Skill-Perform-A-Fast-Schedule-Check.md)
   - [Restart Failed Jobs](./Skills/Skill-Restart-Failed-Jobs.md)
+  - [Summarize Schedule Build](./Skills/Skill-Summarize-Schedule-Build.md)
   - [Retrieve Application Log](./Skills/Skill-Retrieve-Application-Log.md)
   - [Update a Job Status](./Skills/Skill-Update-Job-Status.md)
   - [Update a Machine Status](./Skills/Skill-Update-Machine-Status.md)

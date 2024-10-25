@@ -823,6 +823,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Perform-A-Fast-Schedule-Check",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Retrieve-Application-Log",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Restart-Failed-Jobs",
+                    "Files/UI/Solution-Manager/Otto/Skills/Skill-Summarize-Schedule-Build",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Job-Status",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Machine-Status",
                     "Files/UI/Solution-Manager/Otto/Skills/Skill-Update-Schedule-Status",
