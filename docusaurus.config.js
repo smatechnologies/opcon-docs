@@ -1,5 +1,5 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const VersionsArchived = require("./versionsArchived.json");
+const VersionsArchived = require("./versionsArchived.json")
 module.exports = {
   title: "SMA Technologies Help",
   tagline: "OpCon",
@@ -52,6 +52,11 @@ module.exports = {
             current: {
               label: "current",
             },
+            "23.0": {
+              label: "23.0",
+              path: "v23.0",
+              banner: "none",
+            },
             "22.0": {
               label: "22.0",
               path: "v22.0",
@@ -73,5 +78,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [[require.resolve("@cmfcmf/docusaurus-search-local"), {}]],
-};
+  //plugins: [[require.resolve("@cmfcmf/docusaurus-search-local"), {}]],
+}

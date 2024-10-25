@@ -7,7 +7,7 @@ viewport: width=device-width, initial-scale=1.0
 # Thresholds
 
 Available Thresholds in OpCon are shown in the following Grid under Library -> Thresholds.
-![Resource Grid](../../../../../Resources/Images/SM/Library/Thresholds/Threshold-Grid.png "Threshold Grid")
+![Resource Grid](../../../../../Resources/Images/SM/Library/Thresholds/Threshold-Grid.png "Resource Grid")
 
 Clicking the **Add** or **Edit** button bring up the following screen:
 ![Resource Add](../../../../../Resources/Images/SM/Library/Thresholds/Threshold-Add.png "Threshold Add Screen")

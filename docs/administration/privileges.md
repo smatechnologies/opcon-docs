@@ -49,6 +49,7 @@ OpCon:
 - [Maintain Schedules](#maintain-schedules)
 - [Maintain Service Request](#maintain-service-request)
 - [Maintain Thresholds/Resources](#maintain-thresholdsresources)
+- [Maintain Tags](#maintain-tags)
 
 Manage OpCon Roles
 
@@ -119,7 +120,6 @@ Grants privileges to perform the following functions in the Daily schedules:
 
 - View schedules to delete
 - Delete schedules for defined dates
-- Check schedules for defined dates
 
 :::note
 Users in the role must also have Schedule Privileges to perform these functions.
@@ -308,6 +308,15 @@ Grants access to functions related to maintaining thresholds and resources.
 - Delete Thresholds/Resources
 - Modify Thresholds/Resources
 
+### Maintain Tags
+
+Grants access to functions related to maintaining tags.
+
+- View all defined Tags
+- Add new Tags
+- Delete Tags
+- Modify Tags
+
 ### Maintain Vision Actions
 
 Grants access to functions related to maintaining Vision actions.
@@ -364,7 +373,7 @@ The Departmental Function Privileges are used to grant privileges related to job
 The following data information applies to defining Function Privileges:
 
 - **Role Name**: Defines the unique name of the Role.
-- **Granted Departmental Privileges**: Provides the Departmental Privileges assigned to the Role Name. Departmental privileges are     associated with <All Departments\>, the <General\> department, or user defined departments.
+- **Granted Departmental Privileges**: Provides the Departmental Privileges assigned to the Role Name. Departmental privileges are associated with <All Departments\>, the <General\> department, or user defined departments.
 
 :::note
 The <General\> department is the default department for all jobs.

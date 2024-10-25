@@ -126,8 +126,10 @@ In the upper header container:
 - Click the **Back** button to navigate out of the selected job node and go back to the default right panel view (i.e., with no edge or node selected).
 - Edit the currently selected Master Job.
 - Copy the currently selected Master Job.
+- Move the currently selected Master Job.
 - Delete the currently selected Master Job.
 - Check the cross reference(s) on the currently selected Master Job.
+- Reset the currently selected Master Job type to the default null job type.
 
 In the lower footer container:
 

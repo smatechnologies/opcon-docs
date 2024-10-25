@@ -4,6 +4,252 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.17
+
+2024 October
+
+#### Server
+
+:white_check_mark: **OPCON-23582**: Fixed an issue where the estimated start time of a job was incorrect when it depended on a job in a different schedule.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19737**: Fixed an issue where a machine's capabilities were not validated when it was added to a machine group.
+
+:white_check_mark: **OPCON-21205**: Fixed an issue where a frequency date excluded from a schedule was saved as a decimal number in the database.
+
+:white_check_mark: **OPCON-22258**: The Job Execution History now displays the correct duration for skipped jobs.
+
+:white_check_mark: **OPCON-22286**: Fixed an issue where Forecast All did not properly show the actual forecast when using End of Period with an offset and some periods were excluded.
+
+:white_check_mark: **OPCON-23704**: Fixed an issue where Job Output Parsing settings in Job Definition Task Details were not saved.
+
+:white_check_mark: **OPCON-24338**: Fixed an issue so that WS_FTPPro job sub-types now have advanced failure criteria.
+
+:white_check_mark: **OPCON-24462**: Updated Arguments field for embedded script jobs to allow up to 2000 characters.
+
+:white_check_mark: **OPCON-24466**: Fixed an issue where editing an MFT job resulted in a Bad Request error on the second edit.
+
+:white_check_mark: **OPCON-24489**: Fixed an issue where the advanced failure criteria of a master job was not properly set or displayed in Solution Manager.
+
+:white_check_mark: **OPCON-24499**: Fixed an issue where duplicate frequencies were displayed in inactive frequency list in Master Jobs page.
+
+:white_check_mark: **OPCON-24632**: Fixed an issue where 'Use Exit Code From Script Result' was not properly updated in MS SQL Script jobs.
+
+:white_check_mark: **OPCON-24660**: Fixed an issue where the Time between Notifications was not properly displayed or updated in Escalation Manager Rules.
+
+:white_check_mark: **OPCON-24960**: Improved performance when viewing and updating a Master Job.
+
+:white_check_mark: **OPCON-24998**: Fixed issue where the default Job Build Status for a Master Job Frequency was not 'Released'.
+
+:white_check_mark: **OPCON-25042**: Fixed Episys Answer Prompts jobs to accept parentheses in the Prompt and Response fields.
+
+#### REST API
+
+:eight_spoked_asterisk: **OPCON-25012**: The OpCon API now returns HSTS headers (strict-transport-security) for HTTPS responses, which makes it impossible for your browser to attempt an HTTP connection with the API (forces HTTPS connections), and hence prevents an HSTS vulnerability.
+
+:white_check_mark: **OPCON-23460**: Fixed an issue where schedule builds failed when frequency On Intervals with every number of days was used.
+
+:white_check_mark: **OPCON-23710**: Fixed an issue where fetching the history of a job in a schedule would return the history of all jobs with the same name across all schedules.
+
+:white_check_mark: **OPCON-24583**: Fixed an issue where passing a null type in the PUT and POST machines endpoints requests caused an unhandled exception.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-24669**: Fixed a problem when deploying schedules and reset AutoBuild and AutoDelete options selected by Deploy.
+1) In package deployments added reset options to schedules when versions match and schedule contents not updated.
+2) Changed reset to either set new selected values or remove options if values set to 0.
+
+:white_check_mark: **OPCON-25144**: Fixed a problem when importing schedule definitions that contain multiple roles and the role names have been transformed to the same name causing a duplicate key violation. Fix ensures that duplicate roles and no longer inserted.
+
+## OpCon 22.0.16
+
+2024 July
+
+#### Server
+
+:white_check_mark: **OPCON-22670**: Fixed an issue where jobs using Remote Instance is automatically placed on hold. Jobs using Remote Instance should be able to run correctly now.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-17142**: Fixed an issue in Vision Settings page where selecting a tag from a list did not populate the Pattern field with the selected tag.
+
+:white_check_mark: **OPCON-17491**: Fixed an issue where permissions to view departments were incorrect.
+
+:white_check_mark: **OPCON-21201**: Fixed an issue in Multi-Forecast where frequencies with "Do Not Schedule" build status were not displayed in purple.
+
+:white_check_mark: **OPCON-23087**: Fixed issue in Notification Triggers page where removing an email message type also removes all other message types. Users will now be able to remove an email message type without affecting other types.
+
+:white_check_mark: **OPCON-23225**: Fixed an issue in Master Schedule Definition page where the Save button was not enabled after changes were made to instance properties of a named instance schedule.
+
+:white_check_mark: **OPCON-23301**: Fixed an issue in PERT diagram where some dependency lines were missing for some schedules.
+
+:white_check_mark: **OPCON-23343**: Corrected a grammatical error in an error message where certain function privileges are required to access a particular page.
+
+:white_check_mark: **OPCON-23524**: Fixed an issue where valid regular expressions were considered invalid in Self-Service Requests.
+
+:white_check_mark: **OPCON-23591**: Fixed an issue where an On Request frequency was not able to save with a date of February 29.
+
+## OpCon 22.0.15
+
+2024 May
+
+#### REST API
+
+:white_check_mark: **OPCON-21833**: Fixed an issue which occurred when re-establishing an authenticated connection with an OpConMFT machine.
+
+:white_check_mark: **OPCON-23349**: Fixed an issue where some modifications to a role did not take effect immediately for all logged in users.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-23345**: Fixed a problem where the schedule multi-instance values are not reset correctly during deployment when the schedule definition already exists.
+
+:white_check_mark: **OPCON-23521**: Fixed a problem in Frequency Run Limits when fields Number of Runs and Latest Run Time are not reset correctly during deployment update.
+
+## OpCon 22.0.14
+
+2024 April
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22994**: Fixed an issue where named instance schedules could not be created when Solution Manager was in French.
+
+:white_check_mark: **OPCON-23015**: Fixed an issue where the Save button in daily jobs definition page was enabled without any changes.
+
+## OpCon 22.0.13
+
+2024 March
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-23054**: Fixed an issue when adding jobs to a daily schedule, the schedule and job names in results dialog appeared in lowercase.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-22789**: Fixed issues with deployment of schedules that contain SQL jobs where some job definitions would not be updated correctly if schedules to deploy already exist in the target system.
+
+:white_check_mark: **OPCON-23055**: Fixed a problem during schedule deployment removing schedule named instances if the new version of the schedule no longer has any defined schedule named instances.
+
+:white_check_mark: **OPCON-23091**: Fixed an issue during deployment where the global property value was erroneously mixed up when there were other property names with a similar pattern.
+
+## OpCon 22.0.12
+
+2024 January
+
+#### Server
+
+:white_check_mark: **OPCON-23027**: Fixed an issue where the Start Time Calculator continues calculating and never displays the time after upgrade.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-22679**: Corrected the display of frequency start times when a job has schedule level frequencies.
+
+:white_check_mark: **OPCON-22787**: Fixed an issue where the Agents Machine Groups drawer remains open when multiple Agents are selected and when no Agents are selected. Fixed another issue where filtering Agents based on Status inadvertently selected all Agents in the results.
+
+:white_check_mark: **OPCON-22859**: Corrected the display of server time in master jobs when the schedule has a start offset.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-22759**: Fixed a problem where job events went missing after a deployment of existing schedules (update).
+
+:white_check_mark: **OPCON-22916**: Fixed a problem where deployment of a schedule failed due to a global property not being created.
+
+## OpCon 22.0.11
+
+2023 December
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-22680**: Fixed a problem where the 'Fails if preferred settings not satisfied' field is not set correctly during schedule deployment. The field was not set correctly when the condition was False.
+
+:white_check_mark: **OPCON-22760**: Fixed a deployment problem during update of SQL DTEXEC and SQL SCRIPT actions where the SQL user is set when Windows Authentication is selected.
+
+## OpCon 22.0.10
+
+2023 October
+
+#### Server
+
+:white_check_mark: **OPCON-22276**: Removed verbose-level log messages that wrote the raw event text and had the potential to write sensitive data.
+
+:white_check_mark: **OPCON-22394**: Fixed an issue in OpCon services where a new license file dropped in, was not getting picked up and OpCon kept using the old license file. This does not affect the working of the system in any way; only the application of a new license. NOTE: This only applies if you are on an LTS release and on versions 22.0.5 and greater, or 21.0.17 and greater, or 20.0.22 and greater.
+
+## OpCon 22.0.9
+
+2023 October
+
+#### Installation
+
+:white_check_mark: **OPCON-17338**: Modified SMA Utility SQL scripts to verify existence of script type and runner before inserting new record. This will avoid duplicate values in the database.
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-12616**: When querying for a SAP r3 job from the daily jobs, the query now inserts a "Daily" tag.
+
+:white_check_mark: **OPCON-19144**: Fixed an issue in Master Jobs where schedule instance names were not displayed when adding a cross schedule dependency.
+
+:white_check_mark: **OPCON-20598**: Renamed a column header in Agent Details page from "Time Spent" to "Time Sent".
+
+:white_check_mark: **OPCON-21185**: Fixed an issue where users could not add environment variables to jobs if the value contained '='.
+
+:white_check_mark: **OPCON-21215**: Updated Frequency name to allow special characters. Users will now be able to add and modify Frequency names that contain special characters.
+
+:white_check_mark: **OPCON-21597**: Fixed an issue where any user can view all embedded scripts in Master Jobs and Scripts page. Now Solution Manager shows only scripts the user has permission to.
+
+:white_check_mark: **OPCON-21636**: Fixed an issue in Master Schedules page where clicking the Admin button would prompt the user to save the schedule even when there were no changes.
+
+:white_check_mark: **OPCON-21727**: Fixed Connection Id field for SQL Oracle Daily and Master jobs to allow a null value.
+
+:white_check_mark: **OPCON-21755**: Changed authentication error message to: "We’re having trouble logging you in, please contact your administrator if the problem persists."
+
+:white_check_mark: **OPCON-21824**: Fixed an issue in Master Jobs page where Notification Triggers filter on Group Type did not work.
+
+## OpCon 22.0.8
+
+2023 September
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-20654**: Updated the Duration column on the Processes page to update every 30 seconds and display seconds.
+
+:white_check_mark: **OPCON-20959**: Fixed advanced filters not being honored after adding a new trigger in Notification Triggers.
+
+:white_check_mark: **OPCON-21232**: Fixed an issue in Self Service where error would happen after submitting the service request if user input type was Master Job.
+
+:white_check_mark: **OPCON-21195**: Fixed an issue where "Requires XML Escape" for some Agents was always False.
+
+:white_check_mark: **OPCON-21565**: Fixed an issue where Multi-Forecasting schedule frequencies resulted in an error.
+
+#### REST API
+
+:white_check_mark: **OPCON-16320**: Vision Card using Remote Session now updates to show correct card information.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-21194**: Duplicate jobs are created due to case sensitivity. The keys used during existing job matches changed to uppercase to ensure consistent checking avoiding case sensitivity problems. All calls to extract objects from the database have also been updated to ignore case sensitivity.
+
+:white_check_mark: **OPCON-21515**: During schedule deployment when schedule exists, duplicate event records for schedules and jobs can be created. The correction checks for duplicate event records that could be created due to schedule transformation and adjusted the comparison key adding the frequency name to ensure duplicate events are not added to the JEVENTS table.
+
+## OpCon 22.0.7
+
+2023 August
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-20059**: Fixed a display issue where the AutoBuild checkbox was incorrectly selected on the Master Schedule Definition page.
+
+:white_check_mark: **OPCON-20956**: Fixed an issue in Vision Settings where the page header displayed "Page Not Found".
+
+:white_check_mark: **OPCON-21144**: Fixed an issue in Self Service where comma was reported as invalid character when it was present in characters to strip.
+
+:white_check_mark: **OPCON-21190**: Fixed an issue where users could see schedules outside of their permissions scope when adding a tag.
+
+:white_check_mark: **OPCON-21204**: Fixed an issue where grid pages displayed overlapping rows.
+
+:white_check_mark: **OPCON-21333**: Fixed an issue in Self Service where characters to strip were not working as intended.
+
+:white_check_mark: **OPCON-21391**: Fixed an issue where changing the sub-schedule of a Container job was not saved.
+
 ## OpCon 22.0.6
 
 2023 July
