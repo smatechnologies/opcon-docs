@@ -59,3 +59,4 @@ Otto has the following features:
   - [Update a Job Status](./Skills/Skill-Update-Job-Status.md)
   - [Update a Machine Status](./Skills/Skill-Update-Machine-Status.md)
   - [Update a Schedule Status](./Skills/Skill-Update-Schedule-Status.md)
+  - [Retrieve Job Output](./Skills/Retrieve-Job-Output.md)
