@@ -28,7 +28,7 @@ sidebar_label: "Release Notes"
 
 #### ImpEx2 Web Service
 
-:white_check_mark: **OPCON-25787**: Fixed a problem when Environment Variables were lost during the deployment of new Unix Embedded Script jobs. 
+:white_check_mark: **OPCON-25787**: Fixed a problem where Environment Variables were lost during the deployment of new Unix Embedded Script jobs. 
 
 ## OpCon 23.0.6
 
