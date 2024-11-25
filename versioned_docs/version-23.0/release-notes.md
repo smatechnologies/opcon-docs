@@ -4,6 +4,32 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.7
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2024 November
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19737**: Fixed an issue where a machine's capabilities were not validated when it was added to a machine group.
+
+:white_check_mark: **OPCON-24492**: Updated default values for new OpCon MFT agents.
+
+:white_check_mark: **OPCON-24512**: Fixed an issue where retry on failure values were removed after updating a daily job.
+
+:white_check_mark: **OPCON-24563**: Fixed an issue with 'View Service Requests' privilege that let the user see jobs that they did not permissions for.
+
+:white_check_mark: **OPCON-24637**: Fixed an issue in Episys Answer Prompts jobs where double quotes in the Prompt value caused incorrect display.
+
+:white_check_mark: **OPCON-25111**: Fixed an issue where a role could not be updated if a machine group to which it has access is deleted.
+
+:white_check_mark: **OPCON-25757**: Fixed an issue that prevented sending a test notification while creating a new notification trigger.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-25787**: Fixed a problem when Environment Variables were lost during the deployment of new Unix Embedded Script jobs. 
+
 ## OpCon 23.0.6
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
