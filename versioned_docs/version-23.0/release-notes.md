@@ -24,11 +24,11 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OPCON-25111**: Fixed an issue where a role could not be updated if a machine group to which it has access is deleted.
 
-:white_check_mark: **OPCON-25757**: Fixed an issue that prevented sending a test notification while creating a new notification trigger.
+:white_check_mark: **OPCON-25757**: Fixed an issue that caused an error when clicking the Test button while creating a new notification trigger.
 
 #### ImpEx2 Web Service
 
-:white_check_mark: **OPCON-25787**: Fixed a problem where Environment Variables were lost during the deployment of new Unix Embedded Script jobs. 
+:white_check_mark: **OPCON-25787**: Fixed an issue where Environment Variables were lost during the deployment of new Unix Embedded Script jobs. 
 
 ## OpCon 23.0.6
 
