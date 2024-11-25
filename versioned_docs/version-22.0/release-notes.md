@@ -14,11 +14,12 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OPCON-24492**: Updated default values for new OpCon MFT agents.
 
-:white_check_mark: **OPCON-25757**: Fixed the error message "Trigger name is required” when clicking the Test button while creating a new notification trigger.
+:white_check_mark: **OPCON-25757**: Fixed an issue that caused an error when clicking the Test button while creating a new notification trigger.
 
 #### ImpEx2 Web Service
 
-:white_check_mark: **OPCON-25787**: Fixed a problem when Environment Variables are lost during the deployment of new Unix Embedded Script jobs.
+:white_check_mark: **OPCON-25787**: Fixed an issue where Environment Variables were lost during the deployment of new Unix Embedded Script jobs.
+
 
 ## OpCon 22.0.17
 
