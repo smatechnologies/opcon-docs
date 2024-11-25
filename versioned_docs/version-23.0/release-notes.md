@@ -26,6 +26,10 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OPCON-25757**: Fixed an issue that caused an error when clicking the Test button while creating a new notification trigger.
 
+#### REST API
+
+:white_check_mark: **OPCON-25846**: Fixed a memory leak issue on the Script Runners page when interacting with large databases.
+
 #### ImpEx2 Web Service
 
 :white_check_mark: **OPCON-25787**: Fixed an issue where Environment Variables were lost during the deployment of new Unix Embedded Script jobs. 
