@@ -4,6 +4,22 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.18
+
+2024 November
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-19737**: Fixed an issue where a machine's capabilities were not validated when it was added to a machine group.
+
+:white_check_mark: **OPCON-24492**: Updated default values for new OpCon MFT agents.
+
+:white_check_mark: **OPCON-25757**: Fixed the error message "Trigger name is required” when clicking the Test button while creating a new notification trigger.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-25787**: Fixed a problem when Environment Variables are lost during the deployment of new Unix Embedded Script jobs.
+
 ## OpCon 22.0.17
 
 2024 October
@@ -13,8 +29,6 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-23582**: Fixed an issue where the estimated start time of a job was incorrect when it depended on a job in a different schedule.
 
 #### Solution Manager
-
-:white_check_mark: **OPCON-19737**: Fixed an issue where a machine's capabilities were not validated when it was added to a machine group.
 
 :white_check_mark: **OPCON-21205**: Fixed an issue where a frequency date excluded from a schedule was saved as a decimal number in the database.
 
