@@ -20,6 +20,7 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OPCON-25787**: Fixed an issue where Environment Variables were lost during the deployment of new Unix Embedded Script jobs.
 
+
 ## OpCon 22.0.17
 
 2024 October
