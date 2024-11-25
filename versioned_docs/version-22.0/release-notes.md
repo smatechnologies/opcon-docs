@@ -18,7 +18,7 @@ sidebar_label: "Release Notes"
 
 #### REST API
 
-:white_check_mark: **OPCON-25846**: Fixed a memory leak issue on the scripts runners page when interacting with large databases.
+:white_check_mark: **OPCON-25846**: Fixed a memory leak issue on the Script Runners page when interacting with large databases.
 
 #### ImpEx2 Web Service
 
