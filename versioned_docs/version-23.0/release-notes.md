@@ -4,6 +4,32 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.8
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2025 January
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-24949**: Fixed an issue causing agents page to timeout after selecting an agent.
+
+:white_check_mark: **OPCON-25103**: Fixed issue "Cannot Load Daily Jobs" when right clicking certain jobs in Operations page.
+
+:white_check_mark: **OPCON-25159**: Fixed a permissions issue with master jobs where users with any privilege in &lt;All Departments&gt; were incorrectly able to modify master jobs.
+
+:white_check_mark: **OPCON-25845**: Fixed issue causing nodes to stack on top of one another due to incorrect node positions on the workflow page.
+
+:white_check_mark: **OPCON-25878**: Fixed an issue where departments to which the user did not have access were available when adding or modifying a Master Job.
+
+:white_check_mark: **OPCON-25907**: Fixed an issue where 'Use Exit Code From Script Result' was not properly updated in MS SQL Script jobs for daily jobs.
+
+:white_check_mark: **OPCON-25954**: Web Services jobs, although not fully supported, no longer cause an error when updating some details of the job.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-25833**: Fixed a problem during the script extract process to include a list of roles associated with the script and a problem during the script deployment process to assign the roles associated with the script. This fix requires Deploy version 25.0.0.
+
 ## OpCon 23.0.7
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
