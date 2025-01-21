@@ -4,6 +4,24 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.19
+
+2025 January
+
+#### Solution Manager
+
+:white_check_mark: **OPCON-24949**: Fixed an issue causing agents page to timeout after selecting an agent.
+
+:white_check_mark: **OPCON-25159**: Fixed a permissions issue with master jobs where users with any privilege in &lt;All Departments&gt; were incorrectly able to modify master jobs.
+
+:white_check_mark: **OPCON-25878**: Fixed an issue where departments to which the user did not have access were available when adding or modifying a Master Job.
+
+:white_check_mark: **OPCON-25954**: Web Services jobs, although not fully supported, no longer cause an error when updating some details of the job.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OPCON-25833**: Fixed a problem during the script extract process to include a list of roles associated with the script and a problem during the script deployment process to assign the roles associated with the script. This fix requires Deploy version 25.0.0.
+
 ## OpCon 22.0.18
 
 2024 November
