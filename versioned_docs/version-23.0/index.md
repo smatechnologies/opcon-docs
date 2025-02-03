@@ -6,7 +6,7 @@ slug: "/"
 
 OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heterogeneous workflow automation and orchestration platform.
 
-The current release is **OpCon 23.0.8**.
+The current release is **OpCon 23.0.9**.
 
 The following sections contain more information:
 
