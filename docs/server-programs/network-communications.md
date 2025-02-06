@@ -91,7 +91,7 @@ Service Settings contain basic information for SMANetCom processing.
 ##### Service Setting Details
 
 - The SMANetComName setting is available to set in the event that multiple instances of SMANetCom are required to support the volume of LSAMs. Each LSAM can be assigned to its own SMANetCom in the LSAM machine definition's Advanced Settings in the database.
-- One SMANetCom instance (based on its name) can support maximum 2048 LSAMs; however, administrators should determine the maximum number for an environment based on performance.
+- One SMANetCom instance (based on its name) can support maximum 2048 LSAMs; however, administrators should determine the maximum number for an environment based on performance.The recommended maximum number of agents per NetCom is 500. If exceeded, clients should consider adding another NetCom instance.
 - When multiple SMANetCom instances are needed due to the volume of LSAMs, only one SMANetCom.exe is needed. The SMANetCom.exe can have multiple copies in different locations, but SMA Technologies does not recommend this configuration.
 - To run multiple instances of SMANetCom from the same SMA Service Manager, configure an additional application to call SMANetCom with a unique name.
   - SMANetCom must have its Run Mode set to **Managed**.
