@@ -84,6 +84,9 @@ In order for the button to display on the login screen, you will need to ensure 
 
 - **Enable SSO Authentication** option alongside other values must be configured in the [Server Options](../Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations.md) page inside Solution Manager.
 
+### Okta
+When configuring SSO with **Okta**, users must ensure they have purchased both the **Single Sign-On** and **API Access Management** features from Okta to enable proper authentication and authorization.
+
 ### Session Expiration
 
 Should the browser session expire, a pop-up window will display to allow you to log back into the application without having to go to the login screen. Depending on how you initially logged in, the pop-up will either prompt for your login credentials or display the **Login with Windows** button.
