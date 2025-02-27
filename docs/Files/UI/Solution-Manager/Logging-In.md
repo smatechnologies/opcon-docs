@@ -84,7 +84,8 @@ In order for the button to display on the login screen, you will need to ensure 
 
 - **Enable SSO Authentication** option alongside other values must be configured in the [Server Options](../Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations.md) page inside Solution Manager.
 
-- When configuring SSO with **Okta**, users must ensure they have purchased both the **Single Sign-On** and **API Access Management** features from Okta to enable proper authentication and authorization.
+### Okta
+When configuring SSO with **Okta**, users must ensure they have purchased both the **Single Sign-On** and **API Access Management** features from Okta to enable proper authentication and authorization.
 
 ### Session Expiration
 
