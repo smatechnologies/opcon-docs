@@ -88,7 +88,7 @@ Build and Auto Delete run. Refer to [Time Settings](../administration/server-opt
     graphical interfaces provide fields to set the number of days in
     advance to start the build and the number of days to build from that
     point forward.
-  - If auto build is enabled, the log file is named Auto_Build\_<Schedule Date\>\_<Schedule Name\>.log in the <Output Directory\>\\SAM\\Log\\SMASchedMan\\ directory on the SAM application server.
+  - If auto build is enabled, the log file is named <Schedule Name\>_Build_RUNDATE(YYYYMMDD)_MsgBusID.log in the <Output Directory\>\\SAM\\Log\\SMASchedMan\\ directory on the SAM application server.
 - **Overwrite Existing**: When the auto build executes and the
     schedule is found on the target date, this setting indicates if the
     schedule should be overwritten. When this setting is on,
