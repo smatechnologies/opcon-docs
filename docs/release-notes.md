@@ -21,6 +21,10 @@ sidebar_label: "Release Notes"
 
 :eight_spoked_asterisk: **OPCON-25853**: Upgraded OpCon to .NET 9.
 
+:white_check_mark: **OC-2499**: Fixed database re-connection logic to prevent NotifyHandler from hanging during database disruptions.
+
+:white_check_mark: **OC-2502**: Providing a delayed start and checking for certificate file in NetcomApi to prevent errors encountered during initialization of service.
+
 :white_check_mark: **OPCON-21285**: Fixed an issue where the start time of a job that depended on a container job in the parent schedule was incorrect.
 
 :white_check_mark: **OPCON-23582**: Fixed an issue where the estimated start time of a job was incorrect when it depended on a job in a different schedule.
@@ -167,6 +171,8 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OPCON-26103**: Fixed an issue where the /api/acs/rjsf endpoint did not take the machine's NetComName into account.
 
 #### REST API
+
+:white_check_mark: **OC-22**: Modified OS2200 daily jobs details to exclude completion statuses with empty or null condition words.
 
 :white_check_mark: **OPCON-25738**: Added additional validation for job name and schedule name in delete-daily-job endpoint.
 
