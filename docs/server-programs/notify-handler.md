@@ -22,7 +22,63 @@ The SMA Notify Handler can send the following basic notifications after reading 
 
 SMA Notify Handler configuration determines basic application and logging behavior.
 
-All of the SMA Notify Handler's configuration settings exist in the Enterprise Manager's Server Options. For more information, refer to [Managing Server Options](../Files/UI/Enterprise-Manager/Managing-Server-Options.md) in the **Enterprise Manager** online help.
+All of the SMA Notify Handler's configuration settings exist in the Solution Manager's SMTP Options. For more information, refer to [Managing SMTP Options](../Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings.md) in the **Solution Manager** online help.
+
+### (Optional) Outlook OAUTH2.0 Configuration
+
+> **Prerequisites**: 
+> - Azure AD tenant with administrative access
+> - Exchange Online environment
+> - PowerShell 5.1 or later
+> - Exchange Online PowerShell module
+
+The values from this App Registration that you need for Notify Handler's configuration are:
+  - Application (client) ID
+  - Directory (tenant) ID
+  - Client Secret Value
+
+1. Go to [Azure Portal](https://portal.azure.com) 
+2. Define an Application Registration. 
+    1. Name the app registration "SMANotifyHandler" 
+    2. Select *Single Tenant*
+    3. leave *Redirect URI* blank.
+3. Then go to the SMANotifyHandler's overview 
+    1. Click on *Client Credentials* to add a new *Client Secret*. Save this value for later for your SMTP configuration. 
+    2. Then on the sidebar, go to Manage > API permissions. *Add a Permission* 
+        1. Select *APIs my organization uses* 
+        2. Select *Office 365 Exchange Online* 
+        3. Select *Application permissions* 
+        4. Click on SMTP and enable *SMTP.SendAsApp* 
+        5. *Grant admin consent*.
+4. Setup the *Service Principal* for the App Registration. [Microsoft provides some instructions](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
+5. Enter the Application ID, Tenant ID, and Client Secret into the SMTP configuration on [Solution Manager's Server Options page](../Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings.md)
+
+The commands in the article need to be ran in PowerShell:
+
+```powershell
+# Install and import the Exchange Online PowerShell module
+Install-Module -Name ExchangeOnlineManagement
+Import-module ExchangeOnlineManagement 
+
+# Connect to Exchange Online
+Connect-ExchangeOnline -Organization <tenantId>
+
+# Get the service principal details
+$AADServicePrincipalDetails = Get-AzureADServicePrincipal -SearchString SMANotifyHandler
+
+# Create the service principal
+New-ServicePrincipal -AppId $AADServicePrincipalDetails.AppId `
+                    -ObjectId $AADServicePrincipalDetails.ObjectId `
+                    -DisplayName "Serviceprincipal for SMANotifyHandler $($AADServicePrincipalDetails.Displayname)"
+
+# Get the created service principal
+$EXOServicePrincipal = Get-ServicePrincipal -Identity "Serviceprincipal for SMANotifyHandler $($AADServicePrincipalDetails.Displayname)"
+
+# Add mailbox permissions for the Sender of the SMANotifyHandler notifcations
+Add-MailboxPermission -Identity "john.smith@contoso.com" `
+                      -User $EXOServicePrincipal.Identity `
+                      -AccessRights FullAccess
+```
 
 ### Processing
 
