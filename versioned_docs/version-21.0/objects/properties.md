@@ -64,7 +64,7 @@ below are:
 |SI.$SKD STATUS|Resolves to the status of the schedule (from the Daily tables) to which the property is attached.|
 |JI.$SKD STATUS CATEGORY|Resolves to the status category of the schedule (from the Daily tables) to which the property is attached.|
 |SI.$SKD STATUS CATEGORY|Resolves to the status category of the schedule (from the Daily tables) to which the property is attached.|
-|$START COMMAND|Resolves to the value of the start command the LSAM attempted when the job was submitted to the operating system. This property will only have a value after the job starts and if the agent is a high enough version to support this feature. The following platforms support this feature as of the version listed:Microsoft LSAM - Version 16.01.00z/OS LSAM - Version 15.07.01 (refer to Start Command for more information)MCP LSAM - Version 16.0UNIX LSAM - Version 17.1.0|
+|JI.$START COMMAND|Resolves to the value of the start command the LSAM attempted when the job was submitted to the operating system. This property will only have a value after the job starts and if the agent is a high enough version to support this feature. The following platforms support this feature as of the version listed:Microsoft LSAM - Version 16.01.00z/OS LSAM - Version 15.07.01 (refer to Start Command for more information)MCP LSAM - Version 16.0UNIX LSAM - Version 17.1.0|
 |TH.ThresholdName|Resolves to the current value of the threshold named after the period. This value always returns as an integer.|
 
 ### Managed System Properties
