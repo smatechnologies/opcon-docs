@@ -134,10 +134,10 @@ Use Schedule Import Export to configure the System DSNs for the server. The util
 9. *(Optional)* Enter *Connection to the OpCon scheduling database* in the **Description** field.
 10. Enter, in the **Server** field, the *Host Name* of the server hosting the database with which the SAM will be communicating and click **Next**.
 11. Select the **With SQL Server authentication using a login ID and password entered by the user** radio button.
-12. Enter *opconui* in the **Login ID** field.
-13. Enter *opconui's password* in the **Password** field then click **Next**.
+12. Enter required ID in the **Login ID** field.
+13. Enter required password in the **Password** field then click **Next**.
     :::note
-    The default opconui password is 0pC0nxp$. The '0's are zeros, and the character after the 'p' is a dollar sign.
+    If necessary, please contact SMA support for the needed login information.
     :::
 14. Select the **Change the default database to** checkbox.
 15. Select the **OpCon database**.
