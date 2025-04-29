@@ -18,11 +18,74 @@ The SMA Notify Handler can send the following basic notifications after reading 
 - OpCon Events
 - Command
 
+
 ## Configuration
 
 SMA Notify Handler configuration determines basic application and logging behavior.
 
 All of the SMA Notify Handler's configuration settings exist in the Solution Manager's SMTP Options. For more information, refer to [Managing SMTP Options](../Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings.md) in the **Solution Manager** online help.
+
+### PowerShell Helper Scripts
+
+The following PowerShell scripts are available to help configure SMA Notify Handler for Outlook's MSAL SMTP authentication:
+
+- [Download Create-AppRegistration.ps1](../Resources/Scripts/NotifyHandler/Create-AppRegistration.ps1)
+- [Download Grant-MailboxAccess.ps1](../Resources/Scripts/NotifyHandler/Grant-MailboxAccess.ps1)
+
+> **Note**: Both scripts require PowerShell 5.1 or later. If you encounter module installation issues, you may need to use the `-AllowClobber` parameter.
+
+##  (Optional) Outlook OAUTH2.0 Configuration via Powershell Scripts
+
+Customers may obtain helper scripts at [NotifyHandler Scripts](../Resources/notify-handler-scripts.md) to aid with configuring SMA Notify Handler for [Outlook's MSAL SMTP auth update](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online).
+
+### Preface on issues installing modules
+
+On some systems, users may see error messages like 
+```
+The ExchangeOnlineManagement module is required but not installed. Would you like to install it now? (Y/N): y
+Installing ExchangeOnlineManagement module...
+PackageManagement\Install-Package : The following commands are already available on this
+system:'Find-Package,Install-Package,Uninstall-Package'. This module 'PackageManagement' may override the existing
+commands. If you still want to install this module 'PackageManagement', use -AllowClobber parameter.
+At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm1:1809 char:21
++ ...          $null = PackageManagement\Install-Package @PSBoundParameters
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package],
+   Exception
+    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.Pack
+   ageManagement.Cmdlets.InstallPackage
+
+Done installing ExchangeOnlineManagement module.
+Import-Module : The specified module 'ExchangeOnlineManagement' was not loaded because no valid module file was found
+in any module directory.
+```
+
+If this occurs, you may pass the _AllowClobber_ argument to the *Create-AppRegistration.ps1* and/or *Grant-MailboxAccess.ps1* scripts like so
+```powershell
+.\Create-AppRegistration.ps1 -AllowClobber
+```
+
+This will pass the _AllowClobber_ argument to the Install-Module command and overwrite the existing module.
+
+### Preface on issues with OAuth window opening in Internet Explorer
+
+On some systems, old versions of Internet Explorer might still be set as the system default to open web pages requested from powershell. Some older versions of the browser do not have the necessary javascript version to run OAuth. Either find a way to change the default.
+
+You can also uninstall the browser like so
+```powershell
+dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0
+```
+
+
+### App Registration
+
+SMANotifyHandler will need to be registered as an Enterprise app in your organizations Entra tenant. *Create-AppRegistration.ps1* will automate this process and must be ran by an administrator. The script will need to open a browser for MFA.
+After this, it will generate a file app-registration-details.json :warning: this file will contain the app registration secret in plain text, secure or delete this when you are done with all configuration steps!
+
+### Granting Users Access
+
+Next for each email address that SMANotifyHandler will send from, run *Grant-MailboxAccess.ps1*. The script will prompt you for the email address you are wanting to associate with the Service Principal created by *Create-AppRegistration.ps1*. It will load the app-registration-details.json created earlier.
+
 
 ### (Optional) Outlook OAUTH2.0 Configuration
 
@@ -62,6 +125,7 @@ Import-module ExchangeOnlineManagement
 
 # Connect to Exchange Online
 Connect-ExchangeOnline -Organization <tenantId>
+Connect-AzureAd
 
 # Get the service principal details
 $AADServicePrincipalDetails = Get-AzureADServicePrincipal -SearchString SMANotifyHandler
