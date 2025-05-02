@@ -24,6 +24,172 @@ SMA Notify Handler configuration determines basic application and logging behavi
 
 All of the SMA Notify Handler's configuration settings exist in the Enterprise Manager's Server Options. For more information, refer to [Managing Server Options](../Files/UI/Enterprise-Manager/Managing-Server-Options.md) in the **Enterprise Manager** online help.
 
+### PowerShell Helper Scripts
+
+The following PowerShell scripts are available to help configure SMA Notify Handler for Outlook's MSAL SMTP authentication:
+
+- [Download Create-AppRegistration.ps1](../../../docs/Resources/Scripts/NotifyHandler/Create-AppRegistration.ps1)
+- [Download Grant-MailboxAccess.ps1](../../../docs/Resources/Scripts/NotifyHandler/Grant-MailboxAccess.ps1)
+- [Download ConfigureSMTP.ps1](../../../docs/Resources/Scripts/NotifyHandler/ConfigureSMTP.ps1)
+
+> **Note**: All scripts require PowerShell 5.1 or later. If you encounter module installation issues, you may need to use the `-AllowClobber` parameter.
+
+Customers may use these scripts to aid with configuring SMA Notify Handler for [Outlook's MSAL SMTP auth update](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online).
+
+### Preface on issues installing modules
+
+On some systems, users may see error messages like 
+```
+The ExchangeOnlineManagement module is required but not installed. Would you like to install it now? (Y/N): y
+Installing ExchangeOnlineManagement module...
+PackageManagement\Install-Package : The following commands are already available on this
+system:'Find-Package,Install-Package,Uninstall-Package'. This module 'PackageManagement' may override the existing
+commands. If you still want to install this module 'PackageManagement', use -AllowClobber parameter.
+At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm1:1809 char:21
++ ...          $null = PackageManagement\Install-Package @PSBoundParameters
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package],
+   Exception
+    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.Pack
+   ageManagement.Cmdlets.InstallPackage
+
+Done installing ExchangeOnlineManagement module.
+Import-Module : The specified module 'ExchangeOnlineManagement' was not loaded because no valid module file was found
+in any module directory.
+```
+
+If this occurs, you may pass the _AllowClobber_ argument to the *Create-AppRegistration.ps1* and/or *Grant-MailboxAccess.ps1* scripts like so
+```powershell
+.\Create-AppRegistration.ps1 -AllowClobber
+```
+
+This will pass the _AllowClobber_ argument to the Install-Module command and overwrite the existing module.
+
+### Preface on issues with OAuth window opening in Internet Explorer
+
+On some systems, old versions of Internet Explorer might still be set as the system default to open web pages requested from powershell. Some older versions of the browser do not have the necessary javascript version to run OAuth. Either find a way to change the default.
+
+You can also uninstall the browser like so
+```powershell
+dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0
+```
+
+
+### App Registration
+
+SMANotifyHandler will need to be registered as an Enterprise app in your organizations Entra tenant. *Create-AppRegistration.ps1* will automate this process and must be ran by an administrator. The script will need to open a browser for MFA.
+After this, it will generate a file app-registration-details.json :warning: this file will contain the app registration secret in plain text, secure or delete this when you are done with all configuration steps!
+
+### Granting Users Access
+
+Next for each email address that SMANotifyHandler will send from, run *Grant-MailboxAccess.ps1*. The script will prompt you for the email address you are wanting to associate with the Service Principal created by *Create-AppRegistration.ps1*. It will load the app-registration-details.json created earlier.
+
+### ConfigureSMTP Settings Script
+
+*ConfigureSMTP.ps1* walks the user through inserting OAuth settings for users using Outlook. This script assumes you have already configured a Notify Server through EM, and you are now converting it to OAuth.
+This will have you enter in the values for your Application-Id, Tenant-Id, and Client Secret. It is ok if the profile had previously contained a username/password setting; you may choose to delete if desired but it will be ignored if NotifyHandler sees OAuth settings.
+
+This will need a SMAODBCConfiguration.DAT (typically found C:\ProgramData\OpConxps\SAM). An example of the contents would be
+```
+Server=tcp:localhost; Database=OpConxps; User Id=sa; Password=sYnk3bzpZybGPbSOrhsr4g==
+```
+
+The script will also need SMACommon.dll (typically found C:\Program Files\OpConxps\SAM)
+
+
+The script is ran in Powershell simply by
+```powershell
+*.\ConfigureSMTP.ps1*
+```
+
+It will then present you with a menu
+```log
+Database connection successful.
+
+SMTP/SMS Configuration Menu
+1. Configure Primary Email Settings
+2. Configure Secondary Email Settings
+3. Configure Primary SMS Settings (via SMTP)
+4. Configure Secondary SMS Settings (via SMTP)
+5. Exit
+Enter your choice (1-5):
+```
+
+```log
+Configuring Secondary Email Settings:
+OAuth Application ID [c9e0442b-ae53-457b-aaf0-9255a2e7743d]:
+OAuth Client Secret (current value exists, leave blank to keep):
+OAuth Tenant ID [b47905c2-7b05-4ff5-925f-84d4351cd945]:
+
+Saving settings...
+1
+Saved SMTPAPPID2
+1
+Saved SMTPTENANTID2
+1
+Saved SMTPSECRET2
+Settings saved successfully.
+```
+
+In the above output, settings were already configured. The script will inform you of their value and you may type/paste in a new value, or press *enter* to continue and keep that value.
+
+### (Optional) Outlook OAUTH2.0 Configuration
+
+> **Prerequisites**: 
+> - Azure AD tenant with administrative access
+> - Exchange Online environment
+> - PowerShell 5.1 or later
+> - Exchange Online PowerShell module
+
+The values from this App Registration that you need for Notify Handler's configuration are:
+  - Application (client) ID
+  - Directory (tenant) ID
+  - Client Secret Value
+
+1. Go to [Azure Portal](https://portal.azure.com) 
+2. Define an Application Registration. 
+    1. Name the app registration "SMANotifyHandler" 
+    2. Select *Single Tenant*
+    3. leave *Redirect URI* blank.
+3. Then go to the SMANotifyHandler's overview 
+    1. Click on *Client Credentials* to add a new *Client Secret*. Save this value for later for your SMTP configuration. 
+    2. Then on the sidebar, go to Manage > API permissions. *Add a Permission* 
+        1. Select *APIs my organization uses* 
+        2. Select *Office 365 Exchange Online* 
+        3. Select *Application permissions* 
+        4. Click on SMTP and enable *SMTP.SendAsApp* 
+        5. *Grant admin consent*.
+4. Setup the *Service Principal* for the App Registration. [Microsoft provides some instructions](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
+5. Enter the Application ID, Tenant ID, and Client Secret into the SMTP configuration by running the *ConfigureSMTP.ps1* script
+
+The commands in the article need to be ran in PowerShell:
+
+```powershell
+# Install and import the Exchange Online PowerShell module
+Install-Module -Name ExchangeOnlineManagement
+Import-module ExchangeOnlineManagement 
+
+# Connect to Exchange Online
+Connect-ExchangeOnline -Organization <tenantId>
+Connect-AzureAd
+
+# Get the service principal details
+$AADServicePrincipalDetails = Get-AzureADServicePrincipal -SearchString SMANotifyHandler
+
+# Create the service principal
+New-ServicePrincipal -AppId $AADServicePrincipalDetails.AppId `
+                    -ObjectId $AADServicePrincipalDetails.ObjectId `
+                    -DisplayName "Serviceprincipal for SMANotifyHandler $($AADServicePrincipalDetails.Displayname)"
+
+# Get the created service principal
+$EXOServicePrincipal = Get-ServicePrincipal -Identity "Serviceprincipal for SMANotifyHandler $($AADServicePrincipalDetails.Displayname)"
+
+# Add mailbox permissions for the Sender of the SMANotifyHandler notifcations
+Add-MailboxPermission -Identity "john.smith@contoso.com" `
+                      -User $EXOServicePrincipal.Identity `
+                      -AccessRights FullAccess
+```
+
 ### Processing
 
 When processing notifications:
