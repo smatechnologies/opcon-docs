@@ -34,9 +34,7 @@ The following PowerShell scripts are available to help configure SMA Notify Hand
 
 > **Note**: Both scripts require PowerShell 5.1 or later. If you encounter module installation issues, you may need to use the `-AllowClobber` parameter.
 
-##  (Optional) Outlook OAUTH2.0 Configuration via Powershell Scripts
-
-Customers may obtain helper scripts at [NotifyHandler Scripts](../Resources/notify-handler-scripts.md) to aid with configuring SMA Notify Handler for [Outlook's MSAL SMTP auth update](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online).
+Customers may use these scripts to aid with configuring SMA Notify Handler for [Outlook's MSAL SMTP auth update](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online).
 
 ### Preface on issues installing modules
 
