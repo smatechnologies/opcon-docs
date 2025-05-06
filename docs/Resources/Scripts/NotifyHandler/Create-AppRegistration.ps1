@@ -35,6 +35,9 @@ try {
     # Connect to Microsoft Graph with appropriate scopes
     Write-Host "Connecting to Microsoft Graph..."
     Connect-MgGraph -NoWelcome -Scopes "Directory.ReadWrite.All","Application.ReadWrite.All"
+    if (-not (Get-MgContext)) {
+        throw "Failed to establish connection to Microsoft Graph"
+    }
 
     # Get the tenant ID
     $tenantId = (Get-MgContext).TenantId

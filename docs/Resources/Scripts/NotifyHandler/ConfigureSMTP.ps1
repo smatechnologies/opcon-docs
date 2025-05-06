@@ -58,10 +58,8 @@ function Invoke-SqlCommand {
     $command.Connection = $connection
     $command.CommandText = $query
     
-    $result = $command.ExecuteNonQuery()
+    $command.ExecuteNonQuery() | Out-Null
     $connection.Close()
-    
-    return $result
 }
 
 # Function to execute SQL query and return results
