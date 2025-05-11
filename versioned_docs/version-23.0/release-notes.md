@@ -4,6 +4,56 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.10
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2025 May
+
+#### Server
+
+:white_check_mark: **OC-3**: Fixed an issue where the TLS Certificate Distinguished Name of Windows agents was overwritten when the agents disconnected and reconnected.
+
+:white_check_mark: **OC-8**: Fixed an issue where stopping SMA OpCon Service Manager service from services console, times out and says service did not respond to the start or control request in a timely fashion.
+
+:white_check_mark: **OC-2166**: Fixed an issue where SMANotifyHandler had its log locked, causing it to become unresponsive.
+
+#### Solution Manager
+
+:white_check_mark: **OC-15**: Fixed an issue where viewing Isolate Dependency Chain diagram in PERT resulted in a blank page or a timeout.
+
+:white_check_mark: **OC-22**: Modified OS2200 daily jobs details to exclude completion statuses with empty or null condition words.
+
+:white_check_mark: **OC-165**: Fixed an issue where the User Input Caption value was cleared when changing the User Input Type while configuring inputs for a Service Request.
+
+:white_check_mark: **OC-208**: Fixed an issue where deleting a role associated with a filter caused the Operations Summary page to appear blank.
+
+:white_check_mark: **OC-346**: Fixed an issue where ACS daily jobs did not display the machine or machine group name.
+
+:white_check_mark: **OC-348**: Fixed an issue where Requires XML Escape was not available for ACS master jobs.
+
+:white_check_mark: **OC-350**: Resolved an issue in daily jobs where the start machine for File Transfer jobs was not updated when the source machine changed.
+
+:white_check_mark: **OC-354**: Fixed an issue where semicolons in instance properties of an event caused the event template to display blank.
+
+:white_check_mark: **OC-2115**: Fixed an issue where editing the Daily Job through Solution Manager was resetting all restart data.
+
+:white_check_mark: **OC-2119**: Fixed an issue with default values in the JCL Access dialog for z/Os jobs.
+
+:white_check_mark: **OC-2671**: Fixed an issue where JCL Data was not displayed for daily and master jobs.
+
+:white_check_mark: **OC-2674**: Fixed an issue where users could not see some jobs associated with tags in tag manager.
+
+:white_check_mark: **OC-2710**: Fixed an issue where only the first 20 instance property sets were displayed when adding jobs to a daily schedule.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-2578**: Fixed a problem in ImpEx2 during workflow deployment when a resource or threshold name contains a period (.) causing deployment failure.
+
+:white_check_mark: **OC-2679**: Fixed a problem during deployment when schedule privileges are lost. When role does not include inherit all schedules and a deployment is performed and the role names are the same but characters have different case then the schedule privilege is incorrectly removed.
+
+:white_check_mark: **OC-2688**: Fixed a problem during schedule deployment when the schedule definition included BIS jobs and the schedule exists on the target OpCon system. The BIS RunId field was incorrectly reset.
+
 ## OpCon 23.0.9
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
