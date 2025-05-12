@@ -4,6 +4,38 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.20
+
+2025 May
+
+#### Server
+
+:eight_spoked_asterisk: **OC-2186**: Added OAuth support for SMTP notifications, replacing Basic SMTP (Exchange), which will be deprecated by Microsoft in September.
+
+:white_check_mark: **OC-3**: Fixed an issue where the TLS Certificate Distinguished Name of Windows agents was overwritten when the agents disconnected and reconnected.
+
+:white_check_mark: **OC-2166**: Fixed an issue where SMANotifyHandler had its log locked, causing it to become unresponsive.
+
+#### Solution Manager
+
+:white_check_mark: **OC-15**: Fixed an issue where viewing Isolate Dependency Chain diagram in PERT resulted in a blank page or a timeout.
+
+:white_check_mark: **OC-22**: Modified OS2200 daily jobs details to exclude completion statuses with empty or null condition words.
+
+:white_check_mark: **OC-165**: Fixed an issue where the User Input Caption value was cleared when changing the User Input Type while configuring inputs for a Service Request.
+
+:white_check_mark: **OC-208**: Fixed an issue where deleting a role associated with a filter caused the Operations Summary page to appear blank.
+
+:white_check_mark: **OC-2115**: Fixed an issue where editing the Daily Job through Solution Manager was resetting all restart data.
+
+:white_check_mark: **OC-2158**: Fixed an issue where a job could not be saved if it contained an event with a sub-expression.
+
+:white_check_mark: **OC-2710**: Fixed an issue where only the first 20 instance property sets were displayed when adding jobs to a daily schedule.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-2578**: Fixed a problem in ImpEx2 during workflow deployment when a resource or threshold name contains a period (.) causing deployment failure.
+
 ## OpCon 22.0.19
 
 2025 January
