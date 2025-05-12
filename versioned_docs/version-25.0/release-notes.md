@@ -5,6 +5,23 @@ sidebar_label: "Release Notes"
 # OpCon Release Notes
 
 
+## OpCon 25.0.2
+
+**NOTE**: Verify/Upgrade these components if applicable: 
+
+* **Enterprise Manager** - 25.0 
+* **ServiceNow** Connector – 21.4 or higher
+* **WebServices** Connector – 21.2 or higher
+* **Deploy** – 25.0.0 or higher
+
+2025 May
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OC-2186**: Added OAuth support for SMTP notifications, replacing Basic SMTP (Exchange), which will be deprecated by Microsoft in September.
+
+:white_check_mark: **OC-3024**: Fixed an issue where multiple Access Codes could not be deleted.
+
 ## OpCon 25.0.1
 
 **NOTE**: Verify/Upgrade these components if applicable: 
