@@ -90,7 +90,9 @@ Customers may use these scripts to aid with configuring SMA Notify Handler for [
 1. Start by downloading the helper scripts and ensuring they are not blocked in file properties. Put all of them in a folder to run them out of.
 2. Start by running powershell, and run `cd C:\your\path\to\scripts` and then execute `.\Create-AppRegistration.ps1`
 3. This may prompt NuGet to retrieve certain packages, which can be accepted. Once downloaded and proceeding, the script should open a window requiring sign in. Please sign in with a Entra System Administrator account to correctly create the registration.
-:::warning
+
+:::info Internet Explorer
+
 OAuth window may have issues opening in Internet Explorer
 
 On some systems, old versions of Internet Explorer might still be set as the system default to open web pages requested from powershell. Some older versions of the browser do not have the necessary javascript version to run OAuth. We found that you uninstall the browser with the command below to resolve this.
@@ -98,6 +100,7 @@ On some systems, old versions of Internet Explorer might still be set as the sys
 dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0
 ```
 :::
+
 4. Once this script completes it will create a file named app-registration-details.json. This file will contains the app registration secret in plain text, please securely store or delete this when you are done with all configuration steps!
 5. After completing the App registration you can move on to granting mailbox access and configuring notifyhandler
 
@@ -106,7 +109,9 @@ dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.
 Anytime notifyhandler needs to be pointed at a new mailbox to send emails from, that mailbox needs to grant access to our created app registration. Grant-MailboxAccess.ps1 automates this process. In order for this application to work, we need the folder set up in the previous step and the complete app-registration-details.json (with the secret).
 
 1. Open Powershell and run `cd C:\your\path\to\scripts` and then execute `.\Grant-MailboxAccess.ps1`
-:::warning
+
+:::info AllowClobber
+
 On some systems, users may see error messages like
 ```powershell
 The ExchangeOnlineManagement module is required but not installed. Would you like to install it now? (Y/N): y
@@ -132,6 +137,7 @@ If this occurs, you may pass the `AllowClobber` argument to the `Create-AppRegis
 ```
 This will pass the `AllowClobber` argument to the Install-Module command and overwrite the existing module.
 :::
+
 2. An authentication window should appear, and you need to login using the account you intend notifyhandler to send emails from.
 3. Once logged in, your mailbox should be ready for sending notifications.
 
