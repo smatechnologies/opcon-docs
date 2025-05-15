@@ -70,7 +70,7 @@ In EM Navigation under Administration:
 
 ### Configure the SMA Notify Handler to Use SMTP via OAuth
 
-The notifyhandler can be set up to use Microsoft's OAuth with an application registration and client secret in the event you are treying to directly authenticate via Microsoft EntraID. Two routes can achieve this, the first are a set of powershell scripts written to help simplify the app creation and registration. Alternatively, we also have manual steps provided that walkthrough the provided scripts in a more manual fashion.
+The NotifyHandler can be set up to use Microsoft's OAuth with an application registration and client secret in the event you are trying to directly authenticate via Microsoft EntraID. Two routes can achieve this, the first are a set of Powershell scripts written to help simplify the app creation and registration. Alternatively, we also have manual steps provided that walkthrough the provided scripts in a more manual fashion.
 
 #### PowerShell Helper Scripts
 
@@ -87,28 +87,29 @@ Customers may use these scripts to aid with configuring SMA Notify Handler for [
 
 #### Create-AppRegistration.ps1
 
-1. Start by downloading the helper scripts and ensuring they are not blocked in file properties. Put all of them in a folder to run them out of.
-2. Start by running powershell, and run `cd C:\your\path\to\scripts` and then execute `.\Create-AppRegistration.ps1`
+1. Start by downloading the helper scripts and ensuring they are not blocked in file properties. Put all of them into a single folder to make running them easier.
+2. Start by running Powershell, and execute `cd C:\your\path\to\scripts` and then `.\Create-AppRegistration.ps1` and follow its prompts.
 3. This may prompt NuGet to retrieve certain packages, which can be accepted. Once downloaded and proceeding, the script should open a window requiring sign in. Please sign in with a Entra System Administrator account to correctly create the registration.
 
 :::info Internet Explorer
 
-OAuth window may have issues opening in Internet Explorer
+OAuth window may have issues opening in Internet Explorer.
 
-On some systems, old versions of Internet Explorer might still be set as the system default to open web pages requested from powershell. Some older versions of the browser do not have the necessary javascript version to run OAuth. We found that you uninstall the browser with the command below to resolve this.
+On some systems, old versions of Internet Explorer may still be set as the system default to open web pages requested from Powershell. Some older versions of the browser do not have the necessary javascript version to run the Microsoft login window. We found that you can uninstall the browser with the command below to resolve this.
 ```powershell
 dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0
 ```
 :::
 
-4. Once this script completes it will create a file named app-registration-details.json. This file will contains the app registration secret in plain text, please securely store or delete this when you are done with all configuration steps!
-5. After completing the App registration you can move on to granting mailbox access and configuring notifyhandler
+4. Once this script completes it will create a file named app-registration-details.json. This file will contains the app registration secret in plain text, please securely store or delete this when you are done with all configuration steps.
+5. Next, open Solution Manager and navigate to Library > Server Options > SMTP. Using the app-registration-details.json, enter in your Application ID, Client Secret, Tenant ID. Take note of your Notification Email Address, you will use this with the next script.
+6. After completing the App registration and updating Server Options, you can move on to granting mailbox access and configuring NotifyHandler.
 
 #### Grant-MailboxAccess.ps1
 
-Anytime notifyhandler needs to be pointed at a new mailbox to send emails from, that mailbox needs to grant access to our created app registration. Grant-MailboxAccess.ps1 automates this process. In order for this application to work, we need the folder set up in the previous step and the complete app-registration-details.json (with the secret).
+Anytime NotifyHandler needs to be pointed at a new mailbox to send emails from, that mailbox needs to grant access to our created app registration. Grant-MailboxAccess.ps1 automates this process. In order for this application to work, we need the folder set up in the previous step and the complete app-registration-details.json (with the secret still present, so if you removed it, it will need to be readded).
 
-1. Open Powershell and run `cd C:\your\path\to\scripts` and then execute `.\Grant-MailboxAccess.ps1`
+1. Open Powershell and run `cd C:\your\path\to\scripts` and then execute `.\Grant-MailboxAccess.ps1` to run the script.
 
 :::info AllowClobber
 
@@ -138,8 +139,8 @@ If this occurs, you may pass the `AllowClobber` argument to the `Create-AppRegis
 This will pass the `AllowClobber` argument to the Install-Module command and overwrite the existing module.
 :::
 
-2. An authentication window should appear, and you need to login using the account you intend notifyhandler to send emails from.
-3. Once logged in, your mailbox should be ready for sending notifications.
+2. An authentication window should appear, and you need to login using the account you intend NotifyHandler to send emails from. This is the Notification Email Address in Server Options.
+3. Once logged in, your mailbox should be ready for sending notifications. This script can be rerun multiple times for multiple different mailboxes if needed.
 
 #### (Optional) Outlook OAUTH2.0 Configuration
 
