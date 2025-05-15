@@ -5522,6 +5522,22 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
+"opcon-docs@file:.":
+  version "21.0.0"
+  dependencies:
+    "@cmfcmf/docusaurus-search-local" "^1.2.0"
+    "@docusaurus/core" "^2.0.0-beta.20"
+    "@docusaurus/plugin-google-gtag" "^2.0.0-beta.20"
+    "@docusaurus/preset-classic" "^2.0.0-beta.20"
+    "@mdx-js/react" "^1.6.21"
+    "@svgr/webpack" "^6.5.1"
+    clsx "^1.1.1"
+    file-loader "^6.2.0"
+    opcon-docs "file:."
+    react "^17.0.1"
+    react-dom "^17.0.1"
+    url-loader "^4.1.1"
+
 open@^8.0.9, open@^8.4.0:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/open/-/open-8.4.2.tgz#5b5ffe2a8f793dcd2aad73e550cb87b59cb084f9"
@@ -7306,9 +7322,9 @@ undici-types@~6.13.0:
   integrity sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==
 
 undici@^6.19.5:
-  version "6.19.7"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-6.19.7.tgz#7d4cf26dc689838aa8b6753a3c5c4288fc1e0216"
-  integrity sha512-HR3W/bMGPSr90i8AAp2C4DM3wChFdJPLrWYpIS++LxS8K+W535qftjt+4MyjNYHeWabMj1nvtmLIi7l++iq91A==
+  version "6.21.3"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-6.21.3.tgz#185752ad92c3d0efe7a7d1f6854a50f83b552d7a"
+  integrity sha512-gBLkYIlEnSp8pFbT64yFgGE6UIB9tAkhukC23PmMDCe5Nd+cRqKxSjw5y54MK2AZMgZfJWMaNE4nYUHgi1XEOw==
 
 unherit@^1.0.4:
   version "1.1.3"
