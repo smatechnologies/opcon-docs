@@ -76,8 +76,8 @@ The NotifyHandler can be set up to use Microsoft's OAuth with an application reg
 
 The following PowerShell scripts are available to help configure SMA Notify Handler for Outlook's MSAL SMTP authentication:
 
-- [Download Create-AppRegistration.ps1](../Resources/Scripts/NotifyHandler/Create-AppRegistration.ps1)
-- [Download Grant-MailboxAccess.ps1](../Resources/Scripts/NotifyHandler/Grant-MailboxAccess.ps1)
+- [Download Create-AppRegistration.ps1](../../../docs/Resources/Scripts/NotifyHandler/Create-AppRegistration.ps1)
+- [Download Grant-MailboxAccess.ps1](../../../docs/Resources/Scripts/NotifyHandler/Grant-MailboxAccess.ps1)
 
 :::note
 Both scripts require PowerShell 5.1 or later. If you encounter module installation issues, you may need to use the `-AllowClobber` parameter.
