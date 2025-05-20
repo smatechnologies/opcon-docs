@@ -126,7 +126,7 @@ Use Schedule Import Export to configure the System DSNs for the server. The util
 4. Click the **ODBC** button.
 5. Click the **System DSN** tab.
 6. Click **Add**.
-7. Select the **SQL Server Native Client** driver in the **Name** column and click **Finish**.
+7. Select the **SQL Server** driver in the **Name** column and click **Finish**.
 8. In the Create a New Data Source to SQL Server window: Enter a unique *Data Source name* in the **Name** field. SMA Technologies suggests using the name of the database.
    :::warning
    Do not use the same name as the SQL server instance name.
