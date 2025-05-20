@@ -72,7 +72,7 @@ In EM Navigation under Administration:
 
 The NotifyHandler can be set up to use Microsoft's OAuth with an application registration and client secret in the event you are trying to directly authenticate via Microsoft EntraID. Two routes can achieve this, the first are a set of Powershell scripts written to help simplify the app creation and registration. Alternatively, we also have manual steps provided that walkthrough the provided scripts in a more manual fashion.
 
-:::Warning
+:::warning
 If using OAuth, the Client secret created by our script defaults to 2 years. Secrets created manually default to 6 months. When this client secret expires, you must create a new secret in Entra and update your notification settings accordingly.
 :::
 
