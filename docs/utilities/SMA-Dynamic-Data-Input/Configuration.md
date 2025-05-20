@@ -80,7 +80,7 @@ Select a Driver
 3. Click the **ODBC** button.
 4. Click the **System DSN** tab.
 5. Click **Add**.
-6. Select the **SQL Server Native Client** driver in the **Name**
+6. Select the **SQL Server** driver in the **Name**
     column then click **Finish**.
 
 Define ODBC Details
