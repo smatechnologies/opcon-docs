@@ -56,17 +56,11 @@ All editions of SQL Server are supported; however, **large environments** must u
 For any edition of SQL Server, customers must set up both SQL Server and OpCon maintenance procedures and monitor the environment to ensure continuous processing.
 :::
 
-The database must be one of the following:
+:::caution
+Between Versions 21 and 22, modifications were made to the installation where installations would fail for non-contained databases. Going forward, only contained databases will be allowed as it is a requirement when supporting Azure SQL because security related information like users can't exist outside the database in the cloud. Existing installs without containment will keep working as they are.
+:::
 
-- Microsoft SQL Server version 2012 with Service Pack 3
-- Microsoft SQL Server version 2014 with the most recent Service Pack
-    applied
-- Microsoft SQL Server version 2016 with the most recent Service Pack
-    applied
-- Microsoft SQL Server version 2017 with the most recent Service Pack
-    applied
-- Microsoft SQL Server version 2019 with the most recent Service Pack
-    applied
+OpCon supports all Microsoft-supported editions of Microsoft SQL Server. As with Windows Server, new releases are considered fully tested once they have been open to the general public for 6 months or more. Any installation before the 6 month-mark is at your own risk. Any other types of SQL servers may lead to unexpected results during installation and during normal operation, depending on what, if any, syntactical changes exist between that SQL and MS-SQL.
 
 :::caution
 If the SAM and the SQL database are on different machines, then the Distributed Transaction Coordinator (MSDTC) service must either be running on both machines or not running on either machine. It does not matter if the service is running or not if both the SAM and SQL are on the same machine. Running on the one machine and not the other will cause performance issues and result in a very large SQL server error log.
