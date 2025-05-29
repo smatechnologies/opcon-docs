@@ -29,6 +29,8 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OC-2760**: Fixed RequestRouter to process schedule build and other requests targeted for it without getting stuck on unprocessed requests targeted for relay agents.
 
+:white_check_mark: **OC-2843**: Added more resilience to scheduling message logic for guaranteed delivery. Also added some extra debug messages at Trace Level 1 to provide more information in the logs in case the problem recurs in spite of improved logic.
+
 :white_check_mark: **OC-3040**: Allows integrations built on ACS to utilize Instance Properties when constructing log file paths.
 
 :white_check_mark: **OC-3045**: Enables job data cleanup on job deletion for jobs which ran on an Agent configured via Relay.
@@ -108,6 +110,8 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OC-2578**: Fixed a problem in ImpEx2 during workflow deployment when a resource or threshold name contains a period (.) causing deployment failure.
 
 :white_check_mark: **OC-2889**: Included Deploy 'Frequency_Use_Existing_Definitions' transformation rule capabilities that uses an existing frequency definition when the target job exists.
+
+:white_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match as runner name and platform id provide the required information.
 
 ## Winter 25
 
