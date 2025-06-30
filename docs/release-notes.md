@@ -73,7 +73,7 @@ sidebar_label: "Release Notes"
 2025 June
 
 #### Relay
-:eight_spoked_check_mark: **OC-3600**: Fixed issue where Machines may be placed offline by NetCom/Relay after an interruption to communication.
+:white_check_mark: **OC-3600**: Fixed issue where Machines may be placed offline by NetCom/Relay after an interruption to communication.
 
 ## 25.1.1
 
