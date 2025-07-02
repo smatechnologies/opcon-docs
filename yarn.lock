@@ -2796,9 +2796,9 @@ boxen@^6.2.1:
     wrap-ansi "^8.0.1"
 
 brace-expansion@^1.1.7:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
-  integrity sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.12.tgz#ab9b454466e5a8cc3a187beaad580412a9c5b843"
+  integrity sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
@@ -5521,6 +5521,22 @@ onetime@^5.1.2:
   integrity sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
   dependencies:
     mimic-fn "^2.1.0"
+
+"opcon-docs@file:.":
+  version "21.0.0"
+  dependencies:
+    "@cmfcmf/docusaurus-search-local" "^1.2.0"
+    "@docusaurus/core" "^2.0.0-beta.20"
+    "@docusaurus/plugin-google-gtag" "^2.0.0-beta.20"
+    "@docusaurus/preset-classic" "^2.0.0-beta.20"
+    "@mdx-js/react" "^1.6.21"
+    "@svgr/webpack" "^6.5.1"
+    clsx "^1.1.1"
+    file-loader "^6.2.0"
+    opcon-docs "file:."
+    react "^17.0.1"
+    react-dom "^17.0.1"
+    url-loader "^4.1.1"
 
 open@^8.0.9, open@^8.4.0:
   version "8.4.2"
