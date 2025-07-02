@@ -1,0 +1,24 @@
+---
+lang: en-us
+title: Viewing Additional Machine Information
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Viewing Additional Machine Information
+
+To view additional information:
+
+1.  Double-click on **Machines** under the **Administration** topic. The
+    **Machines** screen displays.
+2.  Select the **machine** in the **Select Machine** drop-down list.
+3.  Click the ![Cross Reference     icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon")
+    button on the toolbar to refer to a list of jobs using the machine.
+4.  Click **OK**.
+5.  Click the ![View Audit     icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon")
+    **View Audit** button to view audit records for changes to the
+    machine.
+6.  Click **Close**.
+:::
+
+ 
+
