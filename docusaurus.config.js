@@ -22,14 +22,13 @@ module.exports = {
         {
           type: "docsVersionDropdown",
           position: "right",
-          dropdownItemsAfter: [
-            ...Object.entries(VersionsArchived).map(
-              ([versionName, versionUrl]) => ({
-                label: versionName,
-                href: versionUrl,
-              })
-            ),
-          ],
+          versions: {
+            current: {label: 'OpCon'},
+            '25.0': {label: '25.0'},
+            '23.0': {label: '23.0'},
+            '22.0': {label: '22.0'},
+            '21.0': {label: '21.0'},
+          },
         },
       ],
     },
