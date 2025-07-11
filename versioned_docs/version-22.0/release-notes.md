@@ -18,6 +18,8 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OC-52**: Fixed an issue where the time 12:00 PM was displayed as 0:00 PM in Solution Manager Studio when editing frequency values on a job.
 
+:white_check_mark: **OC-3152**: Fixed an issue where it was not possible to update an encrypted Global Property if you did not know the original value of the Property.
+
 #### ImpEx2 Web Service
 
 :white_check_mark: **OC-2889**: Included Deploy 'Frequency_Use_Existing_Definitions' transformation rule capabilities that uses an existing frequency definition when the target job exists.
