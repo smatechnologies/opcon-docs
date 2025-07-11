@@ -4,6 +4,38 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.11
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2025 July
+
+#### Installation
+
+:white_check_mark: **OC-3366**: Fixed an issue where SQL database scripts included an extra character on the GO line, which could cause execution errors during deployment.
+
+#### Solution Manager
+
+:white_check_mark: **OC-30**: Fixed an issue where users were unable to add frequency to a multi-instance schedule.
+
+:white_check_mark: **OC-52**: Fixed an issue where the time 12:00 PM was displayed as 0:00 PM in Solution Manager Studio when editing frequency values on a job.
+
+:white_check_mark: **OC-351**: Fixed an issue where Frequencies cross references were not working when the frequency name contains "/".
+
+:white_check_mark: **OC-2795**: Fixed an issue where jobs with dependencies and a start offset time displayed incorrect start times.
+
+:white_check_mark: **OC-3152**: Fixed an issue where it was not possible to update an encrypted Global Property if you did not know the original value of the Property.
+
+#### REST API
+
+:white_check_mark: **OC-3284**: Improved error messaging in the Batch Users API for cases where the platform or platform ID is null in POST and PUT requests.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-2889**: Included Deploy 'Frequency_Use_Existing_Definitions' transformation rule capabilities that uses an existing frequency definition when the target job exists.
+
+:white_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match as runner name and platform id provide the required information.
+
 ## OpCon 23.0.10
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
