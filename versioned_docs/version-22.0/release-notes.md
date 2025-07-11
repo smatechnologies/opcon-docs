@@ -4,6 +4,26 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.21
+
+2025 July
+
+#### Installation
+
+:white_check_mark: **OC-3366**: Fixed an issue where SQL database scripts included an extra character on the GO line, which could cause execution errors during deployment.
+
+#### Solution Manager
+
+:white_check_mark: **OC-30**: Fixed an issue where users were unable to add frequency to a multi-instance schedule.
+
+:white_check_mark: **OC-52**: Fixed an issue where the time 12:00 PM was displayed as 0:00 PM in Solution Manager Studio when editing frequency values on a job.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-2889**: Included Deploy 'Frequency_Use_Existing_Definitions' transformation rule capabilities that uses an existing frequency definition when the target job exists.
+
+:white_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match as runner name and platform id provide the required information.
+
 ## OpCon 22.0.20
 
 2025 May
