@@ -4,6 +4,56 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 25.0.3
+
+**NOTE**: Verify/Upgrade these components if applicable: 
+
+* **Enterprise Manager** - 25.0 
+* **ServiceNow** Connector – 21.4 or higher
+* **WebServices** Connector – 21.2 or higher
+* **Deploy** – 25.0.0 or higher
+
+2025 July
+
+#### Installation
+
+:white_check_mark: **OC-3366**: Fixed an issue where SQL database scripts included an extra character on the GO line, which could cause execution errors during deployment.
+
+#### Solution Manager
+
+:white_check_mark: **OC-12**: Fixed an issue where user could not view log page unless they have both View App logs and View Schedule Build log permission.
+
+:white_check_mark: **OC-30**: Fixed an issue where users were unable to add frequency to a multi-instance schedule.
+
+:white_check_mark: **OC-52**: Fixed an issue where the time 12:00 PM was displayed as 0:00 PM in Solution Manager Studio when editing frequency values on a job.
+
+:white_check_mark: **OC-351**: Fixed an issue where Frequencies cross references were not working when the frequency name contains "/".
+
+:white_check_mark: **OC-1826**: Fixed an issue where filtering agents by type returned no results for ACS and RPA agents.
+
+:white_check_mark: **OC-2158**: Fixed an issue where a job could not be saved if it contained an event with a sub-expression.
+
+:white_check_mark: **OC-2795**: Fixed an issue where jobs with dependencies and a start offset time displayed incorrect start times.
+
+:white_check_mark: **OC-2881**: Fixed an issue causing insufficient space to fill in recurring instance data in the 'When Jobs Finishes OK' section of a daily job's frequency. Additionally, fixed an issue where the 'Resulting Date/Time' was made a required Date/Time picker field in the 'When Job Finishes OK' section for 'Run Again' with 'Recurring Instances'.
+
+:white_check_mark: **OC-2891**: Fixed an issue where the frequency list for a master job was not populated when adding a dependency to a master job in Studio.
+
+:white_check_mark: **OC-3022**: Fixed an issue in Studio where the View button was incorrectly enabled when it should have been disabled.
+
+:white_check_mark: **OC-3152**: Fixed an issue where it was not possible to update an encrypted Global Property if you did not know the original value of the Property.
+
+:white_check_mark: **OC-3253**: Fixed an issue where used trigger names become unavailable across all groups.
+
+:white_check_mark: **OC-3268**: Fixed an issue where SQL Job Types created in Solution Manager did not store batch user information correctly, causing jobs to fail to start.
+
+#### REST API
+
+:white_check_mark: **OC-3284**: Improved error messaging in the Batch Users API for cases where the platform or platform ID is null in POST and PUT requests.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match as runner name and platform id provide the required information.
 
 ## OpCon 25.0.2
 
