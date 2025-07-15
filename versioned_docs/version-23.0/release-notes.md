@@ -448,6 +448,8 @@ sidebar_label: "Release Notes"
 
 #### REST API
 
+:eight_spoked_asterisk: **OPCON-25858**: REST API Change Summary – Machine Endpoints. GET /machine: Previously returned job cross-references by default. Now requires explicit parameters: IncludeAssignedMasterJobs=true and IncludeAssignedDailyJobs=true. POST /machine (group assignment): Previously accepted group IDs only. Now requires full group objects: Gr_Id, Name, and Type. These changes impact automation scripts and integrations relying on older REST API behaviors. Updating documentation and usage is recommended to avoid disruptions.
+
 :eight_spoked_asterisk: **OPCON-22750**: Reduced frequency of API calls when configuring new integrations built on the ACS framework. This will provide a smoother and more performant experience for the end user.
 
 :white_check_mark: **OPCON-21835**: Fixed an error in the API which prevented modification of Guidewire Daily Jobs.
