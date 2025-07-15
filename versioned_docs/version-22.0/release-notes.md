@@ -618,6 +618,8 @@ sidebar_label: "Release Notes"
 
 #### REST API
 
+:white_check_mark: **OPCON-25859**: REST API Change Summary – Machine Endpoints. GET /machine: Previously returned job cross-references by default. Now requires explicit parameters: IncludeAssignedMasterJobs=true and IncludeAssignedDailyJobs=true. POST /machine (group assignment): Previously accepted group IDs only. Now requires full group objects: Gr_Id, Name, and Type. These changes impact automation scripts and integrations relying on older REST API behaviors. Updating documentation and usage is recommended to avoid disruptions.
+
 :white_check_mark: **OPCON-18514**: Fixed an issue that caused slowness or errors when processing Self-Service.
 
 :white_check_mark: **OPCON-18687**: Fixed an issue with job histories when using SQL Server 2012.
