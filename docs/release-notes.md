@@ -88,7 +88,9 @@ sidebar_label: "Release Notes"
 2025 June
 
 #### Solution Manager
-:eight_spoked_asterisk: **OC-2843**: Added more resilience to scheduling message logic for guaranteed delivery. Also added some extra debug messages at Trace Level 1 to provide us more information in the logs in case the problem recurs in spite of improved logic.
+:eight_spoked_asterisk: **OC-2843/OC-2950**: Added more resilience to scheduling message logic for guaranteed delivery. Also added some extra debug messages at Trace Level 1 to provide us more information in the logs in case the problem recurs in spite of improved logic.
+
+:eight_spoked_asterisk: **OC-2911**: Fixed job not found error "not valid".
 
 #### Deploy
 :eight_spoked_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match, as runner name and platform ID provide the required information.
