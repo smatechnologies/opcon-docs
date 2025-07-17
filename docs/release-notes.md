@@ -6,7 +6,7 @@ sidebar_label: "Release Notes"
 
 ## Summer 25
 
-## 25.2.0
+#### 25.2.0
 
 **NOTE**: Verify/Upgrade these components if applicable: 
 
@@ -60,7 +60,7 @@ sidebar_label: "Release Notes"
 
 ## Spring 25
 
-## 25.1.3
+#### 25.1.3
 
 **NOTE**: Verify/Upgrade these components if applicable: 
 
@@ -75,7 +75,7 @@ sidebar_label: "Release Notes"
 #### Relay
 :white_check_mark: **OC-3600**: Fixed issue where Machines may be placed offline by NetCom/Relay after an interruption to communication.
 
-## 25.1.1
+#### 25.1.1
 
 **NOTE**: Verify/Upgrade these components if applicable: 
 
