@@ -55,6 +55,7 @@ The **Refresh Intervals** section allows you set the interval (from 0 to
 application. Refresh intervals can be set for the following services:
 
 - Application Status (s)
+- Escalated Notification (s)
 - Self Service (s)
 - Self Service Execution (s)
 - Vision Live (s)
