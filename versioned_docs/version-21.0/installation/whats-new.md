@@ -11,8 +11,6 @@ installation information on a specific LSAM, refer to the corresponding
 LSAM online help. Any changes requiring actions or changed behaviors
 will be noted in the [Breaking Changes](./breaking-changes.md) section.
 
-## Release 20.2
-
 ### Self-Contained .NET Core
 
 SAM, the REST API, and supporting applications included in the **SMA
@@ -37,14 +35,10 @@ Changes for more information. The installer will be included in all
 future OpCon releases, including maintenance releases for supported
 versions.
 
-## Release 20.1
-
 ### OpCon Web Installer - Download All Agents
 
 **OpCon Web Installer** (OWI) now has the ability to download all
 agents, including those that do not have a Windows installer.
-
-## Release 20.0
 
 ### OpCon Web Installer
 
