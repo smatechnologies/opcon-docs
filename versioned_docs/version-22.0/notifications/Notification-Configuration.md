@@ -80,9 +80,9 @@ If using OAuth, the Client secret created by our script defaults to 2 years. Sec
 
 The following PowerShell scripts are available to help configure SMA Notify Handler for Outlook's MSAL SMTP authentication:
 
-- [Download Create-AppRegistration.ps1](../../../../Resources/Scripts/NotifyHandler/Create-AppRegistration.zip)
-- [Download Grant-MailboxAccess.ps1](../../../../Resources/Scripts/NotifyHandler/Grant-MailboxAccess.zip)
-- [Download ConfigureSMTP.ps1](../../../Resources/Scripts/NotifyHandler/ConfigureSMTP.zip)
+- [Download Create-AppRegistration.ps1](../Resources/Scripts/NotifyHandler/Create-AppRegistration.zip)
+- [Download Grant-MailboxAccess.ps1](../Resources/Scripts/NotifyHandler/Grant-MailboxAccess.zip)
+- [Download ConfigureSMTP.ps1](../Resources/Scripts/NotifyHandler/ConfigureSMTP.zip)
 
 :::note
 Both scripts require PowerShell 5.1 or later. If you encounter module installation issues, you may need to use the `-AllowClobber` parameter.
