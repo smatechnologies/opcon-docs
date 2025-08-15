@@ -146,7 +146,7 @@ This will pass the `AllowClobber` argument to the Install-Module command and ove
 2. An authentication window should appear, and you need to login using the account you intend NotifyHandler to send emails from. This is the Notification Email Address in Server Options.
 3. Once logged in, your mailbox should be ready for sending notifications. This script can be rerun multiple times for multiple different mailboxes if needed.
 
-#### (Optional) Outlook OAUTH2.0 Configuration
+#### Manual App Registration Setup (Optional - This is only needed if you prefer not to use the above PowerShell Scripts to create the App Registration)
 
 > **Prerequisites**: 
 > - Azure AD tenant with administrative access
@@ -175,7 +175,7 @@ The values from this App Registration that you need for Notify Handler's configu
 4. Setup the *Service Principal* for the App Registration. [Microsoft provides some instructions](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 5. Enter the Application ID, Tenant ID, and Client Secret into the SMTP configuration on [Solution Manager's Server Options page](../Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings.md)
 
-The commands in the article need to be ran in PowerShell:
+The following commands need to be run in Powershell in order to grand the App access to send from a specific mailbox:
 
 ```powershell
 # Install and import the Exchange Online PowerShell module
