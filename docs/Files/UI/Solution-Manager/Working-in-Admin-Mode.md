@@ -1,10 +1,8 @@
 # Working in Admin Mode
 
-Users in the «ocadm» role or a role with the «Maintain Service Request»
-privilege will see a Self Service page that is similar to the example
-graphic here.
+Users in the **ocadm** role or a role with the **Maintain Service Request** privilege will see a Self Service page that is similar to the example graphic here.
 
-Admin Mode Self Service Page Display
+### Admin Mode Self Service Page Display
 
 ![Admin Mode Self Service Screen Display](../../../Resources/Images/SM/Service-Request-View-Admin.png "Admin Mode Self Service Screen Display")
 
@@ -12,7 +10,7 @@ Admin Mode Self Service Page Display
 For more information about Function Privileges including those pertaining to the Maintaining Service Requests, refer to [Function Privileges](../../../administration/privileges.md#function-privileges) in the **Concepts** online help.
 :::
 
-From this page, you can do any of the following:
+### ![Related Topics](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon") Related Topics
 
 - [Filter Service Requests](Filtering-Service-Requests.md)
 - [Create Service Requests](Creating-Service-Requests.md)
