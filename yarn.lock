@@ -5522,6 +5522,22 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
+"opcon-docs@file:.":
+  version "21.0.0"
+  dependencies:
+    "@cmfcmf/docusaurus-search-local" "^1.2.0"
+    "@docusaurus/core" "^2.0.0-beta.20"
+    "@docusaurus/plugin-google-gtag" "^2.0.0-beta.20"
+    "@docusaurus/preset-classic" "^2.0.0-beta.20"
+    "@mdx-js/react" "^1.6.21"
+    "@svgr/webpack" "^6.5.1"
+    clsx "^1.1.1"
+    file-loader "^6.2.0"
+    opcon-docs "file:../../../Library/Caches/Yarn/v6/npm-opcon-docs-21.0.0-f69f0743-53a0-4dae-a719-682f4abf6b44-1756935519836/node_modules/opcon-docs"
+    react "^17.0.1"
+    react-dom "^17.0.1"
+    url-loader "^4.1.1"
+
 open@^8.0.9, open@^8.4.0:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/open/-/open-8.4.2.tgz#5b5ffe2a8f793dcd2aad73e550cb87b59cb084f9"
