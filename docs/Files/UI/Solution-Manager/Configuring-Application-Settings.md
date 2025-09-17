@@ -23,7 +23,6 @@ shown in the graphic.
 Configure any of the following settings:
 
 - [Environment Names](#Environm)
-- [Themes](#Themes)
 - [Windows Pass-Through Authentication](#Windows)
 - [Vision Card Warnings](#Vision)
 - [Status Actions Reason Caching](#Status)
@@ -42,17 +41,6 @@ appear on the [login screen](Logging-In.md#Solution_Manager_Login_Screen).
 
 ![Define Environment Name](../../../Resources/Images/SM/Defined-Env-Name2.png "Defined Enviroment Name")
 
-## Themes
-
-Themes allow you to customize the look and feel (skin) of each of your
-OpCon environments in order to distinguish them. You can select one of
-the following predefined themes for your environment:
-
-- ![Default Theme     Swatch](../../../Resources/Images/SM/SM-theme_defaultswatch.png "Default Theme Swatch") Default
-- ![Blueberry Theme     Swatch](../../../Resources/Images/SM/SM-theme_blueberryswatch.png "Blueberry Theme Swatch") Blueberry
-- ![Melon Theme     Swatch](../../../Resources/Images/SM/SM-theme_melonswatch.png "Melon Theme Swatch") Melon
-- ![Emerald Theme     Swatch](../../../Resources/Images/SM/SM-theme_emeraldswatch.png "Emerald Theme Swatch") Emerald
-- ![Ruby Theme     Swatch](../../../Resources/Images/SM/SM-theme_rubyswatch.png "Ruby Theme Swatch") Ruby
 
 ## Windows Pass-Through Authentication
 
