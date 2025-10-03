@@ -118,48 +118,47 @@ Verify that the most recent Open Database Connectivity (ODBC) driver for Microso
 
 ##### Select a Driver
 
-Use Schedule Import Export to configure the System DSNs for the server. The utility must Run as Administrator to have the privileges to configure the DSNs. The SQL DSNs are shared by multiple utilities.
+Use ODBC Data Sources in Windows to configure the System DSNs for the server. You must Run as Administrator to have the privileges to configure the DSNs. The SQL DSNs are shared by multiple utilities.
 
 1. Log in as a *Windows user with Local Administrative Rights*.
-2. Locate ImpEx.exe in the following location: **<Target Directory\>\\Opconxps\\Utilities\\**.
-3. Right-click **ImpEx.exe** and select **Run as administrator** from the menu.
-4. Click the **ODBC** button.
-5. Click the **System DSN** tab.
-6. Click **Add**.
-7. Select the **SQL Server Native Client** driver in the **Name** column and click **Finish**.
-8. In the Create a New Data Source to SQL Server window: Enter a unique *Data Source name* in the **Name** field. SMA Technologies suggests using the name of the database.
+2. Search for ODBC Data Sources in the Windows search bar.
+3. Right-click **ODBC Data Sources (64-bit)** or **ODBC Data Sources (32-bit)** and select **Run as administrator** from the menu.
+4. Click the **System DSN** tab.
+5. Click **Add**.
+6. Select the **SQL Server** driver in the **Name** column and click **Finish**.
+7. In the Create a New Data Source to SQL Server window: Enter a unique *Data Source name* in the **Name** field. SMA Technologies suggests using the name of the database.
    :::warning
    Do not use the same name as the SQL server instance name.
    :::
-9. *(Optional)* Enter *Connection to the OpCon scheduling database* in the **Description** field.
-10. Enter, in the **Server** field, the *Host Name* of the server hosting the database with which the SAM will be communicating and click **Next**.
-11. Select the **With SQL Server authentication using a login ID and password entered by the user** radio button.
-12. Enter required ID in the **Login ID** field.
-13. Enter required password in the **Password** field then click **Next**.
+8. *(Optional)* Enter *Connection to the OpCon scheduling database* in the **Description** field.
+9. Enter, in the **Server** field, the *Host Name* of the server hosting the database with which the SAM will be communicating and click **Next**.
+10. Select the **With SQL Server authentication using a login ID and password entered by the user** radio button.
+11. Enter required ID in the **Login ID** field.
+12. Enter required password in the **Password** field then click **Next**.
     :::note
     If necessary, please contact SMA support for the needed login information.
     :::
-14. Select the **Change the default database to** checkbox.
-15. Select the **OpCon database**.
-16. Accept the remaining default values on the screen and click the **Next** button.
-17. Accept all default values on the last screen and click the **Finish** button.
-18. In the ODBC MS SQL Server Setup window: Click the **Test Data Source** button.
+13. Select the **Change the default database to** checkbox.
+14. Select the **OpCon database**.
+15. Accept the remaining default values on the screen and click the **Next** button.
+16. Accept all default values on the last screen and click the **Finish** button.
+17. In the ODBC MS SQL Server Setup window: Click the **Test Data Source** button.
     - If the test succeeds, exit the ODBC administrator by clicking **OK** on subsequent screens.
     - If the test fails, click **Cancel**.
       - Click the **Back** button until the screen from Step 7 is displayed.
       - Repeat Steps 7 - 17 until the test is successful.
-19. In the ODBC Data Source Administrator window: Click **OK**.
-20. To set up System DSNs to the Access databases for the Schedule Import
+18. In the ODBC Data Source Administrator window: Click **OK**.
+19. To set up System DSNs to the Access databases for the Schedule Import
 Export utility, follow these steps: Click **Add**.
-21. In the Create New Data Source window: Select **Microsoft Access Driver (\*.mdb)** in the drop-down list and click **Finish**.
-22. In the ODBC Microsoft Access Setup window: Enter a *data source* name in the **Data Source Name** text box.
-23. *(Optional)* In the **Description** text box, enter a *description*.
-24. Click the **Select** button.
-25. In the Select Database window: Go to the **Directories** frame and browse to the **Utilities** directory (e.g., C:\\Program Files (x86)\\OpConxps\\Utilities\\).
-26. Click the **IMPEX.mdb** file in the **Database Name** frame and click **OK**.
-27. In the ODBC Microsoft Access Setup window: Click **OK**.
-28. In the ODBC Data Source Administrator window on the System DSN tab: Click **OK**.
-29. On the Access Database DSN screen: Select the **new data source**in the list box and click **OK**.
+20. In the Create New Data Source window: Select **Microsoft Access Driver (\*.mdb)** in the drop-down list and click **Finish**.
+21. In the ODBC Microsoft Access Setup window: Enter a *data source* name in the **Data Source Name** text box.
+22. *(Optional)* In the **Description** text box, enter a *description*.
+23. Click the **Select** button.
+24. In the Select Database window: Go to the **Directories** frame and browse to the **Utilities** directory (e.g., C:\\Program Files (x86)\\OpConxps\\Utilities\\).
+25. Click the **IMPEX.mdb** file in the **Database Name** frame and click **OK**.
+26. In the ODBC Microsoft Access Setup window: Click **OK**.
+27. In the ODBC Data Source Administrator window on the System DSN tab: Click **OK**.
+28. On the Access Database DSN screen: Select the **new data source**in the list box and click **OK**.
 
 #### Configure SMADDI
 

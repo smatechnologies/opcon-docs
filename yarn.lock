@@ -5533,7 +5533,7 @@ onetime@^5.1.2:
     "@svgr/webpack" "^6.5.1"
     clsx "^1.1.1"
     file-loader "^6.2.0"
-    opcon-docs "file:../../../Library/Caches/Yarn/v6/npm-opcon-docs-21.0.0-f69f0743-53a0-4dae-a719-682f4abf6b44-1756935519836/node_modules/opcon-docs"
+    opcon-docs "file:../../../../AppData/Local/Yarn/Cache/v6/npm-opcon-docs-21.0.0-553fc5b9-dab4-4513-be51-e35da9607c22-1757352291038/node_modules/opcon-docs"
     react "^17.0.1"
     react-dom "^17.0.1"
     url-loader "^4.1.1"

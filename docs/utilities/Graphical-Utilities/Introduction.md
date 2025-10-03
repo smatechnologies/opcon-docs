@@ -7,7 +7,7 @@ sidebar_label: 'Introduction'
 OpCon includes the following graphical utilities:
 
 - [Legacy Audit Management](Legacy-Audit-Management.md)
-- [Schedule Import/Export](Schedule-Import_Export.md)
+- [Schedule Import/Export (deprecated)](Schedule-Import_Export.md)
 - [SMA OpCon Configuration Utility](SMA-OpCon-Configuration-Utility.md)
 
 All of these utilities, except SMA Data Collector, require a system data source name (DSN) to connect to the OpCon database. If a system DSN does not exist, refer to [Create System DSNs](../../installation/configuration.md#Create_System_DSNs) in the **OpCon Installation** online help for procedures on configuring the SQL and Access DSNs.

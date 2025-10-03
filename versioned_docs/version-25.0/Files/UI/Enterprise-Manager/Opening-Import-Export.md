@@ -1,5 +1,9 @@
 # Opening Import Export
 
+:::warning
+We are no longer actively developing the original ImpEx application. Our company now offers a more advanced and reliable solution, Deploy, which we encourage all customers to transition to. Please note that ImpEx will no longer receive updates, and Deploy will serve as its replacement going forward.
+:::
+
 The **Import Export** tool can be opened from within the Enterprise Manager.
 
 To open the tool:
