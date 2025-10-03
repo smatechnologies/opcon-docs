@@ -1,5 +1,9 @@
 # Schedule Import/Export
 
+:::warning
+We are no longer actively developing the original ImpEx application. Our company now offers a more advanced and reliable solution, Deploy, which we encourage all customers to transition to. Please note that ImpEx will no longer receive updates, and Deploy will serve as its replacement going forward.
+:::
+
 The Schedule Import Export utility enables users to migrate one or more schedules from one database to another while maintaining relational integrity in the new environment. This utility is not a replacement for regular database backups. Even if a user exports all schedules from a database, some information may be left behind.
 
 To open the Schedule Import Export utility:
@@ -12,7 +16,7 @@ To open the Schedule Import Export utility:
 ## Menus
 
 The menus available are File and Help.
-b
+
 ### File
 
 - **Select ODBC DSN**: Allows users to change the SQL database connection.
