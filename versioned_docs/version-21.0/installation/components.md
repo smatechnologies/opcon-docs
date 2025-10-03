@@ -6,7 +6,7 @@ This topic contains instructions for installing the Enterprise Manager and Optio
 - [SMA OpCon Configuration Utility](#SMA5)
 - [SMA OpCon Core](#SMA_OpCon_Core)
 - [SMA OpCon DDI](#SMA6)
-- [SMA OpCon Schedule Import Export](#SMA)
+- [SMA OpCon Schedule Import Export (Deprecated)](#SMA)
 - [SMA OpCon SNMP Agent](#SMA9)
 - [SMA Resource Monitor](#SMA10)
 - [Silent Mode](#Silent)
@@ -388,6 +388,10 @@ installation on the SMA OpCon DDI.
 6. Click **Finish**.
 
 ## SMA OpCon Schedule Import Export
+
+:::warning
+We are no longer actively developing the original ImpEx application. Our company now offers a more advanced and reliable solution, Deploy, which we encourage all customers to transition to. Please note that ImpEx will no longer receive updates, and Deploy will serve as its replacement going forward.
+:::
 
 The SMA OpCon Schedule Import Export installation can be run independently, if desired, on the machine. Follow the procedure in this section to perform a new installation or an
 upgrade installation on the SMA OpCon Schedule Import Export.
