@@ -4,6 +4,53 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.12
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2025 October
+
+#### Installation
+
+:white_check_mark: **OC-3457**: Fixed an issue where new tables were not being properly added to the opconxps role when updating a non-contained OpConxps database.
+
+#### Server
+
+:white_check_mark: **OC-4607**: Request Router now handles database connection loss during initialization or request cleanup without halting request processing or flooding logs with repeated errors.
+
+#### Solution Manager
+
+:eight_spoked_asterisk: **OC-3715**: The Job Execution History page has been significantly optimized for faster load times and improved responsiveness. A new API endpoint (GET api/jobHistories/{jobId}?from={date}&to={date}&includeSummary=true&scheduleId={scheduleId}) has been introduced to support these enhancements.
+
+:white_check_mark: **OC-3610**: Fixed an issue where updating a batch user removed them from the daily job.
+
+:white_check_mark: **OC-3611**: Fixed an issue where instance properties were removed from the master schedule when the schedule was changed to multi-instance.
+
+:white_check_mark: **OC-3639**: Fixed an issue where the URL to fetch daily jobs was longer than allowable by the browser.
+
+:white_check_mark: **OC-3715**: Fixed an issue in daily jobs where the start machine for File Transfer jobs was not updated when the source machine changed.
+
+:white_check_mark: **OC-3779**: Fixed an issue where cross-references were not detected when the job name contained an underscore.
+
+:white_check_mark: **OC-3793**: Fixed an issue where fetching reports timed out and returned an error.
+
+:white_check_mark: **OC-4569**: Resolved an issue with Notification Groups where checkbox selections across multiple pages were not being retained correctly.
+
+#### REST API
+
+:white_check_mark: **OC-45**: Fixed an issue where &lt;reqparams&gt; values were missing in the API request which caused "Output not found" in Solution Manager when viewing SAP BW job output.
+
+:white_check_mark: **OC-2883**: The api/jobHistories endpoint now returns only the matching jobs when both "scheduleId" and "jobName" are specified.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-1906**:
+* Fixed a problem during Schedule Import using Deploy when schedule instance properties are merged if Deploy rule 'Update Schedule Instance Properties Allowed' is not selected.
+* Implemented additional Deploy rule 'Merge Schedule Instance properties'. By default, no changes are made to Schedule Instance properties.
+* If Deploy rule 'Update Schedule Instance Properties Allowed' is not selected and Deploy rule 'Merge Schedule Instance properties' is selected the schedule instance properties will be merged.
+
+:white_check_mark: **OC-3683**: Fixed a problem when retrieving batch user definition from the database and the batch user name contains a special character ([,.).
+
 ## OpCon 23.0.11
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
