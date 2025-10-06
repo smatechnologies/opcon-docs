@@ -29,8 +29,6 @@ sidebar_label: "Release Notes"
 
 :eight_spoked_asterisk: **OC-3715**: The Job Execution History page has been significantly optimized for faster load times and improved responsiveness. A new API endpoint (GET api/jobHistories/{jobId}?from={date}&to={date}&includeSummary=true&scheduleId={scheduleId}) has been introduced to support these enhancements.
 
-:white_check_mark: **OC-45**: Fixed an issue where viewing SAP BW job output did not work.
-
 :white_check_mark: **OC-3017**: Fixed various issues in advanced frequency settings and frequency forecast in Master Jobs and Frequencies page.
 
 :white_check_mark: **OC-3610**: Fixed an issue where updating a batch user removed them from the daily job.
@@ -52,6 +50,8 @@ sidebar_label: "Release Notes"
 :white_check_mark: **OC-4145**: Fixed an issue where the schedule name was not filled in when adding a job from the Studio page.
 
 #### REST API
+
+:white_check_mark: **OC-45**: Fixed an issue where &lt;reqparams&gt; values were missing in the API request which caused "Output not found" in Solution Manager when viewing SAP BW job output.
 
 :white_check_mark: **OC-2883**: The api/jobHistories endpoint now returns only the matching jobs when both "scheduleId" and "jobName" are specified.
 
