@@ -30,11 +30,15 @@ sidebar_label: "Release Notes"
 
 :white_check_mark: **OC-3715**: Fixed an issue in daily jobs where the start machine for File Transfer jobs was not updated when the source machine changed.
 
+:white_check_mark: **OC-3779**: Fixed an issue where cross-references were not detected when the job name contained an underscore.
+
 :white_check_mark: **OC-3793**: Fixed an issue where fetching reports timed out and returned an error.
 
 :white_check_mark: **OC-4569**: Resolved an issue with Notification Groups where checkbox selections across multiple pages were not being retained correctly.
 
 #### REST API
+
+:white_check_mark: **OC-45**: Fixed an issue where &lt;reqparams&gt; values were missing in the API request which caused "Output not found" in Solution Manager when viewing SAP BW job output.
 
 :white_check_mark: **OC-2883**: The api/jobHistories endpoint now returns only the matching jobs when both "scheduleId" and "jobName" are specified.
 
