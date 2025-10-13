@@ -2,6 +2,10 @@
 
 The **Frequencies and Associated Jobs Report** shows all frequencies with their associated schedules and jobs, sorted by frequency name.
 
+:::note
+Report data is updated nightly at 2:00 AM.
+:::
+
 ![A screen showing the Frequencies and Associated Jobs Report](../../../../../Resources/Images/SM/Library/Reporting/FrequenciesAndAssociatedJobsReport.png "Frequencies and Associated Jobs Report")
 
 ### Filtering & Sorting

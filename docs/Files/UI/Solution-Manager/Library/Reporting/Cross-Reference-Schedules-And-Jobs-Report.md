@@ -2,6 +2,10 @@
 
 The **Cross Reference Schedules and Jobs Report** shows all jobs and their associated schedule(s).
 
+:::note
+Report data is updated nightly at 2:00 AM.
+:::
+
 ![A screen showing the Cross Reference Schedules and Jobs Report](../../../../../Resources/Images/SM/Library/Reporting/CrossReferenceSchedulesAndJobReport.png "Cross Reference Schedules and Jobs Report")
 
 ### Filtering & Sorting
