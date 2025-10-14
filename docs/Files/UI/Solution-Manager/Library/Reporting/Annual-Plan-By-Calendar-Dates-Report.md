@@ -2,6 +2,10 @@
 
 The **Annual Plan By Calendar Dates Report** shows all defined dates on user-defined calendars.
 
+:::note
+Report data is updated nightly at 2:00 AM.
+:::
+
 ![A screen showing the Cross Reference Schedules and Jobs Report](../../../../../Resources/Images/SM/Library/Reporting/AnnualPlanByCalendarDatesReport.png "Cross Reference Schedules and Jobs Report")
 
 ### Filtering & Sorting
