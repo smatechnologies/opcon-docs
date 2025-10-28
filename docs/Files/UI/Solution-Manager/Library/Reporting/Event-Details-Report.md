@@ -6,6 +6,10 @@ The **Event Details by Date Report** shows all daily triggered events with their
 Report data is updated nightly at 2:00 AM.
 :::
 
+:::note
+This report has a maximum return limit of 100,000 records.
+:::
+
 ![A screen showing the Event Details Report](../../../../../Resources/Images/SM/Library/Reporting/EventDetailsByDateReport.png "Event Details Report")
 
 ### Filtering & Sorting
