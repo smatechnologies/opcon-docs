@@ -6,6 +6,10 @@ The **Annual Plan By Calendar Dates Report** shows all defined dates on user-def
 Report data is updated nightly at 2:00 AM.
 :::
 
+:::note
+This report has a maximum return limit of 100,000 records.
+:::
+
 ![A screen showing the Cross Reference Schedules and Jobs Report](../../../../../Resources/Images/SM/Library/Reporting/AnnualPlanByCalendarDatesReport.png "Cross Reference Schedules and Jobs Report")
 
 ### Filtering & Sorting

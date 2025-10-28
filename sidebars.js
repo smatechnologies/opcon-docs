@@ -620,6 +620,7 @@ module.exports = {
                     "Files/UI/Solution-Manager/Library/Reporting/Annual-Plan-By-Calendar-Dates-Report",
                     "Files/UI/Solution-Manager/Library/Reporting/Audit-History-Report",
                     "Files/UI/Solution-Manager/Library/Reporting/Cross-Reference-Schedules-And-Jobs-Report",
+                    "Files/UI/Solution-Manager/Library/Reporting/Current-Global-Properties-Report",
                     "Files/UI/Solution-Manager/Library/Reporting/Current-Resource-Values-Report",
                     "Files/UI/Solution-Manager/Library/Reporting/Current-Threshold-Values-Report",
                     "Files/UI/Solution-Manager/Library/Reporting/Event-Details-Report",

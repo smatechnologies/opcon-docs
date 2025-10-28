@@ -2,6 +2,10 @@
 
 The **Current Resource Values Report** displays the currently defined resources in OpCon.
 
+:::note
+This report has a maximum return limit of 100,000 records.
+:::
+
 ![A screen showing the Current Resource Values Report](../../../../../Resources/Images/SM/Library/Reporting/CurrentResourcesValuesReport.png "Current Resource Values Report")
 
 ### Filtering & Sorting
