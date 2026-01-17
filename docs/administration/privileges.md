@@ -47,6 +47,7 @@ OpCon:
 - [Maintain Machines](#maintain-machines)
 - [Maintain Reports](#maintain-reports)
 - [Maintain Schedules](#maintain-schedules)
+- [Maintain Server Options](#maintain-server-options)
 - [Maintain Service Request](#maintain-service-request)
 - [Maintain Thresholds/Resources](#maintain-thresholdsresources)
 - [Maintain Tags](#maintain-tags)
@@ -266,14 +267,7 @@ To stop and to start communication with the LSAM from the Machine Information sc
 
 ### Maintain Reports
 
-Grants access to all functions (except locking and unlocking reports) in the Report Management tool in the Reports view:
-
-- Add new report specifications
-- Copy report specifications
-- Delete unlocked report specifications
-- Update unlocked report specifications
-- Export unlocked report specifications
-- Import report specifications
+When combined with the [Maintain Server Options](#maintain-server-options) privilege, grants access to the Reporting settings tab in Library > Server Options. Both privileges are required to view and modify the Reporting settings—having only one of these privileges will not display the Reporting settings tab.
 
 :::note
 Only users in the ocadm role can manage locked reports.
@@ -290,6 +284,12 @@ Grants access to all functions related to the Schedule Master including:
 :::note
 When a schedule is added, only the creator is automatically granted privileges to the new schedule; otherwise, the user must have Schedule Privileges to perform the Delete and Modify functions.
 :::
+
+### Maintain Server Options
+
+Grants access to the Server Options page in Library > Server Options to view and modify server configuration settings.
+
+When combined with the [Maintain Reports](#maintain-reports) privilege, grants access to the Reporting settings tab. Both privileges are required to view and modify the Reporting settings—having only one of these privileges will not display the Reporting settings tab.
 
 ### Maintain Service Request
 
