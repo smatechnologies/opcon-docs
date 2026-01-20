@@ -267,11 +267,7 @@ To stop and to start communication with the LSAM from the Machine Information sc
 
 ### Maintain Reports
 
-When combined with the [Maintain Server Options](#maintain-server-options) privilege, grants access to the Reporting settings tab in Library > Server Options. Both privileges are required to view and modify the Reporting settings—having only one of these privileges will not display the Reporting settings tab.
-
-:::note
-Only users in the ocadm role can manage locked reports.
-:::
+Grants access to the Reporting settings tab in Library > Reports. 
 
 ### Maintain Schedules
 
