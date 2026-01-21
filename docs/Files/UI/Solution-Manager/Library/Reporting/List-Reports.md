@@ -24,5 +24,5 @@ The **SETTINGS** tab displays configuration settings related to standard report 
 ![Reports Settings Tab 2](../../../../../Resources/Images/Reports/Reports-Settings-Tab-2.png "Reports Settings Tab 2")
 
 :::note
-Users must have the [Maintain Reports](../../../../administration/privileges.md#maintain-reports) privilege or be in the ocadm role to view the SETTINGS tab.
+Users must have the [Maintain Reports](../../../../../administration/privileges.md) privilege or be in the ocadm role to view the SETTINGS tab.
 :::
