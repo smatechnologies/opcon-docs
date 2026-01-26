@@ -199,7 +199,7 @@ module.exports = {
       type: "category",
       label: "Reports",
       collapsed: true,
-      items: ["reports/overview", "reports/predefined", "reports/custom"],
+      items: ["reports/overview", "reports/predefined", "reports/custom", "reports/reporting-service"],
     },
     {
       type: "category",
