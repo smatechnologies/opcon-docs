@@ -1,16 +1,16 @@
-# Event Details by Date Report
+# Daily Job Information Report
 
-The **Event Details by Date Report** shows all daily triggered events with their schedules, jobs, trigger, match, and event details.
+The **Daily Job Information Report** is used to view daily job execution details including job status, schedule information, and execution times.
 
-:::note
-Report data is updated nightly at 2:00 AM.
+:::info
+By default this report is displaying today's Daily Job Information records. Please use the column filters to customize results in this report.
 :::
 
 :::note
 This report has a maximum return limit of 100,000 records.
 :::
 
-![A screen showing the Event Details Report](../../../../../Resources/Images/SM/Library/Reporting/EventDetailsByDateReport.png "Event Details Report")
+![A screen showing the Daily Job Information Report](../../../../../Resources/Images/SM/Library/Reporting/DailyJobInformationReport.png "Daily Job Information Report")
 
 ### Filtering & Sorting
 
