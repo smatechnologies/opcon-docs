@@ -66,11 +66,6 @@ module.exports = {
               path: "v22.0",
               banner: "none",
             },
-            "21.0": {
-              label: "21.0",
-              path: "v21.0",
-              banner: "none",
-            },
           },
         },
         theme: {
