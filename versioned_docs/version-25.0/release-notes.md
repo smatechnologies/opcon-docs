@@ -2,308 +2,607 @@
 sidebar_label: "Release Notes"
 ---
 
-# OpCon Release Notes
+# OpCon Release Notes - What's New?
+
+## Summary
+
+Release 25 focused heavily on **stability, scheduling reliability, API improvements, and deployment enhancements**. These updates improve day-to-day operations, reduce troubleshooting time, and strengthen integration reliability across OpCon environments.
+
+## OpCon 25.0.5
+
+**NOTE**: Verify/Upgrade these components if applicable:
+* **Enterprise Manager** - 25.0
+* **ServiceNow** Connector - 21.4 or higher
+* **WebServices** Connector - 21.2 or higher
+* **Deploy** - 25.0.0 or higher
+
+**2026 February**
+
+## Installation Improvements
+
+### What's New
+
+:white_check_mark: **OC-3457: Database Role Updates More Reliable**
+Resolved an issue where new tables were not properly added to the opconxps role when upgrading certain databases.
+
+### Why This Matters
+
+Upgrades complete more reliably, reducing post upgrade configuration issues.
+
+## Platform Reliability & Messaging (Server)
+
+### What's New
+
+:white_check_mark: **OC-3549: External Event Handling Improved**
+Resolved an issue where formatting in external events could cause incorrect instance properties.
+
+:white_check_mark: **OC-4607: Request Router Resilience Improvements**
+Improved handling of database connection loss during initialization and cleanup.
+
+:white_check_mark: **OC-5883: NetCom Message Reliability and Monitoring Enhancements**
+Improved message handling during reconnections, prevented duplicate processing, enhanced debugging, and introduced a Message Buildup Monitor to detect and automatically recover from message backlogs. These improvements include a new Message Buildup Monitor that automatically detects when messages are accumulating and triggers recovery actions to restore normal processing. Administrators can configure monitoring thresholds via INI file parameters to optimize performance for their environment.
+
+### Why This Matters
+
+These improvements strengthen system reliability, reduce risk of message loss, and improve automatic recovery from connectivity issues.
+
+## Solution Manager Improvements
+
+### What's New
+
+:eight_spoked_asterisk: **OC-3715: Faster Job Execution History**
+Optimized Job Execution History for significantly faster load times and improved responsiveness.
+
+:white_check_mark: **OC-3017: Improved Frequency Forecasting and Scheduling Stability**
+Resolved issues affecting advanced frequency settings and forecasts.
+
+:white_check_mark: **OC-3610: Batch User Updates More Reliable**
+Updating batch users no longer unintentionally removes them from jobs.
+
+:white_check_mark: **OC-3611: Multi Instance Schedule Stability**
+Instance properties are now preserved correctly when changing schedules.
+
+:white_check_mark: **OC-3639: Improved URL Handling**
+Resolved an issue where long URLs could exceed browser limits.
+
+:white_check_mark: **OC-3745: Server Options Cleanup Behavior Corrected**
+Secondary settings now clear properly when primary settings are removed.
+
+:white_check_mark: **OC-3779: Cross Reference Detection Improvements**
+Cross references now correctly detect job names containing underscores.
+
+:white_check_mark: **OC-3793: Report Timeout Reliability**
+Resolved issues causing report timeouts.
+
+:white_check_mark: **OC-3854: File Transfer Job Accuracy**
+Start machine values now update correctly when source machines change.
+
+:white_check_mark: **OC-3981: Agent Visibility Improvements**
+Agent properties now display correctly during communication.
+
+:white_check_mark: **OC-4145: Studio Job Creation Improvements**
+Schedule names now populate correctly when adding jobs from Studio.
+
+### Why This Matters
+
+These improvements make scheduling, reporting, and job configuration more reliable while reducing troubleshooting time.
+
+## REST API Improvements
+
+### What's New
+
+:white_check_mark: **OC-45: SAP BW Output Retrieval Fix**
+Resolved an issue where request parameters were missing, preventing job output retrieval.
+
+:white_check_mark: **OC-2883: Job History Endpoint Filtering Improvements**
+API responses now correctly return matching jobs when multiple filters are applied.
+
+:white_check_mark: **OC-4261: Database Connection Pool Stability**
+Resolved an issue that could cause Solution Manager to hang due to connection pool exhaustion.
+
+### Why This Matters
+
+API integrations are more predictable and stable, reducing the risk of automation or reporting failures.
+
+## ImpEx2 Web Service Improvements
+
+### What's New
+
+:white_check_mark: **OC-1906: Schedule Import Behavior Improvements**
+Improved handling of schedule instance property merges and introduced a new Deploy rule for merging properties.
+
+:white_check_mark: **OC-3683: Batch User Retrieval Stability**
+Resolved issues retrieving batch users with special characters in names.
+
+### Why This Matters
+
+Deployments and imports are more reliable and predictable, reducing errors in schedule migrations.
+
+## Documentation Updates
+
+### What's New
+
+:white_check_mark: **OC-3902: API Documentation Corrections**
+Corrected Swagger documentation for property expression endpoints.
+
+### Why This Matters
+
+Clearer documentation helps teams build and maintain integrations more efficiently.
 
 ## OpCon 25.0.3
 
-**NOTE**: Verify/Upgrade these components if applicable: 
-
-* **Enterprise Manager** - 25.0 
-* **ServiceNow** Connector – 21.4 or higher
-* **WebServices** Connector – 21.2 or higher
+**NOTE**: Verify/Upgrade these components if applicable:
+* **Enterprise Manager** - 25.0
+* **ServiceNow** Connector - 21.4 or higher
+* **WebServices** Connector - 21.2 or higher
 * **Deploy** – 25.0.0 or higher
 
-2025 July
+**2025 July**
 
-#### Installation
+## Installation Improvements
 
-:white_check_mark: **OC-3366**: Fixed an issue where SQL database scripts included an extra character on the GO line, which could cause execution errors during deployment.
+### What's New
 
-#### Solution Manager
+:white_check_mark: **OC-3366: Deployment Script Reliability**
+Resolved an issue where SQL scripts contained formatting errors that could cause execution failures.
 
-:white_check_mark: **OC-12**: Fixed an issue where user could not view log page unless they have both View App logs and View Schedule Build log permission.
+### Why This Matters
 
-:white_check_mark: **OC-30**: Fixed an issue where users were unable to add frequency to a multi-instance schedule.
+Reduces risk of installation or upgrade failures.
 
-:white_check_mark: **OC-52**: Fixed an issue where the time 12:00 PM was displayed as 0:00 PM in Solution Manager Studio when editing frequency values on a job.
+## Solution Manager Improvements
 
-:white_check_mark: **OC-351**: Fixed an issue where Frequencies cross references were not working when the frequency name contains "/".
+### What's New
 
-:white_check_mark: **OC-1826**: Fixed an issue where filtering agents by type returned no results for ACS and RPA agents.
+:white_check_mark: **OC-12: Log Page Permission Issue Resolved**
+Resolved an issue where users were unable to view the log page unless they had both View App Logs and View Schedule Build Log permissions. Access now behaves correctly based on assigned permissions.
 
-:white_check_mark: **OC-2158**: Fixed an issue where a job could not be saved if it contained an event with a sub-expression.
+:white_check_mark: **OC-30: Multi-Instance Frequency Assignment Fixed**
+Resolved an issue that prevented users from adding frequencies to multi-instance schedules.
 
-:white_check_mark: **OC-2795**: Fixed an issue where jobs with dependencies and a start offset time displayed incorrect start times.
+:white_check_mark: **OC-52: Time Display Corrected in Studio**
+Resolved an issue where 12:00 PM was incorrectly displayed as 0:00 PM when editing frequency values in Solution Manager Studio.
 
-:white_check_mark: **OC-2881**: Fixed an issue causing insufficient space to fill in recurring instance data in the 'When Jobs Finishes OK' section of a daily job's frequency. Additionally, fixed an issue where the 'Resulting Date/Time' was made a required Date/Time picker field in the 'When Job Finishes OK' section for 'Run Again' with 'Recurring Instances'.
+:white_check_mark: **OC-351: Frequency Cross-Reference Detection Fixed**
+Resolved an issue where frequency cross-references were not detected when the frequency name contained a forward slash (/).
 
-:white_check_mark: **OC-2891**: Fixed an issue where the frequency list for a master job was not populated when adding a dependency to a master job in Studio.
+:white_check_mark: **OC-1826: Agent Filtering Improvements**
+Resolved an issue where filtering agents by type returned no results for ACS and RPA agents.
 
-:white_check_mark: **OC-3022**: Fixed an issue in Studio where the View button was incorrectly enabled when it should have been disabled.
+:white_check_mark: **OC-2158: Job Save Issue with Sub-Expressions Resolved**
+Resolved an issue that prevented jobs from being saved when they contained events with sub-expressions.
 
-:white_check_mark: **OC-3152**: Fixed an issue where it was not possible to update an encrypted Global Property if you did not know the original value of the Property.
+:white_check_mark: **OC-2795: Dependency Start Time Accuracy Improved**
+Resolved an issue where jobs with dependencies and start offset times displayed incorrect start times.
 
-:white_check_mark: **OC-3253**: Fixed an issue where used trigger names become unavailable across all groups.
+:white_check_mark: **OC-2881: Recurring Instance Configuration Improvements**
+Resolved an issue where insufficient space prevented entering recurring instance data in certain frequency configurations. Also corrected behavior requiring a valid Date/Time selection when using recurring instances.
 
-:white_check_mark: **OC-3268**: Fixed an issue where SQL Job Types created in Solution Manager did not store batch user information correctly, causing jobs to fail to start.
+:white_check_mark: **OC-2891: Master Job Dependency Frequency List Fixed**
+Resolved an issue where the frequency list was not populated when adding dependencies to a master job in Studio.
 
-:eight_spoked_asterisk: **OC-2843**: Added more resilience to scheduling message logic for guaranteed delivery. Also added some extra debug messages at Trace Level 1 to provide us more information in the logs in case the problem recurs in spite of improved logic.
+:white_check_mark: **OC-3022: Studio View Button Behavior Corrected**
+Resolved an issue where the View button was enabled when it should have been disabled in Studio.
 
-#### REST API
+:white_check_mark: **OC-3152: Encrypted Global Property Update Fixed**
+Resolved an issue that prevented updating encrypted Global Properties without knowing the original value.
 
-:white_check_mark: **OC-3284**: Improved error messaging in the Batch Users API for cases where the platform or platform ID is null in POST and PUT requests.
+:white_check_mark: **OC-3253: Trigger Name Availability Issue Resolved**
+Resolved an issue where previously used trigger names became unavailable across groups.
 
-#### ImpEx2 Web Service
+:white_check_mark: **OC-3268: SQL Job Type Batch User Handling Fixed**
+Resolved an issue where SQL Job Types created in Solution Manager did not correctly store batch user information, which could cause jobs to fail to start.
 
-:white_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match as runner name and platform id provide the required information.
+:eight_spoked_asterisk: **OC-2843: Scheduling Message Resilience Improvements**
+Added stronger scheduling message logic and enhanced debugging capabilities.
+
+### Why This Matters
+
+These improvements enhance scheduling reliability, improve Studio usability, and correct several configuration and filtering behaviors. Together, they reduce troubleshooting time, improve accuracy in scheduling and job configuration, and provide a more consistent and predictable user experience.
+
+## REST API Improvements
+
+### What's New
+
+:white_check_mark: **OC-3284: Improved Error Messaging**
+Clearer error messages returned for invalid Batch User API requests.
+
+### Why This Matters
+
+Developers can troubleshoot integrations faster and more accurately.
+
+## ImpEx2 Improvements
+
+### What's New
+
+:white_check_mark: **OC-3092: Script Runner Matching Improvements**
+Improved script runner matching logic to simplify deployments.
+
+### Why This Matters
+
+Deployments are more reliable and easier to manage.
 
 ## OpCon 25.0.2
 
-**NOTE**: Verify/Upgrade these components if applicable: 
+**NOTE**: Verify/Upgrade these components if applicable:
 
-* **Enterprise Manager** - 25.0 
-* **ServiceNow** Connector – 21.4 or higher
-* **WebServices** Connector – 21.2 or higher
+* **Enterprise Manager** - 25.0
+* **ServiceNow** Connector - 21.4 or higher
+* **WebServices** Connector - 21.2 or higher
 * **Deploy** – 25.0.0 or higher
 
-2025 May
+**2025 May**
 
-#### Solution Manager
+## Solution Manager Improvements
 
-:eight_spoked_asterisk: **OC-2186**: Added OAuth support for SMTP notifications, replacing Basic SMTP (Exchange), which will be deprecated by Microsoft in September.
+### What's New
 
-:white_check_mark: **OC-3024**: Fixed an issue where multiple Access Codes could not be deleted.
+:eight_spoked_asterisk: **OC-2186: OAuth Support for SMTP Notifications**
+Added OAuth support for SMTP, replacing Basic SMTP authentication that is being deprecated.
+
+:white_check_mark: **OC-3024: Access Code Management Fix**
+Resolved an issue preventing deletion of multiple access codes.
+
+### Why This Matters
+
+Improves security compliance and simplifies administration.
 
 ## OpCon 25.0.1
 
-**NOTE**: Verify/Upgrade these components if applicable: 
+**NOTE**: Verify/Upgrade these components if applicable:
 
-* **Enterprise Manager** - 25.0 
-* **ServiceNow** Connector – 21.4 or higher
-* **WebServices** Connector – 21.2 or higher
+* **Enterprise Manager** - 25.0
+* **ServiceNow** Connector - 21.4 or higher
+* **WebServices** Connector - 21.2 or higher
 * **Deploy** – 25.0.0 or higher
 
-2025 March
+**2025 March**
 
-#### Server
+## Platform Reliability Improvements
 
-:white_check_mark: **OC-2499**: Fixed database re-connection logic to prevent NotifyHandler from hanging during database disruptions.
+### What's New
 
-:white_check_mark: **OC-2502**: Providing a delayed start and checking for certificate file in NetcomApi to prevent errors encountered during initialization of service.
+:white_check_mark: **OC-2499: Database Reconnection Improvements**
+Prevented NotifyHandler from hanging during database disruptions.
 
-#### REST API
+:white_check_mark: **OC-2502: NetCom Initialization Stability**
+Improved startup handling to prevent initialization errors.
 
-:white_check_mark: **OC-22**: Modified OS2200 daily jobs details to exclude completion statuses with empty or null condition words.
+### Why This Matters
+
+Improves stability during service restarts and database interruptions.
+
+## REST API Improvements
+
+### What's New
+
+:white_check_mark: **OC-22: OS2200 Job Details Accuracy**
+Resolved an issue affecting completion status filtering.
+
+### Why This Matters
+
+Ensures more accurate reporting and job status visibility.
 
 ## OpCon 25.0.0
 
-**NOTE**: Verify/Upgrade these components if applicable: 
+**NOTE**: Verify/Upgrade these components if applicable:
 
-* **Enterprise Manager** - 25.0 
-* **ServiceNow** Connector – 21.4 or higher
-* **WebServices** Connector – 21.2 or higher
+* **Enterprise Manager** - 25.0
+* **ServiceNow** Connector - 21.4 or higher
+* **WebServices** Connector - 21.2 or higher
 * **Deploy** – 25.0.0 or higher
 
-2025 March
+**2025 March**
 
-#### Server
+## Server Improvements
 
-:eight_spoked_asterisk: **OPCON-25853**: Upgraded OpCon to .NET 9.
+### What's New
 
-:white_check_mark: **OPCON-21285**: Fixed an issue where the start time of a job that depended on a container job in the parent schedule was incorrect.
+:eight_spoked_asterisk: **OPCON-25853: Platform Runtime Upgrade**
+OpCon has been upgraded to run on the .NET 9 runtime, improving platform performance, compatibility, and long-term supportability.
 
-:white_check_mark: **OPCON-23582**: Fixed an issue where the estimated start time of a job was incorrect when it depended on a job in a different schedule.
+:white_check_mark: **OPCON-21285: Container Job Dependency Start Time Corrected**
+Resolved an issue where jobs depending on a container job in a parent schedule could display incorrect start times.
 
-:white_check_mark: **OPCON-24595**: Fixed an issue where SMANotifyHandler had its log locked, causing it to become unresponsive.
+:white_check_mark: **OPCON-23582: Cross-Schedule Dependency Start Time Accuracy Improved**
+Resolved an issue where estimated start times were incorrect when jobs depended on jobs in different schedules.
 
-:white_check_mark: **OPCON-24956**: Fixed NetCom deadlock which would prevent some Agent types from being marked down after failing heartbeats.
+:white_check_mark: **OPCON-24595: SMANotifyHandler Stability Improved**
+Resolved an issue where SMANotifyHandler could become unresponsive due to a locked log file.
 
-:white_check_mark: **OPCON-25930**: Fixed a NetCom issue which caused some ACS jobs to fail on restart due to invalid references
+:white_check_mark: **OPCON-24956: NetCom Deadlock Resolved**
+Resolved a deadlock condition in NetCom that could prevent certain agent types from being marked down after missed heartbeats.
 
-:white_check_mark: **OPCON-25969**: Fixed an issue which could cause ACS integrations to lose variable tokens used in job configurations after completion of a job run.
+:white_check_mark: **OPCON-25930: ACS Job Restart Reliability Improved**
+Resolved an issue that could cause ACS jobs to fail on restart due to invalid references.
 
-:white_check_mark: **OPCON-25982**: Fixed an issue in NetCom where ACS job starts would sometimes request job status information even when the job had previously reported completion.
+:white_check_mark: **OPCON-25969: ACS Variable Token Retention Fixed**
+Resolved an issue where ACS integrations could lose variable tokens after a job completed.
 
-:white_check_mark: **OPCON-26144**: Fixed an issue that caused the error "Adding the specified count to the semaphore would cause it to exceed its maximum count" when communication with an RPA agent was enabled.
+:white_check_mark: **OPCON-25982: ACS Job Status Requests Corrected**
+Resolved an issue where ACS job starts could request job status even after completion was already reported.
 
-#### Solution Manager
+:white_check_mark: **OPCON-26144: RPA Communication Semaphore Error Resolved**
+Resolved an issue that could trigger semaphore errors when communicating with an RPA agent.
 
-:eight_spoked_asterisk: **OPCON-20079**: Provide better formatting for z/OS Job Output menu items.
+### Why This Matters
 
-:eight_spoked_asterisk: **OPCON-23078**: Require Email for Users: This feature introduces a requirement for the email field to be populated for user accounts in support of the new password recovery process in addition to a new server option setting that gives admins the ability to allow existing users to enter their recovery email upon next login.
+These updates improve scheduling accuracy, strengthen communication reliability between components, and reduce the risk of jobs failing or services becoming unresponsive.
 
-:eight_spoked_asterisk: **OPCON-23080**: Forgot Password Link: This feature adds a "Forgot Password?" link on the Solution Manager login screen to initiate the password recovery process by confirming their username and email to generate and receive an email with a password recovery code.
+## Solution Manager Enhancements
 
-:eight_spoked_asterisk: **OPCON-23082**: Password Recovery Validation: This feature allows users to enter and validate the password recovery code received via email and navigates them through the password reset process.
+### What's New
 
-:eight_spoked_asterisk: **OPCON-23094**: Added support for logs that aren't text and inclusive of video logs through the job output screen.
+:eight_spoked_asterisk: **OPCON-20079: Improved z/OS Job Output Formatting**
+Enhanced formatting of z/OS job output menu items for better readability and usability.
 
-:eight_spoked_asterisk: **OPCON-23095**: Licensing logic using the (new) LSAM ID being used for OpCon RPA is enforced.
+:eight_spoked_asterisk: **OPCON-23078: Email Requirement for User Accounts**
+User accounts now require an email address to support password recovery workflows. Administrators can allow existing users to enter recovery emails at next login.
 
-:eight_spoked_asterisk: **OPCON-23096**: Added OpCon RPA script runner & script type capabilities for Script Repo use.
+:eight_spoked_asterisk: **OPCON-23080: Forgot Password Workflow Added**
+Added a "Forgot Password?" link to the login screen, allowing users to initiate password recovery securely.
 
-:eight_spoked_asterisk: **OPCON-23230**: Save Daily Job Details to Master: This feature allows users to push changes made to daily jobs to their associated master job from within Solution Manager Operations and Daily Job Details views.
+:eight_spoked_asterisk: **OPCON-23082: Password Recovery Validation Workflow**
+Added validation and guided steps to securely reset passwords using recovery codes.
 
-:eight_spoked_asterisk: **OPCON-23234**: Tag Management View Access: This feature adds a new permission for admins to control user access to the tag management view in Solution Manager. All existing roles will automatically be granted this privilege, but admins can now control which users are granted access to this view.
+:eight_spoked_asterisk: **OPCON-23094: Expanded Job Output Log Support**
+Support has been added for non-text logs, including video logs, in job output.
 
-:eight_spoked_asterisk: **OPCON-23244**: Reset Job Types from Studio: This feature adds the capability for users to reset supported job types in Solution Manager from the Studio designer view and no longer requires users to navigate to the Master Job list view to perform this function.
+:eight_spoked_asterisk: **OPCON-23095: RPA Licensing Logic Enforcement**
+Updated licensing logic to support the newer LSAM ID model used by OpCon RPA.
 
-:eight_spoked_asterisk: **OPCON-23245**: Configure a Default Homepage: This feature grants users the ability to define a custom landing page upon logging into Solution Manager by selecting the rocket icon displayed in the top right corner of each page. Any of the following pages can be selected as the homepage, but only one page can be active at a time:
-- Self-Service
-- Vision
-- Operations
-- Each page in Library
-- Studio
+:eight_spoked_asterisk: **OPCON-23096: RPA Script Runner Enhancements**
+Added support for OpCon RPA script runners and script types in Script Repository workflows.
 
-:eight_spoked_asterisk: **OPCON-23392**: OpCon MFT users now have the ability to select an option to “force download” the filtered file or list of files. This ensures that OpCon will always download the specified file(s) at runtime regardless of whether changes have been made to the file or not.
+:eight_spoked_asterisk: **OPCON-23230: Save Daily Job Changes to Master**
+Users can now push changes made to daily jobs directly to the associated master job.
 
-:eight_spoked_asterisk: **OPCON-23393**: Added ability to use latest script version in ACS jobs.
+:eight_spoked_asterisk: **OPCON-23234: Tag Management Permissions**
+Introduced permissions to control access to the Tag Management view.
 
-:eight_spoked_asterisk: **OPCON-23662**: Accessibility support has been added to the main navigation, and the following Solution Manager pages: Home, Library, Calendars, Global Properties, License & Support, Logs, Frequencies, Access Codes, Departments, Site Navigation, Login, Resources, Machine Groups, Reporting, Scripts, Server Options, Thresholds, Profile, Escalation Manager, and Access Management to support WCAG accessibility standards.
+:eight_spoked_asterisk: **OPCON-23244: Reset Job Types from Studio**
+Users can now reset supported job types directly from Studio.
 
-:eight_spoked_asterisk: **OPCON-24678**: Added the ability to report on user behavior within Solution Manager. This addition will help SMA determine which features are most valuable to our current customers.
+:eight_spoked_asterisk: **OPCON-23245: Configurable Default Homepage**
+Users can now define a default landing page when logging into Solution Manager.
 
-:eight_spoked_asterisk: **OPCON-24683**: Usage information, page count tracking, and click behavior tracking are captured.
+:eight_spoked_asterisk: **OPCON-23392: MFT Force Download Option**
+Users can now force downloads of filtered files in OpCon MFT.
 
-:eight_spoked_asterisk: **OPCON-25940**: Added an option in User Profile Settings page to uncheck selected jobs after job status update on the Processes page.
+:eight_spoked_asterisk: **OPCON-23393: Latest Script Version Support in ACS**
+ACS jobs can now use the latest script version automatically.
 
-:eight_spoked_asterisk: **OPCON-25961**: Added the ability to archive the output of an MFT Job.
+:eight_spoked_asterisk: **OPCON-23662: Accessibility Improvements**
+Accessibility enhancements were added across Solution Manager to better support WCAG standards.
 
-:white_check_mark: **OPCON-19737**: Fixed an issue where a machine's capabilities were not validated when it was added to a machine group.
+:eight_spoked_asterisk: **OPCON-24678: User Behavior Reporting**
+Added the ability to capture user behavior metrics.
 
-:white_check_mark: **OPCON-23224**: Fixed an issue where the user couldn't add jobs to daily multi-instance schedules.
+:eight_spoked_asterisk: **OPCON-24683: Usage Analytics Collection**
+Usage metrics including page counts and click behavior are now captured.
 
-:white_check_mark: **OPCON-24389**: Fixed several issues related to the machine groups panel on the agents page.
-- Fixed an issue where all machine groups start on the left even if agent has machine groups assigned.
-- Fixed an issue where agents page groups column is not updated after an update in the machine groups panel.
-- Fixed an issue where left and right arrows were enabled without any selected items.
+:eight_spoked_asterisk: **OPCON-25940: Job Selection Behavior Option**
+Added a setting allowing selected jobs to be automatically unchecked after status updates.
 
-:white_check_mark: **OPCON-24390**: Fixed an issue where the filtered agent status was not reflected properly in the url query parameter.
+:eight_spoked_asterisk: **OPCON-25961: MFT Output Archiving**
+Added the ability to archive MFT job output.
 
-:white_check_mark: **OPCON-24394**: Fixed an issue where clearing the machine group filter on the Agents Page did not restore those agents not in a group.
+:white_check_mark: **OPCON-19737: Machine Capability Validation Corrected**
+Resolved an issue where a machine's capabilities were not validated when it was added to a machine group.
 
-:white_check_mark: **OPCON-24405**: Fixed an issue where the Logs API does not remove/archive application log files correctly.
+:white_check_mark: **OPCON-23224: Multi-Instance Job Creation Fixed**
+Resolved an issue where users could not add jobs to daily multi-instance schedules.
 
-:white_check_mark: **OPCON-24492**: Fixed an issue where the default values were not the same when creating a new OpCon MFT agent.
+:white_check_mark: **OPCON-24389: Machine Groups Panel Stability Improvements**
+Resolved several issues affecting machine group layout, update behavior, and navigation controls on the Agents page.
 
-:white_check_mark: **OPCON-24512**: Fixed an issue where retry on failure values were removed after updating a daily job.
+:white_check_mark: **OPCON-24390: Agent Filter URL Accuracy Fixed**
+Resolved an issue where filtered agent status was not correctly reflected in URL query parameters.
 
-:white_check_mark: **OPCON-24563**: Fixed an issue with 'View Service Requests' privilege that let the user see jobs that they did not permissions for.
+:white_check_mark: **OPCON-24394: Agent Filter Reset Behavior Fixed**
+Resolved an issue where clearing a machine group filter did not restore agents not assigned to a group.
 
-:white_check_mark: **OPCON-24637**: Fixed an issue where double quotes were mishandled in Episys Answer Prompt jobs.
+:white_check_mark: **OPCON-24405: Application Log Archiving Fixed**
+Resolved an issue where application logs were not properly removed or archived.
 
-:white_check_mark: **OPCON-24949**: Fixed an issue causing agents page to timeout after selecting an agent.
+:white_check_mark: **OPCON-24492: MFT Agent Default Values Corrected**
+Resolved an issue where default values were inconsistent when creating a new OpCon MFT agent.
 
-:white_check_mark: **OPCON-25103**: Fixed issue "Cannot Load Daily Jobs" when right clicking certain jobs in Operations page.
+:white_check_mark: **OPCON-24512: Retry Settings Persistence Fixed**
+Resolved an issue where retry-on-failure values were removed after updating a daily job.
 
-:white_check_mark: **OPCON-25111**: Fixed an issue where a role could not be updated if a machine group to which it has access is deleted.
+:white_check_mark: **OPCON-24563: Service Request Permission Enforcement Corrected**
+Resolved an issue allowing users to view jobs without the proper permissions.
 
-:white_check_mark: **OPCON-25150**: Fixed an issue where filtering by column resets on every visit on the agents page.
+:white_check_mark: **OPCON-24637: Episys Quote Handling Fixed**
+Resolved an issue where double quotes were mishandled in Episys Answer Prompt jobs.
 
-:white_check_mark: **OPCON-25151**: Resolved an issue where assigning 'Can Update' access to a resource for a role did not work as expected.
+:white_check_mark: **OPCON-24949: Agents Page Timeout Fixed**
+Resolved an issue causing the Agents page to time out after selecting an agent.
 
-:white_check_mark: **OPCON-25158**: Fixed an issue where 'Daily Job Frequency' offset values were cleared on second save via turning admin off.
+:white_check_mark: **OPCON-25103: Daily Jobs Loading Issue Resolved**
+Resolved an issue where certain jobs caused errors when loading Daily Jobs from the Operations page.
 
-:white_check_mark: **OPCON-25159**: Fixed a permissions issue with master jobs where users with any privilege in &lt;All Departments&gt; were incorrectly able to modify master jobs.
+:white_check_mark: **OPCON-25111: Role Update Handling Fixed**
+Resolved an issue where a role could not be updated if a machine group it referenced was deleted.
 
-:white_check_mark: **OPCON-25736**: Fixed an issue which prevented users from selecting an ACS Integration as a Script Runner OS Type if the user had multiple ACS integrations installed.
+:white_check_mark: **OPCON-25150: Agent Page Filter Persistence Corrected**
+Resolved an issue where column filtering reset unexpectedly when revisiting the Agents page.
 
-:white_check_mark: **OPCON-25757**: Fixed the error message "Trigger name is required” when clicking the Test button while creating a new notification trigger.
+:white_check_mark: **OPCON-25151: Resource Permission Update Fixed**
+Resolved an issue where assigning "Can Update" access to a resource did not work as expected.
 
-:white_check_mark: **OPCON-25786**: Fixed an issue where the user could save a Daily Job while ACS was still loading the schema.
+:white_check_mark: **OPCON-25158: Daily Job Frequency Offset Retention Fixed**
+Resolved an issue where frequency offset values were cleared after a second save.
 
-:white_check_mark: **OPCON-25799**: Fixed Notification triggers machine groups dropdown pagination. The dropdown should now load extra notification groups when scrolling down.
+:white_check_mark: **OPCON-25159: Master Job Permission Enforcement Corrected**
+Resolved an issue where users with privileges in &lt;All Departments&gt; could incorrectly modify master jobs.
 
-:white_check_mark: **OPCON-25798**: Fixed an issue on notification triggers page where the delete button was enabled when adding a new notification trigger.
+:white_check_mark: **OPCON-25736: ACS Integration Selection Fixed**
+Resolved an issue preventing users from selecting an ACS Integration as a Script Runner OS type when multiple integrations were installed.
 
-:white_check_mark: **OPCON-25832**: Fixed validation issues with machines and machine groups on the Master Jobs and Daily Jobs definition pages. 
+:white_check_mark: **OPCON-25757: Notification Trigger Validation Fixed**
+Resolved an issue where an incorrect error message appeared when testing notification triggers.
 
-:white_check_mark: **OPCON-25845**: Fixed an issue causing nodes to stack on top of one another due to incorrect node positions on the workflow page.
+:white_check_mark: **OPCON-25786: Daily Job Save During ACS Load Fixed**
+Resolved an issue preventing daily jobs from being saved while ACS schema loading was in progress.
 
-:white_check_mark: **OPCON-25846**: Fixed a memory leak issue on the scripts runners page when interacting with large databases.
+:white_check_mark: **OPCON-25799: Notification Trigger Group Pagination Fixed**
+Resolved an issue where additional notification groups were not loading correctly when scrolling.
 
-:white_check_mark: **OPCON-25849**: Adjusted various UI elements for accessibility and 508 compliance.
+:white_check_mark: **OPCON-25798: Notification Trigger Delete Button Behavior Fixed**
+Resolved an issue where the delete button was enabled while creating a new trigger.
 
-:white_check_mark: **OPCON-25851**: Fixed label on the 'To' input field within the deploy script dialog.
+:white_check_mark: **OPCON-25832: Machine and Machine Group Validation Fixed**
+Resolved validation issues on Master Jobs and Daily Jobs definition pages.
 
-:white_check_mark: **OPCON-25856**: Fixed an issue where &lt;All Departments&gt; was inadvertently available in the master job department select.
+:white_check_mark: **OPCON-25845: Workflow Node Positioning Fixed**
+Resolved an issue causing workflow nodes to overlap due to incorrect positioning.
 
-:white_check_mark: **OPCON-25864**: Fixed an issue which could cause Solution Manager to crash after switching between certain ACS task types.
+:white_check_mark: **OPCON-25846: Script Runner Memory Leak Fixed**
+Resolved a memory leak issue when interacting with large databases on the script runners page.
 
-:white_check_mark: **OPCON-25865**: Fixed an issue which prevented ACS jobs from being fully cleaned up after deletion.
+:white_check_mark: **OPCON-25849: Accessibility and UI Adjustments**
+Various UI elements were adjusted to improve accessibility and 508 compliance.
 
-:white_check_mark: **OPCON-25878**: Fixed an issue where departments to which the user did not have access were available when adding or modifying a Master Job.
+:white_check_mark: **OPCON-25851: Deploy Script Dialog Label Corrected**
+Resolved a labeling issue in the deploy script dialog.
 
-:white_check_mark: **OPCON-25896**: Fixed an issue where JCL Data was not displayed for daily and master jobs.
+:white_check_mark: **OPCON-25856: Department Selection List Corrected**
+Resolved an issue where &lt;All Departments&gt; was incorrectly available in certain master job selections.
 
-:white_check_mark: **OPCON-25905**: Improved performance when editing a Batch User.
+:white_check_mark: **OPCON-25864: ACS Task Switching Stability Fixed**
+Resolved an issue where Solution Manager could crash when switching between certain ACS task types.
 
-:white_check_mark: **OPCON-25906**: Resolved an issue where the add named instance button was enabled on the Master Schedule Definition page in read-only mode.
+:white_check_mark: **OPCON-25865: ACS Job Cleanup Fixed**
+Resolved an issue preventing ACS jobs from being fully cleaned up after deletion.
 
-:white_check_mark: **OPCON-25907**: Fixed an issue where 'Use Exit Code From Script Result' was not properly updated in MS SQL Script jobs for daily jobs.
+:white_check_mark: **OPCON-25878: Department Visibility Enforcement Fixed**
+Resolved an issue where users could see departments they did not have access to.
 
-:white_check_mark: **OPCON-25913**: Fixed an issue in Studio when canceling copying a job, the schedule is not longer able to load.
+:white_check_mark: **OPCON-25896: JCL Data Display Fixed**
+Resolved an issue where JCL data was not displayed for daily and master jobs.
 
-:white_check_mark: **OPCON-25914**: Increased query timeout value while running migrations for OpCon version 24.1.
+:white_check_mark: **OPCON-25905: Batch User Editing Performance Improved**
+Improved performance when editing batch users.
 
-:white_check_mark: **OPCON-25917**: Fixed an issue in Studio where canceling actions gave an error.
+:white_check_mark: **OPCON-25906: Named Instance Button State Corrected**
+Resolved an issue where the Add Named Instance button appeared enabled in read-only mode.
 
-:white_check_mark: **OPCON-25924**: Fixed an issue where selecting a date from a new year would remove all previously selected dates from other years. Calendar selections are now persistent across multiple years. 
+:white_check_mark: **OPCON-25907: Script Exit Code Setting Update Fixed**
+Resolved an issue where exit code settings were not properly updated in MS SQL Script jobs.
 
-:white_check_mark: **OPCON-25939**: Fixed an issue where job execution history was empty for multi-instance jobs.
+:white_check_mark: **OPCON-25913: Studio Copy Cancel Behavior Fixed**
+Resolved an issue where canceling a copy operation prevented schedules from loading.
 
-:white_check_mark: **OPCON-25954**: Web Services jobs, although not fully supported, no longer cause an error when updating some details of the job.
+:white_check_mark: **OPCON-25914: Migration Query Timeout Increased**
+Increased query timeout values during migrations from OpCon 24.1.
 
-:white_check_mark: **OPCON-25955**: Adjusted character limit on database fields from 4000 char limit to nvchar(max).
+:white_check_mark: **OPCON-25917: Studio Cancel Action Error Fixed**
+Resolved an issue where canceling actions in Studio generated errors.
 
-:white_check_mark: **OPCON-25979**: Fixed an issue where users could not see some jobs associated with tags in tag manager.
+:white_check_mark: **OPCON-25924: Calendar Selection Persistence Fixed**
+Resolved an issue where selecting dates in a new year removed selections from previous years.
 
-:white_check_mark: **OPCON-26016**: Fixed an issue with the 'Save Daily Job and Push to Master Job' button on the Daily Jobs page.
+:white_check_mark: **OPCON-25939: Multi-Instance Job History Display Fixed**
+Resolved an issue where execution history appeared empty for multi-instance jobs.
 
-:white_check_mark: **OPCON-26026**: Fixed an issue on in the Notification Triggers manager Group page where the checkboxes on page 2 and beyond did not populate with the correct value.
+:white_check_mark: **OPCON-25954: Web Services Job Update Stability Improved**
+Resolved an issue where updating certain Web Services job details caused errors.
 
-:white_check_mark: **OPCON-26049**: Fixed an issue where only the first 25 available groups were displayed on the Manage Categories page.
+:white_check_mark: **OPCON-25955: Database Field Length Increased**
+Increased character limits on certain database fields to support larger values.
 
-:white_check_mark: **OPCON-26050**: Fixed an issue in ACS where setNestedFieldValues logic failed to handle key removal.
+:white_check_mark: **OPCON-25979: Tag Manager Job Visibility Fixed**
+Resolved an issue where some tagged jobs were not visible to users.
 
-:white_check_mark: **OPCON-26072**: Fixed a permissions issue where users were incorrectly prevented from seeing the Agents page.
+:white_check_mark: **OPCON-26016: Save Daily Job and Push to Master Fixed**
+Resolved an issue affecting the Save Daily Job and Push to Master Job function.
 
-:white_check_mark: **OPCON-26075**: Fixed an issue on the ACS Agent Details Page where a new Agent did not reload RJSF when switching between multiple applications.
+:white_check_mark: **OPCON-26026: Notification Group Checkbox State Fixed**
+Resolved an issue where checkbox values were incorrect on paginated pages.
 
-:white_check_mark: **OPCON-26093**: Fixed an issue that prevented creating new SQL Other DB master jobs.
+:white_check_mark: **OPCON-26049: Category Management Pagination Fixed**
+Resolved an issue where only the first 25 groups were displayed.
 
-:white_check_mark: **OPCON-26103**: Fixed an issue where the /api/acs/rjsf endpoint did not take the machine's NetComName into account.
+:white_check_mark: **OPCON-26050: ACS Nested Field Handling Fixed**
+Resolved an issue where nested field values were not processed correctly.
 
-#### REST API
+:white_check_mark: **OPCON-26072: Agents Page Permission Issue Fixed**
+Resolved an issue preventing some users from viewing the Agents page.
 
-:eight_spoked_asterisk: **OPCON-25859**: REST API Change Summary – Machine Endpoints. GET /machine: Previously returned job cross-references by default. Now requires explicit parameters: IncludeAssignedMasterJobs=true and IncludeAssignedDailyJobs=true. POST /machine (group assignment): Previously accepted group IDs only. Now requires full group objects: Gr_Id, Name, and Type. These changes impact automation scripts and integrations relying on older REST API behaviors. Updating documentation and usage is recommended to avoid disruptions.
+:white_check_mark: **OPCON-26075: ACS Agent Details Page Reload Fixed**
+Resolved an issue where RJSF did not reload when switching applications.
 
-:eight_spoked_asterisk: **OPCON-25012**: The OpCon API now returns HSTS headers (strict-transport-security) for HTTPS responses, which makes it impossible for your browser to attempt an HTTP connection with the API (forces HTTPS connections), and hence prevents an HSTS vulnerability.
+:white_check_mark: **OPCON-26093: SQL Other DB Master Job Creation Fixed**
+Resolved an issue preventing creation of certain SQL master jobs.
 
-:white_check_mark: **OPCON-25738**: Added additional validation for job name and schedule name in delete-daily-job endpoint.
+:white_check_mark: **OPCON-26103: ACS API Machine Name Handling Fixed**
+Resolved an issue where the API did not correctly use the machine NetComName.
 
-:white_check_mark: **OPCON-25740**: Fixed an issue where "Update schedule status request sent." was returned even when exceptions were encountered in update-schedule-status endpoint.
+### Why This Matters
 
-:white_check_mark: **OPCON-25744**: Added null reference check in request.Date for get-failed-jobs endpoint.
+These fixes improve scheduling reliability, user interface stability, permissions accuracy, and workflow behavior across Solution Manager, reducing errors and making day-to-day administration more predictable and efficient.
 
-:white_check_mark: **OPCON-26153**: Fixed an issue where OpconMFT agent was not communicating after install/upgrade.
+## REST API
 
-#### ImpEx2 Web Service
+### What's New
 
-:eight_spoked_asterisk: **OPCON-25933**: Made enhancements to Windows and Unix job import to support splitting Deploy script and schedule / package deployments. Import routines need to check local OpCon database for script information (script, scripttype, runner ids) as the script information is no longer part of the OpConExtract object.   
+:eight_spoked_asterisk: **OPCON-25859: Machine Endpoint Behavior Updates**
+Updated Machine endpoints to require explicit parameters and full group objects, improving clarity and consistency for integrations.
 
-:white_check_mark: **OPCON-25144**: Fixed a problem when importing schedule definitions that contain multiple roles and the role names have been transformed to the same name causing a duplicate key violation. Fix ensures that duplicate roles and no longer inserted.
+:eight_spoked_asterisk: **OPCON-25012: HSTS Security Headers Added**
+API responses now include HSTS headers to enforce HTTPS connections.
 
-:white_check_mark: **OPCON-25833**: Fixed a problem during the script extract process to include a list of roles associated with the script. 
-Fixed a problem during the script deployment process to assign the roles associated with the script.
-Requires Deploy version 25.0.0.
+:white_check_mark: **OPCON-25738: Delete Daily Job Validation Improvements**
+Improved validation for job and schedule names.
 
-:white_check_mark: **OPCON-26097**: Fixed a problem during schedule deployment when the schedule definition included BIS jobs and the schedule exists on the target OpCon system. The BIS RunId field was incorrectly reset. 
+:white_check_mark: **OPCON-25740: Update Schedule Status Response Corrected**
+Resolved an issue where success messages were returned even when errors occurred.
 
-:white_check_mark: **OPCON-26137**: Fixed a problem during deployment when schedule privileges are lost. When role does not include inherit all schedules and a deployment is performed and the role names are the same but characters have different case then the schedule privilege is incorrectly removed.   
+:white_check_mark: **OPCON-25744: Failed Jobs Endpoint Stability Improved**
+Added null reference handling to prevent API errors.
 
-#### Documentation
+:white_check_mark: **OPCON-26153: MFT Agent Communication Fixed**
+Resolved an issue where the MFT agent could stop communicating after install or upgrade.
 
-:white_check_mark: **OPCON-25842**: Updated API documentation for jobTags endpoint.
+### Why This Matters
 
-:white_check_mark: **OPCON-25843**: Fixed API documentation for posting a new script runner.
+These changes improve integration reliability, strengthen API security, and make automation and third-party integrations more predictable.
+
+## ImpEx2 Web Service
+
+### What's New
+
+:eight_spoked_asterisk: **OPCON-25933: Job Import Improvements**
+Enhanced job import behavior to better support split deployments and script metadata handling.
+
+:white_check_mark: **OPCON-25144: Duplicate Role Handling Fixed**
+Resolved an issue where duplicate roles could cause deployment failures.
+
+:white_check_mark: **OPCON-25833: Script Role Association Fixed**
+Resolved issues assigning roles during script extract and deployment.
+
+:white_check_mark: **OPCON-26097: BIS Job Deployment Fix**
+Resolved an issue where BIS RunId values were reset incorrectly during deployment.
+
+:white_check_mark: **OPCON-26137: Schedule Privilege Preservation Fixed**
+Resolved an issue where schedule privileges could be lost due to role name casing differences.
+
+### Why This Matters
+
+These updates make deployments more reliable, reduce migration risks, and improve consistency when promoting schedules and scripts between environments.
+
+## Documentation
+
+### What's New
+
+:white_check_mark: **OPCON-25842: Job Tags API Documentation Updated**
+Updated API documentation for jobTags endpoints.
+
+:white_check_mark: **OPCON-25843: Script Runner Documentation Corrected**
+Fixed documentation for posting new script runners.
+
+### Why This Matters
+
+Clearer documentation helps administrators and developers implement integrations more quickly and with fewer errors.
