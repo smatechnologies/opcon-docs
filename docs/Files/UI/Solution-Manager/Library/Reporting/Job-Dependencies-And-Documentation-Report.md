@@ -1,16 +1,16 @@
-# Event Details by Date Report
+# Job Dependencies and Documentation Report
 
-The **Event Details by Date Report** shows all daily triggered events with their schedules, jobs, trigger, match, and event details.
+The **Job Dependencies and Documentation Report** is used to view daily job dependencies, documentation, and related scheduling information.
 
-:::note
-Report data is updated nightly at 2:00 AM.
+:::info
+By default, this report shows data for schedules on or after today's date.
 :::
 
 :::note
 This report has a maximum return limit of 100,000 records.
 :::
 
-![A screen showing the Event Details Report](../../../../../Resources/Images/SM/Library/Reporting/EventDetailsByDateReport.png "Event Details Report")
+![A screen showing the Job Dependencies and Documentation Report](../../../../../Resources/Images/SM/Library/Reporting/JobDependenciesAndDocumentationReport.png "Job Dependencies and Documentation Report")
 
 ### Filtering & Sorting
 
