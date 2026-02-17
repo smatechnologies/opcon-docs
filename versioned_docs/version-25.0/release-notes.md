@@ -14,7 +14,7 @@ Release 25 focused heavily on **stability, scheduling reliability, API improveme
 * **Enterprise Manager** - 25.0
 * **ServiceNow** Connector - 21.4 or higher
 * **WebServices** Connector - 21.2 or higher
-* **Deploy** - 25.0.0 or higher
+* **Deploy** - 25.2.0 or higher
 
 **2026 February**
 
