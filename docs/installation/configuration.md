@@ -57,6 +57,24 @@ The OpCon Server component's database connection should have been automatically 
 7. Click **OK** to confirm the connection.
 8. Click **OK** to close the program.
 
+#### Advanced Database Connection Parameters (OpCon REST API)
+
+The OpCon REST API uses the connection string stored in `SMAODBCConfiguration.DAT` for its database connection. You can add optional parameters such as `MaxPoolSize` by editing the file manually.
+
+:::caution
+Stop the OpCon REST API service before editing. Create a backup of the file before making changes.
+:::
+
+**File location:** `C:\ProgramData\OpConxps\SAM\SMAODBCConfiguration.DAT` (or the SAM folder if your installation uses a different path)
+
+**Format:** The file contains a SQL connection string with semicolon-separated parameters. Append additional parameters to the end of the string before the final semicolon.
+
+| Parameter | Description |
+| --- | --- |
+| **MaxPoolSize** | Sets the maximum number of connections in the connection pool. Use this to tune performance for environments with many concurrent REST API requests. Append `MaxPoolSize=500` (or your desired value) to the connection string. |
+
+Restart the OpCon REST API service after saving the file.
+
 #### Create a Profile for the EM to Connect to the Database
 
 1. Use menu path: **Start \> All Programs \> OpConxps \> Enterprise Manager**.
