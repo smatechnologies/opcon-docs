@@ -4,6 +4,30 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 22.0.23
+
+2026 February
+
+#### Server
+
+:white_check_mark: **OC-5355**: Fixed an issue with $JOB:ADD events.
+
+#### Solution Manager
+
+:white_check_mark: **OC-3610**: Fixed an issue where updating a batch user removed them from the daily job.
+
+:white_check_mark: **OC-3611**: Fixed an issue where instance properties were removed from the master schedule when the schedule was changed to multi-instance.
+
+:white_check_mark: **OC-3854**: Fixed an issue in daily jobs where the start machine for File Transfer jobs was not updated when the source machine changed.
+
+:white_check_mark: **OC-5424**: Fixed an issue where a Self Service with a certain regular expression pattern could not be saved.
+
+#### ImpEx2 Web Service
+
+:white_check_mark: **OC-1906**: Improved handling of schedule instance property merges and introduced a new Deploy rule for merging properties.
+
+:white_check_mark: **OC-3683**: Fixed a problem when retrieving batch user definition from the database and the batch user name contains a special character ([,.).
+
 ## OpCon 22.0.21
 
 2025 July
