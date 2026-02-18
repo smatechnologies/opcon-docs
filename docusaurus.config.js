@@ -24,10 +24,10 @@ module.exports = {
           position: "right",
           versions: {
             current: {label: 'OpCon'},
+            '26.0': {label: '26.0'},
             '25.0': {label: '25.0'},
             '23.0': {label: '23.0'},
             '22.0': {label: '22.0'},
-            '21.0': {label: '21.0'},
           },
         },
       ],
@@ -51,6 +51,11 @@ module.exports = {
             current: {
               label: "current",
             },
+            "26.0": {
+              label: "26.0",
+              path: "v26.0",
+              banner: "none",
+            },
             "25.0": {
               label: "25.0",
               path: "v25.0",
@@ -64,11 +69,6 @@ module.exports = {
             "22.0": {
               label: "22.0",
               path: "v22.0",
-              banner: "none",
-            },
-            "21.0": {
-              label: "21.0",
-              path: "v21.0",
               banner: "none",
             },
           },
