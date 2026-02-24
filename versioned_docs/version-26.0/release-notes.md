@@ -127,7 +127,7 @@ Customers benefit from improved resilience, faster recovery from network issues,
 :white_check_mark: **OC-4593: REST API Security Hardening**
 A path traversal vulnerability in the Logs endpoint has been addressed, strengthening overall API security.
 
-:open_file_folder: **OC-5089: Updated API Documentation**
+:white_check_mark: **OC-5089: Updated API Documentation**
 Job History API documentation has been updated to reflect current behavior and improve developer usability.
 
 ### Why This Matters
