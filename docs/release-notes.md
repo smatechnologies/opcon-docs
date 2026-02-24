@@ -8,7 +8,7 @@ sidebar_label: "Release Notes"
 
 #### 26.0.1
 
-**NOTE****: Verify/Upgrade these components if applicable**:
+**NOTE**: Verify/Upgrade these components if applicable:
 
 * **Enterprise Manager** - 26.0
 * **ServiceNow** Connector – 21.4 or higher
@@ -154,7 +154,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 #### 25.3.1
 
-**NOTE****: Verify/Upgrade these components if applicable**: 
+**NOTE**: Verify/Upgrade these components if applicable: 
 
 * **Enterprise Manager** - 25.0 
 * **ServiceNow** Connector – 21.4 or higher
@@ -172,7 +172,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 #### 25.3.0
 
-**NOTE****: Verify/Upgrade these components if applicable**: 
+**NOTE**: Verify/Upgrade these components if applicable: 
 
 * **Enterprise Manager** - 25.0 
 * **ServiceNow** Connector – 21.4 or higher
