@@ -6,7 +6,7 @@ sidebar_label: "Release Notes"
 
 ## OpCon 26.0.1
 
-**NOTE****: Verify/Upgrade these components if applicable**:
+**NOTE**: Verify/Upgrade these components if applicable:
 
 * **Enterprise Manager** - 26.0
 * **ServiceNow** Connector – 21.4 or higher
