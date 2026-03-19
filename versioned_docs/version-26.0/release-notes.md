@@ -4,6 +4,28 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 26.0.2
+
+**NOTE**: Verify/Upgrade these components if applicable:
+
+* **Enterprise Manager** - 26.0
+* **ServiceNow** Connector – 21.4 or higher
+* **WebServices** Connector – 21.2 or higher
+* **Deploy** – 26.0.0 or higher
+* **Relay** - 25.1.1 or higher
+
+2026 March
+
+#### Server
+
+:white_check_mark: **OC-5055**: Truncated SQL query in SAM and Critical logs to avoid overflow.
+
+:white_check_mark: **OC-6340**: Fixed an issue where the Reporting Service could crash on DST spring‑forward transition days for environments using a US (or similar) timezone with the default schedule time of 02:00.
+
+#### REST API
+
+:white_check_mark: **OC-6104**: Added support for a MaxPoolSize configuration key in the API, allowing administrators to specify the maximum connection pool size via SMAODBCConfiguration.DAT.
+
 ## OpCon 26.0.1
 
 **NOTE**: Verify/Upgrade these components if applicable:
