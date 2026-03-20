@@ -5533,7 +5533,7 @@ onetime@^5.1.2:
     "@svgr/webpack" "^6.5.1"
     clsx "^1.1.1"
     file-loader "^6.2.0"
-    opcon-docs "file:../../../../AppData/Local/Yarn/Cache/v6/npm-opcon-docs-21.0.0-553fc5b9-dab4-4513-be51-e35da9607c22-1757352291038/node_modules/opcon-docs"
+    opcon-docs "file:."
     react "^17.0.1"
     react-dom "^17.0.1"
     url-loader "^4.1.1"
@@ -7322,9 +7322,9 @@ undici-types@~6.13.0:
   integrity sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==
 
 undici@^6.19.5:
-  version "6.19.7"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-6.19.7.tgz#7d4cf26dc689838aa8b6753a3c5c4288fc1e0216"
-  integrity sha512-HR3W/bMGPSr90i8AAp2C4DM3wChFdJPLrWYpIS++LxS8K+W535qftjt+4MyjNYHeWabMj1nvtmLIi7l++iq91A==
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-6.24.1.tgz#9df1425cede20b836d95634347946f79578b7e71"
+  integrity sha512-sC+b0tB1whOCzbtlx20fx3WgCXwkW627p4EA9uM+/tNNPkSS+eSEld6pAs9nDv7WbY1UUljBMYPtu9BCOrCWKA==
 
 unherit@^1.0.4:
   version "1.1.3"
