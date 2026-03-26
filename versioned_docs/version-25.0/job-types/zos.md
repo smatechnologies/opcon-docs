@@ -457,13 +457,20 @@ value to scan for in the remainder of the message text.
         exclusion.
 
   - The offset is variable and the length of the text within the
-        brackets determines the length.
+        brackets determines the length. The variable text is limited
+        to 42 characters; if exceeded, the trigger entry is skipped.
 
   - If the fixed text is located in a message,
         OpCon scans for the text found in the
         brackets ('{}') in the remainder of the text. If the exclusion
         operator is used, the message will only match if the enclosed
         text is not found.
+
+  - For WTOR (Write-To-Operator with Reply) messages, the reply ID
+        number at the beginning of the message is automatically
+        excluded before matching. The **Offset** value should be set
+        relative to the message text that follows the reply number,
+        not relative to the reply number itself.
 
   - If the fixed text ends with a hyphen ('-'), the variable key
         must be separated from the fixed text by a space to avoid
@@ -1061,7 +1068,16 @@ the FIXED key. The **Msg Len** column defines the length of the FIXED
 key. ALL WTO triggers MUST have a FIXED key. The variable portion is
 optional. A variable key is defined within brackets {}. Once the fixed
 key is located in a record, a variable key is scanned for AFTER the end
-of the fixed key.
+of the fixed key. The variable text between the brackets is limited to
+42 characters; if exceeded, the trigger entry is skipped. If MLWTO=Y is
+set in XPSPARMS, the variable key will also be searched in any minor
+(continuation) lines of a multi-line WTO message.
+
+For WTOR (Write-To-Operator with Reply) messages, the reply ID number
+at the beginning of the message is automatically excluded before
+matching. The **Msg Off** value should be set relative to the message
+text that follows the reply number, not relative to the reply number
+itself.
 
 IVP job IVPPROC1 is used as a series of complex repeated messages that
 have variable contents. IVPPROC1 triggers on the following message:
