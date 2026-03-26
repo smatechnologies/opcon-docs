@@ -414,6 +414,30 @@ File Resource allows up to 80 pre-run definitions for dataset resources.
 - **Condition**: Defines the type of data access condition to cause a
     trigger: Available options are *Exists, Created, Updated, Deleted,
     Referenced, Cataloged,* and *Uncataloged*.
+  - *Created* triggers when a dataset is allocated with DISP=NEW
+        (SMF Type 15 record).
+  - *Updated* triggers when an existing dataset is accessed with
+        DISP=OLD or DISP=MOD (SMF Type 15 record). Does not trigger
+        for newly created datasets.
+  - *Deleted* triggers when a dataset is deleted via DISP=DELETE or
+        scratched (SMF Type 15 or Type 17 record).
+  - *Referenced* triggers on any reference to the dataset, including
+        open for input or output.
+  - *Cataloged* triggers when a dataset is cataloged (SMF Type 61
+        record).
+  - *Uncataloged* triggers when a dataset is uncataloged (SMF Type
+        65 record).
+  - For VSAM datasets (SMF Type 64), triggers only fire when the
+        dataset is closed, not when it is opened. A VSAM dataset is
+        considered "updated" only if records were added, deleted, or
+        changed during the access.
+
+  :::note
+  The following dataset activity is excluded from trigger processing:
+  - Datasets accessed by an abending task are not evaluated for triggers.
+  - Temporary datasets, VIO (Virtual I/O) datasets, and end-of-volume (EOV) records are ignored.
+  - Type 17 SMF recording is optional. If Type 17 records are not being written, the *Deleted* condition will only trigger on DISP=DELETE, not on dataset scratch operations. Type 17 records are only needed if dataset scratch is used as a trigger condition.
+  :::
 - **When**: Determines whether this File Resource trigger is to remain
     in effect after the associated event is triggered.
   - 'While/As Scheduled Only' causes the trigger monitor to delete
@@ -862,12 +886,21 @@ event, the LSAM immediately submits or initiates the associated job, task, or co
         occur on the scheduled date of the associated job. This action
         waits for the trigger to occur or the expiration of the
         parameters (e.g., scheduled date).
-  - The 'Delete' option only functions when JCL containing a
-        DISP=(,DELETE,\[DELETE\]) is honored.     -   'Reference' works for ANY reference, including Open and Close
+  - The 'Delete' option triggers when JCL containing
+        DISP=(,DELETE,\[DELETE\]) is honored, or when a dataset scratch
+        is recorded (Type 17 SMF record). If Type 17 recording is not
+        active, only DISP=DELETE will trigger the condition.
+  - 'Reference' works for ANY reference, including Open and Close
         processing, and should be used sparingly. Each I/O function
         counts as a reference generation, regardless of file processing.
         For example, the sequence of Open-Process-Close generates 3
         references.
+  - Datasets accessed by an abending task, temporary datasets, VIO
+        datasets, and end-of-volume records are excluded from trigger
+        processing.
+  - For VSAM datasets, triggers only fire on dataset close, not on
+        open. A VSAM 'Updated' condition requires that records were
+        actually added, deleted, or changed during the access.
   - The 'Condition' choices are:
     - Exists
     - Created
