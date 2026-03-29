@@ -4,6 +4,58 @@ sidebar_label: "Release Notes"
 
 # OpCon Release Notes
 
+## OpCon 23.0.14
+
+**NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
+
+2026 March
+
+#### Server
+
+:white_check_mark: **OC-4988**: Fixed an issue in the Notify Handler that could cause logging to stop and delay notification delivery.
+
+:white_check_mark: **OC-5055**: Truncated SQL query in SAM and Critical logs to avoid overflow.
+
+:white_check_mark: **OC-6304**: Addressed a potential CRLF injection security vulnerability related to MimeKit 4.15.0.
+
+#### Solution Manager
+
+:white_check_mark: **OC-2700**: Fixed an issue where a job using "on occurrence last Friday of the quarter" frequency was excluded even though it was included in the forecast.
+
+:white_check_mark: **OC-3777**: Fixed an issue in the Tags page where the state of the parent checkbox was not correct.
+
+:white_check_mark: **OC-2784**: Added a pop-up message when querying SAP would take more than 30 seconds.
+
+:white_check_mark: **OC-4355**: Fixed an issue where viewing cross references for certain resources was giving an error.
+
+:white_check_mark: **OC-4366**: Fixed some display issues related to sub-schedule in Studio canvas.
+
+:white_check_mark: **OC-4540**: Fixed an issue where schedule level frequency change was ignored at the job level.
+
+:white_check_mark: **OC-4578**: Fixed a typo in the MCP Master Job “START” Job Summary header so it correctly displays “Job Summary Information.”
+
+:white_check_mark: **OC-4605**: Fixed an issue where jobs with "On Interval" frequencies using interval days could not build.
+
+:white_check_mark: **OC-4639**: Fixed an issue where "Requires XML Escape Sequences" property was not set for ACS agents.
+
+:white_check_mark: **OC-5300**: Fixed an issue where a user without machine privileges was not able to view SMAFT daily jobs.
+
+:white_check_mark: **OC-5422**: Fixed issue with property value containing the ampersand in Notification Manager.
+
+:white_check_mark: **OC-5861**: Fixed an issue that prevented script versions from being deleted.
+
+:white_check_mark: **OC-5689**: Fixed issue in Master Jobs Frequency where an "Invalid frequency FinishOkBehavior property found: RecurringInstanceOffsets" error was thrown.
+
+:white_check_mark: **OC-5988**: Fixed an issue where deleting a user could prevent jobs with associated events from loading.
+
+:white_check_mark: **OC-6113**: Fixed an issue with overlapping nodes in Studio canvas. 
+
+:white_check_mark: **OC-6204**: Fixed an issue that caused the error "Unable to load the Trigger" when editing a master job.
+
+#### REST API
+
+:white_check_mark: **OC-6104**: Added support for a MaxPoolSize configuration key in the API, allowing administrators to specify the maximum connection pool size via SMAODBCConfig.DAT.
+
 ## OpCon 23.0.13
 
 **NOTE**: Verify/Upgrade these components if applicable: **ServiceNow** Connector – 21.4 or higher, **WebServices** Connector – 21.2 or higher, **Deploy** – 22.4 or higher
