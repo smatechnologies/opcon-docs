@@ -12,11 +12,11 @@ sidebar_label: "Release Notes"
 
 #### Server
 
+:eight_spoked_asterisk: **OC-6304**: Addressed a potential CRLF injection security vulnerability related to MimeKit 4.15.0.
+
 :white_check_mark: **OC-4988**: Fixed an issue in the Notify Handler that could cause logging to stop and delay notification delivery.
 
 :white_check_mark: **OC-5055**: Truncated SQL query in SAM and Critical logs to avoid overflow.
-
-:white_check_mark: **OC-6304**: Addressed a potential CRLF injection security vulnerability related to MimeKit 4.15.0.
 
 #### Solution Manager
 
