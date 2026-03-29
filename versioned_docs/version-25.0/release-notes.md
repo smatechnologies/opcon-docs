@@ -8,6 +8,92 @@ sidebar_label: "Release Notes"
 
 Release 25 focused heavily on **stability, scheduling reliability, API improvements, and deployment enhancements**. These updates improve day-to-day operations, reduce troubleshooting time, and strengthen integration reliability across OpCon environments.
 
+## OpCon 25.0.6
+
+**NOTE**: Verify/Upgrade these components if applicable:
+* **Enterprise Manager** - 25.0
+* **ServiceNow** Connector - 21.4 or higher
+* **WebServices** Connector - 21.2 or higher
+* **Deploy** - 25.2.0 or higher
+
+**2026 March**
+
+#### Server
+
+:eight_spoked_asterisk: **OC-6304**: Addressed a potential CRLF injection security vulnerability related to MimeKit 4.15.0.
+
+:white_check_mark: **OC-4988**: Fixed an issue in the Notify Handler that could cause logging to stop and delay notification delivery.
+
+:white_check_mark: **OC-5055**: Truncated SQL query in SAM and Critical logs to avoid overflow.
+
+:white_check_mark: **OC-6388**: Fixed an issue where SMAFT jobs intermittently failed to start with a "Missing Machine IP address" error, requiring a Relay or pod restart to recover.
+
+#### Solution Manager
+
+:white_check_mark: **OC-2700**: Fixed an issue where a job using "on occurrence last Friday of the quarter" frequency was excluded even though it was included in the forecast.
+
+:white_check_mark: **OC-2784**: Added a pop-up message when querying SAP would take more than 30 seconds.
+
+:white_check_mark: **OC-3021**: Fixed an issue in Studio where some of the menu items on the right-hand panel were not displayed when a job was selected.
+
+:white_check_mark: **OC-3777**: Fixed an issue in the Tags page where the state of the parent checkbox was not correct.
+
+:white_check_mark: **OC-4140**: Fixed an issue where jobs disappeared in Studio but were visible in the mini-map.
+
+:white_check_mark: **OC-4206**: Fixed an issue where the estimated start time was incorrect when the job depended on another job from the previous day.
+
+:white_check_mark: **OC-4265**: Fixed an issue where users without an email did not get escalation acknowledgements.
+
+:white_check_mark: **OC-4355**: Fixed an issue where viewing cross references for certain resources was giving an error.
+
+:white_check_mark: **OC-4365**: Fixed the lag between selecting a new job and using the buttons, where during that lag the buttons still retrieve the previously selected job.
+
+:white_check_mark: **OC-4366**: Fixed some display issues related to sub-schedule in Studio Canvas.
+
+:white_check_mark: **OC-4452**: Fixed an issue in Master Jobs where removing the primary machine would display a blank page.
+
+:white_check_mark: **OC-4540**: Fixed an issue where schedule level frequency change was ignored at the job level.
+
+:white_check_mark: **OC-4541**: Fixed a validation error in Studio when clicking and dragging lines to create dependencies.
+
+:white_check_mark: **OC-4578**: Fixed a typo in the MCP Master Job “START” Job Summary header so it correctly displays “Job Summary Information.”
+
+:white_check_mark: **OC-4593**: Addressed a Logs endpoint path traversal vulnerability.
+
+:white_check_mark: **OC-4605**: Fixed an issue where jobs with "On Interval" frequencies using interval days could not build.
+
+:white_check_mark: **OC-4639**: Fixed an issue where "Requires XML Escape Sequences" property was not set for ACS agents.
+
+:white_check_mark: **OC-4673**: Fixed issue where the getfrequency by name query wildcards caused problems in Solution Manager.
+
+:white_check_mark: **OC-4756**: Fixed an issue where positive and negative numeric values were not recognized as valid MCP arguments.
+
+:white_check_mark: **OC-4994**: Fixed an issue where changing the selected column in the filter dialog on the Report Details pages caused an error.
+
+:white_check_mark: **OC-5063**: Resolved issue where an SSO user is able to reset their password and log back in as a normal user.  We now have a check in place to confirm that credentials entered during the password recovery workflow are not tied to an SSO user account.
+
+:white_check_mark: **OC-5300**: Fixed an issue where a user without machine privileges was not able to view SMAFT daily jobs.
+
+:white_check_mark: **OC-5422**: Fixed issue with property value containing the ampersand in Notification Manager.
+
+:white_check_mark: **OC-5466**: Fixed an issue preventing users from viewing all job histories when multiple histories exist for a daily job.
+
+:white_check_mark: **OC-5559**: Fixed an issue in Schedule and Job History Report where filtering on "Is Archived = any" did not work.
+
+:white_check_mark: **OC-5861**: Fixed an issue that prevented script versions from being deleted.
+
+:white_check_mark: **OC-5959**: Fixed an issue where RPA Scripts failed to deploy.
+
+:white_check_mark: **OC-5988**: Fixed an issue where deleting a user could prevent jobs with associated events from loading.
+
+:white_check_mark: **OC-6128**: Fixed an issue where the label "Requires All" in Resource Dependency section was truncated.
+
+:white_check_mark: **OC-6204**: Fixed an issue that caused the error "Unable to load the Trigger" when editing a master job.
+
+### REST API
+
+:white_check_mark: **OC-6104**: Added support for a MaxPoolSize configuration key in the API, allowing administrators to specify the maximum connection pool size via SMAODBCConfig.DAT.
+
 ## OpCon 25.0.5
 
 **NOTE**: Verify/Upgrade these components if applicable:
