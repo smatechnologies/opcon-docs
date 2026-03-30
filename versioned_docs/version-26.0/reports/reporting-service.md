@@ -20,6 +20,10 @@ This document describes the reporting service for on-premises Windows customers.
 
 - The service executable is named **ReportingService**
 
+:::note
+The reporting service must be installed by a user with SA privileges
+:::
+
 ---
 
 ## Configuration

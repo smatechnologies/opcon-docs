@@ -7,9 +7,31 @@ doc_type: conceptual
 
 ## Winter 26
 
+#### 26.0.2
+
+**NOTE**: Verify/Upgrade these components if applicable:
+
+* **Enterprise Manager** - 26.0
+* **ServiceNow** Connector – 21.4 or higher
+* **WebServices** Connector – 21.2 or higher
+* **Deploy** – 26.0.0 or higher
+* **Relay** - 25.1.1 or higher
+
+2026 March
+
+#### Server
+
+:white_check_mark: **OC-5055**: Truncated SQL query in SAM and Critical logs to avoid overflow.
+
+:white_check_mark: **OC-6340**: Fixed an issue where the Reporting Service could crash on DST spring‑forward transition days for environments using a US (or similar) timezone with the default schedule time of 02:00.
+
+#### REST API
+
+:white_check_mark: **OC-6104**: Added support for a MaxPoolSize configuration key in the API, allowing administrators to specify the maximum connection pool size via SMAODBCConfiguration.DAT.
+
 #### 26.0.1
 
-**NOTE****: Verify/Upgrade these components if applicable**:
+**NOTE**: Verify/Upgrade these components if applicable:
 
 * **Enterprise Manager** - 26.0
 * **ServiceNow** Connector – 21.4 or higher
@@ -130,7 +152,7 @@ Customers benefit from improved resilience, faster recovery from network issues,
 :white_check_mark: **OC-4593: REST API Security Hardening**
 A path traversal vulnerability in the Logs endpoint has been addressed, strengthening overall API security.
 
-:open_file_folder: **OC-5089: Updated API Documentation**
+:white_check_mark: **OC-5089: Updated API Documentation**
 Job History API documentation has been updated to reflect current behavior and improve developer usability.
 
 ### Why This Matters
@@ -155,7 +177,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 #### 25.3.1
 
-**NOTE****: Verify/Upgrade these components if applicable**: 
+**NOTE**: Verify/Upgrade these components if applicable: 
 
 * **Enterprise Manager** - 25.0 
 * **ServiceNow** Connector – 21.4 or higher
@@ -173,7 +195,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 #### 25.3.0
 
-**NOTE****: Verify/Upgrade these components if applicable**: 
+**NOTE**: Verify/Upgrade these components if applicable: 
 
 * **Enterprise Manager** - 25.0 
 * **ServiceNow** Connector – 21.4 or higher

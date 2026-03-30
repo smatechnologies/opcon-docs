@@ -46,6 +46,10 @@ This document covers the reporting service for on-premises Windows customers. Cl
 - The reporting service is **installed automatically** as part of the OpCon installer. No separate steps are required
 - The service executable is named **ReportingService**
 
+:::note
+The reporting service must be installed by a user with SA privileges
+:::
+
 ---
 
 ## Configuration

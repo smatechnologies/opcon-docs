@@ -40,16 +40,16 @@ To complete the upgrade to this release, it is important to complete all of the 
 
 To upgrade the OpCon Server, complete the procedures in this section in the following order, complete the following steps:
 
-1. [Prepare the Environment](#Prepare)
-2. [Update the OpCon Server Interactively](#Update)
+1. [Prepare the Environment](#prepare-the-environment)
+2. [Update the OpCon Server Interactively](#update-the-opcon-server-interactively)
 
 ### Prepare the Environment
 
 To prepare for installing the OpCon Server updates:
 
-- [Back up the OpCon Database](#Back)
-- [Stop Services and Manage Files](#Stop)
-- [Stop and Disable Replication or Mirroring](#Stop2)
+- [Back up the OpCon Database](#back-up-the-opcon-database)
+- [Stop Services and Manage Files](#stop-services-and-manage-files)
+- [Stop and Disable Replication or Mirroring](#stop-and-disable-replication-or-mirroring)
 
 #### Back up the OpCon Database
 

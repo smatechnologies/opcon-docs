@@ -104,7 +104,7 @@ processing.
 |Host|Y|*blank*|Y|Host name or IP address of the LDAP server.|
 |Port|Y|389|Y|Port number of the LDAP server.|
 |Domain|N|*blank*|Y|Defines the distinguished name. If it is not specified, SMA LDAP Monitor will connect to the first or default distinguished name.|
-|UserName*|Y|*blank*|Y|Encrypted login name for the LDAP directory. Must have permissions to connect to and query LDAP information from the network.|
+|Domain name\Username*|Y|*blank*|Y|Encrypted login name for the LDAP directory. Must have permissions to connect to and query LDAP information from the network.|
 |Password*|Y|*blank*|Y|Encrypted LDAP Password for the user specified in UserName.|
 |RefreshInterval|N|60|Y|Time interval (in seconds) at which the service re-synchronizes users' accounts between the LSAP server and the OpCon database.|
 |DefaultUserPassword*|N|*blank*|Y|Encrypted default password assigned to newly-created OpCon users. Note: This parameter is required only when the UseDefaultUserPassword parameter is set to True. If users specify UseDefaultUserPassword=true, but do not specify a password, then SMA LDAP Monitor will give an error in the log and exit.|
