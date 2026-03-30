@@ -1,6 +1,26 @@
+---
+title: List Application Logs
+description: "The Application Logs tab displays current log files."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # List Application Logs
 
-The **Application Logs** tab allows you to view list of current log files. User must be a member of a role with a least one of the following privileges to view this tab:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Application Logs** tab displays current log files. To view this tab, you must be a member of a role with at least one of the following privileges:
 
 - All Function Privileges
 - View Application Logs
@@ -9,44 +29,81 @@ The **Application Logs** tab allows you to view list of current log files. User 
 
 ### Filtering & Sorting
 
-You can filter and sort log files by using the column headers in the list. You can also filter by entering text in the **Name** or **Size** field, case insensitive.
+Filter and sort log files using the column headers. Filter by text in the **Name** or **Size** field (case insensitive).
 
 ### Log File Details
 
-Click a row to open the Log File Details Page and see more detailed information about the selected log file.
+Select a row to open the Log File Details page.
 
 ### Download File
 
-Click the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
+Select the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
 
 ### List of collected logs:
 
-The following logs are available in the **Application Logs** tab. This list does not represent all the logs that are available in the application.
+The following logs are available in the **Application Logs** tab. This list does not represent all available logs.
 
-- SAM - The SAM Log includes all processing information relating to Schedule and Job starts, Schedule and Job completions, Event processing, etc. The SAM also writes all configuration information to the log when it starts up or when it regenerates.
+- **SAM** – Logs Schedule and Job starts, completions, Event processing, and configuration information on startup or regeneration
+- **Critical** – Logs processing errors such as machine communication failures, database connection problems, event processing failures, and license expiration notifications
+- **Netcom** – Logs configuration parameters, basic communication information, and agent machine configuration. Changed parameters show the default value in parentheses
+- **NetcomTrace** – Logs all SMANetCom processing information, including detailed TCP/IP messages and socket connection errors for debugging
+- **ServMan** – Logs management information for all listed applications
+- **ServManTrace** –
+- **RequestRouter** – Logs all request routing information
+- **SMAOpConRestAPI** – Logs activity with the OpCon REST API
+- **SMAApiAgentNetcom** –
+- **SMALsamDataRetriever** – Logs requests from the Job Output Retrieval System (JORS)
+- **NotifyHandler (ENS)** – Logs all notification processing (SMANotifyHandler.log)
+- **StartTimeCalculator** – Logs recalculated start times for active jobs
+- **SMABIRTProcessor.log** – Logs general program errors in the SMA Processor handler
+- **SM and SM-API trace logs** (sm-*.log or sm-api-*.log)
 
-- Critical - The Critical Log includes all processing errors relating to machine communication failures, database connection problems, event processing failures, license expiration notifications, and so forth.
+## When Would You Use It?
 
-- Netcom - The SMANetCom Log includes configuration type information relating to configuration parameters, basic communication information and the configuration for each LSAM machine. If the default value for a parameter is changed, the default value will be listed in parentheses next to the relevant parameter.
+- The **Application Logs** tab displays current log files
 
-- NetcomTrace - The SMANetCom will write all processing information into the SMANetComTrace.log. The trace records written to this log will include detailed TCP/IP messages as well as socket connection errors to help with any debugging process.
+## Why Would You Use It?
 
-- ServMan - The SMAServMan Log includes all information relating to the management of all listed applications.
+- **List Application**: The **Application Logs** tab displays current log files
 
-- ServManTrace -
+## Configuration Options
 
-- RequestRouter - The SMARequestRouter Log includes all information relating to request routing.
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Critical | Logs processing errors such as machine communication failures, database connection problems, event processing failures, and license expiration notific... | value in parentheses | — |
+| Netcom | Logs configuration parameters, basic communication information, and agent machine configuration. | value in parentheses | — |
+| NetcomTrace | Logs all SMANetCom processing information, including detailed TCP/IP messages and socket connection errors for debugging | — | — |
+| ServMan | Logs management information for all listed applications | — | — |
+| RequestRouter | Logs all request routing information | — | — |
+| SMAOpConRestAPI | Logs activity with the OpCon REST API | — | — |
+| SMALsamDataRetriever | Logs requests from the Job Output Retrieval System (JORS) | — | — |
+| NotifyHandler (ENS) | Logs all notification processing (SMANotifyHandler.log) | — | — |
+| StartTimeCalculator | Logs recalculated start times for active jobs | — | must be a member of a role with at least one of the following privileges: |
+| SMABIRTProcessor.log | Logs general program errors in the SMA Processor handler | — | must be a member of a role with at least one of the following privileges: |
+## FAQs
 
-- SMAOpConRestAPI - Includes all information relating to activity with the OpCon REST API.
+**Q: What does List Application Logs do?**
 
-- SMAApiAgentNetcom
+The **Application Logs** tab displays current log files. To view this tab, you must be a member of a role with at least one of the following privileges:
 
-- SMALsamDataRetriever - The Data Retriever Log captures information related to the requests from the Job Output Retrieval System (JORS).
+**Q: Where can you find List Application Logs in OpCon?**
 
-- NotifyHandler (also referred to as ENS) - The ENS Log or the SMANotifyHandler.log records all information relating to notification processing.
+Access List Application Logs through the appropriate section in the Enterprise Manager or Solution Manager navigation.
 
-- StartTimeCalculator - The Start Time Calculator will log any recalculated start times for active jobs.
+## Glossary
 
-- SMABIRTProcessor.log - Includes information related to general program errors in the SMA Processor handler.
+**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
 
-- All of trace logs of SM and SM-API (sm-_.log or sm-api-_.log)
+**SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**TCP/IP**: The network communication protocol used for all data exchange between SMANetCom on the OpCon server and agents on target machines.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.

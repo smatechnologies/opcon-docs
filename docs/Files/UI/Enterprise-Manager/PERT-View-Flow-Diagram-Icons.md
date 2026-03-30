@@ -1,12 +1,34 @@
-# PERT View Flow Diagram Icons
+---
+title: PERT View Flow Diagram Icons
+description: "Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
+---
 
-In the diagram, each job is represented by a rectangle (also referred to
-as a "job box") containing a colored bar indicating the job status, an
-icon representing the job type, the job name, and/or icons representing
-the special information about the job. For information on the Job Status
-colors, refer to [Setting Preferences for Status Colors](Preferences-for-Status-Colors.md). For a description of
-Job Statuses, please refer to [Job Statuses](../../../operations/status-descriptions.md#job-statuses)
- in the **Concepts** online help.
+# PERT View Flow Diagram Icons
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information. For Job Status colors, refer to [Setting Preferences for Status Colors](Preferences-for-Status-Colors.md). For job status descriptions, see [Job Statuses](../../../operations/status-descriptions.md#job-statuses) in the **Concepts** online help.
+
+## When Would You Use It?
+
+- Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information
+
+## Why Would You Use It?
+
+- **PERT View**: Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information
 
 ## Job Type Icons
 
@@ -39,3 +61,27 @@ The diagram may also display any of the following information icons:
   ![Threshold Update icon](../../../Resources/Images/EM/EMinsertthreshold.png "Threshold Update icon")    A job has a threshold/ resource update.
   ------------------------------------------------------------------------------------------------------- --------------------------------------------------------
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What does PERT View Flow Diagram Icons cover?**
+
+This page covers Job Type Icons, Information Icons.
+
+## Glossary
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

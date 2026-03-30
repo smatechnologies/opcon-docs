@@ -1,32 +1,44 @@
+---
+title: Jobs
+description: "A _job_ in OpCon is a task or activity, such as running a program on a remote machine, transferring files between machines, or running another schedule."
+product_area: Core Concepts
+audience: Automation Engineer, Application Owner
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - Automation Engineer
+  - Application Owner
+  - Getting Started
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # Jobs
 
-A _job_ in OpCon is a task or activity. The
-task could be to run a program on a remote machine, transfer files
-between machines, or run another schedule. The Job Type's details
-determine the actual task to run. All other components of
-OpCon jobs determine when the job runs and
-what happens when the job finishes.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Application Owner
 
-All jobs in OpCon must first be entered into
-the Job Master tables. A schedule should already be defined, and each
-job must belong to a schedule. Any changes made in Job Master
-Maintenance do not affect previously built Daily schedules.
+## What Is It?
+
+A _job_ in OpCon is a task or activity, such as running a program on a remote machine, transferring files between machines, or running another schedule. The Job Type's details determine the actual task to run. All other components determine when the job runs and what happens when it finishes.
+
+All jobs must first be entered into the Job Master tables. Each job must belong to a schedule, and a schedule should already be defined. Changes made in Job Master Maintenance do not affect previously built Daily schedules.
+
+## When Would You Use It?
+
+- Use this feature when the job runs and what happens when it finishes
+
+## Why Would You Use It?
+
+- **Jobs**: A _job_ in OpCon is a task or activity, such as running a program on a remote machine, transferring files between machines, or running another schedule
 
 ## Job Details
 
-The following information applies to defining jobs:
-
 **Schedule Name**: Defines the name for the schedule containing the job.
 
-**Job Name**: Defines the name of the job. When defining a job in the
-Master tables, the name can be up to but no more than 64 characters.
+**Job Name**: Defines the name of the job. Names can be up to 64 characters.
 
-- The following list of characters are invalid for all Job Types: <
-  (less than), \> (greater than), & (ampersand), ' (single quote), "
-  (double quote), | (pipe), ; (semi-colon), % (percent symbol), ( )
-  (open and closed parentheses), \[ \] (open and closed square brackets, { } (open and closed braces), = (equals sign), \\ (back
-  slash), ! (exclamation point), \* (asterisk), ? (question mark), and
-  , (comma).
+- Invalid characters for all Job Types: < (less than), \> (greater than), & (ampersand), ' (single quote), " (double quote), | (pipe), ; (semi-colon), % (percent symbol), ( ) (open and closed parentheses), \[ \] (open and closed square brackets), { } (open and closed braces), = (equals sign), \\ (back slash), ! (exclamation point), \* (asterisk), ? (question mark), and , (comma)
 
 :::note
 If a Job Name is changed, the history of the job under the previous name is no longer visible.
@@ -52,147 +64,127 @@ If a Job Name is changed, the history of the job under the previous name is no l
 - Windows
 - z/OS
 
-**Job Sub-Type**: Defines a list of all the platform-specific Job
-Sub-Types. Once the Job Sub-Type is selected, the user will enter
-details into specific fields needed for the Job Sub-Type. The EM will
-reconstruct the details into a valid command line for the selected Job
-Type in the database. The following platforms have Job Sub-Types
-available:
+**Job Sub-Type**: Defines platform-specific sub-types. After selecting a sub-type, enter details into the required fields. The EM reconstructs these details into a valid command line for the selected Job Type. Platforms with sub-types available:
 
 - [UNIX Job Sub-Types](../job-types/unix.md#UNIX)
 - [Windows Job Sub-Types](../job-types/windows.md#Windows)
 
 **Access Code**: Defines the Access Code name assigned to the job.
 
-**Disable Build**: Determines when a build is requested, if the job's frequencies are reviewed by SMASchedMan to see
-if it qualifies for the build date. If the value is False (default),
-when a build is requested, the job's frequencies are reviewed by
-SMASchedMan to see if it qualifies for the build date. If the value is
-True, when a build is requested, SMASchedMan ignores the job. When the
-value is True, the job can still be added to a daily schedule through
-manually adding it or through a $JOB:ADD(HLD) event.
+**Disable Build**: Controls whether SMASchedMan reviews the job's frequencies during a build. When False (default), frequencies are reviewed to determine if the job qualifies for the build date. When True, SMASchedMan ignores the job during builds. The job can still be added manually or via a $JOB:ADD(HLD) event.
 
-**Allow Multi-Instance**: Determines if the job can have multiple
-instances of the same job on the same schedule date.
+**Allow Multi-Instance**: Determines if the job can have multiple instances on the same schedule date.
 
-- To request multiple instances of a job, refer to [Job Instance Definition](../Files/UI/Enterprise-Manager/Job-Instance-Definition.md)
-  in the **Enterprise Manager** online help or refer to the
-  [$JOB:ADD event](../events/types.md#$JOB:ADD) in
-  the **OpCon Events** online help.
-- To make full use of Multi-Instance jobs, SMA Technologies recommends using Job Instance
-  Properties. Refer to [Multi-Instance Jobs](../operations/job-names.md#multi-instance-jobs).
+- To request multiple instances, refer to [Job Instance Definition](../Files/UI/Enterprise-Manager/Job-Instance-Definition.md) or the [$JOB:ADD event](../events/types.md#$JOB:ADD)
+- To make full use of multi-instance jobs, use Job Instance Properties. Refer to [Multi-Instance Jobs](../operations/job-names.md#multi-instance-jobs)
 
-**Primary Machine**: Defines the name of a single machine for the job to
-run on. If the Primary Machine is not available at the job's run time,
-the job will not be able to run unless Alternate machines are available.
-Additionally, if a Primary Machine is configured, the job cannot be
-configured to run on a Machine group.
+**Primary Machine**: Defines a single machine for the job to run on. If unavailable at run time, the job cannot run unless Alternate machines are configured. A job with a Primary Machine cannot also use a Machine Group.
 
-**Alternate Machines**: Defines the names of up to three Alternate
-Machines for the job to run on. At run time, the SAM checks to see
-whether the Primary Machine is available to run the job in question. If
-the Primary Machine is down, the SAM attempts to run the job on one of
-the Alternate Machines.
+**Alternate Machines**: Defines up to three alternate machines. At run time, SAM checks whether the Primary Machine is available; if it is down, SAM attempts to run the job on an Alternate Machine.
 
-**Machine Group Selection**: Defines the name of the Machine Group the
-job will run on. If a Machine Group is configured, the job cannot be
-configured to run on a Primary Machine. There are two options for how a
-machine group can be applied to a job.
+**Machine Group Selection**: Defines the Machine Group the job runs on. A job using a Machine Group cannot also use a Primary Machine. Two options apply:
 
-**Run on Least Tasked Machine (default)**: If this option is set,
-OpCon determines the least tasked machine to
-run the job on. This option is useful for _Failover_ and _Workload
-Balancing_ scenarios.
+**Run on Least Tasked Machine (default)**: OpCon selects the least tasked machine. Useful for failover and workload balancing.
 
-**Run on each Machine**: If this option is set, OpCon runs the job on every machine in the
-group.
+**Run on each Machine**: OpCon runs the job on every machine in the group.
 
-- When the job's schedule is built and the job qualifies for the day,
-  OpCon creates a copy of the job for each
-  machine in the group while assigning a specific machine to each copy
-  of the job. The copy of each job is named using the following
-  syntax: `Job Name_Machine Name`
-- If the job also has predefined instances,
-  OpCon creates all predefined instances
-  for each machine in the group. The copy of each job is named using
-  the following syntax: `Job Name_First Property Value_Machine Name`
+- When built and qualified, OpCon creates a copy of the job for each machine, named: `Job Name_Machine Name`
+- If predefined instances exist, each instance is created for each machine, named: `Job Name_First Property Value_Machine Name`
 
-**Job Type Details**: The Job Type Details depend on the selection of the Job Type determined above.
+**Job Type Details**: Depend on the selected Job Type.
 
-**Job Automation Components**: The automation components of jobs are
-fully defined in [Job Automation Components](../job-components/overview.md).
+**Job Automation Components**: Fully defined in [Job Automation Components](../job-components/overview.md).
 
 ### Advanced Failure Criteria
 
-On available platforms, Advanced Failure Criteria allows you to set more
-advanced criteria for determining if the job should Finish OK or Fail.
-When defined, Advanced Failure Criteria overrides the Basic Failure
-Criteria defined for the primary job. The SAM processes the Advanced
-Failure Criteria after receiving a completion message from the
-LSAM. The following fields can be used to define the Advanced Failure Criteria.
+Advanced Failure Criteria sets conditions for determining if a job should Finish OK or Fail on supported platforms. When defined, it overrides the Basic Failure Criteria. SAM processes these criteria after receiving a completion message from the agent.
 
-- **Comparison Operator**: Defines the comparison operator for the
-  "if statement" when comparing the actual value of the job's exit
-  code to the failure criteria rules.
-  - Valid Values: Range, Equal To, Not Equal To, Less Than, Less or
-    Equal, Greater Than, Greater and Equal
-- **Value**: Defines the value used for comparison to the job's
-  actual exit code with the comparison operator.
-  - Valid Values range from -2147483648 to 2147483647
-- **End Value**: Defines the end value for comparison when the
-  comparison operator is "Range".
-  - Valid Values range from -2147483648 to 2147483647
-- **Result**: Defines the desired resulting job status when the
-  criteria for the line is equal to true. You may only specify the
-  Result on the first group of criteria, and this will set the result
-  for all the remaining groups of criteria.
+- **Comparison Operator**: The operator used to compare the job's exit code to the failure criteria
+  - Valid Values: Range, Equal To, Not Equal To, Less Than, Less or Equal, Greater Than, Greater and Equal
+- **Value**: The value compared to the job's actual exit code
+  - Valid Values: -2147483648 to 2147483647
+- **End Value**: The upper bound when the operator is "Range"
+  - Valid Values: -2147483648 to 2147483647
+- **Result**: The resulting job status when the criteria evaluates as true. Set only on the first group; applies to all remaining groups
   - Valid Values: Finish OK, Fail
-- **And/Or**: When defining multiple failure criteria, this field
-  defines the way the strings are evaluated together.
+- **And/Or**: Defines how multiple criteria strings are evaluated together
   - Valid Values: And, Or
-- **Anything Else**: This field contains the other possible result if
-  the Exit code falls outside the advanced criteria comparisons.
-  - If the Result field is set to "Finish OK", Anything Else
-    contains "Fail".
-  - If the Result field is set to "Fail", Anything Else contains
-    "Finish OK".
+- **Anything Else**: The result when the exit code falls outside the advanced criteria comparisons. Automatically set to the opposite of the Result field
 
 ## Job History
 
-Job Master History contains a job's history and includes token
-replacement values, detailed job messages, LSAM feedback, and other job information. For information viewing history
-records, refer to [Using History Management](../Files/UI/Enterprise-Manager/Using-History-Management.md)
-in the **Enterprise Manager** online help. For information on
-maintaining job history records, refer to [Job History Cleanup](../utilities/Command-line-Utilities/Job-History-Cleanup.md)
-in the **Utilities** online help.
+Job Master History contains a job's history, including token replacement values, detailed job messages, agent feedback, and other information. For viewing history, refer to [Using History Management](../Files/UI/Enterprise-Manager/Using-History-Management.md). For maintaining history records, refer to [Job History Cleanup](../utilities/Command-line-Utilities/Job-History-Cleanup.md).
 
-- OpCon stores job history in two tables.
-  As each job completes, SAM automatically stores the history to the
-  primary history table. Periodically, a job history cleanup process
-  should move history records to the archive table. Both tables may be
-  viewed from the History Management tool in the EM.
+OpCon stores job history in two tables. SAM automatically stores history to the primary table as each job completes. Periodically, the history cleanup process moves records to the archive table. Both tables are viewable from the History Management tool in the EM.
+
 - Basic History Information:
-  - **Schedule Date**: Stores the date of the Daily schedule for
-    which the job executed.
-  - **Job Started**: Stores the actual date and time the job started
-    in a 24-hour clock time format (00:00).
-  - **Job Ended**: Stores the date and time the job ended in a
-    24-hour clock time format (00:00).
-  - **Run Time (min)**: Stores the amount of time the job ran in
-    minutes.
-  - **Machine Name**: Stores the name of the machine for which the
-    job executed. For jobs that "run on each machine" in a group,
-    the machine name will display for each copy of the job that ran.
-  - **Final Job Status**: Stores the completion status of the job
-    (whether it terminated successfully or not).
-  - **Exit Description**: Stores the termination details for the
-    job. The maximum characters displayed is 255.
-  - **Ran as job Name**: Stores the job name as it appeared in the
-    daily.
-    - If the job was on a top-level schedule, the name shows the
-      full Job Instance Name.
-    - If the job was on a subschedule or any multi-instance
-      schedule, the name shows with the following syntax: Schedule
-      Instance Name:Job Instance Name
-- Detailed History Information includes the token replacement values,
-  detailed job messages, LSAM feedback, and other job information.
+  - **Schedule Date**: The date of the Daily schedule for which the job run
+  - **Job Started**: The date and time the job started (24-hour format, 00:00)
+  - **Job Ended**: The date and time the job ended (24-hour format, 00:00)
+  - **Run Time (min)**: How long the job ran, in minutes
+  - **Machine Name**: The machine on which the job run. For "run on each machine" jobs, displays once per copy
+  - **Final Job Status**: The completion status of the job
+  - **Exit Description**: Termination details for the job. Maximum 255 characters displayed
+  - **Ran as job Name**: The job name as it appeared in the daily
+    - Top-level schedules show the full Job Instance Name
+    - Subschedules or multi-instance schedules use the format: Schedule Instance Name:Job Instance Name
+- Detailed History Information includes token replacement values, detailed job messages, agent feedback, and other job information
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Schedule Name | Defines the name for the schedule containing the job | — | up to 64 characters.  - Invalid characters for all Job Typ |
+| Job Name | Defines the name of the job. | — | up to 64 characters.  - Invalid characters for all Job Typ |
+| Job Type | Defines the type of job. | — | — |
+| Job Sub-Type | Defines platform-specific sub-types. | — | — |
+| Disable Build | Controls whether SMASchedMan reviews the job's frequencies during a build. | — | — |
+| Allow Multi-Instance | Determines if the job can have multiple instances on the same schedule date | — | — |
+| Primary Machine | Defines a single machine for the job to run on. | — | — |
+| Alternate Machines | Defines up to three alternate machines. | — | — |
+| Machine Group Selection | Defines the Machine Group the job runs on. | — | — |
+| Run on Least Tasked Machine (default) | OpCon selects the least tasked machine. | — | — |
+| Run on each Machine | OpCon runs the job on every machine in the group | — | — |
+| Job Type Details | Depend on the selected Job Type | — | — |
+| Job Automation Components | Fully defined in Job Automation Components | — | — |
+| Comparison Operator | The operator used to compare the job's exit code to the failure criteria | — | — |
+| Value | The value compared to the job's actual exit code | — | — |
+| End Value | The upper bound when the operator is "Range" | — | — |
+| Result | The resulting job status when the criteria evaluates as true. | — | — |
+| And/Or | Defines how multiple criteria strings are evaluated together | — | — |
+| Anything Else | The result when the exit code falls outside the advanced criteria comparisons. | — | — |
+## FAQs
+
+**Q: Where must a job be defined before it can run?**
+
+All jobs must first be entered into the Job Master tables. Each job must belong to a schedule, and the schedule must already be defined before a job can be added to it.
+
+**Q: Does changing a job name affect its history?**
+
+Yes. If a Job Name is changed, the history recorded under the previous name is no longer visible for that job.
+
+**Q: Can a job use both a Primary Machine and a Machine Group?**
+
+No. A job must use either a Primary Machine (with optional Alternate Machines) or a Machine Group — not both simultaneously.
+
+**Q: What happens to a job with Disable Build set to True?**
+
+SMASchedMan ignores the job during automatic schedule builds. The job can still be added manually to a daily schedule or via a `$JOB:ADD(HLD)` event.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+
+**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.

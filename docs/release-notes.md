@@ -1,5 +1,6 @@
 ---
 sidebar_label: "Release Notes"
+doc_type: conceptual
 ---
 
 # OpCon Release Notes
@@ -220,7 +221,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 :white_check_mark: **OC-3666**: Fixed an issue where migration item value in Service Requests did not display correctly for regex.
 
-:white_check_mark: **OC-3745**: Fixed an issue where secondary settings for Client Secret (Email and SMS) under Server Options were not cleared when the associated primary setting was deleted.
+:white_check_mark: **OC-3745**: Fixed an issue where secondary settings for Customer Secret (Email and SMS) under Server Options were not cleared when the associated primary setting was deleted.
 
 :white_check_mark: **OC-3779**: Fixed an issue where cross-references were not detected when the job name contained an underscore.
 
@@ -253,9 +254,9 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 #### ImpEx2 Web Service
 
 :white_check_mark: **OC-1906**:
-* Fixed a problem during Schedule Import using Deploy when schedule instance properties are merged if Deploy rule 'Update Schedule Instance Properties Allowed' is not selected.
-* Implemented additional Deploy rule 'Merge Schedule Instance properties'. By default, no changes are made to Schedule Instance properties.
-* If Deploy rule 'Update Schedule Instance Properties Allowed' is not selected and Deploy rule 'Merge Schedule Instance properties' is selected the schedule instance properties will be merged.
+* Fixed a problem during Schedule Import using Deploy when schedule instance properties are merged if Deploy rule 'Update Schedule Instance Properties Allowed' is not selected
+* Implemented additional Deploy rule 'Merge Schedule Instance properties'. By default, no changes are made to Schedule Instance properties
+* If Deploy rule 'Update Schedule Instance Properties Allowed' is not selected and Deploy rule 'Merge Schedule Instance properties' is selected the schedule instance properties will be merged
 
 :white_check_mark: **OC-3092**: Fixed a problem when performing script runner match. Removed CommandFormat match as runner name and platform id provide the required information.
 
@@ -303,7 +304,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 :white_check_mark: **OC-2891**: Resolved an issue where the frequency list for a master job was not populated when adding a dependency to a master job in Studio.
 
-:white_check_mark: **OC-3016**: Removed Maintain Frequencies Checkbox as it was not being used by any function privileges.
+:white_check_mark: **OC-3016**: Removed Maintain Frequencies option as it was not being used by any function privileges.
 
 :white_check_mark: **OC-3022**: Fixed an issue in Studio where the View button was incorrectly enabled when it should have been disabled.
 
@@ -388,7 +389,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 :eight_spoked_asterisk: **OC-393**: Accessibility support has been added to the main navigation, and the following Solution Manager pages: Job Execution History, Self-Service, Schedule Build, Daily Jobs, Batch Users, Notification Triggers, Master Jobs, to support WCAG accessibility standards.
 
-:eight_spoked_asterisk: **OC-2082**: A global property for Admins has been added to set the checkbox retention policy on the Operations screen.
+:eight_spoked_asterisk: **OC-2082**: A global property for Admins has been added to set the option retention policy on the Operations screen.
 
 :eight_spoked_asterisk: **OC-2467**: Added a new global setting in Server Options that completely turns Otto functionality off.
 
@@ -504,7 +505,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 :eight_spoked_asterisk: **OPCON-23094**: Added support for logs that aren't text and inclusive of video logs through the job output screen.
 
-:eight_spoked_asterisk: **OPCON-23095**: Licensing logic using the (new) LSAM ID being used for OpCon RPA is enforced.
+:eight_spoked_asterisk: **OPCON-23095**: Licensing logic using the (new) agent ID being used for OpCon RPA is enforced.
 
 :eight_spoked_asterisk: **OPCON-23096**: Added OpCon RPA script runner & script type capabilities for Script Repo use.
 
@@ -525,9 +526,9 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 :white_check_mark: **OPCON-23224**: Fixed an issue where the user couldn't add jobs to daily multi-instance schedules.
 
 :white_check_mark: **OPCON-24389**: Fixed several issues related to the machine groups panel on the agents page.
-- Fixed an issue where all machine groups start on the left even if agent has machine groups assigned.
-- Fixed an issue where agents page groups column is not updated after an update in the machine groups panel.
-- Fixed an issue where left and right arrows were enabled without any selected items.
+- Fixed an issue where all machine groups start on the left even if agent has machine groups assigned
+- Fixed an issue where agents page groups column is not updated after an update in the machine groups panel
+- Fixed an issue where left and right arrows were enabled without any selected items
 
 :white_check_mark: **OPCON-24390**: Fixed an issue where the filtered agent status was not reflected properly in the url query parameter.
 
@@ -565,7 +566,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 :white_check_mark: **OPCON-25790**: Fixed an issue where the Otto chatbot lost chat history when the navigation button was used while already on the destination page. Now, the navigation button is hidden in this scenario to prevent unnecessary page reloads and ensure chat continuity.
 
-:white_check_mark: **OPCON-25799**: Fixed Notification triggers machine groups dropdown pagination. The dropdown should now load extra notification groups when scrolling down.
+:white_check_mark: **OPCON-25799**: Fixed Notification triggers machine groups list pagination. The list should now load extra notification groups when scrolling down.
 
 :white_check_mark: **OPCON-25798**: Fixed an issue on notification triggers page where the delete button was enabled when adding a new notification trigger.
 
@@ -613,7 +614,7 @@ A cleaner, more consistent experience makes OpCon easier to learn, faster to use
 
 :white_check_mark: **OPCON-26016**: Fixed an issue with the 'Save Daily Job and Push to Master Job' button on the Daily Jobs page.
 
-:white_check_mark: **OPCON-26026**: Fixed an issue on in the Notification Triggers manager Group page where the checkboxes on page 2 and beyond did not populate with the correct value.
+:white_check_mark: **OPCON-26026**: Fixed an issue on in the Notification Triggers manager Group page where the options on page 2 and beyond did not populate with the correct value.
 
 :white_check_mark: **OPCON-26049**: Fixed an issue where only the first 25 available groups were displayed on the Manage Categories page.
 
@@ -683,7 +684,7 @@ Requires Deploy version 25.0.0.
 
 #### Solution Manager
 
-:eight_spoked_asterisk: **OPCON-24678**: Added the ability to report on user behavior within Solution Manager. This addition will help SMA determine which features are most valuable to our current customers.
+:eight_spoked_asterisk: **OPCON-24678**: Added the ability to report on user behavior within Solution Manager. This addition will help SMA determine which features are most valuable to customers.
 
 2024 October
 
@@ -836,7 +837,7 @@ Requires Deploy version 25.0.0.
 
 :white_check_mark: **OPCON-23517**: Fixed an error in Master Jobs when selecting a job type and then clicking on an empty space on the page.
 
-:white_check_mark: **OPCON-23530**: Fixed an issue where the Role_ocadm checkbox was incorrectly disabled on the Access Management > Users > Roles tab.
+:white_check_mark: **OPCON-23530**: Fixed an issue where the Role_ocadm option was incorrectly disabled on the Access Management > Users > Roles tab.
 
 :white_check_mark: **OPCON-23583**: Fixed an issue where double quotes in Episys Answer Prompt jobs were mishandled.
 
@@ -928,7 +929,7 @@ Requires Deploy version 25.0.0.
 
 :eight_spoked_asterisk: **OPCON-23234**: Tag Management View Access: This feature adds a new permission for admins to control user access to the tag management view in Solution Manager. All existing roles will automatically be granted this privilege, but admins can now control which users are granted access to this view.
 
-:eight_spoked_asterisk: **OPCON-23244**: Reset Job Types from Studio: This feature adds the capability for users to reset supported job types in Solution Manager from the Studio designer view and no longer requires users to navigate to the Master Job list view to perform this function.
+:eight_spoked_asterisk: **OPCON-23244**: Reset Job Types from Studio: This feature adds the capability for users to reset supported job types in Solution Manager from the Studio designer view and no longer requires users to Go to the Master Job list view to perform this function.
 
 :eight_spoked_asterisk: **OPCON-23245**: Configure a Default Homepage: This feature grants users the ability to define a custom landing page upon logging into Solution Manager by selecting the rocket icon displayed in the top right corner of each page. Any of the following pages can be selected as the homepage, but only one page can be active at a time:
 - Self-Service

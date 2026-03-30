@@ -1,31 +1,48 @@
+---
+title: Events
+description: "Events are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression."
+product_area: Job Components
+audience: Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Jobs
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Events
 
-The **Events** associated with a job are OpCon events the SAM processes based on different triggers including job status, a string match on LSAM feedback, an Exit Description evaluation, and Evaluation Expression. Refer to the [OpCon Events](../events/introduction.md) online help. Because the events are attached to a job, all [System Properties](../objects/properties.md#system) can be referenced with tokens in the events. After events are defined for a job, OpCon stores the defined events in the database.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer
+
+## What Is It?
+
+**Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression. Refer to [OpCon Events](../events/introduction.md). All [System Properties](../objects/properties.md#system) can be referenced with tokens in events, which are stored in the database after definition.
 
 :::note
 If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and ? (question mark) are treated as wild cards in Schedule, Job, and Machine Names in Event strings
 :::
 
-The following information applies to defining events:
-
-- **Schedule Name**: Defines the name of the schedule.
-- **Job Name**: Defines the name of the job.
-- **Frequency Name**: Defines the name of the frequency if the event is defined for a specific frequency.
-  - Leave the frequency blank to associate the event at the job level and always include the event for the job.
-  - Select a frequency name to associate the event only when the job runs with the associated frequency.
-- **Event Details**: Defines the details pertaining to the OpCon event. When defining the trigger, define Job Status, an LSAM feedback with a string to match, an Exit Description evaluation, or an Evaluation Expression.
-  - **Job Status**: Defines the status of the job that will cause the OpCon event to process. Valid statuses include:
-    - **Exceeded Max Run Time**: This status occurs when the job runs for longer than the specified Max Run Time.
-    - **Failed**: This status occurs when the job fails.
-    - **Finished OK**: This status occurs when the job terminates successfully.
-    - **Job Still Attempting Start**: This status occurs when the job is still in a Start Attempted status when the SAM checks on the job again after the minutes between checking running jobs.
-    - **Late to Finish**: This status occurs when time is past the late to finish time for the job, and the job is still running.
-    - **Late to Start**: This status occurs when time is past the late to start time for the job, and the job has not yet started.
-    - **Missed Latest Start Time**: This status occurs when the job misses its latest start time.
-    - **Skipped**: This status occurs when the job is skipped.
-    - **Start Attempted**: This status occurs just before the job start information is sent to the LSAM. If for any reason the Event does not get processed, SAM will put the job On Hold.
-  - **LSAM Feedback**: Define the evaluation string to process based on the value of a specific LSAM feedback. The fields involved in defining the evaluation string include:
-    - **LSAM Feedback**: Lists the platform-specific values supported for LSAM Feedback. For example, SAP R/3 includes Child Process. The LSAM feedback values change based on the job type. The following job types support LSAM feedback for event triggers:
+- **Schedule Name**: Schedule name
+- **Job Name**: Job name
+- **Frequency Name**: Frequency name, if the event applies to a specific frequency
+  - Leave the frequency blank to associate the event at the job level and always include the event for the job
+  - Select a frequency name to associate the event only when the job runs with the associated frequency
+- **Event Details**: OpCon event details. Define the trigger as Job Status, agent feedback with a string to match, Exit Description evaluation, or Evaluation Expression
+  - **Job Status**: Job status that triggers the event. Valid statuses:
+    - **Exceeded Max Run Time**: Job ran longer than the specified Max Run Time
+    - **Failed**: Job failed
+    - **Finished OK**: Job terminated successfully
+    - **Job Still Attempting Start**: Job remains in Start Attempted status when SAM rechecks after the configured interval
+    - **Late to Finish**: Time is past the late-to-finish time and the job is still running
+    - **Late to Start**: Time is past the late-to-start time and the job has not started
+    - **Missed Latest Start Time**: Job missed its latest start time
+    - **Skipped**: Job was skipped
+    - **Start Attempted**: Occurs just before job start info is sent to the agent. If the event is not processed, SAM places the job On Hold
+  - **LSAM Feedback**: Evaluation string based on a specific LSAM feedback value. Fields:
+    - **LSAM Feedback**: Platform-specific LSAM feedback values (e.g., SAP R/3 includes Child Process). Values vary by job type. Supported job types:
       - File Transfer
       - IBM i
       - MCP
@@ -34,20 +51,20 @@ The following information applies to defining events:
       - UNIX
       - Windows
       - z/OS
-    - **String to match**: Enter any string to match to the value of the LSAM Feedback. The SAM will use SQL pattern matching with this field to compare to the LSAM Feedback value.
-      - Use percent (%) as opposed to asterisk (\*) as a wildcard.
-      - Use underscore ( \_ ) as opposed to question mark (?) for a single character wildcard.
-      - Single quotes (') are invalid in this field.
-      - This field is a maximum of 4000 characters long.
-  - **Exit Description**: Define the evaluation string for the exit description of the completed job (Finished OK or Failed) that will trigger the event.
+    - **String to match**: String to compare against the agent Feedback value using SQL pattern matching
+      - Use `%` (not `*`) as a wildcard
+      - Use `_` (not `?`) for a single-character wildcard
+      - Single quotes (`'`) are invalid
+      - Maximum 4000 characters
+  - **Exit Description**: Evaluation string for the completed job's exit description (Finished OK or Failed) that triggers the event
 
     :::danger
     $JOB:GOOD/$JOB:BAD should not be associated with Exit Description-based events if the job is set to auto-Retry/Rerun.
     :::
 
-    The fields involved with the Exit Description include:
+    Fields:
 
-    - **Comparison Operators**: Lists the Comparison Operators supported by OpCon for exit description comparison. The valid values include:
+    - **Comparison Operators**: Supported operators:
       - Equal To
       - Not Equal To
       - Less Than
@@ -56,12 +73,57 @@ The following information applies to defining events:
       - Greater Than or Equal
       - Range
       - Contains
-    - **Value**: This is a text field allowing you to enter the exit description to use with the Comparison Operators. The invalid characters include:
-      - Single quotes (')
-      - Semicolons (;)
-    - **End Value**: This is a text field allowing you to enter the end value when the Range Comparison Operator is in use. The invalid characters include:
-      - Single quotes (')
-      - Semicolons (;)
+    - **Value**: Exit description to compare. Invalid characters: single quotes (`'`), semicolons (`;`)
+    - **End Value**: End value for the Range operator. Same invalid characters as Value
 
-  - **Job Completion Complex Expression**: Enter a complete expression for SAM to evaluate upon completion of the job. The expression must result to "True" for the event to process. For more information, refer to [Property Expressions API Syntax](../reference/property-expressions-syntax.md).
-- **Event**: Defines the details of the OpCon event that will execute when the defined status occurs. For information on OpCon event syntax, refer to [Event Types](../events/types.md) in the **OpCon Events** online help.
+  - **Job Completion Complex Expression**: Expression SAM evaluates on job completion. Must result in "True" for the event to process. See [Property Expressions API Syntax](../reference/property-expressions-syntax.md)
+- **Event**: OpCon event that runs when the trigger fires. For syntax, refer to [Event Types](../events/types.md) in the **OpCon Events** online help
+
+## When Would You Use It?
+
+- **Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression
+
+## Why Would You Use It?
+
+- **Events**: **Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Schedule Name | Schedule name | — | — |
+| Job Name | Job name | — | — |
+| Frequency Name | Frequency name, if the event applies to a specific frequency | — | — |
+| Event Details | OpCon event details. | — | — |
+| Event | OpCon event that runs when the trigger fires. | — | — |
+## FAQs
+
+**Q: What triggers can fire a job event?**
+
+Job events can be triggered by job status changes (such as Finished OK, Failed, or Late to Start), by matching a specific agent feedback string, by evaluating the job's exit description, or by a property expression that evaluates to true on job completion.
+
+**Q: Can a job event apply only to a specific frequency?**
+
+Yes. Leave the Frequency Name blank to associate the event at the job level (fires on all runs). Select a specific frequency name to fire the event only when the job runs under that frequency.
+
+**Q: Can system properties be used in event strings?**
+
+Yes. All System Properties can be referenced with tokens in event strings, allowing dynamic values such as `$JOB NAME`, `$SCHEDULE DATE`, or `$MACHINE NAME` to be included in the event.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

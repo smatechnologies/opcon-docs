@@ -1,83 +1,114 @@
+---
+title: Tuxedo ART Job Details
+description: "For information about defining a Tuxedo ART Job, refer to Running Tuxedo ART Jobs in the Tuxedo ART Agent online help."
+product_area: Job Types
+audience: Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Jobs
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Tuxedo ART Job Details
 
-The information in this section applies to defining a Tuxedo ART Job.
-For additional information about this platform, refer to [Executing Tuxedo ART
-Jobs](https://help.smatechnologies.com/opcon/agents/tuxedo/latest/Files/Agents/Tuxedo-ART/Executing-Tuxedo-ART-Jobs.md)
- in the **Tuxedo ART Agent** online help.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer
 
-- **Script**: This defines the name of the script to run. It is passed
-    to the artjesadmin utility during the job start request.
+## What Is It?
 
-- **Owner**: Currently the jobs are executed under the user that is
-    used to run the agent and the Tuxedo ART environment. This has been
-    defined for future use. The default value is \* (asterisk).
+For information about defining a Tuxedo ART Job, refer to [Running Tuxedo ART Jobs](https://help.smatechnologies.com/opcon/agents/tuxedo/latest/Files/Agents/Tuxedo-ART/Running-Tuxedo-ART-Jobs.md) in the **Tuxedo ART Agent** online help.
 
-- **JESRoot Environment**: This is the full path to the JES Root
-    environment so that the agent can retrieve the Tuxedo Job log.
+- **Script**: The name of the script to run. Passed to the artjesadmin utility during job start
+- **Owner**: Reserved for future use. Jobs run under the user configured for the agent and Tuxedo ART environment. Default value is \* (asterisk)
+- **JESRoot Environment**: Full path to the JES Root environment, used by the agent to retrieve the Tuxedo Job log
+- **Tuxedo Environment**: Name of the environment script that sets up environment variables when connecting to the Tuxedo environment. Must include the .sh extension
 
-- **Tuxedo Environment**: This is the name of the environment script
-    that is called to setup the environment variables correctly when the
-    connection is made to the Tuxedo environment. The name must include
-    the .sh extension.
+## When Would You Use It?
+
+- For information about defining a Tuxedo ART Job, refer to [Running Tuxedo ART Jobs](https://help.smatechnologies.com/opcon/agents/tuxedo/latest/Files/Agents/Tuxedo-ART/Running-Tuxedo-ART-Jobs.md) in the **Tuxedo ART Agent** online help
+
+## Why Would You Use It?
+
+- **Tuxedo ART**: For information about defining a Tuxedo ART Job, refer to [Running Tuxedo ART Jobs](https://help.smatechnologies.com/opcon/agents/tuxedo/latest/Files/Agents/Tuxedo-ART/Running-Tuxedo-ART-Jobs.md) in the **Tuxedo ART Agent** online help
 
 ## Variables Tab
 
-Variables tab field definitions are passed as name=value pairs to the
-Tuxedo ART environment.
+Variables are passed as name=value pairs to the Tuxedo ART environment.
 
-- **Name**: The name of a variable in the job script that must be
-    replaced with the value defined in the Value field. The name must
-    start with an & (i.e. &TEST).
-- **Value**: The value field defines the variable value. OpCon
-    properties can be used in this field as these will be resolved when
-    the job is started (e.g., \[\[$SCHEDULE DATE_j\]\],     \[\[SI.C102\]\], \[\[$SCHEDULE DATE (-1d)\]\], \[\[$SCHEDULE DATE
-    (-1M)\]\], SubStr(\[\[$SCHEDULE DATE-BVH\]\],0,2), etc.). The     Control-T keyins can be used to select properties. The definitions
-    include a special function called SubStr which will extract the
-    characters starting at the first character for the number of
-    characters defined by the second character. In the above example
-    SubStr(\[\[$SCHEDULE DATE-BVH\]\],0,2), if the date is defined as     MMDDYYYY, the MM field will be extracted and passed as the variable.
+- **Name**: The variable name in the job script to replace with the defined value. Must start with & (e.g., &TEST)
+- **Value**: The variable value. Supports OpCon properties resolved at job start (e.g., \[\[$SCHEDULE DATE_j\]\], \[\[SI.C102\]\], \[\[$SCHEDULE DATE (-1d)\]\], SubStr(\[\[$SCHEDULE DATE-BVH\]\],0,2)). Use Control-T keyins to select properties. SubStr extracts characters starting at the first position for the number of characters specified by the second argument (e.g., SubStr(\[\[$SCHEDULE DATE-BVH\]\],0,2) extracts MM from MMDDYYYY)
 
 ## Step Control Tab
 
-The Tuxedo ART agent supports a maximum of 5 Step Control definitions per job.
+Supports a maximum of 5 Step Control definitions per job.
 
-- **Step Name**: The name of the step defined in the script.
-- **Min CC**: The minimum step completion code.
-- **Max CC**: The maximum step completion code.
-- **Step Action**: Only the 'Send Trigger Message TO SAM' is
-    supported (e.g., JEVENT=SS1TEST10).
-- **Trigger Message**: The trigger message that is sent to SAM for
-    Agent Feedback. This must match an LSAM Feedback User Message match
-    event definition. For example, if trigger message is
-    JEVENT=SS1TEST10, then LSAM Feedback User message must include the
-    definition User Message match 'JEVENT=SS1TEST10'.
+- **Step Name**: The step name defined in the script
+- **Min CC**: The minimum step completion code
+- **Max CC**: The maximum step completion code
+- **Step Action**: Only 'Send Trigger Message TO SAM' is supported (e.g., JEVENT=SS1TEST10)
+- **Trigger Message**: The message sent to SAM for Agent Feedback. Must match an agent Feedback User Message match event definition (e.g., User Message match 'JEVENT=SS1TEST10')
 
 ## Failure Criteria Tab
 
-The job definition supports advanced failure criteria.
+Supports advanced failure criteria.
 
-- **Comparison Operator**: Defines the comparison operator for the
-    "if statement" when comparing the actual value of the job's exit
-    code to the failure criteria rules.
-  - Valid Values: Range, Equal To, Not Equal To, Less Than, Less or
-        Equal, Greater Than, Greater and Equal
-- **Value**: Defines the value used for comparison to the job's
-    actual exit code with the comparison operator.
-  - Valid Values range from -2147483648 to 2147483647
-- **End Value**: Defines the end value for comparison when the
-    comparison operator is "Range".
-  - Valid Values range from -2147483648 to 2147483647
-- **Result**: Defines the desired resulting job status when the
-    criteria for the line is equal to true. You may only specify the
-    Result on the first group of criteria, and this will set the result
-    for all the remaining groups of criteria.
+- **Comparison Operator**: The operator for comparing the job's exit code to the failure criteria
+  - Valid Values: Range, Equal To, Not Equal To, Less Than, Less or Equal, Greater Than, Greater and Equal
+- **Value**: The value compared against the job's exit code
+  - Valid Values: -2147483648 to 2147483647
+- **End Value**: The end value for comparison when the operator is "Range"
+  - Valid Values: -2147483648 to 2147483647
+- **Result**: The resulting job status when the criteria is true. Specify only on the first group; applies to all remaining groups
   - Valid Values: Finish OK, Fail
-- **And/Or**: When defining multiple failure criteria, this field
-    defines the way the strings are evaluated together.
+- **And/Or**: How multiple failure criteria are evaluated together
   - Valid Values: And, Or
-- **Anything Else**: This field contains the other possible result if
-    the Exit code falls outside the advanced criteria comparisons.
-  - If the Result field is set to "Finish OK", Anything Else
-        contains "Fail".
-  - If the Result field is set to "Fail", Anything Else contains
-        "Finish OK".
+- **Anything Else**: The result when the exit code falls outside the advanced criteria
+  - If Result is "Finish OK", Anything Else is "Fail"
+  - If Result is "Fail", Anything Else is "Finish OK"
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Script | The name of the script to run. | \* | — |
+| Owner | Reserved for future use. | \* | — |
+| JESRoot Environment | Full path to the JES Root environment, used by the agent to retrieve the Tuxedo Job log | — | — |
+| Tuxedo Environment | Name of the environment script that sets up environment variables when connecting to the Tuxedo environment. | — | — |
+| Name | The variable name in the job script to replace with the defined value. | — | — |
+| Value | The variable value. | — | — |
+| Step Name | The step name defined in the script | — | — |
+| Min CC | The minimum step completion code | — | — |
+| Max CC | The maximum step completion code | — | — |
+| Step Action | Only 'Send Trigger Message TO SAM' is supported (e.g., JEVENT=SS1TEST10) | — | — |
+| Trigger Message | The message sent to SAM for Agent Feedback. | — | — |
+| Comparison Operator | The operator for comparing the job's exit code to the failure criteria | — | — |
+| End Value | The end value for comparison when the operator is "Range" | — | — |
+| Result | The resulting job status when the criteria is true. | — | — |
+| And/Or | How multiple failure criteria are evaluated together | — | — |
+| Anything Else | The result when the exit code falls outside the advanced criteria | — | — |
+## FAQs
+
+**Q: What is required to define a Tuxedo ART job?**
+
+A Tuxedo ART job requires a Script name (passed to the artjesadmin utility), a JESRoot Environment path (for retrieving the job log), and a Tuxedo Environment script name (with .sh extension) for setting up environment variables.
+
+**Q: How are variables passed to the Tuxedo ART environment?**
+
+Variables are passed as name=value pairs via the Variables tab. Variable names must start with & (e.g., &TEST). Values support OpCon property tokens resolved at job start.
+
+**Q: What is the maximum number of Step Control definitions per job?**
+
+The Step Control tab supports a maximum of 5 Step Control definitions per Tuxedo ART job.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

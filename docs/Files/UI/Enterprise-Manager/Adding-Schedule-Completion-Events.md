@@ -1,17 +1,34 @@
+---
+title: Adding Schedule Completion Events
+description: "Use this procedure to add Schedule Completion Events in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Adding Schedule Completion Events
 
-To add a new schedule completion event:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-Double-click on **Schedule Master** under the **Administration** topic.
-The **Schedule Master** screen displays.
+## What Is It?
 
-Select the **schedule** in the **Schedule** drop-down list.
+Use this procedure to add Schedule Completion Events in the Enterprise Manager.
 
-Click on the **Events** tab in the **Schedule Details** frame.
+To add a new schedule completion event, complete the following steps:
 
-Click the **Add** button. The **Event Definition Wizard** displays.
-
-Select an **OpCon event template** from the **Event Template** drop-down list. For more information, refer to the [OpCon Events](../../../events/introduction.md) online help.
+1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+2. Select the **schedule** in the **Schedule** list
+3. Select the **Events** tab in the **Schedule Details** frame
+4. Select **Add**. The **Event Definition Wizard** displays
+5. Select an **OpCon event template** from the **Event Template** list. For more information, refer to the [OpCon Events](../../../events/introduction.md) online help
 
 :::tip Example
 
@@ -21,34 +38,16 @@ $JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>]
 
 :::
 
-Place your mouse cursor at the beginning of a **<syntax placeholder\>** displayed in the **Event Parameters** text
-box then drag the cursor to the right to select the entire syntax
-placeholder, excluding any surrounding commas. For example: ,<schedule name\>, .
+6. In the **Event Parameters** text box, select a **\<syntax placeholder\>** (excluding surrounding commas) and replace it with valid OpCon event information
+7. To replace a placeholder with a token:
 
-Replace the selected syntax placeholder with valid
-OpCon event information.
-
-If you wish to replace the syntax placeholder with a token, then do the
-following:
-
-Follow Step 6 to select the syntax placeholder.
-
-Click the ![Insert Token buton](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button")
-**Insert token** button or press **Ctrl/t** on the keyboard to list
-available global properties.
-
-Locate the global property in the selector by:
-
-i.  Scrolling to it.
-ii. Using the search field and filter criteria to find it. You can use
-    Windows wildcard characters in the search field to expand the search
-    and filter the search by property name, property value, or both
-    (default).
-
-Double-click on the **global property** (e.g., $SCHEDULE DATE).
+   a. Select the syntax placeholder as described in Step 6.
+   b. Select ![Insert Token button](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button") **Insert token** or press **Ctrl+T** to list available global properties.
+   c. Locate the global property by scrolling or using the search field. Windows wildcard characters are supported; filter by property name, value, or both (default).
+   d. Select the **global property** (e.g., $SCHEDULE DATE).
 
 :::note
-Double brackets will automatically be placed around the placeholder for the token that is defined.
+Double brackets are automatically placed around the token placeholder.
 :::
 
 :::tip Example
@@ -59,10 +58,42 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 
 :::
 
-Click **Reset** to reset the parameters to their original states.
+8. Select **Reset** to restore original parameters, or select **Finish** to save changes. Select **Cancel** to discard changes
+9. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 
-Click **Finish** to save changes or click **Cancel** to discard the
-changes made in the wizard.
+## When Would You Use It?
 
-Click **Close ☒** (to the right of the **Schedule Master** tab) to close
-the **Schedule Master** screen.
+- You need to add Schedule Completion Events in Enterprise Manager
+- The environment is expanding and requires additional Schedule Completion Events to support new automation workflows
+
+## Why Would You Use It?
+
+- **Extend automation scope**: Adding Schedule Completion Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
+- All additions are tracked in the OpCon audit log, recording who added the Schedule Completion Events and when
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+
+## FAQs
+
+**Q: How do you save a new schedule completion events record?**
+
+After completing the required fields, select the **Save** button on the toolbar to save the schedule completion events record.
+
+## Glossary
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

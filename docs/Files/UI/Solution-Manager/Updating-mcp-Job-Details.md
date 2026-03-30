@@ -1,4 +1,24 @@
+---
+title: Updating MCP Job Details
+description: "In Admin mode, MCP job type properties can be updated or defined."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Updating MCP Job Details
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 In **Admin** mode, MCP job type properties can be updated or defined.
 
@@ -16,214 +36,182 @@ Only those with the appropriate permissions will have access to the **Lock** but
 :::
 
 :::note
-If you do not have the Machine Privilege, then you will not be able to edit the daily job definition.
+If you do not have the Machine Privilege, you will not be able to edit the daily job definition.
 :::
 
 :::note
-Changes made to the job properties in the **Daily Job Definition** will take place immediately. If the job has already run, the changes will take effect the next time the job runs.
-
+Changes made to job properties in the **Daily Job Definition** take place immediately. If the job has already run, changes take effect the next time the job runs.
 :::
 
-To perform this procedure:
+To perform this procedure, complete the following steps:
 
-Click on the **Processes** button at the top-right of the **Operations
-Summary** page. The **Processes** page will display.
+1. Select the **Processes** button at the top-right of the **Operations Summary** page
+2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled
 
-Ensure that both the **Date** and **Schedule** toggle switches are
-enabled so that you can make your date and schedule selection,
-respectively. Each switch will appear green when enabled.
+   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/mcp-process.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/mcp-process.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+3. Select the desired **date(s)** to display the associated schedule(s)
+4. Select one or more **schedule(s)** in the list
+5. Select one **job** in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
+6. Right-click the job to display the **Selection** panel
 
-Select the desired **date(s)** to display the associated schedule(s).
+   ![Job Summary Tab in Operations](../../../Resources/Images/SM/mcp-right-panel.png "Job Summary Tab in Operations")
 
-Select one or more **schedule(s)** in the list.
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
 
-Select one **job** in the list. A record of your selection will display
-in the [status bar](SM-UI-Layout.md#Status) at the bottom of the
-page in the form of a breadcrumb trail.
+   :::note
+   The **Lock** button is not visible to users without the appropriate permissions.
+   :::
 
-Right-click on the job selected in the list to display the **Selection** panel.
-:::
+9. Expand the **Task Details** panel
 
-![Job Summary Tab in Operations](../../../Resources/Images/SM/mcp-right-panel.png "Job Summary Tab in Operations")
+   :::note
+   All required fields are designated by a red asterisk.
+   :::
 
-Click the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
-at the top-left corner of the panel to access the **Daily Job
-Definition** page. By default, this page will be in **Read-only** mode.
+10. Select a **User Id** for running the job. Use the default value of "0/0" or assign an available batch user. User information must be defined as a Batch User ID in OpCon Administration
+11. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To specify a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group. The button appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when toggled to Machine Group
 
-Click the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
-at the top-right corner to place the page in **Admin** mode. The button
-will switch to display a white lock unlocked on a green background
-![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
-when enabled.
+## When Would You Use It?
 
-:::note
-The **Lock** button will not be visible to users who do not have the appropriate permissions.
-:::
+- An existing MCP Job Details in Solution Manager requires changes
+- A process change or system update makes the current MCP Job Details definition outdated
 
-Expand the **Task Details** panel to expose its content.
+## Why Would You Use It?
 
-:::note
-All required fields are designated by a red asterisk.
-:::
-
-Select a **User Id** to use when running the job. Either use the default
-value of "0/0" or assign it to an available batch user. Keep in mind
-that user information must be defined as a Batch User ID in
-OpCon Administration.
-
-Select from the **Machines or Machine Group** drop-down list the
-**machine** where the LSAM is installed. If you wish instead to specify a machine group, then toggle the **Machines** switch
-to _Machine Group_ then select the **machine group** from the drop-down
-list. When toggled to Machine Group, the button will appear green
-![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch").
+- **Keep definitions current**: Updating MCP Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
 
 ## Updating MCP Job Task Details
 
 ### Updating Job Type START
 
-- **File Title:** Enter the WFL or the program to execute
-  - The maximum number of characters for File Title is 96.
-  - Do not begin the WFL or program text with START or RUN. This causes the job to fail.
-  - The File Title can not container lowercase characters.
-- **Arguments** Enter the parameters and/or task attribute(s) to be passed to the task.
-  - The maximum number of characters for Arguments is 200.
-  - Valid arguments include string, numbers, and booleans.
-  - Parenthesis are allowed to be around all the arguments.
-  - Separate arguments with a (,).
-- **Template Display File** Enter the file used in lieu of a job-specific displays file.
-  - Allows customers to use a single set of definitions for multiple OPCON jobs.
-- **EOT Notice Message** Enable to treat each end-of-task notification for this job as a display message.
-  - Enabling this setting allows the user to setan Automated Response to trigger action on task completion without having to wait for job to fully complete.
-- **Task Attributes** Enter Task attribute used to modify, override, or elaborate existing task attibutes that apply to the MCP program or WFL.
-  - The maximum number of characters for each Task Attribute is 300.
-  - Any single given task attribute must fit within a single line and can not be continued from one line to the next.
-  - There can be up to 10 task attributes. If a user needs to define more than 10 task attributes, the additional ones may be appeneded to any existing task attribute by preceding the next task attribute with a semicolon. For example: SW1=TRUE;SW2=TRUE.
+- **File Title:** WFL or program to run (max 96 characters)
+  - Do not begin with START or RUN — this causes the job to fail
+  - Lowercase characters are not allowed
+- **Arguments:** Parameters and/or task attributes passed to the task (max 200 characters)
+  - Valid arguments: strings, numbers, and booleans
+  - Parentheses may wrap all arguments. Separate arguments with a comma (,)
+- **Template Display File:** File used in lieu of a job-specific displays file. Allows a single set of definitions for multiple OpCon jobs
+- **EOT Notice Message:** When enabled, treats each end-of-task notification as a display message, allowing an Automated Response to trigger on task completion without waiting for the job to fully complete
+- **Task Attributes:** Modify, override, or elaborate existing task attributes for the MCP program or WFL (max 300 characters each)
+  - Each attribute must fit on a single line; continuation across lines is not supported
+  - Up to 10 task attributes allowed. To define more, append additional ones to an existing attribute using a semicolon. For example: `SW1=TRUE;SW2=TRUE`
 
 ![START Job: job information](../../../Resources/Images/SM/mcp-copy.png "START Job: job information")
 ![START Job: job information](../../../Resources/Images/SM/mcp-task.png "START Job: job information")
 
 ### Updating Job Type RUN
 
-- **File Title:** Enter the WFL or the program to execute
-  - The maximum number of characters for File Title is 96.
-  - Do not begin the WFL or program text with START or RUN. This causes the job to fail.
-  - The File Title can not container lowercase characters.
-- **Arguments** Enter the parameters and/or task attribute(s) to be passed to the task.
-  - The maximum number of characters for Arguments is 200.
-  - Valid arguments include string, numbers, and booleans.
-  - Parenthesis are allowed to be around all the arguments.
-  - Separate arguments with a (,).
-- **Template Display File** Enter the file used in lieu of a job-specific displays file.
-  - Allows customers to use a single set of definitions for multiple OPCON jobs.
-- **EOT Notice Message** Enable to treat each end-of-task notification for this job as a display message.
-  - Enabling this setting allows the user to setan Automated Response to trigger action on task completion without having to wait for job to fully complete.
-- **Task Attributes** Enter Task attribute used to modify, override, or elaborate existing task attibutes that apply to the MCP program or WFL.
-  - The maximum number of characters for each Task Attribute is 300.
-  - Any single given task attribute must fit within a single line and can not be continued from one line to the next.
-  - There can be up to 10 task attributes. If a user needs to define more than 10 task attributes, the additional ones may be appeneded to any existing task attribute by preceding the next task attribute with a semicolon. For example: SW1=TRUE;SW2=TRUE.
-- **File Attributes** Enter a subset of Task Attributes used to define, enhance, or override default attributse for files used by the MCP program.
-  - The maximum number of characters for each Task Attribute is 300.
-  - Any single given task attribute must fit within a single line and can not be continued from one line to the next.
-  - There can be up to 10 task attributes. If a user needs to define more than 10 task attributes, the additional ones may be appeneded to any existing task attribute by preceding the next task attribute with a semicolon. For example: SW1=TRUE;SW2=TRUE.
-    ![RUN Job: job information](../../../Resources/Images/SM/mcp-copy.png "RUN Job: job information")
-    ![RUN Job: task attributes](../../../Resources/Images/SM/mcp-task.png "RUN Job: task attributes")
-    ![RUN Job: file attributes](../../../Resources/Images/SM/mcp-file.png "RUN Job: file attributes")
+- **File Title:** WFL or program to run (max 96 characters)
+  - Do not begin with START or RUN — this causes the job to fail
+  - Lowercase characters are not allowed
+- **Arguments:** Parameters and/or task attributes passed to the task (max 200 characters)
+  - Valid arguments: strings, numbers, and booleans
+  - Parentheses may wrap all arguments. Separate arguments with a comma (,)
+- **Template Display File:** File used in lieu of a job-specific displays file. Allows a single set of definitions for multiple OpCon jobs
+- **EOT Notice Message:** When enabled, treats each end-of-task notification as a display message, allowing an Automated Response to trigger on task completion without waiting for the job to fully complete
+- **Task Attributes:** Modify, override, or elaborate existing task attributes for the MCP program or WFL (max 300 characters each)
+  - Each attribute must fit on a single line
+  - Up to 10 task attributes allowed. Append additional ones using a semicolon. For example: `SW1=TRUE;SW2=TRUE`
+- **File Attributes:** Subset of Task Attributes used to define, enhance, or override default attributes for files used by the MCP program (max 300 characters each)
+  - Each attribute must fit on a single line
+  - Up to 10 file attributes allowed. Append additional ones using a semicolon. For example: `SW1=TRUE;SW2=TRUE`
+
+![RUN Job: job information](../../../Resources/Images/SM/mcp-copy.png "RUN Job: job information")
+![RUN Job: task attributes](../../../Resources/Images/SM/mcp-task.png "RUN Job: task attributes")
+![RUN Job: file attributes](../../../Resources/Images/SM/mcp-file.png "RUN Job: file attributes")
 
 ### Updating Job Type EAE/AB Suite
 
-- **Report Name**: Defines the name of the EAE/AB Suite report to execute.
-  - Tokens are supported in this field.
-  - The report name cannot exceed 256 characters.
-- **Acceptfile**: Defines the filename that the LSAM will create with the arguments in the Parameters field for the EAE/AB Suite command.
-  - Tokens are supported in this field.
-  - The Acceptfile name cannot exceed 256 characters.
-  - Following completion (or failure) of the job, the Acceptfile is saved as a permanent file in the directory, \*SMA/LINC17/FILES/=.
-    - SMA Technologies recommends that this directory be cleaned up at regular intervals.
-    - A utility called SMA/WFL/CLEANUP/LINC17/FILES is provided in the MCP LSAM release container and may be scheduled via OpCon to perform this maintenance.
-- **Parameters**: Defines all the parameters to run the EAE/AB Suite report.
-  - Tokens are supported in this field.
-  - The Parameters cannot exceed 256 characters.
-- **Template Display File**: Defines the file used in lieu of a job-specific displays file, and it allows the customer to use a single set of definitions for multiple OpCon jobs rather than create a job-specific displays file for each OpCon job. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
-- **EOT Notice Message**: Defines whether to treat each end-of-task notification for this job as a display message. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
-  - Enabling this setting permits the user to set up an Automated Response to trigger action upon end of task without having to wait for the job to fully complete.
-    ![EAE/AB Suite job information](../../../Resources/Images/SM/mcp-eaeab.png "EAE/AB Suitejob information")
+- **Report Name:** Name of the EAE/AB Suite report to run (max 256 characters). Tokens are supported
+- **Acceptfile:** Filename the agent creates with the arguments from the Parameters field for the EAE/AB Suite command (max 256 characters). Tokens are supported
+  - After job completion or failure, the Acceptfile is saved permanently in `*SMA/LINC17/FILES/=`. Clean up this directory regularly using the `SMA/WFL/CLEANUP/LINC17/FILES` utility included in the MCP LSAM release container, which can be scheduled via OpCon
+- **Parameters:** All parameters to run the EAE/AB Suite report (max 256 characters). Tokens are supported
+- **Template Display File:** File used in lieu of a job-specific displays file. Allows a single set of definitions for multiple OpCon jobs. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
+- **EOT Notice Message:** When enabled, treats each end-of-task notification as a display message, allowing an Automated Response to trigger on task completion without waiting for the job to fully complete. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
+
+![EAE/AB Suite job information](../../../Resources/Images/SM/mcp-eaeab.png "EAE/AB Suitejob information")
 
 ### Updating Job Type COPY
 
-The COPY type jobs use the following fields:
-
-- **Source File or Directory** (Required): Specifies the filename (**Example**: (UC)MYUSER/FILES) or the directory (**Example**: (UC)MYUSER/=) that will be copied.
-  - The maximum number of characters for the **Source File or Directory** field is 256.
-  - Tokens are supported in this field.
-- **From** (Required): Specifies the place where the source file is. It can be a Family Disk name or a tape name.
-  - The maximum number of characters for the **From** field is 40.
-  - Tokens are supported in this field.
-- **Kind** (Required): Specifies the kind of the device for the source file.
-  - The Device choices are PACK or TAPE (default).
-- **Destination File or Directory**: Specifies the new filename (**Example**: (UC)MYUSER/SAVED/FILES) or the directory (**Example**: (UC)MYUSER/SAVED/=) for the copied file.
-  - The maximum number of characters for the **Destination File** or **Directory field** is 256.
-  - Tokens are supported in this field.
-- **To** (Required): Specifies where the destination file will be placed. It can be a Family Disk name or a tape name.
-  - The maximum number of characters for the **To** field is 40.
-  - Tokens are supported in this field.
-- **Kind** (Required): Specifies the kind of the device for the destination file.
-  - The Device choices are PACK or TAPE (default).
-- **Hostname (if BNA Transfer)** (Optional): Specifies the Unisys MCP hostname to where the file will be copied. If blank, the application assumes that this is not a BNA Transfer copy.
-  - The maximum number of characters for the **Hostname** field is 256.
-  - Tokens are supported in this field.
-- **Copy & Compare** (Optional): Specifies to use the "COPY & COMPARE" feature if the check box is marked to copy the file.
+- **Source File or Directory** (Required): Filename (e.g., `(UC)MYUSER/FILES`) or directory (e.g., `(UC)MYUSER/=`) to copy (max 256 characters). Tokens are supported
+- **From** (Required): Family Disk name or tape name where the source file resides (max 40 characters). Tokens are supported
+- **Kind** (Required): Device type for the source file — PACK or TAPE (default)
+- **Destination File or Directory:** New filename (e.g., `(UC)MYUSER/SAVED/FILES`) or directory (e.g., `(UC)MYUSER/SAVED/=`) for the copied file (max 256 characters). Tokens are supported
+- **To** (Required): Family Disk name or tape name where the destination file will be placed (max 40 characters). Tokens are supported
+- **Kind** (Required): Device type for the destination file — PACK or TAPE (default)
+- **Hostname (if BNA Transfer)** (Optional): Unisys MCP hostname to copy the file to (max 256 characters). If blank, the application assumes this is not a BNA Transfer copy. Tokens are supported
+- **Copy & Compare** (Optional): When selected, uses the "COPY & COMPARE" feature when copying the file
 
 ![COPY Job: job information](../../../Resources/Images/SM/mcp-copy.png "COPY Job: job information")
 
 ### Updating Job Type CHANGE
 
-The CHANGE type jobs use the following fields:
-
-- **Source File or Directory** (Required): Specifies the filename (**Example**: (UC)MYUSER/FILES) or the directory (**Example**: (UC)MYUSER/=) that will be changed.
-  - The maximum number of characters for the **Source File** or **Directory** field is 256.
-  - Tokens are supported in this field.
-- **New File or Directory** (Required): Specifies the new filename (**Example**:: \*(UC)MYUSER/SAVED/FILES) or the directory (**Example**: \*(UC)MYUSER/SAVED/=) for the new file.
-  - The maximum number of characters for the **New File** or **Directory** field is 256.
-  - Tokens are supported in this field.
-- **From** (Required): Specifies the place where the source file is. It can be a Family Disk name or a tape name.
-  - The maximum number of characters for the **From** field is 40.
-  - Tokens are supported in this field.
+- **Source File or Directory** (Required): Filename (e.g., `(UC)MYUSER/FILES`) or directory (e.g., `(UC)MYUSER/=`) to change (max 256 characters). Tokens are supported
+- **New File or Directory** (Required): New filename (e.g., `*(UC)MYUSER/SAVED/FILES`) or directory (e.g., `*(UC)MYUSER/SAVED/=`) (max 256 characters). Tokens are supported
+- **From** (Required): Family Disk name or tape name where the source file resides (max 40 characters). Tokens are supported
 
 ![CHANGE Job: job information](../../../Resources/Images/SM/mcp-change.png "CHANGE Job: job information")
 
 ### Updating Job Type REMOVE
 
-The REMOVE type jobs use the following fields:
-
-- **Source File or Directory** (Required): Specifies the filename (**Example**: (UC)MYUSER/FILES) or the directory (**Example**: \*(UC)MYUSER/FILES/=) that will be removed.
-  - The maximum number of characters for the **Source File** or **Directory** field is 256.
-  - Tokens are supported in this field.
-- **From** (Required): Specifies the place where the source file is. It can be a Family Disk name or a tape name.
-  - The maximum number of characters for the **From** field is 40.
-  - Tokens are supported in this field.
+- **Source File or Directory** (Required): Filename (e.g., `(UC)MYUSER/FILES`) or directory (e.g., `*(UC)MYUSER/FILES/=`) to remove (max 256 characters). Tokens are supported
+- **From** (Required): Family Disk name or tape name where the source file resides (max 40 characters). Tokens are supported
 
 :::note
-Effective with MCP LSAM 16.02, the user will be able to modify the \*SMA/WFL/REMOVEJOB WFL to elect to have the WFL complete OK even if there are no files deleted. Security errors and locked files will still cause the REMOVEJOB WFL to be reported as failed in this case.
+Effective with MCP LSAM 16.02, `*SMA/WFL/REMOVEJOB` can be modified to complete OK even when no files are deleted. Security errors and locked files still cause the REMOVEJOB WFL to fail.
 
-To implement the alternate behavior, modify a working copy of \*SMA/WFL/REMOVEJOB to comment out sequence #26600, and un-comment sequence 26650. Because the default behavior is to fail the REMOVE MCP job if there are no files to remove, it will be necessary to re-implement this modification each time the MCP LSAM is upgraded if the alternate behavior is desired.
+To enable the alternate behavior, modify a working copy of `*SMA/WFL/REMOVEJOB`: comment out sequence #26600 and uncomment sequence 26650. Re-apply this modification after each MCP LSAM upgrade if the alternate behavior is desired.
 :::
 
 ![REMOVE Job: job information](../../../Resources/Images/SM/mcp-remove.png "REMOVE Job: job information")
 
 ## Pre-Run Information
 
-The primary purpose of a Prerun is to test any required preconditions for job execution. If the Prerun job terminates with an error, it is rescheduled at a user-defined interval. The Prerun job continues to execute at the user-defined interval until it succeeds. After the Prerun job completes successfully, the job defined in the Job Description is allowed to process.
+A Prerun tests required preconditions before job execution. If the Prerun fails, it is rescheduled at a user-defined interval and retried until it succeeds. Once the Prerun completes successfully, the job defined in the Job Description is allowed to process.
 
 ![PreRun information](../../../Resources/Images/SM/mcp-prerun.png "PreRun information")
 
 ## Failure Criteria
 
-- **Fail Codes** Enter words to compare to the MCP console display. if the words match the display, the LSAM follows the failure logic established in the configuration.
-  - The entry must begin with the first word of the MCP console display, follow ed by any additional words included in the search of the display.
-  - Finish the entry with an asterisk (\*) as a wildcard for the remainder of the words in the display.
-  - Use of Fail Codes is an alternative solution to programming a WFL to ABORT if a program ISNT COMPLETEDOK. Use of Fail Codes is restricted to WFL jobs only, it cannot be used for programs.
-- **Fail Reset** Enter words to compare to the MCP console display. If the words match the display. the LSAM follows the failure logic established in the configuration.
+- **Fail Codes:** Words to compare against the MCP console display. If they match, the agent follows the configured failure logic
+  - The entry must begin with the first word of the MCP console display, followed by any additional words to include in the search
+  - End the entry with an asterisk (*) as a wildcard for remaining words
+  - Fail Codes are an alternative to programming a WFL to ABORT if a program `ISNT COMPLETEDOK`. Fail Codes apply to WFL jobs only — not programs
+- **Fail Reset:** Words to compare against the MCP console display. If they match, the agent follows the configured failure logic
 
 ![Failure Criteria Job: job information](../../../Resources/Images/SM/mcp-failure-criteria.png "Failure Criteria Job: job information")
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+
+## FAQs
+
+**Q: How many steps does the Updating MCP Job Details procedure involve?**
+
+The Updating MCP Job Details procedure involves 11 steps. Complete all steps in order and save your changes.
+
+**Q: What does Updating MCP Job Details cover?**
+
+This page covers Updating MCP Job Task Details, Pre-Run Information, Failure Criteria.
+
+## Glossary
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

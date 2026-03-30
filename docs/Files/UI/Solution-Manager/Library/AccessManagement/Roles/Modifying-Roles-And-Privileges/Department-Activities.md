@@ -1,16 +1,28 @@
 ---
 lang: en-us
-title: Roles - Departments
 viewport: width=device-width, initial-scale=1.0
+title: Role Department Activities
+description: "The Departments tab (_Library > Access Management > Roles_) displays the departments assigned to the selected role."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 # Role Department Activities
 
-The Roles page is found in _Library > Access Management > Roles_, and provides the views to manage Privileges and Roles. When you click on the Roles tab, you will see a list of all the roles that have been created in the system. You can click on the name of a role to view the details of that role.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-A series of tabs is displayed on the Roles page. The Departments tab displays the departments that are assigned to the selected role.
+## What Is It?
 
-To modify the department activities assigned to a role, edit the preferred fields and click **Save**.
+The **Departments** tab (_Library > Access Management > Roles_) displays the departments assigned to the selected role. Edit the fields and select **Save** to modify them.
 
 ![Role Department Activities](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-departments-tab.png 'Role Department Activities')
 
@@ -25,3 +37,41 @@ For conceptual help, see:
 - [Privileges](../../../../../../../administration/privileges.md)
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
+
+## When Would You Use It?
+
+- The **Departments** tab (_Library > Access Management > Roles_) displays the departments assigned to the selected role
+
+## Why Would You Use It?
+
+- **Role Department**: The **Departments** tab (_Library > Access Management > Roles_) displays the departments assigned to the selected role
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What does Role Department Activities do?**
+
+title: Roles - Departments
+
+**Q: Where can you find Role Department Activities in OpCon?**
+
+Access Role Department Activities through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

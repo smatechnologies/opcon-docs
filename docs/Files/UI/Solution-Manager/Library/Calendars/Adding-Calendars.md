@@ -1,15 +1,60 @@
 ---
 lang: en-us
-title: Adding Calendars
 viewport: width=device-width, initial-scale=1.0
+title: Adding Calendars
+description: "Use this procedure to add Calendars in Solution Manager."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 # Adding Calendars
 
-To add a user-defined calendar:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-1. Click the **Add** button. The **Calendar** dialog displays.
-2. Add a _name_ in the **Name** field.
-3. _(Optional)_ Add a _description_ in the **Description** field.
-4. _(Optional)_ Add dates to the calendar. Added dates are displayed in the dates list. To remove all dates, click **Clear**.
-5. Click **Save** to save the calendar or **Cancel** to discard changes.
+## What Is It?
+
+Use this procedure to add Calendars in Solution Manager.
+
+To add a user-defined calendar, complete the following steps:
+
+1. Select the **Add** button. The **Calendar** dialog displays
+2. Enter a name in the **Name** field
+3. _(Optional)_ Enter a description in the **Description** field
+4. _(Optional)_ Add dates to the calendar. To remove all dates, select **Clear**
+5. Select **Save** to save the calendar or **Cancel** to discard changes
+
+## When Would You Use It?
+
+- You need to add Calendars in Solution Manager
+- The environment is expanding and requires additional Calendars to support new automation workflows
+
+## Why Would You Use It?
+
+- **Extend automation scope**: Adding Calendars to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
+- All additions are tracked in the OpCon audit log, recording who added the Calendars and when
+
+## FAQs
+
+**Q: How do you save a new calendars record?**
+
+After completing the required fields, select the **Save** button on the toolbar to save the calendars record.
+
+## Glossary
+
+
+**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine eligibility. Calendars can mark days to include or exclude from schedule builds.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.

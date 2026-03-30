@@ -1,11 +1,39 @@
+---
+title: OpCon Server Options
+description: "The Enterprise Manager Administration supports management of Server Options in OpCon."
+product_area: Administration
+audience: System Administrator
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - System Administrator
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # OpCon Server Options
 
+**Theme:** Configure  
+**Who Is It For?** System Administrator
+
+## What Is It?
+
 The **Enterprise Manager Administration** supports management of Server Options in OpCon. Only the OpCon administrative users in the ocadm role can access the options. Refer to [Managing Server Options](../Files/UI/Enterprise-Manager/Managing-Server-Options.md) in the **Enterprise Manager** online help.
+
+## When Would You Use It?
+
+- The **Enterprise Manager Administration** supports management of Server Options in OpCon
+
+## Why Would You Use It?
+
+- **OpCon Server**: The **Enterprise Manager Administration** supports management of Server Options in OpCon
+
+## Configuration Options
 
 ## General Settings
 
 The General category contains default behavior settings for the SAM.
-
 
 | Parameter | Default | Dynamic (Y / N) | Description |
 | --- | --- | :---: | --- |
@@ -14,15 +42,14 @@ The General category contains default behavior settings for the SAM.
 | Number of Runs Included in Job Average Calculations | 10 | Y | Defines the number of most recent job history records to use when SAM Calculates Job Averages.<br /><br />Valid values range from 1 to 999. |
 | SAM Calculates Job Averages | False | Y | Determines if SAM calculates job start and run time averages after each job run.<ul><li>If this value is set to **True**, SAM calculates the average times the way the SMA_JOBAVG stored procedure does. For more information, refer to SMA_JOBAVG in the Database Information online help. SAM passes the following parameters for the calculation:<ul><li>SW1: The value from Server Options for Number of Runs Included in Job Average Calculations.</li><li>SW2: 1</li><li>SW3: 2</li><li>SW4: The Schedule Name for the job that just ran.</li><li>SW5: The Job Name that just ran</li><li>Special: SAM passes a special parameter for the Frequency of the job that just ran.</li></ul></li><li>The job start and run time averages will only be recalculated for jobs that are in use in the Daily. This will keep the times more current, but may cause slight processing delays in SAM depending on the job processing load.</li><li>If this value is set to **False**, set up the job SMA JOB AVERAGE on the SMAUtility schedule to run once per day. For more information, refer to SMA Job Average.</li></ul>Valid values are True and False. |
 | Remove Period in Abbreviated Months and Days | False | Y | SAM will check this setting for resolving Tokens that contain abbreviated months and abbreviated days.<ul><li>If **True**, SAM strips the period from abbreviated months and days.</li><li>If **False**, SAM leaves the period on abbreviated months and days.</li></ul>This setting should only be set to True for customers requiring backward compatibility to older versions of SAM used in the few locales where periods are now included by default with some abbreviations.<br /><br />Valid values are True and False. |
-| Allow Wild Cards in Events | False | Y | This parameter indicates whether or not **\*** (asterisk) and **?** (question mark) are treated as wild cards in Schedule, Job, and Machine Names within Events.<br /><br />Valid values are True and False. |
-| TLS Certificate Serial Number | *blank* | Y | This parameter is an identifier of the digital certificate that is optionally assigned to the OpCon server's SMANetCom program, required only when TLS Client Validation has been selected by one or more LSAMs. This number can be found in the certificate store of the machine where the OpCon server is installed. When blank, the OpCon server's SMANetCom program will not supply a TLS Client certificate to any LSAM.<br /><br />*Note: If an LSAM requires TLS Client validation, but SMANetCom does not provide its certificate, then the communication link with that LSAM will fail to connect.* |
+| Allow Wild Cards in Events | False | Y | This parameter indicates whether **\*** (asterisk) and **?** (question mark) are treated as wild cards in Schedule, Job, and Machine Names within Events.<br /><br />Valid values are True and False. |
+| TLS Certificate Serial Number | *blank* | Y | This parameter is an identifier of the digital certificate that is optionally assigned to the OpCon server's SMANetCom program, required only when TLS Customer Validation has been selected by one or more agents. This number can be found in the certificate store of the machine where the OpCon server is installed. When blank, the OpCon server's SMANetCom program will not supply a TLS Customer certificate to any agent.<br /><br />*Note: If an agent requires TLS Customer validation, but SMANetCom does not provide its certificate, then the communication link with that agent will fail to connect.* |
 | Login Security Message | *blank* | Y | This parameter  configures a security message to display to users after logging into  the application. If a value is specified, then this value is shown in the  security message that is displayed to users after login.<br /><br />*Note: This parameter configures the security message to display in both the Enterprise Manager and Solution Manager applications.* |
 | Incident Management System | *blank* | Y | This parameter identifies the name of the ticketing system that is used for incident management. If a value is specified, then this value  is used  as a label to replace the "Incident Ticket ID" label in the Daily Job Information dialog. |
 | Allow Job Events to Restart Schedules | False | Y | This parameter configures the SAM to allow an event to start a completed schedule. If this option is activated, the following events cause the restart of a completed schedule: $JOB:ADD, $JOB:RESTART, or $JOB:RESCHEDULE.<br /><br />By default, the SAM does not restart a completed schedule and logs the event as an error in the Critical.log. When this option is activated, the SAM restarts a schedule to allow events to process if they are received after a schedule is completed.<br /><br />Valid values are True and False. |
 | Failed jobs should keep the Schedule "In Process" | False | Y | This parameter configures the SAM to keep schedules In Process that contain Failed jobs and Marked Failed jobs.<br /><br />By default, the SAM closes a schedule when all jobs are in one of the following job status categories: Cancelled, Skipped, Finished OK, or Failed. Refer to Jobs Status Change Commands.<br /><br />Valid values are True and False. |
 | Number of Days to Keep a Service Request Execution | 7 | Y | This parameter defines the number of days to retain service request execution history. |
 | Solution Manager URL | *blank* | N | This parameter defines the Solution Manager URL to allow opening Solution Manager within the Enterprise Manager. If a value is specified, a Solution Manager option will appear in the Navigation frame.<br /><br />*Note: After defining a URL and saving the value, you must log out then log in to the Enterprise Manager for the Solution Manager option to appear in the Navigation frame.* |
-
 ## Logging Options
 
 The Logging category contains log and trace settings for the SAM.
@@ -41,8 +68,8 @@ The Time Settings category contains time-related settings for the SAM.
 
 | Parameter | Default | Dynamic (Y / N) | Description |
 | --- | --- | :---: | --- |
-| Hour of each day SAM should detect Schedules to build | 0 | Y | By default, at midnight the SAM detects schedules to build.<br /><br />Valid values range from 0 to 23 and are based on a 24-hour format starting from 0 (midnight) to 23 (11 p.m.).<br /><br />The SAM only processes the builds once per day. If this hour changes after the build process, SAM does not consider this parameter until the next day. Set specific times for individual schedules to build on the schedule definitions. For more information, refer to Schedule Maintenance.<br /><br />*Note: To enable notification for failed schedule build processes, define OpCon events on the SMA_SKD_BUILD job on the AdHoc schedule.*<br /><br />SMA Technologies provides template jobs for AdHoc with the AdHoc.mdb file. For more information, refer to SMA_SKD Jobs on the AdHoc Schedule. |
-| Minutes between checking running jobs | 5 | Y | This parameter determines the maximum time period for the SAM to wait before inquiring about job status. SAM only inquires about the job status if SMANetCom has not received a valid message from the LSAM in the configured amount of time.<br /><br />When jobs are processing, the status responses update the timestamp of the last time the SAM received job information. For short jobs, there is no need for the SAM to request job status. If the SAM does not receive a status for the job within the specified time-out value, it requests the job status.<br /><br />This timer is necessary for jobs that run for long periods of time. It is also necessary for possible losses in communication between SMANetCom and the LSAM.<br /><br />If job-processing issues are suspected, set this timer to three minutes for debugging. When finished debugging, set the timer back to five minutes.<br /><br />If all is running well, this timer can be increased to a recommended maximum of 10 minutes. Valid values range from 1 to 1440.<br /><br />*Note: Jobs in a "Start Attempted" status are not subject to this timer because they are checked in as timely a fashion as possible.* |
+| Hour of each day SAM should detect Schedules to build | 0 | Y | By default, at midnight the SAM detects schedules to build.<br /><br />Valid values range from 0 to 23 and are based on a 24-hour format starting from 0 (midnight) to 23 (11 p.m.).<br /><br />The SAM only processes the builds once per day. If this hour changes after the build process, SAM does not consider this parameter until the next day. Set specific times for individual schedules to build on the schedule definitions. For more information, refer to Schedule Maintenance.<br /><br />*Note: To enable notification for failed schedule build processes, define OpCon events on the SMA_SKD_BUILD job on the AdHoc schedule.*<br /><br />Continuous provides template jobs for AdHoc with the AdHoc.mdb file. For more information, refer to SMA_SKD Jobs on the AdHoc Schedule. |
+| Minutes between checking running jobs | 5 | Y | This parameter determines the maximum time period for the SAM to wait before inquiring about job status. SAM only inquires about the job status if SMANetCom has not received a valid message from the agent in the configured amount of time.<br /><br />When jobs are processing, the status responses update the timestamp of the last time the SAM received job information. For short jobs, there is no need for the SAM to request job status. If the SAM does not receive a status for the job within the specified time-out value, it requests the job status.<br /><br />This timer is necessary for jobs that run for long periods of time. It is also necessary for possible losses in communication between SMANetCom and the agent.<br /><br />If job-processing issues are suspected, set this timer to three minutes for debugging. When finished debugging, set the timer back to five minutes.<br /><br />If all is running well, this timer can be increased to a recommended maximum of 10 minutes. Valid values range from 1 to 1440.<br /><br />*Note: Jobs in a "Start Attempted" status are not subject to this timer because they are checked in as timely a fashion as possible.* |
 | Seconds SAM should wait between PreRun attempts | 180 | Y | This parameter determines the amount of time in seconds between prerun attempts. By default, the SAM re-attempts prerun jobs every 180 seconds (3 minutes) until the job succeeds.<br /><br />Valid values range from 0 to 32000. |
 
 ## SMTP Server Settings
@@ -62,7 +89,7 @@ The SMTP Server Settings category contains configuration options the SMA Notify 
 | SMTP Total Attachment Size in MB (Primary Email) | 10 | Y | Determines the maximum total of MB in the attachments for an email attachments notification from the Primary Email SMTP server.<br /><br />This value should match the limit set by the SMTP server. |
 | SMTP Authentication -Enable SSL (Primary Email) | False | Y | Determines if the SMA Notify Handler will use SSL encryption when connecting to the Primary Email SMTP server.<br /><br />If the SMTP server requires SSL Encryption, the value must be set to True. |
 | SMTP Maximum Number of Attachments (Primary Email) | 50 | Y | Determines the maximum number of attachments allowed per email on a notification from the Primary Email SMTP server.<br /><br />This value should match the limit set by the SMTP server. |
-| SMTP Application ID (Primary Email) | <blank\> | Y | The GUID for the Application (client) ID in your organization's Azure app registrations. |
+| SMTP Application ID (Primary Email) | <blank\> | Y | The GUID for the Application (customer) ID in your organization's Azure app registrations. |
 | SMTP Client Secret (Primary Email) | <blank\> | Y | The client secret for the application in your organization's Azure app registrations for Notify Handler. |
 | SMTP Tenant ID (Primary Email) | <blank\> | Y | The GUID for the Tenant ID in your organization's Azure. |
 | SMTP Server Name (Secondary Email) | *blank* | Y | Defines the name of the Secondary SMTP server for sending email.If messages fail to send through the Primary Email server, the SMA Notify Handler will attempt to send the message again through the Secondary Email server.<br /><br />If no SMS servers are defined, this server will also serve as a Secondary server to send SMS text messages.<br />If the value is blank, the SMA Notify Handler will not attempt messages through a Secondary server.<br /><br />Default: Blank |
@@ -73,7 +100,7 @@ The SMTP Server Settings category contains configuration options the SMA Notify 
 | SMTP Total Attachment Size in MB (Secondary Email) | 10 | Y | Determines the maximum total of MB in the attachments for an email attachments notification from the Secondary Email SMTP server.<br /><br />This value should match the limit set by the SMTP Server. |
 | SMTP Authentication -Enable SSL (Secondary Email) | False | Y | Determines if the SMA Notify Handler will use SSL encryption when connecting to the Secondary Email SMTP server.<br /><br />If the SMTP server requires SSL Encryption, the value must be set to True. |
 | SMTP Maximum Number of Attachments (Secondary Email) | 50 | Y | Determines the maximum number of attachments allowed per email on a notification from the Secondary Email SMTP server.<br /><br />This value should match the limit set by the SMTP server. |
-| SMTP Application ID (Secondary Email) | <blank\> | Y | The GUID for the Application (client) ID in your organization's Azure app registrations. |
+| SMTP Application ID (Secondary Email) | <blank\> | Y | The GUID for the Application (customer) ID in your organization's Azure app registrations. |
 | SMTP Client Secret (Secondary Email) | <blank\> | Y | The client secret for the application in your organization's Azure app registrations for Notify Handler. |
 | SMTP Tenant ID (Secondary Email) | <blank\> | Y | The GUID for the Tenant ID in your organization's Azure. |
 | SMTP Server Name (Primary SMS) | *blank* | Y | Defines the name of the Primary SMTP server for sending SMS text messages.<ul><li>If this server is defined, the SMA Notify Handler will not only attempt SMS messages through the defined SMS server(s) (the email servers will only be used for email messages).</li><li>If the value is blank, the SMA Notify Handler will try to use the Primary Email SMTP server for SMS text messages.</li></ul> Default: Blank |
@@ -82,7 +109,7 @@ The SMTP Server Settings category contains configuration options the SMA Notify 
 | SMTP Authentication User (Primary SMS) | *blank* | Y | Defines an email address for authentication to the Primary SMS SMTP server.<ul><li>If the SMTP server requires authentication, a value must specified here.</li><li>If a value is not specified when required by the SMTP server, the SMA Notify Handler will not be able to send SMS text messages.</li></ul>Customers should specify an email address consistent with their domain name.<br /><br />The SMA Notify Handler will not validate the email address specified; it will only send the message with the user and password specified, leaving the validation up to the SMTP server. *In OAuth configurations, this value is not used*|
 | SMTP Authentication Encrypted Password (Primary SMS) | *blank* | Y | Defines the password for the SMTP Authentication User for the Primary SMS server.<ul><li>If the SMTP server requires authentication, a value must specified here that provides the encrypted password for the user.</li></ul>To encrypt the password manually:<ul><li>Use the Password encryption tool in the Enterprise Manager.</li><li>Then copy and paste the encrypted password for the value of this setting.</li></ul>*For more information, refer to Encrypting Passwords in the Enterprise Manager online help.* *In OAuth configurations, this value is not used* |
 | SMTP Authentication -Enable SSL (Primary SMS) | False | Y | Determines if the SMA Notify  Handler will use SSL encryption when connecting to the Primary SMS SMTP server.<br /><br />If the SMTP server requires SSL Encryption, the value must be set to True. |
-| SMTP Application ID (Primary SMS) | <blank\> | Y | The GUID for the Application (client) ID in your organization's Azure app registrations. |
+| SMTP Application ID (Primary SMS) | <blank\> | Y | The GUID for the Application (customer) ID in your organization's Azure app registrations. |
 | SMTP Client Secret (Primary SMS) | <blank\> | Y | The client secret for the application in your organization's Azure app registrations for Notify Handler. |
 | SMTP Tenant ID (Primary SMS) | <blank\> | Y | The GUID for the Tenant ID in your organization's Azure. |
 | SMTP Server Name (Secondary SMS) | *blank* | Y | Defines the name of the Secondary SMTP server for sending SMS text messages.<ul><li>If messages fail to send through the Primary SMS server, the SMA Notify Handler will attempt to send the message again through the Secondary SMS server.</li><li>If the Primary SMS server is not defined, this server will send SMS text messages.</li><li>If the value is blank, the SMA Notify Handler will not attempt messages through a Secondary server.</li></ul>Default: Blank |
@@ -91,7 +118,7 @@ The SMTP Server Settings category contains configuration options the SMA Notify 
 | SMTP Authentication User (Secondary SMS) | *blank* | Y | Defines an email address for authentication to the Secondary SMS SMTP server.<ul><li>If the SMTP server requires authentication, a value must specified here.</li></ul>If a value is not specified when required by the SMTP server, the SMA Notify Handler will not be able to send text messages through a secondary server.<br /><br />Customers should specify an email address consistent with their domain name.<br /><br />The SMA Notify Handler will not validate the email address specified; it will only send the message with the user and password specified, leaving the validation up to the SMTP server. *In OAuth configurations, this value is not used* |
 | SMTP Authentication Encrypted Password (Secondary SMS) | *blank* | Y | Defines the password for the SMTP Authentication User for the Secondary SMS server.<ul><li>If the SMTP server requires authentication, a value must specified here that provides the encrypted password for the user.</li></ul>To encrypt the password manually:<ul><li>Use the Password encryption tool in the Enterprise Manager.</li><li>Then copy and paste the encrypted password for the value of this setting.</li></ul>*For more information, refer to Encrypting Passwords in the Enterprise Manager online help.* *In OAuth configurations, this value is not used* |
 | SMTP Authentication -Enable SSL (Secondary SMS) | False | Y | Determines if the SMA Notify Handler will use SSL encryption when connecting to the Secondary SMS SMTP server.<br /><br />If the SMTP server requires SSL Encryption, the value must be set to True. |
-| SMTP Application ID (Secondary SMS) | <blank\> | Y | The GUID for the Application (client) ID in your organization's Azure app registrations. |
+| SMTP Application ID (Secondary SMS) | <blank\> | Y | The GUID for the Application (customer) ID in your organization's Azure app registrations. |
 | SMTP Client Secret (Secondary SMS) | <blank\> | Y | The client secret for the application in your organization's Azure app registrations for Notify Handler. |
 | SMTP Tenant ID (Secondary SMS) | <blank\> | Y | The GUID for the Tenant ID in your organization's Azure. |
 
@@ -121,14 +148,14 @@ The Notification Settings category contains configuration options for the SMA No
 The Automatic License Notifications category contains settings to determine if and how the SAM will send automatic license notifications.
 
 :::note
-SMA Technologies **strongly recommends** enabling automatic license notifications. If for any reason the license is compromised and this feature is not enabled, only SAM Critical log will report the problem. Notifying SMA Technologies and local OpCon administrators automatically will ensure action can be taken before the license expires.
+Continuous **strongly recommends** enabling automatic license notifications. If for any reason the license is compromised and this feature is not enabled, only SAM Critical log will report the problem. Notifying Continuous and local OpCon administrators automatically will ensure action can be taken before the license expires.
 :::
 
 | Parameter | Default | Dynamic (Y / N) | Description |
 | --- | --- | :---: | --- |
-| Send Email to SMA Office | Disabled | Yes | This parameter determines if SAM will automatically send email notifications to SMA Technologies office when:<ul><li>The license is expiring</li><li>At the beginning of the month, the task count report is due for Task Based licensed customers.</li></ul>The value of Disabled will disable the SAM from automatically sending email to SMA Technologies. Instead, the SAM will write the information to the SAM.log and Critical.log files.<br /><br />To enable this option choose the SMA Technologies Office that provides sales and support for this site.<br /><br />Valid values include:<ul><li>Disabled</li><li>SMA France</li><li>SMA Europe</li><li>SMA USA</li></ul> |
-| Send Email Cc | *blank* | Yes | For all customers, this parameter configures the list of email addresses that will be copied when the SAM automatically sends license expiration notices.<br /><br />For customers with a Task-based license, this parameter also configures the list of email addresses that will be copied when SAM automatically sends the license notification at the beginning of each month to SMA Technologies.<br /><br />Enter one or more SMTP email addresses separated by semicolons ( ; ). |
-| Encrypt Task License Report | False | Yes | For customers with a Task-based license, this parameter determines if the SAM will encrypt the data for the license reports.<br /><br />Valid values include True and False.<ul><li>If False, the SAM will write the Task License information in clear text.</li><li>If True, the SAM will write the Task License Report information with encryption.</li></ul>Only SMA Technologies will be able to decrypt and read the information. |
+| Send Email to SMA Office | Disabled | Yes | This parameter determines if SAM will automatically send email notifications to Continuous office when:<ul><li>The license is expiring</li><li>At the beginning of the month, the task count report is due for Task Based licensed customers.</li></ul>The value of Disabled will disable the SAM from automatically sending email to Continuous. Instead, the SAM will write the information to the SAM.log and Critical.log files.<br /><br />To enable this option choose the Continuous Office that provides sales and support for this site.<br /><br />Valid values include:<ul><li>Disabled</li><li>SMA France</li><li>SMA Europe</li><li>SMA USA</li></ul> |
+| Send Email Cc | *blank* | Yes | For all customers, this parameter configures the list of email addresses that will be copied when the SAM automatically sends license expiration notices.<br /><br />For customers with a Task-based license, this parameter also configures the list of email addresses that will be copied when SAM automatically sends the license notification at the beginning of each month to Continuous.<br /><br />Enter one or more SMTP email addresses separated by semicolons ( ; ). |
+| Encrypt Task License Report | False | Yes | For customers with a Task-based license, this parameter determines if the SAM will encrypt the data for the license reports.<br /><br />Valid values include True and False.<ul><li>If False, the SAM will write the Task License information in clear text.</li><li>If True, the SAM will write the Task License Report information with encryption.</li></ul>Only Continuous will be able to decrypt and read the information. |
 
 ## Password Requirements
 
@@ -144,7 +171,7 @@ The Password Requirements category contains the requirements for OpCon Login pas
 | Requires alpha characters | False | Y | This parameter determines if the password must contain alphabetical characters.<br /><br />Valid values are True and False. |
 | Requires special characters | False | Y | This parameter determines if the password must contain special characters.<br /><br />Valid values are True and False. |
 | Number of times a character can repeat consecutively | 2 | Y | This parameter determines the number of times a character can repeat consecutively in a password.<br /><br />Example: If value is set to 2, the password "jjj" would be invalid.<br /><br />Valid values range from 1 to 12.<br /><br />Setting the value to 0 disables the setting. |
-| Number of days a password is valid | 0 | Y | This parameter determines the number of days a password is valid from the time users changes their password.<br /><br />**CAUTION: SMA Technologies recommends setting user accounts involved in batch processing to have the password that never expire. When turning this setting on, you should strongly consider all User Accounts set up for running batch processes. To prevent these users from expiring, you may update each of those user accounts to have the password never expire. Refer to User Accounts.**<br /><br />Valid values range from 0 to 365.<br /><br />Setting the value to 0 disables the setting. |
+| Number of days a password is valid | 0 | Y | This parameter determines the number of days a password is valid from the time users changes their password.<br /><br />**CAUTION: Continuous recommends setting user accounts involved in batch processing to have the password that never expire. When turning this setting on, you should strongly consider all User Accounts set up for running batch processes. To prevent these users from expiring, you may update each of those user accounts to have the password never expire. Refer to User Accounts.**<br /><br />Valid values range from 0 to 365.<br /><br />Setting the value to 0 disables the setting. |
 | Number of days before password expiration to warn user | 0 | Y | This parameter determines the number of days in advance of password expiration that the primary graphical user interfaces will warn users that their password is about to expire.<br /><br />Valid values range from 0 to 30. <br /><br />Setting the value to 0 disables the setting. |
 | Minimum number of characters | 8 | Y | This parameter defines the minimum number of characters allowed for every user's password in OpCon.<br /><br />Valid values range from 1 to 12. |
 | Number of passwords to retain in history | 0 | Y | This parameter determines the number of passwords for OpCon to retain in history. When a user changes their password, they will not be able to reuse any of the in the history.<br /><br />Valid values range from 0 to 20.<br /><br />Setting the value to 0 disables the setting. |
@@ -156,7 +183,7 @@ The HTML Documentation category contains the setting for the web-based document
 
 | Parameter | Default | Dynamic (Y / N) | Description |
 | --- | --- | :---: | --- |
-| Root URL for Documentation | *blank* | Y | Defines the root URL to use to access the documentation from the local network. Applications such as the Enterprise Manager (EM) use this URL to access the documentation. Any desktop having EM must be able to reach this URL in order to access the OpCon documentation. |
+| Root URL for Documentation | *blank* | Y | Defines the root URL to use to access the documentation from the local network. Applications such as the Enterprise Manager (EM) use this URL to access the documentation. Any desktop having EM must be able to reach this URL to access the OpCon documentation. |
 
 ## Vision Settings
 
@@ -167,3 +194,85 @@ The Vision category contains the settings for the Solution Manager Vision module
 | Days of Vision History to Keep | 3650 | Y | Defines the number of days Vision data will be retained. |
 | Days in Past to Trigger Vision Actions | 1 | Y | Defines the number of days in the past to use for triggering Vision Actions. |
 | Days in Future to Trigger Vision Actions | 1 | Y | Defines the number of days in the future to use for triggering Vision Action. |
+
+## Security Considerations
+
+### Authentication
+
+The TLS Certificate Serial Number parameter identifies the digital certificate assigned to the OpCon server's SMANetCom program. This is required when TLS Customer Validation has been selected by one or more agents. If an agent requires TLS Customer validation and SMANetCom does not provide its certificate, the communication link with that agent fails.
+
+SMTP authentication passwords stored in Server Options must be encrypted. Use the Password encryption tool in Enterprise Manager and paste the result into the corresponding Encrypted Password field. OAuth-based SMTP authentication uses Application ID, Client Secret, and Tenant ID from Azure app registrations instead of username/password credentials.
+
+The Authentication User (UNC Access) and its encrypted password define the Windows account SMA Notify Handler uses to access network shares and UNC paths for email attachments and Network Message notifications.
+
+### Authorization
+
+Server Options are accessible only to users in the ocadm role.
+
+### Data Security
+
+The Password Requirements category enforces password policies for all OpCon user accounts: minimum character length (default: 8, up to 12), optional requirements for numeric, alpha, and special characters, limits on consecutive repeated characters, password history retention (up to 20 passwords), account lockout after failed login attempts (up to 10), and password expiration (up to 365 days). A static, non-configurable rule prevents passwords from matching the user's Login ID.
+
+For batch processing accounts, Continuous recommends setting Password Never Expires to prevent automated jobs from failing when passwords expire. The Encrypt Task License Report setting (default: False) controls whether SAM encrypts monthly task license report data sent to Continuous.
+
+The Login Security Message parameter configures a security banner displayed to users after login in both Enterprise Manager and Solution Manager.
+
+## Operations
+
+### Monitoring
+
+- The SAM logs all critical errors to `Critical.log` by default. To additionally write them to the Windows Application Event Log, set **Log Critical messages to NT Events** to `True`. Note: this adds overhead.
+- **SAM Message Logging Level** (default: Terse) controls the verbosity of `SAM.log`. Set to `Verbose` for machine processing details or `Debug` for detailed SAM processing diagnostics; return to `Terse` after troubleshooting.
+- SAM checks running job status at the interval defined by **Minutes between checking running jobs** (default: 5 minutes, max recommended: 10 minutes). Set to 3 minutes temporarily when investigating job-processing issues, then return to 5 minutes.
+
+### Common Tasks
+
+- Archive retention for SAM logs is controlled by **Maximum number of days archived SAM logs should be kept** (default: 10, range: 0–365). This value must be less than the `ArchiveDaysToKeep` setting in `SMAServMan.ini`.
+- To enable email/SMS notifications, configure **SMTP Server Name (Primary Email)** in Server Options. If the primary SMTP server fails, the handler retries using **SMTP Server Name (Secondary Email)** if configured.
+- To enable password expiration, set **Number of days a password is valid** in Password Requirements; enable **Password Never Expires** on all batch processing accounts before activating this setting to prevent job failures.
+
+### Alerts and Log Files
+
+- **Log job dependency errors to Critical.log** is enabled by default (True); disable only if verbose dependency logging is causing performance concerns, noting that errors will still appear in `SAM.log` when logging level is Verbose or Debug.
+- SMTP configuration issues (blank server name, missing authentication credentials) cause the SMA Notify Handler to silently fail to deliver email and SMS notifications. Confirm all SMTP Server settings are populated before relying on these notification types.
+- Server Options are accessible only to users in the `ocadm` role via the Enterprise Manager Administration section.
+
+## Exception Handling
+
+**Agent requires TLS Customer Validation but TLS Certificate Serial Number is blank, causing communication failure** — When one or more agents have TLS Customer Validation enabled, SMANetCom must be configured with a certificate serial number to supply to those agents; if TLS Certificate Serial Number is blank in Server Options, SMANetCom does not supply a certificate and the communication link with the requiring agent fails — Configure the TLS Certificate Serial Number in Server Options with the serial number of the digital certificate installed on the OpCon server.
+
+**Batch processing accounts expire when Number of days a password is valid is set without enabling Password Never Expires** — Password expiration applies to all user accounts unless Password Never Expires is set; when a batch processing account's password expires, automated jobs running under that account fail — Enable Password Never Expires on all accounts used for batch processing; review all batch user accounts before enabling the password expiration setting.
+
+**SMTP server requires authentication but SMTP Authentication User is blank, preventing email and text notifications** — If the SMTP server requires authentication and the SMTP Authentication User field is blank, the SMA Notify Handler cannot send emails or text messages — Provide a valid email address in the SMTP Authentication User field and the corresponding encrypted password in the SMTP Authentication Encrypted Password field; in OAuth configurations, supply the Application ID, Client Secret, and Tenant ID instead.
+
+## FAQs
+
+**Q: What are Server Options used for?**
+
+Server Options control the global behavior of the OpCon SAM and supporting services, including time settings, logging, communication, security, and Vision configuration. Changes to Dynamic parameters take effect immediately; others require a service restart.
+
+**Q: How do you access Server Options?**
+
+Server Options are configured through the Enterprise Manager. Refer to the OpCon Server Options documentation in the Concepts online help for detailed configuration guidance.
+
+**Q: What are the Vision Settings used for?**
+
+Vision Settings control how long Vision history data is retained and how many days in the past or future OpCon looks when triggering Vision Actions. These settings apply to the Solution Manager Vision module.
+
+## Glossary
+
+**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
+
+**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
+
+**SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
+
+**SMAServMan (SMA Service Manager)**: Manages the starting, stopping, and restarting of all OpCon server programs. Monitors configured applications and restarts them automatically if they fail unexpectedly.
+
+**SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
+
+**SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.

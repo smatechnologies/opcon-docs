@@ -1,12 +1,40 @@
+---
+title: Predefined Reports
+description: "All OpCon report files are stored in the OpConxps/EnterpriseManagerx64/reports/OPCONXPS_Reports/ folder on the SAM application server."
+product_area: Reports
+audience: Business Analyst, Operations Staff
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Business Analyst
+  - Operations Staff
+  - Reports
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Predefined Reports
 
-All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\``` folder. In order to run a report, the report (.rptdesign) file must reside on the SAM application server. For each report, the following information is given:
+**Theme:** Configure  
+**Who Is It For?** Business Analyst, Operations Staff
 
-- **Description**: Explains the information the report produces.
-- **File Name**: Indicates the name of the BIRT report file. This information is required for defining the report in Report Management (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help) and for running the report with the BIRT Report Generator (refer to [BIRT Report Generator](../utilities/Command-line-Utilities/BIRT-Report-Generator.md) in the **Utilities** online help).
-- **Primary Table**: Indicates the primary table in the OpCon database for the report. This information is required for defining the report in Report Management (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help).
-- **Required Filters**: Indicates the data filters required by the report. This information is required for defining the report in the Report Management utility (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help). Refer to the *Required filter* information listed for each report.
-- **Parameters**: Indicates the parameters to use when specifying the required filters for the -p switches in the BIRT Report Generator syntax. For additional information, refer to [Parameters](../utilities/Command-line-Utilities/BIRT-Report-Generator.md#parameters-1) in the **Utilities** online help.
+## What Is It?
+
+All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\``` folder. To run a report, the report (.rptdesign) file must reside on the SAM application server. For each report, the following information is given:
+
+- **Description**: Explains the information the report produces
+- **File Name**: Indicates the name of the BIRT report file. This information is required for defining the report in Report Management (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help) and for running the report with the BIRT Report Generator (refer to [BIRT Report Generator](../utilities/Command-line-Utilities/BIRT-Report-Generator.md) in the **Utilities** online help)
+- **Primary Table**: Indicates the primary table in the OpCon database for the report. This information is required for defining the report in Report Management (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help)
+- **Required Filters**: Indicates the data filters required by the report. This information is required for defining the report in the Report Management utility (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help). Refer to the *Required filter* information listed for each report
+- **Parameters**: Indicates the parameters to use when specifying the required filters for the -p switches in the BIRT Report Generator syntax. For additional information, refer to [Parameters](../utilities/Command-line-Utilities/BIRT-Report-Generator.md#parameters-1) in the **Utilities** online help
+
+## When Would You Use It?
+
+- All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\``` folder
+
+## Why Would You Use It?
+
+- **Predefined Reports**: All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\``` folder
 
 ## Annual Plan Dates by Calendar
 
@@ -22,7 +50,7 @@ All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\Enterp
 This report becomes more CPU intensive as the amount of Job History in the database increases.
 :::
 
-- **Description**: Shows the estimated and average runtimes for all jobs in the HISTORY table by schedule.
+- **Description**: Shows the estimated and average runtimes for all jobs in the HISTORY table by schedule
 - **File Name**: admin03
 - **Primary Table**: JMASTER
 - **Required Filters**: Schedules
@@ -50,7 +78,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Current Threshold and Resource Values
 
-- **Description**: Shows all threshold/resource names with their descriptions and values. Also presents how many resources are in use.
+- **Description**: Shows all threshold/resource names with their descriptions and values. Also presents how many resources are in use
 - **File Name**: admin11
 - **Primary Table**: THRESH
 - **Required Filters**:<None\>
@@ -58,14 +86,14 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Current OpCon Instance Property Values
 
-- **Description**: Shows all OpCon instance property names with their descriptions and value.
+- **Description**: Shows all OpCon instance property names with their descriptions and value
 - **File Name**: admin09
 - **Primary Table**: TOKEN
 - **Required Filters**:<None\>
 - **Parameters**:<None\>
 
 ## Daily Job Information by Machine
-- **Description**: Shows jobs in the Daily tables with associated job dependencies and subsequent jobs, sorted by machine and schedule date. Additionally, the last page includes the total number of jobs in the report.
+- **Description**: Shows jobs in the Daily tables with associated job dependencies and subsequent jobs, sorted by machine and schedule date. Additionally, the last page includes the total number of jobs in the report
 - **File Name**: skdrep24
 - **Primary Table**: SMASTER
 - **Required Filters**: Schedule Dates, Schedules, Departments
@@ -76,7 +104,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Daily Jobs Assigned to Each Machine in a Group
 
-- **Description**: Shows jobs by schedule date so user(s) will know the impact of removing a machine from a group and/or know which jobs are configured for a Machine Group that was modified. The report uses a special filter for selecting machines.
+- **Description**: Shows jobs by schedule date so user(s) will know the impact of removing a machine from a group and/or know which jobs are configured for a Machine Group that was modified. The report uses a special filter for selecting machines
 - **File Name**: skdrep39
 - **Primary Table**: SMASTER
 - **Required Filters**:<None\>
@@ -88,7 +116,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Daily Schedule by Date
 
-- **Description**: Shows the details of each job in the Daily tables, including all dependencies, threshold/resource updates, and OpCon events, sorted by schedule. Additionally, the last page includes the total number of jobs in the report.
+- **Description**: Shows the details of each job in the Daily tables, including all dependencies, threshold/resource updates, and OpCon events, sorted by schedule. Additionally, the last page includes the total number of jobs in the report
 - **File Name**: dailyskd
 - **Primary Table**: SMASTER
 - **Required Filters**: Schedule Dates, Schedules, Departments
@@ -127,10 +155,9 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 - **Required Filters**:<None\>
 - **Parameters**:<None\>
 
-
 ## ENS Definitions
 
-- **Description**: Shows notification groups, triggers, and notifications defined for each trigger defined within Notification Management.
+- **Description**: Shows notification groups, triggers, and notifications defined for each trigger defined within Notification Management
 - **File Name**: admin23
 - **Primary Table**: ENSMESSAGES
 - **Required Filters**:<None\>
@@ -142,7 +169,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Estimated Run Time by Schedule
 
-- **Description**: List the estimated run times for the frequency of each job, sorted by schedule.
+- **Description**: List the estimated run times for the frequency of each job, sorted by schedule
 - **File Name**: xref19
 - **Primary Table**: JKSD
 - **Required Filters**: Schedules
@@ -153,7 +180,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 :::
 
 ## Event Details by Schedule
-- **Description**: Shows the OpCon events associated with each job in the Master tables, sorted by schedule. 
+- **Description**: Shows the OpCon events associated with each job in the Master tables, sorted by schedule
 - **File Name**: xref05
 - **Primary Table**: JEVENTS 
 - **Required Filters**: Schedules
@@ -165,7 +192,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Event Details by Schedule Date
 
-- **Description**: Shows the OpCon events associated with each job in the Daily tables, sorted by schedule date. 
+- **Description**: Shows the OpCon events associated with each job in the Daily tables, sorted by schedule date
 - **File Name**: xref06
 - **Primary Table**: SEVENTS 
 - **Required Filters**: Schedule Dates, Schedules
@@ -177,7 +204,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Failed Jobs by Date
 
-- **Description**: Shows failed jobs and all associated information, sorted by schedule date. 
+- **Description**: Shows failed jobs and all associated information, sorted by schedule date
 - **File Name**: skdrep09
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -189,7 +216,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Failed Jobs with History Notes
 
-- **Description**: Shows job history, associated history notes, and job completion comments for failed jobs, sorted by schedule. The report uses a special filter for selecting months from the history.
+- **Description**: Shows job history, associated history notes, and job completion comments for failed jobs, sorted by schedule. The report uses a special filter for selecting months from the history
 - **File Name**: skdrep31
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules, Departments 
@@ -201,7 +228,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Frequencies and Associated Jobs
 
-- **Description**: Shows frequencies with associated schedules and jobs, sorted by frequency name. 
+- **Description**: Shows frequencies with associated schedules and jobs, sorted by frequency name
 - **File Name**: skdrep20
 - **Primary Table**: JSKD
 - **Required Filters**:<None\> 
@@ -209,7 +236,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Index of Reports
 
-- **Description**: Provides a list of all reports currently available in the OpCon database, sorted by Report Title
+- **Description**: Provides a list of all reports available in the OpCon database, sorted by Report Title
 - **File Name**: SMARptIndex
 - **Primary Table**: REPORTS
 - **Required Filters**:<None\>
@@ -217,7 +244,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Count by Date and Schedule
 
-- **Description**: Shows the number of jobs for a schedule date, sorted by date then by schedule. 
+- **Description**: Shows the number of jobs for a schedule date, sorted by date then by schedule
 - **File Name**: Admin08 
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules
@@ -229,7 +256,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Count by Machine for Jobs in Wait Machine Status
 
-- **Description**: Provides a count of the number of jobs in a Wait Machine status on individual machines, sorted by machine name and operating system (OS) type.
+- **Description**: Provides a count of the number of jobs in a Wait Machine status on individual machines, sorted by machine name and operating system (OS) type
 - **File Name**: skdrep23
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules
@@ -241,7 +268,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Count by Month and Department
 
-- **Description**: Shows the number of jobs executed for each month in history, sorted by month then department
+- **Description**: Shows the number of jobs run for each month in history, sorted by month then department
 - **File Name**: admin05
 - **Primary Table**: HISTORY
 - **Required Filters**:<None\>
@@ -257,7 +284,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Count by Schedule Date
 
-- **Description**: Shows the number of jobs executed based on the schedule date of the jobs. 
+- **Description**: Shows the number of jobs run based on the schedule date of the jobs
 - **File Name**: admin06 
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedule Dates, Schedules
@@ -269,7 +296,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Count by Start Date
 
-- **Description**: Shows the number of jobs executed based on the actual start date of the jobs. 
+- **Description**: Shows the number of jobs run based on the actual start date of the jobs
 - **File Name**: admin01 
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedule Dates, Schedules
@@ -293,7 +320,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Dependencies by Originating Schedule
 
-- **Description**: Shows jobs with dependencies, sorted by the originating schedule.
+- **Description**: Shows jobs with dependencies, sorted by the originating schedule
 - **File Name**: xref11
 - **Primary Table**: JDEPJOB 
 - **Required Filters**: Schedules
@@ -305,7 +332,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs Dependencies by Schedule Date and Start Time
 
-- **Description**: Shows jobs in the order they execute according to their dependency chain, sorted by schedule date. 
+- **Description**: Shows jobs in the order they run according to their dependency chain, sorted by schedule date
 - **File Name**: xref18
 - **Primary Table**: SDEPJOB 
 - **Required Filters**: Schedule Dates, Schedules
@@ -317,7 +344,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Dependencies by Subsequent Schedule
 
-- **Description**: Shows jobs with dependencies, sorted by the subsequent schedule. 
+- **Description**: Shows jobs with dependencies, sorted by the subsequent schedule
 - **File Name**: xref01
 - **Primary Table**: JDEPJOB 
 - **Required Filters**: Schedules
@@ -333,7 +360,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 If a date is defined and no schedules built for that date have any jobs with dependencies, it is possible to have no data for a date.
 :::
 
-- **Description**: Shows all jobs that are dependent on the defined job and all jobs that the defined job is dependent on, sorted by schedule.
+- **Description**: Shows all jobs that are dependent on the defined job and all jobs that the defined job is dependent on, sorted by schedule
 - **File Name**: xref04
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules
@@ -345,7 +372,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Details for Machine Group
 
-- **Description**: Shows the primary details of jobs for a defined Machine Group. Specifically, this report aids administrators in determining if a machine can be added to a group to run the jobs already configured on the group. The report uses a special filter for selecting machine groups.
+- **Description**: Shows the primary details of jobs for a defined Machine Group. Specifically, this report aids administrators in determining if a machine can be added to a group to run the jobs already configured on the group. The report uses a special filter for selecting machine groups
 - **File Name**: skdrep38
 - **Primary Table**: JMASTER 
 - **Required Filters**:<None\> 
@@ -357,7 +384,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job History by Date
 
-- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was executed on, sorted by date. The report uses a special filter for selecting one history date.
+- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was run on, sorted by date. The report uses a special filter for selecting one history date
 - **File Name**: skdrep06
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules
@@ -369,7 +396,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job History by Date with History Notes
 
-- **Description**: Shows job history, associated history notes, and job completion comments, sorted by schedule. The report uses aspecial filter for selecting one history date. 
+- **Description**: Shows job history, associated history notes, and job completion comments, sorted by schedule. The report uses aspecial filter for selecting one history date
 - **File Name**: skdrep52
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules, Departments 
@@ -381,7 +408,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job History by Department
 
-- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and department.Sorted by department.
+- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and department.Sorted by department
 - **File Name**: skdrep26
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -393,7 +420,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job History by Department (original format)
 
-- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and department. Sorted by department. This original report separates the date and time columns for exporting purposes. 
+- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and department. Sorted by department. This original report separates the date and time columns for exporting purposes
 - **File Name**: skdrep26of.rptdesign
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -405,7 +432,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job History by Schedule
 
-- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was executed on. Sorted by schedule. The report begins from the table's most recent entry.
+- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was run on. Sorted by schedule. The report begins from the table's most recent entry
 - **File Name**: skdrep05
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules
@@ -417,7 +444,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job History by Schedule (Alternate)
 
-- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was executed on. Every row will display the job name. Sorted by schedule. The report begins from the table's most recent entry. The report uses a special filter for selecting months from history.
+- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was run on. Every row will display the job name. Sorted by schedule. The report begins from the table's most recent entry. The report uses a special filter for selecting months from history
 - **File Name**: skdrep47
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules
@@ -428,7 +455,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 :::
 
 ## Job History by Start Date
-- **Description**: Shows the jobs in the primary history table, their finish status, associated run time information, and machine each job was executed on, sorted by start date. 
+- **Description**: Shows the jobs in the primary history table, their finish status, associated run time information, and machine each job was run on, sorted by start date
 - **File Name**: skdrep19
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules
@@ -439,7 +466,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 :::
 
 ## Job History by Start Time
-- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was executed on, sorted by start time. The report uses a special filter for selecting [one history date.
+- **Description**: Shows the jobs in the primary history table, their finish status, associated runtime information, and machine each job was run on, sorted by start time. The report uses a special filter for selecting [one history date
 - **File Name**: skdrep34
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedules
@@ -450,7 +477,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 :::
 
 ## Job History Archive by Date
-- **Description**: Shows the jobs in the archive table, their finish status, associated runtime information, and machine each job was executed on, sorted by date. The report uses a special filter for selecting one history date.
+- **Description**: Shows the jobs in the archive table, their finish status, associated runtime information, and machine each job was run on, sorted by date. The report uses a special filter for selecting one history date
 - **File Name**: skdrep08
 - **Primary Table**: HISTARC 
 - **Required Filters**: Schedules
@@ -463,10 +490,10 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 ## Job History Archive by Schedule
 
 :::caution
-This report returns records for all dates in the history archive table which could contain very large volumes of data, thereby causing the report to run out of memory. SMA Technologies recommends customers with large volumes of data use the Job History Archive by Date report to get a smaller report.
+This report returns records for all dates in the history archive table which could contain very large volumes of data, thereby causing the report to run out of memory. Continuous recommends customers with large volumes of data use the Job History Archive by Date report to get a smaller report.
 :::
 
-- **Description**: Shows all history that has been archived, sorted by schedule.
+- **Description**: Shows all history that has been archived, sorted by schedule
 - **File Name**: skdrep07
 - **Primary Table**: HISTARC 
 - **Required Filters**: Schedules
@@ -482,7 +509,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 The "Job Count Average by Month" graph in the report charts the job count average for each month. Each point is calculated by taking the total number of jobs run in a month and dividing that by the actual number of days jobs ran.
 :::
 
-- **Description**: Shows the job count from history for each month in the selected year. 
+- **Description**: Shows the job count from history for each month in the selected year
 - **File Name**: stt010
 - **Primary Table**: HISTORY 
 - **Required Filters**: Year 
@@ -494,7 +521,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job List by Access Code
 
-- **Description**: Lists all jobs and their associated schedule names, sorted by Access Code. 
+- **Description**: Lists all jobs and their associated schedule names, sorted by Access Code
 - **File Name**: skdrep30
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -506,7 +533,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job List by Department
 
-- **Description**: Lists all jobs and their associated schedule names, sorted by Department.
+- **Description**: Lists all jobs and their associated schedule names, sorted by Department
 - **File Name**: skdrep48
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -518,7 +545,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job List by Job Name
 
-- **Description**: Lists all jobs and their associated schedule names, sorted by job name.
+- **Description**: Lists all jobs and their associated schedule names, sorted by job name
 - **File Name**: skdrep22
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -530,7 +557,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job List by Machine
 
-- **Description**: Lists all jobs and their associated machines, sorted by machine and schedule name. Additionally, the report shows if a machine is the primary or alternate machine for the job.
+- **Description**: Lists all jobs and their associated machines, sorted by machine and schedule name. Additionally, the report shows if a machine is the primary or alternate machine for the job
 - **File Name**: skdrep25
 - **Primary Table**: MACHS
 - **Required Filters**:<None\>
@@ -538,7 +565,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job List by Tag
 
-- **Description**: Lists all jobs and their associated schedule names,  sorted by Tag. 
+- **Description**: Lists all jobs and their associated schedule names,  sorted by Tag
 - **File Name**: skdrep55
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -550,7 +577,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Master Additions and Deletions by Date
 
-- **Description**: Shows all jobs that have been added and deleted  from OpCon, sorted by audit date. The report uses a special filter  for selecting dates from the audit records.
+- **Description**: Shows all jobs that have been added and deleted  from OpCon, sorted by audit date. The report uses a special filter  for selecting dates from the audit records
 - **File Name**: admin16 
 - **Primary Table**: AUDITRECSVIEW 
 - **Required Filters**:<None\> 
@@ -562,7 +589,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Master by Schedule
 
-- **Description**: Shows all details of jobs, including all dependencies, threshold/resource updates, and OpCon events, sorted  by schedule. Additionally, the last page includes the total number  of jobs and frequencies in the report. 
+- **Description**: Shows all details of jobs, including all dependencies, threshold/resource updates, and OpCon events, sorted  by schedule. Additionally, the last page includes the total number  of jobs and frequencies in the report
 - **File Name**: jmaster 
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments, Job Types
@@ -573,7 +600,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 :::
 
 ## Job Status Breakdown by Month
-- **Description**: Based on a selected year, shows the total number of  jobs that completed in a month, broken down by status. 
+- **Description**: Based on a selected year, shows the total number of  jobs that completed in a month, broken down by status
 - **File Name**: stt012
 - **Primary Table**: HISTORY 
 - **Required Filters**: Year 
@@ -604,7 +631,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Status by Department
 
-- **Description**: Shows the jobs, their current status, associated departments and frequencies, and termination information, sorted by department and schedule date.
+- **Description**: Shows the jobs, their current status, associated departments and frequencies, and termination information, sorted by department and schedule date
 - **File Name**: skdrep03
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -616,7 +643,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Status by Status
 
-- **Description**: Shows the jobs, and all associated dates and times,  sorted by job status.
+- **Description**: Shows the jobs, and all associated dates and times,  sorted by job status
 - **File Name**: skdrep02
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -628,7 +655,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Status by Status with Recurrence History
 
-- **Description**: Shows the jobs, and all associated dates and times with the history of all executions of the job for each date, sorted by job status. 
+- **Description**: Shows the jobs, and all associated dates and times with the history of all executions of the job for each date, sorted by job status
 - **File Name**: skdrep44
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -640,7 +667,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Status Count by Machine and Year
 
-- **Description**: Shows the job count for a selected Job Status, grouped by year and machine. 
+- **Description**: Shows the job count for a selected Job Status, grouped by year and machine
 - **File Name**: stt005
 - **Primary Table**: HISTORY 
 - **Required Filters**: Job Status 
@@ -656,7 +683,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 The History table does not include jobs that missed their latest start time, or were canceled; therefore, those records cannot appear in the report.
 :::
 
-- **Description**: Shows the job count for a selected Job Status, sorted by month for a selected year. Also, you can configure the report to highlight cells in the table if the job count is higher than a specific number.
+- **Description**: Shows the job count for a selected Job Status, sorted by month for a selected year. Also, you can configure the report to highlight cells in the table if the job count is higher than a specific number
 - **File Name**: stt002
 - **Primary Table**: HISTORY 
 - **Required Filters**: Job Status, Year, Highlight (default value is 10)
@@ -668,7 +695,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Job Status Count by Schedule and Year
 
-- **Description**: Shows the job history count for a selected Job Status, grouped by year and schedule.
+- **Description**: Shows the job history count for a selected Job Status, grouped by year and schedule
 - **File Name**: stt001
 - **Primary Table**: HISTORY 
 - **Required Filters**: Job Status 
@@ -684,7 +711,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 The start option does not ignore preruns or maximum concurrent job limitations on a machine.
 :::
 
-- **Description**: Shows the jobs, their schedule, frequency, current status, and time-related information, sorted by schedule and  estimated start time.
+- **Description**: Shows the jobs, their schedule, frequency, current status, and time-related information, sorted by schedule and  estimated start time
 - **File Name**: skdrep29
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -696,7 +723,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs Not in Use for a Year
 
-- **Description**: Shows the list of jobs still in the Master that  never ran during a selected year.
+- **Description**: Shows the list of jobs still in the Master that  never ran during a selected year
 - **File Name**: rep001
 - **Primary Table**: JMASTER 
 - **Required Filters**: Year 
@@ -728,7 +755,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs Using a Calendar
 
-- **Description**: Shows jobs using an Annual Plan Calendar, sorted by  schedule. The report uses a special filter for selecting calendars.
+- **Description**: Shows jobs using an Annual Plan Calendar, sorted by  schedule. The report uses a special filter for selecting calendars
 - **File Name**: xref03
 - **Primary Table**: JSKD
 - **Required Filters**: Schedules, Calendars 
@@ -740,7 +767,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs with a Start Offset
 
-- **Description**: Shows jobs with a Start Offset other than 00:00. Includes a job's schedule, frequency, and time-related information, sorted by schedule.
+- **Description**: Shows jobs with a Start Offset other than 00:00. Includes a job's schedule, frequency, and time-related information, sorted by schedule
 - **File Name**: xref16
 - **Primary Table**: JSKD
 - **Required Filters**: Schedules
@@ -752,7 +779,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs with Cross-Day Dependencies by Schedule
 
-- **Description**: Shows jobs with cross-day dependencies plus related jobs and their schedules, sorted by schedule.
+- **Description**: Shows jobs with cross-day dependencies plus related jobs and their schedules, sorted by schedule
 - **File Name**: xref17
 - **Primary Table**: JDEPJOB 
 - **Required Filters**: Schedules
@@ -764,7 +791,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs with Initial Status of Disable Frequency
 
-- **Description**: Shows the details of all jobs with a build status of "Disable Frequency", sorted by schedule.
+- **Description**: Shows the details of all jobs with a build status of "Disable Frequency", sorted by schedule
 - **File Name**: skdrep50
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -776,7 +803,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs with Initial Status of Do Not Schedule
 
-- **Description**: Shows the details of all jobs with a build status of "Do Not Schedule", sorted by schedule.
+- **Description**: Shows the details of all jobs with a build status of "Do Not Schedule", sorted by schedule
 - **File Name**: skdrep10
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -788,7 +815,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs with Initial Status of On Hold
 
-- **Description**: Shows the details of all jobs with a build status of "On Hold", sorted by schedule.
+- **Description**: Shows the details of all jobs with a build status of "On Hold", sorted by schedule
 - **File Name**: skdrep33
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -800,7 +827,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Jobs with Initial Status of To be Skipped
 
-- **Description**: Shows the details of all jobs with a build status of "To be Skipped", sorted by schedule.
+- **Description**: Shows the details of all jobs with a build status of "To be Skipped", sorted by schedule
 - **File Name**: skdrep51
 - **Primary Table**: JMASTER 
 - **Required Filters**: Schedules, Departments 
@@ -860,7 +887,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Master Job List with Selected Initial Build Status
 
-- **Description**: Shows a list of Master jobs in a selected Build Status, sorted by Schedule and Job Name. 
+- **Description**: Shows a list of Master jobs in a selected Build Status, sorted by Schedule and Job Name
 - **File Name**: rep006
 - **Primary Table**: JSKD
 - **Required Filters**: Job Status 
@@ -872,7 +899,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Master Jobs with Advanced Frequency Settings
 
-- **Description**: Shows a list of Master jobs with a selected Advanced Frequency Setting, sorted by Schedule and Job Name. The report only contains results where the date for the Advanced Frequency Setting is in the future.
+- **Description**: Shows a list of Master jobs with a selected Advanced Frequency Setting, sorted by Schedule and Job Name. The report only contains results where the date for the Advanced Frequency Setting is in the future
 - **File Name**: rep005
 - **Primary Table**: JSKD_AUX
 - **Required Filters**: Advance Frequency Code 
@@ -892,7 +919,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Master Jobs with Search Text
 
-- **Description**: Shows the list of Master jobs containing the defined search text within a specified field code. 
+- **Description**: Shows the list of Master jobs containing the defined search text within a specified field code
 - **File Name**: rep002
 - **Primary Table**: JMASTER_AUX 
 - **Required Filters**: JAFC and VALUE 
@@ -928,7 +955,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Not Completed Jobs by Date
 
-- **Description**: Shows the status of jobs that have not completed their run, with status and associated information, sorted by schedule date. 
+- **Description**: Shows the status of jobs that have not completed their run, with status and associated information, sorted by schedule date
 - **File Name**: skdrep04
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -940,7 +967,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Residual Dependencies by Schedule Date
 
-- **Description**: Reports all jobs that have not completed and the originating dependencies the jobs are awaiting. Also presents the subsequent dependencies affected. This report is sorted by schedule. 
+- **Description**: Reports all jobs that have not completed and the originating dependencies the jobs are awaiting. Also presents the subsequent dependencies affected. This report is sorted by schedule
 - **File Name**: admin10 
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -952,7 +979,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Resource Requirements by Schedule
 
-- **Description**: Shows jobs in the Master tables that require a resource, sorted by schedule.
+- **Description**: Shows jobs in the Master tables that require a resource, sorted by schedule
 - **File Name**: xref13
 - **Primary Table**: JDEPTHR 
 - **Required Filters**: Schedules
@@ -972,7 +999,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## SAP Failed Jobs by Date
 
-- **Description**: Shows failed SAP jobs and all associated information, sorted by schedule date.
+- **Description**: Shows failed SAP jobs and all associated information, sorted by schedule date
 - **File Name**: skdrep54
 - **Primary Table**: HISTORY 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -984,7 +1011,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## SAP Job Status in Run Order
 
-- **Description**: Shows the SAP jobs, their current status, associated frequencies, and termination information, sorted in run order. The report determines run order using the actual start time or estimated start time of each job depending on whether the job has started or not.
+- **Description**: Shows the SAP jobs, their current status, associated frequencies, and termination information, sorted in run order. The report determines run order using the actual start time or estimated start time of each job depending on whether the job has started or not
 - **File Name**: skdrep53
 - **Primary Table**: SMASTER 
 - **Required Filters**: Schedule Dates, Schedules, Departments 
@@ -996,7 +1023,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Schedule Details by Schedule
 
-- **Description**: Shows all details of schedules from administration, sorted by schedule.
+- **Description**: Shows all details of schedules from administration, sorted by schedule
 - **File Name**: admin18 
 - **Primary Table**: SNAME 
 - **Required Filters**: Schedules
@@ -1008,7 +1035,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Schedule Status by Date
 
-- **Description**: Shows the schedules, their status, and all associated information, sorted by schedule date. 
+- **Description**: Shows the schedules, their status, and all associated information, sorted by schedule date
 - **File Name**: skdrep11
 - **Primary Table**: SSTATUS 
 - **Required Filters**: Schedule Dates, Schedules 
@@ -1020,7 +1047,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Schedule Status by Schedule
 
-- **Description**: Shows the schedules, their status, and all associated information, sorted by schedule.
+- **Description**: Shows the schedules, their status, and all associated information, sorted by schedule
 - **File Name**: skdrep13
 - **Primary Table**: SSTATUS 
 - **Required Filters**: Schedule Dates, Schedules 
@@ -1032,7 +1059,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Schedule Status by Status
 
-- **Description**: Shows the schedules, their status, and all associated information, sorted by schedule status. 
+- **Description**: Shows the schedules, their status, and all associated information, sorted by schedule status
 - **File Name**: skdrep12
 - **Primary Table**: SSTATUS 
 - **Required Filters**: Schedule Dates, Schedules 
@@ -1044,7 +1071,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Threshold Dependencies by Schedule
 
-- **Description**: Shows jobs in the Master tables that are dependent upon a threshold, and all associated information, sorted by schedule.
+- **Description**: Shows jobs in the Master tables that are dependent upon a threshold, and all associated information, sorted by schedule
 - **File Name**: xref02
 - **Primary Table**: JDEPTHR 
 - **Required Filters**: Schedules
@@ -1056,7 +1083,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Threshold Post Processes by Schedule
 
-- **Description**: Shows jobs that set thresholds. Report includes present threshold value as well as the threshold value immediately following the job. 
+- **Description**: Shows jobs that set thresholds. Report includes present threshold value as well as the threshold value immediately following the job
 - **File Name**: admin15 
 - **Primary Table**: JTHR
 - **Required Filters**: Schedules
@@ -1068,7 +1095,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Top X Failed Jobs for Selected Month
 
-- **Description**: Shows a list of the top 'X' (e.g., Top 10) failed jobs in history for a selected month and year. 
+- **Description**: Shows a list of the top 'X' (e.g., Top 10) failed jobs in history for a selected month and year
 - **File Name**: stt003
 - **Primary Table**: HISTORY 
 - **Required Filters**: Year, Month, Top (default value is 10) 
@@ -1080,7 +1107,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Top X Longest Running Jobs for Selected Month
 
-- **Description**: Shows a list of the top 'X' (e.g., Top 10) jobs from history that took the longest time to run during a selected month and year.
+- **Description**: Shows a list of the top 'X' (e.g., Top 10) jobs from history that took the longest time to run during a selected month and year
 - **File Name**: stt004
 - **Primary Table**: HISTORY
 - **Required Filters**: Year, Month, Top (default value is 10)
@@ -1092,7 +1119,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Total vs Unique Job Summary
 
-- **Description**: Shows the count of all job names in the database and the count of how many of those job names are unique.
+- **Description**: Shows the count of all job names in the database and the count of how many of those job names are unique
 - **File Name**: skdrep27
 - **Primary Table**: JMASTER
 - **Required Filters**: Schedule, Department
@@ -1112,7 +1139,7 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 
 ## Unisys File Dependencies by Schedule
 
-- **Description**: Lists file dependencies for OS 2200 and Unisys BIS jobs, sorted by schedule and job name.
+- **Description**: Lists file dependencies for OS 2200 and Unisys BIS jobs, sorted by schedule and job name
 - **File Name**: skdrep28
 - **Primary Table**: JMASTER
 - **Required Filters**: Schedules, Departments
@@ -1129,3 +1156,44 @@ For detailed syntax requirements, refer to the Parameters section of the [**BIRT
 - **Primary Table**: USERS
 - **Required Filters**:<None\>
 - **Parameters**:<None\>
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Description | Explains the information the report produces | — | — |
+| File Name | Indicates the name of the BIRT report file. | — | — |
+| Primary Table | Indicates the primary table in the OpCon database for the report. | — | — |
+| Required Filters | Indicates the data filters required by the report. | — | — |
+| Parameters | Indicates the parameters to use when specifying the required filters for the -p switches in the BIRT Report Generator syntax. | — | — |
+## FAQs
+
+**Q: Where are the OpCon predefined report files located?**
+
+All OpCon report files are located in the `<TargetDirectory>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\` folder. The report (.rptdesign) file must reside on the SAM application server to run.
+
+**Q: What information is required to define a report in Report Management?**
+
+You need the report's File Name, Primary Table, and Required Filters. These are listed for each predefined report and are used when configuring the report in the Report Management utility or when running it with the BIRT Report Generator.
+
+**Q: How do you pass filter parameters when running a report from the command line?**
+
+Use the `-p` switch with the BIRT Report Generator, in the format `-p "ParameterName=<value>"`. Each report's Parameters field lists the specific parameter names to use.
+
+## Glossary
+
+**BIRT (Business Intelligence and Reporting Tools)**: The open-source reporting engine used by OpCon to generate predefined and custom reports. Reports are run using the BIRTRptgen.exe utility.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.

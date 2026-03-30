@@ -1,163 +1,127 @@
+---
+title: Best Practices
+description: "OpCon best practices are proven patterns for building reliable, maintainable automation — from documenting thresholds and properties to setting up automated maintenance schedules, configuring alerts, and structuring job dependencies effectively."
+product_area: Reference
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - Automation Engineer
+  - Business Analyst
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Best Practices
 
-Click on any of the following How-To quick links:
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
+
+## What Is It?
+
+OpCon best practices are proven patterns for building reliable, maintainable automation — from documenting thresholds and properties to setting up automated maintenance schedules, configuring alerts, and structuring job dependencies effectively.
 
 - [Add Documentation to Thresholds and Properties](#Add)
 - [Automate the Daily Failed Jobs Report](#Automate)
-- [Automate the SMAUtility Schedule to maintain the OpCon     Server](#Automate2)
-- [Avoid updating all Jobs with a new path to a file or     program](#Avoid)
+- [Automate the SMAUtility Schedule to maintain the OpCon Server](#Automate2)
+- [Avoid updating all Jobs with a new path to a file or program](#Avoid)
 - [Check Job Dependencies that cannot be resolved](#Check)
 - [Receive an alert when Machines stop working](#Receive)
 - [Receive an alert when SAM is not running](#Receive2)
 - [Run a Windows Job under a different User Account](#Run)
 - [Set Up Notification for SubSchedules](#Set)
-- [Shut Down a Machine with an LSAM](#Shut)
-- [Use Threshold Dependencies for Late to Start Notifications on a     Job-dependent External Event](#Use)
+- [Shut Down a Machine with an agent](#Shut)
+- [Use Threshold Dependencies for Late to Start Notifications on a Job-dependent External Event](#Use)
+
+## When Would You Use It?
+
+- You need to configure or manage Best Practices in OpCon
+
+## Why Would You Use It?
+
+- **Operational value**: Automate the Daily Failed Jobs Report - Automate the SMAUtility Schedule to maintain the
 
 ## Add Documentation to Thresholds and Properties
 
 #### Use Case
 
-I am starting to notice that we are using a bunch of Thresholds and
-Global Properties in OpCon, and I am
-concerned that we will forget what they are used for. What should we do?
+Thresholds and Global Properties are accumulating in OpCon, and there is a risk of forgetting their purpose. What should be done?
 
 #### Answer
 
-In the definition for each Threshold and Global Property, enter the
-purpose for that item in the **Documentation** field. This documentation
-will help you keep track of what they are used for.
+In the definition for each Threshold and Global Property, enter the purpose in the **Documentation** field to track usage.
 
 ## Automate the Daily Failed Jobs Report
 
 #### Use Case
 
-Are there ways to automate generating a report on failed jobs for a
-specific schedule on a daily, weekly, monthly, etc., basis? Are there
-any types of failed jobs reports that can be generated and made
-available to me for review whenever I need them?
+How can failed job reports be automated on a daily, weekly, or monthly basis?
 
 #### Answer
 
-SMA Technologies provides a database file called **SMAReports.mdb** that can be imported into
-OpCon. The file includes a **Report
-Generator** schedule with all of the reports that can be found under
-**Report Functions**. Each job represents a report that can be
-automated.
+Continuous provides **SMAReports.mdb**, a database file importable into OpCon. It includes a **Report Generator** schedule with all reports found under **Report Functions**. Each job represents a report that can be automated.
 
 ##### Procedure
 
-Launch **Schedule Import Export** from the **Start** menu: **Start \>
-Programs \> OpConxps Utilities \> Schedule Import Export**.
+1. Open **Schedule Import Export**: **Start > Programs > OpConxps Utilities > Schedule Import Export**. For more information, refer to [Schedule Import/Export](../utilities/Graphical-Utilities/Schedule-Import_Export.md)
+2. Log into your **OpCon database**
+3. Create a **DSN** for an Access Database to **SMAReports.mdb** at `\\Program Files\\OpConxps\\Utilities\\SMAReports.mdb`
+4. Select the **Import from Transport Database** button on the toolbar
+5. Select the **Machine** or **User** tab
+6. In the left frame, select a **machine** or **user account**
+7. In the right frame, select a **machine** or **user name**
+8. Select the **Import** button
+9. Select **OK** on the warning message
 
-For more information, refer to [Schedule Import/Export](../utilities/Graphical-Utilities/Schedule-Import_Export.md)
- in the **Utilities** online help.
-
-Log into your **OpCon database** with your credentials.
-
-Create a **DSN** for an *Access Database* to **SMAReports.mdb**. Located
-at **\\\\Program Files\\OpConxps\\Utilities\\SMAReports.mdb**.
-
-Click the **Import from Transport Database** button on the toolbar.
-
-Click the **Machine** or **User** tab.
-
-Go to the left-hand frame and click a **machine** or **user account**.
-
-Go to the right-hand frame and click a **machine** or **user name**.
-
-Click the **Import** button.
-
-Click **OK** on the warning message.
-
-Select one of the following options in the **Conflict Resolution**
-dialog:
-
-- **Yes** to clear (not delete) the existing object in order to
-    receive the new information (jobs for schedules and dates for
-    calendars).
-- **No** to allow the new information to be merged into the existing
-    object.
-- **Cancel** to terminate the transfer and roll back all the changes
-    made up to that point.
-
-Click **OK** on the termination message.
-
-Log into the Enterprise Manager.
-
-Go to: **Job Master \> Report Generator Schedule \> Failed Jobs by
-date**.
+10. Select one of the following options in the **Conflict Resolution** dialog:
+    - **Yes** to clear the existing object and receive new information
+    - **No** to merge new information into the existing object
+    - **Cancel** to terminate the transfer and roll back all changes
+11. Select **OK** on the termination message
+12. Log into the Enterprise Manager and go to **Job Master > Report Generator Schedule > Failed Jobs by date**
 
 :::note
 By default, all of these jobs are disabled.
 :::
 
-This job has been configured to run a report against OpCon's today's
-date **(\[\[$SCHEDULE DATEMS\]\])** and generates a report against a schedule it resides in **(\[\[$SCHEDULE ID\]\])**.
+13. This job runs a report against OpCon's today's date **(\[\[$SCHEDULE DATEMS\]\])** for the schedule it resides in **(\[\[$SCHEDULE ID\]\])**
 
-Copy the **Failed Jobs by Date** job to any desired schedule where this
-report is desired.
-
-Add a **frequency** to this job (e.g., Daily).
+14. Copy the **Failed Jobs by Date** job to any schedule where the report is needed
+15. Add a **frequency** to the job (e.g., Daily)
 
 :::note
-Ensure that this job is included in built schedules already existing for the future.
+Ensure the job is included in built schedules already existing for the future.
 :::
 
-By default, the reports are configured to be saved in: <Output
-Directory\>**\\SAM\\Log\\Reports**. This directory can be modified
-within the **FailedJobsbyDate.cmd** file.
+By default, reports are saved in: `<Output Directory>\SAM\Log\Reports`. This directory can be changed in the **FailedJobsbyDate.cmd** file.
 
 :::note
-Ensure that this job has write access to the new directory.
-:::
-
-:::note
-The Output Directory was configured during installation. For more information, refer to the [File Locations](../file-locations.md) section in this online help.
+Ensure the job has write access to the target directory. The Output Directory was configured during installation. For more information, refer to [File Locations](../file-locations.md).
 :::
 
 ## Automate the SMAUtility Schedule to maintain the OpCon Server
 
 #### Use Case
 
-The history records are building up on my
-OpCon server and database. What should I do?
+History records are building up on the OpCon server and database. What should be done?
 
 #### Answer
 
-SMA Technologies recommends using the SMAUtility schedule for most jobs involved in the maintenance of
-OpCon, including managing history records.
-Configure as many of the **SMAUtility Schedule** jobs as you can. The
-**SMAUtility Schedule** is imported during installation. For information
-on the jobs in the SMAUtility Schedule, refer to [SMAUtility Schedule](../objects/schedules.md#smautility-schedule).
+Use the SMAUtility schedule for maintenance jobs, including managing history records. Configure as many **SMAUtility Schedule** jobs as possible. The schedule is imported during installation. For more information, refer to [SMAUtility Schedule](../objects/schedules.md#smautility-schedule).
 
 ## Avoid updating all Jobs with a new path to a file or program
 
 #### Use Case
 
-Occasionally, my company reorganizes the file structure on a server
-where I run OpCon jobs. This causes the
-programs OpCon automates to move to a
-different directory. How do I define the jobs to easily modify the
-location of my programs?
+When the company reorganizes its file structure, programs move to different directories. How can jobs be defined to easily update program locations?
 
 #### Answer
 
-Use OpCon Properties to store the path to
-your programs. On the jobs, you can use a token as a variable to replace
-the path to the programs at run time. For additional information, refer
-to [Properties](../objects/properties.md).
+Use OpCon Properties to store program paths. Use a token as a variable to replace the path at run time. For more information, refer to [Properties](../objects/properties.md).
 
-Use the following steps to implement Global Properties for the path to
-your programs:
-
-1. Create a Global Property for the full path to your programs on the
-    server. For more information, refer to [Adding Global     Properties](../Files/UI/Enterprise-Manager/Adding-Global-Properties.md)
-     in the **Enterprise Manager** online help.
-2. Use a token to access the Global Property anytime you are defining a
-    job to run a program within this directory. For more information,
-    refer to [Using Properties for     Automation](../objects/using-properties.md)
-    . In the screen below, the \[\[OPCON-SCRIPTS\]\] token is in     the place of the path to the FileRename.cmd file.
+1. Create a Global Property for the full path to your programs. For more information, refer to [Adding Global Properties](../Files/UI/Enterprise-Manager/Adding-Global-Properties.md)
+2. Use a token to access the Global Property in job definitions. For more information, refer to [Using Properties for Automation](../objects/using-properties.md). In the example below, `[[OPCON-SCRIPTS]]` replaces the path to the `FileRename.cmd` file
 
 Global Properties
 
@@ -169,45 +133,31 @@ OpCon Job Master (Details)
 
 #### Result
 
-When the job qualifies to run, SAM resolves the \[\[OPCON-SCRIPTS\]\] token to the value defined for the Global Property, resulting in the
-following command line:
+When the job runs, SAM resolves `[[OPCON-SCRIPTS]]` to the Global Property value:
 
-\
-"C:\\Program Files (x86)\\OpConxps\\Scripts\\MyScript.cmd"
+`"C:\Program Files (x86)\OpConxps\Scripts\MyScript.cmd"`
 
-When your company decides to reorganize the file structure again, simply
-update the value for the Global Property to change the path to your
-programs.
+To update all jobs when the file structure changes, update the Global Property value.
 
 ## Check Job Dependencies that cannot be resolved
 
 #### Use Case
 
-Sometimes there are circular dependencies set up, or jobs that are
-required are missing. How do I find out which jobs are involved in these
-types of dependencies?
+Circular dependencies or missing required jobs can cause resolution failures. How are these identified?
 
 #### Answer
 
-Run the DoBatch function to check for these dependency types, but limit
-the number of schedules to check to 5 per job at any one time. Refer to
-[DoBatch](../utilities/Command-line-Utilities/DoBatch.md#DoBatch)
- in the **Utilities** online help then go to DoBatch
-[Checking](../utilities/Command-line-Utilities/DoBatch.md#Checking)
- to create a command file containing the DoBatch program and the
-CHECK parameter.
+Run the DoBatch function with the CHECK parameter to identify these dependency types, limiting checks to 5 schedules per job at a time. Refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md#DoBatch) and [Checking](../utilities/Command-line-Utilities/DoBatch.md#Checking) in the Utilities online help.
 
 ## Receive an alert when Machines stop working
 
 #### Use Case
 
-How will I know when my machines are no longer working?
+How will I know when machines are no longer working?
 
 #### Answer
 
-The Event Notification system in OpCon is a
-process in which Machine status change events can generate (e.g.,
-trigger) notifications. Refer to [Monitored Events](../job-types/zos.md#monitored-events).
+Use the Event Notification system in OpCon. Machine status change events can trigger notifications. Refer to [Monitored Events](../job-types/zos.md#monitored-events).
 
 ## Receive an alert when SAM is not running
 
@@ -217,267 +167,189 @@ How will I know when SAM is not running?
 
 #### Answer
 
-Configure the "Hung" scripts in the SAM folder. For more information,
-refer to [Hung Script Configuration](../server-programs/service-manager.md#Hung_Script_Configuration)
- in the **Server Programs** online help.
+Configure the "Hung" scripts in the SAM folder. For more information, refer to [Hung Script Configuration](../server-programs/service-manager.md#Hung_Script_Configuration).
 
 ## Run a Windows Job under a different User Account
 
 #### Use Case
 
-How do I run a job under a different Windows User account when **Use
-Service Account** is the only item in the drop-down list?
+How do I run a job under a different Windows User account when **Use Service Account** is the only option in the list?
 
 #### Answer
 
-First, you must define a Batch User Account for the Windows User
-Account. The new Batch User will appear in the drop-down list in the job
-definition screen. Refer to the procedures listed under the [Adding Batch
-Users](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md)
- in the **Enterprise Manager** online help.
+Define a Batch User Account for the Windows User Account. The new Batch User will appear in the list in the job definition screen. Refer to [Adding Batch Users](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md).
 
 ## Set Up Notification for SubSchedules
 
 #### Use Case
 
-How do I make sure the subschedule started on time?
+How do I ensure a subschedule started on time?
 
 #### Answer
 
-Job's within a subschedule do not qualify until after the Container job
-running the subschedule starts. A "Flag As Late to Start" notification
-must be set up on the Container job to make sure the subschedule is
-started on time. Once that is verified, all of the nested job
-notifications should work as intended.
+Jobs within a subschedule do not qualify until the Container job starts. Set up a "Flag As Late to Start" notification on the Container job to confirm the subschedule starts on time.
 
 ##### Procedure
 
-1. Set a Late to Start value for the Container     job. For more information, refer to the **Late to Start** value
-    under [Job Automation     Components](../job-components/frequency.md).
-2. Set up ENS to include the Container job in a group that sends
-    notifications for jobs that are Late to Start.     For more information, refer to [Event
-    Notification](../notifications/Components.md).
-3. Set a Late to Start value for the jobs in the     subschedule. For more information, refer to the **Late to Start**
-    value under [Job Automation     Components](../job-components/frequency.md).
-4. Set up ENS to include the jobs in the subschedule in a group that
-    sends notifications for jobs that are Late to Start. For more information, refer to [Event
-    Notification](../notifications/Components.md).
+1. Set a Late to Start value for the Container job. Refer to the **Late to Start** value under [Job Automation Components](../job-components/frequency.md)
+2. Set up ENS to include the Container job in a group that sends Late to Start notifications. Refer to [Event Notification](../notifications/Components.md)
+3. Set a Late to Start value for jobs in the subschedule. Refer to the **Late to Start** value under [Job Automation Components](../job-components/frequency.md)
+4. Set up ENS to include subschedule jobs in a group that sends Late to Start notifications. Refer to [Event Notification](../notifications/Components.md)
 
-## Shut Down a Machine with an LSAM
+## Shut Down a Machine with an agent
 
 #### Use Case
 
-We will need to shut down a UNIX machine that has an LSAM on it sometime
-in the near future to replace a battery pack. We will shut down the
-machine, replace the battery, and bring the machine back up. Is there
-anything we need to do in OpCon?
+A machine with an agent needs to be shut down for maintenance. What steps are required in OpCon?
 
 #### Answer
 
-Plan to shut down the machine during a time of low processing.
+Plan the shutdown during a period of low processing.
 
-In OpCon, select the option to Disable Job
-Starts for that machine. You can select this option from any place in
-the graphical interfaces that allows you to control the Machine Status.
+1. In OpCon, disable Job Starts for the machine from any interface that controls Machine Status
 
-From an Operations Machine view, look at the count of running jobs for
-the machine. The display will show a ratio of running jobs to maximum
-jobs allowed on that machine (e.g., 3/10). Wait until there are zero
-jobs running (e.g., 0/10).
-
-On the LSAM machine, check for running jobs using the references or
-commands provided:
-
-a.  For IBM i, refer to [IBM i Procedures to shut down a     Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
-b.  For MCP, the machine count in the Enterprise Manager ought to be
-    correct. To confirm this from the LSAM's perspective, refer to the
-    [Interactive LSAM     Window](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Interactive-LSAM-Window.md)
-     in the **MCP LSAM** online help.
-c.  For MSLSAM, refer to [Check for Running     Jobs](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Upgrading-from-a-Release-Prior-to-15.0.md#Check_for_Running_Jobs)
-     in the **Microsoft LSAM** online help.
-d.  For OpenVMS, use the method described in Step 3.
-e.  For OS 2200 and BIS, use the method described in Step 3.
-f.  For SAP BW, refer to [Check for Running     Jobs](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Upgrade-Installation.md#Check_for_Running_Jobs)
-     in the **SAP BW LSAM** online help.
-g.  For SAP R3 and CRM, refer to [Check for Running     Jobs](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Upgrade-Installation.md#Check_for_Running_Jobs)
-     in the **SAP LSAM** online help.
-h.  For UNIX, use the method described in Step 3.
-i.  For zOS, enter the following command: **F lsamname,DISP=JOBQ**.
-
-On the LSAM machine, shut down the LSAM and perform the desired
-maintenance using the references or commands provided:
-
-a.  For IBM i, refer to [IBM i Procedures to shut down a     Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
-b.  For MCP, refer to [Stop the LSAM and Resource     Monitor](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Installation-Upgrade.md#Stop_the_LSAM_and_Resource_Monitor)
-     in the **MCP LSAM** online help.
-c.  For MSLSAM, refer to [Stop the     Service](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Upgrading-from-a-Release-Prior-to-15.0.md#Stop_the_Service)
-     in the **Microsoft LSAM** online help.
-d.  For OpenVMS, refer to [Stopping the     LSAM](https://help.smatechnologies.com/opcon/agents/openvms/latest/Files/Agents/OpenVMS/Starting-and-Stopping-the-LSAM.md#Stopping_the_LSAM)
-     in the **OpenVMS LSAM** online help.
-e.  For OS 2200 and BIS, refer to [Stopping the     LSAM/LMAM](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Components-and-Operation.md#Stopping_the_LSAM/LMAM)
-     in the **OS 2200 LSAM** online help.
-f.  For SAP BW, refer to [Stop the     Service](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Upgrade-Installation.md#Stop_the_Service)
-     in the **SAP BW LSAM** online help.
-g.  For SAP R3 and CRM, refer to [Stop the     Service](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Upgrade-Installation.md#Stop_the_Service)
-     in the **SAP LSAM** online help.
-h.  For UNIX, refer to [Stop the     LSAM](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Operating-the-LSAM.md#Stop_the_LSAM)
-     in the **UNIX LSAM** online help.
-i.  For zOS, enter the following command: **F lsamname,SHUTDOWN**.
-
-Turn the LSAM machine back on, and check the LSAM status using the
-references or commands provided:
-
-a.  For IBM i, refer to [IBM i Procedures to shut down a     Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
-b.  For MCP, from the MARC Main Menu action line, enter the following
-    command: **AA NAME=SMA=** and transmit. For information on the
-    results to look for, refer to [Check LSAM     Status](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/LSAM-Operation.md#Checking_LSAM_Status)
-     in the **MCP LSAM** online help.
-c.  For MSLSAM, refer to [Procedures to Check LSAM Status on     Windows](#Procedures_to_Check_LSAM_Status_on_Windows)
-    .
-d.  For OpenVMS, refer to [Checking LSAM     Status](https://help.smatechnologies.com/opcon/agents/openvms/latest/Files/Agents/OpenVMS/Starting-and-Stopping-the-LSAM.md#Checking_LSAM_Status)
-     in the **OpenVMS LSAM** online help.
-e.  For OS 2200 and BIS, refer to [Checking LSAM/LMAM     Status](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Components-and-Operation.md#Checking_LSAM/LMAM_Status)
-     in the **OS 2200 LSAM** online help.
-f.  For SAP BW, refer to[Procedures to Check LSAM Status on     Windows](#Procedures_to_Check_LSAM_Status_on_Windows)
-    .
-g.  For SAP R3 and CRM, refer to [Procedures to Check LSAM Status on     Windows](#Procedures_to_Check_LSAM_Status_on_Windows)
-    .
-h.  For UNIX, refer to [Check the LSAM     Status](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Operating-the-LSAM.md#Check_the_LSAM_Status)
-     in the **UNIX LSAM** online help.
-i.  For zOS, enter *D A,job* (job is the LSAM job name, not the lsamname
-    identifier. There is a comma between D A and job).
-
-In OpCon, select the option to Enable Job
-Starts for that machine. You can select this option from any place in
-the graphical interfaces that allow you to control the Machine Status.
+2. In an Operations Machine view, monitor the running job count (e.g., 3/10). Wait until the count reaches zero (e.g., 0/10)
+3. On the agent machine, check for running jobs:
+   a. IBM i: refer to [IBM i Procedures to shut down a Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
+   b. MCP: the Enterprise Manager count should be accurate. To confirm from the agent, refer to [Interactive agent Window](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Interactive-agent-Window.md).
+   c. MSLSAM: refer to [Check for Running Jobs](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Upgrading-from-a-Release-Prior-to-15.0.md#Check_for_Running_Jobs).
+   d. OpenVMS: use the method in Step 2.
+   e. OS 2200 and BIS: use the method in Step 2.
+   f. SAP BW: refer to [Check for Running Jobs](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Upgrade-Installation.md#Check_for_Running_Jobs).
+   g. SAP R3 and CRM: refer to [Check for Running Jobs](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Upgrade-Installation.md#Check_for_Running_Jobs).
+   h. UNIX: use the method in Step 2.
+   i. zOS: enter `F lsamname,DISP=JOBQ`.
+4. Shut down the agent and perform maintenance:
+   a. IBM i: refer to [IBM i Procedures to shut down a Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
+   b. MCP: refer to [Stop the agent and Resource Monitor](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Installation-Upgrade.md#Stop_the_LSAM_and_Resource_Monitor).
+   c. MSLSAM: refer to [Stop the Service](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Upgrading-from-a-Release-Prior-to-15.0.md#Stop_the_Service).
+   d. OpenVMS: refer to [Stopping the agent](https://help.smatechnologies.com/opcon/agents/openvms/latest/Files/Agents/OpenVMS/Starting-and-Stopping-the-agent.md#Stopping_the_LSAM).
+   e. OS 2200 and BIS: refer to [Stopping the agent/LMAM](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Components-and-Operation.md#Stopping_the_LSAM/LMAM).
+   f. SAP BW: refer to [Stop the Service](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Upgrade-Installation.md#Stop_the_Service).
+   g. SAP R3 and CRM: refer to [Stop the Service](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Upgrade-Installation.md#Stop_the_Service).
+   h. UNIX: refer to [Stop the agent](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Operating-the-agent.md#Stop_the_LSAM).
+   i. zOS: enter `F lsamname,SHUTDOWN`.
+5. Restart the machine and check agent status:
+   a. IBM i: refer to [IBM i Procedures to shut down a Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
+   b. MCP: from the MARC Main Menu action line, enter `AA NAME=SMA=` and transmit. Refer to [Check agent Status](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/agent-Operation.md#Checking_LSAM_Status).
+   c. MSLSAM: refer to [Procedures to Check agent Status on Windows](#Procedures_to_Check_LSAM_Status_on_Windows).
+   d. OpenVMS: refer to [Checking agent Status](https://help.smatechnologies.com/opcon/agents/openvms/latest/Files/Agents/OpenVMS/Starting-and-Stopping-the-agent.md#Checking_LSAM_Status).
+   e. OS 2200 and BIS: refer to [Checking agent/LMAM Status](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Components-and-Operation.md#Checking_LSAM/LMAM_Status).
+   f. SAP BW: refer to [Procedures to Check agent Status on Windows](#Procedures_to_Check_LSAM_Status_on_Windows).
+   g. SAP R3 and CRM: refer to [Procedures to Check agent Status on Windows](#Procedures_to_Check_LSAM_Status_on_Windows).
+   h. UNIX: refer to [Check the agent Status](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Operating-the-agent.md#Check_the_LSAM_Status).
+   i. zOS: enter `D A,job` (where `job` is the agent job name, not the lsamname identifier; include a comma between `D A` and `job`).
+6. In OpCon, enable Job Starts for the machine from any interface that controls Machine Status
 
 IBM i Procedures to shut down a Machine
 
-On the IBM i LSAM machine, check for running jobs using the commands
-provided:
+On the IBM i LSAM machine, check for running jobs using one of these methods:
 
-Using an OpCon job, specify the following
-command in the CALL field:
+Using an OpCon job, specify the following command in the CALL field:
 
-SMAGPL/CHKIBMLSAM ENV(env_name) STATUS(\*ACTIVE) **- or -**
+`SMAGPL/CHKIBMLSAM ENV(env_name) STATUS(*ACTIVE)` **- or -**
 
-SMAGPL/CHKIBMLSAM ENV(env_name) STATUS(\*INACTIVE)
+`SMAGPL/CHKIBMLSAM ENV(env_name) STATUS(*INACTIVE)`
 
-The OpCon job will report a failure if the
-LSAM server status does not match the STATUS parameter value, or the job
-will end normally if the LSAM server status does match the STATUS
-parameter value. The LSAM environment name must be provided for the ENV
-keyword.
+The job reports failure if the agent server status does not match the STATUS parameter, or ends normally if it does. The agent environment name is required for the ENV keyword.
 
-From an IBM i workstation, enter the LSAM main menu:
+From an IBM i workstation, enter the agent main menu:
 
-i.  Select option 6: LSAM Management menu.
-ii. Select option 3: Check LSAM subsystem status.
-iii. The display that follows may show one or more active jobs, or it
-     may show that no jobs are active.
+i. Select option 6: agent Management menu.
+ii. Select option 3: Check agent subsystem status.
+iii. The display shows active jobs or confirms no jobs are active.
 
-On the IBM i LSAM machine, shut down the LSAM and perform the desired
-maintenance using the commands provided:
+To shut down the agent and perform maintenance:
 
-From an IBM i command entry line or from IBM System i Navigator command
-entry, the LSAM server jobs can be stopped by specifying the LSAM
-environment name with this command: SMAGPL/ENDSMASYS ENV(env_name)
+From an IBM i command entry line or IBM System i Navigator, stop agent server jobs with: `SMAGPL/ENDSMASYS ENV(env_name)`
 
-From an IBM i workstation, enter the LSAM main menu:
+From an IBM i workstation, enter the agent main menu:
 
-i.  Select option 6: LSAM Management menu
-ii. Select option 2: End LSAM.
+i. Select option 6: agent Management menu.
+ii. Select option 2: End agent.
 
-Restart the IBM i LSAM machine using the commands provided:
+To restart the IBM i LSAM machine:
 
-From an IBM i command entry line, or from IBM System i Navigator command
-entry, the LSAM server jobs can be started by specifying the LSAM
-environment name with this command: SMAGPL/STRSMASYS ENV(env_name)
+From an IBM i command entry line or IBM System i Navigator, start agent server jobs with: `SMAGPL/STRSMASYS ENV(env_name)`
 
-From an IBM i workstation, enter the LSAM main menu:
+From an IBM i workstation, enter the agent main menu:
 
-i.  Select option 6: LSAM Management menu.
-ii. Select option 1: Start LSAM.
+i. Select option 6: agent Management menu.
+ii. Select option 1: Start agent.
 
-Check the IBM i LSAM status by following the same procedures as Steps
-1a and 1b.
+Check the IBM i LSAM status using the same procedures as the check steps above.
 
-##### Procedures to Check LSAM Status on Windows
+##### Procedures to Check agent Status on Windows
 
-Use the following procedure to check the status for the SAP BW, SAP R/3
-and CRM, and Windows LSAMs:
+Use this procedure for SAP BW, SAP R/3 and CRM, and Windows LSAMs:
 
-1. Use menu path: **Start \> Control Panel**.
-2. Double-click the **Administrative Tools** icon.
-3. Double-click the **Server Manager** icon.
-4. Expand (+) the **Configuration** option.
-5. Double-click the **Services** icon.
-6. Scroll down to the SMA **LSAM service** in the **Services** list.
-7. Confirm the **LSAM's Status** is **Started**.
+1. Go to **Start > Control Panel**
+2. Select **Administrative Tools**
+3. Select **Server Manager**
+4. Expand **Configuration**
+5. Select **Services**
+6. Scroll to the SMA **LSAM service** in the **Services** list
+7. Confirm the **LSAM Status** is **Started**
 
 ## Use Threshold Dependencies for Late to Start Notifications on a Job-dependent External Event
 
 #### Use Case
 
-We have a job which is dependent on a file arriving. The job is built
-'On Hold' and SMA Resource Monitor sends a $JOB:RELEASE when the file arrives. The problem is we are not
-notified if the file is late arriving. How can we set this up to receive
-a Late to Start notification?
+A job depends on a file arriving. It is built 'On Hold', and SMA Resource Monitor sends a `$JOB:RELEASE` when the file arrives. How can a Late to Start notification be configured?
 
 #### Answer
 
-If a job is 'On Hold', it is not in a "Qualifying" status and the
-"Flag Job As Late" setting is ignored. Instead of building the job
-"On Hold", use a **threshold dependency** to release the job once the
-file arrives.
+A job set to 'On Hold' is not in a "Qualifying" status, so the "Flag Job As Late" setting is ignored. Use a **threshold dependency** instead to release the job when the file arrives.
 
 ##### Procedure Explanation
 
-A threshold will be created to use as an "On" and "Off" switch for
-the job. [SMA Resource Monitor](../utilities/SMA-Resource-Monitor/Introduction.md)
-will watch for the arrival of the file and send a $THRESHOLD:SET event
-to update the threshold to the determined value. The job will have a
-threshold dependency equal to the value SMA Resource Monitor will set once the file arrives.
-This leaves the job in a "Waiting Threshold Dependency" status until
-the files arrives.
+A threshold acts as an "On/Off" switch for the job. [SMA Resource Monitor](../utilities/SMA-Resource-Monitor/Introduction.md) watches for the file and sends a `$THRESHOLD:SET` event to update the threshold. The job has a threshold dependency equal to the value set when the file arrives, keeping the job in "Waiting Threshold Dependency" status until then.
 
-The job will also have a "Flag Job As Late to Start" value set up.
-This will flag the job as Late to Start if the file has not arrived by the determined time. ENS will send an notification if
-the job is Late to Start. The job will update the threshold value once it is complete, closing the loop for the next
-day's processing.
+A "Flag Job As Late to Start" value causes ENS to send a notification if the file has not arrived by the set time. Once the job completes, it resets the threshold to zero for the next day.
 
 ##### Procedure
 
-Create a **threshold** with any name you like and a default value of
-zero (0). For more information, refer to [Adding Thresholds](../Files/UI/Enterprise-Manager/Adding-Thresholds.md)
- in the **Enterprise Manager** online help.
+1. Create a **threshold** with a default value of zero (0). Refer to [Adding Thresholds](../Files/UI/Enterprise-Manager/Adding-Thresholds.md)
+2. Create the **File Monitor** and **action group** to update the threshold. Refer to [Summary Information](../utilities/SMA-Resource-Monitor/Summary-Information.md)
+   a. In the File Monitor, configure parameters to watch for the target file.
+   b. In the action group, use the `$THRESHOLD:SET` event to set the threshold value to one (1).
+3. Create a **threshold dependency** requiring the threshold to equal one (1). Refer to [Adding Threshold/Resource Dependencies](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Dependencies.md)
+4. Set a **Late to Start** value for the job. Refer to [Late to Start/Late to Finish](../job-components/frequency.md#Late)
+5. Set up a notification event on the job for the Late to Start status trigger, or configure an ENS group to send notifications for the Late to Start status. Refer to [Job Automation Components](../job-components/events.md) or [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md)
+6. Configure a threshold update to reset the threshold to zero (0) when the job finishes. Refer to [Adding Threshold/Resource Updates](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Updates.md)
 
-Create the **File Monitor** and **action group** which will update the
-threshold. For more information, refer to [Summary Information](../utilities/SMA-Resource-Monitor/Summary-Information.md)
- in the **Utilities** online help.
+## Configuration Options
 
-a.  In the File Monitor, set up the parameters to watch for the desired
-    file.
-b.  In the associated action group, use the $THRESHOLD:SET event to
-    change the value of your threshold to one (1).
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
 
-Create a **threshold dependency** for the job to require your threshold
-to have a value equal to one (1). For more information, refer to [Adding Threshold/Resource
-Dependencies](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Dependencies.md)
- in the **Enterprise Manager** online help.
+**Q: How should you handle jobs that need to avoid being affected by path changes?**
 
-Set a **Late to Start** value for the job. For more information, refer
-to the **Late to Start** value under [Late to Start/Late to Finish](../job-components/frequency.md#Late).
+Use OpCon Global Properties to store program paths and reference them via tokens in job definitions. When the path changes, update the Global Property value and all jobs using that token will automatically pick up the new path.
 
-Either set up a notification event on the job using the Late to Start
-status trigger, or configure a group in ENS with a trigger to send
-notification(s) from a job event trigger on a status of Late to Start. For more information, refer to [Job
-Automation Components](../job-components/events.md)
- in this online help or [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md)
- in the **Enterprise Manager** online help.
+**Q: How do you safely shut down a machine running an agent?**
 
-Configure a threshold update for the job to set your threshold back to
-zero (0) once it finishes. For more information, refer to [Adding Threshold/Resource
-Updates](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Updates.md)
- in the **Enterprise Manager** online help.
-:::
+Disable Job Starts for the machine in OpCon, wait for the running job count to reach zero, verify no jobs are running on the agent itself, then shut down the agent. After maintenance, restart the agent and re-enable Job Starts in OpCon.
+
+**Q: Why does "Late to Start" not work on a job built On Hold?**
+
+A job in On Hold status is not in a Qualifying status, so the "Flag Job As Late" setting is ignored. Use a threshold dependency instead — the job waits in "Waiting Threshold Dependency" status, and the Late to Start value triggers a notification if the threshold is not set by the configured time.
+
+## Glossary
+
+**DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
+
+**SMA Resource Monitor (SMARM)**: A Windows service that monitors files, counters, services, and processes on Windows machines. When a monitored condition is met, it sends OpCon events to trigger automation actions.
+
+**SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.

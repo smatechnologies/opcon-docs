@@ -1,4 +1,34 @@
+---
+title: Performing Job Procedures when Working in Gantt View
+description: "Use this procedure to perform Job Procedures when Working in Gantt View in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Performing Job Procedures when Working in Gantt View
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Use this procedure to perform Job Procedures when Working in Gantt View in the Enterprise Manager.
+
+## When Would You Use It?
+
+- A Job Procedures when Working in Gantt View action needs to be carried out in Enterprise Manager
+
+## Why Would You Use It?
+
+- **Ensure consistent operations**: Performing Job Procedures when Working in Gantt View actions through OpCon creates a centralized, auditable record of all operational changes
 
 ## Adding Job Completion Comments
 
@@ -6,453 +36,300 @@
 This menu option is only available when the job is Finished OK, Marked Finished OK, Failed, or Marked Failed.
 :::
 
-To perform this procedure:
+To add Job Completion Comments, complete the following steps:
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Comment**. The **Job Completion Comment**
-    dialog displays.
-4. Enter a *short comment* for the job.
-5. Click **OK** or press **Enter** on the keyboard to save the comment
-    or click **Cancel** to abort the operation.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Comment**. The **Job Completion Comment** dialog displays
+4. Enter a *short comment* for the job
+5. Select **OK** to save or **Cancel** to abort
 
 ## Viewing Job Output
 
-This action will open a job's output file when the job is complete.
-Before attempting to view a job's output file, first refer to [Viewing a Job Output File](../../../operations/job-output.md) in the **Concepts** online help.
+Before attempting to view a job's output file, refer to [Viewing a Job Output File](../../../operations/job-output.md).
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> View Job Output**. The **Job Output
-    Retriever** dialog displays.
-4. Double-click on the **Output File(s)** name to retrieve the output
-    file information. The **Log Viewer** dialog displays.
-5. *(Optional)* Click the **Copy To Clipboard** button.
-6. *(Optional)* Click the **Open external editor**
-    button to open the file in an external editor (e.g., Notepad).
-7. Click the **Close** button to close the **Log Viewer** dialog.
-8. Click the **Close** button to close the **Job Output Retriever**
-    dialog.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> View Job Output**. The **Job Output Retriever** dialog displays
+4. Select the **Output File(s)** name. The **Log Viewer** dialog displays
+5. *(Optional)* Select **Copy To Clipboard** or **Open external editor**
+6. Select **Close** to close the **Log Viewer** dialog, then **Close** again to close the **Job Output Retriever** dialog
 
 ## Opening Window to Host
 
 :::note
-This action requires the configuration emulator for the connection to the machine. For information on configuring an emulator, refer to [Preferences for Window To Host](Preferences-for-Windows-To-Host.md).
+This action requires a configured emulator. For details, refer to [Preferences for Window To Host](Preferences-for-Windows-To-Host.md).
 :::
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Window to Host**. The **Window to Host
-    Emulator** dialog displays.
-4. Log in to the machine to manage the content.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Window to Host**. The **Window to Host Emulator** dialog displays
+4. Log in to the machine to manage the content
 
 ## Editing Daily Jobs
 
-This action allows the user to edit job information in the Daily tables.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Maintenance \> Edit Daily**. The **Job Daily** dialog displays
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Maintenance \> Edit Daily**. The **Job
-    Daily** dialog displays.
-4. *(Optional)* Enter the *changes*.
-5. Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
-    on the **Job Daily** toolbar.
-6. Click **Close ☒** (to the right of the **Job Daily** tab) to close
-    the **Job Daily** screen.
+4. *(Optional)* Enter the *changes*
+5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
+6. Select **Close ☒** to close the **Job Daily** screen
 
 ## Editing Master Jobs
 
-This action allows the user to edit job information in the Master
-tables.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Maintenance \> Edit Master Job**. The **Job Master** dialog displays
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Maintenance \> Edit Master Job**. The **Job
-    Master** dialog displays.
-4. *(Optional)* Enter the *changes*.
-5. Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
-    on the **Job Master** toolbar.
-6. Click **Close ☒** (to the right of the **Job Master** tab) to close
-    the **Job Master** screen.
+4. *(Optional)* Enter the *changes*
+5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
+6. Select **Close ☒** to close the **Job Master** screen
 
 ## Deleting Jobs
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Maintenance \> Delete Job**. The **Delete Job** dialog displays
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Maintenance \> Delete Job**. The **Delete
-    Job** dialog displays.
-4. Click the **Yes** button to confirm the deletion or click the **No**
-    button to cancel the deletion.
-5. Click **Close ☒** (to the right of the **Gantt** tab) to close the
-    **Gantt** screen.
+4. Select **Yes** to confirm or **No** to cancel
+5. Select **Close ☒** to close the **Gantt** screen
 
 ## Placing Jobs on Hold
 
-This action will suspend the processing of the selected job. A job that
-has been submitted to start cannot be held.
+Suspends processing of the selected job. A job submitted to start cannot be held.
 
 :::note
-If the action is performed when a schedule is selected, all jobs on a schedule are affected.
+If performed when a schedule is selected, all jobs on the schedule are affected.
 :::
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Hold**. The **Hold** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Hold**. The **Hold** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Canceling Jobs
 
-This action will cancel the job. Any jobs that were dependent on this
-job will not have their dependencies met.
+Cancels the job. Dependent jobs will not have their dependencies met.
 
 :::note
-If the action is performed when a schedule is selected, all jobs on a schedule are affected.
+If performed when a schedule is selected, all jobs on the schedule are affected.
 :::
 
-To perform this procedure:
+To cancel Jobs, complete the following steps:
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Cancel**. The **Cancel** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Cancel**. The **Cancel** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Skipping Jobs
 
-This action will place the job in a Job to be Skipped state until the job qualifies to start. When
-the job qualifies, it is skipped and the job dependency of all
-subsequent jobs will be met.
+Places the job in a Job to be Skipped state until it qualifies to start. When it qualifies, the job is skipped and dependencies of all subsequent jobs are met.
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Skip**. The **Skip** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Skip**. The **Skip** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Killing Jobs
 
-This action will send a request to kill the job. Any jobs dependent on
-killed jobs will not have the dependencies met.
+Sends a request to kill the job. Dependent jobs will not have their dependencies met.
 
 :::note
-This option is not available for the BIS, OpenVMS, IBM i, and OS 2200 platforms.
+Not available for the BIS, OpenVMS, IBM i, and OS 2200 platforms.
 :::
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Kill**. The **Kill** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Kill**. The **Kill** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Releasing Held Jobs
 
-This action will place the job back in a Qualifying state, and the job will process when all dependencies have been met.
+Places the job back in a Qualifying state. The job processes when all dependencies are met.
 
 :::note
-If the action is performed when a schedule is selected, all jobs on a schedule are affected.
+If performed when a schedule is selected, all jobs on the schedule are affected.
 :::
 
-To perform this procedure:
+To release Held Jobs, complete the following steps:
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Release**. The **Release** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Release**. The **Release** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Force Starting Jobs
 
-This action will cause the job to ignore the start time and all
-dependencies. The job starts as soon as this option is selected as long
-as a machine is available.
+Causes the job to ignore the start time and all dependencies. The job starts as soon as a machine is available.
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Force Start**. The **Force Start** dialog
-    displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Force Start**. The **Force Start** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Restarting Jobs
 
-This action will place the job back in a Qualifying state. The job starts as soon as all dependencies are met.
+Places the job back in a Qualifying state. The job starts when all dependencies are met.
 
 :::note
-During the restart qualifying process, the SAM uses all current details from the Daily tables and from the **Job Configuration** screen unless the **Re-build the SubSchedule** option is selected. If **Re-build the SubSchedule** has been selected, SAM will re-build the subschedule before restarting the jobs.
+The SAM uses current details from the Daily tables and **Job Configuration** screen unless **Re-build the SubSchedule** is selected, in which case SAM re-builds the subschedule before restarting.
 :::
 
-To perform this procedure:
+To restart Jobs, complete the following steps:
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Restart**. The **Restart dialog** display.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Restart**. The **Restart dialog** displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Force Restarting Jobs
 
-This action will cause the job to restart.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Force Restart**. The **Force Restart** dialog displays
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Force Restart**. The **Force Restart**
-    dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Restarting Without Prerun
 
-This action will place the selected job back into a
-Qualifying state. The job is submitted without the associated Prerun. All dependencies must be met before the job is
-submitted.
+Places the selected job back in a Qualifying state and submits it without the associated Prerun. All dependencies must be met before submission.
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Restart Without Prerun**. The **Restart
-    Without Prerun** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Restart Without Prerun**. The **Restart Without Prerun** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Restarting On Step
 
-This action will allow you to select a Step on which to restart
-(whenever the job type supports this).
+Allows you to select a step on which to restart (for supported job types).
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Click **Job \> Restart On Step**. The **Restart On Step** dialog
-    displays.
-4. Click on the specific **Start step** to restart.
-5. Click on the specific **End step** to restart (only for platforms
-    that support the End step).
-6. Click the **Restart On Step** button.
-7. Click the **OK** button to confirm.
-8. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-9. Click the **OK** button.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Select **Job \> Restart On Step**. The **Restart On Step** dialog displays
+4. Select the **Start step** to restart
+5. Select the **End step** (only for platforms that support it)
+6. Select **Restart On Step**, then **OK** to confirm
+7. *(Optional)* Enter a *short explanation for the status change*
+8. Select **OK**
 
 ## Marking Jobs Finished OK
 
-The action marks the selected job as Finished OK. If the job is marked Finished OK before it starts,
-both the start time and finish time saved in history equal the time the
-job is marked.
+Marks the selected job as Finished OK. If marked before the job starts, both start and finish times in history equal the time of marking.
 
-To perform this procedure:
-
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Mark Finished OK**. The **Marked Finished
-    OK** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Mark Finished OK**. The **Marked Finished OK** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Marking Jobs Failed
 
-This action marks the selected job as Failed. If the job is marked Failed before it starts, both the
-start and the finish time saved in history equal the time the job is
-marked.
+Marks the selected job as Failed. If marked before the job starts, both start and finish times in history equal the time of marking.
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Mark Failed**. The **Marked Failed** dialog
-    displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Mark Failed**. The **Marked Failed** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Marking Jobs Under Review
 
-his action marks the selected job as Under Review.
-To perform this procedure:
+Marks the selected job as Under Review.
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Under Review**. The **Under Review** dialog
-    displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Under Review**. The **Under Review** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Marking Jobs Fixed
 
-This action marks the selected job as Fixed.
-To perform this procedure:
+Marks the selected job as Fixed.
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **job bar** in the **Gantt** display.
-3. Use menu path: **Job \> Fixed**. The **Fixed** dialog displays.
-4. *(Optional)* Enter a *short explanation for the
-    status change* in the text box provided.
-5. Click the **OK** button to confirm the job status change.
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+
+2. Right-click on the preferred **job bar** in the **Gantt** display
+3. Use menu path: **Job \> Fixed**. The **Fixed** dialog displays
+4. *(Optional)* Enter a *short explanation for the status change*
+5. Select **OK** to confirm
 
 ## Monitoring SAP Child Processes
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **SAP R/3 or CRM job bar**
+3. Use menu path: **Job \> SAP Child Processes**. The **SAP Child Processes** dialog displays
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **SAP R/3 or CRM job bar**.
-3. Use menu path: **Job \> SAP Child Processes**. The **SAP Child
-    Processes** dialog displays.
-4. View the child processes.
-5. *(Optional)* Unselect the checkboxes at the top of
-    the screen to filter out specific statuses.
-6. *(Optional)* Type **Filter Text** above the table to
-    find a specific child process by name.
-7. *(Optional)* Move the **SAP Child Processes** dialog
-    aside and continue work in the **Gantt** tab or other screens while
-    still monitoring the SAP child processes.
-8. Click **Close**.
+4. View the child processes
+5. *(Optional)* Unselect options at the top to filter specific statuses, or type in **Filter Text** to find a child process by name
+6. *(Optional)* Move the dialog aside to continue working in the **Gantt** tab while monitoring
+7. Select **Close**
 
 ## Restarting SAP Child Processes
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **SAP R/3 or CRM job bar**
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-
-2. Right-click on the preferred **SAP R/3 or CRM job bar**.
-
-3. Use menu path: **Job \> SAP Child Processes**. The **SAP Child
-    Processes** dialog displays.
-
-4. *(Optional)* Unselect the checkboxes at the top of
-    the screen to filter out specific statuses.
-
-5. *(Optional)* Type **Filter Text** above the table to
-    find a specific child process by name.
-
-6. Select the checkbox(es) next to the child process(es) you wish to
-    restart.
-
-7. Click the **Restart** button. The **Restart SAP Child Processes**
-    dialog displays.
-
-8. Click the **OK** button to confirm the restart.
+3. Use menu path: **Job \> SAP Child Processes**. The **SAP Child Processes** dialog displays
+4. *(Optional)* Unselect options to filter statuses, or type in **Filter Text** to find a child process
+5. Select the option(es) next to the child process(es) to restart
+6. Select **Restart**. The **Restart SAP Child Processes** dialog displays
+7. Select **OK** to confirm
 
 ## Viewing SAP Job Spools
 
-To perform this procedure:
+1. Complete [Steps 1 - 8 of the Synchronizing Data between List and Gantt Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
+2. Right-click on the preferred **SAP R/3 or CRM job bar**
+3. Use menu path: **Job \> SAP Job Spools**. The **SAP Login** dialog displays
 
-1. Complete [Steps 1 - 8 of the Synchronizing Data between List and
-    Gantt
-    Views](Synchronizing-Data-between-List-and-Gantt-Views.md)
-    procedure. Then, proceed to Step 2 of this procedure.
-2. Right-click on the preferred **SAP R/3 or CRM job bar**.
-3. Use menu path: **Job \> SAP Job Spools**. The **SAP Login** dialog
-    displays.
-4. Enter the *SAP login credentials* then click **OK**. The **View SAP
-    Job's Spools** dialog displays.
-5. *(Optional)* Click the **Refresh** button to update
-    the list.
-6. Double-click on the *job spool* to retrieve. The **SAP Spool
-    Details** dialog displays.
-7. View the spool details.
-8. *(Optional)* Click the **Copy To Clipboard** button.
-9. *(Optional)* Click the **Open external editor**
-    button to open the file in an external editor (e.g., Notepad).
-10. Click the **Close** button to close the **SAP Spool Details**
-    dialog.
-11. Click the **Close** button to close the **View SAP Job's Spools**
-    dialog.
+4. Enter the *SAP login credentials* and select **OK**. The **View SAP Job's Spools** dialog displays
+5. *(Optional)* Select **Refresh** to update the list
+6. Select the *job spool* to retrieve. The **SAP Spool Details** dialog displays
+7. View the spool details
+8. *(Optional)* Select **Copy To Clipboard** or **Open external editor**
+9. Select **Close** to close the **SAP Spool Details** dialog, then **Close** again to close the **View SAP Job's Spools** dialog
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: How many steps does the Performing Job Procedures when Working in Gantt View procedure involve?**
+
+The Performing Job Procedures when Working in Gantt View procedure involves 128 steps. Complete all steps in order and save your changes.
+
+**Q: What does Performing Job Procedures when Working in Gantt View cover?**
+
+This page covers Adding Job Completion Comments, Viewing Job Output, Opening Window to Host.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

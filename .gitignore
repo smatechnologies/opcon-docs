@@ -22,3 +22,9 @@ yarn-error.log*
 .prettierignore
 /.vs
 .claude/settings.local.json
+
+# Temporary tooling scripts from documentation improvement session
+*.py
+__pycache__/
+all_images.txt
+nul

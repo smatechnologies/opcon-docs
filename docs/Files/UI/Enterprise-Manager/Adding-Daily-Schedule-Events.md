@@ -1,68 +1,103 @@
+---
+title: Adding Daily Schedule Events
+description: "Use this procedure to add Daily Schedule Events in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Adding Daily Schedule Events
 
-To perform this procedure:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-Double-click on **Daily Maintenance** under the **Operation** topic. The
-**Daily Maintenance** screen displays.
+## What Is It?
 
-Click on the ![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png)
-**arrow** to expand the specific **date** for the schedule.
+Use this procedure to add Daily Schedule Events in the Enterprise Manager.
 
-Click on the **schedule**.
+To perform this procedure, complete the following steps:
 
-Click on the **Edit Daily** button in the **Maintenance** frame at the
-bottom-right side of the screen. The **Schedule Daily** screen displays.
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+2. Select the ![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
+3. Select the **schedule**
+4. Select **Edit Daily** in the **Maintenance** frame. The **Schedule Daily** screen displays
+5. Select the **Events** tab
+6. Select **Add** in the **Events** frame. The **Event Definition Wizard** displays
+7. Select an **OpCon event template** from the **Event Template** list. Refer to [OpCon Events](../../../events/introduction.md) for more information
 
-Click on the **Events** tab.
+   :::tip Example
+   $JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>.
+   :::
 
-Click the **Add** button in the **Events** frame. The **Event Definition
-Wizard** displays.
+8. In the **Event Parameters** text box, place the cursor at the beginning of a **\<syntax placeholder\>**, then drag right to select the entire placeholder, excluding surrounding commas (e.g., ,[<schedule name\>],)
+9. Replace the selected placeholder with valid OpCon event information
 
-Select an **OpCon event template** from the **Event Template** drop-down list. For more
-information, refer to the [OpCon Events](../../../events/introduction.md) online help.
+To replace a placeholder with a token, complete the following steps:
 
-:::tip Example
-$JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>.
-:::
+1. Select the syntax placeholder as described in step 8
+2. Select the ![Insert Token button](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button") **Insert token** button or press **Ctrl+T** to list available global properties
+3. Locate the global property by scrolling or using the search field. Use Windows wildcard characters to filter by property name, property value, or both
+4. Select the **global property** (e.g., $SCHEDULE DATE)
 
-Place your mouse cursor at the beginning of a **<syntax placeholder\>** displayed in the **Event Parameters** text
-box then drag the cursor to the right to select the entire syntax
-placeholder, excluding any surrounding commas. For example: ,[<schedule name\>], .
+   :::note
+   Double brackets are automatically placed around the token placeholder.
+   :::
 
-Replace the selected syntax placeholder with valid
-OpCon event information.
+   :::tip Example
+   $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth.
+   :::
 
-If you wish to replace the syntax placeholder with a token, then do the
-following:
+5. Select **Reset** to restore parameters to their original states
+6. Select **Finish** to save the event, or **Cancel** to discard changes
+7. Select **Close ☒** to close the **Schedule Daily** screen
+8. Select **Close ☒** to close the **Daily Maintenance** screen
 
-Follow Step 8 to select the syntax placeholder.
+## When Would You Use It?
 
-Click the ![Insert Token buton](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button")
-**Insert token** button or press **Ctrl/t** on the keyboard to list
-available global properties.
+- You need to add Daily Schedule Events in Enterprise Manager
+- The environment is expanding and requires additional Daily Schedule Events to support new automation workflows
 
-Locate the global property in the selector by:
+## Why Would You Use It?
 
-i.  Scrolling to it.
-ii. Using the search field and filter criteria to find it. You can use
-    Windows wildcard characters in the search field to expand the search
-    and filter the search by property name, property value, or both
-    (default).
+- **Extend automation scope**: Adding Daily Schedule Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
+- All additions are tracked in the OpCon audit log, recording who added the Daily Schedule Events and when
 
-Double-click on the **global property** (e.g., $SCHEDULE DATE).
+## Configuration Options
 
-:::note
-Double brackets will automatically be placed around the placeholder for the token that is defined.
-:::
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
 
-:::tip Example
-$JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth.
-:::
+## FAQs
 
-Click the **Reset** button to reset the parameters to their original states.
+**Q: Where do you access Daily Schedule Events in the Enterprise Manager?**
 
-Click **Finish** to save the Schedule Completion event or click **Cancel** to discard the changes made in the wizard.
+Select **Daily Maintenance** under the **Operation** topic in the Enterprise Manager navigation pane.
 
-Click **Close ☒** (to the right of the **Schedule Daily** tab) to close the **Schedule Daily** screen.
+**Q: How do you save a new daily schedule events record?**
 
-Click **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen.
+After completing the required fields, select the **Save** button on the toolbar to save the daily schedule events record.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

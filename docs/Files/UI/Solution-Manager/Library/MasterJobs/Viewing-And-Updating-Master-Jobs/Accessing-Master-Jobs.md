@@ -1,68 +1,71 @@
+---
+title: Accessing Master Job Definition
+description: "As part of the Library module, those with the appropriate privileges can view and modify master job definitions."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Accessing Master Job Definition
 
-As part of the **Library** module, those with the appropriate
-privileges can view the master job definition as well as modify job
-properties. To make this possible, **Master Job Definition** has the
-following two modes:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- **Read-only**: In this mode, you can review the defined properties
-  for the selected job. Job properties cannot be edited while in this
-  mode.
-- **Admin**: In this mode, you can modify the properties, which
-  includes reconfiguring platform-specific details, for the selected
-  job.
+## What Is It?
 
-## Required Privileges
+As part of the **Library** module, those with the appropriate privileges can view and modify master job definitions. **Master Job Definition** has two modes:
 
-In order to view the master job details, you must have at least all of the following privileges:
+- **Read-only**: Review defined properties for the selected job. Properties cannot be edited
+- **Admin**: Modify properties, including platform-specific details, for the selected job
 
-- **Schedule Privilege**: User must be at least in a role that has
-  access to the job's parent schedule.
-- **Departmental Function Privilege**: User must be at least in a role
-  that has All Function Privileges, Add Jobs To Master Schedules, Modify Jobs In MasterSchedules, All Job Master Functions, or View Jobs In Master Schedules privileges for the
-  assigned job's department.
-- **Access Code Privilege**: User must be at least in a role that has
-  access to the assigned job access code.
-- **Department Privilege**: User must be at least in a role that has
-  access to the assigned job department or All Departments.
-- **Machine / Machine Group Privilege**: User must be at least in a role that has
-  access to the assigned job machine or machines in the machine group.
+## When Would You Use It?
 
-In order to edit the master job details, you must be in the ocadm role
-or have at least all of the following privileges:
+- You need to retrieve or review Master Job Definition information from Solution Manager
 
-- **Schedule Privilege**: User must be at least in a role that has
-  access to the job's parent schedule.
-- **Access Code Privilege**: User must be at least in a role that has
-  access to the assigned job access code with **Allow job updates**
-  flag set to true.
-- **Machine / Machine Group Privilege**: User must be at least in a role that has
-  access to the assigned job machine or machines in the machine group.
-- **Departmental Function Privilege**: User must be at least in a role
-  that has All Function Privileges, or Modify Jobs In MasterSchedules or All Job Master Functions privileges and department privilege.
-- **Department Privilege**: User must be at least in a role that has
-  access to the assigned job department or All Departments.
+## Why Would You Use It?
+
+- **Accessing Master**: As part of the **Library** module, those with the appropriate privileges can view and modify master job definitions
+
+## Administration
+
+### Required Privileges
+
+To view master job details, you must have at least all of the following privileges:
+
+- **Schedule Privilege**: Role must have access to the job's parent schedule
+- **Departmental Function Privilege**: Role must have All Function Privileges, Add Jobs To Master Schedules, Modify Jobs In Master Schedules, All Job Master Functions, or View Jobs In Master Schedules for the assigned job's department
+- **Access Code Privilege**: Role must have access to the assigned job access code
+- **Department Privilege**: Role must have access to the assigned job department or All Departments
+- **Machine / Machine Group Privilege**: Role must have access to the assigned job machine or machines in the machine group
+
+To edit master job details, you must be in the ocadm role or have at least all of the following privileges:
+
+- **Schedule Privilege**: Role must have access to the job's parent schedule
+- **Access Code Privilege**: Role must have access to the assigned job access code with **Allow job updates** set to true
+- **Machine / Machine Group Privilege**: Role must have access to the assigned job machine or machines in the machine group
+- **Departmental Function Privilege**: Role must have All Function Privileges, or Modify Jobs In Master Schedules or All Job Master Functions privileges and department privilege
+- **Department Privilege**: Role must have access to the assigned job department or All Departments
 
 ## Master Job Definition Access
 
-To access the master job details:
+To access the master job details, complete the following steps:
 
-1. To view all master jobs, go to **Library** > **Master Jobs**.
-1. Select one **job** in the list.
-1. Click the **View** button at the top-left corner of the panel to access the **Master Job Definition** page. By default, this page will be in **Read-only** mode.
-1. Click the **Back** button to return to the previous page.
-1. Close the **Selection** panel when done.
+1. Go to **Library** > **Master Jobs**
+1. Select one **job** in the list
+1. Select the **View** button at the top-left corner of the panel to access the **Master Job Definition** page. By default, this page is in **Read-only** mode
+1. Select the **Back** button to return to the previous page
+1. Close the **Selection** panel when done
 
 ## Master Job Definition Properties
 
-**Master Job Definition** contains general information about the job as
-well as panels that expose the defined properties when expanded. For
-those with the appropriate privileges, a **Lock** button will also
-appear at the top-right corner of the page that allows you to switch
-between the two modes. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Master Job Definition Read-only Button"))
-when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Job Definition Admin Button"))
-when in **Admin** mode. The page also has a [menu](#Daily3) for quickly
-accessing the panels.
+**Master Job Definition** contains general job information and expandable panels for defined properties. For those with the appropriate privileges, a **Lock** button appears at the top-right corner to switch between modes. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Master Job Definition Read-only Button")) in **Read-only** mode and green and unlocked (![Job Definition Admin Button](../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Job Definition Admin Button")) in **Admin** mode. The page also has a [menu](#Daily3) for quickly accessing the panels.
 
 ### General Info
 
@@ -70,20 +73,50 @@ For information about the **General Info** section, refer to [Viewing and Updati
 
 ### Master Job Definition Panels
 
-Each expandable panel that is displayed on the **Master Job Definition**
-page represents a job property category.
+Each expandable panel represents a job property category.
 
-- In **Read-only** mode, a panel is displayed only when properties
-  have been defined for the category. These properties can be viewed
-  only and not changed while in this mode.
-- In **Admin** mode, all available panels are displayed on the page
-  and may contain properties that can be modified.
+- **Read-only** mode: Only panels with defined properties are displayed; properties cannot be changed
+- **Admin** mode: All available panels are displayed and properties may be modified
 
 ### Master Job Definition Menu
 
-The menu in the left portion of the page allows you to access any of the
-master job definition panels quickly. The menu can be collapsed to show
-icons and tool tips only. When a menu item is left clicked, the view
-automatically scrolls to that particular panel on the page and the panel
-is expanded to expose its contents. Right clicking a menu item will
-toggle **Full Screen** mode.
+The menu in the left portion of the page provides quick access to any master job definition panel. It can be collapsed to show icons and tooltips only. Selecting a menu item scrolls the view to that panel and expands it. right-clicking a menu item toggles **Full Screen** mode.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Read-only | Review defined properties for the selected job. | — | — |
+| Admin | Modify properties, including platform-specific details, for the selected job | — | — |
+| Schedule Privilege | Role must have access to the job's parent schedule | — | must be in the ocadm role or have at least all of the following privileges:  - **Schedul |
+| Departmental Function Privilege | Role must have All Function Privileges, Add Jobs To Master Schedules, Modify Jobs In Master Schedules, All Job Master Functions, or View Jobs In Maste... | — | must be in the ocadm role or have at least all of the following privileges:  - **Schedul |
+| Access Code Privilege | Role must have access to the assigned job access code | — | must be in the ocadm role or have at least all of the following privileges:  - **Schedul |
+| Department Privilege | Role must have access to the assigned job department or All Departments | — | must be in the ocadm role or have at least all of the following privileges:  - **Schedul |
+| Machine / Machine Group Privilege | Role must have access to the assigned job machine or machines in the machine group | — | must be in the ocadm role or have at least all of the following privileges:  - **Schedul |
+## FAQs
+
+**Q: How many steps does the Accessing Master Job Definition procedure involve?**
+
+The Accessing Master Job Definition procedure involves 5 steps. Complete all steps in order and save your changes.
+
+**Q: What does Accessing Master Job Definition cover?**
+
+This page covers Required Privileges, Master Job Definition Access, Master Job Definition Properties.
+
+## Glossary
+
+**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
