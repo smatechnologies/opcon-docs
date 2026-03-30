@@ -572,8 +572,6 @@ module.exports = {
             },
           ],
         },
-        "reference/property-expressions-syntax",
-        "automation-concepts/property-expressions",
         {
           type: "category",
           label: "Scripts",
@@ -1068,6 +1066,7 @@ module.exports = {
           ],
         },
         "reference/best-practices",
+        "reference/property-expressions-syntax",
         "reference/Operations-Machine-Messages",
         "reference/Operations-File-Transfer-Messages",
         "reference/Windows-System-Errors",
