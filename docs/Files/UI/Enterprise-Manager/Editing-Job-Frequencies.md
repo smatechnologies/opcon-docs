@@ -1,32 +1,77 @@
+---
+title: Editing Job Frequencies
+description: "Use this procedure to edit Job Frequencies in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Editing Job Frequencies
 
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Use this procedure to edit Job Frequencies in the Enterprise Manager.
+
 :::note
-You can modify the frequency if it applies only to the selected job; however, to modify a frequency that is on two or more jobs, you must be in the **ocadm** role.
+You can modify a frequency that applies only to the selected job. To modify a frequency used by two or more jobs, you must be in the **ocadm** role.
 :::
 
 :::note
-In the ocadm role, if a previously defined job frequency is being changed, and it is in use by other jobs or schedules, all jobs or schedules using the frequency will be impacted by the change. 
-
-When saving the changes to a previously defined frequency, if it is in use by other jobs or schedules, a pop-up message will be displayed warning you that all jobs and schedules using the frequency will be impacted by the change.
-
-If it is a requirement to change all jobs and schedules with the frequency, continue with saving the changes. If this is not the case, create a new frequency with a new frequency name. 
+In the ocadm role, changes to a shared frequency affect all jobs and schedules using it. A warning message displays when saving changes to a frequency in use by other jobs or schedules. To avoid impacting other jobs and schedules, create a new frequency with a new name instead.
 :::
 
-To edit a frequency:
+To edit a frequency, complete the following steps:
 
-1. Double-click on **Job Master** under the **Administration** topic.
-    The **Job Master** screen displays.
-2. Select the **schedule** in the **Schedule** drop-down list.
-3. Select the **job** in the **Job** drop-down list.
-4. Click on the **Frequency** tab in the **Job Details** frame.
-5. Select the **existing frequency** in the **Frequency list**.
-6. Click the **Edit** button. The **Frequency Definition Wizard**
-    displays.
-7. Enter the *changes* in the wizard.
-8. *(Optional)* Click the **Forecast** button to verify
-    the job frequency changes.
-9. Click **OK** to close the **Forecast** window.
-10. Click **Finish** to save changes and close the wizard or click
-    **Cancel** to discard the changes made in the wizard.
-11. Click **Close ☒** (to the right of the **Job Master** tab) to close
-    the **Job Master** screen.
+1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+2. Select the **schedule** in the **Schedule** list
+3. Select the **job** in the **Job** list
+4. Select on the **Frequency** tab in the **Job Details** frame
+5. Select the **existing frequency** in the **Frequency list**
+6. Select the **Edit** button. The **Frequency Definition Wizard** displays
+7. Enter the *changes* in the wizard
+8. *(Optional)* Select **Forecast** to verify the job frequency changes, then select **OK** to close the **Forecast** window
+9. Select **Finish** to save changes or **Cancel** to discard them
+10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+
+## When Would You Use It?
+
+- An existing Job Frequencies in Enterprise Manager requires changes
+- A change in process, system, or business requirement makes the current Job Frequencies definition outdated
+
+## Why Would You Use It?
+
+- **Keep definitions current**: Updating Job Frequencies in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
+- Changes to Job Frequencies are recorded in the OpCon audit log, providing a complete modification history
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+
+## FAQs
+
+**Q: Do edits to job frequencies take effect immediately?**
+
+Changes saved to job frequencies in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+
+## Glossary
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

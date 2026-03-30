@@ -1,24 +1,54 @@
+---
+title: SMA Resource Monitor Wizards
+description: "The SMA Resource Monitor User Interface provides Wizards within the Add and Edit functions for all monitor types and Action Groups."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # SMA Resource Monitor Wizards
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 The SMA Resource Monitor User Interface provides Wizards within the
 **Add** and **Edit** functions for all monitor types and Action Groups.
 There is a step pane on the left side of the screen that contains the
 names of each step in the wizard.
 
+## When Would You Use It?
+
+- You need to provide Wizards within the using The SMA Resource Monitor User Interface
+
+## Why Would You Use It?
+
+- **Operational value**: Provides Wizards within the Add and Edit functions for all monitor types and Action Group
+
 ## Start an Add Wizard
 
-1. Click on the specific tab - **File Monitors**, **Counter Monitors**,
+To start an Add Wizard, complete the following steps:
+
+1. Select on the specific tab - **File Monitors**, **Counter Monitors**,
     **Service Monitors**, **Process Monitors**, or **Action Groups** -
     for the monitor type to add.
-2. Click **Add**.
+2. Select **Add**
 
 ## Start an Edit Wizard
 
-1. Click on the specific tab - **File Monitors**, **Counter Monitors**,
+1. Select on the specific tab - **File Monitors**, **Counter Monitors**,
     **Service Monitors**, **Process Monitors**, or **Action Groups** -
     for the type of item to edit.
-2. Click on the gray box to the left of the row for the specific
-    monitor type or Action Group item that you want to edit and click
+2. Select on the gray box to the left of the row for the specific
+    monitor type or Action Group item that you want to edit and select
     **Edit**.
 
 When the **Add** or **Edit** menu is selected from the SMA Resource
@@ -56,11 +86,11 @@ all monitor types.
     name: \\ (backslash), / (forward slash), : (colon), \* (asterisk), ?
     (question mark), " (quotes), < (less than), \> (greater than), |
     (pipe)
-- **Documentation**: Provides a place to document monitor information.
+- **Documentation**: Provides a place to document monitor information
 - **Network Share**: For **File Monitors**, determines if the SMA
     Resource Monitor will poll the directory to detect the file. If
-    checkbox is unselected, SMA Resource Monitor will use Windows alerts
-    to optimize performance. If checkbox is selected, SMA Resource
+    option is unselected, SMA Resource Monitor will use Windows alerts
+    to optimize performance. If option is selected, SMA Resource
     Monitor will poll the directory. This option should be enabled to
     monitor files on mapped drives.
   - **Poll Interval**: Defines the seconds between polling attempts
@@ -69,7 +99,7 @@ all monitor types.
     - Maximum Value: 86400
     - When setting this value, determine the amount of time within
             which the file should be acted upon.
-    - When one SMA Resource Monitor is required to monitor high
+    - When one SMA Resource Monitor must monitor high
             volumes of Network share files, it is important to stagger
             this value and set the highest values tolerated for the
             environment.
@@ -95,7 +125,7 @@ Parameters step contains different details.
 #### Auto-Disable and Auto Re-Enable Behavior
 
 When SMA Resource Monitor automatically deactivates a Counter, Service,
-or Process Monitor, it unselects the "Active" checkbox for that
+or Process Monitor, it unselects the "Active" option for that
 monitor on the respective summary tab of the main SMA Resource Monitor
 screen. To automatically re-enable the monitor, configure one or more of
 the Auto Re-Enable Trigger settings.
@@ -104,7 +134,7 @@ If auto re-enable is configured, when SMA Resource Monitor automatically
 deactivates a monitor, it disables the trigger, but keeps monitoring for
 the re-enabling of the trigger and the "Active" box for the monitor in
 the respective summary tab continues to show selected. To manually
-enable the trigger again, unselect then select the "Active" checkbox
+enable the trigger again, unselect then select the "Active" option
 on the respective summary tab of the main SMA Resource Monitor screen.
 
 #### File Monitor Parameters
@@ -128,16 +158,16 @@ on the respective summary tab of the main SMA Resource Monitor screen.
         change in timestamp).
   - **EOFMarker**: Check for a user-defined EOF marker to ensure the
         file is complete (allow wildcards in the EOF string)
-  - **ScanString**: Check for a user-defined string in the file.
+  - **ScanString**: Check for a user-defined string in the file
         (This does not have to be EOF marker.)
-  - **InUse**: Check if the file is in use.
+  - **InUse**: Verify if the file is in use
 - **TrackScanString**: For the ScanString file state, indicates if the
     SMA Resource Monitor will remember the last ScanString location in a
     file for which it had previously triggered the rule. If marked, the
     SMA Resource Monitor will not re-trigger the rule for the same
     location in the file when it detects the file is modified again. The
     trigger will only fire again if new matches for the ScanString
-    setting appear in the modified file. If the checkbox is clear, the
+    setting appear in the modified file. If the option is clear, the
     rule will trigger for previously detected ScanString entries every
     time the file is modified.
 - **Search String**: Defines the string to search for in the file when
@@ -147,7 +177,7 @@ on the respective summary tab of the main SMA Resource Monitor screen.
 - **File Size** (Optional): Defines the File State setting, and
     specifies the minimum file size that the Resource Monitor is looking
     for. If *AbsoluteSize* is the file state, SMA Resource Monitor will
-    check if the file is *exactly* the size specified. For any     other file state, SMA Resource Monitor will check if the file is at least the size specified.
+    verify if the file is *exactly* the size specified. For any     other file state, SMA Resource Monitor will verify if the file is at least the size specified.
 - **Create TimeStamp**: Defines the oldest create date for a file. If
     the create date/time stamp on the file is older than this date/time,
     SMAResourceMonitor will not process the file. The default value for
@@ -234,7 +264,7 @@ The average value is calculated by taking 1 sample every second and averaging la
 - **Value**: Average cutoff value for this counter. If the calculated
     average value goes above this cutoff, the configured action groups
     are triggered.
-  - Minimum Value: 0 (If 0, this feature is disabled).
+  - Minimum Value: 0 (If 0, this feature is disabled)
   - Maximum Value: 99
 - **Samples**: Number of Samples to be used for calculating the
     average value. A sample is taken every second by default.
@@ -246,7 +276,7 @@ The average value is calculated by taking 1 sample every second and averaging la
   - Maximum Value: 300
 
 **Disable Trigger After**: Select one or more of the following
-checkboxes to have the Counter Monitor automatically deactivate when the
+options to have the Counter Monitor automatically deactivate when the
 notification(s) are triggered.
 
 - **Above Max Value**: Will cause the trigger to disable when the
@@ -259,7 +289,7 @@ notification(s) are triggered.
     Trigger).
 
 **Re-Enable Trigger After**: Mark one or more of the following
-checkboxes to have the Counter Monitor automatically re-enable when the
+options to have the Counter Monitor automatically re-enable when the
 condition is met.
 
 - **Above Max Value**: Will cause the trigger to re-enable when the
@@ -279,7 +309,7 @@ condition is met.
 
 - **Service Name**: The display name of a Windows Service as found in
     Windows Services.
-- **Service State**: Contains the service state to monitor for.
+- **Service State**: Contains the service state to monitor for
   - **Started**: Trigger notification when service is found in a
         Started state.
   - **Not Started**: Trigger notification when service is found
@@ -297,7 +327,7 @@ condition is met.
   - Minimum Value: 5
   - Maximum Value: 300
 - **Disable when Triggered**: Deactivates the monitor after the action
-    group is triggered for the defined state. The checkbox is unselected
+    group is triggered for the defined state. The option is unselected
     by default (indicating that the monitor should not be disabled when
     the action group is triggered).
 - **Auto Re-Enable**:Auto Re-Enables the monitor when the service goes
@@ -313,10 +343,10 @@ condition is met.
 
 - **Process Name** (Required): The name of a Windows process that
     could be found in the Windows Task manager.
-- **Process State**: Contains the process state to monitor for.
+- **Process State**: Contains the process state to monitor for
   - **Running**: Trigger notification when process is found in a
         Running state.
-  - **Not Running**: Trigger notification when the process is not found in a running state.
+  - **Not Running**: Trigger notification when the process is not found in a running state
   - **From Time**: This is the start time for monitoring resources. This
     option provides users a way to monitor resources only during a
     specified time period of the day.
@@ -328,7 +358,7 @@ condition is met.
   - Minimum Value: 5
   - Maximum Value: 300
 - **Disable when Triggered**: Deactivates the monitor after the action
-    group is triggered for the defined state. The checkbox is unselected
+    group is triggered for the defined state. The option is unselected
     by default (indicating that the monitor should not be disabled when
     the action group is triggered).
 - **Auto Re-Enable**: Auto Re-Enables the monitor when the process is
@@ -358,7 +388,7 @@ condition is met.
     characters for the Action Group Name is 60.
   - **Create**: This button launches the Action Group Wizard to add
         an *Action Group Name*. When the Action wizard is complete, the
-        new group name is added to the **Action Group Name** drop-down
+        new group name is added to the **Action Group Name** list
         list in the Monitor Wizard.
 - **Actions Table**:
   - **Active**: Indicates if each action is active or inactive. This
@@ -370,15 +400,15 @@ condition is met.
         the group.
 - **Associated Action Groups**: The Associated Action Groups list
     contains the action groups that are associated with the Monitor.
-  - Click the **Add** button to add the selected *Action Group Name*
+  - Select the **Add** button to add the selected *Action Group Name*
         to the *Associated Action Groups*.
-  - Click the **Remove** button to remove a select *Action Group
+  - Select the **Remove** button to remove a select *Action Group
         Name* from the *Associated Action Groups* list.
 
 ### Fourth Screen: Finalize
 
 This **Finalize** screen is a summary, read-only page, and it will
-display the information that was set up by the Add or Edit Wizard. Click
+display the information that was set up by the Add or Edit Wizard. Select
 the **Back** button to change a setting, **Cancel** to get out of the
 wizard or **Finish** to store the monitor information. Each monitor is
 stored in a Rule file (e.g., MonitorName.Rule) in the location
@@ -396,17 +426,17 @@ Action Groups.
     values are invalid for the action group name: \\ (backslash), /
     (forward slash), : (colon), \* (asterisk), ? (question mark), "
     (quotes), \< (less than), \> (greater than), \| (pipe).
-- **Documentation**: Provides a place to document the action group.
+- **Documentation**: Provides a place to document the action group
 
 ### Second Screen: Define Actions
 
 - **Active**: Determines if the action is active or inactive for the
-    group. Click inside the checkbox to activate the action, clear the
-    checkbox to deactivate the action.
-- **Action**: Defines the action(s) to take when a rule is triggered.
-    Type a dollar sign ($) to see a drop-down list of actions and their
+    group. Select inside the option to activate the action, clear the
+    option to deactivate the action.
+- **Action**: Defines the action(s) to take when a rule is triggered
+    Type a dollar sign ($) to see a list of actions and their
     syntaxes. Supported actions include:
-  - All OpCon events. For more information, refer to [Event         Types](../../events/types.md).
+  - All OpCon events. For more information, refer to [Event         Types](../../events/types.md)
   - Local commands. Use the following action:
 
 #### SMA Resource Monitor Variables
@@ -425,76 +455,76 @@ The syntax for all SMA Resource Monitor variables is:
 The following predefined variables are available for File Monitor
 Actions:
 
-- \[\[@FileName\]\] - This is the name of the file which caused the     OpCon event.
+- \[\[@FileName\]\] - This is the name of the file which caused the     OpCon event
 - \[\[@FileNameRegEx\]\] - This is the name of the file which caused     the event. It is detected by specifying a regular expression to
     match the file name.
-- \[\[@EventType\]\] - This is the type of file event     (Create/delete/Modify etc.) which caused the OpCon event.
-- \[\[@FullPath\]\] - This is the complete path to the file which     caused the OpCon event.
+- \[\[@EventType\]\] - This is the type of file event     (Create/delete/Modify etc.) which caused the OpCon event
+- \[\[@FullPath\]\] - This is the complete path to the file which     caused the OpCon event
 - \[\[@FullPathRegEx\]\] - This is the complete path to the file     which caused this event. It is detected by specifying a regular
     expression to match the file name. For information on creating
     regular expressions, refer to
     <http://www.regular-expressions.info/>.
-- \[\[@FullFileName\]\] - This is the fully qualified file name     including path and extension.
+- \[\[@FullFileName\]\] - This is the fully qualified file name     including path and extension
 - \[\[@FullFileNameRegEx\]\] - This is the fully qualified file name     including path and extension which caused the event. It is detected
     by specifying a regular expression to match the file name. For
     information on creating regular expressions, refer to
     <http://www.regular-expressions.info/>.
-- \[\[@CreateStamp\]\] - This is the creation time stamp for the     file.
+- \[\[@CreateStamp\]\] - This is the creation time stamp for the     file
 - \[\[@CreateStampformat\]\] - This is the creation time stamp for     the file in the defined format. (: \[\[@CreateStampyyyymmdd\]\]
-- \[\[@ModStamp\]\] - This is the modification time stamp for the     file.
+- \[\[@ModStamp\]\] - This is the modification time stamp for the     file
 - \[\[@ModStampformat\]\] - This is the modification time stamp for     the file in the defined format. (: \[\[@ModStampyyyymmdd\]\]
-- \[\[@FileRoot\]\] - This is the file name without the path or     extension (leaves the name as is in mixed case).
-- \[\[@FileRootUpper\]\] - This is the same as @FileRoot, but it is     forced to all upper case.
-- \[\[@DATE\]\] - Resolves to short date format setting (ccyy/mm/dd).
+- \[\[@FileRoot\]\] - This is the file name without the path or     extension (leaves the name as is in mixed case)
+- \[\[@FileRootUpper\]\] - This is the same as @FileRoot, but it is     forced to all upper case
+- \[\[@DATE\]\] - Resolves to short date format setting (ccyy/mm/dd)
 - \[\[@Dateformat\]\] - This is the date the file was detected in the
     defined format (YYYYMMDD).
-- \[\[@FileCriteria\]\] - This is the string SMA Resource Monitor was     checking for when the file was detected (e.g., c:\\temp\\\*.txt).
+- \[\[@FileCriteria\]\] - This is the string SMA Resource Monitor was     checking for when the file was detected (e.g., c:\\temp\\\*.txt)
 
 ##### Variables for Counter Monitor Actions
 
 The following predefined tokens are available for Counter Monitor
 Actions:
 
-- \[\[@CounterName\]\] - Name of the counter that was monitored and     caused the action to fire.
-- \[\[@CurrentValue\]\] - The current reading of the Counter.
+- \[\[@CounterName\]\] - Name of the counter that was monitored and     caused the action to fire
+- \[\[@CurrentValue\]\] - The current reading of the Counter
 - \[\[@EventType\]\] - Type of Counter Monitor event
     (HighValue/LowValue/MeanValue, etc.).
-- \[\[@HighCutOff\]\] - High water mark.
-- \[\[@LowCutOff\]\] - Low water mark.
-- \[\[@MachineName\]\] - The machine name on which the counter was     monitored.
-- \[\[@MeanCutOff\]\] - Mean level cut off (for samples defined in     the Rule).
-- \[\[@MeanValue\]\] - The current MeanValue reading (for the samples     defined in the Rule file).
-- \[\[@UniqueID\]\] - A unique identifying number that is associated     with each action fired.
+- \[\[@HighCutOff\]\] - High water mark
+- \[\[@LowCutOff\]\] - Low water mark
+- \[\[@MachineName\]\] - The machine name on which the counter was     monitored
+- \[\[@MeanCutOff\]\] - Mean level cut off (for samples defined in     the Rule)
+- \[\[@MeanValue\]\] - The current MeanValue reading (for the samples     defined in the Rule file)
+- \[\[@UniqueID\]\] - A unique identifying number that is associated     with each action fired
 
 ##### Variables for Service Monitor Actions
 
 The following predefined tokens are available for Service Monitor
 Actions:
 
-- \[\[@CurrentStatus\]\] - This is the current status of the Service.
+- \[\[@CurrentStatus\]\] - This is the current status of the Service
 - \[\[@MACHINENAME\]\] - This is the machine name on which the
     service was monitored.
-- \[\[@SERVICENAME\]\] - This is the display name of the service that     was monitored and caused the action to fire.
-- \[\[@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired.
-- \[\[@ServiceLogon\]\] - This is the name of the user the services     is "running as" or "Local System".
+- \[\[@SERVICENAME\]\] - This is the display name of the service that     was monitored and caused the action to fire
+- \[\[@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired
+- \[\[@ServiceLogon\]\] - This is the name of the user the services     is "running as" or "Local System"
 
 ##### Variables for Process Monitor Actions
 
 The following predefined tokens are available for Process Monitor
 Actions:
 
-- \[\[@CurrentStatus\]\] - This is the current status of the Process.
+- \[\[@CurrentStatus\]\] - This is the current status of the Process
 - \[\[@MACHINENAME\]\] - This is the machine name on which the
     process was monitored.
-- \[\[@PROCESSNAME\]\] - This is the name of the process that was     monitored and caused the action to fire.
-- \[\[@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired.
-- \[\[@PID\]\] - This is the process ID number (PID) for the process     that caused the action to fire.
-- \[\[@ProcessUser\]\] - This is the user that is executing the     process that caused the action to fire.
+- \[\[@PROCESSNAME\]\] - This is the name of the process that was     monitored and caused the action to fire
+- \[\[@UNIQUEID\]\] - This is a unique identifying number that is     associated with each action fired
+- \[\[@PID\]\] - This is the process ID number (PID) for the process     that caused the action to fire
+- \[\[@ProcessUser\]\] - This is the user that is running the     process that caused the action to fire
 
 ### Third Screen: Finalize
 
 This **Finalize** screen is a summary, read-only page, and it will
-display the information that was set up by the Add or Edit Wizard. Click
+display the information that was set up by the Add or Edit Wizard. Select
 the **Back** button to change a setting, **Cancel** to get out of the
 wizard or **Finish** to store the action group information. Each action
 group is stored in an Actn file (e.g., GroupName.Actn) in the same
@@ -523,3 +553,61 @@ The example date would be created with the following string for the Long Date Fo
 |h|Hour in Day (1-12)|Hour in AM/PM|4:00|
 |mm|Minute in hour|Number|30|
 |s|Second in minute|Number|55|
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Documentation | Provides a place to document monitor information | — | — |
+| Network Share | For **File Monitors**, determines if the SMA | — | — |
+| Process Offline Changes | Determines if the SMA Resource Monitor | — | — |
+| File State | Defines the File State values to monitor: | — | — |
+| TrackScanString | For the ScanString file state, indicates if the | — | — |
+| Search String | Defines the string to search for in the file when the file state is set to EOFMARKER or SCANSTRING | — | — |
+| Create TimeStamp | Defines the oldest create date for a file. | — | — |
+| Wait Verify | Defines the number of seconds the monitor will wait | — | — |
+| From Time | Defines the start time for monitoring resources. | — | — |
+| To Time | Defines the end time for monitoring resources. | — | — |
+| Max Concurrent Files | Defines the maximum number of files to process concurrently if monitoring for a variable file name. | — | — |
+| Max Concurrent Files Processing Delay | Defines the amount of processing delay that is involved with the maximum number of files to process concurrently if monitoring for a variable file name | — | — |
+| Performance Object | Defines the name of an object as found in the | — | — |
+| Counter Name | Defines the counter name for the monitor | — | — |
+| Instance | Defines the name of the instance for the chosen | — | — |
+| Triggers | This frame contains the fields required to set up the triggers for the counter monitor's Action Groups | — | — |
+| Above Max Value | Defines the maximum cutoff value for the counter | — | — |
+| Below Min Value | Defines the minimum cutoff value for the counter | — | — |
+| Average | This frame contains the fields required to define an | — | — |
+| Above/Below | Select **Above** or **Below** from this list box to define if the trigger should fire when the counter value is above the average value or when the counter value is below the average value | — | — |
+| Value | Average cutoff value for this counter. | — | — |
+| Samples | Number of Samples to be used for calculating the average value. | — | — |
+| Disable Trigger After | Select one or more of the following | — | — |
+| Above/Below Avg Value | Will cause the trigger to disable when the notification is sent for the counter being Above or Below the | — | — |
+## FAQs
+
+**Q: What wizard functions are available in SMA Resource Monitor?**
+
+The Add and Edit functions both use wizards to guide configuration of File Monitors, Counter Monitors, Service Monitors, Process Monitors, and Action Groups.
+
+**Q: How do you visually identify the current step in a Resource Monitor wizard?**
+
+The current step is highlighted in Red in the step pane on the left side of the screen. Steps not currently in use are displayed in Blue.
+
+**Q: What happens if you select Cancel in a Resource Monitor wizard?**
+
+A confirmation message appears asking whether to close the wizard without saving changes. Selecting Yes closes the wizard and discards all changes. Selecting No returns you to the wizard.
+
+## Glossary
+
+**SMA Resource Monitor (SMARM)**: A Windows service that monitors files, counters, services, and processes on Windows machines. When a monitored condition is met, it sends OpCon events to trigger automation actions.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

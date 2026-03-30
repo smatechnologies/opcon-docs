@@ -1,15 +1,36 @@
 ---
 lang: en-us
-title: Workflow Designer Flow Diagram Icons
 viewport: width=device-width, initial-scale=1.0
+title: Workflow Designer Flow Diagram Icons
+description: "Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 #  Workflow Designer Flow Diagram Icons
 
-In the diagram, each job is represented by a rectangle containing the
-job name, colored squares representing the frequencies on the job, an
-icon representing the job type, and/or icons representing the special
-information about the job .
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information.
+
+## When Would You Use It?
+
+- Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information
+
+## Why Would You Use It?
+
+- **Workflow Designer**: Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information
 
 ## Job Type Icons
 
@@ -39,5 +60,28 @@ The diagram may also display any of the following information icons:
   ------------------------------------------------------------------------------------------------------- --------------------------------------------------------
 :::
 
- 
+## Configuration Options
 
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What does Workflow Designer Flow Diagram Icons cover?**
+
+This page covers Job Type Icons, Information Icons.
+
+## Glossary
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

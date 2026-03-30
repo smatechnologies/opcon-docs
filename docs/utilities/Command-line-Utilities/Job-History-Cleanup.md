@@ -1,89 +1,80 @@
+---
+title: Job History Cleanup
+description: "History.exe archives and purges job history."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Job History Cleanup
 
-The Job History Cleanup utility (History.exe) is an executable that
-archives and purges job history. History.exe is installed to the <Target Directory\>\\OpConxps\\Utilities\\ directory with the SAM
-installation package. This utility will only connect to the same
-database that is configured for SAM in the SMA Connection Configuration
-program.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- When archiving records, this process moves all active History
-    records from the primary history table (HISTORY) to an archive table
-    (HISTARC).
-- When purging records, this process cleans up records from either the
-    primary history (HISTORY) or archived history (HISTARC) tables
-    according to the Cut-off Date, and Days to Keep settings.
+## What Is It?
 
-For information on viewing job history, refer to [Using History Management](../../Files/UI/Enterprise-Manager/Using-History-Management.md)
- in the **Enterprise Manager** online help.
+History.exe archives and purges job history. It is installed to `<Target Directory>\OpConxps\Utilities\` and connects only to the database configured for SAM in the SMA Connection Configuration program.
 
-During installation, the SMAUtility schedule should have been imported.
-On this schedule, jobs named Job History Archive, and Job History Purge
-exist to schedule the Job History cleanup. For more information, refer
-to [SMAUtility Schedule Job Descriptions](../../objects/schedules.md#smautility-schedule)
- in the **Concepts** online help.
+- **Archiving**: Moves active records from the primary history table (HISTORY) to the archive table (HISTARC)
+- **Purging**: Removes records from HISTORY or HISTARC based on the Cut-off Date and Days to Keep settings
+
+For information on viewing job history, refer to [Using History Management](../../Files/UI/Enterprise-Manager/Using-History-Management.md) in the **Enterprise Manager** online help.
+
+During installation, the SMAUtility schedule is imported with jobs named Job History Archive and Job History Purge. For more information, refer to [SMAUtility Schedule Job Descriptions](../../objects/schedules.md#smautility-schedule) in the **Concepts** online help.
+
+## When Would You Use It?
+
+- History.exe archives and purges job history
+
+## Why Would You Use It?
+
+- **Job History**: History.exe archives and purges job history
 
 ## Syntax
 
-Use the following syntax for the History.exe program in the <Target
-Directory\>\\OpConxps\\Utilities\\ directory:
-
-HISTORY.EXE -u<user\> -w<password\> -s<Schedule\>
-
--d<Days to Keep\|Cut-off Date\> -m<Min Records\> \[-h\] \[-p\]
+```shell
+HISTORY.EXE -u<user> -w<password> -s<Schedule> -d<Days to Keep|Cut-off Date> -m<Min Records> [-h] [-p]
+```
 
 ### Parameters
 
-The following describes the command-line parameters:
-
-- **HISTORY.EXE**: The name of the job history cleanup program.
-- **-u<User\>**: Any valid, case-sensitive OpCon User Login ID.
-- **-w<Password\>**: The case-sensitive password corresponding to the
-    User Login ID above.
-- **-s<Schedule\>**: The Schedule name to clean up history records
-    for. Omit this parameter to clean up history for all schedules
-    (including deleted schedules).
-- **-d<Days to Keep\|Cut-off Date\>**: Define either the Days to Keep
-    or the Cut-off Date to determine what records to clean up.
-  - Days to Keep: Define a number between 0 and 32,000 as a negative
-        offset to the current date to start archiving or deleting
-        records.
-  - Cut-off Date: Define the oldest date to keep when archiving or
-        deleting record. The date format must match the syntax
-        recognized by the regional settings of the user running the
-        utility.
-- **-m<Min Records\>**: Defines the minimum number of history entries
-    to keep per job. This number should be between 0 and 32000.
-  - If the minimum records option is set to 10, the Purge Records
-        option will keep the last 10 records of the selected schedule(s)
-        and job(s), no matter what the Cut-off Date is. This option is
-        useful for jobs that run once per month, quarter, or year.
-  - If the value is set to 0 or the switch is omitted, the -d switch
-        decides which records will be removed.
-- **-h** (Optional): Indicates that the primary history (HISTORY)
-    table is to be purged.
-- **-p**(Optional): Indicates a purge is to take place instead of an
-    archive. Specify -p *without* the -h switch to purge the     archive table (HISTARC).
+- **-u\<User\>**: Any valid, case-sensitive OpCon User Login ID
+- **-w\<Password\>**: Case-sensitive password for the User Login ID
+- **-s\<Schedule\>**: Schedule name to clean up. Omit to clean up history for all schedules, including deleted ones
+- **-d\<Days to Keep\|Cut-off Date\>**: Determines which records to clean up
+  - **Days to Keep**: A number (0–32,000) used as a negative offset from the current date
+  - **Cut-off Date**: The oldest date to keep. Format must match the regional settings of the user running the utility
+- **-m\<Min Records\>**: Minimum number of history entries to keep per job (0–32,000). If set to 0 or omitted, the `-d` switch determines which records are removed
+- **-h** (Optional): Purges the primary history table (HISTORY)
+- **-p** (Optional): Performs a purge instead of an archive. Use without `-h` to purge the archive table (HISTARC)
 
 ### Examples
 
 :::tip Example
-The following shows the syntax used to archive the job history for all schedules:
+Archive job history for all schedules, keeping 30 days and at least 12 records per job:
 
 ```shell
 history.exe -ubatchuser -wbatchpwd -d30 -m12
 ```
 
-This will connect to the OpCon database defined for the SAM. The user is batchuser and the password is batchpwd. The schedule option was omitted, which means all schedules' history will be archived. (A -p switch was not listed to indicate a purge.) The days to keep was set to 30, which means the previous month's history will be kept. The minimum records parameter was set to 12, which means at least 12 records will be kept for each job. This is beneficial for jobs that run occasionally because the last 12 executions of the job will be kept, even if the executions are older than 30 days.
+All schedules are included (no `-s` switch). No `-p` switch means archive mode. Jobs with infrequent runs retain their last 12 executions even if older than 30 days.
 :::
 
 :::tip Example
-The following shows the syntax used to purge the job history from the archive table for all schedules:
+Purge the archive table for all schedules, keeping 365 days and at least 120 records per job:
 
 ```shell
 history.exe -ubatchuser -wbatchpwd -d365 -m120 -p
 ```
 
-This will connect to the OpCon database defined for the SAM. The user is batchuser and the password is batchpwd. The schedule option was omitted, which means all schedules' history will be deleted. The days to keep was set to 365, which means the previous year's history will be kept. The minimum records parameter was set to 120, which means at least 120 records will be kept for each job. The -p switch indicates that the records should be purged. The -a switch indicates that the records should be purged from the archive (HISTARC) table.
+The `-p` switch triggers a purge from the archive table (HISTARC).
 :::
 
 ## Logging
@@ -92,22 +83,11 @@ This will connect to the OpCon database defined for the SAM. The user is batchus
 The Output Directory was configured during installation. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-The History log file provides detailed information regarding the history
-clean up process.
+The History log file details the cleanup process.
 
-- The log file resides in the <Output Directory\>\\SAM\\Log\\
-    directory.
-- Each time the History.exe runs, it creates a log file name with the
-    following syntax: History_CCYYMMDD_HHmmssss.log. The "ssss" in
-    syntax represents seconds and tenths of seconds (e.g.,
-    History_20110513_15263142.log).
-- Upon startup, History.exe checks the SAM\\Log folder for log files
-    older than today and moves them to the appropriate archive
-    subfolder.
-  - All archived log files reside in the <Output
-        Directory\>\\SAM\\Log\\Archive\\<Day\> folder.
-  - If the History log files in the SAM\\Log are older than the
-        oldest Archive folder, the old logs are simply deleted.
+- Log files reside in `<Output Directory>\SAM\Log\`
+- Each run creates a log file named `History_CCYYMMDD_HHmmssss.log` (e.g., `History_20110513_15263142.log`)
+- On startup, History.exe moves log files older than today to `<Output Directory>\SAM\Log\Archive\<Day>\`. Logs older than the oldest archive folder are deleted
 
 ## Exit Codes
 
@@ -115,12 +95,76 @@ clean up process.
 The Output Directory was configured during installation. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-The history.exe program uses the following exit codes:
-
 |Status Number|Status Description|
 |--- |--- |
 |0|Batch run successful.|
-|34001|Program aborted. Review the History.log file in the <Output Directory\>\SAM\Log folder and possibly the MSLSAM.log file in the <Output Directory\>\MSLSAM\Log folder for information.|
+|34001|Program aborted. Review the History.log file in `<Output Directory>\SAM\Log\` and possibly the MSLSAM.log file in `<Output Directory>\MSLSAM\Log\`.|
 |34002|Invalid DSN, UserID, and/or Password.|
 |34003|Invalid parameters given.|
 |34004|The user on the command line does not have the required privileges.|
+
+## Security Considerations
+
+### Authentication
+
+History.exe requires a valid, case-sensitive OpCon User Login ID (-u parameter) and the corresponding case-sensitive password (-w parameter) on the command line. The utility connects only to the database configured for SAM in the SMA Connection Configuration program; no alternative database connection can be specified at runtime.
+
+### Authorization
+
+The user account supplied to History.exe must have the required privileges to perform archive and purge operations. If the account lacks the necessary privileges, the utility exits with status code 34004. An invalid User Login ID, DSN, or password causes exit code 34002.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Archiving | Moves active records from the primary history table (HISTORY) to the archive table (HISTARC) | — | — |
+| Purging | Removes records from HISTORY or HISTARC based on the Cut-off Date and Days to Keep settings | — | — |
+| -u\<User\> | Any valid, case-sensitive OpCon User Login ID | — | — |
+| -w\<Password\> | Case-sensitive password for the User Login ID | — | — |
+| -s\<Schedule\> | Schedule name to clean up. | — | — |
+| -d\<Days to Keep\\|Cut-off Date\> | Determines which records to clean up | — | — |
+| -m\<Min Records\> | Minimum number of history entries to keep per job (0–32,000). | — | — |
+## Operations
+
+### Common Tasks
+- Run archive mode (no `-p` flag) regularly via the **Job History Archive** job in the SMAUtility schedule to move records from the HISTORY table to HISTARC.
+- Run purge mode (`-p` flag) separately to remove records from HISTARC based on the Days to Keep (`-d`) and minimum records (`-m`) settings.
+- Use the `-m` parameter to retain a minimum number of history entries per job regardless of age, protecting records for infrequently run jobs.
+
+### Alerts and Log Files
+- Log files are written to `<Output Directory>\SAM\Log\` and named `History_CCYYMMDD_HHmmssss.log`.
+- On startup, History.exe automatically moves log files older than today to `<Output Directory>\SAM\Log\Archive\<Day>\`; logs older than the oldest archive folder are deleted.
+- Exit code `34001` indicates the program aborted; review the History log in `<Output Directory>\SAM\Log\` and the MSLSAM.log in `<Output Directory>\MSLSAM\Log\` for details.
+- Exit code `34002` indicates an invalid DSN, User ID, or password; exit code `34004` indicates the user lacks required privileges.
+
+## FAQs
+
+**Q: What is the difference between archiving and purging with History.exe?**
+
+Archiving moves records from the primary history table (HISTORY) to the archive table (HISTARC). Purging removes records from HISTORY or HISTARC based on the Days to Keep and Minimum Records settings. Use `-p` to purge instead of archive.
+
+**Q: What does the -m (minimum records) parameter do?**
+
+The `-m` parameter sets the minimum number of history entries to retain per job regardless of age. This ensures that jobs with infrequent runs keep at least the specified number of execution records even if they exceed the Days to Keep threshold.
+
+**Q: How do you purge the archive table instead of the primary history table?**
+
+Use the `-p` flag without the `-h` flag. Using `-p` alone purges HISTARC (the archive table). Adding `-h` purges the primary HISTORY table instead.
+
+## Glossary
+
+**DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
+
+**SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.
+
+**SMA Connection Configuration**: A utility that generates the database connection file (.dat) used by OpCon server programs and utilities to connect to the OpCon SQL Server database.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.

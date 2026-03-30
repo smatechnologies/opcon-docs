@@ -1,160 +1,168 @@
+---
+title: Performing Bulk Job Status Updates (Date Level)
+description: "The Operations module allows you to perform mass job status updates at the date level."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Performing Bulk Job Status Updates (Date Level)
 
-The **Operations** module has made performing mass action on job status
-updates at the date level easier. For example, with a few simple steps,
-you can update a job's status for a selected date to Mark Finished OK when the job's current state is in Waiting,
-Held.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Operations** module allows you to perform mass job status updates at the date level.
 
 To perform bulk job status updates:
 
-Click on the **Processes** button at the top-right of the **Operations
-Summary** page. The **Processes** page will display.
+Select the **Processes** button at the top-right of the **Operations Summary** page.
 
-Ensure that the **Date** toggle switch is enabled so that you can make
-your date selection. The switch will appear green when enabled.
+Ensure the **Date** toggle switch is enabled (appears green) to allow date selection.
 
 ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_DateToggle.png "Schedule Status Updates Date Toggle Switch Enabled")
 
-Select the desired **date(s)** in the list. A record of your
-selection(s) will display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page in the form
-of a breadcrumb trail.
+Select the desired **date(s)** in the list. Your selections display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
 ![Date Processes](../../../Resources/Images/SM/Date-Processes.png "Date Processes")
 
-Click on the date record (e.g., 3 date(s)) in the status bar to display
-the **Selection** panel with the **Bulk Job Status Update** tab in
-focus.
+Select the date record in the status bar to display the **Selection** panel with the **Bulk Job Status Update** tab in focus.
 
 :::note
-As an alternative, you can right-click on any date selected in the list to display the **Selection** panel.
+As an alternative, you can right-click any selected date to display the **Selection** panel.
 :::
 
 ![Bulk Job Status Update at Date Level](../../../Resources/Images/SM/BulkUpdateOnDate.png "Bulk Job Status Update at Date Level")
 
-Select one of the following options in the **Change all Job Statuses
-to** drop-down list:
+Select one of the following options from the **Change all Job Statuses to** list:
 
-**Cancel**: This option allows you to cancel all jobs for the selected
-date(s), based on a filter. Any jobs dependent on cancelled jobs do not
-have those dependencies met.
+- **Cancel**: Cancels all jobs for the selected date(s). Dependent jobs do not have those dependencies met
+- **Hold**: Suspends processing of all jobs for the selected date(s)
+- **Mark Failed**: Marks all jobs for the selected date(s) as Failed
+- **Mark Finished OK**: Marks all jobs for the selected date(s) as Finished OK
+- **Mark Fixed**: Marks all jobs for the selected date(s) as Fixed
+- **Mark Under Review**: Marks all jobs for the selected date(s) as Under Review
+- **Release**: Places all held jobs back into a Qualifying state. Jobs start as soon as all dependencies are met
+- **Restart**: Places all jobs back in a Qualifying state. Jobs start as soon as all dependencies are met
+- **Restart on Hold**: Places all jobs in an On Hold state on restart
+- **Skip**: Places all jobs in a Job to be Skipped state until they qualify to start. When jobs qualify, they are skipped and dependencies of subsequent jobs are met
 
-**Hold**: This option allows you to suspend the processing of ALL jobs
-associated with the selected date(s), based on a filter.
+For Container jobs, **Restart** offers additional options:
 
-**Mark Failed**: This option allows you to mark all jobs on the selected
-date(s) as Failed, based on a filter.
-**Mark Finished OK**: This option allows you to mark all jobs on the
-selected date(s) as Finished OK, based on a filter.
-**Mark Fixed**: This option allows you to mark all jobs on the selected
-date(s) as Fixed, based on a filter.
-**Mark Under Review**: This option allows you to mark all jobs on the
-selected date(s) as Under Review, based on a filter.
+- **Restart**: Restarts the Container job and its subschedule jobs one level deep. Nested Container jobs are not affected
+- **Rebuild**: Restarts the Container job and deletes the associated subschedule. SAM rebuilds the subschedule and restarts all its jobs
+- **None**: Restarts the Container job only; the subschedule is untouched. The Container job closes immediately
 
-**Release**: This option allows you to place all held jobs on the
-selected date(s) back into a Qualifying state, based on a filter. Jobs start as soon as all dependencies are met.
+Keep the following scenarios in mind for bulk Restart operations on Container jobs:
 
-**Restart**: This option allows you to place all jobs on the selected
-date(s) back in a Qualifying state, based on a filter. Jobs are started as soon as all dependencies are met.
+**Scenario 1**: Single date, single Container job — select **Restart** from the list, then:
 
-For Container jobs, additional options are available to perform bulk
-Restart operations:
+a. Select the **option(es)** in the **Job To Update** frame for the job status(es) to change.
+b. Select **Restart**, **Rebuild**, or **None**.
+c. Enter or select the change status reason and select **Apply**.
 
-- **Restart**: Restarts the Container job and the subschedule jobs.
-    This process will only impact the objects that are one level deep,
-    which means that if the subschedule has another Container job, then
-    the subschedule jobs associated with that Container job will not be
-    restarted.
-- **Rebuild**: Restarts the Container job and deletes the subschedule
-    associated with it. SAM will then rebuild the subschedule and
-    restart all the jobs in it.
-- **None**: Applies no action on the subschedule. The subschedule
-    remains untouched (neither restarted nor deleted). The Container job
-    restarts but closes immediately since there is no action taking
-    place on the subschedule.
-
-Keep the following scenarios in mind for performing bulk Restart
-operations on Container jobs:
-
-**Scenario 1**: If a single date is selected and that date contains a
-single Container job and **Restart** is selected from the **Change all
-Job Statuses to** drop-down, then do the following next:
-
-a.  Select the **checkbox(es)** in the **Job To Update** frame for the
-    current job status(es) that will undergo the status change---any
-    selection will serve as a status filter.
-b.  Select one of the three \[action\] buttons that is available for the     Container job: **Restart**, **Rebuild**, or **None**.
-c.  Enter or select the change status reason and click **Apply**.
-
-**Scenario 2**: If a single date is selected and that date contains
-multiple Container jobs and **Restart** is selected from the **Change
-all Job Statuses to** drop-down, then do the following next:
-
-Select the **checkbox(es)** in the **Job To Update** frame for the
-current job status(es) that will undergo the status change---any
-selection will serve as a status filter.
-
-Follow either Option 1 or Option 2:
+**Scenario 2**: Single date, multiple Container jobs — select **Restart** from the list, then select the **option(es)** in the **Job To Update** frame and follow either option:
 
 ![Container Job Bulk Restart Options, Single Date, Multi Containers](../../../Resources/Images/SM/ContainerJobBulkRestartOptions.png "Container Job Bulk Restart Options, Single Date, Multi Containers")
 
-- (Option 1) Click on one of the three \[action\]     buttons---**Restart**, **Rebuild**, or **None**---in the **Job
-    Containers Action frame** to apply that action to all Container jobs
-    associated with that date.
-- (Option 2) Click on the **Custom** button in the **Job Containers
-    Action frame** to choose which action to perform on the Container
-    jobs individually. Clicking **Custom** displays every Container job
-    associated with the selected date, each with the **Restart**,
-    **Rebuild**, and **None** options. You can then select one of the
-    three options for each Container job.
+- (Option 1) Select **Restart**, **Rebuild**, or **None** in the **Job Containers Action** frame to apply that action to all Container jobs for the date
+- (Option 2) Select **Custom** in the **Job Containers Action** frame to assign an action to each Container job individually
 
-Enter or select the change status reason and click **Apply**.
+Enter or select the change status reason and select **Apply**.
 
-**Scenario 3**: If multiple dates are selected and the dates contain
-multiple Container jobs and **Restart** is selected from the **Change
-all Job Statuses to** drop-down, then follow steps a - c of Scenario 2. Keep in mind that clicking the **Custom** button in this
-scenario will display each selected date along the Container job(s)
-associated with each date.
+**Scenario 3**: Multiple dates, multiple Container jobs — follow steps a–c of Scenario 2. Selecting **Custom** displays each date with its associated Container jobs.
 
 :::note
-To hide the associated Container jobs in the **Job Containers Action** frame, simply click on any of the other three Job Container Actions (Restart, Rebuild, or None).
+To hide Container jobs in the **Job Containers Action** frame, select any of the other three Job Container Actions (Restart, Rebuild, or None).
 :::
 
-**Restart on Hold**: This option allows you to place all jobs on the
-selected date(s) in an On Hold state on restart, based on a filter.
-
-**Skip**: This option allows you to place all jobs on the selected
-date(s) in a Job to be Skipped state until they qualify to start. When the jobs qualify, the jobs are skipped and the
-job dependencies of all subsequent jobs will be met.
-
 :::note
-For more information about job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
+For more on job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
 :::
 
-Select the **checkbox(es)** for the current job status(es) that will
-undergo the status change. Any selection made in the **Jobs To Update**
-frame will serve as a status filter.
+Select the **option(es)** for the job status(es) that will undergo the status change. Selections in the **Jobs To Update** frame serve as a status filter.
 
 :::note
-For more information about job statuses and allowed changes, refer to [Schedule and Job Status Descriptions and Allowed Status Changes](../../../operations/status-descriptions.md) in the **Concepts** online help.
+For more on job statuses and allowed changes, refer to [Schedule and Job Status Descriptions and Allowed Status Changes](../../../operations/status-descriptions.md) in the **Concepts** online help.
 :::
 
 *(Optional)* Enter or select a change status reason.
 
 :::note
-Depending on application configuration, the **Change Status Reason** drop-down list may store a number of the previous reasons entered for Job or Schedule status updates.
+Depending on application configuration, the **Change Status Reason** list may store previously entered reasons.
 :::
 
-Click **Apply** to apply the job status change.
+Select **Apply** to apply the job status change.
 
 Close the **Selection** panel when done.
 
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
 
-- [Performing Schedule Status     Changes](Performing-Schedule-Status-Changes.md)
-- [Performing Job Status     Changes](Performing-Job-Status-Changes.md)
-- [Performing Agent Status     Updates](Performing-Agent-Status-Updates.md)
+- [Performing Schedule Status Changes](Performing-Schedule-Status-Changes.md)
+- [Performing Job Status Changes](Performing-Job-Status-Changes.md)
+- [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
 - [Viewing Job Output](Viewing-Job-Output.md)
 - [Viewing Job Configuration](Viewing-Job-Configuration.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
+
+## When Would You Use It?
+
+- A Bulk Job Status Updates (Date Level) action needs to be carried out in Solution Manager
+
+## Why Would You Use It?
+
+- **Ensure consistent operations**: Performing Bulk Job Status Updates (Date Level) actions through OpCon creates a centralized, auditable record of all operational changes
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Hold | Suspends processing of all jobs for the selected date(s) | — | — |
+| Mark Failed | Marks all jobs for the selected date(s) as Failed | — | — |
+| Mark Finished OK | Marks all jobs for the selected date(s) as Finished OK | — | — |
+| Mark Fixed | Marks all jobs for the selected date(s) as Fixed | — | — |
+| Mark Under Review | Marks all jobs for the selected date(s) as Under Review | — | — |
+| Release | Places all held jobs back into a Qualifying state. | — | — |
+| Restart | Places all jobs back in a Qualifying state. | — | — |
+| Restart on Hold | Places all jobs in an On Hold state on restart | — | — |
+| None | Restarts the Container job only; the subschedule is untouched. | — | — |
+| Scenario 1 | Single date, single Container job — select **Restart** from the list, then: | — | — |
+| Scenario 2 | Single date, multiple Container jobs — select **Restart** from the list, then select the **option(es)** in the **Job To Update** frame and follow ei... | — | — |
+| Scenario 3 | Multiple dates, multiple Container jobs — follow steps a–c of Scenario 2. | — | — |
+## FAQs
+
+**Q: What is the difference between Restart and Rebuild for Container jobs in a bulk date-level update?**
+
+Restart restarts the Container job and its subschedule jobs one level deep, leaving nested Container jobs unaffected. Rebuild restarts the Container job and deletes the associated subschedule entirely — SAM rebuilds the subschedule and restarts all its jobs from scratch.
+
+**Q: What does the Jobs To Update option selection do during a bulk status update?**
+
+Selections in the Jobs To Update frame act as a status filter, limiting the bulk action to only jobs currently in the selected status(es). This prevents unintended changes to jobs in other states.
+
+**Q: How do you apply different Container job restart actions to individual jobs when multiple Container jobs exist on a single date?**
+
+Select Custom in the Job Containers Action frame. This allows you to assign a separate action — Restart, Rebuild, or None — to each Container job individually rather than applying the same action to all.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

@@ -1,19 +1,49 @@
+---
+title: SMAHoliday
+description: "Learn how to smaholiday in OpCon."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # SMAHoliday
 
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
 :::note
-The information presented in this topic pertains largely to running the SMAHoliday utility as a Windows job. For instructions on running this utility in the OpCon Docker container, please refer to [Running on OpCon in Docker](#Running).
+The information presented in this topic pertains largely to running the SMAHoliday utility as a Windows job. For instructions on running this utility in the OpCon Docker container, see [Running on OpCon in Docker](#Running).
 :::
 
 SMAHoliday (SMAHoliday.exe) is a utility that updates the OpCon database
 with Calendar dates that represent holidays. SMAHoliday.exe is installed
 to the <Target Directory\>\\OpConxps\\ MSLSAM\\ directory with the
-Microsoft LSAM package. The SMAHoliday utility can be run as a job if
+Microsoft agent package. The SMAHoliday utility can be run as a job if
 desired.
+
+## When Would You Use It?
+
+- You need to work with SMAHoliday (SMAHoliday.exe), a utility that updates the OpCon database, in OpCon
+
+## Why Would You Use It?
+
+- **SMAHoliday**: SMAHoliday (SMAHoliday.exe) is a utility that updates the OpCon database
+
+## Configuration Options
 
 ## Backwards Compatibility
 
 This utility is compatible with Holiday.exe. Customers who wish to
-convert should contact SMA Technologies.
+convert should contact Continuous.
 
 ### Legacy Parameters
 
@@ -21,8 +51,7 @@ convert should contact SMA Technologies.
 |--- |--- |
 |/C:|This parameter specifies the CalendarName that will be updated with holidays.|
 |/Y:|This parameter specifies the year where the holiday dates must be processed and added to the database.|
-|/S:|This parameter works in conjunction with the configuration file and will only read and process rules that match the tag entered in the command-line parameter.|
-
+|/S:|This parameter works with the configuration file and will only read and process rules that match the tag entered in the command-line parameter.|
 ### Forward Slash Arguments
 
 The SMAHoliday utility accepts arguments using the forward slash to
@@ -36,14 +65,14 @@ The following is an example of the old command-line syntax:
 SMAHoliday.exe /C:"MasterHoliday"/Y:2017 /S:FR
 
 :::note
-To get the full capability of this utility, SMA Technologies recommends using the dash (-) argument.
+To get the full capability of this utility, Continuous recommends using the dash (-) argument.
 :::
 
 ## Requirements
 
 The SMAHoliday utility requires the following:
 
-- Microsoft LSAM
+- Microsoft agent
 - Microsoft .NET Framework 4.5
 - SMAODBCConfig.dat file
 
@@ -63,7 +92,7 @@ the utility.
 |--- |--- |
 |CalendarName|Defines the name of the calendar being configured.|
 |StartDate|Defines the date the utility begins calculating holidays. Use the following format:MM/DD/YYYY (for US)|
-|DebugMode|Indicates whether or not the program provides messages that can help debug the program. Valid values: ON, OFF|
+|DebugMode|Indicates whether the program provides messages that can help debug the program. Valid values: ON, OFF|
 
 #### FixedHolidays Settings
 
@@ -81,9 +110,9 @@ Non-customized.
 :::tip Example
 09/mo-1=usa ; Labor Day
 
-- 09/mo-1 defines the Rule.
-- usa defines the Tag.
-- Labor Day defines the Description.
+- 09/mo-1 defines the Rule
+- usa defines the Tag
+- Labor Day defines the Description
 
 :::
 
@@ -343,11 +372,11 @@ The SMAHoliday.exe program can exit with the following codes:
 SMAHoliday supports the Exit Code Override File (E.C.O.F.) feature for
 further processing and debugging by writing the exit code and a message
 into this file. For more information, refer to [Exit Code Override File (E.C.O.F.)](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Exit-Code-Override-File-(E.C.O.F.).md)
- in the **Microsoft LSAM** online help.
+ in the **Microsoft agent** online help.
 
 ## Running on OpCon in Docker
 
-In order to run the utility successfully in a Docker container, using
+To run the utility successfully in a Docker container, using
 the Linux agent embedded in it, keep the following things in mind:
 
 1. When running in Docker, the Linux job needs to be set up similar to
@@ -359,4 +388,58 @@ the Linux agent embedded in it, keep the following things in mind:
     just like all other INI files.
 4. Use the default **OpConOnLinux** agent machine (available in the
     container) to run the utility jobs.
-5. Logs are found in **/app/log/Utilities** in the container.
+5. Logs are found in **/app/log/Utilities** in the container
+
+## Operations
+
+### Common Tasks
+- Schedule SMAHoliday.exe as an OpCon Windows job; any jobs that depend on the updated calendar dates should have a job dependency on the SMAHoliday job.
+- Use the `-t` (tag) parameter to limit processing to rules matching a specific tag, enabling separate runs for different regions or rule sets from the same ini file.
+- Use the `-i` parameter to specify an alternate ini file path, allowing multiple configurations to coexist on the same machine.
+- When running in Docker, set the start image to `dotnet /app/SMAHoliday.dll <arguments>` and use the **OpConOnLinux** agent; the ini file is in `/app/config/` inside the container.
+
+### Alerts and Log Files
+- When running in Docker, logs are written to `/app/log/Utilities` inside the container.
+- Exit code `10` indicates the `SMAODBCConfiguration.dat` file is missing or invalid; verify the file exists in `<Target Directory>\OpConxps\MSLSAM\` and contains valid connection settings.
+- Exit code `04` (ini file not found), `07` (invalid calendar name), `08` (incorrect date format), and `12` (calendar not found in database) all indicate configuration issues requiring correction before the next run.
+- SMAHoliday supports the Exit Code Override File (E.C.O.F.) for further processing and debugging of exit codes.
+
+## Exception Handling
+
+**Exit code 04: SMAHoliday.ini is invalid or cannot be found** — The utility cannot locate or parse the configuration file — Verify the path to SMAHoliday.ini is correct and that the file is a valid INI format; use the `-i` parameter to specify an alternate path if the file is in a non-default location.
+
+**Exit code 07: Invalid calendar name or calendar does not exist** — The calendar name specified on the command line or in the configuration file does not match any existing calendar in the OpCon database — Confirm the calendar name is correct and that it exists in OpCon before running the utility.
+
+**Exit code 08: Incorrect date format** — The date provided does not match the required US date format (MM/DD/YYYY) — SMAHoliday is standardized to US English localization and only processes US date formats; correct the StartDate or command-line date parameter to use MM/DD/YYYY format.
+
+**Exit code 10: Could not connect to the database** — The SMAODBCConfiguration.dat file is missing or contains invalid connection information — Verify the SMAODBCConfiguration.dat file exists in the `<Target Directory>\OpConxps\MSLSAM\` directory and contains valid server, database, and credential settings generated by the SMA Connection Configuration utility.
+
+**Exit code 12: Calendar not found in the database** — The specified calendar exists by name but cannot be located during processing — Verify the calendar is properly defined and accessible in OpCon; the calendar name is case-sensitive.
+
+## FAQs
+
+**Q: What does SMAHoliday.exe do?**
+
+SMAHoliday.exe updates the OpCon database with calendar dates that represent holidays. It is installed to the `<Target Directory>\OpConxps\MSLSAM\` directory and can be scheduled as an OpCon Windows job.
+
+**Q: Is SMAHoliday.exe backwards compatible with the older Holiday.exe utility?**
+
+Yes. SMAHoliday.exe accepts forward slash arguments for backwards compatibility with Holiday.exe. Continuous recommends using the dash (`-`) argument syntax for full utility capability.
+
+**Q: What legacy parameters does SMAHoliday support for backwards compatibility?**
+
+The legacy forward-slash parameters are `/C:` (calendar name), `/Y:` (year to process), and `/S:` (tag filter to match specific rules in the configuration file).
+
+## Glossary
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

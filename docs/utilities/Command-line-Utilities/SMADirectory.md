@@ -1,32 +1,60 @@
+---
+title: SMADirectory
+description: "SMADirectory (SMADirectory.exe) manages OpCon directories, keeping log and report directories from consuming excessive disk space."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # SMADirectory
 
-SMADirectory utility (SMADirectory.exe) is used to manage OpCon directories. The utility is specifically useful for keeping log and report directories from using too much disk space.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-Based upon user criteria and filters, the utility can be used to:
+## What Is It?
+
+SMADirectory (SMADirectory.exe) manages OpCon directories, keeping log and report directories from consuming excessive disk space.
+
+Based on user criteria and filters, the utility can:
 
 - Delete files
 - Zip (compress) files
 - Move files (for full recursive directories)
 - Recover files (for full recursive directories)
 
+## When Would You Use It?
+
+- You need to manages OpCon directories, keeping log and report directories from consuming excessive disk space using SMADirectory (SMADirectory.exe)
+
+## Why Would You Use It?
+
+- **SMADirectory**: SMADirectory (SMADirectory.exe) manages OpCon directories, keeping log and report directories from consuming excessive disk space
+
+## Configuration Options
+
 ## Backwards Compatibility
 
-This directory cleanup utility is compatible with SMADeleteOldFiles and ClearDir. Customers who wish to convert should contact SMA Technologies.
+This utility is compatible with SMADeleteOldFiles and ClearDir. Customers who wish to convert should contact Continuous.
 
 ## Requirements
 
-The SMADirectory utility requires the following:
-
-- Microsoft LSAM
+- Microsoft agent
 - Microsoft .NET Framework 4.5
 
 ## Syntax
 
-This utility supports the following types of arguments: dash, forward slash, and comma delimited.
+SMADirectory supports dash, forward slash, and comma-delimited arguments.
 
 :::note
 
-SMADirectory is standardized to use (US) English localization, exclusively. The utility only accepts US settings or command-line values.
+SMADirectory uses (US) English localization exclusively. It only accepts US settings or command-line values.
 
 :::
 
@@ -36,13 +64,11 @@ The SMADirectory.exe program accepts arguments using dash.
 
 :::note
 
-To get the full capability of this utility, SMA Technologies recommends using the dash (-) argument.
+Continuous recommends using the dash (-) argument for full utility capability.
 
 :::
 
 :::tip Example
-
-The following is an example of the command-line syntax:
 
 `SMADirectory.exe -d "c:\Test" -r -e *.*`
 
@@ -50,33 +76,26 @@ The following is an example of the command-line syntax:
 
 #### Parameters
 
-The next table identifies all the acceptable parameters for this
-argument.
-
 | Parameter | Name | Default | Description |
 | --- | --- | --- | --- |
-| -b | Bin | By default, the program will recover the files. | This parameter indicates to recover the files in the default location: `<driveTarget>\ProgramData\OpConxps\MSLSAM\SMADirectory\<directoryTarget>`. If you wish to set a custom location, you may do so using the -o switch. |
-| -B | No Bin |  | This parameter indicates that no recovery will be performed. If you enter -B (No recycle), then the program will not save a copy of the directory in the default location. You may be explicit about recovery using  -b (recover). |
-| -c | Time to Retain | 5D | This parameter specifies the length of time that files should be retained within the timespan. The value must be in the following form: `<Number><TimeSpan>` with TimeSpan  represented as: **D** (day), **H** (hour), **X** (month), **M** (minute), **S** (second), or **Y** (year). For example: `5D` (for 5 days) |
-| -d | Directory Name |  | This **required** parameter specifies the folder to be cleaned up or moved. |
-| -e | Extensions |  | This **required** parameter accepts a pipe to separate extensions and/or filters. |
-| -F | TimeType | FM | This parameter specifies the time type information on files for processing. The available values are: **FA** (for last Access date), **FM** (for last Modification date), or **FC** (for Creation date) |
-| -h | No Hidden | By default, the program will process hidden and system files. | This parameter specifies not to process system and hidden files. |
-| -m | Move | Null | This parameter specifies the path to which a folder will be moved. If the `-m` and/or `-z` switches are entered, then the program will perform a move operation instead of a delete operation. If the zip command was entered, the program will zip the folder. This case is the only scenario where the `-x` (delete) switch may be entered. |
-| -o | RecoverPath | `%ProgramData%/OpConxps/SMADirectory` | If recovery is on, this parameter allows you to specify a location for a recovery copy of the Directory to process. This process will only recover qualifying files. |
-| -r | Recursive | The process does not run recursively. | This parameter specifies to process subfolders and files under subfolders. |
-| -u | Debug |  | This parameter places the program in Debug mode. |
-| -v | Verbose | No | This parameter to print non-deleted file names. |
-| -x | Delete | By default, moved files are not deleted. | When `-m` (move) or `-z` (zip) is specified, the moved files can be also deleted by setting this switch. The user can use the `-x` command to delete the files after the move path location if desired. The `-x` command will delete the files under the MOVE path. The `-x` command is useful when the user only needs a zip file as the result. Since we move the files to the MOVE PATH location, then we create the zip file the files under the MOVE PATH can be deleted using this option. |
-| -z | Zip | By default, no file compression occurs. | This parameter compresses (zips) the files moved. Enter the name of the zip. If the zip command was entered, the program will zip the folder. This program is built with .Net 4.5 for windows; therefore, the compression process requires the compression utility that comes with any Windows operation system. When the user enters the `-z` command, the user can also include the `-m` command. The user can only enter the `-x` command when both `-m` and `-z` are included. The `-z` command requires the name of the file resulted on the compression when there is no `-m` (move) command entered. If there is no zip filename specified, then the program will use the following naming convention to set the filename: zip.currentdate.zip. For example: `zip.03212016.zip`. The compression only occurs after the Move process is completed and the files are compressed in the `-m` path entered by the user. |
-
+| -b | Bin | Recover files | Recovers files to the default location: `<driveTarget>\ProgramData\OpConxps\MSLSAM\SMADirectory\<directoryTarget>`. Use -o to set a custom location. |
+| -c | Time to Retain | 5D | Specifies how long files are retained. Format: `<Number><TimeSpan>` where TimeSpan is **D** (day), **H** (hour), **X** (month), **M** (minute), **S** (second), or **Y** (year). Example: `5D` |
+| -d | Directory Name |  | **Required.** The folder to clean up or move. |
+| -e | Extensions |  | **Required.** Accepts pipe-separated extensions and/or filters. |
+| -F | TimeType | FM | Time type used for file processing: **FA** (last access), **FM** (last modification), or **FC** (creation date) |
+| -h | No Hidden | Process hidden and system files | Excludes system and hidden files from processing. |
+| -m | Move | Null | Path to move a folder. When -m and/or -z are entered, the program performs a move instead of a delete. If -z is also entered, the folder is zipped. This is the only scenario where -x (delete) may be used. |
+| -o | RecoverPath | `%ProgramData%/OpConxps/SMADirectory` | Sets a custom recovery location when recovery is enabled. Only qualifying files are recovered. |
+| -r | Recursive | Off | Processes subfolders and their files. |
+| -u | Debug |  | Enables debug mode. |
+| -v | Verbose | No | Prints names of non-deleted files. |
+| -x | Delete | Off | Deletes files after move or zip when -m or -z is specified. Useful when only the zip file is needed as output. |
+| -z | Zip | No compression | Compresses (zips) moved files. Requires a zip filename; if omitted, uses the format `zip.currentdate.zip` (e.g., `zip.03212016.zip`). Compression occurs after the move. -x may only be used when both -m and -z are included. |
 ### Forward Slash Argument
 
-The forward slash argument is supported for backwards compatibility with cleardir.exe and can be used in the same way as the dash switches.
+Forward slash is supported for backwards compatibility with cleardir.exe and works the same as dash switches.
 
 :::tip Example
-
-The following is an example of the command-line syntax:
 
 `SMADirectory.exe /d "c:\Test" /r /u /e *.*`
 
@@ -84,9 +103,7 @@ The following is an example of the command-line syntax:
 
 ### Comma Delimited Argument
 
-The comma delimited argument is supported for backwards compatibility with the SMADeleteOldFiles and can only be used to delete files (not move or compress them). This mode requires three (3) parameters to run successfully.
-
-The following command-line syntax can be used:
+Comma-delimited syntax is supported for backwards compatibility with SMADeleteOldFiles. It only supports file deletion (not move or compress) and requires exactly three parameters.
 
 ```shell
 <Target Directory>\OpConxps\MSLSAM\SMADirectory.exe Directory,DaysToRetain,FileExtensions
@@ -94,22 +111,20 @@ The following command-line syntax can be used:
 
 #### Parameters
 
-The following describes the command-line parameters:
-
-- **<Target Directory\>**: The path to the OpCon installation folder (e.g., "C:\\Program Files\").
-- **Directory**: The path to the directory to examine.
-- **DaysToRetain**: The number of days to keep in the directory.
-  - The counter must be entered in English. For example, 5d.
-  - The value must be greater than zero, but less than 32,757.
-- **FileExtensions**: The file extensions to apply this retention period to (e.g., "log" would look for files with the log extension).
-  - One or more file extensions can be specified (separated by commas).
-  - The wildcard (\*) character can be specified to apply this retention period to all files in this directory.
+- **\<Target Directory\>**: Path to the OpCon installation folder (e.g., `C:\\Program Files\`)
+- **Directory**: Path to the directory to examine
+- **DaysToRetain**: Number of days to retain files
+  - Must be entered in English (e.g., `5d`)
+  - Must be greater than zero and less than 32,757
+- **FileExtensions**: File extensions for the retention period (e.g., `log`)
+  - Specify multiple extensions separated by commas
+  - Use wildcard (\*) to apply to all files
 
 #### Example
 
 :::tip Example
 
-The following command line would delete any files with an extension of "log" that were older than 5 days:
+Deletes any `log` files older than 5 days:
 
 ```shell
 "C:\Program Files\OpConxps\MSLSAM\SMADirectory"
@@ -119,30 +134,52 @@ The following command line would delete any files with an extension of "log" tha
 "C:\ProgramData\OpConxps\SAM\Log,5,log"
 ```
 
-Notice that there is no period in front of log.
+Note: No period precedes the extension.
 
 :::
 
 ## Exit Codes
 
-The SMADirectory.exe program can exit with the following codes:
-
 | Exit Code | Sample Command | Message | Status Description |
 | --- | --- | --- | --- |
 | 202 | -e |  | Less parameters |
-| 203 | -d C:\Source -c 20W | [GetTimeCounter] Invalid Counter. Cannot be equal or less than zero...[GetTimeOptions] Error while loading settings.|Wrong Counter Letter |
-| 203 | -d C:\Source -c -5D | [GetTimeCounter] Invalid Counter. Cannot be equal or less than zero...[GetTimeOptions] Error while loading settings.|Negative Counter |
-| 204 | -d C:\Source -c 0D | [GetTimeCounter] Invalid Counter|Zero Counter |
-| 205 | -d C:\InvalidFolder -c 5d -e *.* | The Directory does not exits|Directory specified is invalid. |
+| 203 | -d C:\Source -c 20W | [GetTimeCounter] Invalid Counter. Cannot be equal or less than zero...[GetTimeOptions] Error while loading settings. | Wrong Counter Letter |
+| 203 | -d C:\Source -c -5D | [GetTimeCounter] Invalid Counter. Cannot be equal or less than zero...[GetTimeOptions] Error while loading settings. | Negative Counter |
+| 204 | -d C:\Source -c 0D | [GetTimeCounter] Invalid Counter | Zero Counter |
+| 205 | -d C:\Source -c 5d -e *.* | The Directory does not exits | Directory specified is invalid. |
 | 206 | -d C:\Source -c5D -e *.log -2 |  | Invalid Option. Zip File Name is Required. |
 | 206 | -d C:\Source -c5D |  | Invalid Options. The -e is Required. |
 
 | Exit Code | Sample Command | Message | Status Description |
-| --- | --- | --- | ---  |
-| 202 |C:\Source | [Main] Invalid number of arguments|Less parameters |
-| 203 |C:\Source,5W,log | [ParseComaDelimited][SetCounter] Invalid Counter. Cannot be equal or less than zero... | Invalid Counter Letter |
-| 203 |C:\Source,W,log | [ParseComaDelimited][SetCounter] Invalid Counter. Counter is not numeric | Counter is a letter |
-| 204 |C:\Source,0,log | [ParseComaDelimited][SetCounter] Invalid Counter. Cannot be equal or less than zero... | Zero Counter |
-| 204 |C:\Source,-5,log | [ParseComaDelimited][SetCounter] Invalid Counter. Cannot be equal or less than zero... | Negative Counter |
-| 205 |C:\InvalidFolder,0,log | The Directory does not exits | Directory specified is invalid. |
-| 206 |-d C:\Source,5,log | Exit Status 206 | Invalid Options |
+| --- | --- | --- | --- |
+| 202 | C:\Source | [Main] Invalid number of arguments | Less parameters |
+| 203 | C:\Source,5W,log | [ParseComaDelimited][SetCounter] Invalid Counter. Cannot be equal or less than zero... | Invalid Counter Letter |
+| 203 | C:\Source,W,log | [ParseComaDelimited][SetCounter] Invalid Counter. Counter is not numeric | Counter is a letter |
+| 204 | C:\Source,0,log | [ParseComaDelimited][SetCounter] Invalid Counter. Cannot be equal or less than zero... | Zero Counter |
+| 204 | C:\Source,-5,log | [ParseComaDelimited][SetCounter] Invalid Counter. Cannot be equal or less than zero... | Negative Counter |
+| 205 | C:\InvalidFolder,0,log | The Directory does not exits | Directory specified is invalid. |
+| 206 | -d C:\Source,5,log | Exit Status 206 | Invalid Options |
+
+## FAQs
+
+**Q: What file management operations does SMADirectory support?**
+
+SMADirectory can delete files, compress (zip) files, move files for full recursive directories, and recover files for full recursive directories.
+
+**Q: What are the requirements for running SMADirectory?**
+
+SMADirectory requires the Microsoft agent and Microsoft .NET Framework 4.5. It uses US English localization exclusively and only accepts US settings or command-line values.
+
+**Q: Is SMADirectory backwards compatible with older utilities?**
+
+Yes. SMADirectory is compatible with SMADeleteOldFiles and ClearDir. Customers who want to convert from those utilities should contact Continuous.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

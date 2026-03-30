@@ -1,6 +1,34 @@
+---
+title: Property Expressions API Syntax
+description: "The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, and Machine Instance properties)."
+product_area: Reference
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Business Analyst
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Property Expressions API Syntax
 
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
+
+## What Is It?
+
 The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, and Machine Instance properties). For more information, refer to [Properties](../objects/properties.md).
+
+## When Would You Use It?
+
+- The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, and Machine Instance properties)
+
+## Why Would You Use It?
+
+- **Property Expressions**: The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, and Machine Instance properties)
 
 ## Rules
 
@@ -8,8 +36,8 @@ The following rules apply to defining expressions:
 
 - OpCon tokens may be used anywhere in the expression. When the API resolves the token to the value of its property, it always treats it as a string. This means that you do not need to surround it in quotes. For example: `[[My Property]]==[[ABCD 123]]`
 - If you type out the string, surround it in double quotes if it contain letters or if it should not be treated as a number. For example: `[[My Property]]=="ABCD 123"`
-- If the expression is on a command line, or in an Event string, then you must surround the entire expression within the following characters: **\[\[= \]\]**. If the expression is an expression dependency, or is a job completion complex expression trigger, then you do not need to use these characters.
-- If any property value has leading or trailing spaces when saved to the database, those spaces will NOT be trimmed. They will be treated as part of the value.
+- If the expression is on a command line, or in an Event string, then you must surround the entire expression within the following characters: **\[\[= \]\]**. If the expression is an expression dependency, or is a job completion complex expression trigger, then you do not need to use these characters
+- If any property value has leading or trailing spaces when saved to the database, those spaces will NOT be trimmed. They will be treated as part of the value
 - To convert the value of a property to:
   - an integer, use the ToInt() function
   - a long, use the ToLong() function
@@ -39,28 +67,28 @@ For mathematical operations, the result will never exceed 15 numbers.
 
 ### Operator Precedence
 
-1. **^** - **Exponent**. This function operates on two numeric operands. It raises the first operand to the power of the second. Example: `5.23 ^ 3.14` returns `25235.9795396592`.
-2. **/** - **Divide**. This function operates on two numeric operands. It divides the first by the second. Example: `60 / 15` returns `4`.
-3. **\*** - **Multiply**. This function operates on two numeric operands and returns their product. Example: `76 * -234` returns `-17784`.
-4. **%** - **Modulus**. This function operates on two integers and returns the remainder when the first is divided by the second. Example: `25 % 5` returns `0`.
-5. **+** - **Add**. This function operates on two numeric or two string operands. When numeric, it adds the two and returns the result, else if operating on strings, it returns the concatenated value of the two strings. Examples: `12 + 15` returns `27` and `"abcd" + "efgh"` returns `"abcdefgh"`.
-6. **-** - **Subtract**. This function operates on two numeric or two string operands. When numeric, it subtracts the second operand from the first and returns the result. When operating on strings, it removes all occurrences of the second string from the first. Examples: `12 - 15` returns `-3`and `"abcdefgh" - "cd"` returns `"abefgh"`.
-7. **>=** - **Greater than or equals**. This function is similar to "GreaterThan" except that it returns true even if the operands are equal. All else being equal, uppercase letters are considered greater than lowercase ones. Example: `435 >= 435` returns `true`.
-8. **<=** - **Less than or equals**. This function is similar to "LessThan" except that it returns true even if the operands are equal. All else being equal, lowercase letters are considered lesser than uppercase ones. Example: `435 <= 435` returns `true`.
-9. **>** - **Greater than**. This function operates on two numeric or string operands. It returns true if the first operand is greater than the second. For strings, an alphabet that comes later is considered "greater". All else being equal, uppercase letters are considered greater than lowercase ones. Examples: `435 > 2345` returns `false` and `"ABCD" > "abcd"` returns `true`.
-10. **<** - **Less than**. This function operates on two numeric or string operands. It returns true if the first operand is less than the second. For strings, an alphabet that comes before is considered "lesser". All else being equal, lowercase letters are considered lesser than uppercase ones. Examples: `435 < 2345` returns `true` and `"ABCD" < "abcd"` returns `false`.
-11. **!=** - **Not equals**. This function returns true if the two operands it operates on are not equal or have different types. Otherwise, it returns false. Examples: `"cats" != "dogs"` returns `true` and `"a" != 1` returns `true`.
-12. **==** - **Equals**. This function checks to see if the two operands it acts on are both the same type and the same value. If so, it returns true; otherwise, it returns false. If applied to floating point numbers, the comparison returns true if the difference between the numbers is less than 0.001%. This prevents the function from always returning false due to rounding errors. Examples: `25 == 25` returns `true` and `"abc" == "def"` returns `false`.
-13. **&&** - **And**. This function operates on two boolean operands. If both boolean operands are true, the function returns true. If either of the boolean operands is false, the function returns false. Examples: `true && true` returns `true` and `1 == 1 && 1 > 2` returns `false`.
-14. **||** - **Or**. This function operates on two boolean operands. If both boolean operands are false, this function returns false. If either of the operands is true, the function returns true. Examples: `true || true` returns `true` and `1 == 1 || 1 > 2` returns `true`.
-15. **=** - **Assign**. This function operates on a property on the left-hand side and any operand on the right-hand side. The value of the operand is stored in the property and saved to the data store. If the property does not exist, it is created. Example: `[[Token1]]="abcd"` sets the value of Token1 equal to "abcd".
+1. **^** - **Exponent**. This function operates on two numeric operands. It raises the first operand to the power of the second. Example: `5.23 ^ 3.14` returns `25235.9795396592`
+2. **/** - **Divide**. This function operates on two numeric operands. It divides the first by the second. Example: `60 / 15` returns `4`
+3. **\*** - **Multiply**. This function operates on two numeric operands and returns their product. Example: `76 * -234` returns `-17784`
+4. **%** - **Modulus**. This function operates on two integers and returns the remainder when the first is divided by the second. Example: `25 % 5` returns `0`
+5. **+** - **Add**. This function operates on two numeric or two string operands. When numeric, it adds the two and returns the result, else if operating on strings, it returns the concatenated value of the two strings. Examples: `12 + 15` returns `27` and `"abcd" + "efgh"` returns `"abcdefgh"`
+6. **-** - **Subtract**. This function operates on two numeric or two string operands. When numeric, it subtracts the second operand from the first and returns the result. When operating on strings, it removes all occurrences of the second string from the first. Examples: `12 - 15` returns `-3`and `"abcdefgh" - "cd"` returns `"abefgh"`
+7. **>=** - **Greater than or equals**. This function is similar to "GreaterThan" except that it returns true even if the operands are equal. All else being equal, uppercase letters are considered greater than lowercase ones. Example: `435 >= 435` returns `true`
+8. **<=** - **Less than or equals**. This function is similar to "LessThan" except that it returns true even if the operands are equal. All else being equal, lowercase letters are considered lesser than uppercase ones. Example: `435 <= 435` returns `true`
+9. **>** - **Greater than**. This function operates on two numeric or string operands. It returns true if the first operand is greater than the second. For strings, an alphabet that comes later is considered "greater". All else being equal, uppercase letters are considered greater than lowercase ones. Examples: `435 > 2345` returns `false` and `"ABCD" > "abcd"` returns `true`
+10. **<** - **Less than**. This function operates on two numeric or string operands. It returns true if the first operand is less than the second. For strings, an alphabet that comes before is considered "lesser". All else being equal, lowercase letters are considered lesser than uppercase ones. Examples: `435 < 2345` returns `true` and `"ABCD" < "abcd"` returns `false`
+11. **!=** - **Not equals**. This function returns true if the two operands it operates on are not equal or have different types. Otherwise, it returns false. Examples: `"cats" != "dogs"` returns `true` and `"a" != 1` returns `true`
+12. **==** - **Equals**. This function checks to see if the two operands it acts on are both the same type and the same value. If so, it returns true; otherwise, it returns false. If applied to floating point numbers, the comparison returns true if the difference between the numbers is less than 0.001%. This prevents the function from always returning false due to rounding errors. Examples: `25 == 25` returns `true` and `"abc" == "def"` returns `false`
+13. **&&** - **And**. This function operates on two boolean operands. If both boolean operands are true, the function returns true. If either of the boolean operands is false, the function returns false. Examples: `true && true` returns `true` and `1 == 1 && 1 > 2` returns `false`
+14. **||** - **Or**. This function operates on two boolean operands. If both boolean operands are false, this function returns false. If either of the operands is true, the function returns true. Examples: `true || true` returns `true` and `1 == 1 || 1 > 2` returns `true`
+15. **=** - **Assign**. This function operates on a property on the left-hand side and any operand on the right-hand side. The value of the operand is stored in the property and saved to the data store. If the property does not exist, it is created. Example: `[[Token1]]="abcd"` sets the value of Token1 equal to "abcd"
 
 ## Functions
 
 Property expressions support several functions to either convert data or to perform advanced comparisons. It is important to know that:
 
-- In all of the Function Syntax definitions below, any value could also be a full expression.
-- If any parameter is a property that does not exist, the function will throw an exception.
+- In all of the Function Syntax definitions below, any value could also be a full expression
+- If any parameter is a property that does not exist, the function will throw an exception
 
 ### AreEqual(value1, value2, ..)
 
@@ -126,7 +154,7 @@ The SubStr function returns a partial string of the expression in parentheses. T
 
 1. A string (or property)
 2. An integer defining the start index (zero based)
-3. An integer defining the number of characters to include in the substring. This parameter is optional. If it is not specified, then all remaining characters of the string, starting at the first parameter (start), will be returned.
+3. An integer defining the number of characters to include in the substring. This parameter is optional. If it is not specified, then all remaining characters of the string, starting at the first parameter (start), will be returned
 
 The function returns an error if it cannot get the substring for any reason.
 
@@ -140,8 +168,8 @@ The SubStrNE function returns a partial string of the expression in parentheses 
 
 1. A string (or property)
 2. An integer defining the start position (base 0)
-3. An integer defining the length forward to create the substring. This parameter is optional. If it is not specified, then all remaining characters of the string, starting at the first parameter (start), will be returned.
-4. The default value to return if it cannot get the substring for any reason.
+3. An integer defining the length forward to create the substring. This parameter is optional. If it is not specified, then all remaining characters of the string, starting at the first parameter (start), will be returned
+4. The default value to return if it cannot get the substring for any reason
 
 ### TimeDiff(time1, time2, format)
 
@@ -252,7 +280,7 @@ This section describes use cases that can be resolved using the Property Express
 
 ### A Job Depends on the String Value of a Property
 
-In some cases, a job may require that the value of a property contains a specific string. For this use case, we have a job that must only process if a Global Property named "Today" matches the current date. We must check for a string value because a date is not a simple number (integer). To set this up, enter the following information under the Expression Dependency tab:
+In some cases, a job may require that the value of a property contains a specific string. For this use case, consider a job that must only process if a Global Property named "Today" matches the current date. Verify the value is a string because a date is not a simple number (integer). To set this up, enter the following information under the Expression Dependency tab:
 
 `[[Today]]==[[$DATE]]`
 
@@ -264,7 +292,7 @@ When OpCon finds the result is true, then the dependency is resolved. If the res
 
 ### A Job Depends on the Numeric Value of a Property
 
-In some cases, a job may require that the value of a property contains a specific number (integer). For this use case, we have a job that must only process if the value of a Global Property named "BackupServer" has a value of 1. We must use the ToInt function to convert the value of the property to an integer because all OpCon properties are stored as strings. To set this up, enter the following information under the Expression Dependency tab:
+In some cases, a job may require that the value of a property contains a specific number (integer). For this use case, consider a job that must only process if the value of a Global Property named "BackupServer" has a value of 1. Use the ToInt function to convert the value of the property to an integer because all OpCon properties are stored as strings. To set this up, enter the following information under the Expression Dependency tab:
 
 `ToInt([[BackupServer]])==1`
 
@@ -272,7 +300,7 @@ When OpCon finds the result is true, then the dependency is resolved. If the res
 
 ### A Job Depends on a Machine Running No Jobs
 
-Before running maintenance on a machine, it may be useful to check to see if the machine is currently idle. In OpCon that means we want to see if the machine is running zero jobs. Use the following syntax in an expression dependency for this use case:
+Before running maintenance on a machine, it may be useful to check to see if the machine is currently idle. In OpCon that means check whether the machine is running zero jobs. Use the following syntax in an expression dependency for this use case:
 
 `ToInt([[MI.$MACHINE RUNNING JOBS.MachineName]]) == 0`
 
@@ -280,20 +308,19 @@ When OpCon finds the result is true, then the dependency is resolved. If the res
 
 ### Trigger Events when a Job Runs Short or Long
 
-To trigger events based on the Actual Run Time of a job deviating from the Estimated Run Time, there are a number of potential scenarios:
+To trigger events based on the Actual Run Time of a job deviating from the Estimated Run Time, there are several potential scenarios:
 
-- The job runs for less than the estimated run time minus a deviation percentage.
+- The job runs for less than the estimated run time minus a deviation percentage
 - The job runs for longer than the estimated run time plus a deviation percentage. Two scenarios exist for this idea:
-  - Wait until the job finishes then execute an event if the job ran long.
-  - Trigger an event as soon as the job exceeds the 'acceptable threshold', in this case based on a calculated time based on Estimated Run Time plus a percentage.
+  - Wait until the job finishes then run an event if the job ran long
+  - Trigger an event as soon as the job exceeds the 'acceptable threshold', in this case based on a calculated time based on Estimated Run Time plus a percentage
 
 #### Trigger Events when a Job Runs for Less Time than Expected
 
-For this use case, we want to trigger events if a job runs for less time
-than we expect. Let us further examine this use case with an example.
+For this use case, trigger events if a job runs for less time than expected. The following example demonstrates this scenario.
 
 :::tip Example
-We want JobB to fire an event if JobA runs less than 60 seconds. To set this up, add one of the triggers provided below to JobB.
+In this example, JobB fires an event if JobA runs less than 60 seconds. To set this up, add one of the triggers provided below to JobB.
 
 If the schedule date and schedule name are different for JobA and JobB, add the following Job Completion Complex Expression to JobB:
 
@@ -312,11 +339,11 @@ When OpCon finds that JobA ran for less than 60 seconds, then the event trigger 
 
 #### Trigger Events as Soon as a Job's Run Time Exceeds the Estimated Run Time by a User-defined Percentage
 
-For this use case, we want to trigger events as soon as a job runs for more time than we expect based on the job's run time being more than the estimated run time by a percentage. Let us further examine this use case with an example.
+For this use case, trigger events as soon as a job runs for more time than expected based on the job's run time exceeding the estimated run time by a percentage. The following example demonstrates this scenario.
 
 :::tip Example
 
-We want JobB (Null job) to trigger an event if JobA runs longer than 110% of the estimated run time. Assuming that both jobs are on the same schedule and date, use the information below to set this up.
+In this example, JobB (Null job) triggers an event if JobA runs longer than 110% of the estimated run time. Assuming that both jobs are on the same schedule and date, use the information below to set this up.
 
 Add the following Job Completion Complex Expression to JobA:
 
@@ -341,7 +368,7 @@ When JobA is running and has not exceeded 110% of the estimated run time, JobB w
 
 #### Trigger Events after Job Completion if a Job's Run Time Exceeds the Estimated Run Time by a User-defined Percentage
 
-For this use case, we want to trigger events if a job runs for more time than we expect based on the job's run time being more than the estimated run time by a percentage. To set this up, add the following Job Completion Complex Expression to the job and the event to trigger the action:
+For this use case, trigger events if a job runs for more time than expected based on the job's run time exceeding the estimated run time by a percentage. To set this up, add the following Job Completion Complex Expression to the job and the event to trigger the action:
 
 `TimeDiff([[$TIMEhh:mm:ss]], SubStr([[JI.$JOB STARTTIME]], Index([[JI.$JOB STARTTIME]], " ") + 1, 8), "signed_secs") > TimeDiff([[JI.$EST RUN TIME]], "00:00:00", "signed_secs") * 1.1`
 
@@ -353,8 +380,57 @@ When OpCon finds the job ran for more than 110% of the estimated run time, then 
 
 ### Set the Value of a Property Based on an Expression
 
-In some cases, you may want to set the value of a property based on an expression including the value of other properties and/or constants . For this use case, we have a job that must set the value of a property named "Target" based on the computation of subtracting the value of one property from another and dividing it by 8. We must use the ToInt function to convert the value of the properties to integers because all OpCon Properties are stored as strings. To set this up, configure a $PROPERTY:SET event on the job using the following syntax:
+In some cases, you may want to set the value of a property based on an expression including the value of other properties and/or constants. For this use case, consider a job that must set the value of a property named "Target" based on the computation of subtracting the value of one property from another and dividing it by 8. Use the ToInt function to convert the value of the properties to integers because all OpCon Properties are stored as strings. To set this up, configure a $PROPERTY:SET event on the job using the following syntax:
 
 `$PROPERTY:SET,Target,[[=(ToInt([[Source1]])-ToInt([[Source2]]))/8]]`
 
 If "Source1" has a value of 85 and "Source2" has a value of 21, OpCon will set the value of "Target" to a value of 8 (because (85-21)/8 is equal to a value of 8).
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Boolean | This type of operand is specified by case-insensitive sequence of the following letters - true, false. | — | must be escaped with a backslash. Examples: `"abcd", "abcd\"efgh", "C:\\File\\Test.txt", |
+| Numeric | This type of operand is represented by a sequence of numbers, which may include a decimal point. | — | must be escaped with a backslash. Examples: `"abcd", "abcd\"efgh", "C:\\File\\Test.txt", |
+| String | This type of operand is represented by an unlimited sequence of any printable character enclosed within double quotes. | — | must be escaped with a backslash. Examples: `"abcd", "abcd\"efgh", "C:\\File\\Test.txt", |
+## Exception Handling
+
+**Function throws an exception when a property parameter does not exist** — In all property expression functions, if any parameter references an OpCon property that does not exist in the database, the function throws an exception and the expression evaluation fails — Ensure all properties referenced in expressions exist before the expression is evaluated; use the non-exception variants of functions (e.g., SubStrNE, TimeDiffNE) to return a default value instead of failing when a property or substring cannot be resolved.
+
+**SubStr returns an error when the substring cannot be obtained** — The SubStr function returns an error if it cannot extract the requested substring for any reason, causing the expression to fail — Use SubStrNE instead to return a default value when the substring cannot be obtained, or verify that the start index and length parameters are within the bounds of the source string.
+
+**TimeDiff returns an error when the time difference cannot be calculated** — The TimeDiff function returns an error if it cannot compute the time difference between the two provided values — Use TimeDiffNE instead to return a default value when the time difference cannot be determined, or verify that both time values are in valid formats.
+
+**ToInt, ToFloat, ToLong, ToStr, or ToOaTime fails when the value cannot be converted** — Each conversion function returns an error if the provided value cannot be converted to the target type — Verify that the source property or literal value is in a compatible format before passing it to a conversion function; string values containing non-numeric characters will cause ToInt, ToFloat, and ToLong to fail.
+
+**Expression used on a command line or event string without the `[[= ]]` wrapper fails** — When an expression is placed in a command line or event string without being enclosed in `[[= ]]`, it is not evaluated as an expression — Wrap expressions in `[[= ]]` when they appear in command lines or event strings; this wrapper is not required for expression dependencies or job completion complex expression triggers.
+
+## FAQs
+
+**Q: When must you wrap an expression in `[[= ]]`?**
+
+Use `[[= ]]` when the expression appears on a command line or in an Event string. For expression dependencies and job completion complex expression triggers, the `[[= ]]` wrapper is not required.
+
+**Q: How are OpCon token values treated in expressions?**
+
+When the API resolves a token to its property value, it always treats the result as a string. You do not need to surround the token in quotes, but if you type a string literal containing letters, surround it in double quotes to ensure correct comparison.
+
+**Q: How do you use a property value as a number in an expression?**
+
+Use the ToInt(), ToLong(), or ToFloat() conversion functions. For example, `ToInt([[MyProperty]])` converts the string value of the property to an integer for use in arithmetic expressions.
+
+## Glossary
+
+**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

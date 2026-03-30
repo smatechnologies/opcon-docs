@@ -1,71 +1,75 @@
+---
+title: Job Tracking
+description: "Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitted) that were started outside an OpCon schedule or event."
+product_area: Automation Concepts
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Business Analyst
+  - Jobs
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Job Tracking
 
-The Job Tracking feature allows external (user-submitted or
-program-submitted) jobs to be monitored for progress by
-OpCon. It enables
-OpCon to become aware of jobs that were
-started by external users or operating systems rather than started by an
-OpCon schedule or event. This feature tracks
-jobs that are defined in OpCon and by the
-operating system agent.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
 
-For most operating systems, consequently, this feature is limited
-because it is reporting about a job that has already started. This means
-that no OpCon dependencies, resources, or
-thresholds can constrain the job.
+## What Is It?
 
-Additionally, this also means that OpCon
-properties cannot be used in any way to define the job. However, like
-other jobs defined in OpCon, a job history
-can be maintained and subsequent jobs can be made dependent upon a
-Tracked job.
+Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitted) that were started outside an OpCon schedule or event. Jobs must be defined in both OpCon and the operating system agent.
+
+Because OpCon reports on a job that has already started, this feature is limited on most platforms. No OpCon dependencies, resources, or thresholds can constrain the job, and OpCon properties cannot define it. However, job history is maintained, and subsequent jobs can depend on a tracked job.
+
+## When Would You Use It?
+
+- Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitted) that were started outside an OpCon schedule or event
+
+## Why Would You Use It?
+
+- **Job Tracking**: Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitted) that were started outside an OpCon schedule or event
 
 ## Automatic Job Tracking
 
-The Automatic Job Tracking feature allows external (user-submitted or
-program-submitted) jobs to be monitored for progress by
-OpCon. This feature is similar to Job
-Tracking, except that it does not require a job to be defined in
-OpCon, and it may also reduce or eliminate
-definitions stored by the operating system agent.
+Automatic Job Tracking monitors external jobs without requiring a job definition in OpCon, which can also reduce or eliminate definitions stored by the operating system agent.
 
-Since there is no job master record for an automatically tracked job,
-there can be no job history accumulated. Subsequent jobs cannot be made
-dependent on an automatically tracked job since there is no job master
-record or job history.
+Because there is no job master record, no job history accumulates and subsequent jobs cannot depend on an automatically tracked job.
 
-A typical purpose for Automatic Job Tracking would be to monitor the
-job-by-job progress of jobs in an OpCon
-schedule as new jobs appear within the schedule. Automatic Job Tracking
-greatly reduces the preparation for monitoring schedules that may
-initiate a large and complex series of sub-jobs, for example, when a job
-that is defined on that schedule will submit many other sub-jobs (so
-they are not directly started by OpCon and
-would not otherwise appear on the schedule).
+A common use is to monitor job-by-job progress within an OpCon schedule as new jobs appear. This is useful when a scheduled job submits many sub-jobs that are not directly started by OpCon and would not otherwise appear on the schedule.
 
 ## Job Queuing
 
-The Job Queuing feature allows external (user-submitted or
-program-submitted) jobs to be queued for processing by
-OpCon. This feature is like Job Tracking in
-that it requires jobs to be defined by OpCon
-and the operating system agent.
+Job Queuing lets OpCon queue external jobs for processing. Like Job Tracking, it requires jobs to be defined in both OpCon and the operating system agent.
 
-Job Queuing enables OpCon to become aware of
-jobs that are started by external users or an operating system, as
-opposed to jobs started by an OpCon schedule
-or event. However, queuing means that the
-OpCon agent has intercepted the job start
-request and has prevented the job from running until after
-OpCon decides the job is allowed to run. This
-means that queued jobs can be subjected to dependencies on previous jobs
-and on resources and thresholds.
+The OpCon agent intercepts the job start request and holds the job until OpCon allows it to run. This means queued jobs are subject to dependencies, resources, and thresholds. Most job definition parameters (except the Job Start Command) can be overridden, sometimes using OpCon properties. OpCon can also support platform-specific features such as job-level message management, report routing control, and local data area management.
 
-Most job definition parameters (except for the Job Start Command) can be
-overridden, sometimes using OpCon properties.
-It is also possible for OpCon to support
-platform-specific job features, such as job-level message management,
-report routing control, and managing a local data area associated with a
-job that cannot otherwise be managed directly by
-OpCon from outside of the platform-specific
-operating system.
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What is Job Tracking used for?**
+
+Job Tracking lets OpCon monitor external jobs that were started outside an OpCon schedule or event — either by a user or by another program. The job must be defined in both OpCon and the operating system agent.
+
+**Q: Can a tracked job use OpCon dependencies or resources?**
+
+No. Because OpCon reports on a job that has already started, tracked jobs cannot be constrained by OpCon dependencies, resources, or thresholds, and OpCon properties cannot define them. However, job history is maintained and subsequent jobs can depend on a tracked job.
+
+**Q: What is the difference between Job Tracking and Job Queuing?**
+
+Job Tracking monitors jobs that have already started outside OpCon. Job Queuing intercepts a job start request and holds the job until OpCon allows it to run, making it subject to dependencies, resources, and thresholds.
+
+## Glossary
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
