@@ -64,7 +64,7 @@ To configure the Database Connection Information, complete the following steps:
 
 ### Examples
 
-The following examples use [Operators](../../reference/property-expressions-syntax.md#Operator), [Functions](../../reference/property-expressions-syntax.md#Function), and [System Properties](../../objects/properties.md#system-properties) to demonstrate common automation uses:
+The following examples use [Operators](../../reference/property-expressions-syntax.md#operators), [Functions](../../reference/property-expressions-syntax.md#functions), and [System Properties](../../objects/properties.md#system-properties) to demonstrate common automation uses:
 
 - [Check a Property Value for a Specific String](#Check)
 - [Check a Property Value for a Specific Number (Integer)](#Check2)
@@ -176,7 +176,7 @@ If "Source1" is 85 and "Source2" is 21, SMAEvalExp.exe returns exit code 0 and s
 
 ## Logging
 
-SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows LSAM to capture job output to use the View Job Output feature from the Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List.md#Viewing) for details.
+SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows LSAM to capture job output to use the View Job Output feature from the Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List.md#viewing-job-output) for details.
 
 ## Exit Codes
 

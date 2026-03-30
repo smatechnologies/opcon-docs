@@ -1068,7 +1068,6 @@ module.exports = {
           ],
         },
         "reference/best-practices",
-        "reference/property-expressions-syntax",
         "reference/Operations-Machine-Messages",
         "reference/Operations-File-Transfer-Messages",
         "reference/Windows-System-Errors",

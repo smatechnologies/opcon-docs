@@ -32,7 +32,7 @@ The **Workflow Designer** has three main elements: [display area](#Workflow), [a
 
 ## Workflow Designer Display Area
 
-The **display area** provides the graphical workflow (also called a *flow diagram* or *flow map*) for a selected schedule. Each node represents a job (rectangle), threshold (rounded rectangle), or resource (oval). [Lines between nodes](Workflow-Designer-Dependency-Lines.md) represent dependency relationships. You can drag and drop dependencies for jobs, thresholds, and resources, and use [right-click functionality](Workflow-Designer-Right-click-Menus.md) on nodes and dependency lines.
+The **display area** provides the graphical workflow (also called a *flow diagram* or *flow map*) for a selected schedule. Each node represents a job (rectangle), threshold (rounded rectangle), or resource (oval). [Lines between nodes](Workflow-Designer-Dependency-Lines.md) represent dependency relationships. You can drag and drop dependencies for jobs, thresholds, and resources, and use [right-click functionality](Workflow-Designer-Right-Click-Menus.md) on nodes and dependency lines.
 
 Example Flow Diagram
 
@@ -57,7 +57,7 @@ Related Topics
 
 - [Understanding Flow Diagram Icons](Workflow-Designer-Flow-Diagram-Icons.md)
 - [Understanding Dependency Lines](Workflow-Designer-Dependency-Lines.md)
-- [Using Right-click Menus](Workflow-Designer-Right-click-Menus.md)
+- [Using Right-click Menus](Workflow-Designer-Right-Click-Menus.md)
 - [Displaying Schedule Layouts](Displaying-Schedule-Layouts.md)
 - [Displaying Schedules showing Job-Related/Frequency-Related Information](Displaying-Schedules-with-Info.md)
 - [Adding New Schedules](Adding-New-Schedules.md)
