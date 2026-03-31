@@ -6,7 +6,7 @@ module.exports = {
       label: "Overview",
       collapsed: false,
       items: [
-        "Files/UI/Solution-Manager/Getting-Started",
+        "installation/system-requirements",
         "installation/whats-new",
         "release-notes",
       ],
@@ -22,7 +22,6 @@ module.exports = {
         id: "Files/UI/Solution-Manager/Accessing-the-Solution-Overview",
       },
       items: [
-        "installation/system-requirements",
         "Files/UI/Solution-Manager/Logging-In",
         "Files/UI/Solution-Manager/Forgot-Password-Login",
         "Files/UI/Solution-Manager/SM-UI-Layout",
