@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Thresholds** editor defines and maintains OpCon Thresholds, displaying a list of thresholds and their corresponding values. For additional information, refer to [Thresholds](../../../objects/thresholds.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Thresholds settings in Enterprise Manager
-- Thresholds needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Thresholds management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Thresholds changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Thresholds Toolbar
 
 The toolbar allows you to perform threshold management functions. Select any icon to learn more about its functionality.

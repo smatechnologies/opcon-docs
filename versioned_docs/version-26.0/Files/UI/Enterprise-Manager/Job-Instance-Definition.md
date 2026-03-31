@@ -29,14 +29,6 @@ The **Instance Definition** tab in the [**Job Master**](Using-Job-Master.md) edi
 
 For conceptual information, refer to [Instance Definition](../../../job-components/instances.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define and manage job instance properties using The **Instance Definition** tab in the [**Job Master**](Using-Job-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and manage job instance properties
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

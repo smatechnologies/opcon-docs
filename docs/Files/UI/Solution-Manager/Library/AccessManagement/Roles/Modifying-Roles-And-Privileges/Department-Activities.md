@@ -38,14 +38,6 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- The **Departments** tab (_Library > Access Management > Roles_) displays the departments assigned to the selected role
-
-## Why Would You Use It?
-
-- **Role Department**: The **Departments** tab (_Library > Access Management > Roles_) displays the departments assigned to the selected role
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -28,16 +28,6 @@ You must have all appropriate privileges to use the build functionality. For add
 
 The **Schedule Build** dialog contains a list of schedules to build and the build results information.
 
-## When Would You Use It?
-
-- You need to review or update Schedules settings in Enterprise Manager
-- Schedules needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Schedules management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Schedules changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Building Daily Schedules
 
 To build a daily schedule:

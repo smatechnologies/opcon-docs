@@ -22,14 +22,6 @@ doc_type: procedural
 
 The EM detects your local language and defaults to English if that language is unavailable. You can set the language by adding a `--nl` parameter with the Locale ID either to the Enterprise Manager executable or to the **EnterpriseManager.ini** file.
 
-## When Would You Use It?
-
-- The EM detects your local language and defaults to English if that language is unavailable
-
-## Why Would You Use It?
-
-- **Setting the**: The EM detects your local language and defaults to English if that language is unavailable
-
 ## Adding a Parameter on the Executable
 
 To set the language, complete the following steps:

@@ -26,16 +26,6 @@ Input files containing dynamic transactions for processing by SMADDI must be in 
 If a data input file is larger than two megabytes (MB), the SMADDI service cannot process the file. Continuous recommends the administrator delete data input files larger than two MB.
 :::
 
-## When Would You Use It?
-
-- You need to create Data Input Files in OpCon Utilities
-- A new business process or automation requirement calls for a Data Input Files that does not yet exist
-
-## Why Would You Use It?
-
-- **Standardize definitions**: Creating Data Input Files in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
-- All Data Input Files definitions are stored in the OpCon database, making them available to all authorized interfaces and users
-
 ## Understanding Terms and Structure
 
 Familiarization with the following terms is helpful in creating input files:

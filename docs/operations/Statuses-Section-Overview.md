@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Every job and schedule in the daily queue has a status reflecting its current execution state. Understanding status values helps you interpret the daily queue and take corrective actions when something fails, stalls, or needs to be held.
 
-## When Would You Use It?
-
-- Use this feature when something fails, stalls
-
-## Why Would You Use It?
-
-- **Centralized control**: Every job and schedule in the daily queue has a status reflecting its current execution state
-
 ## When would you use this section?
 
 - Understand what a specific job or schedule status means

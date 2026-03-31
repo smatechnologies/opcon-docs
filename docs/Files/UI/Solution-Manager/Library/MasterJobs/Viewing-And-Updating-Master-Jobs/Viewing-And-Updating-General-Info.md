@@ -32,16 +32,6 @@ The section at the top of the **Master Job Definition** page displays general jo
 
 Read-only properties are indicated above. All others can be updated in **Admin** mode.
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating General Info records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating General Info state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating General Info records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Updating General Information
 
 In **Admin** mode, the job name, department, access code, disable build, and allow multi-instance properties can be updated.

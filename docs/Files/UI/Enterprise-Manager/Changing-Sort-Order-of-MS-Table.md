@@ -29,14 +29,6 @@ To perform this procedure, complete the following steps:
 1.  Select on **Machines Status** under the **Operation** topic
 2.  Select the **Machines Status** column heading to sort ascending (arrow pointing down), select again for descending (arrow pointing up), or select a third time to reverse the sort order
 
-## When Would You Use It?
-
-- To perform this procedure:
-
-## Why Would You Use It?
-
-- **Changing Sort**: To perform this procedure:
-
 ## FAQs
 
 **Q: How many steps does the Changing Sort Order of Machines Status Table procedure involve?**

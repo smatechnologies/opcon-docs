@@ -32,14 +32,6 @@ To perform this procedure, complete the following steps:
 4.  Select **Clear** to the right of the text box to return to all information
 :::
 
-## When Would You Use It?
-
-- To perform this procedure:
-
-## Why Would You Use It?
-
-- **Finding Daily**: To perform this procedure:
-
 ## FAQs
 
 **Q: How many steps does the Finding Daily Schedules or Jobs procedure involve?**

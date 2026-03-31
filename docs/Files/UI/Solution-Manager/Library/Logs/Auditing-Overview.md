@@ -19,14 +19,6 @@ doc_type: conceptual
 
 OpCon maintains detailed logs of all configuration changes, schedule build activity, and operational events. These logs support compliance auditing, change tracking, and troubleshooting. The Logs section in Solution Manager provides access to current log files, archive files, and schedule build history.
 
-## When Would You Use It?
-
-- You need to maintains detailed logs of all configuration changes, schedule build activity, and operational events using OpCon
-
-## Why Would You Use It?
-
-- **Operational value**: Provides access to current log files, archive files, and schedule build history
-
 ## When would you use this section?
 
 - Find out who changed a specific job or schedule definition and when

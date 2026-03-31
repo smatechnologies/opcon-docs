@@ -40,14 +40,6 @@ This report provides filters for frequency name, schedule name, and job name. Op
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Frequencies and Associated Jobs Report** shows all frequencies with their associated schedules and jobs, sorted by frequency name
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: The **Frequencies and Associated Jobs Report** shows all frequencies with their associated schedules and jobs, sorted by frequency name
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

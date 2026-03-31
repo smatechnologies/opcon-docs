@@ -51,17 +51,6 @@ If the job name is not visible, scroll through the list or enter the first few l
 9. If multiple jobs were selected, repeat steps 4–8 for each additional job
 10. Select the **x** to the right of the **Daily Maintenance** tab to close the screen
 
-## When Would You Use It?
-
-- You need to add Jobs from Job Master to Daily Schedule in Enterprise Manager
-- The environment is expanding and requires additional Jobs from Job Master to Daily Schedule to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Jobs from Job Master to Daily Schedule to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Jobs from Job Master to Daily Schedule and when
-
-
 ## FAQs
 
 **Q: How do you save a new jobs from job master to daily schedule record?**

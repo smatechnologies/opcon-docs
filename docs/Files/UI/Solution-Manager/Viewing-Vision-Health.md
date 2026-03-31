@@ -51,16 +51,6 @@ An administrator can set critical and tolerable threshold levels on cards for bo
 - **% QoS Failure(s)**: Percentage of QoS failures for the specified date range
 - **% SLA Failure(s)**: Percentage of SLA failures for the specified date range
 
-## When Would You Use It?
-
-- You need to inspect or audit Vision Health records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Vision Health state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Vision Health records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Vision Diagnostic
 
 The Vision Diagnostic page identifies the root cause(s) of health anomalies. It uses the date range from the Vision Health page combined with the cards selected in the Detected Anomalies (Tags) section to find what caused a low QoS percentage or an SLA failure.

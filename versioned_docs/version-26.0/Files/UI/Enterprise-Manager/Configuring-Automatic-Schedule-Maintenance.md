@@ -37,17 +37,6 @@ To configure auto maintenance, complete the following steps:
 11. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 12. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- You need to adjust settings for Automatic Schedule Maintenance in Enterprise Manager
-- Default Automatic Schedule Maintenance settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Automatic Schedule Maintenance settings through Enterprise Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Enterprise Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
-
 ## FAQs
 
 **Q: What does configuring automatic schedule maintenance control?**

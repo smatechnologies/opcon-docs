@@ -21,14 +21,6 @@ doc_type: reference
 
 The **Enterprise Manager Administration** supports management of Server Options in OpCon. Only the OpCon administrative users in the ocadm role can access the options. Refer to [Managing Server Options](../Files/UI/Enterprise-Manager/Managing-Server-Options.md) in the **Enterprise Manager** online help.
 
-## When Would You Use It?
-
-- The **Enterprise Manager Administration** supports management of Server Options in OpCon
-
-## Why Would You Use It?
-
-- **OpCon Server**: The **Enterprise Manager Administration** supports management of Server Options in OpCon
-
 ## Configuration Options
 
 ## General Settings

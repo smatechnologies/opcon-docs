@@ -18,14 +18,6 @@ doc_type: reference
 
 The OpCon server consists of the Schedule Activity Monitor (SAM) and supporting services (SAM-SS). Each component handles a specific role in processing schedules, communicating with agents, sending notifications, and routing requests.
 
-## When Would You Use It?
-
-- The OpCon server consists of the Schedule Activity Monitor (SAM) and supporting services (SAM-SS)
-
-## Why Would You Use It?
-
-- **Centralized control**: The OpCon server consists of the Schedule Activity Monitor (SAM) and supporting services (SAM-SS)
-
 ## When would you use this section?
 
 - Installing or configuring an OpCon server

@@ -22,15 +22,6 @@ doc_type: procedural
 
 Use this procedure to copy Master Jobs in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Master Jobs definition needs to be duplicated in Solution Manager
-- A new Master Jobs with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Master Jobs eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## Administration
 
 ### Required Privileges

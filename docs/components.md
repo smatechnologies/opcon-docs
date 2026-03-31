@@ -23,14 +23,6 @@ doc_type: conceptual
 
 OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services. Desktop clients on user workstations connect to the database, while web-based interfaces connect to web services to manage automation data. Agents that run jobs are called Local Schedule Activity Monitors (LSAMs).
 
-## When Would You Use It?
-
-- OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services
-
-## Why Would You Use It?
-
-- **Getting Started**: OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services
-
 ## OpCon Architecture Overview
 
 ![OpCon Architecture Overview](./Resources/Images/Concepts/opconarchitecture.png "OpCon Architecture Overview")

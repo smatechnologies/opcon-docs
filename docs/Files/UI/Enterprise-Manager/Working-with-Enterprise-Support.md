@@ -26,14 +26,6 @@ Select any **Support** function item in the graphic to learn more.
 
 ![Support Topic ](../../../Resources/Images/EM/EMsupportmenu.png "Support Topic ")
 
-## When Would You Use It?
-
-- You need to provide information for reporting issues to the Continuous support team using The **Enterprise Support** topic in the Navigation Panel
-
-## Why Would You Use It?
-
-- **Operational value**: Provides information for reporting issues to the Continuous support team
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

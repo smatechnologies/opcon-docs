@@ -30,14 +30,6 @@ The **Frequency** tab in the **[Job Master](Using-Job-Master.md)** editor allows
 
 For conceptual information, refer to [Job Frequency](../../../job-components/frequency.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define and manage job frequencies: using The **Frequency** tab in the **[Job Master](Using-Job-Master.md)** editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and manage job frequencies: - Add Job Frequencies - Edit Job Frequ
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

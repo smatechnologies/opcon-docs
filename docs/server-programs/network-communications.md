@@ -26,14 +26,6 @@ SMANetCom sends job start information to each agent and then requests job status
 
 ![SMA Network Communications Module](../Resources/Images/Server-Programs/smanetcom.png "SMA Network Communications Module")
 
-## When Would You Use It?
-
-- The SMANetCom component is responsible for all communication between the SAM and all agents
-
-## Why Would You Use It?
-
-- **SMA Network**: The SMANetCom component is responsible for all communication between the SAM and all agents
-
 ## TLS Security
 
 The OpCon server supports TLS 1.2 for securing communication between itself and any agents that are upgraded and configured to use TLS. Before communication starts, the OpCon server verifies the identity of the agent by exchanging digital certificates with it. Certificates may be either from a Certificate Authority or they may be self-signed certificates.

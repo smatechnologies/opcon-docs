@@ -37,14 +37,6 @@ To define a group, complete the following steps:
 5. Repeat Step 4 until all desired users are added
 6. Select **Save**
 
-## When Would You Use It?
-
-- A new Escalation Groups definition needs to be established in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Escalation Groups in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

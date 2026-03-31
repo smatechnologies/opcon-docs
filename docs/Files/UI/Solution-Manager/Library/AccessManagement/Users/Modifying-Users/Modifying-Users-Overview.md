@@ -19,14 +19,6 @@ doc_type: conceptual
 
 User account modifications are organized into three categories — general identity information, role assignments, and personal settings.
 
-## When Would You Use It?
-
-- User account modifications are organized into three categories — general identity information, role assignments, and personal settings
-
-## Why Would You Use It?
-
-- **Centralized control**: User account modifications are organized into three categories — general identity information, role assignments, and personal settings
-
 ## When would you use this section?
 
 - Changing a user's name, email, or password

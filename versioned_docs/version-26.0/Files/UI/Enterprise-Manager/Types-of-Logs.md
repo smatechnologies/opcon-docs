@@ -22,14 +22,6 @@ doc_type: conceptual
 
 Upon activation, the **Logs** screen displays the current date, time, and log details. OpCon maintains several distinct logs — each capturing a different category of system activity, from job execution and event processing to critical errors and network communication.
 
-## When Would You Use It?
-
-- Upon activation, the **Logs** screen displays the current date, time, and log details
-
-## Why Would You Use It?
-
-- **Types of**: Upon activation, the **Logs** screen displays the current date, time, and log details
-
 ## SAM Log
 
 The **SAM Log** records schedule and job starts, completions, and event processing. The SAM also writes configuration information to the log at startup or regeneration.

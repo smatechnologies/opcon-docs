@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Summary** link provides access to the **Operations Summary** page in Solution Manager. For more information, refer to [Working with Operations](../Solution-Manager/Working-with-Operations.md) in the **Solution Manager** online help.
 
-## When Would You Use It?
-
-- You need to provide access to the **Operations Summary** page in Solution Manager using The **Summary** link
-
-## Why Would You Use It?
-
-- **Operational value**: Provides access to the Operations Summary page in Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -34,15 +34,6 @@ To copy a resource, complete the following steps:
 6.  Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen
 :::
 
-## When Would You Use It?
-
-- An existing Resources definition needs to be duplicated in Enterprise Manager
-- A new Resources with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Resources eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy resources instead of creating a new one?**

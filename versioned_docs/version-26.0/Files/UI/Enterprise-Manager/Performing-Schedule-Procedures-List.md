@@ -26,14 +26,6 @@ Use this procedure to perform Schedule Procedures when Working in List View in t
 If a completed schedule contains failed jobs, it displays in red with the text `ScheduleName (Completed -- Contains Failed Jobs)`. If the schedule is still in progress with failed jobs, it displays as `ScheduleName (In Progress -- Contains Failed Jobs)`.
 :::
 
-## When Would You Use It?
-
-- A Schedule Procedures when Working in List View action needs to be carried out in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Ensure consistent operations**: Performing Schedule Procedures when Working in List View actions through OpCon creates a centralized, auditable record of all operational changes
-
 ## Viewing Schedule Information
 
 To view Schedule Information, complete the following steps:

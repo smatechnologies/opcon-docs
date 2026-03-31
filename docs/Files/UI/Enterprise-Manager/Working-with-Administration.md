@@ -30,14 +30,6 @@ Select any **Administration** function item in the graphic to learn more.
 
 ![Administration Topic](../../../Resources/Images/EM/EMadminmenu.png "Administration Topic")
 
-## When Would You Use It?
-
-- You need to provide screen information and procedures for the [editors](Navigation-Editors.md) and [views](Navigation-Views.md) using The **Administration** topic in the Navigation Panel
-
-## Why Would You Use It?
-
-- **Operational value**: Provides screen information and procedures for the editors and views
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

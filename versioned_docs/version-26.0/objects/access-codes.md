@@ -27,14 +27,6 @@ The following information applies to defining access codes:
 - **Name**: Defines the name for the access code
 - **Documentation**: Provides an area for descriptions and notes for the access code
 
-## When Would You Use It?
-
-- Access codes can be used to secure individual job records
-
-## Why Would You Use It?
-
-- **Access Codes**: Access codes can be used to secure individual job records
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

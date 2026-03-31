@@ -50,16 +50,6 @@ Select the **Execution** indicator to access the history record of any processin
 ![Service Request Execution History Record](../../../Resources/Images/SM/Service-Request-Indicator_3.png "Service Request Execution History Record")
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Service Request Process Indicators records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Service Request Process Indicators state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Service Request Process Indicators records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: What information does the Service Request Process Indicators view display?**

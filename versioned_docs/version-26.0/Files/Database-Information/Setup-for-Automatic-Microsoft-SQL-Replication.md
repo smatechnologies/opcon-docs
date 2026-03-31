@@ -26,14 +26,6 @@ Database replication in SQL Server uses a publishing metaphor with three roles: 
 
 This topic assumes the publisher and subscriber run on distinct SQL Server instances on separate machines. The distributor may share an instance with either the publisher or subscriber, or run on its own.
 
-## When Would You Use It?
-
-- Database replication in SQL Server uses a publishing metaphor with three roles: publisher, distributor, and subscriber
-
-## Why Would You Use It?
-
-- **Operational value**: Automate the setup and tear-down of Microsoft SQL Replication
-
 ## Prerequisites
 
 - The OpCon database server must have Microsoft SQL Server Standard or Enterprise edition installed

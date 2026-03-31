@@ -36,14 +36,6 @@ To perform this procedure, complete the following steps:
 7. Select the **OK** button
 8. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
 
-## When Would You Use It?
-
-- To perform this procedure:
-
-## Why Would You Use It?
-
-- **Checking Daily**: To perform this procedure:
-
 ## FAQs
 
 **Q: How many steps does the Checking Daily Schedules procedure involve?**

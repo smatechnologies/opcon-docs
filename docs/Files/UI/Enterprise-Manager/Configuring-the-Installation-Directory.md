@@ -29,16 +29,6 @@ To configure the installation directory, complete the following steps:
 3. Select the **Apply** button
 4. Select the **OK** button to save and close the **Preferences** dialog
 
-## When Would You Use It?
-
-- You need to adjust settings for the Installation Directory in Enterprise Manager
-- Default the Installation Directory settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing the Installation Directory settings through Enterprise Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Enterprise Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## FAQs
 
 **Q: What does configuring the installation directory control?**

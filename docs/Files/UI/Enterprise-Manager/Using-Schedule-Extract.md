@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Schedule Extract** is an Enterprise Manager plug-in that extracts information for a selected schedule and creates SMADDI XML format files. For more information, refer to [SMA Dynamic Data Input Introduction](../../../utilities/SMA-Dynamic-Data-Input/Introduction.md) in the **Utilities** online help. For information on automating Schedule Extract, refer to [Schedule Extract Command-line Interface](../../../utilities/Command-line-Utilities/Schedule-Extract-Command-line-Interface.md) in the **Utilities** online help.
 
-## When Would You Use It?
-
-- You need to work with The **Schedule Extract**, an Enterprise Manager plug-in that extracts information for a selected schedule and creates SMADDI XML format files, in OpCon
-
-## Why Would You Use It?
-
-- **Using Schedule**: The **Schedule Extract** is an Enterprise Manager plug-in that extracts information for a selected schedule and creates SMADDI XML format files
-
 ## Extracting Schedules
 
 To extract a schedule, complete the following steps:

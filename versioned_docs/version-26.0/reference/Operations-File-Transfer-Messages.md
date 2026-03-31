@@ -25,14 +25,6 @@ doc_type: reference
 In addition to displaying the completion percentage and the interim transfer operations (e.g., compressing, decompressing, etc.), the EM displays specific file transfer codes from the agent's participating in the file transfer job. The Origination column identifies the error 
 location: the FTAgent (Destination) and/or the FTServer (Source).
 
-## When Would You Use It?
-
-- In addition to displaying the completion percentage and the interim transfer operations (e.g., compressing, decompressing, etc.), the EM displays specific file transfer codes from the agent's participating in the file transfer job
-
-## Why Would You Use It?
-
-- **Operations File**: In addition to displaying the completion percentage and the interim transfer operations (e.g., compressing, decompressing, etc.), the EM displays specific file transfer codes from the agent's participating in the file transfer job
-
 ## MCP SMA File Transfer Messages
 
 The following error messages may be encountered in the \*SMA/FTAGENT.

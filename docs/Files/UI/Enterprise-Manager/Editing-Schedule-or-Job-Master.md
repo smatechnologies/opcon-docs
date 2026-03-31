@@ -32,17 +32,6 @@ To edit schedule or job master, complete the following steps:
 4.  Select **Close ☒** (to the right of the **Schedule** or **Job Master** tab) to close the screen
 5.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
 
-## When Would You Use It?
-
-- An existing Schedule or Job Master in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Schedule or Job Master definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Schedule or Job Master in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Schedule or Job Master are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to schedule or job master take effect immediately?**

@@ -48,16 +48,6 @@ To configure the user input, complete the following steps:
 User inputs are limited to the regular integer range of -2147483648 to 2147483647.
 :::
 
-## When Would You Use It?
-
-- You need to adjust settings for Number User Inputs in Solution Manager
-- Default Number User Inputs settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Number User Inputs settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

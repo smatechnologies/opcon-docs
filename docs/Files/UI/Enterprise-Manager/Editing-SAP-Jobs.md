@@ -39,17 +39,6 @@ To edit an SAP job, complete the following steps:
 11. Edit the *information*
 12. Select the **Save** button
 
-## When Would You Use It?
-
-- An existing SAP Jobs in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current SAP Jobs definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating SAP Jobs in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to SAP Jobs are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to sap jobs take effect immediately?**

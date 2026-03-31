@@ -34,14 +34,6 @@ The **Daily Maintenance** view allows you to:
 - Validate job dependencies in the Daily tables (e.g., detect circular dependencies or unmet "Requires" dependencies)
 - Edit schedules and/or jobs in the Daily or Master tables
 
-## When Would You Use It?
-
-- You need to allows you to manage daily schedules and validate job dependencies in the Daily tables using The **Daily Maintenance** view
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to manage daily schedules and validate job dependencies in the Daily tables
-
 ## Daily Maintenance Toolbar
 
 The **Daily Maintenance** view has a toolbar for performing actions in the view. Select any icon on the toolbar below to learn more about its functionality.

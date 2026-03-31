@@ -31,14 +31,6 @@ The **Navigation Panel** is on the left side of the Enterprise Manager and conta
 - [Information](Working-with-Enterprise-Information.md)
 - [Support](Working-with-Enterprise-Support.md)
 
-## When Would You Use It?
-
-- The **Navigation Panel** is on the left side of the Enterprise Manager and contains the following expandable topics:
-
-## Why Would You Use It?
-
-- **Navigation Panel**: The **Navigation Panel** is on the left side of the Enterprise Manager and contains the following expandable topics:
-
 ## Types of Navigation
 
 Each topic provides two types of navigation:

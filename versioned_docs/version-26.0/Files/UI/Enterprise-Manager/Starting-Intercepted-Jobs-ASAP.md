@@ -35,14 +35,6 @@ To start an intercepted job, complete the following steps:
 
  
 
-## When Would You Use It?
-
-- To start an intercepted job:
-
-## Why Would You Use It?
-
-- **Starting Intercepted**: To start an intercepted job:
-
 ## FAQs
 
 **Q: How many steps does the Starting Intercepted Jobs ASAP procedure involve?**

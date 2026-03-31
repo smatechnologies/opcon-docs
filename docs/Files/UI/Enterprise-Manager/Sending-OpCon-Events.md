@@ -30,14 +30,6 @@ The **Event** tab provides the following fields for defining an OpCon event laun
 03/11/08 09:41:23 Logged [NTLOG] EventID= 77777 | Schedule Date= Mar 11 2008 | Sched/Job Info= TestSched:Conversion:12345 | Machine Name= machine01 | Message= The conversion failed.
 :::
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining an OpCon event launched for the selected trigger: using The **Event** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining an OpCon event launched for the selected trigg
-
 ## Adding Events
 
 To add Events, complete the following steps:

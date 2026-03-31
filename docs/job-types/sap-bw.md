@@ -21,14 +21,6 @@ doc_type: conceptual
 
 Use this section to define an SAP BW job. For platform details, refer to [SAP BW Agent Getting started](https://help.smatechnologies.com/opcon/agents/sap-bw/) in the **SAP BW Agent** online help.
 
-## When Would You Use It?
-
-- You need to define an SAP BW job using Use this section to
-
-## Why Would You Use It?
-
-- **SAP BW**: Use this section to define an SAP BW job
-
 ## SAP Query
 
 - **Machine**: Defines the SAP BW agent Machine name. For information on adding an agent machine to OpCon, refer to [Adding Machines](../Files/UI/Enterprise-Manager/Adding-Machines.md) in the **Enterprise Manager** online help

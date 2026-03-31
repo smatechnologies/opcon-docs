@@ -19,14 +19,6 @@ doc_type: conceptual
 
 The Studio canvas is the visual workspace for building and reviewing schedule definitions. From the canvas you can add, edit, copy, and delete master schedules, view dependency lines between jobs, and isolate specific dependency chains for focused review.
 
-## When Would You Use It?
-
-- You need to work with The Studio canvas, the visual workspace for building and reviewing schedule definitions, in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: The Studio canvas is the visual workspace for building and reviewing schedule definitions
-
 ## When would you use this section?
 
 - Add a new master schedule to the Studio canvas

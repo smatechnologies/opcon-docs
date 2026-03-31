@@ -23,14 +23,6 @@ Events are strings that run commands within OpCon. Events can be defined to run 
 
 Any number of events may be defined for each job. Events can be defined at the job or at the frequency level. All events can be passed to the SAM externally through [MSGIN](./defining.md#MSGIN).
 
-## When Would You Use It?
-
-- Events are strings that run commands within OpCon
-
-## Why Would You Use It?
-
-- **Introduction**: Events are strings that run commands within OpCon
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

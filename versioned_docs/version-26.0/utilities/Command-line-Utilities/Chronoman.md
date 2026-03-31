@@ -28,14 +28,6 @@ OpCon user-defined properties can be updated with calculated dates using an exec
 
 Chronoman.exe is installed in the <Target Directory\>\\OpConxps\\MSLSAM\\ directory. Chronoman should be scheduled using a Windows OpCon job. Any jobs requiring the property value should be dependent on the associated Chronoman job. For information on setting up job dependencies, refer to [Adding Job Dependencies](../../Files/UI/Enterprise-Manager/Adding-Job-Dependencies.md).
 
-## When Would You Use It?
-
-- OpCon user-defined properties can be updated with calculated dates using an executable called Chronoman (Chronoman.exe)
-
-## Why Would You Use It?
-
-- **Chronoman**: OpCon user-defined properties can be updated with calculated dates using an executable called Chronoman (Chronoman.exe)
-
 ## Configuration Options
 
 ## Configuration

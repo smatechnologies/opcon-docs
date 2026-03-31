@@ -33,14 +33,6 @@ To forecast a frequency, complete the following steps:
 5.  Select **Close ☒** to close the **Frequency Manager** screen
 :::
 
-## When Would You Use It?
-
-- To forecast a frequency:
-
-## Why Would You Use It?
-
-- **Forecasting Frequencies**: To forecast a frequency:
-
 ## FAQs
 
 **Q: How many steps does the Forecasting Frequencies procedure involve?**

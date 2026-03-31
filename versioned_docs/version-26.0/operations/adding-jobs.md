@@ -41,17 +41,6 @@ Jobs can be added to Daily schedules using:
 - OpCon events (refer to [Job-Related Events](../events/types.md#job-related-events) in the **OpCon Events** online help)
 - Graphical interfaces
 
-## When Would You Use It?
-
-- You need to add Jobs to Daily Schedules in OpCon Operations
-- The environment is expanding and requires additional Jobs to Daily Schedules to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Jobs to Daily Schedules to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Jobs to Daily Schedules and when
-
-
 ## FAQs
 
 **Q: What is required to add a job to a Daily schedule?**

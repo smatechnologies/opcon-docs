@@ -24,16 +24,6 @@ doc_type: procedural
 
 The **Script Runners** editor creates and manages interpreters and their associated command templates. Templates are passed to the Agent machine so the Agent knows how to run scripts received from the centralized database. For more information, refer to [Embedded Scripts](../../../automation-concepts/embedded-scripts.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Script Runners settings in Enterprise Manager
-- Script Runners needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Script Runners management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Script Runners changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Script Runners Toolbar
 
 The toolbar resides at the top-right corner of the screen. Select any icon to learn more about its functionality.

@@ -24,14 +24,6 @@ MCP job details define how OpCon submits a job to a Burroughs MCP system, includ
 
 To view an MCP job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- To view an MCP job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
-## Why Would You Use It?
-
-- **Viewing, Adding,**: To view an MCP job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
 ## Viewing MCP Job Details
 
 1. Go to **Library** > **Master Jobs**

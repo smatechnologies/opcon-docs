@@ -24,14 +24,6 @@ doc_type: procedural
 
 The **Restart Failed Jobs** skill restarts all failed jobs in a specified schedule for a specified date.
 
-## When Would You Use It?
-
-- The **Restart Failed Jobs** skill restarts all failed jobs in a specified schedule for a specified date
-
-## Why Would You Use It?
-
-- **Restart Failed**: The **Restart Failed Jobs** skill restarts all failed jobs in a specified schedule for a specified date
-
 ## Skill Details
 
 ### Parameters

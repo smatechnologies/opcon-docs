@@ -34,15 +34,6 @@ To copy a user account, complete the following steps:
 6.  Select **Close ☒** (to the right of the **User Accounts** tab) to close the **User Accounts** screen
 :::
 
-## When Would You Use It?
-
-- An existing User Accounts definition needs to be duplicated in Enterprise Manager
-- A new User Accounts with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing User Accounts eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy user accounts instead of creating a new one?**

@@ -32,17 +32,6 @@ To view schedules and jobs using frequency names, complete the following steps:
 4.  Select **Close ☒** to close the **Frequency Manager** screen
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Schedules and Jobs using Frequency Names records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Schedules and Jobs using Frequency Names state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Schedules and Jobs using Frequency Names records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-
 ## FAQs
 
 **Q: How many steps does the Viewing Schedules and Jobs using Frequency Names procedure involve?**

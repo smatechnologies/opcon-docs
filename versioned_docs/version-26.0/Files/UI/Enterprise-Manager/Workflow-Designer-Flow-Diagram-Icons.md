@@ -24,14 +24,6 @@ doc_type: conceptual
 
 Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information.
 
-## When Would You Use It?
-
-- Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information
-
-## Why Would You Use It?
-
-- **Workflow Designer**: Each job in the diagram is represented by a rectangle containing the job name, colored squares for frequencies, an icon for the job type, and/or icons for special information
-
 ## Job Type Icons
 
 The diagram may display any of the following job type icons:

@@ -19,14 +19,6 @@ doc_type: reference
 
 Job Task Details contain the platform-specific settings that control how a job runs on its target agent — the command, script, parameters, user credentials, and platform-specific options. Each job type has a unique Task Details panel.
 
-## When Would You Use It?
-
-- You need to control how a job runs on its target agent — the command, script, parameters, user credentials, and platform-specific options using Job Task Details contain the platform-specific settings that
-
-## Why Would You Use It?
-
-- **Centralized control**: Job Task Details contain the platform-specific settings that control how a job runs on its target agent — the command, script, parameters, user credentials, and platform-specific options
-
 ## When would you use this section?
 
 - Set up a job for a specific platform and need to know which fields are required

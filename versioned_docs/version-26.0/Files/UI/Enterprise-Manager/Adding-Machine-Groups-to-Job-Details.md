@@ -32,17 +32,6 @@ To add machine group to details, complete the following steps:
 6. Repeat steps 3–5 for each job requiring the machine group
 7. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to add Machine Groups to Job Details in Enterprise Manager
-- The environment is expanding and requires additional Machine Groups to Job Details to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Machine Groups to Job Details to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Machine Groups to Job Details and when
-
-
 ## FAQs
 
 **Q: How do you save a new machine groups to job details record?**

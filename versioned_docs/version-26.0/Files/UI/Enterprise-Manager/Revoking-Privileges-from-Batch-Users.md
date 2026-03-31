@@ -34,14 +34,6 @@ To revoke privileges, complete the following steps:
 6. Select the **left arrow** to move the batch user(s) to the **Revoked** list box
 7. Select **Close ☒** (to the right of the **Batch User Privileges** tab) to close the **Batch User Privileges** screen
 
-## When Would You Use It?
-
-- To revoke privileges:
-
-## Why Would You Use It?
-
-- **Revoking Privileges**: To revoke privileges:
-
 ## FAQs
 
 **Q: How many steps does the Revoking Privileges from Batch Users procedure involve?**

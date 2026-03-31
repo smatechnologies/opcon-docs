@@ -38,14 +38,6 @@ This report provides filters for resource name, value, description, and in use. 
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Current Resource Values Report** displays the currently defined resources in OpCon
-
-## Why Would You Use It?
-
-- **Current Resource**: The **Current Resource Values Report** displays the currently defined resources in OpCon
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

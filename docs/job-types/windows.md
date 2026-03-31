@@ -27,14 +27,6 @@ Operation](https://help.smatechnologies.com/opcon/agents/windows/administration/
 Jobs can be .exe, .com, .bat, or .cmd type files. If specifying a .com
 file, the command line must have the .com extension.
 
-## When Would You Use It?
-
-- The information in this section applies to defining a Windows Job
-
-## Why Would You Use It?
-
-- **Windows Job**: The information in this section applies to defining a Windows Job
-
 ## Windows Definition
 
 - **Job Action**: Defines the run process the job uses. A job action

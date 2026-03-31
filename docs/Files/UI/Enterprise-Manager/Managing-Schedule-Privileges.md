@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Schedule Privileges** editor maintains Role privileges for Schedules, displaying a list of role names with granted and revoked privileges. For conceptual information, refer to [Schedule Privileges](../../../administration/privileges.md#schedule-privileges) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Schedule Privileges settings in Enterprise Manager
-- Schedule Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Schedule Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Schedule Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Granting Schedule Privileges
 
 To grant a privilege, complete the following steps:

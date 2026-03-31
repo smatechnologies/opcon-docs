@@ -19,14 +19,6 @@ doc_type: conceptual
 
 The Frequencies section in the Library lets you view, create, edit, and forecast frequency definitions. Frequencies can be shared across multiple jobs and schedules. Use the forecast tool to verify which dates a frequency qualifies before assigning it to a job.
 
-## When Would You Use It?
-
-- The Frequencies section in the Library lets you view, create, edit, and forecast frequency definitions
-
-## Why Would You Use It?
-
-- **Centralized control**: The Frequencies section in the Library lets you view, create, edit, and forecast frequency definitions
-
 ## When would you use this section?
 
 - Creating a new reusable frequency definition

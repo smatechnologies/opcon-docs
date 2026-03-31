@@ -30,17 +30,6 @@ To edit a calendar, complete the following steps:
 2. Make the desired changes. To remove all dates, select **Clear**
 3. Select **Save** to save changes or **Cancel** to discard
 
-## When Would You Use It?
-
-- An existing Calendars in Solution Manager requires changes
-- A change in process, system, or business requirement makes the current Calendars definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Calendars in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Calendars are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to calendars take effect immediately?**

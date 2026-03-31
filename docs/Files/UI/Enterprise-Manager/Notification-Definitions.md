@@ -65,14 +65,6 @@ Related Topics
 - [Deleting Notification Definition Information](Deleting-Notification-Definition-Info.md)
 :::
 
-## When Would You Use It?
-
-- You need to provide tabs for configuring notification types using The **Notification Definitions** frame
-
-## Why Would You Use It?
-
-- **Operational value**: Provides tabs for configuring notification types
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

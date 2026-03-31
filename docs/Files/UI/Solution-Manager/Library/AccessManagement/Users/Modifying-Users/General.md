@@ -42,14 +42,6 @@ For conceptual help, see:
 
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- The Users page is found in _Library > Access Management > Users_
-
-## Why Would You Use It?
-
-- **Operational value**: Provides a Reset User Password button to reset the user's password and optionally copy it
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

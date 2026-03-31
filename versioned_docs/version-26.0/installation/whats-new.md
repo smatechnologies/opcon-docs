@@ -79,14 +79,6 @@ Beginning with release 20.0, web documentation is now available on
 that provide web documentation will be available, allowing you to read
 about releases before downloading and installing them.
 
-## When Would You Use It?
-
-- You need to provide information related to changes with using The **What's New** section
-
-## Why Would You Use It?
-
-- **Operational value**: Provides information related to changes with installing or upgrading all of the OpCon com
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

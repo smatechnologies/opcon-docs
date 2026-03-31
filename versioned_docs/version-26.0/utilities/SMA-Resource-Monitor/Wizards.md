@@ -25,14 +25,6 @@ The SMA Resource Monitor User Interface provides Wizards within the
 There is a step pane on the left side of the screen that contains the
 names of each step in the wizard.
 
-## When Would You Use It?
-
-- You need to provide Wizards within the using The SMA Resource Monitor User Interface
-
-## Why Would You Use It?
-
-- **Operational value**: Provides Wizards within the Add and Edit functions for all monitor types and Action Group
-
 ## Start an Add Wizard
 
 To start an Add Wizard, complete the following steps:

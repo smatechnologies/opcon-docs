@@ -31,14 +31,6 @@ tab, you will be able to:
 For conceptual information, refer to [Threshold Dependencies](../../../job-components/threshold-resource-dependencies.md#threshold-dependencies) or [Resource Dependencies](../../../job-components/threshold-resource-dependencies.md#resource-dependencies) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- You need to allows you to define and using The **Threshold/Resource Dependency** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain job dependencies on threshold and resource values
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

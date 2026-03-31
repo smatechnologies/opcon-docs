@@ -35,17 +35,6 @@ To set a dependency, complete the following steps:
 9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png) **Save** on the **Job Master** toolbar
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the screen
 
-## When Would You Use It?
-
-- You need to add Expression Dependencies in Enterprise Manager
-- The environment is expanding and requires additional Expression Dependencies to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Expression Dependencies to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Expression Dependencies and when
-
-
 ## FAQs
 
 **Q: Where do you access Expression Dependencies in the Enterprise Manager?**

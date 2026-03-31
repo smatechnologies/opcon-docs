@@ -43,14 +43,6 @@ The following fields apply to defining remote instances:
     - **Disabled**: Disables transparent Network IP resolution
     - **Enabled**: Enables transparent Network IP resolution
 
-## When Would You Use It?
-
-- You need to work with A *remote instance*, an instance of OpCon that runs on a remote server, in OpCon
-
-## Why Would You Use It?
-
-- **Remote Instances**: A *remote instance* is an instance of OpCon that runs on a remote server
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

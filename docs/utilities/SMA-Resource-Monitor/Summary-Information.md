@@ -29,14 +29,6 @@ The SMA Resource Monitor User Interface creates and manages File Monitors, Count
 - Select a **Monitor Name** to open the Monitor Information screen, which shows *Monitor Details* and *Action Details* for that monitor
 - The Action Groups tab shows actions triggered when an Action Group fires. Action groups can associate with any monitor type, and changes apply to all associated monitors
 
-## When Would You Use It?
-
-- You need to manages File Monitors, Counter Monitors, Service Monitors, Process Monitors, and Action Groups using The SMA Resource Monitor User Interface creates and
-
-## Why Would You Use It?
-
-- **Summary Information**: The SMA Resource Monitor User Interface creates and manages File Monitors, Counter Monitors, Service Monitors, Process Monitors, and Action Groups
-
 ## Menu
 
 The menu on the left is a panel of buttons:

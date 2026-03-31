@@ -22,14 +22,6 @@ doc_type: conceptual
 
 Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information. For Job Status colors, refer to [Setting Preferences for Status Colors](Preferences-for-Status-Colors.md). For job status descriptions, see [Job Statuses](../../../operations/status-descriptions.md#job-statuses) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information
-
-## Why Would You Use It?
-
-- **PERT View**: Each job is represented by a rectangle (job box) containing a colored bar indicating job status, an icon representing the job type, the job name, and icons for special information
-
 ## Job Type Icons
 
 The diagram may display any of the following job type icons:

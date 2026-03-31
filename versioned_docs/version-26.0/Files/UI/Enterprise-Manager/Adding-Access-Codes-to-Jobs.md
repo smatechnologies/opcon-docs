@@ -32,17 +32,6 @@ To add an access code to a job, complete the following steps:
 6. Repeat Steps 3–5 for each job that needs the access code applied
 7. Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to add Access Codes to Jobs in Enterprise Manager
-- The environment is expanding and requires additional Access Codes to Jobs to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Access Codes to Jobs to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Access Codes to Jobs and when
-
-
 ## FAQs
 
 **Q: Where do you access Access Codes to Jobs in the Enterprise Manager?**

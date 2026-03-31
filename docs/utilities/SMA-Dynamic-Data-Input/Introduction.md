@@ -23,14 +23,6 @@ doc_type: conceptual
 
 SMA Dynamic Data Input (SMADDI) is an optional OpCon component that dynamically adds data to OpCon using text files. SMADDI consists of a service that monitors for files and stored procedures that update the database. Both installation packages — **SMA OpCon DDI Install** and **SMA OpCon Database Scripts Install** — are in the `<Target Directory>\Install\_Exe` directory. For installation instructions, refer to the **OpCon Installation** online help.
 
-## When Would You Use It?
-
-- You need to work with SMA Dynamic Data Input (SMADDI), an optional OpCon component that dynamically adds data to OpCon using text files, in OpCon
-
-## Why Would You Use It?
-
-- **SMA Dynamic**: SMA Dynamic Data Input (SMADDI) is an optional OpCon component that dynamically adds data to OpCon using text files
-
 ## SMA Dynamic Data Input Service
 
 The SMADDI service monitors up to 20 input directories for files containing OpCon database update information. When a file is placed in a monitored directory, the Windows operating system notifies the service, which processes the file and moves it to a subdirectory. The service uses minimal processing resources.

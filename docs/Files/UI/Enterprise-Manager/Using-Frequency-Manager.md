@@ -26,14 +26,6 @@ The **Frequency Manager** allows you to look up, edit, rename, forecast, and com
 
 The **Frequency Manager** screen displays a list of frequency names and the master schedules and jobs using each frequency.
 
-## When Would You Use It?
-
-- You need to allows you to look up, edit, rename, forecast, and compare frequencies using The **Frequency Manager**
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to look up, edit, rename, forecast, and compare frequencies
-
 ## Frequency Manager Toolbar
 
 The **Frequency Manager** has a toolbar for managing frequencies. Select any icon on the toolbar below to learn more about its functionality.

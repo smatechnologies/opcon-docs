@@ -19,14 +19,6 @@ doc_type: conceptual
 
 User accounts control who can log in to OpCon and what they can do. Each account is assigned to one or more roles that determine privileges. Accounts also hold individual settings such as default theme, date format, and email address.
 
-## When Would You Use It?
-
-- You need to control who can log in to OpCon and what they can do using User accounts
-
-## Why Would You Use It?
-
-- **Centralized control**: User accounts control who can log in to OpCon and what they can do
-
 ## When would you use this section?
 
 - Creating a new user account for an employee or service account

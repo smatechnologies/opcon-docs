@@ -28,14 +28,6 @@ The **Bar Chart** screen shows jobs grouped by status for either a schedule or a
 
 The **Send the current selection to other views** button must also be activated in another view (e.g., **Daily list** and/or **Matrix**).
 
-## When Would You Use It?
-
-- The **Bar Chart** view displays Daily statistics with each bar representing schedules for that day grouped by job status
-
-## Why Would You Use It?
-
-- **Using Bar**: The **Bar Chart** view displays Daily statistics with each bar representing schedules for that day grouped by job status
-
 ## Bar Chart Toolbar
 
 The **Bar Chart** view has a toolbar for performing actions in the view. Select any icon on the toolbar below to learn more about its functionality.

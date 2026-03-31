@@ -25,16 +25,6 @@ The **Resource Update** panel in **Daily Job Definition** displays defined resou
 - Select the icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
 - When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the property count
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Resource Updates records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Resource Updates state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Resource Updates records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Adding or Updating Resource Updates
 
 In **Admin** mode, resource updates can be updated. For conceptual information, refer to [Threshold/Resource Updates](../../../job-components/threshold-resource-updates.md).

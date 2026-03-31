@@ -59,14 +59,6 @@ The following information applies to defining machines:
     machine. The machine group must be defined before assigning it to
     the machine. For additional information, refer to [Machine Groups](./machine-groups.md).
 
-## When Would You Use It?
-
-- All systems with agents installed must be defined as a machine in the
-
-## Why Would You Use It?
-
-- **Machines**: All systems with agents installed must be defined as a machine in the
-
 ## Machine Name Resolution
 
 For the SMANetCom to communicate with an agent to run jobs, the Machine

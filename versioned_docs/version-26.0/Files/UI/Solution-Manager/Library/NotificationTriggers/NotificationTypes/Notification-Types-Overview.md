@@ -19,14 +19,6 @@ doc_type: reference
 
 Each notification trigger can send alerts through one or more delivery channels. OpCon supports email, text message, OpCon events, Windows Event Log, network message, SNMP trap, run command, and SPO event report — each with its own configuration requirements.
 
-## When Would You Use It?
-
-- You need to configure send alerts through one or more delivery channels for a notification trigger
-
-## Why Would You Use It?
-
-- **Centralized control**: Each notification trigger can send alerts through one or more delivery channels
-
 ## When would you use this section?
 
 - Adding a delivery action to a notification trigger

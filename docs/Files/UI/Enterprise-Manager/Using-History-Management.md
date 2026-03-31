@@ -34,14 +34,6 @@ In the History Management screen, type **\*Build** to find the SMA_SKD_BUILD job
 - [Exporting History Records](Viewing-and-Exporting-History-Records.md#Exportin)
 - [Resetting the View](Viewing-and-Exporting-History-Records.md#Resettin)
 
-## When Would You Use It?
-
-- The **History Management** view is used to view the schedule and job history information
-
-## Why Would You Use It?
-
-- **Operational value**: Provides a Type Filter Text box to type a part of or the full name for the specific item
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

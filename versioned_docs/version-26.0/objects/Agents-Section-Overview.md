@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Agents (referred to as machines in OpCon) are the execution targets for jobs. Each agent runs an OpCon agent that communicates with the OpCon server and runs submitted jobs. Machine groups pool agents so jobs can target any available machine in the group.
 
-## When Would You Use It?
-
-- Agents (referred to as machines in OpCon) are the execution targets for jobs
-
-## Why Would You Use It?
-
-- **Centralized control**: Agents (referred to as machines in OpCon) are the execution targets for jobs
-
 ## When would you use this section?
 
 - Adding a new agent to the OpCon environment

@@ -22,14 +22,6 @@ doc_type: conceptual
 
 The **Reporting** page contains two tabs: **REPORTS** and **SETTINGS**.
 
-## When Would You Use It?
-
-- The **Reporting** page contains two tabs: **REPORTS** and **SETTINGS**
-
-## Why Would You Use It?
-
-- **Reports**: The **Reporting** page contains two tabs: **REPORTS** and **SETTINGS**
-
 ## REPORTS Tab
 
 The **REPORTS** tab lists all available reports. Users only see reports they have permission to view.

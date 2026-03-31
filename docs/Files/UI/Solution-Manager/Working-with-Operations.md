@@ -31,14 +31,6 @@ Solution Manager Operations
 
 ![Solution Manager Operations](../../../Resources/Images/SM/Operations-with-Labels.png "Solution Manager Operations")
 
-## When Would You Use It?
-
-- You need to work with Operations, an SMA Solution Manager module that shows high-level, in OpCon
-
-## Why Would You Use It?
-
-- **Working with**: Operations is an SMA Solution Manager module that shows high-level
-
 ## Filtering
 
 The Filter bar at the top of the page can be used to filter the

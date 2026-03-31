@@ -29,14 +29,6 @@ The **Job Details** tab in the [**Job Master**](Using-Job-Master.md) editor allo
 - [Deleting Jobs](Deleting-Jobs.md)
 - [Viewing Additional Job Information](Viewing-Additional-Schedule-Info.md)
 
-## When Would You Use It?
-
-- You need to allows you to define and maintain general and platform-specific job information using The **Job Details** tab in the [**Job Master**](Using-Job-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain general and platform-specific job information
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

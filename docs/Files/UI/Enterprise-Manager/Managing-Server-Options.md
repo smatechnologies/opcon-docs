@@ -26,16 +26,6 @@ The **Server Options** editor controls global settings for OpCon, displaying ser
 Only the ocadm role can access this editor.
 :::
 
-## When Would You Use It?
-
-- You need to review or update Server Options settings in Enterprise Manager
-- Server Options needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Server Options management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Server Options changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Modifying Server Option Parameter(s)
 
 To modify a server option parameter, complete the following steps:

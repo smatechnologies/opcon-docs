@@ -21,14 +21,6 @@ Otto is the AI-powered chatbot in Solution Manager for cloud customers. Otto und
 
 NOTE: Otto is available exclusively to cloud customers. On-premises customers see a different interface that does not include Otto capabilities.
 
-## When Would You Use It?
-
-- You need to work with Otto, the AI-powered chatbot in Solution Manager for cloud customers, in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Otto is the AI-powered chatbot in Solution Manager for cloud customers
-
 ## When would you use this section?
 
 - Understanding what Otto can do and how to interact with it

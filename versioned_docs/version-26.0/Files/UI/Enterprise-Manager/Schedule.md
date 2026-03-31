@@ -34,14 +34,6 @@ Related Topics
 - [Merging Schedules](Merging-Schedules.md)
 - [Viewing Additional Schedule Information](Viewing-Additional-Schedule-Info.md)
 
-## When Would You Use It?
-
-- You need to allows you to define and maintain the days and times for the schedule to run and define specific schedule properties using The **Schedule** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain the days and times for the schedule to run and define
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

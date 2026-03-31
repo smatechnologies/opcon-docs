@@ -24,14 +24,6 @@ BIRTRptgen.exe calls the BIRTPROCESSOR handler to run reports created with Busin
 
 The Report Generator schedule should have been imported during installation with one template job per distributed report. For more information, refer to [Report Generator Schedule](../../objects/schedules.md#report-generator-schedule).
 
-## When Would You Use It?
-
-- BIRTRptgen.exe calls the BIRTPROCESSOR handler to run reports created with Business Intelligence and Reporting Tools (BIRT)
-
-## Why Would You Use It?
-
-- **BIRT Report**: BIRTRptgen.exe calls the BIRTPROCESSOR handler to run reports created with Business Intelligence and Reporting Tools (BIRT)
-
 ## Syntax
 
 `BIRTRptgen.exe --r<report> [-j[[$JOBID]]] [-t<file type] [-o<output target file>] [-p<parameters>]`

@@ -34,16 +34,6 @@ To delete a script version, complete the following steps:
 6.  Select **Yes** to confirm
 7.  Select **Close ☒** to close the **Script Repository** screen
 
-## When Would You Use It?
-
-- An existing Script Versions in Enterprise Manager is no longer needed
-- The Script Versions has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Script Versions definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
 ## FAQs
 
 **Q: Can a script versions record be recovered after deletion?**

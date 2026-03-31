@@ -26,14 +26,6 @@ The **Deploy Info** tab in the [**Schedule Master**](Using-Schedule-Master.md) e
 
 For conceptual information, refer to [Job and Schedule Frequencies](../../../automation-concepts/frequencies.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- Use this feature when the schedule has been deployed on a local OpCon instance
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to view schedule deployment information when the schedule has been deployed
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

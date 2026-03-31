@@ -30,16 +30,6 @@ Operations Summary Page
 
 ![Solution ManagerOperations Summary Build](../../../Resources/Images/SM/Schedule-Build-Operations-Summary.png "Solution ManagerOperations Summary Build")
 
-## When Would You Use It?
-
-- You need to review or update Schedules settings in Solution Manager
-- Schedules needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Schedules management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Schedules changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Selection Options
 
 Schedule Build Selection Page

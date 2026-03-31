@@ -21,14 +21,6 @@ doc_type: conceptual
 
 Privileges in OpCon control what actions each role can perform. They are assigned to roles, which are then assigned to users. Privileges cover access codes, batch users, departments, functions, machine groups, machines, schedules, and scripts — giving administrators fine-grained control over who can view and modify each part of the system.
 
-## When Would You Use It?
-
-- You need to configure or manage Privileges in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Privileges through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Access Code Privileges
 
 To implement Access Codes for securing jobs, each user must have the appropriate Access Code privileges through one or more [roles](./roles.md) to view and update jobs.

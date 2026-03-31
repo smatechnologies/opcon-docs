@@ -26,14 +26,6 @@ Select on any **Operation** function item in the graphic to learn more about tha
 
 ![Operation Topic](../../../Resources/Images/EM/EMoperationmenu.png "Operation Topic")
 
-## When Would You Use It?
-
-- The **Operation** views display all schedules to which the current user account has access in the Daily tables
-
-## Why Would You Use It?
-
-- **Operational value**: Provides different ways of looking at schedules and jobs
-
 ## Operation Toolbar Common Icons
 
   ----------------------------------------------------------------------------------------------------------- --- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

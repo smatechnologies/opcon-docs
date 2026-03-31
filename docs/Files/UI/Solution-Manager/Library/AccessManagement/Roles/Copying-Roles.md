@@ -24,15 +24,6 @@ doc_type: procedural
 
 Use this procedure to copy Roles in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Roles definition needs to be duplicated in Solution Manager
-- A new Roles with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Roles eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## Administration
 
 ### Required Privileges

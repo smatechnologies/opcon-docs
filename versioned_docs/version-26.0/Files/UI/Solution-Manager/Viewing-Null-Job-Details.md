@@ -52,16 +52,6 @@ Expand the **Task Details** panel to view its content. For Null jobs, the follow
 
 - **Type**: The job type
 
-## When Would You Use It?
-
-- You need to inspect or audit Null Job Details records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Null Job Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Null Job Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

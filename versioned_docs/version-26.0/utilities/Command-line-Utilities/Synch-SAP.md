@@ -35,14 +35,6 @@ If the Server Name cannot be found in the Server Login File, then a
 request is made to the user to supply the user name and password for SAP
 R/3 and CRM jobs.
 
-## When Would You Use It?
-
-- The SMASynchSAP utility (SMASynchSAP.exe) reads the
-
-## Why Would You Use It?
-
-- **Synch SAP**: The SMASynchSAP utility (SMASynchSAP.exe) reads the
-
 ## Usage
 
 This utility is used to re-synch the OpCon

@@ -39,14 +39,6 @@ To print a report, complete the following steps:
 
    Alternatively, select **Save** to save the file for printing later.
 
-## When Would You Use It?
-
-- Alternatively, select **Save** to save the file for printing later
-
-## Why Would You Use It?
-
-- **Printing Reports**: Alternatively, select **Save** to save the file for printing later
-
 ## FAQs
 
 **Q: How many steps does the Printing Reports procedure involve?**

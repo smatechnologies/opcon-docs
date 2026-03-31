@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Within each role, privileges are organized into categories. Each category controls a specific dimension of access — general function privileges, department-scoped activities, batch user assignments, resource access, and user membership.
 
-## When Would You Use It?
-
-- Within each role, privileges are organized into categories
-
-## Why Would You Use It?
-
-- **Centralized control**: Within each role, privileges are organized into categories
-
 ## When would you use this section?
 
 - Granting or restricting a specific function privilege on a role

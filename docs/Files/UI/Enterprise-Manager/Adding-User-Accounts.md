@@ -36,17 +36,6 @@ To add a user account, complete the following steps:
 8.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **User Accounts** toolbar
 9.  Select **Close ☒** to close the **User Accounts** screen
 
-## When Would You Use It?
-
-- You need to add User Accounts in Enterprise Manager
-- The environment is expanding and requires additional User Accounts to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding User Accounts to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the User Accounts and when
-
-
 ## FAQs
 
 **Q: What information is required to add user accounts?**

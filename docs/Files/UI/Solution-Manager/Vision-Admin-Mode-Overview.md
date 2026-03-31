@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Vision Admin Mode provides access to all Vision configuration options. From Admin Mode, you can enable editing, adjust Vision-wide settings, define frequency rules for cards, set up automated actions triggered by card state changes, and connect to remote OpCon instances.
 
-## When Would You Use It?
-
-- You need to provide access to all Vision configuration options using Vision Admin Mode
-
-## Why Would You Use It?
-
-- **Operational value**: Provides access to all Vision configuration options
-
 ## When would you use this section?
 
 - Changing Vision-wide display or behavior settings

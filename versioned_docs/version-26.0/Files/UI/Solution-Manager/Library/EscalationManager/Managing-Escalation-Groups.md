@@ -59,17 +59,6 @@ Related Topics
 
 - [Managing Escalation Rules](Managing-Escalation-Rules.md)
 
-## When Would You Use It?
-
-- You need to review or update Escalation Groups settings in Solution Manager
-- Escalation Groups needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Escalation Groups management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Escalation Groups changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing escalation groups involve?**

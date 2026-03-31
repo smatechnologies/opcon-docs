@@ -38,14 +38,6 @@ This report provides filters for user name, user signon, item type, item name, a
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Users and Privileges Report** displays user accounts and all associated privileges including roles, access codes, functions, schedules, machines, machine groups, batch users, and scripts
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: The **Users and Privileges Report** displays user accounts and all associated privileges including roles, access codes, functions, schedules, machines, machine groups, batch users, and scripts
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

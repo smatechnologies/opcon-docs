@@ -38,14 +38,6 @@ The log files have the names:
 The Output Directory was configured during installation. For more information, refer to [File Locations](../file-locations.md) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- The SAM and supporting services (SAM-SS) have several important logs
-
-## Why Would You Use It?
-
-- **Logging**: The SAM and supporting services (SAM-SS) have several important logs
-
 ## View a Log File
 
 To view a Log File, complete the following steps:

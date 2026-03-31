@@ -62,17 +62,6 @@ To edit an event profile, complete the following steps:
 2.  Select the **SAP profile** in the list
 3.  Select the **Delete** button
 
-## When Would You Use It?
-
-- You need to review or update Event Profiles settings in Enterprise Manager
-- Event Profiles needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Event Profiles management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Event Profiles changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing event profiles involve?**

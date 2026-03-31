@@ -26,14 +26,6 @@ SMA Solution Manager is an application platform that hosts UI modules called Sol
 Solution Manager uses global application links. Each page URL contains the current item ID, selections, and filters, making them suitable for bookmarking or sharing.
 :::
 
-## When Would You Use It?
-
-- You need to work with SMA Solution Manager, an application platform that hosts UI modules called Solutions, in OpCon
-
-## Why Would You Use It?
-
-- **Getting Started**: SMA Solution Manager is an application platform that hosts UI modules called Solutions
-
 ## Application Access
 
 Supported browsers:

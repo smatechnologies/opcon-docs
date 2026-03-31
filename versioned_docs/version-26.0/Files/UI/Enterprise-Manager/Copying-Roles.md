@@ -34,15 +34,6 @@ To copy a role, complete the following steps:
 6.  Select **Close ☒** (to the right of the **Roles** tab) to close the **Roles** screen
 :::
 
-## When Would You Use It?
-
-- An existing Roles definition needs to be duplicated in Enterprise Manager
-- A new Roles with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Roles eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy roles instead of creating a new one?**

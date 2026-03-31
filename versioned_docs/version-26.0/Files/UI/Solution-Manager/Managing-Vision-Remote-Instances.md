@@ -45,16 +45,6 @@ The following fields apply for setting Vision Remote Instances:
     - **Enabled**: Transparent Network IP resolution is active
     - **Auto**: Network IP resolution is automatically detected. This is the default setting
 
-## When Would You Use It?
-
-- You need to review or update Vision Remote Instances settings in Solution Manager
-- Vision Remote Instances needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Vision Remote Instances management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Vision Remote Instances changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Using the Vision Remote Instances Admin Page
 
 The **Vision Remote Instances** page is the central location for viewing, adding, editing, and deleting remote instances.

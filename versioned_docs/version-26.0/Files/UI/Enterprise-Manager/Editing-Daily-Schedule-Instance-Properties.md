@@ -34,17 +34,6 @@ To edit Daily Schedule Instance Properties in the Enterprise Manager, complete t
 9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
     on the **Schedule Daily** toolbar.
 
-## When Would You Use It?
-
-- An existing Daily Schedule Instance Properties in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Daily Schedule Instance Properties definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Daily Schedule Instance Properties in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Daily Schedule Instance Properties are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to daily schedule instance properties take effect immediately?**

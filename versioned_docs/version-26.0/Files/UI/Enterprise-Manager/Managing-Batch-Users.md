@@ -24,16 +24,6 @@ The **Batch User** editor creates and maintains the Batch Users required for pro
 
 The editor contains a list of target operating systems, associated batch users, batch user details, and a button to manage batch user privileges.
 
-## When Would You Use It?
-
-- You need to review or update Batch Users settings in Enterprise Manager
-- Batch Users needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Batch Users management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Batch Users changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Batch Users Toolbar
 
 The **Batch Users** editor has a toolbar for managing batch users. Select any icon on the toolbar below to learn more about its functionality.

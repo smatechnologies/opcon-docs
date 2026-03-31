@@ -26,14 +26,6 @@ Select any **Management** function item in the graphic to learn more.
 
 ![Management Topic](../../../Resources/Images/EM/EMmgmntmenu.png "Management Topic")
 
-## When Would You Use It?
-
-- You need to provide views to manage Audit Management, History Management, and Notification Manager information using The **Management** topic in the Navigation Panel
-
-## Why Would You Use It?
-
-- **Operational value**: Provides views to manage Audit Management, History Management, and Notification Manager i
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

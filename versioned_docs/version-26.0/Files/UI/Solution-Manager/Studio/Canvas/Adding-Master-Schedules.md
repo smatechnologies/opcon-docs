@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to add Master Schedules in Solution Manager.
 
-## When Would You Use It?
-
-- You need to add Master Schedules in Solution Manager
-- The environment is expanding and requires additional Master Schedules to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Master Schedules to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Master Schedules and when
-
 ## Administration
 
 ### Required Privileges

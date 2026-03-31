@@ -35,14 +35,6 @@ Select on the specific tool to open it in its own window. Your options are:
 - Regional Settings
 - Network
 
-## When Would You Use It?
-
-- Various **Windows Tools** can be opened from within the Enterprise Manager
-
-## Why Would You Use It?
-
-- **Opening Windows**: Various **Windows Tools** can be opened from within the Enterprise Manager
-
 ## FAQs
 
 **Q: How do you open Windows Tools?**

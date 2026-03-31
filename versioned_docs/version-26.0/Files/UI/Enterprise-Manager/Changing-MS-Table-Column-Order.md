@@ -29,14 +29,6 @@ To change the column order, complete the following steps:
 1.  Select on **Machines Status** under the **Operation** topic
 2.  *(Optional)* Drag a **Machines Status** column heading to the preferred position and release
 
-## When Would You Use It?
-
-- To change the column order:
-
-## Why Would You Use It?
-
-- **Changing Machines**: To change the column order:
-
 ## FAQs
 
 **Q: How many steps does the Changing Machines Status Table Column Order procedure involve?**

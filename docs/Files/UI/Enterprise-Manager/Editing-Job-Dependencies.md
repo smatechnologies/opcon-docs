@@ -24,16 +24,6 @@ doc_type: conceptual
 
 Use this procedure to edit Job Dependencies in the Enterprise Manager.
 
-## When Would You Use It?
-
-- An existing Job Dependencies in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Job Dependencies definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Job Dependencies in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Job Dependencies are recorded in the OpCon audit log, providing a complete modification history
-
 ## Editing Job-Related Job Dependencies
 
 To edit a dependency, complete the following steps:

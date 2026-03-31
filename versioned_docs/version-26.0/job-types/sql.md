@@ -24,14 +24,6 @@ additional information about this platform, refer to [SQL Agent Configuration an
 Operation](https://help.smatechnologies.com/opcon/agents/sql/administration/service-configuration)
 in the **SQL Agent** online help.
 
-## When Would You Use It?
-
-- The information in this section applies to defining a SQL Job
-
-## Why Would You Use It?
-
-- **SQL Job**: The information in this section applies to defining a SQL Job
-
 ## SQL Definition
 
 - **Job Action**: Defines the run process the job uses. A job action

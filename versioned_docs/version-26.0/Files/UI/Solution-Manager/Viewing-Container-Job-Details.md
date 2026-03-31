@@ -59,17 +59,6 @@ To view job details, complete the following steps:
    If the schedule has not been granted privilege to run as a sub-schedule, the Task Details field values are hidden.
    :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Container Job Details records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Container Job Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Container Job Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-
 ## FAQs
 
 **Q: How many steps does the Viewing Container Job Details procedure involve?**

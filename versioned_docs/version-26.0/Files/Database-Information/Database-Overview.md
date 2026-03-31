@@ -18,14 +18,6 @@ doc_type: conceptual
 
 OpCon uses Microsoft SQL Server as its database. The database administration section addresses high-availability options (mirroring and replication), failover procedures, backup and restore processes, and routine data maintenance.
 
-## When Would You Use It?
-
-- OpCon uses Microsoft SQL Server as its database
-
-## Why Would You Use It?
-
-- **Centralized control**: OpCon uses Microsoft SQL Server as its database
-
 ## When would you use this section?
 
 - Setting up database mirroring or replication for high availability

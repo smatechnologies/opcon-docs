@@ -27,14 +27,6 @@ The **Documentation** tab in the [**Job Master**](Using-Job-Master.md) editor al
 
 For conceptual information, refer to [Documentation](../../../job-components/documentation.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define and maintain job-related information such as command history and operator instructions for failure scenarios using The **Documentation** tab in the [**Job Master**](Using-Job-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain job-related information such as command history and o
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

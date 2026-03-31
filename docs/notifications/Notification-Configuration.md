@@ -22,14 +22,6 @@ doc_type: procedural
 
 Notification configuration in OpCon sets up the delivery infrastructure that the SMA Notify Handler uses to send alerts — including SNMP trap settings, SPO agent configuration, and related prerequisites for each notification type.
 
-## When Would You Use It?
-
-- You need to configure or manage Notification Configuration in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Notification Configuration through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Configuring SNMP Notifications
 
 For information on installing the SNMP service and configuring SNMP notifications, refer to [SMA OpCon SNMP Agent](../installation/components.md#SMA9) in the **OpCon Installation** online help.

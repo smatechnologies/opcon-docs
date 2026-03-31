@@ -30,14 +30,6 @@ Use cases covered in that reference section include:
 - Triggering events based on deviation from estimated run time
 - Setting the value of a property with an expression
 
-## When Would You Use It?
-
-- The Property Expressions API gives programmers advanced functionality for controlling Job Dependencies and Events
-
-## Why Would You Use It?
-
-- **Property Expressions**: The Property Expressions API gives programmers advanced functionality for controlling Job Dependencies and Events
-
 ## FAQs
 
 **Q: What is the Property Expressions API used for?**

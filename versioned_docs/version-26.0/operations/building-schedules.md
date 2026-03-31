@@ -54,14 +54,6 @@ Daily schedules can be built using the following methods:
 - **Failure handling**: If an automatic build fails, SAM processes events on the SMA_SKD_BUILD job. Refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule)
 - **Manual**: Request builds through the graphical interfaces
 
-## When Would You Use It?
-
-- A Daily Schedules needs to be generated or compiled in OpCon Operations
-
-## Why Would You Use It?
-
-- **Automate schedule preparation**: Building Daily Schedules through OpCon automates the process of generating daily work, applying frequency rules and dependencies
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

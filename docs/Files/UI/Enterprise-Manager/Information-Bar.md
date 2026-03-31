@@ -31,14 +31,6 @@ The Information Bar displays the following:
 - **Activity Information**: Flashes brief status messages on the right (e.g., *fetching bar chart data*)
 - **Notifications**: License-related or other notifications appear above the Information Bar at login and require acknowledgment. An x in a red circle in the bar indicates an unacknowledged notification. Hover over the red circle to redisplay the notification
 
-## When Would You Use It?
-
-- Use this feature when working with editors or views
-
-## Why Would You Use It?
-
-- **Information Bar**: The Information Bar is located at the bottom of the Enterprise Manager screen and is always visible when working with editors or views
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

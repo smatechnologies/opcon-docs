@@ -29,14 +29,6 @@ The following images show how the application appears on a smartphone.
 ![Mobile Display Submit Service Request Screen](../../../Resources/Images/SM/Mobile-Tablet_3.png "Mobile Display Submit Service Request Screen")
 ![Mobile Display Self Service Screen](../../../Resources/Images/SM/Mobile-Tablet_4.png "Mobile Display Self Service Screen")
 
-## When Would You Use It?
-
-- SMA Solution Manager works on all form factors (smartphone, tablet, desktop)
-
-## Why Would You Use It?
-
-- **Responsive Platform**: SMA Solution Manager works on all form factors (smartphone, tablet, desktop)
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

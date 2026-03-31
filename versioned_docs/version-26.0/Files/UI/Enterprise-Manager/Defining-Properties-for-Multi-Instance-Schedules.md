@@ -36,14 +36,6 @@ To define a property, complete the following steps:
 10. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar to save the property definitions
 11. Select **Close ☒** to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- A new Properties for Multi-Instance Schedules definition needs to be established in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Properties for Multi-Instance Schedules in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

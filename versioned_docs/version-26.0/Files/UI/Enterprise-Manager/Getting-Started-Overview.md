@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Before using Enterprise Manager for the first time, configure a connection profile for your OpCon server, set your preferences, and optionally change the language. These one-time setup steps prepare Enterprise Manager for daily use and ensure it connects to the correct OpCon server with the right display settings.
 
-## When Would You Use It?
-
-- You need to ensure using before Enterprise Manager for the first time, configure a connection profile for your OpCon server, set your preferences, and optionally change the language
-
-## Why Would You Use It?
-
-- **Centralized control**: Before using Enterprise Manager for the first time, configure a connection profile for your OpCon server, set your preferences, and optionally change the language
-
 ## When would you use this section?
 
 - Setting up Enterprise Manager on a new workstation

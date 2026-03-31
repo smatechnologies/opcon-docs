@@ -33,14 +33,6 @@ To perform this procedure, complete the following steps:
 7. Select the **Remove** button
 8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar to confirm, or select **Cancel** to cancel
 
-## When Would You Use It?
-
-- An existing Daily Schedule Instance Properties in Enterprise Manager is no longer needed
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Daily Schedule Instance Properties definitions reduces clutter and prevents accidental use of outdated configurations
-
 ## FAQs
 
 **Q: How many steps does the Removing Daily Schedule Instance Properties procedure involve?**

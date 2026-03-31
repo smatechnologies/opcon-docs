@@ -68,17 +68,6 @@ Related Topics
 - [Managing Script Versions](Managing-Script-Versions.md)
 - [Managing Script Runners](Managing-Script-Runners.md)
 
-## When Would You Use It?
-
-- You need to review or update Script Types settings in Solution Manager
-- Script Types needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Script Types management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Script Types changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing script types involve?**

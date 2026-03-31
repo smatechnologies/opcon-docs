@@ -33,14 +33,6 @@ To assign a user to a role, complete the following steps:
 5.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Roles** toolbar
 6.  Select **Close ☒** to close the **Roles** screen
 
-## When Would You Use It?
-
-- A Users to Roles needs to be linked to another object in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Enforce access control**: Assigning Users to Roles ensures only authorized users or processes can interact with the associated resources
-
 ## FAQs
 
 **Q: How many steps does the Assigning Users to Roles procedure involve?**

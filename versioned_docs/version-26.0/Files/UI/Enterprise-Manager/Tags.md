@@ -35,14 +35,6 @@ Within the tab, you will be able to:
 
  
 
-## When Would You Use It?
-
-- You need to allows you to define and maintain tags associated with a job using The **Tags** tab in the [**Job Master**](Using-Job-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain tags associated with a job
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

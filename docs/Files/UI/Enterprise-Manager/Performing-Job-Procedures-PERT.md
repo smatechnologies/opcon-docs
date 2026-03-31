@@ -31,14 +31,6 @@ To perform additional job procedures, complete the following steps:
 
 If additional information is needed, go to the preferred **Job procedure** under [Performing Job Procedures when Working in the Gantt View](Performing-Job-Procedures-Gantt.md) and start on Step 2.
 
-## When Would You Use It?
-
-- A Additional Job Procedures when Working in the PERT View action needs to be carried out in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Ensure consistent operations**: Performing Additional Job Procedures when Working in the PERT View actions through OpCon creates a centralized, auditable record of all operational changes
-
 ## FAQs
 
 **Q: How many steps does the Performing Additional Job Procedures when Working in the PERT View procedure involve?**

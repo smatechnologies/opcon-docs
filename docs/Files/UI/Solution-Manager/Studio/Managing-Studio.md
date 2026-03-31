@@ -32,14 +32,6 @@ Use the bar on the left side of the screen
 
 Please check back for more content.
 
-## When Would You Use It?
-
-- Studio is where Master Schedules are created and managed
-
-## Why Would You Use It?
-
-- **Overview**: Studio is where Master Schedules are created and managed
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

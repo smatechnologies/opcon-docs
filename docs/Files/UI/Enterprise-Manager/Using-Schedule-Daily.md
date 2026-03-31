@@ -26,14 +26,6 @@ The **Schedule Daily** editor displays a list of schedule dates and schedules. S
 Completed schedules with failed jobs display in red as: `ScheduleName (Completed -- Contains Failed Jobs)`. In-progress schedules with failed jobs display as: `ScheduleName (In Progress -- Contains Failed Jobs)`.
 :::
 
-## When Would You Use It?
-
-- The **Schedule Daily** editor displays a list of schedule dates and schedules
-
-## Why Would You Use It?
-
-- **Using Schedule**: The **Schedule Daily** editor displays a list of schedule dates and schedules
-
 ## Schedule Daily Toolbar
 
 The toolbar provides functions for managing schedules in daily.

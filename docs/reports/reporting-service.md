@@ -23,14 +23,6 @@ doc_type: procedural
 
 The Reporting Service is a Windows Service that extracts data from the OpCon database, transforms it, and loads it into a dedicated Reporting database. This isolates reporting queries from the operational database and makes the data viewable and downloadable through Solution Manager.
 
-## When Would You Use It?
-
-- You need to configure or manage Reporting Service in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Reporting Service through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Overview
 
 The reporting service is a Windows Service that processes OpCon reporting data viewable and downloadable through Solution Manager. It extracts data from the OpCon database, transforms it, and loads it into a dedicated Reporting database, isolating reporting queries from the operational database for better performance.

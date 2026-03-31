@@ -25,14 +25,6 @@ Optional components in OpCon extend the core server with additional capabilities
 All of the optional components must be enabled in the SMAServMan.ini file. For more information, refer to [SMA Service Manager (SMAServMan)](./service-manager.md).
 :::
 
-## When Would You Use It?
-
-- You need to configure or manage Optional Components in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Optional Components through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## SMA LDAP Monitor
 
 The SMA LDAP Monitor (SMALDAPMon) component periodically checks the LDAP server to synchronize Lightweight Directory Access

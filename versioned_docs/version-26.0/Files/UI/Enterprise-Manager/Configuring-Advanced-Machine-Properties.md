@@ -123,17 +123,6 @@ To configure advanced properties for an SAP R/3 and CRM machine, complete the fo
 9. Select on **System Number**, enter the *two-digit SAP system number*, then select the **Update** button
 10. Select the **Save** button to save all changes to the Advanced Machine Properties
 
-## When Would You Use It?
-
-- You need to adjust settings for Advanced Machine Parameters and Properties in Enterprise Manager
-- Default Advanced Machine Parameters and Properties settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Advanced Machine Parameters and Properties settings through Enterprise Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Enterprise Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
-
 ## FAQs
 
 **Q: What does configuring advanced machine parameters and properties control?**

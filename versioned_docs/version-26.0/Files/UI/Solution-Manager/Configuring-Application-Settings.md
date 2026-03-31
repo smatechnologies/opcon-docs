@@ -46,16 +46,6 @@ To configure application settings, complete the following steps:
 
 5. Select **Save** to save changes to the database
 
-## When Would You Use It?
-
-- You need to adjust settings for Application Settings in Solution Manager
-- Default Application Settings settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Application Settings settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## Environment Names
 
 Environment names label your OpCon environments for easy identification. Once defined, the name appears at the top of the [Navigation menu](SM-UI-Layout.md#Navigati) and on the [login screen](Logging-In.md#Solution_Manager_Login_Screen).

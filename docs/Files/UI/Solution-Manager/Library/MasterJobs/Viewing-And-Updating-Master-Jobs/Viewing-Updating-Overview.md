@@ -19,14 +19,6 @@ doc_type: reference
 
 Each master job has multiple configuration panels covering its core task details, frequencies, dependency rules, events, tags, and more. This section is the reference for all panels available when you open a master job record.
 
-## When Would You Use It?
-
-- Use this feature when you open a master job record
-
-## Why Would You Use It?
-
-- **Centralized control**: Each master job has multiple configuration panels covering its core task details, frequencies, dependency rules, events, tags, and more
-
 ## Configuration Options
 
 ## When would you use this section?

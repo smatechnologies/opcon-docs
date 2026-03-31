@@ -22,14 +22,6 @@ doc_type: procedural
 
 Configure the OpCon Server after a new installation. After an upgrade, review these items to confirm the server is still configured correctly.
 
-## When Would You Use It?
-
-- Configure the OpCon Server after a new installation
-
-## Why Would You Use It?
-
-- **OpCon Server**: Configure the OpCon Server after a new installation
-
 ## Configuration Options
 
 ## Implement Temporary License

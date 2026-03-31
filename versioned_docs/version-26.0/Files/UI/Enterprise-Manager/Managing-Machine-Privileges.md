@@ -26,16 +26,6 @@ The **Machine Privileges** editor maintains Role privileges for Machines, displa
 If a Role has the **Inherit Privileges for All Machines** feature enabled, the UI does not allow granting or revoking specific privileges. For additional information, refer to [Roles](../../../administration/roles.md) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- You need to review or update Machine Privileges settings in Enterprise Manager
-- Machine Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Machine Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Machine Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Granting Machine Privileges
 
 To grant a privilege, complete the following steps:

@@ -22,16 +22,6 @@ doc_type: procedural
 
 Self Service is a licensed OpCon module in the Solution Manager web interface that enables front-office staff to trigger OpCon workflows without IT involvement.
 
-## When Would You Use It?
-
-- You need to review or update Self Service settings in Solution Manager
-- Self Service needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Self Service management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Self Service changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## License File Request and Storing
 
 A license is required to access Self Service in Solution Manager. Follow the procedures below to request and save the license file.

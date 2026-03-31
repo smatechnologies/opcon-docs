@@ -35,17 +35,6 @@ There are several pages you can use to build and manage schedules. These subsect
 
 Please check back for more content.
 
-## When Would You Use It?
-
-- You need to review or update Operations settings in Solution Manager
-- Operations needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Operations management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Operations changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing operations involve?**

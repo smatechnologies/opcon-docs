@@ -28,14 +28,6 @@ The **Dependencies** tab in the **[Job Master](Using-Job-Master.md)** editor has
 -   [Threshold/Resource Dependency](Threshold-and-Resource-Dependency.md)
 -   [Expression Dependency](Expression-Dependency.md)
 
-## When Would You Use It?
-
-- The **Dependencies** tab in the **[Job Master](Using-Job-Master.md)** editor has three sub-tabs for defining and maintaining dependency types:
-
-## Why Would You Use It?
-
-- **Dependencies**: The **Dependencies** tab in the **[Job Master](Using-Job-Master.md)** editor has three sub-tabs for defining and maintaining dependency types:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

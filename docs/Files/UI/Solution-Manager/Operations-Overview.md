@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Operations in Solution Manager is where OpCon jobs and schedules are monitored and controlled in real time. From here, operators navigate the daily queue, change job and schedule statuses, manage container jobs, and interact with the Otto AI assistant.
 
-## When Would You Use It?
-
-- You need to configure or manage this feature in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing this feature through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## When would you use this section?
 
 - Monitoring daily schedule and job execution

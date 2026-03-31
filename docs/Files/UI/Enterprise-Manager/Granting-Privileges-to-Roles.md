@@ -24,14 +24,6 @@ Use this procedure to grant Privileges to Roles in the Enterprise Manager.
 
 Refer to the [Managing Privileges](Managing-Privileges.md) section to grant specific privilege types to a role.
 
-## When Would You Use It?
-
-- Refer to the [Managing Privileges](Managing-Privileges.md) section to grant specific privilege types to a role
-
-## Why Would You Use It?
-
-- **Granting Privileges**: Refer to the [Managing Privileges](Managing-Privileges.md) section to grant specific privilege types to a role
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -40,14 +40,6 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- The Roles page is found in _Library > Access Management > Roles_
-
-## Why Would You Use It?
-
-- **Role Users**: The Roles page is found in _Library > Access Management > Roles_
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

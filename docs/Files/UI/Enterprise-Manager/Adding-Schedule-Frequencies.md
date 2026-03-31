@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to add Schedule Frequencies in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to add Schedule Frequencies in Enterprise Manager
-- The environment is expanding and requires additional Schedule Frequencies to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Schedule Frequencies to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Schedule Frequencies and when
-
 ## Adding New Schedule Frequencies
 
 To add a new frequency, complete the following steps:

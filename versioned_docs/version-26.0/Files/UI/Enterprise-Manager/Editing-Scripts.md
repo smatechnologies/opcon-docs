@@ -34,16 +34,6 @@ To edit a script, complete the following steps:
 6.  Select **Close ☒** to close the **Script Repository** screen
 :::
 
-## When Would You Use It?
-
-- An existing Scripts in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Scripts definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Scripts in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Scripts are recorded in the OpCon audit log, providing a complete modification history
-
 ## FAQs
 
 **Q: Do edits to scripts take effect immediately?**

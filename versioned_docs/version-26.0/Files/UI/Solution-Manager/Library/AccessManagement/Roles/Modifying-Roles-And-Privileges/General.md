@@ -42,14 +42,6 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- The **General** tab (_Library > Access Management > Roles_) displays the name, description, and inherited privileges for the selected role
-
-## Why Would You Use It?
-
-- **Role General**: The **General** tab (_Library > Access Management > Roles_) displays the name, description, and inherited privileges for the selected role
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

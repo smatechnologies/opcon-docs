@@ -94,14 +94,6 @@ For customers who migrated from versions prior to 21.6: In Enterprise Manager, y
 
 ![Filter By Categories](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-categories.png "Filter By Categories")
 
-## When Would You Use It?
-
-- Available Notification Triggers in OpCon are shown in the grid under **Library > Notification Triggers**
-
-## Why Would You Use It?
-
-- **Operational value**: Enables the bottom panel: Description: Provides a description and purpose for the notifi
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

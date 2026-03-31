@@ -35,16 +35,6 @@ To add a script type, complete the following steps:
 7.  Select **Close ☒** (to the right of the **Script Types** tab) to close the **Script Types** screen
 :::
 
-## When Would You Use It?
-
-- You need to add Script Types in Enterprise Manager
-- The environment is expanding and requires additional Script Types to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Script Types to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Script Types and when
-
 ## FAQs
 
 **Q: How do you save a new script types record?**

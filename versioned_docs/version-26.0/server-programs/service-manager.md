@@ -24,14 +24,6 @@ SMAServMan manages the SAM-SS application group, handling startup, shutdown, and
 
 ![SMA Service Manager](../Resources/Images/Server-Programs/servmanconfig.png "SMA Service Manager")
 
-## When Would You Use It?
-
-- You need to manages the SAM-SS application group, handling startup, shutdown, and failover using SMAServMan
-
-## Why Would You Use It?
-
-- **SMA Service**: SMAServMan manages the SAM-SS application group, handling startup, shutdown, and failover
-
 ## Configuration Options
 
 ## Configuration

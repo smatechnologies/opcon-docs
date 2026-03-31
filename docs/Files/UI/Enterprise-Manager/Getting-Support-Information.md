@@ -31,14 +31,6 @@ To gather support info, complete the following steps:
 3.  Select the **OK** button to close the dialog
 :::
 
-## When Would You Use It?
-
-- The **Support** dialog includes contact and product version information
-
-## Why Would You Use It?
-
-- **Getting Support**: The **Support** dialog includes contact and product version information
-
 ## FAQs
 
 **Q: How many steps does the Getting Support Information procedure involve?**

@@ -37,16 +37,6 @@ To view job history information, complete the following steps:
 9.  Select **Close** to close the **Job Execution History** dialog
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Job History Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Job History Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Job History Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: How many steps does the Viewing Job History Information procedure involve?**

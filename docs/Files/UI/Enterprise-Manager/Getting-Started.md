@@ -30,14 +30,6 @@ After logging into Enterprise Manager, you can customize the application using t
 -   [Receiving Installation Details](Receiving-Installation-Details.md)
 :::
 
-## When Would You Use It?
-
-- After logging into Enterprise Manager, you can customize the application using the following links:
-
-## Why Would You Use It?
-
-- **Getting Started**: After logging into Enterprise Manager, you can customize the application using the following links:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

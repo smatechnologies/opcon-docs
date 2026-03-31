@@ -38,14 +38,6 @@ This report provides filters for role name, role description, privilege type, pr
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Roles and Privileges Report** combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view with a Privilege Type column identifying the source of each record
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: The **Roles and Privileges Report** combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view with a Privilege Type column identifying the source of each record
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

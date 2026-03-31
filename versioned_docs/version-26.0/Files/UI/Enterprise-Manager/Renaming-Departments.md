@@ -32,14 +32,6 @@ To rename a department, complete the following steps:
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Departments** toolbar
 5. Select **Close ☒** (to the right of the **Departments** tab) to close the **Departments** screen
 
-## When Would You Use It?
-
-- To rename a department:
-
-## Why Would You Use It?
-
-- **Renaming Departments**: To rename a department:
-
 ## FAQs
 
 **Q: How many steps does the Renaming Departments procedure involve?**

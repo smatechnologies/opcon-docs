@@ -33,16 +33,6 @@ To create and save a custom diagram, complete the following steps:
 5.  Select **Save** to save the image, or select **OK** to close the dialog
 :::
 
-## When Would You Use It?
-
-- You need to create and Saving Custom Diagrams in Enterprise Manager
-- A new business process or automation requirement calls for a and Saving Custom Diagrams that does not yet exist
-
-## Why Would You Use It?
-
-- **Standardize definitions**: Creating and Saving Custom Diagrams in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
-- All and Saving Custom Diagrams definitions are stored in the OpCon database, making them available to all authorized interfaces and users
-
 ## FAQs
 
 **Q: How many steps does the Creating and Saving Custom Diagrams procedure involve?**

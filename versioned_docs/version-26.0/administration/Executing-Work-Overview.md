@@ -18,14 +18,6 @@ doc_type: conceptual
 
 Before OpCon can submit jobs to an agent, the agent must be connected and configured, and the appropriate batch user credentials must be available. The Running Work section covers agent management, batch user configuration, and relay communication settings required to enable job execution.
 
-## When Would You Use It?
-
-- You need to ensure OpCon before can submit jobs to an agent, the agent must be connected and configured, and the appropriate batch user credentials must be available
-
-## Why Would You Use It?
-
-- **Centralized control**: Before OpCon can submit jobs to an agent, the agent must be connected and configured, and the appropriate batch user credentials must be available
-
 ## When would you use this section?
 
 - Adding a new agent and configuring the connection in OpCon

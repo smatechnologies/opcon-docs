@@ -30,17 +30,6 @@ To edit a service request, complete the following steps:
 2. Modify the existing information or settings
 3. Select **Save**
 
-## When Would You Use It?
-
-- An existing Service Requests in Solution Manager requires changes
-- A change in process, system, or business requirement makes the current Service Requests definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Service Requests in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Service Requests are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to service requests take effect immediately?**

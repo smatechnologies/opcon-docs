@@ -59,14 +59,6 @@ The following fields apply to defining job dependencies:
 | Job Name Like (L) | <ul><li>For Conflict dependencies, enables the SAM to check all jobs beginning with the characters specified for the dependent Job Name.</li><li>Use underscores (_) as single-character wildcards for a wider search.</li><li>Only available with the Conflict dependency type.</li></ul>**Example**<br />If "JobA" is defined for the dependent job, "JobA12," "JobAspecial," and "JobAbc" are all checked for a Conflict dependency. |
 | Offset | <ul><li>The number of days offset from the schedule date to check for the dependent schedule and job. A positive offset checks future schedule dates; a negative offset checks past schedule dates.</li><li>Default: 000. Valid range: 000–999.</li><li>Available with all dependency types except Excludes. Not available for job dependencies within a multi-instance schedule.</li></ul>*Note: If the Schedule Name is a multi-instance schedule and the dependent schedule is the same schedule, the Day Offset is not available. Multi-instance schedules only support internal same-day dependencies or valid cross-schedule dependencies.* |
 
-## When Would You Use It?
-
-- You need to configure job dependency relationships in OpCon
-
-## Why Would You Use It?
-
-- **Job Dependencies**: Each OpCon job can depend on one or more OpCon jobs
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

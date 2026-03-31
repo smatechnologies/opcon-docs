@@ -71,17 +71,6 @@ Related Topics
 - [Managing Script Versions](Managing-Script-Versions.md)
 - [Managing Script Types](Managing-Script-Types.md)
 
-## When Would You Use It?
-
-- You need to review or update Script Runners settings in Solution Manager
-- Script Runners needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Script Runners management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Script Runners changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing script runners involve?**

@@ -38,14 +38,6 @@ To set the preferences, complete the following steps:
 6. *(Optional)* Select a **Regular Expression** word to change its color, then select a color and select **OK**
 7. Select **Apply**, then **OK** to save and close the **Preferences** dialog
 
-## When Would You Use It?
-
-- To set the preferences:
-
-## Why Would You Use It?
-
-- **Setting Preferences**: To set the preferences:
-
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Log Viewer procedure involve?**

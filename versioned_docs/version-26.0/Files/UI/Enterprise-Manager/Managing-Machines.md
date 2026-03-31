@@ -26,16 +26,6 @@ The **Machines** editor defines and maintains OpCon Machines, providing a list o
 Before adding a new machine, verify with the OpCon administrator that there is an available license for the machine. If a license is unavailable, contact Continuous Technical Support([<support@smatechnologies.com>]).
 :::
 
-## When Would You Use It?
-
-- You need to review or update Machines settings in Enterprise Manager
-- Machines needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Machines management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Machines changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Machines Toolbar
 
 The **Machines** editor has a toolbar for managing machines. Select on any specific icon on the toolbar below to learn more about its functionality.

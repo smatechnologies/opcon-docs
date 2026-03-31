@@ -66,14 +66,6 @@ Jamie has a multi-instance job named **UpdateCreditDatabase** that should run on
 **Result**: The **UpdateCreditDatabase** job waits in "Wait Threshold Dependency" status. The SMA Resource Monitor increments CreditTransactions for each arriving file. When the value reaches 10, the job runs. On submission, Notification Manager resets the threshold to 0 and adds another job copy to process the next ten records.
 :::
 
-## When Would You Use It?
-
-- You need to work with A *threshold*, a user-defined placeholder consisting of a name and a numeric value, in OpCon
-
-## Why Would You Use It?
-
-- **Operational value**: Allow external applications and systems to affect schedules
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

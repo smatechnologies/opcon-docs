@@ -30,16 +30,6 @@ To add a machine to a machine group, complete the following steps:
 4. Repeat step 3 to assign additional machine groups
 5. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
 
-## When Would You Use It?
-
-- You need to add Machines to Machine Groups in Enterprise Manager
-- The environment is expanding and requires additional Machines to Machine Groups to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Machines to Machine Groups to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Machines to Machine Groups and when
-
 ## FAQs
 
 **Q: How do you save a new machines to machine groups record?**

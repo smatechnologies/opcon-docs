@@ -18,14 +18,6 @@ doc_type: conceptual
 
 OpCon administration encompasses the full server lifecycle — from initial architecture and component configuration through ongoing management of user security, access control, and database health. Administrators use these tools to set up and maintain the OpCon environment, control who can access what, and keep the system reliable.
 
-## When Would You Use It?
-
-- You need to configure or manage this feature in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing this feature through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## When would you use this section?
 
 - Setting up or upgrading an OpCon server installation

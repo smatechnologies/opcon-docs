@@ -26,14 +26,6 @@ Operation](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents
 the automation capabilities of OpCon on this
 platform.
 
-## When Would You Use It?
-
-- The information in this section applies to defining an SAP R/3 and CRM
-
-## Why Would You Use It?
-
-- **SAP R/3**: The information in this section applies to defining an SAP R/3 and CRM
-
 ## Login
 
 - **Machine**: Defines the SAP R/3 and CRM Machine name. For

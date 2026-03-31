@@ -24,14 +24,6 @@ doc_type: procedural
 
 The **Self Service** link provides access to the **Self Service** page in Solution Manager. For more information, refer to [Managing Self Service](../Solution-Manager/Managing-Self-Service.md) in the **Solution Manager** online help.
 
-## When Would You Use It?
-
-- You need to provide access to the **Self Service** page in Solution Manager using The **Self Service** link
-
-## Why Would You Use It?
-
-- **Operational value**: Provides access to the Self Service page in Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

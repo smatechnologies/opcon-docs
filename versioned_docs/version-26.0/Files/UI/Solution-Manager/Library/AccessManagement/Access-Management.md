@@ -39,14 +39,6 @@ For conceptual help, see:
 - [Roles](../../../../../administration/roles.md)
 - [Users](../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- You need to provide views to manage user accounts, privileges, and roles using The **Access Management** page (_Library > Access Management_)
-
-## Why Would You Use It?
-
-- **Operational value**: Provides views to manage user accounts, privileges, and roles
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

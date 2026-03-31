@@ -22,14 +22,6 @@ doc_type: procedural
 
 Custom reports in OpCon are built using the BIRT (Business Intelligence and Reporting Tools) framework. Administrators can edit the Continuous-supplied BIRT reports or create entirely new ones to meet specific reporting requirements.
 
-## When Would You Use It?
-
-- You need to configure or manage Custom Reports in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Custom Reports through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Introduction
 
 This guide explains how to set up an environment for editing Continuous-supplied BIRT reports or creating custom ones.

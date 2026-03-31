@@ -34,14 +34,6 @@ To run a report, complete the following steps:
 8. *(Optional)* Select **Refresh** to refresh the data
 9. *(Optional)* Select **Run report** to run another report
 
-## When Would You Use It?
-
-- A Reports needs to be run manually or on demand
-
-## Why Would You Use It?
-
-- **Automate execution**: Triggering Reports through OpCon provides consistent, logged execution with dependency checking and event handling
-
 ## FAQs
 
 **Q: How many steps does the Running Reports procedure involve?**

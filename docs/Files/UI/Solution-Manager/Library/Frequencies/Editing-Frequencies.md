@@ -32,17 +32,6 @@ To edit Frequencies in Solution Manager, complete the following steps:
 
 ![Frequency Manager Wizard](../../../../../Resources/Images/SM/Library/Frequencies/Frequency-Manager-Wizard.png "Frequency Manager Wizard")
 
-## When Would You Use It?
-
-- An existing Frequencies in Solution Manager requires changes
-- A change in process, system, or business requirement makes the current Frequencies definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Frequencies in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Frequencies are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to frequencies take effect immediately?**

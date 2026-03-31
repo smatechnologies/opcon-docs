@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Job Daily** editor displays a list of schedule dates, schedules, and jobs. Select a schedule date, schedule, and job to modify the job details.
 
-## When Would You Use It?
-
-- The **Job Daily** editor displays a list of schedule dates, schedules, and jobs
-
-## Why Would You Use It?
-
-- **Using Job**: The **Job Daily** editor displays a list of schedule dates, schedules, and jobs
-
 ## Job Daily Toolbar
 
 The **Job Daily** editor has a toolbar for managing jobs in daily. Select any icon on the toolbar to learn more about its functionality.

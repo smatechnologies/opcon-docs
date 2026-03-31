@@ -64,17 +64,6 @@ Related Topics
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 - [Viewing Job Output](Viewing-Job-Output.md)
 
-## When Would You Use It?
-
-- You need to inspect or audit Job Configuration records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Job Configuration state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Job Configuration records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-
 ## FAQs
 
 **Q: How many steps does the Viewing Job Configuration procedure involve?**

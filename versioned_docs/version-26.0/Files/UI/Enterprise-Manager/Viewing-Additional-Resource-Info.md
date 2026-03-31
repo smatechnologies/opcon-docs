@@ -34,16 +34,6 @@ To view additional information, complete the following steps:
 6.  Select **Close**
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Additional Resource Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Additional Resource Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Additional Resource Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: How many steps does the Viewing Additional Resource Information procedure involve?**

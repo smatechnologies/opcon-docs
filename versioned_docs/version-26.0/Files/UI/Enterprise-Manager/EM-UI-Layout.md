@@ -31,14 +31,6 @@ The Enterprise Manager screen layout includes:
 - [Information Bar](Information-Bar.md)
 - [Keyboard Shortcuts](Keyboard-Shortcuts.md)
 
-## When Would You Use It?
-
-- Use this feature when the Enterprise Manager first opens
-
-## Why Would You Use It?
-
-- **Understanding the**: When the Enterprise Manager first opens, it displays the Home screen
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

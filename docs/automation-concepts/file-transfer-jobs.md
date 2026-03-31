@@ -36,14 +36,6 @@ After receiving instructions from the resident agent, the SMAFT Component negoti
 The file transfer port for the initiating machine must be open on the firewall. For more information, refer to [File Transfer Settings](../objects/machines.md#file).
 :::
 
-## When Would You Use It?
-
-- The SMA File Transfer (SMAFT) system transfers files across multiple platforms via an OpCon job
-
-## Why Would You Use It?
-
-- **File Transfer**: The SMA File Transfer (SMAFT) system transfers files across multiple platforms via an OpCon job
-
 ## Configuration
 
 Before attempting a transfer, configure the machine definitions in OpCon and the agents on both source and destination machines.

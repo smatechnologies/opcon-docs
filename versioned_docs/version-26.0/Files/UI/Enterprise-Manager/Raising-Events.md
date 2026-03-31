@@ -33,14 +33,6 @@ To raise an event, complete the following steps:
 5. *(Optional)* Enter any *required parameters* in the **Parameters** text box
 6. Select the **Send** button
 
-## When Would You Use It?
-
-- You need to configure or manage Raising Events in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Raising Events through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## FAQs
 
 **Q: How many steps does the Raising Events procedure involve?**

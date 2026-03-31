@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Schedule actions let you change schedule status, initiate builds, check integrity, edit running schedules, and delete schedules from the daily queue.
 
-## When Would You Use It?
-
-- Schedule actions let you change schedule status, initiate builds, check integrity, edit running schedules, and delete schedules from the daily queue
-
-## Why Would You Use It?
-
-- **Centralized control**: Schedule actions let you change schedule status, initiate builds, check integrity, edit running schedules, and delete schedules from the daily queue
-
 ## When would you use this section?
 
 - Place a schedule On Hold, Released, or Cancelled

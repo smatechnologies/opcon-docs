@@ -27,14 +27,6 @@ Schedule and job status change commands are used with events and graphical inter
 - With one or more schedule(s) identified, Job Status Change commands affect **all** jobs on those schedules. Graphical interfaces also provide a status filter to target jobs in specific statuses
 - With one or more jobs selected, Job Status Change commands affect only the identified job(s)
 
-## When Would You Use It?
-
-- Schedule and job status change commands are used with events and graphical interfaces
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: Schedule and job status change commands are used with events and graphical interfaces
-
 ## Schedule Status Change Commands
 
 - **Hold Schedule**: Suspends processing of the identified schedule(s). Running jobs complete, but no new jobs start. Subschedules in a Waiting or In Process status are placed in Parent Hold

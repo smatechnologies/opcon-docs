@@ -48,17 +48,6 @@ Related Topics
 - [Performing Schedule Checks](Performing-Schedule-Checks.md)
 - [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
 
-## When Would You Use It?
-
-- You need to add Jobs to Daily Schedules in Solution Manager
-- The environment is expanding and requires additional Jobs to Daily Schedules to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Jobs to Daily Schedules to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Jobs to Daily Schedules and when
-
-
 ## FAQs
 
 **Q: How do you save a new jobs to daily schedules record?**

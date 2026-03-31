@@ -19,14 +19,6 @@ doc_type: conceptual
 
 This section explains the core building blocks of OpCon automation — the objects, rules, and behaviors that define how work is scheduled, run, and tracked. Understanding these concepts is essential before building or operating any automated workflow.
 
-## When Would You Use It?
-
-- You need to define how work is scheduled, run, and tracked using This section explains the core building blocks of OpCon automation — the objects, rules, and behaviors that
-
-## Why Would You Use It?
-
-- **Centralized control**: This section explains the core building blocks of OpCon automation — the objects, rules, and behaviors that define how work is scheduled, run, and tracked
-
 ## When would you use this section?
 
 - Learning how OpCon works before building automation

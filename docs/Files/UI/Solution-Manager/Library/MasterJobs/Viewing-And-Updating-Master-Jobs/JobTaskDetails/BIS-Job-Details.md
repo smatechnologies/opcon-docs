@@ -24,14 +24,6 @@ BIS job details define how OpCon submits a job to a Burroughs Information System
 
 To view a BIS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- To view a BIS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
-## Why Would You Use It?
-
-- **Viewing, Adding,**: To view a BIS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
 ## Viewing BIS Job Details
 
 To view BIS Job Details, complete the following steps:

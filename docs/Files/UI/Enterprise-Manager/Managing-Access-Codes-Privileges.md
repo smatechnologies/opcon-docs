@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Access Codes Privileges** editor maintains Role privileges for Access Codes. It lists role names with their granted and revoked access codes. For conceptual information, refer to [Access Code Privileges](../../../administration/privileges.md#access-code-privileges) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Access Codes Privileges settings in Enterprise Manager
-- Access Codes Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Access Codes Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Access Codes Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Granting Privileges to Access Codes
 
 To grant Privileges to Access Codes, complete the following steps:

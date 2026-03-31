@@ -42,14 +42,6 @@ To change the order of the User Inputs, use the up/down arrows in the User Input
 - [Configuring Master Job User Inputs](Configuring-Master-Job-User-Inputs.md)
 - [Configuring Choice User Inputs](Configuring-Choice-User-Inputs.md)
 
-## When Would You Use It?
-
-- You need to prepare and initialize User Inputs in Solution Manager
-
-## Why Would You Use It?
-
-- **Setting up**: When a Variable is defined within the OpCon Event definition, it becomes available as a User Input
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

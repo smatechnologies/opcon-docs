@@ -19,14 +19,6 @@ doc_type: conceptual
 
 OpCon supports running the same schedule multiple times simultaneously using named instances or multi-instance definitions. Remote instances allow a local OpCon system to reference and interact with schedules on a separate, remote OpCon server.
 
-## When Would You Use It?
-
-- OpCon supports running the same schedule multiple times simultaneously using named instances or multi-instance definitions
-
-## Why Would You Use It?
-
-- **Operational value**: Allow a local OpCon system to reference and interact with schedules on a separate, rem
-
 ## When would you use this section?
 
 - Running the same schedule once per store location, machine, or customer simultaneously

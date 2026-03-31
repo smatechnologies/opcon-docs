@@ -22,14 +22,6 @@ doc_type: procedural
 
 The menu bar at the top of the Enterprise Manager screen is always available when working with [editors](Navigation-Editors.md) or [views](Navigation-Views.md). It has two options: Enterprise Manager and Help.
 
-## When Would You Use It?
-
-- Use this feature when working with editors or views
-
-## Why Would You Use It?
-
-- **Menus**: The menu bar at the top of the Enterprise Manager screen is always available when working with [editors](Navigation-Editors.md) or [views](Navigation-Views.md)
-
 ## Enterprise Manager
 
 The Enterprise Manager menu includes the following options:

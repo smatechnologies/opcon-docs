@@ -26,14 +26,6 @@ For information about defining a Tuxedo ART Job, refer to [Running Tuxedo ART Jo
 - **JESRoot Environment**: Full path to the JES Root environment, used by the agent to retrieve the Tuxedo Job log
 - **Tuxedo Environment**: Name of the environment script that sets up environment variables when connecting to the Tuxedo environment. Must include the .sh extension
 
-## When Would You Use It?
-
-- For information about defining a Tuxedo ART Job, refer to [Running Tuxedo ART Jobs](https://help.smatechnologies.com/opcon/agents/tuxedo/latest/Files/Agents/Tuxedo-ART/Running-Tuxedo-ART-Jobs.md) in the **Tuxedo ART Agent** online help
-
-## Why Would You Use It?
-
-- **Tuxedo ART**: For information about defining a Tuxedo ART Job, refer to [Running Tuxedo ART Jobs](https://help.smatechnologies.com/opcon/agents/tuxedo/latest/Files/Agents/Tuxedo-ART/Running-Tuxedo-ART-Jobs.md) in the **Tuxedo ART Agent** online help
-
 ## Variables Tab
 
 Variables are passed as name=value pairs to the Tuxedo ART environment.

@@ -24,15 +24,6 @@ doc_type: procedural
 
 Use this procedure to copy Calendars in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Calendars definition needs to be duplicated in Solution Manager
-- A new Calendars with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Calendars eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## Copying User-Defined Calendars
 
 User-defined calendars do not begin with **(HC:)** in the calendar name. The copy function copies all properties except the calendar name to a new calendar.

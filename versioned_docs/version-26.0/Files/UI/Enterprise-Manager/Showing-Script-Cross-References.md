@@ -34,14 +34,6 @@ To show the cross references, complete the following steps:
 6. Select **Close ☒** to close the **Script Repository** screen
 :::
 
-## When Would You Use It?
-
-- You can view which jobs use specific scripts
-
-## Why Would You Use It?
-
-- **Showing Script**: You can view which jobs use specific scripts
-
 ## FAQs
 
 **Q: How many steps does the Showing Script Cross References procedure involve?**

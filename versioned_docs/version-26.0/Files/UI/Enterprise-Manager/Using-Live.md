@@ -25,14 +25,6 @@ doc_type: procedural
 The **Live** link provides access to the **Vision Live** page in Solution Manager. For more information, refer to [Viewing Cards in Vision Live](../Solution-Manager/Viewing-Cards-in-Vision-Live.md) in the **Solution Manager** online help.
 :::
 
-## When Would You Use It?
-
-- You need to provide access to the **Vision Live** page in Solution Manager using The **Live** link
-
-## Why Would You Use It?
-
-- **Operational value**: Provides access to the Vision Live page in Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

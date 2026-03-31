@@ -52,14 +52,6 @@ Select the **OK** button to open **Schedule Import/Export**.
 For conceptual information about the Schedule Import/Export, refer to [Schedule Import/Export](../../../utilities/Graphical-Utilities/Schedule-Import_Export.md) in the **Utilities** online help.
 :::
 
-## When Would You Use It?
-
-- The **Import Export** tool can be opened from within the Enterprise Manager
-
-## Why Would You Use It?
-
-- **Opening Import**: The **Import Export** tool can be opened from within the Enterprise Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

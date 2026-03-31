@@ -25,14 +25,6 @@ Most jobs in Schedule Operations appear as the original job name. Two features c
 - Multi-Instance Jobs
 - Jobs Run on Each Machine in a Group
 
-## When Would You Use It?
-
-- Most jobs in Schedule Operations appear as the original job name
-
-## Why Would You Use It?
-
-- **OpCon Job**: Most jobs in Schedule Operations appear as the original job name
-
 ## Multi-Instance Jobs
 
 The naming convention for multi-instance jobs depends on whether Job Instance properties are supplied.

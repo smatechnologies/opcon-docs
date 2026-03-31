@@ -18,14 +18,6 @@ doc_type: conceptual
 
 OpCon events are commands that trigger system actions — building schedules, changing job status, updating properties, sending notifications, and more. Events can be attached to jobs, schedules, or notification triggers, and submitted externally via the External Event interface.
 
-## When Would You Use It?
-
-- OpCon events are commands that trigger system actions — building schedules, changing job status, updating properties, sending notifications, and more
-
-## Why Would You Use It?
-
-- **Centralized control**: OpCon events are commands that trigger system actions — building schedules, changing job status, updating properties, sending notifications, and more
-
 ## When would you use this section?
 
 - Understanding what events are available and what parameters they accept

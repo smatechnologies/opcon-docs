@@ -38,17 +38,6 @@ To edit a frequency, complete the following steps:
 8. Select **Finish** to save changes or **Cancel** to discard them
 9. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- An existing Schedule Frequencies in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Schedule Frequencies definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Schedule Frequencies in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Schedule Frequencies are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to schedule frequencies take effect immediately?**

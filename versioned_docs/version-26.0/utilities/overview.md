@@ -28,14 +28,6 @@ OpCon utilities are organized into the following sections:
 - [SMA Dynamic Data Input](./SMA-Dynamic-Data-Input/Introduction.md)
 - [SMA Resource Monitor](./SMA-Resource-Monitor/Introduction.md)
 
-## When Would You Use It?
-
-- OpCon utilities are organized into the following sections:
-
-## Why Would You Use It?
-
-- **Utilities Overview**: OpCon utilities are organized into the following sections:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

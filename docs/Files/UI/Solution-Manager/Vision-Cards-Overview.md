@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Vision cards display aggregated job completion status for jobs matching a specific tag. Cards are organized into categories for grouping and navigation, giving teams a high-level view of automation health across the organization.
 
-## When Would You Use It?
-
-- Vision cards display aggregated job completion status for jobs matching a specific tag
-
-## Why Would You Use It?
-
-- **Centralized control**: Vision cards display aggregated job completion status for jobs matching a specific tag
-
 ## When would you use this section?
 
 - Setting up Vision for the first time and need to create cards

@@ -33,15 +33,6 @@ To copy a global property, complete the following steps:
 5.  Select the **OK** button
 6.  Select **Close ☒** (to the right of the **Global Properties** tab) to close the **Global Properties** screen
 
-## When Would You Use It?
-
-- An existing Global Properties definition needs to be duplicated in Enterprise Manager
-- A new Global Properties with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Global Properties eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy global properties instead of creating a new one?**

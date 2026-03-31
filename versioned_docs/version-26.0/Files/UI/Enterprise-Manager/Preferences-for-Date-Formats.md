@@ -60,14 +60,6 @@ The example date would be created in the EM with the following string for the Lo
 |mm|Minute in hour|Number|30|
 |s|Second in minute|Number|55|
 
-## When Would You Use It?
-
-- You need to control how the EM displays dates and times using Configure the Date and Time formats to
-
-## Why Would You Use It?
-
-- **Setting Preferences**: Configure the Date and Time formats to control how the EM displays dates and times
-
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Date Formats procedure involve?**

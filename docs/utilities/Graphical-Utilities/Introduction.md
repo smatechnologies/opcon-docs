@@ -33,14 +33,6 @@ All of these utilities, except SMA Data Collector, require a system data source 
 Verify that the most recent Open Database Connectivity (ODBC) driver for Microsoft SQL Server is installed before creating the system DSN.
 :::
 
-## When Would You Use It?
-
-- OpCon includes the following graphical utilities:
-
-## Why Would You Use It?
-
-- **Graphical Utilities**: OpCon includes the following graphical utilities:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

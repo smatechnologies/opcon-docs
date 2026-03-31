@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Studio is the visual workflow design environment in Solution Manager. Use Studio to define schedules, place jobs on the canvas, draw dependencies, and visualize automation flow before it runs in production.
 
-## When Would You Use It?
-
-- You need to work with Studio, the visual workflow design environment in Solution Manager, in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Studio is the visual workflow design environment in Solution Manager
-
 ## When would you use this section?
 
 - Designing a new schedule and want a visual representation of job flow

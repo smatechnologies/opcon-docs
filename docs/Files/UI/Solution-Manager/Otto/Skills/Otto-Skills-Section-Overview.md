@@ -19,14 +19,6 @@ doc_type: reference
 
 Skills are the specific actions Otto can perform in OpCon on your behalf. Each skill maps to a common operational task — building schedules, restarting jobs, updating statuses, retrieving logs — and can be triggered by natural language requests to Otto.
 
-## When Would You Use It?
-
-- Skills are the specific actions Otto can perform in OpCon on your behalf
-
-## Why Would You Use It?
-
-- **Centralized control**: Skills are the specific actions Otto can perform in OpCon on your behalf
-
 ## When would you use this section?
 
 - Identifying what actions Otto can take so you can phrase requests correctly

@@ -33,15 +33,6 @@ To copy a department, complete the following steps:
 5.  Select the **OK** button
 6.  Select **Close ☒** (to the right of the **Departments** tab) to close the **Departments** screen
 
-## When Would You Use It?
-
-- An existing Departments definition needs to be duplicated in Enterprise Manager
-- A new Departments with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Departments eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy departments instead of creating a new one?**

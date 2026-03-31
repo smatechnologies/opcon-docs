@@ -40,17 +40,6 @@ To perform this procedure, complete the following steps:
 10. Select **Close ☒** (to the right of the **Schedule Daily** tab) to close the **Schedule Daily** screen
 11. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
 
-## When Would You Use It?
-
-- An existing Schedules in Daily Schedule Tables in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Schedules in Daily Schedule Tables definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Schedules in Daily Schedule Tables in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Schedules in Daily Schedule Tables are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to schedules in daily schedule tables take effect immediately?**

@@ -27,14 +27,6 @@ Automation is the preferred method for database maintenance. If automation is no
 
 For information on automating database maintenance and backups, refer to [OpCon Data Maintenance](OpCon-Data-Maintenance.md).
 
-## When Would You Use It?
-
-- You need to work with Automation, the preferred method for database maintenance, in OpCon
-
-## Why Would You Use It?
-
-- **Manual Database**: Automation is the preferred method for database maintenance
-
 ## Manual Backups
 
 ### Manually Backing Up the Database

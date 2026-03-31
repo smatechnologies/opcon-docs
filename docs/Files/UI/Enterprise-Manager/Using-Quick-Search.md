@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Quick Search** function displays a dialog to search for and edit schedules and/or jobs. The dialog lists schedules and their corresponding jobs, which can be viewed and edited in the **Schedule Master** or **Job Master** screen.
 
-## When Would You Use It?
-
-- The **Quick Search** function displays a dialog to search for and edit schedules and/or jobs
-
-## Why Would You Use It?
-
-- **Using Quick**: The **Quick Search** function displays a dialog to search for and edit schedules and/or jobs
-
 ## Searching Schedule/Job Details
 
 To perform a search, complete the following steps:

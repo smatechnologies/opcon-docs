@@ -26,16 +26,6 @@ The **Remote Instances** editor defines and manages connection information for a
 Only users in the ocadm role can add, edit, or delete remote instances.
 :::
 
-## When Would You Use It?
-
-- You need to review or update Remote Instances settings in Enterprise Manager
-- Remote Instances needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Remote Instances management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Remote Instances changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Remote Instances Toolbar
 
 The **Remote Instances** editor has a toolbar for managing remote instances. Select on any specific icon on the toolbar below to learn more about its functionality.

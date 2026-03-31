@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to view Server Options in Solution Manager.
 
-## When Would You Use It?
-
-- You need to inspect or audit Server Options records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Server Options state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Server Options records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Administration
 
 ### Required Privileges

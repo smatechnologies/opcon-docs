@@ -28,16 +28,6 @@ The following fields apply for setting Vision Actions:
 - **Events:** A list of Events defined for the Action. Select the Add button to open the **Create new Event** window
   - **Event Template**: Select an event template. The page updates dynamically to assist with filling out event details
 
-## When Would You Use It?
-
-- You need to review or update Vision Actions settings in Solution Manager
-- Vision Actions needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Vision Actions management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Vision Actions changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Using the Vision Action Admin Page
 
 The **Vision Actions** page is where you can view, add, edit, and delete actions.

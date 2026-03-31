@@ -67,14 +67,6 @@ The Operation tools perform the functions listed below, depending on the active 
 ||Size list: Selects the preferred size for displayed objects.|
 ||Take Screenshot: Takes a screenshot and saves the visible area of the current view.|
 
-## When Would You Use It?
-
-- The Operation tools perform the functions listed below, depending on the active view
-
-## Why Would You Use It?
-
-- **Operational value**: Provides filtering options for Dates, Job Statuses, Departments, Access Codes, and Tags
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

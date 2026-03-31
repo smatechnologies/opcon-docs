@@ -33,14 +33,6 @@ To encrypt a password, complete the following steps:
 7. Select **Close**
 8. Paste the encrypted password to the desired location
 
-## When Would You Use It?
-
-- Use this feature when a configuration value in OpCon requires an encrypted password
-
-## Why Would You Use It?
-
-- **Encrypting Passwords**: Use the Enterprise Manager encryption tool when a configuration value in OpCon requires an encrypted password
-
 ## FAQs
 
 **Q: How many steps does the Encrypting Passwords procedure involve?**

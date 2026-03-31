@@ -19,14 +19,6 @@ doc_type: reference
 
 The Daily Job Definition is the runtime instance of a master job. You can view all configured settings for a job running in the daily queue and, in some cases, make temporary changes that apply only to today's instance without affecting the master definition.
 
-## When Would You Use It?
-
-- You need to work with The Daily Job Definition, the runtime instance of a master job, in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: The Daily Job Definition is the runtime instance of a master job
-
 ## Configuration Options
 
 ## When would you use this section?

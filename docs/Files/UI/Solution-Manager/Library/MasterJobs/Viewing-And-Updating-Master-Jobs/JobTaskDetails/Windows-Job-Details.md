@@ -24,14 +24,6 @@ Windows job details define how OpCon executes a job on a Windows agent, includin
 
 To view, add, or edit a Windows job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- To view, add, or edit a Windows job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
-## Why Would You Use It?
-
-- **Viewing, Adding,**: To view, add, or edit a Windows job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
 ## Viewing Windows Job Details
 
 1. Go to **Library** > **Master Jobs**

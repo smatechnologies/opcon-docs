@@ -19,14 +19,6 @@ doc_type: conceptual
 
 OpCon uses specific rules to name and track schedules and jobs in the daily queue. Understanding these naming conventions is essential for building date-based automation, filtering in operations views, and identifying specific schedule or job instances.
 
-## When Would You Use It?
-
-- OpCon uses specific rules to name and track schedules and jobs in the daily queue
-
-## Why Would You Use It?
-
-- **Operational value**: Track schedules and jobs in the daily queue
-
 ## When would you use this section?
 
 - Understand how OpCon assigns and displays dates for daily schedules

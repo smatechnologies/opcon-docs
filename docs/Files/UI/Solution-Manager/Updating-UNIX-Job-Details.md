@@ -41,15 +41,6 @@ If you do not have the Machine Privilege, you will not be able to edit the daily
 Changes made to the job properties in the **Daily Job Definition** will take place immediately. If the job has already run, the changes will take effect the next time the job runs.
 :::
 
-## When Would You Use It?
-
-- An existing UNIX Job Details in Solution Manager requires changes
-- A process change or system update makes the current UNIX Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating UNIX Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating Job Action: Run Program Job Details
 
 To perform this procedure:

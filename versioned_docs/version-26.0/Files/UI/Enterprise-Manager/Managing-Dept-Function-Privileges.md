@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Departmental Function Privileges** editor maintains Role privileges for department functions. It contains a list of user account names, departments, and granted and revoked privileges. For conceptual information, refer to [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Departmental Function Privileges settings in Enterprise Manager
-- Departmental Function Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Departmental Function Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Departmental Function Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Granting Departmental Function Privileges
 
 To grant a privilege, complete the following steps:

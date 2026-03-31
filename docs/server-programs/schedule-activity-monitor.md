@@ -24,14 +24,6 @@ The Schedule Activity Monitor (SAM) determines when jobs in the Daily tables qua
 
 ![Schedule Activity Monitor](../Resources/Images/Server-Programs/samconfig.png "Schedule Activity Monitor")
 
-## When Would You Use It?
-
-- Use this feature when jobs in the Daily tables qualify for submission to an agent and processes OpCon events
-
-## Why Would You Use It?
-
-- **Schedule Activity**: The Schedule Activity Monitor (SAM) determines when jobs in the Daily tables qualify for submission to an agent and processes OpCon events
-
 ## Job Qualification Process
 
 SAM analyzes database information to determine when to submit jobs.

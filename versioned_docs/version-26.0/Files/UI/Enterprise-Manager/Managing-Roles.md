@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Roles** editor maintains Role privileges, displaying a list of Role names, Inherit Privilege specifications, and User Assignments. For conceptual information, refer to [Roles](../../../administration/roles.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Roles settings in Enterprise Manager
-- Roles needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Roles management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Roles changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Roles Toolbar
 
 The **Roles** editor has a toolbar for managing roles. Select on any specific icon on the toolbar below to learn more about its functionality.

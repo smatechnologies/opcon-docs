@@ -29,16 +29,6 @@ To perform this procedure, complete the following steps:
 3. *(Optional)* Right-click the **machine** that requires job starts to be enabled
 4. Select **Enable Job Starts** from the menu
 
-## When Would You Use It?
-
-- A Job Starts feature needs to be turned on in Enterprise Manager
-- A scheduled change window or operational event requires activating Job Starts in a controlled manner
-
-## Why Would You Use It?
-
-- **Activate required functionality**: Enabling Job Starts activates the feature for the intended scope without affecting other parts of the system
-- The change is recorded in the OpCon audit log, documenting when the Job Starts was activated and by whom
-
 ## FAQs
 
 **Q: How many steps does the Enabling Job Starts procedure involve?**

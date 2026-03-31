@@ -35,14 +35,6 @@ To enter and open a hyperlink, complete the following steps:
 7.  Select **Yes** to open the file
 :::
 
-## When Would You Use It?
-
-- To enter and open a hyperlink:
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: To enter and open a hyperlink:
-
 ## FAQs
 
 **Q: How many steps does the Entering and Opening Hyperlinks in the Documentation Frame procedure involve?**

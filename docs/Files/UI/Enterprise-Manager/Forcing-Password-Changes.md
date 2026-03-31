@@ -33,14 +33,6 @@ To force a password change, complete the following steps:
 5.  Select **Close ☒** to close the **User Accounts** screen
 :::
 
-## When Would You Use It?
-
-- To force a password change:
-
-## Why Would You Use It?
-
-- **Forcing Password**: To force a password change:
-
 ## FAQs
 
 **Q: How many steps does the Forcing Password Changes at Next Logon procedure involve?**

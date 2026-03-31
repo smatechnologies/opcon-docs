@@ -35,14 +35,6 @@ The **Windows Event Log** dialog provides the following fields for defining a Wi
 
 When the message appears in the Windows Event Log, any notification product that reads this log can send notifications.
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining a Windows Event Log notification: using The **Windows Event Log** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining a Windows Event Log notification: - Event ID (
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

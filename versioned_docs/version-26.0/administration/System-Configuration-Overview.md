@@ -18,14 +18,6 @@ doc_type: conceptual
 
 System configuration covers all server-level settings — from initial installation and upgrade procedures through runtime server options (logging, SMTP, SSO, notifications) and database management (mirroring, replication, backups).
 
-## When Would You Use It?
-
-- System configuration covers all server-level settings — from initial installation and upgrade procedures through runtime server options (logging, SMTP, SSO, notifications) and database management (mirroring, replication, backups)
-
-## Why Would You Use It?
-
-- **Centralized control**: System configuration covers all server-level settings — from initial installation and upgrade procedures through runtime server options (logging, SMTP, SSO, notifications) and database management (mirroring, replication, backups)
-
 ## When would you use this section?
 
 - Performing a new OpCon installation or upgrade

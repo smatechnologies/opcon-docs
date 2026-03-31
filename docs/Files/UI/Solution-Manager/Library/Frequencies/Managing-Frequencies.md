@@ -36,17 +36,6 @@ Related Topics
 - [Editing Frequencies](Editing-Frequencies.md)
 - [Forecasting Frequencies](Forecasting-Frequencies.md)
 
-## When Would You Use It?
-
-- You need to review or update Frequencies settings in Solution Manager
-- Frequencies needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Frequencies management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Frequencies changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing frequencies involve?**

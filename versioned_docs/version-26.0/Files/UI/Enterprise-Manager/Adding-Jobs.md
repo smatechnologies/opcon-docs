@@ -72,17 +72,6 @@ For more information, refer to [Job Type Management](Job-Type-Management.md).
 15. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 16. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to add Jobs in Enterprise Manager
-- The environment is expanding and requires additional Jobs to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Jobs to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Jobs and when
-
-
 ## FAQs
 
 **Q: What information is required to add jobs?**

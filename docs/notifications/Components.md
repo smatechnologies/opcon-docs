@@ -24,14 +24,6 @@ Event Notification in OpCon triggers notifications when Machine, Schedule, and J
 
 Notification types include: Windows Event Log, Email (SMTP), Network Message, SNMP Trap, Unisys SPO AL and CO Reports, Text Messages (SMS), OpCon Events, and Command.
 
-## When Would You Use It?
-
-- Use this feature when Machine, Schedule, and Job status change events occur
-
-## Why Would You Use It?
-
-- **Event Notification**: Event Notification in OpCon triggers notifications when Machine, Schedule, and Job status change events occur
-
 ## Components
 
 The Event Notification system consists of the following components:

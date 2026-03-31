@@ -21,14 +21,6 @@ doc_type: conceptual
 
 Threshold and resource updates cause OpCon to change a threshold value or resource count when a job enters a specific status — such as Finished OK or Failed. These updates are defined at the job level or at a specific frequency level.
 
-## When Would You Use It?
-
-- You need to configure or manage Threshold/Resource Updates in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Threshold/Resource Updates through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Threshold Updates
 
 When a job enters a specific status, OpCon processes a *threshold update* to change the value of a defined threshold and stores it in the database.

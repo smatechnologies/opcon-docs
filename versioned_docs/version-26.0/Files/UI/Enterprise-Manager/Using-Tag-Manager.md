@@ -26,14 +26,6 @@ The **Tag Manager** provides an easy way to create, look up, and associate jobs 
 
 The **Tag Manager** screen displays a list for tag selection and a table showing all schedules/jobs using the selected tag. Use the **Type Filter Text** box to filter by partial or full name. Type an \* (asterisk) before a word to search strings that do not start with that word.
 
-## When Would You Use It?
-
-- You need to provide an easy way to create, look up, and associate jobs to tags, with a quick cross-reference view of jobs using each tag using The **Tag Manager**
-
-## Why Would You Use It?
-
-- **Operational value**: Provides an easy way to create, look up, and associate jobs to tags, with a quick cross-r
-
 ## Tag Manager Toolbar
 
 The toolbar resides at the top-right corner of the screen.

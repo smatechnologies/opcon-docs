@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to add Batch Users in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to add Batch Users in Enterprise Manager
-- The environment is expanding and requires additional Batch Users to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Batch Users to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Batch Users and when
-
 ## Setting up a New Microsoft (MS) agent Batch User
 
 To add a Windows batch user, complete the following steps:

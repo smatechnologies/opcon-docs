@@ -31,14 +31,6 @@ doc_type: conceptual
 
 :::
 
-## When Would You Use It?
-
-- *Tags* are labels you can create to group jobs based on business needs
-
-## Why Would You Use It?
-
-- **Tags**: *Tags* are labels you can create to group jobs based on business needs
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

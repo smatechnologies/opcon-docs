@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Retrieve Application Log** skill retrieves the application log for a specified file name.
 
-## When Would You Use It?
-
-- The **Retrieve Application Log** skill retrieves the application log for a specified file name
-
-## Why Would You Use It?
-
-- **Retrieve Application**: The **Retrieve Application Log** skill retrieves the application log for a specified file name
-
 ## Skill Details
 
 ### Parameters

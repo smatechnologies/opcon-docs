@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Global Properties** editor defines and maintains OpCon Properties. It provides a list of global properties and their values. For conceptual information, refer to [Properties](../../../objects/properties.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Global Properties settings in Enterprise Manager
-- Global Properties needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Global Properties management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Global Properties changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Global Properties Toolbar
 
 The **Global Properties** editor has a toolbar for managing global properties. Select any icon on the toolbar below to learn more about its functionality.

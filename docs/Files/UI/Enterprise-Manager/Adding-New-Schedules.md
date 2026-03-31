@@ -31,16 +31,6 @@ To add a new schedule, complete the following steps:
 3. Enter a name for the new schedule. The schedule is created with default settings
 4. Select **OK** to close the dialog
 
-## When Would You Use It?
-
-- You need to add New Schedules using Workflow Designer in Enterprise Manager
-- The environment is expanding and requires additional New Schedules using Workflow Designer to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding New Schedules using Workflow Designer to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the New Schedules using Workflow Designer and when
-
 ## FAQs
 
 **Q: How do you save a new new schedules using workflow designer record?**

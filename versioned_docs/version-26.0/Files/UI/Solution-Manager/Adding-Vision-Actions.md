@@ -66,17 +66,6 @@ To add a Vision Action, complete the following steps:
 
 *(Optional)* Repeat steps 2–7 to add additional events.
 
-## When Would You Use It?
-
-- You need to add Vision Actions in Solution Manager
-- The environment is expanding and requires additional Vision Actions to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Vision Actions to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Vision Actions and when
-
-
 ## FAQs
 
 **Q: How do you save a new vision actions record?**

@@ -32,14 +32,6 @@ To open the mini map, complete the following steps:
 4. Select the **Close** button when finished viewing the mini map
 :::
 
-## When Would You Use It?
-
-- The **Mini Map** displays a miniature view of the entire **PERT** map of the schedule to browse specific information for schedules and/or jobs
-
-## Why Would You Use It?
-
-- **Opening Mini**: The **Mini Map** displays a miniature view of the entire **PERT** map of the schedule to browse specific information for schedules and/or jobs
-
 ## FAQs
 
 **Q: How many steps does the Opening Mini Maps procedure involve?**

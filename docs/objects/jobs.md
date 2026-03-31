@@ -24,14 +24,6 @@ A _job_ in OpCon is a task or activity, such as running a program on a remote ma
 
 All jobs must first be entered into the Job Master tables. Each job must belong to a schedule, and a schedule should already be defined. Changes made in Job Master Maintenance do not affect previously built Daily schedules.
 
-## When Would You Use It?
-
-- Use this feature when the job runs and what happens when it finishes
-
-## Why Would You Use It?
-
-- **Jobs**: A _job_ in OpCon is a task or activity, such as running a program on a remote machine, transferring files between machines, or running another schedule
-
 ## Job Details
 
 **Schedule Name**: Defines the name for the schedule containing the job.

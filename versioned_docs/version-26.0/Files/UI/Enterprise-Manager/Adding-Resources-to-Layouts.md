@@ -68,17 +68,6 @@ When selecting the Resource Dependency link line, the line should thicken and be
 Refer to the [Delete a Dependency](Adding-Jobs-to-Schedule-Layouts.md#Delete_a_Dependency) procedure to delete resource dependencies.
 :::
 
-## When Would You Use It?
-
-- You need to add Resources to Layouts in Enterprise Manager
-- The environment is expanding and requires additional Resources to Layouts to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Resources to Layouts to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Resources to Layouts and when
-
-
 ## FAQs
 
 **Q: How do you save a new resources to layouts record?**

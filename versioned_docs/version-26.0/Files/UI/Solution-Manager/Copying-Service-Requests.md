@@ -29,15 +29,6 @@ To copy a service request, complete the following steps:
 3.  _(Optional)_ Modify any existing information or settings
 4.  Select the **Save** button
 
-## When Would You Use It?
-
-- An existing Service Requests definition needs to be duplicated in Solution Manager
-- A new Service Requests with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Service Requests eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy service requests instead of creating a new one?**

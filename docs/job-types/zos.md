@@ -32,14 +32,6 @@ platform.
     execution profile and method of resolving security and access
     permissions.
 
-## When Would You Use It?
-
-- The information in this section applies to defining the z/OS Job Type
-
-## Why Would You Use It?
-
-- **z/OS Job**: The information in this section applies to defining the z/OS Job Type
-
 ## Job Fields
 
 ### Batch Job Fields

@@ -37,14 +37,6 @@ To perform this procedure, complete the following steps:
 7. Select **OK** to copy the job details to the Master definition
 8. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
 
-## When Would You Use It?
-
-- If you are in the ocadm role, or have function privileges to *Modify Jobs in Daily Schedule* and *Modify Jobs in Job Master Schedules*, this tool saves the platform-specific job definition information to the Master (starting below the **Machine Selection** section)
-
-## Why Would You Use It?
-
-- **Saving Job**: If you are in the ocadm role, or have function privileges to *Modify Jobs in Daily Schedule* and *Modify Jobs in Job Master Schedules*, this tool saves the platform-specific job definition information to the Master (starting below the **Machine Selection** section)
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

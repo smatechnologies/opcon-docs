@@ -34,14 +34,6 @@ To show schedule frequencies, complete the following steps:
 6. Select **Close ☒** to close the **Frequency Manager** screen
 :::
 
-## When Would You Use It?
-
-- To show schedule frequencies:
-
-## Why Would You Use It?
-
-- **Showing Schedule**: To show schedule frequencies:
-
 ## FAQs
 
 **Q: How many steps does the Showing Schedule Frequencies Only procedure involve?**

@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Authentication controls how users prove their identity before accessing OpCon. Solution Manager supports username/password login, SSO (single sign-on), and external API token generation for integration use cases.
 
-## When Would You Use It?
-
-- You need to controls how users prove their identity before accessing OpCon using Authentication
-
-## Why Would You Use It?
-
-- **Centralized control**: Authentication controls how users prove their identity before accessing OpCon
-
 ## When would you use this section?
 
 - A user needs to log in to Solution Manager for the first time

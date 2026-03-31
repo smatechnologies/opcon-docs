@@ -38,14 +38,6 @@ When the schedule builds, the single job from Job Master becomes several jobs vi
 Because "Backup" was selected in the Job Group, if any one of the jobs fails, the notification is sent, including the exact job name so customers know which instance failed.
 :::
 
-## When Would You Use It?
-
-- Use this feature when the status of one or more items in a group changes
-
-## Why Would You Use It?
-
-- **Notification Triggers**: Notification triggers write notification information to the OpCon database when the status of one or more items in a group changes
-
 ## Machine Triggers
 
 |Status|Definition|

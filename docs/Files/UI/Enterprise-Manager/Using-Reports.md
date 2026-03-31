@@ -24,14 +24,6 @@ The **Reports** view is used to select and view reports. For conceptual informat
 
 Upon activation, the **Reports** screen displays a list for selecting the preferred report. The appropriate report displays in the **Reports** view based on your selection.
 
-## When Would You Use It?
-
-- The **Reports** view is used to select and view reports
-
-## Why Would You Use It?
-
-- **Using Reports**: The **Reports** view is used to select and view reports
-
 ## EM Reports Toolbar
 
 This toolbar resides at the top-right corner of the **Reports** screen. Select any icon on the toolbar below to learn more about its functionality.

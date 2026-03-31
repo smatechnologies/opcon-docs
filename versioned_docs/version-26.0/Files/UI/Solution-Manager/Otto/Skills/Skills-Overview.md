@@ -24,14 +24,6 @@ doc_type: conceptual
 
 Skills perform specific tasks in OpCon directly via the Otto chatbot, without navigating through the OpCon UI. Each skill maps to a specific API endpoint in OpCon and is defined in the OpCon API documentation.
 
-## When Would You Use It?
-
-- Skills perform specific tasks in OpCon directly via the Otto chatbot, without navigating through the OpCon UI
-
-## Why Would You Use It?
-
-- **Overview**: Skills perform specific tasks in OpCon directly via the Otto chatbot, without navigating through the OpCon UI
-
 ## Accessing Skills
 
 to run a skill, ask Otto to perform the task. If the skill is available and enabled, Otto responds with a confirmation message before running. If the skill is unavailable or fails, Otto responds with an error message.

@@ -28,14 +28,6 @@ The Master Jobs tab allows you to manage master jobs.
 
 Please check back for more content.
 
-## When Would You Use It?
-
-- You need to allows you to manage master jobs using The Master Jobs tab
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to manage master jobs
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -37,14 +37,6 @@ Each input file must contain a `<msgtype>` element describing the type of SMADDI
 |add_dependency|Adds a new job, threshold, or resource dependency to a job. If a schedule date is specified, the dependency applies to the daily tables. If no schedule date is specified, the dependency applies to the master and can be associated with a frequency. For more information, refer to [add_dependency Element Structure](./Data-Input-Message-Elements.md#add_dependency-element-structure).|
 |add_documentation|Adds documentation for a schedule or job. For more information, refer to [add_documentation Element Structure](./Data-Input-Message-Elements.md#add_documentation-element-structure).|
 
-## When Would You Use It?
-
-- Each input file must contain a `<msgtype>` element describing the type of SMADDI message
-
-## Why Would You Use It?
-
-- **SMADDI Message**: Each input file must contain a `<msgtype>` element describing the type of SMADDI message
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

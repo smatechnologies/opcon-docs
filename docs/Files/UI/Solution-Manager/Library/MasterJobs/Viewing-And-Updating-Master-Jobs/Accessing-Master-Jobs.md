@@ -25,14 +25,6 @@ As part of the **Library** module, those with the appropriate privileges can vie
 - **Read-only**: Review defined properties for the selected job. Properties cannot be edited
 - **Admin**: Modify properties, including platform-specific details, for the selected job
 
-## When Would You Use It?
-
-- You need to retrieve or review Master Job Definition information from Solution Manager
-
-## Why Would You Use It?
-
-- **Accessing Master**: As part of the **Library** module, those with the appropriate privileges can view and modify master job definitions
-
 ## Administration
 
 ### Required Privileges

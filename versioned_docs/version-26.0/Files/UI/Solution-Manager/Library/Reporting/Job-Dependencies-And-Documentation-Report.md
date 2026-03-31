@@ -48,14 +48,6 @@ _Column menu showing the Filter option_
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Job Dependencies and Documentation Report** is used to view daily job dependencies, documentation, and related scheduling information
-
-## Why Would You Use It?
-
-- **Job Dependencies**: The **Job Dependencies and Documentation Report** is used to view daily job dependencies, documentation, and related scheduling information
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

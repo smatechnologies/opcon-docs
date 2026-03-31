@@ -64,17 +64,6 @@ To set the QoS and SLA ranges, add frequencies, and save the tag card, complete 
 4. Select **OK** to save the changes. The new card name displays on the Vision Settings page
 5. Select **Save** in the bottom-left corner
 
-## When Would You Use It?
-
-- You need to create Cards in Solution Manager
-- A new business process or automation requirement calls for a Cards that does not yet exist
-
-## Why Would You Use It?
-
-- **Standardize definitions**: Creating Cards in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
-- All Cards definitions are stored in the OpCon database, making them available to all authorized interfaces and users
-
-
 ## FAQs
 
 **Q: How many steps does the Creating Cards procedure involve?**

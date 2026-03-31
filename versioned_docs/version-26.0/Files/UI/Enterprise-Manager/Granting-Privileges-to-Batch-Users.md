@@ -35,14 +35,6 @@ To grant privileges, complete the following steps:
 7.  Select **Close ☒** to the right of the **Batch User Privileges** tab to close the screen
 :::
 
-## When Would You Use It?
-
-- You need to configure or manage Granting Privileges to Batch Users in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Granting Privileges to Batch Users through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## FAQs
 
 **Q: How many steps does the Granting Privileges to Batch Users procedure involve?**

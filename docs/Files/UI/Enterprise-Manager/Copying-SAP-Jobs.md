@@ -40,15 +40,6 @@ To copy an SAP job, complete the following steps:
 12. Select **OK**
 :::
 
-## When Would You Use It?
-
-- An existing SAP Jobs definition needs to be duplicated in Enterprise Manager
-- A new SAP Jobs with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing SAP Jobs eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy sap jobs instead of creating a new one?**

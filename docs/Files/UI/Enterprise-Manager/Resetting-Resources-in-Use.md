@@ -41,14 +41,6 @@ To reset a resource in use, complete the following steps:
 7. Select **OK** to save, or **Cancel** to discard
 8. Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen. For more information, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help
 
-## When Would You Use It?
-
-- If the **Resources in Use** value is incorrect due to an unusual occurrence, use this feature to correct it
-
-## Why Would You Use It?
-
-- **Resetting Resources**: If the **Resources in Use** value is incorrect due to an unusual occurrence, use this feature to correct it
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

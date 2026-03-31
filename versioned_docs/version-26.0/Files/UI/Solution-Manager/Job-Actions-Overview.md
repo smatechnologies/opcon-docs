@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Job actions let you view job configuration, status history, output logs, and dependency maps — and change job status, add jobs to running schedules, or delete jobs from the queue.
 
-## When Would You Use It?
-
-- Job actions let you view job configuration, status history, output logs, and dependency maps — and change job status, add jobs to running schedules, or delete jobs from the queue
-
-## Why Would You Use It?
-
-- **Centralized control**: Job actions let you view job configuration, status history, output logs, and dependency maps — and change job status, add jobs to running schedules, or delete jobs from the queue
-
 ## When would you use this section?
 
 - A job has failed and you need to review its output and restart it

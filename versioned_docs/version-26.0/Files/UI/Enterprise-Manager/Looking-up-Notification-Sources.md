@@ -35,14 +35,6 @@ To look up a notification source, complete the following steps:
 5. View the **Results** table showing Notification ID, Notification Type, Group Type, Group Name, and Trigger information
 6. Select **OK** to close the dialog
 
-## When Would You Use It?
-
-- To look up a notification source:
-
-## Why Would You Use It?
-
-- **Looking up**: To look up a notification source:
-
 ## FAQs
 
 **Q: How many steps does the Looking up Notification Sources procedure involve?**

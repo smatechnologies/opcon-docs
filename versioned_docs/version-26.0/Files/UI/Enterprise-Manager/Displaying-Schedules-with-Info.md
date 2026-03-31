@@ -30,14 +30,6 @@ To display the schedule, complete the following steps:
 4. Select the **Job Related** option to display job-related dependency types
 5. Select the **Frequency Related** option to display all frequency-related dependency types. To display specific frequencies, clear **Frequency Related** and select the desired **frequencies** in the associated list box
 
-## When Would You Use It?
-
-- To display the schedule:
-
-## Why Would You Use It?
-
-- **Displaying Schedules**: To display the schedule:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

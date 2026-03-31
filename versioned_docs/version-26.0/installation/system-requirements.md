@@ -25,14 +25,6 @@ Getting Started with OpCon covers the hardware and software requirements that mu
 Do not use the underscore character (\_) in the naming convention of the dedicated OpCon server name (e.g., myservername_2017). Underscores in the server name directly affect OpCon license validation.
 :::
 
-## When Would You Use It?
-
-- You need to configure or manage Getting Started in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Getting Started through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Hardware requirements
 
 Ensure the following minimum hardware requirements are met on the OpCon server based on environment size. Select the larger environment if daily job count and concurrent job executions recommend different sizes.

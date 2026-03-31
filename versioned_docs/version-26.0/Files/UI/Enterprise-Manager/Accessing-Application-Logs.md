@@ -32,14 +32,6 @@ C:\Documents and Settings\User\\.enterpriseManager\\.metadata\\.log
 
 Once a log file reaches 1,002 KB, the **.log** file is saved as **.bak_0.log** and a new **.log** file starts. Subsequent saved files are named **.bak_1.log**, **.bak_2.log**, and so on. Each saved log file contains a comment near the beginning listing the previous log file name and its creation date and time. The EM retains a maximum of 10 log files, overwriting the oldest when the limit is reached.
 
-## When Would You Use It?
-
-- You need to retrieve or review Application Logs information from Enterprise Manager
-
-## Why Would You Use It?
-
-- **Accessing Application**: The Enterprise Manager application logs record your activities while the EM is open
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

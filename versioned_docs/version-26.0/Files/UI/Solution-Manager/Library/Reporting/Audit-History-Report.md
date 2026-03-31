@@ -58,14 +58,6 @@ Available categories for filtering:
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Audit History Report** shows the history of user updates to the OpCon database
-
-## Why Would You Use It?
-
-- **Audit History**: The **Audit History Report** shows the history of user updates to the OpCon database
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

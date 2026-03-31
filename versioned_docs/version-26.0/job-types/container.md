@@ -59,14 +59,6 @@ When the Inventory schedule builds, the Process Stores Container job ends up wit
 
 :::
 
-## When Would You Use It?
-
-- OpCon Container jobs are used to run a subschedule
-
-## Why Would You Use It?
-
-- **Container Job**: OpCon Container jobs are used to run a subschedule
-
 ## Container Details
 
 The following information applies to defining a Container job.

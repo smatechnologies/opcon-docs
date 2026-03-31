@@ -32,14 +32,6 @@ To change the focus of a day, complete the following steps:
 3. Select a **date** with a green background
 4. Select the **schedule** to view its information in the Daily tables
 
-## When Would You Use It?
-
-- To change the focus of a day:
-
-## Why Would You Use It?
-
-- **Changing Focus**: To change the focus of a day:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

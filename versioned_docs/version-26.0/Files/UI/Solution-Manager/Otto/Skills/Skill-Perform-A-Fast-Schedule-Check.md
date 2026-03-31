@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Perform a Fast Schedule Check** skill performs a schedule check for a specified schedule on a specified date.
 
-## When Would You Use It?
-
-- The **Perform a Fast Schedule Check** skill performs a schedule check for a specified schedule on a specified date
-
-## Why Would You Use It?
-
-- **Perform a**: The **Perform a Fast Schedule Check** skill performs a schedule check for a specified schedule on a specified date
-
 ## Skill Details
 
 ### Parameters

@@ -30,16 +30,6 @@ To view escalations, complete the following steps:
 4. *(Optional)* Select **Open external editor** to open a text editor (e.g., Notepad) to preserve the notification details
 5. Close the **Notification Details** dialog when done
 
-## When Would You Use It?
-
-- You need to inspect or audit Notification Details records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Notification Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Notification Details records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: How many steps does the Viewing Notification Details procedure involve?**

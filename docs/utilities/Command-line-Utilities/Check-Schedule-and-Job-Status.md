@@ -22,14 +22,6 @@ doc_type: reference
 
 SMAChkStat.exe compares schedule and job statuses in OpCon against a logical expression, then returns a pass or fail exit code. This enables branching to different jobs or OpCon events based on current status.
 
-## When Would You Use It?
-
-- SMAChkStat.exe compares schedule and job statuses in OpCon against a logical expression, then returns a pass or fail exit code
-
-## Why Would You Use It?
-
-- **Operational value**: Enables branching to different jobs or OpCon events based on current status
-
 ## Rules
 
 - Returns exit code 33001 if the status does not match the expression; returns 0 if it does

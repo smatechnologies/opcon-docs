@@ -35,14 +35,6 @@ The **SPO** tab provides the following fields for defining an SPO AL Report or a
 This notification type is disabled on Linux. Notifications defined before Release 20.0.0 will be disabled.
 :::
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining an SPO AL Report or a CO Report notification: using The **SPO** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining an SPO AL Report or a CO Report notification:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -60,14 +60,6 @@ Related Topics
 - [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
 
-## When Would You Use It?
-
-- A Schedule Checks action needs to be carried out in Solution Manager
-
-## Why Would You Use It?
-
-- **Ensure consistent operations**: Performing Schedule Checks actions through OpCon creates a centralized, auditable record of all operational changes
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -37,17 +37,6 @@ To configure the user input, complete the following steps:
 5. Select **Choice** in the **User Input Type** list
 6. Select **OK** to confirm, or **Cancel** to discard changes and return to the **Service Request definition** page
 
-## When Would You Use It?
-
-- You need to adjust settings for Choice User Inputs in Solution Manager
-- Default Choice User Inputs settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Choice User Inputs settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
-
 ## FAQs
 
 **Q: What does configuring choice user inputs control?**

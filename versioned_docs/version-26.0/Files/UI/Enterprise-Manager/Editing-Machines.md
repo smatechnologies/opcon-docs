@@ -34,17 +34,6 @@ To edit a machine, complete the following steps:
 6.  Right-click over the graphic in the **Communication Status** frame and select **Start Communication** to resume communication with the agent
 7.  Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
 
-## When Would You Use It?
-
-- An existing Machines in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Machines definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Machines in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Machines are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to machines take effect immediately?**

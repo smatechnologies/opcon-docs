@@ -34,14 +34,6 @@ To define a schedule instance, complete the following steps:
 8. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 9. Select **Close ☒** to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- A new Schedule Instances for Machines in Machine Groups definition needs to be established in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Schedule Instances for Machines in Machine Groups in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

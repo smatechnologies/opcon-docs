@@ -34,14 +34,6 @@ To move a job, complete the following steps:
 6. Select **OK** to run the move or **Cancel** to discard
 7. Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to configure or manage Moving Jobs in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Moving Jobs through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## FAQs
 
 **Q: How many steps does the Moving Jobs procedure involve?**

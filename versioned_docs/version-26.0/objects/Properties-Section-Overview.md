@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Properties are named variables referenced anywhere a token is accepted in OpCon — job parameters, event strings, file paths, and more. System properties are built in and updated automatically. Global properties are user-defined and available system-wide. Instance properties are scoped to a specific schedule or job instance.
 
-## When Would You Use It?
-
-- Properties are named variables referenced anywhere a token is accepted in OpCon — job parameters, event strings, file paths, and more
-
-## Why Would You Use It?
-
-- **Centralized control**: Properties are named variables referenced anywhere a token is accepted in OpCon — job parameters, event strings, file paths, and more
-
 ## Configuration Options
 
 ## When would you use this section?

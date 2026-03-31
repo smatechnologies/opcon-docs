@@ -24,16 +24,6 @@ doc_type: procedural
 
 Use this procedure to add Tags in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to add Tags in Enterprise Manager
-- The environment is expanding and requires additional Tags to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Tags to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Tags and when
-
 ## Adding Job-Related Tags
 
 To add a tag, complete the following steps:

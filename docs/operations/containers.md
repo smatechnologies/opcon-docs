@@ -32,14 +32,6 @@ Because subschedules are the "program" the Container job runs, it is important t
 8. If a subschedule job is built with a status of To Be Skipped and its parent Container job is restarted, then the job is also restarted instead of remaining in a Skipped state
 9. If a subschedule job is built with a status of On Hold and its parent Container job is released, then the job is also released instead of remaining in a On Hold state
 
-## When Would You Use It?
-
-- Use this feature when a Container job and subschedule are built
-
-## Why Would You Use It?
-
-- **Container Jobs**: Because subschedules are the "program" the Container job runs, it is important to understand the connection between the Container and the subschedule
-
 ## Restarting Jobs
 
 - If a user restarts a Container job at the *schedule level*, the graphical interfaces display a message to provide a choice to:

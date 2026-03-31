@@ -24,14 +24,6 @@ z/OS job details define how OpCon submits a job to a z/OS environment, including
 
 To view a z/OS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- To view a z/OS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
-## Why Would You Use It?
-
-- **Viewing, Adding,**: To view a z/OS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
 ## Viewing z/OS Job Details
 
 1. Go to **Library** > **Master Jobs**

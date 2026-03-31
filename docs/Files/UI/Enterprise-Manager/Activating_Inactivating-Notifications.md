@@ -32,14 +32,6 @@ To activate or inactivate a notification, complete the following steps:
 6. Select the option to the left of the preferred notification
 7. Select the **green** Power symbol to the left of the **Notification** option
 
-## When Would You Use It?
-
-- To activate or inactivate a notification:
-
-## Why Would You Use It?
-
-- **Activating/Inactivating Notifications**: To activate or inactivate a notification:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

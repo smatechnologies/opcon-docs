@@ -35,17 +35,6 @@ To edit a batch user, complete the following steps:
 Reserved batch users, e.g., "Use Service Account" for Windows, cannot be edited at this time.
 :::
 
-## When Would You Use It?
-
-- An existing Batch Users in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Batch Users definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Batch Users in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Batch Users are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to batch users take effect immediately?**

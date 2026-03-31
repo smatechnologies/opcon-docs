@@ -33,14 +33,6 @@ To unassign a user from a role, complete the following steps:
 5.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Roles** toolbar
 6.  Select **Close ☒** (to the right of the **Roles** tab) to close the **Roles** screen
 
-## When Would You Use It?
-
-- To unassign a user from a role:
-
-## Why Would You Use It?
-
-- **Unassigning Users**: To unassign a user from a role:
-
 ## FAQs
 
 **Q: How many steps does the Unassigning Users from Roles procedure involve?**

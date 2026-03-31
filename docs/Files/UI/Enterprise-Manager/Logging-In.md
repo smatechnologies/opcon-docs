@@ -24,14 +24,6 @@ Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects
 
 Upon initial installation, the only valid user is **ocadm**, the full administrative user. The OpCon administrator should log in as **ocadm** and [create individual accounts](Working-with-Security.md#chapter_4_-_security_3886353224_useraccounts) for all users.
 
-## When Would You Use It?
-
-- Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions
-
-## Why Would You Use It?
-
-- **Logging In/Out**: Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions
-
 ## Log in to the Enterprise Manager
 
 1. Open the Enterprise Manager application (e.g., **Start \> Programs \> OpConxps \> Enterprise Manager**)

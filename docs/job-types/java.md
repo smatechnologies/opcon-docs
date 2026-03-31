@@ -21,14 +21,6 @@ doc_type: conceptual
 
 The information in this section applies to defining a Java job. The Java job type supports three operations than can be run by the Java Agent: Class, Command, and JAR.
 
-## When Would You Use It?
-
-- The information in this section applies to defining a Java job
-
-## Why Would You Use It?
-
-- **Java Job**: The information in this section applies to defining a Java job
-
 ## Class Operation Fields
 
 The Class operation is used to run a Java class. The following information applies to defining Class operations:

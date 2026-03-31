@@ -39,16 +39,6 @@ a.  Right-click the **machine** and select **Machine Information**. For addition
 b.  Select **OK** to close the **Machine Information** dialog.
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Machine Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Machine Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Machine Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: What information does the Machine Information view display?**

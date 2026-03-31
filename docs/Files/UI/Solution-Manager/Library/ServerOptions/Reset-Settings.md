@@ -22,14 +22,6 @@ doc_type: conceptual
 
 Reset Settings in Solution Manager's Server Options lets administrators restore server option values to their system defaults — either for all options at once or for just the current tab — without manually reverting each setting individually.
 
-## When Would You Use It?
-
-- You need to configure or manage Reset Settings in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Reset Settings through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Administration
 
 ### Required Privileges

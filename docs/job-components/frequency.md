@@ -28,14 +28,6 @@ The following information applies to defining a frequency:
 - **Priority**: Defines the priority of the frequency regarding other frequencies defined for the job. For additional information, refer to [Multiple Frequencies and Frequency Priority](../automation-concepts/frequencies.md#multiple-frequencies-and-frequency-priority)
 - **Advanced Frequency Settings**: Defines the advanced frequency features applied to a job. For additional information, refer to [Advanced Frequency Settings](../automation-concepts/frequencies.md#advanced-frequency-settings)
 
-## When Would You Use It?
-
-- Use this feature when a job is to be run
-
-## Why Would You Use It?
-
-- **Job Frequency**: The **Frequency** specifies the weeks, days, and calendar information for when a job is to be run
-
 ## Other Job Details
 
 The other job details are attached to a defined frequency. This provides the flexibility to define different criteria on different sets of dates. Other job detail information includes:

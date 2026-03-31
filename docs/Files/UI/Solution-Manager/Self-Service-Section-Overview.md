@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Self Service is a licensed Solution Manager module that lets non-technical staff trigger OpCon automation workflows without IT involvement. Administrators design service requests with optional user inputs; front-office staff run them on demand.
 
-## When Would You Use It?
-
-- You need to work with Self Service, a licensed Solution Manager module that lets non-technical staff trigger OpCon automation workflows without IT involvement, in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Self Service is a licensed Solution Manager module that lets non-technical staff trigger OpCon automation workflows without IT involvement
-
 ## When would you use this section?
 
 - Set up Self Service for the first time or configure service requests

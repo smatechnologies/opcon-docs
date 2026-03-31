@@ -33,14 +33,6 @@ The **Email** dialog provides the following fields for defining an SMTP email no
 - **Message**: A user-defined message
 - **Attachments**: Files to include with the message. Wildcards are not allowed in filenames
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining an SMTP email notification: using The **Email** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining an SMTP email notification: - To (Required): S
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

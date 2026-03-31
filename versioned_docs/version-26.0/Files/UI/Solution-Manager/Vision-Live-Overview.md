@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Vision Live shows real-time status of all Vision cards. Cards aggregate job completion status for jobs matching their tag criteria. Administrators configure cards and settings in Admin Mode; regular users monitor status and drill into card details in User Mode.
 
-## When Would You Use It?
-
-- Vision Live shows real-time status of all Vision cards
-
-## Why Would You Use It?
-
-- **Centralized control**: Vision Live shows real-time status of all Vision cards
-
 ## When would you use this section?
 
 - Monitor card health and job completion status in real time

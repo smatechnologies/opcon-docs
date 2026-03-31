@@ -33,17 +33,6 @@ To edit a threshold, complete the following steps:
 5.  Select **Close ☒** to close the **Thresholds** screen
 :::
 
-## When Would You Use It?
-
-- An existing Thresholds in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Thresholds definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Thresholds in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Thresholds are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to thresholds take effect immediately?**

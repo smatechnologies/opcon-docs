@@ -19,14 +19,6 @@ doc_type: conceptual
 
 OpCon Solution Manager is a web-based interface for managing OpCon from any supported browser. Connecting to it requires meeting minimum system requirements, authenticating with valid credentials, and understanding the navigation layout — including keyboard shortcuts for efficient use.
 
-## When Would You Use It?
-
-- You need to configure or manage this feature in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing this feature through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## When would you use this section?
 
 - You are a new user accessing Solution Manager for the first time

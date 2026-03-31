@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Master jobs are the permanent definitions that OpCon copies into the daily queue during schedule build. They can be added from scratch, copied from existing jobs, moved between schedules, or reviewed for cross-references before deletion.
 
-## When Would You Use It?
-
-- Master jobs are the permanent definitions that OpCon copies into the daily queue during schedule build
-
-## Why Would You Use It?
-
-- **Centralized control**: Master jobs are the permanent definitions that OpCon copies into the daily queue during schedule build
-
 ## When would you use this section?
 
 - Add a new job to a master schedule

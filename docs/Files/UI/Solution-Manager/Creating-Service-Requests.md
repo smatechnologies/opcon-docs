@@ -90,17 +90,6 @@ Refer to [Setting up User Inputs](Setting-up-User-Inputs.md#_Setting_Up_User) fo
 Refer to [Setting up Privileges](Setting-up-Privileges.md#_Setting_Up_Privileges) for more detail.
 :::
 
-## When Would You Use It?
-
-- You need to create Service Requests in Solution Manager
-- A new business process or automation requirement calls for a Service Requests that does not yet exist
-
-## Why Would You Use It?
-
-- **Standardize definitions**: Creating Service Requests in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
-- All Service Requests definitions are stored in the OpCon database, making them available to all authorized interfaces and users
-
-
 ## Exception Handling
 
 **Track Event Executions job fails and the Service Request fails** — When the Track Event Executions option is enabled, a Service Request completes only when all added jobs finish; if any tracked job fails, the Service Request itself is marked as failed — Review the failed job's output and logs to determine the root cause, correct the job definition or data, and resubmit the Service Request.

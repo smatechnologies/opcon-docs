@@ -22,14 +22,6 @@ doc_type: procedural
 
 The values of properties can be retrieved by tokenizing the property name and using the token in Job Definitions, Schedule Completion Events, Job Events, External Events, and notifications defined in the Notification Manager.
 
-## When Would You Use It?
-
-- The values of properties can be retrieved by tokenizing the property name and using the token in Job Definitions, Schedule Completion Events, Job Events, External Events, and notifications defined in the Notification Manager
-
-## Why Would You Use It?
-
-- **Using Properties**: The values of properties can be retrieved by tokenizing the property name and using the token in Job Definitions, Schedule Completion Events, Job Events, External Events, and notifications defined in the Notification Manager
-
 ## Tokens
 
 A *token* is a placeholder for the value of a property. OpCon will resolve tokens to their property values before processing.

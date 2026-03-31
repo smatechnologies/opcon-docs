@@ -38,17 +38,6 @@ Select a tag in the list to view the tag associations grid, which displays the s
 
 See [Tag Concepts](../../../../job-components/tags.md).
 
-## When Would You Use It?
-
-- You need to review or update Tags settings in Solution Manager
-- Tags needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Tags management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Tags changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-
 ## FAQs
 
 **Q: What does managing tags involve?**

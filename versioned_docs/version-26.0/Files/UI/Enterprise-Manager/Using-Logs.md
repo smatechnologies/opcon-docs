@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Logs** option provides links to display the [SAM server log files](Types-of-Logs.md). To enable this feature, share the **OpConxps** folder on the SAM server and configure the Enterprise Manager connection profile to point to that directory. For more information, refer to [Setting up New Profiles](Managing-Connection-Profiles.md) and [Setting Preferences for Log Viewer](Preferences-for-Log-Viewer.md).
 
-## When Would You Use It?
-
-- You need to provide links to display the [SAM server log files](Types-of-Logs.md) using The **Logs** option
-
-## Why Would You Use It?
-
-- **Operational value**: Provides links to display the SAM server log files
-
 ## Logs Toolbar and Right-click Menu
 
 The **Logs** have a standard toolbar for managing logs. Select any icon to learn more about its functionality. All toolbar options are also available by right-clicking inside any log you are viewing.

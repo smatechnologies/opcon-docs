@@ -29,14 +29,6 @@ For information on **Vision** functions, refer to:
 -   [Using Health](Using-Health.md)
 -   [Using Settings](Using-Settings.md)
 
-## When Would You Use It?
-
-- For information on **Vision** functions, refer to:
-
-## Why Would You Use It?
-
-- **Using Vision**: For information on **Vision** functions, refer to:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

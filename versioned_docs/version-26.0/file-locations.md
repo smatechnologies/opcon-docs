@@ -33,14 +33,6 @@ Output file location defaults are also drive-dependent, but can be set to any lo
 - **Non-system drive**: Output files default to the same folder as the programs
 - **Custom path**: The `SMACommon.ini` file indicates the output file path
 
-## When Would You Use It?
-
-- During installation, you chose where OpCon programs are installed and where they write output files
-
-## Why Would You Use It?
-
-- **File Locations**: During installation, you chose where OpCon programs are installed and where they write output files
-
 ## Installed to System Drive using Default Path
 
 :::info Example

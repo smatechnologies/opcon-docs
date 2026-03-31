@@ -30,14 +30,6 @@ To adjust stop/start communication, complete the following steps:
 4. Select **Start Communication** or **Stop Communication**
 5. Select **Close ☒** to close the **Machines** screen
 
-## When Would You Use It?
-
-- To adjust stop/start communication:
-
-## Why Would You Use It?
-
-- **Adjusting Stop/Start**: To adjust stop/start communication:
-
 ## FAQs
 
 **Q: How many steps does the Adjusting Stop/Start Communication with Machines procedure involve?**

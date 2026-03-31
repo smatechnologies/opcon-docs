@@ -28,16 +28,6 @@ Daily Processes Page
 
 ![Solution Manager Daily Processes](../../../Resources/Images/SM/Daily-Processes.png "Solution Manager Daily Processes")
 
-## When Would You Use It?
-
-- You need to review or update Daily Processes settings in Solution Manager
-- Daily Processes needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Daily Processes management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Daily Processes changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Toolbar Options
 
 The **Daily Processes** page has the following toolbar options:

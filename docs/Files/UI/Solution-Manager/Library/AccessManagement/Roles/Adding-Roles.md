@@ -24,16 +24,6 @@ doc_type: procedural
 
 Use this procedure to add Roles in Solution Manager.
 
-## When Would You Use It?
-
-- You need to add Roles in Solution Manager
-- The environment is expanding and requires additional Roles to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Roles to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Roles and when
-
 ## Administration
 
 ### Required Privileges

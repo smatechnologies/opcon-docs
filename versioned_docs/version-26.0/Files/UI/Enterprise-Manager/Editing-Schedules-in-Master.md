@@ -39,17 +39,6 @@ To perform this procedure, complete the following steps:
 9. Select **Close ☒** to close the **Schedule Master** screen
 10. Select **Close ☒** to close the **Daily Maintenance** screen
 
-## When Would You Use It?
-
-- An existing Schedules in Master Schedule Tables in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Schedules in Master Schedule Tables definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Schedules in Master Schedule Tables in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Schedules in Master Schedule Tables are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to schedules in master schedule tables take effect immediately?**

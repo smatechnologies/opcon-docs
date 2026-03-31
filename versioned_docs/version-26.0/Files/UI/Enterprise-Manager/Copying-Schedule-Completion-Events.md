@@ -37,15 +37,6 @@ To copy a schedule completion event, complete the following steps:
 9.  Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 :::
 
-## When Would You Use It?
-
-- An existing Schedule Completion Events definition needs to be duplicated in Enterprise Manager
-- A new Schedule Completion Events with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Schedule Completion Events eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy schedule completion events instead of creating a new one?**

@@ -30,14 +30,6 @@ to the <Target Directory\>\\OpConxps\\ MSLSAM\\ directory with the
 Microsoft agent package. The SMAHoliday utility can be run as a job if
 desired.
 
-## When Would You Use It?
-
-- You need to work with SMAHoliday (SMAHoliday.exe), a utility that updates the OpCon database, in OpCon
-
-## Why Would You Use It?
-
-- **SMAHoliday**: SMAHoliday (SMAHoliday.exe) is a utility that updates the OpCon database
-
 ## Configuration Options
 
 ## Backwards Compatibility

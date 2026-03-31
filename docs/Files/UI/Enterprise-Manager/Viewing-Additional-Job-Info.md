@@ -31,17 +31,6 @@ To view Additional Job Information in the Enterprise Manager, complete the follo
 5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the job, then select **Close**
 6.  Select the ![View Schedule History icon](../../../Resources/Images/EM/EMviewhist.png "View Schedule History icon") **View Job History** button to view execution history for the job, then select **Close**
 
-## When Would You Use It?
-
-- You need to inspect or audit Additional Job Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Additional Job Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Additional Job Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-
 ## FAQs
 
 **Q: How many steps does the Viewing Additional Job Information procedure involve?**

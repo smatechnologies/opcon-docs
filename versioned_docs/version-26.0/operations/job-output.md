@@ -37,17 +37,6 @@ To view job output successfully, complete the following setup:
 - In the **Enterprise Manager**:
   - Set the **JORS Port number** in *Advanced Machine Properties* to match the agent's configuration file. Refer to [Set JORS Port Number for the Machine](../Files/UI/Enterprise-Manager/Configuring-Advanced-Machine-Properties.md#Set_JORS_Port_Number_for_the_Machine) in the **Enterprise Manager** online help
 
-## When Would You Use It?
-
-- You need to inspect or audit a Job Output File records in OpCon Operations
-- An audit, compliance review, or operational check requires inspection of current a Job Output File state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting a Job Output File records in OpCon Operations supports informed decision-making and provides an audit trail for compliance reviews
-- Information in OpCon Operations reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-
 ## FAQs
 
 **Q: What is JORS?**

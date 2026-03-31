@@ -25,14 +25,6 @@ OpCon includes [Predefined Reports](./predefined.md) for gathering information o
 
 Custom reports can be integrated into the database using the Report Management utility. Refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help.
 
-## When Would You Use It?
-
-- OpCon includes [Predefined Reports](./predefined.md) for gathering information on OpCon status
-
-## Why Would You Use It?
-
-- **OpCon Reporting**: OpCon includes [Predefined Reports](./predefined.md) for gathering information on OpCon status
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

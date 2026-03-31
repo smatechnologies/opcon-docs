@@ -35,17 +35,6 @@ To delete a tag, complete the following steps:
 7.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 8.  Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- An existing Tags in Enterprise Manager is no longer needed
-- The Tags has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Tags definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
-
 ## FAQs
 
 **Q: Can a tags record be recovered after deletion?**

@@ -26,14 +26,6 @@ The SMA OpCon Configuration Utility configures scripts and configuration files o
 
 To open the utility, go to: **Start \> All Programs \> Opconxps \> Utilities \> SMA OpCon Configuration Utility**.
 
-## When Would You Use It?
-
-- The SMA OpCon Configuration Utility configures scripts and configuration files on machines running SMA OpCon software
-
-## Why Would You Use It?
-
-- **SMA OpCon**: The SMA OpCon Configuration Utility configures scripts and configuration files on machines running SMA OpCon software
-
 ## Menus
 
 ### File

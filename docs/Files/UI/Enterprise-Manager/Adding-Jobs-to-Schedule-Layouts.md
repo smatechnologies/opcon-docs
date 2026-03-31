@@ -31,16 +31,6 @@ To add a job to the schedule layout:
 5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 6. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to add Jobs to Schedule Layouts in Enterprise Manager
-- The environment is expanding and requires additional Jobs to Schedule Layouts to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Jobs to Schedule Layouts to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Jobs to Schedule Layouts and when
-
 ## Add a Job Dependency
 
 :::note

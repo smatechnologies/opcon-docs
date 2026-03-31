@@ -21,14 +21,6 @@ doc_type: conceptual
 
 Threshold and resource dependencies allow a job to wait until a threshold reaches a specified numeric value or a resource pool has enough available units before it is eligible to start. These dependencies are defined at the job level or at a specific frequency level.
 
-## When Would You Use It?
-
-- You need to configure or manage Threshold/Resource Dependencies in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Threshold/Resource Dependencies through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Threshold Dependencies
 
 Each OpCon job can depend on the numeric value of a defined *threshold*. Refer to [Thresholds](../objects/thresholds.md) for additional information. OpCon stores threshold dependencies in the database after they are defined for a job.

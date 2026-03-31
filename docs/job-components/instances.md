@@ -30,14 +30,6 @@ The *instance definition* for a job is a place to define properties for one or m
     - If no match is found, the properties defined in the event will be used alone as a new instance of the schedule or job
   - Now, the user only has to define the properties that differ in value from those defined in the Master
 
-## When Would You Use It?
-
-- Use this feature when the job is placed in the Daily tables
-
-## Why Would You Use It?
-
-- **Instance Definition**: The *instance definition* for a job is a place to define properties for one or more instances of the job
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

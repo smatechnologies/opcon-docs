@@ -43,14 +43,6 @@ Schedule checks can be managed by:
   - The DoBatch utility (refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md))
 - Request through the graphical interfaces
 
-## When Would You Use It?
-
-- You need to checking Daily Schedules validates job dependencies in the Daily tables
-
-## Why Would You Use It?
-
-- **Checking Daily**: Checking Daily Schedules validates job dependencies in the Daily tables
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -34,16 +34,6 @@ To disable a user login, complete the following steps:
 Manually disabling a user login releases any Self Service license(s) associated with that user.
 :::
 
-## When Would You Use It?
-
-- A User Logins feature needs to be suspended in Enterprise Manager
-- Maintenance or troubleshooting requires suspending User Logins temporarily without losing the definition
-
-## Why Would You Use It?
-
-- **Prevent unintended execution**: Disabling User Logins suspends activity without deleting the definition, making it simple to re-enable when ready
-- The suspension is recorded in the OpCon audit log, providing an audit trail for change management purposes
-
 ## FAQs
 
 **Q: How many steps does the Disabling User Logins procedure involve?**

@@ -30,14 +30,6 @@ For detailed information and procedures on using the Enterprise Manager applicat
 - [Working with Enterprise Information](Working-with-Enterprise-Information.md)
 - [Working with Enterprise Support](Working-with-Enterprise-Support.md)
 
-## When Would You Use It?
-
-- For detailed information and procedures on using the Enterprise Manager application, refer to:
-
-## Why Would You Use It?
-
-- **Using the**: For detailed information and procedures on using the Enterprise Manager application, refer to:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

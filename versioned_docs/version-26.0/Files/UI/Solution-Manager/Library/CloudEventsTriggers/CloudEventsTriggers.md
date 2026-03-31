@@ -187,14 +187,6 @@ Note: The `type` filter value `com.sma.MFT.Server.Logon` and the list label `MFT
 }
 ```
 
-## When Would You Use It?
-
-- Use this feature when certain events happen on the OpCon MFT Server
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to trigger Events within OpCon via externally-produced 'trigger events' whic
-
 ## Configuration Options
 
 ## FAQs

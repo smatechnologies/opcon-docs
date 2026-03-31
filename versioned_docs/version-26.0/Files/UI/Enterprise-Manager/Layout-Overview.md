@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout. Understanding the layout — menus, navigation panel, editor area, and information bar — is essential for working efficiently in Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to work with Enterprise Manager, an Eclipse-based desktop client with a multi-panel layout, in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout
-
 ## When would you use this section?
 
 - You are using Enterprise Manager for the first time

@@ -22,14 +22,6 @@ doc_type: procedural
 
 Use this procedure to perform Job Procedures when Working in List View in the Enterprise Manager.
 
-## When Would You Use It?
-
-- A Job Procedures when Working in List View action needs to be carried out in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Ensure consistent operations**: Performing Job Procedures when Working in List View actions through OpCon creates a centralized, auditable record of all operational changes
-
 ## Viewing Job Information
 
 To view Job Information, complete the following steps:

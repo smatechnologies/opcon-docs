@@ -67,14 +67,6 @@ When submitting a Service Request via URL, the URL uses the Service Request Name
 
 ![Customized Service Request button](../../../Resources/Images/SM/Stylizing-Service-Request_1.png "Customized Service Request button")
 
-## When Would You Use It?
-
-- You can stylize the Service Request button using custom HTML
-
-## Why Would You Use It?
-
-- **Stylizing Service**: You can stylize the Service Request button using custom HTML
-
 ## FAQs
 
 **Q: How many steps does the Stylizing Service Request Buttons procedure involve?**

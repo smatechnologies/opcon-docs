@@ -22,15 +22,6 @@ doc_type: conceptual
 
 Use this procedure to copy Daily Job Definitions to Master Job in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Daily Job Definitions to Master Job definition needs to be duplicated in Solution Manager
-- A new Daily Job Definitions to Master Job with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Daily Job Definitions to Master Job eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## Administration
 
 ### Required Privileges

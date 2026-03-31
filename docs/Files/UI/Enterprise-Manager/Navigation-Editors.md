@@ -22,14 +22,6 @@ doc_type: procedural
 
 Navigation Editors (e.g., Schedule Master, Job Master, Calendars, Global Properties, Thresholds, Resources, Machines, Machine Groups, Server Options, Roles, User Accounts, Batch Users, Departments, Access Codes, Privileges) provide screens to update information stored in the OpCon database. Any number of editors can be open simultaneously, but only one can be active at a time.
 
-## When Would You Use It?
-
-- You need to provide screens to update information stored in the OpCon database using Navigation Editors (e.g., Schedule Master, Job Master, Calendars, Global Properties, Thresholds, Resources, Machines, Machine Groups, Server Options, Roles, User Accounts, Batch Users, Departments, Access Codes, Privileges)
-
-## Why Would You Use It?
-
-- **Operational value**: Provide screens to update information stored in the OpCon database
-
 ## Opening Navigation Editors
 
 To open Navigation Editors, complete the following steps:

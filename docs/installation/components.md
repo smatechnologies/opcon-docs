@@ -30,14 +30,6 @@ This topic contains instructions for installing the Enterprise Manager and Optio
 - [SMA Resource Monitor](#SMA10)
 - [Silent Mode](#Silent)
 
-## When Would You Use It?
-
-- This topic contains instructions for installing the Enterprise Manager and Optional Server components as stand-alone installations
-
-## Why Would You Use It?
-
-- **Component Installations**: This topic contains instructions for installing the Enterprise Manager and Optional Server components as stand-alone installations
-
 ## Configuration Options
 
 ## Enterprise Manager

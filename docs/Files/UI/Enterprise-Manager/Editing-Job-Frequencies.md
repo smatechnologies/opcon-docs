@@ -43,17 +43,6 @@ To edit a frequency, complete the following steps:
 9. Select **Finish** to save changes or **Cancel** to discard them
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## When Would You Use It?
-
-- An existing Job Frequencies in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Job Frequencies definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Job Frequencies in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Job Frequencies are recorded in the OpCon audit log, providing a complete modification history
-
-
 ## FAQs
 
 **Q: Do edits to job frequencies take effect immediately?**

@@ -22,14 +22,6 @@ doc_type: reference
 
 Each agent returns different status messages while a job is running and when a job completes. The status messages described in this topic appear in the 20-character string following the OpCon job status in Schedule Operations. For a list of File transfer messages, refer to [Operations File Transfer Messages](Operations-File-Transfer-Messages.md).
 
-## When Would You Use It?
-
-- Each agent returns different status messages while a job is running and when a job completes
-
-## Why Would You Use It?
-
-- **Operations Machine**: Each agent returns different status messages while a job is running and when a job completes
-
 ## IBM i LSAM Messages
 
 The table below presents agent status messages forwarded to the SAM. The message descriptions are displayed in Schedule Operations in the graphical interfaces following the job status.

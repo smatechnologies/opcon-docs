@@ -44,14 +44,6 @@ Select the expansion arrow for **Daily Job** to view daily jobs using the select
 
 ![Machine Group Daily Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-DailyJobCrossReference.png "Machine Group Daily Job Cross References Dialog")
 
-## When Would You Use It?
-
-- Available Machine Groups in OpCon are shown in the grid under **Library > Machine Groups**
-
-## Why Would You Use It?
-
-- **Operational value**: Enable the bottom panel: Select the Cross References button to view master and daily jo
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

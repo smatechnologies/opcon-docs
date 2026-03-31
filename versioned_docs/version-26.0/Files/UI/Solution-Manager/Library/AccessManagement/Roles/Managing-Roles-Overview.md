@@ -19,14 +19,6 @@ doc_type: conceptual
 
 Roles are the containers for privileges in OpCon's access control model. Each role holds a set of allowed activities, resource access permissions, and department restrictions. Users inherit all privileges from the roles they belong to.
 
-## When Would You Use It?
-
-- You need to control model using Roles are the containers for privileges in OpCon's access
-
-## Why Would You Use It?
-
-- **Centralized control**: Roles are the containers for privileges in OpCon's access control model
-
 ## When would you use this section?
 
 - Creating a new role for a specific team or user group

@@ -24,16 +24,6 @@ doc_type: procedural
 
 Use this procedure to manage Tags in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to review or update Tags settings in Enterprise Manager
-- Tags needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Tags management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Tags changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Finding Tags
 
 To find a tag, complete the following steps:

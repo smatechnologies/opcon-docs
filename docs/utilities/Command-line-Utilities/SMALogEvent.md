@@ -22,14 +22,6 @@ doc_type: procedural
 
 SMALogEvent writes messages to the Windows event log from a command line. It is installed with the SAM-SS and the required files are in the `<Target Directory>\OpConxps\SAM\` directory. Use SMALogEvent in OpCon program scripts (e.g., SMAServMan, MSLSAM) that run on start, stop, or other trigger events.
 
-## When Would You Use It?
-
-- SMALogEvent writes messages to the Windows event log from a command line
-
-## Why Would You Use It?
-
-- **SMALogEvent**: SMALogEvent writes messages to the Windows event log from a command line
-
 ## Syntax
 
 ```shell

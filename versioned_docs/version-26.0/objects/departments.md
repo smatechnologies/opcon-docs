@@ -27,14 +27,6 @@ The following information applies to defining departments:
 - **Name**: Defines the name for the defined department
 - **Documentation**: Provides an area for descriptions, explanations, and notes that can be updated for the department
 
-## When Would You Use It?
-
-- Departments can be used to secure function privileges associated with individual job records
-
-## Why Would You Use It?
-
-- **Departments**: Departments can be used to secure function privileges associated with individual job records
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

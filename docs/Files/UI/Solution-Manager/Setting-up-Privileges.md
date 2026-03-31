@@ -35,14 +35,6 @@ Select **Save** to save the changes to the database and return to the main Self 
 For more on roles and granting roles privileges, refer to [Roles](../../../administration/roles.md) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- You need to prepare and initialize Privileges in Solution Manager
-
-## Why Would You Use It?
-
-- **Setting up**: The last step is to assign which OpCon role(s) can see and run the Service Request buttons from the Service Request page
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

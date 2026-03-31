@@ -25,16 +25,6 @@ The **Resource Dependency** panel in **Master Job Definition** displays resource
 - Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
 - A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Resource Dependencies records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Resource Dependencies state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Resource Dependencies records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Adding or Updating Resource Dependencies
 
 In **Admin** mode, resource dependencies can be updated. For conceptual information, refer to [Threshold/Resource Dependencies](../../../../../../job-components/threshold-resource-dependencies.md) in the **Concepts** online help.

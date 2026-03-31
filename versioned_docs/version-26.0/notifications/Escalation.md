@@ -47,14 +47,6 @@ As a result:
 
 :::
 
-## When Would You Use It?
-
-- You need to work with An escalation in OpCon, a notification marked for recurring delivery, with an escalation rule, to one or more groups of people defined in escalation groups, in OpCon
-
-## Why Would You Use It?
-
-- **Escalation**: An escalation in OpCon is a notification marked for recurring delivery, with an escalation rule, to one or more groups of people defined in escalation groups
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

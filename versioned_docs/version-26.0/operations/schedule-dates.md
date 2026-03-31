@@ -24,14 +24,6 @@ When schedules are built for a schedule date, all schedule and job information i
 
 ![Definition of a Day's Automation](../Resources/Images/Concepts/portraitdaysautomation.png "Definition of a Day's Automation")
 
-## When Would You Use It?
-
-- Use this feature when schedules are built for a schedule date
-
-## Why Would You Use It?
-
-- **Schedule Dates**: When schedules are built for a schedule date, all schedule and job information is analyzed together to create a day's automation
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

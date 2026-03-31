@@ -34,17 +34,6 @@ To add documentation, complete the following steps:
 8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 9. Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to add Documentation in Enterprise Manager
-- The environment is expanding and requires additional Documentation to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Documentation to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Documentation and when
-
-
 ## FAQs
 
 **Q: Where do you access Documentation in the Enterprise Manager?**

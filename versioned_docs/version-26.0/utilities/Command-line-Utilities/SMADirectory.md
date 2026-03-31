@@ -29,14 +29,6 @@ Based on user criteria and filters, the utility can:
 - Move files (for full recursive directories)
 - Recover files (for full recursive directories)
 
-## When Would You Use It?
-
-- You need to manages OpCon directories, keeping log and report directories from consuming excessive disk space using SMADirectory (SMADirectory.exe)
-
-## Why Would You Use It?
-
-- **SMADirectory**: SMADirectory (SMADirectory.exe) manages OpCon directories, keeping log and report directories from consuming excessive disk space
-
 ## Configuration Options
 
 ## Backwards Compatibility

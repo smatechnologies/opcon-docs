@@ -22,14 +22,6 @@ doc_type: procedural
 
 The SMAGetServiceStatus utility (SMAGetServiceStatus.exe) monitors the status of Windows services. Use it for notifications and recovery actions.
 
-## When Would You Use It?
-
-- The SMAGetServiceStatus utility (SMAGetServiceStatus.exe) monitors the status of Windows services
-
-## Why Would You Use It?
-
-- **SMAGetServiceStatus**: The SMAGetServiceStatus utility (SMAGetServiceStatus.exe) monitors the status of Windows services
-
 ## Syntax
 
 ```

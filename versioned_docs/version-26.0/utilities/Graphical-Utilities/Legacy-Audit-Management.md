@@ -57,14 +57,6 @@ legacy auditing data:
 - The number of records affected by the SQL statement
 - The SQL statement that was processed
 
-## When Would You Use It?
-
-- You need to allows administrators to view audit using The Legacy Audit Management program
-
-## Why Would You Use It?
-
-- **Operational value**: Allows administrators to view audit information, as well as maintain the audit table
-
 ## Menus
 
 The menus available are File, Options, View, and Help.

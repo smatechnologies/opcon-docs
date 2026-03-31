@@ -24,16 +24,6 @@ Use this procedure to view Os2200 Job Details in Solution Manager.
 
 To view an Os2200 job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- You need to inspect or audit Os2200 Job Details records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Os2200 Job Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Os2200 Job Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Editing Os2200 Job Details
 
 To edit Os2200 Job Details, complete the following steps:

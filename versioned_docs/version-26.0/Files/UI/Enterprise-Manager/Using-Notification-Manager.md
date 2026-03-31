@@ -34,14 +34,6 @@ The **Type Filter Text** box lets you type part or all of a name to filter the d
 Type **\*Level** to find a group that includes "Level" somewhere in the name.
 :::
 
-## When Would You Use It?
-
-- You need to define triggers to send notifications using The **Notification Manager** is used to create groups based on Machine, Schedule, and Job status change events in OpCon, then
-
-## Why Would You Use It?
-
-- **Using Notification**: The **Notification Manager** is used to create groups based on Machine, Schedule, and Job status change events in OpCon, then define triggers to send notifications
-
 ## Notification Manager Toolbar
 
 The toolbar resides at the top-right corner of the screen. Select any icon to learn more about its functionality.

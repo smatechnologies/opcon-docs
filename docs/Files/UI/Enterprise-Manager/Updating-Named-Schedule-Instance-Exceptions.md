@@ -22,15 +22,6 @@ doc_type: procedural
 
 Use this procedure to update Named Schedule Instance Exceptions in the Enterprise Manager.
 
-## When Would You Use It?
-
-- An existing Named Schedule Instance Exceptions in Enterprise Manager requires changes
-- A process change or system update makes the current Named Schedule Instance Exceptions definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Named Schedule Instance Exceptions in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating Job Patterns
 
 To update a job pattern, complete the following steps:

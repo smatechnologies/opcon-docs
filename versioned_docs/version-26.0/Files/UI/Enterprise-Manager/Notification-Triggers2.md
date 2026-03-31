@@ -30,14 +30,6 @@ Triggers are responsible for writing the notification information to the OpCon d
 - You can add groups inside other groups to better organize triggers
 - You must add triggers to the "lowest level" groups within a group tree
 
-## When Would You Use It?
-
-- You need to provide tabs for the Trigger types (Machines, Schedules, and Jobs) using The **Notification Triggers** frame
-
-## Why Would You Use It?
-
-- **Operational value**: Provides tabs for the Trigger types (Machines, Schedules, and Jobs)
-
 ## Right-click Menu
 
 - **Add Root Group**: Adds a new group to the root level of the **Jobs**, **Machines**, or **Schedules** tab

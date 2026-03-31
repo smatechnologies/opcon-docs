@@ -23,14 +23,6 @@ doc_type: procedural
 The **Home** link opens the **Vision Home** page in Solution Manager. For more information, refer to [Working with Vision](../Solution-Manager/Working-with-Vision.md) in the **Solution Manager** online help.
 :::
 
-## When Would You Use It?
-
-- The **Home** link opens the **Vision Home** page in Solution Manager
-
-## Why Would You Use It?
-
-- **Using Home**: The **Home** link opens the **Vision Home** page in Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

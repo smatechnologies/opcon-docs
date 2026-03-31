@@ -32,14 +32,6 @@ While a job frequency applies to an individual job, a schedule frequency applies
 You cannot add a schedule frequency to a schedule if any jobs on the schedule already have other frequencies.
 :::
 
-## When Would You Use It?
-
-- You need to specify the recurring days on which a schedule or a job should run using Frequencies
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: Frequencies specify the recurring days on which a schedule or a job should run
-
 ## Configuration Options
 
 ## Multiple Frequencies and Frequency Priority

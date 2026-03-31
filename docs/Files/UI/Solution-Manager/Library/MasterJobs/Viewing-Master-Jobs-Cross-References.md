@@ -24,16 +24,6 @@ Use this procedure to view Master Job Cross References in Solution Manager.
 
 To view a Master Job's cross references, go to **Library** > **Master Jobs**. Select a job and select **Cross References**.
 
-## When Would You Use It?
-
-- You need to inspect or audit Master Job Cross References records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Master Job Cross References state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Master Job Cross References records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: What information does the Master Job Cross References view display?**

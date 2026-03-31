@@ -19,14 +19,6 @@ doc_type: reference
 
 Reference material for OpCon events, notification configuration, reports, command-line and graphical utilities, error message codes, property expression syntax, best practices, and licensing.
 
-## When Would You Use It?
-
-- Reference material for OpCon events, notification configuration, reports, command-line and graphical utilities, error message codes, property expression syntax, best practices, and licensing
-
-## Why Would You Use It?
-
-- **Centralized control**: Reference material for OpCon events, notification configuration, reports, command-line and graphical utilities, error message codes, property expression syntax, best practices, and licensing
-
 ## Configuration Options
 
 ## When would you use this section?

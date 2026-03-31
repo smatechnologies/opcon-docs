@@ -48,14 +48,6 @@ A user must be a member of a role with All Administrative Functions, All Functio
     - No licenses: all users are unchecked and cannot be checked
     - At least one license: ocadm is always checked; others may be set up to the license limit
 
-## When Would You Use It?
-
-- User Accounts are required for authentication to OpCon
-
-## Why Would You Use It?
-
-- **User Accounts**: User Accounts are required for authentication to OpCon
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

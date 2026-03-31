@@ -32,16 +32,6 @@ To add a user-defined calendar, complete the following steps:
 4. _(Optional)_ Add dates to the calendar. To remove all dates, select **Clear**
 5. Select **Save** to save the calendar or **Cancel** to discard changes
 
-## When Would You Use It?
-
-- You need to add Calendars in Solution Manager
-- The environment is expanding and requires additional Calendars to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Calendars to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Calendars and when
-
 ## FAQs
 
 **Q: How do you save a new calendars record?**

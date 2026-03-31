@@ -28,14 +28,6 @@ The **Job Dependency** tab allows you to define and maintain job dependencies:
 
 For conceptual information, refer to [Job Dependencies](../../../job-components/job-dependencies.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define and maintain job dependencies: using The **Job Dependency** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain job dependencies: - Add Job Dependencies - Edit Job D
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

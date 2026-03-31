@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to manage Update Sites in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to review or update Update Sites settings in Enterprise Manager
-- Update Sites needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Update Sites management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Update Sites changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Adding an Update Site
 
 1. Open the Enterprise Manager application
