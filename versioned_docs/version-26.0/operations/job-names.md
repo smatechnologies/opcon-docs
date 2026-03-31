@@ -1,24 +1,55 @@
+---
+title: OpCon Job Names
+description: "Most jobs in Schedule Operations appear as the original job name."
+product_area: Operations
+audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Operations Staff
+  - System Administrator
+  - Schedules
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # OpCon Job Names
 
-While most jobs in Schedule Operations appear as the original job name, there are features that cause OpCon to add extra characters to the name automatically.
+**Theme:** Configure  
+**Who Is It For?** Operations Staff, System Administrator
+
+## What Is It?
+
+Most jobs in Schedule Operations appear as the original job name. Two features cause OpCon to append extra characters automatically:
 
 - Multi-Instance Jobs
 - Jobs Run on Each Machine in a Group
 
+## When Would You Use It?
+
+- Most jobs in Schedule Operations appear as the original job name
+
+## Why Would You Use It?
+
+- **OpCon Job**: Most jobs in Schedule Operations appear as the original job name
+
 ## Multi-Instance Jobs
 
-When OpCon adds additional copies of a multi-instance job to the Daily schedules, the naming convention depends on whether Job Instance properties were supplied.
+The naming convention for multi-instance jobs depends on whether Job Instance properties are supplied.
 
-If Job Instance properties are not supplied, OpCon appends the instance number to the job name by adding a dollar sign followed by a four digit number ($XXXX). Each time the same job is add this way, the number increments by one. If Job Instance properties are supplied, OpCon appends the value of the first property to the job name. Refer to [Defining Properties for Multi-Instance Jobs](../Files/UI/Enterprise-Manager/Defining-Properties-for-Multi-Instance-Jobs.md) in the **Enterprise Manager** online help:
+- **Without Job Instance properties:** OpCon appends a dollar sign and four-digit number ($XXXX), incrementing by one for each additional copy
+- **With Job Instance properties:** OpCon appends the value of the first property to the job name
+
+Refer to [Defining Properties for Multi-Instance Jobs](../Files/UI/Enterprise-Manager/Defining-Properties-for-Multi-Instance-Jobs.md) in the **Enterprise Manager** online help.
 
 :::tip Example
-The following event adds a job to the Daily schedule using only the required parameters for the event. The job "MyJobName" is configured as a multi-instance job.
+The following event adds a multi-instance job to the Daily schedule with only required parameters:
 
 ```shell
 $JOB:ADD,[[$DATE]],MyScheduleName,MyJobName,MyFrequencyName
 ```
 
-When the same event is submitted three times, OpCon creates the following job names in Schedule Operations:
+When submitted three times, OpCon creates:
 
 - MyJobName
 - MyJobName$0002
@@ -26,34 +57,64 @@ When the same event is submitted three times, OpCon creates the following job na
 :::
 
 :::note
-If an additional request for a job comes in and would create a duplicate name even with the first property value, the SAM appends the instance number to the job name by adding a dollar sign followed by a four-digit number ($XXXX).
+If a new job request would create a duplicate name even with the first property value, the SAM appends the instance number ($XXXX) instead.
 :::
 
 :::tip Example
-The following event adds a job to the schedule while defining Job Instance properties called FileName (with a value of abc.txt) and NumRecs (with a value of 100). The job "MyJobName" is configured as a multi-instance job.
+The following event adds a multi-instance job with Job Instance properties FileName (abc.txt) and NumRecs (100):
 
 ```shell
 $JOB:ADD,[[$DATE]],MyScheduleName,MyJobName,MyFrequencyName,FileName=abc.txt;NumRecs=100
 ```
 
-When OpCon creates the job in the Daily tables, it will name the job:
-
-MyJobName_abc
+OpCon names the job: `MyJobName_abc`
 :::
 
 ## Jobs Run on Each Machine in a Group
 
-When a job is configured to *Run on Each Machine* in a machine group at the time the job builds into the Daily schedules, OpCon creates one copy of the job for each machine in the group. Refer to [Adding Jobs](../Files/UI/Enterprise-Manager/Adding-Jobs.md) in the **Enterprise Manager** online help. Each copy of the job is named by adding the machine name using the following syntax:
+When a job is configured to *Run on Each Machine* in a machine group, OpCon creates one copy per machine when the job builds into the Daily schedules. Refer to [Adding Jobs](../Files/UI/Enterprise-Manager/Adding-Jobs.md) in the **Enterprise Manager** online help. Each copy uses the following naming syntax:
 
 ```shell
 JobName_MachineName
 ```
 
 :::tip Example
-A machine group named WindowsMachines contains three machines named Saturn, Neptune, and Mars. A job named MyJobName is configured to Run on Each Machine in the WindowsMachines group. When MyJobName qualifies for a Daily schedule, OpCon creates the following job names:
+A machine group named WindowsMachines contains Saturn, Neptune, and Mars. When MyJobName is configured to run on each machine, OpCon creates:
 
 - MyJobName_Saturn
 - MyJobName_Neptune
 - MyJobName_Mars
 
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: How does OpCon name multi-instance jobs without Job Instance properties?**
+
+OpCon appends a dollar sign and four-digit number to the job name (e.g., `MyJobName$0002`), incrementing by one for each additional copy.
+
+**Q: How does OpCon name multi-instance jobs with Job Instance properties?**
+
+OpCon appends the value of the first Job Instance property to the job name (e.g., `MyJobName_abc.txt`). If this would create a duplicate name, OpCon falls back to appending the instance number.
+
+**Q: How does OpCon name jobs configured to run on each machine in a group?**
+
+Each copy is named using the syntax `JobName_MachineName`. One copy per machine is created when the job builds into the Daily schedules.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

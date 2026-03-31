@@ -1,25 +1,52 @@
+---
+title: Performing Additional Job Procedures when Working in the PERT View
+description: "Use this procedure to perform Additional Job Procedures when Working in the PERT View in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Performing Additional Job Procedures when Working in the PERT View
 
-To perform additional job procedures:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-Double-click on **PERT** under the **Operation** topic. The **PERT**
-screen displays.
+## What Is It?
 
-In the List and/or Matrix view:
+Use this procedure to perform Additional Job Procedures when Working in the PERT View in the Enterprise Manager.
 
-Click on the **schedule** that contains the job.
+To perform additional job procedures, complete the following steps:
 
-In the PERT view:
+1. Select on **PERT** under the **Operation** topic
+2. In the List and/or Matrix view, select the **schedule** that contains the job
+3. In the PERT view, right-click on the **job box**
+4. Select **Job** from the menu, then select the active **command** to perform
 
-Right-click on the **job box**.
+If additional information is needed, go to the preferred **Job procedure** under [Performing Job Procedures when Working in the Gantt View](Performing-Job-Procedures-Gantt.md) and start on Step 2.
 
-Click on **Job** from the menu.
+## When Would You Use It?
 
-Click on the active **command** to perform for the job.
+- A Additional Job Procedures when Working in the PERT View action needs to be carried out in Enterprise Manager
 
-If additional information is needed:
+## Why Would You Use It?
 
-a.  Go to the preferred **Job procedure** under the [Performing Job     Procedures when Working in the Gantt
-    View](Performing-Job-Procedures-Gantt.md).
-b.  Start on Step 2 for each procedure.
-:::
+- **Ensure consistent operations**: Performing Additional Job Procedures when Working in the PERT View actions through OpCon creates a centralized, auditable record of all operational changes
+
+## FAQs
+
+**Q: How many steps does the Performing Additional Job Procedures when Working in the PERT View procedure involve?**
+
+The Performing Additional Job Procedures when Working in the PERT View procedure involves 4 steps. Complete all steps in order and save your changes.
+
+## Glossary
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

@@ -1,4 +1,24 @@
+---
+title: Viewing and Updating Threshold Dependencies
+description: "The Threshold Dependency panel in Daily Job Definition displays any defined threshold dependencies related to the selected job."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing and Updating Threshold Dependencies
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 The **Threshold Dependency** panel in **Daily Job Definition** displays
 any defined threshold dependencies related to the selected job.
@@ -11,6 +31,16 @@ any defined threshold dependencies related to the selected job.
     indicator containing a number (![Job Properties     Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator"))
     will appear to the right of the panel name to indicate the number of
     properties that have been defined.
+
+## When Would You Use It?
+
+- You need to inspect or audit and Updating Threshold Dependencies records in Solution Manager
+- An audit, compliance review, or operational check requires inspection of current and Updating Threshold Dependencies state
+
+## Why Would You Use It?
+
+- **Improve operational visibility**: Inspecting and Updating Threshold Dependencies records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
+- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
 
 ## Adding or Updating Threshold Dependencies
 
@@ -28,7 +58,7 @@ Changes made to the job properties in the **Daily Job Definition** will take pla
 
 To perform this procedure:
 
-Click on the **Processes** button at the top-right of the **Operations
+Select on the **Processes** button at the top-right of the **Operations
 Summary** page. The **Processes** page will display.
 
 Ensure that both the **Date** and **Schedule** toggle switches are
@@ -47,7 +77,7 @@ page in the form of a breadcrumb trail.
 
 ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-Click on the job record (e.g., 1 job(s)) in the status bar to display
+Select on the job record (e.g., 1 job(s)) in the status bar to display
 the **Selection** panel.
 
 :::note
@@ -56,11 +86,11 @@ As an alternative, you can right-click on the job selected in the list to displa
 
 ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
 
-Click the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
+Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
 at the top-left corner of the panel to access the **Daily Job
 Definition** page. By default, this page will be in **Read-only** mode.
 
-Click the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
+Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
 at the top-right corner to place the page in **Admin** mode. The button
 will switch to display a white lock unlocked on a green background
 ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
@@ -78,10 +108,10 @@ Do any of the following to make updates:
 
 Edit or delete any existing threshold dependencies if necessary.
 
-Click the green **Add** button (**+**) to define a new threshold
+Select the green **Add** button (**+**) to define a new threshold
 dependency. When the **Threshold Dependency** dialog displays:
 
-- Select the name of the threshold from drop-down list.
+- Select the name of the threshold from list
 - Select the operator that the SAM should use when the SAM performs
     the dependency check for the job to compare the current threshold
     value to the dependent value. Valid operators include: = (equal), \>
@@ -89,13 +119,13 @@ dependency. When the **Threshold Dependency** dialog displays:
     (less than or equal to), ≠ (not equal).
 - Select the dependent value to which the SAM applies the operator for
     comparison with the current threshold value.
-- Click **Save** to save your selections and close the dialog.
+- Select **Save** to save your selections and close the dialog
 
 ## Indicators
 
 The defined threshold dependency will appear in the **Threshold
 Dependency** panel with visual indicators, similar to the graphic, that
-indicate whether or not the dependency is in good standings, if what is
+indicate whether the dependency is in good standings, if what is
 required for the job is available to that job.
 
 ![Threshold Dependency Indicator](../../../Resources/Images/SM/Threshold-Red-Indicator.png "Threshold Depedency Indicator")
@@ -106,10 +136,35 @@ required for the job is available to that job.
 - Appears red if the threshold defined is not correct. For     example, when the current threshold value is = 1 and the defined
     value is 2.
 
-- The threshold value will appear on the right.
+- The threshold value will appear on the right
 
 :::note
-Click the **Undo** button if you wish to undo your changes for any reason.
+Select the **Undo** button if you wish to undo your changes for any reason.
 :::
 
-Click the **Save** button.
+Select the **Save** button.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+
+## FAQs
+
+**Q: What does Viewing and Updating Threshold Dependencies cover?**
+
+This page covers Adding or Updating Threshold Dependencies, Indicators.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

@@ -1,6 +1,26 @@
+---
+title: Navigation Panel
+description: "The Navigation Panel is on the left side of the Enterprise Manager and contains the following expandable topics: - Solution Manager - Administration - Operation - Security - Management - External."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Navigation Panel
 
-The **Navigation Panel** resides at the left-hand side of the Enterprise Manager application and contains the following expandable topics that present function items for editing and viewing information:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Navigation Panel** is on the left side of the Enterprise Manager and contains the following expandable topics:
 
 - [Solution Manager](Working-with-Solution-Manager.md)
 - [Administration](Working-with-Administration.md)
@@ -11,11 +31,31 @@ The **Navigation Panel** resides at the left-hand side of the Enterprise Manager
 - [Information](Working-with-Enterprise-Information.md)
 - [Support](Working-with-Enterprise-Support.md)
 
+## When Would You Use It?
+
+- The **Navigation Panel** is on the left side of the Enterprise Manager and contains the following expandable topics:
+
+## Why Would You Use It?
+
+- **Navigation Panel**: The **Navigation Panel** is on the left side of the Enterprise Manager and contains the following expandable topics:
+
 ## Types of Navigation
 
-Under each navigation topic, the function list provides two types of navigation:
+Each topic provides two types of navigation:
 
 - [Navigation Editors](Navigation-Editors.md)
 - [Navigation Views](Navigation-Views.md)
 
-Throughout the navigation process, you can customize the look and feel of the Enterprise Manager workspace to suit your individual needs, and multiple [Editors](Navigation-Editors.md) and [Views](Navigation-Views.md) can be opened at one time. This customized layout can be [saved and restored at the next startup](Preferences-from-EM.md#To_always_re-open_the_current_information) of the Enterprise Manager.
+Multiple editors and views can be open simultaneously. The workspace layout can be [saved and restored at next startup](Preferences-from-EM.md#To_always_re-open_the_current_information).
+
+## FAQs
+
+**Q: What does Navigation Panel cover?**
+
+This page covers Types of Navigation.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.

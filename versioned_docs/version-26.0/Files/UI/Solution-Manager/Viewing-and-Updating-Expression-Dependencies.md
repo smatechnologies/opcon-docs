@@ -1,92 +1,124 @@
+---
+title: Viewing and Updating Expression Dependencies
+description: "The Expression Dependency panel in Daily Job Definition displays defined expression dependencies for the selected job."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing and Updating Expression Dependencies
 
-The **Expression Dependency** panel in **Daily Job Definition** displays
-any defined expression dependencies related to the selected job.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- The panel can be placed in **Full Screen** mode by simply clicking
-    the icon (![Full Screen Panel Icon     ](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon"))
-    to the far-right side of the panel bar. Escape **Full Screen** mode
-    by clicking on the icon again.
-- When the panel contains defined properties, a blue circular
-    indicator containing a number (![Job Properties     Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator"))
-    will appear to the right of the panel name to indicate the number of
-    properties that have been defined.
+## What Is It?
+
+The **Expression Dependency** panel in **Daily Job Definition** displays defined expression dependencies for the selected job.
+
+- Select the icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
+- When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the property count
+
+## When Would You Use It?
+
+- You need to inspect or audit and Updating Expression Dependencies records in Solution Manager
+- An audit, compliance review, or operational check requires inspection of current and Updating Expression Dependencies state
+
+## Why Would You Use It?
+
+- **Improve operational visibility**: Inspecting and Updating Expression Dependencies records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
+- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
 
 ## Adding or Updating Expression Dependencies
 
-In **Admin** mode, expression dependencies can be updated. For
-conceptual information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md)
- in the **Concepts** online help. For examples and use cases,
-refer to the [Use Cases](../../../reference/property-expressions-syntax.md#Use)
- section.
+In **Admin** mode, expression dependencies can be updated. For conceptual information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md) and [Use Cases](../../../reference/property-expressions-syntax.md#Use).
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
+Only users with the appropriate permissions can access the **Lock** button and update job properties. Refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) for details.
 :::
 
 :::note
-Changes made to the job properties in the **Daily Job Definition** will take place immediately. If the job has already run, the changes will take effect the next time the job runs.
+Changes made in **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time the job runs.
 :::
 
 To perform this procedure:
 
-Click on the **Processes** button at the top-right of the **Operations
-Summary** page. The **Processes** page will display.
+1. Select the **Processes** button at the top-right of the **Operations Summary** page
 
-Ensure that both the **Date** and **Schedule** toggle switches are
-enabled so that you can make your date and schedule selection,
-respectively. Each switch will appear green when enabled.
+2. Ensure both the **Date** and **Schedule** toggle switches are enabled (green)
 
-![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-Select the desired **date(s)** to display the associated schedule(s).
+To add or Updating Expression Dependencies, complete the following steps:
 
-Select one or more **schedule(s)** in the list.
+3. Select the desired **date(s)** to display associated schedules
 
-Select one **job** in the list. A record of your selection will display
-in the [status bar](SM-UI-Layout.md#Status) at the bottom of the
-page in the form of a breadcrumb trail.
+4. Select one or more **schedule(s)** in the list
 
-![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail
 
-Click on the job record (e.g., 1 job(s)) in the status bar to display
-the **Selection** panel.
+    ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-:::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
-:::
 
-![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+6. Select the job record (e.g., 1 job(s)) in the status bar to open the **Selection** panel
 
-Click the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
-at the top-left corner of the panel to access the **Daily Job
-Definition** page. By default, this page will be in **Read-only** mode.
+    :::note
+    Alternatively, right-click the job in the list to open the **Selection** panel.
+    :::
 
-Click the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
-at the top-right corner to place the page in **Admin** mode. The button
-will switch to display a white lock unlocked on a green background
-![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
-when enabled.
+    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
 
-:::note
-The **Lock** button will not be visible to users who do not have the appropriate permissions.
-:::
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default
 
-Expand the **Expression Dependency** panel to expose its content.
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
 
-![Daily Job Definition Expression Dependency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Expression-Dependency-Panel.png "Daily Job Definition Expression Dependency Panel")
+    :::note
+    The **Lock** button is not visible to users without the appropriate permissions.
+    :::
 
-Do any of the following to make updates:
+9. Expand the **Expression Dependency** panel
 
-a.  Edit or delete any existing property expression if necessary.
-b.  Click the green **Add** button (**+**) to define a new property
-    expression by entering the expression syntax in the designated
-    field. Each property expression field permits up to 4000 characters.
-    You are allowed to have up to two (2) properties expressions for a
-    job.
+    ![Daily Job Definition Expression Dependency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Expression-Dependency-Panel.png "Daily Job Definition Expression Dependency Panel")
 
-:::note
-Click the **Undo** button if you wish to undo your changes for any reason.
-:::
 
-Click the **Save** button.
+10. Make any of the following updates:
+
+    a. Edit or delete existing property expressions as needed.
+    b. Select the green **Add** button (**+**) to define a new property expression. Each field allows up to 4000 characters. A maximum of two (2) property expressions are allowed per job.
+
+    :::note
+    Select the **Undo** button to discard changes.
+    :::
+
+11. Select the **Save** button
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+
+## FAQs
+
+**Q: How many steps does the Viewing and Updating Expression Dependencies procedure involve?**
+
+The Viewing and Updating Expression Dependencies procedure involves 11 steps. Complete all steps in order and save your changes.
+
+**Q: What does Viewing and Updating Expression Dependencies cover?**
+
+This page covers Adding or Updating Expression Dependencies.
+
+## Glossary
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

@@ -1,10 +1,38 @@
+---
+title: Operations Machine Messages
+description: "Each agent returns different status messages while a job is running and when a job completes."
+product_area: Reference
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - Automation Engineer
+  - Business Analyst
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # Operations Machine Messages
 
-Each LSAM returns different status messages while a job is running and when a job completes. The status messages described in this topic appear in the 20-character string following the OpCon job status in Schedule Operations. For a list of File transfer messages, refer to [Operations File Transfer Messages](Operations-File-Transfer-Messages.md).
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
+
+## What Is It?
+
+Each agent returns different status messages while a job is running and when a job completes. The status messages described in this topic appear in the 20-character string following the OpCon job status in Schedule Operations. For a list of File transfer messages, refer to [Operations File Transfer Messages](Operations-File-Transfer-Messages.md).
+
+## When Would You Use It?
+
+- Each agent returns different status messages while a job is running and when a job completes
+
+## Why Would You Use It?
+
+- **Operations Machine**: Each agent returns different status messages while a job is running and when a job completes
 
 ## IBM i LSAM Messages
 
-The table below presents LSAM status messages forwarded to the SAM. The message descriptions are displayed in Schedule Operations in the graphical interfaces following the job status.
+The table below presents agent status messages forwarded to the SAM. The message descriptions are displayed in Schedule Operations in the graphical interfaces following the job status.
 
 | Status | Return Code | Meaning |
 | :---: | --- | --- |
@@ -30,7 +58,7 @@ The table below presents LSAM status messages forwarded to the SAM. The message 
 | 1 | SMA0029 | FTP job invalid action type |
 | 1 | SMA0042 | FTP job remote system name not supplied |
 | 1 | SMA0044 | Tracked or Queued Job start request did not include Private Data with Job ID |
-| 1 | SMA0045 | LSAM cannot find Job Tracking record for Tracked/Queued Job start request |
+| 1 | SMA0045 | agent cannot find Job Tracking record for Tracked/Queued Job start request |
 | 1 | SMA0052 | Tracked/Queued Job already released or cancelled by IBM i Operator |
 | 1 | SMA0062 | OpCon transaction XML field code is invalid |
 | 1 | SMA0067 | SMAFT job request received with no source IP address |
@@ -97,11 +125,11 @@ The table below presents LSAM status messages forwarded to the SAM. The message 
 
 ## MCP Machine Messages
 
-The table below presents LSAM status messages forwarded to the SAM and supporting services. The message descriptions are displayed in Schedule Operations in the graphical interfaces following the job status. The 20-character status description field contains a five-character area reserved for the ClearPath MCP mix number followed by a 15-character description. All TX messages referenced in the table below indicate a message sent from SMANetCom to the LSAM.
+The table below presents agent status messages forwarded to the SAM and supporting services. The message descriptions are displayed in Schedule Operations in the graphical interfaces following the job status. The 20-character status description field contains a five-character area reserved for the ClearPath MCP mix number followed by a 15-character description. All TX messages referenced in the table below indicate a message sent from SMANetCom to the agent.
 
 | Message | Description |
 | --- | --- |
-| ADOPTED | Indicates a tracking request has been received by the LSAM. |
+| ADOPTED | Indicates a tracking request has been received by the agent. |
 | ALREADY RUNNING | An OpCon job initiation request (TX1) was received for this job and the job is running on the ClearPath MCP. |
 | ATTRIBUTE ERR | Assignment of task attributes was attempted on a job initiated with a RUN. One of the task attributes is erroneous. Refer to the system log for a display of the error message from the HANDLEATTRIBUTES procedure.  Verify the job definition details. |
 | COMPLETED | The job completed successfully. |
@@ -119,38 +147,38 @@ The table below presents LSAM status messages forwarded to the SAM and supportin
 | JJJJJ/TTTTTP DS | The task was terminated abnormally because of a program fault. JJJJJ is the job number. TTTTT is the task number. |
 | JJJJJ/TTTTTQ DS | The task was terminated abnormally because of an improper job queue definition or a job queue error. JJJJJ is the job number. TTTTT is the task number. |
 | JJJJJ/TTTTTRESETCODE | The task displayed a message that matched one of the Fail Reset codes, causing the task to be reported as Finished OK in Schedule Operations.  JJJJJ is the job number. TTTTT is the task number. |
-| JJJJJ/TTTTTSNTX/SCRY | An OpCon task initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of an invalid syntax used in the construction of the file title. JJJJJ is the job number. TTTTT is the task number. |
-| JOB ARRAY FULL | This message is sent in response to an OpCon job initiation request (TX1). The message occurs when the number of active jobs, according to the OS handler (SMA/MCP/INTERFACE), has reached the maximum defined in the LSAM configuration file. OpCon attempts job initiation again. |
+| JJJJJ/TTTTTSNTX/SCRY | An OpCon task initiation request (TX1) was received by the agent, but the initiation attempt failed because of an invalid syntax used in the construction of the file title. JJJJJ is the job number. TTTTT is the task number. |
+| JOB ARRAY FULL | This message is sent in response to an OpCon job initiation request (TX1). The message occurs when the number of active jobs, according to the OS handler (SMA/MCP/INTERFACE), has reached the maximum defined in the agent configuration file. OpCon attempts job initiation again. |
 | JOB NOT ACTIVE | This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3). Although the job was found in the tracking file, the record is not available because the job is no longer active. |
-| JOB NOT FOUND | This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3). The job was not found in the tracking file.  This can be the result of any number of situations (multiple SAMs connected to a single LSAM, delayed delivery of a TX1 for a job on which a JOB:TRACK event was sent to SAM, etc.). |
-| JOB Q FULL | This message is sent in response to any OpCon job initiation request (TX1) that is received when the number of active jobs, determined by the COMM Handler (SMA/COMM), has reached the maximum. The maximum number is defined in the LSAM configuration file.  OpCon attempts job initiation again. |
-| LSAMRESTARTING | This message is sent following a restart/recovery of the LSAM modules. The job was present in the LSAM arrays before the LSAM terminated. This is the initial status following an LSAM recovery. It is followed by a current status of the job. |
+| JOB NOT FOUND | This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3). The job was not found in the tracking file.  This can be the result of any number of situations (multiple SAMs connected to a single agent, delayed delivery of a TX1 for a job on which a JOB:TRACK event was sent to SAM, etc.). |
+| JOB Q FULL | This message is sent in response to any OpCon job initiation request (TX1) that is received when the number of active jobs, determined by the COMM Handler (SMA/COMM), has reached the maximum. The maximum number is defined in the agent configuration file.  OpCon attempts job initiation again. |
+| LSAMRESTARTING | This message is sent following a restart/recovery of the agent modules. The job was present in the agent arrays before the agent terminated. This is the initial status following an agent recovery. It is followed by a current status of the job. |
 | MISSING OBJECT | The Details screen in the Enterprise Manager contains the RUN command, but the file named in the File Title is not present. Verify the USERCODE, FAMILY, and spelling. The usercode does not have a family assignment and the Job Details File Title does not include the family name of the program. |
 | NO JOB TITLE | No file title was defined on the Details screen in the Enterprise Manager. Note: The PARAM/ATTR ERR message replaces NO JOB TITLE when the "Contemporary, XML" protocol is in use. |
-| NO WFL FILE | The Details screen in the Enterprise Manager contains the START command, but the file named in the File Title is not present. Verify the user code, family, and spelling. The mix number of this status description belongs to the LSAM task that initiates the WFL compile. It is not the mix number for the WFL compile itself. The usercode does not have a family assignment and the Job Details File Title does not include the family name of the WFL. Note: The PARAM/ATTR ERR message replaces NO WFL FILE when the "Contemporary, XML" protocol is in use. |
+| NO WFL FILE | The Details screen in the Enterprise Manager contains the START command, but the file named in the File Title is not present. Verify the user code, family, and spelling. The mix number of this status description belongs to the agent task that initiates the WFL compile. It is not the mix number for the WFL compile itself. The usercode does not have a family assignment and the Job Details File Title does not include the family name of the WFL. Note: The PARAM/ATTR ERR message replaces NO WFL FILE when the "Contemporary, XML" protocol is in use. |
 | NOT CODE FILE | The Details screen in the Enterprise Manager contains the RUN command, but the File Title is not the name of an existing executable file. |
 | NOT DSED | A "Kill" was requested for this job, but the job was not O-DSed. This message often occurs when the kill was attempted after the job's completion. |
 | NOT FOUND-ARRAY | This message is sent in response to an OpCon job status request (TX2) or to an OpCon job completion acknowledgment (TX3) when an OpCon Job ID is not in the OS Handler (SMA/MCP/INTERFACE) tables. |
 | NOT JOB FILE | The Details screen in the Enterprise Manager contains the START command, but the File Title is not the name of an existing WFL file. |
-| NOT VALID | The job could not be located and the status is unknown. This message may be received following a restart/recovery of the LSAM modules. This message usually indicates the job has completed (normally or abnormally). |
+| NOT VALID | The job could not be located and the status is unknown. This message may be received following a restart/recovery of the agent modules. This message usually indicates the job has completed (normally or abnormally). |
 | O DS | The system operator terminated the job abnormally. |
 | P DS | The job was terminated abnormally because of a program fault. |
-| PARAM/ATTR ERR | An OpCon job initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of a parameter mismatch or invalid attribute (job name does not conform to the rules for entity names). If the START command was used, the mix number of this status description belongs to the LSAM task initiating the WFL compile, and not to the mix number for the WFL compile itself. A possible cause for this error is that the Details screen in the Enterprise Manager contains the START or RUN command, but the file named in the File Title is not present. Verify the USERCODE, FAMILY, and spelling. |
+| PARAM/ATTR ERR | An OpCon job initiation request (TX1) was received by the agent, but the initiation attempt failed because of a parameter mismatch or invalid attribute (job name does not conform to the rules for entity names). If the START command was used, the mix number of this status description belongs to the agent task initiating the WFL compile, and not to the mix number for the WFL compile itself. A possible cause for this error is that the Details screen in the Enterprise Manager contains the START or RUN command, but the file named in the File Title is not present. Verify the USERCODE, FAMILY, and spelling. |
 | PARAMETER ERR | The Details screen in the Enterprise Manager contains the RUN command, but a parameter is erroneous. Verify the parameter length and type. |
 | PRERUN ACTIVE | The Prerun job is active. |
 | PRERUN FAILED | The Prerun job failed. OpCon attempts job initiation again. |
 | PRERUN WAITING | The Prerun job is in the waiting mix. |
 | QUEUED | The job has been placed in a system queue. This is the first status for a WFL job that compiled successfully. When the job is released from the queue, the status changes to RUNNING. |
-| RESTART H_ER nnn | Following a restart of the LSAM, the job's status could not be determined due to a GETSTATUS hard error "nnn". A description of the specific hard error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual. |
-| RESTART S_ER nnn | Following a restart of the LSAM, the job's status could not be determined due to a GETSTATUS soft error "nnn". A description of the specific soft error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual. |
+| RESTART H_ER nnn | Following a restart of the agent, the job's status could not be determined due to a GETSTATUS hard error "nnn". A description of the specific hard error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual. |
+| RESTART S_ER nnn | Following a restart of the agent, the job's status could not be determined due to a GETSTATUS soft error "nnn". A description of the specific soft error may be found in the appropriate appendix of the MCP GETSTATUS/SETSTATUS Manual. |
 | RUNNING | This job is active. This message is also seen if a WFL has been DSed and is waiting for tasks to complete. |
 | RUNNING –ADOPT | OpCon has received the tracking request and responded with a TX1 message. SMA/COMM has received the TX1 message and the job is running. |
 | SCHEDULED | This job has been scheduled by the system. This message can be expected during periods of high processor usage. |
-| SNTX/SECRTY ERR | An OpCon job initiation request (TX1) was received by the LSAM, but the initiation attempt failed because of an invalid syntax used in the construction of the file title. |
+| SNTX/SECRTY ERR | An OpCon job initiation request (TX1) was received by the agent, but the initiation attempt failed because of an invalid syntax used in the construction of the file title. |
 | TASK(S) FAILED | The job completed successfully, but one or more of the subordinate tasks within the WFL failed. |
 | TASK FAILED JOB | The configuration option Fail Job if Task Fails has been set to Y. A subordinate task of the WFL has failed and consequently OpCon has reported the job as failed. |
 | UNKNOWN ERROR | This message occurs when a specific reason for the job's failure could not be identified. In most cases, the WFL job has failed queue insertion. The mix number is the one most recently identified with the OpCon job. If the job has failed queue insertion, this is the mix number of the WFL compile. |
-| USERCODE ERROR | The LSAM was unable to completely assume the identity (e.g., batch user privileges, family assignments, and so forth) of the usercode specified on the Details screen in the Enterprise Manager. Verify the spelling. |
+| USERCODE ERROR | The agent was unable to completely assume the identity (e.g., batch user privileges, family assignments, and so forth) of the usercode specified on the Details screen in the Enterprise Manager. Verify the spelling. |
 | WAITING | The job is in the waiting mix. The mix number shown is the mix number of the waiting process, not necessarily the number of the parent WFL. This message is displayed momentarily even if Automated Response has been set up for the situation. When the task becomes active, again, a status of RUNNING is displayed. |
 | WFL SYNTAX ERR | The WFL source file contains syntax errors. Correct the WFL source. The File Title field on the Details screen in the Enterprise Manager may contain extraneous characters, such as CR/LF, START, or RUN. The File Title field should contain only the file title of the process to be initiated; furthermore, if the job is being initiated using a RUN command, the appropriate task attributes should also be included. The WFL source file contains an "INCLUDE" statement that references a file that cannot be found. The WFL compile was DS'ed. |
 
@@ -163,9 +191,9 @@ The table below presents OS 2200 LSAM status messages forwarded to the SAM. The 
 | <run's-termination-word\> | The run's condition word value at termination. Used to determine a successful or error termination. |
 | <ST-failed-message\> | The "ST" failed message returned by the Exec when an "ST" statement is rejected. |
 | *ASSIGN FAILED ON FILE-NAME FAC=ssssssssssss | This message is displayed when SAM has repeatedly tried to assign a file that should be available. The "sss" field contains the octal facility status code used to determine the cause of the reject. This message does not stop the processing and may be encountered repeatedly until the file becomes available. |
-| *ASSUME ABORTED* | Displayed when a job has been submitted to the Exec, but has never started and is not detected in backlog. The job may have errored during the start process. The LSAM can only assume the job aborted during startup, without ever becoming active. This message is the result of LSAM's RSI (DEMAND) userid not allowed @@CONS RC commands, or the DEMAND session cannot be started. |
+| *ASSUME ABORTED* | Displayed when a job has been submitted to the Exec, but has never started and is not detected in backlog. The job may have errored during the start process. The agent can only assume the job aborted during startup, without ever becoming active. This message is the result of agent's RSI (DEMAND) userid not allowed @@CONS RC commands, or the DEMAND session cannot be started. |
 | AS <runid\> | Displayed once a job has started and the unique Exec Run-ID has been identified. |
-| AWAITING ECL FILE | Displayed when a job's ECL file is exclusively assigned to another EXEC run. The job is not able to start until the LSAM is able to retrieve the ECL, the LSAM continues attempting to retrieve the file. |
+| AWAITING ECL FILE | Displayed when a job's ECL file is exclusively assigned to another EXEC run. The job is not able to start until the agent is able to retrieve the ECL, the agent continues attempting to retrieve the file. |
 | ECL FILE ERROR | Displayed when the ECL cannot be retrieved, often due to an empty file/element. |
 | ECL FILE INVALID | Displayed when the ECL file identified for the job is not a valid file. |
 | ECL NOT FOUND | Displayed when the ECL identified for the job is not found in the ECL file. |
@@ -173,69 +201,69 @@ The table below presents OS 2200 LSAM status messages forwarded to the SAM. The 
 | FILE DEPEND NOT MET | Displayed when one or more file dependencies for the job are not satisfied. |
 | JOB IN BACKLOG | The job has been detected in the Exec's backlog. May be due to the Exec's Batch Limit setting, or resources required by the job are not yet available. |
 | PRERUN COMPLETED | The job's prerun has completed successfully, the actual job is started next. |
-| RC= FINNED | Displayed when an "@@CONS RC" command for the job returns a "FINNED" response. Indicates the job terminated without providing status information to LSAM, or when the job fails to start, often due to an invalid account code rejected by the system console operator. |
-| RC= NOT FOUND | Displayed when an "@@CONS RC" command for the job returns a "NOT FOUND" response. Indicates the job is no longer active, but termination status was not communicated to the LSAM, or when the job fails to start. |
-| RSI RUN NOT ACTIVE | Displayed when the LSAM RSI (DEMAND) session is not active. This may be due to an invalid userid and password. The LSAM requires the job with a later start time. Investigate and correct the RSI issue to re-enable the LSAM to start jobs. Note: The LSAM attempts to use the @START command for jobs with the same ACCT/User-ID as the LSAM. |
+| RC= FINNED | Displayed when an "@@CONS RC" command for the job returns a "FINNED" response. Indicates the job terminated without providing status information to agent, or when the job fails to start, often due to an invalid account code rejected by the system console operator. |
+| RC= NOT FOUND | Displayed when an "@@CONS RC" command for the job returns a "NOT FOUND" response. Indicates the job is no longer active, but termination status was not communicated to the agent, or when the job fails to start. |
+| RSI RUN NOT ACTIVE | Displayed when the agent RSI (DEMAND) session is not active. This may be due to an invalid userid and password. The agent requires the job with a later start time. Investigate and correct the RSI issue to re-enable the agent to start jobs. Note: The agent attempts to use the @START command for jobs with the same ACCT/User-ID as the agent. |
 | ST key Error - INVALID USERID | This error occurs when SECOPT1 is installed and the User ID used for starting an Exec job is invalid. |
 | ST STMT SUBMITTED | Displayed when the "ST" (start) statement has been submitted to the Exec, but the job has not yet become active. |
 | START CMD FAILED | Displayed when the "@START" command has failed for an unidentifiable reason. |
-| START FILE PROBLEM | Displayed when the LSAM is unable to manipulate the job's tracking file. Additional information is displayed on the system console. |
+| START FILE PROBLEM | Displayed when the agent is unable to manipulate the job's tracking file. Additional information is displayed on the system console. |
 | START STMT SUBMITTED | Displayed when the "@START" statement has been submitted to the Exec, but the job has not yet become active. |
-| TRACKING FILE GONE | Displayed when a job terminates without providing termination status to the LSAM, causing the job's tracking file to be deleted. This indicates a job error termination, or an ECL issue involving the premature releasing of the tracking file. |
+| TRACKING FILE GONE | Displayed when a job terminates without providing termination status to the agent, causing the job's tracking file to be deleted. This indicates a job error termination, or an ECL issue involving the premature releasing of the tracking file. |
 
 ### OS 2200 LSAM Messages Displayed at System Console
 
-The following messages are displayed by the LSAM at the Unisys OS 2200 system console:
+The following messages are displayed by the agent at the Unisys OS 2200 system console:
 
 | Message | Description |
 | --- | --- |
 | INIT ERROR STATUS = <xxxx\> | The program is unable to initialize a TIP connection. The <xxxx\> field contains the four-character TIP status code identifying the error Refer to Unisys TIP documentation for the meaning of the status code. |
-| DEMAND SESSION NOT ESTABLISHED DUE TO: MISSING OR INVALID USERID/PASSWORD | The LSAM is unable to start a DEMAND run due to incorrect sign-on information. |
-| DEMAND SESSION NOT ESTABLISHED DUE TO: DEMAND QUOTA EXCEEDED | The LSAM is unable to start a DEMAND run due QUOTA restrictions. |
-| DEMAND SESSION NOT ESTABLISHED DUE TO: RESOURCES NOT AVAILABLE | The LSAM is unable to start a DEMAND run due to lack of system resources (e.g., exceeds the number of DEMAND runs allowed). |
+| DEMAND SESSION NOT ESTABLISHED DUE TO: MISSING OR INVALID USERID/PASSWORD | The agent is unable to start a DEMAND run due to incorrect sign-on information. |
+| DEMAND SESSION NOT ESTABLISHED DUE TO: DEMAND QUOTA EXCEEDED | The agent is unable to start a DEMAND run due QUOTA restrictions. |
+| DEMAND SESSION NOT ESTABLISHED DUE TO: RESOURCES NOT AVAILABLE | The agent is unable to start a DEMAND run due to lack of system resources (e.g., exceeds the number of DEMAND runs allowed). |
 | * INVALID REALTIME PRIORITY: RAISED TO REALTIME LVL 35 | The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive). The program assumes the priority of 35. |
 | * INVALID REALTIME PRIORITY: RAISED TO REALTIME LVL: <param-RT-level\> | The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not between 02 and 35, inclusive). The program assumes the priority of 35. |
 | * REALTIME OPTION SELECTED, BUT NON-NUMERIC LEVEL: <xx\>* ASSUMING REALTIME PRIORITY 35 | The RealTime option has been activated on the program's XQT statement, but the priority provided is not valid (not a number between 02 and 35, inclusive). The program assumes the priority of 35. The <xx\> field displays the invalid priority provided. |
-| LSAM INITIALIZATION COMPLETE | The LSAM has properly initialized and is ready to process batch jobs. |
-| LSAM on duty at <hh:mm\> ON <mm/dd/yyyy\> | The LSAM has started (on duty) at time on date. |
+| agent INITIALIZATION COMPLETE | The agent has properly initialized and is ready to process batch jobs. |
+| agent on duty at <hh:mm\> ON <mm/dd/yyyy\> | The agent has started (on duty) at time on date. |
 | ** REG KEYIN ERROR, STATUS= <xxxxx\> | The program received an error while attempting to register a console keyin reserved word. The <xxxxx\> field contains the error code returned by the registration procedure; refer to Unisys documentation to identify the meaning of the error code. |
 | Keyin <key-word\> Registered for <console-mode\> users | The program has successfully registered the <key-word\> as a console command available to users with the <console-mode\> capabilities, or higher. |
-| LSAM SHUTDOWN IN PROCESS|The LSAM is in process of terminating. |
-| LSAM off duty at <hh:mm\> ON <mm/dd/yyyy\> | The LSAM is no longer active (off duty) at time on date. |
+| agent SHUTDOWN IN PROCESS|The agent is in process of terminating. |
+| agent off duty at <hh:mm\> ON <mm/dd/yyyy\> | The agent is no longer active (off duty) at time on date. |
 | TROUBLE <xxxx\> | The program has encountered trouble while attempting to manipulate TIP file data. The <xxxx\> field contains the TIP error code; refer to Unisys documentation to identify the meaning of the error code. |
 | * UNAUTHORIZED @@CONS KEYIN: and<keyin-data-received\> andRECEIVED FROM: <source-of-keyin\> | A console keyin from an unauthorized source has been received. The <keyin-data-received\> field contains the keyin received. The <source-of-keyin\> field contains the terminal identification the keyin was received from. |
-| LSAM JOB RECORD WRITE FAILURE | The LSAM encountered an error while attempting to write job data to the TIP file. The breakpoint file of the run contains additional error information. |
-| LSAM ARRAY RECORD READ FAILURE | The LSAM encountered an error while attempting to read pointer array data from the TIP file. The breakpoint file of the run contains additional error information. |
-| LSAM ARRAY RECORD WRITE FAILURE | The LSAM encountered an error while attempting to write pointer array data to the TIP file. The breakpoint file of the run contains additional error information. |
+| agent JOB RECORD WRITE FAILURE | The agent encountered an error while attempting to write job data to the TIP file. The breakpoint file of the run contains additional error information. |
+| agent ARRAY RECORD READ FAILURE | The agent encountered an error while attempting to read pointer array data from the TIP file. The breakpoint file of the run contains additional error information. |
+| agent ARRAY RECORD WRITE FAILURE | The agent encountered an error while attempting to write pointer array data to the TIP file. The breakpoint file of the run contains additional error information. |
 | <OpCon/xps-Job-ID\> is currently running | The OpCon job has been started and is processing, a run-id for the job has not yet been identified. |
 | <OpCon/xps-Job-ID\> (<Exec-Run-ID\>) is currently running | The OpCon job has been started and is processing with the <Exec-Run-ID\>. |
 | <OpCon/xps-Job-ID\> Pre-run errored <hh:mm mm/dd/yyyy\> | The Pre-run for OpCon job has errored at time date. |
 | <OpCon/xps-Job-ID\> errored <hh:mm mm/dd/yyyy\> | The OpCon job has errored at time date. |
 | <OpCon/xps-Job-ID\> (<Exec-Run-ID\>) errored <hh:mm mm/dd/yyyy\> | The OpCon job with Exec-Run-ID errored at time date. |
-| <OpCon/xps-Job-ID\> Pre-run no status...assume aborted | The Pre-run for OpCon job has been started, but status information is not available. The LSAM assumes the pre-run has aborted. This is the result of the pre-run job not providing status to LSAM and the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration. |
-| <OpCon/xps-Job-ID\> no status...assume aborted | The OpCon job has been started, but status information is not available. The LSAM assumes the job has aborted. This is the result of the job not providing status to LSAM and the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration. |
-| <OpCon/xps-Job-ID\> (<Exec-Run-ID\>) no status...assume aborted | The OpCon job, with Exec-Run-ID, has been started, but status information is not available. The LSAM assumes the job has aborted. This is the result the LSAM DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration. |
-| CANT ESTABLISH JOB REC LOCK | The LSAM is unable to lock a job record in the TIP file for exclusive use. |
-| LSAM JOB RECORD WRITE FAILURE | The LSAM attempted to write job information in the TIP file, but the write failed. Most likely a problem with the TIP file definition. |
-| LSAM ARRAY RECORD READ FAILURE | The LSAM attempted to read a pointer array record from the TIP file, but the read failed. Most likely TIP file corruption, a failure to properly initialize the TIP file, or a problem with the TIP file definition. |
-| LSAM POST RUN JOBID NOT FOUND <OpCon/xps-Job-ID\> | The OpCon job related to a pre-run job cannot be found in the TIP file. Most likely a TIP file corruption. |
-| <OpCon/xps-Job-ID\> ECL LINE TRUNCATED TO 80 CHARACTERS | The LSAM has detected an ECL command (beginning with @) exceeding 80 characters in length. The ECL line is truncated to 80 characters. ECL command lines longer than 80 characters (without a continuation) are invalid. Most likely a comment on the line caused it to exceed 80 characters. |
-| <RSI-error-message-returned\> and SHUT DOWN OF RSI IN PROCESS | While accessing the DEMAND run, the LSAM received the RSI-error-message-returned. The DEMAND run is terminated. The LSAM attempts to restart the DEMAND run. |
+| <OpCon/xps-Job-ID\> Pre-run no status...assume aborted | The Pre-run for OpCon job has been started, but status information is not available. The agent assumes the pre-run has aborted. This is the result of the pre-run job not providing status to agent and the agent DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration. |
+| <OpCon/xps-Job-ID\> no status...assume aborted | The OpCon job has been started, but status information is not available. The agent assumes the job has aborted. This is the result of the job not providing status to agent and the agent DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration. |
+| <OpCon/xps-Job-ID\> (<Exec-Run-ID\>) no status...assume aborted | The OpCon job, with Exec-Run-ID, has been started, but status information is not available. The agent assumes the job has aborted. This is the result the agent DEMAND run unable to retrieve status using the @@CONS RC command, most likely a problem with the DEMAND user-id configuration. |
+| CANT ESTABLISH JOB REC LOCK | The agent is unable to lock a job record in the TIP file for exclusive use. |
+| agent JOB RECORD WRITE FAILURE | The agent attempted to write job information in the TIP file, but the write failed. Most likely a problem with the TIP file definition. |
+| agent ARRAY RECORD READ FAILURE | The agent attempted to read a pointer array record from the TIP file, but the read failed. Most likely TIP file corruption, a failure to properly initialize the TIP file, or a problem with the TIP file definition. |
+| agent POST RUN JOBID NOT FOUND <OpCon/xps-Job-ID\> | The OpCon job related to a pre-run job cannot be found in the TIP file. Most likely a TIP file corruption. |
+| <OpCon/xps-Job-ID\> ECL LINE TRUNCATED TO 80 CHARACTERS | The agent has detected an ECL command (beginning with @) exceeding 80 characters in length. The ECL line is truncated to 80 characters. ECL command lines longer than 80 characters (without a continuation) are invalid. Most likely a comment on the line caused it to exceed 80 characters. |
+| <RSI-error-message-returned\> and SHUT DOWN OF RSI IN PROCESS | While accessing the DEMAND run, the agent received the RSI-error-message-returned. The DEMAND run is terminated. The agent attempts to restart the DEMAND run. |
 | <OpCon/xps-Job-ID\> duplicated, running as <Exec-Run-ID\> | The Exec Run-ID for OpCon job has been duplicated. The Exec has assigned Exec-Run-ID to the job. |
-| *ST FAIL:<OpCon/xps-Job-ID\> ERR=<xx\> STAT=<start-error-message\> | The @@CON ST command for the OpCon job failed. The ERR field contains an LSAM assigned error code, the STAT field contains the error message returned by the Exec in response to the ST command. |
+| *ST FAIL:<OpCon/xps-Job-ID\> ERR=<xx\> STAT=<start-error-message\> | The @@CON ST command for the OpCon job failed. The ERR field contains an agent assigned error code, the STAT field contains the error message returned by the Exec in response to the ST command. |
 | <OpCon/xps-Job-ID\> (<Exec-Run-ID\>) is waiting in backlog | The OpCon job, with Exec-Run-ID, has been detected in the Exec backlog. This is the result of the Exec batch limit set lower than the OpCon concurrent job limit, or facilities required by the job are not available, or a batch hold (CS H) on the system. |
 | <OpCon/xps-Job-ID\> SUBMITTED AT <hh:mm\> ON <mm/dd/yyyy\> | The OpCon job start command has been submitted at time on date. |
 | <OpCon/xps-Job-ID\> STARTING AS EXEC JOB <Exec-Run-ID\> | The OpCon job has been assigned the Exec-Run-ID. |
 | <OpCon/xps-Job-ID\> IS A PRE-RUN JOB | The OpCon job started is a pre-run job. |
-| <OpCon/xps-Job-ID\>-NO START DATA AVAILABLE | The LSAM has received a start command from OpCon for a job without ECL location data. |
+| <OpCon/xps-Job-ID\>-NO START DATA AVAILABLE | The agent has received a start command from OpCon for a job without ECL location data. |
 | ECL FILE NOT FOUND FOR JOB: <OpConxps-Job-ID\> | The ECL file for the OpCon job cannot be found on the system. Most likely an invalid ECL location has been entered for the job. |
-| START-FILE NOT AVAILABLE FOR JOB.....<OpConxps-Job-ID\> | The LSAM cannot assign the ECL file for the OpCon job. The Exec has rejected the file assignment for a reason other than "not catalogued". The file may be "unloaded", or the LSAM is not authorized to access the file. |
+| START-FILE NOT AVAILABLE FOR JOB.....<OpConxps-Job-ID\> | The agent cannot assign the ECL file for the OpCon job. The Exec has rejected the file assignment for a reason other than "not catalogued". The file may be "unloaded", or the agent is not authorized to access the file. |
 | ECL NOT IN FILE, JOB:<OpConxps-Job-ID\> | The file element is not in the ECL file identified for OpCon job. Either the element name is incorrect, or the file name is incorrect. |
-| ECL IS EXCL ASGED BY ANOTHER RUN and RETRYING START OF <OpConxps-Job-ID\> | The ECL file for OpCon job is exclusively assigned to another run. The LSAM continues attempting to assign the ECL file. |
-| *START FAIL:<OpCon/xps-Job-ID> ERR=<xx\> STAT=<start-error-message\> | The @START command for OpCon job failed. The ERR field contains an LSAM assigned error code. The STAT field contains the error message. |
-| SDFIO SYNTAX ERR: <SDFIO-data\> | A syntax error has been returned by the EXEC SDF services module when LSAM attempted to access an ECL file. The SDFIO-data contains the information used when the error occurred. |
+| ECL IS EXCL ASGED BY ANOTHER RUN and RETRYING START OF <OpConxps-Job-ID\> | The ECL file for OpCon job is exclusively assigned to another run. The agent continues attempting to assign the ECL file. |
+| *START FAIL:<OpCon/xps-Job-ID> ERR=<xx\> STAT=<start-error-message\> | The @START command for OpCon job failed. The ERR field contains an agent assigned error code. The STAT field contains the error message. |
+| SDFIO SYNTAX ERR: <SDFIO-data\> | A syntax error has been returned by the EXEC SDF services module when agent attempted to access an ECL file. The SDFIO-data contains the information used when the error occurred. |
 | SDFIO ASG ERR, FAC.......<facility-status\> | The EXEC SDF services module returned an error while attempting to assign an ECL file. The facility-status contains the FAC error code. |
-| LSAM IS UNABLE TO SIGN ON THE SYSTEM | The LSAM is unable to sign-on a DEMAND run. May be due to improper privileges for the LSAM, or system resources are not available. |
+| agent IS UNABLE TO SIGN ON THE SYSTEM | The agent is unable to sign-on a DEMAND run. May be due to improper privileges for the agent, or system resources are not available. |
 
 ## OS 2200 LMAM Messages
 
@@ -327,8 +355,8 @@ The table below presents OS 2200 LMAM status messages forwarded to the SAM. The 
 | * UNAUTHORIZED @@CONS KEYIN: and<Keyin-received\> and	RECEIVED FROM: <terminal-id\> | A console keyin from an unauthorized source has been received. The <keyin-data-received\> field contains the keyin received. The <source-of-keyin\> field contains the terminal identification the keyin was received from. |
 | SAM / NETCOM USING LEGACY PROTOCOL | The SAM/NETCOM is configured to communicate in LEGACY protocol. The configuration must be "Contemporary, Non-XML". |
 | JOB <OpConxps-job-id\> ERRORED ON <mm/dd/yyyy\> AT <hh:mm:ss\> and JOB <OpConxps-job-id\> ECL: <qual*file.element/version\> | The configuration option is set to display the job's ECL location on error terminations. |
-| LSAM NO LONGER ACTIVE | The XFRTCP has detected the LSAM is not processing. Start the LSAM to resolve. |
-| LSAM-LOCK FILE NOT FOUND ** | The XFRTCP has detected the LSAM-LOCK file is not catalogued. Catalogue the <lsam-qualifier\>*LSAM-LOCK file to resolve. |
+| agent NO LONGER ACTIVE | The XFRTCP has detected the agent is not processing. Start the agent to resolve. |
+| agent-LOCK FILE NOT FOUND ** | The XFRTCP has detected the agent-LOCK file is not catalogued. Catalogue the <lsam-qualifier\>*agent-LOCK file to resolve. |
 | REQUESTS EXCEED OUTWARD FLOW | The XFRTCP is receiving more requests than can be processed. Most likely a network communications problem between NETCOM and XFRTCP. |
 | CANT ESTABLISH EVENT REC LOCK | The XFRTCP is unable to establish a lock on an Event record in the TIP file. Most likely a problem with the TIP file definition. |
 | *XFRTCP IS STOPPING* | XFRTCP is in the process of terminating. |
@@ -336,36 +364,36 @@ The table below presents OS 2200 LMAM status messages forwarded to the SAM. The 
 
 ## SAP BW Machine Messages
 
-To the right of the OpCon Job Status in Schedule Operations, the SAP BW LSAM populates a twenty-character message to communicate numeric job completion information.
+To the right of the OpCon Job Status in Schedule Operations, the SAP BW agent populates a twenty-character message to communicate numeric job completion information.
 
-* For jobs that are running, the SAP BW LSAM returns the SAP BW Process Chain ID. The 20-character termination description in Schedule Operations displays part of the Chain ID. The complete 25 characters Chain ID displays in the Job Configuration screen.
-* For jobs that Finish OK, the SAP BW LSAM returns information in the following format: 0-< Partial Process Chain ID\>
-*  For jobs that Failed, the SAP BW LSAM returns information in the following format: <LSAM Exit Code\> - <SAM job number or SAP Process Chain ID\>
-  * If the LSAM was unable to start the SAP BW Process Chain before it failed, the message contains the SAM job number.
-  * If the LSAM was able to start the SAP BW Process Chain before it failed, the message contains the SAP Process Chain ID.
+* For jobs that are running, the SAP BW agent returns the SAP BW Process Chain ID. The 20-character termination description in Schedule Operations displays part of the Chain ID. The complete 25 characters Chain ID displays in the Job Configuration screen
+* For jobs that Finish OK, the SAP BW agent returns information in the following format: 0-< Partial Process Chain ID\>
+*  For jobs that Failed, the SAP BW agent returns information in the following format: <agent Exit Code\> - <SAM job number or SAP Process Chain ID\>
+  * If the agent was unable to start the SAP BW Process Chain before it failed, the message contains the SAM job number
+  * If the agent was able to start the SAP BW Process Chain before it failed, the message contains the SAP Process Chain ID
 
 :::note
-The SAP BW LSAM returns more detailed alpha numeric error messages to the LSAM Error Messages parameter in the Job Configuration screen of Schedule Operations. Refer to the Configuration tab information in [Job Information](../Files/UI/Enterprise-Manager/Job-Information.md) in the **Enterprise Manager** online help.
+The SAP BW agent returns more detailed alpha numeric error messages to the agent Error Messages parameter in the Job Configuration screen of Schedule Operations. Refer to the Configuration tab information in [Job Information](../Files/UI/Enterprise-Manager/Job-Information.md) in the **Enterprise Manager** online help.
 :::
 
-### SAP BW LSAM Specific Exit Conditions
+### SAP BW agent Specific Exit Conditions
 
-The following is a list of SAP BW LSAM exit conditions for failed jobs. If an exit condition is not in this list, the LSAM Exit Code position of the return status is a Windows error code (refer to [Windows Machine Messages](#Windows) for a list of Windows exit codes).
+The following is a list of SAP BW agent exit conditions for failed jobs. If an exit condition is not in this list, the agent Exit Code position of the return status is a Windows error code (refer to [Windows Machine Messages](#Windows) for a list of Windows exit codes).
 
-| SAP BW LSAM Exit Condition Number | Description |
+| SAP BW agent Exit Condition Number | Description |
 | :---: | --- |
 | 70001 | Error in trying to start the BW Process Chain |
 | 70002 | Error in retrieving the log for BW Process Chain |
 
 ## SAP R/3 and CRM Machine Messages
 
-To the right of the OpCon Job Status in Schedule Operations, the SAP R/3 and CRM LSAM populates a 20-character message to communicate numeric job completion information.
+To the right of the OpCon Job Status in Schedule Operations, the SAP R/3 and CRM agent populates a 20-character message to communicate numeric job completion information.
 
-For jobs that are running, the LSAM returns the SAP job number.
+For jobs that are running, the agent returns the SAP job number.
 
-If the running job has child jobs, the LSAM returns the current status of the child job(s) in following the format: <Child Name\> - <Current Status\>
+If the running job has child jobs, the agent returns the current status of the child job(s) in following the format: <Child Name\> - <Current Status\>
 
-* The Child Name displays up to 15 characters of the child job name.
+* The Child Name displays up to 15 characters of the child job name
 * The current status contains one of the following:
   * **Actv**: Active
   * **Rdy**: Ready
@@ -378,29 +406,29 @@ If the running job has child jobs, the LSAM returns the current status of the ch
 The complete child name and its current status are available in the Job
 Configuration screen.
 
-* For jobs that Finish OK, the LSAM returns information in the following format: 0-< SAP job ID\>
-* For jobs that Failed, the LSAM returns information in the following format: <LSAM Exit Code\> - <SAM or SAP job number\>
-  * If the LSAM was unable to create a copy of the SAP R/3 and CRM job before it failed, the message contains the SAM job number.
-  * If the LSAM was able to create a copy of the SAP R/3 and CRM job before it failed, the message contains the SAP Job number.
+* For jobs that Finish OK, the agent returns information in the following format: 0-< SAP job ID\>
+* For jobs that Failed, the agent returns information in the following format: <agent Exit Code\> - <SAM or SAP job number\>
+  * If the agent was unable to create a copy of the SAP R/3 and CRM job before it failed, the message contains the SAM job number
+  * If the agent was able to create a copy of the SAP R/3 and CRM job before it failed, the message contains the SAP Job number
 
 :::note
-The SAP R/3 and CRM LSAM returns more detailed alpha numeric error messages to the LSAM Error Messages parameter in the Job Configuration screen of Schedule Operations. Refer to the Configuration tab information in [Job Information](../Files/UI/Enterprise-Manager/Job-Information.md) in the **Enterprise Manager** online help.
+The SAP R/3 and CRM agent returns more detailed alpha numeric error messages to the agent Error Messages parameter in the Job Configuration screen of Schedule Operations. Refer to the Configuration tab information in [Job Information](../Files/UI/Enterprise-Manager/Job-Information.md) in the **Enterprise Manager** online help.
 :::
 
-### SAP R/3 and CRM LSAM-Specific Exit Conditions
+### SAP R/3 and CRM agent-Specific Exit Conditions
 
-The following is a list of SAP R/3 and CRM LSAM exit conditions for failed jobs. If an exit condition is not in this list, the LSAM Exit Code position of the return status is a Windows error code (refer to [Windows Machine Messages](#Windows) for a list of Windows exit codes).
+The following is a list of SAP R/3 and CRM agent exit conditions for failed jobs. If an exit condition is not in this list, the agent Exit Code position of the return status is a Windows error code (refer to [Windows Machine Messages](#Windows) for a list of Windows exit codes).
 
-| SAP R/3 and CRM LSAM Exit Condition Number | Description |
+| SAP R/3 and CRM agent Exit Condition Number | Description |
 | :---: | --- |
-| 70001 | The Job Name the LSAM is trying to send to the SAP system is null. |
-| 70002 | The Job Number the LSAM is trying to send to the SAP system is null. |
+| 70001 | The Job Name the agent is trying to send to the SAP system is null. |
+| 70002 | The Job Number the agent is trying to send to the SAP system is null. |
 | 70003 | The USER setting in the SAPLSAM.ini file is blank. |
 | 70004 | Error in logging on to SAP system: bad User ID, password, or TCP/IP address. |
 | 70005 | Error in checking existing job status: could not find the job on the SAP system. |
-| 70006 | Error in job copy: The LSAM could not copy the job to run it in SAP. |
-| 70007 | Error in Job definition get: after the job was copied for execution, the LSAM couldn't retrieve the copied job's details; therefore, the job could not run. |
-| 70008 | Error in starting the copied job: the job copy and job retrieve were successful, but the LSAM could not start the job. |
+| 70006 | Error in job copy: The agent could not copy the job to run it in SAP. |
+| 70007 | Error in Job definition get: after the job was copied for execution, the agent couldn't retrieve the copied job's details; therefore, the job could not run. |
+| 70008 | Error in starting the copied job: the job copy and job retrieve were successful, but the agent could not start the job. |
 | 70009 | Error in getting the job's current status |
 | 70010 | Error in reading the job log |
 | 70011 | Error in getting the children job information for the current job |
@@ -567,7 +595,7 @@ Sometimes it is possible to receive non-numeric characters in the return code. W
 | 30003 | artjesadmin : Job failed |
 | 30004 | artjesadmin : Job was cancelled |
 | 30005 | artjesadmin : Job is in conversion state |
-| 30006 | artjesadmin : Job is executing |
+| 30006 | artjesadmin : Job is running |
 | 30007 | artjesadmin : Job is queued waiting for conversion process |
 | 30008 | artjesadmin : Job has been placed on hold |
 | 30009 | artjesadmin : Job is queued waiting for processing to start |
@@ -578,7 +606,7 @@ Sometimes it is possible to receive non-numeric characters in the return code. W
 
 ## UNIX LSAM Messages
 
-This section covers messages generated by the LSAM which may appear in the LSAM's log and/or error file. Whether informational or to report an error condition, messages begin with text generated by the LSAM, followed by (in parentheses):
+This section covers messages generated by the agent which may appear in the agent's log and/or error file. Whether informational or to report an error condition, messages begin with text generated by the agent, followed by (in parentheses):
 
 * The message ID
 * The system-specific error number returned by the operating system
@@ -588,7 +616,7 @@ This section covers messages generated by the LSAM which may appear in the LSAM'
 Not every message will contain all the items within the parentheses. In general, if the message was not the result of failure within a system routine, then only the message ID will be included. The system-specific error number and description varies from system to system. Moreover, a system call often has multiple failure modes; consequently, the same message ID may be followed by a variety of error codes.
 
 :::tip Example
-The following shows a Detailed LSAM Message which might be returned for a LSAM exit code of 000010205:
+The following shows a Detailed agent Message which might be returned for a agent exit code of 000010205:
 
 ```shell
 [sma_lsam] (monitor) - Unable to execute [/usr/john/job_1] for [JOB1] (120 / 2 [ENOENT] - No such file or directory)
@@ -597,9 +625,9 @@ The following shows a Detailed LSAM Message which might be returned for a LSAM e
 In this case, the user should check what was entered for "Start Image" on the Job Details screen.
 :::
 
-There are currently over 500 messages which might be output, making a listing of each impractical. The following table lists the messages which address conditions that can generally be understood and/or corrected by the user without intervention of SMA Technologies Support personnel. Within the Message Text, "\[x\]" indicates variable data.
+There are currently over 500 messages which might be output, making a listing of each impractical. The following table lists the messages which address conditions that can generally be understood and/or corrected by the user without intervention of Continuous Support personnel. Within the Message Text, "\[x\]" indicates variable data.
 
-Once jobs are built, the Schedule Operations screen contains different information depending on a job's status. In many cases, a specific failure message is returned from the LSAM and viewable in the field "Detailed Job Messages" under the "General" tab of the Job Configuration screen (in Schedule Operations). When UNIX jobs are processing, the status information in Schedule Operations includes the Process ID (pid) number or any optional status messages.
+Once jobs are built, the Schedule Operations screen contains different information depending on a job's status. In many cases, a specific failure message is returned from the agent and viewable in the field "Detailed Job Messages" under the "General" tab of the Job Configuration screen (in Schedule Operations). When UNIX jobs are processing, the status information in Schedule Operations includes the Process ID (pid) number or any optional status messages.
 
 :::note
 Scripts using the sma_status utility can use the 20-character message area to display any desired text; otherwise, the PID displays in the message area. For further information, refer to **sma_status** in the **UNIX LSAM** online help.
@@ -607,14 +635,14 @@ Scripts using the sma_status utility can use the 20-character message area to di
 
 | Message Text | Explanation and/or Corrective Action |
 | --- | --- |
-| \[x\] multiply-defined | The indicated step \[STARTING_STEP, ENDING_STEP, RESTART_STEP\] was found to be included more than once. Check "Start Image" and "Parameters" in the job's Job Details screen. **Note:** The \[x\] multiply-defined message text applies only to jobs based on the [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md). |
-| Invalid job step \[x\] | Shell variable 'next_step' set to a non-existent job Step Label as displayed. Check all settings of 'next_step' -- especially for use of incorrect letter case. **Note:** The Invalid job step \[x\] applies only to jobs based on the [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md) |
-| Infinite loop detected | The job experienced 'number_of_steps' iterations and was terminated. Check the following: - Starting or Restart Step comes after Ending step in script - Step gets repeated, possibly via intervening steps - Job logic correct but 'number_of_step' set too small **Note:** The Infinite loop detected applies only to jobs based on the [SMA Technologies]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md)|
-| Unable to change access for \[x\] | Access permissions for the indicated job stdout/dtderr output file could not be restricted per the LSAM Configuration setting. |
-| Unable to change ownership for \[x\] | Ownership of the indicated job stdout/dtderr output file could not be changed from 'root/root' per the LSAM Configuration setting. |
-| Process \[x\] did not start | The LSAM health monitor has determined that the indicated LSAM process did not start (or started but then immediately terminated). Stop the LSAM. If the cause for the lost process cannot be determined from other error messages, corrected, and the LSAM successfully re-started, then wait five minutes and re-start the LSAM. It should then start and run properly if the cause was of a momentary nature. |
-| Process \[x\] has terminated | The LSAM health monitor has determined that the indicated LSAM process abnormally terminated. Stop the LSAM. If the cause for the lost process cannot be determined from other error messages, corrected, and the LSAM successfully re-started, then wait five minutes and re-start the LSAM. It should then start and run properly if the cause was of a momentary nature. |
-| Sending SIGUSR1 (die) to all LSAM processes | The "bin/lsam\<*SAM_Socket*\> stop" command was given; this message is confirmation that the LSAM is in normal termination processing. |
+| \[x\] multiply-defined | The indicated step \[STARTING_STEP, ENDING_STEP, RESTART_STEP\] was found to be included more than once. Check "Start Image" and "Parameters" in the job's Job Details screen. **Note:** The \[x\] multiply-defined message text applies only to jobs based on the [Continuous]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md). |
+| Invalid job step \[x\] | Shell variable 'next_step' set to a non-existent job Step Label as displayed. Check all settings of 'next_step' -- especially for use of incorrect letter case. **Note:** The Invalid job step \[x\] applies only to jobs based on the [Continuous]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md) |
+| Infinite loop detected | The job experienced 'number_of_steps' iterations and was terminated. Check the following: - Starting or Restart Step comes after Ending step in script - Step gets repeated, possibly via intervening steps - Job logic correct but 'number_of_step' set too small **Note:** The Infinite loop detected applies only to jobs based on the [Continuous]{.GeneralCompanyName}-supplied template job script discussed in [UNIX Job Details](../job-types/unix.md)|
+| Unable to change access for \[x\] | Access permissions for the indicated job stdout/dtderr output file could not be restricted per the agent Configuration setting. |
+| Unable to change ownership for \[x\] | Ownership of the indicated job stdout/dtderr output file could not be changed from 'root/root' per the agent Configuration setting. |
+| Process \[x\] did not start | The agent health monitor has determined that the indicated agent process did not start (or started but then immediately terminated). Stop the agent. If the cause for the lost process cannot be determined from other error messages, corrected, and the agent successfully re-started, then wait five minutes and re-start the agent. It should then start and run properly if the cause was of a momentary nature. |
+| Process \[x\] has terminated | The agent health monitor has determined that the indicated agent process abnormally terminated. Stop the agent. If the cause for the lost process cannot be determined from other error messages, corrected, and the agent successfully re-started, then wait five minutes and re-start the agent. It should then start and run properly if the cause was of a momentary nature. |
+| Sending SIGUSR1 (die) to all agent processes | The "bin/lsam\<*SAM_Socket*\> stop" command was given; this message is confirmation that the agent is in normal termination processing. |
 | Unable to find \[x\] | "\[x\]" cannot be located for processing. |
 | Unable to create \[x\] | "\[x\]" cannot be created for processing. |
 | Unable to open \[x\] | "\[x\]" cannot be opened for processing. |
@@ -623,34 +651,34 @@ Scripts using the sma_status utility can use the 20-character message area to di
 | Deleting \[x\] | "\[x\]" was deleted. This is normally just an informational message, and not indicative of a problem unless "\[x\]" is later referenced in an "Unable to \..." message. |
 | Unable to connect to \[x\] | A socket-based connection cannot be made to the indicated remote service or system. Determine if the indicated system or service is up-and-running, and/or if the network is operational, and correct the condition. |
 | Unable to send \[x1\] to \[x2\] | A message "\[x1\]" cannot be sent over the socket-based connection to the indicated remote service or system ("\[x2\]"). Determine if the indicated system or service is up-and-running, and/or if the network is operational, and correct the condition. |
-| LSAM health monitor operating | Informational message to confirm that the LSAM started with the LSAM health monitor in proper operation. |
-| No LSAM health monitor | Informational message to confirm that the LSAM started without the LSAM health monitor in proper operation. Execute the LSAM Configuration program to confirm that LSAM health monitoring has been disabled. |
-| LSAM health monitor disabled | The LSAM health monitor has ceased operation. This is normal after issuance of the "LSAM stop" command. |
-| Sender not allowed by the LSAM configuration | The portion of the LSAM which communicates with the SAM has received a message over a socket-based connection from an address not configured to be acceptable. The received message was ignored. It may be necessary to run the LSAM Configuration program to update the LSAM's configuration. |
-| Received unauthorized message | Some portion of the LSAM has received a message over a socket-based connection from an unexpected address. The received message was ignored. It may be necessary to run the LSAM Configuration program to update the LSAM's configuration. |
-| Received a message with a blank machine name | The portion of the LSAM which communicates with the SAM has received a message without the required machine name which identifies to the LSAM the intended recipient for the message. Mark the LSAM down in a graphical interface and stop the LSAM. Wait five minutes, then re-start the LSAM and mark it back up in a graphical interface. |
-| Received a message from SAM with invalid action specified | The portion of the LSAM which communicates with the SAM has received a message with an invalid action specified. Mark the LSAM down in a graphical interface and stop the LSAM. Wait five minutes, then re-start the LSAM and mark it back up in a graphical interface. |
-| Received a duplicate message from SAM | The LSAM has received a duplicate message from SAM. If this happens only occasionally, it indicates timing issues which sometimes arise in distributed processing systems like [OpCon]{.GeneralOpConGlobalName}, and is not indicative of a problem. If it happens in a series over a few minutes, it indicates an acute problem with the SAM or the intervening network hardware. |
-| Missing environment variable \[x\] | The indicated UNIX shell environment variable is not defined. The variable may be either expected to be defined at the system level, or it may be an LSAM-defined variable which is not getting passed around as required. |
-| Environment variable \[x\] is | The indicated UNIX shell not defined environment variable is not defined. The variable may be either expected to be defined at the system level, or it may be an LSAM-defined variable which is not getting passed around as required. |
-| Received a SIGUSR1 | Each process in the LSAM should output this message during normal termination of the LSAM. If the "bin/lsam\<*SAM_Socket*\> stop" command was not given, then some process or user on the system issued a "kill" command on the indicated process. |
-| Received order to stop LSAM Health Monitor | This message is output during normal termination processing. |
-| \[x\] Operational | Each process in the LSAM should output this message during normal startup of the LSAM. |
+| agent health monitor operating | Informational message to confirm that the agent started with the agent health monitor in proper operation. |
+| No agent health monitor | Informational message to confirm that the agent started without the agent health monitor in proper operation. Run the agent Configuration program to confirm that agent health monitoring has been disabled. |
+| agent health monitor disabled | The agent health monitor has ceased operation. This is normal after issuance of the "agent stop" command. |
+| Sender not allowed by the agent configuration | The portion of the agent which communicates with the SAM has received a message over a socket-based connection from an address not configured to be acceptable. The received message was ignored. It may be necessary to run the agent Configuration program to update the agent's configuration. |
+| Received unauthorized message | Some portion of the agent has received a message over a socket-based connection from an unexpected address. The received message was ignored. It may be necessary to run the agent Configuration program to update the agent's configuration. |
+| Received a message with a blank machine name | The portion of the agent which communicates with the SAM has received a message without the required machine name which identifies to the agent the intended recipient for the message. Mark the agent down in a graphical interface and stop the agent. Wait five minutes, then re-start the agent and mark it back up in a graphical interface. |
+| Received a message from SAM with invalid action specified | The portion of the agent which communicates with the SAM has received a message with an invalid action specified. Mark the agent down in a graphical interface and stop the agent. Wait five minutes, then re-start the agent and mark it back up in a graphical interface. |
+| Received a duplicate message from SAM | The agent has received a duplicate message from SAM. If this happens only occasionally, it indicates timing issues which sometimes arise in distributed processing systems like [OpCon]{.GeneralOpConGlobalName}, and is not indicative of a problem. If it happens in a series over a few minutes, it indicates an acute problem with the SAM or the intervening network hardware. |
+| Missing environment variable \[x\] | The indicated UNIX shell environment variable is not defined. The variable may be either expected to be defined at the system level, or it may be an agent-defined variable which is not getting passed around as required. |
+| Environment variable \[x\] is | The indicated UNIX shell not defined environment variable is not defined. The variable may be either expected to be defined at the system level, or it may be an agent-defined variable which is not getting passed around as required. |
+| Received a SIGUSR1 | Each process in the agent should output this message during normal termination of the agent. If the "bin/lsam\<*SAM_Socket*\> stop" command was not given, then some process or user on the system issued a "kill" command on the indicated process. |
+| Received order to stop agent Health Monitor | This message is output during normal termination processing. |
+| \[x\] Operational | Each process in the agent should output this message during normal startup of the agent. |
 | Too many arguments for \[x\] | The addition of the text for "Start Image" and "Parameters" in the job definition resulted in \> 100 arguments. An "argument" is any text but a space. For example, the Start Image/Parameters combination "/usr/john/job x y abc123 1", the start image is "/usr/john/job", and the four arguments are "x", "y", "abc123", and "1". (It is possible to include parameters in the "Start Image" text box in the EM.) |
-| Blank start image for \[x\] | The indicated job contained no start image, i.e., script or program to execute. Check the Job Details screen in the EM. |
+| Blank start image for \[x\] | The indicated job contained no start image, i.e., script or program to run. Check the Job Details screen in the EM. |
 | Job \[x\] contained no UID | The indicated job had no User ID. |
 | Job \[x\] contained no GID | The indicated job had no Group ID. |
 | Job \[x1\] contained an invalid | The indicate User ID for the UID \[x2\] indicated job was either non-existent or incorrectly formatted. |
 | Job \[x1\] contained an invalid | The indicate Group ID for the GID \[x2\] indicated job was either non-existent or incorrectly formatted. |
-| Not allowed to start job \[x\] | The LSAM is configured to not as 'root' allow jobs to execute with 'root' privileges. This can be changed by running the LSAM Configuration program. |
-| Unable to access start image \[x1\] for \[x2\] | The indicated Start Image could not be executed for the indicated job. The parenthesized portion of the message provides additional details, on which corrective action can be based. |
-| Unable to execute \[x1\] for | The indicated item could not be \[x2\] executed for the indicated job. The parenthesized portion of the message provides additional details, on which corrective action can be based. |
-| Unable to exec() \[x1\] to start | The indicated Start Image could \[x2\] not be executed for the indicated job. The parenthesized portion of the message provides additional details, on which corrective action can be based. If the LSAM determines that this was caused by an invalid reference to a shell/interpreter, e.g., the first line of the job script reads, "!\#/bin/bogus", an additional message will be generated to indicate this possibility. |
-| Unable to 'cd' to $HOME for \[x\] | LSAM configuration parameter *require_HOME_directory* is enabled and the indicated job cannot be executed within the associated user's HOME directory. The most likely cause is an error defining the HOME directory when the user was added to the system, or that theHOME directory was either never created or it was deleted. |
-| Received TX0 for pid = \[x\] - | This is an informational message \[x\] output to confirm receipt of a command from SAM to terminate the indicated job after the user executed the "Kill Job" command from a graphical interface. This does not indicate that the job actually was terminated; that event/inability will be confirmed in a subsequent message. |
-| Can't fork() for \[x\] - | The LSAM is unable to create a decrementing max jobs to \[x\] process in which to run the indicated job, and is decreasing the number of jobs it will attempt to simultaneously run in an effort to preclude further fork() errors. If this is a recurring problem, the LSAM Configuration program can be executed to lower the number of allowed jobs and/or the OS may need tuning to handle the load. |
+| Not allowed to start job \[x\] | The agent is configured to not as 'root' allow jobs to run with 'root' privileges. This can be changed by running the agent Configuration program. |
+| Unable to access start image \[x1\] for \[x2\] | The indicated Start Image could not be run for the indicated job. The parenthesized portion of the message provides additional details, on which corrective action can be based. |
+| Unable to run \[x1\] for | The indicated item could not be \[x2\] run for the indicated job. The parenthesized portion of the message provides additional details, on which corrective action can be based. |
+| Unable to exec() \[x1\] to start | The indicated Start Image could \[x2\] not be run for the indicated job. The parenthesized portion of the message provides additional details, on which corrective action can be based. If the agent determines that this was caused by an invalid reference to a shell/interpreter, e.g., the first line of the job script reads, "!\#/bin/bogus", an additional message will be generated to indicate this possibility. |
+| Unable to 'cd' to $HOME for \[x\] | agent configuration parameter *require_HOME_directory* is enabled and the indicated job cannot be run within the associated user's HOME directory. The most likely cause is an error defining the HOME directory when the user was added to the system, or that theHOME directory was either never created or it was deleted. |
+| Received TX0 for pid = \[x\] - | This is an informational message \[x\] output to confirm receipt of a command from SAM to terminate the indicated job after the user run the "Kill Job" command from a graphical interface. This does not indicate that the job actually was terminated; that event/inability will be confirmed in a subsequent message. |
+| Can't fork() for \[x\] - | The agent is unable to create a decrementing max jobs to \[x\] process in which to run the indicated job, and is decreasing the number of jobs it will attempt to simultaneously run in an effort to preclude further fork() errors. If this is a recurring problem, the agent Configuration program can be run to lower the number of allowed jobs and/or the OS may need tuning to handle the load. |
 | Job \[x\] completed | Informational message upon proper termination of an OpCon job -- does not reflect the OK/Failed termination status. |
-| Data has not arrived in \[x\] | The LSAM has not received any seconds - closing socket communication from the SAM in the indicated amount of time. The LSAM will close the connection in preparation for SAM initiating a new connection. "\[x\]" can be set with the LSAM Configuration program. |
+| Data has not arrived in \[x\] | The agent has not received any seconds - closing socket communication from the SAM in the indicated amount of time. The agent will close the connection in preparation for SAM initiating a new connection. "\[x\]" can be set with the agent Configuration program. |
 
 :::tip Example
 The following shows UNIX job (Ujob1) running in Schedule Operations without a user-defined status message:
@@ -670,7 +698,7 @@ Ujob2 (Daily) (Job Running – Starting Step 1)
 
 When a job completes, the OpCon status will change to either 'Finished OK' or 'Failed'. The 20-character message text changes to include the exit codes from the job.
 
-In the this next table is a breakdown of the LSAM Exit Codes.
+In the this next table is a breakdown of the agent Exit Codes.
 
 :::note
 Do not confuse these codes with UNIX System Exit Codes. LSAM Exit Codes come from the UNIX LSAM itself while UNIX System Exit Codes come from the UNIX operating system.
@@ -681,7 +709,7 @@ Do not confuse these codes with UNIX System Exit Codes. LSAM Exit Codes come fro
 
 | Section | Exit Code | Valid Values | Description |
 | :---: | --- | --- | --- |
-| **A** | Job Exit Codes | -999999999 to +999999999 | The first 10 characters of the exit condition consist of a plus (+) or minus (-) sign followed by nine digits indicating the job termination status (refer to [LSAM-Specific Error Codes](#LSAM-Spe)). |
+| **A** | Job Exit Codes | -999999999 to +999999999 | The first 10 characters of the exit condition consist of a plus (+) or minus (-) sign followed by nine digits indicating the job termination status (refer to [agent-Specific Error Codes](#agent-Spe)). |
 | **B** | Signals | 0000 to 9999 | If the job terminated due to the receipt of a signal from the operating system or through user intervention, the four-digit numeric value of that signal is specified here. |
 | **C** | Core Dumped | Y/N | Indicates whether or not (Y/N) a core file was created due to the termination of a job. |
 
@@ -689,10 +717,10 @@ Do not confuse these codes with UNIX System Exit Codes. LSAM Exit Codes come fro
 
 The following is a list of the UNIX LSAM job error codes. If an exit code is not in this list, it is a UNIX-specific exit code. For information on UNIX-specific exit codes, refer to [Completed Jobs and LSAM Exit Codes] in the **UNIX LSAM** online help.
 
-Because errors returned vary from platform to platform, it is beyond the scope of this document to try to list the possible reasons for each error. SMA Technologies recommends:
+Because errors returned vary from platform to platform, it is beyond the scope of this document to try to list the possible reasons for each error. Continuous recommends:
 
-* Examine the log files for the LSAM and determine the error number reported.
-* Reference the MAN page for the system call to get more information on the causes of this failure type.
+* Examine the log files for the agent and determine the error number reported
+* Reference the MAN page for the system call to get more information on the causes of this failure type
 
 | UNIX LSAM Exit Code | Failed System Call | Description |
 | :---: | --- | --- |
@@ -700,12 +728,12 @@ Because errors returned vary from platform to platform, it is beyond the scope o
 | 000010001 | <none\> | The job definition does not contain a Group ID. |
 | 000010002 | <none\> | The job definition contains an invalid User ID. |
 | 000010003 | <none\> | The job definition contains an invalid Group ID. |
-| 000010004 | <none\> | The SMANetCom sent a job status request (TX2) for a job or for a prerun process to the LSAM. The LSAM checked to see if the job was still running. The job was **not** running, but was marked as running in the tracking file. |
-| 000010005 | <none\> | The LSAM was started and the job was shown in the tracking file to be running; however, the job was not actually running on the machine. |
-| 000010006 | <none\> | The LSAM was started and the prerun was shown in the tracking file to be running; however, the prerun was not actually running on the machine. |
+| 000010004 | <none\> | The SMANetCom sent a job status request (TX2) for a job or for a prerun process to the agent. The agent checked to see if the job was still running. The job was **not** running, but was marked as running in the tracking file. |
+| 000010005 | <none\> | The agent was started and the job was shown in the tracking file to be running; however, the job was not actually running on the machine. |
+| 000010006 | <none\> | The agent was started and the prerun was shown in the tracking file to be running; however, the prerun was not actually running on the machine. |
 | 000010007 | <none\> | The job was not found in tracking file. |
 | 000010008 | fork() | The system function fork() failed when attempting to create a child process. |
-| 000010009 | <none\> | Privileged runs are not allowed. The LSAM configuration does not allow jobs to be submitted as root. |
+| 000010009 | <none\> | Privileged runs are not allowed. The agent configuration does not allow jobs to be submitted as root. |
 | 000010010 | <none\> | Job was killed by user or system administrator. |
 | 000010100 | fork() | Unable to fork() a process space for the prerun process. |
 | 000010101 | setuid() | Unable to setuid() to the specified User ID for the prerun process. |
@@ -719,7 +747,7 @@ Because errors returned vary from platform to platform, it is beyond the scope o
 | 000010203 | setpgid() |The system function setpgid() failed when attempting to set the parent Group ID for a job. |
 | 000010204 | <none\> | Start Image not found or nsufficient privileges for the job. |
 | 000010205 | exec() | The system function exec() failed when attempting to initialize the process space for a job. |
-| 000010299 | open() | The system function open() failed when the LSAM attempted to open the post-processing script. For more information on the *post-processing script,* refer to **sma_ppscript** in the **UNIX LSAM** online help. |
+| 000010299 | open() | The system function open() failed when the agent attempted to open the post-processing script. For more information on the *post-processing script,* refer to **sma_ppscript** in the **UNIX LSAM** online help. |
 | 000010300 | fork() | The system function fork() failed when attempting to create a process for a post-processing script. |
 | 000010301 | setuid() | The system function setuid() failed when attempting to set the User ID for a post-processing script. |
 | 000010302 | setgid() | The system function setgid() failed when attempting to set the Group ID for a post-processing script. |
@@ -727,10 +755,10 @@ Because errors returned vary from platform to platform, it is beyond the scope o
 | 000010304 | <none\> | Start Image not found or insufficient privileges for the post-processing script. |
 | 000010305 | exec() | The system function exec() failed when attempting to initialize the process space for a post-processing script. |
 
-In many cases, a specific failure message is returned from the LSAM and viewable as field "LSAM Error Message" under the "General" tab of the Job Configuration screen. Messages begin with text generated by the LSAM, and conclude with parentheses containing an integer message ID and perhaps other test. If the error was the result of a system call, the additional text after the message ID would include the system-specific error number returned by the operating system, the symbolic name for this error (common to the vast majority of UNIX systems), and a brief description of the error as returned by the operating system. The UNIX error number and text varies from system to system. Also, a system call often has multiple failure modes, so the same message ID can be followed by a variety of error codes.
+In many cases, a specific failure message is returned from the agent and viewable as field "agent Error Message" under the "General" tab of the Job Configuration screen. Messages begin with text generated by the agent, and conclude with parentheses containing an integer message ID and perhaps other test. If the error was the result of a system call, the additional text after the message ID would include the system-specific error number returned by the operating system, the symbolic name for this error (common to the vast majority of UNIX systems), and a brief description of the error as returned by the operating system. The UNIX error number and text varies from system to system. Also, a system call often has multiple failure modes, so the same message ID can be followed by a variety of error codes.
 
 :::tip Example
-The following shows a LSAM Error Message which might be returned for a LSAM exit code of 000010205:
+The following shows a agent Error Message which might be returned for a agent exit code of 000010205:
 
 ```shell
 [sma_lsam] (monitor) - Unable to execute [/usr/john/job_1] for [JOB1] (120 / 2 [ENOENT] - No such file or directory)
@@ -749,7 +777,6 @@ The following is a list of UNIX LSAM exit codes specifically for File Arrival jo
 | 2 | The path is not found. Reasons include an invalid path or permissions. |
 | 3 | A file is found but the creation date is out of range. |
 
-
 ## Windows Machine Messages
 
 This next table is a list of MSLSAM exit conditions for failed jobs. If an exit condition is not in this list, it is a Windows exit code.
@@ -763,21 +790,21 @@ This next table is a list of MSLSAM exit conditions for failed jobs. If an exit 
 | 31004 | The command line entered in the details screen for this job contains too many characters. The maximum length of the command line is: 4000 characters |
 | 31005 | The prerun working directory entered in the details screen for this job contains too many characters. The maximum length of the prerun working directory is: 255 characters |
 | 31006 | The working directory entered in the details screen for this job contains too many characters. The maximum length of the working directory is: 255 characters |
-| 31007 | The LSAM could not create a process for this job. |
-| 31008 | The LSAM was unable to obtain the rights for the user submitted with the job. |
-| 31009 | The LSAM was unable to grant the user rights to the process. |
-| 31010 | The LSAM was unable to log on as the user submitted with the job. |
-| 31011 | The LSAM was unable to load the environment for the user submitted with the job. |
-| 31012 | The LSAM was unable to load the Windows profile for the user submitted with the job. |
-| 31013 | The LSAM was unable to unload the Windows profile for the user submitted with the job. |
-| 31014 | The LSAM was unable to find the E.C.O.F. specified. |
-| 31015 | The LSAM was unable to start the job in the specified user-security context (unable to impersonate the user). |
-| 31016 | The LSAM was unable to find the user name for this user. This may be because the user has never logged onto this machine. |
+| 31007 | The agent could not create a process for this job. |
+| 31008 | The agent was unable to obtain the rights for the user submitted with the job. |
+| 31009 | The agent was unable to grant the user rights to the process. |
+| 31010 | The agent was unable to log on as the user submitted with the job. |
+| 31011 | The agent was unable to load the environment for the user submitted with the job. |
+| 31012 | The agent was unable to load the Windows profile for the user submitted with the job. |
+| 31013 | The agent was unable to unload the Windows profile for the user submitted with the job. |
+| 31014 | The agent was unable to find the E.C.O.F. specified. |
+| 31015 | The agent was unable to start the job in the specified user-security context (unable to impersonate the user). |
+| 31016 | The agent was unable to find the user name for this user. This may be because the user has never logged onto this machine. |
 | 31017 | Unable to get user token. |
 
 ### Windows File Arrival Exit Codes
 
-The following is a list of Microsoft LSAM exit codes specifically for File Arrival jobs.
+The following is a list of Microsoft agent exit codes specifically for File Arrival jobs.
 
 | Exit Code | Description |
 | :---: | --- |
@@ -816,7 +843,7 @@ XPS*nnnc*
 | XPR001E | STEPNAME MISMATCH | - Indicates that step name on the starting step in the JCL does not match the name in the restart request.<br />- The job is flushed. |
 | XPR005I | *stepname compcode*<br />(SKIPPED FOR RESTART) | Indicates *the stepname* was bypassed for the restart, but *compcode* is simulated for JCL conitianal processing. |
 | XPR010I | DELETE *dataset name* (*volume*)<br />XPR010I UNCATLG *dataset name* (*volume*)<br />XPR010I HDELETE *dataset name* (MIGRAT)<br />XPR010I RETAIN *dataset name* (*volume*) | -Indicates *the dataset name* is going to be created in the step about to start, but it is already caraloged.<br />- OpCon takes the indicated action:<ul><li>**DELETE:** the *dataset* is to be removed from an online DASD Device.</li><li>**UNCATLG:** the *dataset* is on tape of offline DASD, and is simply uncataloged.</li><li>**HDELETE:** The HSM migrated dataset is the be deleted.</li><li>**Retain:** the *dataset* matched the XPR filter table, and no action is taken.</li></ul> |
-| XPR060A | No PCB Available - Activate LSAM | Indicates XPRLIST was requested to update the filter table, but the LSAM was not been started, and no stroage anchor block is available. |
+| XPR060A | No PCB Available - Activate agent | Indicates XPRLIST was requested to update the filter table, but the agent was not been started, and no stroage anchor block is available. |
 | XPR101E | Invalid or missing parms | Indicates a command was issues to XPRLIST, but the command was not recognized. |
 | XPR102E | NO XPSPARMS DD OR MEMBER NOT FOUND | Indicates XPRLIST was requested to load or reload the filter table, but either the XPSPARMS DD is not present, or the requested XPRLST*xx* member is not in the dataset. |
 | XPR105I | FILTER TABLE UPDATED | Indicates the XPR filter table was updated. |
@@ -827,93 +854,93 @@ XPS*nnnc*
 
 | Exit Code | Message | Description |
 | :---: | --- | ---| 
-| XPS000W | Another LSAM is Already Running in the LPAR | - Indicates the new duplicate LSAM is terminated.<br />- SMA Technolgoes recommends waiting for the priot LSAM to conplete before starting its replacement. |
-| XPS001I | OpCon V *v.rr.mmll* Initialized -- \[*machineid*\] | - Indicates OpCon for z/OS has initialized storage queues and contaol blocks successfully.<br />- MachineID is the MACHINEID= definition in the XPSRMnn, or the SMF ID of this LPAR, and subsequently the schedule "Machine ID" for events that is honored bu this LSAM. |
-| XPS002W | XPSPRMnn Set to Vendor Defaults | - Indicates no XPSPRMnn member was located in the start parameter list of the parmeter library.<br />- The resulting default parameter values can be viewed with the "F LSAM,PARMS" command. |
+| XPS000W | Another agent is Already Running in the LPAR | - Indicates the new duplicate agent is terminated.<br />- SMA Technolgoes recommends waiting for the priot agent to conplete before starting its replacement. |
+| XPS001I | OpCon V *v.rr.mmll* Initialized -- \[*machineid*\] | - Indicates OpCon for z/OS has initialized storage queues and contaol blocks successfully.<br />- MachineID is the MACHINEID= definition in the XPSRMnn, or the SMF ID of this LPAR, and subsequently the schedule "Machine ID" for events that is honored bu this agent. |
+| XPS002W | XPSPRMnn Set to Vendor Defaults | - Indicates no XPSPRMnn member was located in the start parameter list of the parmeter library.<br />- The resulting default parameter values can be viewed with the "F agent,PARMS" command. |
 | XPS003I | Storage Recovery Attempt | Issued during back out or remove processing. |
-| XPS003E | Error During Storage Allocation Storage Recovery Failed for queuename | - Indicates an MVS FREEMAIN error was encountered.<br />-Contact SMA Technologies Support if this message persists of the reason for its issuance cannot be determined. |
+| XPS003E | Error During Storage Allocation Storage Recovery Failed for queuename | - Indicates an MVS FREEMAIN error was encountered.<br />-Contact Continuous Support if this message persists of the reason for its issuance cannot be determined. |
 | XPS004A | RUNPARM Not Initaliatlized-Restart | - Indicates the parms dataset was no located in the start parameter list or the parameter library and the operator answered "N" to the XPS101V operator request.<br />- Supply the Parms dataset and restart. |
-| XPS005I | TCP/IP - IP Open (*nnn.nnn.nnn.nnn*) Port: *pppp* | Issued during LSAM IP network initialization to indicate the LPAR Host IP address (*nnn.nnn.nnn.nnn*) returned bu the OMVS "GETHOSTID" request, and to indicate the IP Port (*pppp*) on which XPS390 is listening for SAM messages. |
-| XPS006E | \[*subroutine\]* Abend/Shutdown Detected | - Indicates the *subroutine* encountered an error and the LSAM is systematically shutting down the remaining subtasks and closing SAM Communications.<br />- The LSAM terminates and must be restarted.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS007E | Error During Storage Allocation | - Indicates an MVS GETMAIN errror was encountered.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS008E | Token Fetch Error RC=8 | - Indicates an MVS CSA queue locate error was encounted.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS009I | System Shutdown Underway | - This is a response to an F LSAM,SHUTDOWN request.<br />- Indicates the LSAM is systematically shutting down operational subtasks, stopping XPSPLEX and closing SAM communications.<br />- The LSAM terminiates. |
-| XPS010I | Subtask Shutdown Underway | - This is a response to an internal/external shutdown request.<br />- This message may follow an XPS009I or XPS006E message.<br />Indicates the LSAM is systematically shutting down operational subtaskes and closing SAM communication.<br />- The LSAM terminates. |
-| XPS011I | \[Job\|Message\] Queue Cleared | - This is a response to an F LSAM,CLEARQ operator command.<br />- Indicates all ongoing schedule tracking fails. |
-| XPS012I | Storage Recovery Complete | - This is a response to a GETMAIN failure.<br />- This message may follow an XPS033E message.<br />- Indicates the LSAM was successful in freeing all allocated CSA prior to terminiation. |
+| XPS005I | TCP/IP - IP Open (*nnn.nnn.nnn.nnn*) Port: *pppp* | Issued during agent IP network initialization to indicate the LPAR Host IP address (*nnn.nnn.nnn.nnn*) returned bu the OMVS "GETHOSTID" request, and to indicate the IP Port (*pppp*) on which XPS390 is listening for SAM messages. |
+| XPS006E | \[*subroutine\]* Abend/Shutdown Detected | - Indicates the *subroutine* encountered an error and the agent is systematically shutting down the remaining subtasks and closing SAM Communications.<br />- The agent terminates and must be restarted.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS007E | Error During Storage Allocation | - Indicates an MVS GETMAIN errror was encountered.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS008E | Token Fetch Error RC=8 | - Indicates an MVS CSA queue locate error was encounted.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS009I | System Shutdown Underway | - This is a response to an F agent,SHUTDOWN request.<br />- Indicates the agent is systematically shutting down operational subtasks, stopping XPSPLEX and closing SAM communications.<br />- The agent terminiates. |
+| XPS010I | Subtask Shutdown Underway | - This is a response to an internal/external shutdown request.<br />- This message may follow an XPS009I or XPS006E message.<br />Indicates the agent is systematically shutting down operational subtaskes and closing SAM communication.<br />- The agent terminates. |
+| XPS011I | \[Job\|Message\] Queue Cleared | - This is a response to an F agent,CLEARQ operator command.<br />- Indicates all ongoing schedule tracking fails. |
+| XPS012I | Storage Recovery Complete | - This is a response to a GETMAIN failure.<br />- This message may follow an XPS033E message.<br />- Indicates the agent was successful in freeing all allocated CSA prior to terminiation. |
 | XPS013E | INITAPI Error: XPSERVER *tcpiptask* | - Indicates the XPSERVER subroutine could not establish an interface to TCP.IP on this LPAR.<br />- Ensure that TCP/IP is operating properly and that an OMVS segment is defined to the security facility for OpCon.<br />- Ensure that the TCP= parameter in XPSPRMnn denotes the proper task name for the environment. |
-| XPS014I | PSAM Initialization - Server in XCF Mode | - Issued at an LSAM startup to indicate that the XPSERVER subroutine does not attempt to open IP communications to the SAM.<br />- All communications to the scheudle activity monitor is accomplished through the Sysplex Coupling Facility and the LPAR designated as the Sysplex primary LSAM. |
-| XPS015A | XPS390 Awaiting Connection to the SAM Server<br />XPS015O - XPSYS0 Awaiting Connection to UI Window | - Indicates a temporary communication disconnect occureed between the LSAM and the SAM schedule system.<br />- The LSAM waits approximately 20 seconds and retries the IP Socket ACCEPT request.<br />- If this message persists and all communication protocols appear operational, contact the TCP/IP LAN Network Support Technician.<br />- The type code "0" in dicates the message was issues by XPSYSOUT. |
-| XPS016I | XPS390 SAM Server Connection Established<br />XPS016O - XPSYS0 Window Connection Established | - Indicates that the temporary disconnect was corrected, and the LSAM and the SAM are in communication.<br />- The Type code "O" indicates the message was issued bu XPSYSOUT.<br />- This message mornally follows message XPS015A. |
-| XPS017W | Cannot Bind Port; Suspending Retry for 30 Seconds<br />XPS017O - Cannot Bind Port; Suspending Retry for 30 Seconds | -Indicates a temporary communication disconnect occurred between the LSAM and the SAM schedule system.<br />- The LSAM waits approximately 30 seconds and retries the IP Port BIND request.<br />- This message may be a normal result of stopping and immediatelly restarting the LSAM.<br />- z/OS TCPIP often "hold(s)" access to a port after it is closed to ensure any buffered messages are completed before allowing the prot to be reopened.<br />- If this message persists and all communication protocaols appear iperational, contace the TCP/IP LAN Network Support Technician.<br />- The Type code "O" indicates the message was issued by XPSYSOUT. |
-| XPS018W | Cannot Obtain Socket; Suspending Retry for 30 Seconds<br />XPS018O - Cannot Obtain Socket; Suspending Retry for 30 Seconds | - Indicates a temporarycommunication disconnect has occurred berween the LSAM and the SAM schedule system.<br />- The LSAM waits approximately 30 seconds and retries the IP Socket connection.<br />- This message may be a normal result of stipping and immediately restarting the LSAM.<br />- z/OS TCPIP often "hold(s)" access to a port after close to ensure any buffered messages are completed before allowing the port to be reopened and a socket assigned.<br />- If this message persists and all communication protocols appear operational, contact the TCP/IP LAN Network Support Technician.<br />- The Type code "O" indicates the message was issues by XPSYSOUT.
-| XPS019E | Storage Recovery Failed for \[*queuename*\] | - Indicates the MVS FREEMAIN error was encounted dureing a REMOVEX, REPEXIT or RESET command.<br />- The LSAM could not free storage for \[*queuename*] that was assinged to the LSAM.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS020W | Process CSA Will Change at Next IPL | - Issued in response to an "F LSAM,PROCESS=nn" operator command.<br />-CSA storage is allocated at IPL to coincide with the expected process limit set in the LSAM/Machine environment. |
-| XPS021I | Current Stored PARMS for \[*sysid*] | - Issued in response to an "F LSAM,parm=" operator command to indicate the status of all run time parameters after processing the last command.<br />- A list of current LSAM parameters settings follows this message.<br />- This message and the subsequent parameter list are also issued bu an "F LSAM,PARMS" command or by executing this XPSAUDIT program.<br />- Noe that the PROCESSES display issues does **NOT** show a "Stored" Process of zero. Since this cound is used to size CSA storage queues, only the SAM is advised of a process of ZERO. |
+| XPS014I | PSAM Initialization - Server in XCF Mode | - Issued at an agent startup to indicate that the XPSERVER subroutine does not attempt to open IP communications to the SAM.<br />- All communications to the scheudle activity monitor is accomplished through the Sysplex Coupling Facility and the LPAR designated as the Sysplex primary agent. |
+| XPS015A | XPS390 Awaiting Connection to the SAM Server<br />XPS015O - XPSYS0 Awaiting Connection to UI Window | - Indicates a temporary communication disconnect occureed between the agent and the SAM schedule system.<br />- The agent waits approximately 20 seconds and retries the IP Socket ACCEPT request.<br />- If this message persists and all communication protocols appear operational, contact the TCP/IP LAN Network Support Technician.<br />- The type code "0" in dicates the message was issues by XPSYSOUT. |
+| XPS016I | XPS390 SAM Server Connection Established<br />XPS016O - XPSYS0 Window Connection Established | - Indicates that the temporary disconnect was corrected, and the agent and the SAM are in communication.<br />- The Type code "O" indicates the message was issued bu XPSYSOUT.<br />- This message mornally follows message XPS015A. |
+| XPS017W | Cannot Bind Port; Suspending Retry for 30 Seconds<br />XPS017O - Cannot Bind Port; Suspending Retry for 30 Seconds | -Indicates a temporary communication disconnect occurred between the agent and the SAM schedule system.<br />- The agent waits approximately 30 seconds and retries the IP Port BIND request.<br />- This message may be a normal result of stopping and immediatelly restarting the agent.<br />- z/OS TCPIP often "hold(s)" access to a port after it is closed to ensure any buffered messages are completed before allowing the prot to be reopened.<br />- If this message persists and all communication protocaols appear iperational, contace the TCP/IP LAN Network Support Technician.<br />- The Type code "O" indicates the message was issued by XPSYSOUT. |
+| XPS018W | Cannot Obtain Socket; Suspending Retry for 30 Seconds<br />XPS018O - Cannot Obtain Socket; Suspending Retry for 30 Seconds | - Indicates a temporarycommunication disconnect has occurred berween the agent and the SAM schedule system.<br />- The agent waits approximately 30 seconds and retries the IP Socket connection.<br />- This message may be a normal result of stipping and immediately restarting the agent.<br />- z/OS TCPIP often "hold(s)" access to a port after close to ensure any buffered messages are completed before allowing the port to be reopened and a socket assigned.<br />- If this message persists and all communication protocols appear operational, contact the TCP/IP LAN Network Support Technician.<br />- The Type code "O" indicates the message was issues by XPSYSOUT.
+| XPS019E | Storage Recovery Failed for \[*queuename*\] | - Indicates the MVS FREEMAIN error was encounted dureing a REMOVEX, REPEXIT or RESET command.<br />- The agent could not free storage for \[*queuename*] that was assinged to the agent.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS020W | Process CSA Will Change at Next IPL | - Issued in response to an "F agent,PROCESS=nn" operator command.<br />-CSA storage is allocated at IPL to coincide with the expected process limit set in the agent/Machine environment. |
+| XPS021I | Current Stored PARMS for \[*sysid*] | - Issued in response to an "F agent,parm=" operator command to indicate the status of all run time parameters after processing the last command.<br />- A list of current agent parameters settings follows this message.<br />- This message and the subsequent parameter list are also issued bu an "F agent,PARMS" command or by running this XPSAUDIT program.<br />- Noe that the PROCESSES display issues does **NOT** show a "Stored" Process of zero. Since this cound is used to size CSA storage queues, only the SAM is advised of a process of ZERO. |
 | XPS022W | No PARMS Updated | - Indicates a parameter update request was invalid.<br />- No Parms are updated if any parameter in the request command is invalid. |
-| XPS023I | Process Count Set to Zero  | - Indicates a Machine Process Count of "0000" has been sent to the SAM.<br />- This is the same as indicating a "Machine Down" condition.<br />- Issued in response to an "F LSAM,PROCESS=0" operator command. This command is particularly useful when an z/OS system QUIESCE is underway. It allows a pause in the scheduled event traffic to this LPAR without detailed changes to the SAM schedule. If the LSAM is shutdown, the process cound reverts to the value defined in the XPSPRMnn upon restart. Note that the PROCESSES display issued at message XPS021I does NOT show a "Stored" Process of zero. Since this count is used to size CSA storage queues, only the SAM is advised of a process of ZERO. |
-| XPS024A | Parameter Invalid: \[*parm*] | - Issued if a parameter error occurs during the LSAM start-up. If this is issued the LSAM termintes.<br />- Indicates the *parm* is invlid in response to one of the following:<ul><li>A RUNPARM memebr load during start-up.</li><li>An operator command (F LSAM,parm=value).</li><li>An LSAM JCL Parm (PARM='parm=value')</li><li>Correct and retry the operation.</li></ul> |
-| XPS024E | Parameter Invalid: \[*parm*] | - This message is essentially the same XPS024E. The both indicate a parameter error.<br />- Issued when a user enters an invalid parameter after the LSAM is started. The LSAM continues to run, but the new parameter is rejected. |
-| XPS025E | LOG Dyn Alloc Error R15=*nnnn* | - Indicates the LSAMLOG dataset could not be allocated.<br />- This error may be due to a catalog error ot an invalid GDG override in the OPCONnn Proc.<br />- The task terminates.<br />- Restart the task.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS026E | Error Opening XPSLOG - Restart | - This indicates an open request failed after successfully allocating the RECLOG DD.<br />- The task terminates.<br />- Restart the task.<br />-Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS027I | OpCon LSAM Log Dataset Spin-Off Underway | Each midnight (00:00) and upon operator request (F LSAM,SPINLOG) and new generation of the OpCon RECLOG is created. Logging is suspendeed during the actibvity of de-allocating, closing, re-allocating, and reopening the log. |
+| XPS023I | Process Count Set to Zero  | - Indicates a Machine Process Count of "0000" has been sent to the SAM.<br />- This is the same as indicating a "Machine Down" condition.<br />- Issued in response to an "F agent,PROCESS=0" operator command. This command is particularly useful when an z/OS system QUIESCE is underway. It allows a pause in the scheduled event traffic to this LPAR without detailed changes to the SAM schedule. If the agent is shutdown, the process cound reverts to the value defined in the XPSPRMnn upon restart. Note that the PROCESSES display issued at message XPS021I does NOT show a "Stored" Process of zero. Since this count is used to size CSA storage queues, only the SAM is advised of a process of ZERO. |
+| XPS024A | Parameter Invalid: \[*parm*] | - Issued if a parameter error occurs during the agent start-up. If this is issued the agent termintes.<br />- Indicates the *parm* is invlid in response to one of the following:<ul><li>A RUNPARM memebr load during start-up.</li><li>An operator command (F agent,parm=value).</li><li>An agent JCL Parm (PARM='parm=value')</li><li>Correct and retry the operation.</li></ul> |
+| XPS024E | Parameter Invalid: \[*parm*] | - This message is essentially the same XPS024E. The both indicate a parameter error.<br />- Issued when a user enters an invalid parameter after the agent is started. The agent continues to run, but the new parameter is rejected. |
+| XPS025E | LOG Dyn Alloc Error R15=*nnnn* | - Indicates the LSAMLOG dataset could not be allocated.<br />- This error may be due to a catalog error ot an invalid GDG override in the OPCONnn Proc.<br />- The task terminates.<br />- Restart the task.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS026E | Error Opening XPSLOG - Restart | - This indicates an open request failed after successfully allocating the RECLOG DD.<br />- The task terminates.<br />- Restart the task.<br />-Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS027I | OpCon agent Log Dataset Spin-Off Underway | Each midnight (00:00) and upon operator request (F agent,SPINLOG) and new generation of the OpCon RECLOG is created. Logging is suspendeed during the actibvity of de-allocating, closing, re-allocating, and reopening the log. |
 | XPS028I | Sysout Agent Ready on Port:*nnnn*-*JESx* | - Indicates the Enterprise Manager Sysout View agent (XPSYSOUT) sucessfully opened the IP communication port (*nnnn*) for SYSOUT requests. <br />- *JES* displays the SAPI subsystem from which SYSOUT is retrieved. |
-| XPS029I | Stop Command Recognized | - This is a response to an "F LSAM,STOP" or a "P LSAM" operator command.<br />- Indicates the LSAM is systematically shutting down operational subtasks and closing SAM communications.<br />- The LSAM terminates. |
-| XPS030I | \[*eventname*\] Adopted From *ssss* | - Indicates an Event normally executed on another LPAR being run on the current LPAR due to Sysplex adoption of the target Machine-ID.<br />- To view the status of Sysplex Machine-IDs with respect to the current LPAR, issue command: F XPSPLEX,STATUS. |
+| XPS029I | Stop Command Recognized | - This is a response to an "F agent,STOP" or a "P agent" operator command.<br />- Indicates the agent is systematically shutting down operational subtasks and closing SAM communications.<br />- The agent terminates. |
+| XPS030I | \[*eventname*\] Adopted From *ssss* | - Indicates an Event normally run on another LPAR being run on the current LPAR due to Sysplex adoption of the target Machine-ID.<br />- To view the status of Sysplex Machine-IDs with respect to the current LPAR, issue command: F XPSPLEX,STATUS. |
 | XPS031E | Invalid Jobname Bypassed: \[*jobname*] | - Indicates the Job Name is an invalid MVS construct.<br />- This message is usually due to a special character in the *job name* or other invalid usage.<br />- XPS390 automatically converts lowercase characters to uppercase prior to seatching the defined library for the JCL or Event Name. |
-| XPS032E | JCL Member Not Found: \[*job name*] in \[library *DDNAME*] | - Indicates the SAM schedule requested JCL for \[*job name*] be submitted from \[*DDNAME*] and the LSAM could not locate such as member name.<br />- Correct and reschedule.
-| XPS033E | \[*jobname*\] Invalid JobCard | - Indicates the SAM schedule request JCL for \[*jobname*] be submitted and the LSAM encountered an invalid MVS Job Card.<br />- Correct and reschedule.
+| XPS032E | JCL Member Not Found: \[*job name*] in \[library *DDNAME*] | - Indicates the SAM schedule requested JCL for \[*job name*] be submitted from \[*DDNAME*] and the agent could not locate such as member name.<br />- Correct and reschedule.
+| XPS033E | \[*jobname*\] Invalid JobCard | - Indicates the SAM schedule request JCL for \[*jobname*] be submitted and the agent encountered an invalid MVS Job Card.<br />- Correct and reschedule.
 | XPS034E | JCL Library BLKSIZE Invalid   | - Indicates the Block Size of each JCL PDS library must be greater than 800.<br />- Contace the MVS system Programmer for assistance.<br />- Meddage XPS035S follows with the DDNMAE of the library. |
-| XPS035E | Library DDNAME Error: \[*ddname*] | - Indicates the SAM schedule requested JCL be submitted from \[*ddname*] and the LSAM could not locate such a library or the library had a non-recoverable error.<br />- Correct and reschedule. |
-| XPS036E | Allocation/Open Error on INTRDR | - Indicates an XPSUBMIT subtask was unable to allocate an internal reader for JCL submission.<br />- Restart the LSAM.<br />- Contact the JES System Programmer and ensure that there are enough INTRDRs defined.<br />- Contact SMA Technologies if this message persists or the reason for its issuance cannot be determined. |
+| XPS035E | Library DDNAME Error: \[*ddname*] | - Indicates the SAM schedule requested JCL be submitted from \[*ddname*] and the agent could not locate such a library or the library had a non-recoverable error.<br />- Correct and reschedule. |
+| XPS036E | Allocation/Open Error on INTRDR | - Indicates an XPSUBMIT subtask was unable to allocate an internal reader for JCL submission.<br />- Restart the agent.<br />- Contact the JES System Programmer and ensure that there are enough INTRDRs defined.<br />- Contact Continuous if this message persists or the reason for its issuance cannot be determined. |
 | XPS037I | *jobname*(J*0000*) Submitted From \[*library*] as \[*event name*]<br />XPS037I - *taskname*(S*0000*) Submitted as \[*event name*] | - Indicates that a successful Batch JCL submission has occured.<br />- The Schedule Event \[*event name*] requested submission of \[*jobname*] from DDNAME: \[*library*].<br />- JES has assigned the job number (*Jnnnn*).<br />- Indicates that a successful Start Task initiation has occurred.<br />- The Schedule Event \[*event name*] requested submission of \[*taskname*]. MVS has assigned the task number (*Snnnn*). |
-| XPS038E | \[*ddname*\] DD Error For REXX Event: \[*eventname*] | - Indicates the \[*ddname*\] requested on the SAM schedule record (or the default DD SYSEXEC) for a dynamis REXX event, is not defined to the LSAM.<br />- Correct and reschedule.
+| XPS038E | \[*ddname*\] DD Error For REXX Event: \[*eventname*] | - Indicates the \[*ddname*\] requested on the SAM schedule record (or the default DD SYSEXEC) for a dynamis REXX event, is not defined to the agent.<br />- Correct and reschedule.
 | XPS039E | Token/Symbolic Syntax Error: \[*jobname*]  | - Indicates an invalid syntax for a &SYMBOLIC or \@Token entry in the detail schedule record for \[*jobname*] was encountered.<br />- Correct and reschedule. |
-| XPS040A | Auditor Has Reestabilished EOQ Marker | - Indicates that a tracking queue was not properly synchronized and automatic recovery succeeded.<br />- Contact SMA Technologies Support if this message persists. |
-| XPS041W | Warning: Cannot Establish EOQ Marker | - Indicates a queue format error cannot be recovered.<br />- Contact SMA Technologies Support if this message persists. |
-| XPS042E | CRC Error Detected - Retrying Request | - Indicates the Check Record hash did not agree with the one sent by SAM.<br />- This is a probably temporary network error.<br />- This is a probably temporary network error.<br />- The XPSERVER subroutine discards the related record and request that SAM resend that request.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS043W | DSN Exit Storage Not Freed<br />XPS043W - ACTRT Exit Storage Not Freed<br />XPS043W - U83 Exit Storage Not Freed<br />XPS043W - U84 Tracking Exit Storage Not Freed<br />XPS043W - UJV Exit Storage Not Freed<br />XPS043W - USI Exit Storage Not Freed | - Indicates a request was made to release exits (F LSAM,REPEXIT) and the old storage area was not successfully freed.<br />- This condition is bypassed and the new exit is loaded; however, repeated messages of this type may indicate that storage fragmentation in ECSA is possible. |
-| XPS044W | WTO Exit Storage Not Freed | - Indicates a request was made to reload exists (F LSAM,REPEXIT) and the old storage area was not successfully freed.<br />- This condition is bypassed and the new exit is loaded; howeverm repeated messages of this type may indicate that storage fragmentation in ECSA is possible. |
+| XPS040A | Auditor Has Reestabilished EOQ Marker | - Indicates that a tracking queue was not properly synchronized and automatic recovery succeeded.<br />- Contact Continuous Support if this message persists. |
+| XPS041W | Warning: Cannot Establish EOQ Marker | - Indicates a queue format error cannot be recovered.<br />- Contact Continuous Support if this message persists. |
+| XPS042E | CRC Error Detected - Retrying Request | - Indicates the Check Record hash did not agree with the one sent by SAM.<br />- This is a probably temporary network error.<br />- This is a probably temporary network error.<br />- The XPSERVER subroutine discards the related record and request that SAM resend that request.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS043W | DSN Exit Storage Not Freed<br />XPS043W - ACTRT Exit Storage Not Freed<br />XPS043W - U83 Exit Storage Not Freed<br />XPS043W - U84 Tracking Exit Storage Not Freed<br />XPS043W - UJV Exit Storage Not Freed<br />XPS043W - USI Exit Storage Not Freed | - Indicates a request was made to release exits (F agent,REPEXIT) and the old storage area was not successfully freed.<br />- This condition is bypassed and the new exit is loaded; however, repeated messages of this type may indicate that storage fragmentation in ECSA is possible. |
+| XPS044W | WTO Exit Storage Not Freed | - Indicates a request was made to reload exists (F agent,REPEXIT) and the old storage area was not successfully freed.<br />- This condition is bypassed and the new exit is loaded; howeverm repeated messages of this type may indicate that storage fragmentation in ECSA is possible. |
 | XPS045E | Allocation Error on Sysout DS | - Indicates the XPSYSOUT Agent encountered an error while allocating a JES Sysout.<br />- The probably cause for tihs error is that theSysout is no longer available on the output queue. |
-| XPS046W | TCP/IP Timeout: LSAM Has Lost Contact with SMA NetCom Service. | - Indicates the XPSERVER has timed out waiting on Netcom to respond.<br />- The LSAM continues to poll the SMA Server every 10 to 20 seconds.<br />- This may be caused by a network outage or NetCome shutdown.<br />- Whne communication is resumed, message XPS093I is issued.<br />- If this message persists and all communication protocols appear operational, contact SMA Technologies Support. |
-| XPS046O | TCP/IP Timeout - \[*process*] Restarting. | -   Indicates the XPSAGENT has timed out waiting on IP Window Response to the \[*process*] indicated.<br />- This is not critical communicatons.<br />- If this message persists and all communication protocols appear operational, contact SMA Technologies Support. |
+| XPS046W | TCP/IP Timeout: agent Has Lost Contact with SMA NetCom Service. | - Indicates the XPSERVER has timed out waiting on Netcom to respond.<br />- The agent continues to poll the SMA Server every 10 to 20 seconds.<br />- This may be caused by a network outage or NetCome shutdown.<br />- Whne communication is resumed, message XPS093I is issued.<br />- If this message persists and all communication protocols appear operational, contact Continuous Support. |
+| XPS046O | TCP/IP Timeout - \[*process*] Restarting. | -   Indicates the XPSAGENT has timed out waiting on IP Window Response to the \[*process*] indicated.<br />- This is not critical communicatons.<br />- If this message persists and all communication protocols appear operational, contact Continuous Support. |
 | XPS047I | \[*$event*\] | - This is a response to a step condition code or DSN trigger.<br />- Indicates the event command \[*events*] was sent to the SAM.<br />- The condition or trigger was caused by the job issueing the message. | 
-| XPS048O | InitAPI Error: XPSAGENT*tcpiptask* | -  Indicates the XPSERVER module cannot establish an interface to OpenMVS API.<br />- This error may be due to an OMVS sefment not being defined in the security priduct or a failure in TCP/IP.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuanse cannot be determined. |
+| XPS048O | InitAPI Error: XPSAGENT*tcpiptask* | -  Indicates the XPSERVER module cannot establish an interface to OpenMVS API.<br />- This error may be due to an OMVS sefment not being defined in the security priduct or a failure in TCP/IP.<br />- Contact Continuous Support if this message persists or the reason for its issuanse cannot be determined. |
 | XPS049A | \[*eventname*\] Not in Event Table | - This is a response to a step condition code or DSN trigger.<br />- Indicates the event command \[*eventname] was referenced, but could not be located in the LPAR event table.<br />- The condition or trigger  was caused by the job issuing the message.<br />- Inspect the Event Table and ensure that the event name is spelled correctly and the table entry is available to this LPAR. |
-| XPS050E | XPSCOMM PARM Error | Indicates an invalid PARM= parameter was found on the XPSCOMM execute state or the KEY=. |
-| XPS051E | XPSCOMM Tracking Error | - Indicates the XPSCOMM encountered an error attempting to update the tracking record of the job in question.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS050E | XPSCOMM PARM Error | Indicates an invalid PARM= parameter was found on the XPSCOMM run state or the KEY=. |
+| XPS051E | XPSCOMM Tracking Error | - Indicates the XPSCOMM encountered an error attempting to update the tracking record of the job in question.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
 | XPS052I | XPSCOMM Processing Successful | Indicates that the requested tracking queue update was successfully accomplished bu XPSCOMM. |
-| XPS053A | Invalid Sysid for Adoption | - This is a response to an F LSAM,ADOPTWKLS(*ssss*,*nn*) command.<br />- Indicates as invalid sysid (*ssss*) was requested.<br />- The current LPAR SMFID and those of currently operating LPARS are not valid. |
+| XPS053A | Invalid Sysid for Adoption | - This is a response to an F agent,ADOPTWKLS(*ssss*,*nn*) command.<br />- Indicates as invalid sysid (*ssss*) was requested.<br />- The current LPAR SMFID and those of currently operating LPARS are not valid. |
 | XPS054A | Invalid Reply | - Indicates the operator responded incorrectly to either the XPS112A ot XPS113A message.<br />- Review these message descriptions for the proper reply syntax. |
 | XPS055A | SYSPLEX Mode Not Supported | - Indicates a Sysplex Only request was made (starting XPSLEX, etc.) that was inconsistent the SYSPLEX parameter in XPSPRMnn.<br />- Ensure SYSPLEX=Y is coded in the XPSPRMnn to enab3e Sysplex services in OpCon. |
 | XPS056I | XPSPLEX Already Running | - Indicates an attempt was made to start another XPSPLEX task when one was already running.<br />- Onlly one XPSPLEX task is allowed.<br />- The newly started task terminates. |
 | XPS057A | Invalid Command | -   Indicates an "F XPSPLEX,command" was entered and the command syntax was invalid.<br />- Refer to the syntaz of the F XPSPLEX command for further details. |
-| XPS058W | WTO Msg Tracking Exit NOT Loaded | -   Indicates an internal error has prevented message tracking exit XPSWTOEX from loading.<br />- Message XPS073E or XPS068A may precede this message with causes.<br />- The WTO exit is not optional.<br />- Besides providing message triggering for scheduled event, it also provides for Not Catlg error support and other internal OpCon support features.<br />- Contact SMA Technologies Support if the reason for this message cannot be determined. |
-| XPS059E | Failed to \[*Process Function*] RC=*nnnn* | - Indicates the \[*Process Function*] is a critical internal operational function.<br />- The diagnostic infomration in this message must be passed to SMA Technologies Support as soon as possible.<br />- The OPCONnn task may not continue to function if this error persists. |
-| XPS060E | No PCB Available for Restart - Activate LSAM | - Indicates a control block format error cannot be recovered during initialization.<br />- Events that were "in process" during a system outage might not be properly reported to SAM.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS061E | XPSU84 Foreign Job Tracking Error | - Indicates the LSAM encountered an OpCon job submitted from a different NJE/MAS or JES2 LPAR that is not in LSAM/PSAM configuration.<br />- The job was canceled.<br />- Check the schedule detail for this job and review the job "Machine ID" field.<br />- Check the JCL for SYSID routing information and class assignments.<br />- Contact the applicationprogrammer or Scheduler for futher information. |
-| XPS062I | XPSU84: Step Action Initiated | - This is a TRACE Level 2 response.<br />- It is received from the IEFU84 exit when the OpCOn trace facility is active.<br />- The trace facility should not be active unless specifically requested bu SMA Technologies Support.<br />- To eliminate these messages enter command "F LSAM,TRAC=N". |
-| XPS063I | XPSU84: Step Tracking Initiated | - This is a TRACE Level 2 response.<br />- It is reveived from the IEFU84 exit when the OpCon trace facility if active.<br />- The trace facility should not be active unless specifically requested by SMA Technologies Support.<br />- To eliminate these messages enter command "F LSAM,TRAC=N". |
-| XPS064I | XPSU84: Tracking Record Updated | - This is a TRACE Level 2 response.<br />- It is reveived from the IEFU84 exit when the OpCon trace facility is active.<br />- The trace facility should not be active unless specifically requested bu SMA Technologies Support.<br />- To eliminate these messages enter command "F LSAM,TRAC=N". |
+| XPS058W | WTO Msg Tracking Exit NOT Loaded | -   Indicates an internal error has prevented message tracking exit XPSWTOEX from loading.<br />- Message XPS073E or XPS068A may precede this message with causes.<br />- The WTO exit is not optional.<br />- Besides providing message triggering for scheduled event, it also provides for Not Catlg error support and other internal OpCon support features.<br />- Contact Continuous Support if the reason for this message cannot be determined. |
+| XPS059E | Failed to \[*Process Function*] RC=*nnnn* | - Indicates the \[*Process Function*] is a critical internal operational function.<br />- The diagnostic infomration in this message must be passed to Continuous Support as soon as possible.<br />- The OPCONnn task may not continue to function if this error persists. |
+| XPS060E | No PCB Available for Restart - Activate agent | - Indicates a control block format error cannot be recovered during initialization.<br />- Events that were "in process" during a system outage might not be properly reported to SAM.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS061E | XPSU84 Foreign Job Tracking Error | - Indicates the agent encountered an OpCon job submitted from a different NJE/MAS or JES2 LPAR that is not in agent/PSAM configuration.<br />- The job was canceled.<br />- Check the schedule detail for this job and review the job "Machine ID" field.<br />- Check the JCL for SYSID routing information and class assignments.<br />- Contact the applicationprogrammer or Scheduler for futher information. |
+| XPS062I | XPSU84: Step Action Initiated | - This is a TRACE Level 2 response.<br />- It is received from the IEFU84 exit when the OpCOn trace facility is active.<br />- The trace facility should not be active unless specifically requested bu Continuous Support.<br />- To eliminate these messages enter command "F agent,TRAC=N". |
+| XPS063I | XPSU84: Step Tracking Initiated | - This is a TRACE Level 2 response.<br />- It is reveived from the IEFU84 exit when the OpCon trace facility if active.<br />- The trace facility should not be active unless specifically requested by Continuous Support.<br />- To eliminate these messages enter command "F agent,TRAC=N". |
+| XPS064I | XPSU84: Tracking Record Updated | - This is a TRACE Level 2 response.<br />- It is reveived from the IEFU84 exit when the OpCon trace facility is active.<br />- The trace facility should not be active unless specifically requested bu Continuous Support.<br />- To eliminate these messages enter command "F agent,TRAC=N". |
 | XPS065E | XPSCOMM Event \[*eventname*] Not Found | - Indicates the Event Token coded in the $EVENT=\[*eventname*] parameter in the XPSCOMM program was not located in the system Event Table.<br />- Contact the Production control department.<br />- Request that the production control department inspect the Event Table and ensure that the event name is spelled correctly and the table pentry is available to the LPAR on which that job ran. |
-| XPS066E | \[*queuename*\] CSA Queue Full! | - Indicates there is not enough space in the \[*queuename*] for additional entries.<br />- *refer to the definitiaon in the SETQUES= parameter in XPSPRMnn*.<br />- *Refer to current SETQUES setting using the "F LSAM,DISP=PARMS" command*.<br />- Contact SMA Technologies Support **IMMEDIATLY** if the reason for this message is not obvious. |
-| XPS067E | ADD/POST Error on Submitted Request | - Indicates the XPSERVER subroutine encounted an error attempting to update a tracking record.<br />- Contact SMA Technologies Support if this message persists. |
-| XPS069I | LSAM Task Must Be Down Before XPSPLEX Shutdonw | - This is a response to and operator command to shut down XPSPLEX.<br />- Indicates OPCONnn is still exevuting.<br />- The OPCONnn task must be terminated before XPSPLEX can be sut down.<br />- To shut down BOTH tasks (OPCONnn and XPSPLEX) use the "F LSAM,SHUTDOWN" command. |
-| XPS070I | Pre-run Condition(*c*) Check: \[*eventname*] \[*OK*\|*Failed*] For Job: \[*jobname*] | -   Indicates that the TaskPre-run condition was either met (OK) or failed (Failed) for the \[*jobname*] in questions.<br />- The Task Pre-run condition (c) can be: <ul><li>E=Executing</li><li>N=Not Executing</li></ul>-Refer to the scheduled \[*eventname*] detail for infomration. |
+| XPS066E | \[*queuename*\] CSA Queue Full! | - Indicates there is not enough space in the \[*queuename*] for additional entries.<br />- *refer to the definitiaon in the SETQUES= parameter in XPSPRMnn*.<br />- *Refer to current SETQUES setting using the "F agent,DISP=PARMS" command*.<br />- Contact Continuous Support **IMMEDIATLY** if the reason for this message is not obvious. |
+| XPS067E | ADD/POST Error on Submitted Request | - Indicates the XPSERVER subroutine encounted an error attempting to update a tracking record.<br />- Contact Continuous Support if this message persists. |
+| XPS069I | agent Task Must Be Down Before XPSPLEX Shutdonw | - This is a response to and operator command to shut down XPSPLEX.<br />- Indicates OPCONnn is still exevuting.<br />- The OPCONnn task must be terminated before XPSPLEX can be sut down.<br />- To shut down BOTH tasks (OPCONnn and XPSPLEX) use the "F agent,SHUTDOWN" command. |
+| XPS070I | Pre-run Condition(*c*) Check: \[*eventname*] \[*OK*\|*Failed*] For Job: \[*jobname*] | -   Indicates that the TaskPre-run condition was either met (OK) or failed (Failed) for the \[*jobname*] in questions.<br />- The Task Pre-run condition (c) can be: <ul><li>E=Running</li><li>N=Not Running</li></ul>-Refer to the scheduled \[*eventname*] detail for infomration. |
 | XPS071I | Prerun Check:*aa/nn* Unit=\[*unitname*] Rdy For \[*jobname*] at *hh.mm.ss* | -Indicates that the Task Pre-run tape unites needed (*nn*) for \[*unitname] was tested and *aa* units were found available.<br />-If the count in *aa* is equal to or greater than the number of units needed (*nn*), job \[*jobname*] is submitted immediately; otherwise, the job is sent back to SAM with a "Pre-run Failed" condition and SAM reschedules the job at the interval set by SAM installation options. |
-| XPS072I | Prerun DSN: \[*trigger.dsname.suffix*] For \[*jobname*] Triggered by \[*+*] \[*taskname*] at *hh.mm.ss*  | - Indicates that the Task Pre-run Data Set Name (DSN) ending with the 20-character suffix \[*trigger.dsname.suffix*] has been accessed as required  buy the pre-run condition in \[*jobname*].<br />- The executing job or task that triggererd the DSNAME access event is denoted bu \[*taskname*].<br />- If \[*taskname*] is preceded bu a plus sign ( *+* ), the trigger was manually released, in which the TSO Userid responsible for setting the trigger's count to zero. |
+| XPS072I | Prerun DSN: \[*trigger.dsname.suffix*] For \[*jobname*] Triggered by \[*+*] \[*taskname*] at *hh.mm.ss*  | - Indicates that the Task Pre-run Data Set Name (DSN) ending with the 20-character suffix \[*trigger.dsname.suffix*] has been accessed as required  buy the pre-run condition in \[*jobname*].<br />- The running job or task that triggererd the DSNAME access event is denoted bu \[*taskname*].<br />- If \[*taskname*] is preceded bu a plus sign ( *+* ), the trigger was manually released, in which the TSO Userid responsible for setting the trigger's count to zero. |
 | XPS073E | \[*Error Condition*\] | - Indicates a Trigger or Tracking Exit did not load properly.<br />- One of the following could not load an interface to MVS:<ul><li> XPSWTOEX</li><li>XPSUJV</li><li>XPRUSI</li><li>XPSU84</li><li>XPSU83</li></ul> - Following a general description, each error condition is described in detail below.|
-| XPS073E | BLDL Failed for *XPS3U84* \| *XPSU83* \| *XPSUJV* \| *XPRUSI* \| *XPSWTOEX*| - Indicates an error occurred in an attempt to load one of the trigger exists (i.e., the LOADLIB DD statement in the OPCONnn Proc failed to return the member name).<br />- Check to ensure the STEPLIB or link list contains the module.<br />- Contact SMA Technologies Support if this message persists or the reason for its issance cannot be determined. |
-| XPS073E | *U84* \| *U83* \| *UJV* \| *USI* \| *WTOX* Length not in TTR | -   Indicates an error occurred in an attempt to lood one of the trigger exits (i.e., the LOADLIB DD statemene in the OPCONnn Proc return the member name but the member has zero records).<br />- Check to ensure the STEPLIB or link list contains the named module. Relink these modules using the STAGE2 JCL if necessary.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS073E | Fixed ESQA Getmain Failed: *U84EX* \| *U83EX* \| *UJVEX* \| *USIEX* \| *WTOEX* | - Indicates an error occurred in an attempt to load one of the trigger exits (i.e., the extended storage was not available for the request).<br />- Approximately 2.5K is needed in extended SQA for each module.<br />- Contact the system programmer to research the amount of extended storage allocated.<br />- Contact SMA Technologies Support if this message persists of the reason for its issuance cannot be determined. |
-| XPS073E | Explicit Load for *XPSU84* \|*XPSU83* \| *XPSUJV* \| *XPRUSI* \| *XPSWTOEX* Failed | - Indicates an error occurred in an attempt to load on of the trigger exits (i.e., the LOAD Macro returned a nonzero return code).<br />- This error may be due to environmental factors.<br />- Retry the load request \[F LSAM,REPEXIT].<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS073E | CSVDYNEX Add Failed for *XPSU83* \| *XPSU84* \| *XPSUJV* \| *XPRUSI* | - Indicates an error occurred in an attempt to load XPSU83 into the SMF IEFU83 exit list (i.e., the CSVDYNEX Macro returned a nonzero return code).<br />- Additional messages are issued to the z/OS console by the Dynamic Exit Service.<br />- Ensure SYS.IEFU83 is properly defined to SMF.<br />- Correct the problems indicated by the associated messages, then retry the load request \[F LSAM,REPEXIT].<br />- Contact SMA Technologies Support if this message or the reason for its issuance cannor be determined. |
-| XPS073E | XPS390 Not Initialized | - Indicates XPSELOAD program cannot be executed "stand alone" without OpCon being initialized.<br />- Start the OPCONnn task to reload exits automatically. |
+| XPS073E | BLDL Failed for *XPS3U84* \| *XPSU83* \| *XPSUJV* \| *XPRUSI* \| *XPSWTOEX*| - Indicates an error occurred in an attempt to load one of the trigger exists (i.e., the LOADLIB DD statement in the OPCONnn Proc failed to return the member name).<br />- Check to ensure the STEPLIB or link list contains the module.<br />- Contact Continuous Support if this message persists or the reason for its issance cannot be determined. |
+| XPS073E | *U84* \| *U83* \| *UJV* \| *USI* \| *WTOX* Length not in TTR | -   Indicates an error occurred in an attempt to lood one of the trigger exits (i.e., the LOADLIB DD statemene in the OPCONnn Proc return the member name but the member has zero records).<br />- Check to ensure the STEPLIB or link list contains the named module. Relink these modules using the STAGE2 JCL if necessary.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS073E | Fixed ESQA Getmain Failed: *U84EX* \| *U83EX* \| *UJVEX* \| *USIEX* \| *WTOEX* | - Indicates an error occurred in an attempt to load one of the trigger exits (i.e., the extended storage was not available for the request).<br />- Approximately 2.5K is needed in extended SQA for each module.<br />- Contact the system programmer to research the amount of extended storage allocated.<br />- Contact Continuous Support if this message persists of the reason for its issuance cannot be determined. |
+| XPS073E | Explicit Load for *XPSU84* \|*XPSU83* \| *XPSUJV* \| *XPRUSI* \| *XPSWTOEX* Failed | - Indicates an error occurred in an attempt to load on of the trigger exits (i.e., the LOAD Macro returned a nonzero return code).<br />- This error may be due to environmental factors.<br />- Retry the load request \[F agent,REPEXIT].<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS073E | CSVDYNEX Add Failed for *XPSU83* \| *XPSU84* \| *XPSUJV* \| *XPRUSI* | - Indicates an error occurred in an attempt to load XPSU83 into the SMF IEFU83 exit list (i.e., the CSVDYNEX Macro returned a nonzero return code).<br />- Additional messages are issued to the z/OS console by the Dynamic Exit Service.<br />- Ensure SYS.IEFU83 is properly defined to SMF.<br />- Correct the problems indicated by the associated messages, then retry the load request \[F agent,REPEXIT].<br />- Contact Continuous Support if this message or the reason for its issuance cannor be determined. |
+| XPS073E | XPS390 Not Initialized | - Indicates XPSELOAD program cannot be run "stand alone" without OpCon being initialized.<br />- Start the OPCONnn task to reload exits automatically. |
 | XPS074I | Pre-run Skipped by SAM Request: \[*jobname*] | - Indicates that the OpCon operator has manually requested that the associated job be submitted without pre-run resource checks. |
 | XPS075E | DSN Table Expire Date: *yy.ddd* | - Indicates that any DSN trigger entries that have not been referenced since Julian date *yy.ddd* are expired from the current tracking table.<br />- The entry is reinstated if a job has a pre-run requirement specified. This value fixed by architecture. |
-| XPS075I | Trigger Table Expire Date: xx.xxx | - Indicates the LSAM log has spun off and a copy of the dataset and message tables was written to a new log. During this loggin action, the LSAM calculates and reports an expiration date in the system log.<br />- The LSAM reports the date in Julian format, with a two-digit year and three-digit day number. | 
-| XPS275I | EXPIRING: xxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | - Indicates a trigger table entry has not been referenced since the Trigger Table Expiration Date. The LSAM deletes the table entry, logs the action, and reports it to the system log. **Refer to XPS075I - Trigger Table Expire Date: xx.xxx.**<br />- The variable portion of the message contains the dataset or message filter of the deleted entry. |
-| XPS076E | Error Loading SMF Tracking Exits | - Indicates an error occurred in an attempt to load and SMF exit.<br />- Message XPS073E should precede this message with more detailed problem information.<br />- Contact SMA Technologies Support if this message persists or the reason for its issuance cannot be determined. |
+| XPS075I | Trigger Table Expire Date: xx.xxx | - Indicates the agent log has spun off and a copy of the dataset and message tables was written to a new log. During this loggin action, the agent calculates and reports an expiration date in the system log.<br />- The agent reports the date in Julian format, with a two-digit year and three-digit day number. | 
+| XPS275I | EXPIRING: xxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | - Indicates a trigger table entry has not been referenced since the Trigger Table Expiration Date. The agent deletes the table entry, logs the action, and reports it to the system log. **Refer to XPS075I - Trigger Table Expire Date: xx.xxx.**<br />- The variable portion of the message contains the dataset or message filter of the deleted entry. |
+| XPS076E | Error Loading SMF Tracking Exits | - Indicates an error occurred in an attempt to load and SMF exit.<br />- Message XPS073E should precede this message with more detailed problem information.<br />- Contact Continuous Support if this message persists or the reason for its issuance cannot be determined. |
 | XPS077I | \[exitname] loaded from \[library] | - Indicates which library the exit loader loads from.<br />- The \[exitname] is the name of the exit being loaded. Depending on where the exit module was found, the \[library] is either STEPLIB or is the name of the active linklist set. |
 | XPS077I | XPSACTRT Step Messaging Established | - Indicates that the dynamic load for the XPS390 SMF exit for step messages was successful. |
 | XPS077I | XPSU83 File Trigger Exit Established | - Indicates that the dynamic load for the XPS390 SMF exit for file triggering was successful. |
@@ -924,20 +951,20 @@ XPS*nnnc*
 | XPS080A | XPS390 Not Initialized | - Indicates control block format error caused a temporary tracking failure.<br />- This message may be issued during a "RESET" command. If this message is received at any other time, contact SMA Support. |
 | XPS081A | XPS390 Tracking Record not Available | - Indicates control block format error caused a temporary tracking failure.<br />- This message may be issued during a "RESET" command. If this message is received at any other time, contact SMA Support. |
 | XPS082E | XPS390 Dyn Alloc Error: R15=nn; DALERR=xxxxxxxx | - Indicates an error occurred while attempting to allocate the SYSEXEC DD for REXX dynamic call support.<br />- Refer to the associated MVS allocation messages. Where nn is the return code from SVC99 and xxxxxxxx is the failing Text Unit.<br />- Contact SMA Support if this message persists or the reason for its issuance cannot be determined. |
-| XPS083I | \[DSN \| WTO] Table Entry: \[*entrytext*] Added \| Deleted by \[*jobname*] at hh.mm.ss {via ISPF} | - Indicates that the LSAM or a TSO user (via ISPF) has added a new DSN to WTO trigger to the Sysplex.<br />- The \[*entrytext*] is the dataset name or WTO Text of the trigger. Refer to the \[*jobname*] on the appropriate OpCon schedule to determine the actual event this addition is to trigger.<br />- The ISPF form of this message is issued for ISPF TSO User table updates to the DSN Trigger table only if SPFAUDIT=Y is coded in XPSPRMnn.<br />- This message is also issued for ISPF User deletes. |
-| XPS084I | REXX:\[*execname*] ID=\[*eventname8] Executing | - Indicates the REXX \[*execname*] was successfully called by XPSEVENT after dynamic allocation of SYSEXEC, SYSTSPRT and SYSTSIN.<br />- This message does not indicate the REXX has successfully completed. |
+| XPS083I | \[DSN \| WTO] Table Entry: \[*entrytext*] Added \| Deleted by \[*jobname*] at hh.mm.ss {via ISPF} | - Indicates that the agent or a TSO user (via ISPF) has added a new DSN to WTO trigger to the Sysplex.<br />- The \[*entrytext*] is the dataset name or WTO Text of the trigger. Refer to the \[*jobname*] on the appropriate OpCon schedule to determine the actual event this addition is to trigger.<br />- The ISPF form of this message is issued for ISPF TSO User table updates to the DSN Trigger table only if SPFAUDIT=Y is coded in XPSPRMnn.<br />- This message is also issued for ISPF User deletes. |
+| XPS084I | REXX:\[*execname*] ID=\[*eventname8] Running | - Indicates the REXX \[*execname*] was successfully called by XPSEVENT after dynamic allocation of SYSEXEC, SYSTSPRT and SYSTSIN.<br />- This message does not indicate the REXX has successfully completed. |
 | XPS085I | REXX:\[*execname*] RCD=nnnn, ID=\[*eventname*] | - Indicates the REXX \[*execname*] was completed via XPSEVENT.<br />- If the REXX routine set the EXIT (nn) code, then RCD contains the set value. |
-| XPS086I | ADOPT Command Successful | - Indicates the LSAM has processed the operators ADOPTWKLD command.<br />- To review the status of Machine ID processing on this LPAR enter the F XPSPLEX,STATUS command. |
-| XPS087I | DROP Command Successful | - Indicates the LSAM has processed the operators DROPWKLD command.<br />- To review the status of Machine ID processing on this LPAR enter the F XPSPLEX,STATUS command. |
-| XPS088I | Command: command For: XXXXXXXXXXXX Executed | - Indicates execution of the MVS Command \[*command*] was requested by XPSEVENT.<br />- XPS390 does not check the outcome if operator commands; nevertheless, associated "Message Triggers" may monitor the results of any given command. |
-| XPS089I | REXX:\[*rexxname*] RCD=\[*rtncode*], ID=\[*eventname*] | - Indicates the LSAM has successfully executed the REXX routine \[*rexxname*] as scheduled by event \[*eventname*].<br />- The return code \[*rtncode*] from the REXX routine is passed back to the SAM. |
-| XPS090A | XPCB Token Not Initialized | - Indicates the LSAM is entering "Primary Initialization" and allocating CSA storage for the first time after a system IPL.<br />- If this message is received at any other time, contact SMA Support. |
+| XPS086I | ADOPT Command Successful | - Indicates the agent has processed the operators ADOPTWKLD command.<br />- To review the status of Machine ID processing on this LPAR enter the F XPSPLEX,STATUS command. |
+| XPS087I | DROP Command Successful | - Indicates the agent has processed the operators DROPWKLD command.<br />- To review the status of Machine ID processing on this LPAR enter the F XPSPLEX,STATUS command. |
+| XPS088I | Command: command For: XXXXXXXXXXXX Run | - Indicates execution of the MVS Command \[*command*] was requested by XPSEVENT.<br />- XPS390 does not check the outcome if operator commands; nevertheless, associated "Message Triggers" may monitor the results of any given command. |
+| XPS089I | REXX:\[*rexxname*] RCD=\[*rtncode*], ID=\[*eventname*] | - Indicates the agent has successfully run the REXX routine \[*rexxname*] as scheduled by event \[*eventname*].<br />- The return code \[*rtncode*] from the REXX routine is passed back to the SAM. |
+| XPS090A | XPCB Token Not Initialized | - Indicates the agent is entering "Primary Initialization" and allocating CSA storage for the first time after a system IPL.<br />- If this message is received at any other time, contact SMA Support. |
 | XPS091A | XPCB Control Block Not Initialized | - Indicates a control block format error caused a temporary tracking failure.<br /> - This message may be issued during a "RESET" command.<br />- If this message is received at any other time, contact SMA Support. |
 | XPS092I | REXX:execname ID=XXXXXXXXXXXX Prerun Exec | - Indicates the REXX \[*execname*] was successfully called by XPSEVENT as requested by \[*ID*] after dynamic allocation of SYSEXEC, SYSTSPRT and SYSTSIN.<br />- The message does not indicate the REXX has successfully completed. |
 | XPS093I | OpCon/xps SAM Contact Reestablished | - Indicates XPSERVER had timed out waiting on Netcom to respond (message XPS046 should have been pending).<br />- This condition is no longer a problem and normal communications have been reestablished. |
 | XPS094E | Event: \[*eventname*] Missing | - Indicates the event name noted was referenced by a DSN trigger, but was not found in the Event Table.<br />- Review the DSN trigger definitions and create/rename the event name to match the name in the DSN trigger entry. |
 | XPS095E | Event: \[*eventname*] Missing | - Indicates the event name noted was referenced by a WTO trigger, but was not found in the Event Table.<br />- Review the DSN trigger definitions and create/rename the event name to match the name in the WTO trigger entry. |
-| XPS096I | Sysplex Member: \[*memberid*] Active as \[*PSAM* \| *LSAM*] | - Indicates the XPSPLEX task has recognized that the LPAR shown in Sysplex member \[*memberid*] has joined the OpCon Sysplex group as a PSAM or an LSAM.<br />- nly one LSAM can be allocated in any one Sysplex configuration. |
+| XPS096I | Sysplex Member: \[*memberid*] Active as \[*PSAM* \| *agent*] | - Indicates the XPSPLEX task has recognized that the LPAR shown in Sysplex member \[*memberid*] has joined the OpCon Sysplex group as a PSAM or an agent.<br />- nly one agent can be allocated in any one Sysplex configuration. |
 | XPS097I | XRF/CF Link for Grp: \[*groupname*], Mbr: \[*memberid*] | - Indicates the XPSPLEX task has successfully joined the LPAR to the OpCon Sysplex group \[*groupname*] as member \[*memberid*]. |
 | XPS098E | XRF/CF MSGX Error: \[*returncode*]; \[*reasoncode*] | - Indicates XPSU84 has experienced an error or interruption in Sysplex communications to other OpCon members and was unable to send job status information.<br />- Report this message to SMA Support if this message persists or the reason for its issuance cannot be determined. |
 | XPS099B | XRF/CF \[*errrtn*] Error: \[*returncode*]; \[*reasoncode*] | - Indicates XPSUBMIT has experienced an error or interruption in Sysplex communications to other OpCon members.<br />- Report this message to SMA Support if this message persists or the reason for its issuance cannot be determined. |
@@ -949,15 +976,15 @@ XPS*nnnc*
 | XPS102I | Job Marked FAILED Due to Step Cond Code | - Indicates the SAM schedule entry for this job requested that the job be considered a failure if a given step ended in a condition code equal to or higher than a defined value.<br />- The job continues to process but OpCon tracking is halted and a "Job Fin Error" message is sent to SAM.<br />- Check the schedule detail for this job and review the step "Cond Code Fail" field.<br />- Contact the application programmer or scheduler for further information. |
 | XPS103I | Job Marked COMPLETE Due to Step Cond Code | - Indicates the SAM schedule entry for this job requested that the job be marked "Complete" if a given step ended in a condition code equal to or higher than a defined value.<br />- The job continues to process but OpCon tracking is halted and a "Job Fin OK" message is sent to SAM.<br />- Check the schedule detail for this job and review the step "Cond Code Comp" field.<br />- Contact the application programmer or scheduler for further information. |
 | XPS104I | Job TERMINATED Due to Step Cond Code | - Indicates the SAM schedule entry for this job requested that the job be cancelled if a given step ended in a condition code equal to or higher than a defined value.<br />- That value was met or exceed by this job step.<br />- The job is terminated after the offending step.<br />- Check the schedule detail for this job and review the step "Cond Code Abort" field.<br />- Contact the application programmer or scheduler for further information. |
-| XPS105A | Confirm Y/N is XPS390 to be REMOVED \| RESET \| CYCLED? | - This is a response to an "F LSAM, REMOVEX" or "F LSAM,RESET=S \| C" command.<br />- Prompts the operator is prompted for confirmation of the action.<br />- A Reply of "Y" causes all internal storage allocations to be freed and reallocated.<br />- For RESET=S or REMOVEX, all current data in the queues, except DSN and WTO trigger monitor entries, are lost. |
+| XPS105A | Confirm Y/N is XPS390 to be REMOVED \| RESET \| CYCLED? | - This is a response to an "F agent, REMOVEX" or "F agent,RESET=S \| C" command.<br />- Prompts the operator is prompted for confirmation of the action.<br />- A Reply of "Y" causes all internal storage allocations to be freed and reallocated.<br />- For RESET=S or REMOVEX, all current data in the queues, except DSN and WTO trigger monitor entries, are lost. |
 | XPS106I | DSN: \[*dsname*] Has Triggered Event: \[*eventname*] | - Indicates an ACTIVE unscheduled DSN trigger for the Data Set \[*dsname*] has been satisfied.<br />- The action defined in Event Table entry \[*eventname*] is taken.<br />- To view the event detail, use the XPSPF001 TSO table interface command. |
 | XPS107A | Confirm Y/N is Process Count to Remain at ZERO? | - Once the Process Count is set to ZERO (Refer to message XPS023I) any subsequent parameter update request, including another nonzero Process request, causes this prompt to be issued.<br />- A reply of "Y" leaves the process count at "0".<br />- A reply of "N" reverts the process count to the last value defined by PROCESS= command or the value in XPSPRMnn.<br />**Note:** *The PROCESSES display issued at message XPS021R does not show a "Stored" Process of zero. Since this count is used to size CSA storage queues, only the SAM is advised of a process of ZERO.* |
 | XPS108I | Message from: \[*job/task name*] Has Triggered Event: \[*eventname*] | - Indicates an ACTIVE unscheduled WTO message trigger was activated by job \[*job/task name*].<br />- The action defined in Event Table entry \[*eventname*] is taken.<br />- To view the event detail, use the XPSPF001 TSO table interface command. |
-| XPS109E | XPSU84: Locate Error - Tracking Suspended: \[*schdkey*]<br />XPS109E - \[*jobname*]: Locate Error - Tracking Suspended | - Indicates a tracking error was encountered.<br />- Contact SMA Support if this message persists or the reason for its issuance cannot be determined.<br />- A possible reason for this message may be that a scheduled job was awaiting execution when the system, or LPAR failed. After IPL, the LSAM task was not yet started before the JES initiators, and no tracking queue addresses match the original submission addresses. XPS390 allows the job to execute, but does not report status to SAM or may report a "failed" status. It is possible to manually complete the job on SAM and continue processing. |
-| XPS110A | XPSPRMnn Not Initialized, Reply Y/N to Use SMA Defaults | - Indicates that the LSAM is in "Primary Initialization" and allocating CSA storage for the first time after a system IPL and no XPSPRMnn are available.<br />- If this message is received at any other time, contact SMA Support.<br />- XPSPRMnn can be provided through the XPSPRMnn DD statement in the OPCONnn Proc. | - Contact the system programmer for the proper response to this request. |
-| XPS111A | Enter Recovery Options: RESTART or IGNORE | - Indicates the XPS390 LSAM Recovery Management routine has found that scheduled events were executing or "in-process" when the system IPL occurred.<br />- Reply "RESTART" to this message for the LSAM to report failing jobs to SAM.<br />- Reply, "IGNORE", if all SAM reconciliation is complete. |
-| XPS112A | Two LPARS Cannot Both be LSAM Primary. Enter Sysid of PRIMARY LSAM: \[*sysid1*] or \[*sysid2*] | - Indicates more than one LPAR has LSAM=Y coded in the XPSPRMnn member.<br />- or -<br />- Indicates a response to a prior XPS113A message, the operator established a new Primary LSAM Machine ID. Another Primary LSAM is now attempting to enter the OpCon scheduling Sysplex.<br />- Enter the SMF Machine-ID of the LPAR to maintain Primary LSAM Gateway control.<br />- The non-primary LSAM is terminated and the user has to restart it after correcting XPSPRMnn parameters. |
-| XPS113A | LSAM on \[*sysid*] Has Left the Sysplex. Enter Y/N For This Member to Assume LSAM Status. | - Prompts the user if the z/OS LPAR on which this message was issued can adopt all the functions of the Primary LSAM, which has apparently left the Sysplex complex.<br />- A response of "N" returns this LPAR to its normal PSAM status.<br />- A response of "Y" requires following the procedures for LSAM Fail-Over. |
+| XPS109E | XPSU84: Locate Error - Tracking Suspended: \[*schdkey*]<br />XPS109E - \[*jobname*]: Locate Error - Tracking Suspended | - Indicates a tracking error was encountered.<br />- Contact SMA Support if this message persists or the reason for its issuance cannot be determined.<br />- A possible reason for this message may be that a scheduled job was awaiting execution when the system, or LPAR failed. After IPL, the agent task was not yet started before the JES initiators, and no tracking queue addresses match the original submission addresses. XPS390 allows the job to run, but does not report status to SAM or may report a "failed" status. It is possible to manually complete the job on SAM and continue processing. |
+| XPS110A | XPSPRMnn Not Initialized, Reply Y/N to Use SMA Defaults | - Indicates that the agent is in "Primary Initialization" and allocating CSA storage for the first time after a system IPL and no XPSPRMnn are available.<br />- If this message is received at any other time, contact SMA Support.<br />- XPSPRMnn can be provided through the XPSPRMnn DD statement in the OPCONnn Proc. | - Contact the system programmer for the proper response to this request. |
+| XPS111A | Enter Recovery Options: RESTART or IGNORE | - Indicates the XPS390 agent Recovery Management routine has found that scheduled events were running or "in-process" when the system IPL occurred.<br />- Reply "RESTART" to this message for the agent to report failing jobs to SAM.<br />- Reply, "IGNORE", if all SAM reconciliation is complete. |
+| XPS112A | Two LPARS Cannot Both be agent Primary. Enter Sysid of PRIMARY agent: \[*sysid1*] or \[*sysid2*] | - Indicates more than one LPAR has agent=Y coded in the XPSPRMnn member.<br />- or -<br />- Indicates a response to a prior XPS113A message, the operator established a new Primary agent Machine ID. Another Primary agent is now attempting to enter the OpCon scheduling Sysplex.<br />- Enter the SMF Machine-ID of the LPAR to maintain Primary agent Gateway control.<br />- The non-primary agent is terminated and the user has to restart it after correcting XPSPRMnn parameters. |
+| XPS113A | agent on \[*sysid*] Has Left the Sysplex. Enter Y/N For This Member to Assume agent Status. | - Prompts the user if the z/OS LPAR on which this message was issued can adopt all the functions of the Primary agent, which has apparently left the Sysplex complex.<br />- A response of "N" returns this LPAR to its normal PSAM status.<br />- A response of "Y" requires following the procedures for agent Fail-Over. |
 | XPS115E | Security Check Failed RC=nnn-nnn; R15/R0=nnn; Contact Technical Support | - Indicates an error occurred when the XPSAFAPI attempted to establish an SAF security environment for XPSAGENT.<br />- Contact SMA Support if the reason for this error cannot be determined. |
 | XPS116E | RACDELETE Failed; RC=nnn-nnn; R15/R0=nnn/nnn; Contact Technical Support | - Indicates an error occurred when the XPSAFAPI attempted to remove an SAF security environment for XPSAGENT.<br />- Contact SMA Support if the reason for this error cannot be determined. |
 | XPS117A | \[*Userid*] Not Defined to Security Subsystem | - Indicates an error occurred while the XPSAGENT editor interface was attempting to update JCL in an OpCon defined library.<br />- The \[*Userid] of the OpCon user attempting the update was not found in RACF, Top Secret, ACF2 or other security system.<br />- Access is denied to this user and the update is not made.<br />- Message XPS122I may precede this message with the name of the JCL member this user was attempting to update. |
@@ -976,9 +1003,47 @@ XPS*nnnc*
 | XPS275I | EXPIRING: \[*dsnmask \| message pattern*] | - Because it has not been referenced in 45 days, the dataset or message entry is being removed from the monitor table. |
 | XPS80xi | Messages | - Displays User Exit issues or status.<br />- The x digit refers to the exit number (1 – 9).<br />- The 'I' information character refers to the typical Action/Information Indicator. |
 | XPS80xI | Submit Exit \[*exitname*] Active | - Indicates the first time a user exit is invoked in normal processing.<br />- The activation of that exit is noted on the console. |
-| XPS80xI | User Exit \[*exitname*] Reset | - This is a response to an operator command (F LSAM,REPUSERx) or to an internal error in User Exit #n.<br />- The exit has been reset for reload. It is reloaded and refreshed at the next normal exit call. |
+| XPS80xI | User Exit \[*exitname*] Reset | - This is a response to an operator command (F agent,REPUSERx) or to an internal error in User Exit #n.<br />- The exit has been reset for reload. It is reloaded and refreshed at the next normal exit call. |
 | XPS80xE | Invalid Return Code From User Exit | - Indicates the exit x has returned a value other than that allowed.<br />- The exit may be deactivated and the current job canceled.<br />- Valid return codes for each XPS390 user exit is outlined in the XPUSERnn member of hilevel.midlevel.INSTLIB.<br />- Valid return codes are multiples of four starting with zero (e.g., 00, 04, 08, 12…). |
 | XPS80xE | Load Failed For XPUSERnn | - Indicates the exit referred to by XPUSERnn is not in the //STEPLIB concatenation of the OPCON Proc.<br />- Replace and try again. |
 | XPS600I | REPLY TO nn IS; \[*reply*] | - Indicates the reply referenced (nn) was issued by the LSAM as directed by a WTO Table Event entry.<br />- This message is issued by the OpCon z/OS LSAM Automated Response feature.<br />- This is the OpCon LSAM echo of the IBM IEE600I message. Refer to IEE600I for details.<br />- XPS700I REPLY nn IGNORED; REPLY TOO LONG FOR REQUESTOR | - Indicates the reply referenced (nn) was attempted by the LSAM as directed by a WTO Table Event entry.<br />- This message is issued by the OpCon z/OS LSAM Automated Response feature.<br />- This is the OpCon LSAM echo of the IBM IEE700I message. Refer to IEE700I for details. |
 | XPS999I | Batch Job Statistics: | - Displays an informational set of job execution messages provided by OpCon exit XPSACTRT.<br />- Although the exit is installed by OpCon, all batch jobs, whether or not they are scheduled, receives these messages if the STEPMSGS=Y option is coded in XPSPRMxx. |
 | XPSI499E | ISPLINK BLDL/FETCH FAILED | - Indicates the OpCon ISPF table editor was unable to load the ISPLINK module. |
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| XPS | The product identifier | — | — |
+| nnn | The message reference number | — | — |
+## FAQs
+
+**Q: Where do Operations Machine Messages appear in the OpCon interfaces?**
+
+These status messages appear in the 20-character string that follows the OpCon job status in Schedule Operations within the graphical interfaces. Each agent platform returns different messages while a job is running and when it completes.
+
+**Q: Which agent platforms have machine messages documented in this reference?**
+
+This reference covers machine messages for IBM i, MCP, OS 2200 (jobs, LMAM, JORS, and XFRTCP), SAP BW, SAP R/3 and CRM, Tuxedo ART, UNIX, Windows, and z/OS LSAMs.
+
+**Q: Where can you find file transfer-specific machine messages?**
+
+File transfer status messages are documented separately in the Operations File Transfer Messages reference topic.
+
+## Glossary
+
+**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
+
+**DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
+
+**SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.

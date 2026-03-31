@@ -1,47 +1,74 @@
+---
+title: Named Schedule Instances
+description: "Named Schedule Instances reduce the maintenance burden on repeatable workflows by allowing a single definition rule to be designated for unlimited use or job runs."
+product_area: Automation Concepts
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Business Analyst
+  - Jobs
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Named Schedule Instances
 
-Multi-instance support for schedules in OpCon is a powerful feature that reduces the maintenance burden on repeatable workflows. Essentially, a single definition rule can be designated for unlimited use or job runs.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
 
-Named Schedule Instance functionality expands multi-instance capabilities on schedules to include exception management and inter-instance dependency capability.
+## What Is It?
+
+Named Schedule Instances reduce the maintenance burden on repeatable workflows by allowing a single definition rule to be designated for unlimited use or job runs. This functionality expands multi-instance capabilities on schedules to include exception management and inter-instance dependency.
+
+## When Would You Use It?
+
+- Named Schedule Instances reduce the maintenance burden on repeatable workflows by allowing a single definition rule to be designated for unlimited use or job runs
+
+## Why Would You Use It?
+
+- **Operational value**: Reduce the maintenance burden on repeatable workflows by allowing a single definition r
 
 ## Property Association
 
-Already a multi-instance schedule capability, predefined properties can also be associated with a named instance of a schedule. For more information, refer to [Using Properties for Automation](../objects/using-properties.md) and [Schedule Instance Property Name Syntax](../objects/using-properties.md#schedule).
+Predefined properties can be associated with a named instance of a schedule. Refer to [Using Properties for Automation](../objects/using-properties.md) and [Schedule Instance Property Name Syntax](../objects/using-properties.md#schedule).
 
 ## Exception Management
 
-Exception management is a way to associate exception definitions with named instances by applying execution rules to job patterns. During the schedule build, the exceptions are applied.
+Exception management associates exception definitions with named instances by applying execution rules to job patterns. The exceptions are applied during the schedule build.
 
 :::note
-When defining the job pattern, if only the asterisk wildcard character (\*) is specified in the field, then the exceptions will be applied to all job.
+If only the asterisk wildcard character (\*) is specified in the job pattern field, the exceptions apply to all jobs.
 :::
 
-The following information applies to defining exception rules:
+The following fields define exception rules:
 
-- **Job Field**: Defines the job field in which to apply the exception rule.
-- **To Replace**: Defines the value to replace in the job field.
-  - The value may be:
-    - an empty string ("")
-    - a fixed string ("abc")
-    - a string with instance properties (\[\[$this.Property\]\]) -   The value may not be a property expression.
-  - \[\[\@name\]\] is a case-sensitive token that can be used to     refer to the current instance name.
-  - \[\[\@current\]\] is a case-sensitive token that can be used     to refer to the current value of the job field.
-  - $this may be used as a placeholder for the instance property named in the instance definition. This placeholder is case-sensitive.
-- **New Value**: Defines the replacement value.
-  - The value may be:
-  - a fixed string ("abc")
-  - a string with instance properties (\[\[$this.Property\]\])     -   a property expression (\[\[\@current\]\ + ToOaTime("02:00"))
-- **Is Expression**: Specifies, when enabled, that the new value is a property expression.
+- **Job Field**: The job field in which to apply the exception rule
+- **To Replace**: The value to replace in the job field
+  - Accepted values:
+    - An empty string ("")
+    - A fixed string ("abc")
+    - A string with instance properties (\[\[$this.Property\]\]) — may not be a property expression
+  - \[\[\@name\]\] is a case-sensitive token referring to the current instance name
+  - \[\[\@current\]\] is a case-sensitive token referring to the current value of the job field
+  - $this is a case-sensitive placeholder for the instance property named in the instance definition
+- **New Value**: The replacement value
+  - Accepted values:
+    - A fixed string ("abc")
+    - A string with instance properties (\[\[$this.Property\]\])
+    - A property expression (\[\[\@current\]\] + ToOaTime("02:00"))
+- **Is Expression**: When enabled, specifies that the new value is a property expression
 
 ### Use Cases for Exception Rules
 
 #### When to Use String Replacement
 
-String replacement can be used to change a string value, for instance, on the command line or of a machine or department name. Here are some practical examples.
+Use string replacement to change a string value such as a command line argument, machine name, or department name.
 
 :::tip Example #1
 
-To change the command line from "C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 secondArg" to "C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 secondArg -arg3 thirdArg":
+To add an argument to the command line:
 
 **Job Field**: (Windows) Command Line
 
@@ -54,7 +81,7 @@ To change the command line from "C:\\MyFolder\\MyApp.exe -arg1 firstArg -arg2 se
 
 :::tip Example #2
 
-To change the command line from "<CurrentValue\>" to "<CurrentValue\> -arg3 thirdArg":
+To append an argument to the current command line value:
 
 **Job Field**: (Windows) Command Line
 
@@ -67,7 +94,7 @@ To change the command line from "<CurrentValue\>" to "<CurrentValue\> -arg3 thir
 
 :::tip Example #3
 
-To change the machine from "MyMachine" to "My<Property\>Machine":
+To change the machine from "MyMachine" to "My\<Property\>Machine":
 
 **Job Field**: Primary Machine
 
@@ -80,7 +107,7 @@ To change the machine from "MyMachine" to "My<Property\>Machine":
 
 :::tip Example #4
 
-To change the department from "<CurrentValue\>" to "<CurrentValue\><InstanceName\>":
+To append the instance name to the current department value:
 
 **Job Field**: Department
 
@@ -93,11 +120,11 @@ To change the department from "<CurrentValue\>" to "<CurrentValue\><InstanceName
 
 ### When to Use True Expressions
 
-Expressions can be used to change a numeric field, for instance, the job start offset. Here are some practical examples.
+Use expressions to change numeric fields such as the job start offset.
 
 :::tip Expression Example #1
 
-To change the job start offset from "<CurrentValue\>" by adding 20 minutes to it:
+To add 20 minutes to the current start offset:
 
 **Job Field**: Start Offset
 
@@ -110,7 +137,7 @@ To change the job start offset from "<CurrentValue\>" by adding 20 minutes to it
 
 :::tip Expression Example #2
 
-To change the job start offset from "<CurrentValue\>" by adding 15% of the current offset to it:
+To add 15% of the current offset to itself:
 
 **Job Field**: Start Offset
 
@@ -120,3 +147,37 @@ To change the job start offset from "<CurrentValue\>" by adding 15% of the curre
 
 **Is Expression**: true
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Job Field | The job field in which to apply the exception rule | — | — |
+| To Replace | The value to replace in the job field | — | — |
+| New Value | The replacement value | — | — |
+| Is Expression | When enabled, specifies that the new value is a property expression | — | — |
+## FAQs
+
+**Q: What is the main benefit of Named Schedule Instances?**
+
+Named Schedule Instances reduce maintenance on repeatable workflows by allowing a single schedule definition to be reused across unlimited instances, each with its own set of properties and exceptions applied during the schedule build.
+
+**Q: What is exception management in Named Schedule Instances?**
+
+Exception management associates exception rules with a named instance, applying substitution rules to specific job fields during the schedule build. This allows individual job parameters (such as command line arguments or start times) to be customized per instance without modifying the master definition.
+
+**Q: Can a wildcard be used in the job pattern for exception rules?**
+
+Yes. Using the asterisk (`*`) wildcard as the job pattern applies the exception rule to all jobs in the named schedule instance.
+
+## Glossary
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

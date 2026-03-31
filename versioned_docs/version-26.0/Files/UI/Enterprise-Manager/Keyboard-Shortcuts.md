@@ -1,10 +1,40 @@
+---
+title: Keyboard Shortcuts
+description: "Enterprise Manager supports keyboard shortcuts that speed up navigation and common tasks. Shortcuts are available at the application level (such as F1 for help) and within individual views and editors."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # Keyboard Shortcuts
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Enterprise Manager supports keyboard shortcuts that speed up navigation and common tasks. Shortcuts are available at the application level (such as F1 for help) and within individual views and editors.
+
+## When Would You Use It?
+
+- You need to configure or manage Keyboard Shortcuts in OpCon
+
+## Why Would You Use It?
+
+- **Centralized control**: Managing Keyboard Shortcuts through OpCon provides consistent oversight and a full audit trail for all changes
 
 ## Enterprise Manager
 
-In Enterprise Manager, the **F1** Keyboard shortcut will link to the conceptual information for the current location in Enterprise Manager. From the main screen, this option opens to the first page of the Enterprise Manager Guide user help.
+Press **F1** to open contextual help for the current location. From the main screen, this opens the first page of the Enterprise Manager Guide.
 
-The following are principal shortcuts from the tools on the Enterprise Manager banner page:
+The following shortcuts are available from the Enterprise Manager banner:
 
 ||||
 |--- |--- |--- |
@@ -13,25 +43,25 @@ The following are principal shortcuts from the tools on the Enterprise Manager b
 ||Refresh|F5|
 ||Pause Refresh|Ctrl+P|
 
-In Enterprise Manager, **Ctrl+Alt+K** (Show Key Assist) will display the following shortcut menu:
+Press **Ctrl+Alt+K** (Show Key Assist) to display the shortcut menu:
 
 ![Shortcut menu options in black text on yellow background](../../../Resources/Images/EM/EMshortcutkeysmenu.png "Show Key Assist Shortcut Menu")
 
-The following **Ctrl+Alt+** character keyboard shortcuts access the *Preference* and *System* menus and switch between views.
+The following **Ctrl+Alt+** shortcuts access the *Preference* and *System* menus and switch between views:
 
 |||
 |--- |--- |
-|Ctrl+Alt+B|Go to previous views when multiple views are open in Enterprise Manager|
-|Ctrl+Alt+E|Switch between editors when multiple editors are open in Enterprise Manager|
-|Ctrl+Alt+K|Display the list of shortcuts *- or -* within the Help menu, select Show Key Assist to display the list of shortcuts|
+|Ctrl+Alt+B|Go to previous views when multiple views are open|
+|Ctrl+Alt+E|Switch between editors when multiple editors are open|
+|Ctrl+Alt+K|Display the list of shortcuts *- or -* within the Help menu, select Show Key Assist|
 |Ctrl+Alt+M|Display the system menu for the current view/editor|
-|Ctrl+Alt+N|Go to the next view when multiple views are open in Enterprise Manager|
-|Ctrl+Alt+P|Go to the Preferences screen in Enterprise Manager|
+|Ctrl+Alt+N|Go to the next view when multiple views are open|
+|Ctrl+Alt+P|Go to the Preferences screen|
 |Ctrl+Alt+V|Display the View menu|
 
 ## Schedule Master and Job Master
 
-The following **Alt +** and **Ctrl +** character keyboard shortcuts access required fields in editors within the *Schedule Master* and *Job Master*:
+The following **Alt +** and **Ctrl +** shortcuts access required fields in *Schedule Master* and *Job Master* editors:
 
 ||||
 |--- |--- |--- |
@@ -81,8 +111,8 @@ The following **Alt +** and **Ctrl +** character keyboard shortcuts access requi
 |Alt+A|Add|
 |Alt+R|Remove|
 |Alt+E|Edit|
-|Alt+J|Select Job Related checkbox|
-|Alt+F|Select Frequency Related checkbox|
+|Alt+J|Select Job Related option|
+|Alt+F|Select Frequency Related option|
 
 ## General Job Details
 
@@ -109,7 +139,7 @@ The following **Alt +** and **Ctrl +** character keyboard shortcuts access requi
 |--- |--- |
 |Alt+S|Go to Source Machine field|
 |Alt+D|Go to Destination Machine field|
-|Alt+P|Select/clear Fail if preferred settings not satisfied checkbox|
+|Alt+P|Select/clear Fail if preferred settings not satisfied option|
 |Alt+T|(Options tab) Go to the Source Data Type Field|
 
 ## IBM i Details
@@ -207,7 +237,7 @@ The following **Alt +** and **Ctrl +** character keyboard shortcuts access requi
 |||
 |--- |--- |
 |Alt+N|Go to Name field|
-|Enter Key|Enable the Enter key to move a selected item from Unassigned to Assigned or Assigned to Unassigned|
+|Enter Key|Move a selected item between Unassigned and Assigned|
 
 ## Server Options
 
@@ -221,14 +251,14 @@ The following **Alt +** and **Ctrl +** character keyboard shortcuts access requi
 |||
 |--- |--- |
 |Alt+N|Go to Name field|
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## User Accounts
 
 |||
 |--- |--- |
 |Alt+N|Go to Name field|
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Batch Users
 
@@ -253,42 +283,70 @@ The following **Alt +** and **Ctrl +** character keyboard shortcuts access requi
 |||
 |--- |--- |
 |Alt+U|Go to Allow Job Updates field|
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Schedule Privileges
 
 |||
 |--- |--- |
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Function Privileges
 
 |||
 |--- |--- |
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Departmental Function Privileges
 
 |||
 |--- |--- |
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Batch User Privileges
 
 |||
 |--- |--- |
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Machine Privileges
 
 |||
 |--- |--- |
 |Alt+U|Go to Allow Job Updates field|
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
 
 ## Machine Group Privileges
 
 |||
 |--- |--- |
 |Alt+U|Go to Allow Job Updates field|
-|Enter Key|Enable the Enter key to move a selected item from Revoked to Granted or Granted to Revoked|
+|Enter Key|Move a selected item between Revoked and Granted|
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What does Keyboard Shortcuts cover?**
+
+This page covers Enterprise Manager, Schedule Master and Job Master, Frequency.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+
+**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.

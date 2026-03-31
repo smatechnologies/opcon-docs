@@ -1,59 +1,81 @@
 ---
 sidebar_label: 'Database Maintenance'
+title: OpCon Data Maintenance
+description: "Regular database maintenance helps maintain good performance across OpCon applications."
+product_area: Database Administration
+audience: System Administrator
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 # OpCon Data Maintenance
 
-Regular database maintenance for OpCon helps to maintain good performance for all of the OpCon applications. Before using any of the scripts in this topic, refer to [Environment Variables](#Environm).
+**Theme:** Configure  
+**Who Is It For?** System Administrator
 
-This section describes the scripts used to maintain the database through OpCon. SMA Technologies suggests:
+## What Is It?
 
-- Daily backups of the "master", "msdb", and "distribution" databases to provide further data protection. These backups are used in the event of the loss of the database server, refer to [Job Details](#Job).
-- Monthly to yearly maintenance with supplemental scripts depending on the need, refer to [Supplemental Stored     Procedures](#Suppleme).
+Regular database maintenance helps maintain good performance across OpCon applications. Before using any scripts in this topic, refer to [Environment Variables](#Environm).
+
+Continuous suggests:
+
+- Daily backups of the "master", "msdb", and "distribution" databases. Used if the database server is lost; refer to [Job Details](#Job)
+- Monthly to yearly maintenance with supplemental scripts as needed; refer to [Supplemental Stored Procedures](#Suppleme)
+
+## When Would You Use It?
+
+- You need to maintain good performance across OpCon applications using Regular database maintenance helps
+
+## Why Would You Use It?
+
+- **OpCon Data**: Regular database maintenance helps maintain good performance across OpCon applications
 
 ## Environment Variables
 
-All database maintenance scripts distributed by SMA Technologies use the SMA_SetDBMaintenanceScriptingVariables.cmd and SMA_SetDBEnvironmentScriptingVariables.cmd files to set up the processing environment. These command files **must** be configured before any of the database maintenance scripts will work as documented in this topic. For information on settings in the scripting variables files, refer to [Mirroring Information Worksheet](Database-Mirroring-Checklist.md#Mirrorin).
+All database maintenance scripts use the SMA_SetDBMaintenanceScriptingVariables.cmd and SMA_SetDBEnvironmentScriptingVariables.cmd files to set up the processing environment. These files **must** be configured before any maintenance scripts will work. For settings details, refer to [Mirroring Information Worksheet](Database-Mirroring-Checklist.md#Mirrorin).
 
 ## Supplemental Stored Procedures
 
-SMA Technologies provides several supplemental SQL stored procedures to aid in managing the OpCon data.
+Continuous provides supplemental SQL stored procedures to help manage OpCon data.
 
 :::note
-A SQL user without administrator privileges must be a member of the "opconspuser" role to use the following supplemental stored procedures.
+A SQL user without administrator privileges must be a member of the "opconspuser" role to use these stored procedures.
 :::
 
-- [SMA_JOBAVG](#SMA_JOBA): Averages the run time of jobs in the OpCon database history.
-- [SMA_CLEAN_ENS](#SMA_CLEA): Cleans up "orphaned" entries in the ENSSELECTED table of the OpCon database.
-- [SMA_COMPACTTOKENIDS](#SMA_COMP): Re-allocates the IDs for the tokens in the OpCon database to lower the number of the highest token ID.
+- [SMA_JOBAVG](#SMA_JOBA): Averages job run times in the OpCon database history
+- [SMA_CLEAN_ENS](#SMA_CLEA): Cleans up "orphaned" entries in the ENSSELECTED table
+- [SMA_COMPACTTOKENIDS](#SMA_COMP): Re-allocates token IDs to lower the highest token ID
 
 ### SMA_JOBAVG
 
-The SMA_JOBAVG stored procedure will automatically calculate average start time and run time by frequency for every job it processes.
+The SMA_JOBAVG stored procedure calculates average start time and run time by frequency for every job it processes.
 
 :::note
-The Job Average utility only uses the run times of jobs in the "FINISHED OK" status. Jobs that are Marked FINISHED OK are not considered. It also uses the first run of the job each day to calculate average start times (Finished OK or Failed status).
+The Job Average utility uses only run times of jobs in "FINISHED OK" status (jobs Marked FINISHED OK are excluded). It uses the first run of each job per day to calculate average start times (Finished OK or Failed status).
 :::
 
-The SMA_JOBAVG stored procedure should be scheduled to run at regular intervals to keep job start and run times up to date. The following sections describe the use of the stored procedure and the command files. Installed with the SAM-SS, the required files are in the <Configuration Directory\>\\Utilities\\Database\\ directory.
+Schedule SMA_JOBAVG to run at regular intervals to keep job start and run times current. Required files are installed with the SAM-SS in the `<Configuration Directory>\Utilities\Database\` directory.
 
 :::note
-The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
+For the Configuration Directory location, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-The Job_Avg.cmd and Job_Avg_WinAuth.cmd files run the SMA_JOBAVG stored procedure through sqlcmd.exe. The command files produces the output file SMA_JOBAVG.txt in the same directory as the command file to record the results of the stored procedure.
+The Job_Avg.cmd and Job_Avg_WinAuth.cmd files run SMA_JOBAVG through sqlcmd.exe and produce the output file SMA_JOBAVG.txt in the same directory.
 
 :::caution
-You should not execute SMA_JOBAVG independently if you chose to have SAM calculate Job Averages. For more information, refer to [SAM Calculates Job Averages](../../administration/server-options.md#general) in the **Concepts** online help.
+Do not run SMA_JOBAVG independently if SAM is configured to calculate Job Averages. Refer to [SAM Calculates Job Averages](../../administration/server-options.md#general) in the **Concepts** online help.
 :::
 
 #### Modifying the Command File
 
-The Job_Avg.cmd file runs the SMA_JOBAVG stored procedure through sqlcmd.exe. The stored procedure defaults to averaging with the last 10 executions of all schedules and all jobs while doubling the weight of the last execution of each job. If any one of the default behaviors is not desired, modify the command file to set the desired options.
+By default, SMA_JOBAVG averages the last 10 executions of all schedules and jobs, doubling the weight of the last execution. Modify the command file to change these defaults.
 
 ##### Syntax
-
-The contents of the command files contain the following information:
 
 For SQL Authentication:
 
@@ -65,32 +87,31 @@ sqlcmd -S%OpConxpsSQLInstance% -Uopconsam -P%opconsamDefault% -Q"exec %DatabaseN
 For Windows Authentication:
 
 ```batch
-
 call .\\SMA_SetDBEnvironmentScriptingVariables.cmd
 sqlcmd -S%OpConxpsSQLInstance% -E -Q"exec %DatabaseName%.dbo.SMA_JOBAVG" \> SMA_JOBAVG.txt
 ```
 
-If desired, the default behavior of the stored procedure can be changed by modifying the desired command file to use the following syntax in the -Q parameter:
+To override defaults, use the following syntax in the `-Q` parameter:
 
 `-Q"exec %DatabaseName%.dbo.SMA_JOBAVG SW1,SW2,SW3,'SW4','SW5'"`
 
-- **SW1**: Defines the number of job run times to be averaged. Specify the desired value, or use the word DEFAULT as a place holder to accept the default of 10.
-- **SW2**: The number of job run times (backward from the last execution) to be given extra weight in the average. Specify the desired value, or use the word DEFAULT as a place holder to accept the default of 1 (denote the last execution of the job). The value of 2 indicates the last two executions and so forth.
-- **SW3**: The number indicating the degree of extra weight to be placed on the job (s) listed in SW2. Specify the desired value, or use the word DEFAULT as a place holder to accept the default of 2 (indicating that the run time of the job(s) would be weighted twice as much). The value of 3 would triple the weight and so forth.
-- **SW4**: Specifies the Schedule name for the calculation. Specify the desired value, or use the word DEFAULT as a place holder to accept the default of ALL. If a specific schedule is listed, it must be enclosed in single quotes.
-- **SW5**: Specifies the Job name for the calculation. Specify the desired value, or use the word DEFAULT as a place holder to accept the default of ALL. If a specific job is listed, it must be enclosed in single quotes.
+- **SW1**: Number of job run times to average. Default: `10`
+- **SW2**: Number of recent run times to give extra weight (counting backward from the last execution). Default: `1` (last execution only)
+- **SW3**: Degree of extra weight applied to the run times in SW2. Default: `2` (double weight). Use `3` for triple weight, etc.
+- **SW4**: Schedule name for the calculation. Default: `ALL`. Enclose specific names in single quotes
+- **SW5**: Job name for the calculation. Default: `ALL`. Enclose specific names in single quotes
 
 ##### Modify the Command File
 
-1. Log on to the SAM application server as a *Windows user* with access to the OpCon installation directories.
-2. Right-click on **Start** and select **Explore**.
-3. Browse to the **<Configuration Directory\>\\Utilities\\Database\\** directory.
-4. Right-click the **Job_Avg.cmd** or **Job_Avg_WinAuth.cmd** file and select **Edit**.
-5. Modify the **--Q** parameter. Insert the values for SW1 through SW5, as desired. These values must be in order, must start with one space after the **SMA_JOBAVG** stored procedure name, and must precede the closing quotation mark (") for the command.
+1. Log on to the SAM application server as a *Windows user* with access to the OpCon installation directories
+2. Right-click on **Start** and select **Explore**
+3. Browse to the **<Configuration Directory\>\\Utilities\\Database\\** directory
+4. Right-click **Job_Avg.cmd** or **Job_Avg_WinAuth.cmd** and select **Edit**
+5. Modify the **--Q** parameter. Insert values for SW1 through SW5 in order, with one space after the **SMA_JOBAVG** procedure name, before the closing quotation mark (")
 
 #### Syntax
 
-The following is the syntax for executing the command files from the <Configuration Directory\>\\Utilities\\Database\\ directory:
+From the `<Configuration Directory>\Utilities\Database\` directory:
 
 For SQL Authentication:
 
@@ -105,47 +126,47 @@ Job_Avg_WinAuth.cmd
 ```
 
 :::note
-The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
+For the Configuration Directory location, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
 #### Automating the Stored Procedure in OpCon
 
-SMA Technologies recommends automating the Job_Avg.cmd and Job_Avg_WinAuth.cmd through OpCon daily. The OpCon administrator can determine the interval based on organizational policy and system needs. For information on automating this command file, refer to the [SMA Job Average](../../objects/schedules#smautility-schedule) job definition in the SMAUtility schedule (found in the **Concepts** online help).
+Continuous recommends automating Job_Avg.cmd and Job_Avg_WinAuth.cmd through OpCon daily. The interval can be adjusted based on organizational policy. Refer to the [SMA Job Average](../../objects/schedules#smautility-schedule) job definition in the SMAUtility schedule (in the **Concepts** online help).
 
 ### SMA_CLEAN_ENS
 
-The SMA_CLEAN_ENS stored procedure cleans up "orphaned" entries in the ENSSELECTED table of the OpCon database.
+The SMA_CLEAN_ENS stored procedure cleans up "orphaned" entries in the ENSSELECTED table.
 
 :::caution
-This process is irreversible. SMA Technologies recommends backing up the database before executing SMA_CLEAN_ENS. For information on manually backing up the database, refer to [Manually Backing Up the Database](Manual-Database-Backups-and-Restoration.md#Manually).
+This process is irreversible. Back up the database before running SMA_CLEAN_ENS. Refer to [Manually Backing Up the Database](Manual-Database-Backups-and-Restoration.md#Manually).
 :::
 
-The stored procedure performs the following actions:
+The stored procedure:
 
-- Updates an ENSSELECTED table record with the latest machine/schedule name if:
-  - A machine name in ENSSELECTED does not match the name in the main machine (MACHS) table.
-  - A schedule name in ENSSELECTED does not match the name in the main schedule (SNAME) table.
+- Updates an ENSSELECTED record with the latest machine/schedule name if:
+  - A machine name in ENSSELECTED does not match the name in the MACHS table
+  - A schedule name in ENSSELECTED does not match the name in the SNAME table
 - Deletes an ENSSELECTED record if:
-  - Duplicate entries
-  - A group of machine triggers in ENSSELECTED contains a machine ID that does not exist in the main machine (MACHS) table.
-  - A schedule's ID in ENSSELECTED does not exist in the main schedule (SNAME) table.
-  - A schedule in ENSSELECTED contains a job ID that does not exist in the main job (JMASTER) table.
+  - Duplicate entries exist
+  - A machine ID in ENSSELECTED does not exist in the MACHS table
+  - A schedule ID in ENSSELECTED does not exist in the SNAME table
+  - A job ID in ENSSELECTED does not exist in the JMASTER table
 
-#### Execute SMA_CLEAN_ENS
+#### Run SMA_CLEAN_ENS
 
 On the OpCon Database Server:
 
-1. Log in as a *local administrative user*.
-2. Use menu path: **Start \> All Programs \> SQL Server Management Studio**.
-3. In the Connect to Server window: Select **Database Engine** in the **Server type** drop-down list.
-4. Select the desired \[OpCon Database Server\] in the **Server name** drop-down list.
-5. Select one of the following options in the **Authentication**drop-down list:
-   - **Windows Authentication** to log in with the current Windows User with local administrative authority.
-   - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box.
-6. Click the **Connect** button.
-7. In the Microsoft SQL Server Management Studio window: Expand (+) the **Databases** folder and select the **OpCon database**.
-8. On the Standard toolbar: Click the **New Query** button.
-9. Enter the *command* for the **SMA_CLEAN_ENS** stored procedure.
+1. Log in as a *local administrative user*
+2. Go to **Start > All Programs > SQL Server Management Studio**
+3. In the Connect to Server window, select **Database Engine** in the **Server type** list
+4. Select the **[OpCon Database Server]** in the **Server name** list
+5. Select an authentication option:
+   - **Windows Authentication** to log in with the current Windows user
+   - **SQL Server Authentication**, then enter *sa* in the **Login** field and the *sa* password in the **Password** field
+6. Select the **Connect** button
+7. Expand the **Databases** folder and select the **OpCon database**
+8. Select the **New Query** button on the Standard toolbar
+9. Enter the command for **SMA_CLEAN_ENS**:
    :::tip Example
 
    ```sql
@@ -153,8 +174,8 @@ On the OpCon Database Server:
    ```
 
    :::
-10. Click the **Execute** button or press **F5**.
-11. View the feedback from stored procedure.
+10. Select the **Execute** button or press **F5**
+11. Review the feedback from the stored procedure
 
 :::tip Example
 The following is a summary displayed by the execution of SMA CLEAN_ENS:
@@ -176,19 +197,19 @@ TOTAL REFERENCES REMOVED: 1
 
 ### SMA_COMPACTTHRESHIDS
 
-The SMA_COMPACTTHRESHIDS stored procedure re-allocates the IDs for the thresholds and resources in the OpCon database to lower the number of the highest ID. This maintenance is necessary for customers who create and delete thresholds or resources regularly. As each threshold or resource is created and deleted, the next ID is incremented to the next highest number. The highest possible ID for a threshold or resource is 2,147,483,647. If the ID is exceeded, the SAM is unable to continue processing jobs properly.
+The SMA_COMPACTTHRESHIDS stored procedure re-allocates IDs for thresholds and resources in the OpCon database to lower the highest ID. This maintenance is required for customers who regularly create and delete thresholds or resources. Each create-and-delete cycle increments the next ID. The maximum ID is 2,147,483,647; if exceeded, the SAM cannot process jobs properly.
 
-The SMA_COMPACTTHRESHIDS stored procedure should be scheduled to run at regular intervals to keep the "next" token ID value below the maximum. SMA Technologies provides command files for automating the maintenance of Threshold and Resource IDs. These files reside in the <Configuration Directory\>\\Utilities\\Database\\ directory.
+Schedule SMA_COMPACTTHRESHIDS to run at regular intervals. Command files reside in the `<Configuration Directory>\Utilities\Database\` directory.
 
 :::note
-The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
+For the Configuration Directory location, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-The Compact_ThreshIDs.cmd and Compact_ThreshIDs_WinAuth.cmd files run the SMA_COMPACTTHRESHIDS stored procedure through sqlcmd.exe. The command files produce the output file SMA_COMPACTTHRESHIDS.txt in the same directory as the command file to record the results of the stored procedure.
+The Compact_ThreshIDs.cmd and Compact_ThreshIDs_WinAuth.cmd files run SMA_COMPACTTHRESHIDS through sqlcmd.exe and produce the output file SMA_COMPACTTHRESHIDS.txt in the same directory.
 
 #### Syntax
 
-The following is the syntax for executing the command files from the <Configuration Directory\>**\\Utilities\\Database\\** directory:
+From the `<Configuration Directory>\Utilities\Database\` directory:
 
 For SQL Authentication:
 
@@ -203,19 +224,19 @@ Compact_ThreshIDs_WinAuth.cmd
 ```
 
 :::note
-The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
+For the Configuration Directory location, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
 #### Automating the Stored Procedure in OpCon
 
-SMA Technologies recommends automating the Compact_ThreshIDs.cmd and Compact_ThreshIDs_WinAuth.cmd through OpCon at regular intervals (once per month, week, day, or hour depending on volume of tokens created and deleted). This job can be added to the SMAUtility Schedule to keep all OpCon maintenance jobs together. For additional information, refer to [SMAUtility Schedule](../../objects/schedules#smautility-schedule) in the **Concepts** online help.
+Continuous recommends automating Compact_ThreshIDs.cmd and Compact_ThreshIDs_WinAuth.cmd through OpCon at regular intervals (monthly, weekly, daily, or hourly depending on volume). Add this job to the SMAUtility Schedule. Refer to [SMAUtility Schedule](../../objects/schedules#smautility-schedule) in the **Concepts** online help.
 
 ##### Job Details
 
-The **Command Line** is determined under the **Syntax** heading above. The Working Directory is <Configuration Directory\>\\Utilities\\Database\\.
+The **Command Line** is defined under the **Syntax** section above. The Working Directory is `<Configuration Directory>\Utilities\Database\`.
 
 :::tip Example
-The example below uses the SQL Authentication command file and tokens that resolve to the OpCon properties defined for use with the SMAUtility schedule.
+Using the SQL Authentication command file with SMAUtility schedule tokens:
 
 Command Line:
 
@@ -231,23 +252,23 @@ Working Directory:
 
 :::
 
-SMA Technologies recommends scheduling this job during a time that thresholds and resources are not being deleted and recreated.
+Schedule this job during a period when thresholds and resources are not being deleted and recreated.
 
 ### SMA_COMPACTTOKENIDS
 
-The SMA_COMPACTTOKENIDS stored procedure re-allocates the IDs for the tokens in the OpCon database to lower the number of the highest token ID. This maintenance is necessary for customers who create and delete tokens regularly. As each token is created and deleted, the next token ID is incremented to the next highest number. The highest possible ID for a token is 2,147,483,647. If the ID is exceeded, the SAM is unable to continue processing jobs properly.
+The SMA_COMPACTTOKENIDS stored procedure re-allocates IDs for tokens in the OpCon database to lower the highest token ID. This maintenance is required for customers who regularly create and delete tokens. Each create-and-delete cycle increments the next token ID. The maximum ID is 2,147,483,647; if exceeded, the SAM cannot process jobs properly.
 
-The SMA_COMPACTTOKENIDS stored procedure should be scheduled to run at regular intervals to keep the "next" token ID value below the maximum. SMA Technologies provides command files for automating the maintenance of token IDs. These files reside in the <Configuration Directory\>\\Utilities\\Database\\ directory.
+Schedule SMA_COMPACTTOKENIDS to run at regular intervals. Command files reside in the `<Configuration Directory>\Utilities\Database\` directory.
 
 :::note
-The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
+For the Configuration Directory location, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-The Compact_TokenIDs.cmd and Compact_TokenIDs_WinAuth.cmd files run the SMA_COMPACTTOKENIDS stored procedure through sqlcmd.exe. The command files produce the output file SMA_COMPACTTOKENIDS.txt in the same directory as the command file to record the results of the stored procedure.
+The Compact_TokenIDs.cmd and Compact_TokenIDs_WinAuth.cmd files run SMA_COMPACTTOKENIDS through sqlcmd.exe and produce the output file SMA_COMPACTTOKENIDS.txt in the same directory.
 
 #### Syntax
 
-The following is the syntax for executing the command files from the <Configuration Directory\>**\\Utilities\\Database\\** directory:
+From the `<Configuration Directory>\Utilities\Database\` directory:
 
 For SQL Authentication:
 
@@ -262,19 +283,19 @@ Compact_TokenIDs_WinAuth.cmd
 ```
 
 :::note
-The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
+For the Configuration Directory location, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
 #### Automating the Stored Procedure in OpCon
 
-SMA Technologies recommends automating the Compact_TokenIDs.cmd and Compact_TokenIDs_WinAuth.cmd through OpCon at regular intervals (once per month, week, day, or hour depending on volume of tokens created and deleted). This job can be added to the SMAUtility Schedule to keep all OpCon maintenance jobs together. For additional information, refer to [SMAUtility Schedule](../../objects/schedules#smautility-schedule) in the **Concepts** online help.
+Continuous recommends automating Compact_TokenIDs.cmd and Compact_TokenIDs_WinAuth.cmd through OpCon at regular intervals (monthly, weekly, daily, or hourly depending on volume). Add this job to the SMAUtility Schedule. Refer to [SMAUtility Schedule](../../objects/schedules#smautility-schedule) in the **Concepts** online help.
 
 ##### Job Details
 
-The **Command Line** is determined under the **Syntax** heading above. The Working Directory is <Configuration Directory\>\\Utilities\\Database\\.
+The **Command Line** is defined under the **Syntax** section above. The Working Directory is `<Configuration Directory>\Utilities\Database\`.
 
 :::tip Example
-The example below uses the SQL Authentication command file and tokens that resolve to the OpCon properties defined for use with the SMAUtility schedule.
+Using the SQL Authentication command file with SMAUtility schedule tokens:
 
 Command Line:
 
@@ -290,4 +311,65 @@ Working Directory:
 
 :::
 
-SMA Technologies recommends scheduling this job during a time that tokens are not being deleted and recreated.
+Schedule this job during a period when tokens are not being deleted and recreated.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| SW1 | Number of job run times to average. | `10` | — |
+| SW2 | Number of recent run times to give extra weight (counting backward from the last execution). | `1` | — |
+| SW3 | Degree of extra weight applied to the run times in SW2. | `2` | — |
+| SW4 | Schedule name for the calculation. | `ALL` | — |
+| SW5 | Job name for the calculation. | `ALL` | — |
+## Operations
+
+### Monitoring
+- Monitor threshold and token ID growth: if either reaches the maximum ID of 2,147,483,647, SAM cannot process jobs. Run `SMA_COMPACTTHRESHIDS` or `SMA_COMPACTTOKENIDS` at regular intervals to compact IDs.
+- Do not run `SMA_JOBAVG` independently if SAM is configured to calculate job averages (Server Options); doing so causes redundant processing and may produce inconsistent average values.
+
+### Common Tasks
+- Run `Job_Avg.cmd` (SQL Auth) or `Job_Avg_WinAuth.cmd` (Windows Auth) from `<Configuration Directory>\Utilities\Database\` to update job average start and run times; automate daily via the SMAUtility schedule.
+- Run `Compact_ThreshIDs.cmd` / `Compact_ThreshIDs_WinAuth.cmd` at regular intervals (monthly to hourly depending on volume) to prevent threshold/resource ID exhaustion; schedule during periods when thresholds are not being deleted and recreated.
+- Run `Compact_TokenIDs.cmd` / `Compact_TokenIDs_WinAuth.cmd` at regular intervals to prevent token ID exhaustion; schedule during periods when tokens are not being deleted and recreated.
+- Before running `SMA_CLEAN_ENS`, back up the database — the procedure permanently deletes orphaned ENSSELECTED entries and cannot be reversed.
+
+### Alerts and Log Files
+- `SMA_JOBAVG` output is written to `SMA_JOBAVG.txt` in the `<Configuration Directory>\Utilities\Database\` directory.
+- `SMA_COMPACTTHRESHIDS` output is written to `SMA_COMPACTTHRESHIDS.txt` in the same directory; `SMA_COMPACTTOKENIDS` output is written to `SMA_COMPACTTOKENIDS.txt`.
+
+## Exception Handling
+
+**SMA_CLEAN_ENS run without a database backup results in irreversible data loss** — SMA_CLEAN_ENS permanently deletes orphaned ENSSELECTED entries and cannot be reversed — Back up the OpCon database before running SMA_CLEAN_ENS; use the backed-up copy to restore if the results are not as expected.
+
+**SMA_JOBAVG run independently when SAM is configured to calculate job averages causes duplicate processing** — If SAM Calculates Job Averages is set to True in Server Options, the SAM already runs the same calculation after each job run; running SMA_JOBAVG independently in addition to this causes redundant processing and may produce inconsistent average values — Do not schedule or run SMA_JOBAVG independently when SAM is configured to calculate job averages; disable one method or the other.
+
+**Threshold or token IDs reach the maximum value of 2,147,483,647 and SAM cannot process jobs** — Each create-and-delete cycle of a threshold, resource, or token increments the next ID; if the maximum is reached, the SAM cannot process jobs properly — Run SMA_COMPACTTHRESHIDS or SMA_COMPACTTOKENIDS at regular intervals to compact IDs back to lower values before the maximum is reached.
+
+## FAQs
+
+**Q: How many steps does the OpCon Data Maintenance procedure involve?**
+
+The OpCon Data Maintenance procedure involves 16 steps. Complete all steps in order and save your changes.
+
+**Q: What does OpCon Data Maintenance cover?**
+
+This page covers Environment Variables, Supplemental Stored Procedures.
+
+## Glossary
+
+**SAM-SS (SAM and Supporting Services)**: The collective term for the OpCon server-side processing programs: SAM, SMANetCom, SMA Notify Handler, SMA Request Router, and SMA Start Time Calculator.
+
+**SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.

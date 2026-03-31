@@ -1,21 +1,71 @@
+---
+title: Information Tools
+description: "The Information tools perform the functions listed below, depending on the view in which you are working."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Information Tools
 
-The Information tools will perform the functions specified below, depending on the specific [view](Navigation-Views.md) in which you are currently working.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The Information tools perform the functions listed below, depending on the [view](Navigation-Views.md) in which you are working.
 
 |||
 |--- |--- |
-||Minimize: This tool will cause the view to be minimized and an icon for the view will be placed in the sidebar.|
-||Maximize: This tool will open a view to its maximum size (e.g., use this tool to open the Error Log view to its maximum size and when opened to the maximum size, the Maximize button changes to Restore.|
-||Restore: This tool will change the view back to its original location and size.|
-||Refresh: This tool will refresh the report data.|
-||Manage Reports: This tool will help to manage report filters and general security for the reports.|
-||Activate On Event: If an activity is written to the log file, even though it may not currently be the active log file when the event occurs, that log file will become the active log file displayed.|
-||Scroll down: This tool will immediately move the display to the end of the log file.|
-||Clear: This tool will clear the display from the current log file opened.|
-||Copy to Clipboard: This tool will allow you to copy the highlighted lines from the log file to clipboard so this may be posted to another file as required.|
+||Minimize: Minimizes the view and places an icon for it in the sidebar.|
+||Maximize: Opens the view to its maximum size. When maximized, the Maximize button changes to Restore.|
+||Restore: Returns the view to its original location and size.|
+||Refresh: Refreshes the report data.|
+||Manage Reports: Manages report filters and general security for reports.|
+||Activate On Event: Makes the log file the active displayed log file when an activity is written to it, even if it is not currently the active log file.|
+||Scroll down: Moves the display immediately to the end of the log file.|
+||Clear: Clears the display from the current log file.|
+||Copy to Clipboard: Copies highlighted lines from the log file to the clipboard.|
 ||Toggle table of contents: The Table of Contents is not supported by Enterprise Manager.|
-||Run report: This tool will open the Parameter form dialog in order to make the parameter changes and then re-run the report.|
-||Export data: This tool will open the Export Data dialog in order to provide the data export information then export the data.|
-||Export report: This tool will open the Export Report dialog in order to provide the export format and page information then export the report. This is the recommended tool to use to print an Enterprise Manager report. Refer to Running  Reports.|
-||Print report: This tool will open the Print Report dialog in order to provide the print format and page information  then print the report.|
+||Run report: Opens the Parameter form dialog to modify parameters and re-run the report.|
+||Export data: Opens the Export Data dialog to configure and export data.|
+||Export report: Opens the Export Report dialog to configure export format and page information, then exports the report. This is the recommended tool for printing an Enterprise Manager report. Refer to Running Reports.|
+||Print report: Opens the Print Report dialog to configure print format and page information, then prints the report.|
 ||Print report on the server: Printing a report on the server is not supported by Enterprise Manager.|
+
+## When Would You Use It?
+
+- Use this feature when maximized, the Maximize button changes to Restore
+
+## Why Would You Use It?
+
+- **Information Tools**: The Information tools perform the functions listed below, depending on the [view](Navigation-Views.md) in which you are working
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What does Information Tools do?**
+
+The Information tools perform the functions listed below, depending on the [view](Navigation-Views.md) in which you are working.
+
+**Q: Where can you find Information Tools in OpCon?**
+
+Access Information Tools through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

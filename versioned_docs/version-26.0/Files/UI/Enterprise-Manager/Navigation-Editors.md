@@ -1,80 +1,109 @@
+---
+title: Navigation Editors
+description: "Navigation Editors (e.g., Schedule Master, Job Master, Calendars, Global Properties, Thresholds, Resources, Machines, Machine Groups, Server Options, Roles, User Accounts, Batch Users, Departments."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Navigation Editors
 
-In the Enterprise Manager, the Navigation Editors(e.g., Schedule Master, Job Master, Calendars, Global Properties, Thresholds,
-Resources, Machines, Machine Groups, Server Options, Roles, User
-Accounts, Batch Users, Departments, Access Codes, Privileges) provide
-screens to update information stored in the
-OpCon database. Any number of editors can be
-opened at the same time, but only one can be active at a time.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Navigation Editors (e.g., Schedule Master, Job Master, Calendars, Global Properties, Thresholds, Resources, Machines, Machine Groups, Server Options, Roles, User Accounts, Batch Users, Departments, Access Codes, Privileges) provide screens to update information stored in the OpCon database. Any number of editors can be open simultaneously, but only one can be active at a time.
+
+## When Would You Use It?
+
+- You need to provide screens to update information stored in the OpCon database using Navigation Editors (e.g., Schedule Master, Job Master, Calendars, Global Properties, Thresholds, Resources, Machines, Machine Groups, Server Options, Roles, User Accounts, Batch Users, Departments, Access Codes, Privileges)
+
+## Why Would You Use It?
+
+- **Operational value**: Provide screens to update information stored in the OpCon database
 
 ## Opening Navigation Editors
 
-To perform the procedure:
+To open Navigation Editors, complete the following steps:
 
-1. Click on the arrow to expand a Navigation topic in the [Navigation     Panel](Navigation-Panel.md) to the left of the screen.
-2. Double-click on the **Navigation Editor**(e.g., **Schedule
-    Master**).
-3. *(Optional)* Click on and drag the **Navigation
-    Editor** tab onto the tab bar if not already attached.
-4. Repeat Step 2 to open more editors.
+1. Select the arrow to expand a Navigation topic in the [Navigation Panel](Navigation-Panel.md)
+2. Select the **Navigation Editor** (e.g., **Schedule Master**)
+3. *(Optional)* Drag the **Navigation Editor** tab onto the tab bar if not already attached
+4. Repeat Step 2 to open additional editors
 
 ## Changing Navigation Editor Tab Order
 
-Click on and drag then release the specific **Navigation Editor** tab
-that needs to be moved to the new location on the tab bar.
+Drag and release the **Navigation Editor** tab to the new position on the tab bar.
 
 :::note
-A stack symbol (![Three white folders with black borders stacked](../../../Resources/Images/EM/stacked-folders.png "Stacked icon")) will appear as you drag the view over other editor tabs.
+A stack symbol (![Three white folders with black borders stacked](../../../Resources/Images/EM/stacked-folders.png "Stacked icon")) appears as you drag over other editor tabs.
 :::
 
 ## Arranging Navigation Editors
 
-To perform the procedure:
-
-1. Click on and drag the specific **Navigation Editor** tab in the
-    direction where you want the editor to display (e.g., drag the tab
-    to the left, right, top, or bottom of screen).
-2. Release the **Navigation Editor** tab once the stack symbol has
-    changed to the arrow symbol. The **Navigation Editor** will drop
-    into place.
+1. Drag the **Navigation Editor** tab toward where you want it to display (left, right, top, or bottom)
+2. Release when the stack symbol changes to an arrow. The editor drops into place
 
 ## Right-click Menu for Editors
 
-This section describes the menu items that appear when you right-click
-on any **Navigation Editor** tab.
+right-clicking any **Navigation Editor** tab displays these options:
 
-**Restore**: Restores the editor to its previous location.
+- **Restore**: Restores the editor to its previous location
+- **Move**: Frees the editor or tab group to move to another location
+  - **Editor**: Moves the individual editor
+  - **Tab Group**: Moves the entire grouped set of editors
+- **Size**: Highlights a border edge so you can drag the editor pane to a preferred size
+  - **Left / Right / Top / Bottom**: Highlights the corresponding border edge
+- **Minimize**: Minimizes the editor and places an icon on the right vertical sidebar
+- **Maximize**: Maximizes the editor to full size
+- **Close**: Closes the open editor
+- **Close Others**: Closes all other open editors
+- **Close All**: Closes all open editors
+- **New Editor**: Opens a new instance of the currently selected editor
 
-**Move**: Allows one editor or the editor tab group to become free to
-move to another location.
+## Configuration Options
 
-- Editor: Allows the editor to move to a new location.
-- Tab Group: If two or more editors sit side by side to be grouped
-    together, allows the editor tab group to move to a new location.
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Restore | Restores the editor to its previous location | — | — |
+| Size | Highlights a border edge so you can drag the editor pane to a preferred size | — | — |
+| Minimize | Minimizes the editor and places an icon on the right vertical sidebar | — | — |
+| Maximize | Maximizes the editor to full size | — | — |
+| Close Others | Closes all other open editors | — | — |
+| Close All | Closes all open editors | — | — |
+| New Editor | Opens a new instance of the currently selected editor | — | — |
+## FAQs
 
-**Size**: Provides a bold border to make it easier to adjust the size of
-the editor pane.
+**Q: How many steps does the Navigation Editors procedure involve?**
 
-- Left: Turns the left side of the border for the editor bold to make
-    it easy to grab with the mouse pointer to drag to a preferred size.
-- Right: Turns the right side of the border for the editor bold to
-    make it easy to grab with the mouse pointer to drag to a preferred
-    size.
-- Top: Turns the top side of the border for the editor bold to make it
-    easy to grab with the mouse pointer to drag to a preferred size.
-- Bottom: Turns the bottom side of the border for the editor bold to
-    make it easy to grab with the mouse pointer to drag to a preferred
-    size.
+The Navigation Editors procedure involves 6 steps. Complete all steps in order and save your changes.
 
-**Minimize**: Minimizes the editor area and places an icon on the right
-vertical sidebar.
+**Q: What does Navigation Editors cover?**
 
-**Maximize**: Maximizes the editor to open to its maximum size.
+This page covers Opening Navigation Editors, Changing Navigation Editor Tab Order, Arranging Navigation Editors.
 
-**Close**: Closes the open editor.
+## Glossary
 
-**Close Others**: Closes all other open editors.
+**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
 
-**Close All**: Closes all open editors.
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
-**New Editor**: Opens a new editor of the same one currently selected.
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

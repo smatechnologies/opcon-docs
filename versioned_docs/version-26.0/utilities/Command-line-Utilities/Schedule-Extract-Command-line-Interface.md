@@ -1,4 +1,24 @@
+---
+title: Schedule Extract Command-line Interface
+description: "The EM is equipped with a command-line interface for Schedule Extract to support the ability for customers to automate the extract of selected schedules."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Schedule Extract Command-line Interface
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 The EM is equipped with a command-line interface for Schedule Extract to
 support the ability for customers to automate the extract of selected
@@ -11,7 +31,7 @@ before major changes are made. Some customers make changes daily and
 choose to run Schedule Extract every night. In the future, if an earlier
 version of the schedule needs to be recovered, you can use SMADDI to
 recreate the schedule from the XML file previously created by Schedule
-Extract. For more information about SMADDI, refer to the [SMA Dynamic Data Input](../SMA-Dynamic-Data-Input/Introduction.md) online
+Extract. For more on SMADDI, refer to the [SMA Dynamic Data Input](../SMA-Dynamic-Data-Input/Introduction.md) online
 help.
 
 Another use case is to facilitate automatic movement of a schedule from
@@ -26,9 +46,17 @@ command-line behavior in the Enterprise Manager preferences. For more
 information, refer to [Setting Preferences for Schedule Extract](../../Files/UI/Enterprise-Manager/Preferences-for-Schedule-Extract.md)
  in the **Enterprise Manager** online help.
 
+## When Would You Use It?
+
+- The EM is equipped with a command-line interface for Schedule Extract to
+
+## Why Would You Use It?
+
+- **Operational value**: Automate the extract of selected schedules
+
 ## Rules for Defining a Job for Schedule Extract
 
-You have to schedule the job on a Windows machine that has an LSAM and
+You have to schedule the job on a Windows machine that has an agent and
 an Enterprise Manager compatible with the operating system installed.
 
 a.  If the machine is 64-bit, make sure to install the EM from the <media\>\\Install\\Enterprise Manager\\x64\\ folder.
@@ -78,7 +106,7 @@ The syntax for the command-line interface is:
 The following describes the command-line parameters:
 
 **-opconprofile**: Defines the name of a valid Enterprise Manager
-profile that has been created by the user who is executing schedule
+profile that has been created by the user who is running schedule
 extract. To verify the profile name, log in to the machine and start the
 Enterprise Manager to view or create a profile for the connection to the
 OpCon database for extracting schedules.
@@ -89,14 +117,14 @@ Either the -s or -f argument must be specified on the command line; however, the
 
 **-s**: Defines the name of the schedule to extract.
 
-- Required if -f is not specified.
-- Enclose the Schedule Name in double quotes if it contains spaces.
+- Required if -f is not specified
+- Enclose the Schedule Name in double quotes if it contains spaces
 
 **-f**: Defines the full path and filename of the file containing a list
 of schedules to extract.
 
-- Required if -s is not specified.
-- The file should contain one line per schedule.
+- Required if -s is not specified
+- The file should contain one line per schedule
 - Use the syntax: `-s;<Schedule Name\>`
   - Following the <Schedule Name\>, you can specify the optional
     arguments, with each argument and value separated with a semicolon
@@ -138,7 +166,7 @@ overrides any -v values defined in the file.
 listing automatic changes to be applied to all schedules defined in the
 file specified by the -f argument.
 
-- The file name can be any name.
+- The file name can be any name
 - The file contents must be defined in the same way individual
     automatic changes files are defined. For more information, refer to
     [Automatic Change Files](#Automati).
@@ -168,7 +196,7 @@ met during SMADDI processing:
 1. **Variables**: Contains the files for adding Thresholds and
     Resources. These are required for dependency definitions when the
     dependencies are added.
-2. **Properties**: Contains the files for adding Global Properties.
+2. **Properties**: Contains the files for adding Global Properties
     These are needed for schedule and job definitions to work after they
     are imported.
 3. **Schedules**: Contains the files for adding the schedule
@@ -193,11 +221,11 @@ For these next examples, the \[\[EManagerTools\]\] value is an OpCon global prop
 [[EManagerTools]] -opconprofile PRODUCTION -opconuser ocadm -opconpassword opconxps -s Sched001
 ```
 
-Executes the command line to Schedule Extract with the following parameters:
+Runs the command line to Schedule Extract with the following parameters:
 
 - Use the PRODUCTION profile
 - Use the OpCon user 'ocadm' and its password
-- Extract the schedule 'Sched001' from the Master tables of the OpCon database.
+- Extract the schedule 'Sched001' from the Master tables of the OpCon database
 
 :::
 
@@ -207,11 +235,11 @@ Executes the command line to Schedule Extract with the following parameters:
 [[EManagerTools]] -opconprofile PRODUCTION -opconuser ocadm -opconpassword opconxps -s "TEST ONE"
 ```
 
-Executes the command line to Schedule Extract with the following parameters:
+Runs the command line to Schedule Extract with the following parameters:
 
 - Use the PRODUCTION profile
 - Use the OpCon user 'ocadm' and its password
-- Extract the schedule 'TEST ONE' from the Master tables of the OpCon database.
+- Extract the schedule 'TEST ONE' from the Master tables of the OpCon database
 
 :::
 
@@ -221,12 +249,12 @@ Executes the command line to Schedule Extract with the following parameters:
 [[EManagerTools]] -opconprofile PRODUCTION -opconuser ocadm -opconpassword opconxps -s Sched002 -c Y -p Y -v Y -o Sched002-OUT.xml
 ```
 
-Executes the command line to Schedule Extract with the following parameters:
+Runs the command line to Schedule Extract with the following parameters:
 
 - Use the PRODUCTION profile
 - Use the OpCon user 'ocadm' and its password
-- Extract the schedule 'Sched002' from the Master tables of the OpCon database.
-- Include any associated dates, properties and variables and generate the Sched002-OUT.xml file.
+- Extract the schedule 'Sched002' from the Master tables of the OpCon database
+- Include any associated dates, properties and variables and generate the Sched002-OUT.xml file
 
 :::
 
@@ -236,7 +264,7 @@ Executes the command line to Schedule Extract with the following parameters:
 [[EManagerTools]] -opconprofile PRODUCTION -opconuser ocadm -opconpassword opconxps -f c:/extract/schedules.txt
 ```
 
-Instructs the Enterprise Manager to execute the Schedule Extract with the following parameters:
+Instructs the Enterprise Manager to run the Schedule Extract with the following parameters:
 
 - Use the PRODUCTION profile
 - Use the OpCon user 'ocadm' and its password
@@ -551,7 +579,7 @@ to the "console". This means that to view any log information or
 discover why the job has failed, you must "View Job Output" or
 redirect the output to your own log file. Use \> to create a new file or
 \>\> to append to an existing file. JORS must be enabled for the machine
-and the LSAM's configuration file must be set to "Capture Job Output"
+and the agent's configuration file must be set to "Capture Job Output"
 if you want to use the View Job Output feature.
 
 :::tip Example
@@ -581,3 +609,77 @@ The Schedule Extract Command Line Interface uses the following exit codes:
 |1|The schedule extract process failed. Use the View Job Output feature for more information.|
 |98|The OpCon user or OpCon password is invalid.|
 |99|One or more schedules for extract do not exist in the database.|
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| -opconprofile | Defines the name of a valid Enterprise Manager | — | must be specified on the command line; however, they cannot be specified on the command |
+| -s | Defines the name of the schedule to extract | — | — |
+| -f | Defines the full path and filename of the file containing a list | — | — |
+| Schedule_Name | The schedule name will be changed in all objects | — | — |
+| Frequency_Name | The matching frequency name will be changed in the new_schedule, new_master, add_frequency and add_dependency objects extracted for this schedule | — | — |
+| Job_Name | The matching Job Name will be changed in the new_master, add_frequency and add_dependency objects extracted for this schedule). | — | — |
+| Job_Machine_Name | The matching job machine name (primary machine | — | — |
+| Job_Machine_Group_Name | The matching job machine group name will | — | — |
+| Resource_Name | The matching value in the threshold descriptor | — | — |
+| Threshold_Name | The matching value in the threshold descriptor | — | — |
+| Windows_User | The matching Windows user within a Windows job | — | — |
+| Windows_Command_Line | The matching value in the command line | — | — |
+| Windows_Working_Directory | The matching value in the working | — | — |
+| Unix_User_Id | The matching UNIX user id within a UNIX job will | — | — |
+| Unix_Group_Id | The matching UNIX group id within a UNIX job will | — | — |
+| Unix_Start_Image | The matching value in start image within a | — | — |
+| Unix_Parameter | The matching value in the parameter within a | — | — |
+## Operations
+
+### Common Tasks
+- Run `schedule_extract.cmd` nightly via an OpCon Windows job to back up schedules before major changes.
+- Use the `-f` argument with a file containing multiple schedule names to extract a batch of schedules in a single run.
+- Apply change files (named `<ScheduleName>_GC.xml`) stored in the **Change File Directory** to automatically transform extracted schedules for use in a different environment (e.g., test to production).
+- Pass extracted XML output files to SMADDI in the correct folder order (Variables, Properties, Schedules, Jobs, Documents, Dependencies, Dates) when using the `-split` option.
+
+### Alerts and Log Files
+- All output is written to the console (stdout); redirect to a log file using `>` (new file) or `>>` (append) to preserve run details, e.g.: `schedule_extract.cmd ... > C:\Extract\Log\schedule_extract.log`
+- Enable JORS on the agent machine and set "Capture Job Output" in the agent configuration to use the **View Job Output** feature instead of file redirection.
+- Exit code `1` indicates extraction failure; exit code `98` indicates an invalid OpCon user or password; exit code `99` indicates one or more requested schedules do not exist in the database.
+
+## Exception Handling
+
+**32-bit Enterprise Manager installed on a 64-bit machine causes the schedule_extract.cmd to fail** — If the EM is installed from the x86 folder onto a 64-bit machine, the Java launch command in schedule_extract.cmd does not resolve correctly because the default Java executable path differs — Edit schedule_extract.cmd to replace `command=java` with the full path to the 32-bit Java executable (e.g., `command="C:\Program Files (x86)\Java\jre6\bin\java"`); alternatively, install the EM from the x64 folder.
+
+**Invalid or missing Enterprise Manager profile name causes Schedule Extract to fail** — The -opconprofile argument must match a profile created by the Windows user running the job; if no matching profile exists on the machine, Schedule Extract cannot connect to the OpCon database — Log in to the machine as the job's run-as user, open the Enterprise Manager, and create or verify a profile for the OpCon database connection before scheduling the job.
+
+**-chg argument file not found causes schedules to be extracted without automatic changes applied** — If the -chg argument is specified and Schedule Extract cannot locate the change file (either because the path is wrong or the file does not exist in the Change File Directory preference), the extract completes silently without applying any automatic changes — Verify the full path and filename of the change file, or ensure the file exists in the Change File Directory defined in Enterprise Manager preferences.
+
+## FAQs
+
+**Q: What are the two primary use cases for automating Schedule Extract via command line?**
+
+The first use case is backing up schedules before major changes by running Schedule Extract nightly. The second use case is automating schedule migration from a test environment to production by extracting, modifying, and importing schedules via SMADDI.
+
+**Q: What machine requirements apply to jobs running Schedule Extract?**
+
+The job must run on a Windows machine with both an agent and an Enterprise Manager installed. On 64-bit machines, install the EM from the `x64` folder; on 32-bit machines, use the `x86` folder.
+
+**Q: Where must Schedule Extract command-line behavior be configured before running automated jobs?**
+
+Configure the command-line behavior in the Enterprise Manager preferences under Settings for Schedule Extract before scheduling any automated Schedule Extract jobs.
+
+## Glossary
+
+**SMADDI (SMA Dynamic Data Input)**: An optional OpCon component that dynamically updates the OpCon database using XML text files placed in monitored input directories. SMADDI uses a Windows service and stored procedures to validate and commit the data.
+
+**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.

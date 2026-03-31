@@ -1,36 +1,68 @@
+---
+title: Sending Windows Event Logs
+description: "The Event Log tab provides the following fields for defining a Windows Event Log notification: - Event ID (Optional): User-defined ID used as search criteria in third-party notification filters."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Sending Windows Event Logs
 
-The **Event Log** tab provides the following fields for defining a
-Windows Event Log notification:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- **Event ID** (Optional): Defines a user-defined ID that can be a
-    part of the search criteria in the notification filter for a
-    third-party tool. The maximum for this field is 64 characters.
-  - The SMA Notify Handler places this ID in the message with the
-        format: "EventID=<space\>XXXXXX".
-  - All characters are allowed, except for the following: ~ (Tilde)
-        , \# (Pound), % (Percent), ! (Exclamation), @ (At), $ (Dollar),
-        ^ (Carat)
-- **Severity**: Defines the choices for the message's severity level.
-    The choices are: Information, Warning, or Error.
-- **Custom Event Source**(Optional): Displays the **Event Source**
-    text field when selected. The **Event Source** text field defines a
-    custom Source ID for OpCon to use when writing to the Windows Event
-    Log. The maximum for this field is 64 characters.
-  - The SMA Notify Handler attaches a "OPCON:" prefix to the event
-        source to prevent conflicts and duplications.
-  - The following characters are allowed: a-Z and 0-9
-        (Alphanumeric), - (Dash), \_ (Underscore), " " (Space), ","
-        (Comma), "." (Period), "=" (Equal Sign), "(" & ")"
-        (Parentheses).
-- **Message**: Defines a user-defined message up to 3,000 characters.
-    In addition to the user-defined text, the message includes the
-    default trigger information: Event ID, trigger type, and triggering
-    status change event.
+## What Is It?
 
-When the message appears in the Windows Event Log, any notification
-product able to read this log can send notifications.
+The **Event Log** tab provides the following fields for defining a Windows Event Log notification:
+
+- **Event ID** (Optional): User-defined ID used as search criteria in third-party notification filters. Maximum 64 characters. The SMA Notify Handler formats it as `EventID= XXXXXX`. Prohibited characters: ~ \# % ! @ $ ^
+- **Severity**: Message severity level. Choices: Information, Warning, or Error
+- **Custom Event Source** (Optional): When selected, displays the **Event Source** field for a custom Source ID. Maximum 64 characters. The SMA Notify Handler prepends `OPCON:` to prevent conflicts. Allowed characters: alphanumeric (a-Z, 0-9), dash, underscore, space, comma, period, equal sign, parentheses
+- **Message**: User-defined message up to 3,000 characters. The message also includes default trigger information: Event ID, trigger type, and triggering status change event
+
+When the message appears in the Windows Event Log, any notification product that can read this log can send notifications.
 
 :::note
-This notification type is disabled on Linux. Notifications defined prior to Release 20.0.0 will be disabled.
+This notification type is disabled on Linux. Notifications defined before Release 20.0.0 will be disabled.
 :::
+
+## When Would You Use It?
+
+- You need to provide the following fields for defining a Windows Event Log notification: using The **Event Log** tab
+
+## Why Would You Use It?
+
+- **Operational value**: Provides the following fields for defining a Windows Event Log notification: - Event ID (
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Severity | Message severity level. | trigger information: Event ID | Maximum 64 characters. The SMA Notify Handler prepends `OPCO |
+| Message | User-defined message up to 3,000 characters. | trigger information: Event ID | up to 3,000 characters. The message also includes default |
+## FAQs
+
+**Q: What is Windows Event Logs used for?**
+
+Windows Event Logs is used to send a notification or message from OpCon when triggered by a job, schedule, or machine status event.
+
+## Glossary
+
+**SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

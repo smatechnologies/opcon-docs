@@ -1,227 +1,197 @@
+---
+title: Updating File Transfer Job Details
+description: "In Admin mode, file transfer job properties can be updated or defined."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Updating File Transfer Job Details
 
-In **Admin** mode, Windows job type properties can be updated or
-defined. For conceptual information, refer to [File Transfer Job Details](../../../job-types/file-transfer.md) in the **Concepts** online help.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+In **Admin** mode, file transfer job properties can be updated or defined. For conceptual information, refer to [File Transfer Job Details](../../../job-types/file-transfer.md) in the **Concepts** online help.
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
+Only users with appropriate permissions can access the **Lock** button and update job properties. For details, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
 :::
 
 :::note
-If you do not have the Machine Privilege, then you will not be able to edit the daily job definition.
+Without the Machine Privilege, you cannot edit the daily job definition.
 :::
 
 :::note
-Changes made to the job properties in the **Daily Job Definition** will take place immediately. If the job has already run, the changes will take effect the next time the job runs.
+Changes to job properties in the **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time it runs.
 :::
+
+## When Would You Use It?
+
+- An existing File Transfer Job Details in Solution Manager requires changes
+- A process change or system update makes the current File Transfer Job Details definition outdated
+
+## Why Would You Use It?
+
+- **Keep definitions current**: Updating File Transfer Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
 
 ## Updating File Transfer Job Details
 
 To perform this procedure:
 
-Click on the **Processes** button at the top-right of the **Operations
-Summary** page. The **Processes** page will display.
+1. Select the **Processes** button at the top-right of the **Operations Summary** page
+2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled
 
-Ensure that both the **Date** and **Schedule** toggle switches are
-enabled so that you can make your date and schedule selection,
-respectively. Each switch will appear green when enabled.
+   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+To update File Transfer Job Details, complete the following steps:
 
-Select the desired **date(s)** to display the associated schedule(s).
+3. Select the desired **date(s)** to display associated schedules
+4. Select one or more **schedule(s)** in the list
+5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
 
-Select one or more **schedule(s)** in the list.
+   ![Job Processes](../../../Resources/Images/SM/Job-ProcessesFile-Transfer.png "Job Processes")
 
-Select one **job** in the list. A record of your selection will display
-in the [status bar](SM-UI-Layout.md#Status) at the bottom of the
-page in the form of a breadcrumb trail.
+6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
 
-![Job Processes](../../../Resources/Images/SM/Job-ProcessesFile-Transfer.png "Job Processes")
+   :::note
+   Alternatively, right-click the job in the list to display the **Selection** panel.
+   :::
 
-Click on the job record (e.g., 1 job(s)) in the status bar to display
-the **Selection** panel.
+   ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(File-Transfer).png "Job Summary Tab in Operations")
 
-:::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
-:::
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button displays a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
 
-![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(File-Transfer).png "Job Summary Tab in Operations")
+   :::note
+   The **Lock** button is not visible to users without appropriate permissions.
+   :::
 
-Click the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
-at the top-left corner of the panel to access the **Daily Job
-Definition** page. By default, this page will be in **Read-only** mode.
+9. Expand the **Task Details** panel
 
-Click the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
-at the top-right corner to place the page in **Admin** mode. The button
-will switch to display a white lock unlocked on a green background
-![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
-when enabled.
-
-:::note
-The **Lock** button will not be visible to users who do not have the appropriate permissions.
-:::
-
-Expand the **Task Details** panel to expose its content.
-
-:::note
-All required fields are designated by a red asterisk.
-:::
+   :::note
+   All required fields are marked with a red asterisk.
+   :::
 
 **In the Source frame:**
 
-The **Source** frame is used to define the information for the source
-file.
+Define the source file information:
 
-\
+- Select the **machine** with the source file. Must be Windows or UNIX
+- Select the **user** with access to the file on the source machine
+- Enter the *full path and file name* for the **file** to transfer
+- Select the **data type**:
 
-Select the **machine** with the source file to transfer.
+  :::note
+  If anything other than Binary is selected, file integrity is maintained but the file structure may be altered to suit the target platform.
+  :::
 
-:::note
-The source machine must be Windows or UNIX.
-:::
-
-Select the **user** with access to the file on the Source machine.
-
-Enter the *full path and file name* for the **file** to transfer.
-
-Select the **data type** of the file on the source machine:
-
-:::note
-If anything other than Binary is defined as the Source Data Type, the integrity of the file is maintained but the file structure will likely be altered. This is done in an effort to present the transferred file in a user-friendly structure for the given platform.
-:::
-
-- **Text**: Indicates that the SMA File Transfer Agent and Server
-    should use the default text data type for the platform when working
-    with the file.
-- **ASCII**: Indicates the file is a simple text file in ASCII format.
-- **Binary**: Indicates the file's structure should be left intact
-    during the transfer process.
+  - **Text**: Uses the platform's default text data type
+  - **ASCII**: Treats the file as a simple ASCII text file
+  - **Binary**: Preserves the file's structure during transfer
 
 **In the Destination frame:**
 
-The **Destination** frame is used to define the information for the
-destination file.
+Define the destination file information:
 
-\
-
-Select the **machine** that will receive the file.
-
-:::note
-The destination machine must be Windows or UNIX.
-:::
-
-Select the **user** with access to the location on the Destination
-machine that will receive the file.
-
-Enter the *full path and file name* for the destination **file**.
-
-Select the final **data type** of the file that will be transferred to
-the destination machine:
-
-- **Text**: Indicates that the SMA File Transfer Agent and Server
-    should use the default text data type for the platform when working
-    with the file.
-- **ASCII**: Indicates the file should be written to the Destination
-    Machine as a simple text file in ASCII format.
-- **Binary**: Indicates the file's structure should be left intact
-    during the transfer process.
+- Select the **machine** that will receive the file. Must be Windows or UNIX
+- Select the **user** with access to the destination location
+- Enter the *full path and file name* for the destination **file**
+- Select the **data type**:
+  - **Text**: Uses the platform's default text data type
+  - **ASCII**: Writes the file as a simple ASCII text file
+  - **Binary**: Preserves the file's structure during transfer
 
 **In the Options frame:**
 
-The **Options** frame is used to define the additional information for
-the file transfer
+- **If File Exists**: Determines SMAFT Agent behavior when a target file already exists:
+  - **Do Not Overwrite**: Checks for the file before starting transfer; does not overwrite
+  - **Overwrite**: Transfers and overwrites any existing file
+  - **Backup Then Overwrite**: Backs up the existing file, then overwrites
+  - **Append**: Appends the source file to the destination file
+  - **Backup Then Append**: Backs up the existing file, then appends
 
-\
+- **Delete Source File**: Determines deletion behavior after transfer (Windows agent only):
+  - **No**: Source file is not deleted
+  - **Required**: Job fails if source file is not deleted
+  - **Preferred**: Deletion is attempted but does not fail the job
 
-Select the **If File Exists** option to determine how the SMA File
-Transfer (SMAFT) Agent behaves when a target file exists:
+- **Start Transfer On**: Determines where the job initiates:
+  - **Source**: Starts on the source machine
+  - **Destination**: Starts on the destination machine
 
-- **Do Not Overwrite**: Indicates the SMAFT Agent checks for the
-    existence of the file on the destination machine before starting the
-    transfer.
-- **Overwrite**: Indicates the SMAFT Agent transfers the file while
-    overwriting any existing file on the destination machine.
-- **Backup Then Overwrite**: Indicates the SMAFT Agent checks for the
-    existence of the file on the destination machine before starting
-    transfer.
-- **Append**: Indicates the SMAFT Agent will append the source file to
-    the destination file.
-- **Backup Then Append**: Indicates the SMAFT Agent checks for
-    existence of the file on the destination machine before starting
-    transfer.
+- **Maximum Transfer Rate (kbits/s)**: Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second
 
-Select the **Delete Source File** option to determine if the deletion of
-the Source File is disabled, required, or preferred (only the Windows
-agent supports this feature at this time (other platforms will follow)):
+- **Compression**: Supported types are tar, gzip, and zip:
+  - **None**: No compression
+  - **Required**: Job fails if compression does not occur
+  - **Preferred**: Compression is attempted
 
-- **No**: Indicates the Source File will not be deleted upon
-    successful completion of the file transfer.
-- **Required**: Indicates the SMAFT job will fail if the Source file
-    is not deleted upon successful completion of the file transfer.
-- **Preferred**: Indicates the deletion of the Source File is
-    attempted upon successful completion of the file transfer.
+  :::caution
+  Both the agent and server must support the same compression type for compression to succeed.
+  :::
 
-Select the **Start Transfer On** option to determine where the job will
-start.
+- **Encryption**: Supported types are 3DES, AES, and DES:
+  - **None**: No encryption
+  - **Required**: Job fails if encryption does not occur
+  - **Preferred**: Encryption is attempted
 
-- The valid options include:
-  - **Source**: Choose this option to start the job on the Source
-        machine.
-  - **Destination**: Choose this option to start the job on the
-        Destination machine.
+  :::caution
+  Both the agent and server must support the same encryption type for encryption to succeed.
+  :::
 
-Select the **Maximum Transfer Rate (kbits/s)** option to define the
-transfer rate for the job. Valid values include 64, 128, 256, 512, 1024,
-2048, and \>2048 kbits/second.
-
-Select the **Compression** option to determine if compression is
-disabled, required, or preferred. Supported compression types are tar,
-gzip, and zip:
-
-- **None**: Indicates the transfer does not use compression.
-- **Required**: Indicates the transfer job fails if compression does
-    not occur.
-- **Preferred**: Indicates compression is attempted during the
-    transfer.
-
-:::caution
-Both the agent and the server must both support the same compression type for compression to succeed.
-:::
-
-Select the **Encryption** option to determine if encryption is disabled,
-required, or preferred. Supported encryption types are 3DES, AES, and
-DES:
-
-- **None**: Indicates the transfer does not use encryption.
-- **Required**: Indicates the job fails if encryption does not occur.
-- **Preferred**: Indicates encryption is attempted during the
-    transfer.
-
-:::caution
-Both the agent and the server must both support the same encryption type for the encryption to succeed.
-:::
-
-Select the **TLS Security Override** option to determine if TLS Security
-for file transfers is disabled, required, or preferred:
-
-- **None**: Indicates that TLS Security should not be used by     the SMAFT Agent when connecting to the SMAFT Server.
-- **Required**: Indicates that the SMAFT Agent **must** use TLS Security; otherwise, the job will be failed.
-- **Preferred** (Default): Indicates that the OpCon job request
-    assembly routine uses the SMAFT Server Port numbers and the SMAFT
-    Server/Agent TLS Capability flags to decide what value to send in
-    the TLS Security Mode field.
+- **TLS Security Override**: Determines TLS Security usage for file transfers:
+  - **None**: TLS Security is not used by the SMAFT Agent
+  - **Required**: SMAFT Agent must use TLS Security; otherwise the job fails
+  - **Preferred** (Default): The OpCon job request assembly routine uses SMAFT Server Port numbers and TLS Capability flags to determine the TLS Security Mode value
 
 **In the Failure Criteria frame:**
 
-The **Failure Criteria** frame is used to define the criteria for
-OpCon to determine the final status of the
-primary job.
+Select **Fails if preferred settings not satisfied** to fail the job when the transfer succeeds but preferred settings for Delete Source File, Compression, or Encryption were not met.
 
-\
+Select the **Save** button.
 
-Select the **Fails if preferred settings not satisfied** checkbox to
-determine if the job should fail when the file transfer itself succeeds,
-but the transfer did not comply with the preferred settings for Delete
-Source File, Compression, and Encryption.
+## Configuration Options
 
-Click the **Save** button.
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Delete Source File | Determines deletion behavior after transfer (Windows agent only): | — | — |
+| Start Transfer On | Determines where the job initiates: | — | Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second.  - **Compression**: Supported types are t |
+| Maximum Transfer Rate (kbits/s) | Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second | — | Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second.  - **Compression**: Supported types are t |
+| Compression | Supported types are tar, gzip, and zip: | — | — |
+| Encryption | Supported types are 3DES, AES, and DES: | — | — |
+| TLS Security Override | Determines TLS Security usage for file transfers: | — | — |
+
+## FAQs
+
+**Q: How many steps does the Updating File Transfer Job Details procedure involve?**
+
+The Updating File Transfer Job Details procedure involves 9 steps. Complete all steps in order and save your changes.
+
+**Q: What does Updating File Transfer Job Details cover?**
+
+This page covers Updating File Transfer Job Details.
+
+## Glossary
+
+**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

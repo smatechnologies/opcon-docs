@@ -1,4 +1,24 @@
+---
+title: Legacy Audit Management
+description: "The Legacy Audit Management program allows administrators to view audit information, as well as maintain the audit table."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Legacy Audit Management
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 The Legacy Audit Management program allows administrators to view audit
 information, as well as maintain the audit table. To remove obsolete
@@ -8,10 +28,10 @@ information from the archive audit table. Archiving and deleting can be
 done manually or automatically. For information on automatic audit
 maintenance for the legacy audit data, refer to [Maintaining Audit History Interactively](#Maintain).
 
-With OpCon X5, SMA Technologies replaced the auditing mechanism with a more comprehensive model. For
+With OpCon X5, Continuous replaced the auditing mechanism with a more comprehensive model. For
 information on the current Auditing scheme, refer to
 [Auditing](../../components.md#database) in the
-**Concepts** online help. All auditing data stored prior to release 5.0
+**Concepts** online help. All auditing data stored before release 5.0
 is maintained in the legacy tables (AUDITHIST and AUDITARCH). This audit
 trail may be viewed and maintained with the Legacy Audit Management
 Utility. This utility is no longer installed with OpCon, but is
@@ -21,7 +41,7 @@ the <Target Directory\>\\Utilities folder on the SAM application server
 or any machine where an ODBC connection can be configured to the OpCon
 database.
 
-To use the Audit Management utility interactively, double-click the
+To use the Audit Management utility interactively, select the
 **LegacyAudit.exe** program in the **Utilities** folder. Log in to this
 utility with a User Account that has the privilege to Maintain Audit
 History. Choose the Data Source that will connect the utility to the
@@ -32,10 +52,18 @@ System DSN, refer to [Create System DSNs](../../installation/configuration.md#Cr
 The following information appears in the legacy audit tables for the
 legacy auditing data:
 
-- Date and time the SQL statement was issued.
-- The user who executed the SQL statement.
-- The number of records affected by the SQL statement.
-- The SQL statement that was processed.
+- Date and time the SQL statement was issued
+- The user who run the SQL statement
+- The number of records affected by the SQL statement
+- The SQL statement that was processed
+
+## When Would You Use It?
+
+- You need to allows administrators to view audit using The Legacy Audit Management program
+
+## Why Would You Use It?
+
+- **Operational value**: Allows administrators to view audit information, as well as maintain the audit table
 
 ## Menus
 
@@ -52,7 +80,7 @@ The menus available are File, Options, View, and Help.
 - **Change Login**: Logs out of the current connection and shows the
     Login page again. This allows the user to change their Login Name or
     DSN.
-- **Exit**: Closes the Audit Management program.
+- **Exit**: Closes the Audit Management program
 
 ### Options
 
@@ -65,13 +93,13 @@ The menus available are File, Options, View, and Help.
 
 ### View
 
-- **Audit Trail**: Displays the primary audit trail information.
+- **Audit Trail**: Displays the primary audit trail information
 - **Archived Audit Trail**: Displays all audit history that has been
     archived.
 
 ### Help
 
-- **OpCon Help**: Displays relevant OpCon documentation.
+- **OpCon Help**: Displays relevant OpCon documentation
 - **About**: Displays product versions and Technical Support
     information.
 
@@ -83,7 +111,7 @@ The toolbar provides shortcuts to the menu options.
     Date, and Days to Keep settings.
 - **Archive Records**: Moves audit history to the archive table
     according to the Cut Off Date, and Days to Keep settings.
-- **Cut-off Date**: Determines the date to start deleting records.
+- **Cut-off Date**: Determines the date to start deleting records
 - **Days to Keep**: Determines the date, as an offset to the current
     date, to start deleting records.
 - **Filter**: Displays the Filter Options dialog that allows users to
@@ -100,7 +128,7 @@ take several minutes to display the entire audit history.
 |Column|Description|
 |--- |--- |
 |Date/Time Stamp|Date and time the SQL statement was issued.|
-|User Login ID|The user who executed the SQL statement.|
+|User Login ID|The user who run the SQL statement.|
 |Records Affected|The number of records affected by the SQL statement.|
 |Action Type|The type of SQL transaction that was processed (Insert, Update, Delete, or User Login).|
 |SQL Part 1 – 12|The SQL statement that was processed. Entries made by actions made in the legacy User Interface appear as the exact SQL strings passed by that program. Region (Required) is the area of the data being changed. Valid values include:MachinesSchedulesJobs Update Level (Optional) is the level at which the data was updated. Valid values include:MachinesDateSchedulesJobsAction is the type of action the user attempted. Identity (Required) is one or more fields separated by semicolons (;) that identify the item affected by the change. The identity will include one or more of the following to uniquely identify the item:Machine NameSchedule DateSchedule NameJob Name. Result (Required) is the result of the query action in the database (e.g., Failed, Succeeded, etc.).|
@@ -121,7 +149,7 @@ In the Explorer window:
 
 Browse to the **<Target Directory\>\\OpConxps\\Utilities\\** directory.
 
-Double-click **LegacyAudit.exe**.
+Select **LegacyAudit.exe**.
 
 :::note
 For procedures on creating OpCon User Accounts, refer to [Managing User Accounts](../../Files/UI/Enterprise-Manager/Managing-User-Accounts.md) in the **Enterprise Manager** online help.
@@ -152,8 +180,8 @@ Select the **desired data source**in the **Data Source Name** combo box.
 If a data source has not been set up, refer to [Create System DSNs](../../installation/configuration.md#Create_System_DSNs)
  in the **OpCon Installation** online help.
 
-Select the **Save Settings** checkbox to save the connection information
-for the next login and click **OK**.
+Select the **Save Settings** option to save the connection information
+for the next login and select **OK**.
 
 If the Password Change Required message box appears:
 
@@ -170,8 +198,8 @@ with this procedure.
     Trail**.
 2. Use the following menu path to view the archived audit trail:
     **View \> Archived Audit Trail**.
-3. View the *audit history information*.
-4. Click the **Refresh** button located on the toolbar to refresh
+3. View the *audit history information*
+4. Select the **Refresh** button located on the toolbar to refresh
     records.
 
 ## Filtering Audit Records
@@ -206,7 +234,7 @@ activation, the Filter screen displays the following fields:
     queries. Initially all three query types are selected.
 
 :::note
-Click **OK** or press the **Enter** key to accept the new record selection criteria. Click **Cancel** or press **ESC** to cancel the changes in the record selection criteria. Click **Reset** to reset the record selection criteria to all-inclusive. The record selection criterion remains in effect for the duration of the session or until the administration changes the criteria through the Select option.
+Select **OK** or press the **Enter** key to accept the new record selection criteria. Select **Cancel** or press **ESC** to cancel the changes in the record selection criteria. Select **Reset** to reset the record selection criteria to all-inclusive. The record selection criterion remains in effect for the duration of the session or until the administration changes the criteria through the Select option.
 :::
 
 Filtering for Specific Records
@@ -214,22 +242,24 @@ Filtering for Specific Records
 First, [log into Legacy Audit Management](#Logging_into_Legacy_Audit_Management) before continuing
 with this procedure.
 
-1. Click the **Filter** button.
+1. Select the **Filter** button
 2. *(Optional)* Select a **User Account** in the
-    **Users Login ID** drop-down list.
+    **Users Login ID** list.
 3. *(Optional)* Enter a *SQL string* in the **Search in
     SQL** text box.
+To filter Audit Records, complete the following steps:
+
 4. *(Optional)* Go to the **Query Result** frame and
     select one or more *query results*.
 5. *(Optional)* Go to the **Record Selection Range**
     frame and enter a *Beginning date* and an *Ending date*.
 6. *(Optional)* Go to the **Action Type** frame, select
-    an *action type(s)*, and click **OK**.
+    an *action type(s)*, and select **OK**.
 
 ## Maintaining Audit History Interactively
 
 When auditing is activated, large amounts of data accumulate in the
-OpCon database. SMA Technologies recommends archiving or deleting old audit records regularly. There are two options
+OpCon database. Continuous recommends archiving or deleting old audit records regularly. There are two options
 for limiting the amount of data in the OpCon database: Cut-off Date and
 Days to Keep.
 
@@ -248,9 +278,9 @@ Entering a Cut-off Date
 First, [log into Legacy Audit Management](#Logging_into_Legacy_Audit_Management) before continuing
 with this procedure.
 
-1. Click the **Cut-off Date** button on the tool bar.
+1. Select the **Cut-off Date** button on the tool bar
 2. Enter a *cut-off date* from which to begin deleting records in the
-    audit table and click **OK**.
+    audit table and select **OK**.
 
 ### Days to Keep
 
@@ -272,9 +302,9 @@ Entering Days to Keep in Audit History
 First, [log into Legacy Audit Management](#Logging_into_Legacy_Audit_Management) before continuing
 with this procedure.
 
-1. Click the **Days to Keep** button on the tool bar.
+1. Select the **Days to Keep** button on the tool bar
 2. Enter a *number of days* of audit history to keep in the database
-    and click **OK**.
+    and select **OK**.
 
 ### Archiving Records
 
@@ -290,10 +320,10 @@ The archive option is not available when viewing the archive audit history table
 First, [log into Legacy Audit Management](#Logging_into_Legacy_Audit_Management) before continuing
 with this procedure to archive the audit history of a single job.
 
-1. Use menu path: **View \> Audit Trail**.
+1. Use menu path: **View \> Audit Trail**
 2. Set the *desired limits* for the **Cut-off Date** or **Days to
     Keep**. For more information, refer to Legacy Audit  Management.
-3. Click the **Archive Records** button on the toolbar and click
+3. Select the **Archive Records** button on the toolbar and select
     **OK**.
 
 ### Purging Records
@@ -303,27 +333,27 @@ archive table according to the specifications of the options described
 above. The default is to purge all records. After setting either the
 Cut-off Date or the Days to Keep, purge the archived audit records.
 
-Without setting the Cut-off Date or the Days to Keep, the **Purge Records** button purges *all* archived audit records. SMA Technologies strongly recommends retaining at
+Without setting the Cut-off Date or the Days to Keep, the **Purge Records** button purges *all* archived audit records. Continuous strongly recommends retaining at
 least two weeks of data.
 
 First, [log into Legacy Audit Management](#Logging_into_Legacy_Audit_Management) before continuing
 with this procedure.
 
-1. Use menu path: **View \> Archived Audit Trail**.
+1. Use menu path: **View \> Archived Audit Trail**
 
-2. Click the **Days to Keep** or **Cut-off Date** button on the
+2. Select the **Days to Keep** or **Cut-off Date** button on the
     toolbar.
 
-3. Enter a *value* in the text field and click **OK**.
+3. Enter a *value* in the text field and select **OK**
 
-4. Click the **Purge Records** button on the toolbar and click **OK**.
+4. Select the **Purge Records** button on the toolbar and select **OK**
 
 ## Maintaining Audit Records from the Command Line
 
 Records in the legacy audit table should be deleted as soon as the
 records become obsolete. To ensure regular maintenance of audit records,
 use the command line interface to schedule the legacy audit management
-utility. The job can be scheduled using the Microsoft LSAM on the SAM
+utility. The job can be scheduled using the Microsoft agent on the SAM
 application server.
 
 ### Syntax
@@ -335,11 +365,11 @@ following syntax on the command line or in a command file:
 
 #### Parameters
 
-- **LEGACYAUDIT.EXE**: The name of the audit management program.
+- **LEGACYAUDIT.EXE**: The name of the audit management program
 - **DSN**: The ODBC Data Source Name corresponding to the OpCon
     database. This name can be found on the Legacy Audit Management
     login screen.
-- **UID**: Any valid, case-sensitive OpCon User Login ID.
+- **UID**: Any valid, case-sensitive OpCon User Login ID
 - **PWD**: The case-sensitive password corresponding to the User Login
     ID above.
 - **Days to Keep**: A number between 0 and 32,000. If desired, the
@@ -352,7 +382,7 @@ following syntax on the command line or in a command file:
     specified by -e parameter, or the job is always be considered a
     success. For additional information, refer to [The E.C.O.F. in the     Job
     Definition](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Exit-Code-Override-File-(E.C.O.F.).md#The)
-     in the **Microsoft LSAM** online help.
+     in the **Microsoft agent** online help.
 - **-l**: (lower case L) Provides the full file path (including drive
     letter) and filename for the legacyaudit.exe log file. If -l is not
     given, then an audit log file is placed in the same directory as the
@@ -375,7 +405,7 @@ legacyaudit.exe OPCONXPS,batchuser,batchpwd,30,
 
 During installation, the SMAUtility schedule should have been imported.
 That schedule contains jobs to maintain the new auditing data for OpCon.
-SMA Technologies recommends adding jobs to the SMAUtility schedule to archive and or purge the legacy audit data.
+Continuous recommends adding jobs to the SMAUtility schedule to archive and or purge the legacy audit data.
 
 ## Exit Codes
 
@@ -387,3 +417,85 @@ The legacyaudit.exe program writes the following exit codes to the E.C.O.F.:
 |35001|Program aborted.|
 |35002|Invalid DSN, UserID, and/or Password.|
 |35003|Invalid parameters given.|
+
+## Security Considerations
+
+### Authentication
+
+Logging in to Legacy Audit Management requires a valid OpCon User Login ID and its case-sensitive password. Automatic login (leaving the username and password fields blank) retrieves the user's network login and passes it through to the database. If a disabled account is used, the application notifies the user and shuts down.
+
+When running from the command line, the User Login ID (UID) and password (PWD) are passed as positional parameters. The example syntax includes these credentials in the command string.
+
+### Authorization
+
+Users must log in with a User Account that has the Maintain Audit History privilege to access the Legacy Audit Management utility. Without this privilege, access is denied.
+
+### Data Security
+
+The legacy audit tables (AUDITHIST and AUDITARCH) record all SQL operations performed against OpCon objects prior to release 5.0, including the user, timestamp, number of records affected, and the SQL statement processed. Access to this audit trail must be restricted to authorized administrators. Continuous strongly recommends retaining at least two weeks of archived audit data before purging.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Purge Records | Deletes the audit history from the archive table | — | — |
+| Archive Records | Moves audit history to the archive table | — | — |
+| Change Login | Logs out of the current connection and shows the | — | — |
+| Cut-off Date | Determines the date to start archiving or deleting | — | — |
+| Days to Keep | Determines the date, as an offset to the current | — | — |
+| Audit Trail | Displays the primary audit trail information | — | — |
+| Archived Audit Trail | Displays all audit history that has been | — | — |
+| OpCon Help | Displays relevant OpCon documentation | — | — |
+| User Login ID | This is a selectable list of all User Accounts in | <All Users\> | — |
+| Search in SQL Statement | The administrator can provide a string | — | — |
+| Query Result | Select audit records of SQL operations that failed, that did not affect any records, and that affected records according to user-defined criteria. | — | — |
+| Record Selection Range | Select an inclusive range with a beginning and an ending date to further narrow the search. | — | — |
+| Action Type | Select the types of SQL query to display. | — | — |
+| LEGACYAUDIT.EXE | The name of the audit management program | — | — |
+| UID | Any valid, case-sensitive OpCon User Login ID | — | — |
+| PWD | The case-sensitive password corresponding to the User Login | — | — |
+| -e | Provides the full path (including drive letter) and file | — | — |
+| -l | (lower case L) Provides the full file path (including drive | log file name is     Audit\_<d | — |
+## Operations
+
+### Common Tasks
+- Archive legacy audit records regularly: use **File > Archive Records** (or the toolbar button) after setting the Cut-off Date or Days to Keep; Continuous recommends archiving before purging.
+- Purge archived records: switch to **View > Archived Audit Trail**, set the Days to Keep or Cut-off Date, then select **Purge Records**. Continuous strongly recommends retaining at least two weeks of data before purging.
+- Schedule automated maintenance: add legacy audit archive and purge jobs to the SMAUtility schedule using `LEGACYAUDIT.EXE DSN,UID,PWD,<Days>,` from the `<Target Directory>\OpConxps\Utilities\` directory.
+
+### Alerts and Log Files
+- The command-line interface writes a log file named `Audit_<date-time stamp>.log` to the same directory as `legacyaudit.exe` unless a path is provided with the `-l` parameter.
+- Exit code `35001` (program aborted) and `35002` (invalid DSN, User ID, or password) indicate issues that must be resolved before the next automated run.
+- Use the `-e` parameter to specify an Exit Code Override File (E.C.O.F.) path; without it, the job is always treated as a success by the Microsoft LSAM regardless of actual outcome.
+
+## FAQs
+
+**Q: What audit data does Legacy Audit Management handle?**
+
+Legacy Audit Management handles audit data stored in legacy tables (AUDITHIST and AUDITARCH) from before OpCon release 5.0. Audit data from release 5.0 onward uses a different, more comprehensive auditing model managed through Enterprise Manager.
+
+**Q: Is Legacy Audit Management installed with OpCon?**
+
+No. Legacy Audit Management is no longer installed with OpCon. It is available on the distribution media and must be manually copied from `<media>\Install\SMA OpCon Toolkit\Legacy Audit\` to the Utilities folder.
+
+**Q: What privilege is required to use Legacy Audit Management?**
+
+You must log in with a User Account that has the privilege to Maintain Audit History.
+
+## Glossary
+
+**DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
+
+**SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.

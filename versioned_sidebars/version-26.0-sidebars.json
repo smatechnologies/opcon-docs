@@ -919,6 +919,8 @@
         }
       ]
     },
+    "reference/best-practices",
+    "reference/property-expressions-syntax",
     {
       "type": "link",
       "label": "REST API Docs",
