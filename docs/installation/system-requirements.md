@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: System Requirements
 description: "Getting Started with OpCon covers the hardware and software requirements that must be met before installation, along with key naming conventions and initial configuration considerations for the OpCon server."
 product_area: Installation
 audience: System Administrator
@@ -12,7 +12,7 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-# Getting Started
+# System Requirements
 
 **Theme:** Overview  
 **Who Is It For?** System Administrator
