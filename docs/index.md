@@ -15,7 +15,6 @@ OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heter
 
 ### Overview
 
-- [Getting Started](./installation/system-requirements.md)
 - [What's New](./installation/whats-new.md)
 - [Support Lifecycles](https://help.smatechnologies.com)
 - [Release Notes](./release-notes.md)
@@ -26,6 +25,7 @@ OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heter
 
 ### Accessing the Solution
 
+- [System Requirements](./installation/system-requirements.md)
 - [Authentication](./Files/UI/Solution-Manager/Authentication-Overview.md)
 - [Layout](./Files/UI/Solution-Manager/SM-UI-Layout.md)
 - [Keyboard Shortcuts](./Files/UI/Solution-Manager/Keyboard-Shortcuts.md)

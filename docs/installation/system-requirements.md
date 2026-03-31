@@ -33,15 +33,6 @@ Do not use the underscore character (\_) in the naming convention of the dedicat
 
 - **Centralized control**: Managing Getting Started through OpCon provides consistent oversight and a full audit trail for all changes
 
-## Supported browsers
-
-Solution Manager supports the following browsers:
-
-- Firefox 77.0 and later
-- Google Chrome 85.0 and later
-- Microsoft Edge (Chromium-based, Blink Engine) 85.0 and later
-- Safari (OSX/MacOS or iOS only) 12.0 and later
-
 ## Hardware requirements
 
 Ensure the following minimum hardware requirements are met on the OpCon server based on environment size. Select the larger environment if daily job count and concurrent job executions recommend different sizes.
