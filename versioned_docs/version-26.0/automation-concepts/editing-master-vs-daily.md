@@ -43,10 +43,6 @@ If the start time for a job is changed from 19:00 to 20:00 in the Daily Tables o
 - **Keep definitions current**: Updating Jobs in Master vs Daily Schedules in OpCon ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Jobs in Master vs Daily Schedules are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

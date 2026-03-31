@@ -73,10 +73,6 @@ To remove the Machine from the Daily Table, complete the following steps:
 6. Select **Yes** to confirm the deletion
 7. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

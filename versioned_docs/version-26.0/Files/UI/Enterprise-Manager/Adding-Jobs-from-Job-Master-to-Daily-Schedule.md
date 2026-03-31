@@ -61,10 +61,6 @@ If the job name is not visible, scroll through the list or enter the first few l
 - **Extend automation scope**: Adding Jobs from Job Master to Daily Schedule to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Jobs from Job Master to Daily Schedule and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

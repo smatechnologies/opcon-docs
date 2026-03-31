@@ -49,10 +49,6 @@ To configure the user input, complete the following steps:
 - **Centralize control**: Managing Master Job User Inputs settings through Solution Manager keeps all configuration changes in one place and makes them auditable
 - Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

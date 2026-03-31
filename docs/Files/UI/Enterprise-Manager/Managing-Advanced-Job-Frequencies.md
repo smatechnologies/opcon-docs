@@ -85,10 +85,6 @@ To delete Advanced Frequency Settings, complete the following steps:
 8. Select the **Save** button to save changes
 9. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

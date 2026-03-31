@@ -80,10 +80,6 @@ To set a dependency, complete the following steps:
 16. Select **OK** to save or **Cancel** to discard
 17. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

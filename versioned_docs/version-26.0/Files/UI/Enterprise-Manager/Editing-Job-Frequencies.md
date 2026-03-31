@@ -53,10 +53,6 @@ To edit a frequency, complete the following steps:
 - **Keep definitions current**: Updating Job Frequencies in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Job Frequencies are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

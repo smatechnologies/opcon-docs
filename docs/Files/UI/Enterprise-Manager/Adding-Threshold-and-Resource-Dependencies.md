@@ -74,10 +74,6 @@ To set Frequency-Related Threshold/Resource Dependencies, complete the following
 12. Select **OK** to save, or **Cancel** to discard
 13. Select **Close ☒** to close **Job Master**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -65,10 +65,6 @@ To add a tag, complete the following steps:
 9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 10. Select **Close** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

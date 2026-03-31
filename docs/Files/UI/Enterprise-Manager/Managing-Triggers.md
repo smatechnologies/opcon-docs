@@ -61,10 +61,6 @@ To delete a trigger, complete the following steps:
 6. Select **Delete Trigger**. The **Delete** dialog displays
 7. Select **Yes** to confirm or **No** to cancel
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

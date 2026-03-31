@@ -58,10 +58,6 @@ Related Topics
 - **Extend automation scope**: Adding Jobs to Daily Schedules to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Jobs to Daily Schedules and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

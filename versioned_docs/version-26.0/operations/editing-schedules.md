@@ -50,10 +50,6 @@ Deleting a Container job whose subschedule(s) have never started also deletes al
 - **Keep definitions current**: Updating Daily Schedules in OpCon Operations ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Daily Schedules are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## Operations
 

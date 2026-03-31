@@ -42,10 +42,6 @@ To edit schedule or job master, complete the following steps:
 - **Keep definitions current**: Updating Schedule or Job Master in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Schedule or Job Master are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

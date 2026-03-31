@@ -57,10 +57,6 @@ Related Topics
 - [Changing Case of Machine Names](Changing-Case-of-Machine-Names.md)
 - [Deleting Machines](Deleting-Machines.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

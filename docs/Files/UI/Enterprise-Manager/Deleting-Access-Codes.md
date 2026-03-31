@@ -75,10 +75,6 @@ To revoke an Access Code, complete the following steps:
 4. Select **Yes** to confirm the deletion or **No** to cancel
 5. Select **Close ☒** to close the **Access Codes** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -47,10 +47,6 @@ To configure auto maintenance, complete the following steps:
 - **Centralize control**: Managing Automatic Schedule Maintenance settings through Enterprise Manager keeps all configuration changes in one place and makes them auditable
 - Settings validated through Enterprise Manager are checked against business rules before saving, reducing the risk of misconfiguration
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

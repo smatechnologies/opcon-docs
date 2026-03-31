@@ -70,10 +70,6 @@ To perform this procedure, complete the following steps:
 1. Select an **access code** from the **Access Code** combo box
 1. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

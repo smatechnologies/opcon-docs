@@ -45,10 +45,6 @@ To copy a schedule, complete the following steps:
 
 - **Save configuration time**: Duplicating an existing Schedules eliminates redundant data entry and ensures the new definition inherits proven settings
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

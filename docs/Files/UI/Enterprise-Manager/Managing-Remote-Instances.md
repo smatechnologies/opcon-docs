@@ -49,10 +49,6 @@ Related Topics
 - [Editing Remote Instances](Editing-Remote-Instances.md)
 - [Deleting Remote Instances](Deleting-Remote-Instances.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

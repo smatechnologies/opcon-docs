@@ -71,10 +71,6 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 - **Extend automation scope**: Adding Schedule Completion Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Schedule Completion Events and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

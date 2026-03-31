@@ -144,10 +144,6 @@ Select the **Undo** button if you wish to undo your changes for any reason.
 
 Select the **Save** button.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

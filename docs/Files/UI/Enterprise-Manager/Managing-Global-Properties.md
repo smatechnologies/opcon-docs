@@ -47,10 +47,6 @@ Related Topics
 - [Adding User-defined System Properties](Adding-System-Properties.md)
 - [Deleting Global Properties](Deleting-Global-Properties.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -56,10 +56,6 @@ The **Export Data** button exports records in comma-separated value (.csv) forma
 
 The **Reset View** button resets all selection options to their defaults.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

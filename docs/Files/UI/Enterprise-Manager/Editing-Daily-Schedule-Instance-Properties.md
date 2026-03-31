@@ -44,10 +44,6 @@ To edit Daily Schedule Instance Properties in the Enterprise Manager, complete t
 - **Keep definitions current**: Updating Daily Schedule Instance Properties in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Daily Schedule Instance Properties are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

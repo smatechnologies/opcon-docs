@@ -41,10 +41,6 @@ To edit Job Master Details in the Enterprise Manager, complete the following ste
 - **Keep definitions current**: Updating Job Master Details in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Job Master Details are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

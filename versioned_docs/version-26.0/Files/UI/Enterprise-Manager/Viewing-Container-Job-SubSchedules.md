@@ -43,10 +43,6 @@ To view the SubSchedule, complete the following steps:
 - **Improve operational visibility**: Inspecting Container Jobs' SubSchedules records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
 - Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

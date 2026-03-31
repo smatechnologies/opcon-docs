@@ -117,10 +117,6 @@ To add a new job event:
 15. Select **Finish** to save the job event, or **Cancel** to discard
 16. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -98,10 +98,6 @@ To add a UNIX batch user, complete the following steps:
 4. Enter the *group ID* (number or name), a *slash (/)*, and the *user ID* (number or name) in the **Group/User** text box
 5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

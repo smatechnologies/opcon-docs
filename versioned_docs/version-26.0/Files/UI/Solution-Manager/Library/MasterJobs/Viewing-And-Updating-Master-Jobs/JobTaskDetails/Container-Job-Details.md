@@ -89,10 +89,6 @@ To update Container Job Details, complete the following steps:
 
 For conceptual information, refer to [Container Jobs](../../../../../../../job-types/container.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

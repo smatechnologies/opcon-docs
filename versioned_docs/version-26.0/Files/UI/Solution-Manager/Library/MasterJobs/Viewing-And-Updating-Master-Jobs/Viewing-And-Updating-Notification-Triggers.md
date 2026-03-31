@@ -49,10 +49,6 @@ To perform this procedure, complete the following steps:
 2. Expand the **Notification Triggers** panel to expose its content
 3. Select the (![Manage Notification Triggers](../../../../../../Resources/Images/SM/Library/MasterJobs/manage-notification-triggers.png "Manage Notification Triggers Button")) button to Go to the Notification Triggers page
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

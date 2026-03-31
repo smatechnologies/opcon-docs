@@ -46,10 +46,6 @@ Select a schedule and select **Edit**. The Create Master Schedule page opens wit
 
 Make edits as needed, then select **Save** to save changes or **Back** to cancel.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

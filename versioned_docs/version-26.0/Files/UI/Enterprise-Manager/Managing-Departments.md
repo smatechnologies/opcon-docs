@@ -49,10 +49,6 @@ Related Topics
 - [Deleting Departments](Deleting-Departments.md)
 - [Viewing Additional Department Information](Viewing-Additional-Department-Info.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

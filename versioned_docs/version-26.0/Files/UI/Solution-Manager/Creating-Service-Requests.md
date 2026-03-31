@@ -100,10 +100,6 @@ Refer to [Setting up Privileges](Setting-up-Privileges.md#_Setting_Up_Privileges
 - **Standardize definitions**: Creating Service Requests in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
 - All Service Requests definitions are stored in the OpCon database, making them available to all authorized interfaces and users
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## Exception Handling
 

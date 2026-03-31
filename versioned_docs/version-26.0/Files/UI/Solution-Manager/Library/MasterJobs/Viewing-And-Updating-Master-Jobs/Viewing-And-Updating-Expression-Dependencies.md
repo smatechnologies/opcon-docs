@@ -51,10 +51,6 @@ To perform this procedure, complete the following steps:
 3. Enter changes in the **Job** and/or **Frequency** frames
 4. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

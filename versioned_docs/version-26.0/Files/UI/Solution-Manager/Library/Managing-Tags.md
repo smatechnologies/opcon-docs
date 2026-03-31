@@ -48,10 +48,6 @@ See [Tag Concepts](../../../../job-components/tags.md).
 - **Reduce administrative overhead**: Centralizing Tags management in Solution Manager reduces the time needed to locate and update settings across the environment
 - All Tags changes are captured in the OpCon audit system, supporting change management and compliance processes
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

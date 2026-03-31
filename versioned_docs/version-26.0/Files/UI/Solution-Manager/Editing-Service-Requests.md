@@ -40,10 +40,6 @@ To edit a service request, complete the following steps:
 - **Keep definitions current**: Updating Service Requests in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Service Requests are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

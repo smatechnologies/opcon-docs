@@ -48,10 +48,6 @@ Related Topics
 - [Adding Machine Groups to Jobs details](Adding-Machine-Groups-to-Job-Details.md)
 - [Deleting Machine Groups](Deleting-Machine-Groups.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

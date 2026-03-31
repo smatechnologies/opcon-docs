@@ -44,10 +44,6 @@ Select on any **Solution Manager** function item in the graphic to learn more ab
 - **Reduce administrative overhead**: Centralizing Solution Manager management in Solution Manager reduces the time needed to locate and update settings across the environment
 - All Solution Manager changes are captured in the OpCon audit system, supporting change management and compliance processes
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

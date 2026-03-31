@@ -67,10 +67,6 @@ To add an existing frequency, complete the following steps:
 11. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

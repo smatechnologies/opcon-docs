@@ -41,10 +41,6 @@ To add an access code, complete the following steps:
 - **Extend automation scope**: Adding Access Codes to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Access Codes and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

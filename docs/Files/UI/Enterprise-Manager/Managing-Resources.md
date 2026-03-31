@@ -48,10 +48,6 @@ Related Topics
 - [Copying Resources](Copying-Resources.md)
 - [Deleting Resources](Deleting-Resources.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -50,10 +50,6 @@ Only those with the appropriate permissions will have access to the **Lock** but
 5. Select the **Save** button on the dialog
 6. Select the **Save** button on the Master Job Definition page
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

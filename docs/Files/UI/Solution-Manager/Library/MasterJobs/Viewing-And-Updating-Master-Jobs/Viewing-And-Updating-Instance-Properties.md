@@ -52,10 +52,6 @@ To perform this procedure, complete the following steps:
 4. Fill out the **Name** and **Value** columns
 5. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

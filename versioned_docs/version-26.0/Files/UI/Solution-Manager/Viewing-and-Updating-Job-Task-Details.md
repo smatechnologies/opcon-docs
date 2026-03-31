@@ -48,10 +48,6 @@ Supported platforms:
 - **Improve operational visibility**: Inspecting and Updating Job Task Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
 - Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

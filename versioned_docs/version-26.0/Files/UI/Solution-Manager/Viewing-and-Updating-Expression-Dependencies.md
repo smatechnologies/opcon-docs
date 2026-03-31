@@ -98,10 +98,6 @@ To add or Updating Expression Dependencies, complete the following steps:
 
 11. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

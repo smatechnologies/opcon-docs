@@ -40,10 +40,6 @@ To edit a calendar, complete the following steps:
 - **Keep definitions current**: Updating Calendars in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Calendars are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

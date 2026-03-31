@@ -113,10 +113,6 @@ To delete a job association, complete the following steps:
 6. Select **Yes** to confirm
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

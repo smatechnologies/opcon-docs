@@ -36,10 +36,6 @@ Global Properties in OpCon are listed in the grid under Library > Global Propert
 - **Reduce administrative overhead**: Centralizing Global Properties management in Solution Manager reduces the time needed to locate and update settings across the environment
 - All Global Properties changes are captured in the OpCon audit system, supporting change management and compliance processes
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

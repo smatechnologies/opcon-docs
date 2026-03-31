@@ -78,10 +78,6 @@ In the **Daily Maintenance** screen:
 4. Select **Yes** to confirm or **No** to cancel. Repeat Steps 2–4 for all jobs with the resource to delete
 5. Select **Close ☒** to close the **Resources** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

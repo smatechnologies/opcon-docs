@@ -45,10 +45,6 @@ Reserved batch users, e.g., "Use Service Account" for Windows, cannot be edited 
 - **Keep definitions current**: Updating Batch Users in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Batch Users are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

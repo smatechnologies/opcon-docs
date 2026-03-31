@@ -99,10 +99,6 @@ To add or Updating Threshold Updates, complete the following steps:
 
 11. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

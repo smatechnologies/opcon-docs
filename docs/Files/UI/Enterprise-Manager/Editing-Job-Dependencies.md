@@ -69,10 +69,6 @@ To edit a dependency, complete the following steps:
 11. Select **OK** to save the changes or **Cancel** to discard them
 12. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

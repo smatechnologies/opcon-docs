@@ -48,10 +48,6 @@ Related Topics
 - [Deleting Calendars](Deleting-Calendars.md)
 - [Editing Calendars](Editing-Calendars.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

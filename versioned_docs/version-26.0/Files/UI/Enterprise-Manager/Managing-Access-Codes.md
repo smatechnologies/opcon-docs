@@ -49,10 +49,6 @@ Related Topics
 - [Deleting Access Codes](Deleting-Access-Codes.md)
 - [Viewing Additional Access Code Information](Viewing-Additional-Access-Code-Info.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

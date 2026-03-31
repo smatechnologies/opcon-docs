@@ -42,10 +42,6 @@ To add a department to job details, complete the following steps:
 - **Extend automation scope**: Adding Departments to Job Details to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Departments to Job Details and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

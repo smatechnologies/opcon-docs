@@ -53,10 +53,6 @@ Related Topics
 
   Please check back for more content.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

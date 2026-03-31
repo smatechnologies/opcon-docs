@@ -82,10 +82,6 @@ To delete Schedules from Master Tables, complete the following steps:
 4. Select **Yes** to confirm or **No** to cancel
 5. Select **Close ☒** to close the **Schedule Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

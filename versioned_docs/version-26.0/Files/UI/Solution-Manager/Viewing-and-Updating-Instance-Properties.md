@@ -95,10 +95,6 @@ Select the **Undo** button to revert any changes.
 
 Select the **Save** button.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

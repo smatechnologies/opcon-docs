@@ -63,10 +63,6 @@ To perform this procedure, complete the following steps:
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

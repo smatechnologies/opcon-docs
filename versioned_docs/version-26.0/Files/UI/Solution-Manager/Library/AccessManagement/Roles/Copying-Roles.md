@@ -61,10 +61,6 @@ To copy a role in _Library > Access Management > Roles_, complete the following 
 
 ![Copy Role](../../../../../../Resources/Images/SM/Library/AccessManagement/copy-role.png 'Copy Role')
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

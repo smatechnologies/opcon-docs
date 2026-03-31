@@ -71,10 +71,6 @@ To set Frequency-Related Threshold or Resource Updates, complete the following s
 11. Select **OK** to save, or **Cancel** to discard
 12. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

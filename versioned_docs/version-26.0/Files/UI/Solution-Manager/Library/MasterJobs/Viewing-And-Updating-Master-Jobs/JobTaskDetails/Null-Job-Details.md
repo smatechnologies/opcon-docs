@@ -55,10 +55,6 @@ Create the job and general info as described in [Adding a Job](../../Adding-Mast
 
 For conceptual information, refer to [Null Jobs](../../../../../../../job-types/null.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

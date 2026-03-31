@@ -67,10 +67,6 @@ You can import and store up to a 900KB script file per version.
 - **Extend automation scope**: Adding Scripts to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Scripts and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

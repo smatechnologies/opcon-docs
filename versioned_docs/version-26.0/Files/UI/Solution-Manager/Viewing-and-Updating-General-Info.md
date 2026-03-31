@@ -99,10 +99,6 @@ For conceptual information, refer to [Tags](../../../job-components/tags.md) in 
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

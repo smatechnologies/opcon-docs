@@ -48,10 +48,6 @@ To add a role, complete the following steps:
 - **Extend automation scope**: Adding Roles to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Roles and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

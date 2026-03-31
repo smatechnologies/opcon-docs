@@ -51,10 +51,6 @@ Related Topics
 - [Viewing Additional Batch User Information](Viewing-Additional-Batch-User-Info.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

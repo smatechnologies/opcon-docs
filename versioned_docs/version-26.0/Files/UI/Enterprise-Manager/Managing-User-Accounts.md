@@ -49,10 +49,6 @@ Related Topics
 - [Copying User Accounts](Copying-User-Accounts.md)
 - [Deleting User Accounts](Deleting-User-Accounts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

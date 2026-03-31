@@ -56,10 +56,6 @@ To remove Dependencies, complete the following steps:
 2. Select **Yes** to confirm or **No** to cancel
 3. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -56,10 +56,6 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** to close the **Machine Group Privileges** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

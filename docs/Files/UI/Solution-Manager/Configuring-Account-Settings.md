@@ -57,10 +57,6 @@ To configure account settings, complete the following steps:
 - **Centralize control**: Managing Account Settings settings through Solution Manager keeps all configuration changes in one place and makes them auditable
 - Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

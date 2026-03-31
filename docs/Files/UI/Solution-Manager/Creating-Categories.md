@@ -49,10 +49,6 @@ You can also edit a Service Request directly to change or set its category:
 - **Standardize definitions**: Creating Categories in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
 - All Categories definitions are stored in the OpCon database, making them available to all authorized interfaces and users
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -65,10 +65,6 @@ To edit the job event, complete the following steps:
 9.  Select **Finish** to save or **Cancel** to discard changes
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

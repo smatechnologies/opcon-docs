@@ -42,10 +42,6 @@ To add machine group to details, complete the following steps:
 - **Extend automation scope**: Adding Machine Groups to Job Details to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Machine Groups to Job Details and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

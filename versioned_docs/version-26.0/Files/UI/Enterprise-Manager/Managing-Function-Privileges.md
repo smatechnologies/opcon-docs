@@ -52,10 +52,6 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move functions to the **Revoked** list box
 5. Select **Close ☒** to close the **Function Privileges** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

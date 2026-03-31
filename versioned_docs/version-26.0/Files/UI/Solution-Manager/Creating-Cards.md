@@ -74,10 +74,6 @@ To set the QoS and SLA ranges, add frequencies, and save the tag card, complete 
 - **Standardize definitions**: Creating Cards in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
 - All Cards definitions are stored in the OpCon database, making them available to all authorized interfaces and users
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

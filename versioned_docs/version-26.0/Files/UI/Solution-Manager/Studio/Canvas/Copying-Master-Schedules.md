@@ -55,10 +55,6 @@ A dialog opens to define a new **Schedule Name** with options to **Copy Master J
 1. Enter a new **Schedule Name**
 1. Select **Save** to copy the schedule or **Cancel** to cancel
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

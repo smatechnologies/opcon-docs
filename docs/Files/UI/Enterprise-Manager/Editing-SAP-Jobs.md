@@ -49,10 +49,6 @@ To edit an SAP job, complete the following steps:
 - **Keep definitions current**: Updating SAP Jobs in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to SAP Jobs are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

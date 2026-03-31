@@ -39,10 +39,6 @@ To update the repository, complete the following steps:
 
 - **Keep definitions current**: Updating the Repository for Update Sites in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

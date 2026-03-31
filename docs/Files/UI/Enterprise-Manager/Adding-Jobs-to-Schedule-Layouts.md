@@ -140,10 +140,6 @@ When selecting the dependency link line, the line thickens and becomes bold.
 4. Select **Yes** to confirm or **No** to cancel
 5. Select **Close ☒** (to the right of the **Workflow Designer** tab) to close the **Workflow Designer** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

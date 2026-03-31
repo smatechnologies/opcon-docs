@@ -50,10 +50,6 @@ To perform this procedure, complete the following steps:
 - **Keep definitions current**: Updating Schedules in Daily Schedule Tables in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Schedules in Daily Schedule Tables are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

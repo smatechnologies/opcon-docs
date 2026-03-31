@@ -48,10 +48,6 @@ Select a schedule or schedules and select **Delete**. A confirmation dialog is d
 
 Select **Yes** to delete the schedule(s) or **No** to cancel.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

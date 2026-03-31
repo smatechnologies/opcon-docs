@@ -42,10 +42,6 @@ To add an access code to a job, complete the following steps:
 - **Extend automation scope**: Adding Access Codes to Jobs to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Access Codes to Jobs and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

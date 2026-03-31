@@ -80,10 +80,6 @@ h.  Select **OK**.
 
 On the **Vision Settings** page, select the **Save** button.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -98,10 +98,6 @@ An administrator can export update sites to make them available for other users 
 3. Select the **Export** button. The **Export Sites** dialog displays
 4. Verify the *location* and *file name* of the export file and select **Save**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

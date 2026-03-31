@@ -54,10 +54,6 @@ To copy a job event, complete the following steps:
 
 - **Save configuration time**: Duplicating an existing Job Events eliminates redundant data entry and ensures the new definition inherits proven settings
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

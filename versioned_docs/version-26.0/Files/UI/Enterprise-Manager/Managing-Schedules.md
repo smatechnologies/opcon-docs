@@ -82,10 +82,6 @@ Schedules built on Hold appear **blue**. Schedules built as **Released** appear 
 If no properties are defined, OpCon still requests the build but no properties will be defined.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

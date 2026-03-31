@@ -55,10 +55,6 @@ To perform this procedure, complete the following steps:
    ![Frequency Inactive List](../../../../../../Resources/Images/SM/Library/MasterJobs/inactive-frequencies.png)
 7. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

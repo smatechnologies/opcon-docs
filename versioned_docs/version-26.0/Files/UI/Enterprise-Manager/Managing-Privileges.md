@@ -41,10 +41,6 @@ Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) arrow to 
 - **Reduce administrative overhead**: Centralizing Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
 - All Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -111,10 +111,6 @@ To add an existing frequency:
 11. Select **Finish** to save the frequency in the **Frequency list** and close the wizard
 12. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

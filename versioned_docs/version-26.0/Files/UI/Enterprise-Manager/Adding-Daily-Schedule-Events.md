@@ -69,10 +69,6 @@ To replace a placeholder with a token, complete the following steps:
 - **Extend automation scope**: Adding Daily Schedule Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Daily Schedule Events and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -71,10 +71,6 @@ All changes to Batch User Privileges are captured in the OpCon audit system, sup
 
 The Batch User Privileges editor manages security tokens — the platform user account names — used during batch job submission. These tokens represent real operating system credentials on the target platforms. Controlling which OpCon roles have access to which Batch User IDs limits the operating-system accounts that automation can invoke on each platform.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

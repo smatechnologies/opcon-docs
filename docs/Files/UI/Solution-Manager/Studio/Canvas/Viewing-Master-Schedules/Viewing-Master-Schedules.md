@@ -239,10 +239,6 @@ The minimap is in the lower-right corner of the canvas. Use it to view and move 
 
 ![Studio View Mini-Map](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-minimap.png "Studio View Mini-Map")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -89,10 +89,6 @@ For more information, refer to [Schedule Maintenance](../../../../../objects/sch
 1. _(Optional)_ Select the **Build on Hold** option
 1. Select **Save** to create the schedule or **Cancel** to cancel the operation
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

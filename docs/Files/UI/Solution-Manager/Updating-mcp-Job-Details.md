@@ -183,10 +183,6 @@ A Prerun tests required preconditions before job execution. If the Prerun fails,
 
 ![Failure Criteria Job: job information](../../../Resources/Images/SM/mcp-failure-criteria.png "Failure Criteria Job: job information")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

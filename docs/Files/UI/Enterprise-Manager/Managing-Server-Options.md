@@ -49,10 +49,6 @@ To modify a server option parameter, complete the following steps:
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Server Options** toolbar
 8. Select **Close ☒** to close the **Server Options** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

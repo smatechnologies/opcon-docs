@@ -45,10 +45,6 @@ Please check back for more content.
 - **Reduce administrative overhead**: Centralizing Operations management in Solution Manager reduces the time needed to locate and update settings across the environment
 - All Operations changes are captured in the OpCon audit system, supporting change management and compliance processes
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

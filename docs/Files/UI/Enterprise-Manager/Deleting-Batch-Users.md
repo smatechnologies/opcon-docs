@@ -79,10 +79,6 @@ Delete the Batch User
 - **Maintain a clean environment**: Removing unused Batch Users definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
 - Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

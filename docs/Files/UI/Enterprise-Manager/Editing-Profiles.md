@@ -43,10 +43,6 @@ To edit a profile, complete the following steps:
 - **Keep definitions current**: Updating Profiles in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 - Changes to Profiles are recorded in the OpCon audit log, providing a complete modification history
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -44,10 +44,6 @@ To update a property, complete the following steps:
 
 - **Keep definitions current**: Updating Job Instance Properties in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

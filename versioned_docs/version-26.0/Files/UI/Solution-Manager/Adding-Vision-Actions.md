@@ -76,10 +76,6 @@ To add a Vision Action, complete the following steps:
 - **Extend automation scope**: Adding Vision Actions to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Vision Actions and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

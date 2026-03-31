@@ -75,10 +75,6 @@ To remove an Individual Status Color, complete the following steps:
 3. Select the **Remove** button
 4. Select **Apply** to save, then **OK** to close the **Preferences** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -50,10 +50,6 @@ For more on Function Privileges, refer to [Function Privileges](../../../adminis
 - **Activate required functionality**: Enabling Admin Mode Editing activates the feature for the intended scope without affecting other parts of the system
 - The change is recorded in the OpCon audit log, documenting when the Admin Mode Editing was activated and by whom
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

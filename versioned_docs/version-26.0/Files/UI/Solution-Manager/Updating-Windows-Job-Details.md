@@ -169,10 +169,6 @@ To configure the script, runner, failure criteria, and environment variables, co
 13. Select the **OK** button to add the name/value
 14. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

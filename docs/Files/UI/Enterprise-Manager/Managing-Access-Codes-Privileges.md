@@ -53,10 +53,6 @@ To revoke Privileges from Access Codes, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** to close the screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

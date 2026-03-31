@@ -84,10 +84,6 @@ The line thickens and becomes bold when selected.
 Refer to the [Delete a Dependency](Adding-Jobs-to-Schedule-Layouts.md#Delete_a_Dependency) procedure to delete threshold dependencies.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

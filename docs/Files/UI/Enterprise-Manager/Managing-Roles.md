@@ -49,10 +49,6 @@ Related Topics
 - [Editing Roles](Editing-Roles.md)
 - [Deleting Roles](Deleting-Roles.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -47,10 +47,6 @@ Related Topics
 - [Copying Thresholds](Copying-Thresholds.md)
 - [Deleting Thresholds](Deleting-Thresholds.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

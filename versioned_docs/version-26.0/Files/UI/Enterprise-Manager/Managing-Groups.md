@@ -92,10 +92,6 @@ To rename a group, complete the following steps:
 5.  Select **Rename**
 6.  Type the new *group name* and select **OK**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

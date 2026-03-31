@@ -47,10 +47,6 @@ To view job output successfully, complete the following setup:
 - **Improve operational visibility**: Inspecting a Job Output File records in OpCon Operations supports informed decision-making and provides an audit trail for compliance reviews
 - Information in OpCon Operations reflects the live database state, ensuring that the data reviewed is current at the time of inspection
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

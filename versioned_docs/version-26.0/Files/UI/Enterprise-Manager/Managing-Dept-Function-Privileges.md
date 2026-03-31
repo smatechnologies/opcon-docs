@@ -54,10 +54,6 @@ To revoke a privilege, complete the following steps:
 5. Select the **left arrow** to move them to the **Revoked** list box
 6. Select **Close ☒** to close the **Departmental Function Privileges** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

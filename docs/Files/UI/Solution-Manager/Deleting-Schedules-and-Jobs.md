@@ -68,10 +68,6 @@ Related Topics
 - [Performing Schedule Checks](Performing-Schedule-Checks.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

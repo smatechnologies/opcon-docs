@@ -52,10 +52,6 @@ Related Topics
 - [Deleting Un-used User-defined Calendars](Deleting-User-defined-Calendars.md)
 - [Deleting Old Dates](Deleting-Old-Dates.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -41,10 +41,6 @@ To add a department, complete the following steps:
 - **Extend automation scope**: Adding Departments to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
 - All additions are tracked in the OpCon audit log, recording who added the Departments and when
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -67,10 +67,6 @@ To edit a threshold or resource update, complete the following steps:
 10. Select **Close ☒** to close the **Job Master** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

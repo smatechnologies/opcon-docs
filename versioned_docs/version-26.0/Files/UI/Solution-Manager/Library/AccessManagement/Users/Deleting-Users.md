@@ -63,10 +63,6 @@ To delete a user, complete the following steps:
 
 ![Delete User](../../../../../../Resources/Images/SM/Library/AccessManagement/delete-user.png 'Delete User')
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

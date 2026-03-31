@@ -355,10 +355,6 @@ For conceptual information, refer to [Documentation](../../../job-components/doc
 9. Select **Close ☒** to close the **Daily Maintenance** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 
