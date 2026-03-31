@@ -21,6 +21,13 @@ doc_type: procedural
 
 Getting Started with OpCon covers the hardware and software requirements that must be met before installation, along with key naming conventions and initial configuration considerations for the OpCon server.
 
+**Theme:** Overview  
+**Who Is It For?** System Administrator
+
+## What Is It?
+
+Getting Started with OpCon covers the hardware and software requirements that must be met before installation, along with key naming conventions and initial configuration considerations for the OpCon server.
+
 :::warning
 Do not use the underscore character (\_) in the naming convention of the dedicated OpCon server name (e.g., myservername_2017). Underscores in the server name directly affect OpCon license validation.
 :::

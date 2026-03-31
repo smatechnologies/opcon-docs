@@ -89,6 +89,7 @@ For more information, refer to [Schedule Maintenance](../../../../../objects/sch
 1. _(Optional)_ Select the **Build on Hold** option
 1. Select **Save** to create the schedule or **Cancel** to cancel the operation
 
+*Note: All autobuild settings reset and become disabled when the Sub Schedule option is selected.*
 
 ## FAQs
 
