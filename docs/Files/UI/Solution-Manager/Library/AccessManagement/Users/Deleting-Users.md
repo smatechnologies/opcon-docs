@@ -24,16 +24,6 @@ doc_type: procedural
 
 Use this procedure to delete Users in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Users in Solution Manager is no longer needed
-- The Users has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Users definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
 ## Administration
 
 ### Required Privileges
@@ -63,10 +53,6 @@ To delete a user, complete the following steps:
 
 ![Delete User](../../../../../../Resources/Images/SM/Library/AccessManagement/delete-user.png 'Delete User')
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

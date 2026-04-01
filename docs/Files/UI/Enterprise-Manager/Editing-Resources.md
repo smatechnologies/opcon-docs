@@ -32,21 +32,6 @@ To edit a resource, complete the following steps:
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Resources** toolbar
 5.  Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen
 
-## When Would You Use It?
-
-- An existing Resources in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Resources definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Resources in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Resources are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to resources take effect immediately?**

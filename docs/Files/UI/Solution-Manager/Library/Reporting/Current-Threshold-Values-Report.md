@@ -38,14 +38,6 @@ Filter by threshold name, value, or description. To open the filters panel, sele
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Current Threshold Values Report** displays the currently defined thresholds in OpCon
-
-## Why Would You Use It?
-
-- **Current Threshold**: The **Current Threshold Values Report** displays the currently defined thresholds in OpCon
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Schedule Master** editor is used to define and maintain OpCon Schedules.
 
-## When Would You Use It?
-
-- A new Global Properties definition needs to be established in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Global Properties in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Schedule Master Tabs
 
 The editor contains a list of schedules and uses tabs to provide schedule details, instance definitions, frequencies, and events for each schedule.

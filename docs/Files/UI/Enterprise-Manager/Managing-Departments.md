@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Departments** editor defines and maintains OpCon Departments. It contains a list of department names and related documentation. For conceptual information, refer to [Departments](../../../objects/departments.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Departments settings in Enterprise Manager
-- Departments needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Departments management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Departments changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Departments Toolbar
 
 The **Departments** editor has a toolbar for managing departments. Select any icon on the toolbar below to learn more about its functionality.
@@ -49,10 +39,6 @@ Related Topics
 - [Deleting Departments](Deleting-Departments.md)
 - [Viewing Additional Department Information](Viewing-Additional-Department-Info.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

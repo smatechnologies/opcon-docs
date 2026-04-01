@@ -26,14 +26,6 @@ The **List** view (Daily list) displays all dates that have schedules built. It 
 
 To display schedule and job information in the **Gantt**, **PERT**, **Bar Chart**, **Pie Chart**, and **Workload Chart** views, activate the **Send the current selection to other views** button on the **Daily list** toolbar. The **Listen for selection changes in other views** button must also be activated in each destination view.
 
-## When Would You Use It?
-
-- The **List** view (Daily list) displays all dates that have schedules built
-
-## Why Would You Use It?
-
-- **Using List**: The **List** view (Daily list) displays all dates that have schedules built
-
 ## List View Toolbar
 
 The **List** view has a toolbar for performing actions. Select any icon to learn more about its functionality.

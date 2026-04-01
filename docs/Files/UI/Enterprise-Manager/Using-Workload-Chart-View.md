@@ -26,14 +26,6 @@ The **Workload Chart** view shows at a glance whether schedules have overrun the
 
 The view displays estimated and actual run times for completed jobs, with a progress bar indicating how many jobs have finished versus those still waiting or running. The Schedule Name or Date appears above the chart. To display schedule and job information, activate the **Listen for selection changes in other views** button on the **Workload Chart** toolbar. The **Send the current selection to other views** button must also be activated in another view (e.g., **List** and/or **Matrix**).
 
-## When Would You Use It?
-
-- The **Workload Chart** view shows at a glance whether schedules have overrun their estimated runtime
-
-## Why Would You Use It?
-
-- **Using Workload**: The **Workload Chart** view shows at a glance whether schedules have overrun their estimated runtime
-
 ## Workload Chart Toolbar
 
 ![Workload Chart toolbar](../../../Resources/Images/EM/EMworkloadcharttoolbar.png "Workload Chart toolbar")

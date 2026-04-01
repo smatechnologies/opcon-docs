@@ -59,21 +59,6 @@ To replace a placeholder with a token, complete the following steps:
 7. Select **Close ☒** to close the **Schedule Daily** screen
 8. Select **Close ☒** to close the **Daily Maintenance** screen
 
-## When Would You Use It?
-
-- You need to add Daily Schedule Events in Enterprise Manager
-- The environment is expanding and requires additional Daily Schedule Events to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Daily Schedule Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Daily Schedule Events and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Where do you access Daily Schedule Events in the Enterprise Manager?**

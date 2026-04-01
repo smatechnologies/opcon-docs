@@ -44,16 +44,6 @@ Auto resolution is best in most cases for ensuring a successful connection.
 
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Remote Instances** toolbar
 
-## When Would You Use It?
-
-- You need to add Remote Instances in Enterprise Manager
-- The environment is expanding and requires additional Remote Instances to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Remote Instances to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Remote Instances and when
-
 ## FAQs
 
 **Q: What information is required to add remote instances?**

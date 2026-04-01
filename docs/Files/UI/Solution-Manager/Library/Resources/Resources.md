@@ -35,14 +35,6 @@ The **Name** field is unique across Resources _and_ Thresholds
 Select **Cross References** to see the list of master and daily jobs that use a particular resource:
 ![Resource CrossReferences](../../../../../Resources/Images/SM/Library/Resources/Resource-CrossReference.png "Resource Cross References")
 
-## When Would You Use It?
-
-- Available Resources in OpCon are shown in the following Grid under Library -> Resources
-
-## Why Would You Use It?
-
-- **Resources**: Available Resources in OpCon are shown in the following Grid under Library -> Resources
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

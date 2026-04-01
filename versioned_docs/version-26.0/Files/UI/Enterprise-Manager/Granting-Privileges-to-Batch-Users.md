@@ -1,27 +1,48 @@
 ---
 lang: en-us
-title: Granting Privileges to Batch Users
 viewport: width=device-width, initial-scale=1.0
+title: Granting Privileges to Batch Users
+description: "Use this procedure to grant Privileges to Batch Users in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 #  Granting Privileges to Batch Users
 
-To grant privileges:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-1.  Double-click on **Batch Users** under the **Security** topic. The
-    **Batch User** screen displays.
-2.  Click on the **Manage Privileges** button.
-3.  Select a **role** in the **Select Role** drop-down list.
-    Alternatively, you can use the **Find** ((Ctrl+F) magnifying glass)
-    button to find the role.
-4.  Select an **operating system** in the **Target Operating System**
-    drop-down list.
-5.  Click on the **batch user(s)** in the **Revoked** list box.
-6.  Click the **right arrow** to move the batch user(s) to the
-    **Granted** list box.
-7.  Click **Close ☒** (to the right of the **Batch User Privileges**
-    tab) to close the **Batch User Privileges** screen.
+## What Is It?
+
+Use this procedure to grant Privileges to Batch Users in the Enterprise Manager.
+
+To grant privileges, complete the following steps:
+
+1.  Select on **Batch Users** under the **Security** topic. The **Batch User** screen displays
+2.  Select the **Manage Privileges** button
+3.  Select a **role** in the **Select Role** list. You can also use the **Find** (Ctrl+F) button to locate the role
+4.  Select an **operating system** in the **Target Operating System** list
+5.  Select the **batch user(s)** in the **Revoked** list box
+6.  Select the **right arrow** to move the batch user(s) to the **Granted** list box
+7.  Select **Close ☒** to the right of the **Batch User Privileges** tab to close the screen
 :::
 
- 
+## FAQs
 
+**Q: How many steps does the Granting Privileges to Batch Users procedure involve?**
+
+The Granting Privileges to Batch Users procedure involves 7 steps. Complete all steps in order and save your changes.
+
+## Glossary
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.

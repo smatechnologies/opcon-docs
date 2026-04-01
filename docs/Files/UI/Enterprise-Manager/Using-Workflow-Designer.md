@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Workflow Designer** has three main elements: [display area](#Workflow), [action panel](#Workflow2), and [toolbar](#Workflow3).
 
-## When Would You Use It?
-
-- The **Workflow Designer** has three main elements: [display area](#Workflow), [action panel](#Workflow2), and [toolbar](#Workflow3)
-
-## Why Would You Use It?
-
-- **Using Workflow**: The **Workflow Designer** has three main elements: [display area](#Workflow), [action panel](#Workflow2), and [toolbar](#Workflow3)
-
 ## Workflow Designer Display Area
 
 The **display area** provides the graphical workflow (also called a *flow diagram* or *flow map*) for a selected schedule. Each node represents a job (rectangle), threshold (rounded rectangle), or resource (oval). [Lines between nodes](Workflow-Designer-Dependency-Lines.md) represent dependency relationships. You can drag and drop dependencies for jobs, thresholds, and resources, and use [right-click functionality](Workflow-Designer-Right-Click-Menus.md) on nodes and dependency lines.

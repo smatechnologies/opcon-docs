@@ -22,14 +22,6 @@ doc_type: conceptual
 
 Data Input Message Elements define the XML structure used in SMA Dynamic Data Input (SMADDI) files. Each element either stores data directly in the OpCon database or groups logically related elements within the message hierarchy. Examples show the nested structure required for valid input files.
 
-## When Would You Use It?
-
-- You need to configure or manage Data Input Message Elements in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Data Input Message Elements through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## General Message Elements
 
 Required for all SMADDI input files. Structure:

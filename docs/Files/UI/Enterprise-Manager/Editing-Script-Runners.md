@@ -34,16 +34,6 @@ To edit a script runner, complete the following steps:
 6.  Select **Close ☒** to close the **Script Runners** screen
 :::
 
-## When Would You Use It?
-
-- An existing Script Runners in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Script Runners definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Script Runners in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Script Runners are recorded in the OpCon audit log, providing a complete modification history
-
 ## FAQs
 
 **Q: Do edits to script runners take effect immediately?**

@@ -33,21 +33,6 @@ To view the SubSchedule, complete the following steps:
 5.  Work with the jobs in the subschedule, as needed
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Container Jobs' SubSchedules records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Container Jobs' SubSchedules state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Container Jobs' SubSchedules records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Viewing Container Jobs' SubSchedules procedure involve?**

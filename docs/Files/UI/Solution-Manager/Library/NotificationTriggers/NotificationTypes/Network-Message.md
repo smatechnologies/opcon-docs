@@ -31,14 +31,6 @@ The SMANotifyHandler always attempts to use **Msg.exe** first. For a successful 
 - **Recipient Name(s)** (Required): Machine host names, TCP/IP addresses, or Windows User Names separated by semicolons (;). Maximum 3,000 characters
 - **Message**: A user-defined message up to 3,000 characters. The message also includes default trigger information: trigger type and triggering status change event
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining a Network Pop-up Message notification: using The **Network** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining a Network Pop-up Message notification: - Recip
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

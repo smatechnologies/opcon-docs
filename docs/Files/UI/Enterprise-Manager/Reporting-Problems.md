@@ -56,14 +56,6 @@ h. Select the **Message** tab and enter the problem description.
 i. *(Optional)* Select the **Attachments** tab. Log files are already attached. Select **Attach File** to add more, locate the file, and select **Open**.
 j. Select **Next** to send the email, then select **Finish** to close the dialog.
 
-## When Would You Use It?
-
-- You can report Enterprise Manager bugs directly through the Enterprise Manager
-
-## Why Would You Use It?
-
-- **Reporting Problems**: You can report Enterprise Manager bugs directly through the Enterprise Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

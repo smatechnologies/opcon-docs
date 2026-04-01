@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Retrieve Job Output** skill displays a summary of the output logs for a daily job on a specific date, giving quick access to key information including any errors that occurred.
 
-## When Would You Use It?
-
-- The **Retrieve Job Output** skill displays a summary of the output logs for a daily job on a specific date, giving quick access to key information including any errors that occurred
-
-## Why Would You Use It?
-
-- **Summary Job**: The **Retrieve Job Output** skill displays a summary of the output logs for a daily job on a specific date, giving quick access to key information including any errors that occurred
-
 ## Skill Details
 
 ### Parameters

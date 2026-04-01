@@ -31,14 +31,6 @@ To perform this procedure, complete the following steps:
 3. Right-click anywhere in the **Map** view
 4. Select **Re-Layout Graph**
 
-## When Would You Use It?
-
-- Cached or stale Graph Layouts data in Enterprise Manager needs to be updated
-
-## Why Would You Use It?
-
-- **Ensure data accuracy**: Refreshing Graph Layouts in Enterprise Manager ensures that displayed information reflects the latest database state
-
 ## FAQs
 
 **Q: How many steps does the Refreshing Graph Layouts procedure involve?**

@@ -34,14 +34,6 @@ Selecting **Add** or selecting a record in the grid enables the bottom panel:
 The **Name** field must be unique when adding or editing a notification category.
 :::
 
-## When Would You Use It?
-
-- You need to manage Categories** using Available Notification Categories in OpCon are shown in the grid under **Library > Notification Triggers >
-
-## Why Would You Use It?
-
-- **Operational value**: Enables the bottom panel:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

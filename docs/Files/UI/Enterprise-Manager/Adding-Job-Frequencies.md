@@ -26,16 +26,6 @@ Use this procedure to add Job Frequencies in the Enterprise Manager.
 Job frequencies cannot be added if the job uses a schedule-defined frequency.
 :::
 
-## When Would You Use It?
-
-- You need to add Job Frequencies in Enterprise Manager
-- The environment is expanding and requires additional Job Frequencies to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Job Frequencies to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Job Frequencies and when
-
 ## Adding New Job Frequencies
 
 To add a new frequency:
@@ -111,10 +101,6 @@ To add an existing frequency:
 11. Select **Finish** to save the frequency in the **Frequency list** and close the wizard
 12. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

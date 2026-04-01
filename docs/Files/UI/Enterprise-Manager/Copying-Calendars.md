@@ -33,15 +33,6 @@ To copy a calendar, complete the following steps:
 5.  Select the **OK** button
 6.  Select the **x** to the right of the **Calendar** tab to close the **Calendar** screen
 
-## When Would You Use It?
-
-- An existing Calendars definition needs to be duplicated in Enterprise Manager
-- A new Calendars with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Calendars eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy calendars instead of creating a new one?**

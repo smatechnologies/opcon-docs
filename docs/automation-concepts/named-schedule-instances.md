@@ -22,14 +22,6 @@ doc_type: conceptual
 
 Named Schedule Instances reduce the maintenance burden on repeatable workflows by allowing a single definition rule to be designated for unlimited use or job runs. This functionality expands multi-instance capabilities on schedules to include exception management and inter-instance dependency.
 
-## When Would You Use It?
-
-- Named Schedule Instances reduce the maintenance burden on repeatable workflows by allowing a single definition rule to be designated for unlimited use or job runs
-
-## Why Would You Use It?
-
-- **Operational value**: Reduce the maintenance burden on repeatable workflows by allowing a single definition r
-
 ## Property Association
 
 Predefined properties can be associated with a named instance of a schedule. Refer to [Using Properties for Automation](../objects/using-properties.md) and [Schedule Instance Property Name Syntax](../objects/using-properties.md#schedule).

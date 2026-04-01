@@ -34,14 +34,6 @@ To set the preferences, complete the following steps:
 4. Select **Colors**
 5. [Set the desired job status group colors](Setting-Job-Status-Group-Colors.md), [manage the individual job status colors](Managing-Individual-Status-Colors.md), or [set the desired schedule status colors](Setting-Schedule-Status-Colors.md)
 
-## When Would You Use It?
-
-- To set the preferences:
-
-## Why Would You Use It?
-
-- **Setting Preferences**: To set the preferences:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

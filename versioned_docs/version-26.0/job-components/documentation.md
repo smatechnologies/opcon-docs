@@ -1,11 +1,59 @@
+---
+title: Documentation
+description: "Job documentation is user-defined information (e.g., command history, operator instructions for failure)."
+product_area: Job Components
+audience: Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Jobs
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Documentation
 
-The *documentation* for each job is user-defined information (e.g., command history, instructions for operators in case of failure, etc.). Documentation can be associated with the job or with individual frequencies for the job. Frequency-level documentation can only be added after at least one frequency has been defined.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer
 
-The following information applies to documentation associated with the job:
+## What Is It?
 
-- **Schedule Name**: Defines the name of the schedule.
-- **Job Name**: Defines the name of the job.
-- **Job Documentation**: Contains the user-defined information that is always associated with the job.
-- **Frequency Name**: Defines the name of the frequency if the documentation is defined for a specific frequency. The list box contains the names of all frequencies defined for the selected job in order of priority.
-- **Frequency Documentation**: Contains the user-defined information that is associated the Frequency Name and included with the job only when the job runs with the associated frequency.
+Job *documentation* is user-defined information (e.g., command history, operator instructions for failure). Documentation can be associated with the job or with individual frequencies. Frequency-level documentation requires at least one frequency to be defined first.
+
+- **Schedule Name**: Name of the schedule
+- **Job Name**: Name of the job
+- **Job Documentation**: User-defined information always associated with the job
+- **Frequency Name**: Name of the frequency if documentation is defined for a specific frequency. The list contains all frequencies defined for the job in priority order
+- **Frequency Documentation**: User-defined information associated with the Frequency Name, included with the job only when it runs on that frequency
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Schedule Name | Name of the schedule | — | — |
+| Job Name | Name of the job | — | — |
+| Job Documentation | User-defined information always associated with the job | — | — |
+| Frequency Name | Name of the frequency if documentation is defined for a specific frequency. | — | — |
+| Frequency Documentation | User-defined information associated with the Frequency Name, included with the job only when it runs on that frequency | — | — |
+## FAQs
+
+**Q: What can job documentation contain?**
+
+Job documentation is user-defined free-text information such as command history, operator instructions, failure recovery steps, or other notes relevant to the job.
+
+**Q: Can documentation be different depending on which frequency a job runs under?**
+
+Yes. Frequency Documentation is defined separately for each frequency and is only included with the job when it runs under that specific frequency. At least one frequency must be defined before frequency-level documentation can be added.
+
+**Q: Is job documentation required?**
+
+No. Documentation is optional for all jobs and frequencies.
+
+## Glossary
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

@@ -28,14 +28,6 @@ Actn files to send OpCon events to the SAM.
 When a mapped drive or UNC path is specified in File Name Path, the Resource Monitor Service needs to be running as a domain user who has access to mapped drives or the UNC path being monitored.
 :::
 
-## When Would You Use It?
-
-- Use this feature when a monitored resource rule is met
-
-## Why Would You Use It?
-
-- **SMA Resource**: The SMA Resource Monitor service reads the Rule files to determine what
-
 ## Configure the SMA Resource Monitor Service Log On
 
 1. Use menu path: **Start \> Settings \> Control Panel**

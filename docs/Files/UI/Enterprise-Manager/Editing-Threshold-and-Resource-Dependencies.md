@@ -24,16 +24,6 @@ doc_type: conceptual
 
 Use this procedure to edit Threshold/Resource Dependencies in the Enterprise Manager.
 
-## When Would You Use It?
-
-- An existing Threshold/Resource Dependencies in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Threshold/Resource Dependencies definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Threshold/Resource Dependencies in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Threshold/Resource Dependencies are recorded in the OpCon audit log, providing a complete modification history
-
 ## Editing Job-Related Threshold/Resource Dependencies
 
 To edit a dependency, complete the following steps:
@@ -68,10 +58,6 @@ To edit a dependency, complete the following steps:
 11. Select **Close ☒** to close the **Job Master** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

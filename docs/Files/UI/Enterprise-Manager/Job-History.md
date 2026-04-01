@@ -32,14 +32,6 @@ The dialog shows the following per job iteration:
 - Exit Code
 - Exit Description
 
-## When Would You Use It?
-
-- The **Job History** dialog displays all iterations of a job
-
-## Why Would You Use It?
-
-- **Job History**: The **Job History** dialog displays all iterations of a job
-
 ## Viewing Job History
 
 To view job history, complete the following steps:

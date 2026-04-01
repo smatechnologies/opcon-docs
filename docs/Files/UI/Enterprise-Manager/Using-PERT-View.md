@@ -26,14 +26,6 @@ The **PERT** screen displays job dependency relationships and each job's current
 
 The **Send the current selection to other views** button must also be activated in another view (e.g., **Daily List** and/or **Matrix**). To view changes simultaneously in both views, refer to the [Synchronizing Data between List and PERT Views](Synchronizing-Data-between-List-and-PERT-Views.md) procedure.
 
-## When Would You Use It?
-
-- The **PERT** view shows a schedule's individual jobs and job dependency relationships
-
-## Why Would You Use It?
-
-- **Using PERT**: The **PERT** view shows a schedule's individual jobs and job dependency relationships
-
 ## PERT View Toolbar
 
 The **PERT** view has a toolbar for performing actions in the view. Select any icon to learn more about its functionality.

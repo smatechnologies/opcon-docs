@@ -36,14 +36,6 @@ In **[Workflow Designer](Using-Workflow-Designer.md)**, each dependency type is 
 ||Threshold Dependency: A solid royal blue line with arrow. The job at the arrow end depends on the threshold where the line starts.|
 ||Multiple frequency level Dependencies: Jobs with multiple frequency level dependencies show multiple lines that start and end together but separate to show different paths. The frequency color appears as a diamond on the path; a tooltip on the diamond shows the frequency name.|
 
-## When Would You Use It?
-
-- In **[Workflow Designer](Using-Workflow-Designer.md)**, each dependency type is represented by a different line style and image at the end
-
-## Why Would You Use It?
-
-- **Workflow Designer**: In **[Workflow Designer](Using-Workflow-Designer.md)**, each dependency type is represented by a different line style and image at the end
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

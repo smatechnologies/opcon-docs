@@ -40,14 +40,6 @@ The Information tools perform the functions listed below, depending on the [view
 ||Print report: Opens the Print Report dialog to configure print format and page information, then prints the report.|
 ||Print report on the server: Printing a report on the server is not supported by Enterprise Manager.|
 
-## When Would You Use It?
-
-- Use this feature when maximized, the Maximize button changes to Restore
-
-## Why Would You Use It?
-
-- **Information Tools**: The Information tools perform the functions listed below, depending on the [view](Navigation-Views.md) in which you are working
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

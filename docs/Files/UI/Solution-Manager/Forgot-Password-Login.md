@@ -22,14 +22,6 @@ doc_type: procedural
 
 The Forgot Password feature in Solution Manager lets users reset their own password without administrator intervention by selecting the Forgot Password link on the login screen and following the reset workflow.
 
-## When Would You Use It?
-
-- You need to configure or manage Forgot / Reset Password in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Forgot / Reset Password through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Resetting Password
 
 If a user forgot their password, they can reset it by selecting the **Forgot Password** link on the login screen.

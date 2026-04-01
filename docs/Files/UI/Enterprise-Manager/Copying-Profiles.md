@@ -31,15 +31,6 @@ To copy a profile, complete the following steps:
 5. Select the **Profile** and select **Copy**. The **Copy** dialog displays
 6. Enter the new *profile name* and select **OK**
 
-## When Would You Use It?
-
-- An existing Profiles definition needs to be duplicated in Enterprise Manager
-- A new Profiles with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Profiles eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy profiles instead of creating a new one?**

@@ -22,14 +22,6 @@ doc_type: procedural
 
 Use this procedure to log in in Solution Manager.
 
-## When Would You Use It?
-
-- You need to configure or manage Logging In/Out in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Logging In/Out through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Logging In
 
 Log into the SMA Solution Manager with an OpCon username and password.

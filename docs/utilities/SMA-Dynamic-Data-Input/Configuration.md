@@ -28,14 +28,6 @@ following topics before starting the service:
 - [Configuring the Database Connection](#Configur2)
 - [Configuring the SMADDI Service](#Configur3)
 
-## When Would You Use It?
-
-- After the SMADDI service has been installed with the SAM and the SMADDI
-
-## Why Would You Use It?
-
-- **Configuration**: After the SMADDI service has been installed with the SAM and the SMADDI
-
 ## Configuring the Windows Service Options
 
 There are two options for configuring the SMADDI service based on the

@@ -26,14 +26,6 @@ right-clicking a node opens the **Node Options** menu in the right panel. The is
 
 ![Node Options Panel](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-node-options-panel.png "Node Options Panel")
 
-## When Would You Use It?
-
-- right-clicking a node opens the **Node Options** menu in the right panel
-
-## Why Would You Use It?
-
-- **Operational value**: Allow you to configure the display of nodes and dependencies from a given start node
-
 ## Previous Dependencies
 
 Displays all preceding jobs in a dependent chain.

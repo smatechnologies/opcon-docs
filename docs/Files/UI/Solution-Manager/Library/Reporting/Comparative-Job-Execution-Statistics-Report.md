@@ -38,14 +38,6 @@ This report provides filters for schedule, job, frequency, count, runtime (estim
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Comparative Job Execution Statistics Report** displays job runtime analytics including average runtime, standard deviation, estimated runtime, and variance analysis
-
-## Why Would You Use It?
-
-- **Comparative Job**: The **Comparative Job Execution Statistics Report** displays job runtime analytics including average runtime, standard deviation, estimated runtime, and variance analysis
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

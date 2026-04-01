@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Resources** editor defines and maintains OpCon Resources, providing a list of Resources and their corresponding values. For additional information, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Resources settings in Enterprise Manager
-- Resources needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Resources management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Resources changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Resources Toolbar
 
 The **Resources** editor has a toolbar for managing resources. Select on any specific icon on the toolbar below to learn more about its functionality.
@@ -48,10 +38,6 @@ Related Topics
 - [Copying Resources](Copying-Resources.md)
 - [Deleting Resources](Deleting-Resources.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

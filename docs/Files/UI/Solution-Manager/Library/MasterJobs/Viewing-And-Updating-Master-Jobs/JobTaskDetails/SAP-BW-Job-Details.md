@@ -24,16 +24,6 @@ Use this procedure to view SAP BW Job Details in Solution Manager.
 
 To view an SAP BW job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- You need to inspect or audit SAP BW Job Details records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current SAP BW Job Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting SAP BW Job Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Editing SAP BW Job Details
 
 To edit SAP BW Job Details, complete the following steps:

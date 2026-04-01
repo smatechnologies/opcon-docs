@@ -24,14 +24,6 @@ DoBatch.exe automatically builds, checks, deletes, or forecasts OpCon schedules 
 
 DoBatch.exe is located in \<Target Directory\>\\OpConxps\\OpConxps\\. Run DoBatch on the SAM application server to keep log files together.
 
-## When Would You Use It?
-
-- DoBatch.exe automatically builds, checks, deletes, or forecasts OpCon schedules via command files scheduled as Windows jobs
-
-## Why Would You Use It?
-
-- **DoBatch**: DoBatch.exe automatically builds, checks, deletes, or forecasts OpCon schedules via command files scheduled as Windows jobs
-
 ## Creating a DoBatch command file
 
 To create a DoBatch command file, complete the following steps:

@@ -22,10 +22,9 @@ module.exports = {
         id: "Files/UI/Solution-Manager/Accessing-the-Solution-Overview",
       },
       items: [
-        "installation/system-requirements",
+        "Files/UI/Solution-Manager/SM-UI-Layout",
         "Files/UI/Solution-Manager/Logging-In",
         "Files/UI/Solution-Manager/Forgot-Password-Login",
-        "Files/UI/Solution-Manager/SM-UI-Layout",
         "Files/UI/Solution-Manager/URL-Shortcuts",
         "Files/UI/Solution-Manager/Keyboard-Shortcuts",
         "Files/UI/Solution-Manager/Responsive-Platform",
@@ -403,6 +402,7 @@ module.exports = {
             },
           ],
         },
+        "installation/system-requirements",
         {
           type: "category",
           label: "System Configuration",

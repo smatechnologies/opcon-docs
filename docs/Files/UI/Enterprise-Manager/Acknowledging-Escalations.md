@@ -22,14 +22,6 @@ doc_type: procedural
 
 Escalations can be acknowledged while the Enterprise Manager is loading or after the application opens.
 
-## When Would You Use It?
-
-- Escalations can be acknowledged while the Enterprise Manager is loading or after the application opens
-
-## Why Would You Use It?
-
-- **Acknowledging Escalations**: Escalations can be acknowledged while the Enterprise Manager is loading or after the application opens
-
 ## Acknowledging Escalations During Login to Enterprise Manager
 
 To acknowledge an escalation, complete the following steps:

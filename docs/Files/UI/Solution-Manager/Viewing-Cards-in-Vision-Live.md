@@ -24,16 +24,6 @@ Cards are displayed on the Vision Live page. Use the filter bar to view cards fo
 
 ![Vision Live Page](../../../Resources/Images/SM/Vision-Live-Page-User.png "Vision Live Page")
 
-## When Would You Use It?
-
-- You need to inspect or audit Cards in Vision Live records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Cards in Vision Live state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Cards in Vision Live records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Card Views
 
 Group cards have the top-right corner folded; tag cards do not.

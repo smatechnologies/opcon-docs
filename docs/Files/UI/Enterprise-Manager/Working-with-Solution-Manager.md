@@ -34,21 +34,6 @@ Select on any **Solution Manager** function item in the graphic to learn more ab
 
 ![Solution Manager Topic](../../../Resources/Images/EM/EMsmmenu.png "Solution Manager Topic")
 
-## When Would You Use It?
-
-- You need to review or update Solution Manager settings in Solution Manager
-- Solution Manager needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Solution Manager management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Solution Manager changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What does managing solution manager involve?**

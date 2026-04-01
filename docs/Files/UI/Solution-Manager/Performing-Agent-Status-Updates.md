@@ -77,14 +77,6 @@ Related Topics
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 
-## When Would You Use It?
-
-- A Agent Status Updates action needs to be carried out in Solution Manager
-
-## Why Would You Use It?
-
-- **Ensure consistent operations**: Performing Agent Status Updates actions through OpCon creates a centralized, auditable record of all operational changes
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

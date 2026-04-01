@@ -40,14 +40,6 @@ To set the preferences, complete the following steps:
 14. Select the arrow (![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)) next to **Enterprise Manager** in the Preferences tree to expand and access more preference options
 15. Select **OK** to save and close the **Preferences** dialog
 
-## When Would You Use It?
-
-- Set display preferences for the Enterprise Manager
-
-## Why Would You Use It?
-
-- **Setting Preferences**: Set display preferences for the Enterprise Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

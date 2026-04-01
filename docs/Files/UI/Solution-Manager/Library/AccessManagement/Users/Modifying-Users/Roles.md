@@ -28,14 +28,6 @@ To modify a user, edit the preferred fields and select **Save**.
 
 ![User Roles](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-roles-tab.png 'User Roles')
 
-## When Would You Use It?
-
-- The Users page is found in _Library > Access Management > Users_
-
-## Why Would You Use It?
-
-- **User Roles**: The Users page is found in _Library > Access Management > Users_
-
 ## Email Dialog
 *If Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled.*
 

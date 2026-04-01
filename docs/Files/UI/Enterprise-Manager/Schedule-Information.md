@@ -36,14 +36,6 @@ The dialog contains the following information:
 - **Documentation Tab**: Provides access to documentation relating to the selected schedule
 - **Configuration Tab**: View and define Schedule Instance Properties
 
-## When Would You Use It?
-
-- You need to provide details about the daily copy of a selected schedule using The **Schedule Information** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides details about the daily copy of a selected schedule
-
 ## Getting Schedule Information
 
 To get Schedule Information, complete the following steps:

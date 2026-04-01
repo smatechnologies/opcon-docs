@@ -32,16 +32,6 @@ To edit a Vision Action, complete the following steps:
 4. Select **Save**
 :::
 
-## When Would You Use It?
-
-- An existing Vision Actions in Solution Manager requires changes
-- A change in process, system, or business requirement makes the current Vision Actions definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Vision Actions in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Vision Actions are recorded in the OpCon audit log, providing a complete modification history
-
 ## FAQs
 
 **Q: Do edits to vision actions take effect immediately?**

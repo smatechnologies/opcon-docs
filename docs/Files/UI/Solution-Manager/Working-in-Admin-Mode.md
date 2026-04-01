@@ -41,14 +41,6 @@ For more on Function Privileges including those pertaining to the Maintaining Se
 - [Set up User Inputs](Setting-up-User-Inputs.md)
 - [View Service Request     Processes](Viewing-Service-Request-Process-Indicators.md)
 
-## When Would You Use It?
-
-- Users in the **ocadm** role or a role with the **Maintain Service Request** privilege will see a Self Service page that is similar to the example graphic here
-
-## Why Would You Use It?
-
-- **Working in**: Users in the **ocadm** role or a role with the **Maintain Service Request** privilege will see a Self Service page that is similar to the example graphic here
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

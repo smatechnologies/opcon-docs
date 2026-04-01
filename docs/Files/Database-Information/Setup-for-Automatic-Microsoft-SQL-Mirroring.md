@@ -28,14 +28,6 @@ Database mirroring increases SQL Server database availability and can be configu
 
 OpCon must not be used with database mirroring in high-performance mode due to the risk of data loss. High-performance mode setup is not covered in this topic.
 
-## When Would You Use It?
-
-- Database mirroring increases SQL Server database availability and can be configured in two operating modes: high-performance or high-safety
-
-## Why Would You Use It?
-
-- **Setup for**: Database mirroring increases SQL Server database availability and can be configured in two operating modes: high-performance or high-safety
-
 ## Prerequisites
 
 - The principal and mirror must be separate SQL Server instances running the same edition

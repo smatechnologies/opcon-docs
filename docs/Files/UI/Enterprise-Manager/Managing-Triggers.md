@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to manage Triggers in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to review or update Triggers settings in Enterprise Manager
-- Triggers needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Triggers management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Triggers changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Adding Machine, Schedule, or Job Triggers
 
 :::note
@@ -61,10 +51,6 @@ To delete a trigger, complete the following steps:
 6. Select **Delete Trigger**. The **Delete** dialog displays
 7. Select **Yes** to confirm or **No** to cancel
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

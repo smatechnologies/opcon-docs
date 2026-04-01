@@ -26,14 +26,6 @@ Select any **Information** function item in the graphic to learn more.
 
 ![Information Topic](../../../Resources/Images/EM/EMinformationmenu.png "Information Topic")
 
-## When Would You Use It?
-
-- You need to provide views to manage Reports and Log file information using The **Information** topic in the Navigation Panel
-
-## Why Would You Use It?
-
-- **Operational value**: Provides views to manage Reports and Log file information
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

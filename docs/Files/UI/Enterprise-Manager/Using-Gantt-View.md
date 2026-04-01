@@ -30,14 +30,6 @@ The **Send the current selection to other views** button must also be activated 
 The **Gantt** screen displays only first-level schedule jobs. Individual jobs on a subschedule are not shown, but the Container job is.
 :::
 
-## When Would You Use It?
-
-- The **Gantt** view displays the estimated length and chronological order of jobs by schedule
-
-## Why Would You Use It?
-
-- **Using Gantt**: The **Gantt** view displays the estimated length and chronological order of jobs by schedule
-
 ## Gantt View Toolbar
 
 The **Gantt** view has a toolbar for performing actions in the view. Select any icon on the toolbar below to learn more about its functionality.

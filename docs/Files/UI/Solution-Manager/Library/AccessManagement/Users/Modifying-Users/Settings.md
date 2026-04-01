@@ -28,14 +28,6 @@ To modify a user, edit the preferred fields and select **Save**.
 
 ![User Settings](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-settings-tab.png 'User Settings')
 
-## When Would You Use It?
-
-- The Users page is found in _Library > Access Management > Users_
-
-## Why Would You Use It?
-
-- **Operational value**: Enable password expiration and Enable external tokens settings
-
 ## Email Dialog
 *If Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled.*
 

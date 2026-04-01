@@ -31,14 +31,6 @@ Select on any **External Tools** function item in the graphic to learn more abou
 - [Configuring the Installation Directory](Configuring-the-Installation-Directory.md)
 - [Adding External Tools](Adding-External-Tools.md)
 
-## When Would You Use It?
-
-- Once the [OpCon installation directory has been configured](Configuring-the-Installation-Directory.md) in the Enterprise Manager, you can use the **External Tools** feature
-
-## Why Would You Use It?
-
-- **Working with**: Once the [OpCon installation directory has been configured](Configuring-the-Installation-Directory.md) in the Enterprise Manager, you can use the **External Tools** feature
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

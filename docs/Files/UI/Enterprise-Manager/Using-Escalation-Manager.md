@@ -51,14 +51,6 @@ Related Topics
 - [Defining Escalation Rules](Defining-Escalation-Rules.md)
 - [Applying Escalation Rules to Triggers](Applying-Escalation-Rules-to-Triggers.md)
 
-## When Would You Use It?
-
-- You need to define escalation rules for any ENS trigger that uses email using The **Escalation Manager** editor
-
-## Why Would You Use It?
-
-- **Using Escalation**: The **Escalation Manager** editor defines escalation rules for any ENS trigger that uses email
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

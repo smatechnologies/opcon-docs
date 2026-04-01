@@ -24,16 +24,6 @@ doc_type: procedural
 
 Use this procedure to add Threshold/Resource Updates in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to add Threshold/Resource Updates in Enterprise Manager
-- The environment is expanding and requires additional Threshold/Resource Updates to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Threshold/Resource Updates to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Threshold/Resource Updates and when
-
 ## Setting Job-Related Threshold or Resource Updates
 
 To set Job-Related Threshold or Resource Updates, complete the following steps:
@@ -71,10 +61,6 @@ To set Frequency-Related Threshold or Resource Updates, complete the following s
 11. Select **OK** to save, or **Cancel** to discard
 12. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

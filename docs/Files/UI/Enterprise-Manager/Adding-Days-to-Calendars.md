@@ -29,16 +29,6 @@ To add a holiday or non-working day, complete the following steps:
 3. Select the **days** to mark as holidays or non-working days (displayed in red)
 4. Select **x** to the right of the **Calendars** tab to close the screen
 
-## When Would You Use It?
-
-- You need to add Holidays or Non-Working Days to Calendars in Enterprise Manager
-- The environment is expanding and requires additional Holidays or Non-Working Days to Calendars to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Holidays or Non-Working Days to Calendars to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Holidays or Non-Working Days to Calendars and when
-
 ## FAQs
 
 **Q: Where do you access Holidays or Non-Working Days to Calendars in the Enterprise Manager?**

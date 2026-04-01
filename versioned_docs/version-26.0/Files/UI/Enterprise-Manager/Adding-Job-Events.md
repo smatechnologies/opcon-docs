@@ -1,177 +1,135 @@
+---
+title: Adding Job Events
+description: "Use this procedure to add Job Events in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Adding Job Events
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Use this procedure to add Job Events in the Enterprise Manager.
 
 ## Setting Job-Related Events
 
 To add a new job event:
 
-Double-click on **Job Master** under the **Administration** topic. The
-**Job Master** screen displays.
+1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+2. Select the **schedule** in the **Schedule** list
+3. Select the **job** in the **Job** list
+4. Select the **Events** tab in the **Job Properties** frame
+5. Select the **Job Related** radio button
 
-Select the **schedule** in the **Schedule** drop-down list.
+6. Select the **Add** button. The **Event Definition Wizard** displays
+7. On the **Event Trigger** screen, select one of the following radio buttons: **Job Status**, **LSAM Feedback**, **Exit Description**, or **Job Completion Complex Expression**
+8. Select **Next** to proceed to the **Trigger Details** screen. Complete the fields based on your selection in step 7:
+   - **Job Status**: Select the **job status** in the **Job Status** list
+   - **LSAM Feedback**: Select the **Feedback name**, then enter a *string to match* in the **String to match** field
+   - **Exit Description**: Select the **Operator** in the **Comparison Operator** list, enter a value in the **Value** field, and enter the range end in the **End Value** field
+   - **Job Completion Complex Expression**: Enter the *expression* in the **Expression** text box. For more information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md)
+9. Select **Next** to advance to the **Event Definition** screen
+10. Select an **OpCon event template** from the **Event Template** list. For more information, refer to [OpCon Events](../../../events/introduction.md)
 
-Select the **job** in the **Job** drop-down list.
+    :::tip Example
 
-Click on the **Events** tab in the **Job Properties** frame.
+    ```shell
+    $JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>
+    ```
 
-Select the **Job Related** radio button to set a job-related event.
+    :::
 
-Click the **Add** button. The **Event Definition Wizard** displays.
+To set Job-Related Events, complete the following steps:
 
-Select the **Job Status**, **LSAM Feedback**, **Exit Description** or
-**Job Completion Complex Expression** radio button on the **Event
-Trigger** screen of the wizard.
+11. In the **Event Parameters** text box, select a **\<syntax placeholder\>** (excluding surrounding commas) and replace it with valid OpCon event information
+12. To use a token instead of a literal value:
+    a. Select the syntax placeholder as described in step 11.
+    b. Select **Insert token** or press **Ctrl/t** to list available global properties.
+    c. Locate the global property by scrolling or using the search field (Windows wildcards supported; filter by name, value, or both).
+    d. Select the **global property** (e.g., `$SCHEDULE DATE`).
 
-Click the **Next** button to proceed to **Trigger Details** screen of
-the wizard.
+    :::note
+    Double brackets are automatically placed around the token placeholder.
+    :::
 
-Do one of the following depending on your selection in Step 7.
+    :::tip Example
+    $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
+    :::
 
-a.  If Job Status was selected, select the **job     status** in the **Job Status** drop-down list and proceed to Step 10.
-b.  If LSAM Feedback was selected,  Select the     **Feedback name** in the **LSAM Feedback** drop-down list. Next,
-    enter in the **String to match** field any *string to match the
-    feedback value* that will trigger the
-    OpCon event. Then, proceed to Step 10.
-c.  If Exit Description was selected,  Select the     **Operator** in the **Comparison Operator** drop-down list . Next,
-    enter in the **Value** field the proper value based on the selected
-    **Operator** and enter in the **End Value** field the value for the
-    end of the Range. Then, proceed to Step 10.
-d.  If Job Completion Complex Expression was selected, Enter the *expression* in the
-    **Expression** text box and proceed to Step 10. For more
-    information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md)
-     in the **Concepts** online help.
 
-Click the **Next** button to advance to the **Event Definition** screen
-of the wizard.
-
-Select an **OpCon event template** from the **Event Template** drop-down list. For more
-information, refer to the [OpCon Events](../../../events/introduction.md) online help.
-
-:::tip Example
-
-```shell
-$JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>
-```
-
-:::
-
-Place your mouse cursor at the beginning of a **<syntax placeholder\>** displayed in the **Event Parameters** text
-box then drag the cursor to the right to select the entire syntax
-placeholder, excluding any surrounding commas. For example: ,<schedule name\>, .
-
-Replace the selected syntax placeholder with valid
-OpCon event information.
-
-If you wish to replace the syntax placeholder with a token, then do the
-following:
-
-Follow Step 12 to select the syntax placeholder.
-
-Click the ![Insert Token buton](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button")
-**Insert token** button or press **Ctrl/t** on the keyboard to list
-available global properties.
-
-Locate the global property in the selector by:
-
-i.  Scrolling to it.
-ii. Using the search field and filter criteria to find it. You can use
-    Windows wildcard characters in the search field to expand the search
-    and filter the search by property name, property value, or both
-    (default).
-
-Double-click on the **global property** (e.g., $SCHEDULE DATE).
-
-:::note
-Double brackets will automatically be placed around the placeholder for the token that is defined.
-:::
-
-:::tip Example
-$JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
-:::
-
-Click **Reset** to reset the parameters to their original states.
-
-Click **Finish** to save the job event or click **Cancel** to discard
-the changes made in the wizard.
-
-Click **Close ☒** (to the right of the **Job Master** tab) to close the
-**Job Master** screen.
+13. Select **Reset** to reset parameters to their original states, if needed
+14. Select **Finish** to save the job event, or **Cancel** to discard
+15. Select **Close ☒** to close the **Job Master** screen
 
 ## Setting Frequency-Related Events
 
 To add a new job event:
 
-Double-click on **Job Master** under the **Administration** topic. The
-**Job Master** screen displays.
+1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+2. Select the **schedule** in the **Schedule** list
+3. Select the **job** in the **Job** list
+4. Select the **Events** tab in the **Job Properties** frame
+5. Select the **Frequency Related** radio button
 
-Select the **schedule** in the **Schedule** drop-down list.
+6. Select the **frequency** in the **Frequency list** to apply the event
+7. Select the **Add** button. The **Event Definition Wizard** displays
+8. On the **Event Trigger** screen, select one of the following radio buttons: **Job Status**, **LSAM Feedback**, **Exit Description**, or **Job Completion Complex Expression**
+9. Select **Next** to proceed to the **Trigger Details** screen. Complete the fields based on your selection in step 8:
+   - **Job Status**: Select the **job status** in the **Job Status** list
+   - **LSAM Feedback**: Select the **Feedback name**, then enter a *string to match* in the **String to match** field
+   - **Exit Description**: Select the **Operator** in the **Comparison Operator** list, enter a value in the **Value** field, and enter the range end in the **End Value** field
+   - **Job Completion Complex Expression**: Enter the *expression* in the **Expression** text box. For more information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md)
+10. Select **Next** to advance to the **Event Definition** screen
+11. Select an **OpCon event template** from the **Event Template** list. For more information, refer to [OpCon Events](../../../events/introduction.md)
 
-Select the **job** in the **Job** drop-down list.
+    :::tip Example
+    $JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>
+    :::
 
-Click on the **Events** tab in the **Job Properties** frame.
+12. In the **Event Parameters** text box, select a **\<syntax placeholder\>** (excluding surrounding commas) and replace it with valid OpCon event information
 
-Select the **Frequency Related** radio button to set a frequency-related
-event.
+13. To use a token instead of a literal value:
+    a. Select the syntax placeholder as described in step 12.
+    b. Select **Insert token** or press **Ctrl/t** to list available global properties.
+    c. Scroll down and select the **Global Property** (e.g., `$SCHEDULE DATE`).
+14. Select **Reset** to reset parameters to their original states, if needed
+15. Select **Finish** to save the job event, or **Cancel** to discard
+16. Select **Close ☒** to close the **Job Master** screen
 
-Click on the **frequency** in the **Frequency list** to apply the event.
 
-Click the **Add** button. The **Event Definition Wizard** displays.
+## FAQs
 
-Select the **Job Status**, **LSAM Feedback**, **Exit Description** or
-**Job Completion Complex Expression** radio button on the **Event
-Trigger** screen of the wizard.
+**Q: What information is required to add job events?**
 
-Click the **Next** button to proceed to **Trigger Details** screen of
-the wizard.
+The required fields include **Expression**, **Expression**. Select **Save** on the toolbar to save the new record.
 
-Do one of the following depending on your selection in Step 8.
+**Q: Can you add job events for multiple platforms?**
 
-a.  If Job Status was selected, Select the **job     status** in the **Job Status** drop-down list and proceed to Step 11.
-b.  If LSAM Feedback was selected,  Select the     **Feedback name** in the **LSAM Feedback** drop-down list. Next,
-    enter in the **String to match** field any *string to match the
-    feedback value* that will trigger the
-    OpCon event. Then, proceed to Step 11.
-c.  If Exit Description was selected,  Select the     **Operator** in the **Comparison Operator** drop-down list . Next,
-    enter in the **Value** field the proper value based on the selected
-    **Operator** and enter in the **End Value** field the value for the
-    end of the Range. Then, proceed to Step 11.
-d.  If Job Completion Complex Expression was selected), Enter the *expression* in the
-    **Expression** text box and proceed to Step 11. For more
-    information, refer to [Property Expressions API     Syntax](../../../reference/property-expressions-syntax.md)
-     in the **Concepts** online help.
+Yes. This page covers job events for multiple platforms or contexts: Setting Job-Related Events, Setting Frequency-Related Events.
 
-Click the **Next** button to advance to the **Event Definition** screen
-of the wizard.
+## Glossary
 
-Select an **OpCon event template** from the **Event Template** drop-down list. For more
-information, refer to the [OpCon Events](../../../events/introduction.md) online help.
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
-:::tip Example
-$JOB:ADD,<schedule date\>,<schedule name\>,<job name\>,<frequency name\>
-:::
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 
-Place your mouse cursor at the beginning of a **<syntax placeholder\>** displayed in the **Event Parameters** text
-box then drag the cursor to the right to select the entire syntax
-placeholder, excluding any surrounding commas. For example: ,<schedule name\>, .
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
 
-Replace the selected syntax placeholder with valid
-OpCon event information.
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
 
-If you wish to replace the syntax placeholder with a Token, then do the
-following:
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
-a.  Follow Step 13 to select the syntax placeholder.
-b.  Click the ![Insert Token     buton](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button")
-    **Insert token** button or press **Ctrl/t** on the keyboard to list
-    available global properties.
-c.  Scroll down and double-click on the **Global Property** (e.g.,
-    $SCHEDULE DATE).
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-Click the **Reset** button to reset the parameters to their original
-states.
-
-Click **Finish** to save the job event or click **Cancel** to discard
-the changes made in the wizard.
-
-Click **Close ☒** (to the right of the **Job Master** tab) to close the
-**Job Master** screen.
-:::
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

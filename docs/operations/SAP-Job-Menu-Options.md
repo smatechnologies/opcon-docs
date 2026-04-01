@@ -22,14 +22,6 @@ doc_type: conceptual
 
 SAP jobs include right-click menu options to monitor and restart SAP Child Processes and view SAP Job Spools from within the Enterprise Manager. Access these features using the **SAP Child Processes** and **SAP Job Spools** menu options from a job in Operations.
 
-## When Would You Use It?
-
-- SAP jobs include right-click menu options to monitor and restart SAP Child Processes and view SAP Job Spools from within the Enterprise Manager
-
-## Why Would You Use It?
-
-- **SAP Job**: SAP jobs include right-click menu options to monitor and restart SAP Child Processes and view SAP Job Spools from within the Enterprise Manager
-
 ## SAP Child Processes
 
 Use **SAP Child Processes** to monitor and restart child processes.

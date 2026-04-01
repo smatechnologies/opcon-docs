@@ -58,14 +58,6 @@ Use the quick links to access instructions on how to:
   - [Defining WS_FTP Pro Job Details](#Defining_WS_FTP_Pro_Job_Details)
 - [Defining z/OS Job Details](#Defining_z/OS_Job_Details)
 
-## When Would You Use It?
-
-- Use the quick links to access instructions on how to:
-
-## Why Would You Use It?
-
-- **Job Type**: Use the quick links to access instructions on how to:
-
 ## Defining BIS Job Details
 
 For conceptual information, refer to [BIS Job Details](../../../job-types/bis.md) in the **Concepts** online help.

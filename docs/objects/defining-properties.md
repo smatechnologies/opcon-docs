@@ -62,14 +62,6 @@ To pass a value containing a comma (,) as a job parameter via an OpCon event, sp
 **Result**: Tokens resolve to `DAILY,TEST,JOB`
 :::
 
-## When Would You Use It?
-
-- A new Properties definition needs to be established in OpCon
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Properties in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Methods for Defining Properties
 
 :::note

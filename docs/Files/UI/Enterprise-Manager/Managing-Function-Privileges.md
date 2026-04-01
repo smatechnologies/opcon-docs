@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Function Privileges** editor maintains Role privileges for specific functions. It contains a list of role names with granted and revoked privileges. For conceptual information, refer to [Function Privileges](../../../administration/privileges.md#function-privileges) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Function Privileges settings in Enterprise Manager
-- Function Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Function Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Function Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Granting Function Privileges
 
 To grant a privilege, complete the following steps:
@@ -52,10 +42,6 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move functions to the **Revoked** list box
 5. Select **Close ☒** to close the **Function Privileges** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

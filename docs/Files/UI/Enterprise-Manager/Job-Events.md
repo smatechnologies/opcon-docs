@@ -29,14 +29,6 @@ The **Events** tab in the [**Job Master**](Using-Job-Master.md) editor allows yo
 
 For conceptual information, refer to [Events](../../../job-components/events.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define and manage job-related and frequency-related OpCon events: using The **Events** tab in the [**Job Master**](Using-Job-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and manage job-related and frequency-related OpCon events: - Add J
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

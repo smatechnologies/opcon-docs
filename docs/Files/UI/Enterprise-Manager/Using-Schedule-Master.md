@@ -25,14 +25,6 @@ doc_type: procedural
 The **Schedule Master** editor is used to define and maintain
 OpCon schedules.
 
-## When Would You Use It?
-
-- You need to define and maintain using The **Schedule Master** editor is used to
-
-## Why Would You Use It?
-
-- **Using Schedule**: The **Schedule Master** editor is used to define and maintain
-
 ## Schedule Master Tabs
 
 The editor contains a list of schedules and uses tabs to provide the

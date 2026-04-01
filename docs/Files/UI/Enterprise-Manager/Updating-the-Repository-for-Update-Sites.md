@@ -30,20 +30,6 @@ To update the repository, complete the following steps:
 4. Select the **repository.zip** file
 5. Extract the zip file to the repository location(s), choosing the **Use folder names** option
 
-## When Would You Use It?
-
-- An existing the Repository for Update Sites in Enterprise Manager requires changes
-- A process change or system update makes the current the Repository for Update Sites definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating the Repository for Update Sites in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Updating the Repository for Update Sites procedure involve?**

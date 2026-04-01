@@ -26,14 +26,6 @@ Select on any **Administration** function item in the graphic to learn more abou
 
 ![Scripts Topic](../../../Resources/Images/EM/EMscriptsmenu.png "Scripts Topic")
 
-## When Would You Use It?
-
-- You need to provide views to manage the script repository, script runners, and script types using The **Scripts** topic in the Navigation Panel
-
-## Why Would You Use It?
-
-- **Operational value**: Provides views to manage the script repository, script runners, and script types
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

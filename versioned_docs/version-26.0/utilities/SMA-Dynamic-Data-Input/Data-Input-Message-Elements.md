@@ -1,94 +1,88 @@
+---
+title: Data Input Message Elements
+description: "Data Input Message Elements define the XML structure used in SMADDI files, covering both data-storage elements and logical grouping elements."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Data Input Message Elements
 
-This section presents the supported data input elements and their
-descriptions. The examples indicate the nested structure of elements for
-input files. Not all elements define data items for storage in the
-database. Some elements merely group a set of logically-related elements
-together.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Data Input Message Elements define the XML structure used in SMA Dynamic Data Input (SMADDI) files. Each element either stores data directly in the OpCon database or groups logically related elements within the message hierarchy. Examples show the nested structure required for valid input files.
 
 ## General Message Elements
 
-The general message elements are required for all SMADDI input files.
-Use the following structure:
+Required for all SMADDI input files. Structure:
 
 <msg\>
 
-     <msgtype\></msgtype\>
+&emsp;&emsp;<msgtype\></msgtype\>
 
-         \....all elements required for msgtype
+&emsp;&emsp;&emsp;&emsp;\....all elements required for msgtype
 
 </msg\>
 
 #### <msg\></msg\>
 
-The parent element <msg\> contains a complete transaction for the
-SMADDI stored procedures to commit to the
-OpCon database. SMADDI does not limit the
-number of <msg\> elements for an input file. The data for this element
-contains all child elements needed for the transaction.
+Contains a complete transaction for the SMADDI stored procedures to commit to the OpCon database. SMADDI does not limit the number of <msg\> elements per input file.
 
-- **Requirements**: Required for all messages.
-- **Valid Values**: Any valid DDI text.
+- **Requirements**: Required for all messages
+- **Valid Values**: Any valid DDI text
 
 #### <msgtype\></msgtype\>
 
-The value for <msgtype\> describes the type of data expected for the
-<msg\>. The SMADDI service uses this information to ensure that the
-correct child elements are included within the <msg\>. The data for
-this element must be a Supported SMADDI Message Type. Refer to [SMADDI Message Types](SMADDI-Message-Types.md). Only one
-<msgtype\> element is allowed per <msg\> element.
+Describes the type of data expected for the <msg\>. The SMADDI service uses this to ensure the correct child elements are included. Only one <msgtype\> element is allowed per <msg\>.
 
-- **Requirements**: Required for <msg\>.
-- **Valid Values**: The data for this element must be a Supported
-    SMADDI Message Type. Refer to [SMADDI Message     Types](SMADDI-Message-Types.md).
+- **Requirements**: Required for <msg\>
+- **Valid Values**: A supported SMADDI Message Type. Refer to [SMADDI Message Types](SMADDI-Message-Types.md)
 
 ## add_caldate and del_caldate Element Structures
 
-The add_caldate message type and its elements can be used to add new
-dates to one or more OpCon calendars. If the
-calendar does not exist, it will be created with the specified dates
-included unless the calendar name indicates that it is a schedule
-holiday calendar (HC:ScheduleName). Schedule holiday calendars may not
-be created using the add_caldate message. For information on creating
-data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
+Use `add_caldate` to add dates to one or more OpCon calendars. If the calendar does not exist, it will be created unless the name indicates a schedule holiday calendar (HC:ScheduleName) — those may not be created with this message. Use `del_caldate` to delete dates from calendars. For information on creating data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
 
-The following sample code contains the structure for defining every
-possible element for the add_caldate message type:
+**add_caldate structure:**
 
 <msg\>
 
-  <msgtype\>add_caldate</msgtype\>
+��<msgtype\>add_caldate</msgtype\>
 
-  <calinfo\>
+��<calinfo\>
 
-    <calname\> </calname\>
+����<calname\> </calname\>
 
-    <caldoc\> </caldoc\>
+����<caldoc\> </caldoc\>
 
-    <caldate\> </caldate\>
+����<caldate\> </caldate\>
 
-  </calinfo\>
+��</calinfo\>
 
 </msg\>
 
-The del_caldate message type and its elements can be used to delete the
-entered dates from one or more OpCon
-calendars.
-
-The following sample code contains the structure for defining every
-possible element for the del_caldate message type:
+**del_caldate structure:**
 
 <msg\>
 
-  <msgtype\>del_caldate</msgtype\>
+��<msgtype\>del_caldate</msgtype\>
 
-  <calinfo\>
+��<calinfo\>
 
-    <calname\> </calname\>
+����<calname\> </calname\>
 
-    <caldate\> </caldate\>
+����<caldate\> </caldate\>
 
-  </calinfo\>
+��</calinfo\>
 
 </msg\>
 
@@ -96,155 +90,131 @@ possible element for the del_caldate message type:
 
 #### <calinfo\></calinfo\>
 
-The parent element <calinfo\> contains the child elements needed to add
-/delete days on a single OpCon calendar.
+Contains child elements to add/delete days on a single OpCon calendar.
 
-- **Requirements**: Required for <msgtype\> add_caldate.
-- **Valid Values**: Any valid <calinfo\> child element.
+- **Requirements**: Required for <msgtype\> add_caldate
+- **Valid Values**: Any valid <calinfo\> child element
 
 #### <calname\></calname\>
 
-The value for <calname\> defines the name of the Calendar to which
-dates will be added/deleted.
+Defines the name of the calendar to which dates will be added/deleted.
 
-- **Requirements**: Required for <calinfo\>.
-- **Valid Values**: Valid data for this element is an alphanumeric
-    calendar name that exists in the OpCon
-    database or a new Calendar to be created. Calendar names are a
-    maximum of 50 characters in length and cannot include the following
-    characters: ' (single quote), ( (left parenthesis), ) (right
-    parenthesis),\
-    , (comma), = (equal symbol), ;(semicolon), \| (vertical bar). SMADDI
-    allows only one <calname\> element per <calinfo\> element.
+- **Requirements**: Required for <calinfo\>
+- **Valid Values**: Alphanumeric calendar name (existing or new). Maximum 50 characters. Invalid characters: `' ( ) , = ; |`. One per <calinfo\>
 
 #### <caldoc\></caldoc\>
 
-The value for <caldoc\> defines the purpose of the Calendar to which
-dates will be added/deleted.
+Defines the purpose of the calendar.
 
-- **Requirements**: Optional for <calinfo\>.
-- **Valid Values**: Valid data for this element must not exceed 4000
-    characters. SMADDI allows only one <caldoc\> element per
-    <calinfo\> element.
+- **Requirements**: Optional for <calinfo\>
+- **Valid Values**: Maximum 4000 characters. One per <calinfo\>
 
 #### <caldate\></caldate\>
 
-The value for <caldate\> defines a date to add/delete on the target
-calendar.
+Defines a date to add/delete on the target calendar.
 
-- **Requirements**: Required for <calinfo\>.
-- **Valid Values**: Valid data for this element is a short date in the
-    format recognized by the database server's Regional Settings (e.g.,
-    7/7/2008). SMADDI allows multiple <caldate\> elements per
-    <calinfo\> element. The value for <caldate\> defines a date in the
-    target calendar.
+- **Requirements**: Required for <calinfo\>
+- **Valid Values**: Short date in the format recognized by the database server's Regional Settings (e.g., 7/7/2008). Multiple <caldate\> elements allowed per <calinfo\>
 
 ## new_schedule Element Structure
 
-The new_schedule message type and its elements can be used to add new
-schedules to Master tables of the OpCon
-database. For information on creating data input files, refer to
-[Creating Data Input Files](Creating-Data-Input-Files.md)
-.
+Use `new_schedule` to add schedules to Master tables. For information on creating data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
 
 :::note
-When the <documentation\> tags are used here for new_schedules, the element tag <docfrqname\> CANNOT be used or DDI throws an error message.
+When using <documentation\> tags for new_schedules, the <docfrqname\> element CANNOT be used — DDI throws an error.
 :::
-
-The following sample code contains the structure for defining every
-possible element for the new_schedule message type:
 
 <msg\>
 
-  <msgtype\>new_schedule</msgtype\>
+��<msgtype\>new_schedule</msgtype\>
 
-    <skdinfo\>
+����<skdinfo\>
 
-       <skdname\></skdname\>
+�������<skdname\></skdname\>
 
-       <skdstart\></skdstart\>
+�������<skdstart\></skdstart\>
 
-       <skdwkdays\></skdwkdays\>
+�������<skdwkdays\></skdwkdays\>
 
-       <calusemaster\></calusemaster\>
+�������<calusemaster\></calusemaster\>
 
-       <concurrskdflg\></concurrskdflg\>
+�������<concurrskdflg\></concurrskdflg\>
 
-       <multi_inst_skd\></multi_inst_skd\>
+�������<multi_inst_skd\></multi_inst_skd\>
 
-       <subskd\></subskd\>
+�������<subskd\></subskd\>
 
-       <autobldadv\></autobldadv\>
+�������<autobldadv\></autobldadv\>
 
-       <autoblddays\></autoblddays\>
+�������<autoblddays\></autoblddays\>
 
-       <buildovr\></buildovr\>
+�������<buildovr\></buildovr\>
 
-       <buildhld\></buildhld\>
+�������<buildhld\></buildhld\>
 
-       <skdautobuildtime\></skdautobuildtime\>
+�������<skdautobuildtime\></skdautobuildtime\>
 
-       <autodeldays\></autodeldays\>
+�������<autodeldays\></autodeldays\>
 
-       <addlholday\></addlholday\>
+�������<addlholday\></addlholday\>
 
-       <workday_sun\></workday_sun\>
+�������<workday_sun\></workday_sun\>
 
-       <workday_mon\></workday_mon\>
+�������<workday_mon\></workday_mon\>
 
-       <workday_tue\></workday_tue\>
+�������<workday_tue\></workday_tue\>
 
-       <workday_wed\></workday_wed\>
+�������<workday_wed\></workday_wed\>
 
-       <workday_thu\></workday_thu\>
+�������<workday_thu\></workday_thu\>
 
-       <workday_fri\></workday_fri\>
+�������<workday_fri\></workday_fri\>
 
-       <workday_sat\></workday_sat\>
+�������<workday_sat\></workday_sat\>
 
-       <frq\>
+�������<frq\>
 
-          \....refer to [Data Input Message Elements](#%3Cfrq%3E)
+����������\....refer to [Data Input Message Elements](#%3Cfrq%3E)
 
-       </frq\>
+�������</frq\>
 
-       <documentation\>
+�������<documentation\>
 
-          \....refer to [<documentation\> Documentation Element Structure](#documen)
+����������\....refer to [<documentation\> Documentation Element Structure](#documen)
 
-       </documentation\>
+�������</documentation\>
 
-       <ppevtdets\></ppevtdets\>
+�������<ppevtdets\></ppevtdets\>
 
-       <skd_bld4machgrp\></skd_bld4machgrp\>
+�������<skd_bld4machgrp\></skd_bld4machgrp\>
 
-       <skd_inst_def\>
+�������<skd_inst_def\>
 
-          <skd_predef_prop\></skd_predef_prop\>
+����������<skd_predef_prop\></skd_predef_prop\>
 
-       </skd_inst_def\>
+�������</skd_inst_def\>
 
-       <skdinst\>
+�������<skdinst\>
 
-          <skdinstancename\></skdinstancename\>
+����������<skdinstancename\></skdinstancename\>
 
-          <named_skd_inst_def\>
+����������<named_skd_inst_def\>
 
-            <named_skd_predef_prop\></namded_skd_predef_prop\>
+������������<named_skd_predef_prop\></namded_skd_predef_prop\>
 
-          <named_skd_inst_def\>
+����������<named_skd_inst_def\>
 
-          <jobpat\>
+����������<jobpat\>
 
-            <jobpatname\></jobpatname\>
+������������<jobpatname\></jobpatname\>
 
-            <exception\></exception\>
+������������<exception\></exception\>
 
-          </jobpat\>
+����������</jobpat\>
 
-       </skdinst\>
+�������</skdinst\>
 
-    </skdinfo\>
+����</skdinfo\>
 
 </msg\>
 
@@ -252,355 +222,269 @@ possible element for the new_schedule message type:
 
 #### <skdinfo\></skdinfo\>
 
-The parent element <skdinfo\> contains the child elements needed to
-create a single OpCon schedule.
+Contains child elements to create a single OpCon schedule.
 
-- **Requirements**: Required for <msgtype\> new_schedule.
-- **Valid Values**: Any valid <skdinfo\> child element.
+- **Requirements**: Required for <msgtype\> new_schedule
+- **Valid Values**: Any valid <skdinfo\> child element
 
 #### <skdname\></skdname\>
 
-The <skdname\> element defines the schedule name.
+Defines the schedule name.
 
-- **Requirements**: Required for <skdinfo\>.
+- **Requirements**: Required for <skdinfo\>
 - **EM field label**: Name
-- **Valid Values**: Valid data for this element is an alphanumeric
-    schedule name that does not exist in the
-    OpCon database.
-  - Invalid values include the following: < (less than), \>
-        (greater than), & (ampersand), ' (single quote), "(double
-        quote), \| (pipe), , (comma), ; (semicolon), % (percent), ( )
-        (open and closed parentheses), { } (open and closed braces), \[         \] (open and closed brackets), = (equals sign), \\ (backslash),
-        ! (exclamation point), \~ (tilde), \`(accent grave)
-  - Maximum Characters: 40
-  - SMADDI allows only one <skdname\> element per <skdinfo\>
-        element.
+- **Valid Values**: Alphanumeric schedule name not existing in OpCon. Invalid characters: `< > & ' " | , ; % ( ) { } [ ] = \ ! ~ \``. Maximum 40 characters. One per <skdinfo\>
 
 #### <skdstart\></skdstart\>
 
-The <skdstart\> element is a schedule's start time, also included
-during a schedule's definition.
+Defines the schedule's start time.
 
-- **Requirements**: Optional for <skdinfo\> which defaults to 00:00.
-    SMADDI allows only one <skdstart\> element per <skdinfo\> element.
+- **Requirements**: Optional for <skdinfo\>; defaults to 00:00. One per <skdinfo\>
 - **EM field label**: Start Time
-- **Valid Values**: Valid data for this element is a numerical time in
-    the format hh:mm. If defined, it must be within the range of
-    00:00-23:59.
+- **Valid Values**: Numerical time in hh:mm format; range 00:00–23:59
 
 #### <skdwkdays\></skdwkdays\>
 
-The value for <skdwkdays\> specifies the number of workdays per week
-for the schedule.
+Specifies the number of workdays per week.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Workdays per Week
-- **Valid Values**: The valid values for this element are 5, 6, and 7.
-    SMADDI allows only one <skdwkdays\> element per <skdinfo\>
-    element.
+- **Valid Values**: 5, 6, or 7. One per <skdinfo\>
 
 #### <calusemaster\></calusemaster\>
 
-The <calusemaster\> element indicates if the schedule's calendar
-should use the Master Holiday Calendar.
+Indicates whether the schedule's calendar uses the Master Holiday Calendar.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Use Master Holiday
-- **Valid Values**: The valid values are True and False. If omitted,
-    the value defaults to True. SMADDI allows only one <calusemaster\>
-    element per <skdinfo\> element.
+- **Valid Values**: True or False; defaults to True. One per <skdinfo\>
 
 #### <concurrskdflg\></concurrskdflg\>
 
-The <concurrskdflg\> element an optional element in DDI whose valid
-values are True and False.
+Indicates conflict with other days.
 
-- **Requirements**: Optional for <skdinfo\>. SMADDI allows only one
-    <concurrskdflg\> element per <skdinfo\> element.
+- **Requirements**: Optional for <skdinfo\>. One per <skdinfo\>
 - **EM field label**: Conflict with other days
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <multi_inst_skd\></multi_inst_skd\>
 
-The <multi_inst_skd\> element indicates if a schedule is multi-instance
-capable.
+Indicates if the schedule is multi-instance capable.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Multi-Instance
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <subskd\></subskd\>
 
-The <subskd\> element indicates that the schedule is allowed to be a
-SubSchedule.
+Indicates the schedule is allowed to be a SubSchedule.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: SubSchedule
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <autobldadv\></autobldadv\>
 
-The value for <autobldadv\> contains the number of days in advance to
-start building.
+Number of days in advance to start building.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: days in advance for
-- **Valid Values**: The valid values for this element range from 1 to
-    99 days.
+- **Valid Values**: 1–99 days
 
 #### <autoblddays\></autoblddays\>
 
-The value for <autoblddays\> contains the number of days to build
-consecutively.
+Number of days to build consecutively.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: days
-- **Valid Values**: The valid values for this element range from 1 to
-    99 days.
+- **Valid Values**: 1–99 days
 
 #### <buildovr\></buildovr\>
 
-If 'True', the <buildovr\> element indicates that if the schedule
-exists in the daily tables, it should be overwritten when built again.
-This will only happen if the schedule is complete or does not exist.
+If True, overwrites the schedule in the daily tables when built again (only if schedule is complete or does not exist).
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Overwrite Existing
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <buildhld\></buildhld\>
 
-If 'True', the <buildhld\> element indicates that the schedule should
-be built with a status of "On Hold". The SAM will not process the
-schedule until it is released manually or through an
-OpCon event.
+If True, builds the schedule with status "On Hold." The SAM will not process it until released manually or via an OpCon event.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Build On Hold
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <skdautobuildtime\></skdautobuildtime\>
 
-The <skdautobuildtime\> element is the clock time to build the
-schedule. The SAM uses this time to calculate the start offset for the
-SMA_SKD_BUILD job when creating the build jobs.
+Clock time to build the schedule. The SAM uses this to calculate the start offset for the SMA_SKD_BUILD job.
 
-- **Requirements**: Optional for <skdinfo\> which defaults to 00:00.
-    SMADDI allows only one <skdautobuildtime\> element per <skdinfo\>
-    element.
+- **Requirements**: Optional for <skdinfo\>; defaults to 00:00. One per <skdinfo\>
 - **EM field label**: Auto Build Time
-- **Valid Values**: Valid data for this element is a numerical time in
-    the format hh:mm. If defined, it must be within the range of
-    00:00-23:59.
+- **Valid Values**: hh:mm format; range 00:00–23:59
 
 #### <autodeldays\></autodeldays\>
 
-The value for <autodeldays\> indicates how may days in the past from
-the current date to auto delete this schedule (if it is complete).
+Days in the past from the current date after which to auto-delete the schedule if complete.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: days ago
-- **Valid Values**: The valid values for this element range from 1 to
-    99 days.
+- **Valid Values**: 1–99 days
 
 #### <addlholday\></addlholday\>
 
-The <addlholday\> element defines the name of a calendar to be used for
-determining holidays in addition to the master holiday and schedule
-holiday calendars.
+Name of a calendar used to determine additional holidays beyond the master and schedule holiday calendars.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Additional Holidays
-- **Valid Values**: A valid user-defined calendar in the database.
+- **Valid Values**: A valid user-defined calendar in the database
 
 #### <workday_sun\></workday_sun\>
 
-The <workday_sun\> element defines Sunday as a workday.
+Defines Sunday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Sunday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <workday_mon\></workday_mon\>
 
-The <workday_mon\> element defines Monday as a workday.
+Defines Monday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Monday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <workday_tue\></workday_tue\>
 
-The <workday_tue\> element defines Tuesday as a workday.
+Defines Tuesday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Tuesday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <workday_wed\></workday_wed\>
 
-The <workday_wed\> element defines Wednesday as a workday.
+Defines Wednesday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Wednesday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <workday_thu\></workday_thu\>
 
-The <workday_thu\> element defines Thursday as a workday.
+Defines Thursday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Thursday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <workday_fri\></workday_fri\>
 
-The <workday_fri\> element defines Friday as a workday.
+Defines Friday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Friday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <workday_sat\></workday_sat\>
 
-The <workday_sat\> element defines Saturday as a workday.
+Defines Saturday as a workday.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Saturday
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <ppevtdets\></ppevtdets\>
 
-The <ppevtdets\> element defines the details of the
-OpCon event to be submitted when the schedule
-completes. Valid data for this element should be one of the existing
-OpCon events. SMADDI does not fail the data
-import if you define an invalid event. Any number of <ppevtdets\>
-elements can be defined for the new schedule.
+Defines the OpCon event to submit when the schedule completes. SMADDI does not fail the import for an invalid event. Any number of <ppevtdets\> elements can be defined.
 
-- **Requirements**: Optional for <skdinfo\>.
-- **Valid Values**: For a complete list of valid events, refer to the
-    [OpCon Events](../../events/introduction.md) online help.
+- **Requirements**: Optional for <skdinfo\>
+- **Valid Values**: Any valid OpCon event. Refer to [OpCon Events](../../events/introduction.md)
 
 #### <skd_bld4machgrp\></skd_bld4machgrp\>
 
-Defines the Machine Group Name for the schedule's instances. This
-element is only valid when the Multi-Instance element is True.
+Defines the Machine Group Name for schedule instances. Valid only when Multi-Instance is True.
 
-- **Requirements**: Optional for <skdinfo\>.
-- **EM field label**: Build an instance for each machine in Machine
-    Group
-- **Valid Values**: Any valid Machine Group.
+- **Requirements**: Optional for <skdinfo\>
+- **EM field label**: Build an instance for each machine in Machine Group
+- **Valid Values**: Any valid Machine Group
 
 #### <skd_inst_def\></skd_inst_def\>
 
-The parent element <skd_inst_def\> contains the child elements needed
-to define strings of properties as instances for the schedule.
+Contains child elements to define property strings as schedule instances.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **Valid Values**: (child element) <skd_predef_prop\>
-    </skd_predef_prop\>
 
 #### <skd_predef_prop\></skd_predef_prop\>
 
 Defines a string of property definitions for a schedule instance.
 
-- **Requirements**: Required for <skd_inst_def\>.
+- **Requirements**: Required for <skd_inst_def\>
 - **EM field label**: Define Property Values
-- **Valid Values**: The property string must be in the format
-    PName1=PValue1;PName2=PValue2...
-  - Values for the "PName" should not contain the following
-        characters: ' ( ) \\ , = ; \|
-  - Values for the "PValue" should not contain a semicolon (;)
-  - If the Multi-Instance element is True, and the
-        <skd_bld4machgrp\> element is not specified, any number of
-        <skd_predef_prop\> elements can be defined to specify multiple
-        instances.
-  - If the Multi-Instance element is True, and the
-        <skd_bld4machgrp\> element is specified, the         <skd_predef_prop\> element is not allowed.
-  - If the Multi-Instance element is False, only one
-        <skd_predef_prop\> element is allowed.
+- **Valid Values**: Format: `PName1=PValue1;PName2=PValue2...`
+  - PName must not contain: `' ( ) \ , = ; |`
+  - PValue must not contain a semicolon (;)
+  - If Multi-Instance is True and <skd_bld4machgrp\> is not specified, multiple <skd_predef_prop\> elements are allowed
+  - If Multi-Instance is True and <skd_bld4machgrp\> is specified, <skd_predef_prop\> is not allowed
+  - If Multi-Instance is False, only one <skd_predef_prop\> is allowed
 
 #### <skdinst\></skdinst\>
 
-The parent element <skdinst\> contains the child elements needed to
-define each named schedule instance and any associated predefined
-properties and exceptions. This element is only valid when the
-Multi-Instance element is True and neither the <skd_inst_def\> nor the
-<skd_bld4machgrp\> element is specified.
+Contains child elements to define each named schedule instance, associated properties, and exceptions. Valid only when Multi-Instance is True and neither <skd_inst_def\> nor <skd_bld4machgrp\> is specified.
 
-- **Requirements**: Optional for <skdinfo\>.
+- **Requirements**: Optional for <skdinfo\>
 - **EM field label**: Named Instance
 
 #### <skdinstancename\></skdinstancename\>
 
-The <skdinstancename\> element defines the name of a schedule instance.
+Defines the name of a schedule instance.
 
-- **Requirements**: Required for <skdinst\>.
+- **Requirements**: Required for <skdinst\>
 - **EM field label**: Instances
-- **Valid Values**: Valid data for this element is an alphanumeric
-    instance name that does not exist in the OpCon database.
-  - Invalid values include the following: \~ (tilde) and \`(accent
-        grave)
-  - Maximum Characters: 128
-  - SMADDI allows any number of <skdinstancename\> elements per
-        <skdinst\> element.
+- **Valid Values**: Alphanumeric instance name not existing in OpCon. Invalid characters: `~` and `` ` ``. Maximum 128 characters. Multiple per <skdinst\>
 
 #### <named_skd_inst_def\></named_skd_inst_def\>
 
-The parent element <named_skd_inst_def\> contains the child elements
-needed to define each property string associated with a named instance
-of the schedule.
+Contains child elements to define property strings for a named schedule instance.
 
-- **Requirements**: Optional for <skdinst\>.
+- **Requirements**: Optional for <skdinst\>
 - **Valid Values**: (child element) <named_skd_predef_prop\>
-    </named_skd_predef_prop\>
 
 #### <named_skd_predef_prop\></named_skd_predef_prop\>
 
-Defines a property definition for a named instance of the schedule.
+Defines a property string for a named schedule instance.
 
-- **Requirements**: Required for <named_skd_inst_def\>.
+- **Requirements**: Required for <named_skd_inst_def\>
 - **EM field label**: Properties
-- **Valid Values**: The property string must be in the format
-    PName1=PValue1.
-  - Values for the "PName" should not contain the following
-        characters: ' ( ) \\ , = ; \|
-  - Values for the "PValue" should not contain a semicolon (;)
+- **Valid Values**: Format: `PName1=PValue1`. PName must not contain `' ( ) \ , = ; |`; PValue must not contain a semicolon
 
 #### <jobpat\></jobpat\>
 
-The parent element <jobpat\> contains the child elements needed to
-define each exception associated with a named instance of the schedule.
-This element can only be defined by those in the ocadm role.
+Contains child elements to define exceptions for a named schedule instance. Can only be defined by users in the ocadm role.
 
-- **Requirements**: Optional for <skdinst\>.
+- **Requirements**: Optional for <skdinst\>
 - **EM field label**: Exceptions
-- **Valid Values**: (child element) <jobpatname\> </jobpatname\>;
-    <exception\></exception\>
+- **Valid Values**: (child elements) <jobpatname\>; <exception\>
 
 #### <jobpatname\></jobpatname\>
 
-The element <jobpatname\> defines the job pattern.
+Defines the job pattern.
 
-- **Requirements**: Required for <jobpat\>.
+- **Requirements**: Required for <jobpat\>
 - **EM field label**: Job Patterns
-- **Valid Values**: Valid data for this element is a maximum of 128
-    alphanumeric characters, including the asterisk wildcard character
-    (\*).
-  - Invalid values include the following: \~ (tilde) and \`(accent
-        grave)
+- **Valid Values**: Maximum 128 alphanumeric characters, including asterisk wildcard (`*`). Invalid characters: `~` and `` ` ``
 
 #### <exception\></exception\>
 
-The element <exception\> contains the XML definition for the exception
-rule associated with a defined job pattern.
+Contains the XML definition for an exception rule for a job pattern.
 
-- **Requirements**: Optional for <jobpatname\>.
+- **Requirements**: Optional for <jobpatname\>
 
 - **EM field label**: Exception Rules
 
-- **Valid Values**: The valid (XML-escaped) syntax is:
+- **Valid Values**: XML-escaped syntax:
 
     <exception\>&lt;Exception&gt;&lt;FieldCode&gt;**n**&lt;/FieldCode&gt;\
     &lt;NewValue&gt;**x**&lt;/NewValue&gt;&lt;NewValueIsExpression&gt;**false**&lt;/NewValueIsExpression&gt;&lt;ToReplace&gt;**m**&lt;/ToReplace&gt;&lt;/Exception&gt;</exception\>
@@ -626,22 +510,13 @@ rule associated with a defined job pattern.
     |1003 - User (Source)|5006 - mCurrent Library||
     |1004 - mSource File|5007 - mInit.Lib.List||
 
-  - Where *m* = Substring in the current value to replace.
-    - If the field code is for Job Build Status (933), valid
-            values are: "On Hold", "Released", or "To Be Skipped".
-    - For all other field codes, *m* cannot be a property
-            expression. Valid values are: an empty string (""), a
-            fixed string ("abc"), or a string with instance properties
-            (\[\[$this.Property\]\]).     -   Where *x* = String value with which to replace *m*.
-    - If the field code is for Job Build Status (933), valid
-            values are: "On Hold", "Released", "Cancelled", "To
-            Be Skipped", "Do Not Schedule, or "Disable Build".
-    - For all other field codes, valid values are: a fixed string
-            ("abc"), a string with instance properties
-            (\[\[$this.Property\]\]), or a property expression             (\[\[\@current\]\] + ToOaTime("02:00")).
-  - Where the value for NewValueIsExpression indicates whether or
-        not *x* is a property expression. Valid values are: true or
-        false.
+  - Where *m* = Substring in the current value to replace
+    - If field code is Job Build Status (933), valid values: "On Hold", "Released", or "To Be Skipped"
+    - For all other field codes, *m* cannot be a property expression. Valid values: empty string (""), fixed string ("abc"), or string with instance properties (`[[$this.Property]]`)
+  - Where *x* = String value with which to replace *m*
+    - If field code is Job Build Status (933), valid values: "On Hold", "Released", "Cancelled", "To Be Skipped", "Do Not Schedule", or "Disable Build"
+    - For all other field codes, valid values: fixed string ("abc"), string with instance properties (`[[$this.Property]]`), or a property expression (`[[@current]] + ToOaTime("02:00")`)
+  - Where NewValueIsExpression indicates whether *x* is a property expression: true or false
 
 :::tip Example
 The following is an example XML definition for the <exception\> element:
@@ -657,53 +532,41 @@ The following is an example XML definition for the <exception\> element:
 
 ## new_token and update_token Element Structures
 
-The new_token message type and its elements can be used to add a new
-global property to Master tables of the OpCon
-database. For information on creating data input files, refer to
-[Creating Data Input Files](Creating-Data-Input-Files.md)
-.
+Use `new_token` to add a new global property to Master tables. Use `update_token` to update an existing global property. For information on creating data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
 
-The following sample code contains the structure for defining every
-possible element for the new_token message type:
+**new_token structure:**
 
 <msg\>
 
-  <msgtype\>new_token</msgtype\>
+��<msgtype\>new_token</msgtype\>
 
-  <tokeninfo\>
+��<tokeninfo\>
 
-    <tokendesc\></tokendesc\>
+����<tokendesc\></tokendesc\>
 
-    <tokendoc\></tokendoc\>
+����<tokendoc\></tokendoc\>
 
-    <tokenval\></tokenval\>
+����<tokenval\></tokenval\>
 
-  </tokeninfo\>
+��</tokeninfo\>
 
 </msg\>
 
-The update_token message type and its elements can be used to update a
-global property to Master tables of the OpCon
-database. For information on creating data input files, refer to
-[Creating Data Input Files](Creating-Data-Input-Files.md)
-.
-
-The following sample code contains the structure for defining every
-possible element for the update_token message type:
+**update_token structure:**
 
 <msg\>
 
-  <msgtype\>update_token</msgtype\>
+��<msgtype\>update_token</msgtype\>
 
-  <tokeninfo\>
+��<tokeninfo\>
 
-    <tokendesc\></tokendesc\>
+����<tokendesc\></tokendesc\>
 
-    <tokenval\></tokenval\>
+����<tokenval\></tokenval\>
 
-    <tokendoc\></tokendoc\>
+����<tokendoc\></tokendoc\>
 
-  </tokeninfo\>
+��</tokeninfo\>
 
 </msg\>
 
@@ -711,101 +574,80 @@ possible element for the update_token message type:
 
 #### <tokeninfo\></tokeninfo\>
 
-The parent element <tokeninfo\> contains the child elements needed to
-create a single Global Property.
+Contains child elements to create a single Global Property.
 
-- **Requirements**: Required for <msgtype\> new_token.
-- **Valid Values**: Any valid <tokeninfo\> child element.
+- **Requirements**: Required for <msgtype\> new_token
+- **Valid Values**: Any valid <tokeninfo\> child element
 
 #### <tokendesc\></tokendesc\>
 
-The <tokendesc\> element specifies the name of the Global Property to
-be created in OpCon.
+Specifies the name of the Global Property to create in OpCon.
 
-- **Requirements**: Required for <tokeninfo\>.
+- **Requirements**: Required for <tokeninfo\>
 - **EM field label**: Name
-- **Valid Values**: Valid data for this element is an alphanumeric
-    property name that does not exist in the
-    OpCon database. The element allows a
-    maximum of 20 characters. SMADDI allows only one <tokendesc\>
-    element per <tokeninfo\> element.
+- **Valid Values**: Alphanumeric property name not existing in OpCon. Maximum 20 characters. One per <tokeninfo\>
 
 #### <tokendoc\></tokendoc\>
 
-The value for <tokenval\> specifies documentation for the property.
+Specifies documentation for the property.
 
-- **Requirements**: Optional for <tokeninfo\>.
+- **Requirements**: Optional for <tokeninfo\>
 - **EM field label**: Documentation
-- **Valid Values**: Valid data for this element must not exceed 4000
-    characters. SMADDI allows only one <tokendoc\> element per
-    <tokeninfo\> element.
+- **Valid Values**: Maximum 4000 characters. One per <tokeninfo\>
 
 #### <tokenval\></tokenval\>
 
-The value for <tokenval\> specifies the value to be assigned to the
-Global Property.
+Specifies the value assigned to the Global Property.
 
-- **Requirements**: Required for <tokeninfo\>.
+- **Requirements**: Required for <tokeninfo\>
 - **EM field label**: Value
-- **Valid Values**: Valid data for this element is a maximum of 77
-    alphanumeric characters. SMADDI allows only one <tokenval\> element
-    per <tokeninfo\> element.
+- **Valid Values**: Maximum 77 alphanumeric characters. One per <tokeninfo\>
 
 ## new_variable and update_variable Element Structures
 
-The new_variable message type and its elements can be used to add a new
-threshold or resource to Master tables of the
-OpCon database. For information on creating
-data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
+Use `new_variable` to add a threshold or resource to Master tables. Use `update_variable` to update an existing one. For information on creating data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
 
-The following sample code contains the structure for defining every
-possible element for the new_variable message type:
+**new_variable structure:**
 
 <msg\>
 
-  <msgtype\>new_variable</msgtype\>
+��<msgtype\>new_variable</msgtype\>
 
-  <threshinfo\>
+��<threshinfo\>
 
-    <threshdesc\></threshdesc\>
+����<threshdesc\></threshdesc\>
 
-    <threshdoc\></threshdoc\>
+����<threshdoc\></threshdoc\>
 
-    <threshval\></threshval\>
+����<threshval\></threshval\>
 
-    <threshused\></threshused\>
+����<threshused\></threshused\>
 
-    <threshstyle\></threshstyle\>
+����<threshstyle\></threshstyle\>
 
-  </threshinfo\>
+��</threshinfo\>
 
 </msg\>
 
-The update_variable message type and its elements can be used to update
-a threshold or resource to Master tables of the
-OpCon database. For information on creating
-data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
-
-The following sample code contains the structure for defining every
-possible element for the update_variable message type:
+**update_variable structure:**
 
 <msg\>
 
-  <msgtype\>update_variable</msgtype\>
+��<msgtype\>update_variable</msgtype\>
 
-  <threshinfo\>
+��<threshinfo\>
 
-    <threshdesc\></threshdesc\>
+����<threshdesc\></threshdesc\>
 
-    <threshdoc\></threshdoc\>
+����<threshdoc\></threshdoc\>
 
-    <threshval\></threshval\>
+����<threshval\></threshval\>
 
-    <threshused\></threshused\>
+����<threshused\></threshused\>
 
-    <threshstyle\></threshstyle\>
+����<threshstyle\></threshstyle\>
 
-  </threshinfo\>
+��</threshinfo\>
 
 </msg\>
 
@@ -813,355 +655,321 @@ possible element for the update_variable message type:
 
 #### <threshinfo\></threshinfo\>
 
-The parent element <threshinfo\> contains the child elements needed to
-create a single OpCon variable.
+Contains child elements to create a single OpCon variable.
 
-- **Requirements**: Required for <msgtype\> new_variable.
-- **Valid Values**: Any valid <threshinfo\> child element.
+- **Requirements**: Required for <msgtype\> new_variable
+- **Valid Values**: Any valid <threshinfo\> child element
 
 #### <threshstyle\></threshstyle\>
 
-The value for <threshstyle\> specifies whether the variable is treated
-as a threshold or a resource.
+Specifies whether the variable is treated as a threshold or a resource.
 
-- **Requirements**: Optional for <threshinfo\>.
-- **Valid Values**: Valid data for this element is either Threshold or
-    Resource. SMADDI allows only one <threshstyle\> element per
-    <threshinfo\> element.
+- **Requirements**: Optional for <threshinfo\>
+- **Valid Values**: Threshold or Resource. One per <threshinfo\>
 
 #### <threshdesc\></threshdesc\>
 
-The value for <threshdesc\> specifies the name of the variable to be
-created in OpCon.
+Specifies the name of the variable to create in OpCon.
 
-- **Requirements**: Required for <threshinfo\>.
-- **EM field label**: Name (for Thresholds)
-- **EM field label**: Resource Name (for Resources)
-- **Valid Values**: Valid data for this element is an alphanumeric
-    threshold or resource name that does not exist in the
-    OpCon database. The element allows a
-    maximum of 20 characters. SMADDI allows only one <threshdesc\>
-    element per <threshinfo\> element.
+- **Requirements**: Required for <threshinfo\>
+- **EM field label**: Name (Thresholds) / Resource Name (Resources)
+- **Valid Values**: Alphanumeric threshold or resource name not existing in OpCon. Maximum 20 characters. One per <threshinfo\>
 
 #### <threshdoc\></threshdoc\>
 
-The value for <threshdoc\> specifies documentation for the threshold or
-resource.
+Specifies documentation for the threshold or resource.
 
-- **Requirements**: Optional for <threshinfo\>.
+- **Requirements**: Optional for <threshinfo\>
 - **EM field label**: Documentation
-- **Valid Values**: Valid data for this element must not exceed 4000
-    characters. SMADDI allows only one <threshdoc\> element per
-    <threshinfo\> element.
+- **Valid Values**: Maximum 4000 characters. One per <threshinfo\>
 
 #### <threshval\></threshval\>
 
-- If the value of <threshstyle\> is Threshold, <threshval\>
-    specifies the value to be assigned to the threshold.
-- If the value of <threshstyle\> is Resource, <threshval\> specifies
-    the value to be assigned to the maximum resources allowed.
-- **Requirements**: Required for <threshinfo\>.
-- **EM field label**: Threshold (for Thresholds)
-- **EM field label**: Max Resources (for Resources)
-- **Valid Values**: Valid data for this element is an integer value
-    between zero and 2147483647. SMADDI allows only one <threshval\>
-    element per <threshinfo\> element.
+- If <threshstyle\> is Threshold: specifies the threshold value
+- If <threshstyle\> is Resource: specifies the maximum resources allowed
+- **Requirements**: Required for <threshinfo\>
+- **EM field label**: Threshold (Thresholds) / Max Resources (Resources)
+- **Valid Values**: Integer 0–2147483647. One per <threshinfo\>
 
 #### <threshused\></threshused\>
 
-The value for <threshused\> specifies an initial value to be assigned
-to the number of resources in use when the variable is treated as a
-resource.
+Specifies an initial value for resources in use when the variable is treated as a resource.
 
-- **Requirements**: Optional for <threshinfo\>.
+- **Requirements**: Optional for <threshinfo\>
 - **EM field label**: Resources In Use
-- **Valid Values**: Valid data for this element is an integer value
-    between zero and 2147483647. SMADDI allows only one <threshused\>
-    element per <threshinfo\> element.
+- **Valid Values**: Integer 0–2147483647. One per <threshinfo\>
 
 ## new_master Element Structure
 
-The following sample code contains the structure for defining every
-possible element for the new_master message type:
-
 <msg\>
 
-     <msgtype\>new_master</msgtype\>
+�����<msgtype\>new_master</msgtype\>
 
-     <schedule\>
+�����<schedule\>
 
-     <skdname\></skdname\>
+�����<skdname\></skdname\>
 
-       <job\>
+�������<job\>
 
-         <jname\></jname\>
+���������<jname\></jname\>
 
-         <platform\></platform\>
+���������<platform\></platform\>
 
-         <jobsubtype\></jobsubtype\>
+���������<jobsubtype\></jobsubtype\>
 
-         <dname\></dname\>
+���������<dname\></dname\>
 
-         <accd\></accd\>
+���������<accd\></accd\>
 
-         <use_skdinstmach\></use_skdinstmach\>
+���������<use_skdinstmach\></use_skdinstmach\>
 
-         <pmname\></pmname\>
+���������<pmname\></pmname\>
 
-         <alt1\></alt1\>
+���������<alt1\></alt1\>
 
-         <alt2\></alt2\>
+���������<alt2\></alt2\>
 
-         <alt3\></alt3\>
+���������<alt3\></alt3\>
 
-         <mgrp\></mgrp\>
+���������<mgrp\></mgrp\>
 
-         <mgrpeach\></mgrpeach\>
+���������<mgrpeach\></mgrpeach\>
 
-         <multi_inst_job\></multi_inst_job\>
+���������<multi_inst_job\></multi_inst_job\>
 
-         <disable_bld\></disable_bld\>
+���������<disable_bld\></disable_bld\>
 
-         <job_expr_dep\></job_expr_dep\>
+���������<job_expr_dep\></job_expr_dep\>
 
-         <job_embed_script\></job_embed_script\>
+���������<job_embed_script\></job_embed_script\>
 
-         <job_embed_script_type\></job_embed_script_type\>
+���������<job_embed_script_type\></job_embed_script_type\>
 
-         <job_embed_script_ver\></job_embed_script_ver\>
+���������<job_embed_script_ver\></job_embed_script_ver\>
 
-         <job_embed_script_runner\></job_embed_script_runner\>
+���������<job_embed_script_runner\></job_embed_script_runner\>
 
-         <job_embed_script_args\></job_embed_script_args\>
+���������<job_embed_script_args\></job_embed_script_args\>
 
-         <job_embed_script_hash\></job_embed_script_hash\>
+���������<job_embed_script_hash\></job_embed_script_hash\>
 
-         <jobdata\>
+���������<jobdata\>
 
-         \....refer to [<jobdata\> Platform-specific Elements](jobdata-Platform-specific-Elements.md)
+���������\....refer to [<jobdata\> Platform-specific Elements](jobdata-Platform-specific-Elements.md)
 
-         </jobdata\>
+���������</jobdata\>
 
-         <afc\>
+���������<afc\>
 
-         \....refer to [<afc\> Advanced Failure Criteria Element Structure](#afc)
+���������\....refer to [<afc\> Advanced Failure Criteria Element Structure](#afc)
 
-         </afc\>
+���������</afc\>
 
-         <frq\>
+���������<frq\>
 
-         \....refer to [new_master Frequency Element Structure](#new_mast2)
+���������\....refer to [new_master Frequency Element Structure](#new_mast2)
 
-         </frq\>
+���������</frq\>
 
-         <documentation\>
+���������<documentation\>
 
-         \....refer to [<documentation\> Documentation Element Structure](#documen)
+���������\....refer to [<documentation\> Documentation Element Structure](#documen)
 
-         </documentation\>
+���������</documentation\>
 
-         <predefined_property\>
+���������<predefined_property\>
 
-         \....refer to [<predefined_property\> Job Instance Property Element Structure](#predefi)
+���������\....refer to [<predefined_property\> Job Instance Property Element Structure](#predefi)
 
-         </predefined_property\>
+���������</predefined_property\>
 
-         <jobudt\>
+���������<jobudt\>
 
-         \....refer to [<jobudt\> Job User Defined Tags](#jobudt)
+���������\....refer to [<jobudt\> Job User Defined Tags](#jobudt)
 
-         </jobudt\>
+���������</jobudt\>
 
-         <ppevt\>
+���������<ppevt\>
 
-         \....refer to [Data Input Message Elements](#%3Cppevt%3E)
+���������\....refer to [Data Input Message Elements](#%3Cppevt%3E)
 
-         </ppevt\>
+���������</ppevt\>
 
-         <ppvar\>
+���������<ppvar\>
 
-         \.... refer to [Data Input Message Elements](#%3Cppvar%3E)
+���������\.... refer to [Data Input Message Elements](#%3Cppvar%3E)
 
-         </ppvar\>
+���������</ppvar\>
 
-         <jpre\>
+���������<jpre\>
 
-         \.... refer to [<jpre\> Job Dependencies Element Structure](#jpre)
+���������\.... refer to [<jpre\> Job Dependencies Element Structure](#jpre)
 
-         </jpre\>
+���������</jpre\>
 
-         <vpre\>
+���������<vpre\>
 
-         \.... refer to [Data Input Message Elements](#%3Cvpre%3E)
+���������\.... refer to [Data Input Message Elements](#%3Cvpre%3E)
 
-         </vpre\>
+���������</vpre\>
 
-       </job\>
+�������</job\>
 
-     </schedule\>
+�����</schedule\>
 
 </msg\>
 
 ## new_daily Element Structure
 
-The following sample code contains the structure for defining every
-possible element for the new_daily message type:
-
 <msg\>
 
-     <msgtype\>new_daily</msgtype\>
+�����<msgtype\>new_daily</msgtype\>
 
-     <schedule\>
+�����<schedule\>
 
-           <skddate\></skddate\>
+�����������<skddate\></skddate\>
 
-           <skdname\></skdname\>
+�����������<skdname\></skdname\>
 
-           <job\>
+�����������<job\>
 
-                <jname\></jname\>
+����������������<jname\></jname\>
 
-                <platform\></platform\>
+����������������<platform\></platform\>
 
-                <jobsubtype\></jobsubtype\>
+����������������<jobsubtype\></jobsubtype\>
 
-                <dname\> </dname\>
+����������������<dname\> </dname\>
 
-                <accd\></accd\>
+����������������<accd\></accd\>
 
-                <use_skdinstmach\></use_skdinstmach\>
+����������������<use_skdinstmach\></use_skdinstmach\>
 
-                <pmname\></pmname\>
+����������������<pmname\></pmname\>
 
-                <alt1\></alt1\>
+����������������<alt1\></alt1\>
 
-                <alt2\></alt2\>
+����������������<alt2\></alt2\>
 
-                <alt3\></alt3\>
+����������������<alt3\></alt3\>
 
-                <mgrp\></mgrp\>
+����������������<mgrp\></mgrp\>
 
-                <mgrpeach\></mgrpeach\>
+����������������<mgrpeach\></mgrpeach\>
 
-                <job_expr_dep\></job_expr_dep\>
+����������������<job_expr_dep\></job_expr_dep\>
 
-                <job_embed_script\></job_embed_script\>
+����������������<job_embed_script\></job_embed_script\>
 
-                <job_embed_script_type\></job_embed_script_type\>
+����������������<job_embed_script_type\></job_embed_script_type\>
 
-                <job_embed_script_ver\></job_embed_script_ver\>
+����������������<job_embed_script_ver\></job_embed_script_ver\>
 
-                <job_embed_script_runner\></job_embed_script_runner\>
+����������������<job_embed_script_runner\></job_embed_script_runner\>
 
-                <job_embed_script_args\></job_embed_script_args\>
+����������������<job_embed_script_args\></job_embed_script_args\>
 
-                <job_embed_script_hash\></job_embed_script_hash\>
+����������������<job_embed_script_hash\></job_embed_script_hash\>
 
-                <jobdata\>
+����������������<jobdata\>
 
-                \....refer to [<jobdata\> Platform-specific Elements](jobdata-Platform-specific-Elements.md)
+����������������\....refer to [<jobdata\> Platform-specific Elements](jobdata-Platform-specific-Elements.md)
 
-                </jobdata\>
+����������������</jobdata\>
 
-                <afc\>
+����������������<afc\>
 
-                ...refer to [<afc\> Advanced Failure Criteria Element Structure](#afc)
+����������������...refer to [<afc\> Advanced Failure Criteria Element Structure](#afc)
 
-                </afc\>
+����������������</afc\>
 
-                <frq\>
+����������������<frq\>
 
-                \....refer to [new_daily Frequency Element Structure](#new_dail)
+����������������\....refer to [new_daily Frequency Element Structure](#new_dail)
 
-                </frq\>
+����������������</frq\>
 
-                <documentation\>
+����������������<documentation\>
 
-                \....refer to [<documentation\> Documentation Element Structure](#documen)
+����������������\....refer to [<documentation\> Documentation Element Structure](#documen)
 
-                </documentation\>
+����������������</documentation\>
 
-                <predefined_property\>
+����������������<predefined_property\>
 
-                \....refer to [<predefined_property\> Job Instance Property Element Structure](#predefi)
+����������������\....refer to [<predefined_property\> Job Instance Property Element Structure](#predefi)
 
-                </predefined_property\>
+����������������</predefined_property\>
 
-                <jobudt\>
+����������������<jobudt\>
 
-                \....refer to [<jobudt\> Job User Defined Tags](#jobudt)
+����������������\....refer to [<jobudt\> Job User Defined Tags](#jobudt)
 
-                </jobudt\>
+����������������</jobudt\>
 
-           <ppevt\>
+�����������<ppevt\>
 
-                \....refer to [Data Input Message Elements](#%3Cppevt%3E)
+����������������\....refer to [Data Input Message Elements](#%3Cppevt%3E)
 
-                </ppevt\>
+����������������</ppevt\>
 
-                <ppvar\>
+����������������<ppvar\>
 
-                \....refer to [Data Input Message Elements](#%3Cppvar%3E)
+����������������\....refer to [Data Input Message Elements](#%3Cppvar%3E)
 
-                </ppvar\>
+����������������</ppvar\>
 
-                <jpre\>
+����������������<jpre\>
 
-                \....refer to [<jpre\> Job Dependencies Element Structure](#jpre)
+����������������\....refer to [<jpre\> Job Dependencies Element Structure](#jpre)
 
-                 </jpre\>
+�����������������</jpre\>
 
-                <vpre\>
+����������������<vpre\>
 
-                \....refer to [Data Input Message Elements](#%3Cvpre%3E)
+����������������\....refer to [Data Input Message Elements](#%3Cvpre%3E)
 
-                </vpre\>
+����������������</vpre\>
 
-           </job\>
+�����������</job\>
 
-     </schedule\>
+�����</schedule\>
 
 </msg\>
 
 ## add_dependency Element Structure
 
-The add_dependency message type and its elements can be used to add a
-new job, threshold, or resource dependency to a job. For information on
-creating data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
-
-If "<skddate\>" appears, the system considers it an addition to a
-daily schedule. The following sample code contains the structure for
-defining every possible element for the add_dependency message type:
+Use `add_dependency` to add a job, threshold, or resource dependency to a job. If <skddate\> is present, the system treats it as an addition to a daily schedule. For information on creating data input files, refer to [Creating Data Input Files](Creating-Data-Input-Files.md).
 
 <msg\>
 
 <msgtype\>add_dependency</msgtype\>
 
-     <schedule\>
+�����<schedule\>
 
-     <skddate\></skddate\> (for definition to Daily only)
+�����<skddate\></skddate\> (for definition to Daily only)
 
-     <skdname\></skdname\>
+�����<skdname\></skdname\>
 
-         <job\>
+���������<job\>
 
-            <jname\></jname\>
+������������<jname\></jname\>
 
-            <vpre\>
+������������<vpre\>
 
-            \....refer to [Data Input Message Elements](#%3Cvpre%3E)
+������������\....refer to [Data Input Message Elements](#%3Cvpre%3E)
 
-            </vpre\>
+������������</vpre\>
 
-            <jpre\>
+������������<jpre\>
 
-            \....refer to [<jpre\> Job Dependencies Element Structure](#jpre)
+������������\....refer to [<jpre\> Job Dependencies Element Structure](#jpre)
 
-            </jpre\>
+������������</jpre\>
 
-         </job\>
+���������</job\>
 
-     </schedule\>
+�����</schedule\>
 
 </msg\>
 
@@ -1171,32 +979,29 @@ The add_dependency msgtype requires at least one <vpre\> or one <jpre\>.
 
 ## add_documentation Element Structure
 
-The following sample code contains the structure for defining every
-possible element for the add_documentation message type:
-
 <msg\>
 
-     <msgtype\>add_documentation</msgtype\>
+�����<msgtype\>add_documentation</msgtype\>
 
-     <schedule\>
+�����<schedule\>
 
-     <skddate\><skddate\> (for definition to Daily only)
+�����<skddate\><skddate\> (for definition to Daily only)
 
-     <skdname\></skdname\>
+�����<skdname\></skdname\>
 
-         <job\>
+���������<job\>
 
-          <jname\></jname\>
+����������<jname\></jname\>
 
-          <documentation\>
+����������<documentation\>
 
-                \....refer to [<documentation\> Documentation Element Structure](#documen)
+����������������\....refer to [<documentation\> Documentation Element Structure](#documen)
 
-          </documentation\>
+����������</documentation\>
 
-         </job\>
+���������</job\>
 
-     </schedule\>
+�����</schedule\>
 
 </msg\>
 
@@ -1204,79 +1009,51 @@ possible element for the add_documentation message type:
 
 #### <schedule\></schedule\>
 
-The parent element <schedule\> contains the child elements needed to
-define or reference jobs for a single schedule in the
-OpCon database.
+Contains child elements to define or reference jobs for a single schedule in the OpCon database.
 
-- **Requirements**: Required for any <msgtype\> for which a job must
-    be identified.
-- **Valid Values**: Any valid <schedule\> child element. SMADDI does
-    not limit the number of <schedule\> elements for each <msg\>
-    element.
+- **Requirements**: Required for any <msgtype\> that identifies a job
+- **Valid Values**: Any valid <schedule\> child element. Multiple <schedule\> elements allowed per <msg\>
 
 :::note
-Do not specify the <skddate\> element with a <msgtype\> new_master. A schedule date is invalid in the Master tables. This tag is optional with a <msgtype\> add_dependency. When specified, it will add a dependency to a Daily Schedule job. When not specified, it will add a dependency to a Master job.
+Do not specify <skddate\> with <msgtype\> new_master — a schedule date is invalid in Master tables. With <msgtype\> add_dependency, <skddate\> is optional: when specified, it adds a dependency to a Daily Schedule job; when omitted, it adds a dependency to a Master job.
 :::
 
 #### <skddate\></skddate\>
 
-The <skddate\> element specifies the schedule date for the child
-elements of the parent <schedule\> adding or modifying records in the
-Daily.
+Specifies the schedule date for child elements adding or modifying Daily records.
 
-- **Requirements**: Optional for <schedule\>.
-- **Valid Values**: Valid data for this element is a date in the ymd
-    date format. SMADDI allows only one <skddate\> element per
-    <schedule\> element.
+- **Requirements**: Optional for <schedule\>
+- **Valid Values**: Date in ymd format. One per <schedule\>
 
 #### <skdname\></skdname\>
 
-The <skdname\> element defines the Schedule Name.
+Defines the Schedule Name.
 
 - **Requirements**: Name
-- **Valid Values**: Depending on the parent <msgtype\> element, valid
-    data for this element is an existing Schedule Name in the Master or
-    Daily tables. SMADDI allows only one <skdname\> element per
-    <schedule\> element.
-  - Invalid Characters: < (less than) \> (greater than) &
-        (ampersand) ' (single quote) " (double quote) \| (pipe),
-        (comma), \~ (tilde), \`(accent grave)
-  - Maximum Characters: 255
+- **Valid Values**: Existing Schedule Name in Master or Daily tables. Invalid characters: `< > & ' " | , ~ \``. Maximum 255 characters. One per <schedule\>
 
 #### <job\></job\>
 
-The parent element <job\> contains the child elements needed for
-describing a single job in the OpCon
-database.
+Contains child elements for a single job in the OpCon database.
 
-- **Requirements**: Required for <schedule\>.
-- **Valid Values**: Any valid <job\> child element. SMADDI does not
-    limit the number of <job\> elements for each <schedule\> element.
+- **Requirements**: Required for <schedule\>
+- **Valid Values**: Any valid <job\> child element. Multiple <job\> elements allowed per <schedule\>
 
 #### <jname\></jname\>
 
-The <jname\> element defines the name for the parent <job\>.
+Defines the name for the parent <job\>. For add_dependency, defines the existing job to which dependencies are added.
 
-- **Requirements**: Required for <job\> and for add_dependency which
-    defines the name of the existing job of which one or more variables
-    and/or job dependencies are to be added when <msgtype\> is
-    add_dependency.
+- **Requirements**: Required for <job\> and add_dependency
 - **EM field label**: Name
-- **Valid Values**: Depending on the parent <msgtype\> element, valid
-    data for this element is a unique job name in the Master or Daily
-    tables.
+- **Valid Values**: Unique job name in Master or Daily tables depending on <msgtype\>
 
 #### <platform\></platform\>
 
-The <platform\> element defines the platform for the parent <job\>.
+Defines the platform for the parent <job\>.
 
-**Requirements**: Required for <job\> when <msgtype\> equals new_daily
-or new_master. This element is invalid when <msgtype\> equals
-add_dependency.
-
-**EM field label**: Job Type
-
-**Valid Values**: The valid data for this element include:
+- **Requirements**: Required for <job\> when <msgtype\> is new_daily or new_master. Invalid for add_dependency
+- **EM field label**: Job Type
+- **Valid Values**:
 
 |||
 |--- |--- |
@@ -1292,278 +1069,209 @@ add_dependency.
 
 #### <jobsubtype\></jobsubtype\>
 
-The <jobsubtype\> element defines the Job Sub-Type for the parent
-<job\>.
+Defines the Job Sub-Type for the parent <job\>.
 
-**Requirements**: Optional
+- **Requirements**: Optional
+- **EM field label**: Job Sub-Type
+- **Valid Values**: Depends on the <platform\> value
 
-**EM field label**: Job Sub-Type
+  If <platform\> is Windows:
 
-**Valid Values**: The valid data for this element depends on the value
-in the <platform\> element.
+  |||
+  |--- |--- |
+  |Command: File Copy|Corelation|
+  |Command: File Delete|MS Orchestrator|
+  |Command: File Move|Web Services (RESTful)|
+  |Command: File Rename|WS_FTP Pro|
 
-If <platform\> is Windows, the valid values include:
+  If <platform\> is UNIX:
 
-|||
-|--- |--- |
-|Command: File Copy|Corelation|
-|Command: File Delete|MS Orchestrator|
-|Command: File Move|Web Services (RESTful)|
-|Command: File Rename|WS_FTP Pro|
-
-If <platform\> is UNIX, the valid values include:
-
-|||
-|--- |--- |
-|Episys: Run JobFile|Episys: Find Report from Episys Reports|
-|Episys: Answer Prompts|Episys: Find Report from RSJ Output|
-|Episys: Compare ACH Totals|Episys: FTP all Reports in List|
-|Episys: Find Batch Output Sequence Number||
+  |||
+  |--- |--- |
+  |Episys: Run JobFile|Episys: Find Report from Episys Reports|
+  |Episys: Answer Prompts|Episys: Find Report from RSJ Output|
+  |Episys: Compare ACH Totals|Episys: FTP all Reports in List|
+  |Episys: Find Batch Output Sequence Number||
 
 #### <dname\></dname\>
 
-The <dname\> element defines the Department name for the parent
-<job\>.
+Defines the Department name for the parent <job\>.
 
-- **Requirements**: Optional for <job\> when <msgtype\> equals
-    new_daily or new_master. This element is invalid when <msgtype\>
-    equals add_dependency.
+- **Requirements**: Optional for new_daily or new_master. Invalid for add_dependency
 - **EM field label**: Department
-- **Valid Values**: Valid data for this element is an existing
-    Department in the OpCon database.
+- **Valid Values**: An existing Department in OpCon
 
 :::note
-During a new_daily or new_master import, SMADDI will check for the existence of the Department defined in this element. If the item exists, SMADDI continues the import as normal. If the item does not exist, SMADDI creates the item automatically.
+During new_daily or new_master import, SMADDI checks for the Department. If it exists, import continues normally. If not, SMADDI creates it automatically.
 :::
 
 #### <accd\></accd\>
 
-The <accd\> element defines the Access Code for the parent <job\>.
+Defines the Access Code for the parent <job\>.
 
-- **Requirements**: Optional for <job\> when <msgtype\> equals
-    new_daily or new_master. This element is invalid when <msgtype\>
-    equals add_dependency.
+- **Requirements**: Optional for new_daily or new_master. Invalid for add_dependency
 - **EM field label**: Access Code
-- **Valid Values**: Valid data for this element is an existing Access
-    Code in the OpCon database.
+- **Valid Values**: An existing Access Code in OpCon
 
 :::note
-During a new_daily or new_master import, SMADDI will check for the existence of the Access Code defined in this element. If the item exists, SMADDI continues the import as normal. If the item does not exist, SMADDI creates the item automatically.
+During new_daily or new_master import, SMADDI checks for the Access Code. If it exists, import continues normally. If not, SMADDI creates it automatically.
 :::
 
 #### <use_skdinstmach\></use_skdinstmach\>
 
-The <use_skdinstmach\> element indicates if the job should use the
-schedule instance machine for the job.
+Indicates if the job should use the schedule instance machine.
 
 - **Requirements**: Optional
 - **EM field label**: Use Schedule Instance Machine
-- **Valid Values**: Valid values for this element are True and False.
-    If omitted, the default is False.
-  - This element is only valid when the Schedule is configured to
-        build an instance for all machines in a group and when the Job
-        Type set for the job matches the OS type for the Machine Group
-        configured for the Schedule.
-  - This element is mutually exclusive with all other machine
-        assignment elements for a job (primary, alternates, and machine
-        group).
+- **Valid Values**: True or False; defaults to False
+  - Valid only when the Schedule is configured to build an instance for all machines in a group and the Job Type matches the OS type for that Machine Group
+  - Mutually exclusive with all other machine assignment elements (primary, alternates, and machine group)
 
 #### <pmname\></pmname\>
 
-The <pmname\> element defines the Primary Machine on which the parent
-<job\> runs.
+Defines the Primary Machine for the parent <job\>.
 
-- **Requirements**: Required if <mgrp\> is not defined and
-    <msgtype\> is new_master or new_daily. This element is invalid when
-    <msgtype\> equals add_dependency.
+- **Requirements**: Required if <mgrp\> is not defined and <msgtype\> is new_master or new_daily. Invalid for add_dependency
 - **EM field label**: Primary Machine
-- **Valid Values**: Valid data for this element is an existing Machine
-    in the OpCon database, and the Null
-    Machine.
+- **Valid Values**: An existing Machine in OpCon, including the Null Machine
 
 :::note
-Either the <pmname\> (above) or <mgrp\> element (below) is required. These elements are mutually exclusive.
+Either <pmname\> or <mgrp\> is required. These elements are mutually exclusive.
 :::
 
 #### <alt1\></alt1\>
 
-The <alt1\> element defines the first Alternate Machine on which the
-parent <job\> can run.
+Defines the first Alternate Machine for the parent <job\>.
 
-- **Requirements**: Optional for <job\> when <msgtype\> equals
-    new_daily or new_master. This element is invalid when <msgtype\>
-    equals add_dependency.
+- **Requirements**: Optional for new_daily or new_master. Invalid for add_dependency
 - **EM field label**: Alternate Machine 1
-- **Valid Values**: Valid data for this element is an existing Machine
-    in the OpCon database.
+- **Valid Values**: An existing Machine in OpCon
 
 #### <alt2\></alt2\>
 
-The <alt2\> element defines the second Alternate Machine on which the
-parent <job\> can run.
+Defines the second Alternate Machine for the parent <job\>.
 
-- **Requirements**: Optional for <job\> when <msgtype\> equals
-    new_daily or new_master. This element is invalid when <msgtype\>
-    equals add_dependency.
+- **Requirements**: Optional for new_daily or new_master. Invalid for add_dependency
 - **EM field label**: Alternate Machine 2
 
 #### <alt3\></alt3\>
 
-The <alt3\> element defines the third Alternate Machine on which the
-parent <job\> can run.
+Defines the third Alternate Machine for the parent <job\>.
 
-- **Requirements**: Optional for <job\> when <msgtype\> equals
-    new_daily or new_master. This element is invalid when <msgtype\>
-    equals add_dependency.
+- **Requirements**: Optional for new_daily or new_master. Invalid for add_dependency
 - **EM field label**: Alternate Machine 3
-- **Valid Values**: Valid data for this element is an existing Machine
-    in the OpCon database.
+- **Valid Values**: An existing Machine in OpCon
 
 #### <mgrp\></mgrp\>
 
-The <mgrp\> element defines the Machine Group on which the parent
-<job\> can run.
+Defines the Machine Group for the parent <job\>.
 
-- **Requirements**: Required if <pmname\> is not defined and when
-    <msgtype\> equals new_daily or new_master. This element is invalid
-    when <msgtype\> equals add_dependency.
+- **Requirements**: Required if <pmname\> is not defined and <msgtype\> is new_daily or new_master. Invalid for add_dependency
 - **EM field label**: Machine Group Selection
-- **Valid Values**: Valid data for this element is an existing Machine
-    Group in the OpCon database.
+- **Valid Values**: An existing Machine Group in OpCon
 
 #### <mgrpeach\></mgrpeach\>
 
-The <mgrpeach\> element defines if the job runs on each Machine in the
-Machine Group.
+Defines if the job runs on each Machine in the Machine Group.
 
 - **Requirements**: Optional
 - **EM field label**: Run on Each Machine
-- **Valid Values**: The valid values are True and False.
+- **Valid Values**: True or False
 
 #### <multi_inst_job\></multi_inst_job\>
 
-The <multi_inst_job\> element defines if the job can have multiple
-instances.
+Defines if the job can have multiple instances.
 
 - **Requirements**: Optional
 - **EM field label**: Allow Multi-Instance
-- **Valid Values**: Valid data for this element is True or False. If
-    omitted, False is assumed.
+- **Valid Values**: True or False; defaults to False
 
 #### <disable_bld\></disable_bld\>
 
-The element <disable_bld\> indicates if the job should be disabled from
-build or not.
+Indicates if the job is disabled from build.
 
-- **Requirements**: Optional only for <msgtype\> new_master.
+- **Requirements**: Optional for new_master only
 - **EM field label**: Disable Build
-- **Valid Values**: Valid data for this element is True or False. If
-    omitted, False is assumed.
+- **Valid Values**: True or False; defaults to False
 
 #### <job_expr_dep\></job_expr_dep\>
 
-The < job\_ expr_dep\> element defines a complex expression, for the
-job, that must evaluate to "True" before the job can run when
-scheduled with any frequency.
+Defines a complex expression that must evaluate to "True" before the job can run with any frequency. One per job.
 
-- **Requirements**: Optional for <job\> on the new_daily or
-    new_master message type. There may only be one <job_expr_dep\> tag
-    per job.
+- **Requirements**: Optional for new_daily or new_master
 - **EM field label**: Expression Dependency
-- **Valid Values**: Valid data for this element is any valid property
-    expression.
+- **Valid Values**: Any valid property expression
 
 #### <job_embed_script\></job_embed_script\>
 
-The <job_embed_script\> element defines the embedded script to
-associate with the job.
+Defines the embedded script to associate with the job.
 
-- **Requirements**: This is an Optional field.
+- **Requirements**: Optional
 - **EM field label**: Script
-- **Valid Values**: Valid data for this element is any defined script
-    for the job type.
+- **Valid Values**: Any defined script for the job type
 
 #### <job_embed_script_type\></job_embed_script_type\>
 
-The <job_embed_script_type\> element defines the script type associated
-with the script.
+Defines the script type associated with the script.
 
-- **Requirements**: This is an Optional field.
+- **Requirements**: Optional
 - **EM field label**: Script Type
-- **Valid Values**: Valid data for this element is any valid script
-    type for the specified script.
+- **Valid Values**: Any valid script type for the specified script
 
 #### <job_embed_script_ver\></job_embed_script_ver\>
 
-The <job_embed_script_ver\> element defines the version (or revision)
-of the script to run.
+Defines the version (revision) of the script to run.
 
-- **Requirements:** This is an Optional field.
-- **EM field label:** Version
-- **Valid Values:** Valid data for this element is an integer ranging
-    from 0 to 2147483647.
-  - An integer value of 0 is equivalent to the "LATEST" version.
+- **Requirements**: Optional
+- **EM field label**: Version
+- **Valid Values**: Integer 0–2147483647. A value of 0 equals the "LATEST" version
 
 #### <job_embed_script_runner\></job_embed_script_runner\>
 
-The <job_embed_script_runner\> element defines the "interpreter" for
-relaying how to execute the script.
+Defines the interpreter for running the script.
 
-- **Requirements**: This is an Optional field.
+- **Requirements**: Optional
 - **EM field label**: Runner
-- **Valid Values**: Valid data for this element is any valid script
-    runner for the specified script.
+- **Valid Values**: Any valid script runner for the specified script
 
 #### <job_embed_script_args\></job_embed_script_args\>
 
-The <job_embed_script_args\> element defines any script parameters to
-pass to the script at runtime.
+Defines script parameters to pass at runtime. Tokens and global properties are acceptable.
 
-- **Requirements**: This is an Optional field.
+- **Requirements**: Optional
 - **EM field label**: Arguments
-- **Valid Values**: Valid data for this element are any valid
-    parameters.
-  - Use of tokens or global properties are acceptable.
+- **Valid Values**: Any valid parameters
 
-####  <job_embed_script_hash\></job_embed_script_hash\>
+#### <job_embed_script_hash\></job_embed_script_hash\>
 
-The <job_embed_script_hash\> element defines the MD5 hash of the script
-content.
+Defines the MD5 hash of the script content.
 
-- **Requirements:** This is an Optional field.
-- **EM field label:** N/A
-- **Valid Values:** Valid data for this element is a valid MD5
-    cryptographic hash.
-  - Maximum characters: 32.
+- **Requirements**: Optional
+- **EM field label**: N/A
+- **Valid Values**: Valid MD5 cryptographic hash. Maximum 32 characters
 
 #### <jobdata\></jobdata\>
 
-The parent element <jobdata\> contains the child elements needed to
-define platform-specific job information.
+Contains child elements to define platform-specific job information.
 
-- **Requirements**: Required unless <platform\> is Null Job or
-    <msgtype\> is add_dependency. This element is invalid when
-    <msgtype\> equals add_dependency.
-- **Valid Values**: Valid data for this is any element from the
-    desired platform elements. Only one <jobdata\> element is allowed
-    per <job\> element.
+- **Requirements**: Required unless <platform\> is Null Job or <msgtype\> is add_dependency
+- **Valid Values**: Any element from the desired platform elements. One per <job\>
 
 ## <afc\> Advanced Failure Criteria Element Structure
 
-For Windows, and UNIX jobs, SMADDI also allows the Advanced Failure
-Criteria to be defined. For more information, refer to [Advanced Failure Criteria](../../objects/jobs.md#Advanced).
+For Windows and UNIX jobs, SMADDI supports Advanced Failure Criteria. For more information, refer to [Advanced Failure Criteria](../../objects/jobs.md#Advanced).
 
 <afc\>
 
-   <afc_operator\></afc_operator\>
+���<afc_operator\></afc_operator\>
 
-   <afc_value\></afc_value\>
+���<afc_value\></afc_value\>
 
-   <afc_end_value\></afc_end_value\>
+���<afc_end_value\></afc_end_value\>
 
-   <afc_result\></afc_result\>
+���<afc_result\></afc_result\>
 
-   <afc_and_or\></afc_and_or\>
+���<afc_and_or\></afc_and_or\>
 
 </afc\>
 
@@ -1575,99 +1283,76 @@ When defined, Advanced Failure Criteria overrides the Basic Failure Criteria def
 
 #### <afc\></afc\>
 
-The parent element <afc\> contains the child elements needed to define
-a single set of Advanced Failure Criteria. SMADDI requires this element
-for Advanced Failure Criteria definition. A maximum of 20
-<adv_fail_criteria\> elements are allowed. If more than 20 elements are
-specified, the job input will fail.
+Contains child elements to define a single set of Advanced Failure Criteria. Maximum of 20 <adv_fail_criteria\> elements allowed; the job input fails if more than 20 are specified.
 
 - **Requirements**: Optional
 - **Valid Values**: All <afc\> elements
 
 #### <afc_operator\></afc_operator\>
 
-The <afc_operator\> element defines the Comparison Operator for the
-parent <afc\>.
+Defines the Comparison Operator for the parent <afc\>.
 
-- **Requirements**: Required for <afc\>.
+- **Requirements**: Required for <afc\>
 - **EM field label**: Comparison Operator
-- **Valid Values**: Range, Equal To, Not Equal To, Less Than, Greater
-    Than, Less Than or Equal, Greater Than or Equal
+- **Valid Values**: Range, Equal To, Not Equal To, Less Than, Greater Than, Less Than or Equal, Greater Than or Equal
 
 #### <afc_value\></afc_value\>
 
-The <afc_value\> element defines the Value for the parent <afc\>.
+Defines the Value for the parent <afc\>.
 
-- **Requirements**: Required for <afc\>.
+- **Requirements**: Required for <afc\>
 - **EM field label**: Value
-- **Valid Values**: **-2147483648** through **2147483647**
+- **Valid Values**: -2147483648 through 2147483647
 
 #### <afc_end_value\></afc_end_value\>
 
-The <afc_end_value\> element defines the End Value for the parent
-<afc\> when the <afc_operator\> value is **Range**.
+Defines the End Value when <afc_operator\> is **Range**. SMADDI ignores this element for any other operator value.
 
 - **Requirements**: Optional
 - **EM field label**: End Value
-- **Valid Values**: **-2147483648** through **2147483647**
-
-**Cross-field dependency**: The <afc_end_value\> element is only valid
-if the <afc_operator\> element for the parent <afc\> has a value of
-"Range". If the <afc_operator\> element is any other value, SMADDI
-will ignore the <afc_end_value\> element.
+- **Valid Values**: -2147483648 through 2147483647
 
 #### <afc_result\></afc_result\>
 
-The <afc_result\> element found in the first <afc\> group defines the
-result for all <afc\> groups.
+Defines the result for all <afc\> groups (value from the first group applies to all). SMADDI ignores this element when specified in later groups.
 
-- **Requirements**: Required for <afc\>.
+- **Requirements**: Required for <afc\>
 - **EM field label**: Result
 - **Valid Values**: **Finish OK**, **Fail**
-  - **Additional Information**: When the value is defined for the
-        first <afc_result\>, SMADDI will automatically insert the same
-        value for the Result on all additional groups of <afc\>. If
-        specified with later groups, SMADDI will ignore the
-        <afc_result\> element.
 
 #### <afc_and_or\></afc_and_or\>
 
-The <afc_and_or\> element defines the option for combining multiple
-<afc\> groups together. The value for the <afc_and_or\> element
-determines how OpCon will treat the next group of <afc\> together with
-the current group.
+Determines how OpCon treats the next <afc\> group in relation to the current group. Required for another <afc\> group to be defined.
 
 - **Requirements**: Optional
 - **EM field label**: And/Or
 - **Valid Values**: **And**, **Or**
-  - **Additional Information**: The afc_and_or\> element must exist
-        for another <afc\> group to be defined.
 
 ## <jpre\> Job Dependencies Element Structure
 
 <jpre\>
 
-      <dskdname\></dskdname\>
+������<dskdname\></dskdname\>
 
-      <depjob_instno\></depjob_instno\>
+������<depjob_instno\></depjob_instno\>
 
-      <djname\></djname\>
+������<djname\></djname\>
 
-      <pjfrqname\></pjfrquname\>
+������<pjfrqname\></pjfrqname\>
 
-      <dptype\></dptype\>
+������<dptype\></dptype\>
 
-      <depjob_depinstno\></depjob_depinstno\>
+������<depjob_depinstno\></depjob_depinstno\>
 
-      <dofset\></dofset\>
+������<dofset\></dofset\>
 
-      <iexit\></iexit\>
+������<iexit\></iexit\>
 
-      <onfailure\></onfailure\>
+������<onfailure\></onfailure\>
 
-      <alldys\></alldys\>
+������<alldys\></alldys\>
 
-      <jnlike\></jnlike\>
+������<jnlike\></jnlike\>
 
 </jpre\>
 
@@ -1675,13 +1360,10 @@ the current group.
 
 #### <jpre\></jpre\>
 
-The parent element <jpre\> contains the child elements needed to define
-a single prerequisite job (i.e., job dependency). SMADDI requires this
-element for a prerequisite job definition.
+Contains child elements to define a single prerequisite job (job dependency).
 
-- **Requirements**: Required with <msgtype\> add_dependency if
-    <vpre\> is not specified.
-- **Valid Values**: Any valid <jpre\> child element.
+- **Requirements**: Required with add_dependency if <vpre\> is not specified
+- **Valid Values**: Any valid <jpre\> child element
 
 :::note
 The add_dependency msgtype requires at least one <vpre\> or one <jpre\>.
@@ -1689,133 +1371,103 @@ The add_dependency msgtype requires at least one <vpre\> or one <jpre\>.
 
 #### <dskdname\></dskdname\>
 
-The <dskdname\> element defines the Schedule Name for the parent
-<jpre\>.
+Defines the Schedule Name for the parent <jpre\>.
 
-- **Requirements**: Required for <jpre\>.
+- **Requirements**: Required for <jpre\>
 - **EM field label**: Name
-- **Valid Values**: Depending on the parent <msgtype\> element, valid
-    data for this element is an existing Schedule Name in the Master or
-    Daily tables.
+- **Valid Values**: An existing Schedule Name in Master or Daily tables
 
 #### <depjob_instno\></depjob_instno\>
 
-The <depjob_instno\> element defines the schedule instance name for the
-Successor Job.
+Defines the schedule instance name for the Successor Job.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Instance Name
-- **Valid Values**: Valid data for this element is an existing
-    instance name defined for the schedule in the
-    OpCon database.
+- **Valid Values**: An existing instance name defined for the schedule in OpCon
 
 #### <djname\></djname\>
 
-The <djname\> element defines the Job Name for the parent <jpre\>.
+Defines the Job Name for the parent <jpre\>.
 
-- **Requirements**: Required for <jpre\>.
+- **Requirements**: Required for <jpre\>
 - **EM field label**: Name
-- **Valid Values**: For a valid data for this element is an existing
-    Job Name in the Master tables. For a new_daily <msgtype\>, the data
-    for this element does NOT have to exist in the
-    OpCon database.
+- **Valid Values**: For new_master, an existing Job Name in Master tables. For new_daily, the job does not need to exist in OpCon
 
 #### <pjfrqname\></pjfrqname\>
 
-The <pjfrqname\> element defines the frequency name for which the Job
-Dependency applies.
+Defines the frequency name for which the Job Dependency applies.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Frequency Name
-- **Valid Values**: Valid data for this element is an existing
-    frequency name defined for the job in the
-    OpCon database. If not specified, the
-    dependency is applied at the job level for a master job. This
-    element is ignored for a daily job.
+- **Valid Values**: An existing frequency name for the job in OpCon. If not specified, the dependency applies at the job level for a master job. Ignored for daily jobs
 
 #### <dptype\></dptype\>
 
-The <dptype\> element defines the Dependency Type for the parent
-<jpre\>.
+Defines the Dependency Type for the parent <jpre\>.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Dependency Type
-- **Valid Values**: Valid data options for this element are After,
-    Conflict, Excludes, and Requires. If omitted, the data defaults to
-    After.
+- **Valid Values**: After, Conflict, Excludes, or Requires. Defaults to After
 
 #### <depjob_depinstno\></depjob_depinstno\>
 
-The <depjob_instno\> element defines the schedule instance name for the
-Predecessor Job.
+Defines the schedule instance name for the Predecessor Job.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Instance Name
-- **Valid Values**: Valid data for this element is an existing
-    instance name defined for the schedule in the
-    OpCon database.
+- **Valid Values**: An existing instance name defined for the schedule in OpCon
 
 #### <dofset\></dofset\>
 
-The <dofset\> element defines the number of days offset for a cross-day
-dependency.
+Defines the number of days offset for a cross-day dependency.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Offset
-- **Valid Values**: Valid data for this element is an integer ranging
-    from --999 to +999.
+- **Valid Values**: Integer from -999 to +999
 
 :::note
-If the <skdname\> element contains a multi-instance schedule and the <dskdname\> element contains the same schedule, the Day Offset is not valid. Multi-instance schedules can only have internal same day dependencies or valid cross-schedule dependencies.
+If <skdname\> contains a multi-instance schedule and <dskdname\> contains the same schedule, Day Offset is not valid. Multi-instance schedules can only have internal same-day dependencies or valid cross-schedule dependencies.
 :::
 
 #### <iexit\></iexit\>
 
-The <iexit\> element indicates if OpCon
-ignores the Exit Code of the parent <jpre\>.
+Indicates if OpCon ignores the Exit Code of the parent <jpre\>.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Ignore Exit Code
-- **Valid Values**: Valid data options for this element are Y (Yes)
-    and N (No).
+- **Valid Values**: Y (Yes) or N (No)
 
 #### <onfailure\></onfailure\>
 
-The <onfailure\> element indicates if OpCon
-honors the dependency if the predecessor job fails.
+Indicates if OpCon honors the dependency when the predecessor job fails.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: On Failure
-- **Valid Values**: Valid data options for this element are Y (Yes)
-    and N (No).
+- **Valid Values**: Y (Yes) or N (No)
 
 #### <alldys\></alldys\>
 
-The <alldys\> element indicates if OpCon
-checks all days for a Conflict dependency.
+Indicates if OpCon checks all days for a Conflict dependency.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Check All Days
-- **Valid Values**: Valid data options for this element are Y (Yes)
-    and N (No).
+- **Valid Values**: Y (Yes) or N (No)
 
 #### <jnlike\></jnlike\>
 
-The <jnlike\> element indicates if the <djname\> is a partial name for
-a Conflict dependency.
+Indicates if <djname\> is a partial name for a Conflict dependency.
 
-- **Requirements**: Optional for <jpre\>.
+- **Requirements**: Optional for <jpre\>
 - **EM field label**: Job Name Like
-- **Valid Values**: Valid data options for this element are Y (Yes)
-    and N (No).
+- **Valid Values**: Y (Yes) or N (No)
 
 ## <documentation\> Documentation Element Structure
 
 <documentation\>
 
-     <docfrqname\></docfrqname\>
+�����<docfrqname\></docfrqname\>
 
-     <doc\></doc\>
+�����<doc\></doc\>
 
 </documentation\>
 
@@ -1823,42 +1475,34 @@ a Conflict dependency.
 
 #### <documentation\></documentation\>
 
-The parent element <documentation\> contains the child elements needed
-to define documentation for the schedule or job.
+Contains child elements to define documentation for the schedule or job.
 
 - **Requirements**: Optional
-- **Valid Values**: Any valid <documentation\> child element.
+- **Valid Values**: Any valid <documentation\> child element
 
 #### <docfrqname\></docfrqname\>
 
-The <docfrqname\> element defines the frequency name for which the
-Documentation applies. If this element is defined for a daily job, the
-element is ignored.
+Defines the frequency name for which the Documentation applies. Ignored for daily jobs.
 
 - **Requirements**: Optional
-- **EM field label**: Frequency list \> selected frequency
-- **Valid Values**: An existing frequency name defined for the job in
-    the OpCon database. If not specified, the
-    Documentation is applied at the job level for a master job. This
-    element is ignored for a daily job.
+- **EM field label**: Frequency list > selected frequency
+- **Valid Values**: An existing frequency name for the job in OpCon. If not specified, Documentation applies at the job level for a master job
 
 #### <doc\></doc\>
 
-The <doc\> element contains the documentation for the job.
+Contains documentation for the job.
 
-- **Requirements**: Required for <documentation\>.
+- **Requirements**: Required for <documentation\>
 - **EM field labels**:
-  - *Frequency Documentation* if specified for a job with
-        <docfrqname\>.
-  - *Documentation* if specified for a job without <docfrqname\>.
-  - *Documentation* if specified for a schedule.
-- **Valid Values**: Maximum Characters: 32000
+  - *Frequency Documentation* if specified for a job with <docfrqname\>
+  - *Documentation* if specified for a job without <docfrqname\> or for a schedule
+- **Valid Values**: Maximum 32000 characters
 
 ## <predefined_property\> Job Instance Property Element Structure
 
 <predefined_property\>
 
-      <job_predef_propty\></job_predef_propty\>
+������<job_predef_propty\></job_predef_propty\>
 
 </predefined_property\>
 
@@ -1866,38 +1510,28 @@ The <doc\> element contains the documentation for the job.
 
 #### <predefined_property\></predefined_property\>
 
-The parent element <predefined_property\> contains the child elements
-needed to define a single pre-defined job instance property to a job.
+Contains child elements to define a single pre-defined job instance property.
 
-- **Requirements**: Optional for <job\>.
-- **Valid Values**: Any valid <predefined_property\> child element.
+- **Requirements**: Optional for <job\>
+- **Valid Values**: Any valid <predefined_property\> child element
 
 #### <job_predef_propty\></job_predef_propty\>
 
 Defines a string of property definitions for a job instance.
 
-- **Requirements**: Required for <predefined_property\>.
-- **EM field labels**: Define Property Values \> The defined Property
-    Value
-- **Valid Values**: The property string must be in the format
-    PName1=PValue1;PName2=PValue2...
-  - Values for the "PName" should not contain the following
-        characters: ' ( ) \\ , = ; \|
-  - Values for the "PValue" should not contain a semicolon (;)
-  - If defined within a new_master <msgtype\> and the
-        <multi_inst_job\> element is True, any number of
-        <job_predef_propty\> elements can be defined to specify
-        multiple instances.
-  - If defined within a new_master <msgtype\> and the
-        <multi_inst_job\> element is False -or- if defined within a
-        new_daily <msgtype\>, only one <job_predef_propty\> element is
-        allowed.
+- **Requirements**: Required for <predefined_property\>
+- **EM field labels**: Define Property Values > The defined Property Value
+- **Valid Values**: Format: `PName1=PValue1;PName2=PValue2...`
+  - PName must not contain: `' ( ) \ , = ; |`
+  - PValue must not contain a semicolon (;)
+  - For new_master with <multi_inst_job\> True: multiple <job_predef_propty\> elements are allowed
+  - For new_master with <multi_inst_job\> False, or for new_daily: only one <job_predef_propty\> is allowed
 
 ## <jobudt\> Job User Defined Tags
 
 <jobudt\>
 
-      <job_userdef_tag\></job_userdef_tag\>
+������<job_userdef_tag\></job_userdef_tag\>
 
 </jobudt\>
 
@@ -1905,38 +1539,32 @@ Defines a string of property definitions for a job instance.
 
 #### <jobudt\></jobudt\>
 
-The parent element <jobudt\> contains the child elements needed to
-define a one or more user defined Tags to a job.
+Contains child elements to define one or more user-defined Tags for a job.
 
-- **Requirements**: Optional for <job\>.
-- **Valid Values**: Any valid <jobudt\> child element.
+- **Requirements**: Optional for <job\>
+- **Valid Values**: Any valid <jobudt\> child element
 
 #### <job_userdef_tag\></job_userdef_tag\>
 
-Defines a single tag for the job. The tag name can be new or an existing
-tag. An unlimited number of <job_userdef_tag\> elements are allowed
-within the <jobudt\> parent element.
+Defines a single tag for the job. The tag can be new or existing. Unlimited tags allowed per <jobudt\>.
 
-- **Requirements**: Required for <jobudt\>.
+- **Requirements**: Required for <jobudt\>
 - **EM field labels**: Tag
-- **Valid Values**: Alpha and numeric characters, - (dash) and \--\_
-    (underscore) characters, and spaces.
-  - Any number of <job_userdef_tag\> elements can be defined to
-        specify multiple tags.
+- **Valid Values**: Alphanumeric characters, dash (-), underscore (_), and spaces. Multiple elements allowed
 
 ## <ppevt\> Post Process Events Element Structure
 
 <ppevt\>
 
-      <ppefinst\></ppefinst\>
+������<ppefinst\></ppefinst\>
 
-      <ppefeedbackfld\></ppefeedbackfld\>
+������<ppefeedbackfld\></ppefeedbackfld\>
 
-      <ppefeedbackval\></ppefeedbackval\>
+������<ppefeedbackval\></ppefeedbackval\>
 
-      <ppefrqname\></ppefrqname\>
+������<ppefrqname\></ppefrqname\>
 
-      <ppedets\></ppedets\>
+������<ppedets\></ppedets\>
 
 </ppevt\>
 
@@ -1944,227 +1572,142 @@ within the <jobudt\> parent element.
 
 #### <ppevt\></ppevt\>
 
-The parent element <ppevt\> contains the child elements needed to
-define a single post-process OpCon event.
-SMADDI requires this element for a post-process
-OpCon event definition.
+Contains child elements to define a single post-process OpCon event.
 
-- **Requirements**: Optional for <job\>.
-- **Valid Values**: Any valid <ppevt\> child element.
+- **Requirements**: Optional for <job\>
+- **Valid Values**: Any valid <ppevt\> child element
 
 #### <ppefinst\></ppefinst\>
 
-The <ppefinst\> element defines the final Job Status evaluated before
-submitting the OpCon Event.
+Defines the final Job Status evaluated before submitting the OpCon Event.
 
-- **Requirements**: Optional for <ppevt\>; however, you must specify
-    either <ppefeedbackfld\> or <ppefinst\>.
+- **Requirements**: Optional for <ppevt\>; however, either <ppefeedbackfld\> or <ppefinst\> must be specified
 - **EM field label**: Job Status
-- **Valid Values**: Valid data options for this element are Failed,
-    Finished OK, Skipped, Missed Latest Start Time, Exceeded Max Run
-    Time, Late to Start, Late to Finish, Job Still Attempting Start, and
-    Start Attempted.
+- **Valid Values**: Failed, Finished OK, Skipped, Missed Latest Start Time, Exceeded Max Run Time, Late to Start, Late to Finish, Job Still Attempting Start, or Start Attempted
 
 #### <ppefeedbackfld\></ppefeedbackfld\>
 
-The <ppefeedbackfld\> element defines the LSAM Feedback field to use
-for string matching before submitting the
-OpCon Event.
+Defines the agent Feedback field to use for string matching before submitting the OpCon Event.
 
-**Requirements**: Optional for <ppevt\>; however, you must specify
-either <ppefeedbackfld\> or <ppefinst\>.
+- **Requirements**: Optional for <ppevt\>; however, either <ppefeedbackfld\> or <ppefinst\> must be specified
+- **EM field label**: Exit Description / agent Feedback / Job Completion Complex Expression
 
-**EM field label**: Exit Description
+- **Valid Values**:
+  - For Exit Description, use the value **Exit Description**
+  - For Job Completion Complex Expression, use **Job Completion Complex Expression**
+  - For **Windows** jobs:
 
-**EM field label**: LSAM Feedback
+    |||
+    |--- |--- |
+    |I/O Data Bytes/Sec|Job End Time|
+    |I/O Data Operations/Sec|Job Status Description|
+    |I/O Other Bytes/Sec|Physical Memory Size|
+    |I/O Other Operations/Sec|Processor Usage|
+    |I/O Read Bytes/Sec|Total Processor Time|
+    |I/O Read Operations/Sec|User Processor Time|
+    |I/O Write Bytes/Sec|Virtual Memory Size|
+    |I/O Write Operations/Sec||
 
-**EM field label**: Job Completion Complex Expression
+  - For **UNIX** jobs:
 
-**Valid Values**: Valid data options for this element are based on the
-names of the LSAM Feedback fields defined for each platform.
+    |||
+    |--- |--- |
+    |Block Input Operations|Max Resident Set Size Used|
+    |Block Output Operations|Messages Received|
+    |Characters Read/Written|Messages Sent|
+    |CPU Usage (System Code)|Page Faults|
+    |CPU Usage (User Code)|Page Reclaims|
+    |Integral Shared Memory Size|Signals Received|
+    |Integral Unshared Data|Swaps|
+    |Integral Unshared Stack|Voluntary Context Switch|
+    |Involuntary Context Switches|Wall-clock Run Time|
+    |Job Status Description||
 
-For Exit Description, the value must be **Exit Description**.
+  - For **SAP R/3 and CRM**: Child Process, Job Status Description
+  - For **SAP BW**: Job Status Description, Process, Process Chain Log
+  - For **MCP**:
 
-For Job Completion Complex Expression, the value must be **Job
-Completion Complex Expression**.
+    |||
+    |--- |--- |
+    |Accum Elapsed Time|Process Name|
+    |Accum Elapsed Wait Time|Task Elapsed Time|
+    |Accum I/O Time|Task Elapsed Wait Time|
+    |Accum Print Lines|Task I/O Time|
+    |Accu Processor Time|Task Print Lines|
+    |Accum Ready Q Time|Task Processor Time|
+    |Job Status Description|Task Ready Q Time|
+    |Mix Number||
 
-For **Windows** jobs, the valid values are:
+  - For **File Transfer**:
 
-|||
-|--- |--- |
-|I/O Data Bytes/Sec|Job End Time|
-|I/O Data Operations/Sec|Job Status Description|
-|I/O Other Bytes/Sec|Physical Memory Size|
-|I/O Other Operations/Sec|Processor Usage|
-|I/O Read Bytes/Sec|Total Processor Time|
-|I/O Read Operations/Sec|User Processor Time|
-|I/O Write Bytes/Sec|Virtual Memory Size|
-|I/O Write Operations/Sec||
+    |||
+    |--- |--- |
+    |Bandwidth Used|File Size|
+    |Compression Used|File Transfer Mode Used|
+    |Encryption Used|Job Status Description|
 
-For **UNIX** jobs, the valid values are:
-
-|||
-|--- |--- |
-|Block Input Operations|Max Resident Set Size Used|
-|Block Output Operations|Messages Received|
-|Characters Read/Written|Messages Sent|
-|CPU Usage (System Code)|Page Faults|
-|CPU Usage (User Code)|Page Reclaims|
-|Integral Shared Memory Size|Signals Received|
-|Integral Unshared Data|Swaps|
-|Integral Unshared Stack|Voluntary Context Switch|
-|Involuntary Context Switches|Wall-clock Run Time|
-|Job Status Description||
-
-For **SAP R/3 and CRM**, the valid values are:
-
-||
-|--- |
-|Child Process|
-|Job Status Description|
-
-For **SAP BW**, the valid values are:
-
-||
-|--- |
-|Job Status Description|
-|Process|
-|Process Chain Log|
-
-For **MCP**, the valid values are:
-
-|||
-|--- |--- |
-|Accum Elapsed Time|Process Name|
-|Accum Elapsed Wait Time|Task Elapsed Time|
-|Accum I/O Time|Task Elapsed Wait Time|
-|Accum Print Lines|Task I/O Time|
-|Accu Processor Time|Task Print Lines|
-|Accum Ready Q Time|Task Processor Time|
-|Job Status Description|Task Ready Q Time|
-|Mix Number||
-
-For **File Transfer**, the valid values are:
-
-|||
-|--- |--- |
-|Bandwidth Used|File Size|
-|Compression Used|File Transfer Mode Used|
-|Encryption Used|Job Status Description|
-
-For **IBM i**, the valid values are:
-
-|||
-|--- |--- |
-|Active Job in MSGW Status|User-defined text from LFEEDBACK command|
-|Job Status Description||
-
-For **z/OS**, the valid values are:
-
-|||
-|--- |--- |
-|Job Status Description|Trigger Messages|
-|Step Completion|User Message|
+  - For **IBM i**: Active Job in MSGW Status, User-defined text from LFEEDBACK command, Job Status Description
+  - For **z/OS**: Job Status Description, Trigger Messages, Step Completion, User Message
 
 #### <ppefeedbackval\></ppefeedbackval\>
 
-The <ppefeedbackval\> element defines the Exit Description evaluation
-string or the LSAM Feedback string to match based on the
-<ppefeedbackfld\> element.
+Defines the Exit Description evaluation string or agent Feedback string to match.
 
-**Requirements**: Required if <ppefeedbackfld\> is defined.
+- **Requirements**: Required if <ppefeedbackfld\> is defined
+- **EM field labels**: Comparison Operator, Value, End Value / String to match / Job Completion Complex Expression
 
-**EM field labels**: Comparison Operator, Value, and End Value
+- **Valid Values**:
 
-**EM field label**: String to match
+  For Exit Description, separate fields with semicolons: `Comparison Operator;Value[;End Value]`
 
-**EM field label**: Job Completion Complex Expression
+  :::note
+  Add `;EndValue` only if the Comparison Operator is RG (Range).
+  :::
 
-**Valid Values**:
+  Comparison Operator must be one of: EQ, NE, LT, LE, GT, GE, RG, IN
 
-For Exit Description, separate the evaluation string fields with
-semicolons (;). The syntax is:
+  :::tip Example
+  Range with Value 6 and End Value 9: `<ppefeedbackval>RG;6;9</ppefeedbackval>`
 
-Comparison Operator;Value\[;End Value\]
+  Equal To with Value 5: `<ppefeedbackval>EQ;5</ppefeedbackval>`
+  :::
 
-:::note
-Only add the ;EndValue to the syntax if the Comparison Operator is RG (Range).
-:::
+  For agent Feedback: any string to match.
+  - Use `%` as a wildcard (not `*`)
+  - Use `_` for single-character wildcard (not `?`)
+  - Single quotes (') are invalid
+  - Maximum 4000 characters
 
-The Comparison Operator must be one of the following:
-
-- EQ (Equal To)
-- NE (Not Equal To)
-- LT (Less Than)
-- LE (Less Than or Equal)
-- GT (Greater Than)
-- GE (Greater Than or Equal)
-- RG (Range)
-- IN (Contains)
-
-:::tip Example
-If the Comparison Operator is Range, Value is 6 and End Value is 9, then the value for <ppefeedbackval\> would be:
-
-```xml
-<ppefeedbackval>RG;6;9</ppefeedbackval>
-```
-
-If the Comparison Operator is Equal To, and the Value is 5, then the value for <ppefeedbackval\> would be:
-
-```xml
-<ppefeedbackval>EQ;5 </ppefeedbackval>
-```
-
-:::
-
-For LSAM Feedback: Valid data for this element is any string to match.
-
-- Use percent (%) as opposed to asterisk (\*) as a wildcard.
-- Use underscore ( \_ ) as opposed to question mark (?) for a single
-    character wildcard.
-- Single quotes (') are invalid in this field.
-- This field is a maximum of 4000 characters long.
-
-For Job Completion Complex Expression, the value must be an expression
-that complies with the rules of the Property Expression API. For more
-information, refer to [Property Expressions API Syntax](../../reference/property-expressions-syntax.md)
- in the **Concepts** online help.
+  For Job Completion Complex Expression: must comply with Property Expression API rules. Refer to [Property Expressions API Syntax](../../reference/property-expressions-syntax.md).
 
 #### <ppefrqname\></ppefrqname\>
 
-The <ppefrqname\> element defines the frequency name for which the
-OpCon Event applies.
+Defines the frequency name for which the OpCon Event applies.
 
-- **Requirements**: Optional for <ppevt\>.
-- **Valid Values**: Valid data for this element is an existing
-    frequency name defined for the job in the
-    OpCon database.
+- **Requirements**: Optional for <ppevt\>
+- **Valid Values**: An existing frequency name for the job in OpCon
 
 #### <ppedets\></ppedets\>
 
-The <ppedets\> element defines the details of the
-OpCon Event to be submitted.
+Defines the details of the OpCon Event to submit.
 
-- **Requirements**: Required for <ppevt\>.
+- **Requirements**: Required for <ppevt\>
 - **EM field label**: Event Template
-- **Valid Values**: Valid data for this element must be one of the
-    existing OpCon events.
-  - Maximum characters: 738.
-  - The tilde (\~) is an invalid character in this field.
+- **Valid Values**: An existing OpCon event. Maximum 738 characters. Tilde (~) is invalid
 
 ## <vpre\> Threshold/Resource Dependencies Element Structure
 
 <vpre\>
 
-      <pvname\></pvname\>
+������<pvname\></pvname\>
 
-      <pvvalue\></pvvalue\>
+������<pvvalue\></pvvalue\>
 
-      <pvuseall\></pvuseall\>
+������<pvuseall\></pvuseall\>
 
-      <pvfrqname\></pvfrqname\>
+������<pvfrqname\></pvfrqname\>
 
-      <voptr\></voptr\>
+������<voptr\></voptr\>
 
 </vpre\>
 
@@ -2172,85 +1715,62 @@ OpCon Event to be submitted.
 
 #### <vpre\></vpre\>
 
-The parent element <vpre\> contains the child elements needed to define
-a single prerequisite variable (i.e., Threshold/Resource Dependency).
-SMADDI requires this element for a Threshold/Resource Dependency
-definition.
+Contains child elements to define a single Threshold/Resource Dependency.
 
-- **Requirements**: Required with <msgtype\> add_dependency if
-    <jpre\> not specified.
-- **Valid Values**: Any valid <vpre\> child element.
+- **Requirements**: Required with add_dependency if <jpre\> is not specified
+- **Valid Values**: Any valid <vpre\> child element
 
 #### <pvname\></pvname\>
 
-The <pvname\> element defines the Threshold/Resource name for the
-parent <vpre\>.
+Defines the Threshold/Resource name for the parent <vpre\>.
 
-- **Requirements**: Required for <vpre\>.
+- **Requirements**: Required for <vpre\>
 - **EM field label**: Threshold/Resource
-- **Valid Values**: Valid data for this element is an existing
-    Threshold/Resource name in the OpCon
-    database.
+- **Valid Values**: An existing Threshold/Resource name in OpCon
 
 #### <pvvalue\></pvvalue\>
 
-The <pvvalue\> element defines the value compared to the parent
-<vpre\>'s current value.
+Defines the value compared to the parent <vpre\>'s current value.
 
-- **Requirements**: Required for <vpre\>.
+- **Requirements**: Required for <vpre\>
 - **EM field label**: Value
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 2147483647.
+- **Valid Values**: Integer 0–2147483647
 
 #### <pvuseall\></pvuseall\>
 
-The <pvuseall\> element indicates if the resource dependency should use
-"All" of the resources.
+Indicates if the resource dependency should use "All" resources. Mutually exclusive with <ppvalue\>. Can only be True if <pvname\> contains a Resource.
 
-- **Requirements**: Optional for <vpre\>.
-  - Mutually exclusive with <ppvalue\>.
-  - <pvuseall\> can only be set to "True" if the <pvname\>
-        contains a Resource.
-- **EM field label**: All (checkbox)
-- **Valid Values**: Valid data for this element is **True** or
-    **False**. If not specified, the value defaults to False.
+- **Requirements**: Optional for <vpre\>
+- **EM field label**: All (option)
+- **Valid Values**: True or False; defaults to False
 
 #### <pvfrqname\></pvfrqname\>
 
-The <pvfrqname\> element defines the frequency name for which the
-Threshold/Resource Dependency applies. If this element is defined for a
-daily job, the input will fail.
+Defines the frequency name for which the Threshold/Resource Dependency applies. If specified for a daily job, the input will fail.
 
 - **Requirements**: Optional
 - **EM field label**: Frequency
-- **Valid Values**: Valid data for this element is an existing
-    frequency name defined for the job in the
-    OpCon database. If not specified, the
-    dependency is applied at the job level for a master job. This
-    element is ignored for a daily job.
+- **Valid Values**: An existing frequency name for the job in OpCon. If not specified, the dependency applies at the job level for a master job
 
 #### <voptr\></voptr\>
 
-The <voptr\> element defines the Operator used to resolve the
-dependency.
+Defines the Operator to resolve the dependency.
 
-- **Requirements**: Required for <vpre\>.
+- **Requirements**: Required for <vpre\>
 - **EM field label**: Operator
-- **Valid Values**: For a Threshold Dependency, valid data options for
-    this element are =, <, \>, <=, \>=, <\>, EQ, LT, GT, LE, GE, and
-    NE. For a Resource Dependency, valid data for this element is =.
+- **Valid Values**: For Threshold Dependency: `=`, `<`, `>`, `<=`, `>=`, `<>`, EQ, LT, GT, LE, GE, NE. For Resource Dependency: `=`
 
 ## <ppvar\> Threshold/Resource Updates Element Structure
 
 <ppvar\>
 
-      <jobst\></jobst\>
+������<jobst\></jobst\>
 
-      <ppvfrqname\></ppvfrqname\>
+������<ppvfrqname\></ppvfrqname\>
 
-      <ppvname\></ppvname\>
+������<ppvname\></ppvname\>
 
-      <ppvvalue\></ppvvalue\>
+������<ppvvalue\></ppvvalue\>
 
 </ppvar\>
 
@@ -2258,317 +1778,284 @@ dependency.
 
 #### <ppvar\></ppvar\>
 
-The parent element <ppvar\> contains the child elements needed to
-define a single post-process variable setting (i.e., Threshold Update).
-SMADDI requires this element for a Threshold Update definition.
+Contains child elements to define a single post-process variable setting (Threshold Update).
 
-- **Requirements**: Optional for <job\>.
-- **Valid Values**: Any valid <ppvar\> child element.
+- **Requirements**: Optional for <job\>
+- **Valid Values**: Any valid <ppvar\> child element
 
 #### <jobst\></jobst\>
 
-The <jobst\> element defines the final Job Status evaluated before
-setting the threshold value.
+Defines the final Job Status evaluated before setting the threshold value.
 
-- **Requirements**: Required for <ppvar\>.
+- **Requirements**: Required for <ppvar\>
 - **EM field label**: Job Status
-- **Valid Values**: Valid data options for this element are Failed,
-    Finished OK, Skipped, Missed Latest Start Time, Exceeded Max Run
-    Time, Late to Start, Late to Finish, and Still Attempting Start.
+- **Valid Values**: Failed, Finished OK, Skipped, Missed Latest Start Time, Exceeded Max Run Time, Late to Start, Late to Finish, or Still Attempting Start
 
 #### <ppvfrqname\></ppvfrqname\>
 
-The <ppvfrqname\> element defines the frequency name for which the
-Threshold/Resource Update applies. If this element is defined for a
-daily job, the input will fail.
+Defines the frequency name for which the Threshold/Resource Update applies. If specified for a daily job, the input will fail.
 
 - **Requirements**: Optional
-- **EM field label**: Frequency list \> selected frequency
-- **Valid Values**: Valid data for this element is an existing
-    frequency name defined for the job in the
-    OpCon database. If not specified, the
-    dependency is applied at the job level for a master job. This
-    element is ignored for a daily job.
+- **EM field label**: Frequency list > selected frequency
+- **Valid Values**: An existing frequency name for the job in OpCon. If not specified, the dependency applies at the job level for a master job
 
 #### <ppvname\></ppvname\>
 
-The <ppvname\> element defines the Threshold name for the post- process
-variable setting.
+Defines the Threshold name for the post-process variable setting.
 
-- **Requirements**: Required for <ppvar\>.
+- **Requirements**: Required for <ppvar\>
 - **EM field label**: Name
-- **Valid Values**: Valid data for this element is an existing
-    Threshold name in the OpCon database.
+- **Valid Values**: An existing Threshold name in OpCon
 
 #### <ppvvalue\></ppvvalue\>
 
-The <ppvvalue\> element defines the threshold value for the update.
+Defines the threshold value for the update.
 
-- **Requirements**: Required for <ppvar\>.
+- **Requirements**: Required for <ppvar\>
 - **EM field label**: Value
-- **Valid Values**: Valid data for this element is an integer within
-    0 - 2147483647.
+- **Valid Values**: Integer 0–2147483647
 
 ## add_frequency Element Structure
 
-The add_frequency message type and its elements can be used to add a new
-frequency to a schedule or to a job. The following sample code contains
-the structure for defining all possible elements for the add_frequency
-message type:
+Use `add_frequency` to add a new frequency to a schedule or job.
 
-To add a frequency to a schedule, use the following element structure:
+To add a frequency to a schedule:
 
 <msg\>
 
-  <msgtype\>add_frequency</msgtype\>
+��<msgtype\>add_frequency</msgtype\>
 
-  <schedule\>
+��<schedule\>
 
-     <skdname\> </skdname\>
+�����<skdname\> </skdname\>
 
-     <job\>
+�����<job\>
 
-        <frq\>
+��������<frq\>
 
-        \....refer to [Data Input Message Elements](#%3Cfrq%3E)
+��������\....refer to [Data Input Message Elements](#%3Cfrq%3E)
 
+��������</frq\>
 
-        </frq\>
+�����</job\>
 
-     </job\>
-
-  </schedule\>
+��</schedule\>
 
 </msg\>
 
-To add a frequency to a job, use the following element structure:
+To add a frequency to a job:
 
 <msg\>
 
-  <msgtype\>add_frequency</msgtype\>
+��<msgtype\>add_frequency</msgtype\>
 
-  <schedule\>
+��<schedule\>
 
-     <skdname\> </skdname\>
+�����<skdname\> </skdname\>
 
-     <job\>
+�����<job\>
 
-        <jname\></jname\>
+��������<jname\></jname\>
 
-        <frq\>
+��������<frq\>
 
-           \....refer to [Data Input Message Elements](#%3Cfrq%3E)
+�����������\....refer to [Data Input Message Elements](#%3Cfrq%3E)
 
-        </frq\>
+��������</frq\>
 
-     </job\>
+�����</job\>
 
-  </schedule\>
+��</schedule\>
 
 </msg\>
 
 ## <frq\> Frequency Element Structures
 
-The <frq\> frequency elements are used under several message types in
-addition to the add_frequency message type. The following sections show
-the possible frequency elements based on the message type:
+The <frq\> frequency elements are used under several message types in addition to add_frequency. Frequency elements vary by message type:
 
 - [new_daily Frequency Element Structure](#new_dail)
 - [new_master Frequency Element Structure](#new_mast2)
 - [new_schedule Frequency Element Structure](#new_sche)
 
-The individual element descriptions begin at the [General Frequency Element Definitions](#General_Frequency_Element_Definitions)
- section.
+Element descriptions begin at [General Frequency Element Definitions](#General_Frequency_Element_Definitions).
 
 ### new_daily Frequency Element Structure
 
-The following sample code contains the structure for defining all
-possible elements related to frequencies in the <new_daily\> message
-type:
-
 <job\>
 
-   <jname\></jname\>
+���<jname\></jname\>
 
-   <frqname\></frqname\>
+���<frqname\></frqname\>
 
-   <stoff\></stoff\>
+���<stoff\></stoff\>
 
-   <star\></star\>
+���<star\></star\>
 
-   <ltst\></ltst\>
+���<ltst\></ltst\>
 
-   <ltar\></ltar\>
+���<ltar\></ltar\>
 
-   <jlts\></jlts\>
+���<jlts\></jlts\>
 
-   <jltf\></jltf\>
+���<jltf\></jltf\>
 
-   <bldst\></bldst\>
+���<bldst\></bldst\>
 
-   <mxtm\></mxtm\>
+���<mxtm\></mxtm\>
 
-   <frqert\></frqert\>
+���<frqert\></frqert\>
 
-   <prty\></prty\>
+���<prty\></prty\>
 
-   <autorestartintvl\></autorestartintvl\>
+���<autorestartintvl\></autorestartintvl\>
 
-   <autorestartmax\></autorestartmax\>
+���<autorestartmax\></autorestartmax\>
 
-   <recur_actn_onverlap\></recur_actn_onverlap\>
+���<recur_actn_onverlap\></recur_actn_onverlap\>
 
-   <recur_start_time\></recur_start_time\>
+���<recur_start_time\></recur_start_time\>
 
-   <recur_ss_intvl\></recur_ss_intvl\>
+���<recur_ss_intvl\></recur_ss_intvl\>
 
-   <recur_es_intvl\></recur_es_intvl\>
+���<recur_es_intvl\></recur_es_intvl\>
 
-   <recur_lrt\></recur_lrt\>
+���<recur_lrt\></recur_lrt\>
 
-   <recur_nbrruns\></recur_nbrruns\>
+���<recur_nbrruns\></recur_nbrruns\>
 
-   <frqudt\>
+���<frqudt\>
 
-     <frq_userdef_tag\></frq_userdef_tag\>
+�����<frq_userdef_tag\></frq_userdef_tag\>
 
-   </frqudt\>
+���</frqudt\>
 
 </job\>
 
 ### new_master Frequency Element Structure
 
-The following sample code contains the structure for defining all
-possible elements related to frequencies in the <new_master\> message
-type:
-
 <job\>
 
-   <estrt\></estrt\>
+���<estrt\></estrt\>
 
-   <frq\>
+���<frq\>
 
-      <frqname\></frqname\>
+������<frqname\></frqname\>
 
-      <fpri\></fpri\>
+������<fpri\></fpri\>
 
-      <stoff\></stoff\>
+������<stoff\></stoff\>
 
-      <star\></star\>
+������<star\></star\>
 
-      <ltst\></ltst\>
+������<ltst\></ltst\>
 
-      <ltar\></ltar\>
+������<ltar\></ltar\>
 
-      <jlts\></jlts\>
+������<jlts\></jlts\>
 
-      <jltf\></jltf\>
+������<jltf\></jltf\>
 
-      <bldst\></bldst\>
+������<bldst\></bldst\>
 
-      <mxtm\></mxtm\>
+������<mxtm\></mxtm\>
 
-      <frqert\></frqert\>
+������<frqert\></frqert\>
 
-      <frq_stc_estmethod\></frq_stc_estmethod\>
+������<frq_stc_estmethod\></frq_stc_estmethod\>
 
-      <frq_predicted_start\></frq_predicted_start\>
+������<frq_predicted_start\></frq_predicted_start\>
 
-      <frq_expr_dep\></frq_expr_dep\>
+������<frq_expr_dep\></frq_expr_dep\>
 
-      <prty\></prty\>
+������<prty\></prty\>
 
-      <autorestartintvl\></autorestartintvl\>
+������<autorestartintvl\></autorestartintvl\>
 
-      <autorestartmax\></autorestartmax\>
+������<autorestartmax\></autorestartmax\>
 
-      <recur_actn_onverlap\></recur_actn_onverlap\>
+������<recur_actn_onverlap\></recur_actn_onverlap\>
 
-      <recur_start_time\></recur_start_time\>
+������<recur_start_time\></recur_start_time\>
 
-      <recur_ss_intvl\></recur_ss_intvl\>
+������<recur_ss_intvl\></recur_ss_intvl\>
 
-      <recur_es_intvl\></recur_es_intvl\>
+������<recur_es_intvl\></recur_es_intvl\>
 
-      <recur_lrt\></recur_lrt\>
+������<recur_lrt\></recur_lrt\>
 
-      <recur_nbrruns\></recur_nbrruns\>
+������<recur_nbrruns\></recur_nbrruns\>
 
-      <fgrp\></fgrp\>
+������<fgrp\></fgrp\>
 
-      <dow\></dow\>
+������<dow\></dow\>
 
-      <intvl\></intvl\>
+������<intvl\></intvl\>
 
-      <rqdt\></rqdt\>
+������<rqdt\></rqdt\>
 
-      <ofdays\></ofdays\>
+������<ofdays\></ofdays\>
 
-      <intvl_offset\></intvl_offset\>
+������<intvl_offset\></intvl_offset\>
 
-      <dtype\></dtype\>
+������<dtype\></dtype\>
 
-      <occn\></occn\>
+������<occn\></occn\>
 
-      <period\></period\>
+������<period\></period\>
 
-      <cname\></cname\>
+������<cname\></cname\>
 
-      <aobn\></aobn\>
+������<aobn\></aobn\>
 
-      <begin\></begin\>
+������<begin\></begin\>
 
-      <end\></end\>
+������<end\></end\>
 
-      <include\></include\>
+������<include\></include\>
 
-      <exclude\></exclude\>
+������<exclude\></exclude\>
 
-      <excmo\></excmo\>
+������<excmo\></excmo\>
 
-      <frqudt\>
+������<frqudt\>
 
-        <frq_userdef_tag\></frq_userdef_tag\>
+��������<frq_userdef_tag\></frq_userdef_tag\>
 
-      </frqudt\>
+������</frqudt\>
 
-   </frq\>
+���</frq\>
 
 </job\>
 
 ### new_schedule Frequency Element Structure
 
-The following sample code contains the structure for defining all
-possible elements related to frequencies in the new_schedule message
-type:
-
 <frq\>
 
-   <frqname\></frqname\>
+���<frqname\></frqname\>
 
-   <fpri\></fpri\>
+���<fpri\></fpri\>
 
-   <fgrp\></fgrp\>
+���<fgrp\></fgrp\>
 
-   <dow\></dow\>
+���<dow\></dow\>
 
-   <intvl\></intvl\>
+���<intvl\></intvl\>
 
-   <rqdt\></rqdt\>
+���<rqdt\></rqdt\>
 
-   <ofdays\></ofdays\>
+���<ofdays\></ofdays\>
 
-   <intvl_offset\></intvl_offset\>
+���<intvl_offset\></intvl_offset\>
 
-   <dtype\></dtype\>
+���<dtype\></dtype\>
 
-   <occn\></occn\>
+���<occn\></occn\>
 
-   <period\></period\>
+���<period\></period\>
 
-   <cname\></cname\>
+���<cname\></cname\>
 
-   <aobn\></aobn\>
+���<aobn\></aobn\>
 
 </frq\>
 
@@ -2576,572 +2063,410 @@ type:
 
 ##### <frq\></frq\>
 
-The parent element <frq\> contains the child elements needed to define
-a single Frequency for the schedule or job. If omitted, the defaults of
-all nested elements will be applied to the parent schedule or job. For
-new_schedule and new_master message types, any number of <frq\></frq\>
-elements can reside within a <job\> or <skdinfo\> element.
+Contains child elements to define a single Frequency for the schedule or job. If omitted, defaults apply to the parent schedule or job. For new_schedule and new_master, any number of <frq\> elements can reside within <job\> or <skdinfo\>.
 
-- **Requirements**: Optional for <job\> and <skdinfo\>.
-- **Valid Values**: Any valid <frq\> child element.
+- **Requirements**: Optional for <job\> and <skdinfo\>
+- **Valid Values**: Any valid <frq\> child element
 
 ##### <frqname\></frqname\>
 
-The <frqname\> element defines the Frequency Name for the parent
-<frq\>.
+Defines the Frequency Name for the parent <frq\>.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: Frequency Name
-- **Valid Values**: Valid data for this element is any name 20
-    characters or less that does not contain the following characters:
-    ' (single quote), \| (Pipe symbol), \\ (backslash), " (double
-    quote), ; (semi-colon), % (percent), & (ampersand), < (less
-    than) \> (greater than), ( ) (open and closed parentheses), \[ \]     (open and closed brackets), { } (open and closed braces), , (comma),
-    = (equals), ! (exclamation point), and space.
+- **Valid Values**: Maximum 20 characters. Invalid characters: `' | \ " ; % & < > ( ) [ ] { } , = !` and space
 
 :::note
-When the frqname matches an existing frequency name in the database:
+When frqname matches an existing frequency in the database:
+- If no other <frq\> elements are defined, SMADDI uses the existing frequency definition, Calendar, and AOBN
+- If one or more <frq\> elements are defined, SMADDI appends a unique character to the supplied frqname when adding the specified details
 
-- If none of the above frq elements are defined, SMADDI will use the frequency definition, Calendar and AOBN from the existing frequency.
-- If one or more of the above frq elements are defined, SMADDI goes through the duplicate frequency name resolution logic and appends a unique character to the end of the supplied frqname when adding the details specified with all the frq elements.
-
-If the frqname is unique, SMADDI creates a new frequency with details specified with all the frq elements (while supplying default values for elements left undefined).
+If frqname is unique, SMADDI creates a new frequency with the specified details and defaults for undefined elements.
 :::
 
 ##### <fpri\></fpri\>
 
-The <fpri\> element defines the Frequency Priority for the parent
-<frq\>. Frequency Priority is relative to other frequencies for the
-schedule or job.
+Defines the Frequency Priority relative to other frequencies on the schedule or job.
 
-- **Requirements**: Optional for <frq\> on new_schedule, new_master,
-    and new_frequency message types.
-- **Valid Values**: The data for this element must be a number.
-  - The highest priority number is zero (0). The next highest
-        priority is one (1) and so forth.
-  - The value must not exceed the number of frequencies defined for
-        the schedule or job.
-  - If the defined value conflicts with an existing value for
-        another frequency, the new value is automatically set to the
-        next lower Frequency Priority value as compared to the other
-        frequencies on the job or schedule.
-  - If the <fpri\> element is omitted and no other frequencies
-        exist, SMADDI defaults to a value of zero (0).
-  - If the <fpri\> element is omitted and other frequencies do
-        exist, the value defaults to the next lower Frequency Priority
-        value as compared to the other frequencies on the job or
-        schedule.
+- **Requirements**: Optional for new_schedule, new_master, and new_frequency
+- **Valid Values**: A number. Highest priority is 0, then 1, and so on
+  - Must not exceed the number of frequencies defined for the schedule or job
+  - If it conflicts with an existing value, automatically set to the next lower priority
+  - Defaults to 0 if no other frequencies exist; otherwise defaults to the next lower priority
 
 ##### <stoff\></stoff\>
 
-The <stoff\> element defines the Start Offset Time for the parent
-frequency/job.
+Defines the Start Offset Time for the parent frequency/job.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Start Offset
-- **Valid Values**: Valid data for this element is in the format of
-    hh:mm where hh is an integer from 00 through 99 and where mm is an
-    integer ranging from 00 to 59.
+- **Valid Values**: hh:mm format; hh from 00–99, mm from 00–59
 
 ##### <star\></star\>
 
-The <star\> element indicates if the Start Offset time is Absolute or
-Relative.
+Indicates if the Start Offset is Absolute or Relative.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field labels**: Absolute and Relative
-- **Valid Values**: Valid data options for this element are A
-    (Absolute) and R (Relative).
+- **Valid Values**: A (Absolute) or R (Relative)
 
 ##### <ltst\></ltst\>
 
-The <ltst\> element defines the Latest Start Time for the parent
-frequency/job.
+Defines the Latest Start Time for the parent frequency/job.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Latest Start Offset
-- **Valid Values**: Valid data for this element is in the format of
-    hh:mm where hh is an integer from 00 through 99 and where mm is an
-    integer ranging from 00 to 59.
+- **Valid Values**: hh:mm format; hh from 00–99, mm from 00–59
 
 ##### <ltar\></ltar\>
 
-The <ltar\> element indicates if the Latest Start Time is Absolute or
-Relative.
+Indicates if the Latest Start Time is Absolute or Relative.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field labels**: Absolute and Relative
-- **Valid Values**: Valid data options for this element are A
-    (Absolute) and R (Relative).
+- **Valid Values**: A (Absolute) or R (Relative)
 
 ##### <jlts\></jlts\>
 
-The <jlts\> element indicates the time when the job will become late to
-start.
+Defines when the job becomes late to start.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Late to Start Offset
-- **Valid Values**: Valid data for this element is in the format of
-    hh:mm where hh is an integer from 00 through 99 and where mm is an
-    integer ranging from 00 to 59.
+- **Valid Values**: hh:mm format; hh from 00–99, mm from 00–59
 
 ##### <jltf\></jltf\>
 
-The <jltf\> element indicates the time when the job will become late to
-finish.
+Defines when the job becomes late to finish.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Late to Finish Offset
-- **Valid Values**: Valid data for this element is in the format of
-    hh:mm where hh is an integer from 00 through 99 and where mm is an
-    integer ranging from 00 to 59.
+- **Valid Values**: hh:mm format; hh from 00–99, mm from 00–59
 
 ##### <bldst\></bldst\>
 
-The <bldst\> element defines the Build Status for the parent <frq\>.
+Defines the Build Status for the parent <frq\>.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Job Build Status
-- **Valid Values**: Valid data options for this element are On Hold,
-    Release, Do Not Schedule, To Be Skipped, and Disable Frequency.
+- **Valid Values**: On Hold, Release, Do Not Schedule, To Be Skipped, or Disable Frequency
 
 ##### <mxtm\></mxtm\>
 
-The <mxtm\> element defines the Maximum Run Time in minutes for the
-parent frequency/job.
+Defines the Maximum Run Time in minutes.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Max Run time
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 32767.
+- **Valid Values**: Integer 0–32767
 
 ##### <frqert\></frqert\>
 
-The <frqert\> element defines the estimated run time for the job in
-minutes for the parent frequency/job.
+Defines the estimated run time in minutes.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Estimated Run time
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 32767. If omitted and there was no data to apply from the
-    obsolete <estrt\> element, the data defaults to 1.
+- **Valid Values**: Integer 0–32767. Defaults to 1 if omitted and no data from the obsolete <estrt\> element
 
 ##### <frq_stc_estmethod\></frq_stc_estmethod\>
 
-The <frq_stc_estmethod\> element defines the method for the SMA Start
-Time Calculator to use when predicting the job's Estimated Start Time.
+Defines the method for the SMA Start Time Calculator to predict Estimated Start Time.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    add_frequency message types.
+- **Requirements**: Optional for new_master and add_frequency
 - **EM field label**: Estimation Source
-- **Valid Values**: Valid data options for this element are
-    Calculated, History, and User Defined. If omitted the data defaults
-    to Calculated.
+- **Valid Values**: Calculated, History, or User Defined. Defaults to Calculated
 
 ##### <frq_predicted_start\></frq_predicted_start\>
 
-The <frq_predicted_start\> element defines a specific Predicted Start
-Time in days, hours and minutes offset from the schedule's start time.
+Defines a specific Predicted Start Time as an offset from the schedule's start time.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    add_frequency message types.
+- **Requirements**: Optional for new_master and add_frequency
 - **EM field label**: Predicted Start Time
-- **Valid Values**: Valid data for this element is in the format of
-    hh:mm where hh is an integer from 00 through 99 and where mm is an
-    integer ranging from 00 to 59.
+- **Valid Values**: hh:mm format; hh from 00–99, mm from 00–59
 
 ##### <frq_expr_dep\></frq_expr_dep\>
 
-The < frq\_ expr_dep\> element defines a complex expression, for the
-frequency, that must evaluate to "True" before the job can run when
-scheduled with this frequency.
+Defines a complex expression for the frequency that must evaluate to "True" before the job can run. One per frequency.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    add_frequency message types. There may only be one <frq_expr_dep\>
-    tag per frequency.
+- **Requirements**: Optional for new_master and add_frequency
 - **EM field label**: Expression Dependency
-- **Valid Values**: Valid data for this element is any valid property
-    expression.
+- **Valid Values**: Any valid property expression
 
 ##### <prty\></prty\>
 
-The <prty\> element defines the job Priority calculated by the SAM at
-the time of job submission.
+Defines the job Priority calculated by the SAM at submission.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: SAM Priority
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 32767.
+- **Valid Values**: Integer 0–32767
 
 ##### <estrt\></estrt\>
 
-The <estrt\> element is obsolete; however, for backward compatibility
-if it is specified, the value will populate the data for any missing
-<frqert\> tag for any <frq\> specified in the input file.
+Obsolete. For backward compatibility, its value populates any missing <frqert\> tag in the input file.
 
 ##### <frqudt\></frqudt\>
 
-The parent element <frqudt\> contains the child elements needed to
-define on or more frequency related Tags to a job.
+Contains child elements to define frequency-related Tags for a job.
 
-- **Requirements**: Optional for <frq\>.
-- **Valid Values**: Any valid <frqudt\> child element.
+- **Requirements**: Optional for <frq\>
+- **Valid Values**: Any valid <frqudt\> child element
 
 ##### <frq_userdef_tag\></frq_userdef_tag\>
 
-Defines a single tag for the job as related to the frequency. The tag
-name can be new or an existing tag. An unlimited number of
-<frq_userdef_tag\> elements are allowed within the <frq\> parent
-element.
+Defines a single tag for the job as related to the frequency. Can be new or existing. Unlimited per <frq\>.
 
-**Requirements**: Required for <frqudt\>
-
-**EM field labels**: Tag
-
-**Valid Values**: Alpha and numeric characters, - (dash) and \--\_
-(underscore) characters, and spaces.
-
-- Any number of <frq_userdef_tag\> elements can be defined to specify
-    multiple tags.
+- **Requirements**: Required for <frqudt\>
+- **EM field labels**: Tag
+- **Valid Values**: Alphanumeric characters, dash (-), underscore (_), and spaces. Multiple elements allowed
 
 #### Retry on Failure Element Definitions
 
 ##### <autorestartintvl\></autorestartintvl\>
 
-The <autorestartintvl\> element defines the number of minutes between
-attempts.
+Defines the number of minutes between retry attempts.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Minutes Between Attempts
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 1440. If omitted and the autorestartmax element exists,
-    the data defaults to 0.
+- **Valid Values**: Integer 0–1440. Defaults to 0 if <autorestartmax\> exists
 
 ##### <autorestartmax\></autorestartmax\>
 
-The <autorestartmax\> element defines the maximum attempts for retrying
-on failure.
+Defines the maximum retry attempts on failure.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Maximum Attempts
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 1 to 999. If omitted and the <autorestartintvl\> element
-    exists, the data defaults to 1.
+- **Valid Values**: Integer 1–999. Defaults to 1 if <autorestartintvl\> exists
 
 #### Job Recurrence Element Definitions
 
 ##### <recur_actn_onoverlap\></recur_actn_onoverlap\>
 
-The <recur_actn_onoverlap\> element defines what happens if a previous
-job run time overlaps the next scheduled start time. Only one instance
-is allowed.
+Defines what happens when a previous job run overlaps the next scheduled start time. One instance allowed.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Action on Overlap of Job Recurrence
-- **Valid Values**: Valid data options for this element are Start on
-    Completion and Skip. If omitted, the data defaults to Start on
-    Completion.
+- **Valid Values**: Start on Completion or Skip. Defaults to Start on Completion
 
 ##### <recur_start_time\></recur_start_time\>
 
-The <recur_start_time\> element defines the restart times in days,
-hours, and minutes. Multiple instances are allowed.
+Defines restart times in days, hours, and minutes. Multiple instances allowed.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Recurring Instance Time(s)
-- **Valid Values**: Valid data for this element is in the format of
-    hh:mm where hh is an integer from 00 through 99 and where mm is an
-    integer ranging from 00 to 59.
+- **Valid Values**: hh:mm format; hh from 00–99, mm from 00–59
 
 ##### <recur_ss_intvl\></recur_ss_intvl\>
 
-The <recur_ss_intvl\> element defines the interval of minutes from
-start to start between occurrences. This element or <recur_es_intvl\> must be specified if <recur_lrt\> and/or
-<recur_nbrruns\> exist.
+Defines the interval in minutes from start to start between occurrences. Either this element or <recur_es_intvl\> is required if <recur_lrt\> or <recur_nbrruns\> exist.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Minutes from Start to Start
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 1440.
+- **Valid Values**: Integer 0–1440
 
 ##### <recur_es_intvl\></recur_es_intvl\>
 
-The <recur_es_intvl\> element defines the interval of minutes from end
-to start between occurrences. This element or <recur_ss_intvl\> must be specified if <recur_lrt\> and/or <recur_nbrruns\> exist.
+Defines the interval in minutes from end to start between occurrences. Either this element or <recur_ss_intvl\> is required if <recur_lrt\> or <recur_nbrruns\> exist.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Minutes from End to Start
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 0 to 1440.
+- **Valid Values**: Integer 0–1440
 
 ##### <recur_lrt\></recur_lrt\>
 
-The <recur_lrt\> element defines the latest offset start time for
-restarting in the job recurrence pattern. This element and/or
-<recur_nbrruns\> must be specified if either <recur_ss_intvl\> or
-<recur_es_intvl\> exists.
+Defines the latest offset start time for restarting in the job recurrence pattern. Either this element or <recur_nbrruns\> is required if <recur_ss_intvl\> or <recur_es_intvl\> exists.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Latest Run Time
-- **Valid Values**: Valid data for this element is a time ranging from
-    00:00 to 99:59.
+- **Valid Values**: Time from 00:00 to 99:59
 
 ##### <recur_nbrruns\></recur_nbrruns\>
 
-The <recur_nbrruns\> element defines the total number of runs for the
-parent <job\> in a job recurrence pattern. This element and/or
-<recur_lrt\> must be specified if either <recur_ss_intvl\> or
-<recur_es_intvl\> exists.
+Defines the total number of runs in a job recurrence pattern. Either this element or <recur_lrt\> is required if <recur_ss_intvl\> or <recur_es_intvl\> exists.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types. Also optional for <job\> on the new
-    daily message type.
+- **Requirements**: Optional for new_master and new_frequency. Optional for <job\> on new_daily
 - **EM field label**: Number of Runs
-- **Valid Values**: Valid data for this element is an integer ranging
-    from 2 to 999.
+- **Valid Values**: Integer 2–999
 
 #### Frequency Details Element Definitions
 
 ##### <fgrp\></fgrp\>
 
-The <fgrp\> element assigns a frequency group to the parent <frq\>.
+Assigns a frequency group to the parent <frq\>.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: When to Schedule
-- **Valid Values**: Valid data options for this element are On
-    Occurrence, Odd Weeks, Even Weeks, All Weeks, On Request, On Day,
-    Annual Plan, Beg of Period, Mid of Period, End of Period, and On
-    Intervals. If omitted, the value defaults to On Request.
+- **Valid Values**: On Occurrence, Odd Weeks, Even Weeks, All Weeks, On Request, On Day, Annual Plan, Beg of Period, Mid of Period, End of Period, or On Intervals. Defaults to On Request
 
 ##### <dow\></dow\>
 
-The <dow\> element defines the Days of the Week for the parent <frq\>
-with the <fgrp\> of On Occurrence, Odd Weeks, Even Weeks, All Weeks, or
-Mid of Period.
+Defines the Days of the Week for <fgrp\> values of On Occurrence, Odd Weeks, Even Weeks, All Weeks, or Mid of Period.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: Day of the Week
-- **Valid Values**: Valid data for this element is a seven-character
-    string of Ys and/or Ns indicating the days to include and to
-    exclude. The first character represents Sunday and the last
-    character represents Saturday.
+- **Valid Values**: Seven-character string of Ys and Ns. First character = Sunday, last = Saturday
 
 :::tip Example
-The <dow\> element would contain the following characters if Monday is the desired day: <dow\>NYNNNNN</dow\>.
+Monday only: `<dow>NYNNNNN</dow>`
 :::
 
 ##### <intvl\></intvl\>
 
-The <intvl\> element defines the 5 day intervals for the On Intervals
-<fgrp\>.
+Defines 5-day intervals for the On Intervals <fgrp\>. Not used if <rqdt\> and <intvl_offset\> are specified for On Intervals.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: On Intervals
-- **Valid Values**: Valid data for this element is a six-character
-    string of Ys and/or Ns indicating the day intervals to include and
-    to exclude. The first character represents the 5th, the second
-    character represents the 10th, and so forth with the last character
-    representing the 30th. If omitted, the data defaults to NNNNNN. If
-    using <rqdt\> and <intvl_offset\> for the On Intervals <fgrp\>,
-    do not specify the <intvl\> element.
+- **Valid Values**: Six-character string of Ys and Ns. Characters represent the 5th, 10th, 15th, 20th, 25th, and 30th. Defaults to NNNNNN
 
 :::tip Example
-The <intvl\> element would contain the following characters if scheduling for the 5th, 15th, and 30th: <intvl\>YNYNNY</intvl\>.
+5th, 15th, and 30th: `<intvl>YNYNNY</intvl>`
 :::
 
 ##### <rqdt\></rqdt\>
 
-The <rqdt\> element defines the date for the On Request <fgrp\> or the
-Start Date for the offset intervals with the On Intervals <fgrp\>.
+Defines the date for On Request <fgrp\> or the Start Date for offset intervals with On Intervals <fgrp\>.
 
-- **Requirements**: Optional for <frq\>.
-- **EM field labels**:
-  - *Request Date* if 'When to Schedule' is specified as 'On
-        Request'
-  - On Intervals \>Start if 'When to Schedule' is specified as
-        'On Intervals'
-- **Valid Values**: Valid data for this element is a date in the
-    format recognized by the OpCon server's Regional Settings. To
-    enable the Every Year feature, use 1900 in the year position.
+- **Requirements**: Optional for <frq\>
+- **EM field labels**: Request Date (On Request) / On Intervals > Start (On Intervals)
+- **Valid Values**: Date in the OpCon server's Regional Settings format. Use 1900 in the year position to enable Every Year
 
 ##### <ofdays\></ofdays\>
 
-The <ofdays\> element defines the number of days to offset from an
-Annual Plan, Beg of Period, End of Period, or On Day.
+Defines the number of days to offset from an Annual Plan, Beg of Period, End of Period, or On Day.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: Offset Days
-- **Valid Values**: Valid data for this element depends on the
-    <fgrp\> specified. If omitted, the data defaults to 0.
-  - 1 to 31 is valid for a On Day.
-  - --15 to +15 is valid for a <fgrp\> of Annual Plan.
-  - --15 to +15 is valid for <fgrp\> of Beg of Period and End of
-        Period if the Period is set to Month, Quarter or Year.
-  - -4 to +4 is valid for <fgrp\> of Beg of Period and End of
-        Period if the Period is set to Week and the Schedule has a 5 day
-        week.
-  - -5 to +5 is valid for <fgrp\> of Beg of Period and End of
-        Period if the Period is set to Week and the Schedule has a 6 day
-        week.
-  - -6 to +6 is valid for <fgrp\> of Beg of Period and End of
-        Period if the Period is set to Week and the Schedule has a 7 day
-        week.
+- **Valid Values**: Depends on <fgrp\>; defaults to 0
+  - On Day: 1–31
+  - Annual Plan: -15 to +15
+  - Beg/End of Period (Month, Quarter, or Year): -15 to +15
+  - Beg/End of Period (Week, 5-day schedule): -4 to +4
+  - Beg/End of Period (Week, 6-day schedule): -5 to +5
+  - Beg/End of Period (Week, 7-day schedule): -6 to +6
 
 ##### <intvl_offset\></intvl_offset\>
 
-Defines the number of days for the interval when the <fgrp\> is On
-Intervals and there is also a <rqdt\> element defined.
+Defines the number of days for the interval when <fgrp\> is On Intervals and <rqdt\> is also specified.
 
-- **Requirements**: Required for <fgrp\> of On Intervals with the
-    <rqdt\> element specified.
-- **EM field labels**: Every (\#Days) and Start (field to indicate
-    start date)
-- **Valid Values**: Valid values range from 1 to 32767.
+- **Requirements**: Required for On Intervals <fgrp\> with <rqdt\> specified
+- **EM field labels**: Every (#Days) and Start (start date field)
+- **Valid Values**: 1–32767
 
 ##### <dtype\></dtype\>
 
-The <dtype\> element indicates the Day Type for all <fgrp\> options
-except On Request, and Annual Plan.
+Indicates the Day Type for all <fgrp\> options except On Request and Annual Plan.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: Day Type
-- **Valid Values**: Valid data options for this element are Working
-    and Any.
+- **Valid Values**: Working or Any
 
 ##### <occn\></occn\>
 
-The <occn\> element defines the occurrence for the On Occurrence
-<fgrp\>.
+Defines the occurrence for the On Occurrence <fgrp\>.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: On Occurrence
-- **Valid Values**: Valid data options for this element are the
-    ordinal numbers 1st, 2nd, 3rd, 4th, 5th, and Last.
+- **Valid Values**: 1st, 2nd, 3rd, 4th, 5th, or Last
 
 ##### <period\></period\>
 
-The <period\> element defines the period for the End of Period, Mid of
-Period, Beg of Period, or On Occurrence <fgrp\>s.
+Defines the period for End of Period, Mid of Period, Beg of Period, or On Occurrence <fgrp\>s.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: Periods
-- **Valid Values**: Valid data options for this element are Week,
-    Month, Quarter, and Year. If omitted, the data defaults to Month.
-    The "Week" option is only valid with the Beg of Period and End of
-    Period values for <fgrp\>.
+- **Valid Values**: Week, Month, Quarter, or Year. Defaults to Month. "Week" is only valid with Beg of Period and End of Period
 
 ##### <cname\></cname\>
 
-The <cname\> element defines the name of the Calendar applied to the
-parent <frq\>.
+Defines the name of the Calendar applied to the parent <frq\>.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: Calendar
-- **Valid Values**: Valid data for this element is an existing
-    user-defined calendar in the OpCon
-    database.
+- **Valid Values**: An existing user-defined calendar in OpCon
 
 ##### <aobn\></aobn\>
 
-The <aobn\> element defines when the job should be scheduled if the
-schedule date falls on a Non-Working Day.
+Defines when the job should be scheduled if the schedule date falls on a Non-Working Day.
 
-- **Requirements**: Optional for <frq\>.
+- **Requirements**: Optional for <frq\>
 - **EM field label**: A/O/B/N
-- **Valid Values**: Valid data options for this element are After
-    Date, On Date, Before Date, and Not Schedule.
+- **Valid Values**: After Date, On Date, Before Date, or Not Schedule
 
 #### Advanced Frequency Elements
 
 ##### <begin\></begin\>
 
-The <begin\> element defines the date on which to begin scheduling the
-job for the parent <frq\>.
+Defines the date on which to begin scheduling the job.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types.
+- **Requirements**: Optional for new_master and new_frequency
 - **EM field label**: Start Scheduling on
-- **Valid Values**: Valid data for this element is a complete date
-    with day, month, and year in any valid regional format for the
-    OpCon SQL Server.
+- **Valid Values**: Complete date (day, month, year) in any valid regional format for the OpCon SQL Server
 
 ##### <end\></end\>
 
-The <end\> element defines the date on which to end scheduling the job
-for the parent <frq\>.
+Defines the date on which to end scheduling the job.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types.
+- **Requirements**: Optional for new_master and new_frequency
 - **EM field label**: End Scheduling on
-- **Valid Values**: Valid data for this element is a complete date
-    with day, month, and year in any valid regional format for the
-    OpCon SQL Server.
+- **Valid Values**: Complete date (day, month, year) in any valid regional format for the OpCon SQL Server
 
 ##### <include\></include\>
 
-The <include\> element defines a date to force the inclusion of a job
-despite all other frequency settings.
+Forces inclusion of a job on a specific date despite other frequency settings.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types.
+- **Requirements**: Optional for new_master and new_frequency
 - **EM field label**: Include in Schedule on
-- **Valid Values**: Valid data for this element is a complete date
-    with day, month, and year in any valid regional format for the
-    OpCon SQL Server.
+- **Valid Values**: Complete date (day, month, year) in any valid regional format for the OpCon SQL Server
 
 ##### <exclude\></exclude\>
 
-The <exclude\> element defines a date to force the exclusion of a job
-despite all other frequency settings.
+Forces exclusion of a job on a specific date despite other frequency settings.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types.
+- **Requirements**: Optional for new_master and new_frequency
 - **EM field label**: Exclude from Schedule on
-- **Valid Values**: Valid data for this element is a complete date
-    with day, month, and year in any valid regional format for the
-    OpCon SQL Server.
+- **Valid Values**: Complete date (day, month, year) in any valid regional format for the OpCon SQL Server
 
 ##### <excmo\></excmo\>
 
-The <excmo\> element defines a month to force the exclusion of a job
-despite all other frequency settings.
+Forces exclusion of a job during a specific month despite other frequency settings.
 
-- **Requirements**: Optional for <frq\> on new_master and
-    new_frequency message types.
+- **Requirements**: Optional for new_master and new_frequency
 - **EM field label**: Exclude Month from Schedule
-- **Valid Values**: Valid data for this element is the full name of a
-    month in English (e.g., January, February, etc.).
+- **Valid Values**: Full English month name (e.g., January, February, etc.)
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Requirements | Required for all messages | — | — |
+| Valid Values | Any valid DDI text | — | — |
+| EM field label | Name | 00:00 | Maximum 40 characters. One per <skdinfo\>.  #### <skdstart\> |
+| EM field labels | Define Property Values > The defined Property Value | — | — |
+## FAQs
+
+**Q: What is the required structure for every SMADDI input file?**
+
+Every SMADDI input file must contain at least one `<msg>` element with a `<msgtype>` child element identifying the transaction type. All other elements required for that message type must be nested within `<msg>`. SMADDI does not limit the number of `<msg>` elements per input file.
+
+**Q: What is the purpose of the `<msgtype>` element?**
+
+The `<msgtype>` element tells the SMADDI service which type of data is expected for the `<msg>` transaction, ensuring the correct child elements are included and the appropriate stored procedures are called. Only one `<msgtype>` is allowed per `<msg>`.
+
+**Q: Can SMADDI create schedule holiday calendars using add_caldate?**
+
+No. If the calendar name indicates a schedule holiday calendar (formatted as `HC:ScheduleName`), SMADDI cannot create it — it will not create that calendar type even if it does not exist. The `add_caldate` message can create other calendar types if they do not yet exist.
+
+## Glossary
+
+**SMADDI (SMA Dynamic Data Input)**: An optional OpCon component that dynamically updates the OpCon database using XML text files placed in monitored input directories. SMADDI uses a Windows service and stored procedures to validate and commit the data.
+
+**SMA Start Time Calculator**: Periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database to keep start time estimates current.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.

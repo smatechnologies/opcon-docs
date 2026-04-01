@@ -1,23 +1,47 @@
 ---
 lang: en-us
-title: Editing Scripts
 viewport: width=device-width, initial-scale=1.0
+title: Editing Scripts
+description: "Use this procedure to edit Scripts in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 #  Editing Scripts
 
-To edit a script:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-1.  Double-click on **Repository** under the **Scripts** topic. The
-    **Script Repository** screen displays.
-2.  Select the **script** you wish to edit.
-3.  Click the **Edit Script** button on the toolbar. The **Edit Script**
-    dialog displays.
-4.  Modify the script information: name, type, and/or description.
-5.  Click the **OK** button in the dialog.
-6.  Click **Close ☒** (to the right of the **Script Repository** tab) to
-    close the **Script Repository** screen.
+## What Is It?
+
+Use this procedure to edit Scripts in the Enterprise Manager.
+
+To edit a script, complete the following steps:
+
+1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+2.  Select the **script** to edit
+3.  Select **Edit Script** on the toolbar. The **Edit Script** dialog displays
+4.  Modify the name, type, and/or description
+5.  Select **OK** in the dialog
+6.  Select **Close ☒** to close the **Script Repository** screen
 :::
 
- 
+## FAQs
 
+**Q: Do edits to scripts take effect immediately?**
+
+Changes saved to scripts in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+
+## Glossary
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

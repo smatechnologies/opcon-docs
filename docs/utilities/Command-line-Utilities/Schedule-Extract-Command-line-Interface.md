@@ -46,14 +46,6 @@ command-line behavior in the Enterprise Manager preferences. For more
 information, refer to [Setting Preferences for Schedule Extract](../../Files/UI/Enterprise-Manager/Preferences-for-Schedule-Extract.md)
  in the **Enterprise Manager** online help.
 
-## When Would You Use It?
-
-- The EM is equipped with a command-line interface for Schedule Extract to
-
-## Why Would You Use It?
-
-- **Operational value**: Automate the extract of selected schedules
-
 ## Rules for Defining a Job for Schedule Extract
 
 You have to schedule the job on a Windows machine that has an agent and

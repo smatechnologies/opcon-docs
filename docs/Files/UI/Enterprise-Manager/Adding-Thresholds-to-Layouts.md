@@ -34,16 +34,6 @@ To add a threshold, complete the following steps:
 4. Select the **threshold**
 5. Select the **OK** button
 
-## When Would You Use It?
-
-- You need to add Thresholds to Layouts in Enterprise Manager
-- The environment is expanding and requires additional Thresholds to Layouts to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Thresholds to Layouts to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Thresholds to Layouts and when
-
 ## Add a Threshold Dependency
 
 Establish the dependency link using one of these methods:
@@ -84,10 +74,6 @@ The line thickens and becomes bold when selected.
 Refer to the [Delete a Dependency](Adding-Jobs-to-Schedule-Layouts.md#Delete_a_Dependency) procedure to delete threshold dependencies.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

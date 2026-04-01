@@ -30,14 +30,6 @@ Otto is exclusively available to cloud customers. Non-cloud customers will see t
 
 ![Chatbot](../../../../Resources/Images/SM/Otto/Otto-Non-Cloud-Users.png "Chatbot")
 
-## When Would You Use It?
-
-- You need to work with Otto, the AI chatbot available in Solution Manager, in OpCon
-
-## Why Would You Use It?
-
-- **Otto Chatbot**: Otto is the AI chatbot available in Solution Manager
-
 ## Data and Privacy
 
 Otto uses Azure OpenAI Services, which uses OpenAI's GPT-4o model to generate responses. The service is fully controlled by Microsoft and provides a secure, private environment for processing prompts.

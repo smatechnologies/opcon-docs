@@ -32,14 +32,6 @@ To disable or enable job starts for a machine, complete the following steps:
 4.  Select **Enable Job Starts** or **Disable Job Starts**
 5.  Select **Close ☒** to close the **Machines** screen
 
-## When Would You Use It?
-
-- You need to enable job starts for a machine: using To disable or
-
-## Why Would You Use It?
-
-- **Operational value**: Enable job starts for a machine:
-
 ## FAQs
 
 **Q: How many steps does the Disabling/Enabling Job Starts for Machines procedure involve?**

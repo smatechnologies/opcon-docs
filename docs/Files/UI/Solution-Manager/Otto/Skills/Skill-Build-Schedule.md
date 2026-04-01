@@ -24,14 +24,6 @@ doc_type: procedural
 
 The **Build Schedule** skill builds a schedule for a specified date, places it on hold or releases it, and optionally overwrites an existing build.
 
-## When Would You Use It?
-
-- The **Build Schedule** skill builds a schedule for a specified date, places it on hold or releases it, and optionally overwrites an existing build
-
-## Why Would You Use It?
-
-- **Build Schedule**: The **Build Schedule** skill builds a schedule for a specified date, places it on hold or releases it, and optionally overwrites an existing build
-
 ## Skill Details
 
 ### Parameters

@@ -34,16 +34,6 @@ To add a threshold, complete the following steps:
 6.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Thresholds** toolbar
 7.  Select **Close ☒** to close the **Thresholds** screen
 
-## When Would You Use It?
-
-- You need to add Thresholds in Enterprise Manager
-- The environment is expanding and requires additional Thresholds to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Thresholds to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Thresholds and when
-
 ## FAQs
 
 **Q: How do you save a new thresholds record?**

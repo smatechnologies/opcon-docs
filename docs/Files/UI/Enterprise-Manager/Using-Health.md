@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Health** link opens the **Vision Health** page in Solution Manager. For more information, refer to [Viewing Vision Health](../Solution-Manager/Viewing-Vision-Health.md) in the **Solution Manager** online help.
 
-## When Would You Use It?
-
-- The **Health** link opens the **Vision Health** page in Solution Manager
-
-## Why Would You Use It?
-
-- **Using Health**: The **Health** link opens the **Vision Health** page in Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

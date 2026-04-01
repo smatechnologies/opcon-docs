@@ -30,14 +30,6 @@ Access the **Profile** page from the [Navigation menu](SM-UI-Layout.md#Navigati)
 - [Settings](Configuring-Settings.md)
 - [Application Settings](Configuring-Application-Settings.md)
 
-## When Would You Use It?
-
-- You need to retrieve or review and Updating Profile Settings information from Solution Manager
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: Access the **Profile** page from the [Navigation menu](SM-UI-Layout.md#Navigati) to configure settings from one of these tabs:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

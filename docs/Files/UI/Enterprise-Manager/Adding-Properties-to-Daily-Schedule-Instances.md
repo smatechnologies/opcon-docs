@@ -34,16 +34,6 @@ To perform this procedure, complete the following steps:
 8. Repeat steps 6–7 to add additional properties
 9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar
 
-## When Would You Use It?
-
-- You need to add Properties to Daily Schedule Instances in Enterprise Manager
-- The environment is expanding and requires additional Properties to Daily Schedule Instances to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Properties to Daily Schedule Instances to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Properties to Daily Schedule Instances and when
-
 ## FAQs
 
 **Q: How do you save a new properties to daily schedule instances record?**

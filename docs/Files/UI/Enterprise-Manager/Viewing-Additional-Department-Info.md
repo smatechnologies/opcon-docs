@@ -29,21 +29,6 @@ To view Additional Department Information in the Enterprise Manager, complete th
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
 4.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the Department, then select **Close**
 
-## When Would You Use It?
-
-- You need to inspect or audit Additional Department Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Additional Department Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Additional Department Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Viewing Additional Department Information procedure involve?**

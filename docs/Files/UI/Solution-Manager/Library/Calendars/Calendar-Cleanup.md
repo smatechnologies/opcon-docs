@@ -24,14 +24,6 @@ doc_type: procedural
 
 Calendar cleanup deletes calendar dates older than 30 days. You can clean up all calendars or specific calendars.
 
-## When Would You Use It?
-
-- Calendar cleanup deletes calendar dates older than 30 days
-
-## Why Would You Use It?
-
-- **Calendar Cleanup**: Calendar cleanup deletes calendar dates older than 30 days
-
 ## Clean up all calendars
 
 To clean up all calendars, complete the following steps:

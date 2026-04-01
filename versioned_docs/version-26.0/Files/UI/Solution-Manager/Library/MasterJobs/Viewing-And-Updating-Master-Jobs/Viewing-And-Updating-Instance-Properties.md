@@ -1,16 +1,29 @@
+---
+title: Viewing and Updating Instance Properties
+description: "The Instance Properties panel in Master Job Definition displays instance properties for the job."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing and Updating Instance Properties
 
-The **Instance Properties** panel in **Master Job Definition** displays the
-Instance Properties relating to the job.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- The panel can be placed in **Full Screen** mode by simply clicking
-  the icon (![Full Screen Panel Icon     ](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon"))
-  to the far-right side of the panel bar. Escape **Full Screen** mode
-  by clicking on the icon again.
-- When the panel contains defined properties, a blue circular
-  indicator containing a number (![Job Properties     Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator"))
-  will appear to the right of the panel name to indicate the number of
-  properties that have been defined.
+## What Is It?
+
+The **Instance Properties** panel in **Master Job Definition** displays instance properties for the job.
+
+- Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
+- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
 
 ## Adding or Updating Instance Properties
 
@@ -21,10 +34,29 @@ Only those with the appropriate permissions will have access to the **Lock** but
 
 :::
 
-To perform this procedure:
+To perform this procedure, complete the following steps:
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to navigate to the master job definition page.
-2. Expand the **Instance Properties** panel to expose its content.
-3. Enter the changes to the existing **Instance Properties** and/or add new **Instance Properties** with the green plus icon button.
-4. Fill out the **Name** and **Value** columns.
-5. Click the **Save** button.
+1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
+2. Expand the **Instance Properties** panel to expose its content
+3. Enter changes to existing **Instance Properties** and/or add new ones with the green plus icon button
+4. Fill out the **Name** and **Value** columns
+5. Select the **Save** button
+
+
+## FAQs
+
+**Q: How many steps does the Viewing and Updating Instance Properties procedure involve?**
+
+The Viewing and Updating Instance Properties procedure involves 5 steps. Complete all steps in order and save your changes.
+
+**Q: What does Viewing and Updating Instance Properties cover?**
+
+This page covers Adding or Updating Instance Properties.
+
+## Glossary
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

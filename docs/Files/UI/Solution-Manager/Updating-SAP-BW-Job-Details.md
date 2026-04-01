@@ -36,15 +36,6 @@ If you do not have the Machine Privilege, you will not be able to edit the daily
 Changes made to job properties in the **Daily Job Definition** take place immediately. If the job has already run, changes take effect the next time the job runs.
 :::
 
-## When Would You Use It?
-
-- An existing SAP BW Job Details in Solution Manager requires changes
-- A process change or system update makes the current SAP BW Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating SAP BW Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating SAP BW Job Task Details
 
 To perform this procedure:

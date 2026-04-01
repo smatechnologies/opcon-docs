@@ -32,21 +32,6 @@ To add a department to job details, complete the following steps:
 6. Repeat Steps 3–5 for each job that needs the department applied
 7. Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- You need to add Departments to Job Details in Enterprise Manager
-- The environment is expanding and requires additional Departments to Job Details to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Departments to Job Details to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Departments to Job Details and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Where do you access Departments to Job Details in the Enterprise Manager?**

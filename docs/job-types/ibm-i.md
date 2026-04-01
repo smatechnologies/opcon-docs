@@ -33,14 +33,6 @@ The information in this section applies to defining an IBM i job. The text field
 The Start Job Request Message for the IBM i is a subset of the Submit Job Command available on the IBM i.
 :::
 
-## When Would You Use It?
-
-- The information in this section applies to defining an IBM i job
-
-## Why Would You Use It?
-
-- **IBM i**: The information in this section applies to defining an IBM i job
-
 ## Job Information
 
 :::note

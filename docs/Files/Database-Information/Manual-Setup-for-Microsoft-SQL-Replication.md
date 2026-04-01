@@ -26,14 +26,6 @@ Database replication improves SQL Server database availability using three roles
 
 This topic assumes the publisher and subscriber are distinct SQL Server instances on separate machines. The distributor may be on its own instance or share an instance with either the publisher or subscriber.
 
-## When Would You Use It?
-
-- Database replication improves SQL Server database availability using three roles: publisher, distributor, and subscriber
-
-## Why Would You Use It?
-
-- **Operational value**: Improves SQL Server database availability using three roles: publisher, distributor, and
-
 ## Requirements
 
 Verify the following before attempting transactional replication on the Publishing OpCon Database Server:

@@ -26,14 +26,6 @@ PERT View in Solution Manager
 
 ![PERT View in Solution Manager](../../../Resources/Images/SM/PERT-View.png "PERT View in Solution Manager")
 
-## When Would You Use It?
-
-- PERT functionality renders on-demand diagrams that show job dependency relationships
-
-## Why Would You Use It?
-
-- **Using PERT**: PERT functionality renders on-demand diagrams that show job dependency relationships
-
 ## PERT View Tips
 
 - Use the **Refresh** button to update the PERT representation

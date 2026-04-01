@@ -61,21 +61,6 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 8. Select **Reset** to restore original parameters, or select **Finish** to save changes. Select **Cancel** to discard changes
 9. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- You need to add Schedule Completion Events in Enterprise Manager
-- The environment is expanding and requires additional Schedule Completion Events to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Schedule Completion Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Schedule Completion Events and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How do you save a new schedule completion events record?**

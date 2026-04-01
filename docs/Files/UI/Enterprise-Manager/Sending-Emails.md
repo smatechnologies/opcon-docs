@@ -66,14 +66,6 @@ To add, edit, or remove attachments from the email notification, complete the fo
 5. To edit an attachment, select the item in **Attachments**, select the **Edit** button, enter changes, then select **OK**
 6. To delete an attachment, select the item in **Attachments**, then select the **Remove** button
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining an SMTP email notification: using The **Email** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining an SMTP email notification: - To (Required): O
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

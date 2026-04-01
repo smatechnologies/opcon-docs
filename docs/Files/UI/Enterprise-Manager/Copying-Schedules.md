@@ -36,20 +36,6 @@ To copy a schedule, complete the following steps:
 8.  Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 :::
 
-## When Would You Use It?
-
-- An existing Schedules definition needs to be duplicated in Enterprise Manager
-- A new Schedules with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Schedules eliminates redundant data entry and ensures the new definition inherits proven settings
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Why would you copy schedules instead of creating a new one?**

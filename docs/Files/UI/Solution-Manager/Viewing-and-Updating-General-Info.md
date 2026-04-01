@@ -32,16 +32,6 @@ The **Daily Job Definition** page displays general job details at the top:
 
 Read-only properties cannot be changed. Department, access code, and tags can be updated in **Admin** mode.
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating General Info records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating General Info state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating General Info records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Updating General Information
 
 :::note
@@ -99,10 +89,6 @@ For conceptual information, refer to [Tags](../../../job-components/tags.md) in 
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

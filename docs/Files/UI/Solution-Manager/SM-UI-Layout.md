@@ -25,14 +25,6 @@ Once logged in, you will see the **Home** page from the desktop layout.
 
 ![Solution Manager Home Page](../../../Resources/Images/SM/Home-Page.png "Solution Manager Home Page")
 
-## When Would You Use It?
-
-- Once logged in, you will see the **Home** page from the desktop layout
-
-## Why Would You Use It?
-
-- **Understanding the**: Once logged in, you will see the **Home** page from the desktop layout
-
 ## Navigation Menu
 
 The **Navigation menu** is located to the left of the page. It allows you to log out, navigate through the available Solution(s), and update your OpCon user profile. In desktop mode, toggle the menu by selecting the menu display button (![Menu Display Button](../../../Resources/Images/SM/Menu-Display-Button2.png "Menu Display Button")) at the top of the page.

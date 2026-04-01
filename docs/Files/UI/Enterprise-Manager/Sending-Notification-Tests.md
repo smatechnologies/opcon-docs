@@ -38,14 +38,6 @@ c. Select the **Test** button.
 If the notification has "default information," the Event Trigger value will be set to Test Notification.
 :::
 
-## When Would You Use It?
-
-- To send a notification test:
-
-## Why Would You Use It?
-
-- **Sending Notification**: To send a notification test:
-
 ## FAQs
 
 **Q: How many steps does the Sending Notification Tests procedure involve?**

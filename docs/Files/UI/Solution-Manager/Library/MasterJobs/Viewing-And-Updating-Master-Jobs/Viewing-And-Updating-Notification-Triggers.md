@@ -25,16 +25,6 @@ The **Notification Triggers** panel in **Master Job Definition** displays notifi
 - Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
 - A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Notification Triggers records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Notification Triggers state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Notification Triggers records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Adding or Updating Notification Triggers
 
 **Notification Triggers** can be modified in the Notification Triggers page.
@@ -49,10 +39,6 @@ To perform this procedure, complete the following steps:
 2. Expand the **Notification Triggers** panel to expose its content
 3. Select the (![Manage Notification Triggers](../../../../../../Resources/Images/SM/Library/MasterJobs/manage-notification-triggers.png "Manage Notification Triggers Button")) button to Go to the Notification Triggers page
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

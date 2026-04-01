@@ -36,21 +36,6 @@ To edit a frequency definition, complete the following steps:
 6.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to
     close the **Frequency Manager** screen.
 
-## When Would You Use It?
-
-- An existing Frequency Definitions in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Frequency Definitions definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Frequency Definitions in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Frequency Definitions are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to frequency definitions take effect immediately?**

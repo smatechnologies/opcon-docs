@@ -40,21 +40,6 @@ The **Admin Mode** button is only visible to users in the «ocadm» role or a ro
 For more on Function Privileges pertaining to Vision, refer to [Function Privileges](../../../administration/privileges.md#function-privileges) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- A Admin Mode Editing feature needs to be turned on in Solution Manager
-- A scheduled change window or operational event requires activating Admin Mode Editing in a controlled manner
-
-## Why Would You Use It?
-
-- **Activate required functionality**: Enabling Admin Mode Editing activates the feature for the intended scope without affecting other parts of the system
-- The change is recorded in the OpCon audit log, documenting when the Admin Mode Editing was activated and by whom
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What is the purpose of enabling admin mode editing?**

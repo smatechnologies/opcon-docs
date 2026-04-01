@@ -36,14 +36,6 @@ To show duplicate frequency names, complete the following steps:
 8. Select **Close ☒** to close the **Frequency Manager** screen
 :::
 
-## When Would You Use It?
-
-- To show duplicate frequency names:
-
-## Why Would You Use It?
-
-- **Showing Duplicate**: To show duplicate frequency names:
-
 ## FAQs
 
 **Q: How many steps does the Showing Duplicate Frequency Names Only procedure involve?**

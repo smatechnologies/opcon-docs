@@ -33,14 +33,6 @@ The following fields apply to all calendars:
 - **Schedules using for holidays (\#)**: Schedules using this calendar to define holidays in addition to the schedule's default Holiday Calendar (HC). The number indicates the total count
 - **Schedules/Jobs/Frequencies Using this Calendar (\#)**: Each schedule, job, and frequency using the calendar
 
-## When Would You Use It?
-
-- OpCon supports two types of calendars for flexible scheduling around holidays and non-working days
-
-## Why Would You Use It?
-
-- **Calendars**: OpCon supports two types of calendars for flexible scheduling around holidays and non-working days
-
 ## Holiday Calendars
 
 When a [Job and Schedule Frequencies](../automation-concepts/frequencies.md) uses working days to determine included days, non-working days come from associated Holiday Calendars.

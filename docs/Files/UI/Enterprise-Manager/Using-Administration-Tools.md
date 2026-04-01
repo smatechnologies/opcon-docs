@@ -54,14 +54,6 @@ The Administration tools perform the functions listed below, depending on the sp
 ||Take Screenshot: In the Workflow Designer, captures and saves an image of the current layout.|
 ||Zoom: In the Workflow Designer, the zoom percentage list sets the display size of objects.|
 
-## When Would You Use It?
-
-- The Administration tools perform the functions listed below, depending on the specific [editor](Navigation-Editors.md) or [view](Navigation-Views.md) in which you are working
-
-## Why Would You Use It?
-
-- **Operational value**: Allows editing of the resource value currently in use
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

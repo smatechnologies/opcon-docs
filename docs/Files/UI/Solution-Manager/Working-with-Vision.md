@@ -26,14 +26,6 @@ view the health of cards based on their historical completion.
 
 ![Solution Manager Vision Home Page](../../../Resources/Images/SM/Vision-Home-Page.png "Solution Manager Vision Home Page")
 
-## When Would You Use It?
-
-- You need to allows you to define cards using Vision is an SMA Solution Manager module that
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define cards that show a summary of the status of all jobs with a matchin
-
 ## Vision Live
 
 The Vision Live page allows you to view cards and their statuses. For

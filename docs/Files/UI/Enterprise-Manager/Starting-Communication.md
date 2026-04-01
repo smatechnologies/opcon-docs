@@ -34,14 +34,6 @@ To perform this procedure, complete the following steps:
 
  
 
-## When Would You Use It?
-
-- If the agent is not in a started state, the status can be changed to 'started'
-
-## Why Would You Use It?
-
-- **Starting Communication**: If the agent is not in a started state, the status can be changed to 'started'
-
 ## FAQs
 
 **Q: How many steps does the Starting Communication procedure involve?**

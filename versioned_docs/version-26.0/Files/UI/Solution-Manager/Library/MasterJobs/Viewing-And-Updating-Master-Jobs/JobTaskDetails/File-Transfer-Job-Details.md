@@ -1,32 +1,56 @@
+---
+title: Viewing, Adding, and Editing File Transfer Job Details
+description: "File Transfer job details define how OpCon moves files between machines using the SMA File Transfer service, including source, destination, and overwrite settings."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing, Adding, and Editing File Transfer Job Details
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+File Transfer job details define how OpCon moves files between machines using the SMA File Transfer service, including source and destination settings, transfer mode, and overwrite behavior. These details are configured in the Task Details panel of a File Transfer master job in Solution Manager.
 
 To view, add, or edit a File Transfer job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
 ## Viewing File Transfer Job Details
 
-1. To view a Unix job, go to **Library** > **Master Jobs**.
-1. Select a File Transfer job in the list.
-1. Select **Edit**.
-1. Expand the **Task Details** panel to expose its content.
+1. Go to **Library** > **Master Jobs**
+1. Select a File Transfer job in the list
+1. Select **Edit**
+1. Expand the **Task Details** panel
 
 ---
 
 ## Adding File Transfer Job Details
 
-1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md).
-1. Expand the **Task Details** section. See [File Transfer Job Details](#File-Transfer-Job-Details) for details.
+To add File Transfer Job Details, complete the following steps:
+
+1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md)
+1. Expand the **Task Details** section. See [File Transfer Job Details](#File-Transfer-Job-Details) for details
 
 ---
 
 ## Editing File Transfer Job Details
 
-1. To edit File Transfer job details, go to **Library** > **Master Jobs**.
-1. Select a File Transfer job.
-1. Select **Edit**.
-1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button'))
-   when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button'))
-   when in **Admin** mode.
-1. Expand the **Task Details** panel. See [File Transfer Job Details](#File-Transfer-Job-Details) for details.
+To edit File Transfer Job Details, complete the following steps:
+
+1. Go to **Library** > **Master Jobs**
+1. Select a File Transfer job
+1. Select **Edit**
+1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button')) when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button')) when in **Admin** mode
+1. Expand the **Task Details** panel. See [File Transfer Job Details](#File-Transfer-Job-Details) for details
 
 ---
 
@@ -37,9 +61,6 @@ All required fields are designated by a red asterisk.
 :::
 
 **In the Source frame:**
-
-The **Source** frame is used to define the information for the source
-file.
 
 Select the **machine** with the source file to transfer.
 
@@ -54,20 +75,14 @@ Enter the _full path and file name_ for the **file** to transfer.
 Select the **data type** of the file on the source machine:
 
 :::note
-If anything other than Binary is defined as the Source Data Type, the integrity of the file is maintained but the file structure will likely be altered. This is done in an effort to present the transferred file in a user-friendly structure for the given platform.
+If anything other than Binary is defined as the Source Data Type, the file integrity is maintained but the file structure will likely be altered to present the file in a user-friendly structure for the given platform.
 :::
 
-- **Text**: Indicates that the SMA File Transfer Agent and Server
-  should use the default text data type for the platform when working
-  with the file.
-- **ASCII**: Indicates the file is a simple text file in ASCII format.
-- **Binary**: Indicates the file's structure should be left intact
-  during the transfer process.
+- **Text**: Uses the default text data type for the platform
+- **ASCII**: Indicates the file is a simple text file in ASCII format
+- **Binary**: Leaves the file's structure intact during transfer
 
 **In the Destination frame:**
-
-The **Destination** frame is used to define the information for the
-destination file.
 
 Select the **machine** that will receive the file.
 
@@ -75,119 +90,116 @@ Select the **machine** that will receive the file.
 The destination machine must be Windows or UNIX.
 :::
 
-Select the **user** with access to the location on the Destination
-machine that will receive the file.
+Select the **user** with access to the destination location on the Destination machine.
 
 Enter the _full path and file name_ for the destination **file**.
 
-Select the final **data type** of the file that will be transferred to
-the destination machine:
+Select the final **data type** for the transferred file:
 
-- **Text**: Indicates that the SMA File Transfer Agent and Server
-  should use the default text data type for the platform when working
-  with the file.
-- **ASCII**: Indicates the file should be written to the Destination
-  Machine as a simple text file in ASCII format.
-- **Binary**: Indicates the file's structure should be left intact
-  during the transfer process.
+- **Text**: Uses the default text data type for the platform
+- **ASCII**: Writes the file to the Destination Machine as a simple text file in ASCII format
+- **Binary**: Leaves the file's structure intact during transfer
 
 **In the Options frame:**
 
-The **Options** frame is used to define the additional information for
-the file transfer
+Select the **If File Exists** option to determine how the SMAFT Agent behaves when a target file exists:
 
-Select the **If File Exists** option to determine how the SMA File
-Transfer (SMAFT) Agent behaves when a target file exists:
+- **Do Not Overwrite**: Checks for the file's existence on the destination before starting the transfer
+- **Overwrite**: Transfers the file, overwriting any existing file on the destination
+- **Backup Then Overwrite**: Checks for the file's existence on the destination, then overwrites
+- **Append**: Appends the source file to the destination file
+- **Backup Then Append**: Checks for the file's existence on the destination, then appends
 
-- **Do Not Overwrite**: Indicates the SMAFT Agent checks for the
-  existence of the file on the destination machine before starting the
-  transfer.
-- **Overwrite**: Indicates the SMAFT Agent transfers the file while
-  overwriting any existing file on the destination machine.
-- **Backup Then Overwrite**: Indicates the SMAFT Agent checks for the
-  existence of the file on the destination machine before starting
-  transfer.
-- **Append**: Indicates the SMAFT Agent will append the source file to
-  the destination file.
-- **Backup Then Append**: Indicates the SMAFT Agent checks for
-  existence of the file on the destination machine before starting
-  transfer.
+Select the **Delete Source File** option (Windows agent only; other platforms will follow):
 
-Select the **Delete Source File** option to determine if the deletion of
-the Source File is disabled, required, or preferred (only the Windows
-agent supports this feature at this time (other platforms will follow)):
+- **No**: Source File is not deleted after successful transfer
+- **Required**: SMAFT job fails if the Source File is not deleted after successful transfer
+- **Preferred**: Deletion of the Source File is attempted after successful transfer
 
-- **No**: Indicates the Source File will not be deleted upon
-  successful completion of the file transfer.
-- **Required**: Indicates the SMAFT job will fail if the Source file
-  is not deleted upon successful completion of the file transfer.
-- **Preferred**: Indicates the deletion of the Source File is
-  attempted upon successful completion of the file transfer.
+Select the **Start Transfer On** option:
 
-Select the **Start Transfer On** option to determine where the job will
-start.
+- **Source**: Starts the job on the Source machine
+- **Destination**: Starts the job on the Destination machine
 
-- The valid options include:
-  - **Source**: Choose this option to start the job on the Source
-    machine.
-  - **Destination**: Choose this option to start the job on the
-    Destination machine.
+Select the **Maximum Transfer Rate (kbits/s)** option. Valid values: 64, 128, 256, 512, 1024, 2048, and \>2048 kbits/second.
 
-Select the **Maximum Transfer Rate (kbits/s)** option to define the
-transfer rate for the job. Valid values include 64, 128, 256, 512, 1024,
-2048, and \>2048 kbits/second.
+Select the **Compression** option. Supported types: tar, gzip, and zip.
 
-Select the **Compression** option to determine if compression is
-disabled, required, or preferred. Supported compression types are tar,
-gzip, and zip:
-
-- **None**: Indicates the transfer does not use compression.
-- **Required**: Indicates the transfer job fails if compression does
-  not occur.
-- **Preferred**: Indicates compression is attempted during the
-  transfer.
+- **None**: Transfer does not use compression
+- **Required**: Transfer job fails if compression does not occur
+- **Preferred**: Compression is attempted during the transfer
 
 :::caution
-Both the agent and the server must both support the same compression type for compression to succeed.
+Both the agent and the server must support the same compression type for compression to succeed.
 :::
 
-Select the **Encryption** option to determine if encryption is disabled,
-required, or preferred. Supported encryption types are 3DES, AES, and
-DES:
+Select the **Encryption** option. Supported types: 3DES, AES, and DES.
 
-- **None**: Indicates the transfer does not use encryption.
-- **Required**: Indicates the job fails if encryption does not occur.
-- **Preferred**: Indicates encryption is attempted during the
-  transfer.
+- **None**: Transfer does not use encryption
+- **Required**: Job fails if encryption does not occur
+- **Preferred**: Encryption is attempted during the transfer
 
 :::caution
-Both the agent and the server must both support the same encryption type for the encryption to succeed.
+Both the agent and the server must support the same encryption type for encryption to succeed.
 :::
 
-Select the **TLS Security Override** option to determine if TLS Security
-for file transfers is disabled, required, or preferred:
+Select the **TLS Security Override** option:
 
-- **None**: Indicates that TLS Security should not be used by the SMAFT Agent when connecting to the SMAFT Server.
-- **Required**: Indicates that the SMAFT Agent **must** use TLS Security; otherwise, the job will be failed.
-- **Preferred** (Default): Indicates that the OpCon job request
-  assembly routine uses the SMAFT Server Port numbers and the SMAFT
-  Server/Agent TLS Capability flags to decide what value to send in
-  the TLS Security Mode field.
+- **None**: TLS Security is not used by the SMAFT Agent when connecting to the SMAFT Server
+- **Required**: The SMAFT Agent must use TLS Security; otherwise, the job fails
+- **Preferred** (Default): The OpCon job request assembly routine uses the SMAFT Server Port numbers and the SMAFT Server/Agent TLS Capability flags to determine the TLS Security Mode value
 
 **In the Failure Criteria frame:**
 
-The **Failure Criteria** frame is used to define the criteria for
-OpCon to determine the final status of the
-primary job.
-
-Select the **Fails if preferred settings not satisfied** checkbox to
-determine if the job should fail when the file transfer itself succeeds,
-but the transfer did not comply with the preferred settings for Delete
-Source File, Compression, and Encryption.
+Select the **Fails if preferred settings not satisfied** option to fail the job when the file transfer succeeds but did not comply with the preferred settings for Delete Source File, Compression, and Encryption.
 
 ---
 
 ## More Information
 
-For conceptual information, refer to [File Transfer Jobs](../../../../../../../job-types/file-transfer.md) in
-the **Concepts** online help.
+For conceptual information, refer to [File Transfer Jobs](../../../../../../../job-types/file-transfer.md) in the **Concepts** online help.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Text | Uses the default text data type for the platform | — | — |
+| ASCII | Indicates the file is a simple text file in ASCII format | — | must be Windows or UNIX. |
+| Binary | Leaves the file's structure intact during transfer | — | must be Windows or UNIX. ::: |
+| Do Not Overwrite | Checks for the file's existence on the destination before starting the transfer | — | — |
+| Overwrite | Transfers the file, overwriting any existing file on the destination | — | — |
+| Backup Then Overwrite | Checks for the file's existence on the destination, then overwrites | — | — |
+| Append | Appends the source file to the destination file | — | — |
+| Backup Then Append | Checks for the file's existence on the destination, then appends | — | — |
+| Required | SMAFT job fails if the Source File is not deleted after successful transfer | — | Valid values: 64, 128, 256, 512, 1024, 2048, and \>2048 kbits/second. |
+| Preferred | Deletion of the Source File is attempted after successful transfer | — | Valid values: 64, 128, 256, 512, 1024, 2048, and \>2048 kbits/second. |
+| Source | Starts the job on the Source machine | — | Valid values: 64, 128, 256, 512, 1024, 2048, and \>2048 kbits/second.  Select the **Compression** option. Supporte |
+| Destination | Starts the job on the Destination machine | — | Valid values: 64, 128, 256, 512, 1024, 2048, and \>2048 kbits/second.  Select the **Compression** option. Supporte |
+| None | Transfer does not use compression | — | — |
+## FAQs
+
+**Q: How many steps does the Viewing, Adding, and Editing File Transfer Job Details procedure involve?**
+
+The Viewing, Adding, and Editing File Transfer Job Details procedure involves 11 steps. Complete all steps in order and save your changes.
+
+**Q: What does Viewing, Adding, and Editing File Transfer Job Details cover?**
+
+This page covers Viewing File Transfer Job Details, Adding File Transfer Job Details, Editing File Transfer Job Details.
+
+**Q: What happens to a file's structure when a data type other than Binary is used in a file transfer?**
+
+If anything other than Binary is defined as the Source Data Type, file integrity is maintained but the file's structure will likely be altered during the transfer.
+
+## Glossary
+
+**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

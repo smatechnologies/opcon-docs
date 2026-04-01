@@ -40,14 +40,6 @@ _Column menu showing the Filter option_
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Schedule and Job History Report** is used to view schedule and job history information
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: The **Schedule and Job History Report** is used to view schedule and job history information
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

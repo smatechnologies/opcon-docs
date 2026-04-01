@@ -65,14 +65,6 @@ Job execution history can also be accessed in PERT View. For more information, r
 - [Accessing Job Summary](Accessing-Job-Summary.md)
 - [Using PERT View](Using-PERT-View.md)
 
-## When Would You Use It?
-
-- You need to retrieve or review Job Executions History information from Solution Manager
-
-## Why Would You Use It?
-
-- **Accessing Job**: In the **Operations** module, you can access all iterations (executions history) of a job and view job output from past executions
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

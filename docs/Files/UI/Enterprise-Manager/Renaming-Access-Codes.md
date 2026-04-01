@@ -32,14 +32,6 @@ To rename an access code, complete the following steps:
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Access Codes** toolbar
 5. Select **Close ☒** (to the right of the **Access Codes** tab) to close the **Access Codes** screen
 
-## When Would You Use It?
-
-- To rename an access code:
-
-## Why Would You Use It?
-
-- **Renaming Access**: To rename an access code:
-
 ## FAQs
 
 **Q: How many steps does the Renaming Access Codes procedure involve?**

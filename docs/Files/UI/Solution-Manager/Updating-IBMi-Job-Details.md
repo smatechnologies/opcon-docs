@@ -46,15 +46,6 @@ Without the Machine Privilege, you cannot edit the daily job definition.
 Changes made in **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time the job runs.
 :::
 
-## When Would You Use It?
-
-- An existing IBM i Job Details in Solution Manager requires changes
-- A process change or system update makes the current IBM i Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating IBM i Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating IBM i Job Task Details
 
 To perform this procedure:

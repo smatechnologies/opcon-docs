@@ -1,96 +1,98 @@
+---
+title: Managing Schedules
+description: "The Schedule Build dialog generates schedule builds manually for selected schedules for a specified day or series of days."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Managing Schedules
 
-The **Schedule Build** dialog gives you the ability to generate schedule
-builds manually for selected schedules for a specified day or series of
-days. For conceptual information on building daily schedules, refer to
-[Building Daily Schedules](../../../operations/building-schedules.md)
- in the **Concepts** online help.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Schedule Build** dialog generates schedule builds manually for selected schedules for a specified day or series of days. For conceptual information, refer to [Building Daily Schedules](../../../operations/building-schedules.md) in the **Concepts** online help.
 
 :::note
-For you to use the build functionality in the Schedule Build dialog, you must have all the appropriate privileges. For additional information, refer to [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges) in the **Concepts** online help.
+You must have all appropriate privileges to use the build functionality. For additional information, refer to [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges) in the **Concepts** online help.
 :::
 
-The **Schedule Build** dialog contains a list of schedules to build and
-the build results information.
+The **Schedule Build** dialog contains a list of schedules to build and the build results information.
 
 ## Building Daily Schedules
 
 To build a daily schedule:
 
-Double-click on **Schedule Build** under the **Operation** topic. The
-**Build Schedules** dialog displays.
-
-Select the **schedule(s)** in the **Schedule Selection** list.
-Alternatively, in the **Schedule Selection** text box, you can type *the
-first few letters or numbers* for the schedule to find and then select
-the **specific schedule**. You could also select the **Show schedules
-with auto-build** option or **Show schedules without auto-build**
-option.
-
-In the Start text box in the Scheduling Dates frame:
-
-Enter the *Start date* requested for the build of the schedule.
-Alternatively, you can click the **calendar** button (to the right of
-the text box) to select the **date** from the monthly calendar.
-
-In the Stop text box:
-
-Enter the *Stop date* requested for the build of the schedule or click
-the **calendar** button (to the right of the text box) to select the
-**date** from the monthly calendar.
-
-*(Optional)* Select the **Overwrite existing schedules**
-checkbox.
+1. Select on **Schedule Build** under the **Operation** topic. The **Build Schedules** dialog displays
+2. Select the **schedule(s)** in the **Schedule Selection** list. Alternatively, type the first few letters or numbers in the **Schedule Selection** text box to filter the list. You can also select the **Show schedules with auto-build** or **Show schedules without auto-build** option
+3. In the **Start** text box, enter the start date or select it using the **calendar** button
+4. In the **Stop** text box, enter the stop date or select it using the **calendar** button
+5. *(Optional)* Select the **Overwrite existing schedules** option
 
 :::note
 Existing schedules that are processing cannot be overwritten.
 :::
 
-*(Optional)* Select the **Define schedule instance**
-checkbox.
+To build Daily Schedules, complete the following steps:
 
-Click the **Build** button. The **Build Properties** dialog displays.
-
-Select the **Released** radio button to release the schedule to build or
-select the **on Hold** radio button to control the start of the schedule
-manually.
+6. *(Optional)* Select the **Define schedule instance** option
+7. Select **Build**. The **Build Properties** dialog displays
+8. Select the **Released** option to release the schedule, or select **on Hold** to start the schedule manually
 
 :::note
-If a schedule is being built for a date prior to the current date, the user will be unable to select the **Released** schedule build status. The schedule will always be built on Hold.
+If building a schedule for a date before the current date, the **Released** status is unavailable. The schedule will always be built on Hold.
 :::
 
-Click the **OK** button.
+9. Select **OK**
 
 :::note
-Schedules built on Hold will appear **blue**. Schedules built as **Released** will appear **green**. Hovering the mouse over a row in the **Build Results** table will display the details about the specific schedule build including the log file details.
+Schedules built on Hold appear **blue**. Schedules built as **Released** appear **green**. Hover over a row in the **Build Results** table to view details, including log file information.
 :::
 
-If the Define schedule instance checkbox was not selected:
-Click **Close ☒** (top-right-hand side of screen) to close the **Build
-Schedules** dialog.
-
-If the Define schedule instance checkbox was selected and the schedule is not associated with any named instances:
-
-Do the following in the **Define Schedule Instance** dialog:
-
-a.  Enter a set of one or more *property definitions* using the
-    following format: **PropertyName=PropertyValue**. Separate each
-    definition with a semicolon (;).
-b.  Skip to Step 13.
-
-If the Define schedule instance checkbox was selected and the schedule is associated with any named instances:
-
-Do the following in the **Define Schedule Instance** dialog:
-
-a.  Select the named instance.
-b.  Enter a set of one or more *property definitions* using the
-    following format: **PropertyName=PropertyValue**. Separate each
-    definition with a semicolon (;).
-c.  Go to Step 13.
-
-Click the **OK** button to save the property definitions or click the
-**Cancel** button to cancel the definitions for that schedule instance.
+10. If the **Define schedule instance** option was not selected, select **Close ☒** to close the **Build Schedules** dialog
+11. If the **Define schedule instance** option was selected and the schedule has no named instances, do the following in the **Define Schedule Instance** dialog:
+    a. Enter one or more property definitions in the format **PropertyName=PropertyValue**, separated by semicolons (;).
+    b. Skip to Step 13.
+12. If the **Define schedule instance** option was selected and the schedule has named instances, do the following:
+    a. Select the named instance.
+    b. Enter property definitions in the format **PropertyName=PropertyValue**, separated by semicolons (;).
+    c. Go to Step 13.
+13. Select **OK** to save, or **Cancel** to discard the definitions for that schedule instance
 
 :::note
-If no properties are defined for the schedule, OpCon will still request the build for the schedule, but no properties will be defined.
+If no properties are defined, OpCon still requests the build but no properties will be defined.
 :::
+
+
+## FAQs
+
+**Q: What does managing schedules involve?**
+
+Managing schedules includes Building Daily Schedules. Access schedules through the Enterprise Manager navigation pane.
+
+**Q: Who can manage schedules in OpCon?**
+
+Users with the appropriate privileges assigned through their role can manage schedules. Contact your OpCon system administrator if you do not have access.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

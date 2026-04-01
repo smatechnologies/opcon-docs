@@ -1,72 +1,109 @@
+---
+title: Deleting Thresholds
+description: "Deleting a threshold requires completing all four procedures below in order."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Deleting Thresholds
 
-If the need arises to delete a threshold, there are several required
-procedures.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Deleting a threshold requires completing all four procedures below in order.
 
 To delete a threshold:
 
 Remove the Threshold from the Daily Tables
 
-1. Double-click on **Daily Maintenance** under the **Operation** topic.
-    The **Daily Maintenance** screen displays.
-2. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
-    **arrow** to expand the **date** for the schedule.
-3. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
-    **arrow** to expand the **schedule**.
-4. Click on the **job**.
-5. Click on the **Edit Daily** button in the **Maintenance** frame at
-    the bottom-right side of the screen.
-6. Click on the **Threshold/Resource Update** tab.
-7. Click on the **Threshold/Resource Update** to delete and click the
-    **Remove** button.
-8. Click the **Yes** button to confirm the deletion or click the **No**
-    button to discard the deletion.
+To remove the Threshold from the Daily Tables, complete the following steps:
+
+1. Select **Daily Maintenance** under the **Operation** topic
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
+4. Select the **job**
+5. Select the **Edit Daily** button in the **Maintenance** frame at the bottom-right of the screen
+6. Select the **Threshold/Resource Update** tab
+7. Select the **Threshold/Resource Update** to delete, then select **Remove**
+8. Select **Yes** to confirm or **No** to cancel
 
 Remove the Threshold from the Master Tables
 
-1. Double-click on **Daily Maintenance** under the **Operation** topic.
-    The **Daily Maintenance** screen displays.
-2. **In the Daily frame:**
-3. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
-    **arrow** to expand the **date** for the schedule.
-4. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
-    **arrow** to expand the **schedule**.
-5. Click on the **job**.
-6. Click on the **Edit Master** button in the **Maintenance** frame at
-    the bottom-right side of the screen.
-7. Click on the **Threshold/Resource Update** tab.
-8. Click on the **Threshold/Resource Update** to delete and click the
-    **Remove** button.
-9. Click the **Yes** button to confirm the deletion or click the **No**
-    button to discard the deletion.
-10. Repeat Steps 6 - 9 for all jobs updating the threshold.
+To remove the Threshold from the Master Tables, complete the following steps:
+
+1. Select **Daily Maintenance** under the **Operation** topic
+2. In the **Daily** frame, select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
+4. Select the **job**
+5. Select the **Edit Master** button in the **Maintenance** frame at the bottom-right of the screen
+6. Select the **Threshold/Resource Update** tab
+7. Select the **Threshold/Resource Update** to delete, then select **Remove**
+8. Select **Yes** to confirm or **No** to cancel
+9. Repeat steps 5-8 for all jobs updating the threshold
 
 Remove the Threshold Dependencies from the Master Tables
 
-1. Double-click on **Job Master** under the **Administration** topic.
-    The **Job Master** screen displays.
-2. Select the **schedule** in the **Schedule** drop-down list.
-3. Select the **job** in the **Job** drop-down list.
-4. Click on the **Dependencies** tab.
-5. Click on the **Threshold/Resource Dependency** tab.
-6. Click on the **threshold** to be delete and click the **Remove**
-    button.
-7. Click the **Yes** button to confirm the deletion or click the **No**
-    button to discard the deletion.
-8. Repeat Steps 4 - 8 for all jobs updating the threshold.
-9. Click **Close ☒** (to the right of the **Job Master** tab) to close
-    the **Job Master** screen.
+To remove the Threshold Dependencies from the Master Tables, complete the following steps:
+
+1. Select **Job Master** under the **Administration** topic
+2. Select the **schedule** in the **Schedule** list
+3. Select the **job** in the **Job** list
+4. Select the **Dependencies** tab
+5. Select the **Threshold/Resource Dependency** tab
+6. Select the **threshold** to delete, then select **Remove**
+7. Select **Yes** to confirm or **No** to cancel
+8. Repeat steps 4-7 for all jobs updating the threshold
+9. Select **Close ☒** to close the **Job Master** screen
 
 Delete the Threshold
 
-1. Double-click on **Thresholds** under the **Administration** topic.
-    The **Thresholds** screen displays.
-2. Select the **threshold** in the drop-down list for **Select
-    Threshold**.
-3. Click ![Remove     icon](../../../Resources/Images/EM/EMdelete.png "Remove icon")
-    **Remove** on the **Thresholds** toolbar.
-4. Click the **Yes** button to confirm the deletion or click the **No**
-    button to discard the deletion.
-5. Click **Close ☒** (to the right of the **Thresholds** tab) to close
-    the **Thresholds** screen.
+To delete the Threshold, complete the following steps:
+
+1. Select **Thresholds** under the **Administration** topic
+2. Select the **threshold** in the **Select Threshold** list
+3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Thresholds** toolbar
+4. Select **Yes** to confirm or **No** to cancel
+5. Select **Close ☒** to close the **Thresholds** screen
 :::
+
+## FAQs
+
+**Q: Where do you delete thresholds in the Enterprise Manager?**
+
+Select **Daily Maintenance** under the **Operation** topic in the Enterprise Manager navigation pane, then select the record to delete.
+
+**Q: Can a thresholds record be recovered after deletion?**
+
+No. Deleting a thresholds record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+
+**Q: What should you check before deleting thresholds?**
+
+Verify the thresholds is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

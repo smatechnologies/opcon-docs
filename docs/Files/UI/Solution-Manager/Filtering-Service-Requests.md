@@ -24,14 +24,6 @@ Use the Filter bar to filter Service Requests by «Category», «OpCon Role», a
 
 ![Self Service Filtering Options](../../../Resources/Images/SM/Filtering-Service-Requests_new.png "Self Service Filtering Options")
 
-## When Would You Use It?
-
-- You need to narrow a Service Requests list to a specific subset in Solution Manager
-
-## Why Would You Use It?
-
-- **Focus on relevant data**: Filtering Service Requests in Solution Manager reduces information overload in large environments and speeds up targeted investigations
-
 ## Querying with Wildcards
 
 The Search/Filter bar supports wildcard characters:

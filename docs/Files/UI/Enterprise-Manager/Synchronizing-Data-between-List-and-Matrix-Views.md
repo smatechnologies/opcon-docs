@@ -39,14 +39,6 @@ To synchronize the data between views, complete the following steps:
 
  
 
-## When Would You Use It?
-
-- A Data between List and Matrix Views needs to be kept in sync with an external system
-
-## Why Would You Use It?
-
-- **Keep data consistent**: Synchronizing Data between List and Matrix Views ensures OpCon reflects the current state of external systems, preventing stale data from causing errors
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

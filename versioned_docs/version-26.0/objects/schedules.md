@@ -1,4 +1,24 @@
+---
+title: Schedules
+description: "A schedule in OpCon is a group of jobs making up a business process."
+product_area: Core Concepts
+audience: Automation Engineer, Application Owner
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - Automation Engineer
+  - Application Owner
+  - Getting Started
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Schedules
+
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Application Owner
+
+## What Is It?
 
 A schedule in OpCon is a group of jobs making up a business process. Schedules must be created before any jobs
 can be defined. Once schedules are defined, jobs can be created in Job
@@ -31,11 +51,11 @@ schedules:
     information on inserting hyperlinks into the Documentation area,
     refer to [Entering and Opening Hyperlinks in the Documentation Frame](../Files/UI/Enterprise-Manager/Entering-and-Opening-Hyperlinks.md)
      in the **Enterprise Manager** online help.
-- **Start Time**: Provides the start time for the schedule and is based on a 24-hour clock. The popular choice is to leave this start time at midnight because all jobs on the schedule have a start time that is offset from the schedule start time. At the appointed time, the SAM will start examining the schedule to determine whether any jobs qualify to start.
+- **Start Time**: Provides the start time for the schedule and is based on a 24-hour clock. The popular choice is to leave this start time at midnight because all jobs on the schedule have a start time that is offset from the schedule start time. At the appointed time, the SAM will start examining the schedule to determine whether any jobs qualify to start
   :::note
   For a subschedule, the SAM does not use the Start Time value to control the subschedule's actual start time. When the Container job calling the subschedule qualifies to start, the SAM force-starts the subschedule. When the Start Time value is defined for a subschedule, SAM only uses the value for calculating the start times of the jobs on the subschedule. This provides a way for the jobs on the subschedule to extend beyond the 24-hour period of the Parent schedule.
   :::
-- **Workdays per Week**: Defines the schedule's working days. Every day that has a checkbox selected is considered a workday.
+- **Workdays per Week**: Defines the schedule's working days. Every day that has a option selected is considered a workday
   :::note
   The Workdays per Week setting directly affects all job and schedule frequencies. Refer to Job and Schedule Frequencies.
   :::
@@ -68,7 +88,7 @@ schedules:
         that there are no cross-schedule dependencies to this schedule
         (cross-schedule dependencies on multi-instance schedule's jobs
         are invalid).
-- **Conflict with Other Days**: Determines if a schedule is allowed to run if the same schedule is still running on a different day.
+- **Conflict with Other Days**: Determines if a schedule is allowed to run if the same schedule is still running on a different day
   :::note
   OpCon does not support the Conflict with Other Days setting for subschedules.
   :::
@@ -88,8 +108,8 @@ Build and Auto Delete run. Refer to [Time Settings](../administration/server-opt
     graphical interfaces provide fields to set the number of days in
     advance to start the build and the number of days to build from that
     point forward.
-  - If auto build is enabled, the log file is named <Schedule Name\>_Build_RUNDATE(YYYYMMDD)_MsgBusID.log in the <Output Directory\>\\SAM\\Log\\SMASchedMan\\ directory on the SAM application server.
-- **Overwrite Existing**: When the auto build executes and the
+  - If auto build is enabled, the log file is named <Schedule Name\>_Build_RUNDATE(YYYYMMDD)_MsgBusID.log in the <Output Directory\>\\SAM\\Log\\SMASchedMan\\ directory on the SAM application server
+- **Overwrite Existing**: When the auto build runs and the
     schedule is found on the target date, this setting indicates if the
     schedule should be overwritten. When this setting is on,
     OpCon overwrites the schedule if it is in
@@ -97,7 +117,7 @@ Build and Auto Delete run. Refer to [Time Settings](../administration/server-opt
 - **Build On Hold**: Indicates if the schedule should be built with a
     status of On Hold. The SAM will not process the     schedule until it is released manually or through an
     OpCon event.
-- **Auto Build Time**: Defines the clock time to build the schedule.
+- **Auto Build Time**: Defines the clock time to build the schedule
     The default value of 00:00 will build at the time indicated by the
     Server Option setting for "Hour of each day SAM should detect
     Schedules to build". To define a specific time for this schedule to
@@ -113,7 +133,7 @@ Build and Auto Delete run. Refer to [Time Settings](../administration/server-opt
   - If a Schedule has a status of On Hold and         has never been released, it will be deleted in the automatic
         delete process. If a schedule is On Hold         after previously being released, it will **not** be deleted
         in the automatic delete process.
-  - If auto delete is enabled, the log file is named Auto_Delete\_<Schedule Date\>\_<Schedule Name\>.log in the <Output Directory\>\\SAM\\Log\\SMASchedMan\\ directory on the SAM application server.
+  - If auto delete is enabled, the log file is named Auto_Delete\_<Schedule Date\>\_<Schedule Name\>.log in the <Output Directory\>\\SAM\\Log\\SMASchedMan\\ directory on the SAM application server
 
 ### Instance Definition
 
@@ -123,10 +143,10 @@ exceptions for one or more named instances of the schedule. Instance
 Definitions is enabled for all schedules except the AdHoc schedule. The
 following options are provided:
 
-**Build an instance for each machine in Machine Group**: For Multi-Instance schedules, defines the Machine Group containing the machines the schedule should build for. One instance of the schedule will build for each machine in the group. To make use of the schedule instance machine, configure the jobs in the schedule to "Use Schedule Instance Machine". For more information, refer to [Using the Same Schedule Across Multiple Machines](../automation-concepts/machine-groups.md#using-the-same-schedule-across-multiple-machine).
+**Build an instance for each machine in Machine Group**: For Multi-Instance schedules, defines the Machine Group containing the machines the schedule should build for. One instance of the schedule will build for each machine in the group. To use the schedule instance machine, configure the jobs in the schedule to "Use Schedule Instance Machine". For more information, refer to [Using the Same Schedule Across Multiple Machines](../automation-concepts/machine-groups.md#using-the-same-schedule-across-multiple-machine).
 
 **Build an instance for each set of Properties**: Defines the predefined
-properties for each instance of the schedule. To make use of the
+properties for each instance of the schedule. To use the
 Schedule Instance Properties, use tokens with the jobs to reference the
 Schedule Instance Properties (e.g., \[\[**SI**.StoreID\]\]). For more information, refer to [Using Properties for Automation](using-properties.md) and [Schedule Instance Property Name Syntax](using-properties.md#schedule-instance-property-name-syntax).
 
@@ -203,7 +223,7 @@ If the administrator had set the Daily frequency to the higher priority, the Mon
 ### Schedule Completion Events
 
 Schedule Completion Events are OpCon events
-with user-specified parameters that can be executed based on a
+with user-specified parameters that can be run based on a
 schedule's completion. Any number of OpCon
 events may be defined for each schedule. For a list and definition for
 all supported OpCon events, refer to the
@@ -229,9 +249,9 @@ Deploy:
 
 - **Version**: Defines the version of the master schedule deployed
     into OpCon via OpCon Deploy.
-- **Package**: Defines a grouping of schedules deployed together.
-- **Description**: Defines a description of the deploy action.
-- **Record Id**: Defines the ID of the record deployed.
+- **Package**: Defines a grouping of schedules deployed together
+- **Description**: Defines a description of the deploy action
+- **Record Id**: Defines the ID of the record deployed
 - **Deployed**: Defines the OpCon Deploy user that triggered the
     deploy action and the date and time the schedule was deployed.
 
@@ -245,7 +265,7 @@ maintaining history records, refer to [Using History Management](../Files/UI/Ent
 - Viewing Options:
   - **View Detailed History**: If this option is enabled, all
         detailed history for the selected schedule including status
-        change explanations and LSAM Feedback will display.
+        change explanations and agent Feedback will display.
   - **View Archived History**: If this option is enabled, all
         archived history for the selected schedule will display.
 - Display Information:
@@ -317,10 +337,10 @@ build unless specifically called by some other user-defined process.
     - Customers should modify the value of the Global Property
             named \[SMAAdminEmail\] to contain the email address or             semicolon separated list of email addresses that should
             receive the notification.
-    - The CC and BCC fields are blank by default.
+    - The CC and BCC fields are blank by default
     - The Message is left blank because the SAM automatically
             inserts the log message in this position.
-    - There are no attachments.
+    - There are no attachments
 - You can also use Event Notification to set up notification for the
     jobs. Set up a Schedule notification group that includes the AdHoc
     schedule then configure notification triggers for Job Failed or Job
@@ -334,7 +354,7 @@ the jobs imported with the SMAUtility schedule.
 
 #### Recommendations and Requirements
 
-- SMA Technologies recommends using the     SMAUtility schedule for most jobs involved in the maintenance of
+- Continuous recommends using the     SMAUtility schedule for most jobs involved in the maintenance of
     OpCon.
 - A maintenance job must be added to a schedule to be built in a
     Released state at regular intervals depending on the type of
@@ -345,7 +365,7 @@ the jobs imported with the SMAUtility schedule.
     processing lessens the jobs' affect on overall system performance.
 - It is important for this schedule to have a consistent actual start
     and finish time to avoid conflicts and failures.
-- Ensure the proper amount of storage (e.g., disk) space is available.
+- Ensure the proper amount of storage (e.g., disk) space is available
 
 #### Global Properties Used by the SMAUtility Schedule
 
@@ -354,7 +374,7 @@ definitions are imported to supply the values to the tokens on the
 command lines of the jobs.
 
 - **SMADBCredentials**: This property defines the User Name and
-    Password for logging in to Audit and History cleanup utilities. SMA Technologies recommends updating the default value to a user other than ocadm.
+    Password for logging in to Audit and History cleanup utilities. Continuous recommends updating the default value to a user other than ocadm.
   - Default Value: **-uocadm -w\*\*\*\*\*\*\*\*\*\*\*\***
 - **SMAOpConDataPath**: This property defines the path to the <Configuration Directory\>, which is the parent directory for the
     OpCon data folder.
@@ -478,7 +498,7 @@ to [Job History Cleanup](https://help.smatechnologies.com/opcon/core/latest/Util
  in the **Utilities** online help).
 
 :::note
-If an alternate database backup is in use (instead of the SMA Database Backup job), SMA Technologies recommends configuring the History Purge job to occur after the database has been backed up.
+If an alternate database backup is in use (instead of the SMA Database Backup job), Continuous recommends configuring the History Purge job to occur after the database has been backed up.
 :::
 
 - Job Details
@@ -554,7 +574,7 @@ This job is set to run at 15 minutes after Midnight. Do not run this job with a 
 
 ##### SMA Database Backup
 
-SMA Technologies provides an embedded SQL script for automating the SMA Database Backup job which uses SQL authentication
+Continuous provides an embedded SQL script for automating the SMA Database Backup job which uses SQL authentication
 and is configured to run every day after the SMA Database Maintenance,
 but it has a Job Build Status of "Do Not Schedule." To activate this
 job, change the Job Build Status to On Hold or Released}.
@@ -585,7 +605,7 @@ job, change the Job Build Status to On Hold or Released}.
 
 ##### SMA Database Maintenance
 
-SMA Technologies provides an embedded SQL script for automating the SMA Database Maintenance job which uses SQL
+Continuous provides an embedded SQL script for automating the SMA Database Maintenance job which uses SQL
 authentication and has a Job Build Status of "Do Not Schedule." To
 activate this job, change the Job Build Status to On Hold or Released.
 
@@ -610,7 +630,7 @@ activate this job, change the Job Build Status to On Hold or Released.
 
 ##### SMA Database Transaction Log Backup
 
-SMA Technologies provides an embedded SQL script for automating the SMA Database Transaction Log Backup job which uses
+Continuous provides an embedded SQL script for automating the SMA Database Transaction Log Backup job which uses
 SQL authentication and is configured to run every day after the SMA
 Database Backup and recur every two hours; however, it has a Job Build
 Status of "Do Not Schedule". To activate this job, change the Job
@@ -652,7 +672,7 @@ Build Status to On Hold or Released.
 
 ##### SMA Index Defragmentation (SMA DBCC Index Defrag)
 
-SMA Technologies provides an embedded SQL script for automating the SMA Index Defragmentation job which uses SQL
+Continuous provides an embedded SQL script for automating the SMA Index Defragmentation job which uses SQL
 authentication and is configured to run every Sunday at 01:00 after SMA
 Job Average.
 
@@ -685,7 +705,7 @@ The SMA Job Average job is included in the SMAUtility schedule to
 automate running the SMA_JOBAVG stored procedure. Refer to
 [SMA_JOBAVG](https://help.smatechnologies.com/opcon/core/latest/Database-Information/OpCon-Data-Maintenance.md#SMA_JOBA)
  in the **Database Information** online help. Automation of this
-stored procedure is required to provide more accurate data for
+stored procedure must provide more accurate data for
 reporting, and for the Gantt chart and the Plan display. The SMA Job
 Average job is configured to run every day after the Audit History Purge
 job. If desired, edit the command file to specify any optional switches.
@@ -736,12 +756,12 @@ The Output Directory was configured during installation. For more information, r
 ### Report Generator Schedule
 
 The Report Generator Schedule contains template jobs for automating
-every predefined report SMA Technologies distributes with OpCon. Each job uses
+every predefined report Continuous distributes with OpCon. Each job uses
 SMABIRTRptGen.exe and passes in the appropriate parameters for each
 report. For more information, refer to [BIRT Report Generator](../utilities/Command-line-Utilities/BIRT-Report-Generator.md)
  in the **Utilities** online help.
 
-SMA Technologies recommends importing the Report Generator schedule during installation. If the schedule was not imported
+Continuous recommends importing the Report Generator schedule during installation. If the schedule was not imported
 during installation, refer to [Import the OpCon Maintenance and Report Jobs](../installation/configuration.md#Import_the_OpCon_Maintenance)
  in the **OpCon Installation** online
 help.
@@ -768,11 +788,76 @@ lines of the jobs.
     components associated with them.
 - By default, reports that allow a Department filter will include all
     departments.
-- By default, all reports are created as PDF files.
+- By default, all reports are created as PDF files
 
-To use the Report Generator jobs:
+To use the Report Generator jobs, complete the following steps:
 
 1. For Schedule- and Job-related reports, copy the desired Report
     Generator job to the schedule against which the report should run.
 2. Add a frequency and any other desired job components to the desired
     Report Generator job.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Schedule Name | Defines the name for the schedule. | — | — |
+| Documentation | Provides an area for descriptions, explanations | — | — |
+| Start Time | Provides the start time for the schedule and is based on a 24-hour clock. | — | — |
+| Workdays per Week | Defines the schedule's working days. | name is <None\> | — |
+| Additional Holidays | Defines the name of a calendar that contain | name is <None\> | — |
+| Use Master Holiday | Determines if Master Holiday Calendar dates | — | — |
+| Multi-Instance | Determines if multiple instances of the same | — | must be called by a Container job on any other schedule. |
+| SubSchedule | Determines if copies of the schedule are allowed to be contained inside other schedules in | — | must be called by a Container job on any other schedule.     For additional information, |
+| Conflict with Other Days | Determines if a schedule is allowed to run if the same schedule is still running on a different day | — | — |
+| Auto Build | Indicates if OpCon should | — | — |
+| Overwrite Existing | When the auto build runs and the schedule is found on the target date, this setting indicates if the schedule should be overwritten. | — | — |
+| Build On Hold | Indicates if the schedule should be built with a status of On Hold. | value of 00:00 will build at t | — |
+| Auto Build Time | Defines the clock time to build the schedule | value of 00:00 will build at t | — |
+| Auto Delete | Indicates if OpCon | — | — |
+| Build an instance for each machine in Machine Group | For Multi-Instance schedules, defines the Machine Group containing the machines the schedule should build for. | — | — |
+| Build an instance for each set of Properties | Defines the predefined | — | — |
+| Scenario | In the Schedule Master (Instance Definition tab), Instance Definitions are defined for a schedule named CloseRegisters | — | — |
+| Build a named schedule instance | For Multi-Instance schedules, defines each named instance of the schedule and the associated predefined properties and/or exceptions. | — | — |
+| Frequency Name | Defines the name of the schedule frequency. | — | — |
+| Priority | Indicates the priority of a frequency when the schedule has two or more frequencies that qualify for the same day | — | — |
+| Frequency Definition | Defines the days the jobs on the schedule | — | must be considered. The Daily frequency qualifies for every day. The Monthly frequency o |
+| Result | Because the Daily and Monthly frequencies resolve to the same day, at the end of the month OpCon builds the schedule and its jobs with the Monthly fre... | — | — |
+| Version | Defines the version of the master schedule deployed | — | — |
+| Package | Defines a grouping of schedules deployed together | — | — |
+| Description | Defines a description of the deploy action | — | — |
+## FAQs
+
+**Q: What privilege is required to create and manage schedules?**
+
+A user must be a member of a role with All Administrative Functions, All Function Privileges, or the Maintain Schedules privilege to define schedules.
+
+**Q: What is the difference between a Multi-Instance schedule and a SubSchedule?**
+
+A Multi-Instance schedule allows multiple instances of the same schedule to run on the same date, each with its own set of properties. A SubSchedule is a schedule that must be called by a Container job on another schedule and runs as a child process.
+
+**Q: What does Build On Hold do when Auto Build is enabled?**
+
+When Build On Hold is selected, OpCon builds the schedule but places it in a held state. The schedule does not run until it is manually released or released by an OpCon event.
+
+**Q: Does Auto Delete remove schedules that are still On Hold?**
+
+Yes, if the schedule has been On Hold and has never been released. If a schedule was previously released and is currently On Hold, it will not be deleted by the automatic delete process.
+
+## Glossary
+
+**BIRT (Business Intelligence and Reporting Tools)**: The open-source reporting engine used by OpCon to generate predefined and custom reports. Reports are run using the BIRTRptgen.exe utility.
+
+**SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.

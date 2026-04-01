@@ -34,14 +34,6 @@ The SMA Notify Handler can send the following basic notifications after reading 
 - OpCon Events
 - Command
 
-## When Would You Use It?
-
-- The SMA Notify Handler component is responsible for reading the NOTIFY table in the OpCon database and writing the message to the appropriate location
-
-## Why Would You Use It?
-
-- **SMA Notify**: The SMA Notify Handler component is responsible for reading the NOTIFY table in the OpCon database and writing the message to the appropriate location
-
 ## Configuration
 
 SMA Notify Handler configuration determines basic application and logging behavior.

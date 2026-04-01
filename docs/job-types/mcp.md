@@ -21,14 +21,6 @@ doc_type: reference
 
 MCP job details define the parameters for running a job on a Burroughs MCP (Master Control Program) agent. Text fields in the graphical interfaces support OpCon token replacement. [Tokens](../objects/using-properties.md#tokens) are resolved as the SAM prepares to send the job to the agent. For more information about this platform, refer to [MCP LSAM Configuration](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Configuration.md) in the **MCP LSAM** online help.
 
-## When Would You Use It?
-
-- You need to configure or manage MCP Job Details in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing MCP Job Details through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Job Information
 
 - **User Code**: The usercode under which the job runs

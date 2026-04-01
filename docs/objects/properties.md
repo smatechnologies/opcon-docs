@@ -22,14 +22,6 @@ doc_type: reference
 
 Properties are attributes of OpCon objects. Retrieve property values by tokenizing the property name and using that token in OpCon events or job definition details.
 
-## When Would You Use It?
-
-- Properties are attributes of OpCon objects
-
-## Why Would You Use It?
-
-- **Properties**: Properties are attributes of OpCon objects
-
 ## Property Types
 
 There are three types of properties in OpCon:

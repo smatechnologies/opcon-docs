@@ -42,14 +42,6 @@ This report provides filters for date, agent type, department name, and day coun
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Unique Task Count Report** shows unique task counts by date, agent type, and department
-
-## Why Would You Use It?
-
-- **Unique Task**: The **Unique Task Count Report** shows unique task counts by date, agent type, and department
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

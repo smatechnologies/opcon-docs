@@ -39,14 +39,6 @@ Select a row to open the Log File Details page.
 
 Select the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
 
-## When Would You Use It?
-
-- The **Schedule Build** tab displays log files for scheduled builds
-
-## Why Would You Use It?
-
-- **List Schedule**: The **Schedule Build** tab displays log files for scheduled builds
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

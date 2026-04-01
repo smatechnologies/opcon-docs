@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Update Machine Status** skill updates the status of a machine. The status must be one of: `limited`, `up`, `down`.
 
-## When Would You Use It?
-
-- The **Update Machine Status** skill updates the status of a machine
-
-## Why Would You Use It?
-
-- **Update Machine**: The **Update Machine Status** skill updates the status of a machine
-
 ## Skill Details
 
 ### Parameters

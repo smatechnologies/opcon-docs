@@ -40,16 +40,6 @@ To configure user settings, complete the following steps:
    - [Debug](#Debug)
 5. Select **Save** to save the changes to the database
 
-## When Would You Use It?
-
-- You need to adjust settings for Settings in Solution Manager
-- Default Settings settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Settings settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## General
 
 The **General** section sets the application language. Available options:

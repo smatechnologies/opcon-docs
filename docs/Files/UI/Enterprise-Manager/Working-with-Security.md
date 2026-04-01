@@ -26,14 +26,6 @@ Select on any **Administration** function item in the graphic to learn more abou
 
 ![Security Topic](../../../Resources/Images/EM/EMsecuritymenu.png "Security Topic")
 
-## When Would You Use It?
-
-- You need to provide views to manage User Accounts and User Privileges information using The **Security** topic in the Navigation Panel
-
-## Why Would You Use It?
-
-- **Operational value**: Provides views to manage User Accounts and User Privileges information
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

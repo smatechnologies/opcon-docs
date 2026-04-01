@@ -27,14 +27,6 @@ The **Events** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
 - [Copy Schedule Completion Events](Copying-Schedule-Completion-Events.md)
 - [Delete Schedule Completion Events](Deleting-Schedule-Completion-Events.md)
 
-## When Would You Use It?
-
-- You need to allows you to define, edit, and manage schedule completion events using The **Events** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define, edit, and manage schedule completion events
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

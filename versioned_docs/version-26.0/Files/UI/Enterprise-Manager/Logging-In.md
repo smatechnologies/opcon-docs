@@ -1,57 +1,104 @@
+---
+title: Logging In/Out
+description: "Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Logging In/Out
 
-When signing in to the Enterprise Manager (EM), a dual login takes place. First, the EM must establish a connection to the SQL Server with a valid user for the database. Next, the OpCon Role privileges are checked in the OpCon tables to verify access to OpCon functions.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-Upon initial installation of OpCon, the only valid user is **ocadm** who is the full administrative user. The OpCon administrator should log in as **ocadm** and [create individual accounts](Working-with-Security.md#chapter_4_-_security_3886353224_useraccounts) for all users in the environment.
+## What Is It?
+
+Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions.
+
+Upon initial installation, the only valid user is **ocadm**, the full administrative user. The OpCon administrator should log in as **ocadm** and [create individual accounts](Working-with-Security.md#chapter_4_-_security_3886353224_useraccounts) for all users.
 
 ## Log in to the Enterprise Manager
 
-To log in to the application:
-
-1. Launch the Enterprise Manager application (e.g., use menu path: **Start \> Programs \> OpConxps \> Enterprise Manager**).
+1. Open the Enterprise Manager application (e.g., **Start \> Programs \> OpConxps \> Enterprise Manager**)
 2. In the **Username** text box:
    - For manual login, enter a case-sensitive User Login ID (e.g., ocadm)
-   - For first-time automatic login, do not enter a username in this field. The Enterprise Manager will get your network login and pass it through to the database.
+   - For first-time automatic login, leave this field blank. The EM retrieves your network login and passes it to the database
 
 :::note
 For procedures on creating OpCon user accounts, refer to [Managing User Accounts](Managing-User-Accounts.md#chapter_4_-_security_3886353224_useraccounts).
 :::
 
-In the **Password** text box:
-a.  For manual login, enter the case-sensitive password for the user **- or -**
-b.  For first-time automatic login, do not enter a password in this field.
+3. In the **Password** text box:
+   - For manual login, enter the case-sensitive password
+   - For first-time automatic login, leave this field blank
 
 :::note
-For automatic login, Enterprise Manager remembers your profile and automatically logs in the next time you start the program.
+For automatic login, Enterprise Manager remembers your profile and logs in automatically on the next open.
 :::
 
-**For a first-time user logging in, and a Profile is not defined:**
+To log in to the Enterprise Manager, complete the following steps:
 
-Click the **Add** button to create a profile. For more information on creating or editing existing
-profiles, refer to [Managing Connection Profiles](Managing-Connection-Profiles.md).
-
-**For a user logging in who has an existing Profile:**
-
-Select the **profile** in the **Profile** drop-down list.
+4. Select a profile:
+   - **No profile defined:** Select the **Add** button to create one. Refer to [Managing Connection Profiles](Managing-Connection-Profiles.md)
+   - **Existing profile:** Select the **profile** in the **Profile** list
 
 :::note
-The profile list is sorted. Entering the first letter of the profile will take you to that first profile in the list.
+The profile list is sorted. Entering the first letter of a profile name jumps to the first matching entry.
 :::
 
-Click the **Login** button to log in to the Enterprise Manager.
+5. Select the **Login** button
 
 :::note
-Signing on with a Network Account will make the EM sign on automatically the next time it is opened.
-:::
-
-:::note
-As a security measure, some users may be presented with a Security message after each manual login. Those users must Accept or Decline this message. If accepted, then the user may proceed as normal to access the features and data in the application. If declined, then the application is closed.
-
-If this security measure is in place for users who are configured for automatic login, then those users will be presented with a Security message whenever the application is opened. These users must Accept or Decline this message. If accepted, then the user may proceed as normal to access the features and data in the application. If declined, then the application is closed.
-
-The Security message is configured under the Generals tab of the Server Options editor in the Enterprise Manager. For more information about security message configuration, refer to the [Login Security Message](../../../administration/server-options.md#general) parameter in the Concepts online help.
+As a security measure, some users are presented with a Security message after login. Select **Accept** to proceed or **Decline** to close the application. This applies to both manual and automatic login users. The Security message is configured under the Generals tab in the Server Options editor. Refer to the [Login Security Message](../../../administration/server-options.md#general) parameter in the Concepts online help.
 :::
 
 ## Log out of the Enterprise Manager
 
 Select **EnterpriseManager \> Logout** at the top of the application to disconnect from the current database.
+
+## Security Considerations
+
+### Authentication
+
+Logging in to the Enterprise Manager involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions. Manual login requires a case-sensitive User Login ID and password. Automatic login uses the user's network account; the EM retrieves the network login and passes it to the database automatically, remembering the profile for subsequent logins.
+
+Upon initial installation, the only valid user is ocadm, the full administrative user. The OpCon administrator should log in as ocadm first and create individual accounts for all other users before granting shared access.
+
+A configurable security message can be displayed to users after login. Users must select Accept to proceed or Decline to close the application. This message applies to both manual and automatic login users.
+
+### Authorization
+
+After successful database authentication, OpCon Role privileges are checked to determine which functions the user can access. Users with no role assigned cannot log in.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: How many steps does the Logging In/Out procedure involve?**
+
+The Logging In/Out procedure involves 5 steps. Complete all steps in order and save your changes.
+
+**Q: What does Logging In/Out cover?**
+
+This page covers Log in to the Enterprise Manager, Log out of the Enterprise Manager.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

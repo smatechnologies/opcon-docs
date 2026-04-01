@@ -28,14 +28,6 @@ All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\Enterp
 - **Required Filters**: Indicates the data filters required by the report. This information is required for defining the report in the Report Management utility (refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help). Refer to the *Required filter* information listed for each report
 - **Parameters**: Indicates the parameters to use when specifying the required filters for the -p switches in the BIRT Report Generator syntax. For additional information, refer to [Parameters](../utilities/Command-line-Utilities/BIRT-Report-Generator.md#parameters-1) in the **Utilities** online help
 
-## When Would You Use It?
-
-- All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\``` folder
-
-## Why Would You Use It?
-
-- **Predefined Reports**: All OpCon report files can be found in the ```<TargetDirectory\>\OpConxps\EnterpriseManagerx64\reports\OPCONXPS_Reports\``` folder
-
 ## Annual Plan Dates by Calendar
 
 - **Description**: Shows all defined dates on user-defined calendars, sorted by calendar name

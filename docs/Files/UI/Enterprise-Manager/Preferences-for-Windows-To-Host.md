@@ -32,14 +32,6 @@ To set the preferences, complete the following steps:
 6. Enter the *Command* to run for the platform
 7. Select **Apply**, then select **OK**
 
-## When Would You Use It?
-
-- Use this feature when running the Window to Host shortcut from Operation views
-
-## Why Would You Use It?
-
-- **Setting Preferences**: Use **Window to Host** preferences to configure third-party emulators that the EM calls when running the **Window to Host** shortcut from **Operation** views
-
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Window To Host procedure involve?**

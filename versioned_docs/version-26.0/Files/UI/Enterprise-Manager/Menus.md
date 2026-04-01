@@ -1,76 +1,102 @@
+---
+title: Menus
+description: "The menu bar at the top of the Enterprise Manager screen is always available when working with editors or views."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Menus
 
-The menu bar at the top of the Enterprise Manager screen is always available whether you are working with
-[editors](Navigation-Editors.md) or [views](Navigation-Views.md).
-The menu bar has two options: Enterprise Manager and Help.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The menu bar at the top of the Enterprise Manager screen is always available when working with [editors](Navigation-Editors.md) or [views](Navigation-Views.md). It has two options: Enterprise Manager and Help.
 
 ## Enterprise Manager
 
-The Enterprise Manager menu displays the following options when
-selected:
+The Enterprise Manager menu includes the following options:
 
-|||
+| Option | Description |
 |--- |--- |
-||Refresh (F5): This menu item refreshes all active windows.|
-||Pause Refresh (Ctrl+P): This menu item will cause the automatic refresh process to pause.|
-||Logout (Ctrl+L): This menu item disconnects the User from the database without exiting the Enterprise manager.|
-||Password Update:  This menu item allows the user to change their Password, generate an external token, or encrypt a password.|
-||Preferences (Ctrl+Alt+P): This menu item allows the user to set various preferences for several of the views.|
-||Exit (Ctrl+Q):  This menu item will close the Enterprise Manager.|
+| Refresh (F5) | Refreshes all active windows. |
+| Pause Refresh (Ctrl+P) | Pauses the automatic refresh process. |
+| Logout (Ctrl+L) | Disconnects the user from the database without exiting Enterprise Manager. |
+| Password Update | Change your password, generate an external token, or encrypt a password. |
+| Preferences (Ctrl+Alt+P) | Set preferences for various views. |
+| Exit (Ctrl+Q) | Closes Enterprise Manager. |
 
-Underneath the menu bar, the **Logout**, **Refresh**, and **Pause
-Refresh** toolbar icons display.
+The **Logout**, **Refresh**, and **Pause Refresh** toolbar icons also display beneath the menu bar.
 
 ### Encrypting Passwords
 
-You will need to use the Enterprise Manager encryption tool if a
-configuration value in OpCon requires an
-encrypted password.
+Use the Enterprise Manager encryption tool when an OpCon configuration value requires an encrypted password.
 
-To encrypt a password:
-
-1. Log in to the Enterprise Manager.
-2. Use menu path: **EnterpriseManager \> Password Update \> Password Encryption Tool**. The **Password encryption tool** dialog displays.
-3. *(Optional)*Select the **Visible** checkbox to make the password characters visible.
-4. Enter the password in the **Password** field.
-5. Click **Encrypt**.
-6. Click the **Copy to clipboard** button to copy the encrypted password.
-7. Click **Close** to close the dialog.
-8. Paste the encrypted password to the desired location.
+1. Log in to the Enterprise Manager
+2. Go to **EnterpriseManager > Password Update > Password Encryption Tool**. The **Password encryption tool** dialog displays
+3. *(Optional)* Select the **Visible** option to show the password characters
+4. Enter the password in the **Password** field
+5. Select **Encrypt**
+6. Select **Copy to clipboard** to copy the encrypted password
+7. Select **Close**
+8. Paste the encrypted password to the desired location
 
 ### Generating External Tokens
 
-To generate an external token:
-
-1. Log in to the Enterprise Manager.
-2. Use menu path: **EnterpriseManager \> Password Update \> Generate External Token**. The **External Token Set** dialog displays.
-3. Select one of the following options:
-    a.  Click the **Yes** button to copy the external token to the
-        clipboard ***-- or --***
-    b.  Click the **No** button to close the dialog.
-4. Paste the external token to the desired location.
+1. Log in to the Enterprise Manager
+2. Go to **EnterpriseManager > Password Update > Generate External Token**. The **External Token Set** dialog displays
+3. Select **Yes** to copy the external token to the clipboard, or **No** to close the dialog
+4. Paste the external token to the desired location
 
 ## Help
 
-The **Help** menu displays the following options when selected:
+The **Help** menu includes the following options:
 
-- **Enterprise Manager (F1)**: This item or the **F1** key on
-    the keyboard will link to the conceptual information for the current
-    location in Enterprise Manager. From the main screen, this option
-    opens to the first topic of the **Enterprise Manager** online help.
-- **Documentation**: This item will provide links to all
-    OpCon online product help. Click on the
-    specific link to view the documentation.
-- **Show Key Assist**: This item will provide a list of functions and their associated keyboard
-    shortcut keys.
-- **Check for Updates**: During     startup for Enterprise Manager, a check will be made for a new
-    version (if available). The Check for Updates is an Enterprise
-    Manager preference. For more information on setting preferences,
-    refer to the [procedures for changing     preferences](Setting-Preferences.md).
-- **Legend**: This item opens the     legend window that explains the colors and icons associated with the
-    jobs, schedules, and dependencies displayed in the views.
-- **About OpCon Enterprise Manager**: This menu item displays SMA Technologies contact information, Product
-    version details, and the option to Report a Problem. This menu also
-    displays OpCon License information to
-    users with granted privileges. For more information on reporting a
-    problem, refer to [Reporting Problems](Reporting-Problems.md)
+- **Enterprise Manager (F1)**: Opens contextual help for the current location. From the main screen, opens the first topic of the Enterprise Manager online help
+- **Documentation**: Provides links to all OpCon online product help
+- **Show Key Assist**: Lists functions and their keyboard shortcut keys
+- **Check for Updates**: Checks for a new version of Enterprise Manager (also runs at startup if configured). For more information, refer to [Setting Preferences](Setting-Preferences.md)
+- **Legend**: Opens the legend window explaining colors and icons for jobs, schedules, and dependencies in the views
+- **About OpCon Enterprise Manager**: Displays Continuous contact information, product version details, and the option to Report a Problem. Also shows OpCon License information for users with granted privileges. Refer to [Reporting Problems](Reporting-Problems.md)
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Documentation | Provides links to all OpCon online product help | — | — |
+| Show Key Assist | Lists functions and their keyboard shortcut keys | — | — |
+| Check for Updates | Checks for a new version of Enterprise Manager (also runs at startup if configured). | — | — |
+| Legend | Opens the legend window explaining colors and icons for jobs, schedules, and dependencies in the views | — | — |
+| About OpCon Enterprise Manager | Displays Continuous contact information, product version details, and the option to Report a Problem. | — | — |
+## FAQs
+
+**Q: How many steps does the Menus procedure involve?**
+
+The Menus procedure involves 12 steps. Complete all steps in order and save your changes.
+
+**Q: What does Menus cover?**
+
+This page covers Enterprise Manager, Help.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

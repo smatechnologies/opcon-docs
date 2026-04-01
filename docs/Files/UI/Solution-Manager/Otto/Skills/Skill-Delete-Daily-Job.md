@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Delete Daily Job** skill deletes a specified job from a specified daily schedule for a specified date.
 
-## When Would You Use It?
-
-- The **Delete Daily Job** skill deletes a specified job from a specified daily schedule for a specified date
-
-## Why Would You Use It?
-
-- **Delete Daily**: The **Delete Daily Job** skill deletes a specified job from a specified daily schedule for a specified date
-
 ## Skill Details
 
 ### Parameters

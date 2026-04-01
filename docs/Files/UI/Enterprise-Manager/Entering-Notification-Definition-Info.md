@@ -34,14 +34,6 @@ To enter notification definition information, complete the following steps:
 8. Enter the notification information
 9. Select **Save**
 
-## When Would You Use It?
-
-- To enter notification definition information:
-
-## Why Would You Use It?
-
-- **Entering Notification**: To enter notification definition information:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -24,16 +24,6 @@ doc_type: procedural
 
 Use this procedure to edit Job Events in the Enterprise Manager.
 
-## When Would You Use It?
-
-- An existing Job Events in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Job Events definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Job Events in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Job Events are recorded in the OpCon audit log, providing a complete modification history
-
 ## Editing Job-Related Events
 
 To edit the job event, complete the following steps:
@@ -65,10 +55,6 @@ To edit the job event, complete the following steps:
 9.  Select **Finish** to save or **Cancel** to discard changes
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -24,14 +24,6 @@ doc_type: procedural
 
 The **Get Failed Jobs** skill retrieves a list of failed jobs for a specified date.
 
-## When Would You Use It?
-
-- The **Get Failed Jobs** skill retrieves a list of failed jobs for a specified date
-
-## Why Would You Use It?
-
-- **Get Failed**: The **Get Failed Jobs** skill retrieves a list of failed jobs for a specified date
-
 ## Skill Details
 
 ### Parameters

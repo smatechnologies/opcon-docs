@@ -58,14 +58,6 @@ Fields are hidden if data is unavailable or if the user lacks the appropriate pr
 - **Flag when it is a recurrent job**: Indicates the selected job is scheduled to run at regular intervals and/or absolute times throughout the day
 - **Job Tags**: Job- and/or frequency-related labels or bookmarks associated with the selected job
 
-## When Would You Use It?
-
-- You need to retrieve or review Job Summary information from Solution Manager
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to access key information about the daily copy of a selected job
-
 ## Time Representations in Job Summary
 
 Time values may include icons that indicate special conditions:

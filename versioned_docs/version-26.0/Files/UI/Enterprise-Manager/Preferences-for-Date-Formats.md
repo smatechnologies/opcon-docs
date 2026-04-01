@@ -1,40 +1,43 @@
+---
+title: Setting Preferences for Date Formats
+description: "Configure the Date and Time formats to control how the EM displays dates and times."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Setting Preferences for Date Formats
 
-Configure the Date and Time formats to control the way the EM displays
-dates and times throughout the program.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-To set the preferences:
+## What Is It?
 
-1. Launch the Enterprise Manager application.
-2. Use menu path: **EnterpriseManager \> Preferences**. The
-    **Preferences** dialog displays.
-3. Click on the arrow (![Expand Arrow     ](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow "))
-    next to **Enterprise Manager** in the Preferences tree to expand the
-    drop-down list.
-4. Click on **Date Formats**. The **Date Formats** settings display to
-    the right.
-5. *(Optional)* Click inside the **Full date format**
-    text box to modify the layout to include the date and time. The
-    default is **M/d/yy h:mm a**.
-6. *(Optional)* Click inside the **Long date format**
-    text box to modify the layout to include the date only. The default
-    is **MMMM d, yyyy**.
-7. *(Optional)* Click inside the **Short date format**
-    text box to modify the layout to include a numeric short date only.
-    The default is **M/d/yy**.
-8. *(Optional)* Click inside the **Long time format**
-    text box to modify the layout to include hours, minutes, and
-    seconds. The default is **h:mm:ss a**.
-9. *(Optional)* Click inside the **Short time format**
-    text box to modify the layout to include hours and minutes. The
-    default is **h:mm a**.
-10. *(Optional)* Click on the **Restore Defaults**
-    button to restore the original date formats.
-11. Click **Apply** button to apply the changed date formats.
-12. Click **OK** to save the changes and close the **Preferences**
-    dialog.
-13. **Close ☒** the **Enterprise Manager**.
-14. Restart to load the new formats.
+Configure the Date and Time formats to control how the EM displays dates and times.
+
+To set the preferences, complete the following steps:
+
+1. Open the Enterprise Manager application
+2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
+3. Select on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
+4. Select on **Date Formats**. The **Date Formats** settings display to the right
+5. *(Optional)* Modify any of the following format fields:
+   - **Full date format** – date and time (default: **M/d/yy h:mm a**)
+   - **Long date format** – date only (default: **MMMM d, yyyy**)
+   - **Short date format** – numeric short date (default: **M/d/yy**)
+   - **Long time format** – hours, minutes, and seconds (default: **h:mm:ss a**)
+   - **Short time format** – hours and minutes (default: **h:mm a**)
+6. *(Optional)* Select **Restore Defaults** to restore the original formats
+7. Select **Apply** to apply the changes
+8. Select **OK** to save and close the **Preferences** dialog
+9. Close and restart the Enterprise Manager to load the new formats
 
 The format letters and examples below refer to this Long Date example: `Monday, August 8, 2011`
 
@@ -56,3 +59,15 @@ The example date would be created in the EM with the following string for the Lo
 |h|Hour in Day (1-12)|Hour in AM/PM|4:00|
 |mm|Minute in hour|Number|30|
 |s|Second in minute|Number|55|
+
+## FAQs
+
+**Q: How many steps does the Setting Preferences for Date Formats procedure involve?**
+
+The Setting Preferences for Date Formats procedure involves 9 steps. Complete all steps in order and save your changes.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

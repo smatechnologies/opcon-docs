@@ -32,14 +32,6 @@ The table lists keyboard shortcuts for Solution Manager. If a shortcut applies t
 |Ctrl+S|Save|
 |Esc|Cancel/Undo/Exit/No|
 
-## When Would You Use It?
-
-- The table lists keyboard shortcuts for Solution Manager
-
-## Why Would You Use It?
-
-- **Keyboard Shortcuts**: The table lists keyboard shortcuts for Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

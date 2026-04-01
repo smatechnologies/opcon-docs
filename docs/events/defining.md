@@ -21,14 +21,6 @@ doc_type: procedural
 
 Use this procedure to define Events in OpCon.
 
-## When Would You Use It?
-
-- A new Events definition needs to be established in OpCon Events
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Events in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Internal Events
 
 An internal event is any OpCon event entered in the database in association with a specific job or schedule.

@@ -73,15 +73,6 @@ To perform this procedure, complete the following steps:
 10. Select a **User Id** for running the job. Use the default value of "0/0" or assign an available batch user. User information must be defined as a Batch User ID in OpCon Administration
 11. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To specify a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group. The button appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when toggled to Machine Group
 
-## When Would You Use It?
-
-- An existing MCP Job Details in Solution Manager requires changes
-- A process change or system update makes the current MCP Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating MCP Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating MCP Job Task Details
 
 ### Updating Job Type START
@@ -183,10 +174,6 @@ A Prerun tests required preconditions before job execution. If the Prerun fails,
 
 ![Failure Criteria Job: job information](../../../Resources/Images/SM/mcp-failure-criteria.png "Failure Criteria Job: job information")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

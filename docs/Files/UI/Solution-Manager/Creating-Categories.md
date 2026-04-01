@@ -39,21 +39,6 @@ You can also edit a Service Request directly to change or set its category:
 ![Editing Service Request Category](../../../Resources/Images/SM/Creating-Categories_5.png "Editing Service Request Category")
 :::
 
-## When Would You Use It?
-
-- You need to create Categories in Solution Manager
-- A new business process or automation requirement calls for a Categories that does not yet exist
-
-## Why Would You Use It?
-
-- **Standardize definitions**: Creating Categories in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
-- All Categories definitions are stored in the OpCon database, making them available to all authorized interfaces and users
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Creating Categories procedure involve?**

@@ -30,14 +30,6 @@ The **SNMP Trap** dialog provides the following fields for defining an SNMP trap
 - **Severity**: Defines the message's severity level. Choices are: Information, Warning, or Error
 - **Message**: Defines a user-defined message up to 3,000 characters. The message also includes default trigger information: Event ID, trigger type, and triggering status change event
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining an SNMP trap notification: using The **SNMP Trap** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining an SNMP trap notification: - Event ID (Optiona
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

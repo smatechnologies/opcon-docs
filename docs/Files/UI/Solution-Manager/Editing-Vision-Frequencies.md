@@ -36,21 +36,6 @@ To edit a Vision Frequency, complete the following steps:
 6. Select **Save**
 :::
 
-## When Would You Use It?
-
-- An existing Vision Frequencies in Solution Manager requires changes
-- A change in process, system, or business requirement makes the current Vision Frequencies definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Vision Frequencies in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Vision Frequencies are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to vision frequencies take effect immediately?**

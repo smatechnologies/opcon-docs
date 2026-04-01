@@ -37,14 +37,6 @@ The `<jobdata>` element in SMA Dynamic Data Input holds platform-specific fields
 - [Windows Job Elements](#Windows)
 - [z/OS Job Elements](#z/OS)
 
-## When Would You Use It?
-
-- You need to configure or manage <jobdata\> Platform-specific Elements in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing <jobdata\> Platform-specific Elements through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Container Job Element Structure
 
 Enter either **new_master** or **new_daily** for the msgtype. For

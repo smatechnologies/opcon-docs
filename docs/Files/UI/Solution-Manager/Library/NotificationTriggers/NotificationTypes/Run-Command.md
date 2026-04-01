@@ -28,14 +28,6 @@ The **Run Command** dialog provides the following fields for defining a command 
 - **Working Directory** (Optional): Defines the working directory used by the program. The maximum for this field is 255 characters
 - **Batch User** (Required): Defines the user with permissions to run the program
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining a command to run for the selected trigger: using The **Run Command** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining a command to run for the selected trigger: - C
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

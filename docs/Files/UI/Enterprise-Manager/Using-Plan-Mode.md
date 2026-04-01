@@ -33,14 +33,6 @@ To use plan mode, complete the following steps:
 5.  *(Optional)* Hover over the **end of the job box** until the bi-directional arrow appears
 6.  Hold the left mouse button and drag the end of the **job box** to the new estimated end time
 
-## When Would You Use It?
-
-- The Plan mode in the **Gantt** chart can be used to alter a job's start time or run duration
-
-## Why Would You Use It?
-
-- **Using Plan**: The Plan mode in the **Gantt** chart can be used to alter a job's start time or run duration
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

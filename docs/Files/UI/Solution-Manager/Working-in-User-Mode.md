@@ -32,14 +32,6 @@ Users not in the «ocadm» role or a role with the «Maintain Service Request» 
 - [Filter Service Requests](Filtering-Service-Requests.md)
 - [View Service Request Processes](Viewing-Service-Request-Process-Indicators.md)
 
-## When Would You Use It?
-
-- Users not in the «ocadm» role or a role with the «Maintain Service Request» privilege see a Self Service page showing only the Service Request buttons their roles permit
-
-## Why Would You Use It?
-
-- **Working in**: Users not in the «ocadm» role or a role with the «Maintain Service Request» privilege see a Self Service page showing only the Service Request buttons their roles permit
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

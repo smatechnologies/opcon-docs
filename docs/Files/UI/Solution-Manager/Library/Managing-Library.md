@@ -32,14 +32,6 @@ Use the bar on the left side of the screen
 
 Please check back for more content.
 
-## When Would You Use It?
-
-- You need to provide options for Administration, Management, and Security using Library
-
-## Why Would You Use It?
-
-- **Operational value**: Provides options for Administration, Management, and Security
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

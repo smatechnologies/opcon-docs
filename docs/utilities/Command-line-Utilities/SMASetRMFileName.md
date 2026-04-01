@@ -22,14 +22,6 @@ doc_type: procedural
 
 SMASetRMFileName updates the file name monitored by a specified rule in the SMA Resource Monitor Rules file. Use it when you need to monitor files whose names include a dynamic date component that changes each run.
 
-## When Would You Use It?
-
-- Use this feature when you need to monitor files whose names include a dynamic date component that changes each run
-
-## Why Would You Use It?
-
-- **SMASetRMFileName**: SMASetRMFileName updates the file name monitored by a specified rule in the SMA Resource Monitor Rules file
-
 ## Syntax
 
 ```shell

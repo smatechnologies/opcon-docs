@@ -35,14 +35,6 @@ Failure to follow replication failover and recovery procedures in the proper ord
 Exceeding the number of licensed machines (agents) causes the license to be shortened to 30 days from date of license violation and will void the license key.
 :::
 
-## When Would You Use It?
-
-- You need to configure or manage Failover and Recovery with Replication in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Failover and Recovery with Replication through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Automatic Failover to the Subscribing Database Server
 
 When configured, automatic failover to the Subscribing OpCon Database Server occurs when the Secondary SMA Service Manager encounters a failover trigger. For further information, refer to [Automatic Failover](Failover-Scenarios.md#Automati).

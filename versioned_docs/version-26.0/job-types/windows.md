@@ -1,9 +1,28 @@
+---
+title: Windows Job Details
+description: "The information in this section applies to defining a Windows Job."
+product_area: Job Types
+audience: Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - Automation Engineer
+  - Jobs
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # Windows Job Details
 
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer
+
+## What Is It?
+
 The information in this section applies to defining a Windows Job. For
-additional information about this platform, refer to [Microsoft LSAM Configuration and
+additional information about this platform, refer to [Microsoft agent Configuration and
 Operation](https://help.smatechnologies.com/opcon/agents/windows/administration/configuration)
- in the **Microsoft LSAM** online help.
+ in the **Microsoft agent** online help.
 
 Jobs can be .exe, .com, .bat, or .cmd type files. If specifying a .com
 file, the command line must have the .com extension.
@@ -18,14 +37,14 @@ file, the command line must have the .com extension.
   - Define "Use Service Account" if the MSLSAM is running as a
         Domain User. For additional information on running the MSLSAM as
         a Domain User, refer to [Service Configuration         Options](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Service-Configuration-Options.md)
-         in the **Microsoft LSAM** online help.
+         in the **Microsoft agent** online help.
   - Define a specific Domain User if the MSLSAM is running as the
         Local System. For additional information on running the MSLSAM
         as the Local System, refer to [Service Configuration         Options](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Service-Configuration-Options.md)
-         in the **Microsoft LSAM** online help.
+         in the **Microsoft agent** online help.
   - If the User ID does not list the Domain User, register the
         Domain User in the EM. For information on registering a Domain
-        User in the Enterprise Manager (EM), refer to [Setting up a New         Microsoft (MS) LSAM Batch
+        User in the Enterprise Manager (EM), refer to [Setting up a New         Microsoft (MS) agent Batch
         User](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md#Setting)
          in the **Enterprise Manager** online help.
 
@@ -38,7 +57,7 @@ options are Normal, High, Idle, or Real-Time.
 Do not use Real-Time unless the machine can be dedicated to that single process.
 :::
 
-**Run in Command Shell**: Defines whether or not to run the defined
+**Run in Command Shell**: Defines whether to run the defined
 Windows command line in a command shell.
 
 **Prerun**: Defines the information for a prerequisite process that runs
@@ -48,7 +67,7 @@ Working Directory information.
 - If a prerun fails, the primary job does not start. Upon failure, the
     SAM reschedules the prerun at a user-defined interval. For
     information on this Prerun setting, refer to [Time Settings](../administration/server-options.md#time-settings).
-- The Prerun job continues to execute at the user-defined interval
+- The Prerun job continues to run at the user-defined interval
     until it succeeds. When a prerun job is successful, the primary job
     starts (provided there are no other dependencies).
 
@@ -69,7 +88,7 @@ needing input (e.g., .ini files) or creating output (e.g., log files).
     Convention (UNC) pathname in the working directory.
 
 **Command Line**: Defines the full path to the executable file on the
-LSAM machine.
+agent machine.
 
 - The maximum length of the command line is 255 characters (or the
     current Windows command-line maximum).
@@ -82,12 +101,12 @@ LSAM machine.
 - If the command line has a reference to a directory or filename that
     contains spaces, the directory and file name must be enclosed in
     double quotes (e.g., "c:\\this is my directory\\test.exe").
-- Do not place command-line parameters within the double quotes.
-- The MSLSAM automatically executes .com, .exe, .cmd, and .bat files;
+- Do not place command-line parameters within the double quotes
+- The MSLSAM automatically runs .com, .exe, .cmd, and .bat files;
     otherwise, the command line must specify a path to a file
     interpreter and must specify a path to the file itself. Another
     approach would be to insert the command line information in a .com,
-    .exe, .cmd, or .bat file and execute the file normally through
+    .exe, .cmd, or .bat file and run the file normally through
     OpCon.
 - The command line supports OpCon and
     Windows System Variables.
@@ -115,7 +134,7 @@ needing input (e.g., .ini files) or creating output (e.g., log files).
 
 **E.C.O.F.**: Defines the full path to the Exit Code Override File
 (E.C.O.F.). Since some jobs do not return a meaningful termination
-status to the operating system, SMA Technologies provides the E.C.O.F feature to help create informative feedback from
+status to the operating system, Continuous provides the E.C.O.F feature to help create informative feedback from
 jobs.
 
 - If a job uses this feature, the value in the E.C.O.F. supersedes the
@@ -123,8 +142,8 @@ jobs.
 - Upon termination, the job produces the E.C.O.F. The MSLSAM reads the
     E.C.O.F. and compares the value in the file to the Failure Criteria
     (refer to below) to determine the job's final status. Refer to
-    [Microsoft LSAM Configuration and     Operation](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Configuration-and-Operation.md)
-     in the **Microsoft LSAM** online help.
+    [Microsoft agent Configuration and     Operation](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Configuration-and-Operation.md)
+     in the **Microsoft agent** online help.
 
 **Basic Failure Criteria**: Provides fields to define basic criteria for
 OpCon to determine the final status of the
@@ -150,7 +169,7 @@ job.
   - **Exit Code**: Any integer (-2,147,483,648 through
         2,147,483,647) to compare with the job's exit code.
 
-**Advanced Failure Criteria**: Windows jobs can make use of the Advanced
+**Advanced Failure Criteria**: Windows jobs can use the Advanced
 Failure Criteria feature for the job defined in the Command Line. For
 more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
 
@@ -207,29 +226,29 @@ This job can be added to the daily using an event with various values of Run_Tim
 
 :::
 
-- **Env Variable Name**: Defines the environment variable name.
+- **Env Variable Name**: Defines the environment variable name
 
-- **Env Variable Value**: Defines the environment variable value.
+- **Env Variable Value**: Defines the environment variable value
     OpCon properties can be used for values.
 
 ### Fields for File Arrival
 
-- **File Name**: Defines the file path and name of the file to detect.
+- **File Name**: Defines the file path and name of the file to detect
     The file path and name support the Universal Naming Convention (UNC)
     standards, and Windows wildcard characters are supported in the file
     name (e.g., C:\\Folder\\Filename?ABC\*.txt).
-- **Sub-directory Search**: Specifies whether or not to search
+- **Sub-directory Search**: Specifies whether to search
     sub-directories under the specified file path.
 - **File Creation Time Stamp Window, Relative to Midnight (in
     days,hrs,mins or a token)**: Defines the time frame that the program
-    uses to watch for the arrival of the file. As best practice, SMA Technologies recommends setting the time frame
+    uses to watch for the arrival of the file. As best practice, Continuous recommends setting the time frame
     to be close to the expected time of arrival (e.g., if the file is
     expected to arrive in the evening, set the time frame to evening
     hours).
 - **File Size Stable Duration (in secs)**: Defines the amount of time
     the file size has remained stable to indicate the file has finished
     arriving.
-- **Failure Criteria**: Windows jobs can make use of the Advanced
+- **Failure Criteria**: Windows jobs can use the Advanced
     Failure Criteria feature for the job defined in the Start Image. For
     more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
 
@@ -256,7 +275,7 @@ run for this job.
 The **View** button will only be enabled for embedded scripts for which the user is a member of a role with privileges to view the contents from Job Details. A user must be a member of a role with All Administrative Functions, All Function Privileges, Maintain Embedded Scripts privilege, View Embedded Script Contents privilege, or must be in the ocadm role to view the contents.
 :::
 
-**Runner**: Defines the run command template for executing the script.
+**Runner**: Defines the run command template for running the script.
 
 **Run Command Template:** Displays the syntax for the selected runner.
 
@@ -268,10 +287,10 @@ runtime.
     Runners](../Files/UI/Enterprise-Manager/Adding-Script-Runners.md)
      in the **Enterprise Manager** online help.
 
-**Working Dir.**: Provides the executed script a specific execution
+**Working Dir.**: Provides the run script a specific execution
 context in the same manner as with a standard Windows job.
 
-**Failure Criteria**: Windows jobs can make use of the Advanced Failure
+**Failure Criteria**: Windows jobs can use the Advanced Failure
 Criteria feature for the job defined in the Start Image. For more
 information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
 
@@ -297,15 +316,15 @@ This job can be added to the daily using an event with various values of Run_Tim
 
 :::
 
-- **Env Variable Name**: Defines the environment variable name.
+- **Env Variable Name**: Defines the environment variable name
 
-- **Env Variable Value**: Defines the environment variable value.
+- **Env Variable Value**: Defines the environment variable value
     OpCon properties can be used for values.
 
 ## Windows Job Sub-Types
 
 Windows job sub-types simplify the job definition process by displaying
-fields to generate the command line for programs commonly used by SMA Technologies' customers. The following
+fields to generate the command line for programs commonly used by Continuous' customers. The following
 job sub-types are currently supported for Windows:
 
 - [Command: File Copy](#Command:)
@@ -327,7 +346,7 @@ order to copy a file.
     security authentication.
 - **Source File**: Defines the directory and file or files to be
     copied.
-  - For multiple files, use wildcards.
+  - For multiple files, use wildcards
 - **Destination File**: Specifies the directory and/or filename for
     the new file(s).
 
@@ -350,7 +369,7 @@ for Windows File Copy.
 
 This Windows sub-type is for an OpCon user
 who does a lot of Windows File Deletes. Enterprise Manager provides a
-simple Job SubType screen in order to delete a file.
+simple Job SubType screen to delete a file.
 
 #### Basic Tab
 
@@ -360,7 +379,7 @@ This tab will contain the most basic options for the command.
     security authentication.
 - **File To Delete**: Specifies a comma separated list of one or more
     files or directories.
-  - Wildcards may be used to delete multiple files.
+  - Wildcards may be used to delete multiple files
   - If a directory is specified, all files within the directory will
         be deleted.
 
@@ -403,13 +422,13 @@ This tab will contain all the advanced options for the command.
 
 This Windows sub-type moves one or more files from one directory to the
 specified directory. Enterprise Manager provides a simple Job SubType
-screen in order to move a file.
+screen to move a file.
 
 - **User Id**: Defines the User ID assigned to the job for Windows
     security authentication.
 - **Source File**: Defines the directory and file or files to be
     moved.
-  - For multiple files, use wildcards or file1+file2+file3 format.
+  - For multiple files, use wildcards or file1+file2+file3 format
 - **Destination File**: Specifies the directory and/or filename for
     the new file(s).
 
@@ -417,13 +436,13 @@ screen in order to move a file.
 
 This Windows sub-type is for an OpCon user
 who does a lot of Windows File renaming. Enterprise Manager provides a
-simple Job SubType screen in order to rename a file.
+simple Job SubType screen to rename a file.
 
 - **User Id**: Defines the User ID assigned to the job for Windows
     security authentication.
 - **Path and Current File Name**: Defines full path to the location of
     the file to rename and the current file name.
-- **New File Name**: Defines the new file name for the file.
+- **New File Name**: Defines the new file name for the file
 
 ### Corelation
 
@@ -440,11 +459,11 @@ The Corelation subtype will automatically add needed quotation marks around the 
 
 #### General
 
-- **Jobname**: Sets the jobname to start.
-- **Jobserial**: Sets the jobserial to start.
+- **Jobname**: Sets the jobname to start
+- **Jobserial**: Sets the jobserial to start
 - **Connector Location** (Required): Defines the     path where the SMACorelation.exe program is installed. The default
     value is \[\[RCJPATH\]\].
-  - SMA Technologies recommends creating a
+  - Continuous recommends creating a
         Global Property named RCJPATH so a token can be placed in the
         Corelation details and the path maintained by an administrator.
         The value for the property should contain the path to the
@@ -474,17 +493,17 @@ The Corelation subtype will automatically add needed quotation marks around the 
     that instructs SMARunCorelationJob to display all of the batch jobs
     that are defined in the Corelation database.
 - **Include debug messages** *(Optional)*: Defines an
-    option to turn on all debug print. All XML is displayed. This
+    option to enable all debug print. All XML is displayed. This
     includes the series of queries and responses for the job status.
 
 #### Parameters
 
-- **Batch Options**: Defines an optional way to specify parameters.
+- **Batch Options**: Defines an optional way to specify parameters
     Some job parameters are "nested." Each parameter consists of
     multiple arguments. The simplest format is "tag\|value" (similar
     to **Batch Options**). If this is a nested parameter, then the
     "parents" are specified as well. If this value is selected, the
-    **Include job details in output** checkbox is selected
+    **Include job details in output** option is selected
     automatically, and **Property Owner** is optional when selecting
     **Batch Options**. When defining a **Name** or **Value**, \| (pipe)
     is an invalid character.
@@ -492,12 +511,12 @@ The Corelation subtype will automatically add needed quotation marks around the 
     options are nested.
 - **Parameters**: Defines an optional way to specify parameters. When
     defining a **Value**, \| (pipe) is an invalid character.
-- **Name**: Defines the property name.
-- **Value**: Defines the property value.
+- **Name**: Defines the property name
+- **Value**: Defines the property value
 
 ### WS_FTP Pro
 
-For SMA Technologies' customers who own WS_FTP Pro, the following information applies to the WS_FTP Pro
+For Continuous' customers who own WS_FTP Pro, the following information applies to the WS_FTP Pro
 sub-type:
 
 :::note
@@ -510,7 +529,7 @@ default to the "C:\\Program Files\\Ipswitch\\WS_FTP Professional"
 directory on the machine where the job will run (with WS_FTP Pro
 installed).
 
-- SMA Technologies recommends creating a Global     Property so a token can be placed in the WS_FTP Pro details and the
+- Continuous recommends creating a Global     Property so a token can be placed in the WS_FTP Pro details and the
     path maintained by an administrator. The value for the property
     should contain the path without the trailing slash. When the job is
     saved, the EM will append \\wsftppro to construct the command.
@@ -545,7 +564,7 @@ from
 - Be sure to use the appropriate syntax as defined by the WS_FTP Pro
     Tools Guide. Remember to use quotes to enclose any parameters with
     spaces.
-- If your job fails with an exit code not in the [Microsoft LSAM     Machine
+- If your job fails with an exit code not in the [Microsoft agent     Machine
     Messages](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Machine-Messages.md)
     , please consult the WS_FTP Pro Tools Guide under the heading
     "Return Codes".
@@ -553,3 +572,91 @@ from
 **Advanced Failure Criteria**: The WS_FTP Pro sub-type can make use of
 the Advanced Failure Criteria feature for the job defined in the Command
 Line. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
+
+## Operations
+
+### Monitoring
+
+- **Basic Failure Criteria** evaluates up to five exit code conditions (EQ, NE, LT, GT, GE, LE). If any criterion is TRUE at job end, OpCon reports the job as Failed. Prerun exit codes are evaluated separately in the **Prerun Exit Code** section.
+- Job output can be parsed for specific strings using **Job Output Parsing**: define a String to Search and the Exit Code to assign when that string is found. This allows text-based failure detection independent of the process exit code.
+- The **Custom Application Log** field can attach an external application log to the job output log, providing additional context when investigating job failures.
+
+### Common Tasks
+
+- If a prerun fails, SAM reschedules it at the interval defined by **Seconds SAM should wait between PreRun attempts** in Server Options > Time Settings (default: 180 seconds). The prerun retries until it succeeds.
+- Use the **E.C.O.F.** (Exit Code Override File) field for jobs that do not return a meaningful exit code: the MSLSAM reads the file and uses its value to evaluate Failure Criteria instead of the standard exit code.
+- Do not use **Real-Time** job priority unless the machine can be entirely dedicated to that single process; use **Normal** or **High** priority for standard workloads.
+
+### Alerts and Log Files
+
+- When **Advanced Failure Criteria** is selected, no customized job-related entries are added to the Windows Event Log. Use Basic Failure Criteria when Windows Event Log entries for the job are required.
+- Working directory must be specified for jobs that require input files (e.g., `.ini` files) or produce output files (e.g., log files); the maximum length is 255 characters.
+
+## Exception Handling
+
+**Prerun job fails and blocks the primary job from starting** — If a prerun job fails, the primary job does not start; SAM reschedules the prerun at a user-defined interval and retries until it succeeds — Verify the prerun command line and working directory are correct; adjust the prerun retry interval in Server Options under Time Settings if the default interval is not appropriate.
+
+**Real-Time job priority monopolizes machine resources** — Setting the job priority to Real-Time dedicates the machine's processor to that single process, which can prevent other processes from running — Do not use Real-Time priority unless the machine can be entirely dedicated to that job; use Normal or High instead.
+
+**Advanced Failure Criteria suppresses custom Windows Event Log entries** — When Advanced Failure Criteria is selected, no job-related customized log entries are added to the Windows Event Log — If Windows Event Log entries are required for the job, use Basic Failure Criteria instead of Advanced Failure Criteria.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Job Action | Defines the run process the job uses. | — | — |
+| User ID | Defines the User ID assigned to the job for Windows | — | — |
+| Job Priority | Defines the Windows process priority for the job. | — | — |
+| Run in Command Shell | Defines whether to run the defined | — | — |
+| Prerun | Defines the information for a prerequisite process that runs | — | — |
+| (Prerun) Working Directory | Defines the working directory for the job listed in the Prerun. | — | — |
+| Command Line | Defines the full path to the executable file on the | — | — |
+| Working Directory | Defines the working directory for the job listed | — | — |
+| E.C.O.F. | Defines the full path to the Exit Code Override File | — | — |
+| Basic Failure Criteria | Provides fields to define basic criteria for | — | — |
+| Job Exit Codes | If any one of the criteria is TRUE at the end of a job, the OpCon reports the job as | — | — |
+| Advanced Failure Criteria | Windows jobs can use the Advanced | — | — |
+| Prerun Exit Code | If the criterion is TRUE at the end of a prerun | — | — |
+| Job Output Parsing | Provides fields to define the search criteria | — | — |
+| Search Operation | Defines the type of search operation to perform | — | — |
+| String to Search | Defines the parsing value string to be searched. | — | — |
+| Exit Code | Defines the exit code to use if the String to Search | — | — |
+| Custom Application Log | Defines an external application log to be attached to the job output log. | — | — |
+| Environment Variables | Defines the environment variables for the job | — | — |
+| Env Variable Name | Defines the environment variable name | — | — |
+| Env Variable Value | Defines the environment variable value | — | — |
+| File Name | Defines the file path and name of the file to detect | — | — |
+| Sub-directory Search | Specifies whether to search | — | — |
+| File Size Stable Duration (in secs) | Defines the amount of time | — | — |
+| Failure Criteria | Windows jobs can use the Advanced | — | — |
+## FAQs
+
+**Q: What file types can Windows jobs run?**
+
+Windows jobs can run .exe, .com, .bat, or .cmd type files. If specifying a .com file, the command line must include the .com extension.
+
+**Q: What are the three Windows job actions?**
+
+The three job actions are Run Program (runs a program or script), File Arrival (monitors for file arrival), and Embedded Script (runs a script stored in the OpCon script repository).
+
+**Q: What happens if a prerun fails on a Windows job?**
+
+If a prerun fails, the primary job does not start. The SAM reschedules the prerun at a user-defined interval and runs it repeatedly until it succeeds before allowing the primary job to start.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts can be assigned to Windows jobs and run at runtime without requiring the script file to exist on the target machine.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

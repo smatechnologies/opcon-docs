@@ -34,14 +34,6 @@ To compare frequencies, complete the following steps:
 6.  Select the **Finish** button in both **Frequency Definition** frames
 7.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
 
-## When Would You Use It?
-
-- You can compare two frequencies side by side
-
-## Why Would You Use It?
-
-- **Comparing Frequencies**: You can compare two frequencies side by side
-
 ## FAQs
 
 **Q: How many steps does the Comparing Frequencies procedure involve?**

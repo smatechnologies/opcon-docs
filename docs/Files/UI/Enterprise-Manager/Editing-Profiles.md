@@ -33,21 +33,6 @@ To edit a profile, complete the following steps:
 7. Select **Finish** once the connection to the database is made
 8. Select **Apply** to save the changes, then select **OK** to close the **Preferences** dialog
 
-## When Would You Use It?
-
-- An existing Profiles in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Profiles definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Profiles in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Profiles are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to profiles take effect immediately?**

@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Batch User Privileges** editor creates and maintains security tokens used in batch processing and manages Role privileges for those tokens. It contains a list of user account names, the target OS, and the granted and revoked privileges. For conceptual information, refer to [Batch User Privileges](../../../administration/privileges.md#batch-user-privileges) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Batch User Privileges settings in Enterprise Manager
-- Batch User Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Batch User Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Batch User Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Setting up Batch User IDs
 
 Batch User IDs are required for processing jobs on Windows, IBM i, MCP, UNIX, and OpenVMS. For setup details, refer to [Adding Batch Users](Adding-Batch-Users.md).
@@ -71,10 +61,6 @@ All changes to Batch User Privileges are captured in the OpCon audit system, sup
 
 The Batch User Privileges editor manages security tokens — the platform user account names — used during batch job submission. These tokens represent real operating system credentials on the target platforms. Controlling which OpCon roles have access to which Batch User IDs limits the operating-system accounts that automation can invoke on each platform.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

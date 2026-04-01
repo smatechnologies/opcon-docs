@@ -25,14 +25,6 @@ As part of the **Operations** module, users with the appropriate privileges can 
 - **Read-only**: Review defined properties for the selected job. Properties cannot be edited in this mode
 - **Admin**: Modify properties, including reconfiguring platform-specific details, for the selected job
 
-## When Would You Use It?
-
-- You need to retrieve or review Daily Job Definition information from Solution Manager
-
-## Why Would You Use It?
-
-- **Accessing Daily**: As part of the **Operations** module, users with the appropriate privileges can view the daily job definition and modify job properties
-
 ## Administration
 
 ### Required Privileges

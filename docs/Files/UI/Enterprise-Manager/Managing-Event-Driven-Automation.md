@@ -54,21 +54,6 @@ To remove a trigger, complete the following steps:
 5. Select the **Save** button
 :::
 
-## When Would You Use It?
-
-- You need to review or update Event Driven Automation settings in Enterprise Manager
-- Event Driven Automation needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Event Driven Automation management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Event Driven Automation changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What does managing event driven automation involve?**

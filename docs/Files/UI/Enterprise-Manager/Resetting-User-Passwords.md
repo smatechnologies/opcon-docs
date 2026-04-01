@@ -31,14 +31,6 @@ To reset a user password, complete the following steps:
 3. Select the **Reset User Password** button
 4. Select **Close ☒** (to the right of the **User Accounts** tab) to close the **User Accounts** screen
 
-## When Would You Use It?
-
-- To reset a user password:
-
-## Why Would You Use It?
-
-- **Resetting User**: To reset a user password:
-
 ## FAQs
 
 **Q: How many steps does the Resetting User Passwords procedure involve?**

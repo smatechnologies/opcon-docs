@@ -57,21 +57,6 @@ You can import and store up to a 900KB script file per version.
 9. *(If prompted)* Assign a role or roles in the **Assign Script Roles** dialog and select **Save**
 10. Select **Close ☒** (to the right of the **Script Repository** tab) to close the **Script Repository** screen
 
-## When Would You Use It?
-
-- You need to add Scripts in Enterprise Manager
-- The environment is expanding and requires additional Scripts to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Scripts to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Scripts and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How do you save a new scripts record?**

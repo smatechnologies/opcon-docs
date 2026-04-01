@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to delete Schedules and Jobs in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Schedules and Jobs in Solution Manager is no longer needed
-- The Schedules and Jobs has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Schedules and Jobs definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
 ## Delete Schedule(s)
 
 To delete Schedule(s), complete the following steps:
@@ -68,10 +58,6 @@ Related Topics
 - [Performing Schedule Checks](Performing-Schedule-Checks.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -51,14 +51,6 @@ From this page, you can do any of the following:
 - [Manage Vision Remote     Instances](Managing-Vision-Remote-Instances.md)
 - [View Cards in Vision     Live](Viewing-Cards-in-Vision-Live.md)
 
-## When Would You Use It?
-
-- Users in the «ocadm» role will see a Vision Live page that is similar to
-
-## Why Would You Use It?
-
-- **Working in**: Users in the «ocadm» role will see a Vision Live page that is similar to
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

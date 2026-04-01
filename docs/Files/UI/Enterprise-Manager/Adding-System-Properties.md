@@ -33,16 +33,6 @@ To add a system property, complete the following steps:
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Global Properties** toolbar
 8. Select **Close ☒** (to the right of the **Global Properties** tab) to close the **Global Properties** screen
 
-## When Would You Use It?
-
-- You need to add User-defined System Properties in Enterprise Manager
-- The environment is expanding and requires additional User-defined System Properties to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding User-defined System Properties to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the User-defined System Properties and when
-
 ## FAQs
 
 **Q: How do you save a new user-defined system properties record?**

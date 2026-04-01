@@ -36,14 +36,6 @@ To apply a rule to a trigger, complete the following steps:
 10. *(Optional)* Select the **Attachments** tab and add *attachments*
 11. Select **Save**
 
-## When Would You Use It?
-
-- To apply a rule to a trigger:
-
-## Why Would You Use It?
-
-- **Applying Escalation**: To apply a rule to a trigger:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

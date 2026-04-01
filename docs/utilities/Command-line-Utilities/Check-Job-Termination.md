@@ -22,14 +22,6 @@ doc_type: conceptual
 
 SMACheckTerm.exe compares the termination description of a completed job to a specific value. If the exit code matches the expression, it returns 0; otherwise it returns a failure exit code. This enables branching to different jobs or OpCon events based on a job's exit code.
 
-## When Would You Use It?
-
-- SMACheckTerm.exe compares the termination description of a completed job to a specific value
-
-## Why Would You Use It?
-
-- **Operational value**: Enables branching to different jobs or OpCon events based on a job's exit code
-
 ## Rules
 
 :::tip Example

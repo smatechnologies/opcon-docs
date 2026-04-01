@@ -21,14 +21,6 @@ doc_type: reference
 
 This section contains the syntax, definition, and parameter descriptions for all supported OpCon events.
 
-## When Would You Use It?
-
-- This section contains the syntax, definition, and parameter descriptions for all supported OpCon events
-
-## Why Would You Use It?
-
-- **Event Types**: This section contains the syntax, definition, and parameter descriptions for all supported OpCon events
-
 ## Administrative Events
 
 ### $CALENDAR:ADD

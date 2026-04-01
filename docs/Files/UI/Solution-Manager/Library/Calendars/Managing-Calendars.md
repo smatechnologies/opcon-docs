@@ -24,16 +24,6 @@ doc_type: procedural
 
 The **Calendars** page is used to define and maintain OpCon Calendars and displays a list of existing calendars. For conceptual information, refer to [Calendars](../../../../../objects/calendars.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Calendars settings in Solution Manager
-- Calendars needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Calendars management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Calendars changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Calendars Toolbar
 
 The **Calendars** page has a toolbar for managing calendars.
@@ -48,10 +38,6 @@ Related Topics
 - [Deleting Calendars](Deleting-Calendars.md)
 - [Editing Calendars](Editing-Calendars.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

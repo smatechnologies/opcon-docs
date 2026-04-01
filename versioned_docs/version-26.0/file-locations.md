@@ -1,25 +1,41 @@
+---
+title: File Locations
+description: "During installation, you chose where OpCon programs are installed and where they write output files."
+product_area: OpCon
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Getting Started
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # File Locations
 
-During the installation, someone chose where the OpCon programs were installed and where they would write output files.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-The configuration file location is based on where the programs were installed.
+## What Is It?
 
-- If the programs were installed anywhere on the system drive (e.g., C:\\), the configuration files will be in the <systemdrive\>:\\ProgramData\\OpConxps directory.
-- If the programs were installed to a non-system drive (e.g., D:\\), the configuration files will be in the same folder as the programs.
+During installation, you chose where OpCon programs are installed and where they write output files.
 
-The output files and folders can be configured for any local hard drive location, but their default location is based on where the programs were installed.
+Configuration file location depends on the installation drive:
 
-- If the programs were installed anywhere on the system drive (e.g., C:\\), the output files will default to the <systemdrive\>:\\ProgramData\\OpConxps directory.
-- If the programs were installed to a non-system drive (e.g., D:\\), the output files will default to the same folder as the programs.
-- If a custom path was defined, the SMACommon.ini configuration file will indicate the path to the output files.
+- **System drive** (e.g., C:\\): Configuration files are in `<systemdrive>:\ProgramData\OpConxps`
+- **Non-system drive** (e.g., D:\\): Configuration files are in the same folder as the programs
 
-The subsequent examples show different possible installation directory structures.
+Output file location defaults are also drive-dependent, but can be set to any local hard drive location:
+
+- **System drive**: Output files default to `<systemdrive>:\ProgramData\OpConxps`
+- **Non-system drive**: Output files default to the same folder as the programs
+- **Custom path**: The `SMACommon.ini` file indicates the output file path
 
 ## Installed to System Drive using Default Path
 
 :::info Example
-This example shows where you will find your programs and files if they were installed to a system drive using the default paths.
-
 **Programs**: C:\Program Files\OpConxps\\*program folder*
 
 **Configuration files**: C:\ProgramData\OpConxps\\*program folder*
@@ -28,13 +44,13 @@ This example shows where you will find your programs and files if they were inst
 :::
 
 :::note
-The root OpConxps data folder is likely hidden. To access this directory, type C:\\ProgramData in your File Explorer address bar.
+The root OpConxps data folder is likely hidden. To access it, type `C:\ProgramData` in your File Explorer address bar.
 :::
 
 ## Installed to System Drive using Custom Path
 
 :::info Example
-This example shows where you would find your programs and files if they were installed to a custom system path of C:\My OpCon\OpConxps\ and accepted the default output path.
+Programs installed to C:\My OpCon\OpConxps\ with default output path.
 
 **Programs**: C:\My OpCon\\*program folder*
 
@@ -46,7 +62,7 @@ This example shows where you would find your programs and files if they were ins
 ## Installed to Non-System Drive using Custom Path
 
 :::info Example
-This example shows where you would find your programs and files if they were installed to a custom path on a non-system drive of D:\My Programs\OpConxps\ and accepted the default output path.
+Programs installed to D:\My Programs\OpConxps\ with default output path.
 
 **Programs**: D:\My Programs\OpConxps\\*program folder*
 
@@ -58,15 +74,43 @@ This example shows where you would find your programs and files if they were ins
 ## Installed Output Files using Custom Path
 
 :::info Example
-This example shows where you would find your output files if you chose a custom path. No matter where the programs were installed, the output files could have been configured for a custom location on any local hard drive.
-
-In this example, the default path was accepted for the program files and a custom path of E:\Logs\OpConxps\ was defined for the output files.
+Programs at default path; output files at custom path E:\Logs\OpConxps\.
 
 **Programs**: C:\Program Files\OpConxps\\*program folder*
 
 **Configuration files**: C:\ProgramData\OpConxps\\*program folder*
 
-**Note**: The SMACommon.ini file in this folder contains the location for the output files.
+**Note**: SMACommon.ini in this folder contains the output file path.
 
 **Output files**: E:\Logs\OpConxps\\*program folder*
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| System drive | Output files default to `:\ProgramData\OpConxps` | `<systemdrive>:\ProgramData\OpConxps` | — |
+| Non-system drive | Output files default to the same folder as the programs | — | — |
+| Custom path | The `SMACommon.ini` file indicates the output file path | Path  :::info Example **Progra | — |
+| Programs | C:\Program Files\OpConxps\\*program folder* | — | — |
+| Configuration files | C:\ProgramData\OpConxps\\*program folder* | — | — |
+| Output files | C:\ProgramData\OpConxps\\*program folder* | — | — |
+## FAQs
+
+**Q: Where are OpCon configuration files stored when installed on the system drive?**
+
+Configuration files are stored in `<systemdrive>:\ProgramData\OpConxps`. The root `OpConxps` data folder may be hidden — type `C:\ProgramData` in File Explorer to access it.
+
+**Q: Where are configuration files stored when OpCon is installed on a non-system drive?**
+
+When installed on a non-system drive (e.g., D:\), configuration files are stored in the same folder as the programs.
+
+**Q: How do you find the output file path when a custom path is configured?**
+
+Check the `SMACommon.ini` file in the configuration folder. This file contains the custom output file path when one is set during installation.
+
+## Glossary
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

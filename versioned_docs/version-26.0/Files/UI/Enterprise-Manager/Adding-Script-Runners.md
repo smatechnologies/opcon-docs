@@ -1,81 +1,78 @@
+---
+title: Adding Script Runners
+description: "When creating script runners, keep the following in mind: - A runner can only run scripts belonging to its defined script type - Define at least one runner for each script type - Define a runner for."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Adding Script Runners
 
-When creating script runners, bear in mind the following key points:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- A runner can only run scripts that belong to the defined script
-    type.
-- At least one runner should be defined for each script type.
-- There should also be a runner defined for each supported platform of
-    a given script type.
+## What Is It?
 
-If you have a Python script that can run on both Windows and Linux platforms, then you would define at least one runner on each platform. Something similar to the following:
+When creating script runners, keep the following in mind:
+
+- A runner can only run scripts belonging to its defined script type
+- Define at least one runner for each script type
+- Define a runner for each supported platform of a given script type
+
+For example, a Python script that runs on both Windows and Linux requires at least one runner per platform:
 
 |Name|Script Type|OS|Command Template|
 |---|---|---|---|
 |Python-Win|Python|Windows|Syntax|
 |Python-Unix|Python|UNIX|Syntax|
 
-Let's take this example one step further and say that you had two versions of the Python runner for a Windows machine. Here, in this case, you would define at least one runner for each version for the Windows platform. Something similar to the following:
+If you have two versions of the Python runner for Windows, define at least one runner per version:
 
 |Name|Script Type|OS|Command Template|
 |---|---|---|---|
 |Python1-Win|Python|Windows|Syntax|
 |Python2-Win|Python|Windows|Syntax|
 
-To add a script runner:
+To add a script runner, complete the following steps:
 
-Double-click on **Runners** under the **Scripts** topic. The **Script
-Runners** screen displays.
+1. Select on **Runners** under the **Scripts** topic. The **Script Runners** screen displays
+2. Select **Add Runner** on the toolbar. The **Add Runner** dialog displays
+3. Enter *a name* for the script runner
+4. Select the **OS** from the list. Supported platforms: UNIX and Windows
+5. Select the **script type** from the list. If no script types are listed:
+   a. Select **Add** next to the **Type** list.
+   b. Enter the *information* for the new script type in the **Add Script Type** dialog.
+   c. Select **Save** in the **Add Script Type** dialog.
+   d. Select the **newly-added script type** from the **Type** list.
+6. In the **Command Template** field, enter the path to the executable and syntax for the file and arguments. Use one of the following predefined templates as a base:
+   - PowerShell: `powershell.exe -ExecutionPolicy Bypass -File $FILE $ARGUMENTS`
+   - Python: `python $FILE $ARGUMENTS`
+   - PERL: `perl $FILE $ARGUMENTS`
+   - Command Shell: `cmd.exe /c $FILE $ARGUMENTS`
+   - CScript: `Cscript.exe $FILE $ARGUMENTS`
 
-Click the **Add Runner** button on the toolbar. The **Add Runner**
-dialog displays.
+   When defining or modifying the command template:
+   - The template may contain tokens resolved at runtime. Continuous recommends using Machine Instance properties for the executable path so the template works across machines
+   - `$FILE` — placeholder for the filename; required for every runner
+   - `$ARGUMENTS` — placeholder for script arguments; optional but recommended for every runner to reduce the total number of runners needed. Replaced at runtime with any script parameters from the job definition
+7. Select **Save** in the **Add Runner** dialog
+8. Select **Close ☒** (to the right of the **Script Runners** tab) to close the **Script Runners** screen
 
-Enter *a name* for the script runner.
+## FAQs
 
-Select the **OS** from the drop-down list. The following platforms
-support this feature: UNIX and Windows.
+**Q: How do you save a new script runners record?**
 
-Select the **script type** from the drop-down list. If there are no
-script types currently available or listed:
+After completing the required fields, select the **Save** button on the toolbar to save the script runners record.
 
-a.  Click the **Add** button next to the **Type** drop-down list.
-b.  Enter the *information* for the new script type in the **Add Script
-    Type** dialog.
-c.  Click the **Save** button in the **Add Script Type** dialog.
-d.  Select the **newly-added script type** from the **Type** drop-down
-    list.
+## Glossary
 
-Enter, in the **Command Template** field, the path to the executable and
-syntax for the placement of the file and arguments. As a base, you can
-copy the command template syntax from one of the following predefined
-script runners installed with application and modify it, accordingly:
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
-- PowerShell (powershell.exe -ExecutionPolicy Bypass -File $FILE
-    $ARGUMENTS)
-- Python (python $FILE $ARGUMENTS)
-- PERL (perl $FILE $ARGUMENTS)
-- Command Shell (cmd.exe /c $FILE $ARGUMENTS)
-- CScript (Cscript.exe $FILE $ARGUMENTS)
-
-When defining or modifying the command template, bear in mind the
-following:
-
-- The template may contain tokens, which will be resolved at runtime.
-  - SMA Technologies recommends using Machine         Instance properties for the path to the executable so that the
-        template will work on different machines.
-- $FILE is a placeholder for the location where the Agent should
-    place the filename when constructing the command to send to the
-    operating system.
-  - This placeholder should be defined for every runner.
-- $ARGUMENTS is a placeholder for the location where the Agent should
-    place the arguments when constructing the command to send to the
-    operating system.
-  - This placeholder is optional for each runner, but SMA Technologies recommends that you include
-        it for every runner to reduce the number of runners defined.
-  - This placeholder will be replaced at runtime with any script
-        parameters included on the job definition screen.
-
-Click the **Save** button in the **Add Runner** dialog.
-
-Click **Close ☒** (to the right of the **Script Runners** tab) to close
-the **Script Runners** screen.
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

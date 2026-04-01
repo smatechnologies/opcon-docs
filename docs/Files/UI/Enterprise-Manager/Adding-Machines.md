@@ -35,21 +35,6 @@ To add a machine, complete the following steps:
 7. Enter the maximum number of jobs allowed by the OpCon server
 8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Machines** toolbar
 
-## When Would You Use It?
-
-- You need to add Machines in Enterprise Manager
-- The environment is expanding and requires additional Machines to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Machines to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Machines and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How do you save a new machines record?**

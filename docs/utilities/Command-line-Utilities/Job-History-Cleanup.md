@@ -29,14 +29,6 @@ For information on viewing job history, refer to [Using History Management](../.
 
 During installation, the SMAUtility schedule is imported with jobs named Job History Archive and Job History Purge. For more information, refer to [SMAUtility Schedule Job Descriptions](../../objects/schedules.md#smautility-schedule) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- History.exe archives and purges job history
-
-## Why Would You Use It?
-
-- **Job History**: History.exe archives and purges job history
-
 ## Syntax
 
 ```shell

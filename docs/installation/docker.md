@@ -29,14 +29,6 @@ The **opcon-server** Docker image includes:
 - SMA OpCon Service Manager
 - SMA OpCon Solution Manager
 
-## When Would You Use It?
-
-- OpCon's server components can be installed and run in a Docker container
-
-## Why Would You Use It?
-
-- **OpCon on**: OpCon's server components can be installed and run in a Docker container
-
 ## Known Limitations
 
 - SQL Server must have SQL authentication enabled

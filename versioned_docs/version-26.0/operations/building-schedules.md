@@ -1,41 +1,108 @@
+---
+title: Building Daily Schedules
+description: "Building Daily schedules copies qualifying Master schedules and jobs for specified dates into the active Daily processing tables for SAM."
+product_area: Operations
+audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - Operations Staff
+  - System Administrator
+  - Schedules
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Building Daily Schedules
 
-Building Daily schedules is the process of copying the Master schedules and jobs that qualify for specified dates and putting them into the active Daily processing tables for SAM. SMA Technologies recommends that customers build schedules before the schedule start times to allow time for all dependencies to resolve.
+**Theme:** Build  
+**Who Is It For?** Operations Staff, System Administrator
+
+## What Is It?
+
+Building Daily schedules copies qualifying Master schedules and jobs for specified dates into the active Daily processing tables for SAM. Build schedules before their start times to allow dependencies to resolve.
 
 :::note
-If building a schedule for a date older than today or for a range of dates with the first date being older than today, OpCon automatically places the schedule On Hold for all included defined dates.
+If building a schedule for a past date or a date range starting in the past, OpCon automatically places the schedule On Hold for those dates.
 :::
 
-When defining the schedules to build, the user will have the option to:
+When defining schedules to build, you can:
 
-- Set a range of dates for building.
-- Determine if schedules will or will not be overwritten if found in the Daily tables.
-  - Existing schedules that are processing cannot be overwritten.
-  - If a schedule is set as *Multi-Instance*, the "Overwrite Existing" setting would never apply because each build would create a new instance.
-- Set specific property definitions for each schedule instance requested. If enabled, the following information can be supplied:
-  :::note
-  If specific definitions are not supplied for each schedule instance, OpCon automatically builds all defined instances for the schedule.
-  :::
-- If the schedule being processed has no defined instances, (refer to [Instance Definition](../job-components/instances.md)), the user can enter property definitions for an instance of a specific schedule in the format:
+- Set a date range
+- Choose whether to overwrite schedules already in the Daily tables
+  - Schedules currently processing cannot be overwritten
+  - *Multi-Instance* schedules are never overwritten; each build creates a new instance
+- Set specific property definitions for each schedule instance. If not supplied, OpCon builds all defined instances automatically
+- For schedules with no defined instances, enter property definitions in the format:
 
   ```shell
   PName1=PValue1;PName2=PValue2…
   ```
 
   For more information, refer to [Properties](../objects/properties.md).
-- In graphical interface, if the schedule being processed is configured to build an instance for each machine in a machine group (refer to [Instance Definition](../job-components/instances.md)), the user can select a specific machine from the group.
-- In graphical interface, if the schedule being processed has one or more instance definitions with predefined user properties (refer to [Instance Definition](../job-components/instances.md)), the user can enter property definitions for an instance of a specific schedule in the format:
-- In graphical interface, if the schedule being processed is associated with one or more named instances (refer to [Instance Definition](../job-components/instances.md)), the user can select a specific named instance then enter property definitions for the named instance in the format:
+- In the graphical interface, for schedules configured to build an instance per machine in a machine group, select a specific machine
+- In the graphical interface, for schedules with predefined user property instances or named instances, select the instance and enter property definitions in the same format
 
 ![Schedule Build Process](../Resources/Images/Concepts/schedulebuildprocess.png "Schedule Build Process")
 
-All schedule build processing is managed by the SMASchedMan program on the OpCon server. For additional information, refer to [SMASchedMan](../server-programs/request-router.md#smasched) in the **Server Programs** online help.
+All schedule build processing is managed by SMASchedMan on the OpCon server. Refer to [SMASchedMan](../server-programs/request-router.md#smasched) in the **Server Programs** online help.
 
-Building Daily schedules can be managed using the following methods:
+Daily schedules can be built using the following methods:
 
-- If automatic schedule maintenance is configured, the SAM will automatically build Daily schedules. For additional information, refer to [Schedule Maintenance](../objects/schedules.md#schedule-maintenance).
-- Schedule builds can also be automated using:
-  - OpCon events (refer to [Schedule-Related Events](../events/types.md#schedule) in the **OpCon Events** online help)
-  - The DoBatch utility (refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md) in the in the **Utilities** online help)
-- If an automatic Schedule Build process fails, the SAM will process the events on the SMA_SKD_BUILD job. For additional information, refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule).
-- Schedule builds can be requested through the graphical interfaces.
+- **Automatic**: When automatic schedule maintenance is configured, SAM builds Daily schedules automatically. Refer to [Schedule Maintenance](../objects/schedules.md#schedule-maintenance)
+- **Automated via events or utilities**: Use [Schedule-Related Events](../events/types.md#schedule) or the [DoBatch](../utilities/Command-line-Utilities/DoBatch.md) utility
+- **Failure handling**: If an automatic build fails, SAM processes events on the SMA_SKD_BUILD job. Refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule)
+- **Manual**: Request builds through the graphical interfaces
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Automatic | When automatic schedule maintenance is configured, SAM builds Daily schedules automatically. | — | — |
+| Automated via events or utilities | Use Schedule-Related Events or the DoBatch utility | — | — |
+| Failure handling | If an automatic build fails, SAM processes events on the SMA_SKD_BUILD job. | — | — |
+| Manual | Request builds through the graphical interfaces | — | — |
+## Operations
+
+### Common Tasks
+- Build schedules before their start times to allow dependencies to resolve before jobs become eligible to run.
+- If building for a past date or a date range starting in the past, OpCon automatically places those schedule instances On Hold; they must be manually released before they will process.
+- Use automatic schedule maintenance to have SAM build Daily schedules automatically; if an automatic build fails, SAM processes events on the `SMA_SKD_BUILD` job on the AdHoc schedule.
+- Schedules currently In Process cannot be overwritten during a build; Multi-Instance schedules are never overwritten — each new build creates a new instance.
+
+### Alerts and Log Files
+- Build processing is managed by SMASchedMan on the OpCon server; if an automatic build fails and was started by an OpCon Event, the SAM processes events on the `SMA_SKD_BUILD` job on the AdHoc schedule.
+
+## FAQs
+
+**Q: What does building a Daily Schedule do?**
+
+Building a Daily Schedule copies qualifying Master schedules and jobs for specified dates into the active Daily processing tables, making them available for the SAM to process.
+
+**Q: What happens if I build a schedule for a past date?**
+
+OpCon automatically places the schedule On Hold for any past dates. The schedule will not run until it is manually released.
+
+**Q: Can a schedule that is currently processing be overwritten during a build?**
+
+No. Schedules currently In Process cannot be overwritten. Multi-Instance schedules are also never overwritten — each new build creates an additional instance.
+
+**Q: Can schedule builds be automated?**
+
+Yes. Builds can be triggered automatically through schedule maintenance settings, via Schedule-Related Events, using the DoBatch utility, or configured through automatic schedule maintenance on individual schedule definitions.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

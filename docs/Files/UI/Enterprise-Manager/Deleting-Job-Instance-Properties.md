@@ -34,21 +34,6 @@ To delete a property, complete the following steps:
 8. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 9. Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- An existing Job Instance Properties in Enterprise Manager is no longer needed
-- The Job Instance Properties has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Job Instance Properties definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Can a job instance properties record be recovered after deletion?**

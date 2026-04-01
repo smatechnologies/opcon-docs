@@ -28,14 +28,6 @@ The Master vs. Daily design provides the following primary benefits:
 - The SAM scans all active schedules and jobs to determine when to submit jobs for processing. By processing the jobs in the Daily, SAM scans only the required subset of jobs for the day, thereby making processing more efficient. For example, there may be 1,000 jobs defined in the Job Master tables, but of those 1,000 jobs, only 150 must run on weeknights. Instead of having to continually read through 1,000 records to decide what job to start next, the SAM only has to scan 150 records
 - Individual changes can be made to jobs, such as removing a dependency or changing a start time, without making any changes to the Job Master tables. This means that when any subsequent schedules are generated, the original values and requirements are still in place
 
-## When Would You Use It?
-
-- OpCon was designed to use two major sets of tables
-
-## Why Would You Use It?
-
-- **Operational value**: Automate all known workflows for an environment
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

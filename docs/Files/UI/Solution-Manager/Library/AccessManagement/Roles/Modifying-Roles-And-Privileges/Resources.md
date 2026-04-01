@@ -42,14 +42,6 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- The **Resources** tab (_Library > Access Management > Roles_) displays the resources granted to the selected role, including access codes, machines, machine groups, schedules, and scripts
-
-## Why Would You Use It?
-
-- **Role Resources**: The **Resources** tab (_Library > Access Management > Roles_) displays the resources granted to the selected role, including access codes, machines, machine groups, schedules, and scripts
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

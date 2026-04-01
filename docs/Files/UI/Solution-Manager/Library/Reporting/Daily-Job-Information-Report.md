@@ -48,14 +48,6 @@ _Column menu showing the Filter option_
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Daily Job Information Report** shows daily job execution details including job status, schedule information, and execution times
-
-## Why Would You Use It?
-
-- **Daily Job**: The **Daily Job Information Report** shows daily job execution details including job status, schedule information, and execution times
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

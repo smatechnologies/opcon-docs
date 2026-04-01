@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to view and Exporting History Records in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to inspect or audit and Exporting History Records records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current and Exporting History Records state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Exporting History Records records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Viewing Records
 
 To view a history record, complete the following steps:
@@ -56,10 +46,6 @@ The **Export Data** button exports records in comma-separated value (.csv) forma
 
 The **Reset View** button resets all selection options to their defaults.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

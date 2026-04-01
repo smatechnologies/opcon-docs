@@ -42,14 +42,6 @@ The end-of-month frequency must be prioritized at the top. If Friday and end of 
 - [Documentation](./documentation.md)
 - [Tags](./tags.md)
 
-## When Would You Use It?
-
-- You need to describes the components used to automate OpCon jobs using This section
-
-## Why Would You Use It?
-
-- **Operational value**: Automate OpCon jobs
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

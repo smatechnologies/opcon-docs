@@ -24,14 +24,6 @@ doc_type: procedural
 
 The **Summarize Schedule Build** skill displays a summary of the schedule build log for a specified schedule and date, including status, any build issues, and a link to the full log file.
 
-## When Would You Use It?
-
-- The **Summarize Schedule Build** skill displays a summary of the schedule build log for a specified schedule and date, including status, any build issues, and a link to the full log file
-
-## Why Would You Use It?
-
-- **Summarize Schedule**: The **Summarize Schedule Build** skill displays a summary of the schedule build log for a specified schedule and date, including status, any build issues, and a link to the full log file
-
 ## Skill Details
 
 ### Parameters

@@ -31,14 +31,6 @@ To perform this procedure, complete the following steps:
 3. *(Optional)* Right-click on the **machine** that requires the number of running jobs to be reset
 4. Select **Re-Synchronize Running Jobs** from the menu
 
-## When Would You Use It?
-
-- To perform this procedure:
-
-## Why Would You Use It?
-
-- **Re-Synchronizing Running**: To perform this procedure:
-
 ## FAQs
 
 **Q: How many steps does the Re-Synchronizing Running Jobs procedure involve?**

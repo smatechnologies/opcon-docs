@@ -24,14 +24,6 @@ Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitt
 
 Because OpCon reports on a job that has already started, this feature is limited on most platforms. No OpCon dependencies, resources, or thresholds can constrain the job, and OpCon properties cannot define it. However, job history is maintained, and subsequent jobs can depend on a tracked job.
 
-## When Would You Use It?
-
-- Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitted) that were started outside an OpCon schedule or event
-
-## Why Would You Use It?
-
-- **Job Tracking**: Job Tracking lets OpCon monitor external jobs (user-submitted or program-submitted) that were started outside an OpCon schedule or event
-
 ## Automatic Job Tracking
 
 Automatic Job Tracking monitors external jobs without requiring a job definition in OpCon, which can also reduce or eliminate definitions stored by the operating system agent.

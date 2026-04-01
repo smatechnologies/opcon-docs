@@ -30,14 +30,6 @@ If the agents and the machines involved in the file transfer are not properly co
 Machine definition for Primary and Alternate machines and Machine Groups is not available for File Transfer Job Details.
 :::
 
-## When Would You Use It?
-
-- The information in this section applies to defining a File Transfer job
-
-## Why Would You Use It?
-
-- **File Transfer**: The information in this section applies to defining a File Transfer job
-
 ## File Information
 
 - **Machine (Source)**: Defines the machine with the source file to transfer. Only the machines enabled for file transfer can be defined for this value. Refer to [File Transfer Settings](../objects/machines.md#File)

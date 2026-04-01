@@ -26,16 +26,6 @@ Editing job automation components in the **Daily** editor is similar to editing 
 Changes made to the job properties in the Job Daily take place immediately. If the job has already run, the changes take effect the next time the job runs.
 :::
 
-## When Would You Use It?
-
-- An existing Job Automation Components in Job Daily in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Job Automation Components in Job Daily definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Job Automation Components in Job Daily in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Job Automation Components in Job Daily are recorded in the OpCon audit log, providing a complete modification history
-
 ## Editing Job Details
 
 1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
@@ -355,10 +345,6 @@ For conceptual information, refer to [Documentation](../../../job-components/doc
 9. Select **Close ☒** to close the **Daily Maintenance** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -1,32 +1,60 @@
+---
+title: Viewing and Updating Tags
+description: "The Tags panel in Master Job Definition displays tags relating to the job and its frequencies."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing and Updating Tags
 
-The **Tags** panel in **Master Job Definition** displays the
-tags relating to the job and frequencies of the job.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- The panel can be placed in **Full Screen** mode by simply clicking
-  the icon (![Full Screen Panel Icon     ](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon"))
-  to the far-right side of the panel bar. Escape **Full Screen** mode
-  by clicking on the icon again.
-- When the panel contains defined properties, a blue circular
-  indicator containing a number (![Job Properties     Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator"))
-  will appear to the right of the panel name to indicate the number of
-  properties that have been defined.
+## What Is It?
+
+The **Tags** panel in **Master Job Definition** displays tags relating to the job and its frequencies.
+
+- Select the icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
+- When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count
 
 ## Adding or Updating Tags
 
-In **Admin** mode, tags can be updated. For
-conceptual information, refer to
-[Tags](../../../../../../job-components/tags.md) in the
-**Concepts** online help.
+To add or Updating Tags, complete the following steps:
 
 :::note
 Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
-
 :::
 
-To perform this procedure:
+1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
+2. Expand the **Tags** panel
+3. Enter the changes to the **Job** and/or **Frequency** frames
+4. Select the **Save** button
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to navigate to the master job definition page.
-2. Expand the **Tags** panel to expose its content.
-3. Enter the changes to the **Job** and/or **Frequency** frames.
-4. Click the **Save** button.
+
+## FAQs
+
+**Q: How many steps does the Viewing and Updating Tags procedure involve?**
+
+The Viewing and Updating Tags procedure involves 4 steps. Complete all steps in order and save your changes.
+
+**Q: What does Viewing and Updating Tags cover?**
+
+This page covers Adding or Updating Tags.
+
+## Glossary
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

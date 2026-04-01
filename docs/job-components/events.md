@@ -79,14 +79,6 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
   - **Job Completion Complex Expression**: Expression SAM evaluates on job completion. Must result in "True" for the event to process. See [Property Expressions API Syntax](../reference/property-expressions-syntax.md)
 - **Event**: OpCon event that runs when the trigger fires. For syntax, refer to [Event Types](../events/types.md) in the **OpCon Events** online help
 
-## When Would You Use It?
-
-- **Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression
-
-## Why Would You Use It?
-
-- **Events**: **Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

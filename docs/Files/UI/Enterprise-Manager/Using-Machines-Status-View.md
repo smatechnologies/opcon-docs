@@ -32,14 +32,6 @@ The **Machines Status** view displays information about each machine defined in 
   - **Communication Status Trend**: Shows the number of machines defined and how many are communicating or disabled
   - **Operating System Trend**: Shows machine types defined in the OpCon environment, each assigned a color with a legend below the chart
 
-## When Would You Use It?
-
-- The **Machines Status** view displays information about each machine defined in the OpCon database in three formats: **Table**, **Map**, and **Statistics**
-
-## Why Would You Use It?
-
-- **Using Machines**: The **Machines Status** view displays information about each machine defined in the OpCon database in three formats: **Table**, **Map**, and **Statistics**
-
 ## Machines Status View Right-click Menu
 
 - **Machine Information**: Refer to [Viewing Machine Information](Viewing-Machine-Information.md)
