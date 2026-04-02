@@ -14,9 +14,9 @@ Relays and NetComs manage communication between the OpCon server and agents acro
 
 ## What are relays and NetComs?
 
-A **relay** is a communication component that routes messages between the OpCon server and agents. Relays support a primary/standby architecture — if the primary relay becomes unavailable, you can fail over to a standby relay to maintain agent communication.
+A **relay** is a communication component that routes messages between the OpCon server and agents when OpCon is hosted in Cloud and Agents are within customer's network premises. Relays support a primary/standby architecture — if the primary relay becomes unavailable, you can fail over to a standby relay to maintain agent communication.
 
-A **NetCom** (SMA Network Communications Module) is the underlying communication component that handles the direct connection between OpCon and its agents. NetComs can operate independently or through a relay.
+A **NetCom** (SMA Network Communications Module) is the communication component that handles the direct connection between OpCon and its agents when both are within same infrastructure (On-Prem OpCon Installations where both OpCon and Agents are within customer's network premises OR Both OpCon and Agents are in Cloud). A relay is not required in these configurations.
 
 ## Primary and standby architecture
 
@@ -39,7 +39,7 @@ The **Relays / NetComs** page uses a split-pane layout:
 Use the **Relays / NetComs** page to:
 
 - Monitor the communication status of relays and NetComs across your environment
-- Restart a relay that is in Standby or Stopped status
+- Restart a relay that is in Communicating or Standby status
 - Upgrade a relay to a newer version
 - View relay logs for troubleshooting
 - Perform a manual failover from a primary relay to a standby relay

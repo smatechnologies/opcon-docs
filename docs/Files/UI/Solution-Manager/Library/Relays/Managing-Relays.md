@@ -26,7 +26,7 @@ For a description of each column, see [Relays reference](Relays-Reference.md).
 
 ## Restarting a relay
 
-You can restart a relay that is in Standby or Stopped status. After you start the restart, OpCon polls for the relay to return to Communicating status.
+You can restart a relay that is in Communicating or Standby status. After you initiate the restart, OpCon polls for the relay to return to Communicating/Standby status.
 
 :::note
 You must have the OCADM role to restart a relay.
@@ -35,9 +35,9 @@ You must have the OCADM role to restart a relay.
 To restart a relay, complete the following steps:
 
 1. Go to **Library** > **Relays / NetComs**.
-2. In the **Relays** grid, select the relay you want to restart. The relay must have a status of Standby or Stopped.
+2. In the **Relays** grid, select the relay you want to restart. The relay must have a status of Communicating or Standby.
 3. Select the **Restart** button. OpCon sends the restart command to the relay.
-4. Wait for the relay status to change to Communicating. The restart operation times out after 2 minutes if the relay does not respond.
+4. Wait for the relay status to change to Communicating or Standby. The restart operation times out after 2 minutes if the relay does not respond.
 
 ## Upgrading a relay
 
@@ -50,7 +50,7 @@ You must have the OCADM role to upgrade a relay.
 To upgrade a relay, complete the following steps:
 
 1. Go to **Library** > **Relays / NetComs**.
-2. In the **Relays** grid, select the relay you want to upgrade.
+2. In the **Relays** grid, select the relay you want to upgrade. The **Upgrade** button is only enabled if the relay is in Communicating or Standby status and an upgrade is available for the relay version.
 3. Select the **Upgrade** button. The Upgrade Relay dialog is displayed with the current version and a list of available versions.
 4. From the **Select Relay** list, select the version you want to install.
 5. Select the **Save** button. The upgrade begins and the dialog closes.
@@ -62,7 +62,7 @@ You can view relay logs to troubleshoot communication issues. The Relay Logs dia
 To view relay logs, complete the following steps:
 
 1. Go to **Library** > **Relays / NetComs**.
-2. In the **Relays** grid, select the relay whose logs you want to view.
+2. In the **Relays** grid, select the relay whose logs you want to view. The **Logs** button is only enabled if the relay is in Communicating or Standby status.
 3. Select the **Logs** button. The Relay Logs dialog is displayed.
 4. Select the tab for the log file you want to view:
    - **SMANetComRelay.log** — Main relay log with configuration and communication information

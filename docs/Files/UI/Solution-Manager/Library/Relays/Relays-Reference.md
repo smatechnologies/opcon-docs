@@ -66,9 +66,9 @@ The following actions are available in the **Relays** grid toolbar. These action
 
 | Action | Availability |
 |---|---|
-| **Restart** | Available when a relay with a status of Standby or Stopped is selected |
-| **Upgrade** | Available when any relay is selected |
-| **Logs** | Available when any relay is selected |
+| **Restart** | Available when a relay with a status of Communicating or Standby is selected |
+| **Upgrade** | Available when a relay in Communicating or Standby status is selected and an upgrade is available for that relay version |
+| **Logs** | Available when any relay in Communicating or Standby status is selected |
 | **Choose Failover** | Available when all failover requirements are met. See [Failover requirements](#failover-requirements) |
 
 ## Failover requirements
