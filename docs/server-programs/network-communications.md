@@ -15,8 +15,12 @@ doc_type: procedural
 
 # SMA Network Communications Module (SMANetCom)
 
-**Theme:** Configure  
+**Theme:** Configure
 **Who Is It For?** System Administrator
+
+:::note
+To view NetComs in Solution Manager, see [Relays overview](../Files/UI/Solution-Manager/Library/Relays/Relays-Overview.md).
+:::
 
 ## What Is It?
 
