@@ -50,16 +50,6 @@ To configure the user input, complete the following steps:
   * **Regular Expression Pattern**: Builds a regex matcher pattern to validate the user's entry before injection
   * **Custom Error Message**: Defines an error message displayed when a regex validation exception occurs. For example: "Please enter a 10-digit phone number with hyphens (e.g., 281-446-5000)."
 
-## When Would You Use It?
-
-- You need to adjust settings for Text Collection User Inputs in Solution Manager
-- Default Text Collection User Inputs settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Text Collection User Inputs settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -1,46 +1,79 @@
+---
+title: Schedule Information
+description: "The Schedule Information dialog provides details about the daily copy of a selected schedule."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Schedule Information
 
-The **Schedule Information** dialog provides details about the daily
-copy of a selected schedule, and this information can be viewed by
-right-clicking on a schedule in the **List**, **Matrix**, or **PERT**
-views. The **Schedule Information** fields can be copied and pasted to
-the clipboard. The **Schedule Information** dialog contains the
-following information:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-- **Schedule Date**: The date the schedule was built for.
-- **Schedule Name**: The name of the selected schedule.
-- **Status**: The current status of the selected schedule.
-- **Start Time**: The date the schedule was built for, and as defined
-    in **Operation**, the time the schedule is supposed to start.
-- **End Time**: If the schedule has not yet completed, this will
-    display *Not Finished*. If the schedule has completed, the finished
-    date and time will be displayed.
-- **Work Week**: The number of workdays in the week for the selected
-    schedule.
-- **Actual Start Time**: If the schedule has not yet started, this
-    will show *Not Started*. If the selected schedule has started, this
-    will show the date and time the schedule actually began processing.
-- **Post Processes Tab**: This tab allows access to the information
-    about the schedule post processes.
-- **Status Change Explanation Tab**: Lists chronologically manual
-    status changes to a schedule.
-  - The format of the value is: **<Status Change\> -
-        <Explanation\> (<user\> on <Date\> <Time\>)**
-- **Documentation Tab**:This tab allows access to any documentation
-    relating to the selected schedule.
-- **Configuration Tab**: This tab provides a place to view and define
-    Schedule Instance Properties.
+## What Is It?
+
+The **Schedule Information** dialog provides details about the daily copy of a selected schedule. Access it by right-clicking a schedule in the **List**, **Matrix**, or **PERT** views. Fields can be copied to the clipboard.
+
+The dialog contains the following information:
+
+- **Schedule Date**: The date the schedule was built for
+- **Schedule Name**: The name of the selected schedule
+- **Status**: The current status of the selected schedule
+- **Start Time**: The build date and the time the schedule is supposed to start, as defined in **Operation**
+- **End Time**: Displays *Not Finished* if incomplete; displays the finished date and time if completed
+- **Work Week**: The number of workdays in the week for the selected schedule
+- **Actual Start Time**: Displays *Not Started* if not yet started; displays the date and time processing began if started
+- **Post Processes Tab**: Provides information about the schedule post processes
+- **Status Change Explanation Tab**: Lists chronological manual status changes. Format: **\<Status Change\> - \<Explanation\> (\<user\> on \<Date\> \<Time\>)**
+- **Documentation Tab**: Provides access to documentation relating to the selected schedule
+- **Configuration Tab**: View and define Schedule Instance Properties
 
 ## Getting Schedule Information
 
-To get schedule information:
+To get Schedule Information, complete the following steps:
 
-1. Double-click on **List** under the **Operation** topic.
-2. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
-    **arrow** to expand the specific **date**.
-3. Right-click on the **Schedules** icon.
-4. Click on **Schedule Information** from the menu. The **Schedule
-    Information** dialog displays.
-5. View the schedule information.
-6. Click on the various **tabs** for additional information.
-7. Click the **OK** button to close the dialog.
+1. Select on **List** under the **Operation** topic
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Right-click on the **Schedules** icon
+4. Select **Schedule Information** from the menu. The **Schedule Information** dialog displays
+5. Select the various **tabs** for additional information
+6. Select the **OK** button to close the dialog
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Schedule Date | The date the schedule was built for | — | — |
+| Schedule Name | The name of the selected schedule | — | — |
+| Status | The current status of the selected schedule | — | — |
+| Start Time | The build date and the time the schedule is supposed to start, as defined in **Operation** | — | — |
+| End Time | Displays *Not Finished* if incomplete; displays the finished date and time if completed | — | — |
+| Work Week | The number of workdays in the week for the selected schedule | — | — |
+| Actual Start Time | Displays *Not Started* if not yet started; displays the date and time processing began if started | — | — |
+| Post Processes Tab | Provides information about the schedule post processes | — | — |
+| Status Change Explanation Tab | Lists chronological manual status changes. | — | — |
+| Documentation Tab | Provides access to documentation relating to the selected schedule | — | — |
+| Configuration Tab | View and define Schedule Instance Properties | — | — |
+## FAQs
+
+**Q: How many steps does the Schedule Information procedure involve?**
+
+The Schedule Information procedure involves 6 steps. Complete all steps in order and save your changes.
+
+**Q: What does Schedule Information cover?**
+
+This page covers Getting Schedule Information.
+
+## Glossary
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

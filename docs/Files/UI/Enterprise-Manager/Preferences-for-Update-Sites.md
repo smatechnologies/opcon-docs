@@ -38,14 +38,6 @@ Related Topics
 - [Updating the Repository for Update Sites](Updating-the-Repository-for-Update-Sites.md)
 - [Managing Update Sites](Managing-Update-Sites.md)
 
-## When Would You Use It?
-
-- The Enterprise Manager can automatically check for updates
-
-## Why Would You Use It?
-
-- **Setting Preferences**: The Enterprise Manager can automatically check for updates
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -1,6 +1,26 @@
+---
+title: Windows System Errors
+description: "Error numbers and descriptions for Microsoft Windows Error Codes (0-499)."
+product_area: Reference
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - Automation Engineer
+  - Business Analyst
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # Windows System Errors
 
-The table contains error numbers and descriptions of Microsoft Windows Error Codes.
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
+
+## What Is It?
+
+Error numbers and descriptions for Microsoft Windows Error Codes (0-499).
 
 |Constant/value|Description|
 |--- |--- |
@@ -124,7 +144,7 @@ The table contains error numbers and descriptions of Microsoft Windows Error Cod
 |ERROR_IS_SUBST_TARGET149|An attempt was made to join or substitute a drive for which a directory on the drive is the target of a previous substitute.|
 |ERROR_SYSTEM_TRACE150|System trace information was not specified in the CONFIG.SYS file, or tracing is disallowed.|
 |ERROR_INVALID_EVENT_COUNT151|The number of specified semaphore events for DosMuxSemWait is not correct.|
-|ERROR_TOO_MANY_MUXWAITERS152|DosMuxSemWait did not execute; too many semaphores are already set.|
+|ERROR_TOO_MANY_MUXWAITERS152|DosMuxSemWait did not run; too many semaphores are already set.|
 |ERROR_INVALID_LIST_FORMAT153|The DosMuxSemWait list is not correct.|
 |ERROR_LABEL_TOO_LONG154|The volume label entered exceeds the label character limit of the target file system.|
 |ERROR_TOO_MANY_TCBS155|Cannot create another thread.|
@@ -202,3 +222,31 @@ The table contains error numbers and descriptions of Microsoft Windows Error Cod
 |ERROR_INVALID_ADDRESS487|Attempt to access invalid address.|
 
 **Source:** *"Platform SDK: Debugging and Error Handling: System Error Codes (0 -- 499)."* MSDN Library. <http://msdn.microsoft.com/library/default.asp?url=/library/en-us/debug/base/system_error_codes\_\_0-499\_.asp>. Accessed 11/30/2005 10:30 am.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What range of Windows error codes does this reference cover?**
+
+This reference covers Microsoft Windows System Error Codes 0 through 499.
+
+**Q: What does error code 5 (ERROR_ACCESS_DENIED) mean?**
+
+ERROR_ACCESS_DENIED (code 5) means "Access is denied." This typically occurs when the user account running the job does not have sufficient permissions on the target resource.
+
+**Q: Where can you find the full Microsoft documentation for these error codes?**
+
+The source for these error codes is the Microsoft MSDN Platform SDK documentation for System Error Codes (0–499), available through the Microsoft Developer Network.
+
+## Glossary
+
+**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

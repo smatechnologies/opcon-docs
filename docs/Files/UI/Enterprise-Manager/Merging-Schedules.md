@@ -33,14 +33,6 @@ To merge schedules, complete the following steps:
 5. Select **OK** to save or **Cancel** to discard
 6. Select **Close ☒** to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- Merging two schedules combines all jobs from both into a single schedule
-
-## Why Would You Use It?
-
-- **Merging Schedules**: Merging two schedules combines all jobs from both into a single schedule
-
 ## FAQs
 
 **Q: How many steps does the Merging Schedules procedure involve?**

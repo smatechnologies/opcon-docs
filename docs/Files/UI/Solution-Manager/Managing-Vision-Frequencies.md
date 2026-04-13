@@ -88,16 +88,6 @@ Define two SLAs:
   - **Repeat After**: *(Optional)* Minutes between repeated action runs until the problem is resolved. Options: 1, 2, 3, 4, 5, 10, 15, 20, 30, 45, or 60 min
   - **Instance**: The remote instance used when triggering the action. The action is submitted using the Vision Action User. For more information, refer to [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md) in the **Solution Manager** online help
 
-## When Would You Use It?
-
-- You need to review or update Vision Frequencies settings in Solution Manager
-- Vision Frequencies needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Vision Frequencies management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Vision Frequencies changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Using the Vision Frequencies Admin Page
 
 The **Vision Frequencies** page lists all existing frequencies and provides a central location for adding, editing, and deleting frequencies.

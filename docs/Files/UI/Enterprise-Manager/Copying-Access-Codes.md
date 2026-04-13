@@ -33,15 +33,6 @@ To copy an access code, complete the following steps:
 5.  Select the **OK** button
 6.  Select **Close ☒** (to the right of the **Access Codes** tab) to close the **Access Codes** screen
 
-## When Would You Use It?
-
-- An existing Access Codes definition needs to be duplicated in Enterprise Manager
-- A new Access Codes with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Access Codes eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy access codes instead of creating a new one?**

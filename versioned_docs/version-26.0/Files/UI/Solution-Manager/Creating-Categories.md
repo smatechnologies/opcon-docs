@@ -1,42 +1,54 @@
 ---
 lang: en-us
-title: Creating Categories
 viewport: width=device-width, initial-scale=1.0
+title: Creating Categories
+description: "You can group Service Requests into defined categories, such as a department or user group, and associate requests with that category."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 # Creating Categories
 
-You can group the Service Requests into defined categories. For example,
-a specific department or user group can be defined as a category and all
-the Service Requests for which that department or user group must
-perform can be associated with that category.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-To create and associate a category:
+## What Is It?
 
-1. Click the **+ Create** button, as shown in the example graphic.
+You can group Service Requests into defined categories, such as a department or user group, and associate requests with that category.
 
-2. Enter a unique name for the new category. As a best practice, when
-    naming the category, choose a naming convention that helps refine
-    the Service Request filtering query. For example, you could name the
-    category: *Important/Saturday*. In doing so, "Saturday" could be
-    used as the Category filter.
+To create and associate a category, complete the following steps:
 
-3. Select a background color for the new category. There are no
-    restrictions on the multi-use of background colors. As a visual
-    indicator, any color swatch reduced in size simply indicates that
-    that particular color is currently in use for an existing category.
+1. Select the **+ Create** button
+2. Enter a unique name. Use a naming convention that supports filtering (e.g., *Important/Saturday* lets you filter by "Saturday")
+3. Select a background color. A reduced color swatch indicates the color is already in use
+4. *(Optional)* Select one or more Service Requests to assign to the category. Each Service Request can belong to only one category at a time
+5. Select **Save**. The new category displays
 
-4. *(Optional)* Select the Service Request(s) that you
-    wish to assign to the new category. Keep in mind that any Service
-    Request can only be assigned to one category at a time.
+    ![New Category Created](../../../Resources/Images/SM/Creating-Categories_4.png "New Category Created")
 
-5. Click **Save**. The new category should now display.
-
-    ![New Category     Created](../../../Resources/Images/SM/Creating-Categories_4.png "New Category Created")
-
-Besides modifying the settings of the category directly, you can also
-edit a Service Request to change or set the category to which it
-belongs, as such:
+You can also edit a Service Request directly to change or set its category:
 
 ![Editing Service Request Category](../../../Resources/Images/SM/Creating-Categories_5.png "Editing Service Request Category")
 :::
+
+## FAQs
+
+**Q: How many steps does the Creating Categories procedure involve?**
+
+The Creating Categories procedure involves 5 steps. Complete all steps in order and save your changes.
+
+## Glossary
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

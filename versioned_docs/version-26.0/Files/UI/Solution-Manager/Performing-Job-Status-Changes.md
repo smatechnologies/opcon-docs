@@ -1,14 +1,30 @@
+---
+title: Performing Job Status Changes
+description: "The Operations module allows you to perform job status changes using a few simple steps."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Performing Job Status Changes
 
-The **Operations** module allows you to perform job status changes using
-a few simple steps.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Operations** module allows you to perform job status changes using a few simple steps.
 
 To perform job status changes:
 
-Click on one of the six operation dials (Failed, Blocked, Waiting,
-Running, Completed, or Ignored) or use the **Quick Search** field (type
-the keyword and click **Enter**) in the **Jobs** section on the
-**Operations Summary** page.
+Select one of the six operation dials (Failed, Blocked, Waiting, Running, Completed, or Ignored) or use the **Quick Search** field in the **Jobs** section on the **Operations Summary** page.
 
 ![Jobs Operation Dials](../../../Resources/Images/SM/Job-Operation-Dials.png "Jobs Operation Dials")
 
@@ -18,114 +34,59 @@ The "Ignored" operation dial groups any job with a job status of Cancelled or Sk
 
 The **Processes** page will display.
 
-*(Optional)* Filter and/or sort the list of jobs
-displayed.
+*(Optional)* Filter and/or sort the list of jobs displayed.
 
 Filtering:
 
-a.  For [quick filtering](Managing-Daily-Processes.md#Quick), you
-    can use the **Filter Bar** just above the list of jobs to filter the
-    list. You simply type the keyword in the appropriate field and click
-    **Enter**, and the list will filter accordingly.
-b.  For [alternative     filtering](Managing-Daily-Processes.md#Interactive), use the
-    interactive color-coded **Statistics Bar** above the list of jobs to
-    filter the list by status. Click on any color in the bar to filter
-    the view by the current job status.
-c.  For more [in-depth     filtering](Managing-Daily-Processes.md#In-depth), you can use
-    the ![Operations Filter     Button](../../../Resources/Images/SM/Operations-Filter-Icon.png "Operations Filter Button")
-    button to display the **Filter** panel then filter the list of jobs
-    by job status, tag, department, or access code. The filter button
-    icon will change to dark yellow and also display the number of
-    filters currently turned on (![Operations Filter in     Use](../../../Resources/Images/SM/Operations-Filter-Icon-in-Use.png "Operations Filter in Use")).
-    Click on the **x** at the top-right corner of the button to remove
-    all selected filters at once.
+a.  For [quick filtering](Managing-Daily-Processes.md#Quick), use the **Filter Bar** above the job list. Type the keyword in the appropriate field and press **Enter**.
+b.  For [alternative filtering](Managing-Daily-Processes.md#Interactive), use the interactive color-coded **Statistics Bar** above the job list to filter by status. Select any color to filter by that job status.
+c.  For [in-depth filtering](Managing-Daily-Processes.md#In-depth), select the ![Operations Filter Button](../../../Resources/Images/SM/Operations-Filter-Icon.png "Operations Filter Button") button to display the **Filter** panel, then filter by job status, tag, department, or access code. The button turns dark yellow and shows the number of active filters (![Operations Filter in Use](../../../Resources/Images/SM/Operations-Filter-Icon-in-Use.png "Operations Filter in Use")). Select **x** at the top-right corner to remove all filters at once.
 
 Sorting:
 
-Click on the column heading to sort the column in ascending order
-(indicated by a small arrow pointing down). Click on the column heading
-again to sort the column in descending order (indicated by a small arrow
-pointing up).
+Select a column heading to sort ascending (small arrow pointing down); select it again to sort descending (small arrow pointing up).
 
-Select any **job(s)** in the list. A record of your selection(s) will
-display in the [status bar](SM-UI-Layout.md#Status) at the bottom
-of the page in the form of a breadcrumb trail.
+Select any **job(s)** in the list. Your selections appear in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
 ![Job Processes](../../../Resources/Images/SM/Job-Processes.png "Job Processes")
 
-Click on the job record (e.g., 1 job(s)) in the status bar to display
-the **Selection** panel.
+Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
 :::note
-As an alternative, you can right-click on any job selected in the list to display the **Selection** panel.
+As an alternative, right-click any selected job to display the **Selection** panel.
 :::
 
 Select the **Job Status Update** accordion-style tab in the panel.
 
 ![Job Status Update Panel](../../../Resources/Images/SM/Job-Status-Update-Panel.png "Job Status Update Panel")
 
-*(Optional)* Click the **Refresh available actions**
-button to verify which status update actions are available for the
-current selection. This option is particularly helpful when more than
-one job has been selected since all status update buttons are enabled by
-default.
+*(Optional)* Select **Refresh available actions** to verify which status update actions are available for the current selection. This is helpful when more than one job is selected, since all status update buttons are enabled by default.
 
 *(Optional)* Enter or select a change status reason.
 
 :::note
-Depending on application configuration, the **Change Status Reason** drop-down list may store a number of the previous reasons entered for Job or Schedule status updates.
+Depending on application configuration, the **Change Status Reason** list may store previous reasons entered for job or schedule status updates.
 :::
 
-Select one of the following status updates to apply to the selected
-job(s):
+Select one of the following status updates to apply to the selected job(s):
 
-- **Hold**: This option allows you to place the selected job(s) on
-    hold.
-- **Cancel**: This option allows you to cancel the selected job(s).
-    The job does not process unless manually started by a user or an
-    event.
-- **Skip**: This option allows you to place the selected job(s) in a
-    Job to be Skipped state until the job(s)     qualify to start. When the job(s) qualify, they are skipped and the
-    job dependencies of all subsequent jobs are met.
-- **Kill**: This option allows you to send a request to abort one ore
-    more jobs on an Agent machine. If the kill is successful, the
-    application reports the killed job as Failed.     If the Kill is not successful, the job continues to show a
-    Running status in the application.
-- **Release**: This option allows you to release the selected job(s)
-    from a Held state.
-- **Force Start**: This option allows you to force start the selected
-    job(s). This causes the job(s) to ignore all dependencies, and to
-    start immediately.
-- **Restart**: This option allows you to place the selected job(s)
-    back in a Qualifying state. All dependencies     must be met before the job(s) are submitted.
-- **Restart on Hold**: This option allows you to place the selected
-    job(s) back in a Qualifying state, and the     job(s) will process when all dependencies have been met.
-- **Force Restart**: This option allows you to force restart the
-    selected job(s) and ignore the start time and all dependencies. The
-    job(s) restart as soon as this option is selected as long as a
-    machine is available.
-- **Restart On Step**: This option allows you to select a step on
-    which to restart a job. This option can only be triggered if the job
-    type supports this feature and there is an available list of steps
-    in the database returned by the Agent during runtime.
-- **Mark Finished OK**: This option allows you to change the selected
-    job(s) to a Finished OK status regardless of     the job's current status. All events are processed as if the job(s)
-    had Finished OK without intervention. If a job     is Marked Finished OK before it starts, both
-    the start and finish time saved in history equal the time the job is
-    marked.
-- **Mark Failed**: This option allows you change the selected job(s)
-    to a Failed status regardless of the job's     current status. All events are processed as if the job(s) had failed
-    without intervention. If a job is Marked Failed     before it starts, both the start and finish time saved in history
-    equal the time the job is marked.
-- **Mark Under Review**: This option allows you to change the selected
-    job(s) to an Under Review status (and being     worked on) when the job is in a Failed, Marked
-    Failed, or Initialization Error state.
-- **Mark Fixed**: This option allows you to change the selected job(s)
-    to Fixed status when the job is in a Failed, Marked Failed,
-    Initialization Error, or Under Review state.
+- **Hold**: Places the selected job(s) on hold
+- **Cancel**: Cancels the selected job(s). The job does not process unless manually started by a user or an event
+- **Skip**: Places the selected job(s) in a Job to be Skipped state until they qualify to start. When jobs qualify, they are skipped and dependencies of all subsequent jobs are met
+- **Kill**: Sends a request to abort one or more jobs on an Agent machine. If successful, the application reports the job as Failed. If unsuccessful, the job continues to show a Running status
+- **Release**: Releases the selected job(s) from a Held state
+- **Force Start**: Forces the selected job(s) to start immediately, ignoring all dependencies
+- **Restart**: Places the selected job(s) back in a Qualifying state. All dependencies must be met before jobs are submitted
+- **Restart on Hold**: Places the selected job(s) back in a Qualifying state; jobs process when all dependencies are met
+- **Force Restart**: Force restarts the selected job(s), ignoring start time and all dependencies. Jobs restart as soon as a machine is available
+- **Restart On Step**: Restarts a job at a selected step. Available only if the job type supports this feature and the Agent returned an available list of steps during runtime
+- **Mark Finished OK**: Changes the selected job(s) to Finished OK regardless of current status. All events are processed as if the job(s) finished normally. If marked before starting, both start and finish times in history equal the time of marking
+- **Mark Failed**: Changes the selected job(s) to Failed regardless of current status. All events are processed as if the job(s) failed without intervention. If marked before starting, both start and finish times in history equal the time of marking
+- **Mark Under Review**: Changes the selected job(s) to Under Review when in a Failed, Marked Failed, or Initialization Error state
+- **Mark Fixed**: Changes the selected job(s) to Fixed when in a Failed, Marked Failed, Initialization Error, or Under Review state
 
 :::note
-For more information about job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
+For more on job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
 :::
 
 Close the **Selection** panel when done.
@@ -133,11 +94,55 @@ Close the **Selection** panel when done.
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
 
-- [Performing Schedule Status     Changes](Performing-Schedule-Status-Changes.md)
-- [Performing Bulk Status Job Updates (Schedule     Level)](Performing-Bulk-Job-Status-Updates-Schedule-Level.md)
-- [Performing Bulk Status Job Updates (Date     Level)](Performing-Bulk-Job-Status-Updates-Date-Level.md)
-- [Performing Agent Status     Updates](Performing-Agent-Status-Updates.md)
+- [Performing Schedule Status Changes](Performing-Schedule-Status-Changes.md)
+- [Performing Bulk Status Job Updates (Schedule Level)](Performing-Bulk-Job-Status-Updates-Schedule-Level.md)
+- [Performing Bulk Status Job Updates (Date Level)](Performing-Bulk-Job-Status-Updates-Date-Level.md)
+- [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
 - [Viewing Job Output](Viewing-Job-Output.md)
 - [Viewing Job Configuration](Viewing-Job-Configuration.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Hold | Places the selected job(s) on hold | — | — |
+| Kill | Sends a request to abort one or more jobs on an Agent machine. | — | — |
+| Release | Releases the selected job(s) from a Held state | — | — |
+| Force Start | Forces the selected job(s) to start immediately, ignoring all dependencies | — | — |
+| Restart | Places the selected job(s) back in a Qualifying state. | — | — |
+| Restart on Hold | Places the selected job(s) back in a Qualifying state; jobs process when all dependencies are met | — | — |
+| Force Restart | Force restarts the selected job(s), ignoring start time and all dependencies. | — | — |
+| Restart On Step | Restarts a job at a selected step. | — | — |
+| Mark Finished OK | Changes the selected job(s) to Finished OK regardless of current status. | — | — |
+| Mark Failed | Changes the selected job(s) to Failed regardless of current status. | — | — |
+| Mark Under Review | Changes the selected job(s) to Under Review when in a Failed, Marked Failed, or Initialization Error state | — | — |
+| Mark Fixed | Changes the selected job(s) to Fixed when in a Failed, Marked Failed, Initialization Error, or Under Review state | — | — |
+## FAQs
+
+**Q: What does the Kill action do when applied to a running job?**
+
+Kill sends a request to abort the job on the Agent machine. If successful, the job is reported as Failed. If unsuccessful, the job continues to show a Running status.
+
+**Q: What is the difference between Restart and Force Restart?**
+
+Restart places the job back in a Qualifying state and requires all dependencies to be met before the job starts. Force Restart ignores start time and all dependencies, restarting the job as soon as a machine is available.
+
+**Q: What does the Ignored operation dial display on the Operations Summary page?**
+
+The Ignored dial groups any job with a status of Cancelled or Skipped, providing a single view of all jobs that were intentionally bypassed during processing.
+
+## Glossary
+
+**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

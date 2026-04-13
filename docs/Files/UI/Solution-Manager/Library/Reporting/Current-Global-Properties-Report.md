@@ -38,14 +38,6 @@ This report provides filters for property name, value, and description. Open the
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Current Global Properties Report** displays the currently defined global properties in OpCon
-
-## Why Would You Use It?
-
-- **Current Global**: The **Current Global Properties Report** displays the currently defined global properties in OpCon
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

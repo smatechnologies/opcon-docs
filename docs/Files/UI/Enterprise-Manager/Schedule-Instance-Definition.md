@@ -36,14 +36,6 @@ The **Instance Definition** tab in the [**Schedule Master**](Using-Schedule-Mast
 
 For conceptual information, refer to [Instance Definition](../../../job-components/instances.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define, edit, and manage schedule instances and named schedule instances using The **Instance Definition** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define, edit, and manage schedule instances and named schedule instances
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

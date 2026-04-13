@@ -1,17 +1,51 @@
+---
+title: Editing Daily Schedule Instance Properties
+description: "To edit Daily Schedule Instance Properties in the Enterprise Manager, complete the following steps: 1."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Editing Daily Schedule Instance Properties
 
-To perform this procedure:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-1. Double-click on **Daily Maintenance** under the **Operation** topic.
-    The **Daily Maintenance** screen displays.
-2. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+## What Is It?
+
+To edit Daily Schedule Instance Properties in the Enterprise Manager, complete the following steps:
+
+1. Select on **Daily Maintenance** under the **Operation** topic
+2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
     **arrow** to expand the specific **date** for the schedule.
-3. Click on the **schedule**.
-4. Click on the **Edit Daily** button in the **Maintenance** frame at
-    the bottom-right side of the screen.
-5. Click on the **Instance Definition** tab.
-6. Select the **property name** in the **Available Properties** table.
-7. Make the changes to the *property definition*.
-8. Click the **Update** button.
-9. Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
+3. Select on the **schedule**
+4. Select on the **Edit Daily** button in the **Maintenance** frame
+5. Select on the **Instance Definition** tab
+6. Select the **property name** in the **Available Properties** table
+7. Make the changes to the *property definition*
+8. Select the **Update** button
+9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
     on the **Schedule Daily** toolbar.
+
+## FAQs
+
+**Q: Do edits to daily schedule instance properties take effect immediately?**
+
+Changes saved to daily schedule instance properties in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+
+## Glossary
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

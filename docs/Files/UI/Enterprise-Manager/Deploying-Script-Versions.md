@@ -37,14 +37,6 @@ To deploy a script version, complete the following steps:
 11. Select the **Close** button in the **Versions** dialog
 12. Select **Close ☒** to close the **Script Repository** screen
 
-## When Would You Use It?
-
-- You need to roll out Script Versions to a new environment
-
-## Why Would You Use It?
-
-- **Scale automation efficiently**: Deploying Script Versions through OpCon ensures a consistent, tracked rollout with the ability to roll back if needed
-
 ## FAQs
 
 **Q: How many steps does the Deploying Script Versions procedure involve?**

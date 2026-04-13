@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **User Accounts** editor defines and maintains OpCon User Accounts. It contains a list of users, user account details, and options. For information on manual login, automatic login, and optional LDAP integration, refer to [User Accounts](../../../administration/user-accounts.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update User Accounts settings in Enterprise Manager
-- User Accounts needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing User Accounts management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All User Accounts changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## User Accounts Toolbar
 
 The **User Accounts** editor toolbar provides functions for managing user accounts. Select any icon to learn more about its functionality.
@@ -49,10 +39,6 @@ Related Topics
 - [Copying User Accounts](Copying-User-Accounts.md)
 - [Deleting User Accounts](Deleting-User-Accounts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

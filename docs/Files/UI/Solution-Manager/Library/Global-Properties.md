@@ -26,21 +26,6 @@ Global Properties in OpCon are listed in the grid under Library > Global Propert
 
 ![Managing Library](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Managing Library")
 
-## When Would You Use It?
-
-- You need to review or update Global Properties settings in Solution Manager
-- Global Properties needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Global Properties management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Global Properties changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What does managing global properties involve?**

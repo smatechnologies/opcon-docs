@@ -38,16 +38,6 @@ To view the logs, complete the following steps:
 10. Select **Job Log**
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit SAP Job Logs records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current SAP Job Logs state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting SAP Job Logs records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: How many steps does the Viewing SAP Job Logs procedure involve?**

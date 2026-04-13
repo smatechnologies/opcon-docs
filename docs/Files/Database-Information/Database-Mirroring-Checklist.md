@@ -26,14 +26,6 @@ The Continuous SQL scripts for mirroring the OpCon database use scripting variab
 The Configuration Directory location depends on your installation path. See [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- The Continuous SQL scripts for mirroring the OpCon database use scripting variables defined in `SMA_SetDBMirroringScriptingVariables.cmd`
-
-## Why Would You Use It?
-
-- **Database Mirroring**: The Continuous SQL scripts for mirroring the OpCon database use scripting variables defined in `SMA_SetDBMirroringScriptingVariables.cmd`
-
 ## Mirroring Information Worksheet
 
 Before configuring mirroring in [Setup for Automatic Microsoft SQL Mirroring](Setup-for-Automatic-Microsoft-SQL-Mirroring.md), fill in the values below.

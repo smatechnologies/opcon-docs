@@ -64,14 +64,6 @@ To set up a new profile, complete the following steps:
 13. Select **Finish** to save and close the dialog, then select **Finish** again once the database connection is established
 14. Select **Apply** to save additional changes, or **OK** to save and close the **Preferences** dialog
 
-## When Would You Use It?
-
-- You need to prepare and initialize New Profiles in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Setting up**: To set up a new profile:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

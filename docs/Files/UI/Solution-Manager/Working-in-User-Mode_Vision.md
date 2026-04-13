@@ -30,14 +30,6 @@ From this page, you can do any of the following:
 
 - [View Cards in Vision Live](Viewing-Cards-in-Vision-Live.md)
 
-## When Would You Use It?
-
-- Users without the «ocadm» role, or without the «Maintain Vision Actions», «Maintain Vision Frequencies», or «Maintain Vision Workspaces» privileges, see a read-only Vision Live page
-
-## Why Would You Use It?
-
-- **Working in**: Users without the «ocadm» role, or without the «Maintain Vision Actions», «Maintain Vision Frequencies», or «Maintain Vision Workspaces» privileges, see a read-only Vision Live page
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

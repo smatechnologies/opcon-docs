@@ -36,14 +36,6 @@ Select a row to open the Log File Details page.
 
 Select the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
 
-## When Would You Use It?
-
-- The **Archives** tab displays archived log files
-
-## Why Would You Use It?
-
-- **List Archive**: The **Archives** tab displays archived log files
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

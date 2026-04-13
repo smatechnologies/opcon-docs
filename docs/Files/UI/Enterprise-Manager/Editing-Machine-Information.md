@@ -37,21 +37,6 @@ To perform this procedure, complete the following steps:
 9.  Select the **Save** button in the dialog
 10. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
 
-## When Would You Use It?
-
-- An existing Machine Information in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Machine Information definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Machine Information in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Machine Information are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to machine information take effect immediately?**

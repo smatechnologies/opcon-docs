@@ -26,14 +26,6 @@ The copy dialog copies a notification trigger definition — including all its n
 
 ![Copy Message](../../../../../../Resources/Images/SM/Library/NotificationTriggers/copy-message.png "Copy Message")
 
-## When Would You Use It?
-
-- The copy dialog copies a notification trigger definition — including all its notifications — to other groups of the same type
-
-## Why Would You Use It?
-
-- **Copy Notification**: The copy dialog copies a notification trigger definition — including all its notifications — to other groups of the same type
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

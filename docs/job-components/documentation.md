@@ -27,14 +27,6 @@ Job *documentation* is user-defined information (e.g., command history, operator
 - **Frequency Name**: Name of the frequency if documentation is defined for a specific frequency. The list contains all frequencies defined for the job in priority order
 - **Frequency Documentation**: User-defined information associated with the Frequency Name, included with the job only when it runs on that frequency
 
-## When Would You Use It?
-
-- Job *documentation* is user-defined information (e.g., command history, operator instructions for failure)
-
-## Why Would You Use It?
-
-- **Documentation**: Job *documentation* is user-defined information (e.g., command history, operator instructions for failure)
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

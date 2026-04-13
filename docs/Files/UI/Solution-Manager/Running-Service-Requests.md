@@ -33,14 +33,6 @@ Proceed based on one of two prompts:
 - If a confirmation message was configured with no user inputs, the Service Request stops and prompts you to select **Submit** to continue or **Cancel** to discard the run request
 - If user inputs were configured, the Service Request stops so that you can configure the User Input field(s)
 
-## When Would You Use It?
-
-- A Service Requests needs to be run manually or on demand
-
-## Why Would You Use It?
-
-- **Automate execution**: Triggering Service Requests through OpCon provides consistent, logged execution with dependency checking and event handling
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

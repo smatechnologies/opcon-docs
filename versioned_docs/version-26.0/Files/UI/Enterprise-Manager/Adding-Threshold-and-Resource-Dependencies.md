@@ -1,81 +1,94 @@
+---
+title: Adding Threshold/Resource Dependencies
+description: "Use this procedure to add Threshold/Resource Dependencies in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Adding Threshold/Resource Dependencies
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Use this procedure to add Threshold/Resource Dependencies in the Enterprise Manager.
 
 ## Setting Job-Related Threshold/Resource Dependencies
 
-To set a dependency:
+To set Job-Related Threshold/Resource Dependencies, complete the following steps:
 
-Double-click on **Job Master** under the **Administration** topic. The
-**Job Master** screen displays.
+1. Select **Job Master** under the **Administration** topic
+2. Select the **schedule** in the **Schedule** list
 
-Select the **schedule** in the **Schedule** drop-down list.
+3. Select the **job** in the **Job** list
+4. Select the **Dependencies** tab in the **Job Properties** frame
+5. Select the **Threshold/Resource Dependency** tab
+6. Select the **Job Related** option
+7. Select **Add**. The **Threshold/Resource Dependency** dialog displays
 
-Select the **job** in the **Job** drop-down list.
-
-Click on the **Dependencies** tab in the **Job Properties** frame.
-
-Click on the **Threshold/Resource Dependency** tab.
-
-Select the **Job Related** checkbox.
-
-Click the **Add** button. The **Threshold/Resource Dependency** dialog
-displays.
-
-Select a **threshold/resource** in the **Threshold/Resource** drop-down
-list.
-
-Select a **threshold/resource** in the **Threshold/Resource** drop-down
-list.
-
-a.  For a Threshold: Select an **operator** and enter     a *value* in the **Value** field. Then, proceed to Step 10.
-b.  For a Resource: Enter a *value* in the **Value**     field. Alternatively, you can select the **All** checkbox to require
-    the job to consume all resources when it runs. Unselect the **All**
-    checkbox to re-enable the **Value** field. Then, proceed to Step
-    10.
-
-Click the **OK** button to save the changes or the **Cancel** button to
-discard the changes.
-
-Click **Close ☒** (to the right of the **Job Master** tab) to close the
-**Job Master** screen.
+8. Select a **threshold/resource** in the **Threshold/Resource** list
+9. Do one of the following:
+   - **For a Threshold**: Select an **operator** and enter a value in the **Value** field
+   - **For a Resource**: Enter a value in the **Value** field. Select the **All** option to require all resources when the job runs; clear it to re-enable the **Value** field
+10. Select **OK** to save, or **Cancel** to discard
+11. Select **Close ☒** to close **Job Master**
 
 ## Setting Frequency-Related Threshold/Resource Dependencies
 
-To set a dependency:
+To set Frequency-Related Threshold/Resource Dependencies, complete the following steps:
 
-Double-click on **Job Master** under the **Administration** topic. The
-**Job Master** screen displays.
+1. Select **Job Master** under the **Administration** topic
+2. Select the **schedule** in the **Schedule** list
+3. Select the **job** in the **Job** list
 
-Select the **schedule** in the **Schedule** drop-down list.
+4. Select the **Dependencies** tab in the **Job Properties** frame
+5. Select the **Threshold/Resource Dependency** tab
+6. Select the **Frequency Related** option
+7. Select the **frequency** in the **Frequency List**
+8. Select **Add**. The **Threshold/Resource Dependency** dialog displays
 
-Select the **job** in the **Job** drop-down list.
+9. Select a **threshold/resource** in the **Threshold/Resource** list
+10. Do one of the following:
+    - **For a Threshold**: Select an **operator** and enter a value in the **Value** field
+    - **For a Resource**: Enter a value in the **Value** field. Select the **All** option to require all resources when the job runs; clear it to re-enable the **Value** field
+11. Select a **frequency** in the **Frequency** list
+12. Select **OK** to save, or **Cancel** to discard
+13. Select **Close ☒** to close **Job Master**
 
-Click on the **Dependencies** tab in the **Job Properties** frame.
 
-Click on the **Threshold/Resource Dependency** tab.
+## FAQs
 
-Select the **Frequency Related** checkbox.
+**Q: Where do you access Threshold/Resource Dependencies in the Enterprise Manager?**
 
-Select the **frequency** in the **Frequency List**.
+Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
 
-Click the **Add** button. The **Threshold/Resource Dependency** dialog
-displays.
+**Q: How do you save a new threshold/resource dependencies record?**
 
-Select a **threshold/resource** in the **Threshold/Resource** drop-down
-list.
+After completing the required fields, select the **Save** button on the toolbar to save the threshold/resource dependencies record.
 
-Do one of the following:
+**Q: Can you add threshold/resource dependencies for multiple platforms?**
 
-a.  For a Threshold: Select an **operator** and enter     a *value* in the **Value** field. Then, proceed to Step 11.
-b.  For a Resource: Enter a *value* in the **Value**     field. Alternatively, you can select the **All** checkbox to require
-    the job to consume all resources when it runs. Unselect the **All**
-    checkbox to re-enable the **Value** field. Then, proceed to Step
-    11.
+Yes. This page covers threshold/resource dependencies for multiple platforms or contexts: Setting Job-Related Threshold/Resource Dependencies, Setting Frequency-Related Threshold/Resource Dependencies.
 
-Select a **frequency** in the **Frequency** drop-down list.
+## Glossary
 
-Click the **OK** button to save the changes or the **Cancel** button to
-discard the changes.
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
-Click **Close ☒** (to the right of the **Job Master** tab) to close the
-**Job Master** screen.
-:::
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

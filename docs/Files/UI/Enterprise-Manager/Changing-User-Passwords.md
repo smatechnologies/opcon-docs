@@ -35,14 +35,6 @@ To change a user password, complete the following steps:
 7. Select **OK**
 8. Select **Close ☒** to close the **User Accounts** screen
 
-## When Would You Use It?
-
-- To change a user password:
-
-## Why Would You Use It?
-
-- **Changing User**: To change a user password:
-
 ## FAQs
 
 **Q: How many steps does the Changing User Passwords procedure involve?**

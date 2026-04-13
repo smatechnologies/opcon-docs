@@ -28,14 +28,6 @@ The **Frequency** tab in the [**Schedule Master**](Using-Schedule-Master.md) edi
 
 For conceptual information, refer to [Job and Schedule Frequencies](../../../automation-concepts/frequencies.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to allows you to define, edit, and manage schedule frequencies using The **Frequency** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define, edit, and manage schedule frequencies
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -80,16 +80,6 @@ Related Topics
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 - [Viewing Job Configuration](Viewing-Job-Configuration.md)
 
-## When Would You Use It?
-
-- You need to inspect or audit Job Output records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Job Output state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Job Output records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -31,14 +31,6 @@ To forecast Frequencies in Solution Manager, complete the following steps:
 
 ![Frequency Forecast](../../../../../Resources/Images/SM/Library/Frequencies/Frequency-Forecast.png "Frequency Forecast")
 
-## When Would You Use It?
-
-- You need to configure or manage Forecasting Frequencies in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Forecasting Frequencies through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -39,21 +39,6 @@ To view schedule or job information, complete the following steps:
 9. *(Optional)* Right-click a **schedule** and select **Schedule History**. Select **Close** to close
 10. Select a **schedule**, right-click a **job**, and select **Job History**. Select **OK** to close
 
-## When Would You Use It?
-
-- You need to inspect or audit Schedule and/or Job Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Schedule and/or Job Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Schedule and/or Job Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Viewing Schedule and/or Job Information procedure involve?**

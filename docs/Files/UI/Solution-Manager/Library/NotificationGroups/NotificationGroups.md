@@ -58,14 +58,6 @@ Select the **Add** button to quickly add a new category to the list.
 
 ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/AddCategory.png "Notification Group Jobs/Machines")
 
-## When Would You Use It?
-
-- Use this feature when Included is selected
-
-## Why Would You Use It?
-
-- **Operational value**: Enables the bottom panel: When Included is selected, all items selected in the list — pl
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

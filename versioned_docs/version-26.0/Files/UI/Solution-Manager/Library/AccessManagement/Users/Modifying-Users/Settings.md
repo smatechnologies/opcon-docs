@@ -1,24 +1,37 @@
 ---
 lang: en-us
-title: Users - Settings
 viewport: width=device-width, initial-scale=1.0
+title: User Settings
+description: "The Users page is found in _Library > Access Management > Users_."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 # User Settings
 
-The Users page is found in _Library > Access Management > Users_, and provides the views to manage Users. When you click on the Users tab, you will see a list of all the users that have been created in the system. You can click on the name of a user to view and modify the details of that user.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-A series of tabs is displayed on the Users page. The Settings tab displays the **Enable password expiration** and **Enable external tokens** settings.
+## What Is It?
 
-To modify a User, edit the preferred fields and click **Save**.
+The Users page is found in _Library > Access Management > Users_. The Settings tab displays the **Enable password expiration** and **Enable external tokens** settings.
+
+To modify a user, edit the preferred fields and select **Save**.
 
 ![User Settings](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-settings-tab.png 'User Settings')
 
 ## Email Dialog
 *If Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled.*
 
-When saving, a dialog to enter a User email will be displayed if user does not have an email set and does not have contain a SSO role.  
-Please enter an email to continue, clicking cancel will cancel the save.
+When saving, an email dialog appears if the user has no email set and no SSO role. Enter an email to continue. Selecting **Cancel** cancels the save.
 
 ![Email Dialog](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-email-dialog.png 'Email Dialog')
 
@@ -31,3 +44,15 @@ For more information see:
 For conceptual help, see:
 
 - [Users](../../../../../../../administration/user-accounts.md)
+
+## FAQs
+
+**Q: What does User Settings cover?**
+
+This page covers Email Dialog.
+
+## Glossary
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.

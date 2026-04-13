@@ -37,14 +37,6 @@ Related Topics
 - [Viewing Notification Details](Viewing-Notification-Details.md)
 - [Acknowledging Escalations](Acknowledging-Escalations.md)
 
-## When Would You Use It?
-
-- The **Escalation Acknowledgment** view is used to view and acknowledge escalations
-
-## Why Would You Use It?
-
-- **Using Escalation**: The **Escalation Acknowledgment** view is used to view and acknowledge escalations
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

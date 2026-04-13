@@ -1,4 +1,23 @@
+---
+title: SAP R/3 and CRM Job Details
+description: "The information in this section applies to defining an SAP R/3 and CRM job."
+product_area: Job Types
+audience: Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - Automation Engineer
+  - Jobs
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # SAP R/3 and CRM Job Details
+
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer
+
+## What Is It?
 
 The information in this section applies to defining an SAP R/3 and CRM
 job. For additional information about this platform, refer to [SAP LSAM Configuration and
@@ -10,11 +29,11 @@ platform.
 ## Login
 
 - **Machine**: Defines the SAP R/3 and CRM Machine name. For
-    information on adding an LSAM Machine to     OpCon, refer to [Adding
+    information on adding an agent Machine to     OpCon, refer to [Adding
     Machines](../Files/UI/Enterprise-Manager/Adding-Machines.md)
      in the **Enterprise Manager** online help.
-- **User ID**: Defines the valid SAP login ID.
-- **Password**: Defines the correct SAP password for the User ID.
+- **User ID**: Defines the valid SAP login ID
+- **Password**: Defines the correct SAP password for the User ID
 - **Language**: Defines the two-character language abbreviation (e.g.,
     enter EN for English), and forces the abbreviation to all capital
     letters.
@@ -37,7 +56,7 @@ platform.
         intervals and after Classes A and B.
 - **Job Number**: Defines the SAP R/3 and SAP CRM Job number (Job ID)
     as defined in the SAP system.
-- **Start SAP Job**: Configures SAP start criteria for the job.
+- **Start SAP Job**: Configures SAP start criteria for the job
   - **A.S.A.P.**: Configures the job to start as soon as a
         background process is available.
   - **Immediately**: Configures the job to start as soon as it
@@ -67,8 +86,8 @@ represents a program which can be any one of three program types:
 OpCon supports the definition and
 modification of the following information for ABAP Programs:
 
-- **ABAP Program**: Defines the ABAP program name.
-- **Variant**: Defines the ABAP program Variant.
+- **ABAP Program**: Defines the ABAP program name
+- **Variant**: Defines the ABAP program Variant
 - **Variant List**: Defines the following variant parameter names and
     values:
   - **Parameter**: Defines the technical name associated with a
@@ -116,10 +135,10 @@ modification of the following information for ABAP Programs:
     specifications. The following information applies to defining the
     Print Specifications:
   - **General Attributes**:
-    - **Output Device**: Defines the name of the output device.
+    - **Output Device**: Defines the name of the output device
     - **Number of Copies**: Defines how many copies of the
             document to print.
-    - **Text Only**: Defines the text-only printing option.
+    - **Text Only**: Defines the text-only printing option
     - **Time of Printing**: Defines the time to print a spool
             request. Valid options include:
       - Send to SAP spooler for now
@@ -179,7 +198,7 @@ modification of the following information for ABAP Programs:
                 unfinished. This normally occurs when a spool request is
                 released for output. If no spool request is found, a new
                 one is generated.
-    - **Do not Append Print Jobs**: Defines whether or not to
+    - **Do not Append Print Jobs**: Defines whether to
             append print jobs.
     - **Storage Mode**: Defines the type of storage mode to use
             for the job.
@@ -189,9 +208,9 @@ modification of the following information for ABAP Programs:
 OpCon supports the definition and
 modification of the following information for External Commands:
 
-- **Command**: Defines the external command name.
+- **Command**: Defines the external command name
 - **Parameters**: Defines the parameter string to pass to the external
-    command when the step executes.
+    command when the step runs.
 - **Operating System**: Defines the Operating System on which the
     background job processes (e.g., AS400, Windows, SunOS).
 - **Target Server**: Defines the name of the application server for
@@ -205,16 +224,16 @@ modification of the following information for External Commands:
   - **Job waiting for external termination**: Informs SAP to wait
         for the termination of the external command before returning any
         exit condition.
-  - **Activate trace**: Turns on detailed flow trace for the job.
+  - **Activate trace**: Turns on detailed flow trace for the job
 
 #### External Program Details
 
 OpCon supports the definition and
 modification of the following information for External Programs:
 
-- **Program**: Defines the external program name.
+- **Program**: Defines the external program name
 - **Parameters**: Defines the parameter string to pass to the external
-    command when the step executes.
+    command when the step runs.
 - **Target Server**: Defines the host name of the SAP system for
     running the external program.
 - **Control Flags**: Defines various options to provide additional
@@ -226,4 +245,54 @@ modification of the following information for External Programs:
   - **Job waiting for external termination**: Informs SAP to wait
         for the termination of the external command before returning any
         exit condition.
-  - **Activate trace**: Turns on detailed flow trace for the job.
+  - **Activate trace**: Turns on detailed flow trace for the job
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| User ID | Defines the valid SAP login ID | — | — |
+| Password | Defines the correct SAP password for the User ID | — | — |
+| Language | Defines the two-character language abbreviation (e.g | — | — |
+| Job Name | Defines the name of the job as defined in the SAP R/3 | — | — |
+| Job Class | Defines the classification of SAP R/3 and SAP CRM | — | — |
+| Job Number | Defines the SAP R/3 and SAP CRM Job number (Job ID) | — | — |
+| Start SAP Job | Configures SAP start criteria for the job | — | — |
+| Exec. Target | Defines the name of the SAP Application Server on which the job processes | — | — |
+| ABAP Program | Defines the ABAP program name | — | — |
+| Variant | Defines the ABAP program Variant | — | — |
+| Variant List | Defines the following variant parameter names and values: | — | — |
+| Print Specifications | Defines the numerous print parameters and specifications. | — | — |
+| Command | Defines the external command name | — | — |
+| Parameters | Defines the parameter string to pass to the external | — | — |
+| Operating System | Defines the Operating System on which the background job processes (e.g., AS400, Windows, SunOS) | — | — |
+| Target Server | Defines the name of the application server for running the background job | — | — |
+| Control Flags | Defines the options to provide additional control | — | — |
+| Program | Defines the external program name | — | — |
+## FAQs
+
+**Q: What login information is required for an SAP R/3 and CRM job?**
+
+An SAP R/3 and CRM job requires a Machine name (the SAP LSAM), a valid SAP User ID and Password, and a two-character Language abbreviation (e.g., EN for English).
+
+**Q: What does the "Activate trace" option do for an SAP job?**
+
+When enabled, Activate trace turns on detailed flow trace for the SAP job, writing trace output to the job log on the SAP system.
+
+**Q: What is the "Job waiting for external termination" option?**
+
+This option instructs SAP to wait for the termination of the external command before returning any exit condition, ensuring the job status in OpCon accurately reflects the SAP job's completion.
+
+## Glossary
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

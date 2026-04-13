@@ -15,8 +15,12 @@ doc_type: procedural
 
 # SMA Network Communications Module (SMANetCom)
 
-**Theme:** Configure  
+**Theme:** Configure
 **Who Is It For?** System Administrator
+
+:::note
+To view NetComs in Solution Manager, see [Relays overview](../Files/UI/Solution-Manager/Library/Relays/Relays-Overview.md).
+:::
 
 ## What Is It?
 
@@ -25,14 +29,6 @@ The SMANetCom component is responsible for all communication between the SAM and
 SMANetCom sends job start information to each agent and then requests job status updates, writing the feedback from the agents into the database. When a job completes, the agents respond with the completion status. Continually reading SMANetCom messages in the database, the SAM uses this information to report statuses and resolve dependencies.
 
 ![SMA Network Communications Module](../Resources/Images/Server-Programs/smanetcom.png "SMA Network Communications Module")
-
-## When Would You Use It?
-
-- The SMANetCom component is responsible for all communication between the SAM and all agents
-
-## Why Would You Use It?
-
-- **SMA Network**: The SMANetCom component is responsible for all communication between the SAM and all agents
 
 ## TLS Security
 

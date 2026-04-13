@@ -27,21 +27,6 @@ See [Calendar Concepts](../../../../objects/calendars.md).
 ![Managing Calendars](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingCalendars.png  "Managing Calendars")
 
 Please check back for more content.
-## When Would You Use It?
-
-- You need to review or update Calendars settings in Solution Manager
-- Calendars needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Calendars management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All Calendars changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What does managing calendars involve?**

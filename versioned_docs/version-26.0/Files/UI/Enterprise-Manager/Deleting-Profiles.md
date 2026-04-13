@@ -1,12 +1,52 @@
+---
+title: Deleting Profiles
+description: "Use this procedure to delete Profiles in the Enterprise Manager."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Deleting Profiles
 
-To delete a profile:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-1. Launch the Enterprise Manager application.
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays.
-3. Click on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the drop-down list.
-4. Click on **Connection Profiles**. The **Connection Profiles** settings display to the right.
-5. Click on the specific **Profile** and click the **Remove** button.
-6. Click **Yes** to confirm the deletion. Click **No** to cancel the deletion.
-7. Click **Apply** to save the changes in this dialog.
-8. Click **OK** to save the changes and close the **Preferences** dialog.
+## What Is It?
+
+Use this procedure to delete Profiles in the Enterprise Manager.
+
+To delete a profile, complete the following steps:
+
+1. Open the Enterprise Manager application
+2. Go to **EnterpriseManager > Preferences**
+3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree
+4. Select **Connection Profiles**
+5. Select the **Profile** to delete, then select **Remove**
+6. Select **Yes** to confirm or **No** to cancel
+7. Select **Apply** to save changes
+8. Select **OK** to save and close the **Preferences** dialog
+
+## FAQs
+
+**Q: Can a profiles record be recovered after deletion?**
+
+No. Deleting a profiles record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+
+**Q: How many profiles records can you delete at once?**
+
+Select the specific profiles record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

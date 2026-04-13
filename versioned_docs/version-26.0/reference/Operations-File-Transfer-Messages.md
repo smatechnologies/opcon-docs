@@ -1,12 +1,28 @@
 ---
 lang: en-us
-title: Operations File Transfer Messages
 viewport: width=device-width, initial-scale=1.0
+title: Operations File Transfer Messages
+description: "In addition to displaying the completion percentage and the interim transfer operations (e.g., compressing, decompressing, etc.), the EM displays specific file transfer codes from the agent's."
+product_area: Reference
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - Automation Engineer
+  - Business Analyst
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: reference
 ---
 
 #  Operations File Transfer Messages
 
-In addition to displaying the completion percentage and the interim transfer operations (e.g., compressing, decompressing, etc.), the EM displays specific file transfer codes from the LSAM's participating in the file transfer job. The Origination column identifies the error 
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
+
+## What Is It?
+
+In addition to displaying the completion percentage and the interim transfer operations (e.g., compressing, decompressing, etc.), the EM displays specific file transfer codes from the agent's participating in the file transfer job. The Origination column identifies the error 
 location: the FTAgent (Destination) and/or the FTServer (Source).
 
 ## MCP SMA File Transfer Messages
@@ -33,7 +49,6 @@ The following error messages may be encountered in the \*SMA/FTAGENT.
 | The \*SMA/FTAGENT program attempted to place a job status message in the \*SMA/OUTBOUND/FILE, but was unable to do so. | Log error: Can't write to SAM. \<first 132 characters of the status message\>FTAGENT aborts. |
 | An unsupported Common Character Set designation was received. | Log error: Invalid CommonCharSet \<CommonCharSet\>FTAGENT aborts. |
 
-
 ## OS 2200 File Transfer Server Messages
 
 The OS 2200 File Transfer Server messages are sent to File Transfer Agents, which may be displayed in OpCon Schedule Operations.
@@ -41,7 +56,7 @@ The OS 2200 File Transfer Server messages are sent to File Transfer Agents, whic
 | Message | Description |
 | --- | --- |
 | SECURITY VIOLATION | An attempt has been made to violate the security settings of the File Transfer configuration. Most often this results from disallowing File Transfers, and an attempt to perform a transfer was initiated. |
-| File Name Missing | The name of the source file was not provided by the FTAgent. This situation should be reported to SMA Technologies Support. |
+| File Name Missing | The name of the source file was not provided by the FTAgent. This situation should be reported to Continuous Support. |
 | Unsupported SOURCE Data Type | The selected Data Type for the source file is not supported. The Data Type must be ASCII or Default Text. |
 | Unsupported file type: *file name* | The source file type is not supported. Refer to the **OS 2200 Source Files** section to review the unsupported types. |
 | File does NOT exist: *file name* | The requested source file does not exist on the source system. |
@@ -60,8 +75,7 @@ The OS 2200 File Transfer Server messages are sent to File Transfer Agents, whic
 | *file-name* File not found (SDFI CST: *xx* ) | An attempt to open the file for reading failed due to a file assignment error; the *xx* CST number provides the error identifier. The SMAJORS Log file will contain specific error information. |
 | File Open Error *xx*: *error message text* | An attempt to open the file for reading failed. The *xx* contains the error identifier; the *error message text* contains a brief description of the error. The SMAJORS Log file will contain additional error information. |
 | FILE READ ERROR (CST: *xx*, CSST: *xx* ) *error message text* | An error occurred while reading the source file. The CST and CSST contain error identifiers; *error message text* contains a brief description of the error. The SMAJORS Log file will contain additional error information. |
-| 1 - POINTER AT END OF STRING <br /><br />2 - START DELIMITER NOT FOUND<br /><br />3 - RETURNED STRING TRUNCATED <br /><br />4 - END DELIMITER NOT FOUND <br /><br />Invalid Request: Not \<DATA\> <br /><br />Invalid Request: *request data* | These messages are the result of internal processing discrepancies between the FTServer and FTAgent. These should be reported to SMA Technologies Support. |
-
+| 1 - POINTER AT END OF STRING <br /><br />2 - START DELIMITER NOT FOUND<br /><br />3 - RETURNED STRING TRUNCATED <br /><br />4 - END DELIMITER NOT FOUND <br /><br />Invalid Request: Not \<DATA\> <br /><br />Invalid Request: *request data* | These messages are the result of internal processing discrepancies between the FTServer and FTAgent. These should be reported to Continuous Support. |
 
 ## OS 2200 File Transfer Job Messages
 
@@ -78,37 +92,36 @@ The OS 2200 File Transfer Server messages are sent to File Transfer Agents, whic
 | 9 (11) Invalid Encryption mode (must be NONE) | Encryption Required has been specified for the file transfer job. Encryption is not supported. |
 | 10 (12) Invalid Overwrite parameter (cannot be APPEND) | Destination File Handling has been identified as either "Append" or "Backup and Append". The OS 2200 FTAgent does not support file appends. |
 | 13 (15) Common Bank slot not available | The number of File Transfer jobs is greater than twelve (12), OR the Common Bank has become corrupted (possibly from many FTAgent job aborts.) To correct, stop and restart XFRTCP and SMAJOR runs. |
-| 14 (16) FPRC Request (020) message received in error | A communications error between an FTServer and FTAgent has occurred. Report this condition to SMA Technologies Support. |
-| 15 (17) SEND Request (022) message received in error | A communications error between an FTServer and FTAgent has occurred. Report this condition to SMA Technologies Support. |
-| 16 (20) TIP read error: XFR READ FAILURE | An error occurred while attempting to read the XFER Status record from the TIP file. Most likely the TIP file is corrupted; use the XFRINI/ECL and LPARMRES/ECL procedures to re-initialize the file. This situation should be reported to SMA Technologies Support. |
-| 17 (21) TIP read error: INIT and Parameters failure | An error occurred while attempting to initialize the TIP interface and red the LSAM Parameters record from the TIP file. Most likely the TIP file is corrupted; use the XFRINI/ECL and LPARMRES/ECL procedures to re-initialize the file. This situation should be reported to SMA Technologies Support. |
+| 14 (16) FPRC Request (020) message received in error | A communications error between an FTServer and FTAgent has occurred. Report this condition to Continuous Support. |
+| 15 (17) SEND Request (022) message received in error | A communications error between an FTServer and FTAgent has occurred. Report this condition to Continuous Support. |
+| 16 (20) TIP read error: XFR READ FAILURE | An error occurred while attempting to read the XFER Status record from the TIP file. Most likely the TIP file is corrupted; use the XFRINI/ECL and LPARMRES/ECL procedures to re-initialize the file. This situation should be reported to Continuous Support. |
+| 17 (21) TIP read error: INIT and Parameters failure | An error occurred while attempting to initialize the TIP interface and red the agent Parameters record from the TIP file. Most likely the TIP file is corrupted; use the XFRINI/ECL and LPARMRES/ECL procedures to re-initialize the file. This situation should be reported to Continuous Support. |
 | 18 (22) COMM Failure: OPEN connection failed | The attempt to open a connection to the FTServer failed. The job's log file contains detailed error information. |
-| 19 (23) Invalid CAPABILITIES message | The FTAgent has received an invalid message from the FTServer. This situation should be reported to SMA Technologies Support. |
-| 20 (24) Required CAPABILITY not present: ASCII | The FTServer does not have the required capability of transferring the file in ASCII format. This situation should be reported to SMA Technologies Support. |
+| 19 (23) Invalid CAPABILITIES message | The FTAgent has received an invalid message from the FTServer. This situation should be reported to Continuous Support. |
+| 20 (24) Required CAPABILITY not present: ASCII | The FTServer does not have the required capability of transferring the file in ASCII format. This situation should be reported to Continuous Support. |
 | 21 (25) Destination File Name invalid | The name provided for the destination file does not meet the FTAgent requirements. Review the OS 2200 Destination Files section for acceptable file names. |
 | 22 (26) FACILITIES STATUS error (\@FAC) | A Facilities Error occurred while attempting to manage the destination file. The job's log file will contain detailed error information. |
 | 23 (27) Open OUTPUT file failed | An error occurred when the FTAgent attempted to open the destination file. The job's log file will contain detailed error information. |
 | 24 (30) Received error from server | The FTAgent received an error message from the FTServer; the received message is included. Review the FTServer documentation for additional information pertaining to the message. |
 | 25 (31) File WRITE error (SDFIO) | The FTAgent encountered an error when attempting to write data to the destination file. The job's log will contain detailed error information. |
-| 26 (32) Job Record not found in TIP FILE | The necessary job data could not be found in the TIP file. This may be the result of a corrupted file, or a combination of multiple occurrences of the job processing simultaneously. This situation should be reported to SMA Technologies Support. |
+| 26 (32) Job Record not found in TIP FILE | The necessary job data could not be found in the TIP file. This may be the result of a corrupted file, or a combination of multiple occurrences of the job processing simultaneously. This situation should be reported to Continuous Support. |
 | 27 (33) COMM Failure: Connection Rejected | The FTServer rejected the FTAgent's attempt to open a communications session. |
 | 28 (34) COMM Failure: Connection Aborted | The communications connection between the FTServer and FTAgent aborted. |
-| 29 (35) COMM Failure: Connection Closed before EOF| The communications connection between the FTServer and FTAgent was closed before the end-of-file was received. This situation should be reported to SMA Technologies Support. |
-| 30 (36) FIXED length records w/zero RecordLength | The FTServer has identified the source file as containing FIXED length records but has reported a zero record length. This situation should be reported to SMA Technologies Support. |
-| 31 (37) Required RECORD parameters not present | The FTServer has failed to provide file parameters required to create the output file. This situation should be reported to SMA Technologies Support. |
+| 29 (35) COMM Failure: Connection Closed before EOF| The communications connection between the FTServer and FTAgent was closed before the end-of-file was received. This situation should be reported to Continuous Support. |
+| 30 (36) FIXED length records w/zero RecordLength | The FTServer has identified the source file as containing FIXED length records but has reported a zero record length. This situation should be reported to Continuous Support. |
+| 31 (37) Required RECORD parameters not present | The FTServer has failed to provide file parameters required to create the output file. This situation should be reported to Continuous Support. |
 | 32 (40) Unsupported File Format (not FIXED or VARIABLE) | The format of the source file is  not supported bu the OS 2200 FTAgent. |
 | 33 (41) Preferred Compression FAILED | The File Transfer job is defined with "Compression Preferred" and "Failed if Preferred not met". The file has been transferred successfully. |
 | 34 (42) Preferred Encryption FAILED | The File Transfer job is defined with "Encryption Preferred" and "Failed if Preferred not met". The file has been transferred successfully. |
 | 35 (43) Invalid Destination File key(s) | The Read and/or Write keys provided for the destination file are invalid. |
 | 36 (44) File Transfer Server not responding | The FTServer is no longer communication with the FTAgent. |
-| 37 (45) Invalid Packet Number received on Resend | An out-of-sequence data message has been received by the FTAgent. This situation should be reported to SMA Technologies Support. |
-
+| 37 (45) Invalid Packet Number received on Resend | An out-of-sequence data message has been received by the FTAgent. This situation should be reported to Continuous Support. |
 
 ## UNIX File Transfer Error Codes
 
 File transfer errors received by STDOUT/STDERR may be viewed in the EM's Job Output Retrieval System (JORS).
 
-The messages in this section are output by the UNIX Agent and Server; messages output by a non-UNIX Agent or Server will be different, and the user is referred to the documentation for the appropriate LSAM. When the destination machine is UNIX and an error originates in the Server, the Agent will prepend "FTServer:" to the message to indicate that it originated with the Server. 
+The messages in this section are output by the UNIX Agent and Server; messages output by a non-UNIX Agent or Server will be different, and the user is referred to the documentation for the appropriate agent. When the destination machine is UNIX and an error originates in the Server, the Agent will prepend "FTServer:" to the message to indicate that it originated with the Server. 
 
 :::tip Example
 FTServer: Error reading Temp File ```[/usr/local/lsam/tmp/FT_AHhs5/daily.txt.asc.10203]```
@@ -118,14 +131,13 @@ FTServer: Error reading Temp File ```[/usr/local/lsam/tmp/FT_AHhs5/daily.txt.asc
 
 | Message | Origination | Explanation |
 | --- | :---: | --- |
-| Original Destination File <br />\[*desf*] backed up to \[backup] | FTAgent | Per the job's "Overwrite" option. the FTAgent backed up the Destination File prior to starting the file transfer. |
+| Original Destination File <br />\[*desf*] backed up to \[backup] | FTAgent | Per the job's "Overwrite" option. the FTAgent backed up the Destination File before starting the file transfer. |
 | Original Destination File <br />\[*file*] did not exist to backup | FTAgent | At the job's startup, no Destination File exists to backup. |
 | Could not change default access permissions for Destination File \[*desf*] | FTAgent | Following the transfer of a new Destination File, the new file's access privileges could not be changed from the system-dependent default to:<br /><br />- full access by owner<br />- read access by group<br />- no access by others<br /><br />NOTE: If the Destination file existed before the file transfer, the file transfer does not modify its access permissions. |
-| \[*src_machine*]src_file --> \[*dest_mach*]dest_file | FTAgent| - Displays the results of the file transfer.<br />- The Destination File was created or overwritten.<br />- Shown if the job's "Overwrite" option specified appending, but the Destination File did not exist prior to the file transfer. |
+| \[*src_machine*]src_file --> \[*dest_mach*]dest_file | FTAgent| - Displays the results of the file transfer.<br />- The Destination File was created or overwritten.<br />- Shown if the job's "Overwrite" option specified appending, but the Destination File did not exist before the file transfer. |
 | \[*src_machine*]src_file appended --> \[*dest_machine*]dest_file | FTAgent | - Displays the results of the file transfer.<br />- The Source File was appended to the Destination File. |
 | File transfer successfully completed | FTAgent | The job ran to completion. |
 | File transfer did not complete! | FTAgent | The job did not run to completion. The file may or may not have been transferred. Refer to the job's STDERR output for details of what went wrong. |
-
 
 ### STDERR
 
@@ -135,7 +147,7 @@ Written to a job's STDERR file when the job requirements could not be met. The f
 | --- | :---: | --- |
 | User does not have required access to Source File \[*file*] | FTServer | The file transfer was aborted because the user did no have READ access to the Source File. |
 | User does not have required access to Destination File \[*file*] | FTAgent | The file transfer was aborted because the user did not have WRITE access to the Destination File OR CREATE access to the Destination directory. |
-| Invalid path component in Destination File \[*file*] | FTAgent | The file transfer was aborted because the user specified a non-existent directory within the path portion of the Destination File, i.e., that portion of the Destination File prior to the final '/' in the filename. |
+| Invalid path component in Destination File \[*file*] | FTAgent | The file transfer was aborted because the user specified a non-existent directory within the path portion of the Destination File, i.e., that portion of the Destination File before the final '/' in the filename. |
 | Destination File \[*file*] already exists and overwrite not allowed. | FTAgent | The file transfer was aborted because the Destination File already existed, and the user specified "Do Not Overwrite" for the job's "Overwrite" option. |
 | Could not back-up Destination File \[*file*] (*indicator*) | FTAgent | - The file transfer was aborted becuase the Destination File could not be backed up as the user specified for the job's "Overwrite" option.<br />- The indicator field provides the specific reason. |
 | Compression REQUIRED but not supported by both machines | FTAgent | The file transfer was aborted because compatible forms of file compression were not available on both the Source and Destination machine. |
@@ -170,8 +182,8 @@ Occurrence of an error does not necessarily (but usually does) mean that a job i
 | Tag \[*tag*] is not specified | FTServer<br />FTAgent | The indicated XML tag was missing. |
 | End tag \[*tag*] is not specified | FTServer<br />FTAgent | The associated ending tag for the indicated XML tag was missing. |
 | Value for Tag \[*tag*] is not specified | FTServer<br />FTAgent | No value was supplied for the indicated XML tag. |
-| Could not fork() for \[*operation*] (*indicator*) | FTServer<br />FTAgent | - The indicated operation could not be performed due to inability to execute a fork() call.<br />- The indicator field provides the specific reason. |
-| Could not wait() for \[*operation*] (*indicator*) | FTServer<br />FTAgent | - The indicated operation could not be performed due to inability to execute a wait() call.<br />- The indicator field provides the specific reason. |
+| Could not fork() for \[*operation*] (*indicator*) | FTServer<br />FTAgent | - The indicated operation could not be performed due to inability to run a fork() call.<br />- The indicator field provides the specific reason. |
+| Could not wait() for \[*operation*] (*indicator*) | FTServer<br />FTAgent | - The indicated operation could not be performed due to inability to run a wait() call.<br />- The indicator field provides the specific reason. |
 | Processing error in \[*operation*] (*inidicator*) | FTServer<br />FTAgent | The indicated operation could not be performed due to the reason pointed to by the indicator field. |
 | Max attempts at sending message exceeded | FTServer<br />FTAgent | The maximum number of attempts to sned a message was reached. |
 | Max Wait Time to receive message has elapsed | FTServer<br />FTAgent | The maximum time allowed for reception of a message was reached. |
@@ -184,7 +196,7 @@ Occurrence of an error does not necessarily (but usually does) mean that a job i
 | RCV Queue full | FTServer<br />FTAgent | The queue is full because a processing error occurred. |
 | Error in FT Directory format | FTServer<br />FTAgent | The file which maps Source and Destination files to temporary files for processing is corrupted. |
 | Could not lock FT Directory \[*directory*] (*indicator*) | FTServer<br />FTAgent | - The file which maps Source and Destination files to temporary files for processing could not be locked for exclusive use.<br />- The indicator field provides the specific reason. |
-| Incorrect number of parameters | FTAgent | FTAgent received the wrong number of startup parameters from the LSAM. |
+| Incorrect number of parameters | FTAgent | FTAgent received the wrong number of startup parameters from the agent. |
 | Unknown host name \[*computer*] | FTAgent | FTAgent was unable to locate the indicated *computer* on the network while trying to connect to the FTServer. |
 | Error connecting to \[*computer*] (*indicator*) | FTAgent | FTAgent was unable to connect to the FTServer located on the indicated *computer*. The indicator field provides the specific reason. |
 | Could not get host name (*indicator*) | FTAgent | FTAgent was unable to retrieve its own host name to send to FTServer. The indicator field provides the specific reason. |
@@ -229,3 +241,39 @@ The UNIXLSAM.log file contains these errors.
 | 14013 | FTAgent<br />FTServer | Compression is not supported for files 2GB and larger. |
 | 14014 | FTAgent<br />FTServer | During a Windows to Windows file transfer where the transfer Starts on the Destination machine, this error will occur if the user specified for the Source Machine doesn't have the required privileges on that machine. |
 | 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In the Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click on the job and select Job Information > Configuration > Job Information. |
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What does the Origination column in file transfer error messages indicate?**
+
+The Origination column identifies whether the error occurred at the FTAgent (Destination) or the FTServer (Source) side of the file transfer.
+
+**Q: What should you do when error code 14099 appears?**
+
+View the SMAFT log on the machine where the transfer was started. In the Enterprise Manager, right-click the job and select Job Information > Configuration > Job Information for additional details.
+
+**Q: Why might error 14014 occur in a Windows-to-Windows file transfer?**
+
+Error 14014 occurs during a Windows-to-Windows file transfer where the transfer starts on the Destination machine, and the user specified for the Source Machine does not have the required privileges on that machine.
+
+## Glossary
+
+**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

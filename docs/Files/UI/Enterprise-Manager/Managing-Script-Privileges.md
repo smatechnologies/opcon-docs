@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Script Privileges** editor maintains Role privileges for Embedded Scripts. It displays a list of role names with granted and revoked privileges. For conceptual information, refer to [Embedded Script Privileges](../../../administration/privileges.md#embedded-script-privileges) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Script Privileges settings in Enterprise Manager
-- Script Privileges needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Script Privileges management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Script Privileges changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Granting Script Privileges
 
 To grant a privilege, complete the following steps:
@@ -56,10 +46,6 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** to close the screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

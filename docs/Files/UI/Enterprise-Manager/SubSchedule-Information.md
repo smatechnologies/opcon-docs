@@ -56,14 +56,6 @@ The **Schedule Details** tab includes:
 - **Documentation Tab**: Displays documentation for the subschedule, including any hyperlinks. Refer to [Entering and Opening Hyperlinks in Documentation Frame](Entering-and-Opening-Hyperlinks.md)
 - **Configuration Tab**: Allows reconfiguration of platform-specific details and review of advanced job information. Follow Steps 1–6 of the [Getting Container Job or subschedule Information](#Getting) procedure, then follow the [Adding Job Configuration Parameters](#Adding) procedure starting at Step 6
 
-## When Would You Use It?
-
-- You need to provide details about the daily copy of a selected Container job or subschedule using The **SubSchedule Information** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides details about the daily copy of a selected Container job or subschedule
-
 ## Getting Container Job or subschedule Information
 
 To get the information, complete the following steps:

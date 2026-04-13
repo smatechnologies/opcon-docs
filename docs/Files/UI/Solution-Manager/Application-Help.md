@@ -28,14 +28,6 @@ Web-based help is available directly within the application, covering the entire
 You may need to disable your browser pop-up blocker to open help in the browser window.
 :::
 
-## When Would You Use It?
-
-- Web-based help is available directly within the application, covering the entire OpCon product suite
-
-## Why Would You Use It?
-
-- **Application Help**: Web-based help is available directly within the application, covering the entire OpCon product suite
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

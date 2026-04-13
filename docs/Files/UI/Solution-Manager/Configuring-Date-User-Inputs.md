@@ -58,16 +58,6 @@ To configure the user input, complete the following steps:
 The date pattern format is based on the Javascript Moment format. The following patterns are not supported: **yo**, **N**, **NN**, **NNN**, **NNNN**, **NNNNN**, **y**, **yy**, **yyy**, **yyyy**. Refer to <https://momentjs.com/docs/#/displaying/format> for the official format reference.
 :::
 
-## When Would You Use It?
-
-- You need to adjust settings for Date User Inputs in Solution Manager
-- Default Date User Inputs settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Date User Inputs settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -37,15 +37,6 @@ To copy named instance definitions, complete the following steps:
 9.  Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 :::
 
-## When Would You Use It?
-
-- An existing Named Schedule Instance Definitions definition needs to be duplicated in Enterprise Manager
-- A new Named Schedule Instance Definitions with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Named Schedule Instance Definitions eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy named schedule instance definitions instead of creating a new one?**

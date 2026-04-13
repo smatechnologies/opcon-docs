@@ -25,16 +25,6 @@ The **Threshold Update** panel in **Master Job Definition** displays the Thresho
 - Select the icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
 - When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Threshold Updates records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Threshold Updates state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Threshold Updates records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Adding or Updating Threshold Updates
 
 To add or Updating Threshold Updates, complete the following steps:
@@ -50,10 +40,6 @@ Only those with the appropriate permissions will have access to the **Lock** but
 5. Select the **Save** button on the dialog
 6. Select the **Save** button on the Master Job Definition page
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

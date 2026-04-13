@@ -35,14 +35,6 @@ See also:
 - [Managing Escalation Rules](Managing-Escalation-Rules.md)
 - [Managing Escalation Groups](Managing-Escalation-Groups.md)
 
-## When Would You Use It?
-
-- Escalation Manager has options related to Escalations
-
-## Why Would You Use It?
-
-- **Overview**: Escalation Manager has options related to Escalations
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

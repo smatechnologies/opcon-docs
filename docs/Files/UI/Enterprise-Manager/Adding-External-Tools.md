@@ -42,16 +42,6 @@ To add an external tool, complete the following steps:
 10. Open Enterprise Manager and go to **External Tools** in the **Navigation Panel** to verify the entry for Internet Information Services
 11. Select **Internet Information Services** to confirm it works correctly
 
-## When Would You Use It?
-
-- You need to add External Tools in Enterprise Manager
-- The environment is expanding and requires additional External Tools to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding External Tools to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the External Tools and when
-
 ## FAQs
 
 **Q: How do you save a new external tools record?**

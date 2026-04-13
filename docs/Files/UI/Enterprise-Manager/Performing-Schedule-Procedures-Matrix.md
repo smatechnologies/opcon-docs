@@ -24,14 +24,6 @@ doc_type: procedural
 
 Use this procedure to perform Schedule Procedures when Working in Matrix View in the Enterprise Manager.
 
-## When Would You Use It?
-
-- A Schedule Procedures when Working in Matrix View action needs to be carried out in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Ensure consistent operations**: Performing Schedule Procedures when Working in Matrix View actions through OpCon creates a centralized, auditable record of all operational changes
-
 ## Placing Schedules On Hold
 
 This action suspends processing of the selected schedule. Currently running jobs continue, but no new jobs start.

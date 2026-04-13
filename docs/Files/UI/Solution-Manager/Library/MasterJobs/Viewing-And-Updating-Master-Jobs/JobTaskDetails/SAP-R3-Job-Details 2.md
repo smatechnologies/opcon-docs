@@ -24,14 +24,6 @@ SAP R/3 and CRM job details define how OpCon submits background jobs to an SAP R
 
 To view, add, or edit a SAP R/3 and CRM job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- To view, add, or edit a SAP R/3 and CRM job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
-## Why Would You Use It?
-
-- **Viewing, Adding,**: To view, add, or edit a SAP R/3 and CRM job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
 ## Viewing SAP R/3 and CRM Job Details
 
 1. Go to **Library** > **Master Jobs**

@@ -54,16 +54,6 @@ To configure the database connection settings and save the remote instance, comp
     -   **Auto**
 8.  Select the **Save** button
 
-## When Would You Use It?
-
-- You need to add Vision Remote Instances in Solution Manager
-- The environment is expanding and requires additional Vision Remote Instances to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Vision Remote Instances to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Vision Remote Instances and when
-
 ## FAQs
 
 **Q: What information is required to add vision remote instances?**

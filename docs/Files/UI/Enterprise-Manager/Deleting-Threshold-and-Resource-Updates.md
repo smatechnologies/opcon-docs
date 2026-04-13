@@ -35,21 +35,6 @@ To delete a threshold or resource update, complete the following steps:
 9. Select **Yes** to confirm or **No** to cancel
 10. Select **Close ☒** to close the **Job Master** screen
 
-## When Would You Use It?
-
-- An existing Threshold/Resource Updates in Enterprise Manager is no longer needed
-- The Threshold/Resource Updates has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Threshold/Resource Updates definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Can a threshold/resource updates record be recovered after deletion?**

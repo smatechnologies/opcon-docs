@@ -26,16 +26,6 @@ Use this procedure to manage Individual Job Status Colors in the Enterprise Mana
 Select the **Restore Defaults** button in the Color Preferences to restore the default color choices.
 :::
 
-## When Would You Use It?
-
-- You need to review or update Individual Job Status Colors settings in Enterprise Manager
-- Individual Job Status Colors needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Individual Job Status Colors management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Individual Job Status Colors changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Editing an Individual Status Color
 
 To set the preferences, complete the following steps:
@@ -75,10 +65,6 @@ To remove an Individual Status Color, complete the following steps:
 3. Select the **Remove** button
 4. Select **Apply** to save, then **OK** to close the **Preferences** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

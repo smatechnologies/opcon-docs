@@ -1,46 +1,39 @@
 ---
 sidebar_label: 'Introduction'
+title: SMA Dynamic Data Input Introduction
+description: "SMA Dynamic Data Input (SMADDI) is an optional OpCon component that dynamically adds data to OpCon using text files."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 # SMA Dynamic Data Input Introduction
 
-SMA Dynamic Data Input (SMADDI) is an optional component of
-OpCon that facilitates dynamically adding
-data to OpCon with a text file. SMADDI
-consists of both a service used to monitor for files and stored
-procedures used to update the database. The **SMA OpCon DDI Install**
-package installs the SMADDI service. The **SMA OpCon Database Scripts
-Install** package includes the application of the SMADDI stored
-procedures to the OpCon database. Both
-installation packages can be found in the <Target Directory\>\\Install\\\_Exe directory. For installation
-instructions on either package, refer to the **OpCon Installation**
-online help.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+SMA Dynamic Data Input (SMADDI) is an optional OpCon component that dynamically adds data to OpCon using text files. SMADDI consists of a service that monitors for files and stored procedures that update the database. Both installation packages — **SMA OpCon DDI Install** and **SMA OpCon Database Scripts Install** — are in the `<Target Directory>\Install\_Exe` directory. For installation instructions, refer to the **OpCon Installation** online help.
 
 ## SMA Dynamic Data Input Service
 
-The SMA Dynamic Data Input (SMADDI) service monitors up to 20 different
-input directories to detect files containing update information for the
-OpCon database. The SMADDI service processes
-any file in an input directory and moves the file to a subdirectory. The
-SMADDI service requires very little processing resources because it
-sleeps unless notified by the Windows operating system that a file has
-been placed in one of the directories.
+The SMADDI service monitors up to 20 input directories for files containing OpCon database update information. When a file is placed in a monitored directory, the Windows operating system notifies the service, which processes the file and moves it to a subdirectory. The service uses minimal processing resources.
 
 ### Network Input Directories
 
-The list of directories to monitor may define network directories in the
-form of drive letters or UNC path names. However, the following rules
-apply when the SMADDI service monitors network directories:
+Network directories may be defined using drive letters or UNC path names. The following rules apply:
 
-- The service must be running as a Domain User with the correct
-    privileges. For information on setting up the service to run as a
-    Domain User, refer to [First Option: Running the Service as a     Windows Domain User](Configuration.md#First).
-- If the network connection is lost, the service continues to monitor
-    all other accessible directories. SMADDI does not monitor the lost
-    network directory until the service is stopped and is restarted.
-- If a network directory is not available when the service is started,
-    SMADDI does not monitor the directory until the service is stopped
-    and is restarted.
+- The service must run as a Domain User with the correct privileges. See [First Option: Running the Service as a Windows Domain User](Configuration.md#First)
+- If the network connection is lost, the service continues monitoring other accessible directories. The lost directory is not monitored again until the service is restarted
+- If a network directory is unavailable when the service starts, SMADDI does not monitor it until the service is restarted
 
 :::caution
 Do not use a mapped drive as the directory to monitor for SMADDI.
@@ -48,50 +41,25 @@ Do not use a mapped drive as the directory to monitor for SMADDI.
 
 #### Input Directories
 
-For each input directory defined, the SMADDI service creates three
-subdirectories: Done, Error, Output.
+For each input directory, the SMADDI service creates three subdirectories:
 
-- **Done**: When a file is detected in the input directory, the
-    service processes the file and moves it to the Done subdirectory.
-- **Error**: If a parsing error or transactional error is detected
-    with the input file, the service writes a file to the Error
-    subdirectory. SMADDI names the file with the following syntax: `<InputFileName\> - Error.txt`.
-- **Output**: If the service is configured to write output for each
-    file received, the service writes the output from the SMADDI stored
-    procedures to a file in the Output subdirectory. SMADDI names the
-    file with the following syntax: `<InputFileName\> - Out.txt`. The
-    Output directory contains success and failure messages. If a
-    transaction error was reported in the error file, the output file
-    lists the details of the transaction error encountered by the stored
-    procedures.
+- **Done**: Files are moved here after processing
+- **Error**: If a parsing or transactional error is detected, the service writes a file here named `<InputFileName> - Error.txt`
+- **Output**: If configured to write output, the service writes stored procedure results here named `<InputFileName> - Out.txt`. This directory contains success and failure messages, including transaction error details
 
-When the SMADDI service detects a file, it parses the information and
-then passes it to the stored procedures for input to the database.
+After detecting a file, the service parses it and passes the data to the stored procedures for database input.
 
 ## SMA Dynamic Data Input Stored Procedures
 
-The SMA Dynamic Data Input (SMADDI) stored procedures are responsible
-for updating the OpCon database with
-information received from the SMADDI service. The stored procedures
-first validate the data and then commit the changes to the database.
+The SMADDI stored procedures update the OpCon database with information received from the SMADDI service. They validate the data first, then commit the changes.
 
 ## Input Files
 
-Using tags supported by SMA Technologies, the input files must contain an XML-type data structure and must be less
-than two megabytes (MB). The text files contain information describing
-both the type of data and the data itself. Input files may contain a
-single transaction or many transactions. Moreover, multiple transaction
-types may exist in a single input file. SMADDI processes all input files
-detected in identified input directories.
+Input files must use an XML-type data structure with Continuous-supported tags and must be under two megabytes (MB). Each file describes both the type of data and the data itself. A file may contain a single transaction or multiple transactions of different types. SMADDI processes all files detected in identified input directories.
 
 ## Security
 
-The SMADDI service logs in to the OpCon
-database with the Database Login ID and password stored by the SMA ODBC
-Configuration Tool. Windows security handles all other security issues.
-Specifically, the input directories and subdirectories should have
-appropriate permissions assigned to them to prevent unauthorized
-placement of files in the directories.
+The SMADDI service connects to the OpCon database using the Database Login ID and password stored by the SMA ODBC Configuration Tool. Windows security handles all other access controls. Assign appropriate permissions to input directories and subdirectories to prevent unauthorized file placement.
 
 ## Architecture
 
@@ -100,3 +68,45 @@ This diagram shows the relationships of all components in SMADDI.
 SMA Dynamic Data Input Architecture
 
 ![SMA Dynamic Data Input Architecture](../../Resources/Images/Utilities/SDDIarch.png "SMA Dynamic Data Input Architecture")
+
+## Security Considerations
+
+### Authentication
+
+The SMADDI service connects to the OpCon database using the Database Login ID and password stored by the SMA ODBC Configuration Tool.
+
+### Data Security
+
+Windows security handles all access controls beyond the database connection. Appropriate permissions must be assigned to the input directories and their subdirectories (Done, Error, Output) to prevent unauthorized file placement. Any file placed in a monitored directory is processed by the service and committed to the OpCon database, so directory access must be limited to authorized sources.
+
+Mapped drives must not be used as SMADDI input directories. If a network directory is unavailable at service startup, SMADDI does not monitor it until the service is restarted. If the network connection is lost while running, the lost directory is not monitored again until restart.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Error | If a parsing or transactional error is detected, the service writes a file here named ` - Error.txt` | — | — |
+| Output | If configured to write output, the service writes stored procedure results here named ` - Out.txt`. | — | — |
+## FAQs
+
+**Q: What does the SMADDI service do?**
+
+The SMADDI service monitors up to 20 input directories for files containing OpCon database update information. When a file is placed in a monitored directory, the service processes it and moves it to a subdirectory (Done, Error, or Output).
+
+**Q: What happens if a network input directory is unavailable when SMADDI starts?**
+
+If a network directory is unavailable at service startup, SMADDI does not monitor it until the service is restarted. If the connection is lost while running, the service continues monitoring other accessible directories but does not resume the lost directory until restarted.
+
+**Q: Should mapped drives be used as SMADDI input directories?**
+
+No. Continuous explicitly cautions against using mapped drives as monitored directories for SMADDI. Use UNC path names or local directories instead.
+
+## Glossary
+
+**SMADDI (SMA Dynamic Data Input)**: An optional OpCon component that dynamically updates the OpCon database using XML text files placed in monitored input directories. SMADDI uses a Windows service and stored procedures to validate and commit the data.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

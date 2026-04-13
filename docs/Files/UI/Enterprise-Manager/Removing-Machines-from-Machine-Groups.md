@@ -30,14 +30,6 @@ To remove a machine from a machine group, complete the following steps:
 4. Repeat Step 3 for any additional machine groups to un-assign
 5. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
 
-## When Would You Use It?
-
-- An existing Machines from Machine Groups in Enterprise Manager is no longer needed
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Machines from Machine Groups definitions reduces clutter and prevents accidental use of outdated configurations
-
 ## FAQs
 
 **Q: How many steps does the Removing Machines from Machine Groups procedure involve?**

@@ -22,14 +22,6 @@ doc_type: reference
 
 Schedules and jobs in Schedule Operations have a status that indicates state and determines allowed status changes.
 
-## When Would You Use It?
-
-- You need to determine allowed status changes using Schedules and jobs in Schedule Operations have a status that indicates state and
-
-## Why Would You Use It?
-
-- **Streamlined workflow**: Schedules and jobs in Schedule Operations have a status that indicates state and determines allowed status changes
-
 ## Schedule Statuses
 
 OpCon schedule status definitions and permitted changes:

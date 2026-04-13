@@ -24,14 +24,6 @@ doc_type: procedural
 
 Use this procedure to use User-defined Calendars in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to configure or manage Using User-defined Calendars in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Using User-defined Calendars through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Using as Additional Holiday Calendars
 
 To use as Additional Holiday Calendars, complete the following steps:

@@ -58,14 +58,6 @@ The following logs are available in the **Application Logs** tab. This list does
 - **SMABIRTProcessor.log** – Logs general program errors in the SMA Processor handler
 - **SM and SM-API trace logs** (sm-*.log or sm-api-*.log)
 
-## When Would You Use It?
-
-- The **Application Logs** tab displays current log files
-
-## Why Would You Use It?
-
-- **List Application**: The **Application Logs** tab displays current log files
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

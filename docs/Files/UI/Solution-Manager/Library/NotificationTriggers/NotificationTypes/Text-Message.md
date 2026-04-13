@@ -35,14 +35,6 @@ The **Text Message** dialog provides the following fields for defining a notific
 The SMA Notify Handler inserts a Notification ID in the format `ID=nnn` before any other message content. For more information, refer to [Looking up Notification Sources](Look-up-Notification-Sources).
 :::
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining a notification to a pager, phone, or other SMS-capable device using The **Text Message** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining a notification to a pager, phone, or other SMS
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

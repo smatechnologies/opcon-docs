@@ -26,16 +26,6 @@ Deleting a machine requires two procedures.
 If the SAM is starting jobs while a machine is being deleted, the Enterprise Manager (EM) may lock up and fail to delete the machine. Continuous recommends deleting a machine when the SAM is processing few or no jobs.
 :::
 
-## When Would You Use It?
-
-- An existing Machines in Enterprise Manager is no longer needed
-- The Machines has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Machines definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
 ## Remove the Machine from the Daily Table
 
 To remove the Machine from the Daily Table, complete the following steps:
@@ -73,10 +63,6 @@ To remove the Machine from the Daily Table, complete the following steps:
 6. Select **Yes** to confirm the deletion
 7. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

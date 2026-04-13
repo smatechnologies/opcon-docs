@@ -1,33 +1,64 @@
+---
+title: Managing Function Privileges
+description: "The Function Privileges editor maintains Role privileges for specific functions."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Managing Function Privileges
 
-The **Function Privileges** editor is used to maintain Role privileges
-for specific functions. The editor contains a list of role names and the
-granted and revoked privileges. For conceptual information, refer to
-[Function Privileges](../../../administration/privileges.md#function-privileges)
- in the **Concepts** online help.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Function Privileges** editor maintains Role privileges for specific functions. It contains a list of role names with granted and revoked privileges. For conceptual information, refer to [Function Privileges](../../../administration/privileges.md#function-privileges) in the **Concepts** online help.
 
 ## Granting Function Privileges
 
-To grant a privilege:
+To grant a privilege, complete the following steps:
 
-1. Double-click on **Function Privileges** under the **Security**
-    topic. The **Function Privileges** screen displays.
-2. Select a **role** in the **Select Role** drop-down list.
-3. Select the **function(s)** in the **Revoked** list box.
-4. Click the **right arrow** to move functions to the **Granted** list
-    box.
-5. Click **Close ☒** (to the right of the **Function Privileges** tab)
-    to close the **Function Privileges** screen.
+1. Select on **Function Privileges** under the **Security** topic. The **Function Privileges** screen displays
+2. Select a **role** in the **Select Role** list
+3. Select the **function(s)** in the **Revoked** list box
+4. Select the **right arrow** to move functions to the **Granted** list box
+5. Select **Close ☒** to close the **Function Privileges** screen
 
 ## Revoking Function Privileges
 
-To revoke a privilege:
+To revoke a privilege, complete the following steps:
 
-1. Double-click on **Function Privileges** under the **Security**
-    topic. The **Function Privileges** screen displays.
-2. Select a **role** in the **Select Role** drop-down list.
-3. Select the **function(s)** in the **Granted** list box.
-4. Click the **left arrow** to move functions to the **Revoked** list
-    box.
-5. Click **Close ☒** (to the right of the **Function Privileges** tab)
-    to close the **Function Privileges** screen.
+1. Select on **Function Privileges** under the **Security** topic. The **Function Privileges** screen displays
+2. Select a **role** in the **Select Role** list
+3. Select the **function(s)** in the **Granted** list box
+4. Select the **left arrow** to move functions to the **Revoked** list box
+5. Select **Close ☒** to close the **Function Privileges** screen
+
+
+## FAQs
+
+**Q: What does managing function privileges involve?**
+
+Managing function privileges includes Granting Function Privileges, Revoking Function Privileges. Access function privileges through the Enterprise Manager navigation pane.
+
+**Q: Who can manage function privileges in OpCon?**
+
+Users with the appropriate privileges assigned through their role can manage function privileges. Contact your OpCon system administrator if you do not have access.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

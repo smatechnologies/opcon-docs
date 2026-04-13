@@ -35,21 +35,6 @@ To edit a global property, complete the following steps:
 5.  Select **Close ☒** (to the right of the **Global Properties** tab) to
     close the **Global Properties** screen.
 
-## When Would You Use It?
-
-- An existing Global Properties in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Global Properties definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Global Properties in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Global Properties are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to global properties take effect immediately?**

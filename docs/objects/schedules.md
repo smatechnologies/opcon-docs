@@ -36,14 +36,6 @@ define schedules:
 An 'Active Schedule' (mentioned frequently in this online help) is a schedule that has started and is In Process or placed On Hold.
 :::
 
-## When Would You Use It?
-
-- You need to work with A schedule in OpCon, a group of jobs making up a business process, in OpCon
-
-## Why Would You Use It?
-
-- **Schedules**: A schedule in OpCon is a group of jobs making up a business process
-
 ## Schedule Definition
 
 ### Schedule Details

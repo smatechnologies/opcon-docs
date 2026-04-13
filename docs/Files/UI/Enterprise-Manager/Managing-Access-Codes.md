@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Access Codes** editor defines and maintains OpCon Access Codes. It contains a list of all access codes and related documentation. For conceptual information, refer to [Access Codes](../../../objects/access-codes.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Access Codes settings in Enterprise Manager
-- Access Codes needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Access Codes management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Access Codes changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Access Codes Toolbar
 
 The **Access Codes** editor toolbar provides functions for managing access codes. Select any icon below to learn more about its functionality.
@@ -49,10 +39,6 @@ Related Topics
 - [Deleting Access Codes](Deleting-Access-Codes.md)
 - [Viewing Additional Access Code Information](Viewing-Additional-Access-Code-Info.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

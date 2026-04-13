@@ -31,21 +31,6 @@ To edit Job Master Details in the Enterprise Manager, complete the following ste
 7.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png) **Save** on the **Job Master** toolbar
 8.  Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## When Would You Use It?
-
-- An existing Job Master Details in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Job Master Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Job Master Details in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Job Master Details are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to job master details take effect immediately?**

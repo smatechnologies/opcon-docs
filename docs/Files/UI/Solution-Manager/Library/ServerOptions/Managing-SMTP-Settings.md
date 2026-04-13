@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to manage SMTP Settings in Solution Manager.
 
-## When Would You Use It?
-
-- You need to review or update SMTP Settings settings in Solution Manager
-- SMTP Settings needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing SMTP Settings management in Solution Manager reduces the time needed to locate and update settings across the environment
-- All SMTP Settings changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Administration
 
 ### Required Privileges

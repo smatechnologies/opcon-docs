@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to manage SAP R/3 and CRM Background Functions in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to review or update SAP R/3 and CRM Background Functions settings in Enterprise Manager
-- SAP R/3 and CRM Background Functions needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing SAP R/3 and CRM Background Functions management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All SAP R/3 and CRM Background Functions changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## SAP Login
 
 The first time you retrieve data from the SAP system, the User Interface displays an **SAP Login** screen with the following fields:

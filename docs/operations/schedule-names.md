@@ -25,14 +25,6 @@ Most schedules appear with their original name, but some features cause OpCon to
 - [Multi-Instance Schedules](#Multi-In)
 - [SubSchedules](#SubSched)
 
-## When Would You Use It?
-
-- Most schedules appear with their original name, but some features cause OpCon to append characters automatically
-
-## Why Would You Use It?
-
-- **OpCon Schedule**: Most schedules appear with their original name, but some features cause OpCon to append characters automatically
-
 ## Multi-Instance Schedules
 
 When building additional copies of a multi-instance schedule, the naming convention depends on whether Schedule Instance properties were supplied.

@@ -33,14 +33,6 @@ Related Topics
 
 - [Managing Schedules](Managing-Schedules.md)
 
-## When Would You Use It?
-
-- The **Schedule Build Queue** page displays all schedules that are building or have completed building
-
-## Why Would You Use It?
-
-- **Using Schedule**: The **Schedule Build Queue** page displays all schedules that are building or have completed building
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

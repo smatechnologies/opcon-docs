@@ -31,14 +31,6 @@ tab, you will be able to:
 For conceptual information, refer to [Threshold Updates](../../../job-components/threshold-resource-updates.md#threshold-updates) or [Resource Updates](../../../job-components/threshold-resource-updates.md#resource-updates) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- You need to allows you to define and using The **Threshold/Resource Update** tab in the **[Job Master](Using-Job-Master.md)** editor
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to define and maintain threshold and resource updates related to a job
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

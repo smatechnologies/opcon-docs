@@ -1,4 +1,24 @@
+---
+title: SMA Resource Monitor Tools
+description: "The SMA Resource Monitor User Interface includes the following tools: - Copy - Delete - Find - Filter."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # SMA Resource Monitor Tools
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 The SMA Resource Monitor User Interface includes the following tools:
 
@@ -9,60 +29,34 @@ The SMA Resource Monitor User Interface includes the following tools:
 
 ## Copy
 
-When the **Copy** button is selected from the main SMA Resource Monitor
-User Interface screen, an action pane appears below the menu.
+Selecting **Copy** from the main screen opens an action pane:
 
-- **From**: Select the monitor or action group to copy.
-- **To**: Type the name for the new Monitor or Action Group (maximum
-    characters: 60).
-- **OK**: Click the **OK** button to copy the monitor or action group.
-- **Cancel**: Click the **Cancel** button to cancel the copy action.
+- **From**: Select the monitor or action group to copy
+- **To**: Name for the new monitor or action group (max 60 characters)
+- **OK**: Select to copy
+- **Cancel**: Select to cancel
 
 ## Delete
 
-Click on the gray box to the left of the row for the specific Monitor or
-Action Group item to delete. Select the **Delete** button. When the
-**Delete** button is clicked, a confirmation message displays:
+Select the gray box to the left of the row for the monitor or action group to delete, then select **Delete**. A confirmation message displays:
 
-- If the **Yes** button is selected, the monitor or action group is
-    deleted.
-- If the **No** button is selected, the screen returns without
-    deleting the monitor or action group.
+- **Yes**: Deletes the monitor or action group
+- **No**: Returns without deleting
 
 ## Find
 
-When the **Find** button is selected from the main SMA Resource Monitor
-User Interface screen, an action pane appears below the menu.
+Selecting **Find** from the main screen opens an action pane:
 
-- **Name**: Type the Monitor or Action Group name to be found.
-- **Whole Words Only**: Indicates if the whole word must be found to
-    match the criteria.
-  - If selected, the search will only find the whole word as it
-        stands alone (e.g., typing 'rule' for the name would only find
-        (if it existed) Rule, rule).
-  - If not selected, the search will find the name not only if it
-        stands alone, but will also find other words that match the same
-        order of characters for the name (e.g., typing 'rule' for the
-        name would find (if it existed) Rule, rule, Ruler, ruler, Ruled,
-        ruled).
-- **Case-Sensitive**: Indicates if case-sensitivity should be applied
-    to the search.
-  - If selected, the search will only find matches for the uppercase
-        or lowercase that was typed in the Name text box.
-  - If not selected, the search will not match case.
-- **Find/Next**: Click the **Find** button to initiate the search.
-    After the first search, the button changes to **Next** to find the
-    next item.
-- **Previous**: Click the **Previous** (Prev) button to find the
-    previous match in the table.
-- **Done**: Click the **Done** button to finish the search and close
-    the Find pane.
+- **Name**: Type the monitor or action group name to find
+- **Whole Words Only**: If selected, matches only the exact whole word. If cleared, also matches words containing the search string
+- **Case-Sensitive**: If selected, matches case exactly. If cleared, ignores case
+- **Find/Next**: Select to start the search. Changes to **Next** after the first result
+- **Previous**: Select to find the previous match
+- **Done**: Select to close the Find pane
 
 ## Filter
 
-When the **Filter** button is selected, an action pane appears below the
-menu. Depending on the tab selected, the Filter steps contain different
-details.
+Selecting **Filter** opens an action pane. Contents vary by tab:
 
 - [Filter File Monitors](#Filter)
 - [Filter Counter Monitors](#Filter2)
@@ -70,59 +64,65 @@ details.
 - [Filter Process Monitors](#Filter4)
 - [Filter Action Groups](#Filter5)
 
+For all filter panes: select **Filter** to apply the filter (table refreshes to show matching items), and **Done** to close the pane (table refreshes to show all records).
+
 ### Filter File Monitors
 
-- **Name Contains**: Type all or part of the file name.
-- **File State**: Choose the file state (e.g., Create, Delete,
-    SizeChange, AbsoluteSize, Modify, EOFMarker, ScanString, InUse) from
-    the drop-down list.
-- **Filter**: Click the **Filter** button to apply the filter to the
-    selected table. The table will refresh to only display those items
-    matching the filter settings.
-- **Done**: Click the **Done** button to close the filter pane. The
-    table will refresh to show all records.
+- **Name Contains**: All or part of the file name
+- **File State**: Choose from the list (e.g., Create, Delete, SizeChange, AbsoluteSize, Modify, EOFMarker, ScanString, InUse)
 
 ### Filter Counter Monitors
 
-- **Name Contains**: Type all or part of the counter name.
-- **Performance Object**: Choose the Performance Object from the
-    drop-down list.
-- **Counter Name**: Choose the Counter Name from the drop-down list.
-- **Filter**: Click the **Filter** button to apply the filter to the
-    selected table. The table will refresh to only display those items
-    matching the filter settings.
-- **Done**: Click the **Done** button to close the filter pane. The
-    table will refresh to show all records.
+- **Name Contains**: All or part of the counter name
+- **Performance Object**: Choose from the list
+- **Counter Name**: Choose from the list
 
 ### Filter Service Monitors
 
-- **Name Contains**: Type all or part of the service name.
-- **ServiceState**: Choose the ServiceState (e.g., Started, Not
-    Started, Stopped) from the drop-down list.
-- **Filter**: Click the **Filter** button to apply the filter to the
-    selected table. The table will refresh to only display those items
-    matching the filter settings.
-- **Done**: Click the **Done** button to close the filter pane. The
-    table will refresh to show all records.
+- **Name Contains**: All or part of the service name
+- **ServiceState**: Choose from the list (e.g., Started, Not Started, Stopped)
 
 ### Filter Process Monitors
 
-- **Name Contains**: Type all or part of the process name.
-- **ProcessState**: Choose the ProcessState (e.g., Running, Not
-    Running) from the drop-down list.
-- **Filter**: Click the **Filter** button to apply the filter to the
-    selected table. The table will refresh to only display those items
-    matching the filter settings.
-- **Done**: Click the **Done** button to close the filter pane. The
-    table will refresh to show all records.
+- **Name Contains**: All or part of the process name
+- **ProcessState**: Choose from the list (e.g., Running, Not Running)
 
 ### Filter Action Groups
 
-- **Name Contains**: Type all or part of the name of the file for the
-    filter.
-- **Action Contains**: Type information regarding the specific action.
-- **Filter**: Click the **Filter** button to apply the filter to the
-    selected table. The table will refresh to only display those items
-    matching the filter settings.
-- **Done**: Click the **Done** button to close the filter pane. The
-    table will refresh to show all records.
+- **Name Contains**: All or part of the action group name
+- **Action Contains**: Information about the specific action
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Name | Type the monitor or action group name to find | — | — |
+| Whole Words Only | If selected, matches only the exact whole word. | — | — |
+| Case-Sensitive | If selected, matches case exactly. | — | — |
+| Find/Next | Select to start the search. | — | — |
+| Name Contains | All or part of the file name | — | — |
+| File State | Choose from the list (e.g., Create, Delete, SizeChange, AbsoluteSize, Modify, EOFMarker, ScanString, InUse) | — | — |
+| Performance Object | Choose from the list | — | — |
+| Counter Name | Choose from the list | — | — |
+| ServiceState | Choose from the list (e.g., Started, Not Started, Stopped) | — | — |
+| ProcessState | Choose from the list (e.g., Running, Not Running) | — | — |
+| Action Contains | Information about the specific action | — | — |
+## FAQs
+
+**Q: What tools does the SMA Resource Monitor UI provide for managing monitors?**
+
+The UI provides four tools: Copy (duplicates a monitor or action group), Delete (removes a monitor or action group with confirmation), Find (searches by name with options for whole-word and case-sensitive matching), and Filter (narrows the displayed list by criteria).
+
+**Q: How do you delete a monitor in SMA Resource Monitor?**
+
+Select the gray box to the left of the monitor row to select it, then select Delete. A confirmation message appears — select Yes to confirm deletion or No to cancel.
+
+**Q: How does the Find tool's Whole Words Only setting affect search results?**
+
+When Whole Words Only is selected, the search matches only the exact whole word. When cleared, the search also returns monitors whose names contain the search string as a substring.
+
+## Glossary
+
+**SMA Resource Monitor (SMARM)**: A Windows service that monitors files, counters, services, and processes on Windows machines. When a monitored condition is met, it sends OpCon events to trigger automation actions.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

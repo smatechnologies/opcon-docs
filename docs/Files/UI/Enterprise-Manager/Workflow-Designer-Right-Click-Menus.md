@@ -54,14 +54,6 @@ Right-click on a node or dependency line in the **Workflow Designer** to display
 -   **Take Screenshot**: Saves an image of the current **Workflow Designer** layout. Also available on the **Workflow Designer** toolbar
 :::
 
-## When Would You Use It?
-
-- Right-click on a node or dependency line in the **Workflow Designer** to display the following menu items:
-
-## Why Would You Use It?
-
-- **Workflow Designer**: Right-click on a node or dependency line in the **Workflow Designer** to display the following menu items:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

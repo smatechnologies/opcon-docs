@@ -1,0 +1,525 @@
+=== FILE 0: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Solution-Manager/Library/Reporting/Current-Threshold-Values-Report.md ===
+# Current Threshold Values Report
+
+The **Current Threshold Values Report** displays the currently defined thresholds in OpCon.
+
+:::note
+This report has a maximum return limit of 100,000 records.
+:::
+
+![A screen showing the Current Threshold Values Report](../../../../../Resources/Images/SM/Library/Reporting/CurrentThresholdsValuesReport.png "Current Threshold Values Report")
+
+### Filtering & Sorting
+
+This report provides filters for threshold name, value, and description. You can open the filters panel by clicking on the menu (three dots) in the header of any column, and selecting 'Filter'.
+
+ ![A screen showing how to open the column menu](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
+
+
+### Exporting to CSV
+
+Click the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters will be applied when exporting the report.
+
+
+
+---END---
+
+=== FILE 1: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Deleting-Named-Schedule-Instances.md ===
+---
+lang: en-us
+title: Deleting Named Schedule Instances
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Deleting Named Schedule Instances
+
+To delete a named schedule instance:
+
+1.  Double-click on **Schedule Master** under the **Administration**
+    topic. The **Schedule Master** screen displays.
+2.  Select the **schedule** in the **Schedule Selection** drop-down
+    list.
+3.  Click on the **Instance Definition** tab in the **Schedule Details**
+    frame.
+4.  Select the **instance name** that you wish to remove.
+5.  Click the **Remove** button.
+6.  Click ![Green circle with white checkmark     inside](../../../Resources/Images/EM/EMsave.png "Save icon")
+    **Save** on the **Schedule Master** toolbar to confirm the deletion.
+7.  Click **Close ☒** (to the right of the **Schedule Master** tab) to
+    close the **Schedule Master** screen.
+:::
+
+ 
+
+
+
+---END---
+
+=== FILE 2: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Deleting-Notification-Definition-Info.md ===
+# Deleting Notification Definition Information
+
+To delete notification definition information:
+
+1. Double-click on **Notification Manager** under the **Management**
+    topic. The **Notification Manager** screen displays.
+2. Click the **Machines**, **Schedules**, or **Jobs** tab in the
+    **Notification Triggers** frame.
+3. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+    **arrow** to expand the **Machines**,**Schedules**,or **Jobs**
+    information.
+4. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+    **arrow** to expand the **Notification Group** that contains the
+    appropriate trigger.
+5. Click on the **trigger** containing the Notification Definition
+    information.
+6. Unselect the checkbox to the left of the notification.
+7. Click the **Save** button. The **Delete** dialog displays.
+8. Click the **Yes** button to delete the notification information or
+    click the **No** button to cancel the deletion.
+
+
+---END---
+
+=== FILE 3: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/job-types/null.md ===
+# Null Job Details
+
+The Null job provides a way to generate OpCon events and/or set thresholds without having to run a job.
+
+- Examples of Null job use are:
+  - To keep schedules open
+  - Initialize thresholds at a specific point in a schedule
+  - Send notifications
+- Null jobs are set up like any other job, except the '**Job Type**' is set to Null.
+- Apart from the fact no job-specific details are associated with it, a Null job is identical to other jobs (i.e., it has at least one frequency and may have dependencies, etc., associated with it).
+- A Null job always finishes **OK** as soon as it starts.
+
+
+---END---
+
+=== FILE 4: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Deleting-Job-Instance-Properties.md ===
+# Deleting Job Instance Properties
+
+To delete a property:
+
+1. Double-click on **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the **schedule** in the **Schedule** drop-down list.
+3. Select the **job** in the **Job** drop-down list.
+4. Click on the **Instance Definition** tab in the **Job Properties** frame.
+5. Select the **property** to remove.
+6. Click the **Remove** button.
+7. Repeat Steps 5 and 6 to delete additional properties.
+8. Click ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar to confirm the deletion.
+9. Click **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen.
+
+
+---END---
+
+=== FILE 5: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Removing-Daily-Schedule-Instance-Properties.md ===
+# Removing Daily Schedule Instance Properties
+
+To perform this procedure:
+
+1. Double-click on **Daily Maintenance** under the **Operation** topic.
+    The **Daily Maintenance** screen displays.
+2. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+    **arrow** to expand the specific **date** for the schedule.
+3. Click on the **schedule**.
+4. Click on the **Edit Daily** button in the **Maintenance** frame at
+    the bottom-right side of the screen.
+5. Click on the **Instance Definition** tab.
+6. Select the **property definition** in the **Available Properties**
+    table.
+7. Click the **Remove** button.
+8. Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
+    on the **Schedule Daily** toolbar to confirm the deletion or click
+    **Cancel** on the **Schedule Daily** toolbar to cancel the deletion.
+
+
+---END---
+
+=== FILE 6: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Adding-Documentation.md ===
+# Adding Documentation
+
+To add documentation:
+
+1. Double-click on **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the **schedule** in the **Schedule** drop-down list.
+3. Select the **job** in the **Job** drop-down list.
+4. Click on the **Documentation** tab in the **Job Properties** frame.
+5. Enter the *job-related documentation* in the **Documentation** text box.
+6. Select the **frequency** in the **Frequency list**.
+7. Enter the *frequency-related documentation* in the **Frequency Documentation** text box.
+8. Click ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar.
+9. Click **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen.
+
+
+---END---
+
+=== FILE 7: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Deleting-Jobs-from-Daily-Schedules.md ===
+# Deleting Jobs from Daily Schedules
+
+To perform this procedure:
+
+1. Double-click on **Daily Maintenance** under the **Operation** topic.
+    The **Daily Maintenance** screen displays.
+2. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+    **arrow** to expand the specific **date** for the schedule.
+3. Click on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+    **arrow** to expand the schedule.
+4. Click on the **job** to delete.
+5. Click the **Delete** button in the **Maintenance** frame at the
+    bottom-right side of the screen.
+6. Click the **OK** button to delete the job or
+7. Click the **Cancel** button to disregard the delete.
+8. Click **Close ☒** (to the right of the **Daily Maintenance** tab) to
+    close the **Daily Maintenance** screen.
+
+
+---END---
+
+=== FILE 8: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/automation-concepts/null-jobs.md ===
+# Null Jobs
+
+The Null job provides a way to generate OpCon
+events and/or set thresholds without having to run a job.
+
+- Null jobs are set up like any other job, except the **Job Type** is
+    set to Null.
+- Apart from the fact that no Job-specific details are associated with
+    it, a Null job is identical to other jobs (i.e., all job automation
+    components can be associated with it).
+- A Null job always finishes **OK** as soon as it starts.
+
+Examples of Null job use are to:
+
+- Keep schedules open
+- Initialize thresholds at a specific point in a schedule
+- Send notifications
+
+
+---END---
+
+=== FILE 9: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Deleting-Job-Frequencies.md ===
+# Deleting Job Frequencies
+
+To delete a frequency:
+
+1. Double-click on **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the **schedule** in the **Schedule** drop-down list.
+3. Select the **job** in the **Job** drop-down list.
+4. Click on the **Frequency** tab in the **Job Properties** frame.
+5. Select the **frequency** in the **Frequency list**.
+6. Click the **Remove** button.
+7. Click **Yes** to confirm the deletion or click **No** to cancel the deletion.
+8. Repeat Step 5 - 7 to delete multiple frequencies.
+9. Click **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen.
+
+
+---END---
+
+=== FILE 10: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Deleting-Profiles.md ===
+# Deleting Profiles
+
+To delete a profile:
+
+1. Launch the Enterprise Manager application.
+2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays.
+3. Click on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the drop-down list.
+4. Click on **Connection Profiles**. The **Connection Profiles** settings display to the right.
+5. Click on the specific **Profile** and click the **Remove** button.
+6. Click **Yes** to confirm the deletion. Click **No** to cancel the deletion.
+7. Click **Apply** to save the changes in this dialog.
+8. Click **OK** to save the changes and close the **Preferences** dialog.
+
+
+---END---
+
+=== FILE 11: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/utilities/SMA-Resource-Monitor/Introduction.md ===
+---
+sidebar_label: 'Introduction'
+---
+
+# SMA Resource Monitor Introduction
+
+The SMA Resource Monitor for Windows is a file watcher and Windows counter monitor. Both files and other resource triggers will cause the Resource Monitor to send OpCon events for processing. Pictured below is the architecture of the SMA Resource Monitor.
+
+![SMA Resource Monitor Architecture](../../Resources/Images/Utilities/SMARMarch.png "SMA Resource Monitor Architecture")
+
+Both the GUI and the Service require the INI file to determine configuration settings. The GUI reads and updates the Rules and Action files, and the Service uses the Rules and Action files to monitor entities and take actions by sending OpCon events through an MSGIN directory.
+
+
+---END---
+
+=== FILE 12: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Changing-Focus-of-Days-in-Calendars.md ===
+# Changing Focus of Days in Calendars
+
+To change the focus of a day:
+
+1. Double-click on **Matrix** under the **Operation** topic. The **Matrix** screen displays.
+2. Click the **First** button to change the focus to the first day in the Daily tables.
+3. Click the **Today** button to change the focus to the current day's date.
+4. Click the **Last** button to change the focus to the last day for which there are currently schedules in the Daily tables.
+5. Click on a **date** that has a green background.
+6. Click on the **schedule** to view the schedule information in the Daily tables.
+
+
+---END---
+
+=== FILE 13: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Disabling-User-Logins.md ===
+# Disabling User Logins
+
+To disable a user login:
+
+1. Double-click on **User Accounts** under the **Security** topic. The
+    **User Accounts** screen displays.
+2. Select a **role** in the **Select Role** drop-down list.
+    Alternatively, you can use the **Find** ((Ctrl+F) magnifying glass)
+    button to find the role.
+3. Select the **Login disabled** checkbox.
+4. Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
+    on the **User Accounts** toolbar.
+5. Click **Close ☒** (to the right of the **User Accounts** tab) to
+    close the **User Accounts** screen.
+
+:::note
+Keep in mind that manually disabling a user login also releases any Self Service license(s) associated with that user.
+:::
+
+
+---END---
+
+=== FILE 14: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Adding-Thresholds.md ===
+---
+lang: en-us
+title: Adding Thresholds
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Adding Thresholds
+
+To add a threshold:
+
+1.  Double-click on **Thresholds** under the **Administration** topic.
+    The **Thresholds** screen displays.
+2.  Click ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon")
+    **Add** on the **Thresholds** toolbar.
+3.  Enter an alphanumeric *property name* in the **Name** text box.
+4.  *(Optional)* Enter the documentation in the
+    **Documentation** text box.
+5.  Enter a *threshold value* (default = 0) in the **Threshold Value**
+    box.
+6.  Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
+    on the **Thresholds** toolbar.
+7.  Click **Close ☒** (to the right of the **Thresholds** tab) to close
+    the **Thresholds** screen.
+:::
+
+ 
+
+
+
+---END---
+
+=== FILE 15: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Changing-Sort-Order-of-MS-Table.md ===
+---
+lang: en-us
+title: Changing Sort Order of Machines Status Table
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Changing Sort Order of Machines Status Table
+
+To perform this procedure:
+
+1.  Double-click on **Machines Status** under the **Operation** topic.
+2.  *(Optional)* Click on the **Machines Status** column
+    heading to sort the column in *ascending* order (indicated by a
+    small arrow pointing down).
+3.  *(Optional)* Click on the **Machines Status** column
+    heading again to sort the column in *descending* order (indicated by
+    a small arrow pointing up).
+4.  *(Optional)* Click once more on the **Machines
+    Status** column heading, and the sort order will be *reversed*.
+:::
+
+ 
+
+
+
+---END---
+
+=== FILE 16: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Solution-Manager/Working-in-User-Mode_Vision.md ===
+# Working in User Mode
+
+Users not in the «ocadm» role or a role with the «Maintain Vision
+Actions», «Maintain Vision Frequencies», or «Maintain Vision Workspaces»
+privileges will see a Vision Live page that is similar to the example
+graphic here. These users, who must have the «View Vision Workspaces»
+privilege, can only view cards on the Vision Live page and will not be
+able to create, edit, or delete cards.
+
+User Mode Vision Page Display
+
+![User Mode Vision Page Display](../../../Resources/Images/SM/Vision-Live-Page-User.png "User Mode Vision Page Display")
+
+From this page, you can do any of the following:
+
+- [View Cards in Vision     Live](Viewing-Cards-in-Vision-Live.md)
+
+
+---END---
+
+=== FILE 17: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/utilities/Graphical-Utilities/Introduction.md ===
+---
+sidebar_label: 'Introduction'
+---
+
+# Graphical Utilities Introduction
+
+OpCon includes the following graphical utilities:
+
+- [Legacy Audit Management](Legacy-Audit-Management.md)
+- [Schedule Import/Export (deprecated)](Schedule-Import_Export.md)
+- [SMA OpCon Configuration Utility](SMA-OpCon-Configuration-Utility.md)
+
+All of these utilities, except SMA Data Collector, require a system data source name (DSN) to connect to the OpCon database. If a system DSN does not exist, refer to [Create System DSNs](../../installation/configuration.md#Create_System_DSNs) in the **OpCon Installation** online help for procedures on configuring the SQL and Access DSNs.
+
+:::note
+Verify that the most recent Open Database Connectivity (ODBC) driver for Microsoft SQL Server is installed before creating the system Data Source Name (DSN).
+:::
+
+
+---END---
+
+=== FILE 18: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Renaming-Frequencies.md ===
+---
+lang: en-us
+title: Renaming Frequencies
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Renaming Frequencies
+
+To rename a frequency:
+
+1.  Double-click on **Frequency Manager** under the **Management**
+    topic. The **Frequency Manager** screen displays.
+2.  Type the *frequency name* in the **Type Filter** text box or select
+    the **frequency name**.
+3.  Click the **Rename a frequency** button on the **Frequency Manager**
+    toolbar. The **Frequency Definition Wizard** displays.
+4.  Click inside the **Frequency Name** text box to rename the
+    frequency.
+5.  Click the **Finish** button.
+6.  Click **Close ☒** (to the right of the **Frequency Manager** tab) to
+    close the **Frequency Manager** screen.
+:::
+
+ 
+
+
+
+---END---
+
+=== FILE 19: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Preferences-for-Status-Colors.md ===
+# Setting Preferences for Status Colors
+
+:::note
+Click the **Restore Defaults** button in the Color Preferences to restore the default color choices.
+:::
+
+To set the preferences:
+
+1. Launch the Enterprise Manager application.
+2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays.
+3. Click on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the drop-down list.
+4. Click on **Colors**. The **Colors** settings display to the right.
+5. [Set the desired job status group colors](Setting-Job-Status-Group-Colors.md), [manage the individual job status colors](Managing-Individual-Status-Colors.md), or [set the desired schedule status colors](Setting-Schedule-Status-Colors.md).
+
+
+---END---
+
+=== FILE 20: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Disabling-and-Enabling-Job-Starts.md ===
+---
+lang: en-us
+title: Disabling/Enabling Job Starts for Machines
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Disabling/Enabling Job Starts for Machines
+
+To disable or enable job starts for a machine:
+
+1.  Double-click on **Machines** under the **Administration** topic. The
+    **Machines** screen displays.
+2.  Select the **machine** in the **Select Machine** drop-down list.
+3.  Right-click over the graphic to enable the menu in the
+    **Communication Status** frame.
+4.  Select **Enable Job Starts** or **Disable Job Starts** to
+    enable/disable job starts for the selected machine.
+5.  Click **Close ☒** (to the right of the **Machines** tab) to close
+    the **Machines** screen.
+:::
+
+ 
+
+
+
+---END---
+
+=== FILE 21: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Solution-Manager/Library/MasterJobs/Viewing-And-Updating-Master-Jobs/JobTaskDetails/Null-Job-Details.md ===
+# Viewing and Adding Null Job Details
+
+To view, add, or edit a Null job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
+
+## Viewing Null Job Details
+
+1. To view a null job, go to **Library** > **Master Jobs**.
+1. Select a null job in the list.
+1. Select **Edit**.
+1. Expand the **Task Details** panel to expose its content.
+
+---
+
+## Adding Null Job Details
+
+Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md).
+
+---
+
+### More Information
+
+For conceptual information, refer to [Null Jobs](../../../../../../../job-types/null.md) in
+the **Concepts** online help.
+
+
+---END---
+
+=== FILE 22: C:\Users\rweesner\.claude-worktrees\opcon-docs\lucid-bell\docs/Files/UI/Enterprise-Manager/Assigning-Users-to-Roles.md ===
+---
+lang: en-us
+title: Assigning Users to Roles
+viewport: width=device-width, initial-scale=1.0
+---
+
+#  Assigning Users to Roles
+
+To assign a user to a role:
+
+1.  Double-click on **Roles** under the **Security** topic. The
+    **Roles** screen displays.
+2.  Select the **role name** in the **Select Role** drop-down list.
+3.  Select the **User Login ID(s)** in the **Revoked** list.
+4.  Click the **right arrow** to assign the users to the role.
+5.  Click ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
+    on the **Roles** toolbar.
+6.  Click **Close ☒** (to the right of the **Roles** tab) to close the
+    **Roles** screen.
+:::
+
+ 
+
+
+
+---END---
+

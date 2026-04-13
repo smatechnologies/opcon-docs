@@ -1,46 +1,56 @@
+---
+title: Configuring Settings
+description: "Use this procedure to configure Settings in Solution Manager."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Configuring Settings
 
-To configure user settings:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
-Log into the Solution Manager, if not already logged in.
+## What Is It?
 
-Click on the **user profile** button located in the **Navigation** menu,
-as shown in the graphic.
+Use this procedure to configure Settings in Solution Manager.
+
+To configure user settings, complete the following steps:
+
+1. Log into the Solution Manager
+2. Select the **user profile** button in the **Navigation** menu
 
 ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
 
-The **Profile** page will display.
-
-Select the **Settings** tab on the **Profile** page, as shown in the
-graphic.
+3. Select the **Settings** tab on the **Profile** page
 
 ![Profile Settings Tab](../../../Resources/Images/SM/Profile-Settings-Tab.png "Profile Settings Tab")
 
-Configure any of the following types of settings:
-
-- [General](#General)
-- [DateTime Format](#DateTime)
-- [Refresh Intervals](#Refresh)
-- [Debug](#Debug)
-
-Click **Save** to save the changes to the database.
+4. Configure any of the following settings:
+   - [General](#General)
+   - [DateTime Format](#DateTime)
+   - [Refresh Intervals](#Refresh)
+   - [Debug](#Debug)
+5. Select **Save** to save the changes to the database
 
 ## General
 
-The **General** section allows you to set the language of the
-application. Available options are:
+The **General** section sets the application language. Available options:
 
-- **From Web Browser**: Instructs the application to inherit the
-    language settings of your web browser.
-- **EN**: Sets the language to English.
-- **FR**: Set the language to French.
+- **From Web Browser**: Inherits the language settings of your web browser
+- **EN**: Sets the language to English
+- **FR**: Sets the language to French
 
 ## DateTime Format
 
-The **DateTime** section allows you to configure the date and time
-formats to control the way the Solution Manager displays dates and times
-throughout the application. You can select a predefined format for the
-following:
+The **DateTime** section configures the date and time formats used throughout Solution Manager. You can select a predefined format for:
 
 - Full Date
 - Long Date
@@ -50,9 +60,7 @@ following:
 
 ## Refresh Intervals
 
-The **Refresh Intervals** section allows you set the interval (from 0 to
-600 seconds) that data is automatically refreshed for services in the
-application. Refresh intervals can be set for the following services:
+The **Refresh Intervals** section sets the auto-refresh interval (0–600 seconds) for the following services:
 
 - Application Status (s)
 - Escalated Notification (s)
@@ -68,49 +76,61 @@ application. Refresh intervals can be set for the following services:
 ## Debug
 
 :::note
-The **Debug** section will only appear if a member of the ocadm role has not disabled your ability to configure custom debug settings.
+The **Debug** section only appears if a member of the ocadm role has not disabled your ability to configure custom debug settings.
 :::
 
-The **Debug** section allows you to configure debugging in the
-application by utilizing the **Global Settings** switch. If the switch
-is enabled, then the global debug settings configured by a member of the
-ocadm role will be applied. If the switch is disabled, then the
-following options will become available for configuration:
+The **Debug** section configures debugging via the **Global Settings** switch. When enabled, global debug settings from the ocadm role apply. When disabled, the following options become available:
 
-- **Client Log Level**: This option allows you to write logs to your
-    web browser console. Since client logs are local, they will be lost
-    once the browser is closed.
-- **Deep Observe**: This option enables a Framework event observe.
-- **Send Trigger**: This option allows you to set the trigger for
-    sending server logs to the API server to be saved in files. There
-    are three options:
-  - **Disabled**: This option disables the trigger.
-  - **Send on Interval and Max Size**: This option allows you to set
-        an interval- or size-driven trigger with these settings:
-    - **Log Level**: This option allows you to set the server log
-            level.
-    - **Api**: This option, when enabled, logs all the
-            communications (requests and responses) between the Client
-            and Server.
-    - **Interval (s)**: This option allows you to configure the
-            logs to be sent at a certain time interval (from 0 to 600
-            seconds).
-    - **Max Size (characters)**: This option allows you to
-            configure the logs to be sent on the accumulated max
-            character size limit (from 0 to 5000 characters).
-  - **Send on Event**: This option allows you to set an event-driven
-        trigger with these settings:
-    - **Log Level**: This option allows you to set the server log
-            level.
-    - **Api**: This option, when enabled, logs all the
-            communications (requests and responses) between the Client
-            and Server.
-    - **Trigger Log Level**: This option allows you to configure
-            the logs to be sent when an ERROR or WARN occurs.
-    - **Max Size to keep (characters)**: This options allows you
-            to configure the logs to be sent on the max size to keep
-            limit (from 0 to 5000 kilobytes).
+- **Customer Log Level**: Writes logs to your web browser console. Logs are local and lost when the browser is closed
+- **Deep Observe**: Enables a Framework event observe
+- **Send Trigger**: Sets the trigger for sending server logs to the API server. Options:
+  - **Disabled**: Disables the trigger
+  - **Send on Interval and Max Size**: Sets an interval- or size-driven trigger with these settings:
+    - **Log Level**: Sets the server log level
+    - **Api**: When enabled, logs all communications (requests and responses) between the Customer and Server
+    - **Interval (s)**: Sends logs at a set time interval (0–600 seconds)
+    - **Max Size (characters)**: Sends logs when the accumulated character limit is reached (0–5000 characters)
+  - **Send on Event**: Sets an event-driven trigger with these settings:
+    - **Log Level**: Sets the server log level
+    - **Api**: When enabled, logs all communications (requests and responses) between the Customer and Server
+    - **Trigger Log Level**: Sends logs when an ERROR or WARN occurs
+    - **Max Size to keep (characters)**: Sends logs when the max size to keep limit is reached (0–5000 kilobytes)
 
 :::note
-In instances where you are able to reproduce an issue in the application, you can also utilize the **InstantLog Mode** feature to generate a temporary log file to send to the Support team. For more information about how to activate this feature, refer to [InstantLog Mode](SM-UI-Layout.md#InstantLog).
+To reproduce an issue in the application, use the **InstantLog Mode** feature to generate a temporary log file for the Support team. Refer to [InstantLog Mode](SM-UI-Layout.md#InstantLog).
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| From Web Browser | Inherits the language settings of your web browser | — | — |
+| EN | Sets the language to English | — | — |
+| FR | Sets the language to French | — | — |
+| Customer Log Level | Writes logs to your web browser console. | — | — |
+| Deep Observe | Enables a Framework event observe | — | — |
+| Send Trigger | Sets the trigger for sending server logs to the API server. | — | — |
+
+## FAQs
+
+**Q: What does configuring settings control?**
+
+Configuring settings defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
+
+**Q: How many steps are required to configure settings?**
+
+The configuration procedure involves 5 steps. Complete all steps in order and select **Save** to apply the changes.
+
+## Glossary
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

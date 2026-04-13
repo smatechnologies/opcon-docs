@@ -54,16 +54,6 @@ To configure the user input, complete the following steps:
 * **Characters to Strip**: Specifies which character(s) to remove from the User Input after validation
 * **Padding**: Specifies the padding direction (left/right), padding length, and padding character
 
-## When Would You Use It?
-
-- You need to adjust settings for Text User Inputs in Solution Manager
-- Default Text User Inputs settings no longer meet the operational requirements of your environment
-
-## Why Would You Use It?
-
-- **Centralize control**: Managing Text User Inputs settings through Solution Manager keeps all configuration changes in one place and makes them auditable
-- Settings validated through Solution Manager are checked against business rules before saving, reducing the risk of misconfiguration
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -40,15 +40,6 @@ If you do not have the Machine Privilege, you will not be able to edit the daily
 Changes made to the job properties in the **Daily Job Definition** take place immediately. If the job has already run, the changes take effect the next time the job runs.
 :::
 
-## When Would You Use It?
-
-- An existing Windows Job Details in Solution Manager requires changes
-- A process change or system update makes the current Windows Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Windows Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating Job Action: Run Program Job Details
 
 ### Navigate to the Daily Job Definition
@@ -169,10 +160,6 @@ To configure the script, runner, failure criteria, and environment variables, co
 13. Select the **OK** button to add the name/value
 14. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

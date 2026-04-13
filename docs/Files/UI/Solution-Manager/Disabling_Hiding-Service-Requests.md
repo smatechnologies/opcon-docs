@@ -30,16 +30,6 @@ You can define rules (OpCon expressions) to disable or hide Service Request butt
 Both rules are optional. If neither is defined, the button is enabled and visible.
 :::
 
-## When Would You Use It?
-
-- A or Hiding Service Requests feature needs to be suspended in Solution Manager
-- Maintenance or troubleshooting requires suspending or Hiding Service Requests temporarily without losing the definition
-
-## Why Would You Use It?
-
-- **Prevent unintended execution**: Disabling or Hiding Service Requests suspends activity without deleting the definition, making it simple to re-enable when ready
-- The suspension is recorded in the OpCon audit log, providing an audit trail for change management purposes
-
 ## Disabling Service Requests
 
 :::note
@@ -64,10 +54,6 @@ To define a hide rule, complete the following steps:
 2. Toggle the **Hide Rule** switch on. A text field appears for entering the expression
 3. Enter a boolean value, a token, or a complex expression
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

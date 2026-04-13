@@ -26,14 +26,6 @@ The Continuous SQL scripts for replicating the OpCon database use scripting vari
 The Configuration Directory location depends on your installation path. See [File Locations](../../file-locations.md) in the **Concepts** online help.
 :::
 
-## When Would You Use It?
-
-- The Continuous SQL scripts for replicating the OpCon database use scripting variables defined in `SMA_SetDBReplicationScriptingVariables.cmd`
-
-## Why Would You Use It?
-
-- **Database Replication**: The Continuous SQL scripts for replicating the OpCon database use scripting variables defined in `SMA_SetDBReplicationScriptingVariables.cmd`
-
 ## Replication Information Worksheet
 
 Before configuring replication in [Setup for Automatic Microsoft SQL Replication](Setup-for-Automatic-Microsoft-SQL-Replication.md), fill in the values below.

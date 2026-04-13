@@ -33,14 +33,6 @@ Complete all procedures in this chapter from beginning to end to successfully in
 - To install interactively, refer to the next section
 - To install in silent mode, refer to [Silent Mode](./components.md#Silent)
 
-## When Would You Use It?
-
-- Complete all procedures in this chapter from beginning to end to successfully install an OpCon Server for the first time
-
-## Why Would You Use It?
-
-- **New Server**: Complete all procedures in this chapter from beginning to end to successfully install an OpCon Server for the first time
-
 ## Interactive OpCon Server Installation
 
 ### Install the OpCon Server

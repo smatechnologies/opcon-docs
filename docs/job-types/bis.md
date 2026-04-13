@@ -21,14 +21,6 @@ doc_type: conceptual
 
 Use this section to define a BIS job in OpCon. Text fields support OpCon token replacement; [tokens](../objects/using-properties.md#okens) are resolved as the SAM prepares to send the job to the LSAM. For platform details, refer to [OS 2200 LSAM and BIS LMAM Configuration](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Configuration.md) in the **OS 2200 LSAM** online help.
 
-## When Would You Use It?
-
-- You need to define a BIS job in OpCon using Use this section to
-
-## Why Would You Use It?
-
-- **BIS Job**: Use this section to define a BIS job in OpCon
-
 ## Job Information
 
 - **Run ID**: Defines the name under which the BIS run is registered

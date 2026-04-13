@@ -52,14 +52,6 @@ In the Audit Management screen, type **\*JobName** to find a specific job name i
 - [Viewing Audit Records](Viewing-and-Exporting-Audit-Records.md#Viewing)
 - [Exporting Audit Records](Viewing-and-Exporting-Audit-Records.md#Exportin)
 
-## When Would You Use It?
-
-- The **Audit Management** view displays the history of user updates to the OpCon database
-
-## Why Would You Use It?
-
-- **Operational value**: Provides list lists for user selection, audit category selection, and date range
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -48,14 +48,6 @@ _Column menu showing the Filter option_
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- The **Annual Plan By Calendar Dates Report** shows all defined dates on user-defined calendars
-
-## Why Would You Use It?
-
-- **Annual Plan**: The **Annual Plan By Calendar Dates Report** shows all defined dates on user-defined calendars
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

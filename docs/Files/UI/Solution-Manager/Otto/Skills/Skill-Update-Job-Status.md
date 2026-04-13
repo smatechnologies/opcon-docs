@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Update Job Status** skill updates the status of a daily job on a specified schedule for a specified date.
 
-## When Would You Use It?
-
-- The **Update Job Status** skill updates the status of a daily job on a specified schedule for a specified date
-
-## Why Would You Use It?
-
-- **Update Job**: The **Update Job Status** skill updates the status of a daily job on a specified schedule for a specified date
-
 ## Skill Details
 
 ### Parameters

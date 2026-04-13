@@ -32,16 +32,6 @@ To perform this procedure, complete the following steps:
 4. Select **Disable Job Starts** from the menu
 :::
 
-## When Would You Use It?
-
-- A Job Starts feature needs to be suspended in Enterprise Manager
-- Maintenance or troubleshooting requires suspending Job Starts temporarily without losing the definition
-
-## Why Would You Use It?
-
-- **Prevent unintended execution**: Disabling Job Starts suspends activity without deleting the definition, making it simple to re-enable when ready
-- The suspension is recorded in the OpCon audit log, providing an audit trail for change management purposes
-
 ## FAQs
 
 **Q: How many steps does the Disabling Job Starts procedure involve?**

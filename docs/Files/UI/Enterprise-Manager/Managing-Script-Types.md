@@ -24,16 +24,6 @@ doc_type: procedural
 
 The **Script Types** editor creates and manages script types associated with scripts stored in the centralized database. The script type determines which [script runners](Managing-Script-Runners.md) can run a given script, establishing the relationship between a script and its runners. For more information, refer to [Embedded Scripts](../../../automation-concepts/embedded-scripts.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Script Types settings in Enterprise Manager
-- Script Types needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Script Types management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Script Types changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Script Types Toolbar
 
 The toolbar resides at the top-right corner of the screen. Select any icon to learn more about its functionality.
@@ -53,10 +43,6 @@ Related Topics
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

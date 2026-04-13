@@ -29,14 +29,6 @@ scenarios are the most common:
 - Using the Same Job Definition Across Multiple Machines
 - Using the Same Schedule Across Multiple Machines
 
-## When Would You Use It?
-
-- There are several scenarios for automation that benefit from using
-
-## Why Would You Use It?
-
-- **Using Machine**: There are several scenarios for automation that benefit from using
-
 ## Failover
 
 The following scenario applies Machine Groups to Jobs for Failover

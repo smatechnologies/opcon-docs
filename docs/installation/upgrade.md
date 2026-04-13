@@ -28,14 +28,6 @@ Before beginning the upgrade, complete [Getting Started](./system-requirements.m
 
 To complete the upgrade to this release, it is important to complete all of the procedures in this topic from beginning to end.
 
-## When Would You Use It?
-
-- To complete the upgrade to this release, it is important to complete all of the procedures in this topic from beginning to end
-
-## Why Would You Use It?
-
-- **OpCon Server**: To complete the upgrade to this release, it is important to complete all of the procedures in this topic from beginning to end
-
 ## Upgrade the OpCon Server
 
 To upgrade the OpCon Server, complete the procedures in this section in the following order, complete the following steps:

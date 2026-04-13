@@ -21,14 +21,6 @@ doc_type: procedural
 
 Failover in OpCon shuts down the primary SMA Service Manager and starts the secondary, transferring control of the application group to the standby server. OpCon supports both automatic and manual failover, and the configuration depends on whether the database uses mirroring, replication, or a standalone setup.
 
-## When Would You Use It?
-
-- You need to configure or manage Failover Scenarios in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Failover Scenarios through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Introduction
 
 Failover shuts down the primary SMA Service Manager (SMAServMan) and starts the secondary SMAServMan. The SMAServMan controls the activation and shutdown of an application group defined in its configuration file. The primary SMAServMan runs on the primary machine; the secondary SMAServMan runs on the secondary machine (refer to [Configuration Scenarios](#Configur)). A machine without a failover configuration is a Stand Alone machine. Failover must also consider the database configuration.

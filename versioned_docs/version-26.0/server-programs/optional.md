@@ -1,4 +1,25 @@
+---
+title: Optional Components
+description: "Optional components in OpCon extend the core server with additional capabilities such as LDAP synchronization, notification handling, and data input processing."
+product_area: Server Programs
+audience: System Administrator
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - System Administrator
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # Optional Components
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator
+
+## What Is It?
+
+Optional components in OpCon extend the core server with additional capabilities — such as LDAP synchronization, notification handling, and data input processing. All optional components must be enabled in the SMAServMan.ini file before they will run.
 
 :::note
 All of the optional components must be enabled in the SMAServMan.ini file. For more information, refer to [SMA Service Manager (SMAServMan)](./service-manager.md).
@@ -11,7 +32,7 @@ Protocol (LDAP) users with OpCon users. These users can exist in Active
 Directory or OpenLDAP.
 
 :::note
-SMA LDAP Monitor currently does not support using Organizational Units in Active Directory. Organizational Unit users must be put in a Group in order to be found and synced.
+SMA LDAP Monitor currently does not support using Organizational Units in Active Directory. Organizational Unit users must be put in a Group to be found and synced.
 :::
 
 OpCon administrators can define the LDAP Group name for synchronization
@@ -156,10 +177,10 @@ specified with \--\[argument\]=\[value\] or \--\[argument\] \[value\] or -\[argu
 
 |Argument|Required|Value|
 |--- |--- |--- |
-|-c, --credentials|N|This parameter sets the credentials and encrypts the user name and passwords in the configuration file. The program can be run the first time only in order to complete the configuration.|
-|-u, --user|N|This parameter is used in conjunction with -c or --credentials. It defines the user name to connect to the LDAP server.|
-|-p, --password|N|This parameter is used in conjunction with -c or --credentials. It defines the password to connect to the LDAP server.|
-|-d, --defaultpassword|N|This parameter is used in conjunction with -c or --credentials. It defines the OpCon user password to log in Enterprise Manager.|
+|-c, --credentials|N|This parameter sets the credentials and encrypts the user name and passwords in the configuration file. The program can be run the first time only to complete the configuration.|
+|-u, --user|N|This parameter is used with -c or --credentials. It defines the user name to connect to the LDAP server.|
+|-p, --password|N|This parameter is used with -c or --credentials. It defines the password to connect to the LDAP server.|
+|-d, --defaultpassword|N|This parameter is used with -c or --credentials. It defines the OpCon user password to log in Enterprise Manager.|
 |-i, --inifile|N|Name of the existing INI file to encrypt the credentials.|
 |-s, --standalone|N|Runs SMALDAPMon.exe in standalone mode without SMAServMan. SMALDAPMon.exe will run once, and then the program will exit.|
 |--help|N|Displays the help screen.|
@@ -172,7 +193,73 @@ SMALDAPMon.exe -c -u admin -p adminpassword -d opconxps -x ******************** 
 
 SMALDAPMon.exe --credentials --user admin --password adminpassword --defaultpassword opconxps --inifile SMALDAPMon.ini
 
-SMALDAPMon.exe --credentials --user=admin --password=adminpassword --defaultpassword=opconxps 
+SMALDAPMon.exe --credentials --user=admin --password=adminpassword --defaultpassword=opconxps
 ```
 
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## Operations
+
+### Monitoring
+
+- `SMALDAPMon.log` resides in `<Output Directory>\SAM\Log\`. The log rolls over when it reaches `MaximumLogFileSize` (default: 150,000 bytes, min: 10,000 bytes). Log archive folders are retained for `ArchiveDaysToKeep` days (default: 10).
+- The `TraceLevel` setting controls logging detail (0 = Off, 1 = Critical, 2 = Error, 3 = Warning, 4 = Information, 5 = Debug). The default is 4 (Information). All Debug Options settings are dynamic.
+- SMA LDAP Monitor re-synchronizes users between the LDAP server and the OpCon database at the interval defined by `RefreshInterval` (default: 60 seconds). A sync of 300 seconds (5 minutes) is shown in the sample configuration.
+
+### Common Tasks
+
+- All optional components must be enabled in `SMAServMan.ini` before they will run. Refer to [SMA Service Manager (SMAServMan)](./service-manager.md).
+- To encrypt credentials in `SMALDAPMon.ini`, run: `SMALDAPMon.exe --credentials --user <user> --password <pass> --defaultpassword <pass> --inifile SMALDAPMon.ini`.
+- To run a one-time sync without SMAServMan, use the `--standalone` argument: `SMALDAPMon.exe --standalone`.
+
+### Alerts and Log Files
+
+- Users removed from an LDAP group are removed from the associated OpCon role and disabled if they are not in any other mapped roles.
+- If `UseDefaultUserPassword=true` is set but `DefaultUserPassword` is blank, SMA LDAP Monitor logs an error and exits; review the log for this condition after configuration changes.
+- If multiple LDAP groups share the same name, all matching group users are imported; fully qualify the group name in `SMALDAPMon.ini` to restrict imports to a specific group.
+
+## Exception Handling
+
+**SMA LDAP Monitor gives an error and exits when UseDefaultUserPassword is true but no password is specified** — If `UseDefaultUserPassword=true` is set in the configuration but the `DefaultUserPassword` parameter is left blank, SMA LDAP Monitor logs an error and exits — Provide a value for the `DefaultUserPassword` parameter whenever `UseDefaultUserPassword` is set to true.
+
+**Organizational Unit users are not found or synced** — SMA LDAP Monitor does not support Organizational Units (OUs) in Active Directory; users in OUs are not discovered during synchronization — Move OU users into an LDAP Group that is mapped in SMALDAPMon.ini so the monitor can find and sync them.
+
+**LDAP password longer than 12 characters prevents interactive login** — While SMA LDAP Monitor passwords can exceed 12 characters, the Enterprise Manager and Solution Manager enforce a 12-character limit; an LDAP user with a password longer than 12 characters cannot log in interactively — Use passwords of 12 characters or fewer if interactive login via the Enterprise Manager or Solution Manager is required for LDAP-synced users.
+
+**Multiple LDAP groups with the same name import all users from all matching groups** — If multiple Sync sections define the same group name, SMA LDAP Monitor imports users from all LDAP groups with that name — Fully qualify the group name in SMALDAPMon.ini (e.g., including domain path) to target only the intended group when multiple groups share a name.
+
+## FAQs
+
+**Q: What does SMA LDAP Monitor do?**
+
+SMA LDAP Monitor (SMALDAPMon) periodically checks an LDAP server to synchronize LDAP users (from Active Directory or OpenLDAP) with OpCon user accounts. It creates, enables, disables, and assigns roles to OpCon users based on their membership in configured LDAP groups.
+
+**Q: Does SMA LDAP Monitor support Organizational Units in Active Directory?**
+
+No. SMA LDAP Monitor does not support Organizational Units (OUs) in Active Directory. Users in OUs must be placed in an LDAP Group to be found and synchronized.
+
+**Q: What happens to an OpCon user if they are removed from an LDAP group?**
+
+If a user exists in OpCon but is no longer in the mapped LDAP group, SMA LDAP Monitor removes them from the associated OpCon role. If they are not in any other mapped roles, the user is also disabled in OpCon.
+
+## Glossary
+
+**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
+
+**SMAServMan (SMA Service Manager)**: Manages the starting, stopping, and restarting of all OpCon server programs. Monitors configured applications and restarts them automatically if they fail unexpectedly.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

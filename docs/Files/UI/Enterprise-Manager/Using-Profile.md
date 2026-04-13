@@ -25,14 +25,6 @@ doc_type: procedural
 The **Profile** link opens the **Profile** page in Solution Manager. For more information, refer to [Configuring Account Settings](../Solution-Manager/Configuring-Account-Settings.md) in the **Solution Manager** online help.
 :::
 
-## When Would You Use It?
-
-- The **Profile** link opens the **Profile** page in Solution Manager
-
-## Why Would You Use It?
-
-- **Using Profile**: The **Profile** link opens the **Profile** page in Solution Manager
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

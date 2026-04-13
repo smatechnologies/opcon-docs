@@ -25,16 +25,6 @@ The **Expression Dependency** panel in **Daily Job Definition** displays defined
 - Select the icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
 - When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the property count
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Expression Dependencies records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Expression Dependencies state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Expression Dependencies records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Adding or Updating Expression Dependencies
 
 In **Admin** mode, expression dependencies can be updated. For conceptual information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md) and [Use Cases](../../../reference/property-expressions-syntax.md#Use).
@@ -98,10 +88,6 @@ To add or Updating Expression Dependencies, complete the following steps:
 
 11. Select the **Save** button
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

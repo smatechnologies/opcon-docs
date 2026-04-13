@@ -1,4 +1,24 @@
+---
+title: Viewing and Updating Job Frequencies
+description: "The Frequency panel in Daily Job Definition displays all of the frequency information for a job."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing and Updating Job Frequencies
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
 
 The **Frequency** panel in **Daily Job Definition** displays all of the
 frequency information for a job.
@@ -28,7 +48,7 @@ Changes made to the job properties in the **Daily Job Definition** will take pla
 
 To perform this procedure:
 
-Click on the **Processes** button at the top-right of the **Operations
+Select on the **Processes** button at the top-right of the **Operations
 Summary** page. The **Processes** page will display.
 
 Ensure that both the **Date** and **Schedule** toggle switches are
@@ -47,7 +67,7 @@ page in the form of a breadcrumb trail.
 
 ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-Click on the job record (e.g., 1 job(s)) in the status bar to display
+Select on the job record (e.g., 1 job(s)) in the status bar to display
 the **Selection** panel.
 
 :::note
@@ -56,11 +76,11 @@ As an alternative, you can right-click on the job selected in the list to displa
 
 ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
 
-Click the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
+Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
 at the top-left corner of the panel to access the **Daily Job
 Definition** page. By default, this page will be in **Read-only** mode.
 
-Click the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
+Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
 at the top-right corner to place the page in **Admin** mode. The button
 will switch to display a white lock unlocked on a green background
 ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
@@ -78,7 +98,7 @@ The **Parent Schedule Start Time** frame displays the start time
 information for the schedule containing the selected job. This frame has
 the following read-only field:
 
-- **Server Time**: The time on the SAM server.
+- **Server Time**: The time on the SAM server
 
 **In the Estimated Job Start Time frame:**
 
@@ -86,9 +106,9 @@ The **Estimated Job Start Time** frame displays the information about
 the estimated start times that OpCon will use. This frame has the
 following read-only fields:
 
-- **Local**: The time on the local client (web client).
-- **Server**: The time on the SAM server.
-- **Agent**: The time on the start Agent machine.
+- **Local**: The time on the local client (web client)
+- **Server**: The time on the SAM server
+- **Agent**: The time on the start Agent machine
 
 **In the Offset frame:**
 
@@ -143,7 +163,7 @@ start time of the job from the start time of the schedule (Latest Start
 Offset).
 
 :::note
-If the latest start time is passed before the job qualifies for execution, the job is set to a Missed Latest Start Time status and will not automatically execute. The default value of 00:00 disables the feature.
+If the latest start time is passed before the job qualifies for execution, the job is set to a Missed Latest Start Time status and will not automatically run. The default value of 00:00 disables the feature.
 :::
 
 **In the Job Start Time Estimation Method frame:**
@@ -153,7 +173,7 @@ method for the SMA Start Time Calculator to use when predicting the
 estimated start time of the job.
 
 Specify the estimated runtime in minutes for the job. Either manually
-input the estimated run time or utilize the input field selectors to
+input the estimated run time or use the input field selectors to
 make your selections.
 
 Select one of the following sources to use for predicting the estimated
@@ -177,7 +197,7 @@ The **Job Execution** frame is used to set the priority and maximum run
 time for the job.
 
 Specify a number for the job's priority, zero (0) being the lowest.
-Either manually input the priority number or utilize the input field
+Either manually input the priority number or use the input field
 selectors to make your selections.
 
 :::note
@@ -185,24 +205,24 @@ If the SAM can submit more jobs at the same time to a machine than the machine a
 :::
 
 Specify the maximum run time in minutes for the job. Either manually
-input the maximum run time or utilize the input field selectors to make
+input the maximum run time or use the input field selectors to make
 your selections.
 
 **In the When Job Fails frame:**
 
-The **When Job Fails** frame is used to specify whether or not a job
+The **When Job Fails** frame is used to specify whether a job
 should be automatically restarted after a job failure.
 
-Specify whether or not there should be attempts made to restart the job
+Specify whether there should be attempts made to restart the job
 if it fails by utilizing the **Retry** toggle switch. When enabled, the
 switch will appear green.
 
 Specify the interval between restart attempts in minutes. Either
-manually input the number or utilize the input field selectors to make
+manually input the number or use the input field selectors to make
 your selections.
 
 Specify the maximum number of restart attempts that should be made.
-Either manually input the number or utilize the input field selectors to
+Either manually input the number or use the input field selectors to
 make your selections.
 
 :::note
@@ -211,7 +231,7 @@ The Retry feature is useful for situations where a job may fail because of timin
 
 **In the When Job Finishes Ok frame:**
 
-The **When Job Finishes Ok** frame is used to specify whether or not a
+The **When Job Finishes Ok** frame is used to specify whether a
 job is automatically rescheduled after a successful run.
 
 Select one of the following available options to determine if a job
@@ -227,12 +247,12 @@ options are:
 - **Add**: Use this button to add new restart times in days, hours,
     and minutes. Specified times appear in the Recurring Instance
     Time(s) list box in chronological order.
-- **Delete**: Use this button to delete existing restart times.
-- **Edit**: Use this button to update existing restart times.
+- **Delete**: Use this button to delete existing restart times
+- **Edit**: Use this button to update existing restart times
 - **Action on Overlap of Job Recurrence**: This option allows you to
     specify what happens if a previous job run time overlaps the next
     scheduled start time. Available options are:
-  - **Skip**: Select this option to skip the run for \[that\]         scheduled time after the previous run finishes successfully.
+  - **Skip**: Select this option to skip the run for \[that\]         scheduled time after the previous run finishes successfully
   - **Start On Completion**: Select this option to start the next
         scheduled time as soon as the previous run finishes
         successfully.
@@ -242,12 +262,12 @@ job to run at regular intervals throughout the day. Available options
 are:
 
 - **Minutes from Start to Start**: This option is used to specify the
-    run interval. If selected from the **Run Interval** drop-down, use
+    run interval. If selected from the **Run Interval** list, use
     the **value** field to specify the number of minutes from the start
     time of one iteration of the job to the start time for the next
     iteration of the job.
 - **Minutes from End to Start**: This option is used to specify the
-    run interval. If selected from the **Run Interval** drop-down, use
+    run interval. If selected from the **Run Interval** list, use
     the **value** field to specify the number of minutes from the end of
     one iteration of the job to the start time for the next iteration of
     the job.
@@ -260,7 +280,53 @@ are:
     of times for the recurring job to run.
 
 :::note
-Click the **Undo** button if you wish to undo your changes for any reason.
+Select the **Undo** button if you wish to undo your changes for any reason.
 :::
 
-Click the **Save** button.
+Select the **Save** button.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Server Time | The time on the SAM server | — | — |
+| Local | The time on the local client (web client) | — | — |
+| Server | The time on the SAM server | — | — |
+| Agent | The time on the start Agent machine | — | — |
+| Absolute | This option indicates that the job's Start Offset | — | — |
+| Relative | This option indicates that the job's Start Offset | — | — |
+| Calculated | (Default) This option uses the job's start offset | — | — |
+| History | This option uses the job's average start time by frequency from history as the estimated start time. | — | — |
+| User Defined | This option uses a hard-coded Predicted Start Time | — | — |
+| None | This option indicates that a job reschedule will not take | — | — |
+| Recurring Instances | This option allows you to reschedule a successful job to run at fixed times throughout the day. | — | — |
+| Action on Overlap of Job Recurrence | This option allows you to specify what happens if a previous job run time overlaps the next scheduled start time. | — | — |
+| Restart Offset | This option allows you to reschedule a successful | — | — |
+| Minutes from Start to Start | This option is used to specify the run interval. | — | — |
+| Minutes from End to Start | This option is used to specify the run interval. | — | — |
+| Latest Run Time (Offset) | This option is used to specify the latest possible start time for the recurring job based on the schedule's start time. | — | — |
+| Number of Runs | This option is used to specify the total number | — | — |
+
+## FAQs
+
+**Q: What does Viewing and Updating Job Frequencies cover?**
+
+This page covers Adding or Updating Job Frequencies.
+
+## Glossary
+
+**SMA Start Time Calculator**: Periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database to keep start time estimates current.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

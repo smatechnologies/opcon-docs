@@ -1,4 +1,24 @@
+---
+title: Using Properties for Automation
+description: "The values of properties can be retrieved by tokenizing the property name and using the token in Job Definitions, Schedule Completion Events, Job Events, External Events, and notifications defined in."
+product_area: Core Concepts
+audience: Automation Engineer, Application Owner
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - Automation Engineer
+  - Application Owner
+  - Getting Started
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Using Properties for Automation
+
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Application Owner
+
+## What Is It?
 
 The values of properties can be retrieved by tokenizing the property name and using the token in Job Definitions, Schedule Completion Events, Job Events, External Events, and notifications defined in the Notification Manager.
 
@@ -30,7 +50,7 @@ This will resolve to the value of a schedule instance property whose property na
 
 ObjectType.PropertyName.Qualifier.Qualifier...
 
-- The ObjectType tells OpCon where the property belongs.
+- The ObjectType tells OpCon where the property belongs
   - **RI** = Remote Instance (This is the remote instance of OpCon.)
   - **OI** = OpCon Instance
   - **MI** = Machine Instance
@@ -38,9 +58,9 @@ ObjectType.PropertyName.Qualifier.Qualifier...
   - **JI** = Job Instance
   - **SSI** = Source Schedule Instance (This is the parent schedule one level above a subschedule.)
   - **SJI** = Source Job Instance (This is the parent Container job for a subschedule.)
-- The PropertyName is the name of the property.
-  - If the property name contains a period, the name must be enclosed in quotes (e.g., "File.Name").
-- The *qualifiers* are additional descriptions of the object for unique identification. The Property Name and each qualifier can be filled by a token or property expression if desired. The object types can use the qualifiers specified in the table.
+- The PropertyName is the name of the property
+  - If the property name contains a period, the name must be enclosed in quotes (e.g., "File.Name")
+- The *qualifiers* are additional descriptions of the object for unique identification. The Property Name and each qualifier can be filled by a token or property expression if desired. The object types can use the qualifiers specified in the table
 
 | Object Type | Qualifiers | Notes |
 | --- | --- | --- |
@@ -56,10 +76,10 @@ ObjectType.PropertyName.Qualifier.Qualifier...
 
 The simplest references to property names require no qualifiers. Simple property name syntax can be used in the following scenarios:
 
-- Job Detail Definitions when the desired property is associated with the current Job Definition's schedule, machine, or job.
-- OpCon events associated with a job when the desired property is associated with the current job's schedule, machine, or job.
-- Schedule Completion Events when the desired property is associated with the current schedule.
-- Notifications in the [Export Records to CSV](../Files/UI/Enterprise-Manager/Viewing-and-Exporting-History-Records.md#Exportin) button (to the right of Run Dates) will open the Export to CSV file pop-up in order to provide the export comma-separated value format and export information when the desired property is associated with a different job, schedule, or machine than the one that triggered the OpCon event.
+- Job Detail Definitions when the desired property is associated with the current Job Definition's schedule, machine, or job
+- OpCon events associated with a job when the desired property is associated with the current job's schedule, machine, or job
+- Schedule Completion Events when the desired property is associated with the current schedule
+- Notifications in the [Export Records to CSV](../Files/UI/Enterprise-Manager/Viewing-and-Exporting-History-Records.md#Exportin) button (to the right of Run Dates) will open the Export to CSV file pop-up to provide the export comma-separated value format and export information when the desired property is associated with a different job, schedule, or machine than the one that triggered the OpCon event
 
 The complete simple syntax for each object is the following:
 
@@ -109,7 +129,7 @@ A Job Instance property would look like this: [[JI.<property name\>]].
 :::
 
 :::tip Example
-The command line below is defined for a job named CrunchNumbers in a Subschedule called by a Container job whose name is MainProcessing. CrunchNumbers has a parameter that needs the value of the "Numbers" property on Parent schedule name for the MainProcessing job. Because more than one parent schedule can call the same subschedule, we choose to use the SSI object type.
+The command line below is defined for a job named CrunchNumbers in a Subschedule called by a Container job whose name is MainProcessing. CrunchNumbers has a parameter that needs the value of the "Numbers" property on Parent schedule name for the MainProcessing job. Because more than one parent schedule can call the same subschedule, use the SSI object type.
 
 ```shell
 C:\\Progra~1\\CoolProgram\\crunch.exe [[SSI.Numbers]]
@@ -148,16 +168,16 @@ being used in one of the following scenarios:
 - OpCon events associated with a job when
     the desired property is associated with a different job's schedule,
     machine, or job.
-- All [Property-Related Events](../events/types.md#Property).
+- All [Property-Related Events](../events/types.md#Property)
 - Schedule Completion Events when the desired property is associated
     with a different schedule.
 - Notifications in the [Export Records to CSV](../Files/UI/Enterprise-Manager/Viewing-and-Exporting-History-Records.md#Exportin)
     button (to the right of Run Dates) will open the Export to CSV file
-    pop-up in order to provide the export comma-separated value format
+    pop-up to provide the export comma-separated value format
     and export information when the desired property is associated with
     a different job, schedule, or machine than the one that triggered
     the OpCon event.
-- All [External Events](../events/defining.md#external).
+- All [External Events](../events/defining.md#external)
 - The OpCon server allows you to specify
     specific text, tokens, and property expressions within the syntax of
     the fully qualified syntax strings.
@@ -166,11 +186,11 @@ being used in one of the following scenarios:
 The following are all valid tokens when specified on a command line or job event:
 
 - [[DiskSpace]]
-  - This will resolve to the value of the "DiskSpace" global property.
+  - This will resolve to the value of the "DiskSpace" global property
 - [[MI.[[WindowsProperty]].Machine1]]
-  - This will resolve to the value of a machine instance property named by the value of the global property named "WindowsProperty" for Machine1.
+  - This will resolve to the value of a machine instance property named by the value of the global property named "WindowsProperty" for Machine1
 - [[SI.[[PropertyName]].[[ScheduleDate]].[[ScheduleName]]]]
-  - This will resolve to the value of a schedule instance property whose property name, date and schedule name are stored in the global properties "PropertyName", "ScheduleDate", and "ScheduleName", respectively.
+  - This will resolve to the value of a schedule instance property whose property name, date and schedule name are stored in the global properties "PropertyName", "ScheduleDate", and "ScheduleName", respectively
 :::
 
 For each object that supports properties, there are different syntax rules.
@@ -194,16 +214,16 @@ JI."File.Name"."08.01.2010"."Sched[Name]"."Job{Name}"
 
 RI.RemoteInstanceName.FullyQualifiedProperty
 
-- *RI* is the **required** property type and indicates that the property will be associated with a remote instance.
-- *RemoteInstanceName* is the name assigned to the remote instance. For more information, refer to [Remote Instances](../objects/remote-instances.md).
-- *FullyQualifiedProperty* is the fully qualified property name for the property.
+- *RI* is the **required** property type and indicates that the property will be associated with a remote instance
+- *RemoteInstanceName* is the name assigned to the remote instance. For more information, refer to [Remote Instances](../objects/remote-instances.md)
+- *FullyQualifiedProperty* is the fully qualified property name for the property
 
 :::tip Example
 This example shows the use of a Remote Instance property.
 
 **Scenario**: A job called JobB must not run until another job called JobA has Finished OK on a remote instance called OpCon2.
 
-- To access JobA, the administrator defines the remote instance named OpCon2 on the Administration screen for Remote Instances in Enterprise Manager.
+- To access JobA, the administrator defines the remote instance named OpCon2 on the Administration screen for Remote Instances in Enterprise Manager
 - For JobB, the administrator adds the following expression dependency to get and check the status of JobA on the remote system, OpCon2, in the ApplicationSchedule from today's current date:
 
 ```shell
@@ -224,8 +244,8 @@ In the graphical interfaces, the Global Properties screens are used to manage th
 
 OI.PropertyName
 
-- *OI* is an optional indicator for the OpCon Instance property. If not specified, an OpCon Instance property is assumed (e.g., OI.MyOpConxpsProperty and MyOpConxpsProperty will both be interpreted as OpCon Global Properties).
-- *PropertyName* is the name assigned to the property.
+- *OI* is an optional indicator for the OpCon Instance property. If not specified, an OpCon Instance property is assumed (e.g., OI.MyOpConxpsProperty and MyOpConxpsProperty will both be interpreted as OpCon Global Properties)
+- *PropertyName* is the name assigned to the property
 
 The table displays sample property names that are associated with the OpCon instance and the tokens that access them.
 
@@ -237,17 +257,17 @@ The table displays sample property names that are associated with the OpCon inst
 :::tip Example
 This example shows the definition and use of a user-defined OpCon Instance property.
 
-**Scenario**: For every working day, the Accounting schedule runs and has a job named ProcessCreditTransactions which is built On Hold. The Accounting schedule is built for multiple days, but it must run on each day and complete before the next day can begin processing. An external process must execute before ProcessCreditTransactions can be released. That external process could occur any time between 10:00 PM and 4:00 AM each day.
+**Scenario**: For every working day, the Accounting schedule runs and has a job named ProcessCreditTransactions which is built On Hold. The Accounting schedule is built for multiple days, but it must run on each day and complete before the next day can begin processing. An external process must run before ProcessCreditTransactions can be released. That external process could occur any time between 10:00 PM and 4:00 AM each day.
 
-- Because ProcessCreditTransactions must be released on the correct date, on the Administration screen for Global Properties, the administrator creates an OpCon Instance property named ProcessingDate and sets the initial value to the current date.
-- On the Administration screen for Schedule Master, the administrator marks the checkbox to Conflict with Other Days for the Accounting schedule. This setting will ensure that the Accounting schedule will only process one day at a time.
-- On the Accounting schedule, the administrator creates a Null job with an OpCon event to set the value of the ProcessingDate property to the Schedule Date as soon as the Accounting schedule begins processing.
+- Because ProcessCreditTransactions must be released on the correct date, on the Administration screen for Global Properties, the administrator creates an OpCon Instance property named ProcessingDate and sets the initial value to the current date
+- On the Administration screen for Schedule Master, the administrator marks the option to Conflict with Other Days for the Accounting schedule. This setting will ensure that the Accounting schedule will only process one day at a time
+- On the Accounting schedule, the administrator creates a Null job with an OpCon event to set the value of the ProcessingDate property to the Schedule Date as soon as the Accounting schedule begins processing
 
   ```shell
   $PROPERTY:SET,ProcessingDate,[[$SCHEDULE DATE]]
   ```
 
-- When setting up the external OpCon event to release ProcessCreditTransactions, the administrator uses a token to call the ProcessingDate property for the Schedule Date in the event.
+- When setting up the external OpCon event to release ProcessCreditTransactions, the administrator uses a token to call the ProcessingDate property for the Schedule Date in the event
 
   ```shell
   $JOB:RELEASE,[[ProcessingDate]],Accounting,ProcessCreditTransactions,username,eventpassword
@@ -260,14 +280,14 @@ This example shows the definition and use of a user-defined OpCon Instance prope
 
 MI.PropertyName.MachineName
 
-- *MI* is the **required** property type and indicates that the property will be associated with a machine.
-- *PropertyName* is a **required** user-defined name assigned to the property.
-- *MachineName* is the qualifier for the OpCon machine name.
-  - The MachineName qualifier is required for [External Events](../events/defining.md#external) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the machine name in the OpCon database to which the property belongs.
-  - If the machine name contains a period, the name must be enclosed in quotes (e.g., MIPropertyName. "Machine.Name").
+- *MI* is the **required** property type and indicates that the property will be associated with a machine
+- *PropertyName* is a **required** user-defined name assigned to the property
+- *MachineName* is the qualifier for the OpCon machine name
+  - The MachineName qualifier is required for [External Events](../events/defining.md#external) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the machine name in the OpCon database to which the property belongs
+  - If the machine name contains a period, the name must be enclosed in quotes (e.g., MIPropertyName. "Machine.Name")
 
 :::tip Example
-The following event is attached to a job and executes when the job Fails. In the notification event, the message references a Machine Instance Property called "App.DriveLetter" using simple property name syntax. The [[MI."App.DriveLetter"]] token will resolve to the value of the App.DriveLetter property associated with the Machine the job ran on:
+The following event is attached to a job and runs when the job Fails. In the notification event, the message references a Machine Instance Property called "App.DriveLetter" using simple property name syntax. The [[MI."App.DriveLetter"]] token will resolve to the value of the App.DriveLetter property associated with the Machine the job ran on:
 
 $NOTIFY:EMAIL,admin@customer.com,,,Job Failed, The job ran on machine [[$MACHINE NAME]] on drive letter [[MI."App.DriveLetter"]]and failed with exit code [[$JOB TERMINATION]]
 :::
@@ -283,13 +303,13 @@ This shows the definition and use of a user-defined Machine Instance property.
 
 **Scenario**: A job needs to run on all machines in a machine group to delete old files in a directory. The job uses the SMADirectory utility to accomplish this, but the path to the program is different for each machine. A user-defined Machine Instance property is created for the path to the program for each machine in the desired machine group. The Machine Instance property is then referenced with a token on the command line for the job.
 
-- Create a Machine Instance property called SMAUtilitiesPath with a value of the path to the SMADirectory program. (Do this for each machine in the group from the EM Machines screen. Use navigation path: Administration > Machines. Then, click the Open Advanced Settings Panel link and add a new "Available Property" field.)
+- Create a Machine Instance property called SMAUtilitiesPath with a value of the path to the SMADirectory program. (Do this for each machine in the group from the EM Machines screen. Use navigation path: Administration > Machines. Then, select the Open Advanced Settings Panel link and add a new "Available Property" field.)
 
   ```shell
   SMAUtilitiesPath="C:\Program Files\OpConxps\MSLSAM
   ```
 
-- In the Command Line field for the job, use a token with the "MI" preface to indicate a reference to a Machine Instance (MI) property for SMAUtilitiesPath. When resolving the token, the SAM will know to look up the value for the property in the Machine's Advanced settings.
+- In the Command Line field for the job, use a token with the "MI" preface to indicate a reference to a Machine Instance (MI) property for SMAUtilitiesPath. When resolving the token, the SAM will know to look up the value for the property in the Machine's Advanced settings
 
   ```shell
   [[MI.SMAUtilitiesPath]]\SMADirectory.exe" C:\Temp,5,tmp
@@ -307,19 +327,19 @@ This shows the definition and use of a user-defined Machine Instance property.
 
 SI.PropertyName.ScheduleDate.ScheduleName
 
-- *SI* is the **required** property type and indicates that the property will be associated with a schedule.
-- *PropertyName* is a **required** user-defined name assigned to the property.
-- *ScheduleDate* is the first qualifier for the Schedule Instance property.
-  - The ScheduleDate qualifier is required for [External Events](../events/defining.md#external) and [Defining Events](../events/defining.md#property) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the schedule date containing the schedule in the OpCon database to which the property belongs.
+- *SI* is the **required** property type and indicates that the property will be associated with a schedule
+- *PropertyName* is a **required** user-defined name assigned to the property
+- *ScheduleDate* is the first qualifier for the Schedule Instance property
+  - The ScheduleDate qualifier is required for [External Events](../events/defining.md#external) and [Defining Events](../events/defining.md#property) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the schedule date containing the schedule in the OpCon database to which the property belongs
   - If the ScheduleDate qualifier is omitted, OpCon uses the default value of the date associated with the object referencing the property. To omit the ScheduleDate and still specify the ScheduleName qualifier, use the following syntax:
 
     ```shell
     SI.PropertyName..ScheduleName
     ```
 
-- *ScheduleName* is the last qualifier for the Schedule Instance property.
-  - The ScheduleName qualifier is required for [External Events](../events/defining.md#external) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the schedule name in the OpCon database to which the property belongs.
-  - If the schedule name contains a period, the name must be enclosed in quotes (e.g., SI.PropertyName."Schedule.Name").
+- *ScheduleName* is the last qualifier for the Schedule Instance property
+  - The ScheduleName qualifier is required for [External Events](../events/defining.md#external) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the schedule name in the OpCon database to which the property belongs
+  - If the schedule name contains a period, the name must be enclosed in quotes (e.g., SI.PropertyName."Schedule.Name")
   - If specifying a full subschedule name, enclose the schedule name in double quotes (e.g.,
         \[\[SI.ScheduleProperty.8/28/2009."ParentSchedule_Container\[SubSchedule\]"\]\]).
   - If the ScheduleName qualifier is omitted, OpCon uses the default value of the schedule name associated with the object referencing the property. To omit the ScheduleName after specifying the ScheduleDate, use the following syntax:
@@ -329,7 +349,7 @@ SI.PropertyName.ScheduleDate.ScheduleName
       ```
 
 :::tip Example
-The event below is attached to a multiple-instance schedule and executes when each schedule instance completes. Each instance of the schedule is created to process information for a city; therefore, each instance has a property named "City" defining the city it is processing for. In the notification event, the message references the Schedule Instance property called "City" using simple property name syntax. The [[SI.City]] token will resolve to the value of the City property associated with the Schedule instance:
+The event below is attached to a multiple-instance schedule and runs when each schedule instance completes. Each instance of the schedule is created to process information for a city; therefore, each instance has a property named "City" defining the city it is processing for. In the notification event, the message references the Schedule Instance property called "City" using simple property name syntax. The [[SI.City]] token will resolve to the value of the City property associated with the Schedule instance:
 
 ```shell
 $NOTIFY:EMAIL,admin@customer.com,,,Schedule Complete,The schedule finished for [[SI.City]].
@@ -393,10 +413,10 @@ This shows the definition and use of a user-defined Schedule Instance property i
 
 JI.PropertyName.ScheduleDate.ScheduleName.JobName
 
-- *JI* is the **required** property type and indicates that the property will be associated with a job.
-- *PropertyName* is a **required** user-defined name assigned to the property.
-  - If the Job Instance property is for the current Schedule Date, current Schedule Name, and current Job Name, the optional qualifiers can be omitted and the trailing periods are not required (e.g., JI.MyJobProperty).
-- *ScheduleDate* is the first qualifier for the Job Instance property.
+- *JI* is the **required** property type and indicates that the property will be associated with a job
+- *PropertyName* is a **required** user-defined name assigned to the property
+  - If the Job Instance property is for the current Schedule Date, current Schedule Name, and current Job Name, the optional qualifiers can be omitted and the trailing periods are not required (e.g., JI.MyJobProperty)
+- *ScheduleDate* is the first qualifier for the Job Instance property
   - The ScheduleDate qualifier is required for [External Events](../events/defining.md#external)
          and [Defining Events](../events/defining.md#property)
          and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for
@@ -418,7 +438,7 @@ JI.PropertyName.ScheduleDate.ScheduleName.JobName
     JI.PropertyName.ScheduleDate
     ```
 
-- *ScheduleName* is the second qualifier for the Job Instance property.
+- *ScheduleName* is the second qualifier for the Job Instance property
   - The ScheduleName qualifier is required for [External Events](../events/defining.md#external)
          and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for
         the automation scenario, specify the schedule name containing
@@ -443,12 +463,12 @@ JI.PropertyName.ScheduleDate.ScheduleName.JobName
     JI.PropertyName.ScheduleDate.ScheduleName
     ```
 
-- *JobName* is the third qualifier for the Job Instance property.
-  - The JobName qualifier is required for [External Events](../events/defining.md#external) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the job name in the OpCon database to which the property belongs.
-  - If the job name contains a period, the name must be enclosed in quotes (e.g., JI.PropertyName.ScheduleName."Job.Name").
+- *JobName* is the third qualifier for the Job Instance property
+  - The JobName qualifier is required for [External Events](../events/defining.md#external) and is optional for scenarios that support the [Simple Property Name Syntax](#Simple). If required for the automation scenario, specify the job name in the OpCon database to which the property belongs
+  - If the job name contains a period, the name must be enclosed in quotes (e.g., JI.PropertyName.ScheduleName."Job.Name")
 
 :::tip Example
-The event below is attached to a multiple-instance job and executes when each job instance Finishes OK. Each instance of the job is created to process information for a city; therefore, each instance has a property named "City" defining the city it is processing for. In the notification event, the message references the Job Instance property called "City" using simple property name syntax. The [[JI.City]] token will resolve to the value of the City property associated with the job instance:
+The event below is attached to a multiple-instance job and runs when each job instance Finishes OK. Each instance of the job is created to process information for a city; therefore, each instance has a property named "City" defining the city it is processing for. In the notification event, the message references the Job Instance property called "City" using simple property name syntax. The [[JI.City]] token will resolve to the value of the City property associated with the job instance:
 
 ```shell
 $NOTIFY:EMAIL,admin@customer.com,,,Job Finished OK,The job finished OK for [[JI.City]]
@@ -515,4 +535,42 @@ This shows the definition and use of a user-defined Job Instance property.
   C:\progs\checkthefile.bat abc.txt 100
   ```
 
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Scenario | A job called JobB must not run until another job called JobA has Finished OK on a remote instance called OpCon2 | — | — |
+| Result | When JobA has a status of Finished OK, then JobB will run | — | — |
+## FAQs
+
+**Q: What is a token in OpCon?**
+
+A token is a placeholder for the value of a property. Tokens are formed by enclosing a property name in double brackets (e.g., `[[PropertyName]]`) or double braces (e.g., `{{PropertyName}}`). OpCon resolves tokens to their property values before processing jobs or events.
+
+**Q: Can encrypted property tokens be decrypted inside OpCon?**
+
+No. Tokens using encrypted properties cannot be decrypted by OpCon itself — they can only be decrypted by an agent. Use encrypted tokens only when the value will be sent to an agent for decryption, such as in a command line.
+
+**Q: What object type prefix is used to reference a job instance property in a token?**
+
+Use the `JI` prefix — for example, `[[JI.PropertyName]]` — to reference a job instance property in a token.
+
 :::
+
+## Glossary
+
+**MSGIN**: A directory monitored by an agent for incoming OpCon event files. Placing a properly formatted event file in MSGIN causes the agent to forward it to SAM for processing.
+
+**SMA Resource Monitor (SMARM)**: A Windows service that monitors files, counters, services, and processes on Windows machines. When a monitored condition is met, it sends OpCon events to trigger automation actions.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.

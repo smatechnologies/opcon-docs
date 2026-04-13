@@ -32,21 +32,6 @@ To edit a remote instance, complete the following steps:
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Remote Instances** toolbar
 5.  Select **Close ☒** (to the right of the **Remote Instances** tab) to close the **Remote Instances** screen
 
-## When Would You Use It?
-
-- An existing Remote Instances in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Remote Instances definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Remote Instances in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Remote Instances are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Do edits to remote instances take effect immediately?**

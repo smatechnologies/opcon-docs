@@ -36,14 +36,6 @@ Several carriers are deprecating email-to-text functionality. Best practice is t
 The SMA Notify Handler inserts a Notification ID in the format ID=nnn before any other message content. For more information, refer to [Looking up Notification Sources](Looking-up-Notification-Sources.md).
 :::
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining a notification to a pager, phone, or other SMS-capable device using The **Text** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining a notification to a pager, phone, or other SMS
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

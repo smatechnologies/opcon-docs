@@ -1,20 +1,34 @@
+---
+title: Managing Remote Instances
+description: "The Remote Instances editor defines and manages connection information for accessing remote instances of OpCon."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Managing Remote Instances
 
-The **Remote Instances** editor is used to define and manage connection
-information for accessing remote instances of OpCon. For conceptual
-information, refer to [Remote Instances](../../../objects/remote-instances.md) in the
-**Concepts** online help.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Remote Instances** editor defines and manages connection information for accessing remote instances of OpCon. For conceptual information, refer to [Remote Instances](../../../objects/remote-instances.md) in the **Concepts** online help.
 
 :::note
-Keep in mind that only those in the ocadm role will be able to add, edit, or delete remote instances.
+Only users in the ocadm role can add, edit, or delete remote instances.
 :::
 
 ## Remote Instances Toolbar
 
-The **Remote Instances** editor also has a toolbar that allows you to
-perform functions for managing the remote instances. Click on any
-specific icon on the toolbar below to learn more about its
-functionality.
+The **Remote Instances** editor has a toolbar for managing remote instances. Select on any specific icon on the toolbar below to learn more about its functionality.
 
 ![Remote Instances toolbar](../../../Resources/Images/EM/EMdashboardtoolbar.png "Remote Instances toolbar")
 
@@ -24,3 +38,26 @@ Related Topics
 - [Adding Remote Instances](Adding-Remote-Instances.md)
 - [Editing Remote Instances](Editing-Remote-Instances.md)
 - [Deleting Remote Instances](Deleting-Remote-Instances.md)
+
+
+## FAQs
+
+**Q: What does managing remote instances involve?**
+
+Managing remote instances includes Remote Instances Toolbar. Access remote instances through the Enterprise Manager navigation pane.
+
+**Q: Who can manage remote instances in OpCon?**
+
+Users with the appropriate privileges assigned through their role can manage remote instances. Contact your OpCon system administrator if you do not have access.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

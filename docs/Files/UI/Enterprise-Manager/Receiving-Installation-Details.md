@@ -39,14 +39,6 @@ To get details about the installation, complete the following steps:
 11. Select **Close** to close the **OpCon Enterprise Manager Installation Details** dialog
 12. Select **OK** to close the **Contact Information** dialog
 
-## When Would You Use It?
-
-- To receive Enterprise Manager installation details (e.g., provider information, plug-in names and identification, version numbers), [initiate the Installation details setup](Setting-up-New-Profiles.md#OpConxps_data_location_details) in the Enterprise Manager Preferences first
-
-## Why Would You Use It?
-
-- **Receiving Installation**: To receive Enterprise Manager installation details (e.g., provider information, plug-in names and identification, version numbers), [initiate the Installation details setup](Setting-up-New-Profiles.md#OpConxps_data_location_details) in the Enterprise Manager Preferences first
-
 ## FAQs
 
 **Q: How many steps does the Receiving Installation Details procedure involve?**

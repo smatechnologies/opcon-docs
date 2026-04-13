@@ -34,14 +34,6 @@ OpCon best practices are proven patterns for building reliable, maintainable aut
 - [Shut Down a Machine with an agent](#Shut)
 - [Use Threshold Dependencies for Late to Start Notifications on a Job-dependent External Event](#Use)
 
-## When Would You Use It?
-
-- You need to configure or manage Best Practices in OpCon
-
-## Why Would You Use It?
-
-- **Operational value**: Automate the Daily Failed Jobs Report - Automate the SMAUtility Schedule to maintain the
-
 ## Add Documentation to Thresholds and Properties
 
 #### Use Case

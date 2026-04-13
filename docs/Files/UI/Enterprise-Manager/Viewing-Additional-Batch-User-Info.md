@@ -28,16 +28,6 @@ To view Additional Batch User Information in the Enterprise Manager, complete th
 2.  Select the **batch user** in the **Select the target OS** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
 
-## When Would You Use It?
-
-- You need to inspect or audit Additional Batch User Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Additional Batch User Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Additional Batch User Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## FAQs
 
 **Q: How many steps does the Viewing Additional Batch User Information procedure involve?**

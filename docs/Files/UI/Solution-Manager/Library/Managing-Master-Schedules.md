@@ -30,14 +30,6 @@ See-https://help.smatechnologies.com/opcon/core/v22.10/Files/UI/Solution-Manager
 
 Please check back for more content.
 
-## When Would You Use It?
-
-- You need to allows you to manage master schedules using The Master Schedules screen
-
-## Why Would You Use It?
-
-- **Operational value**: Allows you to manage master schedules
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

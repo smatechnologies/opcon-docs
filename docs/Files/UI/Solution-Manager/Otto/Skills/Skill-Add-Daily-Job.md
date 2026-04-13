@@ -24,14 +24,6 @@ doc_type: procedural
 
 The **Add Daily Job** skill adds a new daily job to a specified daily schedule for a specified date, frequency, and status.
 
-## When Would You Use It?
-
-- The **Add Daily Job** skill adds a new daily job to a specified daily schedule for a specified date, frequency, and status
-
-## Why Would You Use It?
-
-- **Add Daily**: The **Add Daily Job** skill adds a new daily job to a specified daily schedule for a specified date, frequency, and status
-
 ## Skill Details
 
 ### Parameters

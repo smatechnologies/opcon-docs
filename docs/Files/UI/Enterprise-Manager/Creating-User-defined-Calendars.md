@@ -35,16 +35,6 @@ To create a user-defined calendar, complete the following steps:
 7.  Select **Close ☒** (to the right of the **Calendars** tab) to close the **Calendars** screen
 :::
 
-## When Would You Use It?
-
-- You need to create User-defined Calendars in Enterprise Manager
-- A new business process or automation requirement calls for a User-defined Calendars that does not yet exist
-
-## Why Would You Use It?
-
-- **Standardize definitions**: Creating User-defined Calendars in OpCon ensures consistent, repeatable configurations that all schedules and jobs can reference
-- All User-defined Calendars definitions are stored in the OpCon database, making them available to all authorized interfaces and users
-
 ## FAQs
 
 **Q: How many steps does the Creating User-defined Calendars procedure involve?**

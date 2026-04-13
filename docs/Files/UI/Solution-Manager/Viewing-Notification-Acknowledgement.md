@@ -32,16 +32,6 @@ The screen lists unacknowledged escalations and shows the following information 
   - **Exhausted**: Sent to all groups in the rule, but not yet acknowledged
   - **Acknowledged**: Acknowledged; the notification will automatically disappear shortly
 
-## When Would You Use It?
-
-- You need to inspect or audit Notification Acknowledgement records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Notification Acknowledgement state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Notification Acknowledgement records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Acknowledging Escalations
 
 :::note

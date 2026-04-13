@@ -26,14 +26,6 @@ the OpCon components except the agents (also
 referred to as Agents). For installation information on a specific agent,
 refer to the corresponding agent online help.
 
-## When Would You Use It?
-
-- Use this feature when installing or upgrading all of the OpCon components except the agents (also referred to as Agents)
-
-## Why Would You Use It?
-
-- **Operational value**: Provides information on changes requiring action or new behaviors when installing or upgr
-
 ## Release 20.2
 
 ### Deploy and ImpEx2

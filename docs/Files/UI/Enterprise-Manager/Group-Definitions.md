@@ -30,14 +30,6 @@ The **<Notification Trigger Type\>** frame provides options for selecting all or
   - **Selected**: Shows only selected items
   - **Not Selected**: Shows only unselected items
 
-## When Would You Use It?
-
-- You need to provide options for selecting all or specific machines, schedules, and jobs for the notification group using The **<Notification Trigger Type\>** frame
-
-## Why Would You Use It?
-
-- **Operational value**: Provides options for selecting all or specific machines, schedules, and jobs for the noti
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

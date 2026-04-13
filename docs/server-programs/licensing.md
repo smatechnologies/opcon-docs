@@ -37,14 +37,6 @@ License notifications appear in the Enterprise Manager during login and in the O
 - Product Support requires renewal
 - A license file appears to be corrupt
 
-## When Would You Use It?
-
-- You need to provide a license file during installation and maintenance to enable SAM using Continuous
-
-## Why Would You Use It?
-
-- **Operational value**: Provides a license file during installation and maintenance to enable SAM
-
 ## License Types
 
 Continuous provides the following license types:

@@ -31,14 +31,6 @@ Common uses:
 - Initialize thresholds at a specific point in a schedule
 - Send notifications
 
-## When Would You Use It?
-
-- The Null job generates OpCon events and/or sets thresholds without running a job
-
-## Why Would You Use It?
-
-- **Null Job**: The Null job generates OpCon events and/or sets thresholds without running a job
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

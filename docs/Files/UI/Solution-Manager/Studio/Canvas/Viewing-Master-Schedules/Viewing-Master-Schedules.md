@@ -24,16 +24,6 @@ Studio Canvas renders on-demand diagrams showing job nodes and job dependency re
 
 ![Studio View in Solution Manager](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-in-solution-manager.png "Studio View in Solution Manager")
 
-## When Would You Use It?
-
-- You need to inspect or audit Master Schedule records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current Master Schedule state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Master Schedule records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Studio Concepts
 
 ### Nodes
@@ -239,10 +229,6 @@ The minimap is in the lower-right corner of the canvas. Use it to view and move 
 
 ![Studio View Mini-Map](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-minimap.png "Studio View Mini-Map")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

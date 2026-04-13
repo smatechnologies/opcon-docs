@@ -32,15 +32,6 @@ To copy a machine group, complete the following steps:
 4.  Select the **OK** button
 5.  Select **Close ☒** (to the right of the **Machine Groups** tab) to close the **Machine Groups** screen
 
-## When Would You Use It?
-
-- An existing Machine Groups definition needs to be duplicated in Enterprise Manager
-- A new Machine Groups with similar settings to an existing one needs to be created quickly
-
-## Why Would You Use It?
-
-- **Save configuration time**: Duplicating an existing Machine Groups eliminates redundant data entry and ensures the new definition inherits proven settings
-
 ## FAQs
 
 **Q: Why would you copy machine groups instead of creating a new one?**

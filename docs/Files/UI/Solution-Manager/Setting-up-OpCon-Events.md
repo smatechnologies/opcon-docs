@@ -52,14 +52,6 @@ Use the **Manual Edit** button (pencil icon) to define or edit an Event manually
   - **${SM.USER.EMAIL}** - Resolves to the Email Address defined for the OpCon user who selected the Service Request button
   - **${SM.USER.COMMENTS}** - Resolves to the Comments defined for the OpCon user who selected the Service Request button
 
-## When Would You Use It?
-
-- You need to prepare and initialize OpCon Events in Solution Manager
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Setting up OpCon Events through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -22,14 +22,6 @@ doc_type: conceptual
 
 URL shortcuts let users navigate directly to specific areas of Solution Manager — such as Self Service, Vision, or Operations — by appending a path to the base URL, bypassing the Home page.
 
-## When Would You Use It?
-
-- You need to configure or manage URL Shortcuts in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing URL Shortcuts through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Self Service Shortcut
 
 To go directly to Self Service, bypassing the Home page, use this URL syntax: `https://server:port/selfservice`

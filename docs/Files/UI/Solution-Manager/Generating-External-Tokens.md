@@ -39,14 +39,6 @@ To generate external tokens, complete the following steps:
 
 5. Select **Generate**
 
-## When Would You Use It?
-
-- A new External Tokens needs to be produced in Solution Manager
-
-## Why Would You Use It?
-
-- **Generating External**: An external token and a valid OpCon User Login ID are required to run an external event
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

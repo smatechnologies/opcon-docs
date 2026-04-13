@@ -24,14 +24,6 @@ doc_type: conceptual
 
 The **Update Schedule Status** skill updates the status of a daily schedule for a specified date. The status can be set to `release`, `hold`, `start`, or `close`.
 
-## When Would You Use It?
-
-- The **Update Schedule Status** skill updates the status of a daily schedule for a specified date
-
-## Why Would You Use It?
-
-- **Update Schedule**: The **Update Schedule Status** skill updates the status of a daily schedule for a specified date
-
 ## Skill Details
 
 ### Parameters

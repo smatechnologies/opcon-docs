@@ -31,14 +31,6 @@ The dialog includes the following per schedule iteration:
 - History Details (if selected)
 - History Archive (if selected)
 
-## When Would You Use It?
-
-- The **Schedule History** dialog displays all iterations of a schedule
-
-## Why Would You Use It?
-
-- **Schedule History**: The **Schedule History** dialog displays all iterations of a schedule
-
 ## Viewing Schedule History
 
 To view Schedule History, complete the following steps:

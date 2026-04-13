@@ -45,14 +45,6 @@ Variables are resolved before the Event is sent to OpCon. A preview of the defin
 
 Complete the Event definition, then select **OK** to apply changes and return to the **OpCon Events** page, or select **Cancel** to discard changes.
 
-## When Would You Use It?
-
-- You need to provide options to add, edit, or delete them using The **OpCon Events** dialog lists existing events and
-
-## Why Would You Use It?
-
-- **Operational value**: Provides options to add, edit, or delete them
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

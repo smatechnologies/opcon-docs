@@ -38,14 +38,6 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## When Would You Use It?
-
-- The **Batch Users** tab (_Library > Access Management > Roles_) displays the batch users assigned to the selected role
-
-## Why Would You Use It?
-
-- **Role Batch**: The **Batch Users** tab (_Library > Access Management > Roles_) displays the batch users assigned to the selected role
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

@@ -40,21 +40,6 @@ Jobs can also be deleted from Daily schedules.
 Deleting a Container job whose subschedule(s) have never started also deletes all of that Container job's subschedule(s), including any spawned subschedules.
 :::
 
-## When Would You Use It?
-
-- An existing Daily Schedules in OpCon Operations requires changes
-- A change in process, system, or business requirement makes the current Daily Schedules definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Daily Schedules in OpCon Operations ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Daily Schedules are recorded in the OpCon audit log, providing a complete modification history
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## Operations
 
 ### Common Tasks

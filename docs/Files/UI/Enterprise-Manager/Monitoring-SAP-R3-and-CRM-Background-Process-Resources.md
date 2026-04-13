@@ -30,16 +30,6 @@ To monitor the background process resources, complete the following steps:
 2. Right-click on the preferred **SAP R/3 and CRM machine name**
 3. Hover over **SAP Machine** in the right-click menu and select **Background Process Resources**
 
-## When Would You Use It?
-
-- You need visibility into the current status of SAP R/3 and CRM Background Process Resources
-- Proactive oversight is required to detect and respond to SAP R/3 and CRM Background Process Resources status changes before they affect operations
-
-## Why Would You Use It?
-
-- **Proactive operations**: Monitoring SAP R/3 and CRM Background Process Resources through OpCon enables early detection of failures and supports SLA compliance for automated workflows
-- Status changes can trigger OpCon notifications and events, enabling automated responses to operational conditions
-
 ## FAQs
 
 **Q: How many steps does the Monitoring SAP R/3 and CRM Background Process Resources procedure involve?**

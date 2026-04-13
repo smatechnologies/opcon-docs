@@ -33,14 +33,6 @@ To open the Schedule Import Export utility:
 - To make schedule transfers, the Schedule Import Export utility requires the appropriate ODBC drivers for the SQL database. OpCon installation does not provide SQL ODBC drivers; however, the installation does include Microsoft Access ODBC drivers for the transport database
 - For information on configuring the SQL and Access DSNs, refer to [Create System DSNs](../../installation/configuration.md) in the **OpCon Installation** online help
 
-## When Would You Use It?
-
-- You need to enables users to migrate one or more schedules from one database to another while maintaining relational integrity in the new environment using The Schedule Import Export utility
-
-## Why Would You Use It?
-
-- **Operational value**: Enables users to migrate one or more schedules from one database to another while mainta
-
 ## Menus
 
 The menus available are File and Help.

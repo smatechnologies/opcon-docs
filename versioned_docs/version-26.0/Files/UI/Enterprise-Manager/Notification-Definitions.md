@@ -1,29 +1,41 @@
+---
+title: Notification Definitions
+description: "The Notification Definitions frame provides tabs for configuring notification types."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
+---
+
 # Notification Definitions
 
-The **Notification Definitions** frame provides tabs for configuring
-notification types.
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+The **Notification Definitions** frame provides tabs for configuring notification types.
 
 :::note
 ENS allows the insertion of any OpCon Property in all notification fields. For additional information, refer to [Defining Global Properties](Defining-Global-Properties.md).
 :::
 
-Initially, the frame will display only a **General** tab, which provides
-information on the defined notifications for the selected trigger. The
-tab has the following options:
+Initially, the frame displays a **General** tab with information on the defined notifications for the selected trigger. The tab has the following options:
 
-**Description**: This option allows you to provide a description and
-purpose for the notification triggers to be sent.
-
-**Notification Types**: These options allow you to specify the
-notification types by selecting the applicable checkboxes. Each
-selection enables a tab for defining the notification details.
+- **Description**: A description and purpose for the notification triggers to be sent
+- **Notification Types**: options to specify notification types. Each selection enables a tab for defining the notification details
 
 :::note
-For the fields supporting Tokens, use the Global Property Selector by pressing the **Ctrl/t** keyboard shortcut to find and define Tokens for Global Properties easily. You may also type a Token manually. For more information on Tokens, refer to [Tokens](../../../objects/using-properties.md#tokens) in the **Concepts** online help.
+For fields supporting Tokens, use the Global Property Selector by pressing **Ctrl/t** to find and define Tokens for Global Properties. You may also type a Token manually. For more on Tokens, refer to [Tokens](../../../objects/using-properties.md#tokens) in the **Concepts** online help.
 :::
 
-Click on any of the following quick links to access the instructions on
-how to define and send that notification type:
+Select any of the following to access instructions for defining and sending that notification type:
 
 - [Send Email (SMTP)](Sending-Emails.md)
 - [Send Short Text Message](Sending-Short-Text-Messages.md)
@@ -34,44 +46,58 @@ how to define and send that notification type:
 - [Send SPO Event Report](Sending-SPO-Event-Reports.md)
 - [Run Command](Running-Commands.md)
 
-- **[Active/Inactive Notification     Status](Activating_Inactivating-Notifications.md)**: The power
-    symbol to the left of each checkbox indicates the *Active*(green) or
-    *Inactive* (red) status for each type of notification. By default,
-    the power symbols are gray. You can click the power symbol to toggle
-    the status from *Active* to *Inactive*.
+- **[Active/Inactive Notification Status](Activating_Inactivating-Notifications.md)**: The power symbol to the left of each option indicates *Active* (green) or *Inactive* (red) status. By default, power symbols are gray. Select the power symbol to toggle between *Active* and *Inactive*
 
-- **Include Internal Job Number in Job Name frame**: This option
-    determines whether the job name included in the Prefix Information
-    for the notification message will be unique each time a notification
-    is processed. The unique job name comprises the original job name
-    and a unique SAM-generated job number.
+- **Include Internal Job Number in Job Name frame**: Determines whether the job name in the Prefix Information is unique each time a notification is processed. The unique job name comprises the original job name and a SAM-generated job number
 
-- **Escalation Rule**: This option specifies the optional
-    escalation rule to apply to an     email notification. By default, this drop-down list and search
-    function are disabled and only become active if the **Send Email
-    (SMTP)** checkbox is selected.
+- **Escalation Rule**: Specifies an optional escalation rule for an email notification. Disabled by default; activates only when **Send Email (SMTP)** is selected
 
-- **Save**: This button saves changes to the defined notifications and
-    applies to all defined notification tabs. This button is only active
-    when:
-  - New notification details are being defined
-  - Changes have been made to the current selection
+- **Save**: Saves changes to all defined notification tabs. Active only when new notification details are being defined or changes have been made
 
-- **Cancel**: This button cancels all changes made on the screen
-    without committing them to the database.
+- **Cancel**: Cancels all changes without committing them to the database
 
-- **[**Test All**](Sending-Notification-Tests.md)**: This button
-    will send a test for all active notifications.
-  - On all the specific notification tabs, the third button beneath
-        the tabs is **Test**. When you select
-        **[Test](Sending-Notification-Tests.md)**, the notification
-        for the current tab will send a test.
-  - If the notification has "default information," the Event
-        Trigger value will be set to *Test Notification*.
+- **[Test All](Sending-Notification-Tests.md)**: Sends a test for all active notifications. On each specific notification tab, a **Test** button sends a test for that tab only. If the notification has default information, the Event Trigger value is set to *Test Notification*
 
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
 
-- [Entering Notification Definition     Information](Entering-Notification-Definition-Info.md)
-- [Deleting Notification Definition     Information](Deleting-Notification-Definition-Info.md)
+- [Entering Notification Definition Information](Entering-Notification-Definition-Info.md)
+- [Deleting Notification Definition Information](Deleting-Notification-Definition-Info.md)
 :::
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Description | A description and purpose for the notification triggers to be sent | — | — |
+| Notification Types | options to specify notification types. | — | — |
+| Include Internal Job Number in Job Name frame | Determines whether the job name in the Prefix Information is unique each time a notification is processed. | information | — |
+| Escalation Rule | Specifies an optional escalation rule for an email notification. | information | — |
+| [Test All](Sending-Notification-Tests.md) | Sends a test for all active notifications. | information | — |
+## FAQs
+
+**Q: What does Notification Definitions do?**
+
+The **Notification Definitions** frame provides tabs for configuring notification types.
+
+**Q: Where can you find Notification Definitions in OpCon?**
+
+Access Notification Definitions through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

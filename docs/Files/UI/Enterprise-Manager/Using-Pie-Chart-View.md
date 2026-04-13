@@ -30,14 +30,6 @@ If the "Show Job Containers" preference is turned off, Container jobs are exclud
 
 The Schedule Name or Date appears above the pie. To display schedule and job information, you **must** first activate the **Listen for selection changes in other views** button on the **Pie Chart** toolbar. The **Send the current selection to other views** button must also be activated in another view (e.g., **List** and/or **Matrix**).
 
-## When Would You Use It?
-
-- You need to represents a schedule using colors corresponding to job statuses using The **Pie Chart** view
-
-## Why Would You Use It?
-
-- **Using Pie**: The **Pie Chart** view represents a schedule using colors corresponding to job statuses
-
 ## Pie Chart Toolbar
 
 The **Pie Chart** view has a toolbar for performing actions in the view. Select any icon to learn more about its functionality.

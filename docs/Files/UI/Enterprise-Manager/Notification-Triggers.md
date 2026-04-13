@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Notification Triggers** tab in the [**Job Master**](Using-Job-Master.md) editor is a read-only view showing the triggers and OpCon events defined in the **Notification Manager** that will be triggered by the job's actions.
 
-## When Would You Use It?
-
-- You need to work with The **Notification Triggers** tab in the [**Job Master**](Using-Job-Master.md) editor, a read-only view showing the triggers and OpCon events defined in the **Notification Manager** that will be triggered by the job's actions, in OpCon
-
-## Why Would You Use It?
-
-- **Notification Triggers**: The **Notification Triggers** tab in the [**Job Master**](Using-Job-Master.md) editor is a read-only view showing the triggers and OpCon events defined in the **Notification Manager** that will be triggered by the job's actions
-
 ## Viewing Job Event Notification Triggers
 
 To view Job Event Notification Triggers, complete the following steps:

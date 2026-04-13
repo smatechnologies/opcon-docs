@@ -1,4 +1,23 @@
+---
+title: UNIX Job Details
+description: "The information in this section applies to defining a UNIX job."
+product_area: Job Types
+audience: Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Reference
+  - Automation Engineer
+  - Jobs
+last_updated: 2026-03-18
+doc_type: reference
+---
+
 # UNIX Job Details
+
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer
+
+## What Is It?
 
 The information in this section applies to defining a UNIX job. For
 additional information about this platform, refer to [UNIX LSAM Configuration](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Configuration.md)
@@ -21,10 +40,10 @@ refer to [UNIX Job Sub-Types](#UNIX).
 
 ### Fields for Run Program
 
-**NICE Value**: Defines a value in order to increase/decrease the
+**NICE Value**: Defines a value to increase/decrease the
 priority of the job and prerun (if present).
 
-- Valid values range from -20 to 20 with a default of zero.
+- Valid values range from -20 to 20 with a default of zero
 - A lower NICE Value signifies a higher priority; therefore, entering
     a negative number raises the priority and a positive number lowers
     the priority.
@@ -34,9 +53,9 @@ It is possible to instruct the operating system to dedicate all resources to a s
 :::
 
 **Prerun**: Defines the full path to the executable file on the
-LSAM machine to execute immediately before the job specified in the Start Image.
+agent machine to run immediately before the job specified in the Start Image.
 
-- If a prerun fails, the primary job does not start.
+- If a prerun fails, the primary job does not start
 - If a prerun job fails, the SAM reschedules the job at a user-defined
     interval. For information on this Prerun setting, refer to [Time Settings](../administration/server-options.md#time-settings).
 - The SAM runs the job repeatedly until it finishes successfully. When
@@ -46,8 +65,8 @@ LSAM machine to execute immediately before the job specified in the Start Image.
     Core Dump, and there are no signals.
 
 **Start Image**: Defines the full path to the executable file on the
-LSAM machine. If the job requires a user's environment variables, refer to [LSAM Environment
-Variables](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/LSAM-Environment-Variables.md)
+agent machine. If the job requires a user's environment variables, refer to [agent Environment
+Variables](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/agent-Environment-Variables.md)
  in the **UNIX LSAM** online help.
 
 - With the Non-XML data structure, the maximum length of the start
@@ -105,21 +124,21 @@ This job can be added to the daily using an event with various values of Run_Tim
 
 :::
 
-- **Env Variable Name**: Defines the environment variable name.
+- **Env Variable Name**: Defines the environment variable name
 
-- **Env Variable Value**: Defines the environment variable value.
+- **Env Variable Value**: Defines the environment variable value
     OpCon properties can be used for values.
 
 ### Fields for File Arrival
 
-- **File Name**: Defines the file path and name of the file to detect.
+- **File Name**: Defines the file path and name of the file to detect
     UNIX wildcard characters are supported in the file name (e.g.,
     /usr/local/abc\*.txt).
-- **Sub-directory Search**: Specifies whether or not to search
+- **Sub-directory Search**: Specifies whether to search
     sub-directories under the specified file path.
 - **File Creation Time Stamp Window, Relative to Midnight (in
     days,hrs,mins or a token)**: Defines the time frame that the program
-    uses to watch for the arrival of the file. As best practice, SMA Technologies recommends setting the time frame
+    uses to watch for the arrival of the file. As best practice, Continuous recommends setting the time frame
     to be close to the expected time of arrival (e.g., if the file is
     expected to arrive in the evening, set the time frame to evening
     hours).
@@ -129,7 +148,7 @@ This job can be added to the daily using an event with various values of Run_Tim
 
 ### Fields and Controls for Embedded Script
 
-- **Script**: Defines the embedded script to associate with the job.
+- **Script**: Defines the embedded script to associate with the job
     Refer to the [Embedded Scripts](../automation-concepts/embedded-scripts.md)
      concept.
   - At runtime, the script and type information are used by the
@@ -141,8 +160,8 @@ This job can be added to the daily using an event with various values of Run_Tim
     script.
 - **Version**: Defines the specific version (or revision) of the
     script to run for this job.
-- **View**: Displays the contents of the script when clicked.
-- **Runner**: Defines the run command template for executing the
+- **View**: Displays the contents of the script when clicked
+- **Runner**: Defines the run command template for running the
     script.
 - **Run Command Template:** Displays the syntax for the selected
     runner.
@@ -175,9 +194,9 @@ This job can be added to the daily using an event with various values of Run_Tim
 
 :::
 
-- **Env Variable Name**: Defines the environment variable name.
+- **Env Variable Name**: Defines the environment variable name
 
-- **Env Variable Value**: Defines the environment variable value.
+- **Env Variable Value**: Defines the environment variable value
     OpCon properties can be used for values.
 
 ## Failure Criteria
@@ -205,12 +224,12 @@ Failed. For additional information on UNIX exit codes, refer to [UNIX LSAM Exit 
     - **LE** (less than or equal to)
   - **Exit code integer**: An integer to compare with the job's
         exit code. Due to operating system constraints, the UNIX
-        LSAM only recognizes values between -127         and 127.
-- **Advanced Failure Criteria**: UNIX jobs can make use of the
+        agent only recognizes values between -127         and 127.
+- **Advanced Failure Criteria**: UNIX jobs can use the
     Advanced Failure Criteria feature for the job defined in the Start
     Image. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
 - **Fails on Core Dump**: Determines the configuration for how the
-    LSAM should report the job's status when the job     does or does not create a core file. For example:
+    agent should report the job's status when the job     does or does not create a core file. For example:
   - If the Fails on Core Dump flag is checked and a core dump is
         produced, then the job status will return a failed exit code.
   - If the Fails on Core Dump flag is checked and a core dump is not
@@ -226,8 +245,8 @@ Failed. For additional information on UNIX exit codes, refer to [UNIX LSAM Exit 
 The UNIX LSAM supports the Job Restart Step capability which allows users to define the step at which execution is to begin
 when a job is restarted from Schedule Operations. By default, jobs
 restart from the first step. Additionally, UNIX jobs support the ability
-for users to specify that only a portion of a job be executed. By
-default, jobs execute "From Beginning to End". Use of either the Job
+for users to specify that only a portion of a job be run. By
+default, jobs run "From Beginning to End". Use of either the Job
 Restart Step or the Job Start/End Step capability requires formatting of
 the job's top-level script, and use of the Job Start/End Step
 capability requires formatting of the job's "Start Image" or
@@ -239,7 +258,7 @@ additional information, refer to the
 ## UNIX Job Sub-Types
 
 UNIX job sub-types simplify the job definition process by displaying
-fields to generate the command line for programs commonly used by SMA Technologies' customers. The following
+fields to generate the command line for programs commonly used by Continuous' customers. The following
 job sub-types are currently supported for UNIX:
 
 - [Episys: Run JobFile](#Episys:)
@@ -259,8 +278,8 @@ The following information applies to the Episys: Run JobFile sub-type:
     OpCon Administration. Refer to [Adding a     Batch User for
     UNIX](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md#Adding)
      in the **Enterprise Manager** online help. The UNIX
-    LSAM configuration determines how the LSAM will     interpret the Group ID/User ID. For more information, refer to
-    [path_to_su](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/LSAM-Configuration-Parameters.md#path_to_su)
+    agent configuration determines how the agent will     interpret the Group ID/User ID. For more information, refer to
+    [path_to_su](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/agent-Configuration-Parameters.md#path_to_su)
      in the **UNIX LSAM** online help.
 - **RSJ Path**: Defines the path to the directory on the UNIX machine
     where the RSJ programs are installed.
@@ -270,11 +289,11 @@ The following information applies to the Episys: Run JobFile sub-type:
     resolves to a three-digit number. For information on creating tokens
     and setting their values, refer to [Using Properties for Automation](../objects/using-properties.md)
     .
-- **Episys Job**: Defines the name of the job in Episys.
-- **Restart Point**: The name of the restart point for the job.
+- **Episys Job**: Defines the name of the job in Episys
+- **Restart Point**: The name of the restart point for the job
   - If EM finds a token (text surrounded in double brackets like
         \[\[$SCHEDULE NAME\]\]), it will not validate the characters         within the token.
-  - The EM will strip any trailing spaces on this field.
+  - The EM will strip any trailing spaces on this field
   - EM will automatically wrap this field in single quotes when
         building the command line. This means that user entered spaces
         that are not inside double brackets are allowed and will not
@@ -287,7 +306,7 @@ The following information applies to the Episys: Run JobFile sub-type:
 - **Delete Edit File** (Optional): Determines if the edit file should
     be deleted upon completion of the job.
 - **Advanced Failure Criteria**: The Episys: Run JobFile sub-type can
-    make use of the Advanced Failure Criteria feature for the job
+    use the Advanced Failure Criteria feature for the job
     defined in the Start Image. For more information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
 
 ### Episys: Answer Prompts
@@ -331,7 +350,7 @@ sub-type.
      in the **Enterprise Manager** online help.
 - **RSJ Path**: Defines the path to the directory on the UNIX machine
     where the RSJ programs are installed.
-- **SYM Number**: Defines the Episys "SYM" where the output resides.
+- **SYM Number**: Defines the Episys "SYM" where the output resides
     The value should be a three-digit number or an
     OpCon token that resolves to a
     three-digit number. For information on creating Tokens and setting
@@ -358,7 +377,7 @@ Sequence Number sub-type.
      in the **Enterprise Manager** online help.
 - **RSJ Path**: Defines the path to the directory on the UNIX machine
     where the RSJ programs are installed.
-- **SYM Number**: Defines the Episys "SYM" where the output resides.
+- **SYM Number**: Defines the Episys "SYM" where the output resides
     The value should be a three-digit number or an
     OpCon token that resolves to a
     three-digit number. For information on creating Tokens and setting
@@ -393,7 +412,7 @@ Reports sub-type.
      in the **Enterprise Manager** online help.
 - **RSJ Path**: Defines the path to the directory on the UNIX machine
     where the RSJ programs are installed.
-- **SYM Number**: Defines the Episys "SYM" where the report resides.
+- **SYM Number**: Defines the Episys "SYM" where the report resides
     The value should be a three-digit number or an
     OpCon token that resolves to a
     three-digit number. For information on creating tokens and setting
@@ -429,7 +448,7 @@ Output sub-type.
      in the **Enterprise Manager** online help.
 - **RSJ Path**: Defines the path to the directory on the UNIX machine
     where the RSJ programs are installed.
-- **SYM Number**: Defines the Episys "SYM" where the report resides.
+- **SYM Number**: Defines the Episys "SYM" where the report resides
     The value should be a three-digit number or an
     OpCon token that resolves to a
     three-digit number. For information on creating tokens and setting
@@ -454,7 +473,7 @@ Output sub-type.
     value 99) that identifies the occurrence of the Report title to
     search for.
 - **Advanced Failure Criteria**: The Episys: Find Report from RSJ
-    Output sub-type can make use of the Advanced Failure Criteria
+    Output sub-type can use the Advanced Failure Criteria
     feature for the job defined in the Start Image. For more
     information, refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria).
 
@@ -481,7 +500,7 @@ telnet DestinationServer 21
      in the **Enterprise Manager** online help.
 - **RSJ Path**: Defines the path to the directory on the UNIX machine
     where the RSJ programs are installed.
-- **SYM Number**: Defines the Episys "SYM" where the report resides.
+- **SYM Number**: Defines the Episys "SYM" where the report resides
     The value should be a three-digit number or an
     OpCon token that resolves to a
     three-digit number. For information on creating tokens and setting
@@ -497,8 +516,96 @@ telnet DestinationServer 21
     characters must be 'escaped' with a backslash.
 - **Destination Host Name**: Defines the name of the Server the files
     will be sent to.
-- **Port Number**: Defines the FTP Port number to use.
+- **Port Number**: Defines the FTP Port number to use
 - **Destination Folder**: Defines the directory to place the files on
     the destination Host machine.
 - **Extension**: Defines the optional parameter used to give the
     reports an extension.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Job Action | Defines the run process the job uses. | — | must be defined     as a Batch User ID in OpCon     Administration. Refer to [Adding Bat |
+| Group Id / User Id | Defines the UNIX Group ID and User ID to use when running the job. | — | must be defined     as a Batch User ID in OpCon     Administration. Refer to [Adding Bat |
+| NICE Value | Defines a value to increase/decrease the priority of the job and prerun (if present) | zero | Valid values range from -20 to 20 with a default of zero. - A lower NICE Value signifies a higher priority; there |
+| Prerun | Defines the full path to the executable file on the | — | — |
+| Start Image | Defines the full path to the executable file on the | — | — |
+| Parameters | Defines any required command-line parameters | — | — |
+| Job Output Parsing | Provides fields to define the search criteria | — | — |
+| Search Operation | Defines the type of search operation to perform | — | — |
+| String to Search | Defines the parsing value string to be searched. | — | — |
+| Exit Code | Defines the exit code to use if the String to Search | — | — |
+| Custom Application Log | Defines an external application log to be attached to the job output log. | — | — |
+| Environment Variables | Defines the environment variables for the job | — | — |
+| Env Variable Name | Defines the environment variable name | — | — |
+| Env Variable Value | Defines the environment variable value | — | — |
+| File Name | Defines the file path and name of the file to detect | — | — |
+| Sub-directory Search | Specifies whether to search | — | — |
+| File Size Stable Duration (in secs) | Defines the amount of time | — | — |
+| Script | Defines the embedded script to associate with the job | — | — |
+| Script Type | Displays the script type associated with the script | — | — |
+| Version | Defines the specific version (or revision) of the script to run for this job | — | — |
+| Runner | Defines the run command template for running the script | — | — |
+| Arguments | Defines any script parameters to pass to the script | — | — |
+| Basic Exit Codes | Provides fields to define basic criteria for | — | — |
+| Advanced Failure Criteria | UNIX jobs can use the | — | — |
+| Fails on Core Dump | Determines the configuration for how the | — | — |
+## Operations
+
+### Monitoring
+
+- A UNIX prerun succeeds when: exit code is zero (0), there is no core dump, and there are no signals. Any deviation from these conditions causes the prerun to fail, blocking the primary job from starting.
+- **Fails on Core Dump**: When checked, if the job produces a core file, OpCon reports the job as failed regardless of the exit code. Uncheck this option if core files from the process are expected and should not affect job status.
+- **NICE Value** controls job priority (valid range: -20 to 20, default: 0). A lower (more negative) value gives higher OS scheduling priority; setting a very low value can starve other processes of CPU resources.
+
+### Common Tasks
+
+- If a UNIX prerun fails, SAM reschedules it at the interval defined by **Seconds SAM should wait between PreRun attempts** in Server Options > Time Settings (default: 180 seconds). The prerun retries until it succeeds.
+- For jobs that require a user's environment variables, refer to agent Environment Variables documentation and define the full path to the executable in **Start Image**.
+- Specify the **Group Id / User Id** using a Batch User ID defined in OpCon Administration; this ID controls the UNIX security context under which the job runs.
+
+### Alerts and Log Files
+
+- UNIX prerun failures are logged by SAM and block the primary job. Check `SAM.log` and `Critical.log` for prerun-related messages when jobs do not start.
+- For File Arrival jobs, the **File Size Stable Duration** ensures the file is fully written before OpCon reports it as arrived; set this value appropriately for files written by slow or streaming processes.
+
+## Exception Handling
+
+**Prerun job fails and blocks the primary job from starting** — If a UNIX prerun fails, the primary job does not start; SAM reschedules the prerun at a user-defined interval and retries until it succeeds — Verify the prerun path and parameters are correct; the prerun succeeds only when exit code is zero, there is no core dump, and no signals are present.
+
+**NICE Value set too low dedicates all OS resources to a single process** — Setting a very low (highly negative) NICE Value instructs the operating system to dedicate all resources to that job until it completes, which can starve other processes — Use NICE values carefully; a value of 0 (default) provides normal priority; reserve highly negative values only for processes that truly require maximum CPU priority.
+
+**Job fails on core dump when Fails on Core Dump is checked** — If the Fails on Core Dump flag is checked and the job produces a core file, the job returns a failed exit code even if the exit code itself indicates success — Uncheck Fails on Core Dump if core files from this process are expected and should not affect the job's final status.
+
+## FAQs
+
+**Q: What are the three UNIX job actions?**
+
+The three job actions are Run Program (runs a program or script), File Arrival (monitors for file arrival), and Embedded Script (runs a script stored in the OpCon script repository).
+
+**Q: How does the NICE Value affect a UNIX job?**
+
+The NICE Value controls the scheduling priority of the job. A lower (more negative) value gives higher priority; a higher (more positive) value lowers priority. Valid values range from -20 to 20, with 0 as the default.
+
+**Q: What determines whether a UNIX prerun succeeds?**
+
+A UNIX prerun succeeds if the exit code is zero (0), there is no core dump, and there are no signals. If the prerun fails, the SAM reschedules it at a user-defined interval and retries until it succeeds.
+
+## Glossary
+
+**MSGIN**: A directory monitored by an agent for incoming OpCon event files. Placing a properly formatted event file in MSGIN causes the agent to forward it to SAM for processing.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts can be assigned to Windows jobs and run at runtime without requiring the script file to exist on the target machine.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

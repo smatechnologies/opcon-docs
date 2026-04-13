@@ -34,15 +34,6 @@ Without the Machine Privilege, you cannot edit the daily job definition.
 Changes to job properties in the **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time it runs.
 :::
 
-## When Would You Use It?
-
-- An existing File Transfer Job Details in Solution Manager requires changes
-- A process change or system update makes the current File Transfer Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating File Transfer Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating File Transfer Job Details
 
 To perform this procedure:

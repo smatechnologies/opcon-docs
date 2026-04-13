@@ -1,4 +1,23 @@
+---
+title: Logging
+description: "The SAM and supporting services (SAM-SS) have several important logs."
+product_area: Server Programs
+audience: System Administrator
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Logging
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator
+
+## What Is It?
 
 The SAM and supporting services (SAM-SS) have several important logs. All logs are located in the <Output Directory\>\\SAM\\Log\\ directory.
 
@@ -21,9 +40,11 @@ The Output Directory was configured during installation. For more information, r
 
 ## View a Log File
 
-1. Use menu path: **Start \> Programs \> Log Monitors \> *<Log Name\>***.
-2. View the log information with FileMon.
-3. Close FileMon by using menu path: **File \> Exit** .
+To view a Log File, complete the following steps:
+
+1. Use menu path: **Start \> Programs \> Log Monitors \> *<Log Name\>***
+2. View the log information with FileMon
+3. Close FileMon by using menu path: **File \> Exit** 
 
 ## Log Archiving
 
@@ -36,7 +57,7 @@ The Output Directory was configured during installation. For more information, r
 If an archive folder for the day does not already exist, the component
 creates one. The folder names use the following naming convention:
 yyyy_mm_dd (Weekday). The logging mechanism generates the weekday name
-according to the Regional Settings of the user executing the component.
+according to the Regional Settings of the user running the component.
 
 :::tip Example
 If the Regional Settings are set to English, an archive folder would have the following name: 2008_01_11 (Friday).
@@ -102,7 +123,7 @@ and so forth.
 ## SMANetCom.log
 
 SMANetCom writes its configuration parameters, basic communication
-information and the configuration for each LSAM machine to the
+information and the configuration for each agent machine to the
 SMANetCom.log. In the configuration information, the default value is
 listed in parentheses next to the relevant parameter if a configuration
 default is modified.
@@ -134,12 +155,12 @@ the associated SMA protocol types.
 |TX4|Both|Machine Status|
 |TX9|Legacy|Retrieve Pending Messages|
 
-#### LSAM Response Breakdown
+#### agent Response Breakdown
 
-In the SMANetComTrace.log, every "From" (<<<) message is an LSAM response to an SMANetCom request. Embedded in a 48-character string, the message follows the machine name and job name in an LSAM response. Break down the string in the following manner:
+In the SMANetComTrace.log, every "From" (<<<) message is an agent response to an SMANetCom request. Embedded in a 48-character string, the message follows the machine name and job name in an agent response. Break down the string in the following manner:
 
-- The first 10 characters are the OpCon job number.
-- The 11th character is the LSAM response.
+- The first 10 characters are the OpCon job number
+- The 11th character is the agent response
   - 0 - Job Not Found
   - 1 - Job Initialization Error
   - 2 - Job to be Requeued
@@ -150,17 +171,17 @@ In the SMANetComTrace.log, every "From" (<<<) message is an LSAM response to an 
   - 7 - Job Erred, Completion Notice Pending
   - 8 - Job Finished OK, Deleted from Tracking File
   - 9 - Job Erred, Deleted from Tracking File
-- The 12th through 23rd characters are the start and stop time of the job.
-- The 24th through 28th characters are the maximum number of jobs the LSAM is allowed to process concurrently.
-- The last 20 characters are the exit condition and the status description of the job. For more information on LSAM exit conditions, refer to the individual LSAM's online help.
+- The 12th through 23rd characters are the start and stop time of the job
+- The 24th through 28th characters are the maximum number of jobs the agent is allowed to process concurrently
+- The last 20 characters are the exit condition and the status description of the job. For more on agent exit conditions, refer to the individual agent's online help
 
 :::note
-For most LSAMs, the status description will not be shown.
+For most agents, the status description will not be shown.
 :::
 
 ## SMAServMan.log
 
-SMAServMan writes all information to the SMAServMan.log regarding the management of all listed applications. For more information on SMA Service Manager's listed applications, refer to the [Application List](./service-manager.md#application-list) table in the **SMA Service Manager** topic.
+SMAServMan writes all information to the SMAServMan.log regarding the management of all listed applications. For more on SMA Service Manager's listed applications, refer to the [Application List](./service-manager.md#application-list) table in the **SMA Service Manager** topic.
 
 ## SMANotifyHandler.log
 
@@ -173,3 +194,59 @@ The SMAStartTime Calculator writes all job start time calculation processing inf
 ## SMARequestRouter.log
 
 The SMARequestRouter writes all request routing processing information to SMARequestRouter.log.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## Operations
+
+### Monitoring
+
+- All SAM-SS log files reside in `<Output Directory>\SAM\Log\`. Monitor this directory for the following active log files: `Sam.log`, `Critical.log`, `SMANetCom.log`, `SMANetComTrace.log`, `SMAServMan.log`, `SMANotifyHandler.log`, `SMAStartTimeCalculator.log`, and `SMARequestRouter.log`.
+- The `Critical.log` records all SAM processing errors including machine communication failures, database connection problems, event processing failures, and license expiration notifications. Review it first when investigating issues.
+- The `SMANetComTrace.log` records all TCP/IP messages between SMANetCom and agents, including socket connection errors and agent response codes; `TraceSAMMessages=ON` is required to generate this file.
+
+### Common Tasks
+
+- View any log file via **Start > Programs > Log Monitors > *Log Name*** using FileMon.
+- Archived log files are stored in `<Output Directory>\SAM\Log\Archive\` in date-named folders (e.g., `2008_01_11 (Friday)`). Each component archives when the log reaches its configured maximum size or at end of day.
+- The SAM retains 10 days of archived logs by default; adjust the "Maximum number of days archived SAM logs should be kept" setting in Server Options to change the retention period.
+
+### Alerts and Log Files
+
+- If the `SAM.log` is locked at startup, SAM writes to `Critical.log` and the Windows Application Event Log, then terminates immediately.
+- A corrupt `SAM.log` at startup is archived with the naming convention `SAM hhmmss - Bad File.log` (e.g., `SAM 090000 - Bad File.log`).
+- Agent response codes in `SMANetComTrace.log` indicate job state: `8` = Job Finished OK (deleted from tracking), `9` = Job Erred (deleted from tracking), `1` = Job Initialization Error, `5` = Job Running.
+
+## FAQs
+
+**Q: Where are the SAM-SS log files located?**
+
+All SAM-SS log files are located in the `<Output Directory>\SAM\Log\` directory. The Output Directory was configured during installation.
+
+**Q: When are log files archived?**
+
+Each component archives log files at the end of the day or when they reach the maximum log file size configured in the component's .ini file. Archived files are stored in the `<Output Directory>\SAM\Log\Archive` folder, organized by date (e.g., `2008_01_11 (Friday)`).
+
+**Q: What is the Critical.log used for?**
+
+The Critical.log contains all SAM processing errors, including machine communication failures, database connection problems, event processing failures, and license expiration notifications.
+
+## Glossary
+
+**SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
+
+**SMAServMan (SMA Service Manager)**: Manages the starting, stopping, and restarting of all OpCon server programs. Monitors configured applications and restarts them automatically if they fail unexpectedly.
+
+**SAM-SS (SAM and Supporting Services)**: The collective term for the OpCon server-side processing programs: SAM, SMANetCom, SMA Notify Handler, SMA Request Router, and SMA Start Time Calculator.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**TCP/IP**: The network communication protocol used for all data exchange between SMANetCom on the OpCon server and agents on target machines.
+
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

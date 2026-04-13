@@ -36,14 +36,6 @@ Select the **Cross References** button to view the master and daily jobs that us
 
 ![Departments CrossReferences](../../../../../Resources/Images/SM/Library/Departments/Departments_CrossReference.png "Departments Cross References Dialog")
 
-## When Would You Use It?
-
-- Selecting **Add**, **Copy**, or **Edit** opens the corresponding dialog:
-
-## Why Would You Use It?
-
-- **Departments**: Selecting **Add**, **Copy**, or **Edit** opens the corresponding dialog:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

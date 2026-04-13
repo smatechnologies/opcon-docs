@@ -39,14 +39,6 @@ The Management tools perform the functions listed below, depending on the active
 ||Compare Frequencies: Compares the frequency definition rules for two frequencies side by side.|
 ||Edit Selected Job or Schedule: Edits the selected job or schedule in its perspective editor.|
 
-## When Would You Use It?
-
-- The Management tools perform the functions listed below, depending on the active [editor](Navigation-Editors.md) or [view](Navigation-Views.md)
-
-## Why Would You Use It?
-
-- **Using Management**: The Management tools perform the functions listed below, depending on the active [editor](Navigation-Editors.md) or [view](Navigation-Views.md)
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

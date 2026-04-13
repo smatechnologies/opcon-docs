@@ -29,14 +29,6 @@ Job-level expression dependencies are always included when the job runs. Frequen
 - **Job Expression**: An expression that must resolve to "true" when the SAM performs the dependency check for the job
 - **Frequency Expression**: An expression associated with the Frequency Name that must resolve to "true" during the dependency check. Included only when the job runs on the associated frequency
 
-## When Would You Use It?
-
-- You need to configure job dependency relationships in OpCon
-
-## Why Would You Use It?
-
-- **Expression Dependencies**: Each OpCon job can depend on the result of an expression defined using the Property Expressions API
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

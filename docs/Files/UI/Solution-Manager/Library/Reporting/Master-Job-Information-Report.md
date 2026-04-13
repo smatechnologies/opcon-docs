@@ -43,14 +43,6 @@ Open the filters panel by selecting the menu (three dots) in any column header a
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## When Would You Use It?
-
-- You need to provide a comprehensive view of master job configurations in OpCon, including job details, schedules, machines, departments, frequencies, access codes, tags, timing information, and notes using The **Master Job Information Report**
-
-## Why Would You Use It?
-
-- **Operational value**: Provides a comprehensive view of master job configurations in OpCon, including job detail
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

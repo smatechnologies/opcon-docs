@@ -33,14 +33,6 @@ To rename a frequency, complete the following steps:
 5. Select the **Finish** button
 6. Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
 
-## When Would You Use It?
-
-- To rename a frequency:
-
-## Why Would You Use It?
-
-- **Renaming Frequencies**: To rename a frequency:
-
 ## FAQs
 
 **Q: How many steps does the Renaming Frequencies procedure involve?**

@@ -27,14 +27,6 @@ For Episys jobs, OpCon provides additional
 details to support easy job definition. For additional information,
 refer to [UNIX Job Sub-Types](#UNIX).
 
-## When Would You Use It?
-
-- The information in this section applies to defining a UNIX job
-
-## Why Would You Use It?
-
-- **Operational value**: Provides additional details to support easy job definition
-
 ## UNIX Definition
 
 - **Job Action**: Defines the run process the job uses. A job action

@@ -32,16 +32,6 @@ To delete a schedule:
 4. Select **Yes** to confirm or **No** to cancel
 5. Select **Close ☒** to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- An existing Schedules in Enterprise Manager is no longer needed
-- The Schedules has been decommissioned or replaced and should be removed to keep the configuration clean
-
-## Why Would You Use It?
-
-- **Maintain a clean environment**: Removing unused Schedules definitions reduces clutter and prevents accidental use of outdated or obsolete configurations
-- Deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews
-
 ## Deleting Schedules from Daily Tables
 
 To learn how to perform this procedure, refer to [Deleting Daily Schedules](Deleting-Daily-Schedules.md).
@@ -82,10 +72,6 @@ To delete Schedules from Master Tables, complete the following steps:
 4. Select **Yes** to confirm or **No** to cancel
 5. Select **Close ☒** to close the **Schedule Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

@@ -24,16 +24,6 @@ Use this procedure to view and Adding Container Job Details in Solution Manager.
 
 To view, add, or edit a Container job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- You need to inspect or audit and Adding Container Job Details records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Adding Container Job Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Adding Container Job Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Viewing Container Job Details
 
 To view Container Job Details, complete the following steps:
@@ -89,10 +79,6 @@ To update Container Job Details, complete the following steps:
 
 For conceptual information, refer to [Container Jobs](../../../../../../../job-types/container.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

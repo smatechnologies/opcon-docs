@@ -50,14 +50,6 @@ The dialog contains the following fields:
 -   **Machine Properties tab**: Machine properties for this machine
 -   **Documentation tab**: Documentation captured on the **Machines** editor dialog
 
-## When Would You Use It?
-
-- You need to provide details about the selected machine using The **Machine Information** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides details about the selected machine
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

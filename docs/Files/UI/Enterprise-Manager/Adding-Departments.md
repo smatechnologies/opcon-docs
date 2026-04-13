@@ -31,21 +31,6 @@ To add a department, complete the following steps:
 5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Departments** toolbar
 6. Select **Close ☒** (to the right of the **Departments** tab) to close the screen
 
-## When Would You Use It?
-
-- You need to add Departments in Enterprise Manager
-- The environment is expanding and requires additional Departments to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Departments to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Departments and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Where do you access Departments in the Enterprise Manager?**

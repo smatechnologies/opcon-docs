@@ -45,15 +45,6 @@ All required fields are designated by a **red asterisk**.
 A loading animation appears when waiting for results from the SAP Business Warehouse system.
 :::
 
-## When Would You Use It?
-
-- An existing SAP R3 Job Details in Solution Manager requires changes
-- A process change or system update makes the current SAP R3 Job Details definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating SAP R3 Job Details in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## Updating SAP R3 Job Task Details
 
 To perform this procedure:

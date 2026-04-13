@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to edit Master Schedules in Solution Manager.
 
-## When Would You Use It?
-
-- An existing Master Schedules in Solution Manager requires changes
-- A change in process, system, or business requirement makes the current Master Schedules definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Master Schedules in Solution Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Master Schedules are recorded in the OpCon audit log, providing a complete modification history
-
 ## Administration
 
 ### Required Privileges
@@ -46,10 +36,6 @@ Select a schedule and select **Edit**. The Create Master Schedule page opens wit
 
 Make edits as needed, then select **Save** to save changes or **Back** to cancel.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

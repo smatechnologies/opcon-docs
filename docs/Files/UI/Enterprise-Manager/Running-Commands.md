@@ -30,14 +30,6 @@ The **Run Command** tab provides the following fields for the selected trigger:
 This notification type is disabled on Linux. Notifications defined before Release 20.0.0 will be disabled.
 :::
 
-## When Would You Use It?
-
-- A Commands needs to be run manually or on demand
-
-## Why Would You Use It?
-
-- **Automate execution**: Triggering Commands through OpCon provides consistent, logged execution with dependency checking and event handling
-
 ## FAQs
 
 **Q: What does running commands do?**

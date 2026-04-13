@@ -24,14 +24,6 @@ The **Matrix** view provides an alternative grid-format way to view and update j
 
 To display schedule and job information in the **Gantt**, **PERT**, **Bar Chart**, **Pie Chart**, and **Workload Chart** views, activate the **Send the current selection to other views** button on the **Matrix** toolbar. The **Listen for selection changes in other views** button must also be activated in each destination view.
 
-## When Would You Use It?
-
-- You need to provide an alternative grid-format way to view and update job information using The **Matrix** view
-
-## Why Would You Use It?
-
-- **Operational value**: Provides an alternative grid-format way to view and update job information
-
 ## Matrix Toolbar
 
 The **Matrix** view has a toolbar for performing actions. Select any icon to learn more about its functionality.

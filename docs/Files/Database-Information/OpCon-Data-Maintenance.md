@@ -27,14 +27,6 @@ Continuous suggests:
 - Daily backups of the "master", "msdb", and "distribution" databases. Used if the database server is lost; refer to [Job Details](#Job)
 - Monthly to yearly maintenance with supplemental scripts as needed; refer to [Supplemental Stored Procedures](#Suppleme)
 
-## When Would You Use It?
-
-- You need to maintain good performance across OpCon applications using Regular database maintenance helps
-
-## Why Would You Use It?
-
-- **OpCon Data**: Regular database maintenance helps maintain good performance across OpCon applications
-
 ## Environment Variables
 
 All database maintenance scripts use the SMA_SetDBMaintenanceScriptingVariables.cmd and SMA_SetDBEnvironmentScriptingVariables.cmd files to set up the processing environment. These files **must** be configured before any maintenance scripts will work. For settings details, refer to [Mirroring Information Worksheet](Database-Mirroring-Checklist.md#Mirrorin).

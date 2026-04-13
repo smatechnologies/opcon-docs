@@ -31,14 +31,6 @@ In the Script Repository, you can:
 - Create versions of a script to associate the correct version with a job
 - Delete a script or any versions of a script
 
-## When Would You Use It?
-
-- The **Script Repository** editor stores job scripts in the OpCon database
-
-## Why Would You Use It?
-
-- **Using Script**: The **Script Repository** editor stores job scripts in the OpCon database
-
 ## Script Repository Toolbar
 
 The toolbar resides at the top-right corner of the screen.

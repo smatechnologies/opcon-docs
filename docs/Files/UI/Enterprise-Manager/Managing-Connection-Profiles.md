@@ -33,21 +33,6 @@ Related Topics
 - [Deleting Profiles](Deleting-Profiles.md)
 - [Copying Profiles](Copying-Profiles.md)
 
-## When Would You Use It?
-
-- You need to review or update Connection Profiles settings in Enterprise Manager
-- Connection Profiles needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Connection Profiles management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Connection Profiles changes are captured in the OpCon audit system, supporting change management and compliance processes
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What does managing connection profiles involve?**

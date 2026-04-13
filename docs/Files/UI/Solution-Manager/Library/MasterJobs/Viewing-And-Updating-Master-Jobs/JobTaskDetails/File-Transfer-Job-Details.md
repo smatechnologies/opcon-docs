@@ -24,14 +24,6 @@ File Transfer job details define how OpCon moves files between machines using th
 
 To view, add, or edit a File Transfer job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-## When Would You Use It?
-
-- To view, add, or edit a File Transfer job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
-## Why Would You Use It?
-
-- **Viewing, Adding,**: To view, add, or edit a File Transfer job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges)
-
 ## Viewing File Transfer Job Details
 
 1. Go to **Library** > **Master Jobs**

@@ -22,16 +22,6 @@ doc_type: procedural
 
 Use this procedure to add Job Events in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to add Job Events in Enterprise Manager
-- The environment is expanding and requires additional Job Events to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Job Events to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Job Events and when
-
 ## Setting Job-Related Events
 
 To add a new job event:
@@ -117,10 +107,6 @@ To add a new job event:
 15. Select **Finish** to save the job event, or **Cancel** to discard
 16. Select **Close ☒** to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

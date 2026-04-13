@@ -38,14 +38,6 @@ Jamie has 30 jobs that use tape drives on a mainframe with only 10 physical tape
 **Result**: The SAM uses one TapeDrive resource per submitted job. If all 10 are in use, the SAM waits until one is available before submitting the next job.
 :::
 
-## When Would You Use It?
-
-- You need to work with A *resource*, a user-defined value with a name and a numeric limit, in OpCon
-
-## Why Would You Use It?
-
-- **Resources**: A *resource* is a user-defined value with a name and a numeric limit
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

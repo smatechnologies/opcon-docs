@@ -31,21 +31,6 @@ To add an access code, complete the following steps:
 5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Access Codes** toolbar
 6. Select **Close ☒** (to the right of the **Access Codes** tab) to close the screen
 
-## When Would You Use It?
-
-- You need to add Access Codes in Enterprise Manager
-- The environment is expanding and requires additional Access Codes to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Access Codes to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Access Codes and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: Where do you access Access Codes in the Enterprise Manager?**

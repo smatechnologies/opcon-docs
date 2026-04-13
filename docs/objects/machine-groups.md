@@ -29,14 +29,6 @@ The following fields apply to defining machine groups:
 - **Machine OS Type**: The OS Type for the machine group
 - **Machine Assignment**: All assigned machines for the group. Machines must have matching operating systems and communication protocols
 
-## When Would You Use It?
-
-- A *machine group* displays user-defined machines with common characteristics and usage
-
-## Why Would You Use It?
-
-- **Machine Groups**: A *machine group* displays user-defined machines with common characteristics and usage
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

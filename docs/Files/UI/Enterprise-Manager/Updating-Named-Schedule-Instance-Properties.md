@@ -36,15 +36,6 @@ To update a property, complete the following steps:
 10. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 11. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 
-## When Would You Use It?
-
-- An existing Named Schedule Instance Properties in Enterprise Manager requires changes
-- A process change or system update makes the current Named Schedule Instance Properties definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Named Schedule Instance Properties in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-
 ## FAQs
 
 **Q: How many steps does the Updating Named Schedule Instance Properties procedure involve?**

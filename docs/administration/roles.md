@@ -33,14 +33,6 @@ Role management fields:
 - **Inherit Privileges for All Scripts**: When enabled, the Role inherits privileges for all current and future Embedded Scripts. When cleared, the Role retains previously inherited Embedded Script privileges
 - **User Assignment**: User Accounts assigned to this Role. A User Account must have at least one assigned role to log in. Refer to [User Accounts](./user-accounts.md)
 
-## When Would You Use It?
-
-- You need to maintain privileges for multiple User Accounts simultaneously, simplifying administration using Roles
-
-## Why Would You Use It?
-
-- **Roles**: Roles maintain privileges for multiple User Accounts simultaneously, simplifying administration
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

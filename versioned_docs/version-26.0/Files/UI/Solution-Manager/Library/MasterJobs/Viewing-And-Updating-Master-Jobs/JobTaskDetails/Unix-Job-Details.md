@@ -1,30 +1,50 @@
+---
+title: Viewing, Adding, and Editing Unix Job Details
+description: "Unix job details define how OpCon executes a job on a UNIX agent, including start image, parameters, environment variables, and failure criteria."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing, Adding, and Editing Unix Job Details
+
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+Unix job details define how OpCon executes a job on a UNIX agent, including the start image, parameters, environment variables, and failure criteria. These details are configured in the Task Details panel of a Unix master job in Solution Manager.
 
 To view, add, or edit a Unix job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
 ## Viewing Unix Job Details
 
-1. To view a Unix job, go to **Library** > **Master Jobs**.
-1. Select a Unix job in the list.
-1. Select **Edit**.
-1. Expand the **Task Details** panel to expose its content.
+1. Go to **Library** > **Master Jobs**
+1. Select a Unix job in the list
+1. Select **Edit**
+1. Expand the **Task Details** panel
 
 ---
 
 ## Adding Unix Job Details
 
-1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md).
-1. Expand the **Task Details** section.
-1. In the **Machine Selection** frame, select from the **Machines or Machine Group** drop-down list the
-   **machine** where the LSAM is installed. If you wish instead to specify a machine group, then toggle the **Machines**
-   switch to _Machine Group_ then select the **machine group** from the
-   drop-down list. When toggled to Machine Group, the button will
-   appear green ![Green Enabled     Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch').
-1. In the **General** frame,
-   1. Select a **User Id** to use when running the job.
-   1. Select a **Job Action**.
+To add Unix Job Details, complete the following steps:
 
-For a Unix job, you can add the following job actions:
+1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md)
+1. Expand the **Task Details** section
+1. In the **Machine Selection** frame, select the **machine** where the agent is installed from the **Machines or Machine Group** list. To use a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group. When toggled, the switch appears green ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
+1. In the **General** frame:
+   1. Select a **User Id** to use when running the job
+   1. Select a **Job Action**
+
+Available job actions:
 
 - [Run Program](#Run-Program)
 - [File Arrival](#File-Arrival)
@@ -34,23 +54,19 @@ For a Unix job, you can add the following job actions:
 
 ## Editing Unix Job Details
 
-1. To edit Unix job details, go to **Library** > **Master Jobs**.
-1. Select a Unix job.
-1. Select **Edit**.
-1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button'))
-   when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button'))
-   when in **Admin** mode.
-1. Expand the **Task Details** panel.
-1. In the **Machine Selection** frame, select from the **Machines or Machine Group** drop-down list the
-   **machine** where the LSAM is installed. If you wish instead to specify a machine group, then toggle the **Machines**
-   switch to _Machine Group_ then select the **machine group** from the
-   drop-down list. When toggled to Machine Group, the button will
-   appear green ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch').
-1. In the **General** frame,
-   1. Select a **User Id** to use when running the job.
-   1. Select a **Job Action**.
+To edit Unix Job Details, complete the following steps:
 
-For a Unix job, you can edit the following job actions:
+1. Go to **Library** > **Master Jobs**
+1. Select a Unix job
+1. Select **Edit**
+1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button')) in **Read-only** mode and green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button')) in **Admin** mode
+1. Expand the **Task Details** panel
+1. In the **Machine Selection** frame, select the **machine** where the agent is installed from the **Machines or Machine Group** list. To use a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group. When toggled, the switch appears green ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
+1. In the **General** frame:
+   1. Select a **User Id** to use when running the job
+   1. Select a **Job Action**
+
+Available job actions:
 
 - [Run Program](#Run-Program)
 - [File Arrival](#File-Arrival)
@@ -62,245 +78,183 @@ For a Unix job, you can edit the following job actions:
 
 **In the Prerun frame:**
 
-The **Prerun** frame is used to define the information for a
-prerequisite process that runs immediately before the primary job.
+To run Program, complete the following steps:
 
-1. Enable the **Prerun** switch ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch').
-1. Enter the _command line detail_ for the prerun process. This should be
-   the full path to the executable file on the LSAM machine to execute immediately before the job specified in the Start Image. This
-   field permits up to 4000 characters.
+1. Enable the **Prerun** switch ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
+1. Enter the full path to the executable file on the agent machine. This field permits up to 4000 characters
 
 **In the Run frame:**
 
-The **Run** frame is used to define the information for running the
-primary job.
-
-1. Enter the _full path and file name of the program to execute_ in the UNIX
-   **Start Image**. This field permits up to 4000 characters.
-2. Enter any required _command-line parameters_. This field permits up to
-   4000 characters.
+1. Enter the full path and file name of the program in the UNIX **Start Image**. This field permits up to 4000 characters
+2. Enter any required command-line parameters. This field permits up to 4000 characters
 
 :::note
 OpCon concatenates the Start Image and Parameters and inserts a space between them before sending the job to the UNIX LSAM.
 :::
 
-3. Enter the _NICE Value_ to increase/decrease the priority of the job
-   and prerun (if present). Valid values range from -20 to 20 with a default of zero (0).
-
-:::note
-A lower NICE Value signifies a higher priority; therefore, entering a negative number raises the priority and a positive number lowers the priority.
-:::
+3. Enter the _NICE Value_ to adjust job priority. Valid values range from -20 to 20, defaulting to 0. Lower values mean higher priority; negative numbers raise priority and positive numbers lower it
 
 **In the Job Output Parsing frame:**
 
-The **Job Output Parsing** frame is used to define the search criteria
-for analyzing job output that matches the defined characters (string)
-and will result in the defined exit code.
-
-1. Click the green **Add** button (**+**) to define the parsing criteria.
-
-2. Select the **Search Operation** from the drop-down list.
-
-3. Enter the **String to Search**. Wildcard characters are supported in the
-   string. This field permits up to 255 characters.
-
-4. Select or enter the **Exit Code**.
+1. Select the green **Add** button (**+**)
+2. Select the **Search Operation** from the list
+3. Enter the **String to Search**. Wildcard characters are supported. This field permits up to 255 characters
+4. Select or enter the **Exit Code**
 
 :::note
-Remove any defined parsing criteria by clicking the **Delete** button at the end of the row.
+Remove parsing criteria by selecting the **Delete** button at the end of the row.
 :::
 
-5. Enter the **Custom Application Log Path**. Wildcard characters are
-   supported for specifying multiple logs.
+
+5. Enter the **Custom Application Log Path**. Wildcard characters are supported for specifying multiple logs
 
 **In the Failure Criteria frame:**
 
-The **Failure Criteria** frame is used to define the criteria for
-OpCon to determine the final status of the
-primary job.
+1. Select an **operator** then enter or select the **exit code integer**
 
-1. Select an **operator** then enter or select the **exit code integer**.
-
-2. Specify whether the defined criteria should be used to determine if the
-   job Failed or Finished OK.
+2. Specify whether the criteria determines if the job Failed or Finished OK
 
 Defining Multiple Failure Criteria:
 
-1. Use the **and/or** field to define multiple failure criteria. This field
-   defines the way the strings are evaluated together. You must define all "And" comparisons before the "Or" comparisons. Additionally, if the Comparison Operator on the previous group is "Equal To", then the _and/or_ value must be set to "Or".
-
-2. Use the **Fail on Core Dump** switch to configure how the
-   LSAM should report the status of the job when the job does or does not create a core file.
-
-- If the **Fail on Core Dump** switch is enabled ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
-  and a core dump is produced, then the job status will return a failed exit code.
-- If the **Fail on Core Dump** switch is enabled ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
-  and a core dump is not produced, then the job succeeds (assuming all other exit code processing is good).
+1. Use the **and/or** field to define multiple failure criteria. All "And" comparisons must be defined before "Or" comparisons. If the Comparison Operator on the previous group is "Equal To", the _and/or_ value must be set to "Or"
+2. Use the **Fail on Core Dump** switch to configure how the agent reports job status based on core file creation:
+   - Enabled + core dump produced: job returns a failed exit code
+   - Enabled + no core dump produced: job succeeds (assuming other exit code processing passes)
 
 :::note
-The final exit code processing has nothing to do with whether a core dump is produced or not. It simply is a final determination of whether the program produced an acceptable job status.
+Core dump detection is a final status determination and does not affect exit code processing.
 :::
 
-Define up to five different signal failure criteria. If any signal
-failure criterion is TRUE when a job finishes,
-OpCon reports the job as Failed.
+Define up to five signal failure criteria. If any criterion is TRUE when a job finishes, OpCon reports the job as Failed.
 
 **In the Environment Variables frame:**
 
-The **Environment Variables** frame is used to define the environment
-variables for the job to use.
+1. Select the green **Add** button (**+**)
+2. Enter a _name_ in the **Name** field
+3. Enter a _value_ in the **Value** field. Remove a variable by selecting the **Delete** button at the end of the row
 
-1. Click the green **Add** button (**+**) to define the environment
-   variables.
-
-2. Enter a _name_ in the **Name** field.
-
-3. Enter a _value_ in the **Value** field. Remove any defined environment
-   variable by clicking the **Delete** button at the end of the row.
-
-4. Click the **OK** button to add the name/value.
+4. Select the **OK** button
 
 :::note
-Click the **Undo** button if you wish to undo your changes for any reason.
+Select the **Undo** button to discard your changes.
 :::
 
-5. Click the **Save** button.
+5. Select the **Save** button
 
 ## File Arrival
 
-1. Enter the _file path and name of the file to detect_ in the **File
-   Name** field. UNIX wildcard characters are supported in the file
-   name (e.g., /usr/local/abc\*.txt). This field permits up to 4000
-   characters.
-1. Specify whether or not to search the sub-directory under the
-   specified path by utilizing the **Sub-directory Search** toggle
-   switch. When enabled, the switch will appear green.
-1. Specify the time frame (_Start Time_ and _End Time_) within which
-   the file must arrive in the directory. Either manually input the
-   time frame or utilize the input field selectors to make your
-   selections.
-1. Specify the amount of time in seconds (_Duration_) that the file
-   size must remain stable. Either manually input the number of seconds
-   or utilize the input field selector(s) to make your selection.
-1. Select an **operator** then enter or select the **exit code
-   integer**.
-1. Specify whether the defined criteria should be used to determine if
-   the job Failed or Finished OK.
-1. Click the **Save** button.
+1. Enter the file path and name in the **File Name** field. UNIX wildcard characters are supported (e.g., /usr/local/abc\*.txt). This field permits up to 4000 characters
+1. Enable the **Sub-directory Search** toggle to search subdirectories under the specified path. When enabled, the switch appears green
+1. Specify the _Start Time_ and _End Time_ within which the file must arrive. Enter manually or use the input field selectors
+1. Specify the _Duration_ in seconds that the file size must remain stable. Enter manually or use the input field selector(s)
+1. Select an **operator** then enter or select the **exit code integer**
+1. Specify whether the criteria determines if the job Failed or Finished OK
+1. Select the **Save** button
 
 ## Embedded Script
 
-For conceptual information, refer to [Embedded Scripts](../../../../../../../automation-concepts/embedded-scripts.md) in the
-**Concepts** online help.
+For conceptual information, refer to [Embedded Scripts](../../../../../../../automation-concepts/embedded-scripts.md) in the **Concepts** online help.
 
 :::note
-If you do not have the Script Privilege for the script, then you will not be able to see the task details or edit the daily job definition (the Lock button will be disabled).
+If you do not have the Script Privilege for the script, you will not be able to see the task details or edit the daily job definition (the Lock button will be disabled).
 :::
 
 **In the Embedded Script frame:**
 
-The **Embedded Script** frame is used to associate an embedded script to
-run with the job.
-
-1. Select the **script** that you wish to associate with the job. The
-   **Type** field will populate to show the type of script selected.
-
-2. Select the specific **version (or revision) of the script** to run for
-   this job. The **Comments** field will populate with any notes provided
-   about the script.
+1. Select the **script** to associate with the job. The **Type** field populates with the script type
+2. Select the **version (or revision) of the script** to run. The **Comments** field populates with any notes about the script
 
 :::note
-Selecting the "Latest" version means that just before the job runs, the latest version of the script will be used.
+Selecting "Latest" uses the most recent version of the script at the time the job runs.
 :::
 
 Viewing Scripts:
 
-To view the details about a script, click the **Preview** button
-(![Daily Job Definition Preview Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-View-Script.png 'Daily Job Definition Preview Button')).
-Once clicked, the **Script Viewer** pop-up window will display
-information (e.g., name, description, type, version, version comment,
-author, created, updated) about and the contents of the selected script.
+To view script details, select the **Preview** button (![Daily Job Definition Preview Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-View-Script.png 'Daily Job Definition Preview Button')). The **Script Viewer** pop-up displays information (name, description, type, version, version comment, author, created, updated) and the script contents.
 
 :::note
-The **Preview** button will only be enabled for embedded scripts for which the user is a member of a role with privileges to view the contents. A user must be a member of a role with All Administrative Functions, All Function Privileges, View Embedded Script Contents privilege, or must be in the ocadm role to view the contents.
-:::
-
-:::note
-If you do not have the View Embedded Script Contents privilege, then you will not be able to see any of the script contents in **Preview** mode.
+The **Preview** button is only enabled for users in a role with All Administrative Functions, All Function Privileges, View Embedded Script Contents privilege, or the ocadm role. Without the View Embedded Script Contents privilege, script contents are not visible in **Preview** mode.
 :::
 
 **In the Runner frame:**
 
-The **Runner** frame is used to configure the run definition that is
-used to execute the script.
-
-1. Select the **runner** (interpreter) that will be used to run the script.
-   The **Run Command Template** field will populate to show the syntax for
-   the runner.
-
-2. Enter any _argument(s)_ that you wish to pass to the script at runtime.
-   This field permits up to 255 characters.
+1. Select the **runner** (interpreter) to use. The **Run Command Template** field populates with the runner syntax
+2. Enter any _arguments_ to pass to the script at runtime. This field permits up to 255 characters
 
 :::note
-When defining the argument, keep in mind the that the equal sign (=) is a restricted character.
+The equal sign (=) is a restricted character when defining arguments.
 :::
 
 **In the Failure Criteria frame:**
 
-The **Failure Criteria** frame is used to define the criteria for
-OpCon to determine the final status of the
-job.
-
-1. Select an **operator** then enter or select the **exit code integer**.
-
-2. Specify whether the defined criteria should be used to determine if the
-   job Failed or Finished OK.
+1. Select an **operator** then enter or select the **exit code integer**
+2. Specify whether the criteria determines if the job Failed or Finished OK
 
 Defining Multiple Failure Criteria:
 
-1. Use the **and/or** field to define multiple failure criteria. This field
-   defines the way the strings are evaluated together. You must define all "And" comparisons before the "Or" comparisons. Additionally, if the Comparison Operator on the previous group is "Equal To", then the _and/or_ value must be set to "Or".
-
-2. Use the **Fail on Core Dump** switch to configure how the
-   LSAM should report the status of the job when the job does or does not create a core file.
-
-- If the **Fail on Core Dump** switch is enabled ![Green Enabled     Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
-  and a core dump is produced, then the job status will return a failed exit code.
-- If the **Fail on Core Dump** switch is enabled ![Green Enabled     Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png 'Green Enabled Switch')
-  and a core dump is not produced, then the job succeeds (assuming all other exit code processing is good).
+1. Use the **and/or** field to define multiple failure criteria. All "And" comparisons must be defined before "Or" comparisons. If the Comparison Operator on the previous group is "Equal To", the _and/or_ value must be set to "Or"
+2. Use the **Fail on Core Dump** switch to configure how the agent reports job status based on core file creation:
+   - Enabled + core dump produced: job returns a failed exit code
+   - Enabled + no core dump produced: job succeeds (assuming other exit code processing passes)
 
 :::note
-The final exit code processing has nothing to do with whether a core dump is produced or not. It simply is a final determination of whether the program produced an acceptable job status.
+Core dump detection is a final status determination and does not affect exit code processing.
 :::
 
-Define up to five different signal failure criteria. If any signal
-failure criterion is TRUE when a job finishes,
-OpCon reports the job as Failed.
+Define up to five signal failure criteria. If any criterion is TRUE when a job finishes, OpCon reports the job as Failed.
 
 **In the Environment Variables frame:**
 
-The **Environment Variables** frame is used to define the environment
-variables for the job to use.
+1. Select the green **Add** button (**+**)
+2. Enter a _name_ in the **Name** field
+3. Enter a _value_ in the **Value** field. Remove a variable by selecting the **Delete** button at the end of the row
 
-1. Click the green **Add** button (**+**) to define the environment
-   variables.
-
-2. Enter a _name_ in the **Name** field.
-
-3. Enter a _value_ in the **Value** field. Remove any defined environment
-   variable by clicking the **Delete** button at the end of the row.
-
-4. Click the **OK** button to add the name/value.
+4. Select the **OK** button
 
 :::note
-Click the **Undo** button if you wish to undo your changes for any reason.
+Select the **Undo** button to discard your changes.
 :::
 
-5. Click the **Save** button.
+5. Select the **Save** button
 
 ---
 
 ### More Information
 
-For conceptual information, refer to [Unix Jobs](../../../../../../../job-types/unix.md) in
-the **Concepts** online help.
+For conceptual information, refer to [Unix Jobs](../../../../../../../job-types/unix.md) in the **Concepts** online help.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: How many steps does the Viewing, Adding, and Editing Unix Job Details procedure involve?**
+
+The Viewing, Adding, and Editing Unix Job Details procedure involves 54 steps. Complete all steps in order and save your changes.
+
+**Q: What does Viewing, Adding, and Editing Unix Job Details cover?**
+
+This page covers Viewing Unix Job Details, Adding Unix Job Details, Editing Unix Job Details.
+
+**Q: What does the NICE Value field control for a Unix job, and what is the valid range?**
+
+The NICE Value adjusts the job's execution priority on the UNIX system. Valid values range from -20 to 20, with 0 as the default. Lower (more negative) values give the job higher priority; higher (more positive) values give it lower priority.
+
+## Glossary
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts can be assigned to Windows jobs and run at runtime without requiring the script file to exist on the target machine.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

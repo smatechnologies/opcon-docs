@@ -38,21 +38,6 @@ Supported platforms:
 - [File Transfer](Updating-File-Transfer-Job-Details.md)
 - [MCP](Updating-mcp-Job-Details.md)
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Job Task Details records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Job Task Details state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Job Task Details records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What information does the and Updating Job Task Details view display?**

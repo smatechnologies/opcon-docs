@@ -32,16 +32,6 @@ any defined resource dependencies related to the selected job.
     will appear to the right of the panel name to indicate the number of
     properties that have been defined.
 
-## When Would You Use It?
-
-- You need to inspect or audit and Updating Resource Dependencies records in Solution Manager
-- An audit, compliance review, or operational check requires inspection of current and Updating Resource Dependencies state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting and Updating Resource Dependencies records in Solution Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Solution Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
 ## Adding or Updating Resource Dependencies
 
 In **Admin** mode, resource dependencies can be updated. For conceptual
@@ -145,10 +135,6 @@ Select the **Undo** button if you wish to undo your changes for any reason.
 
 Select the **Save** button.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

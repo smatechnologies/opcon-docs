@@ -22,14 +22,6 @@ doc_type: procedural
 
 The **Job Master** editor is used to define and maintain OpCon jobs.
 
-## When Would You Use It?
-
-- You need to define and maintain OpCon jobs using The **Job Master** editor is used to
-
-## Why Would You Use It?
-
-- **Using Job**: The **Job Master** editor is used to define and maintain OpCon jobs
-
 ## Job Master Tabs
 
 The editor lists jobs and uses tabs to provide details for each job, including instance definitions, frequencies, events, threshold/resource updates, dependencies, documentation, tags, and notification triggers. Select any tab to learn more about its functionality.

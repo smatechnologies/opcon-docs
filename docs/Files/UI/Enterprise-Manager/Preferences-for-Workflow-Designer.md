@@ -39,14 +39,6 @@ To set the preferences, complete the following steps:
 13. Select **Apply** to save changes
 14. Select **OK** to save and close the **Preferences** dialog
 
-## When Would You Use It?
-
-- To set the preferences:
-
-## Why Would You Use It?
-
-- **Setting Preferences**: To set the preferences:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

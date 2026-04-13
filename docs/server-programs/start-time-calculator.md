@@ -36,14 +36,6 @@ SMA Start Time Calculator performs calculations as follows:
 Start times change continuously based on many factors (offsets, absolute/relative factors, dependent job start times, job run times, etc.). The Start Time Calculator is process intensive and must be configured for your data center's requirements. To set the refresh interval, refer to the General Settings for the SMAStartTimeCalculator.ini file below.
 :::
 
-## When Would You Use It?
-
-- The SMA Start Time Calculator periodically recalculates estimated start times for all active jobs in the OpCon Daily tables, then updates the database
-
-## Why Would You Use It?
-
-- **SMA Start**: The SMA Start Time Calculator periodically recalculates estimated start times for all active jobs in the OpCon Daily tables, then updates the database
-
 ## Configuration
 
 The SMAStartTimeCalculator.ini file resides in the \<Configuration Directory\>\\SAM\\ folder and controls basic service and logging behavior.

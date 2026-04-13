@@ -24,14 +24,6 @@ In the Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Main
 
 Unlike Editors, Views can be [dragged out of the workspace to another separate area](#Moving) on their own.
 
-## When Would You Use It?
-
-- You need to provide visual representations supporting the editors using In the Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status)
-
-## Why Would You Use It?
-
-- **Operational value**: Provide visual representations supporting the editors
-
 ## Opening Navigation Views
 
 To open Navigation Views, complete the following steps:

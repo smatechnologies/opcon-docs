@@ -38,16 +38,6 @@ To edit a script version, complete the following steps:
 10. Select **Close ☒** to close the **Script Repository** screen
 :::
 
-## When Would You Use It?
-
-- An existing Script Versions in Enterprise Manager requires changes
-- A change in process, system, or business requirement makes the current Script Versions definition outdated
-
-## Why Would You Use It?
-
-- **Keep definitions current**: Updating Script Versions in Enterprise Manager ensures changes apply to future builds without disrupting currently running schedules
-- Changes to Script Versions are recorded in the OpCon audit log, providing a complete modification history
-
 ## FAQs
 
 **Q: Do edits to script versions take effect immediately?**

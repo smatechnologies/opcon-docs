@@ -60,14 +60,6 @@ The dialog contains the following information:
 - **Tags Tab**: Displays all job and frequency tags associated with the selected job
 - **Configuration Tab**: Allows reconfiguration of platform-specific details and review of platform information for the selected job. Refer to [Adding Job Configuration Parameters](#Adding)
 
-## When Would You Use It?
-
-- You need to provide details about the daily copy of a selected job using The **Job Information** dialog
-
-## Why Would You Use It?
-
-- **Operational value**: Provides details about the daily copy of a selected job
-
 ## Getting Job information
 
 To get job information, complete the following steps:

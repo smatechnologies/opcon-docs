@@ -37,14 +37,6 @@ To define a rule, complete the following steps:
 9. Repeat Steps 4–8 until all desired rule sequences are added
 10. Select **Save** in the **Escalation Rule Add/Edit** dialog
 
-## When Would You Use It?
-
-- A new Escalation Rules definition needs to be established in Enterprise Manager
-
-## Why Would You Use It?
-
-- **Establish reusable definitions**: Defining Escalation Rules in OpCon creates a reusable reference that schedules, jobs, and events can share
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

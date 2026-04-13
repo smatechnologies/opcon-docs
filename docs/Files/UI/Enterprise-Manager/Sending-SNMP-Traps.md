@@ -32,14 +32,6 @@ The **SNMP** tab provides the following fields for defining an SNMP trap notific
 This notification type is disabled on Linux. Notifications defined before Release 20.0.0 will be disabled.
 :::
 
-## When Would You Use It?
-
-- You need to provide the following fields for defining an SNMP trap notification: using The **SNMP** tab
-
-## Why Would You Use It?
-
-- **Operational value**: Provides the following fields for defining an SNMP trap notification: - Event ID (Optiona
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

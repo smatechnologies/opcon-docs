@@ -38,21 +38,6 @@ To add a role, complete the following steps:
 7. Select ![Save button](../../../Resources/Images/EM/EMsave.png "Save button") **Save** on the **Roles** toolbar
 8. Select **Close ☒** (to the right of the **Roles** tab) to close the **Roles** screen
 
-## When Would You Use It?
-
-- You need to add Roles in Enterprise Manager
-- The environment is expanding and requires additional Roles to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Roles to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Roles and when
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: What information is required to add roles?**

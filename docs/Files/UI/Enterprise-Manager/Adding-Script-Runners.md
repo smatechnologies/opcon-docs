@@ -65,16 +65,6 @@ To add a script runner, complete the following steps:
 7. Select **Save** in the **Add Runner** dialog
 8. Select **Close ☒** (to the right of the **Script Runners** tab) to close the **Script Runners** screen
 
-## When Would You Use It?
-
-- You need to add Script Runners in Enterprise Manager
-- The environment is expanding and requires additional Script Runners to support new automation workflows
-
-## Why Would You Use It?
-
-- **Extend automation scope**: Adding Script Runners to OpCon brings additional resources under centralized scheduling, monitoring, and event processing
-- All additions are tracked in the OpCon audit log, recording who added the Script Runners and when
-
 ## FAQs
 
 **Q: How do you save a new script runners record?**

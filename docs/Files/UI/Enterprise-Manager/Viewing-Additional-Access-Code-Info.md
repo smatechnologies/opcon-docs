@@ -29,21 +29,6 @@ To view Additional Access Code Information in the Enterprise Manager, complete t
 3.  Select the ![Cross References icon](../../../Resources/Images/EM/EMcrossref.png "Cross References icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
 4.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button on the toolbar to view audit records for changes to the access code, then select **Close**
 
-## When Would You Use It?
-
-- You need to inspect or audit Additional Access Code Information records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Additional Access Code Information state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Additional Access Code Information records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Viewing Additional Access Code Information procedure involve?**

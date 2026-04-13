@@ -38,14 +38,6 @@ The **SPO** dialog lets you choose between an AL Report or CO Report notificatio
 - **Instance** (Required): Any valid CO instance attribute. Case-sensitive. Maximum 250 characters
 - **Command** (Optional): Any valid CO command attribute. Maximum 250 characters
 
-## When Would You Use It?
-
-- Use this feature when enabled. - Text (Optional): User-defined message up to 250 characters
-
-## Why Would You Use It?
-
-- **SPO Event**: The **SPO** dialog lets you choose between an AL Report or CO Report notification:
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

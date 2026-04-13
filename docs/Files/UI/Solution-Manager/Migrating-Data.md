@@ -38,14 +38,6 @@ To perform data migration, complete the following steps:
 During migration, you can export migration settings for future use and/or download a full report.
 :::
 
-## When Would You Use It?
-
-- Users who upgraded from an earlier release of OpCon to OpCon 20.00.00 or higher may need to migrate their data before accessing the system
-
-## Why Would You Use It?
-
-- **Migrating Data**: Users who upgraded from an earlier release of OpCon to OpCon 20.00.00 or higher may need to migrate their data before accessing the system
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

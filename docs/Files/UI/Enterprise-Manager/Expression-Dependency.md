@@ -28,14 +28,6 @@ The **Expression Dependency** tab lets you define and maintain job dependencies 
 
 For conceptual information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md) in the **Concepts** online help. For examples and use cases, refer to the [Use Cases](../../../reference/property-expressions-syntax.md#Use) section.
 
-## When Would You Use It?
-
-- You need to define and maintain job dependencies on expressions using the Property Expressions API using The **Expression Dependency** tab lets you
-
-## Why Would You Use It?
-
-- **Expression Dependency**: The **Expression Dependency** tab lets you define and maintain job dependencies on expressions using the Property Expressions API
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

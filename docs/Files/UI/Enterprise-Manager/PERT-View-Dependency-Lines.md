@@ -33,14 +33,6 @@ In **[PERT](Using-PERT-View.md)** view, each dependency type is represented by a
 ||Resource Dependency: A solid gold line with arrow. The job at the arrow end has a requirement for the resource where the line starts.|
 ||Threshold Dependency: A solid royal blue line with arrow. The job at the arrow end has a dependency on the threshold where the line starts.|
 
-## When Would You Use It?
-
-- In **[PERT](Using-PERT-View.md)** view, each dependency type is represented by a different line style and image at the end
-
-## Why Would You Use It?
-
-- **PERT View**: In **[PERT](Using-PERT-View.md)** view, each dependency type is represented by a different line style and image at the end
-
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |

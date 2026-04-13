@@ -1,73 +1,93 @@
 ---
 lang: en-us
-title: Workflow Designer Right-Click Menus
 viewport: width=device-width, initial-scale=1.0
+title: Workflow Designer right-click Menus
+description: "Right-click on a node or dependency line in the Workflow Designer to display the following menu items: - Open SubSchedule: Changes the display to show the subschedule for the selected Container job -."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
-#  Workflow Designer Right-Click Menus
+#  Workflow Designer Right-click Menus
 
-You can right-click on a node or dependency line displayed in the
-**Workflow Designer** layout to display the following menu items:
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
 
--   **Open SubSchedule**: Changes the display to show the subschedule
-    for the selected Container job.
+## What Is It?
 
--   **Edit**: After selecting one node or dependency line, selecting
-    **Edit** will open the appropriate editor. You must have the
-    required privileges for the node to perform this function.
+Right-click on a node or dependency line in the **Workflow Designer** to display the following menu items:
 
--   **Delete**: After selecting a node, selecting **Delete** or pressing
-    **Delete** on the keyboard will delete the item. You must have the
-    required privileges for the node to perform the following functions:
-    -   Once the job is selected, selecting the **Delete** item deletes
-        the current job from the **Job Master**. It will, therefore, no
-        longer be visible in the **Workflow Designer** view or in the
-        **Job Master** editor.
-    -   Once a threshold or resource is selected, selecting the
-        **Delete** item deletes the threshold and/or resource from the
-        map, but it does not delete the definition from Administration.
-        A threshold or resource cannot be deleted if there are
-        dependencies involved.
+-   **Open SubSchedule**: Changes the display to show the subschedule for the selected Container job
 
--   **Find**: Opens the **Quick Search** dialog to find any node on the
-    layout. This is the same function that is available on the
-    **Workflow Designer** toolbar.
+-   **Edit**: Opens the appropriate editor for the selected node or dependency line. Requires the appropriate privileges
+
+-   **Delete**: Deletes the selected item. Requires the appropriate privileges
+    -   Deleting a job removes it from the **Job Master** and the **Workflow Designer** view
+    -   Deleting a threshold or resource removes it from the map but not from Administration. A threshold or resource cannot be deleted if dependencies are involved
+
+-   **Find**: Opens the **Quick Search** dialog to find any node. Also available on the **Workflow Designer** toolbar
 
 -   **Isolate**: Presents the following options:
-    -   **Previous Dependencies**: This option keeps visible the
-        selected node and all of the dependency chain leading up to the
-        node. All other nodes and dependencies are faded out in the
-        display area.
-    -   **Subsequent Dependencies**: This option keeps visible the
-        selected node and all of the dependency chain after up to the
-        node. All other nodes and dependencies are faded out in the
-        display area.
-    -   **Dependency Chain**: This option keeps visible the entire
-        dependency chain connected to the selected node. All other nodes
-        and dependencies are faded out in the display area.
-    -   **Shortest Path**: This option shows the shortest path among all
-        of the dependency chains to the job selected.
+    -   **Previous Dependencies**: Shows the selected node and all preceding dependencies; fades out all others
+    -   **Subsequent Dependencies**: Shows the selected node and all subsequent dependencies; fades out all others
+    -   **Dependency Chain**: Shows the entire dependency chain connected to the selected node; fades out all others
+    -   **Shortest Path**: Shows the shortest path among all dependency chains to the selected job
 
 -   **Layout**: Presents the following options:
-    -   **Top to Bottom**: Lays out the thresholds, resources, and jobs
-        using a top to bottom flow.
-    -   **Left to Right**: Lays out the thresholds, resources, and jobs
-        using a left to right flow.
-    -   **Grid**: Lays out the thresholds, resources, and jobs using a
-        grid.
+    -   **Top to Bottom**: Lays out nodes using a top-to-bottom flow
+    -   **Left to Right**: Lays out nodes using a left-to-right flow
+    -   **Grid**: Lays out nodes using a grid
 
--   **Zoom in**: Zooms in 10% at a time to a maximum of 200%.
+-   **Zoom in**: Zooms in 10% at a time to a maximum of 200%
 
--   **Zoom out**: Zooms out 10% at a time to a minimum of 10%.
+-   **Zoom out**: Zooms out 10% at a time to a minimum of 10%
 
--   **Print**: Prints the full map image. This is the same function that
-    is available on the **Workflow Designer** toolbar.
+-   **Print**: Prints the full map image. Also available on the **Workflow Designer** toolbar
 
--   **Take Screenshot**: Provides the function to take a screen shot and
-    save an image of the current **Workflow Designer** layout. This is
-    the same function that is available on the **Workflow Designer**
-    toolbar.
+-   **Take Screenshot**: Saves an image of the current **Workflow Designer** layout. Also available on the **Workflow Designer** toolbar
 :::
 
- 
+## Configuration Options
 
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+| Open SubSchedule | Changes the display to show the subschedule for the selected Container job | — | — |
+| Isolate | Presents the following options: | — | — |
+| Layout | Presents the following options: | — | — |
+| Zoom in | Zooms in 10% at a time to a maximum of 200% | — | — |
+| Zoom out | Zooms out 10% at a time to a minimum of 10% | — | — |
+| Take Screenshot | Saves an image of the current **Workflow Designer** layout. | — | — |
+## FAQs
+
+**Q: What does Workflow Designer Right-click Menus do?**
+
+title: Workflow Designer Right-click Menus
+
+**Q: Where can you find Workflow Designer Right-click Menus in OpCon?**
+
+Access Workflow Designer Right-click Menus through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+
+## Glossary
+
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+
+**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+
+**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

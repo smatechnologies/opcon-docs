@@ -29,14 +29,6 @@ The Look up Notification Sources dialog in Solution Manager performs a reverse l
 3. View the **Results** table, which shows the Notification ID, Notification Type, Group Type, Group Name, and Trigger information
 4. Select **Close** to close the dialog
 
-## When Would You Use It?
-
-- You need to configure or manage Look up Notification Sources in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Look up Notification Sources through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## FAQs
 
 **Q: How many steps does the Look up Notification Sources procedure involve?**

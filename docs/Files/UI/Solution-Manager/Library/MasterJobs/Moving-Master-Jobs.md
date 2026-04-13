@@ -22,14 +22,6 @@ doc_type: procedural
 
 Use this procedure to move Master Jobs in Solution Manager.
 
-## When Would You Use It?
-
-- You need to configure or manage Moving Master Jobs in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Moving Master Jobs through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Administration
 
 ### Required Privileges

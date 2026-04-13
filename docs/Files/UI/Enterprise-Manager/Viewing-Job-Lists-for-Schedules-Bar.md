@@ -37,21 +37,6 @@ To view the job list, complete the following steps:
 9.  Select **OK** to close the **Jobs list** dialog
 :::
 
-## When Would You Use It?
-
-- You need to inspect or audit Job Lists for Schedules records in Enterprise Manager
-- An audit, compliance review, or operational check requires inspection of current Job Lists for Schedules state
-
-## Why Would You Use It?
-
-- **Improve operational visibility**: Inspecting Job Lists for Schedules records in Enterprise Manager supports informed decision-making and provides an audit trail for compliance reviews
-- Information in Enterprise Manager reflects the live database state, ensuring that the data reviewed is current at the time of inspection
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-
 ## FAQs
 
 **Q: How many steps does the Viewing Job Lists for Schedules procedure involve?**

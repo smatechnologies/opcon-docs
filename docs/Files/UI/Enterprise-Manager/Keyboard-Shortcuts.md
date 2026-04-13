@@ -22,14 +22,6 @@ doc_type: reference
 
 Enterprise Manager supports keyboard shortcuts that speed up navigation and common tasks. Shortcuts are available at the application level (such as F1 for help) and within individual views and editors.
 
-## When Would You Use It?
-
-- You need to configure or manage Keyboard Shortcuts in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Keyboard Shortcuts through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Enterprise Manager
 
 Press **F1** to open contextual help for the current location. From the main screen, this opens the first page of the Enterprise Manager Guide.

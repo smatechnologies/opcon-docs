@@ -24,14 +24,6 @@ doc_type: conceptual
 
 Use this procedure to forecast Job Frequencies in the Enterprise Manager.
 
-## When Would You Use It?
-
-- You need to configure or manage Forecasting Job Frequencies in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Forecasting Job Frequencies through OpCon provides consistent oversight and a full audit trail for all changes
-
 ## Forecasting a Single Job Frequency
 
 To forecast a job frequency, complete the following steps:

@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: System Requirements
 description: "Getting Started with OpCon covers the hardware and software requirements that must be met before installation, along with key naming conventions and initial configuration considerations for the OpCon server."
 product_area: Installation
 audience: System Administrator
@@ -12,7 +12,14 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-# Getting Started
+# System Requirements
+
+**Theme:** Overview  
+**Who Is It For?** System Administrator
+
+## What Is It?
+
+Getting Started with OpCon covers the hardware and software requirements that must be met before installation, along with key naming conventions and initial configuration considerations for the OpCon server.
 
 **Theme:** Overview  
 **Who Is It For?** System Administrator
@@ -24,14 +31,6 @@ Getting Started with OpCon covers the hardware and software requirements that mu
 :::warning
 Do not use the underscore character (\_) in the naming convention of the dedicated OpCon server name (e.g., myservername_2017). Underscores in the server name directly affect OpCon license validation.
 :::
-
-## When Would You Use It?
-
-- You need to configure or manage Getting Started in OpCon
-
-## Why Would You Use It?
-
-- **Centralized control**: Managing Getting Started through OpCon provides consistent oversight and a full audit trail for all changes
 
 ## Hardware requirements
 

@@ -27,14 +27,6 @@ The SMA Resource Monitor User Interface includes the following tools:
 - [Find](#Find)
 - [Filter](#Filter6)
 
-## When Would You Use It?
-
-- The SMA Resource Monitor User Interface includes the following tools:
-
-## Why Would You Use It?
-
-- **SMA Resource**: The SMA Resource Monitor User Interface includes the following tools:
-
 ## Copy
 
 Selecting **Copy** from the main screen opens an action pane:

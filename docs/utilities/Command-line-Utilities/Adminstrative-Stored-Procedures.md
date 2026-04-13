@@ -35,14 +35,6 @@ Continuous provides scripts and supplemental SQL stored procedures to aid in man
 A SQL user without administrator privileges must be a member of the "opconspuser" role to use the administrative stored procedures.
 :::
 
-## When Would You Use It?
-
-- You need to provide scripts and supplemental SQL stored procedures to aid in managing OpCon: using Continuous
-
-## Why Would You Use It?
-
-- **Operational value**: Provides scripts and supplemental SQL stored procedures to aid in managing OpCon: - SMA_C
-
 ## SMA_CHGMACHINE
 
 SMA_CHGMACHINE increases job-processing performance by changing a heavily used agent machine's ID to 1. Because the SAM operates in a processing loop, the machine with an ID of 1 receives slightly more processing time. Less critical machines are often tested first with OpCon, resulting in more critical machines having higher IDs. This stored procedure allows the OpCon administrator to move a critical production agent to the beginning of the processing loop.

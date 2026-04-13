@@ -22,16 +22,6 @@ doc_type: procedural
 
 The **Machine Groups** editor defines and maintains OpCon Machine Groups. It lists machine groups with their machine type and lets you view and edit assigned and unassigned machines. For conceptual information, refer to [Machine Groups](../../../objects/machine-groups.md) in the **Concepts** online help.
 
-## When Would You Use It?
-
-- You need to review or update Machine Groups settings in Enterprise Manager
-- Machine Groups needs to be reviewed as part of routine system maintenance or a compliance audit
-
-## Why Would You Use It?
-
-- **Reduce administrative overhead**: Centralizing Machine Groups management in Enterprise Manager reduces the time needed to locate and update settings across the environment
-- All Machine Groups changes are captured in the OpCon audit system, supporting change management and compliance processes
-
 ## Machine Groups Toolbar
 
 The **Machine Groups** editor has a toolbar for managing machine groups. Select any icon on the toolbar below to learn more about its functionality.
@@ -48,10 +38,6 @@ Related Topics
 - [Adding Machine Groups to Jobs details](Adding-Machine-Groups-to-Job-Details.md)
 - [Deleting Machine Groups](Deleting-Machine-Groups.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 
 ## FAQs
 

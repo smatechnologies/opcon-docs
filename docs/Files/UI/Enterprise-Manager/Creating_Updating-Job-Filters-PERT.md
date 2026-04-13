@@ -33,14 +33,6 @@ To create or update a job filter, complete the following steps:
 5.  Select **OK** to save the job filter changes, or select **Cancel** to discard the changes
 :::
 
-## When Would You Use It?
-
-- To create or update a job filter:
-
-## Why Would You Use It?
-
-- **Creating/Updating Job**: To create or update a job filter:
-
 ## FAQs
 
 **Q: How many steps does the Creating/Updating Job Filters procedure involve?**

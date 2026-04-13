@@ -1,4 +1,24 @@
+---
+title: Using Machine Groups
+description: "There are several scenarios for automation that benefit from using Machine Groups in OpCon."
+product_area: Automation Concepts
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - Automation Engineer
+  - Business Analyst
+  - Jobs
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Using Machine Groups
+
+**Theme:** Configure  
+**Who Is It For?** Automation Engineer, Business Analyst
+
+## What Is It?
 
 There are several scenarios for automation that benefit from using
 Machine Groups in OpCon. The following
@@ -19,7 +39,7 @@ jobs will use this Machine Group with the "Run on Least Tasked
 Machine" option defined. In this case, every job will run on this group
 as opposed to running on one specific machine. If the machine in that
 group has a hardware failure, another machine with an
-LSAM could be placed in that group to take over the processing until the primary machine is repaired. In this case there
+agent could be placed in that group to take over the processing until the primary machine is repaired. In this case there
 could be hundreds of jobs being affected by a machine. If these jobs run
 on a Machine Group, the administrator will only need to add a working
 machine to the group to take over processing. If the jobs had been
@@ -31,7 +51,7 @@ update hundreds of individual jobs to use the new machine.
 The following scenario applies Machine Groups to Jobs for Workload
 Balancing by selecting the option to "Run on Least Tasked Machine":
 
-Multiple jobs exist, the jobs are able to be processed on more than one
+Multiple jobs exist, the jobs can be processed on more than one
 machine, and there is no specific priority order for which machine to
 process the jobs on. This usually occurs when the machines in question
 have access to shared data. The machines are placed in a machine group,
@@ -43,7 +63,7 @@ to determine which machine in the group to use for execution.
 The Workload Balancing algorithm works as follows:
 OpCon allows the user to specify a maximum
 number of concurrent jobs to run on each individual machine with an
-LSAM. At runtime, if a job has been designated to run on a group of machines, OpCon starts the job on
+agent. At runtime, if a job has been designated to run on a group of machines, OpCon starts the job on
 the machine with the greatest percentage of available
 OpCon job slots. If machines have the same
 percentage of open slots, the SAM alphabetically selects a machine. The
@@ -86,7 +106,7 @@ Type. Additionally, the programs for the jobs are installed in the same
 location on each machine. In OpCon, all of
 these machines are placed in a machine group. The jobs in the schedule
 are set up as required, and each job is set to "Use Schedule Instance
-Machine". On the Schedule definition, the "Multi-Instance" checkbox
+Machine". On the Schedule definition, the "Multi-Instance" option
 is marked, and the correct machine group is defined for the option to
 "Build an instance for each machine in the Group". When the schedule
 is built and the jobs qualify for the day,
@@ -102,3 +122,35 @@ OpCon administrator to set up jobs. If the
 schedule was not set up to run on each machine, the administrator would
 have had to manually create a copy of the schedule for each desired
 machine.
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: What are the main uses for Machine Groups in OpCon?**
+
+The most common uses are failover, workload balancing, running the same job definition across multiple machines, and running the same schedule across multiple machines.
+
+**Q: How does the Failover scenario work with a Machine Group?**
+
+A single machine is assigned to the Machine Group, and all jobs use that group with "Run on Least Tasked Machine." If the machine in the group is replaced or changed, only the Machine Group definition needs to be updated — job definitions remain unchanged.
+
+**Q: What is the benefit of using a Machine Group with "Run on Each Machine"?**
+
+OpCon automatically creates and runs a copy of the job for each machine in the group, eliminating the need to manually create separate job definitions or schedule copies for each machine.
+
+## Glossary
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+
+**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

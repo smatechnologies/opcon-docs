@@ -1,26 +1,46 @@
+---
+title: Viewing, Adding, and Editing z/OS Job Details
+description: "z/OS job details define how OpCon submits a job to a z/OS environment, including job card details, step parameters, data set definitions, and output handling."
+product_area: Solution Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
+tags:
+  - Procedural
+  - System Administrator
+  - Automation Engineer
+  - Solution Manager
+last_updated: 2026-03-18
+doc_type: procedural
+---
+
 # Viewing, Adding, and Editing z/OS Job Details
 
-To view an z/OS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
+**Theme:** Configure  
+**Who Is It For?** System Administrator, Automation Engineer
+
+## What Is It?
+
+z/OS job details define how OpCon submits a job to a z/OS environment, including job card details, step parameters, data set definitions, and output handling. These details are configured in the Task Details panel of a z/OS master job in Solution Manager.
+
+To view a z/OS job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
 ## Viewing z/OS Job Details
 
-1. To view an z/OS job, go to **Library** > **Master Jobs**.
-1. Select an z/OS job in the list.
-1. Select **Edit**.
-1. Expand the **Task Details** panel to expose its content.
+1. Go to **Library** > **Master Jobs**
+1. Select a z/OS job in the list
+1. Select **Edit**
+1. Expand the **Task Details** panel
 
 ## Adding z/OS Job Details
 
-1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md).
-1. Expand the **Task Details** section.
-1. Select from the **Machines or Machine Group** drop-down list the
-   **machine** where the LSAM is installed. If you wish instead to specify a machine group, then toggle the **Machines**
-   switch to _Machine Group_ then select the **machine group** from the
-   drop-down list. When toggled to Machine Group, the switch will
-   appear green.
-1. Select a **Job Type**.
+To add z/OS Job Details, complete the following steps:
 
-For a z/OS job, you can select the following job types:
+1. Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md)
+1. Expand the **Task Details** section
+1. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To use a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group. The switch appears green when toggled to Machine Group
+1. Select a **Job Type**
+
+Available z/OS job types:
 
 - [BATCH](#batch)
 - [STARTED TASK](#started-task)
@@ -32,303 +52,252 @@ For a z/OS job, you can select the following job types:
 
 ## Editing z/OS Job Details
 
-1. To edit z/OS job details, go to **Library** > **Master Jobs**.
-1. Select a z/OS job.
-1. Select **Edit**.
-1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Master Job Definition Read-only Button"))
-   when in **Read-only** mode and appears green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Job Definition Admin Button"))
-   when in **Admin** mode.
-1. Expand the **Task Details** panel.
-1. Select from the **Machines or Machine Group** drop-down list the
-   **machine** where the LSAM is installed. If you wish instead to specify a machine group, then toggle the **Machines**
-   switch to _Machine Group_ then select the **machine group** from the
-   drop-down list. When toggled to Machine Group, the button will
-   appear green ![Green Enabled     Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch").
+To edit z/OS Job Details, complete the following steps:
+
+1. Go to **Library** > **Master Jobs**
+1. Select a z/OS job
+1. Select **Edit**
+1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Master Job Definition Read-only Button")) in **Read-only** mode and green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Job Definition Admin Button")) in **Admin** mode
+1. Expand the **Task Details** panel
+1. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To use a machine group, toggle the **Machines** switch to _Machine Group_ and select the group. The button appears green ![Green Enabled Switch](../../../../../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when toggled
 
 ### BATCH
 
-The Batch Job is the primary event type for z/OS scheduling. The JCL for the scheduled job must reside in a library allocated to the OPCONxx LSAM task for the MachineID on which it is submitted. This is the only event type that may execute on a system other than the one on which it is submitted. The following information applies to defining a Batch job:
+The Batch Job is the primary event type for z/OS scheduling. JCL for the scheduled job must reside in a library allocated to the OPCONxx agent task for the MachineID on which it is submitted. This is the only event type that may run on a system other than the one on which it is submitted.
 
-- **Member Name:** This is the name of the library member containing the batch JCL, If a member name is not provided, the job name is used.
-
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
+- **Member Name:** Name of the library member containing the batch JCL. If blank, the job name is used
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
 
 :::note
-SMA Technologies recommends leaving the Member Name blank in production definitions. Use the Event Name to identify the JCL member name, and reserve the Member Name for overrides.
+Continuous recommends leaving the Member Name blank in production definitions. Use the Event Name to identify the JCL member name, and reserve the Member Name for overrides.
 :::
 
-- **Temporary Member** The Temporary Member name overrides the Member Name. It can be defined in the Job Master definition, but is primarily intended to be used in the job definition on the daily schedule to load a different JCL member for an instance of the job. Also, if the user edits the JCL and saves it as the member name in the override library, the LSAM will generate a temporary member name for it, so that it will only be used by this instance.
+- **Temporary Member:** Overrides the Member Name. Can be defined in the Job Master, but is primarily used in the daily schedule to load a different JCL member for a specific instance. If the user edits the JCL and saves it to the override library, the agent generates a temporary member name so it is only used for that instance
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
 
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
+- **Batch User:** z/OS security ID assigned to the job. Defaults to the user ID in the job card or the USERID from XPSPARMS
 
-- **Batch User** Defines the z/OS security ID to be assigned to this job, if any. The default is the user ID in the job card or the USERID from XPSPARMS.
-
-- **DDNAME** Defines the DD Name in the LSAM task that points to the library that contains this job's JCL. The default is XPSJCL, or the value of LSAM the JCLDD parameter in XPSPARMS. The DD Name may contain alphabetic, national, and numeric characters
-
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
+- **DDNAME:** DD Name in the agent task pointing to the library containing the job's JCL. Defaults to XPSJCL, or the agent JCLDD parameter in XPSPARMS. May contain alphabetic, national, and numeric characters
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
 
 :::note
-If the DDNAME field is set equal to '$DUMMY,' no real batch job will be submitted. As soon as all pre-runs are satisfied, the job will be marked complete. This allows the definition of a 'Pre-run only' job, similar to the File Watcher job types on other platforms.
+If DDNAME is set to `$DUMMY`, no batch job is submitted. Once all pre-runs are satisfied, the job is marked complete. This creates a "Pre-run only" job, similar to the File Watcher job type on other platforms.
 :::
 
-- **Override DDNAME** Defines a DD Name in the LSAM task to search for JCL before the batch DD NAME.
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
+- **Override DDNAME:** DD Name in the agent task to search for JCL before the batch DD NAME
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
 
 :::note
-If the override DD name begins with 'TEMP' and the Override Member name is blank, then this job is eligible for temporary JCL processing. If the JCL is found in the override library when the job is started, then the member is renamed with a unique name, and the schedule record for the current instance is updated with the new name. This prevents the JCL from being re-used when the job is scheduled again. Temporary JCL processing will be bypassed for DDs that concatenate datasets.
+If the override DD name begins with `TEMP` and the Override Member name is blank, the job is eligible for temporary JCL processing. If JCL is found in the override library at job start, the member is renamed with a unique name and the schedule record is updated. This prevents the JCL from being reused when the job is scheduled again. Temporary JCL processing is bypassed for DDs that concatenate datasets.
 :::
 
 ### Started Task
 
-The Started Task Control Fields are required when Started Task is defined for the z/OS Job Type. Started Task events require no batch JES initiator. Such jobs as CICS or IMS regions are popular uses of this event type. Like Batch Jobs, these events are tracked at the step level of detail. The following information applies to defining Started Task Control.
+Started Task events require no batch JES initiator. Jobs such as CICS or IMS regions are common uses of this event type. Like Batch Jobs, these events are tracked at the step level.
 
-- **Started Task Name** This is the name of the started task defined in a system procedure library. The Name must be defined (as normal with any started task) to the SAF security product.
-- **Execution Parms** The parms will be appended to the started task name, after a comma, to complete the start command (e.g., TYPE=WARM). It may contain any properties allowed in a Stared Task EXEC parameter.
+- **Started Task Name:** Name of the started task defined in a system procedure library. Must be defined to the SAF security product
+- **Execution Parms:** Appended to the started task name after a comma to complete the start command (e.g., `TYPE=WARM`). May contain any properties allowed in a Started Task EXEC parameter
 
 ### Command
 
-The Command Control Fields are required when Console Command Execution is defined for the Event Type. Console Commands can be scheduled to execute on the machine defined in the Primary Machine ID entry. Console Command Executions are the only events that have no completion or exit codes available. Each command scheduled is executed as-is without verification as to the desired result. The following information applies to defining the Command Control.
+Console Commands can be scheduled to run on the machine defined in the Primary Machine ID entry. Console Command Executions have no completion or exit codes. Each command is run as-is without verification of the result.
 
-- **Host Job Name** The command is issued from a dynamic started task, with the name taken from the job name.
-- **Operator Command** Defines the text of the command to be executed.
+- **Host Job Name:** The command is issued from a dynamic started task using the job name
+- **Operator Command:** Text of the command to be run
 
 :::note
-The z/OS LSAM (z/OS) does not have a method of checking to see if the command is correct or if the desired results were achieved. Thus, the command is always executed as defined and a Finished OK status is always returned to the SAM.
+The z/OS LSAM has no method for verifying whether a command is correct or achieved the desired result. The command is always run as defined, and a Finished OK status is always returned to the SAM.
 :::
 
 ### Rexx
 
-The REXX Control Fields are required when REXX Event (Dynamic) is defined for the Event Type. REXX procedures require no JCL and can be use for a variety of automation interfaces. The REXX Event functions much like a Console Command. The z/OS LSAM dynamically allocates a print file, and executes the program from the designated DD. The following information applies to defining REXX Control:
+REXX procedures require no JCL and can be used for a variety of automation interfaces. The REXX Event functions like a Console Command. The z/OS LSAM dynamically allocates a print file and runs the program from the designated DD.
 
-- **Exec Name** The Exec name is taken from the job name.
-- **Execution Parms** Defines any input parameters required for the REXX procedure.
-- **Submit DDName** Defines the DD Name in the OPCONxx PROC that points to the library containing the REXX program. The default is SYSEXEC.
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
+- **Exec Name:** Taken from the job name
+- **Execution Parms:** Input parameters required for the REXX procedure
+- **Submit DDName:** DD Name in the OPCONxx PROC pointing to the library containing the REXX program. Defaults to SYSEXEC
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
 
 ### Tracked or Queued
 
 :::note
-As far as job definition and scheduling are concerned, Tracked and Queued jobs are identical. Choosing either Tracked or Queued in the z/OS Job Type documents how the user expects the job to be submitted, and it does not change how the job is scheduled or how it runs.
+Tracked and Queued jobs are identical in terms of job definition and scheduling. Choosing either documents how the job is expected to be submitted; it does not change how the job is scheduled or runs.
 :::
 
-- The Tracked Job indicates a Batch Job profile, but the JCL is submitted to the JES queue from an external source and is tracked dynamically by the LSAM. This job should be defined on an OpCon Schedule with no dependencies.
-- The Queued Job indicates a Batch Job profile but the JCL is submitted to the JES queue from an external source and is tracked dynamically by the LSAM. These jobs may have dependencies on other jobs or pre-runs and must arrive in a JES "held" queue or as a TYPRUN=HOLD job.
-- Tracked Jobs should not be restarted from OpCon. Attempting to restart a Tracked Job will only result in the original completion status being reported. To restart a Tracked or Queued job, re-submit it from the original source.
+- **Tracked Job:** JCL is submitted to the JES queue from an external source and tracked dynamically by the agent. Should be defined on an OpCon Schedule with no dependencies
+- **Queued Job:** JCL is submitted to the JES queue from an external source and tracked dynamically by the agent. May have dependencies on other jobs or pre-runs; must arrive in a JES "held" queue or as a `TYPRUN=HOLD` job
+- Tracked Jobs should not be restarted from OpCon. Restarting only reports the original completion status. To restart a Tracked or Queued job, resubmit it from the original source
 
 ### Sysplex
 
-A coupled group of z/OS systems. When a job is scheduled on a machine in a sysplex, its pre-runs, or the job itself, may run on any system in the sysplex. There are two fields that control that:
+A coupled group of z/OS systems. When a job is scheduled on a machine in a sysplex, its pre-runs or the job itself may run on any system in the sysplex.
 
-**Pre-run System** Allows the user to select one system for pre-runs or ANY system.  
-**Submit on any system** Determines if the job will be started on the system where the pre-runs were satisfied. If it is not selected, the job will be started on the machine name that was assigned to the job.
+- **Pre-run System:** Select one system for pre-runs or ANY system
+- **Submit on any system:** Determines whether the job starts on the system where pre-runs were satisfied. If not selected, the job starts on the assigned machine name
 
 ### Failure Criteria
 
-Defines a range of successful condition codes for the job. The default is blank, meaning there are no job-level condition code checks.
+Defines a range of successful condition codes for the job. Default is blank (no job-level condition code checks).
 
-- **Min CC** The minimum tolerated condition code for the job. Any condition code less than this value is considered a failure condition.
-
-  - This value must be set between 0 and 4095 and less than Max CC.
-
-- **Max CC** The maximum tolerated condition code for the job. Any condition code greater than this value is considered a failure condition.
-  - This value must be set between 0 and 4095 and greater than Min CC.
+- **Min CC:** Minimum tolerated condition code. Any code below this value is a failure. Must be 0–4095 and less than Max CC
+- **Max CC:** Maximum tolerated condition code. Any code above this value is a failure. Must be 0–4095 and greater than Min CC
 
 ### JCL/SYSOUT Access
 
-Provides access to z/OS JCL and job output listings
+Provides access to z/OS JCL and job output listings.
 
-- **Member Name** This is the name of PDS or PDS/E member containing the JCL.
-- **View JCL DD** This is the DD (file) name of the library containing the JCL member.
-- **Save JCL DD** This is the name of the library to contain the saved JCL (Override DD). Defaults to TEMPJCL.
-- **View JCL** This button fetches the JCL from the member identified by the View JCL DD and member name and loads it in a text editor. Clicking OK in the editor loads the edit buffer in storage and enables the Save JCL button.
-- **Save JCL** This button uploads the JCL from the edit buffer to the host and saves it in the member identified by the Save JCL DD and member name, using the current OpCon User ID for access. If the OpCon user is not known to the security system on the z/OS host, or if the user does not have permission to update the Save JCL library, the upload will fail. If the upload succeeds, the ISPF member statistics will be updated.
+- **Member Name:** Name of the PDS or PDS/E member containing the JCL
+- **View JCL DD:** DD name of the library containing the JCL member
+- **Save JCL DD:** Name of the library to contain the saved JCL (Override DD). Defaults to TEMPJCL
+- **View JCL:** Fetches JCL from the member identified by View JCL DD and member name, and loads it in a text editor. Selecting OK enables the Save JCL button
+- **Save JCL:** Uploads JCL from the edit buffer to the host and saves it in the member identified by Save JCL DD and member name, using the current OpCon User ID. The upload fails if the user is not known to the z/OS security system or lacks permission to update the Save JCL library. On success, ISPF member statistics are updated
 
 :::note
-Setting the Member Name to the JES JobID and the View JCL DD to JESJCLIN allows fetching the JCL from the spool, similar to the SDSF SJ option.
+Setting the Member Name to the JES JobID and View JCL DD to JESJCLIN fetches JCL from the spool, similar to the SDSF SJ option.
 :::
 
 ### Step Control
 
-Step Control allows the definition of up to 80 step condition codes or step condition code ranges. Special schedule or execution handling can be defined depending on the condition code at step completion, or step control definitions can be used to override Job Minimum and Maximum condition codes. Only the first matching Step Control definition will be used at the end of each step, so they should be defined in order of priority. Step Control is not available when the Event Type defined is Console Command or REXX Event.
+Step Control allows up to 80 step condition codes or ranges. Special schedule or execution handling can be defined based on the condition code at step completion, or Step Control can override Job Min/Max condition codes. Only the first matching definition is used at the end of each step; define them in priority order. Step Control is not available for Console Command or REXX Event types.
 
-- **Step Name** Defines the fully qualified step name in the format: JOBSTEP or JOBSTEP.PROCSTEP. JOBSTEP identifies the name on a job-level EXEC statement. PROCSTEP identifies the name on the EXEC PGM statement in a JCL procedure.
-  - If the JOBSTEP invokes a JCL procedure, entering the JOBSTEP alone will allow the entry to match any step in the procedure. To match a specific step, include the PROCSTEP.
-  - A '?' character will match any single non-blank character in the step name and a '\*' character at the end of the string will match all remaining characters or blank spaces in the step name.
-- **Min CC and Max CC** Defines the minimum to maximum range of return codes this step control definition checks.
-  - Both the minimum and maximum values need to between 0 and 4095.
-  - Min CC needs to be less than or equal to Max CC
-  - Max CC needs to be greater than or equal to Min CC
-- **Step Action** Defines the action to be taken when the defined step's return code falls in the Step CC range.
-  - **Abend Job At Step Termination** Tells OpCon that this job is to be immediately terminated. All remaining steps are flushed but COND=EVEN/ONLY steps will be allowed to run. OpCon will show the job as Failed.
-  - **Send Job Completed To SAM** Tells OpCon that, no matter how many steps are left to execute, OpCon is to consider this job complete, with its success or failure determined by the steps up to and including this one.
-  - **Send Trigger Message To SAM** Tells OpCon that the only action is to send the Trigger Message.
-  - **Post Error, But Allow Job To Continue** Tells OpCon that a job failure condition is to be posted. Subsequent steps in this job execute, but job dependencies are not resolved.
-  - **OK To Continue** Tells OpCon that despite the Min and Max Job CC, this step is OK with this return code range. In other words, it provides step level exceptions to the job level failure criteria.
-  - **Set Restart Step** Tells OpCon to override the automatic restart step assignment when a job fails. By default, the restart step is set to the step that fails.
-    - In the Step Name field, enter the failed step name to override.
-    - In the Trigger Message field, enter the desired restart step name.
-- **Trigger Message** Required only with the Send Trigger Message to SAM action, but can be used with any Step Action defined.
-  - This message may be up to 20 characters, and is posted to Schedule Operations and recorded in the User Messages LSAM Feedback.
-  - Additional trigger actions can be defined with any of the following special message formats
-    - For Message $EVENT=eventname, the eventname action defined in the z/OS event trigger table is triggered. This may refer to any valid OpCon event that has been predefined in the z/OS Event table. If the name is not found, the message will be changed to JEVENT=eventname, and sent like any other message.
-    - Message $JOB:GOOD will set the job to a Finished OK status immediately.
-    - Message $JOB:BAD will set the job to a Failed status immediately.
-    - Message $S=jobstep[.procstep] will set the job’s restart step to jobstep[.procstep].
-  - LSAM Feedback codes can be used to trigger job events, so this is the preferred way to define step triggers, rather than the z/OS event trigger table, because all event types are supported and the events can contain instance properties. In addition, multiple trigger events can be defined for the same message.
-    - The status of each step is written to the Step Completion LSAM Feedback table, so it provides an alternate way to define triggers, which does not require a step control definition. These messages have a fixed format, making it easy to match on all or part of the result
-      - A five character status code
-        - **Cnnnn**, where **nnnn** is the decimal condition code
-        - **FLUSH**, if the step did not execute
-        - **Unnnn**, where nnnn is the decimal abend code
-        - **S-xxx**, where xxx is the hexadecimal abend code.
-      - A space
-      - The step name, in execstep or jobstep.execstep format
-    - Automatic restart step selection at the job or step level can be enabled or disabled. This will be controlled through prefixing the restart step name with a plus ('+') or hyphen ('-') character.  
-      If the first character of the "message" field is:
-      - '+' - Set auto step flag on for this job, then set the restart step from the message, starting with the second character.
-      - '-' - Set auto step flag off for this job, then set the restart from the message, starting with the second character.
-      - ' ' (blank) - Do not change the flag, but set the restart step from the message, starting with the second character.
-      - Anything else - Set the restart step from the message field, starting with the first character.
-        If the restart step name is blank, this action is a no-op.
+- **Step Name:** Fully qualified step name in the format `JOBSTEP` or `JOBSTEP.PROCSTEP`. JOBSTEP is the name on a job-level EXEC statement; PROCSTEP is the name on the EXEC PGM statement in a JCL procedure
+  - Entering only JOBSTEP matches any step in an invoked procedure. To match a specific step, include PROCSTEP
+  - `?` matches any single non-blank character; `*` at the end matches all remaining characters or blank spaces
+- **Min CC and Max CC:** Return code range this step control definition checks. Both values must be 0–4095; Min CC must be less than or equal to Max CC
+- **Step Action:** Action taken when the step's return code falls within the defined range
+  - **Abend Job At Step Termination:** Immediately terminates the job. Remaining steps are flushed, but `COND=EVEN/ONLY` steps run. OpCon shows the job as Failed
+  - **Send Job Completed To SAM:** Marks the job complete regardless of remaining steps; success or failure is determined by steps up to and including this one
+  - **Send Trigger Message To SAM:** Sends the Trigger Message only
+  - **Post Error, But Allow Job To Continue:** Posts a job failure condition. Subsequent steps run, but job dependencies are not resolved
+  - **OK To Continue:** Overrides job-level failure criteria for this step at this return code range
+  - **Set Restart Step:** Overrides the automatic restart step assignment when a job fails. Enter the failed step name in Step Name and the desired restart step in Trigger Message
+- **Trigger Message:** Required for Send Trigger Message to SAM, but usable with any Step Action. Up to 20 characters; posted to Schedule Operations and recorded in User Messages agent Feedback
+  - Special message formats:
+    - `$EVENT=eventname` — triggers the named action from the z/OS event trigger table. If the name is not found, the message changes to `JEVENT=eventname`
+    - `$JOB:GOOD` — sets the job to Finished OK immediately
+    - `$JOB:BAD` — sets the job to Failed immediately
+    - `$S=jobstep[.procstep]` — sets the job's restart step
+  - agent Feedback codes can trigger job events and are the preferred method for defining step triggers, because all event types are supported and events can contain instance properties. Multiple trigger events can be defined for the same message
+  - Step completion status is written to the Step Completion agent Feedback table in a fixed format:
+    - A five-character status code: **Cnnnn** (condition code), **FLUSH** (step did not run), **Unnnn** (decimal abend code), or **S-xxx** (hexadecimal abend code)
+    - A space
+    - The step name in `execstep` or `jobstep.execstep` format
+  - Automatic restart step selection can be enabled or disabled by prefixing the restart step name:
+    - `+` — enables auto step flag, then sets restart step from the remainder of the message
+    - `-` — disables auto step flag, then sets restart step from the remainder of the message
+    - ` ` (blank) — does not change the flag; sets restart step from the remainder of the message
+    - Any other character — sets the restart step from the first character of the message field
+    - If the restart step name is blank, this action is a no-op
 
 ### z/OS Pre-run Definitions
 
-The z/OS LSAM (z/OS) allows for five different types of Pre-runs to be processed: File Resource, Message Trigger, Job/Task Resource, Tape Devices, and REXX Procedure.
+The z/OS LSAM supports five pre-run types: File Resource, Message Trigger, Job/Task Resource, Tape Devices, and REXX Procedure.
 
 #### File Resource
 
-File Resource allows up to 80 pre-run definitions for dataset resources.
+Allows up to 80 pre-run definitions for dataset resources.
 
-- **Dataset** Defines up to 44 characters of DSN trigger information. Wild card characters may be used to match partial dataset names.
-  - The percent ('%') and asterisk ('\*') characters are allowable wildcards.
-    - A (%) wildcard character represents any single character.
-    - A final asterisk (\*) will match any remaining characters.
-  - To support filtering on Generation Datasets, a dataset name ending in .G0000V00 will be treated like .G%%%%V%%, but require the dataset to be a member of a GDG.
-- **Generations** Defines the number of times the condition must be met before releasing the job. This may be used to start jobs after a number of GDG datasets have been received.
-- **Condition** Defines the type of data access condition to cause a trigger: Available options are Exists, Created, Updated, Deleted, Referenced, Cataloged, and Uncataloged.
+- **Dataset:** Up to 44 characters of DSN trigger information. Wildcards are supported:
+  - `%` matches any single character
+  - A final `*` matches any remaining characters
+  - A dataset ending in `.G0000V00` is treated like `.G%%%%V%%` but must be a member of a GDG
+- **Generations:** Number of times the condition must be met before releasing the job. Useful for starting jobs after several GDG datasets have been received
+- **Condition:** Type of data access condition to trigger: Exists, Created, Updated, Deleted, Referenced, Cataloged, or Uncataloged
   :::note
-  Wild cards and generations cannot be used with File Exists conditions.
+  Wildcards and generations cannot be used with File Exists conditions.
   :::
-- **When** Determines whether this File Resource trigger is to remain in effect after the associated event is triggered.
-  - 'While/As Scheduled Only' causes the trigger monitor to delete this entry once the trigger has occurred. In this mode, the next time a job/event referencing this DSN is ready to run, the trigger is refreshed and the associated event waits for completely new trigger conditions to be met.
-  - Continuous Monitoring resets the trigger generation count and continues monitoring the condition. In Continuous mode, the next time a job/event referencing this DSN is ready to run, the trigger may happen immediately, if all trigger conditions were satisfied again.
-- **Job Name** Defines the job that must satisfy the condition before a trigger occurs. For example, specify the name of the job that must update a DSN before a trigger would occur. This prevents reruns or outside creations from triggering events intended for a specific scheduled job or task.
+- **When:** Whether the trigger remains in effect after the associated event fires
+  - **While/As Scheduled Only:** Deletes the trigger entry once triggered. On the next scheduled run, the trigger is refreshed and waits for new conditions
+  - **Continuous Monitoring:** Resets the generation count and continues monitoring. On the next scheduled run, the trigger may fire immediately if conditions were satisfied again
+- **Job Name:** Job that must satisfy the condition before a trigger occurs. Prevents reruns or external creations from triggering events intended for a specific job
   :::note
-  The Job Name does not apply to File Exists conditions.
+  Job Name does not apply to File Exists conditions.
   :::
 
 #### Message Trigger
 
-Message Trigger allows up to 80 pre-run definitions for Console Message requirements. Message triggers are particularly useful for capturing error and threshold indicators, and taking actions to notify or respond automatically based on schedule criteria.  
-Message triggers are defined very explicitly. All message trigger keys must contain a fixed positional key word. They may also contain a second value to scan for in the remainder of the message text.
+Allows up to 80 pre-run definitions for Console Message requirements. Useful for capturing error and threshold indicators and taking automated actions. All message trigger keys must contain a fixed positional keyword and may also contain a second value to scan for in the remaining message text.
 
-- **Key** Defines the trigger text to be sought. The first characters define the fixed text to match in a possible candidate message.
-  - The Offset (refer to Offset: This is the number of leading characters (0-120) to skip when matching the key.) and Length (refer to Length: Used to define the number of characters in the key. The key can be up to forty-four characters long.) must be defined to match the key.
-  - Following the fixed text key, a variable key may be defined as a second argument. The variable key is enclosed in brackets ('{}') and may be preceded by a hyphen ('-') to indicate exclusion.
-  - The offset is variable and the length of the text within the brackets determines the length.
-  - If the fixed text is located in a message, OpCon scans for the text found in the brackets ('{}') in the remainder of the text. If the exclusion operator is used, the message will only match if the enclosed text is not found.
-  - If the fixed text ends with a hyphen ('-'), the variable key must be separated from the fixed text by a space to avoid ambiguity.
-    - A space is always required between the fixed key and the opening bracket or hyphen
-- **Generations** Defines the number of messages matching the key that must be issued before triggering the associated event or job.
-- **When** Determines whether this Message Resource trigger is to remain in effect after the associated event is triggered.
-  - 'While/As Scheduled Only' causes the trigger monitor to delete this entry once the trigger has occurred. In this mode, the next time a job referencing this Message Trigger is ready to run, the trigger is refreshed and the associated event waits for completely new trigger conditions to be met.
-  - Continuous Monitoring resets the trigger generation count to zero and continue monitoring for the trigger. In this mode, the next time a job referencing this Message Trigger is ready to run, the trigger may happen immediately, if all trigger conditions were satisfied again.
-- **Job Name** Defines the job that must issue this message before a trigger would occur. This prevents reruns or outside creations from triggering events intended for a specific scheduled job or task.
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
-- **Offset** Defines the number of leading characters (0-120) to skip when matching the key.
-- **Limit** Defines the number of characters in the key.
-  - The key can be up to forty-four characters long.
+- **Key:** Trigger text to match. The first characters define the fixed text; Offset and Length must be defined to match the key
+  - A variable key may follow as a second argument enclosed in brackets (`{}`). A preceding hyphen (`-`) indicates exclusion
+  - The offset is variable; the length of the text within brackets determines the length
+  - If the fixed text is found, OpCon scans for the bracketed text in the remainder. With the exclusion operator, the message matches only if the enclosed text is not found
+  - If the fixed text ends with a hyphen, the variable key must be separated from it by a space
+  - A space is always required between the fixed key and the opening bracket or hyphen
+- **Generations:** Number of matching messages that must be issued before triggering the event
+- **When:** Whether the trigger remains in effect after firing
+  - **While/As Scheduled Only:** Deletes the trigger once triggered; refreshed on the next scheduled run
+  - **Continuous Monitoring:** Resets the generation count and continues monitoring; may fire immediately on the next scheduled run if conditions were satisfied again
+- **Job Name:** Job that must issue this message before triggering. Prevents unintended triggers from reruns or external sources
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
+- **Offset:** Number of leading characters (0–120) to skip when matching the key
+- **Limit:** Number of characters in the key. Maximum 44 characters
 
 #### Job/Task Resource
 
-Job/Task Resource allows up to 80 pre-run definitions to check for the existence of an executing job or task on any given system.
+Allows up to 80 pre-run definitions to check for the existence of an running job or task.
 
-- **Job/Task Name** Defines the eight-character name of a batch job, system task, or TSO User ID being sought.
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
-- **Job/Task Must Be** Determines whether the named task or job should be Executing or Not Executing for the associated event to submit.
+- **Job/Task Name:** Eight-character name of a batch job, system task, or TSO User ID
+  - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
+- **Job/Task Must Be:** Whether the named task should be Running or Not Running for the event to submit
 
 #### Tape Device
 
-Tape Units allows the definition of a pre-run to require the availability of a specific number and type of tape unit(s) on any given system.
+Allows a pre-run requiring availability of a specific number and type of tape unit(s).
 
-- **Device** Defines a generic or esoteric tape unit as defined by IBM unit standards.
-  - The value may contain up to eight alphanumeric characters.
-- **Units** Defines the number of units that must be available for the associated job to be submitted.
+- **Device:** Generic or esoteric tape unit as defined by IBM unit standards. Up to 8 alphanumeric characters
+- **Units:** Number of units that must be available for the job to submit
 
 #### REXX Procedure
 
-REXX Procedure allows the definition of a REXX event as a pre-run. The REXX Procedure is distinguishable from the REXX event type in that it plays the role of a resource advisor when set up as a pre-run condition. Unlike a REXX event, the return code from this REXX procedure must be zero, or the associated job is not submitted.
+Allows a REXX event as a pre-run. Unlike the REXX event type, the return code from this procedure must be zero, or the associated job is not submitted.
 
-- **REXX Name** Defines the name of the procedure to execute.
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
-- **REXX DD** Defines the DD Name in the OPCONxx PROC that points to the library containing the REXX executable code. The default is SYSEXEC.
-  - The maximum number of characters for Member Name is 8.
-  - The Member Name may contain alphabetical letters, numbers, and @#$
-  - The first character cannot be a number.
-- **REXX PARAM** Defines the input parameters required for the REXX procedure.
+- **REXX Name:** Name of the procedure to run. Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
+- **REXX DD:** DD Name in the OPCONxx PROC pointing to the library containing the REXX executable code. Defaults to SYSEXEC. Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number
+- **REXX PARAM:** Input parameters required for the REXX procedure
 
 ### z/OS Restart Definitions
 
-OpCon can automate job restarts. The LSAM defaults are used, unless overridden at the job level, with the necessary actions dictated by the characteristics of the programs and JCL being executed.  
-Restart determines how XPR handles the dataset (DSN) cleanup during a Normal Run and a Restart for the defined job only.
+OpCon automates job restarts. agent defaults are used unless overridden at the job level. Restart controls how XPR handles dataset (DSN) cleanup during a Normal Run and a Restart.
 
-- **Duplicate Dataset Actions** Defines how XPR cleans up the duplicate dataset(s).
-  - **Normal Run** Defines the type of Run
-    - **&ltblank&gt**: The LSAM defaults are used.
-    - **None** Disables XPR DSN cleanup.
-    - **Scratch** Prevents NOT CATLGD 2 errors by scratching any pre-existing datasets.
-    - **Reuse** Prevents NOT CATLGD 2 errors by converting DISP=NEW to DISP=OLD.
-  - **Restart** Defines the type of Restart
-    - **&ltblank&gt**: The LSAM defaults are used.
-    - **None** Disables XPR DSN cleanup.
-    - **Scratch** Prevents NOT CATLGD 2 errors by scratching any pre-existing datasets.
-    - **Reuse** Prevents NOT CATLGD 2 errors by converting DISP=NEW to DISP=OLD.
-  - **GDG Option** Defines how XPR determines Generation Data Group (GDG) base generations during a restart
-    - **&ltblank&gt**: The LSAM defaults are used.
-    - **None**: Disables GDG adjustment.
-    - **Absolute**: Resets the base generation to the value it had during the first run.
-    - **Relative**: Looks for positive relative generations in the steps to be executed to determine the correct base.
-    - **Catalog Resync**: Based on looking at the bypassed steps to determine the highest relative generation already created, sets the base so that it resolves to the current generation.
+- **Duplicate Dataset Actions:**
+  - **Normal Run:**
+    - **&lt;blank&gt;:** agent defaults are used
+    - **None:** Disables XPR DSN cleanup
+    - **Scratch:** Prevents NOT CATLGD 2 errors by scratching pre-existing datasets
+    - **Reuse:** Prevents NOT CATLGD 2 errors by converting DISP=NEW to DISP=OLD
+  - **Restart:**
+    - **&lt;blank&gt;:** agent defaults are used
+    - **None:** Disables XPR DSN cleanup
+    - **Scratch:** Prevents NOT CATLGD 2 errors by scratching pre-existing datasets
+    - **Reuse:** Prevents NOT CATLGD 2 errors by converting DISP=NEW to DISP=OLD
+  - **GDG Option:** Controls how XPR determines GDG base generations during a restart
+    - **&lt;blank&gt;:** agent defaults are used
+    - **None:** Disables GDG adjustment
+    - **Absolute:** Resets the base generation to the value it had during the first run
+    - **Relative:** Examines positive relative generations in the steps to be run to determine the correct base
+    - **Catalog Resync:** Examines bypassed steps to find the highest relative generation already created and sets the base to resolve to the current generation
       :::note
-      The GDGBIAS=STEP JCL option is not compatible with the Absolute GDG restart option. If that option is used on a restart, GDG bias resolution will not be attempted.
+      The GDGBIAS=STEP JCL option is not compatible with the Absolute GDG restart option. If used on a restart, GDG bias resolution is not attempted.
       :::
 
 ### JCL Substitution
 
-The JCL Substitution defines the JCL parameter symbol or OpCon token, separated by double backslashes, to be used in this run.
+Defines the JCL parameter symbol or OpCon token, separated by double backslashes, to use in this run.
 
-- Use carriage returns in the field to separate lines for easier readability. The maximum total characters in this field is 3400 characters.
-- Each override (@) or symbolic (&) definition is separated by two backslashes (\\\\).
-- When the z/OS LSAM encounters an "&name=" symbolic, it scans each JCL statement for an operand match.
-- Only operands are changed by an "&" symbolic override. To qualify for replacement, an operand must be preceded by a comma or a blank and include an "=" sign (e.g., all instances of UNIT=xxxxx is substituted using &UNIT=SYSDA).
-- The "@" overrides should not be confused with "&" symbolics. Overrides are placeholders for data and symbolics are replacements of very specific data in a specific field enclosed in specific delimiters. Symbolics reference operands only.
-- Overrides can be embedded anywhere in JCL or SYSIN data and can define an entire 80-byte JCL record.
-- Overrides have no restrictions on content or delimiters except they cannot contain double backslashes (e.g., a date card override could be represented as @TODAY=October 12, 2005).
-- Internal OpCon are represented by [[…]] notations and may be used as data components of either symbolics or overrides (e.g., @TODAY=[[$DATE]]).
+- Use carriage returns to separate lines for readability. Maximum total characters: 3400
+- Each override (`@`) or symbolic (`&`) definition is separated by two backslashes (`\\`)
+- When the z/OS LSAM encounters an `&name=` symbolic, it scans each JCL statement for an operand match
+- `&` symbolics change operands only. To qualify, an operand must be preceded by a comma or blank and include an `=` sign (e.g., all instances of `UNIT=xxxxx` are substituted using `&UNIT=SYSDA`)
+- `@` overrides are placeholders for data; `&` symbolics replace specific operand data. Symbolics reference operands only
+- Overrides can be embedded anywhere in JCL or SYSIN data and can define an entire 80-byte JCL record. They have no restrictions on content or delimiters except they cannot contain double backslashes (e.g., `@TODAY=October 12, 2005`)
+- Internal OpCon tokens use `[[…]]` notation and may be used as data components of either symbolics or overrides (e.g., `@TODAY=[[$DATE]]`)
 
 ### Additional Information for z/OS Job Details
 
-The information in this section contains more detailed information required to make full use of the z/OS job details.
-
 #### z/OS Job Information
 
-OpCon supports several types of scheduled events for z/OS. Scheduled event types include Batch Jobs, Started Tasks, Dynamic REXX, Operator Command, Tracked Job, and Queued Job.
+OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks, Dynamic REXX, Operator Command, Tracked Job, and Queued Job.
 
 **Batch Jobs**
 
@@ -336,10 +305,9 @@ OpCon supports several types of scheduled events for z/OS. Scheduled event types
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | JES initiated batch from JCL in a specific library already defined (by DDName) to LSAM.                                                                                                         |
-| Security  | <ul><li>Security ID, from Scheduled Job record on SAM, inserted or replaces USER= on Job Card.</li><li>If no Security ID from SAM is defined, USER= on Job Card is allowed to remain.</li><li>When no USER= can be built or found, the default USERID definition from XPSPRMxx is inserted in the Job Card as a USER= keyword.</li><li>If USERID=NONE is set in XPSPRMxx and no USER= can be built or found, the USER= keyword is omitted from the Job Card during submission. This gives the submitted job the SAF authority of the LSAM itself.</li></ul> 
-| Event Control | <ul><li>Provided by Job Control Language (JCL) statements in a member of a predefined JCL library allocated to the LSAM task. There is no practical limit to the number of libraries or DDNAMEs.</li><li>If a JCL library DDNAME is not defined on the SAM schedule record for a job, the default JCLDD= set in XPSPRMxx is used to locate the JCL for the job (XPSJCL is the installation default).</li></ul> |
-| Event Control | <ul><li>Provided by Job Control Language (JCL) statements in a member of a predefined JCL library allocated to the LSAM task. There is no practical limit to the number of libraries or DDNAMEs.</li><li>If a JCL library DDNAME is not defined on the SAM schedule record for a job, the default JCLDD= set in XPSPRMxx is used to locate the JCL for the job (XPSJCL is the installation default).</li></ul> |
+| Execution | JES initiated batch from JCL in a specific library already defined (by DDName) to agent. |
+| Security  | <ul><li>Security ID from the SAM schedule record is inserted or replaces USER= on the Job Card.</li><li>If no Security ID is defined, USER= on the Job Card remains.</li><li>If no USER= can be built or found, the default USERID from XPSPRMxx is inserted as USER=.</li><li>If USERID=NONE is set in XPSPRMxx and no USER= can be built or found, the USER= keyword is omitted, giving the job the SAF authority of the agent.</li></ul> |
+| Event Control | <ul><li>Provided by JCL statements in a member of a predefined JCL library allocated to the agent task. No practical limit on libraries or DDNAMEs.</li><li>If no DDNAME is defined on the SAM schedule record, the default JCLDD= from XPSPRMxx is used (XPSJCL is the installation default).</li></ul> |
 
 **Started Tasks**
 
@@ -347,9 +315,9 @@ OpCon supports several types of scheduled events for z/OS. Scheduled event types
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | LSAM initiated address space requiring a JCL Proc. |
-| Security | Single level (as with all Started tasks): Proc Member Name and its access authority must be defined to the Security Access Facility (SAF) product. |
-| Event Control | Provided by Job Control Language (JCL) statements in a predefined member in the system PROCLIB concatenation and PARMS passed to Proc. |
+| Execution | agent initiated address space requiring a JCL Proc. |
+| Security | Single level: Proc Member Name and its access authority must be defined to the SAF product. |
+| Event Control | Provided by JCL statements in a predefined member in the system PROCLIB concatenation and PARMS passed to Proc. |
 
 **Dynamic REXX**
 
@@ -357,9 +325,9 @@ OpCon supports several types of scheduled events for z/OS. Scheduled event types
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | LSAM initiated address space. |
-| Security | Single level: REXX Exec Name and its access authority must be defined to the Security Access Facility (SAF) product. The userid is assigned by STARTED class resource jobname.jobname. |
-| Event Control | Provided by Dynamic allocation of SYSEXEC, SYSTSPRT, SYSTSIN, and PARMS passed to REXX Routine. |
+| Execution | agent initiated address space. |
+| Security | Single level: REXX Exec Name and its access authority must be defined to the SAF product. The userid is assigned by STARTED class resource `jobname.jobname`. |
+| Event Control | Provided by dynamic allocation of SYSEXEC, SYSTSPRT, SYSTSIN, and PARMS passed to REXX Routine. |
 
 **Operator Command**
 
@@ -367,8 +335,8 @@ OpCon supports several types of scheduled events for z/OS. Scheduled event types
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | LSAM initiated address space via IEESYSAS. |
-| Security | Single level: Command authority must be defined to the Security Access Facility (SAF) product for the STARTED class resource jobname.jobname. |
+| Execution | agent initiated address space via IEESYSAS. |
+| Security | Single level: Command authority must be defined to the SAF product for STARTED class resource `jobname.jobname`. |
 | Event Control | None |
 
 **Tracked Job**
@@ -378,8 +346,8 @@ OpCon supports several types of scheduled events for z/OS. Scheduled event types
 | Function  | Description|
 | --------- | ---------- |
 | Execution | JES initiated batch from JCL. |
-| Security | Assigned by normal rules during job submission. Not under LSAM control. | 
-| Event Control | Provided by JCL submitted from a source external to the LSAM. |
+| Security | Assigned by normal rules during job submission. Not under agent control. |
+| Event Control | Provided by JCL submitted from a source external to the agent. |
 
 **Queued Job**
 
@@ -387,412 +355,404 @@ OpCon supports several types of scheduled events for z/OS. Scheduled event types
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | JES initiated batch from JCL submitted on hold and released by LSAM when all scheduled requirements are met. |
-| Security | Assigned by normal rules during job submission. Not under LSAM control. |
-| Event Control | Provided by JCL submitted from a source external to the LSAM. |
+| Execution | JES initiated batch from JCL submitted on hold and released by agent when all scheduled requirements are met. |
+| Security | Assigned by normal rules during job submission. Not under agent control. |
+| Event Control | Provided by JCL submitted from a source external to the agent. |
 
 #### REXX Execution in OpCon
-The REXX language can be a very powerful tool, especially when it comes to integration and automation of OpCon into the z/OS environment. For this reason, there are several ways to support REXX executions in OpCon.
 
 **REXX as a Batch Job**
-This method is transparent to OpCon. It is possible to use Batch TSO or the REXX batch utility (IRXJCL). JCL for execution is contained in a JCL member, just as with any production Batch Job. The parameters passed to the REXX routine are hard coded in the EXEC statement on the PARM= keyword. Security is provide by the USERID= keyword on the job card. Parms may be altered via OpCon @.
+This method is transparent to OpCon. Use Batch TSO or the REXX batch utility (IRXJCL). JCL for execution is contained in a JCL member like any production Batch Job. Parameters are hard-coded in the EXEC statement PARM= keyword. Security is provided by the USERID= keyword on the job card. Parms may be altered via OpCon `@`.
 
 **REXX as a Started Task**
-For long running routines that provide control interfaces (e.g., to balancing products, change or problem management, etc.) or that provide monitoring (awaiting CICS transaction "signals", etc.) consider a started task (STC) rather than a batch-initiated job. A started task does not tie up a JES initiator and is more isolated from system performance problems. Started tasks can also remain active with little or no resource consumption for long periods without affecting the ability of the system to do other work.
-
-Just as with REXX in a Batch Job, running REXX as a started task is transparent to OpCon. It looks like any other scheduled started task. Use either TSO Batch or IRXJCL. The one major difference is that it is possible to code the PARAM that is to be passed to the REXX routine (if any) in SAM schedule record "Params". Security is provided by the Proc name used.
+For long-running routines that provide control interfaces or monitoring, a started task (STC) is preferable to a batch job. An STC does not tie up a JES initiator, is more isolated from performance problems, and can remain active with minimal resource consumption. Running REXX as an STC is transparent to OpCon. Use TSO Batch or IRXJCL. Execution parameters can be coded in the SAM schedule record "Params" field. Security is provided by the Proc name.
 
 **REXX as a Dynamic Task**
-The Dynamic REXX task is initiated by the LSAM and has no JCL or Procs associated with it. A separate address space is created and SYSEXEC, SYSTSPRT and SYSTSIN DDNAMES are dynamically allocated. The REXX procedure is called and the return code is captured and returned to the SAM. Condition code actions can be set. The following rules apply:
+The Dynamic REXX task is initiated by the agent with no JCL or Procs. A separate address space is created and SYSEXEC, SYSTSPRT, and SYSTSIN DDNAMEs are dynamically allocated. The return code is captured and returned to the SAM. Condition code actions can be set. Rules:
 
-- Only a single step is executed.
-- The SYSEXEC DDNAME concatenation is "copied" from that defined in the executing LSAM task.
-- Define any DDNAME in the LSAM task as a SYSEXEC concatenation.
-- The SYSTSPRT allocation is assigned to the MSGCLASS defined in XPSPRMxx (default MSGCLASS=A).
-- The SYSTSIN DD is always dummied.
-- All parameters come from "EXEC Params" in the job definition.
-- Dynamic REXX events share all the advantages of started tasks and they do not require JCL.
+- Only a single step runs
+- The SYSEXEC DDNAME concatenation is copied from the running agent task
+- Define any DDNAME in the agent task as a SYSEXEC concatenation
+- SYSTSPRT allocation is assigned to the MSGCLASS defined in XPSPRMxx (default MSGCLASS=A)
+- SYSTSIN DD is always dummied
+- All parameters come from "EXEC Params" in the job definition
+- Dynamic REXX events share the advantages of started tasks and require no JCL
 
 **REXX as a Dynamic Pre-run Event**
-As a "twist" to the Dynamic REXX, it is possible to define a Dynamic REXX routine to be executed prior to the running of an associated Batch Job or other event. In this case the Dynamic REXX executes just the same as it does standalone, but rather than returning to SAM with a return code, the return code is used to immediately trigger (or not trigger) a subsequent Event in the LSAM itself. So, in those cases where immediate response to an action or monitor event is needed, a REXX Dynamic Pre-run can trigger a dependent Job or Task much faster than SAM could respond to an "After" dependency.
+A Dynamic REXX routine can be defined to run before a Batch Job or other event. It runs the same as a standalone Dynamic REXX, but the return code immediately triggers (or withholds) a subsequent event in the agent rather than returning to SAM. This enables faster response than SAM dependency processing when immediate action is required.
 
 **Tracking Externally Submitted Batch Job Events in OpCon**
-Within the z/OS LSAM, it is possible to trap and track events submitted outside of OpCon. There are three possible approaches to Non-Schedule Event Tracking.
+Within the z/OS LSAM, externally submitted events can be trapped and tracked using three approaches:
 
-1. Define a single job name "mask" that is always trapped by the z/OS LSAM;
-2. Define from one to eight single character JES execution classes to monitor and trap for tracking;
-3. Insert a tracking indicator ("T" or "Q") as the continuation character of the first Job card on any batch job requiring tracking.
+1. Define a single job name "mask" always trapped by the z/OS LSAM
+2. Define one to eight single-character JES execution classes to monitor and trap for tracking
+3. Insert a tracking indicator (`T` or `Q`) as the continuation character of the first Job card
+
 :::note
-A "C" continuation character bypasses the TRACLASS and TRACMASK runtime tracking options.
+A `C` continuation character bypasses the TRACLASS and TRACMASK runtime tracking options.
 :::
-4. Add a job step executing XPSTRACK.
-Performing all of the approaches is also possible. Define a job mask or JES tracking classes in the XPSPRMxx member of the OpCon Parmlib (XPSPARMS DD in the LSAM task). The following job is an of a dynamic job request:
-![Dynamic job request](../../../../../../../Resources/Images/SM/Operations/ZOs/Dynamic-Job-Request.png "Dynamic job request")  
 
-The "TRACJOB" job above illustrates all three ways to set up a user submitted or non-scheduled submission as a scheduled "tracked" job.
 
-1. Job Name mask as defined in XPSPRMxx. In the above, this is TRACMASK=TRAC****.
-2. A special held class or class list as defined in XPSPRMxx. In the above, this is TRACLASS=TQA.
-3. A "T" is placed in continuation column 72 of the 1st job card (this option requires multiple continued job cards).
-Dynamically tracked jobs may or may not have dependency capabilities. Because their arrival on the schedule may be arbitrary, using them as dependent triggers should be avoided as a standard practice. However, when needed, dynamic job tracking can be a powerful tool for automation.
+4. Add a job step running XPSTRACK
 
-Every job that is to be dynamically tracked by the z/OS LSAM must be predefined on the OpCon schedule. If it has no dependencies or resource requirements, it is released immediately by the LSAM. Otherwise, it is released as dependencies or resources are satisfied.
+All approaches can be combined. Define a job mask or JES tracking classes in the XPSPRMxx member of the OpCon Parmlib (XPSPARMS DD in the agent task). The following job illustrates all three setup methods:
 
-As seen in the above example, a schedule name token (e.g., @SCHDName) starting in column 59 overrides the AdHoc schedule name default. This allows the scheduling of a job through any schedule on OpCon.
+![Dynamic job request](../../../../../../../Resources/Images/SM/Operations/ZOs/Dynamic-Job-Request.png "Dynamic job request")
+
+
+1. Job Name mask as defined in XPSPRMxx (e.g., TRACMASK=TRAC****)
+2. A special held class or class list as defined in XPSPRMxx (e.g., TRACLASS=TQA)
+3. A `T` in continuation column 72 of the first job card (requires multiple continued job cards)
+
+Dynamically tracked jobs may or may not have dependency capabilities. Because their arrival on the schedule may be arbitrary, using them as dependent triggers should be avoided as standard practice.
+
+Every dynamically tracked job must be predefined on the OpCon schedule. If it has no dependencies or resource requirements, it is released immediately. Otherwise, it is released as dependencies or resources are satisfied.
+
+A schedule name token (e.g., `@SCHDName`) starting in column 59 overrides the AdHoc schedule name default, allowing scheduling through any schedule on OpCon.
 
 :::note
-The @ character is an indicator flag, and not part of the schedule name.
+The `@` character is an indicator flag, not part of the schedule name.
 
-The requested schedule must exist on the CURRENT day, or dynamic tracking fails. The "AdHoc" schedule always exists or will be added automatically. Note:
+The requested schedule must exist on the current day, or dynamic tracking fails. The "AdHoc" schedule always exists or is added automatically.
 
-When the 'Q' continuation character is used and a schedule name is supplied on the job card, the job will be added to the LATEST date with the schedule. This helps to link jobs across the "midnight boundary".
+When the `Q` continuation character is used and a schedule name is on the job card, the job is added to the LATEST date with that schedule, helping to link jobs across the midnight boundary.
 
-The default schedule name can be changed from AdHoc by defining the TRACSCHD parameter in XPSPARMS.
+The default schedule name can be changed from AdHoc using the TRACSCHD parameter in XPSPARMS.
 :::
 
 #### Assigning a Date, Schedule, Job and Frequency to a Job
-To assign a Date, Schedule name, Job name ,and Frequency to the job, create an event in the ISPF Event table:
-![Action trigger definition](../../../../../../../Resources/Images/SM/Operations/ZOs/Action-Trigger-Definition.png "Action trigger definition")  
 
-- The token name must match the name on the job card.
-- The Action Type must be $JOB.
-- The Action must be TRACK.
-- The only fields used are Element (the OpCon job name), Schd Date, Schd Name and Frequency.
-- Element and Schd Name are required.
+To assign a Date, Schedule name, Job name, and Frequency, create an event in the ISPF Event table:
 
-In the sample screen above, a job named TRACJOB will be added to the OpCon PRODSCHD schedule on the LATEST date as job name QUEUEDJOB with Frequency Daily.
+![Action trigger definition](../../../../../../../Resources/Images/SM/Operations/ZOs/Action-Trigger-Definition.png "Action trigger definition")
 
-If a job has an Event table entry and a job card frequency definition, the job card definition will override the entry table.
+- The token name must match the name on the job card
+- The Action Type must be `$JOB`
+- The Action must be `TRACK`
+- Only the following fields are used: Element (OpCon job name), Schd Date, Schd Name, and Frequency. Element and Schd Name are required
+
+In the sample above, a job named TRACJOB is added to the OpCon PRODSCHD schedule on the LATEST date as job name QUEUEDJOB with Frequency Daily.
+
+If a job has both an Event table entry and a job card frequency definition, the job card definition overrides the event table entry.
 
 #### Prerun Conditions
-Pre-run conditions are provided as resource management and triggering functions for scheduled events. Pre-run conditions are logically associated to a production-scheduled event, such as a batch job. When SAM sends the LSAM a "Start Job" request, that request may have Pre-run conditions. A file may be needed or a tape drive must be available or a non-scheduled task (e.g., CICS) must be down, before a job can execute. The Pre-run condition defines the resources required to execute a job successfully.
 
-If the pre-run resources are available for execution of the scheduled event, the LSAM immediately submits or initiates the associated job, task, or command.
-- **File Resource**
-  - Check for the existence, creation, modification, deletion, reference, or change of catalog status of a specific dataset, either anonymously or by a specific job or task name.
-  - It is possible to request that a file resource is satisfied a number of times before triggering the associated job or event.
-  - It is also possible to request that the file trigger can only occur on the scheduled date of the associated job. This action waits for the trigger to occur or the expiration of the parameters (e.g., scheduled date).
-  - The 'Delete' option only functions when JCL containing a DISP=(,DELETE,[DELETE]) is honored.
-  - 'Reference' works for ANY reference, including Open and Close processing, and should be used sparingly. Each I/O function counts as a reference generation, regardless of file processing. For example, the sequence of Open-Process-Close generates 3 references.
-  - The 'Condition' choices are:
-    - Exists
-    - Created
-    - Updated
-    - Deleted
-    - Referenced
-    - Cataloged
-    - Uncataloged
-- **Message Trigger**
-  - The 'When' choices are:
-    - Continuous Monitoring
-    - While/As Scheduled Only
-    - Any message issued to the system log can be used as a trigger for a scheduled event
-- **Job/Task Resource**
-  - 'Job/Task Must Be' choices are:
-    - Executing
-    - Not Executing
-    - Check for the existence of a job or task, by name. If the named task is executing, the appropriate action is taken.
-    - Request that the associated job be run or not run if the pre-run task is found in an executing state.
-- **Tape Units**
-  - Check for the availability of a number of tape class units (by esoteric name or device type) on a specific machine ID.
-  - If the check fails, OpCon schedules a retry later.
-    - The 'Device' choices are: 
-      - &ltUser-defined&gt
-      - 3420
-      - 3423
-      - 3480
-      - 3490
-      - 3590
-- **REXX Procedure**
-  - A REXX program
-  - Execution PARM
-  - A Return Code of ZERO allows the associated job/task to execute.
-  - A NON-ZERO return code delays the start of the associated job.
+Pre-run conditions are resource management and triggering functions for scheduled events. When SAM sends the agent a "Start Job" request, that request may include pre-run conditions (e.g., a file is needed, a tape drive must be available, or a non-scheduled task must be down). If pre-run resources are available, the agent immediately submits or initiates the associated job, task, or command.
 
-#### Pre-run Conditions – How They Work
-Pre-run conditions can be Immediate and Monitored. Most File Resource and all Message Trigger events are monitored; the criteria for these conditions are stored in continuously monitored tables. All other pre-run conditions are "Immediate" events; they are essentially a "true/false" test.
+- **File Resource:** Checks for existence, creation, modification, deletion, reference, or catalog status change of a specific dataset. Can require the condition to be met multiple times before triggering. Can be restricted to the scheduled date of the associated job. The `Delete` option functions only when JCL contains `DISP=(,DELETE,[DELETE])`. `Reference` applies to any reference including Open and Close processing; each I/O function counts as one reference. Condition choices: Exists, Created, Updated, Deleted, Referenced, Cataloged, Uncataloged
+- **Message Trigger:** Any message issued to the system log can trigger a scheduled event. `When` choices: Continuous Monitoring, While/As Scheduled Only
+- **Job/Task Resource:** Checks for the presence or absence of a job or task by name. `Job/Task Must Be` choices: Running, Not Running
+- **Tape Units:** Checks availability of tape class units by esoteric name or device type. If the check fails, OpCon schedules a retry. Device choices: &lt;User-defined&gt;, 3420, 3423, 3480, 3490, 3590
+- **REXX Procedure:** Runs a REXX program. A return code of zero allows the job to run. A non-zero return code delays the start
 
-**Immediate Events**  
-Each Immediate pre-run event has its own special use or purpose:
-- File Resource "EXISTS" Option: Only the "Exists" option of the File Resource pre-run is an immediate event. All others are tabled and monitored. An MVS catalog "Locate" is issued for this type of pre-run. For this reason, the dataset name used for the Exists option must be fully qualified and contain no wild card characters.
-- Job/Task Resource: Used to check for the presence or absence of a non-scheduled task. Such tasks as TSO User-ids, report writers and other tasks can be verified. If the required task is in the required state, the associated job is immediately submitted. Otherwise, the test is repeated throughout the scheduled day, until the pre-run condition is satisfied or the job is removed from the schedule.
-- Tape Units: Used to check for the presence of a fixed number of unallocated tape unit devices by esoteric name or device type (e.g., four 3480 units). If the required units are found unallocated the associated job is immediately submitted. Otherwise, the test continues every couple of minutes throughout the scheduled day, until the pre-run condition is satisfied or the job is removed from the schedule.
-- REXX Procedure: Used for any automation purpose. The named REXX routine is executed. A Return code from the routine of ZERO allows the associated job to be immediately submitted. Any Non-Zero Return Code causes the test to be repeated throughout the scheduled day, until the REXX routine ends with a Return Code of Zero or the job is removed from the schedule. A REXX Pre-run executes as a started task in its own address space. Unlike the other immediate pre-runs, it starts immediately but it may not end for hours or days. Write unique/special monitors that look for very complicated events or provide for custom interfaces.
+#### Pre-run Conditions — How They Work
 
-**Monitored Events**  
-Monitored pre-run events have a completely different life cycle. When a monitored pre-run event is defined, it becomes part of a continuously monitored event stream. An independent set of programs maintains tables that record when events are triggered, by what task and when those events are referenced by scheduled OpCon Pre-runs. The two types of monitored events are called "PASSIVE" and "ACTIVE" trigger events.
+Pre-run conditions are either Immediate or Monitored. Most File Resource and all Message Trigger events are monitored; criteria are stored in continuously monitored tables. All other pre-runs are Immediate — essentially a true/false test.
 
-**Active Event Triggers**  
-Active event triggers represent a scheduled event waiting to happen. It is ALWAYS ACTIVE regardless of the contents or disposition of the daily schedule. The trigger is defined ON THE z/OS SYSTEM only. The trigger has a defined action to be taken when the trigger is activated. Event (refer to XPSCOMM event parameters) may describe jobs to be added, deleted or released, or non-job related events such as notifications, machine reconfiguration or schedule level events. Once an Active Trigger activates and performs the assigned task, it is placed back into the "active" state and the process repeats itself.
+**Immediate Events**
 
-**Passive Event Triggers**  
-Passive triggers represent a trigger waiting on a scheduled event. The trigger is activated by a scheduled job. The trigger itself is defined in the JOB DETAIL for the job requiring the trigger. After the trigger is recognized AND the target job is started, the trigger may be reset to await the next occurrence of the job or it may be deleted from the monitoring table. These two different behaviors are termed "Continuous" and "As Scheduled".
+- **File Resource "EXISTS":** Only the Exists option is an immediate event. An MVS catalog Locate is issued; the dataset name must be fully qualified with no wildcards
+- **Job/Task Resource:** Checks for the presence or absence of a non-scheduled task. If the required state is found, the job is submitted immediately. Otherwise, the test repeats throughout the scheduled day
+- **Tape Units:** Checks for a fixed number of unallocated tape unit devices. If available, the job is submitted immediately. Otherwise, the test continues every few minutes throughout the scheduled day
+- **REXX Procedure:** The named REXX routine runs. A return code of zero submits the associated job immediately. A non-zero code repeats the test throughout the scheduled day. A REXX Pre-run runs as a started task in its own address space and may run for hours or days, enabling custom monitors for complex events
 
-**Continuous Monitoring**  
-Once a scheduled event has set a PASSIVE trigger, it can request that the trigger stay "alive" even after the associated job or event has started. The next time the event or job is scheduled the trigger is tested to see if it triggered again at any time since the last execution of the job. If it has, the job immediately runs and the trigger is reset to monitor continuously.
+**Monitored Events**
 
-**As Scheduled Monitoring**  
-Once a scheduled event has set a PASSIVE trigger, it can request that trigger be deleted as soon as it triggers the event or job. In this way, only events that occur within the scheduled time window of the associated job are considered triggers.
+Monitored pre-runs become part of a continuously monitored event stream. An independent set of programs maintains tables recording when events are triggered. The two types are PASSIVE and ACTIVE trigger events.
 
-**Implied Pre-run Conditions**  
-Several "implied" pre-run conditions are displayed in the Enterprise Manager:
+**Active Event Triggers**
+Active triggers represent scheduled events waiting to happen. Always active regardless of daily schedule contents. Defined on the z/OS system only, with an action to take when activated. Once activated and the assigned task is performed, the trigger returns to the active state and the process repeats.
+
+**Passive Event Triggers**
+Passive triggers represent a trigger waiting on a scheduled event, activated by a scheduled job. Defined in the JOB DETAIL for the job requiring the trigger. After the trigger is recognized and the target job starts, the trigger resets to await the next occurrence (Continuous) or is deleted (As Scheduled).
+
+**Continuous Monitoring**
+Once a scheduled event sets a PASSIVE trigger, it can request the trigger stay active after the associated job starts. On the next scheduled run, the trigger is tested to see if it fired again since the last execution. If so, the job runs immediately and the trigger resets to monitor continuously.
+
+**As Scheduled Monitoring**
+The trigger is deleted as soon as it fires. Only events within the scheduled time window of the associated job are considered triggers.
+
+**Implied Pre-run Conditions**
 
 | Prerun Message | Meaning | Job Status |
 | -------------- | ------- | ---------- |
-| Awaiting Execution | On JES2 Input Queue or JES3 CI or awaiting MAIN | Executes as soon as JES assigns an available initiator. | 
-| SSSS Not in SYSPLEX | System ID SSSS is not available to the OpCon LSAM | Job is resubmitted when system SSSS returns or is ADOPTED by another system. |
+| Awaiting Execution | On JES2 Input Queue, JES3 CI, or awaiting MAIN | Runs as soon as JES assigns an available initiator. |
+| SSSS Not in SYSPLEX | System ID SSSS is not available to the OpCon agent | Job is resubmitted when system SSSS returns or is adopted by another system. |
 
 #### Defining File Resource (DSN) Triggers
-A File Resource trigger is used to illustrate the life cycle of a passive monitored event:
-1. A new job is scheduled that requires a pre-run File Resource defined as:
-2. DSName: PROD.BANK.DRAFT.G*
-3. Generations: 3
-4. Condition: Created
-5. Creating Job: Any
-6. Created on SysID: ANY
-7. Type: As Scheduled only When the associated job is ready to START (all other SAM dependencies are met), the z/OS LSAM adds the DSN trigger criteria to the internal DSN Trigger Table on all LSAMs in the SYSPLEX.
-8. SAM sets the job to "Waiting Start Time – DSN(s) Not Available" on the SAM schedule.
-9. At a user-defined interval, SAM checks the z/OS LSAM for any trigger hits on the pre-run DSN(s). If none is found, the "Waiting Start Time" message persists. For information on this Prerun setting, refer to Time Settings.
-10. At the same time, on each z/OS machine, the File Tracking components are checking every "File Close" event and looking for a match on the entry in the DSN Table. In this example, it takes three GDG creations for a "trigger" to be posted.
-11. At some point, all three generations have been created and the job runs. In this example, the DSN trigger entry in the LSAM is deleted as soon as the job is released because the proper procedure is to look for this DSN only "While/As Scheduled".
-12. If "Continuous Monitoring" was requested, the DSN trigger would be reset to look for three more generations. The next time a job with the same pre-run DSN is scheduled, the table already has the status of the DSN. If three generations (or more) have been created since the last time the associated job was scheduled, it would be immediately submitted.
 
-Refer to the IVP pre-defined jobs for examples of defining PASSIVE File Resource triggers. The section on the ISPF Automation Table Administrator has examples of setting ACTIVE triggers and administering defined trigger events.
+Life cycle of a passive monitored event:
 
-Wildcard characters may be used in DSN Trigger definitions to automate triggering on similar file names. For instance, "PROD.????.DRAFT.*" would trigger on a DSN match, regardless of the contents of '????'. Wild cards may be any non-valid DSN character except blank (space) and asterisk (*). Valid wildcard characters are any of "?+_&!~%". Any number or combination of wildcards may be used in any position of the dataset name definition.
+1. A new job is scheduled requiring a pre-run File Resource:
+   - DSName: `PROD.BANK.DRAFT.G*`
+   - Generations: 3
+   - Condition: Created
+   - Creating Job: Any
+   - Created on SysID: ANY
+   - Type: As Scheduled Only
+
+2. When the associated job is ready to start (all other SAM dependencies met), the z/OS LSAM adds the DSN trigger criteria to the internal DSN Trigger Table on all LSAMs in the SYSPLEX
+3. SAM sets the job to "Waiting Start Time — DSN(s) Not Available."
+4. At a user-defined interval, SAM checks for trigger hits. If none, the "Waiting Start Time" message persists
+5. On each z/OS machine, File Tracking components check every File Close event against the DSN Table. In this example, three GDG creations are required for a trigger
+6. Once all three generations are created, the job runs. The DSN trigger entry is deleted because the type is "While/As Scheduled."
+7. With Continuous Monitoring, the trigger resets to look for three more generations. On the next scheduled run, if three or more generations have been created since the last run, the job is submitted immediately
+
+Wildcard characters can be used in DSN Trigger definitions. For example, `PROD.????.DRAFT.*` triggers on a match regardless of the `????` content. Valid wildcard characters are any non-valid DSN character except blank and asterisk: `?+_&!~%`. Any number or combination of wildcards may be used.
 
 #### Message Triggers
-WTO table (Console Message) triggering is accomplished by program XPSWTOEX. It allows triggering on two keys in a message: one FIXED and one VARIABLE. The Msg Off column defines the number of character positions (bytes) from the beginning of the message text to the start of the FIXED key. The Msg Len column defines the length of the FIXED key. ALL WTO triggers MUST have a FIXED key. The variable portion is optional. A variable key is defined within brackets {}. Once the fixed key is located in a record, a variable key is scanned for AFTER the end of the fixed key.
 
-IVP job IVPPROC1 is used as a series of complex repeated messages that have variable contents. IVPPROC1 triggers on the following message:  
-*XPS072I - Prerun MSG: XPS072I IVPJOB15 For IVPPROC1 Triggered by..*
+WTO table (Console Message) triggering is handled by program XPSWTOEX. Triggering supports two keys: one FIXED and one VARIABLE. The Msg Off column defines the number of character positions from the start of the message text to the FIXED key. The Msg Len column defines the FIXED key length. All WTO triggers must have a FIXED key. The variable portion is optional and defined within brackets `{}`. Once the fixed key is located, the variable key is scanned for after the end of the fixed key.
 
-The message has two key components. First, its message id and event qualifier (XPS072I) and the name of a schedule event being triggered (IVPJOB15). To create a PASSIVE event or to trigger an awaiting ACTIVE event, the Message Key must be qualified. This example selects the correct message.
+Console Message Triggers operate the same as DSN Triggers. The first time a job with a Message Trigger pre-run is requested, the WTO Table is updated and subsequent start requests verify that table until the trigger is satisfied or the job is removed. "While/AS" and "Continuous" triggers behave the same as with DSN Triggers.
 
-This key tells the LSAM WTO monitor program to look in position zero of the message for seven characters ('XPS072I'), and then scan for the text within brackets ({IVPJOB15}) somewhere AFTER the fixed text.
-
-Console Message Triggers work exactly the same way as DSN Triggers. The first time a job is requested with a Message Trigger pre-run, the Message (WTO) Table is updated and subsequent start requests interrogates that table for a trigger until the trigger is satisfied or the job is removed from the schedule. "When/AS" and "Continuous" triggers act the same way.
-
-Table cleanup for the DSN and WTO tables is automatic. If a trigger goes un-referenced for 45 days, it is removed. In addition, the XPSPF001 ISPF Table Administration Application can be used to perform maintenance on storage tables.
-
-Refer to the IVP pre-defined jobs for examples of defining PASSIVE message triggers. The section on the ISPF Automation Table Administrator has s of setting ACTIVE triggers and administering defined trigger events.
+WTO and DSN table cleanup is automatic. Triggers unreferenced for 45 days are removed. The XPSPF001 ISPF Table Administration Application can also perform maintenance on storage tables.
 
 #### Resource Requirements
-Resource requirements at the LSAM level are controlled by resource tabs in the Job Information display. Multiple resources can be requested but they can only be honored in the sequence of the tabs. For example, File Resources are always checked first, once they are satisfied, the next resource is sought. The last resource function to be performed is the REXX script procedure. It is processed after all other resources have been satisfied.
+
+Resources at the agent level are controlled by resource tabs in the Job Information display. Multiple resources can be requested but are honored in tab sequence — File Resources are checked first, then each subsequent resource, with the REXX script procedure last.
 
 | Resource Requirement | Description |
 | -------------------- | ----------- |
-| File Resource | This is the most often-used resource definition. Previously in this topic, the various rules and conventions that can be used to trigger events using the File Triggering features are explained. When a file trigger is defined here, it is said to be a "scheduled trigger" and as such is self-documenting in the job that is awaiting it. |
-| Message Trigger | The various rules and conventions that can be used to trigger events using the WTO Message Triggering features are described. When a message trigger is defined here, it is said to be a "scheduled trigger" and as such is self-documenting in the job that is awaiting it. | 
-| Job/Task Resource | This is simply a "must be" / "can't be" executing test. The execution status of a task or job can be checked before a scheduled event is to run to ensure the state is the desired one. | 
-| Tape Units | This is a powerful feature for sites that have tape processing using a scarce or limited device type (e.g., 3420). Define any esoteric or generic unit type (e.g., CTAPE or 3480) that is defined on the z/OS system – and a number from 1 – 9 for the number of units that the UCB lookup routine is to locate. Messages are displayed by OpCon and the LSAM indicating how many units are available and required at a user-defined interval until the resource is satisfied. If the resources are available, the job is submitted for execution immediately (within one second). | 
-| REXX Procedure | This function executes a REXX program directly from a REXX procedure library and tests its return code before submitting the associated job. If the return code is non-zero, the associated job waits for a user-defined interval and the REXX routine is executed again. This process continues until a return code of zero is received from the REXX procedure or the job is removed from the schedule. |
+| File Resource | The most commonly used resource definition. A "scheduled trigger" that is self-documenting in the job awaiting it. |
+| Message Trigger | A "scheduled trigger" using WTO Message Triggering features; self-documenting in the job awaiting it. |
+| Job/Task Resource | A "must be" / "can't be" running test that checks a task or job state before a scheduled event runs. |
+| Tape Units | Checks for a defined number of unallocated tape units by esoteric or generic unit type. Messages indicate available and required units at a user-defined interval until satisfied. If resources are available, the job is submitted within one second. |
+| REXX Procedure | Runs a REXX program from a procedure library and tests its return code. If non-zero, the job waits for a user-defined interval and the routine runs again, repeating until return code zero is received or the job is removed from the schedule. |
 
-All pre-runs are tested at a user-defined interval, starting as soon as all other schedule dependencies are met for an event. The status in SAM shows "Start Attempted". If the associated pre-run test fails, it returns to a "Wait Start Time" status. The Pre-run test it is waiting for is also displayed in the status.
+All pre-runs are tested at a user-defined interval once all other schedule dependencies are met. SAM shows "Start Attempted." If the test fails, status returns to "Wait Start Time" with the specific pre-run listed.
 
 #### Restart
-An MVS job is controlled by JCL, which may contain multiple steps. An error in a late step may not require the repeated execution of previous, correct steps. IBM provides the ability, using a RESTART keyword on the JOB card, to designate a starting step for these cases.
 
-**Restart Solutions in OpCon**  
-OpCon automates the restart process and provides the features that are lacking in the JOB card RESTART.
-- The user can start and end the job in any step, even if the names are not unique.
-- Optionally, the restart step may be placed on the job card so that resource managers, such as JES3, will not attempt to find resources for steps that will be skipped when the job is restarted.
-- Completion codes for steps that do not execute during the restart can be restored, so that subsequent conditional processing is evaluated correctly.
-- If a dataset to be created or recreated is already catalogued at the beginning of a step, it can be uncataloged and, if it is on DASD, scratched. This avoids processing errors.
-- Dataset cleanup can be suppressed (e.g., for database journal files) by defining patterns for the dataset names in one or more tables.
-- Generation numbers used during the first run can be restored during the restart so that the correct data is used.
-- Other options are available to reset the base generations in such as way as to avoid JCL errors and skipped generations, based on the current catalog and restart JCL.
+An MVS job controlled by JCL may contain multiple steps. An error in a late step may not require re-execution of earlier steps. IBM provides a RESTART keyword on the JOB card to designate a starting step.
+
+**Restart Solutions in OpCon**
+
+OpCon automates the restart process with capabilities beyond the JOB card RESTART:
+
+- Start and end the job at any step, even if step names are not unique
+- Optionally place the restart step on the job card so resource managers such as JES3 skip resources for bypassed steps
+- Restore completion codes for steps that do not run during the restart so conditional processing evaluates correctly
+- Uncatalog and scratch pre-existing DASD datasets to avoid processing errors
+- Suppress dataset cleanup for patterns such as database journal files using defined name tables
+- Restore generation numbers from the first run so correct data is used
+- Additional options reset base generations to avoid JCL errors and skipped generations based on the current catalog and restart JCL
 
 **GDG Regression Options**
-A Generation Data Group (GDG) is a set of related datasets that can be referenced by generation. A Generation Data Set (GDS) is a member of the group with a specific generation. A GDS can be allocated by absolute generation, but is normally referenced by a base name (e.g., A.B.C) and a relative generation, which can be '0', for the current generation, or a signed number (e.g., -1, +1, +2). The relative generation is used, with the catalog, to compute the absolute generation of the GDS.
+
+A Generation Data Group (GDG) is a set of related datasets referenced by generation. A Generation Data Set (GDS) is a member with a specific generation, referenced by base name and a relative generation (`0` for current, or a signed number such as `-1`, `+1`, `+2`).
 
 :::note
-**Example**  
-GDG A.B.C is defined and has generations 7, 8, 9, and 10 cataloged.
+**Example**
+
+GDG A.B.C has generations 7, 8, 9, and 10 cataloged.
 - A.B.C(0) resolves to generation 10: A.B.C.G0010V00
 - A.B.C(-1) resolves to generation 9: A.B.C.G0009V00
 - A.B.C(+1) resolves to generation 11: A.B.C.G0011V00
 :::
 
-The base generation is determined and recorded by the system when the group is first referenced in the job. Thus, a given relative generation always refers to the same absolute generation for the life of a job. If the previous run of the job created any new generations, the base is different during a restart, and the absolute generation for a given relative generation is not the same. To use the correct generation during a restart, it is normally necessary to un-catalogue the new generations or change the relative generations in the JCL.
+The base generation is determined when the group is first referenced in the job. If the previous run created new generations, the base differs on restart, making relative generations resolve to different absolute generations. Correct restart typically requires uncataloging new generations or changing relative generations in the JCL.
 
 :::note
-**Example**  
-Given JCL that includes the following statements:
+**Example**
+
+Given JCL:
+```
 //STEP1 ....
-
 //DD1 DD DSN=A.B.C(+1),DISP=(NEW,CATLG)
-
 ...
-
 //STEP3 ...
-
 //DD2 DD DSN=A.B.C(+1),DISP=SHR
-
-...
+```
+Both statements refer to generation 11 on a normal run. During a restart, the new base is 11, so both statements refer to generation 12. Restarting in STEP3 causes an error because generation 12 does not exist.
 :::
 
-This is the correct way to refer to a new GDS across steps, and works as expected. In our example, both statements would refer to generation 11. During a restart, the new base is 11, and the statements refer to generation 12. If the job is restarted in STEP3, an error occurs because generation 12 does not exist.
+OpCon offers four GDG regression options. OpCon takes no action for GDS references by explicit absolute generation.
 
-**Solutions**  
-An automated restart solution can help to avoid the errors in several ways. It can un-catalog the new generations, change the absolute or relative generation internally, or reset the base. Usually some combination is used.
-
-OpCon offers four options for GDG regression: None, Absolute, Relative, and Catalog Resync. OpCon takes no action for any GDS that is referenced by explicit absolute generation.
-
-- **None** is the trivial, do nothing option. The user takes full responsibility.
-- **Absolute** requests XPR to reset the base generation to the value it had during the first run. This ensures that all relative generations resolve to the same absolute generations during the restart.
-- **Relative and Catalog Resync** are related options that allow for the creation of new generations by other jobs between the first run and the restart. The goal is to avoid scratching valid datasets created by other jobs and prevent JCL errors due to positive relative generations, without causing gaps in the cataloged generations. OpCon associates the highest cataloged generation with a particular relative generation in the JCL.
+- **None:** No action taken. The user takes full responsibility
+- **Absolute:** XPR resets the base generation to the value from the first run. All relative generations resolve to the same absolute generations during the restart
+- **Relative and Catalog Resync:** Related options that allow new generations created by other jobs between the first run and the restart. The goal is to avoid scratching valid datasets and prevent JCL errors from positive relative generations without creating gaps in cataloged generations. OpCon associates the highest cataloged generation with a particular relative generation in the JCL
 
 *Sample JCL: Undesirable GDG Resolution*
 
 | JCL | First run base generation 7 | Restart in step 3 base generation 10 |
 | --- | --------------------------- | ------------------------------------ |
-| //STEP1 ... |
+| //STEP1 ... | | |
 | //DD DD DSN=A.B.C(+1),DISP=(NEW,CATLG) | G0008V00 | n/a |
-| //STEP2 ... | 
+| //STEP2 ... | | |
 | //DD DD DSN=A.B.C(+2),DISP=(NEW,CATLG) | G0009V00 | n/a |
-| //STEP3 ... |
+| //STEP3 ... | | |
 | //DD DD DSN=A.B.C(+3),DISP=(NEW,CATLG) | G0010V00 | G0013V00 |
-| //STEP4 ... | 
+| //STEP4 ... | | |
 | //DD DD DSN=A.B.C(+4),DISP=(NEW,CATLG) | G0011V00 | G0014V00 |
 
-This JCL normally creates four new generations in a GDG. If it is restarted in STEP3, it runs correctly, but skips two generation for the new datasets (e.g., If the current generation is 10, a restart in STEP3 creates generation 13 and 14). There are no datasets corresponding to generations 11 and 12. While this is not an error, it is not desirable.
+This JCL normally creates four new generations. A restart in STEP3 runs correctly but skips generations 11 and 12 (creating 13 and 14 instead). Not an error, but not desirable.
 
 *Sample JCL: Undesirable GDG Resolution*
 
 | JCL | First run base generation 7 | Restart in step 3 base generation 10 |
 | --- | --------------------------- | ------------------------------------ |
-| //STEP1 ... |
+| //STEP1 ... | | |
 | //DDI DD DSN=A.B.C(0),DISP=SHR | G0007V00 | n/a |
 | //DDO DD DSN=A.B.C(+1),DISP=(NEW,CATLG) | G0008V00 | n/a |
-| //STEP2 ... | 
-| //DDI DD DSN=A.B.C(+1),DISP=SHR | G0008V00 | n/a | 
+| //STEP2 ... | | |
+| //DDI DD DSN=A.B.C(+1),DISP=SHR | G0008V00 | n/a |
 | //DDO DD DSN=A.B.C(+2),DISP=(NEW,CATLG) | G0009V00 | n/a |
-| //STEP3 ... |
-| //DDI DD DSN=A.B.C(+2),DISP=SHR | G0009V00 | G0012V00 | 
+| //STEP3 ... | | |
+| //DDI DD DSN=A.B.C(+2),DISP=SHR | G0009V00 | G0012V00 |
 | //DDO DD DSN=A.B.C(+3),DISP=(NEW,CATLG) | G0010V00 | G0013V00 |
-| //STEP4 ... | 
+| //STEP4 ... | | |
 | //DDI DD DSN=A.B.C(+3),DISP=SHR | G0010V00 | G0013V00 |
 | //DDO DD DSN=A.B.C(+4),DISP=(NEW,CATLG) | G0011V00 | G0014V00 |
 
-In this case, the restart in STEP3 results in a JCL error, because STEP3.DDI refers to generation 12, which does not exist.
+In this case, a restart in STEP3 causes a JCL error because STEP3.DDI refers to generation 12, which does not exist.
 
-- **Relative** looks for positive relative generations in the steps to be executed to determine the correct base.
+- **Relative:** Examines positive relative generations in the steps to run to determine the correct base. If positive references to NEW datasets exist, the base is set so the lowest positive NEW dataset is `+1` relative to the current catalog. If no positive NEW references exist, the base is set so the highest relative generation is the current generation. If JCL contains no positive generations, the base is not reset
 
-If there are positive references to NEW datasets, the base is set so that the lowest positive NEW dataset is '+1' relative to the current catalog. In our first example, this requires that the base be set to '8', so that '+3' resolves to '11', which is the next available generation.
-
-If there are no positive NEW references, the base is set so that the highest relative generation is the current generation. If the JCL contains no positive generations, the base is not reset.
-
-In the example, only STEP3 and STEP4 are examined, with the result that '+3' is chosen as the lowest positive NEW generation, so '+2' is associated with the current catalog generation. If the current generation is 10, the base is set to '8' (10-2).
+In the example, only STEP3 and STEP4 are examined. `+3` is the lowest positive NEW generation, so `+2` is associated with the current catalog generation. If the current generation is 10, the base is set to 8 (10-2).
 
 *Sample JCL: GDG Relative Option*
 
-| JCL | Positive | Positive NEW | Restart in step 3 generation used | Equivalent generation relative to current | 
+| JCL | Positive | Positive NEW | Restart in step 3 generation used | Equivalent generation relative to current |
 | --- | -------- | ------------ | --------------------------------- | ----------------------------------------- |
-| //STEP1 ... | 
+| //STEP1 ... | | | | |
 | //DDI DD DSN=A.B.C(0),DISP=SHR | | | n/a | |
 | //DDI DD DSN=A.B.C(0),DISP=SHR | | | n/a | |
-| //STEP2 ... | 
+| //STEP2 ... | | | | |
 | //DDI DD DSN=A.B.C(+1),DISP=SHR | | | n/a | |
 | //DDO DD DSN=A.B.C(+2),DISP=(NEW,CATLG) | | | n/a | |
-| //STEP3 ... | 
+| //STEP3 ... | | | | |
 | //DDI DD DSN=A.B.C(+2),DISP=SHR | +2 | | n/a | +0 |
 | //DDO DD DSN=A.B.C(+3),DISP=(NEW,CATLG) | +3 | +3 | n/a | +1 |
-| //STEP4 ... | 
+| //STEP4 ... | | | | |
 | //DDI DD DSN=A.B.C(+3),DISP=SHR | +3 | | G0011V00 | +1 |
 | //DDI DD DSN=A.B.C(0),DISP=SHR | +4 | +4 | G0012V00 | +2 |
 
-- **Catalog Resync** is based on looking at the bypassed steps to determine the highest relative generation already created, and setting the base so that it resolves to the current generation. In both of our examples, a restart in STEP3 would require that '+2' resolve to '10', because that was the highest generation in the previous steps. Again, the new base is '8'. If no positive generations are found, the base is not reset.
+- **Catalog Resync:** Examines bypassed steps to find the highest relative generation already created and sets the base to resolve to the current generation. In both examples, a restart in STEP3 requires `+2` to resolve to `10` (the highest generation from previous steps). The new base is `8`. If no positive generations are found, the base is not reset
 
-In the example, only STEP1 and STEP2 are examined, and '+2' is the highest positive reference, which is associated with the current catalog generation. Again, if the current generation is 10, the base is set to '8' (10-2).
+In the example, only STEP1 and STEP2 are examined. `+2` is the highest positive reference, associated with the current catalog generation. If the current generation is 10, the base is set to 8 (10-2).
 
 *Sample JCL: GDG Catalog Resync Option*
 
-| JCL | Positive | Restart in step 3 generation used | Equivalent generation relative to current | 
+| JCL | Positive | Restart in step 3 generation used | Equivalent generation relative to current |
 | --- | -------- | --------------------------------- | ----------------------------------------- |
-| //STEP1 ... | 
+| //STEP1 ... | | | |
 | //DDI DD DSN=A.B.C(0),DISP=SHR | | n/a | |
 | //DDO DD DSN=A.B.C(+1),DISP=(NEW,CATLG) | +1 | n/a | |
-| //STEP2 ... | 
+| //STEP2 ... | | | |
 | //DDI DD DSN=A.B.C(+1),DISP=SHR | +1 | n/a | |
 | //DDO DD DSN=A.B.C(+2),DISP=(NEW,CATLG) | +2 | n/a | |
-| //STEP3 ... | 
+| //STEP3 ... | | | |
 | //DDI DD DSN=A.B.C(+2),DISP=SHR | n/a | G0010V00 | +0 |
 | //DDO DD DSN=A.B.C(+3),DISP=(NEW,CATLG) | n/a | G0011V00 | +1 |
-| //STEP4 ... | 
+| //STEP4 ... | | | |
 | //DDI DD DSN=A.B.C(+3),DISP=SHR | n/a | G0011V00 | +1 |
 | //DDO DD DSN=A.B.C(+4),DISP=(NEW,CATLG) | n/a | G0012V00 | +2 |
 
 #### Using z/OS JCL Symbolic Substitution (&)
-Manual setup of JCL can be reduced or eliminated by utilizing OpCon JCL Symbolic replacement options. JCL symbolic substitutions are defined in the Batch Control Section of the Job Master Detail display. Each override or symbolic definition must be separated by two backslashes (\\\\).  
-When the z/OS LSAM encounters an "&name=" symbolic it scans each JCL for an operand match. For instance, changing a Generation Data Group (GDG) reference from the last DSN created, to its predecessor. If the EXEC statement has a "GDG=(-0)" operand, a "&GDG=(-1)" symbolic definition in the SAM schedule record causes the GDG symbolic to be changed – for this run only.
 
-Only "Operands" are changed by an "&" Symbolic substitution. The rule for locating an Operand is that it must be preceded by a comma or a blank AND be followed by an "=" sign. In the following example, JCL #1 is changed, but JCL #2 is not, if "&PARM=(YES)" is coded in the Enterprise Manager:
+OpCon JCL Symbolic replacement can reduce or eliminate manual JCL setup. Define each override or symbolic in the Batch Control Section of the Job Master Detail display, separated by two backslashes (`\\`).
 
-1. //STEP1 EXEC LIB=SYS1.OKLIB,PARM=(NO),MBR=TEMPNAME
-2. //MYDD DD DSN=SYS1.PARMLIB,DISP=SHR
+When the z/OS LSAM encounters an `&name=` symbolic, it scans each JCL statement for an operand match. For example, changing a GDG reference from `(-0)` to `(-1)`: if the EXEC statement has `GDG=(-0)` and `&GDG=(-1)` is defined in the SAM schedule record, the GDG symbolic changes for that run only.
 
-Also, the z/OS LSAM does EXACTLY what is said, so if an error is coded in the symbolic override, the error is passed to the job JCL. If "&PARM=(YES" was coded in the previous example, the result would be:
+Only operands are changed by `&` substitution. An operand must be preceded by a comma or blank and followed by `=`. In the following example, JCL #1 is changed but JCL #2 is not when `&PARM=(YES)` is coded:
 
-//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(YES,MBR=TEMPNAME
+1. `//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(NO),MBR=TEMPNAME`
+2. `//MYDD DD DSN=SYS1.PARMLIB,DISP=SHR`
 
-This probably results in a JCL Error.
+The z/OS LSAM runs exactly what is specified. If `&PARM=(YES` (missing closing parenthesis) is coded, the result is:
 
-If the JCL syntax matches the criteria for an "Operand", a replacement is forced. For example, a symbolic definition of "&UNIT=3420" would be a match on BOTH the following statements:
+`//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(YES,MBR=TEMPNAME`
 
-1. //STEP1 EXEC LIB=SYS1.OKLIB,UNIT=3380,MBR=TEMPNAME
-2. //MYDD DD DSN=SYS1.PARMLIB,DISP=SHR,UNIT=SYSDA
+This likely results in a JCL Error.
 
-When developing symbolic operands, make sure that they do not duplicate JCL operands or statements -UNLESS - the substitutions are common throughout the JCL. This is a powerful feature, but it can cause unexpected results if not defined and tested properly.
+If the JCL syntax qualifies as an operand, replacement is forced. For example, `&UNIT=3420` matches both of these:
+
+
+1. `//STEP1 EXEC LIB=SYS1.OKLIB,UNIT=3380,MBR=TEMPNAME`
+2. `//MYDD DD DSN=SYS1.PARMLIB,DISP=SHR,UNIT=SYSDA`
+
+Ensure symbolic operands do not duplicate JCL operands or statements unless substitutions are intended to be universal. This is a powerful feature but can produce unexpected results if not defined and tested carefully.
 
 #### Using z/OS Data Overrides (@)
-Overrides are beneficial for REXX Parms, date cards or other dynamic JCL or data requirements in a job stream. For example, if a step only runs at end of month or a control card is inserted only on certain frequencies – these applications are best for @ Overrides.
 
-"@"Overrides are not to be confused with "&" Symbolics. Overrides are "place holders" for data and symbolics are substitutions of very specific operands. Symbolics reference "Operands" only. Overrides can be imbedded anywhere in JCL or SYSIN data and can define an entire 80 byte JCL record if need be. Overrides have no restrictions on content or delimiters except that they cannot contain double backslashes.
+Overrides are useful for REXX Parms, date cards, or other dynamic JCL or data requirements — for example, when a step runs only at month-end or a control card is inserted on certain frequencies.
+
+`@` overrides are placeholders for data; `&` symbolics replace specific operands. Overrides can be embedded anywhere in JCL or SYSIN data, can define an entire 80-byte JCL record, and have no restrictions on content or delimiters except they cannot contain double backslashes.
 
 :::note
-The data override keys are matched against the JCL in the order that they are defined in the parameter string. If a key begins with the same characters as a previously defined key, the shorter key always matches first.
+Override keys are matched against JCL in the order defined in the parameter string. If a key begins with the same characters as a previously defined key, the shorter key always matches first.
 :::
 
-Consider the following:
+Example:
 
-\\\\@MONTH=Jan\\\\@MONTH2=Mar\\\\
+`\\@MONTH=Jan\\@MONTH2=Mar\\`
 
-@MONTH in the JCL will always match before @MONTH2.
+`@MONTH` always matches before `@MONTH2`. To avoid this, define the longer key first or make the shorter key unique:
 
-To avoid this problem, define the longer key first, or make the shorter key unique:
-
-\\\\@MONTH2=Mar\\\\@MONTH=Jan\\\\ - or -
-
-\\\\@MONTH1=Jan\\\\@MONTH2=Mar\\\\
+`\\@MONTH2=Mar\\@MONTH=Jan\\` — or — `\\@MONTH1=Jan\\@MONTH2=Mar\\`
 
 :::caution
 To avoid formatting errors, the token placeholder should be the same length as the substitution value, or appropriate padding must be provided.
 :::
 
 #### Using OpCon as Data Overrides
-Internal OpCon tokens are represented by [[$…]] notations and may be used as data components of either Symbolics or Overrides. Refer to Properties.
 
-In the following example, the OpCon system variable token "$DATE" (MM/DD/YY) is substituted for the @DATE MVS override in the JCL //SYSIN DD data:  
-DATE CARD AB.224@DATE /* TODAYS DATE IN COL 17 – MM/DD/YY */
+Internal OpCon tokens use `[[$…]]` notation and may be used as data components of either symbolics or overrides. Refer to Properties.
 
-Becomes:  
-DATE CARD AB.22412/15/02 /* TODAYS DATE IN COL 17 – MM/DD/YY */
+Example — the OpCon system variable token `$DATE` (MM/DD/YY) substituted for `@DATE`:
 
-The following is an example of incorrectly padding the override:  
-DATE CARD AB.224@DATE /* TODAYS DATE IN COL 17 - MM/DD/YY */
+Before: `DATE CARD AB.224@DATE /* TODAYS DATE IN COL 17 — MM/DD/YY */`
 
-Becomes:  
-DATE CARD AB.22412/15/02 TODAYS DATE IN COL 17 - MM/DD/YY */
+After: `DATE CARD AB.22412/15/02 /* TODAYS DATE IN COL 17 — MM/DD/YY */`
+
+Example of incorrect padding:
+
+Before: `DATE CARD AB.224@DATE /* TODAYS DATE IN COL 17 - MM/DD/YY */`
+
+After: `DATE CARD AB.22412/15/02 TODAYS DATE IN COL 17 - MM/DD/YY */`
 
 #### Start Command
-The $START COMMAND property resolves to the value of the start command the LSAM attempted when a job was submitted to the operating system. The table provides z/OS start commands by Job Sub-Type.
+
+The `$START COMMAND` property resolves to the start command the agent attempted when submitting a job. The following table lists z/OS start commands by Job Sub-Type.
 
 | Job Sub-Type | Start Command |
 | ------------ | ------------- |
-| Batch | ddname(member)#programmer name <br/><br/> **Note:** "Programmer name" is taken from the JCL job statement. This 20-character field allows the user to describe the job better than the member name. |
-| Started Task | S taskname[,params] |
-| Command | C:command text |
-| Rexx | R:rexxname [params]
-| Queued | Q:jobname JobID|machineID#programmer name | 
-| Tracked | T:jobname JobID|machineID#programmer name |
+| Batch | `ddname(member)#programmer name` **Note:** "Programmer name" is taken from the JCL job statement. This 20-character field allows the user to describe the job beyond the member name. |
+| Started Task | `S taskname[,params]` |
+| Command | `C:command text` |
+| Rexx | `R:rexxname [params]` |
+| Queued | `Q:jobname JobID\|machineID#programmer name` |
+| Tracked | `T:jobname JobID\|machineID#programmer name` |
+
+## Configuration Options
+
+| Setting | What It Does | Default | Notes |
+|---|---|---|---|
+## FAQs
+
+**Q: How many steps does the Viewing, Adding, and Editing z/OS Job Details procedure involve?**
+
+The Viewing, Adding, and Editing z/OS Job Details procedure involves 32 steps. Complete all steps in order and save your changes.
+
+**Q: What does Viewing, Adding, and Editing z/OS Job Details cover?**
+
+This page covers Viewing z/OS Job Details, Adding z/OS Job Details, Editing z/OS Job Details.
+
+## Glossary
+
+**DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
+
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+
+**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+
+**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+
+**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+
+**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
