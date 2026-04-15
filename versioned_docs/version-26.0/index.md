@@ -94,6 +94,9 @@ OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heter
   - [Relay](./server-programs/introduction.md)
 - [System Requirements](./installation/system-requirements.md)
 - [System Configuration](./administration/System-Configuration-Overview.md)
+  - [New Install](./installation/install.md)
+  - [Upgrade](./installation/upgrade.md)
+  - [Component Install](./installation/components.md)
 
 </div>
 
