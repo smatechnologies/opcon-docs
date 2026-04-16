@@ -396,7 +396,13 @@ module.exports = {
               type: "category",
               label: "Relay",
               collapsed: true,
+              link: {
+                type: "doc",
+                id: "Files/UI/Solution-Manager/Library/Relays/Relays-Overview",
+              },
               items: [
+                "Files/UI/Solution-Manager/Library/Relays/Managing-Relays",
+                "Files/UI/Solution-Manager/Library/Relays/Relays-Reference",
                 "server-programs/network-communications",
               ],
             },

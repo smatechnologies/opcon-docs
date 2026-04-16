@@ -8,13 +8,12 @@ description: >
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash, Task, WebFetch
 ---
 
-> **Last updated:** March 2026
+> **Last updated:** April 2026
 >
 > **Recent changes:**
-> - Added Resource Loading, Multi-Page Coordination, golden-examples.md
-> - Removed remediation.md and plugin-instructions.md references
-> - Glossary aligned to ISP Confluence source; Sycorr→Continuous
-> - Updated product references to OpCon
+> - Added Always-on scope section: standards now apply to all docs/ edits regardless of explicit skill invocation
+> - Updated Document Types table to reflect correct repo paths (docs/ not docs-site/docs/)
+> - Added overview page type to Document Types table
 
 # Technical Writer
 
@@ -29,6 +28,18 @@ When writing documentation, identify the primary audience by role. Use that role
 **Roles:** System Administrator, Automation Engineer, Operations Staff, Application Owner, Business Analyst, Compliance Team
 
 **General assumptions:** Readers are comfortable with automation and IT operations concepts (job scheduling, dependencies, agents, event-driven processing) but are NOT developers. Never expose internal class names, namespaces, or implementation details in user-facing text.
+
+## Always-on scope
+
+These standards apply to **every edit or addition to any file in `docs/`**, regardless of whether the technical-writer skill was explicitly invoked. This includes targeted edits, bug fixes, content additions, new pages, and overview pages.
+
+Before completing any write or edit operation on a `docs/` file:
+
+1. Run the pre-flight checklist (see Quality Checklist below) against every sentence or section you touched
+2. Verify that no banned terms, passive constructions, or heading case violations were introduced
+3. If creating a new page, confirm it follows the correct documentation type structure from [opcon-documentation-types.md](resources/opcon-documentation-types.md)
+
+This rule cannot be overridden by operating mode or by the absence of an explicit skill invocation. If a change would violate these standards, fix the violation before saving — do not defer it to a later review pass.
 
 ## Writing Process
 
@@ -188,9 +199,9 @@ task to keep context focused and avoid unnecessary processing.
 | Type | Location | Standards |
 |------|----------|-----------|
 | API endpoint reference | `docs/api/reference/` | opcon-api-reference.md |
-| Help article | `docs-site/docs/` | opcon-documentation-standards.md |
-| Release notes | `docs-site/docs/release-notes/` | opcon-documentation-standards.md (Release Notes section) |
-| Setup instructions | Inline in plugin C# | opcon-documentation-standards.md |
+| Help article | `docs/` | opcon-documentation-standards.md |
+| Overview page | `docs/` (named `*-overview.md`) | opcon-documentation-standards.md + opcon-documentation-types.md |
+| Release notes | `docs/release-notes.md` | opcon-documentation-standards.md (Release Notes section) |
 
 ## Multi-Page Coordination
 
