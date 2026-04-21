@@ -96,6 +96,10 @@ Expression Dependencies:
 
     orange
 
+:::note
+Studio removes nodes outside the visible canvas area to maintain performance on large schedules. When a node is outside the viewport, dependency lines connected to it will not appear. This is expected behavior. To see a dependency line, scroll to bring both connected nodes into the visible canvas area.
+:::
+
 #### Cross Schedule Dependencies
 
 Dependencies can exist between jobs from different schedules, creating a cross-schedule dependency. These are represented like normal dependency lines; the nodes themselves indicate which job belongs to the selected schedule. See [Job Nodes](./Viewing-Master-Schedules.md#job-nodes) for details.
@@ -215,6 +219,10 @@ The controls are in the lower-left corner of the canvas. Use them to zoom in, zo
 
 ![Studio View Controls](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-controls.png "Studio View Controls")
 
+:::note
+When working with large schedules, use the zoom-in control to keep the viewport focused on a smaller area. A smaller viewport reduces the number of nodes rendered at one time, which improves performance and keeps dependency lines visible.
+:::
+
 ### Legend
 
 Select the info button in the controls to open or close the legend, which shows details for each dependency line. The legend appears in the lower-left corner next to the controls.
@@ -231,6 +239,10 @@ The minimap is in the lower-right corner of the canvas. Use it to view and move 
 
 
 ## FAQs
+
+**Q: Why are some dependency lines missing when I scroll around a large schedule?**
+
+Studio removes nodes outside the visible canvas area to maintain performance on large schedules. When a node is outside the viewport, dependency lines connected to it will not appear. This is expected behavior. To see a dependency line, scroll to bring both connected nodes into the visible canvas area, or use the zoom-out control to view more of the schedule at once.
 
 **Q: How many steps does the Viewing Master Schedule procedure involve?**
 
