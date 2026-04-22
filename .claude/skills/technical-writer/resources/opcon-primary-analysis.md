@@ -1,6 +1,6 @@
 # Writer-Friendly Documentation Standard
 
-> **Purpose:** This file defines the primary page template used to evaluate documentation completeness and structure. Every feature page submitted for review is scored against these 13 sections (0–12).
+> **Purpose:** This file defines the primary page template used to evaluate documentation completeness and structure. Every feature page submitted for review is scored against these 11 active sections (0–1, 4–12). Sections 2 and 3 are deprecated — their content is now part of Section 1.
 >
 > **Used by:** `doc-quality-assessor` — Template Adherence Review (Step 3) and Completeness subscore.
 
@@ -8,14 +8,14 @@
 
 ## Template Overview
 
-Every feature page must include all 13 sections below, in order. Each section has a defined intent — use it to judge whether the content present actually fulfills the section's purpose, not just whether a heading exists.
+Every feature page must include all 11 active sections below, in order. Each section has a defined intent — use it to judge whether the content present actually fulfills the section's purpose, not just whether a heading exists.
 
 | # | Section Title | One-Line Intent |
 |---|---|---|
 | 0 | Theme and Audience | Declares page type and target reader at the top |
-| 1 | What Is It? (Overview) | 2–4 sentence intro for a first-time reader |
-| 2 | When Would You Use It? (Use Cases) | Bullet list of key scenarios |
-| 3 | Why Would You Use It? (Value) | Benefits in plain language |
+| 1 | What Is It? (Overview, Use Cases, and Value) | Prose description + bullet list of scenarios and benefits |
+| ~~2~~ | ~~When Would You Use It?~~ | **Deprecated** — merge content into § 1 |
+| ~~3~~ | ~~Why Would You Use It?~~ | **Deprecated** — merge content into § 1 |
 | 4 | How To Implement It | Prerequisites, numbered steps, one example |
 | 5 | Configuration Options | Table: Setting \| What It Does \| Default \| Notes |
 | 6 | Exception Handling | Error → Meaning → Fix |
@@ -47,27 +47,32 @@ At the top of the page, clearly state:
 
 ---
 
-### Section 1 — What Is It? (Overview)
+### Section 1 — What Is It? (Overview, Use Cases, and Value)
 
-2–4 sentences explaining the feature for a first-time reader. Should answer: what does this feature do, and what problem does it solve?
+A combined section that explains what the feature is, when readers would use it, and why it provides value. Structure it as:
 
-**Evaluation pass criteria:** 2–4 sentences present. No bullet lists. Written for someone with no prior exposure to the feature.
+1. **Prose description** (1–3 sentences): what this feature does and what problem it solves. Written for a first-time reader.
+2. **Bullet list** (at least 2 bullets): key use-case scenarios and/or benefits. Phrased from the reader's perspective — either as scenarios ("Use this when...", "You are configuring...") or as outcomes ("Reduces...", "Ensures..."). Do not include bullets that simply restate the prose description.
 
----
+Do not use subheadings inside this section. Do not create separate `## When would you use it?` or `## Why would you use it?` headings — those are deprecated.
 
-### Section 2 — When Would You Use It? (Use Cases)
-
-A bullet list of key scenarios in which a user would reach for this feature. Each bullet should describe a real situation, not a capability.
-
-**Evaluation pass criteria:** At least 2 bullets present. Phrased as scenarios ("When you need to…", "If your organization…"), not capabilities ("This feature supports…").
+**Evaluation pass criteria:** Prose description present (1–3 sentences). At least 2 bullets present. No deprecated When/Why subheadings. No redundancy between prose and bullets.
 
 ---
 
-### Section 3 — Why Would You Use It? (Value)
+### Section 2 — ~~When Would You Use It?~~ (DEPRECATED)
 
-Benefits written in plain language. Focus on outcomes: easier, faster, safer, more automated, reduced risk, etc. Avoid marketing language.
+> **This section is deprecated.** Do not create a `## When would you use it?` heading on any new or revised page. Merge existing When content into the bullet list under § 1 (What Is It?) and remove the heading.
+>
+> When reviewing existing pages: flag any `## When would you use it?` section as a violation and suggest merging its bullets into § 1.
 
-**Evaluation pass criteria:** At least 2 distinct benefits stated. Written from the reader's perspective. Does not simply restate the feature's capabilities.
+---
+
+### Section 3 — ~~Why Would You Use It?~~ (DEPRECATED)
+
+> **This section is deprecated.** Do not create a `## Why would you use it?` heading on any new or revised page. Merge existing Why content into the bullet list under § 1 (What Is It?) and remove the heading.
+>
+> When reviewing existing pages: flag any `## Why would you use it?` section as a violation and suggest merging its bullets into § 1.
 
 ---
 
@@ -183,6 +188,8 @@ When evaluating a page against this template, apply the following status to each
 | ⚠️ Present but incomplete | Section exists but is missing one or more required elements |
 | ❌ Missing | Section is absent or reduced to a heading with no content |
 
-The **Completeness subscore** (weighted 25%) is derived from the ratio of ✅ sections to total sections. Partial credit applies for ⚠️ sections at the reviewer's discretion.
+The **Completeness subscore** (weighted 25%) is derived from the ratio of ✅ sections to the 11 active sections (0–1, 4–12). Sections 2 and 3 are excluded from scoring — their presence is a violation, not a credit.
 
 The **Structure / Template Adherence subscore** (weighted 15%) evaluates whether sections appear in order, use the correct format (table, numbered list, etc.), and meet the structural requirements stated above — not just whether content is present.
+
+**Violation: deprecated headings present.** If a page contains `## When would you use it?` or `## Why would you use it?` as standalone headings, flag each as a structure violation and recommend merging the content into § 1.
