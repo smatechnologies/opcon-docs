@@ -88,9 +88,9 @@ If the license file is encrypted after receipt (e.g., saved to a Windows folder 
 
 1. Open your email program and open the **email message** containing the license file
 2. Right-click the **license file** and select **Save As**
-3. Browse to the SAM Installation directory
+3. Browse to the SAM Data directory
     :::tip Example
-    C:\Program Files\OpConxps\SAM\
+    C:\ProgramData\OpConxps\SAM\
     :::
 4. Select the **Save** button
 
