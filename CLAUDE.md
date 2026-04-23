@@ -32,6 +32,19 @@ Invoke the skill when writing, reviewing, or editing documentation pages. The sk
 | **Edit** | "Fix," "Update," "Revise" | Apply targeted changes while preserving compliant content |
 | **Consult** | "Should I," "How do I" | Provide guidance from the standards without producing output |
 
+### Automatic invocation on document changes
+
+Apply the technical-writer skill automatically whenever you work on `.md` files in `docs/`:
+
+| Situation | Mode | Required action |
+|---|---|---|
+| You edit an existing `.md` file in `docs/` | Edit | Run the skill before reporting the task complete — fix all violations found |
+| You create a new `.md` file in `docs/` | Write | Produce a compliant page from the start using the correct page type template |
+| User asks you to review or audit docs | Review | Report all violations with file path, line number, and suggested fix |
+| User asks "should I" or "how do I" about standards | Consult | Answer from the standards without producing output |
+
+Do not report a documentation task as complete until the skill has run and all violations are resolved.
+
 ### Key Standards
 
 - **Terminology**: Use customer-facing terms. Never use: LSAM, execute/executed/executing, right-select, click, drop-down, checkbox, navigate to, launch, client, task/process (as job synonyms)

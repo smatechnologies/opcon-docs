@@ -72,8 +72,8 @@ If the license file is encrypted after being received from SMA Technologies (e.g
 1. Open your email program to get the license file from SMA Technologies.
 2. Open the **email message** containing the license file.
 3. Right-click the **license file** and select **Save As**.
-4. Browse to the SAM Installation directory.
+4. Browse to the SAM Data directory.
     :::tip Example
-    C:\Program Files\OpConxps\SAM\
+    C:\ProgramData\OpConxps\SAM\
     :::
 5. Click the **Save** button.
