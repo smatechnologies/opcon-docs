@@ -126,7 +126,6 @@ Tracked and Queued jobs are identical in terms of job definition and scheduling.
 
 - **Tracked Job:** JCL is submitted to the JES queue from an external source and tracked dynamically by the agent. Should be defined on an OpCon Schedule with no dependencies
 - **Queued Job:** JCL is submitted to the JES queue from an external source and tracked dynamically by the agent. May have dependencies on other jobs or pre-runs; must arrive in a JES "held" queue or as a `TYPRUN=HOLD` job
-- Tracked Jobs should not be restarted from OpCon. Restarting only reports the original completion status. To restart a Tracked or Queued job, resubmit it from the original source
 
 ### Sysplex
 
