@@ -120,6 +120,16 @@ This function returns the source string with the defined replacements made. This
 `Replace("abcdefgh", "c", "x")` returns **"abxdefgh"**.
 :::
 
+### ReplaceBackslashes(source, replacement)
+
+This function returns the source string with all backslash characters (`\`) replaced by the specified replacement string. This function accepts two parameters. Both of them are strings. Because backslashes cannot be represented as a literal character in expression string arguments, this function is the recommended way to remove or replace backslash characters in a property value.
+
+:::tip Examples
+`ReplaceBackslashes("domain\\username", "")` returns **"domainusername"**.
+
+`ReplaceBackslashes("domain\\username", "/")` returns **"domain/username"**.
+:::
+
 ### SubStr(value, start, length)
 
 The SubStr function returns a partial string of the expression in parentheses. This function accepts three parameters:
