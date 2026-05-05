@@ -255,11 +255,9 @@ As far as job definition and scheduling are concerned, Tracked and Queued jobs a
     submitted to the JES queue from an external source and is tracked
     dynamically by the agent. These jobs may have     dependencies on other jobs or pre-runs and must arrive in a JES
     "held" queue or as a TYPRUN=HOLD job.
-- Tracked Jobs should not be restarted from
-    OpCon. Attempting to restart a Tracked
-    Job will only result in the original completion status being
-    reported. To restart a Tracked or Queued job, re-submit it from the
-    original source.
+- Tracked Jobs cannot be restarted directly from OpCon — a restart only reports the original completion status. To re-run a Tracked or Queued job, do one of the following:
+    - Resubmit the job from its original external source.
+    - Convert the **z/OS Job Type** to **Batch**, import the JCL into an OpCon library, and restart from OpCon. See [Restarting External Jobs through OpCon](https://help.smatechnologies.com/opcon/agents/zos/advanced-features/restarting-jobs) in the z/OS Agent help.
 
 The following information applies to defining *Tracked Job* and *Queued
 Job Controls*:
