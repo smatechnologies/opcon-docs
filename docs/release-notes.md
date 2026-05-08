@@ -5,26 +5,6 @@ doc_type: conceptual
 
 # OpCon Release Notes
 
-## ResourceMonitor
-
-#### 21.1.0
-
-**Bug Fix**
-
-:white_check_mark: **Log-archive retention now respects the INI file**: The ArchiveDaysToKeep setting configured in the INI file is now applied correctly at service startup. In prior releases this value was ignored and the default retention was used instead.
-
-#### 21.0.0
-
-**FIPS Compliance & .NET Framework 4.8.1**
-
-:eight_spoked_asterisk: ResourceMonitor has been updated to be FIPS-compliant and now runs on .NET Framework 4.8.1. Both the service and the UI have been rebuilt against the latest FIPS-compliant SMA libraries, and the installer automatically deploys the .NET Framework 4.8.1 runtime as a prerequisite where it is not already present.
-
-**Other Improvements**
-
-:eight_spoked_asterisk: Service startup and logging-initialization errors are now written to the Windows Event Log, making installation and configuration issues easier to diagnose.
-
-:eight_spoked_asterisk: Improved service responsiveness and a cleaner, faster service shutdown.
-
 ## Winter 26
 
 #### 26.0.2
