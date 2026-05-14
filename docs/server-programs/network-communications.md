@@ -186,7 +186,7 @@ The Secondary Mode Settings are reserved for future use.
 
 The Debug Options configure the SMANetCom logging behavior.
 
-+|Debug Options|Default|Dynamic (Y/N)|Description|
+|Debug Options|Default|Dynamic (Y/N)|Description|
 |--- |--- |--- |--- |
 |MaximumLogFileSize|150000|Y|Defines the maximum size in bytes for each log file. Determines when the current log file is closed and a new file is started. When the file reaches this maximum size, it is "rolled over." This setting creates small, manageable log files. SMANetCom.log resides in the <Output Directory\>\SAM\Log directory. When the log file reaches the maximum size, SMANetCom archives the log file. When SMANetCom is installed with the SAM, the SAM maintains the archive folders. Note: Each SMANetCom instance based on its SMANetComName has its SMANetCom log file as mentioned in the Details of Service Settings.|
 |TraceSAMMessages|ON|Y|Enables/Disables SMANetCom to create the SMANetComTrace log file. If OFF, SMANetCom creates only the SMANetCom log file. If ON, SMANetCom creates both the SMANetCom log and SMANetComTrace log files. The SMANetComTrace log contains all records regarding TX messages. Continuous strongly recommends leaving this value set to ON. Note: Each SMANetCom instance based on its SMANetComName has its own SMANetComTrace log file as mentioned in the Details of Service Settings.|
