@@ -24,13 +24,13 @@ doc_type: conceptual
 
 ## Summary
 
-Release 26.1.2 addressed several issues with schedule builds, job output retrieval, and resolved values of the global properties $NOW and $TIME.
+Release 26.1.2 addressed several issues with schedule builds, job output retrieval, and resolved values of [[$NOW]] and [[$TIME]].
 
 ## Core Engine & Infrastructure
 
 :white_check_mark: **OC-7278: Schedule Built for Wrong Date** Fix an issue with build date selection.
 
-:white_check_mark: **OC-7316: Question Mark in Resolved Values of [[\$NOW]] and [[\$TIME]]** Resolved values of the $NOW and $TIME global properties no longer contain an unexpected question mark before AM/PM (for example, 12:27:01?PM now correctly displays as 12:27:01 PM). This affected SAM logs, console display events, notifications, and any other location where these properties were resolved.
+:white_check_mark: **OC-7316: Question Mark in Resolved Values of [[$NOW]] and [[$TIME]]** Resolved values of the $NOW and $TIME global properties no longer contain an unexpected question mark before AM/PM (for example, 12:27:01?PM now correctly displays as 12:27:01 PM). This affected SAM logs, console display events, notifications, and any other location where these properties were resolved.
 
 :white_check_mark: **OC-7321: Job Output Retrieval Through Relay Over TLS** Resolved an issue where JORS (Job Output Retrieval Service) requests routed through SMANetComRelay over TLS would fail with a "Client Certificate with Serial Number not found in repository" error in environments where TLS client certificate validation was not configured.
 
