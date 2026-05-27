@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Notification Triggers
@@ -115,7 +115,7 @@ title: Notification Triggers
 
 **Q: Where can you find Notification Triggers in OpCon?**
 
-Access Notification Triggers through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Notification Triggers in Solution Manager.
 
 ## Glossary
 

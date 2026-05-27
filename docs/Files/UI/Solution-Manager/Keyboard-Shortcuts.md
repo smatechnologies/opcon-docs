@@ -1,4 +1,4 @@
----
+﻿---
 title: Keyboard Shortcuts
 description: "The table lists keyboard shortcuts for Solution Manager."
 product_area: Solution Manager
@@ -44,7 +44,7 @@ The table lists keyboard shortcuts for Solution Manager. If a shortcut applies t
 
 **Q: Where can you find Keyboard Shortcuts in OpCon?**
 
-Access Keyboard Shortcuts through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Keyboard Shortcuts in Solution Manager.
 
 ## Glossary
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Escalation Groups
 description: "Use Escalation Manager to add, edit, delete, and check cross-references for escalation groups."
 product_area: Solution Manager
@@ -63,7 +63,7 @@ Related Topics
 
 **Q: What does managing escalation groups involve?**
 
-Managing escalation groups includes adding, editing, and deleting records. Access escalation groups through the Enterprise Manager navigation pane.
+Managing escalation groups includes adding, editing, and deleting records. Access escalation groups in Solution Manager.
 
 **Q: Who can manage escalation groups in OpCon?**
 

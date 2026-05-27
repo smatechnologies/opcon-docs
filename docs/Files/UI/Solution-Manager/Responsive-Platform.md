@@ -1,4 +1,4 @@
----
+﻿---
 title: Responsive Platform
 description: "SMA Solution Manager works on all form factors (smartphone, tablet, desktop)."
 product_area: Solution Manager
@@ -41,7 +41,7 @@ SMA Solution Manager works on all form factors (smartphone, tablet, desktop). It
 
 **Q: Where can you find Responsive Platform in OpCon?**
 
-Access Responsive Platform through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Responsive Platform in Solution Manager.
 
 ## Glossary
 

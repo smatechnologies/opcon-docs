@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Security Settings
 description: "Use this procedure to manage Security Settings in Solution Manager."
 product_area: Solution Manager
@@ -103,7 +103,7 @@ Configuring Security Settings requires the Role_ocadm role or the Maintain Serve
 
 **Q: What does managing security settings involve?**
 
-Managing security settings includes Required Privileges, Configuring Security, Email. Access security settings through the Enterprise Manager navigation pane.
+Managing security settings includes Required Privileges, Configuring Security, Email. Access security settings in Solution Manager.
 
 **Q: Who can manage security settings in OpCon?**
 

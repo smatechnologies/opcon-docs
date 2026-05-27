@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Overview
@@ -40,7 +40,7 @@ title: Managing Master Jobs
 
 **Q: Where can you find Overview in OpCon?**
 
-Access Overview through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Overview in Solution Manager.
 
 ## Glossary
 

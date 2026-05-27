@@ -1,4 +1,4 @@
----
+﻿---
 title: Users and Privileges Report
 description: "The Users and Privileges Report displays user accounts and all associated privileges including roles, access codes, functions, schedules, machines, machine groups, batch users, and scripts."
 product_area: Solution Manager
@@ -50,7 +50,7 @@ The **Users and Privileges Report** displays user accounts and all associated pr
 
 **Q: Where can you find Users and Privileges Report in OpCon?**
 
-Access Users and Privileges Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Users and Privileges Report in Solution Manager.
 
 ## Glossary
 

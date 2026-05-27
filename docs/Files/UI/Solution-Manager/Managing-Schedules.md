@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Schedules
@@ -146,7 +146,7 @@ Related Topics
 
 **Q: What does managing schedules involve?**
 
-Managing schedules includes Selection Options, Instance Definition Options, Build Options, Schedule Build Log. Access schedules through the Enterprise Manager navigation pane.
+Managing schedules includes Selection Options, Instance Definition Options, Build Options, Schedule Build Log. Access schedules in Solution Manager.
 
 **Q: Who can manage schedules in OpCon?**
 

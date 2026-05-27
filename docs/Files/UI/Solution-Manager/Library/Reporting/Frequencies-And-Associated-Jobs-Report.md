@@ -1,4 +1,4 @@
----
+﻿---
 title: Frequencies and Associated Jobs Report
 description: "The Frequencies and Associated Jobs Report shows all frequencies with their associated schedules and jobs, sorted by frequency name."
 product_area: Solution Manager
@@ -52,7 +52,7 @@ The **Frequencies and Associated Jobs Report** shows all frequencies with their 
 
 **Q: Where can you find Frequencies and Associated Jobs Report in OpCon?**
 
-Access Frequencies and Associated Jobs Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Frequencies and Associated Jobs Report in Solution Manager.
 
 ## Glossary
 

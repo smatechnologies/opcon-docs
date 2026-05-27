@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Calendars
@@ -43,7 +43,7 @@ Related Topics
 
 **Q: What does managing calendars involve?**
 
-Managing calendars includes Calendars Toolbar. Access calendars through the Enterprise Manager navigation pane.
+Managing calendars includes Calendars Toolbar. Access calendars in Solution Manager.
 
 **Q: Who can manage calendars in OpCon?**
 

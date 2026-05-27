@@ -1,4 +1,4 @@
----
+﻿---
 title: List Schedule Build Logs
 description: "The Schedule Build tab displays log files for scheduled builds."
 product_area: Solution Manager
@@ -51,7 +51,7 @@ The **Schedule Build** tab displays log files for scheduled builds. To view this
 
 **Q: Where can you find List Schedule Build Logs in OpCon?**
 
-Access List Schedule Build Logs through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access List Schedule Build Logs in Solution Manager.
 
 ## Glossary
 

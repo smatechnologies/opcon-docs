@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Self Service
 description: "Self Service is a licensed OpCon module in the Solution Manager web interface that enables front-office staff to trigger OpCon workflows without IT involvement."
 product_area: Solution Manager
@@ -28,13 +28,15 @@ A license is required to access Self Service in Solution Manager. Follow the pro
 
 To request the license file, complete the following steps:
 
-1. Open Enterprise Manager
-2. Go to **Help > About OpCon EnterpriseManager**
-3. Select the **License Information** tab
-4. Select the **System ID** \[e.g., (SeverName_1234)\] at the end of the first line
-5. Right-click and select **Copy**
-6. Email <license@continuous.com> to request an updated license file with "Self Service" support, and paste the System ID into the request. Expect a response within an hour during business hours
-7. Select **OK** to close the **About** dialog
+1. Log in to **Solution Manager**.
+2. Go to **Library** > **License & Support** > **Licensing**.
+3. Copy the **System ID** value.
+4. Go to the Continuous Support Portal and submit a license file request. Include:
+
+    - Your company's name
+    - The environment type (e.g., Production)
+    - The System ID copied from Solution Manager
+    - A note requesting "Self Service" support
 
 To save the license file, complete the following steps:
 
@@ -46,7 +48,7 @@ To save the license file, complete the following steps:
 
 **Q: What does managing self service involve?**
 
-Managing self service includes License File Request and Storing. Access self service through the Enterprise Manager navigation pane.
+Managing self service includes License File Request and Storing. Access self service in Solution Manager.
 
 **Q: Who can manage self service in OpCon?**
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Audit History Report
 description: "The Audit History Report shows the history of user updates to the OpCon database."
 product_area: Solution Manager
@@ -83,7 +83,7 @@ The **Audit History Report** shows the history of user updates to the OpCon data
 
 **Q: Where can you find Audit History Report in OpCon?**
 
-Access Audit History Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Audit History Report in Solution Manager.
 
 ## Glossary
 

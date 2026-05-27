@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing SMTP Settings
 description: "Use this procedure to manage SMTP Settings in Solution Manager."
 product_area: Solution Manager
@@ -121,7 +121,7 @@ SMTP Authentication Encrypted Passwords for all email and SMS server configurati
 
 **Q: What does managing smtp settings involve?**
 
-Managing smtp settings includes Required Privileges, Configuring SMTP Settings. Access smtp settings through the Enterprise Manager navigation pane.
+Managing smtp settings includes Required Privileges, Configuring SMTP Settings. Access smtp settings in Solution Manager.
 
 **Q: Who can manage smtp settings in OpCon?**
 

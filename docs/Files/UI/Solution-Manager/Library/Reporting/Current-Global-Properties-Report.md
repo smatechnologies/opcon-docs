@@ -1,4 +1,4 @@
----
+﻿---
 title: Current Global Properties Report
 description: "The Current Global Properties Report displays the currently defined global properties in OpCon."
 product_area: Solution Manager
@@ -50,7 +50,7 @@ The **Current Global Properties Report** displays the currently defined global p
 
 **Q: Where can you find Current Global Properties Report in OpCon?**
 
-Access Current Global Properties Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Current Global Properties Report in Solution Manager.
 
 ## Glossary
 

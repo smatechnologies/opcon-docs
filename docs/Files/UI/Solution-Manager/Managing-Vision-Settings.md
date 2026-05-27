@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Vision Settings
 description: "Vision Settings allows you to create, edit, and delete cards and view the hierarchy of existing cards."
 product_area: Solution Manager
@@ -88,7 +88,7 @@ Related Topics
 
 **Q: What does managing vision settings involve?**
 
-Managing vision settings includes adding, editing, and deleting records. Access vision settings through the Enterprise Manager navigation pane.
+Managing vision settings includes adding, editing, and deleting records. Access vision settings in Solution Manager.
 
 **Q: Who can manage vision settings in OpCon?**
 

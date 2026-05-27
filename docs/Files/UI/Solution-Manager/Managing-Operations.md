@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Operations
@@ -39,7 +39,7 @@ Please check back for more content.
 
 **Q: What does managing operations involve?**
 
-Managing operations includes adding, editing, and deleting records. Access operations through the Enterprise Manager navigation pane.
+Managing operations includes adding, editing, and deleting records. Access operations in Solution Manager.
 
 **Q: Who can manage operations in OpCon?**
 

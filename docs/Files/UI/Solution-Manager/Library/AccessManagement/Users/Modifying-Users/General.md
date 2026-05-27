@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: User General
@@ -54,7 +54,7 @@ title: Users - General
 
 **Q: Where can you find User General in OpCon?**
 
-Access User General through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access User General in Solution Manager.
 
 ## Glossary
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Schedule and Job History Report
 description: "The Schedule and Job History Report is used to view schedule and job history information."
 product_area: Solution Manager
@@ -52,7 +52,7 @@ The **Schedule and Job History Report** is used to view schedule and job history
 
 **Q: Where can you find Schedule and Job History Report in OpCon?**
 
-Access Schedule and Job History Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Schedule and Job History Report in Solution Manager.
 
 ## Glossary
 

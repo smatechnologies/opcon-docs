@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Notification Categories
@@ -46,7 +46,7 @@ title: Notification Categories
 
 **Q: Where can you find Notification Categories in OpCon?**
 
-Access Notification Categories through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Notification Categories in Solution Manager.
 
 ## Glossary
 

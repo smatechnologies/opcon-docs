@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing SSO Configurations
 description: "Use this procedure to manage SSO Configurations in Solution Manager."
 product_area: Solution Manager
@@ -272,7 +272,7 @@ The Client ID, Authority URL, and Redirect URI are registered with the IdP and m
 
 **Q: What does managing sso configurations involve?**
 
-Managing sso configurations includes Required Privileges, Configuring SSO. Access sso configurations through the Enterprise Manager navigation pane.
+Managing sso configurations includes Required Privileges, Configuring SSO. Access sso configurations in Solution Manager.
 
 **Q: Who can manage sso configurations in OpCon?**
 

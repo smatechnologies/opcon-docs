@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Vision Remote Instances
 description: "Vision Remote Instances define instances of OpCon to be monitored that run and are accessed on a remote server."
 product_area: Solution Manager
@@ -78,7 +78,7 @@ Related Topics
 
 **Q: What does managing vision remote instances involve?**
 
-Managing vision remote instances includes Using the Vision Remote Instances Admin Page. Access vision remote instances through the Enterprise Manager navigation pane.
+Managing vision remote instances includes Using the Vision Remote Instances Admin Page. Access vision remote instances in Solution Manager.
 
 **Q: Who can manage vision remote instances in OpCon?**
 

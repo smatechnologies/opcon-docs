@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Frequencies
@@ -40,7 +40,7 @@ Related Topics
 
 **Q: What does managing frequencies involve?**
 
-Managing frequencies includes adding, editing, and deleting records. Access frequencies through the Enterprise Manager navigation pane.
+Managing frequencies includes adding, editing, and deleting records. Access frequencies in Solution Manager.
 
 **Q: Who can manage frequencies in OpCon?**
 

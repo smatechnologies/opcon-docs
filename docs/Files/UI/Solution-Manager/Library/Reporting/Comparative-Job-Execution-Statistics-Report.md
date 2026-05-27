@@ -1,4 +1,4 @@
----
+﻿---
 title: Comparative Job Execution Statistics Report
 description: "The Comparative Job Execution Statistics Report displays job runtime analytics including average runtime, standard deviation, estimated runtime, and variance analysis."
 product_area: Solution Manager
@@ -50,7 +50,7 @@ The **Comparative Job Execution Statistics Report** displays job runtime analyti
 
 **Q: Where can you find Comparative Job Execution Statistics Report in OpCon?**
 
-Access Comparative Job Execution Statistics Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Comparative Job Execution Statistics Report in Solution Manager.
 
 ## Glossary
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Run Command
 description: "!Run Command The Run Command dialog provides the following fields for defining a command to run for the selected trigger: - Command (Required): Defines the full path and name of the program to run."
 product_area: Solution Manager
@@ -40,7 +40,7 @@ The **Run Command** dialog provides the following fields for defining a command 
 
 **Q: Where can you find Run Command in OpCon?**
 
-Access Run Command through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Run Command in Solution Manager.
 
 ## Glossary
 

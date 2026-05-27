@@ -36,7 +36,7 @@ OpCon provides two primary graphical user interfaces:
 - **Enterprise Manager (EM)** – a rich client for Windows and Linux
 - **Solution Manager** – a browser-based interface
 
-Both interfaces access the OpCon database to manage automation data and operations. For more information, refer to the **Enterprise Manager** and **Solution Manager** online help.
+Both interfaces access the OpCon database to manage automation data and operations. For more information, refer to the **Solution Manager** online help.
 
 ![Graphical User Interfaces](./Resources/Images/Concepts/GUIs.png "Graphical User Interfaces")
 

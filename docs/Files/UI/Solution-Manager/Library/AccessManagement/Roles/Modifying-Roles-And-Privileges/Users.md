@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Role Users
@@ -52,7 +52,7 @@ viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Role Users in OpCon?**
 
-Access Role Users through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Role Users in Solution Manager.
 
 ## Glossary
 

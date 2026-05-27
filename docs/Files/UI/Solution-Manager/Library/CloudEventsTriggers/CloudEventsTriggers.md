@@ -1,4 +1,4 @@
----
+﻿---
 title: CloudEvents Triggers
 description: "The CloudEvents Triggers module allows you to trigger Events within OpCon via externally-produced 'trigger events' which adhere to the CloudEvents Specification."
 product_area: Solution Manager
@@ -197,7 +197,7 @@ The **CloudEvents Triggers** module allows you to trigger Events within OpCon vi
 
 **Q: Where can you find CloudEvents Triggers in OpCon?**
 
-Access CloudEvents Triggers through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access CloudEvents Triggers in Solution Manager.
 
 ## Glossary
 

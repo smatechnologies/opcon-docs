@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Service Requests
@@ -37,7 +37,7 @@ Select on one of the buttons at top-right corner of each Service Request to [edi
 
 **Q: What does managing service requests involve?**
 
-Managing service requests includes adding, editing, and deleting records. Access service requests through the Enterprise Manager navigation pane.
+Managing service requests includes adding, editing, and deleting records. Access service requests in Solution Manager.
 
 **Q: Who can manage service requests in OpCon?**
 

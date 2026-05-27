@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Vision Frequencies
@@ -153,7 +153,7 @@ Related Topics
 
 **Q: What does managing vision frequencies involve?**
 
-Managing vision frequencies includes Using the Vision Frequencies Admin Page. Access vision frequencies through the Enterprise Manager navigation pane.
+Managing vision frequencies includes Using the Vision Frequencies Admin Page. Access vision frequencies in Solution Manager.
 
 **Q: Who can manage vision frequencies in OpCon?**
 

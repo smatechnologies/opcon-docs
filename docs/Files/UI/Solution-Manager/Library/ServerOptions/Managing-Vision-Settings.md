@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Vision Settings
 description: "Use this procedure to manage Vision Settings in Solution Manager."
 product_area: Solution Manager
@@ -53,7 +53,7 @@ To configure Vision Settings, go to **Library** > **Server Options** > select on
 
 **Q: What does managing vision settings involve?**
 
-Managing vision settings includes Required Privileges, Configuring Vision. Access vision settings through the Enterprise Manager navigation pane.
+Managing vision settings includes Required Privileges, Configuring Vision. Access vision settings in Solution Manager.
 
 **Q: Who can manage vision settings in OpCon?**
 

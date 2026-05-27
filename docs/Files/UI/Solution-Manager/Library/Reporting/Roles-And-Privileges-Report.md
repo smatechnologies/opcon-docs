@@ -1,4 +1,4 @@
----
+﻿---
 title: Roles and Privileges Report
 description: "The Roles and Privileges Report combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view with a Privilege Type column."
 product_area: Solution Manager
@@ -50,7 +50,7 @@ The **Roles and Privileges Report** combines all role privilege types — Machin
 
 **Q: Where can you find Roles and Privileges Report in OpCon?**
 
-Access Roles and Privileges Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Roles and Privileges Report in Solution Manager.
 
 ## Glossary
 

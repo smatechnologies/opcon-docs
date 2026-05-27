@@ -1,4 +1,4 @@
----
+﻿---
 title: Windows Event Log
 description: "!Windows Event Log The Windows Event Log dialog provides the following fields for defining a Windows Event Log notification: - Event ID (Optional): A user-defined ID usable as search criteria in."
 product_area: Solution Manager
@@ -49,7 +49,7 @@ The **Windows Event Log** dialog provides the following fields for defining a Wi
 
 **Q: Where can you find Windows Event Log in OpCon?**
 
-Access Windows Event Log through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Windows Event Log in Solution Manager.
 
 ## Glossary
 

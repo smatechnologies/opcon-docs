@@ -1,4 +1,4 @@
----
+﻿---
 title: Master Job Information Report
 description: "The Master Job Information Report provides a comprehensive view of master job configurations in OpCon, including job details, schedules, machines, departments, frequencies, access codes, tags, timing."
 product_area: Solution Manager
@@ -55,7 +55,7 @@ The **Master Job Information Report** provides a comprehensive view of master jo
 
 **Q: Where can you find Master Job Information Report in OpCon?**
 
-Access Master Job Information Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Master Job Information Report in Solution Manager.
 
 ## Glossary
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: SNMP Trap
 description: "!SNMP Trap The SNMP Trap dialog provides the following fields for defining an SNMP trap notification: - Event ID (Optional): Defines a user-defined ID usable as search criteria in a third-party."
 product_area: Solution Manager
@@ -44,7 +44,7 @@ The **SNMP Trap** dialog provides the following fields for defining an SNMP trap
 
 **Q: Where can you find SNMP Trap in OpCon?**
 
-Access SNMP Trap through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access SNMP Trap in Solution Manager.
 
 ## Glossary
 
