@@ -46,7 +46,7 @@ Continuous documentation for each agent will provide guidelines for configuring 
 
 Once the TLS server and customer identities are established, the encrypted communication can begin. If there is a problem in establishing the identity, the communication fails immediately. There are settings in the OpCon machine records and also in the agent local configuration file that must be set on to start using TLS security. These control values can be used to assure that no communication will occur without valid certificates. The same control values can be used to disable TLS security, for example, in case some administrative problem is preventing data communication, and the site wishes to continue OpCon communication without using TLS security.
 
-Refer to [General](../administration/server-options.md#general) and [Communication Settings](../administration/server-options.md#communication-settings) in the **Concepts** online help for options to configure TLS correctly.
+Refer to [General](../administration/server-options.md#general-settings) and [Communication Settings](../administration/server-options.md#communication-settings) in the **Concepts** online help for options to configure TLS correctly.
 
 :::note
 Keep in mind that Continuous is only providing a means by which its software can use TLS Security tools. Continuous does not provide or support certificate publication, and it also does not attempt to duplicate the instructions for managing certificate stores in each operating system. The OpCon user is responsible for understanding and implementing those resources. Support for digital certificate publication is available from certificate publishing agencies. Instructions for generating digital certificate requests and for installing certificates in local certificate stores should be available from either the operating system vendor or from a third-party source that provided the digital certificate management tools.
@@ -186,7 +186,7 @@ The Secondary Mode Settings are reserved for future use.
 
 The Debug Options configure the SMANetCom logging behavior.
 
-+|Debug Options|Default|Dynamic (Y/N)|Description|
+|Debug Options|Default|Dynamic (Y/N)|Description|
 |--- |--- |--- |--- |
 |MaximumLogFileSize|150000|Y|Defines the maximum size in bytes for each log file. Determines when the current log file is closed and a new file is started. When the file reaches this maximum size, it is "rolled over." This setting creates small, manageable log files. SMANetCom.log resides in the <Output Directory\>\SAM\Log directory. When the log file reaches the maximum size, SMANetCom archives the log file. When SMANetCom is installed with the SAM, the SAM maintains the archive folders. Note: Each SMANetCom instance based on its SMANetComName has its SMANetCom log file as mentioned in the Details of Service Settings.|
 |TraceSAMMessages|ON|Y|Enables/Disables SMANetCom to create the SMANetComTrace log file. If OFF, SMANetCom creates only the SMANetCom log file. If ON, SMANetCom creates both the SMANetCom log and SMANetComTrace log files. The SMANetComTrace log contains all records regarding TX messages. Continuous strongly recommends leaving this value set to ON. Note: Each SMANetCom instance based on its SMANetComName has its own SMANetComTrace log file as mentioned in the Details of Service Settings.|
@@ -270,7 +270,7 @@ A single SMANetCom instance can support a maximum of 2048 agents, but the recomm
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Event Types
 description: "This section contains the syntax, definition, and parameter descriptions for all supported OpCon events."
 product_area: Events
@@ -253,7 +253,7 @@ $JOB:TAGADD,<schedule date>,<schedule name>,<job name>,<tags>
 
 The $JOB:TAGDEL event deletes one or more tags from the job in the Daily.
 
-**Synax**:
+**Syntax**:
 
 ```shell
 $JOB:TAGDEL,<schedule date>,<schedule name>,<job name>,<tags>
@@ -268,23 +268,23 @@ $JOB:TAGDEL,<schedule date>,<schedule name>,<job name>,<tags>
 
 **Required Privileges**:
 
-- All Adminstrative Functions
+- All Administrative Functions
 
 **XML Syntax**:
 
 ```xml
-<EVENT\>
-   <TYPE\>JOB</TYPE\>
-   <ACTION\>TAGDEL</ACTION\>
-   <SKDDATE\></SKDDATE\>
-   <SKDNAME\></SKDNAME\>
-   <JOBNAME\></JOBNAME\>
-   <TAGS\>
-       <TAG\></TAG\>
-       <TAG\></TAG\>\...</TAGS\>
-   <USERNAME\></USERNAME\>
-   <USERPWD\></USERPWD\>
-</EVENT\>
+<EVENT>
+   <TYPE>JOB</TYPE>
+   <ACTION>TAGDEL</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <TAGS>
+       <TAG></TAG>
+       <TAG></TAG>\...</TAGS>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
+</EVENT>
 ```
 
 ### $JOB:USER
@@ -837,19 +837,19 @@ $JOB:FIXED,<schedule date>,<schedule name>,<job name>
 
 **Required Privileges**:
 
-- Delete Jobs from Daily Schedules
+- Mark Jobs Fixed
 
 **XML Syntax**:
 
 ```xml
 <EVENT>
-   <TYPE>JOB</TYPE>
-   <ACTION>DELETE</ACTION>
-   <SKDDATE></SKDDATE>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>FIXED</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -1365,14 +1365,14 @@ None
 </EVENT>
 ```
 
-### $JOB:UNDERREVIEW
+### $JOB:REVIEW
 
-The$JOB:UNDERREVIEW event marks the job as Under Review.
+The $JOB:REVIEW event marks the job as Under Review.
 
 **Syntax**:
 
 ```shell
-$JOB:UNDERREVIEW,<schedule date>,<schedule name>,<job name>
+$JOB:REVIEW,<schedule date>,<schedule name>,<job name>
 ```
 
 **Parameters**:
@@ -1892,7 +1892,7 @@ This replaced $TOKEN:DELETE.
 **Syntax**:
 
 ```shell
-$PROPERTY:DELETE,<property name
+$PROPERTY:DELETE,<property name>
 ```
 
 **Parameters**:
@@ -2510,7 +2510,7 @@ External events are passed by creating an ASCII file with the event string, User
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

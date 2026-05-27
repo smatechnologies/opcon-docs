@@ -49,7 +49,7 @@ The dialog contains the following information:
 - **Late to Finish Time**: The positive number of hours and minutes offsetting the Late to Finish time from the job Start Offset
 - **Maximum Run Time (min)**: The maximum run time in minutes for the job
 - **Latest Start Offset**: The positive number of hours and minutes offsetting the latest start time from the schedule start time
-- **Incident Ticket ID**: The incident ticket ID associated with a job. If a ticket URL exists, the ID is clickable and links to more information. If a name for the incident management system is configured in [Server Options](../../../administration/server-options.md#general), the **Incident Ticket ID** label is replaced by that value
+- **Incident Ticket ID**: The incident ticket ID associated with a job. If a ticket URL exists, the ID is clickable and links to more information. If a name for the incident management system is configured in [Server Options](../../../administration/server-options.md#general-settings), the **Incident Ticket ID** label is replaced by that value
 - **Job Dependencies Tab**: Displays all jobs the selected job depends on, including dependency type, schedule date, schedule name, job name, current status, and options. Satisfied dependencies appear in blue; unsatisfied dependencies appear in red. Select a listed job to open its **Job Information** dialog
 - **Th/Rs Dependencies Tab**: Displays all Threshold and Resource dependencies, including the Threshold/Resource name, Operator, required Value, and Current Value. Satisfied dependencies appear in blue; unsatisfied appear in red. Select a Threshold Dependency to resolve it manually
 - **Exp Dependencies Tab**: Displays any Expression dependencies related to the selected job

@@ -1,6 +1,6 @@
 ---
 title: OpCon Server Options
-description: "The Enterprise Manager Administration supports management of Server Options in OpCon."
+description: "Configure global behavior settings for the OpCon SAM and supporting services, including time settings, logging, SMTP configuration, password requirements, and Vision settings."
 product_area: Administration
 audience: System Administrator
 version_introduced: "[see release notes]"
@@ -19,7 +19,7 @@ doc_type: reference
 
 ## What Is It?
 
-The **Enterprise Manager Administration** supports management of Server Options in OpCon. Only the OpCon administrative users in the ocadm role can access the options. Refer to [Managing Server Options](../Files/UI/Enterprise-Manager/Managing-Server-Options.md) in the **Enterprise Manager** online help.
+Server Options control the global behavior of the OpCon SAM and supporting services. Only users assigned to Roles with the **Maintain Server Options** privilege can access Server Options. To open Server Options in Solution Manager, go to **Administration** > **Server Options**.
 
 ## Configuration Options
 
@@ -159,15 +159,15 @@ The Password Requirements category contains the requirements for OpCon Login pas
 | Minimum number of lower-case characters required | 0 | Y | This parameter defines the minimum number of lower-case characters required in a password. |
 |Minimum number of upper-case characters required | 0 | Y | This parameter defines the minimum number of upper-case characters required in a password. |
 | Minimum number of days between password changes | 0 | Y | This parameter defines the minimum number of days before a user can change a password.<br /><br />*Note: If the value is set to 0, this parameter is disabled.* |
-| Requires numeric characters | False | Y | This parameter determines if the password must contain numeric characters.<br /><br />Valid values are True and False. |
-| Requires alpha characters | False | Y | This parameter determines if the password must contain alphabetical characters.<br /><br />Valid values are True and False. |
-| Requires special characters | False | Y | This parameter determines if the password must contain special characters.<br /><br />Valid values are True and False. |
+| Requires numeric characters | True | Y | This parameter determines if the password must contain numeric characters.<br /><br />Valid values are True and False. |
+| Requires alpha characters | True | Y | This parameter determines if the password must contain alphabetical characters.<br /><br />Valid values are True and False. |
+| Requires special characters | True | Y | This parameter determines if the password must contain special characters.<br /><br />Valid values are True and False. |
 | Number of times a character can repeat consecutively | 2 | Y | This parameter determines the number of times a character can repeat consecutively in a password.<br /><br />Example: If value is set to 2, the password "jjj" would be invalid.<br /><br />Valid values range from 1 to 12.<br /><br />Setting the value to 0 disables the setting. |
-| Number of days a password is valid | 0 | Y | This parameter determines the number of days a password is valid from the time users changes their password.<br /><br />**CAUTION: Continuous recommends setting user accounts involved in batch processing to have the password that never expire. When turning this setting on, you should strongly consider all User Accounts set up for running batch processes. To prevent these users from expiring, you may update each of those user accounts to have the password never expire. Refer to User Accounts.**<br /><br />Valid values range from 0 to 365.<br /><br />Setting the value to 0 disables the setting. |
+| Number of days a password is valid | 365 | Y | This parameter determines the number of days a password is valid from the time users changes their password.<br /><br />**CAUTION: Continuous recommends setting user accounts involved in batch processing to have the password that never expire. When turning this setting on, you should strongly consider all User Accounts set up for running batch processes. To prevent these users from expiring, you may update each of those user accounts to have the password never expire. Refer to User Accounts.**<br /><br />Valid values range from 0 to 365.<br /><br />Setting the value to 0 disables the setting. |
 | Number of days before password expiration to warn user | 0 | Y | This parameter determines the number of days in advance of password expiration that the primary graphical user interfaces will warn users that their password is about to expire.<br /><br />Valid values range from 0 to 30. <br /><br />Setting the value to 0 disables the setting. |
 | Minimum number of characters | 8 | Y | This parameter defines the minimum number of characters allowed for every user's password in OpCon.<br /><br />Valid values range from 1 to 12. |
-| Number of passwords to retain in history | 0 | Y | This parameter determines the number of passwords for OpCon to retain in history. When a user changes their password, they will not be able to reuse any of the in the history.<br /><br />Valid values range from 0 to 20.<br /><br />Setting the value to 0 disables the setting. |
-| Number of failed logon attempts before account lockout | 0 | Y | This parameter determines the number of password attempts before the account is locked.<br /><br />Valid values range from 0 to 10.<br /><br />Setting the value to 0 disables the setting. |
+| Number of passwords to retain in history | 10 | Y | This parameter determines the number of passwords for OpCon to retain in history. When a user changes their password, they will not be able to reuse any of the in the history.<br /><br />Valid values range from 0 to 20.<br /><br />Setting the value to 0 disables the setting. |
+| Number of failed logon attempts before account lockout | 5 | Y | This parameter determines the number of password attempts before the account is locked.<br /><br />Valid values range from 0 to 10.<br /><br />Setting the value to 0 disables the setting. |
 
 ## HTML Documentation
 
@@ -199,7 +199,7 @@ The Authentication User (UNC Access) and its encrypted password define the Windo
 
 ### Authorization
 
-Server Options are accessible only to users in the ocadm role.
+Server Options are accessible only to users assigned to Roles with the **Maintain Server Options** privilege.
 
 ### Data Security
 
@@ -227,7 +227,7 @@ The Login Security Message parameter configures a security banner displayed to u
 
 - **Log job dependency errors to Critical.log** is enabled by default (True); disable only if verbose dependency logging is causing performance concerns, noting that errors will still appear in `SAM.log` when logging level is Verbose or Debug.
 - SMTP configuration issues (blank server name, missing authentication credentials) cause the SMA Notify Handler to silently fail to deliver email and SMS notifications. Confirm all SMTP Server settings are populated before relying on these notification types.
-- Server Options are accessible only to users in the `ocadm` role via the Enterprise Manager Administration section.
+- Server Options are accessible only to users assigned to Roles with the **Maintain Server Options** privilege. Access them in Solution Manager under **Administration** > **Server Options**.
 
 ## Exception Handling
 
@@ -245,7 +245,7 @@ Server Options control the global behavior of the OpCon SAM and supporting servi
 
 **Q: How do you access Server Options?**
 
-Server Options are configured through the Enterprise Manager. Refer to the OpCon Server Options documentation in the Concepts online help for detailed configuration guidance.
+In Solution Manager, go to **Administration** > **Server Options**. Only users assigned to Roles with the **Maintain Server Options** privilege can modify Server Options.
 
 **Q: What are the Vision Settings used for?**
 
@@ -267,4 +267,4 @@ Vision Settings control how long Vision history data is retained and how many da
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.

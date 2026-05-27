@@ -56,7 +56,7 @@ The profile list is sorted. Entering the first letter of a profile name jumps to
 5. Select the **Login** button
 
 :::note
-As a security measure, some users are presented with a Security message after login. Select **Accept** to proceed or **Decline** to close the application. This applies to both manual and automatic login users. The Security message is configured under the Generals tab in the Server Options editor. Refer to the [Login Security Message](../../../administration/server-options.md#general) parameter in the Concepts online help.
+As a security measure, some users are presented with a Security message after login. Select **Accept** to proceed or **Decline** to close the application. This applies to both manual and automatic login users. The Security message is configured under the Generals tab in the Server Options editor. Refer to the [Login Security Message](../../../administration/server-options.md#general-settings) parameter in the Concepts online help.
 :::
 
 ## Log out of the Enterprise Manager

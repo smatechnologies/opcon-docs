@@ -60,7 +60,7 @@ For the Configuration Directory location, refer to [File Locations](../../file-l
 The Job_Avg.cmd and Job_Avg_WinAuth.cmd files run SMA_JOBAVG through sqlcmd.exe and produce the output file SMA_JOBAVG.txt in the same directory.
 
 :::caution
-Do not run SMA_JOBAVG independently if SAM is configured to calculate Job Averages. Refer to [SAM Calculates Job Averages](../../administration/server-options.md#general) in the **Concepts** online help.
+Do not run SMA_JOBAVG independently if SAM is configured to calculate Job Averages. Refer to [SAM Calculates Job Averages](../../administration/server-options.md#general-settings) in the **Concepts** online help.
 :::
 
 #### Modifying the Command File

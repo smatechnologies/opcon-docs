@@ -52,7 +52,7 @@ SAM checks a job for processing in this order:
 
 ## SAM Processing Options
 
-SAM processing options are configured through the Enterprise Manager (EM). Refer to [OpCon Server Options](../administration/server-options.md) in the **Concepts** online help.
+SAM processing options are configured in Solution Manager. Refer to [OpCon Server Options](../administration/server-options.md) for details.
 
 ## SMA Connection Configuration Tool
 
@@ -60,23 +60,16 @@ The SMA Connection Configuration program contains connection information to the 
 
 ## Request a New License File from Continuous
 
-After paying maintenance to Continuous, complete the following steps to request a new license file.
+To request a new license file from Continuous, complete the following steps:
 
-1. Log in to the **Enterprise Manager**
-2. Go to **Help > About OpCon Enterprise Manager**
-3. Select the **License Information** tab
+1. Log in to **Solution Manager**.
+2. Go to **Library** > **License & Support** > **Licensing**.
+3. Copy the **System ID** value.
+4. Go to the Continuous Support Portal and submit a license file request. Include:
 
-    :::note
-    Only users with granted privileges can view the **License Information** tab.
-    :::
-
-4. At the end of the first line, select the System ID (e.g., SMAServer_1234)
-5. Right-click and select **Copy**
-6. Send an email to <license@smatechnologies.com> with the subject line "License File Request". Include:
-
-    - Environment for the SAM and database (e.g., Production)
-    - The System ID copied from the Help tab (press Ctrl+V to paste)
     - Your company's name
+    - The environment type (e.g., Production)
+    - The System ID copied from Solution Manager
 
 ### Place the License File in the SAM Directory
 
@@ -98,7 +91,7 @@ If the license file is encrypted after receipt (e.g., saved to a Windows folder 
 
 ### Authorization
 
-Viewing the License Information tab in the Enterprise Manager's About dialog requires a user with granted privileges. Not all user accounts have access to this tab.
+Viewing the License Information tab in Solution Manager requires a user with granted privileges. Not all user accounts have access to this tab.
 
 SQL connection configuration for the SMA Connection Configuration program can only be changed from the SAM application server. The SAM-SS must be stopped and restarted to detect new SQL connection configuration information.
 
@@ -116,19 +109,19 @@ The license file must not be encrypted after receipt. Saving the license file to
 
 - SAM evaluates job qualification in this order: Job Qualifications for Start, Latest Allowable Start Time, Start Time, Job Dependencies, Threshold/Resources, Expression Dependencies, and Machine Availability. Use this sequence to diagnose why a job is not starting.
 - SAM writes successful processing information (schedule/job starts and completions, event processing, configuration on start or regeneration) to `SAM.log`, and all processing errors to `Critical.log`. Both files reside in `<Output Directory>\SAM\Log\`.
-- License expiration notifications are logged to `Critical.log`. View the System ID via **Help > About OpCon Enterprise Manager > License Information** tab to request a new license.
+- License expiration notifications are logged to `Critical.log`. View the System ID in Solution Manager under **Library** > **License & Support** > **Licensing** and submit a new license request through the Continuous Support Portal.
 
 ### Common Tasks
 
 - After modifying SQL connection configuration using the SMA Connection Configuration tool, the SAM-SS must be stopped and restarted for the changes to take effect.
-- To request a new license: log in to the Enterprise Manager, go to **Help > About OpCon Enterprise Manager > License Information**, copy the System ID, and email <license@smatechnologies.com> with the environment type, System ID, and company name.
+- To request a new license: log in to Solution Manager, go to **Library** > **License & Support** > **Licensing**, copy the System ID, and submit a request through the Continuous Support Portal with your company name, environment type, and System ID.
 - Save the license file to the SAM directory (e.g., `C:\Program Files\OpConxps\SAM\`) without file-system encryption enabled.
 
 ### Alerts and Log Files
 
 - If the `SAM.log` is locked when SAM starts up, SAM writes to `Critical.log` and the Windows Application Event Log, then terminates immediately.
 - Processing errors logged to `Critical.log` include machine communication failures, database connection problems, event processing failures, and license expiration notifications.
-- SAM processing options (logging level, time settings, job average calculations) are configured through **Enterprise Manager > Server Options**.
+- SAM processing options (logging level, time settings, job average calculations) are configured in Solution Manager under **Administration** > **Server Options**.
 
 ## FAQs
 
@@ -152,7 +145,7 @@ The SAM-SS must be stopped and restarted to detect new SQL connection configurat
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
