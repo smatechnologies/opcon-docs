@@ -580,8 +580,11 @@ system.
 REXX Procedure allows the definition of a REXX event as a pre-run. The
 REXX Procedure is distinguishable from the REXX event type in that it
 plays the role of a resource advisor when set up as a pre-run condition.
-Unlike a REXX event, the return code from this REXX procedure must be
-zero, or the associated job is not submitted.
+The return code from the REXX procedure must be zero for the associated
+job to be submitted. Any non-zero return code is treated as a failure:
+the job start is retried after the user-defined interval, and the REXX
+procedure runs again. This cycle continues until the procedure returns
+zero or the job is removed from the schedule.
 
 - **REXX Name**: Defines the name of the procedure to run. A REXX
     Name may contain alphabetic, national, and numeric characters. A
@@ -641,31 +644,93 @@ The GDGBIAS=STEP JCL option is not compatible with the **Absolute** GDG restart 
 
 ## JCL Substitution
 
-The JCL Substitution defines the JCL parameter symbol or
-OpCon token, separated by double backslashes,
-to be used in this run.
+The **JCL Substitution** field defines the symbolic and override values that the z/OS Agent applies to the JCL each time the job runs. When the job is submitted, the agent scans the JCL for matching tokens and replaces them with the values supplied here. Use the field to inject parameter values, dataset names, dates, or other run-time data without editing the source JCL.
 
-- Use carriage returns in the field to separate lines for easier
-    readability. The maximum total characters in this field is 3400
-    characters.
-- Each override (@) or symbolic (&) definition is separated by two
-    backslashes (\\\\).
-- When the z/OS LSAM encounters an "&name="     symbolic, it scans each JCL statement for an operand match
-- Only operands are changed by an "&" symbolic override. To qualify
-    for replacement, an operand must be preceded by a comma or a blank
-    and include an "=" sign (e.g., all instances of UNIT=xxxxx is
-    substituted using &UNIT=SYSDA).
-- The "@" overrides should not be confused with "&" symbolics
-    Overrides are placeholders for data and symbolics are replacements
-    of very specific data in a specific field enclosed in specific
-    delimiters. Symbolics reference operands only.
-- Overrides can be embedded anywhere in JCL or SYSIN data and can
-    define an entire 80-byte JCL record.
-- Overrides have no restrictions on content or delimiters except they
-    cannot contain double backslashes (e.g., a date card override could
-    be represented as \@TODAY=October 12, 2005).
-- Internal OpCon are represented by
-    \[\[...\]\] notations and may be used as data components of either     symbolics or overrides (e.g., \@TODAY=\[\[$DATE\]).
+### Syntax
+
+Each definition begins with an `@` (override) or an `&` (symbolic) and is separated from the next definition by two backslashes (`\\`). For readability, press the **Enter** key to put each definition on its own line. The field accepts up to 3400 characters.
+
+### Symbolic definitions (`&`)
+
+A symbolic definition has the form `&name=value`. The agent scans every JCL statement for an operand match. An operand qualifies for replacement only when it is preceded by a comma or a blank and includes an equals sign. Symbolics affect operands only.
+
+For example, `&GDG=(-1)` changes a `GDG=(-0)` operand on an EXEC statement to `GDG=(-1)` for one run, letting the job reference the predecessor generation of a Generation Data Group.
+
+Given the symbolic `&PARM=(YES)`, the agent changes line 1 below but not line 2:
+
+```
+//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(NO),MBR=TEMPNAME
+//MYDD  DD  DSN=SYS1.PARMLIB,DISP=SHR
+```
+
+In line 1, `,PARM=(NO)` qualifies as an operand and becomes `,PARM=(YES)`. In line 2, `PARMLIB` is part of the dataset name and is not an operand, so it is left alone.
+
+The agent substitutes the value exactly as supplied. A syntax error in the symbolic carries through to the submitted JCL. For example, if you code `&PARM=(YES` with an unbalanced parenthesis, the JCL becomes:
+
+```
+//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(YES,MBR=TEMPNAME
+```
+
+This usually produces a JCL error at submission.
+
+A match forces replacement wherever the operand appears. For example, `&UNIT=3420` matches the `UNIT=` operand on both of the following statements:
+
+```
+//STEP1 EXEC LIB=SYS1.OKLIB,UNIT=3380,MBR=TEMPNAME
+//MYDD  DD  DSN=SYS1.PARMLIB,DISP=SHR,UNIT=SYSDA
+```
+
+When you design symbolics, make sure the operand names you target do not collide with operands you want to leave unchanged, unless the substitution is intended to apply throughout the JCL.
+
+### Override definitions (`@`)
+
+An override has the form `@name=value`. Overrides are placeholders for data and can appear anywhere in JCL or SYSIN records, including as the full 80-byte contents of a JCL record. There are no restrictions on the override value's content or delimiters except that it cannot contain two consecutive backslashes.
+
+Overrides are useful for REXX parameters, date cards, and control cards that vary by run or by frequency. For example, `@TODAY=October 12, 2005` replaces every occurrence of `@TODAY` in the JCL with that date string.
+
+:::note
+Override keys are matched against the JCL in the order they are defined in the field. If a key begins with the same characters as a previously defined key, the shorter key matches first. Given `\\@MONTH=Jan\\@MONTH2=Mar\\`, `@MONTH` in the JCL always matches before `@MONTH2`. To avoid this, define the longer key first (`\\@MONTH2=Mar\\@MONTH=Jan\\`) or make the keys distinct (`\\@MONTH1=Jan\\@MONTH2=Mar\\`).
+:::
+
+:::caution
+The override token in the JCL must be the same length as the substitution value, or you must reserve padding around it. A length mismatch causes data on the JCL record to shift left or right, which can break column-sensitive content such as date cards. To let the agent adjust the surrounding data automatically, use a variable-length override (see below).
+:::
+
+### Variable-length overrides (`@%`)
+
+When the variable name begins with `%`, the agent shifts the surrounding data on the JCL record left or right to fit the replacement value instead of preserving fixed column positions. You can also add an optional dot after the token (for example, `@%DATE.`) to mark where the variable name ends; the dot is removed after the value is substituted.
+
+### OpCon property references
+
+OpCon properties such as `[[$DATE]]` or `[[$SCHEDULE DATE (+1d)]]` can be used as the value of either an override or a symbolic. For the full list of available properties, refer to [Properties](../objects/properties.md).
+
+For example, define `@DATE=[[$DATE]]` in the field. With sufficient padding reserved around the placeholder, the SYSIN line:
+
+```
+DATE CARD AB.224@DATE    /* TODAYS DATE IN COL 17 -- MM/DD/YY */
+```
+
+becomes:
+
+```
+DATE CARD AB.22412/15/02 /* TODAYS DATE IN COL 17 -- MM/DD/YY */
+```
+
+If the surrounding text does not reserve enough room for the substituted value, the data shifts and column-sensitive content is overwritten. For example, replacing `@DATE` (5 characters) with `12/15/02` (8 characters) when only one space follows the placeholder produces:
+
+```
+DATE CARD AB.22412/15/02 TODAYS DATE IN COL 17 - MM/DD/YY */
+```
+
+To avoid this, pad the placeholder to match the substituted value's length or use a variable-length override (`@%DATE`).
+
+### Scan character
+
+The default scan character is `@`. To use a different character (for example, to support a local character set), enter `\\JCLSCAN=xy\\` as the first entry in the field, where `x` and `y` are the substitution characters. Listing two different characters causes the agent to make two replacement passes — once for each character.
+
+:::note
+Symbolic and override processing is one piece of the z/OS Agent **Dynamic JCL Facility (DJF)**, which also provides built-in date and time variables (`%YY`, `%MM`, `%DD`, `%CYY`, `%CMM`, `%CDD`, `%CHHMMSS`, `%FREQ`, `%RESTART`), conditional `--IF` / `--ELSE` / `--ENDIF` blocks, `--SET` and `--GET` statements, and `--INCLUDE` for shared JCL fragments. For the full reference, refer to [Dynamic JCL Facility](https://help.smatechnologies.com/opcon/agents/zos/reference/djf) in the z/OS Agent help.
+:::
 
 ## Additional Information for z/OS Job Details
 
@@ -953,8 +1018,8 @@ event, the agent immediately submits or initiates the associated job, task, or c
 - **REXX Procedure**:
   - A REXX program
   - Execution PARM
-  - A Return Code of ZERO allows the associated job/task to run
-  - A NON-ZERO return code delays the start of the associated job
+  - A return code of zero allows the associated job to be submitted
+  - A non-zero return code is treated as a failure; the job start is retried after the user-defined interval until the procedure returns zero or the job is removed from the schedule
 
 #### Pre-run Conditions -- How They Work
 
@@ -1461,112 +1526,6 @@ generation. Again, if the current generation is 10, the base is set to
 
 : Sample JCL: GDG Catalog Resync Option
 
-### Using z/OS JCL Symbolic Substitution (&)
-
-Manual setup of JCL can be reduced or eliminated by utilizing
-OpCon JCL Symbolic replacement options. JCL
-symbolic substitutions are defined in the Batch Control Section of the
-Job Master Detail display. Each override or symbolic definition must be
-separated by two backslashes (\\\\).
-
-When the z/OS LSAM encounters an "&name=" symbolic it scans each JCL
-for an operand match. For instance, changing a Generation Data Group
-(GDG) reference from the last DSN created, to its predecessor. If the
-EXEC statement has a "GDG=(-0)" operand, a "&GDG=(-1)" symbolic
-definition in the SAM schedule record causes the GDG symbolic to be
-changed -- for this run only.
-
-Only "Operands" are changed by an "&" Symbolic substitution. The
-rule for locating an Operand is that it must be preceded by a comma or a
-blank AND be followed by an "=" sign. In the following example, JCL
-\#1 is changed, but JCL \#2 is not, if "&PARM=**(YES)"** is coded in
-the Enterprise Manager:
-
-1. //STEP1 EXEC LIB=SYS1.OKLIB**,PARM=**(NO),MBR=TEMPNAME
-2. //MYDD DD DSN=SYS1.**PARM**LIB,DISP=SHR
-
-Also, the z/OS LSAM does EXACTLY what is said, so if an error is coded
-in the symbolic override, the error is passed to the job JCL. If
-"&PARM=**(YES"** was coded in the previous example, the result would
-be:
-
-\
-
-//STEP1 EXEC LIB=SYS1.OKLIB**,PARM=(YES**,MBR=TEMPNAME
-
-\
-
-This probably results in a JCL Error.
-
-If the JCL syntax matches the criteria for an "Operand", a replacement
-is forced. For example, a symbolic definition of "&UNIT=3420" would be
-a match on BOTH the following statements:
-
-1. //STEP1 EXEC LIB=SYS1.OKLIB**,UNIT=3380,**MBR=TEMPNAME
-2. //MYDD DD DSN=SYS1.PARMLIB,DISP=SHR,**UNIT=SYSDA**
-
-When developing symbolic operands, make sure that they do not duplicate
-JCL operands or statements -UNLESS - the substitutions are common
-throughout the JCL. This is a powerful feature, but it can cause
-unexpected results if not defined and tested properly.
-
-### Using z/OS Data Overrides (@)
-
-Overrides are beneficial for REXX Parms, date cards or other dynamic JCL
-or data requirements in a job stream. For example, if a step only runs
-at end of month or a control card is inserted only on certain
-frequencies -- these applications are best for @ Overrides.
-
-"@"Overrides are not to be confused with "&" Symbolics. Overrides
-are "place holders" for data and symbolics are substitutions of very
-specific operands. Symbolics reference "Operands" only. Overrides can
-be imbedded anywhere in JCL or SYSIN data and can define an entire 80
-byte JCL record if need be. Overrides have no restrictions on content or
-delimiters except that they cannot contain double backslashes.
-
-:::note
-The data override keys are matched against the JCL in the order that they are defined in the parameter string. If a key begins with the same characters as a previously defined key, the shorter key always matches first.
-:::
-
-Consider the following:
-
-\\\\ \@MONTH=Jan\\\\\@MONTH2=Mar\\\\
-
-\@MONTH in the JCL will always match before \@MONTH2.
-
-To avoid this problem, define the longer key first, or make the shorter
-key unique:
-
-\\\\\@MONTH2=Mar\\\\\@MONTH=Jan\\\\ **- or -**
-
-\\\\\@MONTH1=Jan\\\\\@MONTH2=Mar\\\\
-
-:::caution
-To avoid formatting errors, the token placeholder should be the same length as the substitution value, or appropriate padding must be provided.
-:::
-
-### Using OpCon as Data Overrides
-
-Internal OpCon tokens are represented by
-\[\[$...\]\] notations and may be used as data components of either Symbolics or Overrides. Refer to [Properties](../objects/properties.md).
-
-In the following example, the OpCon system
-variable token "$DATE" (MM/DD/YY) is substituted for the \@DATE MVS
-override in the JCL //SYSIN DD data:
-
-DATE CARD AB.224\@DATE /\* TODAYS DATE IN COL 17 -- MM/DD/YY \*/
-
-Becomes:
-
-DATE CARD AB.22412/15/02 /\* TODAYS DATE IN COL 17 -- MM/DD/YY \*/
-
-The following is an example of incorrectly padding the override:
-DATE CARD AB.224\@DATE /\* TODAYS DATE IN COL 17 - MM/DD/YY \*/
-
-Becomes:
-
-DATE CARD AB.22412/15/02 TODAYS DATE IN COL 17 - MM/DD/YY \*/
-
 ### Start Command
 
 The $START COMMAND property resolves to the value of the start command
@@ -1632,14 +1591,14 @@ Sub-Type.
 ### Alerts and Log Files
 
 - JCL upload via the **Save JCL** function fails if the OpCon user is not registered in the z/OS security product (e.g., RACF) or lacks update authority to the target library. Check the z/OS security system for the user's access rights if uploads fail.
-- A REXX pre-run procedure that returns a non-zero return code prevents the associated job from being submitted; review the REXX return code logic when batch jobs fail to start.
+- A REXX pre-run procedure must return zero for the associated job to be submitted; any non-zero return code is treated as a failure and the job start is retried after the user-defined interval. If a job is not starting as expected, check whether the REXX procedure is returning a non-zero code on each retry.
 - When a trigger message uses `$EVENT=eventname`, OpCon looks up the event name in the z/OS event trigger table; if not found, the message is changed to `JEVENT=eventname` and processed as a generic message.
 
 ## Exception Handling
 
 **Save JCL upload fails when the OpCon user lacks access to the security system or the Save JCL library** — If the OpCon user ID is not recognized by the z/OS security system or does not have permission to update the Save JCL DD library, the JCL upload will fail — Ensure the OpCon user is registered in the z/OS security product (such as RACF) and is granted the appropriate update authority to the target library before using the Save JCL function.
 
-**REXX pre-run procedure does not submit the job if it returns a non-zero return code** — A REXX procedure defined as a Pre-Run condition must return a code of zero to allow the associated job to be submitted; any non-zero return code prevents submission — Review and correct the REXX procedure logic to ensure it returns zero when pre-run conditions are satisfied.
+**REXX pre-run procedure retries the job start when it returns a non-zero return code** — A REXX procedure defined as a Pre-Run condition acts as a resource advisor: a zero return code allows the job to be submitted, and any non-zero return code is treated as a failure that retries the job start after the user-defined interval. The cycle continues until the procedure returns zero or the job is removed from the schedule — If a job is not starting as expected, review the REXX procedure logic to confirm whether the non-zero return is intentional (delaying submission until a resource is available) or a defect in the procedure.
 
 **Trigger Message using $EVENT=eventname is not processed if the event name is not in the z/OS event table** — When a trigger message uses `$EVENT=eventname`, OpCon looks up the event name in the z/OS event trigger table; if the name is not found, the message is changed to `JEVENT=eventname` and sent as a generic message, bypassing the intended automation — Verify that the event name is correctly defined in the z/OS agent's event table, or use agent Feedback codes to define triggers without requiring the event table.
 
