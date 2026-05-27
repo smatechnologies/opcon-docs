@@ -650,6 +650,10 @@ The **JCL Substitution** field defines the symbolic and override values that the
 
 Each definition begins with an `@` (override) or an `&` (symbolic) and is separated from the next definition by two backslashes (`\\`). For readability, press the **Enter** key to put each definition on its own line. The field accepts up to 3400 characters.
 
+:::note
+The `@` and `&` characters shown here are the default scan characters. For environments that use a non-default code page, you can change them by entering `\\JCLSCAN=xy\\` as the first entry in the field. See [Scan character](#scan-character) below for details.
+:::
+
 ### Symbolic definitions (`&`)
 
 A symbolic definition has the form `&name=value`. The agent scans every JCL statement for an operand match. An operand qualifies for replacement only when it is preceded by a comma or a blank and includes an equals sign. Symbolics affect operands only.
