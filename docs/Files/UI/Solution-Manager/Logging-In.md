@@ -39,7 +39,7 @@ If data migration is required, your login may be rejected. A member of the ocadm
 :::note
 Some users may see a Security message after each manual login or automatic login attempt. Users must Accept or Decline this message. If accepted, the user proceeds normally. If declined, the user is returned to the login screen or shown the security message again.
 
-The Security message is configured under the Generals tab of the Server Options. For more information, refer to the [Login Security Message](../../../administration/server-options.md#general-settings) parameter in the Concepts online help.
+The Security message is configured under the General tab of the Server Options. For more information, refer to the [Login Security Message](../../../administration/server-options.md#general-settings) parameter in the Concepts online help.
 :::
 
 ### Automatic Login
