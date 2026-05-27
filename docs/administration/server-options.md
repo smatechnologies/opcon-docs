@@ -19,7 +19,7 @@ doc_type: reference
 
 ## What Is It?
 
-Server Options control the global behavior of the OpCon SAM and supporting services. Only users in the **ocadm** role can access Server Options. To open Server Options in Solution Manager, go to **Administration** > **Server Options**.
+Server Options control the global behavior of the OpCon SAM and supporting services. Only users assigned to Roles with the **Maintain Server Options** privilege can access Server Options. To open Server Options in Solution Manager, go to **Administration** > **Server Options**.
 
 ## Configuration Options
 
@@ -199,7 +199,7 @@ The Authentication User (UNC Access) and its encrypted password define the Windo
 
 ### Authorization
 
-Server Options are accessible only to users in the ocadm role.
+Server Options are accessible only to users assigned to Roles with the **Maintain Server Options** privilege.
 
 ### Data Security
 
@@ -227,7 +227,7 @@ The Login Security Message parameter configures a security banner displayed to u
 
 - **Log job dependency errors to Critical.log** is enabled by default (True); disable only if verbose dependency logging is causing performance concerns, noting that errors will still appear in `SAM.log` when logging level is Verbose or Debug.
 - SMTP configuration issues (blank server name, missing authentication credentials) cause the SMA Notify Handler to silently fail to deliver email and SMS notifications. Confirm all SMTP Server settings are populated before relying on these notification types.
-- Server Options are accessible only to users in the **ocadm** role. Access them in Solution Manager under **Administration** > **Server Options**.
+- Server Options are accessible only to users assigned to Roles with the **Maintain Server Options** privilege. Access them in Solution Manager under **Administration** > **Server Options**.
 
 ## Exception Handling
 
@@ -245,7 +245,7 @@ Server Options control the global behavior of the OpCon SAM and supporting servi
 
 **Q: How do you access Server Options?**
 
-In Solution Manager, go to **Administration** > **Server Options**. Only users in the **ocadm** role can view or modify Server Options.
+In Solution Manager, go to **Administration** > **Server Options**. Only users assigned to Roles with the **Maintain Server Options** privilege can modify Server Options.
 
 **Q: What are the Vision Settings used for?**
 

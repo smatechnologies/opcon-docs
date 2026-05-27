@@ -60,23 +60,16 @@ The SMA Connection Configuration program contains connection information to the 
 
 ## Request a New License File from Continuous
 
-After paying maintenance to Continuous, complete the following steps to request a new license file.
+To request a new license file from Continuous, complete the following steps:
 
-1. Log in to **Solution Manager**
-2. Go to **Help** > **About OpCon**
-3. Select the **License Information** tab
+1. Log in to **Solution Manager**.
+2. Go to **Library** > **License & Support** > **Licensing**.
+3. Copy the **System ID** value.
+4. Go to the Continuous Support Portal and submit a license file request. Include:
 
-    :::note
-    Only users with granted privileges can view the **License Information** tab.
-    :::
-
-4. At the end of the first line, select the System ID (e.g., SMAServer_1234)
-5. Right-click and select **Copy**
-6. Send an email to <license@smatechnologies.com> with the subject line "License File Request". Include:
-
-    - Environment for the SAM and database (e.g., Production)
-    - The System ID copied from the Help tab (press Ctrl+V to paste)
     - Your company's name
+    - The environment type (e.g., Production)
+    - The System ID copied from Solution Manager
 
 ### Place the License File in the SAM Directory
 
@@ -116,12 +109,12 @@ The license file must not be encrypted after receipt. Saving the license file to
 
 - SAM evaluates job qualification in this order: Job Qualifications for Start, Latest Allowable Start Time, Start Time, Job Dependencies, Threshold/Resources, Expression Dependencies, and Machine Availability. Use this sequence to diagnose why a job is not starting.
 - SAM writes successful processing information (schedule/job starts and completions, event processing, configuration on start or regeneration) to `SAM.log`, and all processing errors to `Critical.log`. Both files reside in `<Output Directory>\SAM\Log\`.
-- License expiration notifications are logged to `Critical.log`. View the System ID via **Help** > **About OpCon** > **License Information** in Solution Manager to request a new license.
+- License expiration notifications are logged to `Critical.log`. View the System ID in Solution Manager under **Library** > **License & Support** > **Licensing** and submit a new license request through the Continuous Support Portal.
 
 ### Common Tasks
 
 - After modifying SQL connection configuration using the SMA Connection Configuration tool, the SAM-SS must be stopped and restarted for the changes to take effect.
-- To request a new license: log in to Solution Manager, go to **Help** > **About OpCon** > **License Information**, copy the System ID, and email <license@smatechnologies.com> with the environment type, System ID, and company name.
+- To request a new license: log in to Solution Manager, go to **Library** > **License & Support** > **Licensing**, copy the System ID, and submit a request through the Continuous Support Portal with your company name, environment type, and System ID.
 - Save the license file to the SAM directory (e.g., `C:\Program Files\OpConxps\SAM\`) without file-system encryption enabled.
 
 ### Alerts and Log Files
