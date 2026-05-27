@@ -1,6 +1,15 @@
 ---
+title: "OpCon Documentation"
+description: "Complete reference documentation for the OpCon workload automation platform, including installation, configuration, administration, and daily operations."
 slug: "/"
 hide_table_of_contents: true
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Application Owner
+  - Operations Staff
+  - Getting Started
 ---
 
 # OpCon

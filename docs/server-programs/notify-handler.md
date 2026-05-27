@@ -27,7 +27,7 @@ The SMA Notify Handler component is responsible for reading the NOTIFY table in 
 The SMA Notify Handler can send the following basic notifications after reading the NOTIFY table:
 
 - Windows Event Log
-- Email (SMTP Basic and OAuth) (For more on configuring notifications for SMTP, refer to [Configuring SMTP Notifications](../notifications/Notification-Configuration.md#Configur3) in the **Concepts** online help.)
+- Email (SMTP Basic and OAuth) (For more on configuring notifications for SMTP, refer to [Configuring SMTP Notifications](../notifications/Notification-Configuration.md#configuring-smtp-notifications) in the **Concepts** online help.)
 - SNMP Trap (For more on configuring notifications for SMTP, refer to [Configuring SNMP Notifications](../notifications/Notification-Configuration.md#Configur) in the **Concepts** online help.)
 - Unisys Single Point of Operations (SPO) AL and CO Reports (For more on configuring notifications for SMTP, refer to [Configuring SPO Notifications](../notifications/Notification-Configuration.md#Configur2) in the **Concepts** online help.)
 - Text Messages (SMS)
