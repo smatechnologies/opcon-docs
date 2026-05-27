@@ -1,6 +1,6 @@
 ---
 title: Jobs
-description: "A _job_ in OpCon is a task or activity, such as running a program on a remote machine, transferring files between machines, or running another schedule."
+description: "A job in OpCon is a unit of automated work, such as running a program on a remote machine, transferring files between machines, or running another schedule."
 product_area: Core Concepts
 audience: Automation Engineer, Application Owner
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: reference
 
 ## What Is It?
 
-A _job_ in OpCon is a task or activity, such as running a program on a remote machine, transferring files between machines, or running another schedule. The Job Type's details determine the actual task to run. All other components determine when the job runs and what happens when it finishes.
+A _job_ in OpCon is a unit of automated work, such as running a program on a remote machine, transferring files between machines, or running another schedule. The Job Type's details determine the actual job to run. All other components determine when the job runs and what happens when it finishes.
 
 All jobs must first be entered into the Job Master tables. Each job must belong to a schedule, and a schedule should already be defined. Changes made in Job Master Maintenance do not affect previously built Daily schedules.
 
@@ -167,7 +167,7 @@ SMASchedMan ignores the job during automatic schedule builds. The job can still 
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
 

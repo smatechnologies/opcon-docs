@@ -23,7 +23,7 @@ doc_type: procedural
 The **Solution Manager** topic in the Navigation Panel provides links to access Solution Manager modules and pages from within the Enterprise Manager.
 
 :::note
-The Solution Manager topic will only appear in the Navigation Panel if the **Solution Manager URL** General Server Option is defined. For more information, refer to [Solution Manager URL](../../../administration/server-options.md#general) in the **Concepts** online help.
+The Solution Manager topic will only appear in the Navigation Panel if the **Solution Manager URL** General Server Option is defined. For more information, refer to [Solution Manager URL](../../../administration/server-options.md#general-settings) in the **Concepts** online help.
 :::
 
 :::note

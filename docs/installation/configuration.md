@@ -423,7 +423,7 @@ To configure OpCon, complete the following steps:
 10. Under Administration in the Navigation Panel, select **Server Options**
 
 11. Verify the **General** tab is selected
-12. Review all parameters. Refer to [General Settings](../administration/server-options.md#general) for details
+12. Review all parameters. Refer to [General Settings](../administration/server-options.md#general-settings) for details
 13. To modify a parameter:
     1. Select the **parameter** in the parameter table
     2. Enter a *valid value* in the frame at the bottom of the screen

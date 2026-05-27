@@ -142,7 +142,6 @@ The Output Directory was configured during installation. For more information, r
 
 |Debug Options|Default|Dynamic (Y/N)|Definition|
 |--- |--- |--- |--- |
-|ArchiveDaysToKeep|15|N|Number of days of log history to retain. Automatic cleanup reduces disk storage.|
 |TraceLevel|0|N|Debug trace detail level. Valid values: 0 = Basic, 1 = Detailed, 2 = Very detailed|
 
 ### SMABIRTPROCESSOR.ini
@@ -151,7 +150,7 @@ The Output Directory was configured during installation. For more information, r
 
 |General Settings|Default|Dynamic (Y/N)|Definition|
 |--- |--- |--- |--- |
-|BIRT_HOME|.\BIRT\birt-runtime-2_5_2|N|Path of the BIRT_HOME environment variable containing the BIRT runtime files.|
+|BIRT_HOME|.\BIRT|N|Path of the BIRT_HOME environment variable containing the BIRT runtime files.|
 
 #### Debug Options
 
@@ -176,7 +175,7 @@ Reserved for future use.
 |TCP/IP Parameters|Default|Dynamic (Y/N)|Definition|
 |--- |--- |--- |--- |
 |SocketNumber|1305|N|Socket number for connection to the SAP R/3 machine.|
-|BWSocketNumber|13056|N|Socket number for connection to the SAP BW machine.|
+|BWSocketNumber|1306|N|Socket number for connection to the SAP BW machine.|
 
 #### Debug Options
 
@@ -212,7 +211,7 @@ The Output Directory was configured during installation. For more information, r
 ### Alerts and Log Files
 
 - `SMALSAMDataRetriever.log`, `SMABirtProcessor.log`, and `SAPQueryProcessor.log` all reside in `<Output Directory>\SAM\Log\`.
-- `SMALSAMDataRetriever` retains 15 days of log history by default (`ArchiveDaysToKeep=15`); adjust as needed to manage disk storage.
+- The `SMALSAMDataRetriever.log` file rolls over automatically based on its `MaximumLogFileSize` setting (default: 150,000 bytes).
 - Set `TraceLevel` to `1` (Detailed) or `2` (Very detailed) in the relevant `.ini` file for additional diagnostic output when troubleshooting request handler issues.
 
 ## FAQs
