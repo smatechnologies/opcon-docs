@@ -50,7 +50,7 @@ The **Comparative Job Execution Statistics Report** displays job runtime analyti
 
 **Q: Where can you find Comparative Job Execution Statistics Report in OpCon?**
 
-Access Comparative Job Execution Statistics Report in Solution Manager or the Enterprise Manager.
+Access Comparative Job Execution Statistics Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

@@ -60,7 +60,7 @@ The **Daily Job Information Report** shows daily job execution details including
 
 **Q: Where can you find Daily Job Information Report in OpCon?**
 
-Access Daily Job Information Report in Solution Manager or the Enterprise Manager.
+Access Daily Job Information Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

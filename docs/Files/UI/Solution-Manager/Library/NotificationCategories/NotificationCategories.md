@@ -46,7 +46,7 @@ title: Notification Categories
 
 **Q: Where can you find Notification Categories in OpCon?**
 
-Access Notification Categories in Solution Manager or the Enterprise Manager.
+Access Notification Categories in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

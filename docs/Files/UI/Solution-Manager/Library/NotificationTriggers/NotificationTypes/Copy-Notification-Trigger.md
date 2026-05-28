@@ -38,7 +38,7 @@ The copy dialog copies a notification trigger definition — including all its n
 
 **Q: Where can you find Copy Notification Trigger in OpCon?**
 
-Access Copy Notification Trigger in Solution Manager or the Enterprise Manager.
+Access Copy Notification Trigger in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

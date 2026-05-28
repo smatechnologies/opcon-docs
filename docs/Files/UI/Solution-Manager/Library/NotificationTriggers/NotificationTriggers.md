@@ -115,7 +115,7 @@ title: Notification Triggers
 
 **Q: Where can you find Notification Triggers in OpCon?**
 
-Access Notification Triggers in Solution Manager or the Enterprise Manager.
+Access Notification Triggers in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

@@ -54,7 +54,7 @@ The **Unique Task Count Report** shows unique task counts by date, agent type, a
 
 **Q: Where can you find Unique Task Count Report in OpCon?**
 
-Access Unique Task Count Report in Solution Manager or the Enterprise Manager.
+Access Unique Task Count Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

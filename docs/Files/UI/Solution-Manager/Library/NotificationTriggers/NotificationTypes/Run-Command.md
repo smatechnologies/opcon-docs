@@ -40,7 +40,7 @@ The **Run Command** dialog provides the following fields for defining a command 
 
 **Q: Where can you find Run Command in OpCon?**
 
-Access Run Command in Solution Manager or the Enterprise Manager.
+Access Run Command in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

@@ -121,7 +121,7 @@ SMTP Authentication Encrypted Passwords for all email and SMS server configurati
 
 **Q: What does managing smtp settings involve?**
 
-Managing smtp settings includes Required Privileges, Configuring SMTP Settings. Access smtp settings in Solution Manager or the Enterprise Manager.
+Managing smtp settings includes Required Privileges, Configuring SMTP Settings. Access smtp settings in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage smtp settings in OpCon?**
 

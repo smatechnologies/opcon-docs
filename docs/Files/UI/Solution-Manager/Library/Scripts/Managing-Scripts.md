@@ -89,7 +89,7 @@ Related Topics
 
 **Q: What does managing scripts involve?**
 
-Managing scripts includes adding, editing, and deleting records. Access scripts in Solution Manager or the Enterprise Manager.
+Managing scripts includes adding, editing, and deleting records. Access scripts in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage scripts in OpCon?**
 

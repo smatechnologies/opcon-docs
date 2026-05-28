@@ -57,7 +57,7 @@ The **OpCon Events** dialog lists existing events and provides options to add, e
 
 **Q: Where can you find OpCon Events in OpCon?**
 
-Access OpCon Events in Solution Manager or the Enterprise Manager.
+Access OpCon Events in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

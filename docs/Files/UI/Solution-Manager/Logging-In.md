@@ -46,7 +46,7 @@ The Security message is configured under the General tab of the Server Options. 
 
 Solution Manager supports automatic login when Windows Authentication is enabled.
 
-First, configure users in OpCon for Automatic Login in Solution Manager or the Enterprise Manager.
+First, configure users in OpCon for Automatic Login in Solution Manager or Enterprise Manager.
 
 :::note
 The user account must include the Windows Domain and Username.

@@ -49,7 +49,7 @@ The **Email** dialog provides the following fields for defining an SMTP email no
 
 **Q: Where can you find Email (SMTP) dialog in OpCon?**
 
-Access Email (SMTP) dialog in Solution Manager or the Enterprise Manager.
+Access Email (SMTP) dialog in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

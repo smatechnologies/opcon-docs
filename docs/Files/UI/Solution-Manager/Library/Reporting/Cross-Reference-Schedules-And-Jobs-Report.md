@@ -56,7 +56,7 @@ The **Cross Reference Schedules and Jobs Report** shows all jobs and their assoc
 
 **Q: Where can you find Cross Reference Schedules and Jobs Report in OpCon?**
 
-Access Cross Reference Schedules and Jobs Report in Solution Manager or the Enterprise Manager.
+Access Cross Reference Schedules and Jobs Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

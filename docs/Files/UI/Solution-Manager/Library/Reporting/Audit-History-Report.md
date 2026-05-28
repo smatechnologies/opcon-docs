@@ -83,7 +83,7 @@ The **Audit History Report** shows the history of user updates to the OpCon data
 
 **Q: Where can you find Audit History Report in OpCon?**
 
-Access Audit History Report in Solution Manager or the Enterprise Manager.
+Access Audit History Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

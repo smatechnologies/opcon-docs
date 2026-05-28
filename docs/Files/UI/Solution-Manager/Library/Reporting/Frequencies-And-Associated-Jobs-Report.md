@@ -52,7 +52,7 @@ The **Frequencies and Associated Jobs Report** shows all frequencies with their 
 
 **Q: Where can you find Frequencies and Associated Jobs Report in OpCon?**
 
-Access Frequencies and Associated Jobs Report in Solution Manager or the Enterprise Manager.
+Access Frequencies and Associated Jobs Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

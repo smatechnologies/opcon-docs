@@ -69,7 +69,7 @@ Related Topics
 
 **Q: What does managing escalation rules involve?**
 
-Managing escalation rules includes adding, editing, and deleting records. Access escalation rules in Solution Manager or the Enterprise Manager.
+Managing escalation rules includes adding, editing, and deleting records. Access escalation rules in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage escalation rules in OpCon?**
 

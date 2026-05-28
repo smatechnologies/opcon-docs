@@ -50,7 +50,7 @@ The **Users and Privileges Report** displays user accounts and all associated pr
 
 **Q: Where can you find Users and Privileges Report in OpCon?**
 
-Access Users and Privileges Report in Solution Manager or the Enterprise Manager.
+Access Users and Privileges Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

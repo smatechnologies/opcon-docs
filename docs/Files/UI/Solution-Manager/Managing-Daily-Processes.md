@@ -197,7 +197,7 @@ Related Topics
 
 **Q: What does managing daily processes involve?**
 
-Managing daily processes includes Toolbar Options, Date/Schedule Selection Enabling/Disabling, Filter Profiles, Filtering. Access daily processes in Solution Manager or the Enterprise Manager.
+Managing daily processes includes Toolbar Options, Date/Schedule Selection Enabling/Disabling, Filter Profiles, Filtering. Access daily processes in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage daily processes in OpCon?**
 

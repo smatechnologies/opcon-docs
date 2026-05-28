@@ -53,7 +53,7 @@ The **SPO** dialog lets you choose between an AL Report or CO Report notificatio
 
 **Q: Where can you find SPO Event Report in OpCon?**
 
-Access SPO Event Report in Solution Manager or the Enterprise Manager.
+Access SPO Event Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

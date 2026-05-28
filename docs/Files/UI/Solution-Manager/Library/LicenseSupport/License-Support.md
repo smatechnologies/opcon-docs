@@ -42,7 +42,7 @@ The **License & Support** page displays your license information, Solution Manag
 
 **Q: Where can you find License & Support in OpCon?**
 
-Access License & Support in Solution Manager or the Enterprise Manager.
+Access License & Support in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

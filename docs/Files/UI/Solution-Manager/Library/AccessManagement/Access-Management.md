@@ -51,7 +51,7 @@ title: Access Management
 
 **Q: Where can you find Access Management in OpCon?**
 
-Access Access Management in Solution Manager or the Enterprise Manager.
+Access Access Management in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

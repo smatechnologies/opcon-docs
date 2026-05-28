@@ -75,7 +75,7 @@ Related Topics
 
 **Q: What does managing script runners involve?**
 
-Managing script runners includes adding, editing, and deleting records. Access script runners in Solution Manager or the Enterprise Manager.
+Managing script runners includes adding, editing, and deleting records. Access script runners in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage script runners in OpCon?**
 

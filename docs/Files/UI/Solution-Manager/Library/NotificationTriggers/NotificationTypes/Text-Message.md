@@ -47,7 +47,7 @@ The **Text Message** dialog provides the following fields for defining a notific
 
 **Q: Where can you find Text Message in OpCon?**
 
-Access Text Message in Solution Manager or the Enterprise Manager.
+Access Text Message in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

@@ -48,7 +48,7 @@ The **Archives** tab displays archived log files.
 
 **Q: Where can you find List Archive Files in OpCon?**
 
-Access List Archive Files in Solution Manager or the Enterprise Manager.
+Access List Archive Files in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

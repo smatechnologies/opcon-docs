@@ -50,7 +50,7 @@ title: Roles - Activities
 
 **Q: Where can you find Role Activities in OpCon?**
 
-Access Role Activities in Solution Manager or the Enterprise Manager.
+Access Role Activities in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

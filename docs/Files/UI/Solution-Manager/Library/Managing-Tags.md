@@ -42,7 +42,7 @@ See [Tag Concepts](../../../../job-components/tags.md).
 
 **Q: What does managing tags involve?**
 
-Managing tags includes adding, editing, and deleting records. Access tags in Solution Manager or the Enterprise Manager.
+Managing tags includes adding, editing, and deleting records. Access tags in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage tags in OpCon?**
 

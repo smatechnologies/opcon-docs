@@ -1,7 +1,7 @@
 ---
 sidebar_label: 'SMARequestRouter'
 title: SMA Request Router
-description: "The SMA Request Router reads the OpCon database to process requests from the SAM and the Enterprise Manager."
+description: "The SMA Request Router reads the OpCon database to process requests from the SAM, Enterprise Manager, and Solution Manager."
 product_area: Server Programs
 audience: System Administrator
 version_introduced: "[see release notes]"

@@ -50,7 +50,7 @@ For conceptual help, see:
 
 **Q: What does managing users involve?**
 
-Managing users includes adding, editing, and deleting records. Access users in Solution Manager or the Enterprise Manager.
+Managing users includes adding, editing, and deleting records. Access users in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage users in OpCon?**
 

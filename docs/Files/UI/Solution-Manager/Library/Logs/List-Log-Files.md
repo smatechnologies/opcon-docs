@@ -80,7 +80,7 @@ The **Application Logs** tab displays current log files. To view this tab, you m
 
 **Q: Where can you find List Application Logs in OpCon?**
 
-Access List Application Logs in Solution Manager or the Enterprise Manager.
+Access List Application Logs in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

@@ -40,7 +40,7 @@ title: Managing Master Jobs
 
 **Q: Where can you find Overview in OpCon?**
 
-Access Overview in Solution Manager or the Enterprise Manager.
+Access Overview in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

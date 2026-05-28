@@ -63,7 +63,7 @@ Related Topics
 
 **Q: What does managing escalation groups involve?**
 
-Managing escalation groups includes adding, editing, and deleting records. Access escalation groups in Solution Manager or the Enterprise Manager.
+Managing escalation groups includes adding, editing, and deleting records. Access escalation groups in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage escalation groups in OpCon?**
 

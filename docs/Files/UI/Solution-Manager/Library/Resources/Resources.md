@@ -47,7 +47,7 @@ viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Resources in OpCon?**
 
-Access Resources in Solution Manager or the Enterprise Manager.
+Access Resources in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

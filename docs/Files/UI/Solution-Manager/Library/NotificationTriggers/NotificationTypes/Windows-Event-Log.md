@@ -49,7 +49,7 @@ The **Windows Event Log** dialog provides the following fields for defining a Wi
 
 **Q: Where can you find Windows Event Log in OpCon?**
 
-Access Windows Event Log in Solution Manager or the Enterprise Manager.
+Access Windows Event Log in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

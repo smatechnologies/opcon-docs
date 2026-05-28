@@ -55,7 +55,7 @@ The **Master Job Information Report** provides a comprehensive view of master jo
 
 **Q: Where can you find Master Job Information Report in OpCon?**
 
-Access Master Job Information Report in Solution Manager or the Enterprise Manager.
+Access Master Job Information Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

@@ -54,7 +54,7 @@ title: Roles - Resources
 
 **Q: Where can you find Role Resources in OpCon?**
 
-Access Role Resources in Solution Manager or the Enterprise Manager.
+Access Role Resources in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

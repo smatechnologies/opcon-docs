@@ -56,7 +56,7 @@ title: Machine Groups
 
 **Q: Where can you find Machine Groups in OpCon?**
 
-Access Machine Groups in Solution Manager or the Enterprise Manager.
+Access Machine Groups in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

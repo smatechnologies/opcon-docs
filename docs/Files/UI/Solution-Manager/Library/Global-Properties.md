@@ -30,7 +30,7 @@ Global Properties in OpCon are listed in the grid under Library > Global Propert
 
 **Q: What does managing global properties involve?**
 
-Managing global properties includes adding, editing, and deleting records. Access global properties in Solution Manager or the Enterprise Manager.
+Managing global properties includes adding, editing, and deleting records. Access global properties in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage global properties in OpCon?**
 
