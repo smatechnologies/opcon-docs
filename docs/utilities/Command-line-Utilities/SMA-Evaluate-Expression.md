@@ -26,6 +26,10 @@ SMAEvalExp.exe is installed in the `<Target Directory>\OpConxps\MSLSAM\` directo
 
 ## Configuring the Database Connection Information
 
+:::note
+In fresh installations of OpCon version 23 and later, **SMAConnectionConfig.exe** no longer includes a graphical user interface. On these installations, generate the database connection file (`SMAODBCConfiguration.dat`) by running **SMAConnectionConfig.exe** from the command line. The graphical steps below apply only to installations that include the graphical version of the utility.
+:::
+
 To configure the Database Connection Information, complete the following steps:
 
 1. Open SMAConnectionConfig.exe from `<Target Directory>\OpConxps\MSLSAM\` (e.g., `C:\Program Files\OpConxps\MSLSAM\`)
