@@ -1,4 +1,4 @@
----
+﻿---
 title: Email (SMTP) dialog
 description: "!Email Notification The Email dialog provides the following fields for defining an SMTP email notification: - To (Required): SMTP email address(es) separated by semicolons (;)."
 product_area: Solution Manager
@@ -49,7 +49,7 @@ The **Email** dialog provides the following fields for defining an SMTP email no
 
 **Q: Where can you find Email (SMTP) dialog in OpCon?**
 
-Access Email (SMTP) dialog through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Email (SMTP) dialog in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

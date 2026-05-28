@@ -97,17 +97,15 @@ next procedures.
 
 To request the license file, complete the following steps:
 
-1. Open Enterprise Manager
-2. Use menu path: **Help \> About OpCon Enterprise Manager**
-3. Select the **License Information** tab
-4. Select the **System ID** \[e.g., (OpconServer_6410)\] at the end of     the first line
-5. Right-click and select **Copy**
+1. Log in to **Solution Manager**.
+2. Go to **Library** > **License & Support** > **Licensing**.
+3. Copy the **System ID** value.
+4. Go to the Continuous Support Portal and submit a license file request. Include:
 
-6. Send an email to <license@smatechnologies.com> to request an updated
-    license file for OpCon that includes support for "SMA Vision" and
-    paste the System ID into the email request. You should receive the
-    license within an hour during regular business hours.
-7. Select **OK** to close the **About** dialog
+    - Your company's name
+    - The environment type (e.g., Production)
+    - The System ID copied from Solution Manager
+    - A note requesting "SMA Vision" support
 
 After Continuous responds to the license request, follow this next procedure to save the license file to the SAM
 directory.

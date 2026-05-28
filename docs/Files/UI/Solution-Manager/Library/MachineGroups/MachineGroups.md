@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Machine Groups
@@ -56,7 +56,7 @@ title: Machine Groups
 
 **Q: Where can you find Machine Groups in OpCon?**
 
-Access Machine Groups through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Machine Groups in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

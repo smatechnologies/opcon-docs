@@ -28,8 +28,8 @@ The SMA Notify Handler can send the following basic notifications after reading 
 
 - Windows Event Log
 - Email (SMTP Basic and OAuth) (For more on configuring notifications for SMTP, refer to [Configuring SMTP Notifications](../notifications/Notification-Configuration.md#configuring-smtp-notifications) in the **Concepts** online help.)
-- SNMP Trap (For more on configuring notifications for SMTP, refer to [Configuring SNMP Notifications](../notifications/Notification-Configuration.md#Configur) in the **Concepts** online help.)
-- Unisys Single Point of Operations (SPO) AL and CO Reports (For more on configuring notifications for SMTP, refer to [Configuring SPO Notifications](../notifications/Notification-Configuration.md#Configur2) in the **Concepts** online help.)
+- SNMP Trap (For more on configuring notifications for SNMP, refer to [Configuring SNMP Notifications](../notifications/Notification-Configuration.md#configuring-snmp-notifications) in the **Concepts** online help.)
+- Unisys Single Point of Operations (SPO) AL and CO Reports (For more on configuring notifications for SPO, refer to [Configuring SPO Notifications](../notifications/Notification-Configuration.md#configuring-spo-notifications) in the **Concepts** online help.)
 - Text Messages (SMS)
 - OpCon Events
 - Command

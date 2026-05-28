@@ -1,4 +1,4 @@
----
+﻿---
 title: Application Help
 description: "Web-based help is available directly within the application, covering the entire OpCon product suite."
 product_area: Solution Manager
@@ -40,7 +40,7 @@ Web-based help is available directly within the application, covering the entire
 
 **Q: Where can you find Application Help in OpCon?**
 
-Access Application Help through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Application Help in Solution Manager.
 
 ## Glossary
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Job Dependencies and Documentation Report
 description: "The Job Dependencies and Documentation Report is used to view daily job dependencies, documentation, and related scheduling information."
 product_area: Solution Manager
@@ -60,7 +60,7 @@ The **Job Dependencies and Documentation Report** is used to view daily job depe
 
 **Q: Where can you find Job Dependencies and Documentation Report in OpCon?**
 
-Access Job Dependencies and Documentation Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Job Dependencies and Documentation Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

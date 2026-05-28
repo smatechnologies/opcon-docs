@@ -915,7 +915,7 @@ The complete list of parameters that can be defined by a space-separated string 
 ### Common Tasks
 
 - **New EM installation on Windows**: Download the OpCon Web Installer (OWI) from <https://github.com/smatechnologies/opcon-web-installer>, run `OpCon Web Installer.exe`, select the Enterprise Manager component with the **Install** action, and complete the wizard.
-- **Create an EM database connection profile**: Launch the Enterprise Manager; on the Database Connection Profile screen, enter the profile name, authentication credentials (`opconui`), SQL Server name or IP, and select the database. Test the connection before saving.
+- **Create an EM database connection profile**: Open the Enterprise Manager; on the Database Connection Profile screen, enter the profile name, authentication credentials (`opconui`), SQL Server name or IP, and select the database. Test the connection before saving.
 - **Distribute EM connection profiles**: Copy the `profiles.xml` file from `<user directory>\.enterpriseManager\` on a configured machine to the same path on other EM machines. Back up existing profiles before overwriting.
 
 ### Alerts and Log Files
@@ -930,7 +930,7 @@ The complete list of parameters that can be defined by a space-separated string 
 
 **EM database connection test fails during profile setup** — If the connection test in the EM profile wizard does not succeed, the wizard cannot proceed — Select the Back button, correct the server name, authentication method, or credentials, and test again; the database list only populates after all previous fields are filled in correctly.
 
-**Enterprise Manager cannot log in because no database connection profile exists** — After a new EM installation, users cannot log in until a Database Connection Profile for the OpCon database is created on that machine — Create a profile using the Database Connection Profile screen that appears on first launch, or via the procedure to Create a Profile for the EM to Connect to the Database.
+**Enterprise Manager cannot log in because no database connection profile exists** — After a new EM installation, users cannot log in until a Database Connection Profile for the OpCon database is created on that machine — Create a profile using the Database Connection Profile screen that appears when the Enterprise Manager is first opened, or via the procedure to Create a Profile for the EM to Connect to the Database.
 
 **Automatic EM updates fail on some Windows 7 and Windows 2008 R2 machines due to insufficient privileges** — The automatic update mechanism may fail because the EnterpriseManager folder does not grant sufficient write permissions to the logged-in user — Modify the permissions on the EnterpriseManager folder to grant Full Control to Creator Owner, Users, and the LogonUser accounts.
 

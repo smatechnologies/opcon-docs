@@ -1,4 +1,4 @@
----
+﻿---
 title: License & Support
 description: "The License & Support page displays your license information, Solution Manager version, and SMA support resources."
 product_area: Solution Manager
@@ -42,7 +42,7 @@ The **License & Support** page displays your license information, Solution Manag
 
 **Q: Where can you find License & Support in OpCon?**
 
-Access License & Support through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access License & Support in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

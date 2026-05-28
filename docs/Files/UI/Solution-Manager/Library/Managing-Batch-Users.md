@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Batch Users
 description: "The Batch User editor creates and maintains Batch Users required for processing jobs on IBM i, MCP, OpenVMS, SQL, UNIX, and Windows."
 product_area: Solution Manager
@@ -48,7 +48,7 @@ Related Topics
 
 **Q: What does managing batch users involve?**
 
-Managing batch users includes Batch Users Toolbar. Access batch users through the Enterprise Manager navigation pane.
+Managing batch users includes Batch Users Toolbar. Access batch users in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage batch users in OpCon?**
 

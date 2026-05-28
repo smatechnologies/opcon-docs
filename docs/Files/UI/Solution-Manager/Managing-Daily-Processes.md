@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Daily Processes
 description: "The !Processes Button button on the main Operations page takes you to a page where you can view and manage the Daily processes in operation."
 product_area: Solution Manager
@@ -197,7 +197,7 @@ Related Topics
 
 **Q: What does managing daily processes involve?**
 
-Managing daily processes includes Toolbar Options, Date/Schedule Selection Enabling/Disabling, Filter Profiles, Filtering. Access daily processes through the Enterprise Manager navigation pane.
+Managing daily processes includes Toolbar Options, Date/Schedule Selection Enabling/Disabling, Filter Profiles, Filtering. Access daily processes in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage daily processes in OpCon?**
 

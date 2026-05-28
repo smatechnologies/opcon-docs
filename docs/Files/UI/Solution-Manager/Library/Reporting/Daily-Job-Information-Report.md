@@ -1,4 +1,4 @@
----
+﻿---
 title: Daily Job Information Report
 description: "The Daily Job Information Report shows daily job execution details including job status, schedule information, and execution times."
 product_area: Solution Manager
@@ -60,7 +60,7 @@ The **Daily Job Information Report** shows daily job execution details including
 
 **Q: Where can you find Daily Job Information Report in OpCon?**
 
-Access Daily Job Information Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Daily Job Information Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

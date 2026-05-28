@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Thresholds
@@ -47,7 +47,7 @@ viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Thresholds in OpCon?**
 
-Access Thresholds through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Thresholds in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

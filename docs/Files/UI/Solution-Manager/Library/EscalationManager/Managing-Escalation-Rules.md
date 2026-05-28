@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Escalation Rules
 description: "Use Escalation Manager to add, edit, delete, and check cross-references for escalation rules."
 product_area: Solution Manager
@@ -69,7 +69,7 @@ Related Topics
 
 **Q: What does managing escalation rules involve?**
 
-Managing escalation rules includes adding, editing, and deleting records. Access escalation rules through the Enterprise Manager navigation pane.
+Managing escalation rules includes adding, editing, and deleting records. Access escalation rules in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage escalation rules in OpCon?**
 

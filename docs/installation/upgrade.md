@@ -333,7 +333,7 @@ Before the OpCon database can be upgraded, database replication and mirroring mu
 ### Common Tasks
 
 - **Back up the OpCon database before upgrading**: In SQL Server Management Studio, right-click the OpCon database, choose **Tasks > Back Up**, set Backup type to **Full**, and save with a `.bak` extension (e.g., `D:\MSSQL\Backup\Opconxps.bak`).
-- **Stop SMA services before upgrading**: Go to **Start > Administrative Tools > Server Manager > Configuration > Services**, select each SMA service, and click **Stop**.
+- **Stop SMA services before upgrading**: Go to **Start > Administrative Tools > Server Manager > Configuration > Services**, select each SMA service, and select **Stop**.
 - **Check for running jobs before stopping services**: Run `showrunning` from the agent directory; repeat until **Jobs Running** shows `0`. Use `kill <pid>` to terminate any remaining jobs if approved by the OpCon administrator.
 
 ### Alerts and Log Files

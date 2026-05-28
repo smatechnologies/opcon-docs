@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Users
@@ -50,7 +50,7 @@ For conceptual help, see:
 
 **Q: What does managing users involve?**
 
-Managing users includes adding, editing, and deleting records. Access users through the Enterprise Manager navigation pane.
+Managing users includes adding, editing, and deleting records. Access users in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage users in OpCon?**
 

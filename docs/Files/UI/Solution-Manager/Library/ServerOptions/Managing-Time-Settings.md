@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Time Settings
 description: "Use this procedure to manage Time Settings in Solution Manager."
 product_area: Solution Manager
@@ -55,7 +55,7 @@ The Time settings tab configures intervals that SAM will poll on statuses.
 
 **Q: What does managing time settings involve?**
 
-Managing time settings includes Required Privileges, Configuring Time. Access time settings through the Enterprise Manager navigation pane.
+Managing time settings includes Required Privileges, Configuring Time. Access time settings in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage time settings in OpCon?**
 

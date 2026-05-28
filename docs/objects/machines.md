@@ -32,7 +32,6 @@ The following information applies to defining machines:
     a TCP/IP address. For additional information, refer to [Machine Name Resolution](#Machine).
 - **Documentation**: Provides an area for descriptions, explanations,
     and notes that can be updated for the defined machine.
-     in the **Enterprise Manager** online help.
 - **Machine Type**: Defines the type of agent (Agent) being defined
 - **Socket Number**: Defines the socket (port number) for
     communication with the agent. The socket number must match the one
@@ -500,8 +499,7 @@ agent to connect to the SAP BW system.
 connect to the SAP System.
 
 - Valid values are three-digit numbers ranging from 000 to 999
-- A valid number must be in this field to create jobs in the
-    Enterprise Manager.
+- A valid number must be in this field to create SAP jobs in OpCon
 - Default value: 850
 
 **Gateway**: Defines the full connection string for the
@@ -522,7 +520,7 @@ The following example is a router connection string:
 
 - **cpce801** is the SAP machine name
 - **127.0.0.1** is the TCP/IP address of the SAP machine
-- A valid connection string must be in this field to create jobs in the Enterprise Manager
+- A valid connection string must be in this field to create SAP jobs in OpCon
 
 :::
 
@@ -530,8 +528,7 @@ The following example is a router connection string:
 to connect to the SAP system.
 
 - Valid values are two-digit numbers ranging from 00 (Default) to 99
-- A valid number must be in this field to create jobs in the
-    Enterprise Manager.
+- A valid number must be in this field to create SAP jobs in OpCon
 
 **RFC Trace**: Determines if the SAP RFC trace for the SAPQueryProcessor
 message requests should be turned on. Refer to
@@ -558,8 +555,7 @@ system.
 SAPQueryProcessor to connect to the SAP System.
 
 - Valid values are three-digit numbers ranging from 000 to 999
-- A valid number must be in this field to create jobs in the
-    Enterprise Manager.
+- A valid number must be in this field to create SAP jobs in OpCon
 - Default Value: 850
 
 **Gateway**: Defines the full connection string for the
@@ -580,7 +576,7 @@ The following example is a router connection string:
 
 - **cpce801** is the SAP machine name
 - **127.0.0.1** is the TCP/IP address of the SAP machine
-- A valid connection string must be in this field to create jobs in the Enterprise Manager
+- A valid connection string must be in this field to create SAP jobs in OpCon
 
 :::
 
@@ -588,8 +584,7 @@ The following example is a router connection string:
 connect to the SAP system.
 
 - Valid values are two-digit numbers ranging from 00 (Default) to 99
-- A valid number must be in this field to create jobs in the
-    Enterprise Manager.
+- A valid number must be in this field to create SAP jobs in OpCon
 
 **RFC Trace**: Determines if the SAP RFC trace for the SAPQueryProcessor
 message requests should be turned on. Refer to

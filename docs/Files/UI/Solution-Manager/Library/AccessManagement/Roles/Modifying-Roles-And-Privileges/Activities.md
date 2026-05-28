@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Role Activities
@@ -50,7 +50,7 @@ title: Roles - Activities
 
 **Q: Where can you find Role Activities in OpCon?**
 
-Access Role Activities through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Role Activities in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

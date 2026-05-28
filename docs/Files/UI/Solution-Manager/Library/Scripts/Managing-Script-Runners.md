@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Script Runners
 description: "The Script Runners module allows you to add, edit, delete, and check cross-references for script runners."
 product_area: Solution Manager
@@ -75,7 +75,7 @@ Related Topics
 
 **Q: What does managing script runners involve?**
 
-Managing script runners includes adding, editing, and deleting records. Access script runners through the Enterprise Manager navigation pane.
+Managing script runners includes adding, editing, and deleting records. Access script runners in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage script runners in OpCon?**
 

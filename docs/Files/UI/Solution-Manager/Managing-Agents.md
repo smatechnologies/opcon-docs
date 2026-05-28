@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Agents
@@ -32,7 +32,7 @@ See [Performing-Agent-Status-Updates](Performing-Agent-Status-Updates.md).
 
 **Q: What does managing agents involve?**
 
-Managing agents includes adding, editing, and deleting records. Access agents through the Enterprise Manager navigation pane.
+Managing agents includes adding, editing, and deleting records. Access agents in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage agents in OpCon?**
 
