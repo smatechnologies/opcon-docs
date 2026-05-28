@@ -1,4 +1,4 @@
----
+﻿---
 title: Network Message
 description: "!Network Message The Network dialog provides the following fields for defining a Network Pop-up Message notification: The SMANotifyHandler always attempts to use Msg.exe first."
 product_area: Solution Manager
@@ -44,7 +44,7 @@ The **Network** dialog provides the following fields for defining a Network Pop-
 
 **Q: Where can you find Network Message in OpCon?**
 
-Access Network Message through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Network Message in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

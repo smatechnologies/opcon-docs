@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Scripts
 description: "The Scripts module allows you to add, edit, delete, deploy, and check cross-references for scripts."
 product_area: Solution Manager
@@ -89,7 +89,7 @@ Related Topics
 
 **Q: What does managing scripts involve?**
 
-Managing scripts includes adding, editing, and deleting records. Access scripts through the Enterprise Manager navigation pane.
+Managing scripts includes adding, editing, and deleting records. Access scripts in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage scripts in OpCon?**
 

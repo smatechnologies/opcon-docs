@@ -1,4 +1,4 @@
----
+﻿---
 title: List Archive Files
 description: "The Archives tab displays archived log files."
 product_area: Solution Manager
@@ -48,7 +48,7 @@ The **Archives** tab displays archived log files.
 
 **Q: Where can you find List Archive Files in OpCon?**
 
-Access List Archive Files through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access List Archive Files in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

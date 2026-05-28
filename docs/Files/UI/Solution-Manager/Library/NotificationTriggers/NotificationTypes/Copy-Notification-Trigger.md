@@ -1,4 +1,4 @@
----
+﻿---
 title: Copy Notification Trigger
 description: "!Copy Notification Trigger The copy dialog copies a notification trigger definition — including all its notifications — to other groups of the same type."
 product_area: Solution Manager
@@ -38,7 +38,7 @@ The copy dialog copies a notification trigger definition — including all its n
 
 **Q: Where can you find Copy Notification Trigger in OpCon?**
 
-Access Copy Notification Trigger through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Copy Notification Trigger in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

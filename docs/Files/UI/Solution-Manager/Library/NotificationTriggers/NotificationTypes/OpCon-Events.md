@@ -1,4 +1,4 @@
----
+﻿---
 title: OpCon Events
 description: "!OpCon Events The OpCon Events dialog lists existing events and provides options to add, edit, or delete them."
 product_area: Solution Manager
@@ -57,7 +57,7 @@ The **OpCon Events** dialog lists existing events and provides options to add, e
 
 **Q: Where can you find OpCon Events in OpCon?**
 
-Access OpCon Events through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access OpCon Events in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

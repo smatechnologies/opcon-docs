@@ -1,4 +1,4 @@
----
+﻿---
 title: Updating UNIX Job Details
 description: "In Admin mode, UNIX job type properties can be updated or defined."
 product_area: Solution Manager
@@ -184,9 +184,9 @@ Select the **Save** button.
 
 ## Updating Job Action: File Arrival Job Details
 
-### Navigate to the Daily Job Definition
+### Go to the Daily Job Definition
 
-To navigate to the daily job definition for the File Arrival job, complete the following steps:
+To go to the daily job definition for the File Arrival job, complete the following steps:
 
 1. Select on the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display
 2. Ensure that both the **Date** and **Schedule** toggle switches are enabled so that you can make your date and schedule selection, respectively. Each switch will appear green when enabled

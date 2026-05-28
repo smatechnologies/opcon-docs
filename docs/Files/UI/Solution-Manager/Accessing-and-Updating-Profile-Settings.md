@@ -1,4 +1,4 @@
----
+﻿---
 title: Accessing and Updating Profile Settings
 description: "!User Profile Button !Profile Account Tab Access the Profile page from the Navigation menu to configure settings from one of these tabs: - Account - External Token - Settings - Application Settings"
 product_area: Solution Manager
@@ -42,7 +42,7 @@ Access the **Profile** page from the [Navigation menu](SM-UI-Layout.md#Navigati)
 
 **Q: Where can you find Accessing and Updating Profile Settings in OpCon?**
 
-Access Accessing and Updating Profile Settings through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Accessing and Updating Profile Settings in Solution Manager.
 
 ## Glossary
 

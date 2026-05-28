@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Script Versions
 description: "The Script Versions module allows you to add, edit, delete, deploy, and check cross-references for script versions."
 product_area: Solution Manager
@@ -91,7 +91,7 @@ Related Topics
 
 **Q: What does managing script versions involve?**
 
-Managing script versions includes adding, editing, and deleting records. Access script versions through the Enterprise Manager navigation pane.
+Managing script versions includes adding, editing, and deleting records. Access script versions in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage script versions in OpCon?**
 

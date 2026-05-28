@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-MCP job details define how OpCon submits a job to a Burroughs MCP system, including user code, access code, file title, and task attributes. These details are configured in the Task Details panel of an MCP master job in Solution Manager.
+MCP job details define how OpCon submits a job to a Burroughs MCP system, including user code, access code, file title, and task attributes. These details are configured in the Task Details panel of an MCP master job in Solution Manager or Enterprise Manager.
 
 To view an MCP job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 

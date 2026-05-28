@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Roles and Privileges
@@ -53,7 +53,7 @@ For conceptual help, see:
 
 **Q: What does managing roles and privileges involve?**
 
-Managing roles and privileges includes adding, editing, and deleting records. Access roles and privileges through the Enterprise Manager navigation pane.
+Managing roles and privileges includes adding, editing, and deleting records. Access roles and privileges in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage roles and privileges in OpCon?**
 

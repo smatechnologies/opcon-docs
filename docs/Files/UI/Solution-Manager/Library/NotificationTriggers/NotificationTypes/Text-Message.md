@@ -1,4 +1,4 @@
----
+﻿---
 title: Text Message
 description: "!Text Message The Text Message dialog provides the following fields for defining a notification to a pager, phone, or other SMS-capable device."
 product_area: Solution Manager
@@ -47,7 +47,7 @@ The **Text Message** dialog provides the following fields for defining a notific
 
 **Q: Where can you find Text Message in OpCon?**
 
-Access Text Message through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Text Message in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

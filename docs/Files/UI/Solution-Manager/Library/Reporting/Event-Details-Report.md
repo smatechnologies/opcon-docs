@@ -1,4 +1,4 @@
----
+﻿---
 title: Event Details by Date Report
 description: "The Event Details by Date Report shows all daily triggered events with their schedules, jobs, trigger, match, and event details."
 product_area: Solution Manager
@@ -60,7 +60,7 @@ The **Event Details by Date Report** shows all daily triggered events with their
 
 **Q: Where can you find Event Details by Date Report in OpCon?**
 
-Access Event Details by Date Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Event Details by Date Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

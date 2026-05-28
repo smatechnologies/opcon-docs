@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Tags
@@ -42,7 +42,7 @@ See [Tag Concepts](../../../../job-components/tags.md).
 
 **Q: What does managing tags involve?**
 
-Managing tags includes adding, editing, and deleting records. Access tags through the Enterprise Manager navigation pane.
+Managing tags includes adding, editing, and deleting records. Access tags in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage tags in OpCon?**
 

@@ -1,4 +1,4 @@
----
+﻿---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Role Department Activities
@@ -50,7 +50,7 @@ title: Roles - Departments
 
 **Q: Where can you find Role Department Activities in OpCon?**
 
-Access Role Department Activities through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Role Department Activities in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

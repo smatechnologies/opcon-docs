@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Script Types
 description: "The Script Types module allows you to add, edit, delete, and check cross-references for script types."
 product_area: Solution Manager
@@ -72,7 +72,7 @@ Related Topics
 
 **Q: What does managing script types involve?**
 
-Managing script types includes adding, editing, and deleting records. Access script types through the Enterprise Manager navigation pane.
+Managing script types includes adding, editing, and deleting records. Access script types in Solution Manager or Enterprise Manager.
 
 **Q: Who can manage script types in OpCon?**
 

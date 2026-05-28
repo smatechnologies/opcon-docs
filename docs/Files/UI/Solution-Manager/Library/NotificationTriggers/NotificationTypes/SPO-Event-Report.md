@@ -1,4 +1,4 @@
----
+﻿---
 title: SPO Event Report
 description: "The SPO dialog lets you choose between an AL Report or CO Report notification: !Text Message - AL: Defines the AL report fields when enabled - Text (Optional): User-defined message up to 250."
 product_area: Solution Manager
@@ -53,7 +53,7 @@ The **SPO** dialog lets you choose between an AL Report or CO Report notificatio
 
 **Q: Where can you find SPO Event Report in OpCon?**
 
-Access SPO Event Report through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access SPO Event Report in Solution Manager or Enterprise Manager.
 
 ## Glossary
 

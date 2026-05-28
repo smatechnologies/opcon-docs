@@ -1,4 +1,4 @@
----
+﻿---
 title: Updating Windows Job Details
 description: "In Admin mode, Windows job type properties can be updated or defined."
 product_area: Solution Manager
@@ -42,9 +42,9 @@ Changes made to the job properties in the **Daily Job Definition** take place im
 
 ## Updating Job Action: Run Program Job Details
 
-### Navigate to the Daily Job Definition
+### Go to the Daily Job Definition
 
-To navigate to the daily job definition for the Run Program job, complete the following steps:
+To go to the daily job definition for the Run Program job, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page
 2. Ensure both the **Date** and **Schedule** toggle switches are enabled. Each switch appears green when enabled
@@ -91,9 +91,9 @@ To define job output parsing criteria and environment variables, complete the fo
 
 ## Updating Job Action: File Arrival Job Details
 
-### Navigate to the Daily Job Definition
+### Go to the Daily Job Definition
 
-To navigate to the daily job definition for the File Arrival job, complete the following steps:
+To go to the daily job definition for the File Arrival job, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page
 2. Ensure both the **Date** and **Schedule** toggle switches are enabled. Each switch appears with a green checkmark when enabled
@@ -127,9 +127,9 @@ For conceptual information, refer to [Embedded Scripts](../../../automation-conc
 If you do not have the Script Privilege for the script, you will not be able to see the task details or edit the daily job definition (the Lock button will be disabled).
 :::
 
-### Navigate to the Daily Job Definition
+### Go to the Daily Job Definition
 
-To navigate to the daily job definition for the Embedded Script job, complete the following steps:
+To go to the daily job definition for the Embedded Script job, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page
 2. Ensure both the **Date** and **Schedule** toggle switches are enabled. Each switch appears with a green checkmark when enabled

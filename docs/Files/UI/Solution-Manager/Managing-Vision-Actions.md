@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing Vision Actions
 description: "Vision Actions are OpCon Events defined for a Vision Frequency Trigger."
 product_area: Solution Manager
@@ -61,7 +61,7 @@ Related Topics
 
 **Q: What does managing vision actions involve?**
 
-Managing vision actions includes Using the Vision Action Admin Page. Access vision actions through the Enterprise Manager navigation pane.
+Managing vision actions includes Using the Vision Action Admin Page. Access vision actions in Solution Manager.
 
 **Q: Who can manage vision actions in OpCon?**
 
