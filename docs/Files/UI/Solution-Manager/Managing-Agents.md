@@ -24,7 +24,10 @@ doc_type: procedural
 
 Use this procedure to manage Agents in Solution Manager.
 
-See [Performing-Agent-Status-Updates](Performing-Agent-Status-Updates.md).
+See:
+
+- [Adding Agents](Adding-Agents.md)
+- [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
 
 ![Managing Agents](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingAgents.png "Managing Agents")
 

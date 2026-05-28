@@ -33,6 +33,7 @@ For conceptual information, refer to [Frequencies](../../../../../automation-con
 
 Related Topics
 
+- [Adding Frequencies](Adding-Frequencies.md)
 - [Editing Frequencies](Editing-Frequencies.md)
 - [Forecasting Frequencies](Forecasting-Frequencies.md)
 

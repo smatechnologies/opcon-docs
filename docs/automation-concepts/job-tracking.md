@@ -38,10 +38,6 @@ Job Queuing lets OpCon queue external jobs for processing. Like Job Tracking, it
 
 The OpCon agent intercepts the job start request and holds the job until OpCon allows it to run. This means queued jobs are subject to dependencies, resources, and thresholds. Most job definition parameters (except the Job Start Command) can be overridden, sometimes using OpCon properties. OpCon can also support platform-specific features such as job-level message management, report routing control, and local data area management.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is Job Tracking used for?**

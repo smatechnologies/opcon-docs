@@ -376,6 +376,7 @@ module.exports = {
               },
               items: [
         "Files/UI/Solution-Manager/Managing-Agents",
+                "Files/UI/Solution-Manager/Adding-Agents",
                 "Files/UI/Solution-Manager/Performing-Agent-Status-Updates",
               ],
             },
@@ -603,6 +604,7 @@ module.exports = {
           },
           items: [
         "Files/UI/Solution-Manager/Library/Frequencies/Managing-Frequencies",
+            "Files/UI/Solution-Manager/Library/Frequencies/Adding-Frequencies",
             "Files/UI/Solution-Manager/Library/Frequencies/Editing-Frequencies",
             "Files/UI/Solution-Manager/Library/Frequencies/Forecasting-Frequencies",
           ],
