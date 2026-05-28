@@ -60,7 +60,7 @@ The **Event Details by Date Report** shows all daily triggered events with their
 
 **Q: Where can you find Event Details by Date Report in OpCon?**
 
-Access Event Details by Date Report in Solution Manager.
+Access Event Details by Date Report in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

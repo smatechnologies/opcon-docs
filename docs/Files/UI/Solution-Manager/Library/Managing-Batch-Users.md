@@ -48,7 +48,7 @@ Related Topics
 
 **Q: What does managing batch users involve?**
 
-Managing batch users includes Batch Users Toolbar. Access batch users in Solution Manager.
+Managing batch users includes Batch Users Toolbar. Access batch users in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage batch users in OpCon?**
 

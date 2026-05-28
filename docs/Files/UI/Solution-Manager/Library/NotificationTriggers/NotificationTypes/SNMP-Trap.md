@@ -44,7 +44,7 @@ The **SNMP Trap** dialog provides the following fields for defining an SNMP trap
 
 **Q: Where can you find SNMP Trap in OpCon?**
 
-Access SNMP Trap in Solution Manager.
+Access SNMP Trap in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

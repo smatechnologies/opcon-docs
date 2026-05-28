@@ -53,7 +53,7 @@ For conceptual help, see:
 
 **Q: What does managing roles and privileges involve?**
 
-Managing roles and privileges includes adding, editing, and deleting records. Access roles and privileges in Solution Manager.
+Managing roles and privileges includes adding, editing, and deleting records. Access roles and privileges in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage roles and privileges in OpCon?**
 

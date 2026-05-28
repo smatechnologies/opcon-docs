@@ -72,7 +72,7 @@ Related Topics
 
 **Q: What does managing script types involve?**
 
-Managing script types includes adding, editing, and deleting records. Access script types in Solution Manager.
+Managing script types includes adding, editing, and deleting records. Access script types in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage script types in OpCon?**
 

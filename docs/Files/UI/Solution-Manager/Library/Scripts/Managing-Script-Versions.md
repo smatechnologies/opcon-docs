@@ -91,7 +91,7 @@ Related Topics
 
 **Q: What does managing script versions involve?**
 
-Managing script versions includes adding, editing, and deleting records. Access script versions in Solution Manager.
+Managing script versions includes adding, editing, and deleting records. Access script versions in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage script versions in OpCon?**
 

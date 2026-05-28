@@ -46,10 +46,10 @@ The Security message is configured under the General tab of the Server Options. 
 
 Solution Manager supports automatic login when Windows Authentication is enabled.
 
-First, configure users in OpCon for Automatic Login in Solution Manager.
+First, configure users in OpCon for Automatic Login in Solution Manager or the Enterprise Manager.
 
 :::note
-The user account in Solution Manager must include the Windows Domain and Username.
+The user account must include the Windows Domain and Username.
 :::
 
 Google Chrome uses the security settings in **Internet Options**. The **Prompt for user name and password** custom setting should not be selected.

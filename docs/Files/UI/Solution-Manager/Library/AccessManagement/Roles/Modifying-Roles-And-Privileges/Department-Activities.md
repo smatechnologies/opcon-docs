@@ -50,7 +50,7 @@ title: Roles - Departments
 
 **Q: Where can you find Role Department Activities in OpCon?**
 
-Access Role Department Activities in Solution Manager.
+Access Role Department Activities in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

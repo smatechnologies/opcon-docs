@@ -54,7 +54,7 @@ title: Users - General
 
 **Q: Where can you find User General in OpCon?**
 
-Access User General in Solution Manager.
+Access User General in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

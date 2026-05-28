@@ -50,7 +50,7 @@ The **Current Threshold Values Report** displays the currently defined threshold
 
 **Q: Where can you find Current Threshold Values Report in OpCon?**
 
-Access Current Threshold Values Report in Solution Manager.
+Access Current Threshold Values Report in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

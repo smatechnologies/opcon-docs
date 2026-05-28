@@ -42,7 +42,7 @@ title: Managing Master Schedules
 
 **Q: Where can you find Overview in OpCon?**
 
-Access Overview in Solution Manager.
+Access Overview in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

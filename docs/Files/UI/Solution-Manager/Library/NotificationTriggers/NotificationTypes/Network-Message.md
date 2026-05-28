@@ -44,7 +44,7 @@ The **Network** dialog provides the following fields for defining a Network Pop-
 
 **Q: Where can you find Network Message in OpCon?**
 
-Access Network Message in Solution Manager.
+Access Network Message in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

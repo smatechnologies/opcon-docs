@@ -52,7 +52,7 @@ The **Schedule and Job History Report** is used to view schedule and job history
 
 **Q: Where can you find Schedule and Job History Report in OpCon?**
 
-Access Schedule and Job History Report in Solution Manager.
+Access Schedule and Job History Report in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

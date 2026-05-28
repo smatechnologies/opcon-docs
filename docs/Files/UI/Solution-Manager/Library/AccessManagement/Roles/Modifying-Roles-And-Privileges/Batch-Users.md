@@ -50,7 +50,7 @@ title: Roles - Batch Users
 
 **Q: Where can you find Role Batch Users in OpCon?**
 
-Access Role Batch Users in Solution Manager.
+Access Role Batch Users in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

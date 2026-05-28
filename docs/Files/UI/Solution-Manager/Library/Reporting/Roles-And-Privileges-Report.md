@@ -50,7 +50,7 @@ The **Roles and Privileges Report** combines all role privilege types — Machin
 
 **Q: Where can you find Roles and Privileges Report in OpCon?**
 
-Access Roles and Privileges Report in Solution Manager.
+Access Roles and Privileges Report in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

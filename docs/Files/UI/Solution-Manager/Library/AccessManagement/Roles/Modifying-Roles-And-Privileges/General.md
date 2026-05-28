@@ -54,7 +54,7 @@ title: Roles - General
 
 **Q: Where can you find Role General in OpCon?**
 
-Access Role General in Solution Manager.
+Access Role General in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

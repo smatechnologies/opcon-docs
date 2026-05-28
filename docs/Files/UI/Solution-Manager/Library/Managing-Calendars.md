@@ -31,7 +31,7 @@ Please check back for more content.
 
 **Q: What does managing calendars involve?**
 
-Managing calendars includes adding, editing, and deleting records. Access calendars in Solution Manager.
+Managing calendars includes adding, editing, and deleting records. Access calendars in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage calendars in OpCon?**
 

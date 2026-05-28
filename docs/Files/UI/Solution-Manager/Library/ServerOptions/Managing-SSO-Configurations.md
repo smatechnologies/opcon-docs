@@ -272,7 +272,7 @@ The Client ID, Authority URL, and Redirect URI are registered with the IdP and m
 
 **Q: What does managing sso configurations involve?**
 
-Managing sso configurations includes Required Privileges, Configuring SSO. Access sso configurations in Solution Manager.
+Managing sso configurations includes Required Privileges, Configuring SSO. Access sso configurations in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage sso configurations in OpCon?**
 

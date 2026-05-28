@@ -56,7 +56,7 @@ The Logging settings contains log and trace settings for the SAM.
 
 **Q: What does managing logging settings involve?**
 
-Managing logging settings includes Required Privileges, Configuring Logging. Access logging settings in Solution Manager.
+Managing logging settings includes Required Privileges, Configuring Logging. Access logging settings in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage logging settings in OpCon?**
 

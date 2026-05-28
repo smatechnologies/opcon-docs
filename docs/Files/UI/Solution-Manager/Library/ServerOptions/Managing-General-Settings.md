@@ -64,7 +64,7 @@ The General category contains default behavior settings for the SAM.
 
 **Q: What does managing general settings involve?**
 
-Managing general settings includes Required Privileges, Configuring General. Access general settings in Solution Manager.
+Managing general settings includes Required Privileges, Configuring General. Access general settings in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage general settings in OpCon?**
 

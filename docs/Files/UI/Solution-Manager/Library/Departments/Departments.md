@@ -48,7 +48,7 @@ viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Departments in OpCon?**
 
-Access Departments in Solution Manager.
+Access Departments in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

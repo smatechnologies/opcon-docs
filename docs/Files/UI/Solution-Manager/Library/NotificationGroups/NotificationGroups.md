@@ -70,7 +70,7 @@ title: Notification Groups
 
 **Q: Where can you find Notification Groups in OpCon?**
 
-Access Notification Groups in Solution Manager.
+Access Notification Groups in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

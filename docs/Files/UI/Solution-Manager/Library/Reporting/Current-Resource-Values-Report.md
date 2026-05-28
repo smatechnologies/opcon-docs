@@ -50,7 +50,7 @@ The **Current Resource Values Report** displays the currently defined resources 
 
 **Q: Where can you find Current Resource Values Report in OpCon?**
 
-Access Current Resource Values Report in Solution Manager.
+Access Current Resource Values Report in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

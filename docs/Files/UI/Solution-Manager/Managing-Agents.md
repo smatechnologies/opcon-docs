@@ -32,7 +32,7 @@ See [Performing-Agent-Status-Updates](Performing-Agent-Status-Updates.md).
 
 **Q: What does managing agents involve?**
 
-Managing agents includes adding, editing, and deleting records. Access agents in Solution Manager.
+Managing agents includes adding, editing, and deleting records. Access agents in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage agents in OpCon?**
 

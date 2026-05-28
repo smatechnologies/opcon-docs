@@ -81,7 +81,7 @@ SNMP and SPO notification processing are disabled by default (SNMP Notifications
 
 **Q: What does managing notification settings involve?**
 
-Managing notification settings includes Required Privileges, Configuring Notification. Access notification settings in Solution Manager.
+Managing notification settings includes Required Privileges, Configuring Notification. Access notification settings in Solution Manager or the Enterprise Manager.
 
 **Q: Who can manage notification settings in OpCon?**
 

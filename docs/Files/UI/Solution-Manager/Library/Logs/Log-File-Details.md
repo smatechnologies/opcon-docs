@@ -44,7 +44,7 @@ The **Log File Details** page displays the description and content of the select
 
 **Q: Where can you find Log File Details in OpCon?**
 
-Access Log File Details in Solution Manager.
+Access Log File Details in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

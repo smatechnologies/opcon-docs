@@ -60,7 +60,7 @@ The **Annual Plan By Calendar Dates Report** shows all defined dates on user-def
 
 **Q: Where can you find Annual Plan By Calendar Dates Report in OpCon?**
 
-Access Annual Plan By Calendar Dates Report in Solution Manager.
+Access Annual Plan By Calendar Dates Report in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 

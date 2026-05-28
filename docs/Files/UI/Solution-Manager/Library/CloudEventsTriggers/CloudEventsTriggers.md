@@ -197,7 +197,7 @@ The **CloudEvents Triggers** module allows you to trigger Events within OpCon vi
 
 **Q: Where can you find CloudEvents Triggers in OpCon?**
 
-Access CloudEvents Triggers in Solution Manager.
+Access CloudEvents Triggers in Solution Manager or the Enterprise Manager.
 
 ## Glossary
 
