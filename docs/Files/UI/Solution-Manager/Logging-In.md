@@ -95,7 +95,7 @@ The **Login with Windows** button lets you log in using Windows Authentication, 
 
 For the button to display on the login screen, ensure the following settings are configured:
 
-- Enable the **Enable Windows Authentication** option in **Server Options** in Solution Manager, or via the API
+- Enable the **Enable Windows Authentication** setting via the API
 - Enable **Windows Pass-Through Authentication** in the [Application Settings](Configuring-Application-Settings.md) in Solution Manager
 
 ### Single Sign On Login
