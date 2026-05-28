@@ -28,10 +28,9 @@ For conceptual information, refer to [Frequencies](../../../../../automation-con
 
 ### Required Privileges
 
-To add a frequency, your role must have one of the following privileges:
+To add a frequency, your role must have the following privilege:
 
-- **Function Privilege**: Maintain Frequencies
-- **Function Privilege**: All Function Privileges
+- **Function Privilege**: All Function Privileges (grants access to the Frequency Manager)
 
 For more information, refer to [Managing Roles and Privileges](../AccessManagement/Roles/Managing-Roles-And-Privileges.md).
 
@@ -56,7 +55,7 @@ To add a new frequency, complete the following steps:
 |---|---|---|---|
 | Frequency Name | Unique identifier for the frequency | — | Required; must be unique across the OpCon database |
 | Frequency Rule | Defines when the frequency qualifies (calendar, day-of-week, period, etc.) | — | Refer to [Frequency Definition](../../../../../automation-concepts/frequencies.md#frequency-definition) for the full list of rule options |
-| Calendar | The calendar used to evaluate the rule | _blank_ | Required for calendar-based rules |
+| Calendar | The calendar used to refine the dates the rule qualifies | None | Optional; when associated, OpCon matches the calendar dates against the qualifying dates |
 
 ## FAQs
 

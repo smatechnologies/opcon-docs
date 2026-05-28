@@ -39,7 +39,7 @@ For more information, refer to [Managing Roles and Privileges](Library/AccessMan
 
 To add a new agent, complete the following steps:
 
-1. Go to **Administration** > **Agents**.
+1. Open the **Agents** administration section.
 2. Select the **Add** button.
 3. Enter the official host name or alias of the agent machine in the **Name** field. The name must be resolvable to a TCP/IP address.
 4. Select the platform type in the **Machine Type** list.
