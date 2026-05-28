@@ -1,5 +1,9 @@
 # Managing SSO Configurations
 
+:::note
+Single Sign-On (SSO) is available to customers with a TB2 or On-Prem Subscription license. SSO is supported in OpCon version 23 and later.
+:::
+
 ## Required Privileges
 
 In order to configure the **Single Sign-On** setting, you must have one of the following:

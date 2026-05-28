@@ -19,6 +19,10 @@ doc_type: conceptual
 
 Authentication controls how users prove their identity before accessing OpCon. Solution Manager supports username/password login, SSO (single sign-on), and external API token generation for integration use cases.
 
+:::note
+Single Sign-On (SSO) is available to customers with a TB2 or On-Prem Subscription license. SSO is supported in OpCon version 23 and later.
+:::
+
 ## When would you use this section?
 
 - A user needs to log in to Solution Manager for the first time
