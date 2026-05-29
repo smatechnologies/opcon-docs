@@ -10,7 +10,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Getting Started
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: conceptual
 ---
 
@@ -21,7 +21,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services. Desktop clients on user workstations connect to the database, while web-based interfaces connect to web services to manage automation data. Agents that run jobs are called Local Schedule Activity Monitors (LSAMs).
+OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services. Desktop applications on user workstations connect to the database, while web-based interfaces connect to web services to manage automation data. Agents that run jobs are installed on the platforms where the work runs and communicate with the OpCon Server over TCP/IP.
 
 ## OpCon Architecture Overview
 
@@ -33,7 +33,7 @@ OpCon Server components include the database, Schedule Activity Monitor (SAM), a
 
 OpCon provides two primary graphical user interfaces:
 
-- **Enterprise Manager (EM)** – a rich client for Windows and Linux
+- **Enterprise Manager (EM)** – a desktop application for Windows and Linux
 - **Solution Manager** – a browser-based interface
 
 Both interfaces access the OpCon database to manage automation data and operations. For more information, refer to the **Enterprise Manager** and **Solution Manager** online help.
@@ -51,13 +51,13 @@ All changes to OpCon objects are audited. The following information is recorded 
 - **Date**: Timestamp of the change
 - **User**: The user or application that made the change
   - OpCon user accounts are recorded by account name
-  - OpCon applications appear with an asterisk prefix (e.g., SAM entries use **\*SMASAM**)
+  - OpCon applications appear with an asterisk prefix (for example, SAM entries use **\*SMASAM**)
   - Changes by unregistered applications are recorded under **Unknown**
 - **Data Changed**: The name of the changed item
 - **Original Value**: The value before the change
 - **Final Value**: The value after the change
 - **Category**: The OpCon object category affected
-- **Name**: The exact item affected (e.g., when Data Changed shows "Job Record," Name shows the job name such as ScheduleABC:Job299)
+- **Name**: The exact item affected (for example, when Data Changed shows "Job Record," Name shows the job name such as `ScheduleABC:Job299`)
 
 :::info
 For viewing audit records, refer to [Viewing and Exporting Audit Records](./Files/UI/Enterprise-Manager/Viewing-and-Exporting-Audit-Records.md) in the **Enterprise Manager** online help.
@@ -71,7 +71,7 @@ SAM-SS manages all automation processing. For more information, refer to the [Se
 
 #### Schedule Activity Monitor (SAM)
 
-SAM is the logical processor for OpCon workflow automation. It monitors schedule and job start times, dependencies, and user commands to determine job execution timing. SAM also processes OpCon events and communicates job and event information with agents via SMANetCom. For more information, refer to [Schedule Activity Monitor (SAM)](./server-programs/schedule-activity-monitor.md).
+SAM is the logical processor for OpCon workflow automation. It monitors schedule and job start times, dependencies, and user commands to determine when jobs run. SAM also processes OpCon events and communicates job and event information with agents via SMANetCom. For more information, refer to [Schedule Activity Monitor (SAM)](./server-programs/schedule-activity-monitor.md).
 
 #### SMA Network Communications Module (SMANetCom)
 
@@ -89,9 +89,9 @@ SMA Request Router sends requests to designated Request Handlers and writes comp
 
 SMA Start Time Calculator periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database. For more information, refer to [SMA Start Time Calculator](./server-programs/start-time-calculator.md).
 
-### Local Schedule Activity Monitors (LSAMs)
+### Agents
 
-agents are agents installed on the platforms where jobs run. Written in the native language of their platforms, they communicate with SMANetCom via TCP/IP. OpCon supports the following job types:
+Agents are installed on the platforms where jobs run. Written in the native language of their platforms, they communicate with SMANetCom via TCP/IP. OpCon supports the following job types:
 
 - [BIS](./job-types/bis.md)
 - [Container](./job-types/container.md)
@@ -112,7 +112,7 @@ agents are agents installed on the platforms where jobs run. Written in the nati
 
 **Q: What are the core components of OpCon?**
 
-OpCon consists of the database (Microsoft SQL Server), the SAM and Supporting Services (SAM-SS), graphical user interfaces (Enterprise Manager and Solution Manager), and Local Schedule Activity Monitors (LSAMs) installed on each platform where jobs run.
+OpCon consists of the database (Microsoft SQL Server), the SAM and Supporting Services (SAM-SS), graphical user interfaces (Enterprise Manager and Solution Manager), and agents installed on each platform where jobs run.
 
 **Q: What is the difference between SAM and SMANetCom?**
 
@@ -126,7 +126,7 @@ Yes. All changes to OpCon objects are automatically audited, recording the times
 
 **SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
 
-**SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
+**SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and other notifications.
 
 **SMA Request Router**: Sends requests to designated Request Handlers and writes completion information back to the OpCon database. Manages tasks such as schedule maintenance and job output retrieval.
 
@@ -134,8 +134,10 @@ Yes. All changes to OpCon objects are automatically audited, recording the times
 
 **SAM-SS (SAM and Supporting Services)**: The collective term for the OpCon server-side processing programs: SAM, SMANetCom, SMA Notify Handler, SMA Request Router, and SMA Start Time Calculator.
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine when jobs run, and processes OpCon events.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Enterprise Manager (EM)**: OpCon's desktop graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+
+**Agent**: The OpCon software component installed on a platform where jobs run. Each agent is written in the native language of its platform and communicates with SMANetCom via TCP/IP.

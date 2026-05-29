@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Notification Categories
-description: "Available Notification Categories in OpCon are shown in the grid under Library > Notification Triggers > Manage Categories."
+description: "Notification categories group related notification groups in Solution Manager so you can organize and filter notification triggers."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -11,43 +11,49 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: conceptual
 ---
 
 # Notification Categories
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
 ## What Is It?
 
-Available Notification Categories in OpCon are shown in the grid under **Library > Notification Triggers > Manage Categories**.
+A notification category is a label you assign to notification groups so you can organize and filter notification triggers in Solution Manager. Each category has a unique name and an optional set of assigned notification groups.
+
+You manage notification categories on the **Manage Categories** page. To open it, go to **Library > Notification Triggers** and select **Manage Categories**.
 
 ![Notification Categories Grid](../../../../../Resources/Images/SM/Library/NotificationCategories/NotificationCategories-Grid.png "Notification Categories Grid")
 
-Selecting **Add** or selecting a record in the grid enables the bottom panel:
+The grid lists existing categories by **Name**. Select a category in the grid, or select **New Category**, to open the edit panel below the grid.
 
 ![Notification Categories Add and Edit](../../../../../Resources/Images/SM/Library/NotificationCategories/NotificationCategories-EditPanel.png "Editable panel for notification categories")
 
+## How It Works
+
+The edit panel contains the following fields:
+
+| Field | Description |
+|---|---|
+| **Name** | The unique name of the category. This field is required. |
+| **Available Groups** / **Assigned Groups** | A transfer list that moves notification groups between those available and those assigned to the category. Move a group to **Assigned Groups** to include it in the category. |
+
 :::note
-The **Name** field must be unique when adding or editing a notification category.
+The **Name** field must be unique. If you enter a name that is already in use, Solution Manager reports that the category name is already used.
 :::
 
-## FAQs
+After editing a category, select **Save** to apply your changes or **Reset** to discard them. To remove a category, select it in the grid and select **Delete**.
 
-**Q: Where can you find Notification Categories in OpCon?**
-
-Access Notification Categories in Solution Manager or Enterprise Manager.
+<!-- GAP: Required privileges for adding, editing, or deleting notification categories are not exposed as a named role in the source reviewed; needs SME confirmation. -->
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Notification Category**: A uniquely named label that groups related notification groups, used to organize and filter notification triggers in Solution Manager.
+
+**Notification Group**: A named collection of machines, schedules, or jobs that notification triggers act on.
+
+**Notification Trigger**: A definition that sends a notification when a monitored machine, schedule, or job changes to a specified status.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Enterprise Manager**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.

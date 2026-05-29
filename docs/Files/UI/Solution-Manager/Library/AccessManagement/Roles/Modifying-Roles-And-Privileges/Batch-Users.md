@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Role Batch Users
-description: "The Batch Users tab (_Library > Access Management > Roles_) displays the batch users assigned to the selected role."
+description: "The Batch Users tab (_Library > Access Management > Roles_) controls which batch users the selected role can access."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,9 @@ doc_type: conceptual
 
 ## What Is It?
 
-The **Batch Users** tab (_Library > Access Management > Roles_) displays the batch users assigned to the selected role. Edit the fields and select **Save** to modify them.
+The **Batch Users** tab (_Library > Access Management > Roles_) controls which batch users the selected role can access. A batch user is a target-platform account (login name plus a group/user profile) that OpCon uses to run jobs on a machine.
+
+The tab presents the batch users in two lists: **Revoked** and **Granted**. Move batch users between the lists to grant or revoke access for the role, then select **Save** to apply the changes. Each batch user appears by its login name.
 
 ![Role Batch Users](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-batchusers-tab.png 'Role Batch Users')
 
@@ -50,10 +52,10 @@ Access Role Batch Users in Solution Manager or Enterprise Manager.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Batch User**: A target-platform account that OpCon uses to run jobs on a machine. A batch user is identified by its login name and includes a group/user profile that describes the account on the target operating system.
 
 **Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
