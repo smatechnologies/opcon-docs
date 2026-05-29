@@ -37,16 +37,6 @@ To perform this procedure, complete the following steps:
 7. Select **OK** to copy the job details to the Master definition
 8. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Saving Job Definitions to Master procedure involve?**
-
-The Saving Job Definitions to Master procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

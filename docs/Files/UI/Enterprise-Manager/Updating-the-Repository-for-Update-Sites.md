@@ -1,6 +1,6 @@
 ---
 title: Updating the Repository for Update Sites
-description: "Use this procedure to update the Repository for Update Sites in the Enterprise Manager."
+description: "Use this procedure to update the Repository for Update Sites in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to update the Repository for Update Sites in the Enterprise Manager.
+Use this procedure to update the Repository for Update Sites in Enterprise Manager.
 
 To update the repository, complete the following steps:
 
@@ -29,12 +29,6 @@ To update the repository, complete the following steps:
 3. Browse to the *Enterprise Manager Updates* directory on the OpCon Installation media
 4. Select the **repository.zip** file
 5. Extract the zip file to the repository location(s), choosing the **Use folder names** option
-
-## FAQs
-
-**Q: How many steps does the Updating the Repository for Update Sites procedure involve?**
-
-The Updating the Repository for Update Sites procedure involves 5 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

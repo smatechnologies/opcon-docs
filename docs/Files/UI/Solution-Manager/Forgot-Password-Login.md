@@ -56,15 +56,7 @@ To resend the code, select **Resend**.
 
 ![Solution Manager Forgot Password New Password Page](../../../Resources/Images/SM/Forgot-Password-New-Password.png "Solution Manager Forgot Password New Password Page")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Forgot / Reset Password procedure involve?**
-
-The Forgot / Reset Password procedure involves 3 steps. Complete all steps in order and save your changes.
 
 **Q: What does Forgot / Reset Password cover?**
 

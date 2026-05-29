@@ -237,16 +237,11 @@ The minimap is in the lower-right corner of the canvas. Use it to view and move 
 
 ![Studio View Mini-Map](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-minimap.png "Studio View Mini-Map")
 
-
 ## FAQs
 
 **Q: Why are some dependency lines missing when I scroll around a large schedule?**
 
 Studio removes nodes outside the visible canvas area to maintain performance on large schedules. When a node is outside the viewport, dependency lines connected to it will not appear. This is expected behavior. To see a dependency line, scroll to bring both connected nodes into the visible canvas area, or use the zoom-out control to view more of the schedule at once.
-
-**Q: How many steps does the Viewing Master Schedule procedure involve?**
-
-The Viewing Master Schedule procedure involves 2 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing Master Schedule cover?**
 

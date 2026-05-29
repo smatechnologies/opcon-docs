@@ -35,14 +35,7 @@ To look up a notification source, complete the following steps:
 5. View the **Results** table showing Notification ID, Notification Type, Group Type, Group Name, and Trigger information
 6. Select **OK** to close the dialog
 
-## FAQs
-
-**Q: How many steps does the Looking up Notification Sources procedure involve?**
-
-The Looking up Notification Sources procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

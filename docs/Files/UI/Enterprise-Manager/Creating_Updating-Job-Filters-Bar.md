@@ -34,12 +34,6 @@ To create or update a job filter, complete the following steps:
 6.  Select **OK** to save the job filter changes, or select **Cancel** to discard the changes
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating/Updating Job Filters procedure involve?**
-
-The Creating/Updating Job Filters procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

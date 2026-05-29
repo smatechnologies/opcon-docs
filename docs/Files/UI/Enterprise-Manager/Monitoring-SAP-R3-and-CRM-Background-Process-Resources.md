@@ -30,12 +30,6 @@ To monitor the background process resources, complete the following steps:
 2. Right-click on the preferred **SAP R/3 and CRM machine name**
 3. Hover over **SAP Machine** in the right-click menu and select **Background Process Resources**
 
-## FAQs
-
-**Q: How many steps does the Monitoring SAP R/3 and CRM Background Process Resources procedure involve?**
-
-The Monitoring SAP R/3 and CRM Background Process Resources procedure involves 3 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

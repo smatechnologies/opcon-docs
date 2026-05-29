@@ -37,12 +37,6 @@ To deploy a script version, complete the following steps:
 11. Select the **Close** button in the **Versions** dialog
 12. Select **Close ☒** to close the **Script Repository** screen
 
-## FAQs
-
-**Q: How many steps does the Deploying Script Versions procedure involve?**
-
-The Deploying Script Versions procedure involves 12 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

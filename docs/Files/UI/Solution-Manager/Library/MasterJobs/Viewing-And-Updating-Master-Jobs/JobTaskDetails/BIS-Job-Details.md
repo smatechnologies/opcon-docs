@@ -89,10 +89,6 @@ All file dependencies must be met before the BIS job starts.
 | Type | Type of dependency the job has on the file: | — | — |
 ## FAQs
 
-**Q: How many steps does the Viewing, Adding, and Editing BIS Job Details procedure involve?**
-
-The Viewing, Adding, and Editing BIS Job Details procedure involves 12 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing, Adding, and Editing BIS Job Details cover?**
 
 This page covers Viewing BIS Job Details, Adding BIS Job Details, Editing BIS Job Details.

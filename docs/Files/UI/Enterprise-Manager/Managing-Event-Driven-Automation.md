@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Event Driven Automation
-description: "Use this procedure to manage Event Driven Automation in the Enterprise Manager."
+description: "Use this procedure to manage Event Driven Automation in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage Event Driven Automation in the Enterprise Manager.
+Use this procedure to manage Event Driven Automation in Enterprise Manager.
 
 To add a trigger, complete the following steps:
 
@@ -58,7 +58,7 @@ To remove a trigger, complete the following steps:
 
 **Q: What does managing event driven automation involve?**
 
-Managing event driven automation includes adding, editing, and deleting records. Access event driven automation through the Enterprise Manager navigation pane.
+Managing event driven automation includes adding, editing, and deleting records. Access event driven automation through Enterprise Manager navigation pane.
 
 **Q: Who can manage event driven automation in OpCon?**
 

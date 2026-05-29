@@ -156,10 +156,6 @@ To remove properties from job information, complete the following steps:
 | SubSequent Jobs Tab | Displays all jobs dependent on the selected job, including schedule date, schedule name, and job name. | — | — |
 ## FAQs
 
-**Q: How many steps does the Job Information procedure involve?**
-
-The Job Information procedure involves 46 steps. Complete all steps in order and save your changes.
-
 **Q: What does Job Information cover?**
 
 This page covers Getting Job information, Adding Job Configuration Parameters, Editing Job Configuration Parameters.

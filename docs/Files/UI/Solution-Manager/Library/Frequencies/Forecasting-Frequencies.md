@@ -31,16 +31,6 @@ To forecast Frequencies in Solution Manager, complete the following steps:
 
 ![Frequency Forecast](../../../../../Resources/Images/SM/Library/Frequencies/Frequency-Forecast.png "Frequency Forecast")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Forecasting Frequencies procedure involve?**
-
-The Forecasting Frequencies procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.

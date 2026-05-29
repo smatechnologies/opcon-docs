@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Script Versions
-description: "Use this procedure to delete Script Versions in the Enterprise Manager."
+description: "Use this procedure to delete Script Versions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Script Versions in the Enterprise Manager.
+Use this procedure to delete Script Versions in Enterprise Manager.
 
 To delete a script version, complete the following steps:
 
@@ -45,7 +45,6 @@ No. Deleting a script versions record permanently removes it from OpCon. Verify 
 Select the specific script versions record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
 
 ## Glossary
-
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
 

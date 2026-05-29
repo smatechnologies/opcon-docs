@@ -59,7 +59,6 @@ To add Events, complete the following steps:
     ```
     :::
 
-
 11. Select the **Finish** button when all event parameters are complete
 12. Select **Save** to save, or **Cancel** to discard
 
@@ -105,10 +104,6 @@ To delete Events, complete the following steps:
 | Event Command | The Event Command definition. | — | — |
 | Parameters | The event parameters associated with the Event Command | — | — |
 ## FAQs
-
-**Q: How many steps does the Sending OpCon Events procedure involve?**
-
-The Sending OpCon Events procedure involves 36 steps. Complete all steps in order and save your changes.
 
 **Q: What does Sending OpCon Events cover?**
 

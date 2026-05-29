@@ -309,7 +309,7 @@ processes. The SAM will not automatically call the jobs to run, but it
 will use the Events from the jobs to send notifications.
 
 :::note
-The Enterprise Manager Build, Check, and Delete processes give interactive feedback and do not use the SMA_SKD jobs for notification.
+Enterprise Manager Build, Check, and Delete processes give interactive feedback and do not use the SMA_SKD jobs for notification.
 :::
 
 The SMA_SKD jobs have the following names:

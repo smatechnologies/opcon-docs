@@ -35,12 +35,7 @@ To configure the installation directory, complete the following steps:
 
 Configuring the installation directory defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure the installation directory?**
-
-The configuration procedure involves 4 steps. Complete all steps in order and select **Save** to apply the changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

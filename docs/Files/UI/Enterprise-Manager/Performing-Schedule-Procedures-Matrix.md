@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Performing Schedule Procedures when Working in Matrix View
-description: "Use this procedure to perform Schedule Procedures when Working in Matrix View in the Enterprise Manager."
+description: "Use this procedure to perform Schedule Procedures when Working in Matrix View in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Schedule Procedures when Working in Matrix View in the Enterprise Manager.
+Use this procedure to perform Schedule Procedures when Working in Matrix View in Enterprise Manager.
 
 ## Placing Schedules On Hold
 
@@ -176,15 +176,7 @@ If no properties are defined for the schedule, OpCon will still submit the build
 13. Select the **x** to the right of the **Matrix** tab to close the **Matrix** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Performing Schedule Procedures when Working in Matrix View procedure involve?**
-
-The Performing Schedule Procedures when Working in Matrix View procedure involves 76 steps. Complete all steps in order and save your changes.
 
 **Q: What does Performing Schedule Procedures when Working in Matrix View cover?**
 

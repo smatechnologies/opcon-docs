@@ -36,14 +36,7 @@ To show the cross references, complete the following steps:
 8. Select **Close ☒** to close the **Script Repository** screen
 :::
 
-## FAQs
-
-**Q: How many steps does the Showing Script Version Cross References procedure involve?**
-
-The Showing Script Version Cross References procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
 

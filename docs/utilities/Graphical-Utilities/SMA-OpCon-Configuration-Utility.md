@@ -238,7 +238,7 @@ To update Database, complete the following steps:
 
 ## Enterprise Manager Screen
 
-This screen configures memory settings for the Enterprise Manager. Complete this configuration once during product installation and update it as needed.
+This screen configures memory settings for Enterprise Manager. Complete this configuration once during product installation and update it as needed.
 
 ### Releases/Root Folders
 
@@ -280,7 +280,7 @@ The Microsoft Agent and other Windows-based proxy agents (SAP, SAP BW) can be in
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
 | Configure Database Scripts | Refer to the next section | — | — |
-| Configure Enterprise Manager | Refer to the Enterprise Manager Screen section | — | — |
+| Configure Enterprise Manager | Refer to Enterprise Manager Screen section | — | — |
 | Configure Agents | Refer to the Agents Screen section | — | — |
 | DB Scripts Folder | Path to the ```\Utilities\Database``` folder, which contains the SMA_SET\* scripting variables files | — | — |
 | SQL Server Login | Settings passed as parameters to DB_Setup, DB_Setup_WinAuth, DB_Update, and DB_Update_WinAuth command files | — | — |

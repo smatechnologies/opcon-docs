@@ -34,14 +34,7 @@ To compare frequencies, complete the following steps:
 6.  Select the **Finish** button in both **Frequency Definition** frames
 7.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
 
-## FAQs
-
-**Q: How many steps does the Comparing Frequencies procedure involve?**
-
-The Comparing Frequencies procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

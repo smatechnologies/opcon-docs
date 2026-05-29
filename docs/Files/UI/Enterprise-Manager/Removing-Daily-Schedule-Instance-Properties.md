@@ -1,6 +1,6 @@
 ---
 title: Removing Daily Schedule Instance Properties
-description: "Use this procedure to remove Daily Schedule Instance Properties in the Enterprise Manager."
+description: "Use this procedure to remove Daily Schedule Instance Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to remove Daily Schedule Instance Properties in the Enterprise Manager.
+Use this procedure to remove Daily Schedule Instance Properties in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
@@ -32,12 +32,6 @@ To perform this procedure, complete the following steps:
 6. Select the **property definition** in the **Available Properties** table
 7. Select the **Remove** button
 8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar to confirm, or select **Cancel** to cancel
-
-## FAQs
-
-**Q: How many steps does the Removing Daily Schedule Instance Properties procedure involve?**
-
-The Removing Daily Schedule Instance Properties procedure involves 8 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

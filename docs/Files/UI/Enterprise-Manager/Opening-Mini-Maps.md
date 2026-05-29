@@ -32,12 +32,6 @@ To open the mini map, complete the following steps:
 4. Select the **Close** button when finished viewing the mini map
 :::
 
-## FAQs
-
-**Q: How many steps does the Opening Mini Maps procedure involve?**
-
-The Opening Mini Maps procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

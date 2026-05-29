@@ -57,10 +57,6 @@ The **Add Daily Job** skill adds a new daily job to a specified daily schedule f
 | Status | The status for the added job. | — | — |
 ## FAQs
 
-**Q: How many steps does the Add Daily Job procedure involve?**
-
-The Add Daily Job procedure involves 2 steps. Complete all steps in order and save your changes.
-
 **Q: What does Add Daily Job cover?**
 
 This page covers Skill Details, Example.

@@ -109,10 +109,6 @@ Script name: `PreUpdateChecks.sql`
   - Writes the list to the log file for user review
   - Generates output to DB_Setup.log (creation) or DB_Update.log (update)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: Where are the OpCon database scripts located?**

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Raising Events
-description: "Use this procedure to raise Events in the Enterprise Manager."
+description: "Use this procedure to raise Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to raise Events in the Enterprise Manager.
+Use this procedure to raise Events in Enterprise Manager.
 
 To raise an event, complete the following steps:
 
@@ -33,14 +33,7 @@ To raise an event, complete the following steps:
 5. *(Optional)* Enter any *required parameters* in the **Parameters** text box
 6. Select the **Send** button
 
-## FAQs
-
-**Q: How many steps does the Raising Events procedure involve?**
-
-The Raising Events procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

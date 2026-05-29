@@ -1,6 +1,6 @@
 ---
 title: Managing Triggers
-description: "Use this procedure to manage Triggers in the Enterprise Manager."
+description: "Use this procedure to manage Triggers in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage Triggers in the Enterprise Manager.
+Use this procedure to manage Triggers in Enterprise Manager.
 
 ## Adding Machine, Schedule, or Job Triggers
 
@@ -51,12 +51,11 @@ To delete a trigger, complete the following steps:
 6. Select **Delete Trigger**. The **Delete** dialog displays
 7. Select **Yes** to confirm or **No** to cancel
 
-
 ## FAQs
 
 **Q: What does managing triggers involve?**
 
-Managing triggers includes Adding Machine, Schedule, or Job Triggers, Deleting Machine, Schedule, or Job Triggers. Access triggers through the Enterprise Manager navigation pane.
+Managing triggers includes Adding Machine, Schedule, or Job Triggers, Deleting Machine, Schedule, or Job Triggers. Access triggers through Enterprise Manager navigation pane.
 
 **Q: Who can manage triggers in OpCon?**
 

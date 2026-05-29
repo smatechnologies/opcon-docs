@@ -1,6 +1,6 @@
 ---
 title: Adding Global Properties
-description: "Use this procedure to add Global Properties in the Enterprise Manager."
+description: "Use this procedure to add Global Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Global Properties in the Enterprise Manager.
+Use this procedure to add Global Properties in Enterprise Manager.
 
 To add a global property, complete the following steps:
 
@@ -44,7 +44,6 @@ The required fields include **Documentation**. Select **Save** on the toolbar to
 No. The Documentation field is optional. You can enter notes about the global properties to track its purpose, but it is not required to save the record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

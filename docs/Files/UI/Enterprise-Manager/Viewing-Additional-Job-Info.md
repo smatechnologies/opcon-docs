@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Job Information
-description: "To view Additional Job Information in the Enterprise Manager, complete the following steps: 1."
+description: "To view Additional Job Information in Enterprise Manager, complete the following steps: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-To view Additional Job Information in the Enterprise Manager, complete the following steps:
+To view Additional Job Information in Enterprise Manager, complete the following steps:
 
 1.  Select on **Job Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
@@ -30,12 +30,6 @@ To view Additional Job Information in the Enterprise Manager, complete the follo
 4.  Select the ![Merge icon](../../../Resources/Images/EM/EMcrossref.png "Merge icon") **Cross Reference** button on the toolbar to view a list of jobs on the schedule, then select **OK**
 5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the job, then select **Close**
 6.  Select the ![View Schedule History icon](../../../Resources/Images/EM/EMviewhist.png "View Schedule History icon") **View Job History** button to view execution history for the job, then select **Close**
-
-## FAQs
-
-**Q: How many steps does the Viewing Additional Job Information procedure involve?**
-
-The Viewing Additional Job Information procedure involves 6 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

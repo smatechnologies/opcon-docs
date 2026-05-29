@@ -324,10 +324,6 @@ Continuous strongly recommends backing up the OpCon database before upgrading to
 
 Before the OpCon database can be upgraded, database replication and mirroring must be disabled. Replication scripts (StopRepl.cmd and supporting SQL files) in use in the environment must be backed up before the upgrade, as the upgrade replaces the files in the Database directory. The backed-up copies serve as a reference for reconfiguring replication after the upgrade completes.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks

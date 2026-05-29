@@ -44,12 +44,11 @@ To revoke a privilege, complete the following steps:
 5. Select the **left arrow** to move them to the **Revoked** list box
 6. Select **Close ☒** to close the **Departmental Function Privileges** screen
 
-
 ## FAQs
 
 **Q: What does managing departmental function privileges involve?**
 
-Managing departmental function privileges includes Granting Departmental Function Privileges, Revoking Departmental Function Privileges. Access departmental function privileges through the Enterprise Manager navigation pane.
+Managing departmental function privileges includes Granting Departmental Function Privileges, Revoking Departmental Function Privileges. Access departmental function privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage departmental function privileges in OpCon?**
 

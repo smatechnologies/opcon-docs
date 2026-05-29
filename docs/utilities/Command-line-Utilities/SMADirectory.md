@@ -29,8 +29,6 @@ Based on user criteria and filters, the utility can:
 - Move files (for full recursive directories)
 - Recover files (for full recursive directories)
 
-## Configuration Options
-
 ## Backwards Compatibility
 
 This utility is compatible with SMADeleteOldFiles and ClearDir. Customers who wish to convert should contact Continuous.

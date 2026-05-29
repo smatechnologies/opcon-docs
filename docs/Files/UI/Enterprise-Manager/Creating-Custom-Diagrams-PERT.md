@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating and Saving Custom Diagrams
-description: "Use this procedure to create and Saving Custom Diagrams in the Enterprise Manager."
+description: "Use this procedure to create and Saving Custom Diagrams in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to create and Saving Custom Diagrams in the Enterprise Manager.
+Use this procedure to create and Saving Custom Diagrams in Enterprise Manager.
 
 To create and save a custom diagram, complete the following steps:
 
@@ -32,12 +32,6 @@ To create and save a custom diagram, complete the following steps:
 4.  Select **Take Screenshot** on the **PERT** toolbar. The **Image Preview** dialog displays
 5.  Select **Save** to save the image, or select **OK** to close the dialog
 :::
-
-## FAQs
-
-**Q: How many steps does the Creating and Saving Custom Diagrams procedure involve?**
-
-The Creating and Saving Custom Diagrams procedure involves 5 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Container Jobs' SubSchedules
-description: "Use this procedure to view Container Jobs' SubSchedules in the Enterprise Manager."
+description: "Use this procedure to view Container Jobs' SubSchedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Container Jobs' SubSchedules in the Enterprise Manager.
+Use this procedure to view Container Jobs' SubSchedules in Enterprise Manager.
 
 To view the SubSchedule, complete the following steps:
 
@@ -32,12 +32,6 @@ To view the SubSchedule, complete the following steps:
 4.  Select on **Open SubSchedule** from the menu
 5.  Work with the jobs in the subschedule, as needed
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Container Jobs' SubSchedules procedure involve?**
-
-The Viewing Container Jobs' SubSchedules procedure involves 5 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

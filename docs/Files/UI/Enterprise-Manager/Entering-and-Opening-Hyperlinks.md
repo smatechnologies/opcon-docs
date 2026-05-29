@@ -35,12 +35,6 @@ To enter and open a hyperlink, complete the following steps:
 7.  Select **Yes** to open the file
 :::
 
-## FAQs
-
-**Q: How many steps does the Entering and Opening Hyperlinks in the Documentation Frame procedure involve?**
-
-The Entering and Opening Hyperlinks in the Documentation Frame procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

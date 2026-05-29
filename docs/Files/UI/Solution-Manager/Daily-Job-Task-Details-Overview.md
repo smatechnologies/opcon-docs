@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Daily Job Task Details show the platform-specific execution settings for a job currently in the daily queue. These settings reflect the master job definition at build time and can be temporarily modified for the current day's run.
 
-## When would you use this section?
-
 - You need to verify what command line or script a job will run today
 - You need to make a temporary parameter change for today's execution only
 - A job failed because of a configuration issue and you want to correct it before restarting

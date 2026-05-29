@@ -64,10 +64,6 @@ To get Schedule Information, complete the following steps:
 | Configuration Tab | View and define Schedule Instance Properties | — | — |
 ## FAQs
 
-**Q: How many steps does the Schedule Information procedure involve?**
-
-The Schedule Information procedure involves 6 steps. Complete all steps in order and save your changes.
-
 **Q: What does Schedule Information cover?**
 
 This page covers Getting Schedule Information.

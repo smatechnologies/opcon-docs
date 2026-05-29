@@ -42,12 +42,11 @@ Related Topics
 - [Deleting Un-used User-defined Calendars](Deleting-User-defined-Calendars.md)
 - [Deleting Old Dates](Deleting-Old-Dates.md)
 
-
 ## FAQs
 
 **Q: What does managing calendars involve?**
 
-Managing calendars includes Calendars Toolbar. Access calendars through the Enterprise Manager navigation pane.
+Managing calendars includes Calendars Toolbar. Access calendars through Enterprise Manager navigation pane.
 
 **Q: Who can manage calendars in OpCon?**
 

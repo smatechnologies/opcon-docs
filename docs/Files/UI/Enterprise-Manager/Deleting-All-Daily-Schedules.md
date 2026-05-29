@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting All Daily Schedules for Particular Days
-description: "To delete All Daily Schedules for Particular Days in the Enterprise Manager, complete the following steps: 1."
+description: "To delete All Daily Schedules for Particular Days in Enterprise Manager, complete the following steps: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-To delete All Daily Schedules for Particular Days in the Enterprise Manager, complete the following steps:
+To delete All Daily Schedules for Particular Days in Enterprise Manager, complete the following steps:
 
 1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select on the **date** to delete

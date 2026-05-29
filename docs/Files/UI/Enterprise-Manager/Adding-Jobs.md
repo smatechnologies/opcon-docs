@@ -1,6 +1,6 @@
 ---
 title: Adding Jobs
-description: "Use this procedure to add Jobs in the Enterprise Manager."
+description: "Use this procedure to add Jobs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Jobs in the Enterprise Manager.
+Use this procedure to add Jobs in Enterprise Manager.
 
 To add a job, complete the following steps:
 

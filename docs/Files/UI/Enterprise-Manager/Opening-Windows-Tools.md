@@ -1,6 +1,6 @@
 ---
 title: Opening Windows Tools
-description: "Various Windows Tools can be opened from within the Enterprise Manager."
+description: "Various Windows Tools can be opened from within Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Various **Windows Tools** can be opened from within the Enterprise Manager.
+Various **Windows Tools** can be opened from within Enterprise Manager.
 
 To open a tool:
 
@@ -39,7 +39,7 @@ Select on the specific tool to open it in its own window. Your options are:
 
 **Q: How do you open Windows Tools?**
 
-Follow the steps on this page to open Windows Tools in the Enterprise Manager.
+Follow the steps on this page to open Windows Tools in Enterprise Manager.
 
 ## Glossary
 

@@ -32,12 +32,6 @@ To perform this procedure, complete the following steps:
 4.  Select **Clear** to the right of the text box to return to all information
 :::
 
-## FAQs
-
-**Q: How many steps does the Finding Daily Schedules or Jobs procedure involve?**
-
-The Finding Daily Schedules or Jobs procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

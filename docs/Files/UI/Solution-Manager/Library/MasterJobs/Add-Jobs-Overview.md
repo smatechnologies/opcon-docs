@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Master jobs are the permanent definitions that OpCon copies into the daily queue during schedule build. They can be added from scratch, copied from existing jobs, moved between schedules, or reviewed for cross-references before deletion.
 
-## When would you use this section?
-
 - Add a new job to a master schedule
 - Copy an existing job to create a similar one with minimal rework
 - Move a job from one schedule to another

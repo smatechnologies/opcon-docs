@@ -1,6 +1,6 @@
 ---
 title: Using the Application
-description: "For detailed information and procedures on using the Enterprise Manager application, refer to: - Working with Administration - Working with Operation - Working with Security - Working with Management."
+description: "For detailed information and procedures on using Enterprise Manager application, refer to: - Working with Administration - Working with Operation - Working with Security - Working with Management."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-For detailed information and procedures on using the Enterprise Manager application, refer to:
+For detailed information and procedures on using Enterprise Manager application, refer to:
 
 - [Working with Administration](Working-with-Administration.md)
 - [Working with Operation](Working-with-Operation.md)
@@ -30,10 +30,6 @@ For detailed information and procedures on using the Enterprise Manager applicat
 - [Working with Enterprise Information](Working-with-Enterprise-Information.md)
 - [Working with Enterprise Support](Working-with-Enterprise-Support.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with the Application?**

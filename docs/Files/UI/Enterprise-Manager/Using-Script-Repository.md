@@ -53,10 +53,6 @@ Related Topics
 - [Showing Script Version Cross References](Showing-Script-Version-Cross-References.md)
 - [Deploying Script Versions](Deploying-Script-Versions.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Script Repository?**

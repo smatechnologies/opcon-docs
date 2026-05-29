@@ -1,6 +1,6 @@
 ---
 title: Performing Additional Job Procedures when Working in the PERT View
-description: "Use this procedure to perform Additional Job Procedures when Working in the PERT View in the Enterprise Manager."
+description: "Use this procedure to perform Additional Job Procedures when Working in the PERT View in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Additional Job Procedures when Working in the PERT View in the Enterprise Manager.
+Use this procedure to perform Additional Job Procedures when Working in the PERT View in Enterprise Manager.
 
 To perform additional job procedures, complete the following steps:
 
@@ -30,12 +30,6 @@ To perform additional job procedures, complete the following steps:
 4. Select **Job** from the menu, then select the active **command** to perform
 
 If additional information is needed, go to the preferred **Job procedure** under [Performing Job Procedures when Working in the Gantt View](Performing-Job-Procedures-Gantt.md) and start on Step 2.
-
-## FAQs
-
-**Q: How many steps does the Performing Additional Job Procedures when Working in the PERT View procedure involve?**
-
-The Performing Additional Job Procedures when Working in the PERT View procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

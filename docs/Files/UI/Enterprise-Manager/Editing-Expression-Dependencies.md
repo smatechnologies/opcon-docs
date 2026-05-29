@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Expression Dependencies
-description: "Use this procedure to edit Expression Dependencies in the Enterprise Manager."
+description: "Use this procedure to edit Expression Dependencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to edit Expression Dependencies in the Enterprise Manager.
+Use this procedure to edit Expression Dependencies in Enterprise Manager.
 
 To edit a dependency, complete the following steps:
 

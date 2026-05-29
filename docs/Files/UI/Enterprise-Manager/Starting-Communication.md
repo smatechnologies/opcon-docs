@@ -34,12 +34,6 @@ To perform this procedure, complete the following steps:
 
  
 
-## FAQs
-
-**Q: How many steps does the Starting Communication procedure involve?**
-
-The Starting Communication procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.

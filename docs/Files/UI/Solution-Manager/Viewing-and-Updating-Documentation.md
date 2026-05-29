@@ -53,12 +53,7 @@ To perform this procedure, complete the following steps:
 
 :::
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Documentation procedure involve?**
-
-The Viewing and Updating Documentation procedure involves 11 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Documentation cover?**
 

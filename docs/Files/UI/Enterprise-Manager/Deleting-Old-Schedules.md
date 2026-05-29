@@ -1,6 +1,6 @@
 ---
 title: Deleting Old Schedules
-description: "Use this procedure to delete Old Schedules in the Enterprise Manager."
+description: "Use this procedure to delete Old Schedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Old Schedules in the Enterprise Manager.
+Use this procedure to delete Old Schedules in Enterprise Manager.
 
 :::note
 By default, OpCon regards any schedule in the Daily tables more than 14 days old as an "Old Schedule." Adjust this threshold by changing the **Days to maintain in daily** setting in Enterprise Manager Preferences. Refer to [Setting Preferences from Enterprise Manager](Preferences-from-EM.md).

@@ -1,6 +1,6 @@
 ---
 title: Adding Access Codes
-description: "Use this procedure to add Access Codes in the Enterprise Manager."
+description: "Use this procedure to add Access Codes in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Access Codes in the Enterprise Manager.
+Use this procedure to add Access Codes in Enterprise Manager.
 
 To add an access code, complete the following steps:
 
@@ -33,9 +33,9 @@ To add an access code, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Access Codes in the Enterprise Manager?**
+**Q: Where do you access Access Codes in Enterprise Manager?**
 
-Select **Access Codes** under the **Security** topic in the Enterprise Manager navigation pane.
+Select **Access Codes** under the **Security** topic in Enterprise Manager navigation pane.
 
 **Q: What information is required to add access codes?**
 

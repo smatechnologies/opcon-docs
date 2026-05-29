@@ -96,12 +96,6 @@ Refer to [Setting up Privileges](Setting-up-Privileges.md#_Setting_Up_Privileges
 
 **Confirmation Message is not set to True when a User Input is defined** — When a Service Request includes User Input fields (such as Environmental Variable inputs), the Confirmation Message setting must be True; if it is not set, the Service Request cannot be submitted correctly — Set the Confirmation Message option to True whenever one or more User Input definitions are present on the Service Request.
 
-## FAQs
-
-**Q: How many steps does the Creating Service Requests procedure involve?**
-
-The Creating Service Requests procedure involves 3 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.

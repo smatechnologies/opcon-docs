@@ -29,12 +29,6 @@ The Look up Notification Sources dialog in Solution Manager performs a reverse l
 3. View the **Results** table, which shows the Notification ID, Notification Type, Group Type, Group Name, and Trigger information
 4. Select **Close** to close the dialog
 
-## FAQs
-
-**Q: How many steps does the Look up Notification Sources procedure involve?**
-
-The Look up Notification Sources procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.

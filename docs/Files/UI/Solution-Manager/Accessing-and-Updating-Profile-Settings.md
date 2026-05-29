@@ -30,10 +30,6 @@ Access the **Profile** page from the [Navigation menu](SM-UI-Layout.md#Navigati)
 - [Settings](Configuring-Settings.md)
 - [Application Settings](Configuring-Application-Settings.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Accessing and Updating Profile Settings do?**

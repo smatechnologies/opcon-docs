@@ -1,6 +1,6 @@
 ---
 title: Deleting Job Frequencies
-description: "Use this procedure to delete Job Frequencies in the Enterprise Manager."
+description: "Use this procedure to delete Job Frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Job Frequencies in the Enterprise Manager.
+Use this procedure to delete Job Frequencies in Enterprise Manager.
 
 To delete a frequency, complete the following steps:
 

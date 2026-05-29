@@ -240,12 +240,8 @@ The UNIXLSAM.log file contains these errors.
 | 14012 | FTAgent<br />FTServer | "Delete Source File" is required, and the user does not have permission to delete file. |
 | 14013 | FTAgent<br />FTServer | Compression is not supported for files 2GB and larger. |
 | 14014 | FTAgent<br />FTServer | During a Windows to Windows file transfer where the transfer Starts on the Destination machine, this error will occur if the user specified for the Source Machine doesn't have the required privileges on that machine. |
-| 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In the Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click on the job and select Job Information > Configuration > Job Information. |
+| 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click on the job and select Job Information > Configuration > Job Information. |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the Origination column in file transfer error messages indicate?**
@@ -254,7 +250,7 @@ The Origination column identifies whether the error occurred at the FTAgent (Des
 
 **Q: What should you do when error code 14099 appears?**
 
-View the SMAFT log on the machine where the transfer was started. In the Enterprise Manager, right-click the job and select Job Information > Configuration > Job Information for additional details.
+View the SMAFT log on the machine where the transfer was started. In Enterprise Manager, right-click the job and select Job Information > Configuration > Job Information for additional details.
 
 **Q: Why might error 14014 occur in a Windows-to-Windows file transfer?**
 

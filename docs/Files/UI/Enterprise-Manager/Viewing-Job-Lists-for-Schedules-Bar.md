@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Job Lists for Schedules
-description: "Use this procedure to view Job Lists for Schedules in the Enterprise Manager."
+description: "Use this procedure to view Job Lists for Schedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Job Lists for Schedules in the Enterprise Manager.
+Use this procedure to view Job Lists for Schedules in Enterprise Manager.
 
 To view the job list, complete the following steps:
 
@@ -36,12 +36,6 @@ To view the job list, complete the following steps:
 8.  View the **list of jobs** in the subschedule
 9.  Select **OK** to close the **Jobs list** dialog
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Job Lists for Schedules procedure involve?**
-
-The Viewing Job Lists for Schedules procedure involves 9 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

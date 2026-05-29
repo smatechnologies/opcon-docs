@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Granting Privileges to Batch Users
-description: "Use this procedure to grant Privileges to Batch Users in the Enterprise Manager."
+description: "Use this procedure to grant Privileges to Batch Users in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to grant Privileges to Batch Users in the Enterprise Manager.
+Use this procedure to grant Privileges to Batch Users in Enterprise Manager.
 
 To grant privileges, complete the following steps:
 
@@ -34,12 +34,6 @@ To grant privileges, complete the following steps:
 6.  Select the **right arrow** to move the batch user(s) to the **Granted** list box
 7.  Select **Close ☒** to the right of the **Batch User Privileges** tab to close the screen
 :::
-
-## FAQs
-
-**Q: How many steps does the Granting Privileges to Batch Users procedure involve?**
-
-The Granting Privileges to Batch Users procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

@@ -1,6 +1,6 @@
 ---
 title: Performing Schedule Procedures when Working in List View
-description: "Use this procedure to perform Schedule Procedures when Working in List View in the Enterprise Manager."
+description: "Use this procedure to perform Schedule Procedures when Working in List View in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Schedule Procedures when Working in List View in the Enterprise Manager.
+Use this procedure to perform Schedule Procedures when Working in List View in Enterprise Manager.
 
 :::note
 If a completed schedule contains failed jobs, it displays in red with the text `ScheduleName (Completed -- Contains Failed Jobs)`. If the schedule is still in progress with failed jobs, it displays as `ScheduleName (In Progress -- Contains Failed Jobs)`.
@@ -389,15 +389,7 @@ If no properties are defined for the schedule, OpCon will still request the buil
 13. Select the **Close** button to close the **Add Jobs to \<Schedule Name\>** dialog
 14. Select the **x** to the right of the **Daily list** tab to close the screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Performing Schedule Procedures when Working in List View procedure involve?**
-
-The Performing Schedule Procedures when Working in List View procedure involves 217 steps. Complete all steps in order and save your changes.
 
 **Q: What does Performing Schedule Procedures when Working in List View cover?**
 

@@ -41,7 +41,6 @@ Yes. The copy must be saved with a new unique name to distinguish it from the or
 
 ## Glossary
 
-
 **Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows on demand, optionally collecting user input through a form before submitting.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.

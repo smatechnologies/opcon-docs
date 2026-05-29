@@ -39,7 +39,7 @@ The **Audit Management** screen provides list lists for user selection, audit ca
 - **Role**: Displays changes to Role definitions
 - **Schedule Maintenance**: Displays user-submitted requests for Schedule Build, Schedule Check, and Date level Schedule Deletes
 - **Threshold/Resource**: Displays changes to Threshold and Resource definitions
-- **User Account**: Displays changes to User Account definitions, Last Login, Last Log out, and the Enterprise Manager version used
+- **User Account**: Displays changes to User Account definitions, Last Login, Last Log out, and Enterprise Manager version used
 
 The **Type Filter Text** box filters results by full or partial name. Use an \* (asterisk) prefix to search mid-string.
 
@@ -68,7 +68,7 @@ In the Audit Management screen, type **\*JobName** to find a specific job name i
 | Role | Displays changes to Role definitions | — | — |
 | Schedule Maintenance | Displays user-submitted requests for Schedule Build, Schedule Check, and Date level Schedule Deletes | — | — |
 | Threshold/Resource | Displays changes to Threshold and Resource definitions | — | — |
-| User Account | Displays changes to User Account definitions, Last Login, Last Log out, and the Enterprise Manager version used | — | — |
+| User Account | Displays changes to User Account definitions, Last Login, Last Log out, and Enterprise Manager version used | — | — |
 ## FAQs
 
 **Q: What can you do with Audit Management?**

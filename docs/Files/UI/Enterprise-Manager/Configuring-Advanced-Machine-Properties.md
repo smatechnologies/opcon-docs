@@ -129,10 +129,6 @@ To configure advanced properties for an SAP R/3 and CRM machine, complete the fo
 
 Configuring advanced machine parameters and properties defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure advanced machine parameters and properties?**
-
-The configuration procedure is organized into six phases: modifying parameters, adding available properties, editing available properties, configuring the JORS port, removing available properties, and configuring SAP-specific machine properties. Complete all relevant phases and select **Save** to apply the changes.
-
 ## Glossary
 
 **JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.

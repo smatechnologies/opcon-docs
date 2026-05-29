@@ -1,6 +1,6 @@
 ---
 title: Performing Job Procedures when Working in Matrix View
-description: "Use this procedure to perform Job Procedures when Working in Matrix View in the Enterprise Manager."
+description: "Use this procedure to perform Job Procedures when Working in Matrix View in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Job Procedures when Working in Matrix View in the Enterprise Manager.
+Use this procedure to perform Job Procedures when Working in Matrix View in Enterprise Manager.
 
 ## Adding Job Completion Comments
 
@@ -386,15 +386,7 @@ To perform this procedure, complete the following steps:
 12. Select **Close** to close the **SAP Spool Details** dialog
 13. Select **Close** to close the **View SAP Job's Spools** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Performing Job Procedures when Working in Matrix View procedure involve?**
-
-The Performing Job Procedures when Working in Matrix View procedure involves 184 steps. Complete all steps in order and save your changes.
 
 **Q: What does Performing Job Procedures when Working in Matrix View cover?**
 

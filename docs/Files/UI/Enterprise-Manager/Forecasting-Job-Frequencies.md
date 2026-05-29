@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Forecasting Job Frequencies
-description: "Use this procedure to forecast Job Frequencies in the Enterprise Manager."
+description: "Use this procedure to forecast Job Frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to forecast Job Frequencies in the Enterprise Manager.
+Use this procedure to forecast Job Frequencies in Enterprise Manager.
 
 ## Forecasting a Single Job Frequency
 
@@ -55,15 +55,7 @@ To forecast all job frequencies, complete the following steps:
 9.  Select **Close ☒** to close the **Schedule Master** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Forecasting Job Frequencies procedure involve?**
-
-The Forecasting Job Frequencies procedure involves 18 steps. Complete all steps in order and save your changes.
 
 **Q: What does Forecasting Job Frequencies cover?**
 

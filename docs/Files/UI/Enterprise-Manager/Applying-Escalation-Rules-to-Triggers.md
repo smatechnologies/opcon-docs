@@ -1,6 +1,6 @@
 ---
 title: Applying Escalation Rules to Triggers
-description: "Use this procedure to apply Escalation Rules to Triggers in the Enterprise Manager."
+description: "Use this procedure to apply Escalation Rules to Triggers in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to apply Escalation Rules to Triggers in the Enterprise Manager.
+Use this procedure to apply Escalation Rules to Triggers in Enterprise Manager.
 
 To apply a rule to a trigger, complete the following steps:
 
@@ -35,16 +35,6 @@ To apply a rule to a trigger, complete the following steps:
 9. Select the **Message** tab and add a *message*
 10. *(Optional)* Select the **Attachments** tab and add *attachments*
 11. Select **Save**
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Applying Escalation Rules to Triggers procedure involve?**
-
-The Applying Escalation Rules to Triggers procedure involves 11 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

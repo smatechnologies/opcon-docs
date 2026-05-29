@@ -32,12 +32,6 @@ To disable or enable job starts for a machine, complete the following steps:
 4.  Select **Enable Job Starts** or **Disable Job Starts**
 5.  Select **Close ☒** to close the **Machines** screen
 
-## FAQs
-
-**Q: How many steps does the Disabling/Enabling Job Starts for Machines procedure involve?**
-
-The Disabling/Enabling Job Starts for Machines procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

@@ -23,7 +23,7 @@ doc_type: procedural
 Deleting a machine requires two procedures.
 
 :::note
-If the SAM is starting jobs while a machine is being deleted, the Enterprise Manager (EM) may lock up and fail to delete the machine. Continuous recommends deleting a machine when the SAM is processing few or no jobs.
+If the SAM is starting jobs while a machine is being deleted, Enterprise Manager (EM) may lock up and fail to delete the machine. Continuous recommends deleting a machine when the SAM is processing few or no jobs.
 :::
 
 ## Remove the Machine from the Daily Table
@@ -62,7 +62,6 @@ To remove the Machine from the Daily Table, complete the following steps:
 5. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Machines** toolbar
 6. Select **Yes** to confirm the deletion
 7. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
-
 
 ## FAQs
 

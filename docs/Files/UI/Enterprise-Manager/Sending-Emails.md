@@ -74,12 +74,6 @@ To add, edit, or remove attachments from the email notification, complete the fo
 | Exclude Prefix Information | Select this option to exclude prefix information (Schedule Date, Machine Name, Schedule Name, Job Name \[and Internal Job Number\], trigger type, and ... | — | — |
 | Message | A user-defined message | — | — |
 | Attachments | Files to include with the message. | — | — |
-## FAQs
-
-**Q: How many steps does the Sending Emails (SMTP) procedure involve?**
-
-The Sending Emails (SMTP) procedure is divided into three phases: navigating to the notification trigger, configuring recipients and message content, and managing attachments. Complete all relevant phases to configure the email notification.
-
 ## Glossary
 
 **JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.

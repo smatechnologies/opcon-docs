@@ -111,10 +111,6 @@ Select the **Save** button to save your changes.
 
 ## FAQs
 
-**Q: How many steps does the Updating SAP BW Job Details procedure involve?**
-
-The Updating SAP BW Job Details procedure involves 10 steps. Complete all steps in order and save your changes.
-
 **Q: What does Updating SAP BW Job Details cover?**
 
 This page covers Updating SAP BW Job Task Details.

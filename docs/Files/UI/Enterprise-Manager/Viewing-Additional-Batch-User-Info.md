@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Batch User Information
-description: "To view Additional Batch User Information in the Enterprise Manager, complete the following steps: 1."
+description: "To view Additional Batch User Information in Enterprise Manager, complete the following steps: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,17 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-To view Additional Batch User Information in the Enterprise Manager, complete the following steps:
+To view Additional Batch User Information in Enterprise Manager, complete the following steps:
 
 1.  Select on **Batch Users** under the **Security** topic
 2.  Select the **batch user** in the **Select the target OS** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
-
-## FAQs
-
-**Q: How many steps does the Viewing Additional Batch User Information procedure involve?**
-
-The Viewing Additional Batch User Information procedure involves 3 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

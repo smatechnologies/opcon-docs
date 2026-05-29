@@ -46,10 +46,6 @@ The toolbar provides functions for managing schedules in daily.
 - [Editing Schedules in Daily Schedule     Tables](Editing-Schedules-in-Daily.md)
 - [Editing Schedules in Master Schedule     Tables](Editing-Schedules-in-Master.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Schedule Daily?**

@@ -47,10 +47,6 @@ As a result:
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is escalation in OpCon?**
@@ -63,7 +59,7 @@ No. Acknowledging an escalation signals to OpCon that the user has read the noti
 
 **Q: Who can acknowledge an escalation?**
 
-Anyone who can see the escalation in the Escalation Acknowledgment view in the Enterprise Manager can acknowledge it.
+Anyone who can see the escalation in the Escalation Acknowledgment view in Enterprise Manager can acknowledge it.
 
 ## Glossary
 

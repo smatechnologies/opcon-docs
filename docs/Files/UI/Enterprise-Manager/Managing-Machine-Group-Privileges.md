@@ -46,12 +46,11 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** to close the **Machine Group Privileges** screen
 
-
 ## FAQs
 
 **Q: What does managing machine group privileges involve?**
 
-Managing machine group privileges includes Granting Machine Group Privileges, Revoking Machine Group Privileges. Access machine group privileges through the Enterprise Manager navigation pane.
+Managing machine group privileges includes Granting Machine Group Privileges, Revoking Machine Group Privileges. Access machine group privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage machine group privileges in OpCon?**
 

@@ -1,6 +1,6 @@
 ---
 title: Changing Focus of Days in Calendars
-description: "Use this procedure to change Focus of Days in Calendars in the Enterprise Manager."
+description: "Use this procedure to change Focus of Days in Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to change Focus of Days in Calendars in the Enterprise Manager.
+Use this procedure to change Focus of Days in Calendars in Enterprise Manager.
 
 To change the focus of a day, complete the following steps:
 
@@ -31,16 +31,6 @@ To change the focus of a day, complete the following steps:
    - **Last** — moves focus to the last day with schedules in the Daily tables
 3. Select a **date** with a green background
 4. Select the **schedule** to view its information in the Daily tables
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Changing Focus of Days in Calendars procedure involve?**
-
-The Changing Focus of Days in Calendars procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

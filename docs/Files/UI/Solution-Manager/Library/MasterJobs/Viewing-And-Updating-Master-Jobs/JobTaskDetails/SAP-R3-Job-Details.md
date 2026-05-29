@@ -364,10 +364,6 @@ For conceptual information, refer to [SAP R/3 and CRM Jobs](../../../../../../..
 | Name | Spool request name | — | — |
 ## FAQs
 
-**Q: How many steps does the Viewing, Adding, and Editing SAP R/3 and CRM Job Details procedure involve?**
-
-The Viewing, Adding, and Editing SAP R/3 and CRM Job Details procedure involves 11 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing, Adding, and Editing SAP R/3 and CRM Job Details cover?**
 
 This page covers Viewing SAP R/3 and CRM Job Details, Adding SAP R/3 and CRM Job Details, Editing SAP R/3 and CRM Job Details.

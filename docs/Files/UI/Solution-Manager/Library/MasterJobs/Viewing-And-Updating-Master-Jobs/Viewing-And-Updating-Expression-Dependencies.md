@@ -41,12 +41,7 @@ To perform this procedure, complete the following steps:
 3. Enter changes in the **Job** and/or **Frequency** frames
 4. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Expression Dependencies procedure involve?**
-
-The Viewing and Updating Expression Dependencies procedure involves 4 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Expression Dependencies cover?**
 

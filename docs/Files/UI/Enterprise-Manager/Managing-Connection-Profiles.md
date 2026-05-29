@@ -1,6 +1,6 @@
 ---
 title: Managing Connection Profiles
-description: "When using the Enterprise Manager for the first time or when setting up a new database connection, define a profile with the database name, login, and password."
+description: "When using Enterprise Manager for the first time or when setting up a new database connection, define a profile with the database name, login, and password."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-When using the Enterprise Manager for the first time or when setting up a new database connection, define a profile with the database name, login, and password. You can also set a background color for a profile to distinguish between databases (e.g., production vs. test).
+When using Enterprise Manager for the first time or when setting up a new database connection, define a profile with the database name, login, and password. You can also set a background color for a profile to distinguish between databases (e.g., production vs. test).
 
 ![Color-coded Navigational Views](../../../Resources/Images/EM/EMprofilepics.png "Color-coded Navigational Views")
 
@@ -37,7 +37,7 @@ Related Topics
 
 **Q: What does managing connection profiles involve?**
 
-Managing connection profiles includes adding, editing, and deleting records. Access connection profiles through the Enterprise Manager navigation pane.
+Managing connection profiles includes adding, editing, and deleting records. Access connection profiles through Enterprise Manager navigation pane.
 
 **Q: Who can manage connection profiles in OpCon?**
 

@@ -34,10 +34,6 @@ Related Topics
 - [Merging Schedules](Merging-Schedules.md)
 - [Viewing Additional Schedule Information](Viewing-Additional-Schedule-Info.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Schedule do?**
@@ -46,7 +42,7 @@ The **Schedule** tab in the [**Schedule Master**](Using-Schedule-Master.md) edit
 
 **Q: Where can you find Schedule in OpCon?**
 
-Access Schedule through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Schedule through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

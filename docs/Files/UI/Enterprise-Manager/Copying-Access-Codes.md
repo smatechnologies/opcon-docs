@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Access Codes
-description: "Use this procedure to copy Access Codes in the Enterprise Manager."
+description: "Use this procedure to copy Access Codes in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Access Codes in the Enterprise Manager.
+Use this procedure to copy Access Codes in Enterprise Manager.
 
 To copy an access code, complete the following steps:
 
@@ -44,7 +44,6 @@ Copying access codes is useful when you want to reuse an existing configuration 
 Yes. The copy must be saved with a new unique name to distinguish it from the original access codes record.
 
 ## Glossary
-
 
 **Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching privilege to view or act on objects tagged with a given Access Code.
 

@@ -78,9 +78,9 @@ To delete the Threshold, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you delete thresholds in the Enterprise Manager?**
+**Q: Where do you delete thresholds in Enterprise Manager?**
 
-Select **Daily Maintenance** under the **Operation** topic in the Enterprise Manager navigation pane, then select the record to delete.
+Select **Daily Maintenance** under the **Operation** topic in Enterprise Manager navigation pane, then select the record to delete.
 
 **Q: Can a thresholds record be recovered after deletion?**
 

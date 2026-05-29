@@ -99,10 +99,6 @@ SQL connection configuration for the SMA Connection Configuration program can on
 
 The license file must not be encrypted after receipt. Saving the license file to a Windows folder with "Encrypt contents to secure data" enabled prevents SAM from reading the file. The license file must be saved to the SAM directory without file-system encryption applied.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

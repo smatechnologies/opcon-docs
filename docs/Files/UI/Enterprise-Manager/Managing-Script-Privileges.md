@@ -46,12 +46,11 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** to close the screen
 
-
 ## FAQs
 
 **Q: What does managing script privileges involve?**
 
-Managing script privileges includes Granting Script Privileges, Revoking Script Privileges. Access script privileges through the Enterprise Manager navigation pane.
+Managing script privileges includes Granting Script Privileges, Revoking Script Privileges. Access script privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage script privileges in OpCon?**
 

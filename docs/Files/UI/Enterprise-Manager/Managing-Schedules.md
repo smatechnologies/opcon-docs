@@ -72,12 +72,11 @@ Schedules built on Hold appear **blue**. Schedules built as **Released** appear 
 If no properties are defined, OpCon still requests the build but no properties will be defined.
 :::
 
-
 ## FAQs
 
 **Q: What does managing schedules involve?**
 
-Managing schedules includes Building Daily Schedules. Access schedules through the Enterprise Manager navigation pane.
+Managing schedules includes Building Daily Schedules. Access schedules through Enterprise Manager navigation pane.
 
 **Q: Who can manage schedules in OpCon?**
 

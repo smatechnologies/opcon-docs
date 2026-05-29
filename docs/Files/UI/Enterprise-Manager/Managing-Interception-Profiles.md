@@ -66,7 +66,7 @@ To edit an interception profile, complete the following steps:
 
 **Q: What does managing interception profiles involve?**
 
-Managing interception profiles includes adding, editing, and deleting records. Access interception profiles through the Enterprise Manager navigation pane.
+Managing interception profiles includes adding, editing, and deleting records. Access interception profiles through Enterprise Manager navigation pane.
 
 **Q: Who can manage interception profiles in OpCon?**
 

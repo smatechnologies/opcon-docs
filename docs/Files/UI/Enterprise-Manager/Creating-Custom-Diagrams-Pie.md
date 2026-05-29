@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating and Saving Custom Diagrams
-description: "Use this procedure to create and Saving Custom Diagrams in the Enterprise Manager."
+description: "Use this procedure to create and Saving Custom Diagrams in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to create and Saving Custom Diagrams in the Enterprise Manager.
+Use this procedure to create and Saving Custom Diagrams in Enterprise Manager.
 
 To create and save a custom diagram, complete the following steps:
 
@@ -35,14 +35,7 @@ To create and save a custom diagram, complete the following steps:
 7.  Select **Save** to save the image, or select **OK** to close the dialog
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating and Saving Custom Diagrams procedure involve?**
-
-The Creating and Saving Custom Diagrams procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

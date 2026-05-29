@@ -1,6 +1,6 @@
 ---
 title: Adding Batch Users
-description: "Use this procedure to add Batch Users in the Enterprise Manager."
+description: "Use this procedure to add Batch Users in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Batch Users in the Enterprise Manager.
+Use this procedure to add Batch Users in Enterprise Manager.
 
 ## Setting up a New Microsoft (MS) agent Batch User
 
@@ -88,12 +88,11 @@ To add a UNIX batch user, complete the following steps:
 4. Enter the *group ID* (number or name), a *slash (/)*, and the *user ID* (number or name) in the **Group/User** text box
 5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
 
-
 ## FAQs
 
-**Q: Where do you access Batch Users in the Enterprise Manager?**
+**Q: Where do you access Batch Users in Enterprise Manager?**
 
-Select **Batch Users** under the **Security** topic in the Enterprise Manager navigation pane.
+Select **Batch Users** under the **Security** topic in Enterprise Manager navigation pane.
 
 **Q: What information is required to add batch users?**
 

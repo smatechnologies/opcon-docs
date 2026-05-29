@@ -34,9 +34,9 @@ To add an access code to a job, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Access Codes to Jobs in the Enterprise Manager?**
+**Q: Where do you access Access Codes to Jobs in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new access codes to jobs record?**
 

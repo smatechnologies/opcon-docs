@@ -170,7 +170,6 @@ On the Publishing Database Server:
 
 If publishing is still set up on the Publishing Database Server, disable it before restoring.
 
-
 1. Go to the **Object Explorer** frame
 2. Right-click the **Replication** folder and select **Disable Publishing and Distributions**
 3. On the Disable Publishing and Distribution Wizard welcome screen, select **Next**
@@ -257,7 +256,6 @@ Delete all stored procedures from the subscribing OpCon database created during 
 
 On the Subscribing Database Server:
 
-
 1. Log in as a *local administrative user*
 2. Use menu path: **Start \> All Programs \> SQL Server Management Studio**
 3. In the Connect to Server window: Select **Database Engine** in the **Server type** list
@@ -287,10 +285,6 @@ On the Subscribing Database Server:
 
 If replication was in use, restore it manually or through the SMA Replication schedules. Refer to [Manual Setup for Microsoft SQL Replication](Manual-Setup-for-Microsoft-SQL-Replication.md) or [Setup for Automatic Microsoft SQL Replication](Setup-for-Automatic-Microsoft-SQL-Replication.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -315,10 +309,6 @@ If replication was in use, restore it manually or through the SMA Replication sc
 **Exceeding the licensed machine count shortens the license to 30 days and voids the key** — If the number of connected agents exceeds the number of licensed machines, the license is shortened to 30 days from the date of the violation and the existing license key is voided — Monitor agent counts and contact Continuous for a license update before adding machines that would exceed the licensed count.
 
 ## FAQs
-
-**Q: How many steps does the Failover and Recovery with Replication procedure involve?**
-
-The Failover and Recovery with Replication procedure involves 105 steps. Complete all steps in order and save your changes.
 
 **Q: What does Failover and Recovery with Replication cover?**
 

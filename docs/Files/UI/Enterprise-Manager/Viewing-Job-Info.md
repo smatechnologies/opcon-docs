@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Job Information
-description: "Use this procedure to view Job Information in the Enterprise Manager."
+description: "Use this procedure to view Job Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Job Information in the Enterprise Manager.
+Use this procedure to view Job Information in Enterprise Manager.
 
 To view job information, complete the following steps:
 
@@ -31,12 +31,6 @@ To view job information, complete the following steps:
 3.  Select the **job** to open the **Job Information** dialog. Alternatively, right-click the **job box**, select **Job**, then **Job Information**. For more information, refer to [Job Information](Job-Information.md)
 4.  Select **OK** to close the **Job Information** dialog
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Job Information procedure involve?**
-
-The Viewing Job Information procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

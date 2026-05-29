@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Global Properties
-description: "Use this procedure to copy Global Properties in the Enterprise Manager."
+description: "Use this procedure to copy Global Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to copy Global Properties in the Enterprise Manager.
+Use this procedure to copy Global Properties in Enterprise Manager.
 
 To copy a global property, complete the following steps:
 
@@ -44,7 +44,6 @@ Copying global properties is useful when you want to reuse an existing configura
 Yes. The copy must be saved with a new unique name to distinguish it from the original global properties record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

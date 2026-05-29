@@ -135,7 +135,6 @@ Select the **Undo** button if you wish to undo your changes for any reason.
 
 Select the **Save** button.
 
-
 ## FAQs
 
 **Q: What does Viewing and Updating Resource Dependencies cover?**

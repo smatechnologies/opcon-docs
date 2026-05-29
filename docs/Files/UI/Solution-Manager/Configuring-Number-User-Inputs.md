@@ -61,10 +61,6 @@ User inputs are limited to the regular integer range of -2147483648 to 214748364
 
 Configuring number user inputs defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure number user inputs?**
-
-The configuration procedure involves 6 steps. Complete all steps in order and select **Save** to apply the changes.
-
 ## Glossary
 
 **Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.

@@ -26,7 +26,7 @@ The license file contains general information about the license and Product Supp
 - The license defines the Customer Name/ID, License Create Date, and Expiration for the software
 - Product Support defines the date through which you can receive paid Continuous technical support
 
-License notifications appear in the Enterprise Manager during login and in the Operation Views. The SAM also writes notifications to the SAM log file and/or the Critical log file depending on severity. Notifications occur when:
+License notifications appear in Enterprise Manager during login and in the Operation Views. The SAM also writes notifications to the SAM log file and/or the Critical log file depending on severity. Notifications occur when:
 
 - The number of machines (agents) exceeds the license limit
 - A license is missing
@@ -71,7 +71,7 @@ Continuous provides the following license types:
 
 **Q: What happens when the OpCon license expires?**
 
-When the license expires, SAM enters Emergency Mode to allow normal functioning for a short time. License expiration notifications appear in the Enterprise Manager during login, in Operation Views, and in the SAM and Critical log files.
+When the license expires, SAM enters Emergency Mode to allow normal functioning for a short time. License expiration notifications appear in Enterprise Manager during login, in Operation Views, and in the SAM and Critical log files.
 
 **Q: What are the two OpCon license types?**
 

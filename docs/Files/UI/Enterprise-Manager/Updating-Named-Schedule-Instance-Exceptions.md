@@ -1,6 +1,6 @@
 ---
 title: Updating Named Schedule Instance Exceptions
-description: "Use this procedure to update Named Schedule Instance Exceptions in the Enterprise Manager."
+description: "Use this procedure to update Named Schedule Instance Exceptions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to update Named Schedule Instance Exceptions in the Enterprise Manager.
+Use this procedure to update Named Schedule Instance Exceptions in Enterprise Manager.
 
 ## Updating Job Patterns
 
@@ -55,12 +55,7 @@ To update an exception rule, complete the following steps:
 11. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 12. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 
-
 ## FAQs
-
-**Q: How many steps does the Updating Named Schedule Instance Exceptions procedure involve?**
-
-The Updating Named Schedule Instance Exceptions procedure involves 23 steps. Complete all steps in order and save your changes.
 
 **Q: What does Updating Named Schedule Instance Exceptions cover?**
 

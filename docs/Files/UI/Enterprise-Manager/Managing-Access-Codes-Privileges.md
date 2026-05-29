@@ -43,12 +43,11 @@ To revoke Privileges from Access Codes, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** to close the screen
 
-
 ## FAQs
 
 **Q: What does managing access codes privileges involve?**
 
-Managing access codes privileges includes Granting Privileges to Access Codes, Revoking Privileges from Access Codes. Access access codes privileges through the Enterprise Manager navigation pane.
+Managing access codes privileges includes Granting Privileges to Access Codes, Revoking Privileges from Access Codes. Access access codes privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage access codes privileges in OpCon?**
 

@@ -1,6 +1,6 @@
 ---
 title: Deleting Notification Definition Information
-description: "Use this procedure to delete Notification Definition Information in the Enterprise Manager."
+description: "Use this procedure to delete Notification Definition Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Notification Definition Information in the Enterprise Manager.
+Use this procedure to delete Notification Definition Information in Enterprise Manager.
 
 To delete notification definition information, complete the following steps:
 

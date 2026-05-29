@@ -76,12 +76,6 @@ Job execution history can also be accessed in PERT View. For more information, r
 | Agent | The name of the agent machine on which the job run. | — | — |
 | Termination Status | The completion status of the job | — | — |
 | Exit Code | The numeric value returned when the job terminated | — | — |
-## FAQs
-
-**Q: How many steps does the Accessing Job Executions History procedure involve?**
-
-The Accessing Job Executions History procedure involves 12 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.

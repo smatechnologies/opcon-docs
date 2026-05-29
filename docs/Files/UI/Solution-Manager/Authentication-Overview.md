@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Authentication controls how users prove their identity before accessing OpCon. Solution Manager supports username/password login, SSO (single sign-on), and external API token generation for integration use cases.
 
-## When would you use this section?
-
 - A user needs to log in to Solution Manager for the first time
 - A user has forgotten their password and needs to reset it
 - You are configuring SSO for your organization

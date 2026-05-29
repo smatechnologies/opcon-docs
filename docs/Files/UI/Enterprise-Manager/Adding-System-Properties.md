@@ -1,6 +1,6 @@
 ---
 title: Adding User-defined System Properties
-description: "Use this procedure to add User-defined System Properties in the Enterprise Manager."
+description: "Use this procedure to add User-defined System Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add User-defined System Properties in the Enterprise Manager.
+Use this procedure to add User-defined System Properties in Enterprise Manager.
 
 To add a system property, complete the following steps:
 

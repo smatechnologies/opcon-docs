@@ -22,7 +22,7 @@ doc_type: conceptual
 
 The Audit Cleanup utility (Audit.exe) archives and purges audit data. Audit.exe is installed to the `<Target Directory>\OpConxps\Utilities\` directory with the SAM installation package. It connects only to the database configured for SAM in the SMA Connection Configuration program.
 
-- **Archiving**: Moves all active Audit records from the primary auditing table to a table used for viewing audit data in the Enterprise Manager. Refer to [Using Audit Management](../../Files/UI/Enterprise-Manager/Using-Audit-Management.md) in the **Enterprise Manager** online help
+- **Archiving**: Moves all active Audit records from the primary auditing table to a table used for viewing audit data in Enterprise Manager. Refer to [Using Audit Management](../../Files/UI/Enterprise-Manager/Using-Audit-Management.md) in the **Enterprise Manager** online help
 - **Purging**: Cleans up records from the audit viewing table according to the Days to Keep|Cut-off Date setting
 
 During installation, the SMAUtility schedule is imported with jobs named Job History Archive and Audit History Purge to schedule Audit history cleanup. Refer to [SMAUtility Schedule Job Descriptions](../../objects/schedules.md#smautility-schedule) in the **Concepts** online help.
@@ -81,7 +81,7 @@ The user account supplied to Audit.exe must have the required privileges to perf
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| Archiving | Moves all active Audit records from the primary auditing table to a table used for viewing audit data in the Enterprise Manager. | — | — |
+| Archiving | Moves all active Audit records from the primary auditing table to a table used for viewing audit data in Enterprise Manager. | — | — |
 | Purging | Cleans up records from the audit viewing table according to the Days to Keep\|Cut-off Date setting | — | — |
 | AUDIT.EXE | The audit management program | — | — |
 | -u\<User\> | Any valid, case-sensitive OpCon User Login ID | — | — |

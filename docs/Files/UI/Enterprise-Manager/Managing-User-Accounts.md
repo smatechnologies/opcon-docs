@@ -39,12 +39,11 @@ Related Topics
 - [Copying User Accounts](Copying-User-Accounts.md)
 - [Deleting User Accounts](Deleting-User-Accounts.md)
 
-
 ## FAQs
 
 **Q: What does managing user accounts involve?**
 
-Managing user accounts includes User Accounts Toolbar. Access user accounts through the Enterprise Manager navigation pane.
+Managing user accounts includes User Accounts Toolbar. Access user accounts through Enterprise Manager navigation pane.
 
 **Q: Who can manage user accounts in OpCon?**
 

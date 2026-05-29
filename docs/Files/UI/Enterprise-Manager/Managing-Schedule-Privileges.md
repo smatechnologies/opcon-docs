@@ -46,12 +46,11 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** (to the right of the **Schedule Privileges** tab) to close the screen
 
-
 ## FAQs
 
 **Q: What does managing schedule privileges involve?**
 
-Managing schedule privileges includes Granting Schedule Privileges, Revoking Schedule Privileges. Access schedule privileges through the Enterprise Manager navigation pane.
+Managing schedule privileges includes Granting Schedule Privileges, Revoking Schedule Privileges. Access schedule privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage schedule privileges in OpCon?**
 

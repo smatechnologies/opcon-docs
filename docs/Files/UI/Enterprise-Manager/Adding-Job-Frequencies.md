@@ -1,6 +1,6 @@
 ---
 title: Adding Job Frequencies
-description: "Use this procedure to add Job Frequencies in the Enterprise Manager."
+description: "Use this procedure to add Job Frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Job Frequencies in the Enterprise Manager.
+Use this procedure to add Job Frequencies in Enterprise Manager.
 
 :::note
 Job frequencies cannot be added if the job uses a schedule-defined frequency.
@@ -100,7 +100,6 @@ To add an existing frequency:
 10. *(Optional)* Select **Back** to select another existing frequency or [create a new frequency](#Adding_New_Job_Frequency)
 11. Select **Finish** to save the frequency in the **Frequency list** and close the wizard
 12. Select **Close ☒** to close the **Job Master** screen
-
 
 ## FAQs
 

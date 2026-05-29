@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Before using Enterprise Manager for the first time, configure a connection profile for your OpCon server, set your preferences, and optionally change the language. These one-time setup steps prepare Enterprise Manager for daily use and ensure it connects to the correct OpCon server with the right display settings.
 
-## When would you use this section?
-
 - Setting up Enterprise Manager on a new workstation
 - Adding or modifying a connection profile for a different OpCon server
 - Changing display preferences or the language setting
@@ -32,7 +30,7 @@ Before using Enterprise Manager for the first time, configure a connection profi
 |------|-------------|
 | Manage Connection Profiles | Configure and manage OpCon server connection profiles |
 | Set Preferences | Configure display, date format, log viewer, and other EM preferences |
-| Set Language | Change the language used in the Enterprise Manager interface |
+| Set Language | Change the language used in Enterprise Manager interface |
 | Receive Installation Details | View installed version and environment details |
 
 ## Glossary
@@ -52,6 +50,6 @@ Initial setup steps for Enterprise Manager: configuring a connection profile, se
 
 System administrators and automation engineers. Responsibilities include configuring settings, managing user access, and monitoring related processes and components.
 
-**Q: Where should I start in the Enterprise Manager section?**
+**Q: Where should I start in Enterprise Manager section?**
 
 Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.

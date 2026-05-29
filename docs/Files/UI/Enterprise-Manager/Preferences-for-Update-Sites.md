@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences for Update Sites
-description: "The Enterprise Manager can automatically check for updates."
+description: "Enterprise Manager can automatically check for updates."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-The Enterprise Manager can automatically check for updates. The OpCon administrator should define the update site(s) allowed for the environment. EM supports update sites through an HTTP site, FTP site, or a local network directory.
+Enterprise Manager can automatically check for updates. The OpCon administrator should define the update site(s) allowed for the environment. EM supports update sites through an HTTP site, FTP site, or a local network directory.
 
 :::caution
 If using a local directory, do not place the Update directory inside the directory structure of an EM that will be updated. Continuous recommends a path such as **C:\EM Updates\\** on the SAM server. The repository will exist inside this directory after extraction from the zip file provided by Continuous.
@@ -38,10 +38,6 @@ Related Topics
 - [Updating the Repository for Update Sites](Updating-the-Repository-for-Update-Sites.md)
 - [Managing Update Sites](Managing-Update-Sites.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does setting preferences for update sites configure?**

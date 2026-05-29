@@ -34,9 +34,9 @@ To add a department to job details, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Departments to Job Details in the Enterprise Manager?**
+**Q: Where do you access Departments to Job Details in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new departments to job details record?**
 

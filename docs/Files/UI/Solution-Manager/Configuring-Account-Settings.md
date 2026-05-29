@@ -53,10 +53,6 @@ To configure account settings, complete the following steps:
 
 Configuring account settings defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure account settings?**
-
-The configuration procedure involves 5 steps. Complete all steps in order and select **Save** to apply the changes.
-
 ## Glossary
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.

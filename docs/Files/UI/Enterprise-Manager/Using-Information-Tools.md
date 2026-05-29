@@ -40,10 +40,6 @@ The Information tools perform the functions listed below, depending on the [view
 ||Print report: Opens the Print Report dialog to configure print format and page information, then prints the report.|
 ||Print report on the server: Printing a report on the server is not supported by Enterprise Manager.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Information Tools do?**
@@ -52,7 +48,7 @@ The Information tools perform the functions listed below, depending on the [view
 
 **Q: Where can you find Information Tools in OpCon?**
 
-Access Information Tools through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Information Tools through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

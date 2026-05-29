@@ -60,7 +60,6 @@ Yes. The copy must be saved with a new unique name to distinguish it from the or
 
 ## Glossary
 
-
 **Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine eligibility. Calendars can mark days to include or exclude from schedule builds.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.

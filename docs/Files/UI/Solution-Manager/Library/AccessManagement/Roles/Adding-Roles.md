@@ -47,7 +47,6 @@ To add a new role in _Library > Access Management_, complete the following steps
 
 ![Role Details](../../../../../../Resources/Images/SM/Library/AccessManagement/role-details-dialog.png 'Role Details')
 
-
 ## FAQs
 
 **Q: How do you save a new roles record?**

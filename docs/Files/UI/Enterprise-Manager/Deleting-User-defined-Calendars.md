@@ -1,6 +1,6 @@
 ---
 title: Deleting Un-used User-defined Calendars
-description: "Use this procedure to delete Un-used User-defined Calendars in the Enterprise Manager."
+description: "Use this procedure to delete Un-used User-defined Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Un-used User-defined Calendars in the Enterprise Manager.
+Use this procedure to delete Un-used User-defined Calendars in Enterprise Manager.
 
 :::note
 Continuous recommends deleting user-defined calendars no longer in use to control the size of database tables. Holiday calendars are automatically deleted when the associated schedule is deleted.

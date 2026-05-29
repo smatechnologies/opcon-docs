@@ -49,7 +49,6 @@ To delete a role in _Library > Access Management > Roles_, complete the followin
 3. Select **Delete the selected role**
 4. Select **Yes** to confirm deletion or **No** to cancel
 
-
 ## FAQs
 
 **Q: Can a roles record be recovered after deletion?**

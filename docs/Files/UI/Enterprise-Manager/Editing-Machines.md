@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Machines
-description: "Use this procedure to edit Machines in the Enterprise Manager."
+description: "Use this procedure to edit Machines in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Machines in the Enterprise Manager.
+Use this procedure to edit Machines in Enterprise Manager.
 
 To edit a machine, complete the following steps:
 

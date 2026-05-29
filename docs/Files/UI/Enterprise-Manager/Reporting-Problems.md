@@ -1,6 +1,6 @@
 ---
 title: Reporting Problems
-description: "You can report Enterprise Manager bugs directly through the Enterprise Manager."
+description: "You can report Enterprise Manager bugs directly through Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-You can report Enterprise Manager bugs directly through the Enterprise Manager. Activities are recorded in a log file, which is gathered and attached to the report email. These problems refer only to the Enterprise Manager; report SAM or agent problems to Continuous support through the normal process.
+You can report Enterprise Manager bugs directly through Enterprise Manager. Activities are recorded in a log file, which is gathered and attached to the report email. These problems refer only to Enterprise Manager; report SAM or agent problems to Continuous support through the normal process.
 
 To report an EM bug, complete the following steps:
 
@@ -31,7 +31,7 @@ Before gathering log files, enable tracing and reproduce the bug. Go to the **En
 1. Select **Report Problem** under the **Support** topic. The **Report Problem** dialog opens with the **Enterprise Manager** radio button selected by default
 
 :::note
-You can also access Report Problem from the Enterprise Manager **Help** menu by selecting **About OpCon Enterprise Manager** > **Report Problem**, then proceed with Step 2.
+You can also access Report Problem from Enterprise Manager **Help** menu by selecting **About OpCon Enterprise Manager** > **Report Problem**, then proceed with Step 2.
 :::
 
 2. Select **Next** to advance to the **Choose Method** screen
@@ -56,19 +56,11 @@ h. Select the **Message** tab and enter the problem description.
 i. *(Optional)* Select the **Attachments** tab. Log files are already attached. Select **Attach File** to add more, locate the file, and select **Open**.
 j. Select **Next** to send the email, then select **Finish** to close the dialog.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
-**Q: Where is Reporting Problems located in the Enterprise Manager?**
+**Q: Where is Reporting Problems located in Enterprise Manager?**
 
-Select **Report Problem** under the **Support** topic in the Enterprise Manager navigation pane.
-
-**Q: How many steps does the Reporting Problems procedure involve?**
-
-The Reporting Problems procedure involves 3 steps. Complete all steps in order and save your changes.
+Select **Report Problem** under the **Support** topic in Enterprise Manager navigation pane.
 
 ## Glossary
 

@@ -1,6 +1,6 @@
 ---
 title: Navigation Panel
-description: "The Navigation Panel is on the left side of the Enterprise Manager and contains the following expandable topics: - Solution Manager - Administration - Operation - Security - Management - External."
+description: "The Navigation Panel is on the left side of Enterprise Manager and contains the following expandable topics: - Solution Manager - Administration - Operation - Security - Management - External."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-The **Navigation Panel** is on the left side of the Enterprise Manager and contains the following expandable topics:
+The **Navigation Panel** is on the left side of Enterprise Manager and contains the following expandable topics:
 
 - [Solution Manager](Working-with-Solution-Manager.md)
 - [Administration](Working-with-Administration.md)

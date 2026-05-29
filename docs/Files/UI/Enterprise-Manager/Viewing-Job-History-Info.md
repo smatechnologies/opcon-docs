@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Job History Information
-description: "Use this procedure to view Job History Information in the Enterprise Manager."
+description: "Use this procedure to view Job History Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to view Job History Information in the Enterprise Manager.
+Use this procedure to view Job History Information in Enterprise Manager.
 
 To view job history information, complete the following steps:
 
@@ -36,12 +36,6 @@ To view job history information, complete the following steps:
 8.  Right-click any row and select **View Job Output** to view the job output for the selected record
 9.  Select **Close** to close the **Job Execution History** dialog
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Job History Information procedure involve?**
-
-The Viewing Job History Information procedure involves 9 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Threshold/Resource Updates
-description: "Use this procedure to add Threshold/Resource Updates in the Enterprise Manager."
+description: "Use this procedure to add Threshold/Resource Updates in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Threshold/Resource Updates in the Enterprise Manager.
+Use this procedure to add Threshold/Resource Updates in Enterprise Manager.
 
 ## Setting Job-Related Threshold or Resource Updates
 
@@ -61,12 +61,11 @@ To set Frequency-Related Threshold or Resource Updates, complete the following s
 11. Select **OK** to save, or **Cancel** to discard
 12. Select **Close ☒** to close the **Job Master** screen
 
-
 ## FAQs
 
-**Q: Where do you access Threshold/Resource Updates in the Enterprise Manager?**
+**Q: Where do you access Threshold/Resource Updates in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new threshold/resource updates record?**
 

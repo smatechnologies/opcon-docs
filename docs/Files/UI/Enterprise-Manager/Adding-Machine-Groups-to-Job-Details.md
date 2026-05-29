@@ -1,6 +1,6 @@
 ---
 title: Adding Machine Groups to Job Details
-description: "Use this procedure to add Machine Groups to Job Details in the Enterprise Manager."
+description: "Use this procedure to add Machine Groups to Job Details in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Machine Groups to Job Details in the Enterprise Manager.
+Use this procedure to add Machine Groups to Job Details in Enterprise Manager.
 
 To add machine group to details, complete the following steps:
 

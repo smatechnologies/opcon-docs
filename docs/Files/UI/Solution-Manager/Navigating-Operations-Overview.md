@@ -19,8 +19,6 @@ doc_type: conceptual
 
 The Operations interface is the main workspace for monitoring and managing daily schedule and job execution. It provides views for daily processes, schedule and job status, machine status, and application settings — all accessible from a consistent navigation panel.
 
-## When would you use this section?
-
 - Learning the Operations interface for the first time
 - Configuring application settings or your personal profile
 - Understanding the daily processes view and schedule presentation

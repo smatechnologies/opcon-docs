@@ -58,10 +58,6 @@ Select the **Add** button to quickly add a new category to the list.
 
 ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/AddCategory.png "Notification Group Jobs/Machines")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Notification Groups do?**

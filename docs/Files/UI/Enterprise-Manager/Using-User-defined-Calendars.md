@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using User-defined Calendars
-description: "Use this procedure to use User-defined Calendars in the Enterprise Manager."
+description: "Use this procedure to use User-defined Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to use User-defined Calendars in the Enterprise Manager.
+Use this procedure to use User-defined Calendars in Enterprise Manager.
 
 ## Using as Additional Holiday Calendars
 
@@ -64,10 +64,6 @@ To use as Additional Holiday Calendars, complete the following steps:
 10. Select **Finish**
 11. Select the **x** to the right of the **Schedule Master** tab to close the screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with User-defined Calendars?**

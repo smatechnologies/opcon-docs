@@ -34,10 +34,6 @@ Selecting **Add** or selecting a record in the grid enables the bottom panel:
 The **Name** field must be unique when adding or editing a notification category.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Notification Categories do?**

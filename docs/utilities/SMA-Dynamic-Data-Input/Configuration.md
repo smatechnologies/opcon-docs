@@ -264,10 +264,6 @@ When the service runs as a Windows Domain User (required to monitor network dire
 
 The ODBC System DSN used by SMADDI must not share its name with the SQL Server instance name. The DSN stores the database server hostname, database name, and authentication credentials used to connect to the OpCon scheduling database.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks

@@ -118,10 +118,6 @@ Related Topics
 | Start Time | The actual time the selected job started on the OpCon server. | — | — |
 ## FAQs
 
-**Q: How many steps does the Accessing Job Summary procedure involve?**
-
-The Accessing Job Summary procedure involves 8 steps. Complete all steps in order and save your changes.
-
 **Q: What does Accessing Job Summary cover?**
 
 This page covers Time Representations in Job Summary.

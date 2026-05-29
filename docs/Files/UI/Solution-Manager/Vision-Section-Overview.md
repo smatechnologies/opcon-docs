@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Vision is a Solution Manager module that provides a high-level view of OpCon job health using tag-based cards. Each card aggregates job status from matching jobs across schedules, shows SLA performance trends, and can trigger automated actions when card states change. Vision also connects to remote OpCon instances for consolidated enterprise-wide monitoring.
 
-## When would you use this section?
-
 - Create and configure Vision cards to monitor business-critical workflows
 - Track SLA completion rates and historical quality-of-service data
 - Set up automated actions or frequency rules for Vision cards

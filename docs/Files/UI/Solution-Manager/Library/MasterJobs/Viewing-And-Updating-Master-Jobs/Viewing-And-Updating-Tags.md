@@ -38,12 +38,7 @@ Only those with the appropriate permissions will have access to the **Lock** but
 3. Enter the changes to the **Job** and/or **Frequency** frames
 4. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Tags procedure involve?**
-
-The Viewing and Updating Tags procedure involves 4 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Tags cover?**
 

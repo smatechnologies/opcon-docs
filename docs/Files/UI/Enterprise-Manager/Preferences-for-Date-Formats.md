@@ -24,7 +24,7 @@ Configure the Date and Time formats to control how the EM displays dates and tim
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
 3. Select on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select on **Date Formats**. The **Date Formats** settings display to the right
@@ -37,7 +37,7 @@ To set the preferences, complete the following steps:
 6. *(Optional)* Select **Restore Defaults** to restore the original formats
 7. Select **Apply** to apply the changes
 8. Select **OK** to save and close the **Preferences** dialog
-9. Close and restart the Enterprise Manager to load the new formats
+9. Close and restart Enterprise Manager to load the new formats
 
 The format letters and examples below refer to this Long Date example: `Monday, August 8, 2011`
 
@@ -59,12 +59,6 @@ The example date would be created in the EM with the following string for the Lo
 |h|Hour in Day (1-12)|Hour in AM/PM|4:00|
 |mm|Minute in hour|Number|30|
 |s|Second in minute|Number|55|
-
-## FAQs
-
-**Q: How many steps does the Setting Preferences for Date Formats procedure involve?**
-
-The Setting Preferences for Date Formats procedure involves 9 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

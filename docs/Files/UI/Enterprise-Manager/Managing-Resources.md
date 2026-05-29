@@ -38,12 +38,11 @@ Related Topics
 - [Copying Resources](Copying-Resources.md)
 - [Deleting Resources](Deleting-Resources.md)
 
-
 ## FAQs
 
 **Q: What does managing resources involve?**
 
-Managing resources includes Resources Toolbar. Access resources through the Enterprise Manager navigation pane.
+Managing resources includes Resources Toolbar. Access resources through Enterprise Manager navigation pane.
 
 **Q: Who can manage resources in OpCon?**
 

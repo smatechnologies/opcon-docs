@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Job Events
-description: "Use this procedure to edit Job Events in the Enterprise Manager."
+description: "Use this procedure to edit Job Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Job Events in the Enterprise Manager.
+Use this procedure to edit Job Events in Enterprise Manager.
 
 ## Editing Job-Related Events
 
@@ -54,7 +54,6 @@ To edit the job event, complete the following steps:
 8.  Enter the *changes* in the wizard. Select **Reset** to revert parameters to their original states
 9.  Select **Finish** to save or **Cancel** to discard changes
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
-
 
 ## FAQs
 

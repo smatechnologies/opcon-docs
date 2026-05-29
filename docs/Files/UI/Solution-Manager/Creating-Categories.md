@@ -39,12 +39,6 @@ You can also edit a Service Request directly to change or set its category:
 ![Editing Service Request Category](../../../Resources/Images/SM/Creating-Categories_5.png "Editing Service Request Category")
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating Categories procedure involve?**
-
-The Creating Categories procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.

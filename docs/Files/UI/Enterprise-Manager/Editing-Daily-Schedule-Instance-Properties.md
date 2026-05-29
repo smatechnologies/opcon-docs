@@ -1,6 +1,6 @@
 ---
 title: Editing Daily Schedule Instance Properties
-description: "To edit Daily Schedule Instance Properties in the Enterprise Manager, complete the following steps: 1."
+description: "To edit Daily Schedule Instance Properties in Enterprise Manager, complete the following steps: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-To edit Daily Schedule Instance Properties in the Enterprise Manager, complete the following steps:
+To edit Daily Schedule Instance Properties in Enterprise Manager, complete the following steps:
 
 1. Select on **Daily Maintenance** under the **Operation** topic
 2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)

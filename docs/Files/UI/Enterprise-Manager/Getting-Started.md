@@ -30,10 +30,6 @@ After logging into Enterprise Manager, you can customize the application using t
 -   [Receiving Installation Details](Receiving-Installation-Details.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Getting Started do?**
@@ -42,7 +38,7 @@ title: Getting Started
 
 **Q: Where can you find Getting Started in OpCon?**
 
-Access Getting Started through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Getting Started through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

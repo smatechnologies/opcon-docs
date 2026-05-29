@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Frequencies are calendar rules that determine which days a job or schedule qualifies to build and run. Each frequency combines a day pattern (daily, weekly, monthly, etc.) with offset rules, start/end dates, and calendar exclusions. Jobs can have multiple frequencies; OpCon selects the most favorable qualifying day.
 
-## When would you use this section?
-
 - Defining when a new job or schedule should run
 - Modeling complex calendaring requirements (e.g., last business day of month, every other Friday, except holidays)
 - Understanding how calendars and frequencies interact during schedule build

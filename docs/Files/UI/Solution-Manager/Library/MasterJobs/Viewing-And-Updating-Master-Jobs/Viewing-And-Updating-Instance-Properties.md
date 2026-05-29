@@ -42,12 +42,7 @@ To perform this procedure, complete the following steps:
 4. Fill out the **Name** and **Value** columns
 5. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Instance Properties procedure involve?**
-
-The Viewing and Updating Instance Properties procedure involves 5 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Instance Properties cover?**
 

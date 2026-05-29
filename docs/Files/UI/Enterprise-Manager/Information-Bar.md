@@ -1,6 +1,6 @@
 ---
 title: Information Bar
-description: "The Information Bar is located at the bottom of the Enterprise Manager screen and is always visible when working with editors or views."
+description: "The Information Bar is located at the bottom of Enterprise Manager screen and is always visible when working with editors or views."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-The Information Bar is located at the bottom of the Enterprise Manager screen and is always visible when working with editors or views. It displays the SAM last pulse message, user information, and database connection details, reading left to right.
+The Information Bar is located at the bottom of Enterprise Manager screen and is always visible when working with editors or views. It displays the SAM last pulse message, user information, and database connection details, reading left to right.
 
 The Information Bar displays the following:
 
@@ -45,11 +45,11 @@ The Information Bar displays the following:
 
 **Q: What does Information Bar do?**
 
-The Information Bar is located at the bottom of the Enterprise Manager screen and is always visible when working with editors or views. It displays the SAM last pulse message, user information, and da
+The Information Bar is located at the bottom of Enterprise Manager screen and is always visible when working with editors or views. It displays the SAM last pulse message, user information, and da
 
 **Q: Where can you find Information Bar in OpCon?**
 
-Access Information Bar through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Information Bar through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

@@ -36,10 +36,6 @@ Several carriers are deprecating email-to-text functionality. Best practice is t
 The SMA Notify Handler inserts a Notification ID in the format ID=nnn before any other message content. For more information, refer to [Looking up Notification Sources](Looking-up-Notification-Sources.md).
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is Short Text Messages used for?**

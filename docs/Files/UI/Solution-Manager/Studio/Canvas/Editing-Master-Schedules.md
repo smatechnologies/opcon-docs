@@ -36,7 +36,6 @@ Select a schedule and select **Edit**. The Create Master Schedule page opens wit
 
 Make edits as needed, then select **Save** to save changes or **Back** to cancel.
 
-
 ## FAQs
 
 **Q: Do edits to master schedules take effect immediately?**

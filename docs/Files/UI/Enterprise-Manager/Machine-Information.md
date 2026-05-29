@@ -84,7 +84,7 @@ title: Machine Information
 
 **Q: Where can you find Machine Information in OpCon?**
 
-Access Machine Information through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Machine Information through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

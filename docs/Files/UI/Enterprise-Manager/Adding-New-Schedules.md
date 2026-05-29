@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding New Schedules using Workflow Designer
-description: "Use this procedure to add New Schedules using Workflow Designer in the Enterprise Manager."
+description: "Use this procedure to add New Schedules using Workflow Designer in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add New Schedules using Workflow Designer in the Enterprise Manager.
+Use this procedure to add New Schedules using Workflow Designer in Enterprise Manager.
 
 To add a new schedule, complete the following steps:
 
@@ -38,7 +38,6 @@ To add a new schedule, complete the following steps:
 After completing the required fields, select the **Save** button on the toolbar to save the new schedules using workflow designer record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

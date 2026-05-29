@@ -1,6 +1,6 @@
 ---
 title: Adding Holidays or Non-Working Days to Calendars
-description: "Use this procedure to add Holidays or Non-Working Days to Calendars in the Enterprise Manager."
+description: "Use this procedure to add Holidays or Non-Working Days to Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Holidays or Non-Working Days to Calendars in the Enterprise Manager.
+Use this procedure to add Holidays or Non-Working Days to Calendars in Enterprise Manager.
 
 To add a holiday or non-working day, complete the following steps:
 
@@ -31,9 +31,9 @@ To add a holiday or non-working day, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Holidays or Non-Working Days to Calendars in the Enterprise Manager?**
+**Q: Where do you access Holidays or Non-Working Days to Calendars in Enterprise Manager?**
 
-Select **Calendars** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Calendars** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new holidays or non-working days to calendars record?**
 

@@ -19,8 +19,6 @@ doc_type: conceptual
 
 This section explains the core building blocks of OpCon automation — the objects, rules, and behaviors that define how work is scheduled, run, and tracked. Understanding these concepts is essential before building or operating any automated workflow.
 
-## When would you use this section?
-
 - Learning how OpCon works before building automation
 - Explaining OpCon's model to a colleague or stakeholder
 - Designing a new automated workflow and selecting the right object types

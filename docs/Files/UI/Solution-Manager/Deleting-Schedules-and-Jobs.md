@@ -35,7 +35,6 @@ To delete Schedule(s), complete the following steps:
 This icon is <ins>disabled</ins> if the schedule has a running job.
 :::
 
-
 3. Select **Yes** to confirm deletion
 
    ![Delete Schedule(s) Confirmation Dialog](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs2.png "Delete Schedule(s) Confirmation Dialog")
@@ -57,7 +56,6 @@ Related Topics
 
 - [Performing Schedule Checks](Performing-Schedule-Checks.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
-
 
 ## FAQs
 

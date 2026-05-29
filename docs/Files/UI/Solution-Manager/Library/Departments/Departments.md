@@ -36,10 +36,6 @@ Select the **Cross References** button to view the master and daily jobs that us
 
 ![Departments CrossReferences](../../../../../Resources/Images/SM/Library/Departments/Departments_CrossReference.png "Departments Cross References Dialog")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Departments do?**

@@ -124,10 +124,6 @@ For conceptual information, refer to [SAP BW Jobs](../../../../../../../job-type
 
 ## FAQs
 
-**Q: How many steps does the Viewing Os2200 Job Details procedure involve?**
-
-The Viewing Os2200 Job Details procedure involves 4 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing Os2200 Job Details cover?**
 
 This page covers Editing Os2200 Job Details, More Information.

@@ -21,8 +21,6 @@ Enterprise Manager (EM) is the legacy desktop client for OpCon, built on Eclipse
 
 NOTE: Continuous recommends using Solution Manager for all new work. Enterprise Manager will continue to receive support but new features are delivered in Solution Manager.
 
-## When would you use Enterprise Manager?
-
 - Managing OpCon from a Windows desktop
 - Accessing features not yet in Solution Manager (advanced PERT views, matrix views, specific SAP management tools)
 - Maintaining a legacy automation environment built using Enterprise Manager workflows
@@ -58,7 +56,7 @@ NOTE: Continuous recommends using Solution Manager for all new work. Enterprise 
 
 ## FAQs
 
-**Q: What does the Enterprise Manager Overview cover?**
+**Q: What does Enterprise Manager Overview cover?**
 
 Enterprise Manager (EM) is the legacy desktop client for OpCon, built on Eclipse. It provides full access to OpCon administration, schedule operations, security management, and reporting. While most capabilities are now available in Solution Manager, Enterprise Manager remains available for customers who rely on its advanced views and tools.
 
@@ -66,6 +64,6 @@ Enterprise Manager (EM) is the legacy desktop client for OpCon, built on Eclipse
 
 System administrators, automation engineers, and operations staff. Responsibilities include configuring settings, managing user access, and monitoring related processes and components.
 
-**Q: Where should I start in the Enterprise Manager section?**
+**Q: Where should I start in Enterprise Manager section?**
 
 Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.

@@ -1,6 +1,6 @@
 ---
 title: Managing Groups
-description: "Use this procedure to manage Groups in the Enterprise Manager."
+description: "Use this procedure to manage Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage Groups in the Enterprise Manager.
+Use this procedure to manage Groups in Enterprise Manager.
 
 ## Adding Machine, Schedule, or Job Groups
 
@@ -82,12 +82,11 @@ To rename a group, complete the following steps:
 5.  Select **Rename**
 6.  Type the new *group name* and select **OK**
 
-
 ## FAQs
 
 **Q: What does managing groups involve?**
 
-Managing groups includes Adding Machine, Schedule, or Job Groups, Deleting Machine, Schedule, or Job Groups, Renaming Machine, Schedule, or Job Groups. Access groups through the Enterprise Manager navigation pane.
+Managing groups includes Adding Machine, Schedule, or Job Groups, Deleting Machine, Schedule, or Job Groups, Renaming Machine, Schedule, or Job Groups. Access groups through Enterprise Manager navigation pane.
 
 **Q: Who can manage groups in OpCon?**
 

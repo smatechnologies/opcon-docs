@@ -53,7 +53,6 @@ To delete a user, complete the following steps:
 
 ![Delete User](../../../../../../Resources/Images/SM/Library/AccessManagement/delete-user.png 'Delete User')
 
-
 ## FAQs
 
 **Q: Can a users record be recovered after deletion?**

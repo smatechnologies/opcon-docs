@@ -1,6 +1,6 @@
 ---
 title: Editing Job Frequencies
-description: "Use this procedure to edit Job Frequencies in the Enterprise Manager."
+description: "Use this procedure to edit Job Frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Job Frequencies in the Enterprise Manager.
+Use this procedure to edit Job Frequencies in Enterprise Manager.
 
 :::note
 You can modify a frequency that applies only to the selected job. To modify a frequency used by two or more jobs, you must be in the **ocadm** role.

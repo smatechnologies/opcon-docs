@@ -1,6 +1,6 @@
 ---
 title: Editing Schedules in Daily Schedule Tables
-description: "Use this procedure to edit Schedules in Daily Schedule Tables in the Enterprise Manager."
+description: "Use this procedure to edit Schedules in Daily Schedule Tables in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Schedules in Daily Schedule Tables in the Enterprise Manager.
+Use this procedure to edit Schedules in Daily Schedule Tables in Enterprise Manager.
 
 :::note
 Changes to the schedule start time and events take effect immediately. If the schedule has already run, changes take effect the next time the schedule runs.

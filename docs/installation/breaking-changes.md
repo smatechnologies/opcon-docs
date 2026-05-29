@@ -95,10 +95,6 @@ schedules to fail. Refer to the [instructions on the Innovation Lab](https://git
 details on manually migrating the scripts. The scripts are included as
 Embedded Scripts on new database installs.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the Breaking Changes section cover?**

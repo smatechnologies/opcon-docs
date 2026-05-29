@@ -30,7 +30,7 @@ The following fields apply to defining remote instances:
 
 - **Name**: Name of the remote instance
 - **Documentation**: Area for descriptions and notes about the remote instance
-    - For information on inserting hyperlinks into the Documentation area, refer to Entering and Opening Hyperlinks in the Documentation Frame in the Enterprise Manager online help
+    - For information on inserting hyperlinks into the Documentation area, refer to Entering and Opening Hyperlinks in the Documentation Frame in Enterprise Manager online help
 - **Server**: Name of the server where the database resides
 - **Database**: Name of the database to connect to
 - **User**: Authorized SQL Server username for connecting to the database

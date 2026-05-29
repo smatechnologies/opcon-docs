@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Defining Escalation Rules
-description: "Use this procedure to define Escalation Rules in the Enterprise Manager."
+description: "Use this procedure to define Escalation Rules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to define Escalation Rules in the Enterprise Manager.
+Use this procedure to define Escalation Rules in Enterprise Manager.
 
 To define a rule, complete the following steps:
 
@@ -37,10 +37,6 @@ To define a rule, complete the following steps:
 9. Repeat Steps 4–8 until all desired rule sequences are added
 10. Select **Save** in the **Escalation Rule Add/Edit** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining escalation rules?**

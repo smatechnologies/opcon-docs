@@ -60,16 +60,6 @@ Related Topics
 - [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Performing Schedule Checks procedure involve?**
-
-The Performing Schedule Checks procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

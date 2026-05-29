@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Threshold/Resource Dependencies
-description: "Use this procedure to delete Threshold/Resource Dependencies in the Enterprise Manager."
+description: "Use this procedure to delete Threshold/Resource Dependencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to delete Threshold/Resource Dependencies in the Enterprise Manager.
+Use this procedure to delete Threshold/Resource Dependencies in Enterprise Manager.
 
 To delete a dependency, complete the following steps:
 

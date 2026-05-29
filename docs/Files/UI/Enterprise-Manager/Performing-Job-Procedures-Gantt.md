@@ -1,6 +1,6 @@
 ---
 title: Performing Job Procedures when Working in Gantt View
-description: "Use this procedure to perform Job Procedures when Working in Gantt View in the Enterprise Manager."
+description: "Use this procedure to perform Job Procedures when Working in Gantt View in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Job Procedures when Working in Gantt View in the Enterprise Manager.
+Use this procedure to perform Job Procedures when Working in Gantt View in Enterprise Manager.
 
 ## Adding Job Completion Comments
 
@@ -296,15 +296,7 @@ Marks the selected job as Fixed.
 8. *(Optional)* Select **Copy To Clipboard** or **Open external editor**
 9. Select **Close** to close the **SAP Spool Details** dialog, then **Close** again to close the **View SAP Job's Spools** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Performing Job Procedures when Working in Gantt View procedure involve?**
-
-The Performing Job Procedures when Working in Gantt View procedure involves 128 steps. Complete all steps in order and save your changes.
 
 **Q: What does Performing Job Procedures when Working in Gantt View cover?**
 

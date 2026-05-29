@@ -43,16 +43,11 @@ To clean up specific calendars, complete the following steps:
 
 ## FAQs
 
-**Q: How many steps does the Calendar Cleanup procedure involve?**
-
-The Calendar Cleanup procedure involves 7 steps. Complete all steps in order and save your changes.
-
 **Q: What does Calendar Cleanup cover?**
 
 This page covers Clean up all calendars, Clean up specific calendars.
 
 ## Glossary
-
 
 **Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine eligibility. Calendars can mark days to include or exclude from schedule builds.
 

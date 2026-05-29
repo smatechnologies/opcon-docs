@@ -1,6 +1,6 @@
 ---
 title: Adding Job Events
-description: "Use this procedure to add Job Events in the Enterprise Manager."
+description: "Use this procedure to add Job Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Job Events in the Enterprise Manager.
+Use this procedure to add Job Events in Enterprise Manager.
 
 ## Setting Job-Related Events
 
@@ -67,7 +67,6 @@ To set Job-Related Events, complete the following steps:
     $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
     :::
 
-
 13. Select **Reset** to reset parameters to their original states, if needed
 14. Select **Finish** to save the job event, or **Cancel** to discard
 15. Select **Close ☒** to close the **Job Master** screen
@@ -106,7 +105,6 @@ To add a new job event:
 14. Select **Reset** to reset parameters to their original states, if needed
 15. Select **Finish** to save the job event, or **Cancel** to discard
 16. Select **Close ☒** to close the **Job Master** screen
-
 
 ## FAQs
 

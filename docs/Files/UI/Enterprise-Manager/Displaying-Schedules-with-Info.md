@@ -30,16 +30,6 @@ To display the schedule, complete the following steps:
 4. Select the **Job Related** option to display job-related dependency types
 5. Select the **Frequency Related** option to display all frequency-related dependency types. To display specific frequencies, clear **Frequency Related** and select the desired **frequencies** in the associated list box
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Displaying Schedules showing Job-Related/Frequency-Related Information procedure involve?**
-
-The Displaying Schedules showing Job-Related/Frequency-Related Information procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.

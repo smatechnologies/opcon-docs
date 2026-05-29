@@ -197,10 +197,6 @@ On the OpCon Database Server, connect to SQL Server Management Studio (as above)
 
 If replication was in use, refer to [Manual Setup for Microsoft SQL Replication](Manual-Setup-for-Microsoft-SQL-Replication.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -224,10 +220,6 @@ If replication was in use, refer to [Manual Setup for Microsoft SQL Replication]
 **Replication must be disabled before restoration or the installer cannot drop and recreate tables** — If replication is active when the restoration begins, the database upgrade scripts cannot run because they need to drop and recreate tables — Disable replication (push or pull subscription) and disable publishing before starting the restoration procedure.
 
 ## FAQs
-
-**Q: How many steps does the Manual Database Backups and Restoration procedure involve?**
-
-The Manual Database Backups and Restoration procedure involves 72 steps. Complete all steps in order and save your changes.
 
 **Q: What does Manual Database Backups and Restoration cover?**
 

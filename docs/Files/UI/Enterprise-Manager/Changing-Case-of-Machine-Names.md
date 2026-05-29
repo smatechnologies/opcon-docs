@@ -1,6 +1,6 @@
 ---
 title: Changing Case of Machine Names
-description: "Use this procedure to change Case of Machine Names in the Enterprise Manager."
+description: "Use this procedure to change Case of Machine Names in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to change Case of Machine Names in the Enterprise Manager.
+Use this procedure to change Case of Machine Names in Enterprise Manager.
 
 :::note
 If the database being used by OpCon is not binary, the case of a machine name cannot be changed. A non-binary database considers the entry to be the same. Complete the following steps if the case of the machine name needs to be changed.
@@ -48,16 +48,6 @@ To change the case of a machine name:
 10. Select on **Start Communication**
 11. Select **Close ☒** (to the right of the **Machines** tab) to close
     the **Machines** screen.
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Changing Case of Machine Names procedure involve?**
-
-The Changing Case of Machine Names procedure involves 11 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

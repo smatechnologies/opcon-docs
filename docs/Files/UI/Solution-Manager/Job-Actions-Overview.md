@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Job actions let you view job configuration, status history, output logs, and dependency maps — and change job status, add jobs to running schedules, or delete jobs from the queue.
 
-## When would you use this section?
-
 - A job has failed and you need to review its output and restart it
 - You need to view a job's dependency chain before making changes
 - You want to add a job to a schedule that is already running today

@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences for Gantt
-description: "Use this procedure to set Preferences for Gantt in the Enterprise Manager."
+description: "Use this procedure to set Preferences for Gantt in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Gantt in the Enterprise Manager.
+Use this procedure to set Preferences for Gantt in Enterprise Manager.
 
 :::note
 Close and re-open the charts for changes to take effect.
@@ -28,7 +28,7 @@ Close and re-open the charts for changes to take effect.
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select **Gantt**. The **Gantt** settings display to the right
@@ -41,16 +41,6 @@ To set the preferences, complete the following steps:
 11. *(Optional)* In the **Type of dependencies** list, select how job dependency lines are displayed
 12. Select **Apply** to save the changes
 13. Select **OK** to save and close the **Preferences** dialog
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Setting Preferences for Gantt procedure involve?**
-
-The Setting Preferences for Gantt procedure involves 13 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

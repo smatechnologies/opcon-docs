@@ -1,6 +1,6 @@
 ---
 title: Editing Schedules in Master Schedule Tables
-description: "Use this procedure to edit Schedules in Master Schedule Tables in the Enterprise Manager."
+description: "Use this procedure to edit Schedules in Master Schedule Tables in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Schedules in Master Schedule Tables in the Enterprise Manager.
+Use this procedure to edit Schedules in Master Schedule Tables in Enterprise Manager.
 
 :::note
 Changes made in the Master tables will take effect the next time the schedule is built.

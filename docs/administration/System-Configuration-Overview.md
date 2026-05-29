@@ -18,8 +18,6 @@ doc_type: conceptual
 
 System configuration covers all server-level settings — from initial installation and upgrade procedures through runtime server options (logging, SMTP, SSO, notifications) and database management (mirroring, replication, backups).
 
-## When would you use this section?
-
 - Performing a new OpCon installation or upgrade
 - Changing server options (SMTP relay, SSO provider, logging levels)
 - Configuring or maintaining database mirroring or replication

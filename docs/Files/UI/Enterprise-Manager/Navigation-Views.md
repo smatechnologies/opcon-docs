@@ -1,6 +1,6 @@
 ---
 title: Navigation Views
-description: "In the Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status)."
+description: "In Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status)."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-In the Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status) provide visual representations supporting the editors. Any number of views can be open simultaneously, but only one can be active at a time.
+In Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status) provide visual representations supporting the editors. Any number of views can be open simultaneously, but only one can be active at a time.
 
 Unlike Editors, Views can be [dragged out of the workspace to another separate area](#Moving) on their own.
 
@@ -48,7 +48,7 @@ A stack symbol (![Three white folders with black borders stacked](../../../Resou
 
 ## Moving Navigation Views of the Workspace Frame
 
-1. Select and drag the **Navigation View** tab outside the Enterprise Manager workspace (e.g., to a second monitor)
+1. Select and drag the **Navigation View** tab outside Enterprise Manager workspace (e.g., to a second monitor)
 2. Release the tab in the preferred location
 
 Alternatively, right-click the **Navigation View** tab, select **Detached**, then drag it to the preferred location.
@@ -80,10 +80,6 @@ Select and drag the **Navigation View** tab back to the preferred location insid
 | Minimize | Minimizes the view and places an icon on the right vertical sidebar | — | — |
 | Maximize | Maximizes the view to its maximum size | — | — |
 ## FAQs
-
-**Q: How many steps does the Navigation Views procedure involve?**
-
-The Navigation Views procedure involves 8 steps. Complete all steps in order and save your changes.
 
 **Q: What does Navigation Views cover?**
 

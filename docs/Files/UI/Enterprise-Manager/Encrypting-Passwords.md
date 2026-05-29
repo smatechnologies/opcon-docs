@@ -1,6 +1,6 @@
 ---
 title: Encrypting Passwords
-description: "Use the Enterprise Manager encryption tool when a configuration value in OpCon requires an encrypted password."
+description: "Use Enterprise Manager encryption tool when a configuration value in OpCon requires an encrypted password."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use the Enterprise Manager encryption tool when a configuration value in OpCon requires an encrypted password.
+Use Enterprise Manager encryption tool when a configuration value in OpCon requires an encrypted password.
 
 To encrypt a password, complete the following steps:
 
-1. Log in to the Enterprise Manager
+1. Log in to Enterprise Manager
 2. Use menu path: **EnterpriseManager \> Password Update \> Password Encryption Tool**. The **Password encryption tool** dialog displays
 3. *(Optional)* Select **Visible** to make the password characters visible
 4. Enter the password in the **Password** field
@@ -32,12 +32,6 @@ To encrypt a password, complete the following steps:
 6. Select **Copy to clipboard** to copy the encrypted password
 7. Select **Close**
 8. Paste the encrypted password to the desired location
-
-## FAQs
-
-**Q: How many steps does the Encrypting Passwords procedure involve?**
-
-The Encrypting Passwords procedure involves 8 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

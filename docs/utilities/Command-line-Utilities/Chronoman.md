@@ -28,8 +28,6 @@ OpCon user-defined properties can be updated with calculated dates using an exec
 
 Chronoman.exe is installed in the <Target Directory\>\\OpConxps\\MSLSAM\\ directory. Chronoman should be scheduled using a Windows OpCon job. Any jobs requiring the property value should be dependent on the associated Chronoman job. For information on setting up job dependencies, refer to [Adding Job Dependencies](../../Files/UI/Enterprise-Manager/Adding-Job-Dependencies.md).
 
-## Configuration Options
-
 ## Configuration
 
 To configure Chronoman, update the Chronoman configuration file (Chronoman.ini) and set up the DSN information.
@@ -310,7 +308,7 @@ d,1
 :::tip Example
 Set the property to the first working day of the month in the format of a seven-character Julian date.
 
-For this example, a user-defined System property was created in the Enterprise Manager. The property was given a Name of $SCHEDULE DATE JUL and a value of YYYYj.
+For this example, a user-defined System property was created in Enterprise Manager. The property was given a Name of $SCHEDULE DATE JUL and a value of YYYYj.
 
 - The property can be passed to a command file from the OpCon command line
 - This property cannot be used in the command file because only the SAM can resolve system

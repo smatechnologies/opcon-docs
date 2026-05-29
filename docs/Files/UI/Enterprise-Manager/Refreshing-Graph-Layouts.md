@@ -31,14 +31,7 @@ To perform this procedure, complete the following steps:
 3. Right-click anywhere in the **Map** view
 4. Select **Re-Layout Graph**
 
-## FAQs
-
-**Q: How many steps does the Refreshing Graph Layouts procedure involve?**
-
-The Refreshing Graph Layouts procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

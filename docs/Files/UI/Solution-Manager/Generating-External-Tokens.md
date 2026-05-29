@@ -39,16 +39,6 @@ To generate external tokens, complete the following steps:
 
 5. Select **Generate**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Generating External Tokens procedure involve?**
-
-The Generating External Tokens procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.

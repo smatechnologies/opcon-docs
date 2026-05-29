@@ -1,6 +1,6 @@
 ---
 title: Adding Jobs to Schedule Layouts
-description: "Use this procedure to add Jobs to Schedule Layouts in the Enterprise Manager."
+description: "Use this procedure to add Jobs to Schedule Layouts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Jobs to Schedule Layouts in the Enterprise Manager.
+Use this procedure to add Jobs to Schedule Layouts in Enterprise Manager.
 
 To add a job to the schedule layout:
 
@@ -129,7 +129,6 @@ When selecting the dependency link line, the line thickens and becomes bold.
 
 4. Select **Yes** to confirm or **No** to cancel
 5. Select **Close ☒** (to the right of the **Workflow Designer** tab) to close the **Workflow Designer** screen
-
 
 ## FAQs
 

@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Report Management enables administrators to view, add, delete, and edit report specifications in the database. Reports are created using BIRT Reports and viewed through the Enterprise Manager. You can create customized reports with the BIRT report writer tools and import them using the Report Management utility.
+Report Management enables administrators to view, add, delete, and edit report specifications in the database. Reports are created using BIRT Reports and viewed through Enterprise Manager. You can create customized reports with the BIRT report writer tools and import them using the Report Management utility.
 
 ## Opening Report Management
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Machine Groups
-description: "Use this procedure to add Machine Groups in the Enterprise Manager."
+description: "Use this procedure to add Machine Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Machine Groups in the Enterprise Manager.
+Use this procedure to add Machine Groups in Enterprise Manager.
 
 To add a machine group, complete the following steps:
 

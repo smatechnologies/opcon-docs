@@ -1,6 +1,6 @@
 ---
 title: Running Reports
-description: "Use this procedure to run Reports in the Enterprise Manager."
+description: "Use this procedure to run Reports in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to run Reports in the Enterprise Manager.
+Use this procedure to run Reports in Enterprise Manager.
 
 To run a report, complete the following steps:
 
@@ -34,14 +34,7 @@ To run a report, complete the following steps:
 8. *(Optional)* Select **Refresh** to refresh the data
 9. *(Optional)* Select **Run report** to run another report
 
-## FAQs
-
-**Q: How many steps does the Running Reports procedure involve?**
-
-The Running Reports procedure involves 9 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

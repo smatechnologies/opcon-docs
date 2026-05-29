@@ -1,6 +1,6 @@
 ---
 title: Editing Profiles
-description: "Use this procedure to edit Profiles in the Enterprise Manager."
+description: "Use this procedure to edit Profiles in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Profiles in the Enterprise Manager.
+Use this procedure to edit Profiles in Enterprise Manager.
 
 To edit a profile, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select on **Connection Profiles**. The **Connection Profiles** settings display to the right

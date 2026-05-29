@@ -33,12 +33,6 @@ To merge schedules, complete the following steps:
 5. Select **OK** to save or **Cancel** to discard
 6. Select **Close ☒** to close the **Schedule Master** screen
 
-## FAQs
-
-**Q: How many steps does the Merging Schedules procedure involve?**
-
-The Merging Schedules procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

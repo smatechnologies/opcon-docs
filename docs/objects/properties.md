@@ -224,10 +224,6 @@ A User-defined Property is a variable with any name and any character value, res
 
 For more information, refer to [Using Properties for Automation](./using-properties.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What are the three types of properties in OpCon?**

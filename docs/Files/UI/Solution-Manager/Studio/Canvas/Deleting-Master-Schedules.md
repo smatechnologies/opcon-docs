@@ -38,7 +38,6 @@ Select a schedule or schedules and select **Delete**. A confirmation dialog is d
 
 Select **Yes** to delete the schedule(s) or **No** to cancel.
 
-
 ## FAQs
 
 **Q: Can a master schedules record be recovered after deletion?**

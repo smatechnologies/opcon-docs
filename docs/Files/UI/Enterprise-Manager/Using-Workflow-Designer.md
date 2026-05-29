@@ -57,10 +57,6 @@ Related Topics
 - [Adding Thresholds to Layouts](Adding-Thresholds-to-Layouts.md)
 - [Adding Resources to Layouts](Adding-Resources-to-Layouts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Workflow Designer?**

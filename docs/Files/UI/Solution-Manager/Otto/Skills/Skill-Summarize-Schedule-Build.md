@@ -48,10 +48,6 @@ The **Summarize Schedule Build** skill displays a summary of the schedule build 
 | Schedule Name | The name of the daily schedule | — | must be valid and exist in the system. 2. The date must be the date on which the schedul |
 ## FAQs
 
-**Q: How many steps does the Summarize Schedule Build procedure involve?**
-
-The Summarize Schedule Build procedure involves 2 steps. Complete all steps in order and save your changes.
-
 **Q: What does Summarize Schedule Build cover?**
 
 This page covers Skill Details, Example.

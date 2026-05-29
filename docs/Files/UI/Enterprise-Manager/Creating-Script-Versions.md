@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating Script Versions
-description: "Use this procedure to create Script Versions in the Enterprise Manager."
+description: "Use this procedure to create Script Versions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to create Script Versions in the Enterprise Manager.
+Use this procedure to create Script Versions in Enterprise Manager.
 
 To create a new script version, complete the following steps:
 
@@ -37,14 +37,7 @@ To create a new script version, complete the following steps:
 9.  Select **Close ☒** (to the right of the **Script Repository** tab) to close the **Script Repository** screen
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating Script Versions procedure involve?**
-
-The Creating Script Versions procedure involves 9 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
 

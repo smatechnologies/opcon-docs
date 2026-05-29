@@ -35,16 +35,6 @@ To find a tag, complete the following steps:
 7.  Select **OK**
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Finding Tags procedure involve?**
-
-The Finding Tags procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

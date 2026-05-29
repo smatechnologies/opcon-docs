@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout. Understanding the layout — menus, navigation panel, editor area, and information bar — is essential for working efficiently in Enterprise Manager.
 
-## When would you use this section?
-
 - You are using Enterprise Manager for the first time
 - You need to find a specific editor or view within the application
 - You want to set up keyboard shortcuts or learn the available hotkeys
@@ -29,7 +27,7 @@ Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout.
 
 | Page | Description |
 |------|-------------|
-| EM UI Layout | Overview of the Enterprise Manager interface panels and regions |
+| EM UI Layout | Overview of Enterprise Manager interface panels and regions |
 | Menus | The menu bar items and what each menu contains |
 | Navigation Panel | How to use the left-side navigation tree to open editors |
 | Information Bar | The status bar at the bottom of the EM window |
@@ -48,6 +46,6 @@ Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout.
 
 System administrators, automation engineers, and operations staff manage Enterprise Manager, including configuring settings, managing user access, and monitoring processes.
 
-**Q: Where should I start in the Enterprise Manager section?**
+**Q: Where should I start in Enterprise Manager section?**
 
 Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.

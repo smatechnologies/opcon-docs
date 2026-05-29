@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Machine Information
-description: "Use this procedure to view Machine Information in the Enterprise Manager."
+description: "Use this procedure to view Machine Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to view Machine Information in the Enterprise Manager.
+Use this procedure to view Machine Information in Enterprise Manager.
 
 To perform this procedure:
 
@@ -46,7 +46,6 @@ b.  Select **OK** to close the **Machine Information** dialog.
 The Machine Information view displays the current state and details for the selected item. Use this view to monitor status and take action as needed.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

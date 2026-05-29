@@ -68,12 +68,10 @@ To install the Environment, complete the following steps:
 
     ![Select a Wizard](../Resources/Images/Reports/Custom-Reports---Select-a-Wizard.png "Select a Wizard")
 
-
 14. Select **Next**
 
 15. Enter **OpCon_Reports** in the **Project name** field. Leave **Use
     default location** selected.
-
 
 16. Select **Finish**
 
@@ -98,7 +96,7 @@ To install the SMA Reports, complete the following steps:
 2. Expand the **General** folder
 3. Select **File System**
 4. Select **Next**
-5. Browse to the *reports sub-directory* under the Enterprise Manager
+5. Browse to the *reports sub-directory* under Enterprise Manager
     directory.
 6. Select the **reports** folder to include all of the sub-directories
 7. Select **OK**
@@ -128,7 +126,6 @@ To create a New Report, complete the following steps:
     Resource Explorer
 
     ![Resource     Explorer](../Resources/Images/Reports/Custom-Reports---Resource-Explorer.png "Resource Explorer")
-
 
 7. Right-click on **opconxps** and add it to the report
 
@@ -197,7 +194,7 @@ jdbc:mysql://<host>:<port>/<database>
 
 After editing the report, copy the report from the OpConXPS_Reports
 folder, e.g., C:\\BIRT\\projects\\OpCon_Reports\\OpConXPS_Reports, to
-the reports sub-directory under the Enterprise Manager directory, e.g.,
+the reports sub-directory under Enterprise Manager directory, e.g.,
 C:\\Program Files\\OpConxps\\EnterpriseManager
 x64\\reports\\OpConXPS_Reports.
 
@@ -207,7 +204,7 @@ To schedule the New Reports, complete the following steps:
 
 1. Add the *report(s)* to the path: **<OpCon Install
     Folder\>\\SAM\\BIRT\\ReportEngine\\OpConXPS_Reports**.
-2. Create or use an existing **Schedule** in the Enterprise Manager
+2. Create or use an existing **Schedule** in Enterprise Manager
 3. Create a **Windows** job with the *report name* as the *job name*
 4. Select the Windows **Primary Machine**
 5. Select **Run Program** in the **Job Action** menu
@@ -239,11 +236,11 @@ Custom reports are created or edited using the BIRT Report Designer (Eclipse BIR
 
 **Q: Where must the report file reside to run it in OpCon?**
 
-The report (.rptdesign) file must reside on the SAM application server. After editing, copy the report to the reports sub-directory under the Enterprise Manager directory and to the SAM BIRT ReportEngine folder.
+The report (.rptdesign) file must reside on the SAM application server. After editing, copy the report to the reports sub-directory under Enterprise Manager directory and to the SAM BIRT ReportEngine folder.
 
 **Q: How do you schedule a custom report to run automatically?**
 
-Create a Windows job in the Enterprise Manager that calls `BIRTRptGen.exe` with the report name as the `-r` argument. Add the job to a schedule and build it to run on the desired frequency.
+Create a Windows job in Enterprise Manager that calls `BIRTRptGen.exe` with the report name as the `-r` argument. Add the job to a schedule and build it to run on the desired frequency.
 
 ## Glossary
 

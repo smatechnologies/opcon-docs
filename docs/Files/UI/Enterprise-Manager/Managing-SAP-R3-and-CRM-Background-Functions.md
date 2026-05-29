@@ -1,6 +1,6 @@
 ---
 title: Managing SAP R/3 and CRM Background Functions
-description: "Use this procedure to manage SAP R/3 and CRM Background Functions in the Enterprise Manager."
+description: "Use this procedure to manage SAP R/3 and CRM Background Functions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage SAP R/3 and CRM Background Functions in the Enterprise Manager.
+Use this procedure to manage SAP R/3 and CRM Background Functions in Enterprise Manager.
 
 ## SAP Login
 
@@ -230,7 +230,7 @@ Related Topics
 
 **Q: What does managing sap r/3 and crm background functions involve?**
 
-Managing sap r/3 and crm background functions includes SAP Login, SAP Machine. Access sap r/3 and crm background functions through the Enterprise Manager navigation pane.
+Managing sap r/3 and crm background functions includes SAP Login, SAP Machine. Access sap r/3 and crm background functions through Enterprise Manager navigation pane.
 
 **Q: Who can manage sap r/3 and crm background functions in OpCon?**
 

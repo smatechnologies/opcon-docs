@@ -273,10 +273,6 @@ For conceptual information, refer to [SQL Jobs](../../../../../../../job-types/s
 | Parameters (positional) | _(Optional)_ Defines parameter values to pass to the script | — | — |
 ## FAQs
 
-**Q: How many steps does the Viewing, Adding, and Editing SQL Job Details procedure involve?**
-
-The Viewing, Adding, and Editing SQL Job Details procedure involves 9 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing, Adding, and Editing SQL Job Details cover?**
 
 This page covers Viewing SQL Job Details, Adding SQL Job Details, Editing SQL Job Details.

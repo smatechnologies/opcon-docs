@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Every job and schedule in the daily queue has a status reflecting its current execution state. Understanding status values helps you interpret the daily queue and take corrective actions when something fails, stalls, or needs to be held.
 
-## When would you use this section?
-
 - Understand what a specific job or schedule status means
 - Determine which status change commands are available and what they do
 - A job is stuck, failed, or waiting and you need to decide which action to take

@@ -39,12 +39,11 @@ Related Topics
 - [Editing Roles](Editing-Roles.md)
 - [Deleting Roles](Deleting-Roles.md)
 
-
 ## FAQs
 
 **Q: What does managing roles involve?**
 
-Managing roles includes Roles Toolbar. Access roles through the Enterprise Manager navigation pane.
+Managing roles includes Roles Toolbar. Access roles through Enterprise Manager navigation pane.
 
 **Q: Who can manage roles in OpCon?**
 

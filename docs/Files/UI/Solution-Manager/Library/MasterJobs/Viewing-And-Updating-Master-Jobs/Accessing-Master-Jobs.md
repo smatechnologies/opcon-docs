@@ -87,10 +87,6 @@ The menu in the left portion of the page provides quick access to any master job
 | Machine / Machine Group Privilege | Role must have access to the assigned job machine or machines in the machine group | — | must be in the ocadm role or have at least all of the following privileges:  - **Schedul |
 ## FAQs
 
-**Q: How many steps does the Accessing Master Job Definition procedure involve?**
-
-The Accessing Master Job Definition procedure involves 5 steps. Complete all steps in order and save your changes.
-
 **Q: What does Accessing Master Job Definition cover?**
 
 This page covers Required Privileges, Master Job Definition Access, Master Job Definition Properties.

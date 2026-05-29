@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Job Events
-description: "Use this procedure to copy Job Events in the Enterprise Manager."
+description: "Use this procedure to copy Job Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Job Events in the Enterprise Manager.
+Use this procedure to copy Job Events in Enterprise Manager.
 
 To copy a job event, complete the following steps:
 

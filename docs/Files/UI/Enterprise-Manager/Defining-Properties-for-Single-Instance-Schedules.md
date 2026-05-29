@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Defining Properties for Single Instance Schedules
-description: "Use this procedure to define Properties for Single Instance Schedules in the Enterprise Manager."
+description: "Use this procedure to define Properties for Single Instance Schedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to define Properties for Single Instance Schedules in the Enterprise Manager.
+Use this procedure to define Properties for Single Instance Schedules in Enterprise Manager.
 
 To define a property, complete the following steps:
 
@@ -37,10 +37,6 @@ To define a property, complete the following steps:
 9.  Select **Close ☒** to close the **Schedule Master** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining properties for single instance schedules?**

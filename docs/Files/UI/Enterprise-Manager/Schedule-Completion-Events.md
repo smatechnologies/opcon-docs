@@ -27,10 +27,6 @@ The **Events** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
 - [Copy Schedule Completion Events](Copying-Schedule-Completion-Events.md)
 - [Delete Schedule Completion Events](Deleting-Schedule-Completion-Events.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Schedule Completion Events do?**
@@ -39,7 +35,7 @@ The **Events** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
 
 **Q: Where can you find Schedule Completion Events in OpCon?**
 
-Access Schedule Completion Events through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Schedule Completion Events through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

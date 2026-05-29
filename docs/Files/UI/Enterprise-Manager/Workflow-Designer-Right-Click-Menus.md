@@ -72,7 +72,7 @@ title: Workflow Designer Right-click Menus
 
 **Q: Where can you find Workflow Designer Right-click Menus in OpCon?**
 
-Access Workflow Designer Right-click Menus through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Workflow Designer Right-click Menus through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

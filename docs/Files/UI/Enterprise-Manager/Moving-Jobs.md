@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Moving Jobs
-description: "Use this procedure to move Jobs in the Enterprise Manager."
+description: "Use this procedure to move Jobs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to move Jobs in the Enterprise Manager.
+Use this procedure to move Jobs in Enterprise Manager.
 
 To move a job, complete the following steps:
 
@@ -33,12 +33,6 @@ To move a job, complete the following steps:
 5. Select the destination **schedule** in the **Schedule** list
 6. Select **OK** to run the move or **Cancel** to discard
 7. Select **Close ☒** to close the **Job Master** screen
-
-## FAQs
-
-**Q: How many steps does the Moving Jobs procedure involve?**
-
-The Moving Jobs procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

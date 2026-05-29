@@ -95,10 +95,6 @@ To get the information, complete the following steps:
 | Status | The current status of the selected subschedule | — | — |
 ## FAQs
 
-**Q: How many steps does the SubSchedule Information procedure involve?**
-
-The SubSchedule Information procedure involves 8 steps. Complete all steps in order and save your changes.
-
 **Q: What does SubSchedule Information cover?**
 
 This page covers Getting Container Job or subschedule Information.

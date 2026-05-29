@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Schedule Information
-description: "Use this procedure to view Additional Schedule Information in the Enterprise Manager."
+description: "Use this procedure to view Additional Schedule Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Additional Schedule Information in the Enterprise Manager.
+Use this procedure to view Additional Schedule Information in Enterprise Manager.
 
 To view additional information, complete the following steps:
 
@@ -35,12 +35,6 @@ To view additional information, complete the following steps:
 7.  Select the ![View Schedule History icon](../../../Resources/Images/EM/EMviewhist.png "View Schedule History icon") **View Schedule History** button to view execution history for the schedule
 8.  Select **Close**
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Additional Schedule Information procedure involve?**
-
-The Viewing Additional Schedule Information procedure involves 8 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

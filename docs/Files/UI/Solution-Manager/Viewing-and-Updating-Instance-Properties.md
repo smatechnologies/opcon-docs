@@ -85,7 +85,6 @@ Select the **Undo** button to revert any changes.
 
 Select the **Save** button.
 
-
 ## FAQs
 
 **Q: What does Viewing and Updating Instance Properties cover?**

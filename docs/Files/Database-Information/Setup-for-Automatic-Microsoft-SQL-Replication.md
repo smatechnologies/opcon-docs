@@ -303,13 +303,13 @@ The first time the utility is activated, there is a prompt to select a DSN for t
 
 The agents on the Primary and Secondary SAM application servers must have certain configurations in the database for all replication jobs to run successfully. Complete the procedures below to make the required configurations.
 
-#### Log in to the Primary Database from the Enterprise Manager
+#### Log in to the Primary Database from Enterprise Manager
 
 1. Use menu path: **Start \> Programs \> OpConxps \> Enterprise Manager**
 2. Enter a *case-sensitive User Login ID* (e.g., ocadm) in the **Username** text box
 3. Enter the *case-sensitive password* for the user in the **Password** text box
 4. Select the **Profile to the Primary database** in the **Profile** list
-5. Select **Login** to login to the Enterprise Manager
+5. Select **Login** to login to Enterprise Manager
 
 #### Configure the agent Machine Definitions
 
@@ -543,7 +543,7 @@ After meeting all of the [Prerequisites](#Prerequi) and completing the [Configur
 On any machine with an OpCon Enterprise Manager, complete the following
 steps:
 
-1. [Log in to the Primary Database from the Enterprise Manager](#Log_in_to_the_Primary_Database_from_the_Enterprise_Manager)
+1. [Log in to the Primary Database from Enterprise Manager](#Log_in_to_the_Primary_Database_from_the_Enterprise_Manager)
 2. Select **Schedule Build**
 3. Select the **SMAReplicationSetup** schedule in the **Schedule Selection** frame
 4. Accept the default options so that the schedules will build for today
@@ -664,7 +664,7 @@ After meeting all of the [Prerequisites](#Prerequi) and completing the [Configur
 
 On any machine with an OpCon Enterprise Manager, complete the following steps:
 
-1. [Log in to the Primary Database from the Enterprise Manager](#Log_in_to_the_Primary_Database_from_the_Enterprise_Manager)
+1. [Log in to the Primary Database from Enterprise Manager](#Log_in_to_the_Primary_Database_from_the_Enterprise_Manager)
 2. Select **Schedule Build**
 3. Select the **SMAReplicationTearDown** schedule in the **Schedule Selection** frame
 4. Accept the default options so the schedules will build for today
@@ -759,7 +759,7 @@ After meeting all of the [Prerequisites](#Prerequi) and completing the [Configur
 
 On any machine with an OpCon Enterprise Manager, complete the following steps:
 
-1. [Log in to the Primary Database from the Enterprise Manager](#Log_in_to_the_Primary_Database_from_the_Enterprise_Manager)
+1. [Log in to the Primary Database from Enterprise Manager](#Log_in_to_the_Primary_Database_from_the_Enterprise_Manager)
 2. Select **Schedule Build**
 3. Select the **SMAReplicationRecoverToPrimary** schedule in the **Schedule Selection** frame
 4. Accept the default options so the schedules will build for today
@@ -791,10 +791,6 @@ After properly configuring the SMA Service Manager on the primary server, comple
 7. Use menu path: **Start \> Programs \> OpConxps \> Log Monitors \>Log File Name**
 8. View the SMAServMan, SAM, Critical, SMANetCom, and SMANetComTrace logs to verify that the SAM and SMANetCom connected successfully to the database
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -810,10 +806,6 @@ After properly configuring the SMA Service Manager on the primary server, comple
 - If any jobs in the `SMAReplicationRecoverToPrimary` schedule fail, review the relevant log files to determine the failure cause before restarting the failed job.
 
 ## FAQs
-
-**Q: How many steps does the Setup for Automatic Microsoft SQL Replication procedure involve?**
-
-The Setup for Automatic Microsoft SQL Replication procedure involves 262 steps. Complete all steps in order and save your changes.
 
 **Q: What does Setup for Automatic Microsoft SQL Replication cover?**
 

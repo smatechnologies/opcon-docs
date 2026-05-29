@@ -160,7 +160,6 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 
 :::
 
-
 16. Select the **Reset** button to reset parameters to their original states
 17. Select **Finish** to save the job event, or select **Cancel** to discard changes
 18. Select **Close ☒** to close the **Job Daily** screen, then **Close ☒** to close the **Daily Maintenance** screen
@@ -344,7 +343,6 @@ For conceptual information, refer to [Documentation](../../../job-components/doc
 8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
 9. Select **Close ☒** to close the **Daily Maintenance** screen
 :::
-
 
 ## FAQs
 

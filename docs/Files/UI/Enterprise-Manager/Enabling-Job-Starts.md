@@ -29,12 +29,6 @@ To perform this procedure, complete the following steps:
 3. *(Optional)* Right-click the **machine** that requires job starts to be enabled
 4. Select **Enable Job Starts** from the menu
 
-## FAQs
-
-**Q: How many steps does the Enabling Job Starts procedure involve?**
-
-The Enabling Job Starts procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

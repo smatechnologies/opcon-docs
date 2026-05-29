@@ -31,12 +31,6 @@ To perform this procedure, complete the following steps:
 3. *(Optional)* Right-click on the **machine** that requires the number of running jobs to be reset
 4. Select **Re-Synchronize Running Jobs** from the menu
 
-## FAQs
-
-**Q: How many steps does the Re-Synchronizing Running Jobs procedure involve?**
-
-The Re-Synchronizing Running Jobs procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

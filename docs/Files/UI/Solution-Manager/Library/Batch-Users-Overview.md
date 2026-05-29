@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Batch users are operating system credentials that OpCon uses to authenticate job submissions to agents. Each batch user is associated with a specific machine or platform type and holds the username and password the agent uses to run submitted jobs.
 
-## When would you use this section?
-
 - Configuring credentials for a new platform or agent
 - Updating a batch user's password after it changes
 - Granting or revoking a role's access to a specific batch user

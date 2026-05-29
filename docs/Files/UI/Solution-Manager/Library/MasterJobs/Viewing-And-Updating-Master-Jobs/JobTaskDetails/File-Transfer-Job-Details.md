@@ -178,10 +178,6 @@ For conceptual information, refer to [File Transfer Jobs](../../../../../../../j
 | None | Transfer does not use compression | — | — |
 ## FAQs
 
-**Q: How many steps does the Viewing, Adding, and Editing File Transfer Job Details procedure involve?**
-
-The Viewing, Adding, and Editing File Transfer Job Details procedure involves 11 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing, Adding, and Editing File Transfer Job Details cover?**
 
 This page covers Viewing File Transfer Job Details, Adding File Transfer Job Details, Editing File Transfer Job Details.

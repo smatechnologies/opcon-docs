@@ -1,6 +1,6 @@
 ---
 title: Deleting Job Instance Properties
-description: "Use this procedure to delete Job Instance Properties in the Enterprise Manager."
+description: "Use this procedure to delete Job Instance Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Job Instance Properties in the Enterprise Manager.
+Use this procedure to delete Job Instance Properties in Enterprise Manager.
 
 To delete a property, complete the following steps:
 

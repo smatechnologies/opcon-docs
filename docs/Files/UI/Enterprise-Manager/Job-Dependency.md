@@ -28,10 +28,6 @@ The **Job Dependency** tab allows you to define and maintain job dependencies:
 
 For conceptual information, refer to [Job Dependencies](../../../job-components/job-dependencies.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Job Dependency do?**
@@ -40,7 +36,7 @@ The **Job Dependency** tab allows you to define and maintain job dependencies:
 
 **Q: Where can you find Job Dependency in OpCon?**
 
-Access Job Dependency through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Job Dependency through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

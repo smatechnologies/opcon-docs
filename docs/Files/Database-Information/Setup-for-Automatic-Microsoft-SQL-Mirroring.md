@@ -100,7 +100,6 @@ These steps are only required if a Witness Server will be used. If not, skip to 
 
 #### Modify SMA_DBMirrorSetup.cmd
 
-
 1. Right-click **SMA_DBMirrorSetup.cmd** and select **Edit**
 2. Find the section containing the **SMA_SETWITNESS** script
 3. Delete `rem` from the front of the two (2) lines as instructed in the file
@@ -111,7 +110,6 @@ These steps are only required if a Witness Server will be used. If not, skip to 
 7. **Close** the file
 
 #### Modify SMA_DBMirrorRemove.cmd
-
 
 1. Right-click **SMA_DBMirrorRemove.cmd** and select **Edit**
 2. If high-availability has been configured, find the line containing the **SMA_REMOVEWITNESS** script and delete `rem` from the front of that line and the next line
@@ -127,7 +125,6 @@ If using Manual Failover and SMAServMan should be stopped before failover and st
 
 #### Modify SMA_ManualFailoverToMirror.cmd
 
-
 1. Right-click **SMA_ManualFailoverToMirror.cmd** and select **Edit**
 2. Find the line containing **SC \\\\%PrincipalServerName% stop SMA_ServMan** and delete `rem` from the front of the stop command
 3. Find the line containing **SC \\\\%MirrorServerName% start SMA_ServMan** and delete `rem` from the front of the start command
@@ -135,7 +132,6 @@ If using Manual Failover and SMAServMan should be stopped before failover and st
 5. **Close** the file
 
 #### Modify SMA_ManualFailbackToPrincipal.cmd
-
 
 1. Right-click **SMA_ManualFailoverToMirror.cmd** and select **Edit**
 2. Find the line containing **SC \\\\%MirrorServerName% stop SMA_ServMan** and delete `rem` from the front of the stop command
@@ -366,10 +362,6 @@ Complete the [Modify SMA_DBMirrorRemove.cmd](#Modify_SMA_DBMirrorRemove.cmd) pro
 **Pausing mirroring for extended periods causes the transaction log to grow and can fill the disk** — When mirroring is paused, the transaction log on the principal cannot be truncated and continues growing; if left paused long enough, the log or disk fills completely — Resume mirroring as soon as possible after a pause and monitor transaction log size; if extended maintenance is needed, plan for log file growth accordingly.
 
 ## FAQs
-
-**Q: How many steps does the Setup for Automatic Microsoft SQL Mirroring procedure involve?**
-
-The Setup for Automatic Microsoft SQL Mirroring procedure involves 101 steps. Complete all steps in order and save your changes.
 
 **Q: What does Setup for Automatic Microsoft SQL Mirroring cover?**
 

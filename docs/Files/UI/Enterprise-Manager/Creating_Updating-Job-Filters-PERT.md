@@ -33,14 +33,7 @@ To create or update a job filter, complete the following steps:
 5.  Select **OK** to save the job filter changes, or select **Cancel** to discard the changes
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating/Updating Job Filters procedure involve?**
-
-The Creating/Updating Job Filters procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching privilege to view or act on objects tagged with a given Access Code.
 

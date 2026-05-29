@@ -30,14 +30,7 @@ To adjust stop/start communication, complete the following steps:
 4. Select **Start Communication** or **Stop Communication**
 5. Select **Close ☒** to close the **Machines** screen
 
-## FAQs
-
-**Q: How many steps does the Adjusting Stop/Start Communication with Machines procedure involve?**
-
-The Adjusting Stop/Start Communication with Machines procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

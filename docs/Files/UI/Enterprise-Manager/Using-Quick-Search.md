@@ -51,10 +51,6 @@ To edit the job details, complete the following steps:
 4. Enter the *changes* and select ![Green circular with white check mark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 5. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Quick Search?**

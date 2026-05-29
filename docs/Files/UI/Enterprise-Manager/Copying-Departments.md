@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Departments
-description: "Use this procedure to copy Departments in the Enterprise Manager."
+description: "Use this procedure to copy Departments in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Departments in the Enterprise Manager.
+Use this procedure to copy Departments in Enterprise Manager.
 
 To copy a department, complete the following steps:
 
@@ -44,7 +44,6 @@ Copying departments is useful when you want to reuse an existing configuration a
 Yes. The copy must be saved with a new unique name to distinguish it from the original departments record.
 
 ## Glossary
-
 
 **Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. Used with function privileges to restrict which users can view or manage specific jobs.
 

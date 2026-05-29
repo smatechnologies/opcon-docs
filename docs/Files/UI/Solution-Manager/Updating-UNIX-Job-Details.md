@@ -351,12 +351,7 @@ Select the **Undo** button if you wish to undo your changes for any reason.
 
 Select the **Save** button.
 
-
 ## FAQs
-
-**Q: How many steps does the Updating UNIX Job Details procedure involve?**
-
-The Updating UNIX Job Details procedure involves 18 steps. Complete all steps in order and save your changes.
 
 **Q: What does Updating UNIX Job Details cover?**
 

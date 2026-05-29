@@ -47,10 +47,6 @@ Related Topics
 - [Group Definitions](Group-Definitions.md)
 - [Notification Definitions](Notification-Definitions.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Notification Manager?**

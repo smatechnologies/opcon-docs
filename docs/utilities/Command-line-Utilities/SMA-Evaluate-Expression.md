@@ -172,7 +172,7 @@ If "Source1" is 85 and "Source2" is 21, SMAEvalExp.exe returns exit code 0 and s
 
 ## Logging
 
-SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows LSAM to capture job output to use the View Job Output feature from the Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List#viewing-job-output) for details.
+SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows LSAM to capture job output to use the View Job Output feature from Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List#viewing-job-output) for details.
 
 ## Exit Codes
 

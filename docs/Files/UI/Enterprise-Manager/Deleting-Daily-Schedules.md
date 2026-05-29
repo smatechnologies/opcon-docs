@@ -1,6 +1,6 @@
 ---
 title: Deleting Daily Schedules
-description: "To delete Daily Schedules in the Enterprise Manager, complete the following steps: 1."
+description: "To delete Daily Schedules in Enterprise Manager, complete the following steps: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-To delete Daily Schedules in the Enterprise Manager, complete the following steps:
+To delete Daily Schedules in Enterprise Manager, complete the following steps:
 
 1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule

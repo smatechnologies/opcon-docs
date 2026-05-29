@@ -18,8 +18,6 @@ doc_type: conceptual
 
 OpCon uses role-based access control (RBAC) to manage what each user can see and do. User security configuration includes authentication settings, role and privilege assignments, departments, access codes, and audit log access.
 
-## When would you use this section?
-
 - Creating or modifying user accounts
 - Assigning or changing role memberships and privileges
 - Configuring SSO or reviewing authentication settings

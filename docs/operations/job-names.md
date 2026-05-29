@@ -79,10 +79,6 @@ A machine group named WindowsMachines contains Saturn, Neptune, and Mars. When M
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How does OpCon name multi-instance jobs without Job Instance properties?**

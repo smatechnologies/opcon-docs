@@ -39,12 +39,11 @@ To modify a server option parameter, complete the following steps:
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Server Options** toolbar
 8. Select **Close ☒** to close the **Server Options** screen
 
-
 ## FAQs
 
 **Q: What does managing server options involve?**
 
-Managing server options includes Modifying Server Option Parameter(s). Access server options through the Enterprise Manager navigation pane.
+Managing server options includes Modifying Server Option Parameter(s). Access server options through Enterprise Manager navigation pane.
 
 **Q: Who can manage server options in OpCon?**
 

@@ -277,10 +277,6 @@ On the Secondary SAM application server:
 | %3 | The sa password for the SQL Server hosting the Subscribing OpCon database | sufficient | — |
 ## FAQs
 
-**Q: How many steps does the Manual Setup for Microsoft SQL Replication procedure involve?**
-
-The Manual Setup for Microsoft SQL Replication procedure involves 86 steps. Complete all steps in order and save your changes.
-
 **Q: What does Manual Setup for Microsoft SQL Replication cover?**
 
 This page covers Requirements, Publishing and Subscribing Servers, Configuring the Subscribing Server for Failover.

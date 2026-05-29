@@ -44,10 +44,6 @@ This report provides filters for schedule name and job name. Open the filters pa
 
 Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Cross Reference Schedules and Jobs Report do?**

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Resetting User Passwords
-description: "Use this procedure to reset User Passwords in the Enterprise Manager."
+description: "Use this procedure to reset User Passwords in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to reset User Passwords in the Enterprise Manager.
+Use this procedure to reset User Passwords in Enterprise Manager.
 
 To reset a user password, complete the following steps:
 
@@ -31,14 +31,7 @@ To reset a user password, complete the following steps:
 3. Select the **Reset User Password** button
 4. Select **Close ☒** (to the right of the **User Accounts** tab) to close the **User Accounts** screen
 
-## FAQs
-
-**Q: How many steps does the Resetting User Passwords procedure involve?**
-
-The Resetting User Passwords procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

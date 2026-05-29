@@ -47,12 +47,11 @@ Related Topics
 - [Changing Case of Machine Names](Changing-Case-of-Machine-Names.md)
 - [Deleting Machines](Deleting-Machines.md)
 
-
 ## FAQs
 
 **Q: What does managing machines involve?**
 
-Managing machines includes Machines Toolbar. Access machines through the Enterprise Manager navigation pane.
+Managing machines includes Machines Toolbar. Access machines through Enterprise Manager navigation pane.
 
 **Q: Who can manage machines in OpCon?**
 

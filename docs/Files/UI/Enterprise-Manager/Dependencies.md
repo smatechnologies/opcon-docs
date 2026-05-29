@@ -28,10 +28,6 @@ The **Dependencies** tab in the **[Job Master](Using-Job-Master.md)** editor has
 -   [Threshold/Resource Dependency](Threshold-and-Resource-Dependency.md)
 -   [Expression Dependency](Expression-Dependency.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Dependencies do?**
@@ -40,7 +36,7 @@ viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Dependencies in OpCon?**
 
-Access Dependencies through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Dependencies through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

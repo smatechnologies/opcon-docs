@@ -43,12 +43,11 @@ Related Topics
 
 :::
 
-
 ## FAQs
 
 **Q: What does managing script types involve?**
 
-Managing script types includes Script Types Toolbar, Right-click Menu. Access script types through the Enterprise Manager navigation pane.
+Managing script types includes Script Types Toolbar, Right-click Menu. Access script types through Enterprise Manager navigation pane.
 
 **Q: Who can manage script types in OpCon?**
 

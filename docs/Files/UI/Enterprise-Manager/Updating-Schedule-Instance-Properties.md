@@ -1,6 +1,6 @@
 ---
 title: Updating Schedule Instance Properties
-description: "Use this procedure to update Schedule Instance Properties in the Enterprise Manager."
+description: "Use this procedure to update Schedule Instance Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to update Schedule Instance Properties in the Enterprise Manager.
+Use this procedure to update Schedule Instance Properties in Enterprise Manager.
 
 To update a property, complete the following steps:
 
@@ -33,12 +33,6 @@ To update a property, complete the following steps:
 7. Repeat Steps 4 - 6 to edit additional properties in the **Instances** table
 8. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 9. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
-
-## FAQs
-
-**Q: How many steps does the Updating Schedule Instance Properties procedure involve?**
-
-The Updating Schedule Instance Properties procedure involves 9 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

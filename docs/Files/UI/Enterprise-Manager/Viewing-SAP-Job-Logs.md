@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing SAP Job Logs
-description: "Use this procedure to view SAP Job Logs in the Enterprise Manager."
+description: "Use this procedure to view SAP Job Logs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view SAP Job Logs in the Enterprise Manager.
+Use this procedure to view SAP Job Logs in Enterprise Manager.
 
 To view the logs, complete the following steps:
 
@@ -37,12 +37,6 @@ To view the logs, complete the following steps:
 9.  Select the **SAP job** in the list
 10. Select **Job Log**
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing SAP Job Logs procedure involve?**
-
-The Viewing SAP Job Logs procedure involves 10 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

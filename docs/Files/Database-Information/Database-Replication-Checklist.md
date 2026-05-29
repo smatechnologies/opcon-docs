@@ -58,10 +58,6 @@ Before configuring replication in [Setup for Automatic Microsoft SQL Replication
 |DistributorKey||
 |SubscriptionType||
   
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Database Replication Checklist cover?**

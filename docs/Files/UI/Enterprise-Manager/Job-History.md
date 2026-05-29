@@ -51,15 +51,7 @@ To view job history, complete the following steps:
 13. To delete a note, select the note row, select the **Remove** button, then select **Yes** to confirm
 14. Select the **OK** button to close the **Job History** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Job History procedure involve?**
-
-The Job History procedure involves 14 steps. Complete all steps in order and save your changes.
 
 **Q: What does Job History cover?**
 

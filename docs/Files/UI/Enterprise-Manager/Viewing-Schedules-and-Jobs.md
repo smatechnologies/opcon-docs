@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Schedules and Jobs using Frequency Names
-description: "Use this procedure to view Schedules and Jobs using Frequency Names in the Enterprise Manager."
+description: "Use this procedure to view Schedules and Jobs using Frequency Names in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Schedules and Jobs using Frequency Names in the Enterprise Manager.
+Use this procedure to view Schedules and Jobs using Frequency Names in Enterprise Manager.
 
 To view schedules and jobs using frequency names, complete the following steps:
 
@@ -31,12 +31,6 @@ To view schedules and jobs using frequency names, complete the following steps:
 3.  View the schedules/jobs using the selected frequency
 4.  Select **Close ☒** to close the **Frequency Manager** screen
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Schedules and Jobs using Frequency Names procedure involve?**
-
-The Viewing Schedules and Jobs using Frequency Names procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

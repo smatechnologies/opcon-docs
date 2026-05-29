@@ -79,10 +79,6 @@ Beginning with release 20.0, web documentation is now available on
 that provide web documentation will be available, allowing you to read
 about releases before downloading and installing them.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the What's New section cover?**

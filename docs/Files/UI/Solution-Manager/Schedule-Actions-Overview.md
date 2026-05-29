@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Schedule actions let you change schedule status, initiate builds, check integrity, edit running schedules, and delete schedules from the daily queue.
 
-## When would you use this section?
-
 - Place a schedule On Hold, Released, or Cancelled
 - Build a new schedule instance for today or a future date
 - Run a schedule check to identify missing job dependencies

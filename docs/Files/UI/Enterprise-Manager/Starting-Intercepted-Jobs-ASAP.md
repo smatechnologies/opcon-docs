@@ -35,12 +35,6 @@ To start an intercepted job, complete the following steps:
 
  
 
-## FAQs
-
-**Q: How many steps does the Starting Intercepted Jobs ASAP procedure involve?**
-
-The Starting Intercepted Jobs ASAP procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

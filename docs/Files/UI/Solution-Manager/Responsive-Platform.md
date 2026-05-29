@@ -29,10 +29,6 @@ The following images show how the application appears on a smartphone.
 ![Mobile Display Submit Service Request Screen](../../../Resources/Images/SM/Mobile-Tablet_3.png "Mobile Display Submit Service Request Screen")
 ![Mobile Display Self Service Screen](../../../Resources/Images/SM/Mobile-Tablet_4.png "Mobile Display Self Service Screen")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Responsive Platform do?**

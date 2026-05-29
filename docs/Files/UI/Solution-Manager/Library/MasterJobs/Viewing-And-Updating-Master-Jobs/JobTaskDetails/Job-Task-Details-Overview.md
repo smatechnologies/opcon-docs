@@ -19,8 +19,6 @@ doc_type: reference
 
 Job Task Details contain the platform-specific settings that control how a job runs on its target agent — the command, script, parameters, user credentials, and platform-specific options. Each job type has a unique Task Details panel.
 
-## When would you use this section?
-
 - Set up a job for a specific platform and need to know which fields are required
 - Update a job's command line, script reference, or execution parameters
 - Troubleshoot a job failure by reviewing its task configuration

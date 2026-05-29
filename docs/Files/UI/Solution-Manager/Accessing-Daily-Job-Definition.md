@@ -122,10 +122,6 @@ The menu in the left portion of the page provides quick access to any panel. The
 | Access Code Privilege | User must be in a role with access to the assigned job access code | — | must be in a role with access to the assigned job access code.  To edit the daily job de |
 ## FAQs
 
-**Q: How many steps does the Accessing Daily Job Definition procedure involve?**
-
-The Accessing Daily Job Definition procedure involves 9 steps. Complete all steps in order and save your changes.
-
 **Q: What does Accessing Daily Job Definition cover?**
 
 This page covers Required Privileges, Daily Job Definition Access, Daily Job Definition Properties.

@@ -34,16 +34,6 @@ To enter notification definition information, complete the following steps:
 8. Enter the notification information
 9. Select **Save**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Entering Notification Definition Information procedure involve?**
-
-The Entering Notification Definition Information procedure involves 9 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.

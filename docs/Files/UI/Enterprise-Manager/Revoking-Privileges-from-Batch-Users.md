@@ -34,12 +34,6 @@ To revoke privileges, complete the following steps:
 6. Select the **left arrow** to move the batch user(s) to the **Revoked** list box
 7. Select **Close ☒** (to the right of the **Batch User Privileges** tab) to close the **Batch User Privileges** screen
 
-## FAQs
-
-**Q: How many steps does the Revoking Privileges from Batch Users procedure involve?**
-
-The Revoking Privileges from Batch Users procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.

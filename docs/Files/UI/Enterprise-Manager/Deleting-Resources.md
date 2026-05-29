@@ -1,6 +1,6 @@
 ---
 title: Deleting Resources
-description: "Use this procedure to delete Resources in the Enterprise Manager."
+description: "Use this procedure to delete Resources in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Resources in the Enterprise Manager.
+Use this procedure to delete Resources in Enterprise Manager.
 
 To delete a resource, complete the following procedures in order.
 
@@ -67,7 +67,6 @@ In the **Daily Maintenance** screen:
 
 4. Select **Yes** to confirm or **No** to cancel. Repeat Steps 2–4 for all jobs with the resource to delete
 5. Select **Close ☒** to close the **Resources** screen
-
 
 ## FAQs
 

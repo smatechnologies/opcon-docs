@@ -49,10 +49,6 @@ The **Restart Failed Jobs** skill restarts all failed jobs in a specified schedu
 | Schedule Name | The name of the schedule on which to restart all failed jobs | — | — |
 ## FAQs
 
-**Q: How many steps does the Restart Failed Jobs procedure involve?**
-
-The Restart Failed Jobs procedure involves 1 step. Complete all steps in order and save your changes.
-
 **Q: What does Restart Failed Jobs cover?**
 
 This page covers Skill Details, Example.

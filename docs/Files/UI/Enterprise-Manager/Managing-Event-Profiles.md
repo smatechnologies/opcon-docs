@@ -66,7 +66,7 @@ To edit an event profile, complete the following steps:
 
 **Q: What does managing event profiles involve?**
 
-Managing event profiles includes adding, editing, and deleting records. Access event profiles through the Enterprise Manager navigation pane.
+Managing event profiles includes adding, editing, and deleting records. Access event profiles through Enterprise Manager navigation pane.
 
 **Q: Who can manage event profiles in OpCon?**
 

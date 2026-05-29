@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Renaming Departments
-description: "Use this procedure to rename Departments in the Enterprise Manager."
+description: "Use this procedure to rename Departments in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to rename Departments in the Enterprise Manager.
+Use this procedure to rename Departments in Enterprise Manager.
 
 To rename a department, complete the following steps:
 
@@ -31,12 +31,6 @@ To rename a department, complete the following steps:
 3. Enter the new *department name* in the **Name** text box
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Departments** toolbar
 5. Select **Close ☒** (to the right of the **Departments** tab) to close the **Departments** screen
-
-## FAQs
-
-**Q: How many steps does the Renaming Departments procedure involve?**
-
-The Renaming Departments procedure involves 5 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

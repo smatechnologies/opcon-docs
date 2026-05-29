@@ -42,12 +42,11 @@ To revoke a privilege, complete the following steps:
 4. Select the **left arrow** to move functions to the **Revoked** list box
 5. Select **Close ☒** to close the **Function Privileges** screen
 
-
 ## FAQs
 
 **Q: What does managing function privileges involve?**
 
-Managing function privileges includes Granting Function Privileges, Revoking Function Privileges. Access function privileges through the Enterprise Manager navigation pane.
+Managing function privileges includes Granting Function Privileges, Revoking Function Privileges. Access function privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage function privileges in OpCon?**
 

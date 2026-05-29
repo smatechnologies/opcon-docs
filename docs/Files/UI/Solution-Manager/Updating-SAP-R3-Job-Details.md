@@ -419,10 +419,6 @@ Select **Save** to apply changes to the daily job, or **Undo** to revert them.
 
 ## FAQs
 
-**Q: How many steps does the Updating SAP R3 Job Details procedure involve?**
-
-The Updating SAP R3 Job Details procedure involves 10 steps. Complete all steps in order and save your changes.
-
 **Q: What does Updating SAP R3 Job Details cover?**
 
 This page covers Updating SAP R3 Job Task Details.

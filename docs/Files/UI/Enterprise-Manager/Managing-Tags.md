@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Tags
-description: "Use this procedure to manage Tags in the Enterprise Manager."
+description: "Use this procedure to manage Tags in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage Tags in the Enterprise Manager.
+Use this procedure to manage Tags in Enterprise Manager.
 
 ## Finding Tags
 
@@ -103,12 +103,11 @@ To delete a job association, complete the following steps:
 6. Select **Yes** to confirm
 :::
 
-
 ## FAQs
 
 **Q: What does managing tags involve?**
 
-Managing tags includes Finding Tags, Adding Tags, Renaming Tags, Deleting Tags. Access tags through the Enterprise Manager navigation pane.
+Managing tags includes Finding Tags, Adding Tags, Renaming Tags, Deleting Tags. Access tags through Enterprise Manager navigation pane.
 
 **Q: Who can manage tags in OpCon?**
 

@@ -41,10 +41,6 @@ OpCon includes the following command-line utilities:
 - [SMASetRMFileName](SMASetRMFileName.md)
 - [Synch SAP](Synch-SAP.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What types of tasks can command-line utilities perform?**

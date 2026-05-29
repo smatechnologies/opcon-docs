@@ -45,12 +45,7 @@ To perform this procedure, complete the following steps:
    ![Frequency Inactive List](../../../../../../Resources/Images/SM/Library/MasterJobs/inactive-frequencies.png)
 7. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Frequencies procedure involve?**
-
-The Viewing and Updating Frequencies procedure involves 7 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Frequencies cover?**
 

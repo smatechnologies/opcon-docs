@@ -32,16 +32,6 @@ To display the schedule layout, complete the following steps:
 4. *(Optional)* Select **Marquee** in the **Tools** frame, then select and drag to select a group of items and drag them to a new location in the display area
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Displaying Schedule Layouts procedure involve?**
-
-The Displaying Schedule Layouts procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.

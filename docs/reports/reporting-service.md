@@ -119,10 +119,6 @@ The service writes logs to:
 - Ensure the service runs under the same user account that encrypted the passwords (DPAPI is user-specific)
 - For Windows Authentication, verify the service account has database access
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the Reporting Service do?**

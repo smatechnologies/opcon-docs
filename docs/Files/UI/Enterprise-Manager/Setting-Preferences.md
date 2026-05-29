@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences
-description: "Use Preferences to customize the Enterprise Manager's look and feel."
+description: "Use Preferences to customize Enterprise Manager's look and feel."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use Preferences to customize the Enterprise Manager's look and feel. The EM saves preferences to the `.enterpriseManager` folder in your home directory and applies changes immediately.
+Use Preferences to customize Enterprise Manager's look and feel. The EM saves preferences to the `.enterpriseManager` folder in your home directory and applies changes immediately.
 
 :::info
 - Windows XP: `C:\Documents and Settings\username\.enterpriseManager`
@@ -43,10 +43,6 @@ Use Preferences to customize the Enterprise Manager's look and feel. The EM save
 - [Setting Preferences for Workflow Designer and PERT](Preferences-for-Workflow-Designer.md)
 - [Setting Preferences for Schedule Extract](Preferences-for-Schedule-Extract.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does setting preferences configure?**

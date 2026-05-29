@@ -41,16 +41,6 @@ To reset a resource in use, complete the following steps:
 7. Select **OK** to save, or **Cancel** to discard
 8. Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen. For more information, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Resetting Resources in Use procedure involve?**
-
-The Resetting Resources in Use procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.

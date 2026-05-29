@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Tags
-description: "Use this procedure to delete Tags in the Enterprise Manager."
+description: "Use this procedure to delete Tags in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Tags in the Enterprise Manager.
+Use this procedure to delete Tags in Enterprise Manager.
 
 To delete a tag, complete the following steps:
 

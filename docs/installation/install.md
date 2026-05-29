@@ -65,10 +65,6 @@ The SMA OpCon Database Scripts, SMA OpCon SAM, and SMA OpCon Solution Manager ar
 
 For server configuration, refer to [OpCon Server Configuration](./configuration.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What should be completed before beginning a new OpCon server installation?**

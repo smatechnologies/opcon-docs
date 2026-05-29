@@ -1,6 +1,6 @@
 ---
 title: Checking Daily Schedules
-description: "Use this procedure to check Daily Schedules in the Enterprise Manager."
+description: "Use this procedure to check Daily Schedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to check Daily Schedules in the Enterprise Manager.
+Use this procedure to check Daily Schedules in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
@@ -35,12 +35,6 @@ To perform this procedure, complete the following steps:
 6. Note the *log file name* for later access if required
 7. Select the **OK** button
 8. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
-
-## FAQs
-
-**Q: How many steps does the Checking Daily Schedules procedure involve?**
-
-The Checking Daily Schedules procedure involves 8 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

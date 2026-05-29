@@ -138,10 +138,6 @@ A Prerun tests required preconditions before job execution. If the Prerun termin
 | Destination File or Directory | New filename (e.g., `(UC)MYUSER/SAVED/FILES`) or directory (e.g., `(UC)MYUSER/SAVED/=`) for the copied file. | — | Maximum 256 characters; tokens supported. - **To** (Required) |
 ## FAQs
 
-**Q: How many steps does the Viewing, Adding, and Editing MCP Job Details procedure involve?**
-
-The Viewing, Adding, and Editing MCP Job Details procedure involves 16 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing, Adding, and Editing MCP Job Details cover?**
 
 This page covers Viewing MCP Job Details, Adding MCP Job Details, Editing MCP Job Details.

@@ -37,12 +37,11 @@ Related Topics
 - [Copying Thresholds](Copying-Thresholds.md)
 - [Deleting Thresholds](Deleting-Thresholds.md)
 
-
 ## FAQs
 
 **Q: What does managing thresholds involve?**
 
-Managing thresholds includes Thresholds Toolbar. Access thresholds through the Enterprise Manager navigation pane.
+Managing thresholds includes Thresholds Toolbar. Access thresholds through Enterprise Manager navigation pane.
 
 **Q: Who can manage thresholds in OpCon?**
 

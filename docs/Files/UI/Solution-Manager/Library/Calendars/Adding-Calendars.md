@@ -40,7 +40,6 @@ After completing the required fields, select the **Save** button on the toolbar 
 
 ## Glossary
 
-
 **Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine eligibility. Calendars can mark days to include or exclude from schedule builds.
 
 **OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

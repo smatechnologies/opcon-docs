@@ -74,10 +74,6 @@ right-clicking any **Navigation Editor** tab displays these options:
 | New Editor | Opens a new instance of the currently selected editor | — | — |
 ## FAQs
 
-**Q: How many steps does the Navigation Editors procedure involve?**
-
-The Navigation Editors procedure involves 6 steps. Complete all steps in order and save your changes.
-
 **Q: What does Navigation Editors cover?**
 
 This page covers Opening Navigation Editors, Changing Navigation Editor Tab Order, Arranging Navigation Editors.

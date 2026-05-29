@@ -32,7 +32,6 @@ The Master Job Cross References view displays the current state and details for 
 
 ## Glossary
 
-
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
 **Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Master data is the template from which Daily tables are built.

@@ -35,7 +35,7 @@ Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) arrow to 
 
 **Q: What does managing privileges involve?**
 
-Managing privileges includes adding, editing, and deleting records. Access privileges through the Enterprise Manager navigation pane.
+Managing privileges includes adding, editing, and deleting records. Access privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage privileges in OpCon?**
 

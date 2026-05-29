@@ -340,10 +340,6 @@ Schedule this job during a period when tokens are not being deleted and recreate
 
 ## FAQs
 
-**Q: How many steps does the OpCon Data Maintenance procedure involve?**
-
-The OpCon Data Maintenance procedure involves 16 steps. Complete all steps in order and save your changes.
-
 **Q: What does OpCon Data Maintenance cover?**
 
 This page covers Environment Variables, Supplemental Stored Procedures.

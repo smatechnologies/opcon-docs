@@ -33,12 +33,6 @@ To exclude a machine from a machine group, complete the following steps:
 3. Select a **machine** in the **Assigned Machines** list to move it to **Unassigned Machines**. To move multiple machines, use Shift+select or Ctrl+select to select them, then select the **left arrow**
 4. Select **Close ☒** to close the **Machine Groups** screen
 
-## FAQs
-
-**Q: How many steps does the Excluding Machines from Machine Groups procedure involve?**
-
-The Excluding Machines from Machine Groups procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

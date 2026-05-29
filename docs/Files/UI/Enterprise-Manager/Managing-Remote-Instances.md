@@ -39,12 +39,11 @@ Related Topics
 - [Editing Remote Instances](Editing-Remote-Instances.md)
 - [Deleting Remote Instances](Deleting-Remote-Instances.md)
 
-
 ## FAQs
 
 **Q: What does managing remote instances involve?**
 
-Managing remote instances includes Remote Instances Toolbar. Access remote instances through the Enterprise Manager navigation pane.
+Managing remote instances includes Remote Instances Toolbar. Access remote instances through Enterprise Manager navigation pane.
 
 **Q: Who can manage remote instances in OpCon?**
 

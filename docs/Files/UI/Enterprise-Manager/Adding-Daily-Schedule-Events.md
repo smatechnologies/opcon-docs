@@ -1,6 +1,6 @@
 ---
 title: Adding Daily Schedule Events
-description: "Use this procedure to add Daily Schedule Events in the Enterprise Manager."
+description: "Use this procedure to add Daily Schedule Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Daily Schedule Events in the Enterprise Manager.
+Use this procedure to add Daily Schedule Events in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
@@ -61,9 +61,9 @@ To replace a placeholder with a token, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Daily Schedule Events in the Enterprise Manager?**
+**Q: Where do you access Daily Schedule Events in Enterprise Manager?**
 
-Select **Daily Maintenance** under the **Operation** topic in the Enterprise Manager navigation pane.
+Select **Daily Maintenance** under the **Operation** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new daily schedule events record?**
 

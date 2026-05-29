@@ -1,6 +1,6 @@
 ---
 title: Printing Reports
-description: "Use this procedure to print Reports in the Enterprise Manager."
+description: "Use this procedure to print Reports in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to print Reports in the Enterprise Manager.
+Use this procedure to print Reports in Enterprise Manager.
 
 To print a report, complete the following steps:
 
@@ -39,14 +39,7 @@ To print a report, complete the following steps:
 
    Alternatively, select **Save** to save the file for printing later.
 
-## FAQs
-
-**Q: How many steps does the Printing Reports procedure involve?**
-
-The Printing Reports procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
