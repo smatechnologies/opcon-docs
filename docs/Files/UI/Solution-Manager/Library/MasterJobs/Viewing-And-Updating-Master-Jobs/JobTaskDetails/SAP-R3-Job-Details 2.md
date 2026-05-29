@@ -369,7 +369,7 @@ See [SAP R/3 and CRM Jobs](../../../../../../../job-types/sap.md) in the **Conce
 
 - [SAP R/3 and CRM Jobs](../../../../../../../job-types/sap.md)
 - [Adding a Job](../../Adding-Master-Jobs.md)
-- [Accessing Master Jobs](../../Accessing-Master-Jobs.md)
+- [Accessing Master Jobs](../Accessing-Master-Jobs.md)
 
 ## Glossary
 
