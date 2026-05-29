@@ -20,59 +20,71 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Schedules and Jobs in Solution Manager.
+Use this procedure to delete Schedules and Jobs in Solution Manager. Deleting removes the selected Schedule or Job from the current day's automation. You cannot delete a Schedule that contains a running Job, and you cannot delete a Job that is in the **Running** state.
+
+## Required Privileges
+
+To view Jobs in a Schedule and act on them in Operations, your user must have the **View Jobs in Schedule Operations** privilege.
+
+<!-- GAP: A specific delete-Schedule / delete-Job privilege was not confirmed in the source. The View Jobs in Schedule Operations privilege (FunctionPrivilege.VIEW_JOBS_IN_SCHEDULE_OPERATIONS) gates the Operations Processes view; confirm with an SME whether an additional privilege is required to delete. -->
 
 ## Delete Schedule(s)
 
-To delete Schedule(s), complete the following steps:
+To delete one or more Schedules, complete the following steps:
 
-1. Select one or more dates or schedules from the grid and right-click
-2. On the right-side panel, select the ![Delete Icon](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs-Icon.png "Delete Icon") icon
+1. Select one or more dates or schedules from the grid, then right-click.
+2. On the right-side panel, select the ![Delete Icon](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs-Icon.png "Delete button") **Delete** button.
 
    ![Delete Schedule(s) Right Panel](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs1.png "Delete Schedule(s) Right Panel")
 
-:::note
-This icon is <ins>disabled</ins> if the schedule has a running job.
-:::
+   :::note
+   The **Delete** button is <ins>disabled</ins> if the Schedule has a running Job.
+   :::
 
-3. Select **Yes** to confirm deletion
+3. Select **Yes** to confirm the deletion.
 
    ![Delete Schedule(s) Confirmation Dialog](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs2.png "Delete Schedule(s) Confirmation Dialog")
 
+**Result:** The selected Schedules are removed from the grid.
+
 ## Delete Job(s)
 
-1. Select one or more jobs from the grid and right-click
+To delete one or more Jobs, complete the following steps:
 
-:::note
-The delete icon is <ins>disabled</ins> if the job is in the Running state.
-:::
+1. Select one or more Jobs from the grid, then right-click.
+2. On the right-side panel, select the **Delete** button.
 
-To delete Job(s), complete the following steps:
+   :::note
+   The **Delete** button is <ins>disabled</ins> if the Job is in the **Running** state.
+   :::
 
-2. Repeat steps 2 and 3 above
+3. Select **Yes** to confirm the deletion.
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+**Result:** The selected Jobs are removed from the grid.
+
+## FAQs
+
+**Q: Can a deleted Schedule or Job be recovered?**
+
+No. Deleting a Schedule or Job permanently removes it from the current day's automation. Verify the Schedule or Job is no longer needed before deleting it.
+
+**Q: How many Schedules or Jobs can you delete at once?**
+
+You can select multiple dates, Schedules, or Jobs in the grid before you delete. Select all of the items you want to remove, select the **Delete** button on the right-side panel, then select **Yes** to confirm.
+
+**Q: Why is the Delete button disabled?**
+
+The **Delete** button is disabled when a Schedule contains a running Job or when a Job is in the **Running** state. Wait for the Job to finish, or take the appropriate action on the running Job, then try again.
+
+## Related Topics
 
 - [Performing Schedule Checks](Performing-Schedule-Checks.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
 
-## FAQs
-
-**Q: Can a schedules and jobs record be recovered after deletion?**
-
-No. Deleting a schedules and jobs record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many schedules and jobs records can you delete at once?**
-
-Select the specific schedules and jobs record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
 ## Glossary
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Schedule**: A named container for Jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the Jobs that run within them.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+**Job**: The fundamental unit of work in OpCon. A Job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Solution Manager**: The web-based OpCon interface for building Schedules, monitoring Operations, and managing Jobs.

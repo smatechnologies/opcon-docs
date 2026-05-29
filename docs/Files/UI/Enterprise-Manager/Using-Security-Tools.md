@@ -1,49 +1,55 @@
 ---
 title: Using Security Tools
-description: "The Security tools perform the following functions depending on the current screen."
+description: "Reference for the toolbar buttons available in the Enterprise Manager Security editors."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: reference
 ---
 
 # Using Security Tools
 
-**Theme:** Configure  
+**Theme:** Configure
 **Who Is It For?** System Administrator, Automation Engineer
 
 ## What Is It?
 
-The Security tools perform the following functions depending on the current screen.
+The Security tools are the toolbar buttons available in the Enterprise Manager Security editors, such as the Role, User, and Function Privileges editors. Use these buttons to add, save, copy, and remove security records, review audit history, and control the editor window. The buttons that appear depend on the editor that is currently open.
 
-|||
-|--- |--- |
-||Add  (Ctrl+ N): Adds the appropriate editor information.|
-||Remove(Ctrl+ D): Deletes the appropriate editor information.|
-||Save  (Ctrl+ S): Saves the appropriate editor information.|
-||Cancel  (Ctrl+ R): Cancels the appropriate editor information.|
-||Cross References: Displays cross reference details for the schedule's dependent master jobs.|
-||Copy: Copies the appropriate editor information.|
-||View Audit: Opens the Audit Management dialog to view the specific user audit record.|
-||Minimize: Minimizes the editor and places an icon in the sidebar.|
-||Maximize: Opens the editor to its maximum size. The Maximize button changes to a Restore button when maximized.|
-||Restore: Returns the editor view to its original location and size.|
+## Security tools
+
+The following buttons are available, depending on the current editor:
+
+| Button | Shortcut | Description |
+| --- | --- | --- |
+| **Add** | Ctrl+N | Adds a new record to the editor. |
+| **Remove** | Ctrl+D | Deletes the selected record from the editor. |
+| **Save** | Ctrl+S | Saves the changes in the editor. |
+| **Cancel** | Ctrl+R | Cancels the unsaved changes in the editor. |
+| **Cross References** | — | Displays cross reference details for the schedule's dependent master jobs. |
+| **Copy** | — | Copies the selected record. |
+| **View Audit** | — | Opens the **Audit Management** dialog to view the audit record for the selected user. |
+| **Minimize** | — | Minimizes the editor and places an icon in the sidebar. |
+| **Maximize** | — | Opens the editor to its maximum size. The **Maximize** button changes to a **Restore** button when the editor is maximized. |
+| **Restore** | — | Returns the editor to its original location and size. |
+
+<!-- GAP: Keyboard shortcuts (Ctrl+N, Ctrl+D, Ctrl+S, Ctrl+R) carried over from the prior page; not located in Enterprise Manager source message bundles or command-binding files. Needs SME/source confirmation. -->
 
 ## FAQs
 
-**Q: What can you do with Security Tools?**
+**Q: What can you do with the Security tools?**
 
-Security Tools allows you to manage and configure related settings.
+The Security tools let you manage the records in a Security editor — adding, saving, copying, and removing records — and review the audit history for a selected user.
 
-**Q: Who has access to Security Tools?**
+**Q: Who has access to the Security tools?**
 
-Access to Security Tools is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+Access to the Security editors is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
 
 ## Glossary
 
@@ -57,4 +63,4 @@ Access to Security Tools is controlled by the privileges assigned to your OpCon 
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

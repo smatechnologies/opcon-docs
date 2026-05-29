@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Machine Information
-description: "The Machine Information dialog provides details about the selected machine."
+description: "The Machine Information dialog provides read-only details about a selected machine."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -11,91 +11,65 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: reference
 ---
 
-#  Machine Information
-
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+# Machine Information
 
 ## What Is It?
 
-The **Machine Information** dialog provides details about the selected machine. Access it by selecting **Machine Information** from the right-click menu on the **Table** tab or the **Map** tab of the **Machine Status** view.
+The **Machine Information** dialog provides read-only details about a selected machine, including its communication settings, status, concurrent job limits, time zone, and TLS configuration. Use it to review how a machine is configured and to confirm its current operating state without opening the **Machines** editor.
 
-The dialog contains the following fields:
+To open the dialog, right-click a machine on the **Table** tab or the **Map** tab of the **Machine Status** view and select **Machine Information**.
 
--   **Machine Name**: Name of the selected machine
--   **Protocol**: Communication protocol in use
--   **Status**: Current status of the machine
--   **Last Update**: Time of the last status change
--   **LSAM Type**: OS type of the machine
--   **Running Jobs**: Number of jobs currently running and the configured maximum
--   **Domain Name**: Domain name defined in the machine configuration
--   **Max Concurrent Jobs (Agent)**: Maximum concurrent jobs allowed by the agent
--   **Netcom Name**: Netcom name of the machine
--   **Max Concurrent Jobs (Server)**: Maximum concurrent jobs for the machine, as defined in the database
--   **LSAM Socket Number**: Socket number defined for the machine
--   **IP Address**: IP address of the machine
--   **Supports Kill Job**: Whether the *Kill* option is available
--   **Gateway**: Gateway machine, if defined
--   **Supports File Transfer**: Whether the machine is configured for File Transfer runs
--   **JORS Socket Number**: JORS socket number defined for the machine
--   **Time Zone**: (Optional) User-defined name for the machine's physical time zone
--   **Time Offset from SAM**: Read-only calculated difference between the machine's time and SAM's time. Appears only when Time Zone Name and Time Offset from UTC are configured on both the machine and SAM
--   **TLS**: Whether this machine uses TLS
--   **TLS Certificate S/N**: Identifier for the agent certificate verified by the OpCon server
--   **Machine Groups tab**: Machine group(s) the machine belongs to
--   **Machine Properties tab**: Machine properties for this machine
--   **Documentation tab**: Documentation captured on the **Machines** editor dialog
+The dialog presents machine details in a set of read-only fields, followed by three tabs: **Machine Groups**, **Machine Properties**, and **Documentation**.
 
-## Configuration Options
+## Fields
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Machine Name | Name of the selected machine | — | — |
-| Protocol | Communication protocol in use | — | — |
-| Status | Current status of the machine | — | — |
-| Last Update | Time of the last status change | — | — |
-| agent Type | OS type of the machine | — | — |
-| Running Jobs | Number of jobs currently running and the configured maximum | — | — |
-| Domain Name | Domain name defined in the machine configuration | — | — |
-| Max Concurrent Jobs (Agent) | Maximum concurrent jobs allowed by the agent | — | — |
-| Netcom Name | Netcom name of the machine | — | — |
-| Max Concurrent Jobs (Server) | Maximum concurrent jobs for the machine, as defined in the database | — | — |
-| agent Socket Number | Socket number defined for the machine | — | — |
-| IP Address | IP address of the machine | — | — |
-| Supports Kill Job | Whether the *Kill* option is available | — | — |
-| Gateway | Gateway machine, if defined | — | — |
-| Supports File Transfer | Whether the machine is configured for File Transfer runs | — | — |
-| JORS Socket Number | JORS socket number defined for the machine | — | — |
-| Time Zone | (Optional) User-defined name for the machine's physical time zone | — | — |
-| Time Offset from SAM | Read-only calculated difference between the machine's time and SAM's time. | — | — |
-| TLS Certificate S/N | Identifier for the agent certificate verified by the OpCon server | — | — |
-| Machine Groups tab | Machine group(s) the machine belongs to | — | — |
-| Machine Properties tab | Machine properties for this machine | — | — |
-| Documentation tab | Documentation captured on the **Machines** editor dialog | — | — |
-## FAQs
+| Field | Description |
+|---|---|
+| **Machine Name** | Name of the selected machine. |
+| **Protocol** | Communication protocol in use. |
+| **Status** | Current status of the machine. |
+| **Last Update** | Time of the last status change. |
+| **LSAM Type** | Operating system type of the machine. |
+| **Running Jobs** | Number of jobs currently running, with the configured maximum. |
+| **Domain Name** | Fully qualified domain name defined for the machine. |
+| **Max Concurrent Jobs (Agent)** | Maximum concurrent jobs allowed by the Agent. |
+| **Netcom Name** | Netcom name of the machine. |
+| **Max Concurrent Jobs (Server)** | Maximum concurrent jobs for the machine, as defined in the database. |
+| **LSAM Socket Number** | Socket number defined for the machine. |
+| **IP Address** | IP address of the machine. |
+| **Supports Kill Job** | Whether the machine supports the *Kill* option. Shows **Yes** or **No**. |
+| **Gateway** | Gateway machine, if defined. |
+| **Supports File Transfer** | Whether the machine is configured for File Transfer. Shows **Yes** when a File Transfer port number greater than zero is defined. |
+| **JORS Socket Number** | JORS socket number defined for the machine. |
+| **Time Zone** | Time zone name configured for the machine. Appears only when a time zone name or time offset is stored for the machine, and is shown as `name (+/-offset)` when an offset from UTC is also stored. |
+| **Time Offset from SAM** | Calculated difference between the machine's time offset from UTC and SAM's time offset from UTC. Appears only when the time zone is shown for the machine and SAM's time zone and offset from UTC are stored in the database. |
+| **TLS** | Whether this machine uses TLS for scheduling communication. Shows **Yes** or **No**. |
+| **TLS Certificate S/N** | Serial number of the Agent certificate verified by the OpCon server. |
 
-**Q: Where can you find Machine Information in OpCon?**
+## Tabs
 
-Access Machine Information through the appropriate section in Enterprise Manager or Solution Manager navigation.
+| Tab | Description |
+|---|---|
+| **Machine Groups** | Machine groups the machine belongs to, sorted by name. |
+| **Machine Properties** | Properties available for the machine. |
+| **Documentation** | Documentation captured for the machine on the **Machines** editor dialog. |
 
 ## Glossary
 
-**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
+**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from machines directly within the OpCon graphical interfaces.
 
-**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
+**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and Agents, ensuring that job start and status data is transmitted safely.
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workload automation. SAM monitors schedule and job start times, dependencies, and user commands to determine when jobs run, and processes OpCon events.
 
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as machines in OpCon.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job run requests to machines through SMANetCom, and machines report job completion status back to SAM.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+## Related Topics
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+<!-- GAP: Related Topics links (Machine Status view, Machines editor) not verified against the docs site navigation; needs SME/source confirmation of page paths. -->

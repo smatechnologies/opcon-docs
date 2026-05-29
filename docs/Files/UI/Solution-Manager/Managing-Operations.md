@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Operations
-description: "The !Build Button button on the main Operations page takes you to the Schedule Build page where you can manage building schedules."
+description: "Use the Build button on the Operations Summary page in Solution Manager to open the Schedule Build page and build daily schedules from your master schedules."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,39 +22,65 @@ doc_type: procedural
 
 ## What Is It?
 
-The ![Build Button](../../../Resources/Images/SM/Schedule-Build-Operations-Summary-Build-Button.png "Build Button")
-button on the main **Operations** page takes you to the **Schedule Build** page where you can manage building schedules.
+The **Operations Summary** page is the operational home page in Solution Manager. It shows the current status of your schedules, jobs, and Agents as donut cards, and gives you quick access to work with all schedules, jobs, and Agents.
 
-<!-- ![Build Button](../Resources/Images/SM/Schedule-Build-Operations-Summary-Build-Button.png "Build Button") -->
+From the **Operations Summary** page, the **Build** button opens the **Schedule Build** page, where you build daily schedules from your master schedules for a range of dates. The **Schedule Build** page guides you through three steps: **Selection**, **Instance(s) Definition**, and **Build**.
 
-Operations Summary Page
+![Solution Manager Operations Summary with the Build button](../../../Resources/Images/SM/Schedule-Build-Operations-Summary.png "Solution Manager Operations Summary")
 
-![Solution ManagerOperations Summary Build](../../../Resources/Images/SM/Schedule-Build-Operations-Summary.png "Solution ManagerOperations Summary Build")
+## Required Privileges
 
-There are several pages you can use to build and manage schedules. These subsections describe these options in detail.
+To build daily schedules, your role must include the **Build Daily Schedules** function privilege. Without this privilege, the **Schedule Build** page is not available.
 
-Please check back for more content.
+## Build Daily Schedules
+
+To build daily schedules from the **Operations Summary** page, complete the following steps:
+
+1. On the **Operations Summary** page, select **Build** to open the **Schedule Build** page.
+2. On the **Selection** step, set the **From** and **To** dates for the range of days you want to build.
+3. Select the build state for the new schedules: **On Hold** or **Released**. New schedules are set to **On Hold** by default.
+4. To replace schedules that already exist for the selected dates, turn on **Overwrite Existing Schedules**. This option is off by default.
+5. In the schedule grid, select one or more master schedules to build. You can filter the grid by the **Name**, **Auto-build**, and **Multi Instance** columns. You must select at least one schedule to continue.
+6. Select **Next** to go to the **Instance(s) Definition** step.
+7. On the **Instance(s) Definition** step, review or adjust the instances to build for each selected schedule, then select **Next**.
+8. On the **Build** step, monitor the build progress for each schedule. Solution Manager reports the number of jobs built and shows a status of **Building**, **Failed**, or completed for each request.
+
+**Result:** Solution Manager submits the build request and creates the daily schedules for the selected dates. Built schedules appear in the **Build** step with their progress, and you can open the build log for any request from this step.
+
+<!-- GAP: The Instance(s) Definition step (named instances, machines, instance properties) is not documented in detail here; confirm field-level behavior with SME/source before expanding step 7. -->
+
+## Schedule Build Queue
+
+The **Schedule Build** page toolbar includes a **Queue** button that opens the **Schedule Build Queue** page, where you can review build requests. Use the **Back** button to return to the page you came from.
+
+<!-- GAP: Detailed Schedule Build Queue page behavior (columns, actions, retention) is not confirmed from the reviewed source; needs SME/source to expand. -->
 
 ## FAQs
 
-**Q: What does managing operations involve?**
+**Q: What does the Build button do?**
 
-Managing operations includes adding, editing, and deleting records. Access operations in Solution Manager or Enterprise Manager.
+The **Build** button on the **Operations Summary** page opens the **Schedule Build** page, where you select master schedules and a date range and build the corresponding daily schedules.
 
-**Q: Who can manage operations in OpCon?**
+**Q: Are new schedules held or released when they are built?**
 
-Users with the appropriate privileges assigned through their role can manage operations. Contact your OpCon system administrator if you do not have access.
+By default, new schedules are built **On Hold**. You can choose **Released** instead on the **Selection** step before you build.
+
+**Q: Who can build schedules in OpCon?**
+
+Users whose role includes the **Build Daily Schedules** privilege can build schedules. Contact your OpCon system administrator if you do not have access.
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Master schedule**: The reusable definition that the daily schedule for a given date is built from. Selecting a master schedule on the **Schedule Build** page determines which daily schedules are created.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, Agents, and administrative functions a user can access.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+**Solution Manager**: OpCon's browser-based graphical user interface for monitoring and managing automation, including operations such as building schedules and updating schedule, job, and Agent statuses.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+## Related Topics
+
+<!-- GAP: Related topic page links (Schedule Build Queue, Operations/Processes, Agents) not verified in this repository; add internal links once target page paths are confirmed. -->

@@ -1,6 +1,6 @@
 ---
 title: Adding Machines to Machine Groups
-description: "Use this procedure to add Machines to Machine Groups in Enterprise Manager."
+description: "Use this procedure to assign Machines to a Machine Group in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,40 +8,59 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
 doc_type: procedural
+last_updated: 2026-05-29
 ---
 
 # Adding Machines to Machine Groups
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
 ## What Is It?
 
-Use this procedure to add Machines to Machine Groups in Enterprise Manager.
+A Machine Group is a named collection of Machines that share the same machine type. You assign Machines to a Machine Group so that jobs and schedules can target the group instead of an individual Machine. You manage group membership in the **Machine Groups** editor in Enterprise Manager, where Machines move between an **Unassigned Machines** list and an **Assigned Machines** list.
 
-To add a machine to a machine group, complete the following steps:
+All Machines in a group must use the same machine type and the same data type. The editor allows only Machines that match the group's selected **Machine Type**, and it allows either all Non-XML or all XML Machines in a single group, not a mix.
 
-1. Select **Machines** under the **Administration** topic
-2. Select the **machine group** in the **Unassigned** list box
-3. Select the **right arrow** (green) to move the machine group to the **Assigned** list box
-4. Repeat step 3 to assign additional machine groups
-5. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
+## Required Privileges
+
+Your role must have the privileges needed to open the **Machine Groups** editor and update Machine Group membership. Machine Group access is controlled per role through Machine Group privileges, including the **Can Update** permission for the group.
+
+<!-- GAP: Exact named privilege required to open the Machine Groups editor and save membership changes is enforced through role/Machine Group privileges in code (RoleMachineGroup, Can Update); the specific customer-facing privilege label is not confirmed in source. Needs SME/source. -->
+
+## Assign Machines to a Machine Group
+
+To assign Machines to a Machine Group, complete the following steps:
+
+1. In the navigation pane, select the **Administration** category.
+2. Select **Machine Groups** to open the Machine Groups editor.
+3. From the **Machine Group** list, select the group you want to update.
+4. In the **Machine Assignment** section, select one or more Machines in the **Unassigned Machines** list.
+5. Select the green arrow button to move the selected Machines to the **Assigned Machines** list.
+6. To remove a Machine from the group, select it in the **Assigned Machines** list and select the red arrow button to move it back to **Unassigned Machines**.
+7. Select **Save** on the toolbar to save the Machine Group.
+
+**Result:** The Machines in the **Assigned Machines** list are members of the Machine Group and are available when you target that group from a job or schedule.
+
+## Notes
+
+- A Machine Group cannot be saved while it is empty. At least one Machine must remain in the **Assigned Machines** list.
+- The **Unassigned Machines** list shows only Machines that match the group's **Machine Type**.
+- A Machine Group can contain only one data type. If you select a mix of Non-XML and XML Machines, Enterprise Manager reports that the group can contain only Non-XML or only XML Machines.
 
 ## FAQs
 
-**Q: How do you save a new machines to machine groups record?**
+**Q: Why do some Machines not appear in the Unassigned Machines list?**
 
-After completing the required fields, select the **Save** button on the toolbar to save the machines to machine groups record.
+The list shows only Machines whose machine type matches the group's **Machine Type**. After the first Machine is assigned, the list is further limited to Machines that share the same data type as the assigned Machines.
+
+**Q: How do I save the changes?**
+
+After moving Machines between the lists, select **Save** on the toolbar.
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Enterprise Manager**: OpCon's graphical user interface used to define schedules and jobs, manage automation data, and perform operational tasks.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job requests to Machines and receives job completion status back from them.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Machine Group**: A named collection of Machines of the same machine type. Jobs and schedules can target a Machine Group instead of a single Machine.

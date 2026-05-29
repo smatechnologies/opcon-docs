@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Departments
-description: "!Departments Grid Selecting Add, Copy, or Edit opens the corresponding dialog: !Departments Add Dialog !Departments Copy Dialog !Departments Edit Dialog Select the Cross References button to view the."
+description: "Departments are organizational groupings in OpCon used to scope job and schedule access by role. Learn what Departments are, how role privileges apply to them, and how to view the jobs that use a Department."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -11,7 +11,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: conceptual
 ---
 
@@ -22,7 +22,19 @@ doc_type: conceptual
 
 ## What Is It?
 
+A Department is an organizational grouping in OpCon that you use to assign jobs to logical divisions. A Department has a name that identifies it. You can scope user roles to specific Departments, which controls the jobs and schedules a user can view and manage.
+
 ![Departments Grid](../../../../../Resources/Images/SM/Library/Departments/Departments.png "Departments Grid")
+
+Departments are available in both Solution Manager and Enterprise Manager.
+
+## How It Works
+
+Each role in OpCon grants a set of function privileges per Department. When you assign Department function privileges to a role, you control exactly which actions members of that role can perform against the jobs and schedules in each Department. For example, separate roles can be limited to maintaining schedules, modifying jobs in daily schedules, or releasing jobs only within the Departments they are responsible for.
+
+Maintaining Departments is itself controlled by a function privilege, so only roles that have been granted the **Maintain Departments** privilege can add, copy, edit, or remove Departments.
+
+### Adding, copying, and editing a Department
 
 Selecting **Add**, **Copy**, or **Edit** opens the corresponding dialog:
 
@@ -32,6 +44,12 @@ Selecting **Add**, **Copy**, or **Edit** opens the corresponding dialog:
 
 ![Departments Edit Dialog](../../../../../Resources/Images/SM/Library/Departments/EditDepartment.png "Departments Edit Dialog")
 
+A Department is identified by its **Name**.
+
+<!-- GAP: Full list of fields in the Add/Copy/Edit Department dialogs (beyond Name) is not confirmed in the OpCon source snapshot; the Department entity exposes only id and name. Needs SME/UI confirmation. -->
+
+### Viewing where a Department is used
+
 Select the **Cross References** button to view the master and daily jobs that use a particular Department.
 
 ![Departments CrossReferences](../../../../../Resources/Images/SM/Library/Departments/Departments_CrossReference.png "Departments Cross References Dialog")
@@ -40,7 +58,11 @@ Select the **Cross References** button to view the master and daily jobs that us
 
 **Q: Where can you find Departments in OpCon?**
 
-Access Departments in Solution Manager or Enterprise Manager.
+You can manage Departments in Solution Manager or Enterprise Manager.
+
+**Q: Who can add or change Departments?**
+
+Only users whose role includes the **Maintain Departments** function privilege can add, copy, edit, or remove Departments.
 
 ## Glossary
 
@@ -48,10 +70,14 @@ Access Departments in Solution Manager or Enterprise Manager.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific Departments, controlling which jobs a user can manage.
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Role**: A named set of permissions in OpCon. A role grants function privileges per Department, which determines the actions its members can perform within each Department.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+
+## Related Topics
+
+<!-- GAP: Related Topics links (Roles, Schedules) not confirmed against repository paths; needs verification of target page paths. -->

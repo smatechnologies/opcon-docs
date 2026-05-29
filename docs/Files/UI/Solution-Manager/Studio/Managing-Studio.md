@@ -1,7 +1,5 @@
-﻿---
-lang: en-us
-viewport: width=device-width, initial-scale=1.0
-title: Overview
+---
+title: Managing Studio
 description: "Studio is where Master Schedules are created and managed."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
@@ -11,43 +9,48 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: conceptual
 ---
 
-# Overview
+# Managing Studio
 
-**Theme:** Overview  
+**Theme:** Overview
 **Who Is It For?** System Administrator, Automation Engineer
 
 ## What Is It?
 
-Studio is where Master Schedules are created and managed. Master Schedules can contain multiple jobs. Use the selection bar on the left side of the screen to navigate available options.
+Studio is the area of Solution Manager where you create and manage Master Schedules. A Master Schedule is a template definition that OpCon uses to build daily schedule instances, and it can contain multiple jobs.
 
-![Managing Studio](../../../../Resources/Images/SM/Studio/Managing-Studio.png "Managing Studio")
+From Studio, you can:
 
-:::note
-Use the bar on the left side of the screen
-:::
+- Create a new Master Schedule definition
+- Edit an existing Master Schedule's properties or canvas layout
+- Copy a Master Schedule as a starting point for a new one
+- Work with schedules and jobs on a visual canvas
 
-Please check back for more content.
+## How It Works
 
-## FAQs
+Use the **Navigation menu** on the left side of the page to move between the available solutions and Studio's workspace. In desktop mode, you can toggle the menu by selecting the menu display button at the top of the page.
 
-**Q: Where can you find Overview in OpCon?**
+Within Studio, you build and manage Master Schedule definitions on a visual canvas. For the canvas-based actions that add, copy, edit, and delete Master Schedules, see [Canvas Overview](Canvas/Canvas-Overview.md).
 
-Access Overview in Solution Manager.
+<!-- GAP: A Managing-Studio screenshot is referenced by the original page but the image file (Resources/Images/SM/Studio/Managing-Studio.png) does not exist in the repository. Add the screenshot or confirm the correct asset with an SME before linking it. -->
+
+<!-- GAP: Required privileges for accessing and using Studio are not confirmed in the source or existing page. Confirm the relevant Function/Schedule privileges with an SME. -->
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+| Term | Definition |
+| --- | --- |
+| Master Schedule | The template definition of a schedule stored in OpCon's master tables. Changes to the master affect all future builds but not already-built daily schedules. |
+| Daily Schedule | A schedule instance that OpCon builds for a specific date. Changes to a daily schedule affect only that date and do not modify the master definition. |
+| Schedule | A named group of jobs in OpCon that represents a business process. Schedules are built each day based on their defined frequencies and calendars. |
+| Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
+| Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+## Related Topics
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Define Schedule Overview](Define-Schedule-Overview.md)
+- [Creating a Workflow Overview](Workflow-Overview.md)
+- [Canvas Overview](Canvas/Canvas-Overview.md)
