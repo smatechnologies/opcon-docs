@@ -32,10 +32,6 @@ Common uses:
 - Initialize thresholds at a specific point in a schedule
 - Send notifications
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does a Null job do?**

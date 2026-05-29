@@ -22,6 +22,10 @@ doc_type: procedural
 
 Use this procedure to manage SSO Configurations in Solution Manager.
 
+:::note
+Single Sign-On (SSO) is available to customers with a TB2 or On-Prem Subscription license. SSO is supported in OpCon version 23 and later.
+:::
+
 ## Administration
 
 ### Required Privileges
