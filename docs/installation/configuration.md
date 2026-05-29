@@ -64,6 +64,8 @@ The OpCon Server component database connection is automatically configured durin
 In fresh installations of OpCon version 23 and later, **SMAConnectionConfig.exe** no longer includes a graphical user interface, and no shortcut is added under **Start** > **All Programs** > **OpConxps** > **Utilities**. On these installations, configure the database connection file (`SMAODBCConfiguration.dat`) by running **SMAConnectionConfig.exe** from the command line. The graphical steps below apply only to installations that include the graphical version of the utility.
 :::
 
+To configure the database connection for the OpCon server, complete the following steps:
+
 1. Use menu path: **Start \> All Programs \> OpConxps \> Utilities\> SMA Connection Config**
 2. In the **Server\\Instance Name** field, enter the *Server Name* (include the instance name if needed using the Server\\Instance Name syntax)
 
@@ -80,8 +82,6 @@ In fresh installations of OpCon version 23 and later, **SMAConnectionConfig.exe*
    - **None**: No setting (default)
    - **SQL Always On**: SQL Server configured for high availability
    - **SQL Mirroring**: SQL Server configured for mirroring
-To configure Database Connections, complete the following steps:
-
 6. Select **Connect**
 7. Select **OK** to confirm the connection
 8. Select **OK** to close the program

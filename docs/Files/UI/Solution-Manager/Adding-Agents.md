@@ -22,6 +22,11 @@ doc_type: procedural
 
 Use this procedure to add an Agent (Machine) in Solution Manager. An Agent represents a platform that has the OpCon agent software installed and that OpCon routes job execution requests to.
 
+Add an agent when you:
+
+- Install the OpCon agent software on a new platform and need OpCon to communicate with it
+- Bring additional capacity online to run jobs
+
 For conceptual information, refer to [Machines](../../../objects/machines.md) in the **Concepts** online help.
 
 ## Administration

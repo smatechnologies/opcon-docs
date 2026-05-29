@@ -29,7 +29,7 @@ Use this procedure to manage SSO Configurations in Solution Manager.
 To configure the **Single Sign-On** setting, you must have one of the following:
 
 - **Role**: Role_ocadm
-- **Function Privilege**: Maintian server options
+- **Function Privilege**: Maintain Server Options
 
 ---
 
@@ -122,7 +122,7 @@ To configure SSO, complete the following steps:
 
 ---
 
-### Creating an applications that are OpenID Connect Compatible
+### Creating Applications That Are OpenID Connect Compatible
 
 #### Okta Application
 
@@ -263,20 +263,21 @@ The Client ID, Authority URL, and Redirect URI are registered with the IdP and m
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| Function Privilege | Maintian server options | — | — |
-| Invalid Redirect URI | The redirect URI in the SSO configuration must match the one configured in your IdP. | — | — |
-| Incorrect Authority | The authority (OIDC provider URL) must match exactly. | — | — |
-| Invalid Customer ID | The customer ID in the SSO configuration must match the one expected by your IdP. | — | — |
+| Provider | Identity provider (IdP) used for SSO | — | Options: Okta, Azure AD, Other |
+| Authority | URL of the OIDC/OAuth2 provider | — | Required; the Test Connection button uses this value to retrieve IdP metadata |
+| Client ID | Client application identifier registered with the OIDC/OAuth2 provider | — | — |
+| Redirect URI | Location the authorization server sends the user after successful authorization | — | Must include `/login/callback` |
+| Scope | Scopes requested from the OIDC/OAuth2 provider | openid | Separate multiple scopes with a space |
 
 ## FAQs
 
-**Q: What does managing sso configurations involve?**
+**Q: Which identity providers does OpCon SSO support?**
 
-Managing sso configurations includes Required Privileges, Configuring SSO. Access sso configurations in Solution Manager or Enterprise Manager.
+OpCon SSO uses OpenID Connect (OIDC) on top of the OAuth 2.0 framework. It supports Okta, Azure AD, and any identity provider that follows the OIDC authentication protocol.
 
-**Q: Who can manage sso configurations in OpCon?**
+**Q: Which privilege is required to configure SSO?**
 
-Users with the appropriate privileges assigned through their role can manage sso configurations. Contact your OpCon system administrator if you do not have access.
+You must have the Role_ocadm role or the Maintain Server Options function privilege.
 
 **Q: What happens to a user's OpCon password after they first log in through SSO?**
 

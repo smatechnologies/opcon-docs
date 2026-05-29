@@ -22,6 +22,11 @@ doc_type: procedural
 
 Use this procedure to add a Frequency in Solution Manager. A Frequency is a set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 
+Add a frequency when you:
+
+- Define a new recurring pattern for when jobs or schedules are eligible to run
+- Reuse a common timing rule across multiple jobs and schedules
+
 For conceptual information, refer to [Frequencies](../../../../../automation-concepts/frequencies.md) in the **Concepts** online help.
 
 ## Administration
