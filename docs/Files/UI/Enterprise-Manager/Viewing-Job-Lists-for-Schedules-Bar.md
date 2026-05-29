@@ -26,13 +26,13 @@ Use this procedure to view Job Lists for Schedules in Enterprise Manager.
 
 To view the job list, complete the following steps:
 
-1.  Select on **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays
-2.  Select on a **date** or **schedule** to display in the **Bar Chart** screen
-3.  Right-click on the **bar** for the schedule
-4.  Select on **Jobs list** from the menu. The **Jobs list** dialog displays
+1.  Select **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays
+2.  Select a **date** or **schedule** to display in the **Bar Chart** screen
+3.  Right-click the **bar** for the schedule
+4.  Select **Jobs list** from the menu. The **Jobs list** dialog displays
 5.  Select **OK** to close the dialog
 6.  To view a subschedule's job list, select on a **date** (and optionally a **schedule** containing the subschedule), then select on the **subschedule**
-7.  Right-click on the **bar** for the subschedule and select **Jobs list**. The **Jobs list** dialog displays
+7.  Right-click the **bar** for the subschedule and select **Jobs list**. The **Jobs list** dialog displays
 8.  View the **list of jobs** in the subschedule
 9.  Select **OK** to close the **Jobs list** dialog
 :::

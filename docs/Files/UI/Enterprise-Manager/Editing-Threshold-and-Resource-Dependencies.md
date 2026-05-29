@@ -28,7 +28,7 @@ Use this procedure to edit Threshold/Resource Dependencies in Enterprise Manager
 
 To edit a dependency, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Dependencies** tab, then the **Threshold/Resource Dependency** tab
@@ -44,7 +44,7 @@ To edit a dependency, complete the following steps:
 
 To edit a dependency, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Dependencies** tab, then the **Threshold/Resource Dependency** tab

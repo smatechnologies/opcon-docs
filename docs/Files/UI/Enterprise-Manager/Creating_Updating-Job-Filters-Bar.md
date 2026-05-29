@@ -26,7 +26,7 @@ Job filters in Enterprise Manager let operators narrow the jobs displayed in the
 
 To create or update a job filter, complete the following steps:
 
-1.  Select on **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays
+1.  Select **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays
 2.  Select a **date**, or select a **date** and a **schedule**, to display in the **Bar Chart** screen
 3.  Select **Open the job filter dialog** on the **Bar Chart** toolbar. The **Job Filter** dialog displays
 4.  Select the tab for the filter criteria (e.g., **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)

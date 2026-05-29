@@ -30,10 +30,6 @@ The **Dependencies** tab in the **[Job Master](Using-Job-Master.md)** editor has
 
 ## FAQs
 
-**Q: What does Dependencies do?**
-
-viewport: width=device-width, initial-scale=1.0
-
 **Q: Where can you find Dependencies in OpCon?**
 
 Access Dependencies through the appropriate section in Enterprise Manager or Solution Manager navigation.

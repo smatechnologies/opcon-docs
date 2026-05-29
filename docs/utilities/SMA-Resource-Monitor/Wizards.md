@@ -29,17 +29,17 @@ names of each step in the wizard.
 
 To start an Add Wizard, complete the following steps:
 
-1. Select on the specific tab - **File Monitors**, **Counter Monitors**,
+1. Select the specific tab - **File Monitors**, **Counter Monitors**,
     **Service Monitors**, **Process Monitors**, or **Action Groups** -
     for the monitor type to add.
 2. Select **Add**
 
 ## Start an Edit Wizard
 
-1. Select on the specific tab - **File Monitors**, **Counter Monitors**,
+1. Select the specific tab - **File Monitors**, **Counter Monitors**,
     **Service Monitors**, **Process Monitors**, or **Action Groups** -
     for the type of item to edit.
-2. Select on the gray box to the left of the row for the specific
+2. Select the gray box to the left of the row for the specific
     monitor type or Action Group item that you want to edit and select
     **Edit**.
 

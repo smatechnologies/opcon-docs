@@ -26,8 +26,8 @@ Use this procedure to raise Events in Enterprise Manager.
 
 To raise an event, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
-2. Right-click on the preferred **SAP R/3 and CRM machine name**
+1. Select **Machines Status** under the **Operation** topic
+2. Right-click the preferred **SAP R/3 and CRM machine name**
 3. Hover over **SAP Machine** in the right-click menu and select **Raise SAP Events**. The **Raise SAP Events** dialog displays
 4. Enter the *event text* in the **SAP Event Id** text box
 5. *(Optional)* Enter any *required parameters* in the **Parameters** text box

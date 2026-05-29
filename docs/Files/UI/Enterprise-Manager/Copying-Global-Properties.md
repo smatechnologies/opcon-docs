@@ -26,7 +26,7 @@ Use this procedure to copy Global Properties in Enterprise Manager.
 
 To copy a global property, complete the following steps:
 
-1.  Select on **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
+1.  Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
 2.  Select a **global property** in the **Global Properties** list, or select the **Find** button to locate the property
 3.  Select the **Copy** button on the **Global Property** toolbar. The **Copy Global Property** dialog displays
 4.  Enter a new *global property name*

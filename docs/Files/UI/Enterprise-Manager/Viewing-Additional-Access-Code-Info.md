@@ -24,7 +24,7 @@ doc_type: procedural
 
 To view Additional Access Code Information in Enterprise Manager, complete the following steps:
 
-1.  Select on **Access Codes** under the **Security** topic
+1.  Select **Access Codes** under the **Security** topic
 2.  Select the **access code** in the **Select Access Code** list
 3.  Select the ![Cross References icon](../../../Resources/Images/EM/EMcrossref.png "Cross References icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
 4.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button on the toolbar to view audit records for changes to the access code, then select **Close**

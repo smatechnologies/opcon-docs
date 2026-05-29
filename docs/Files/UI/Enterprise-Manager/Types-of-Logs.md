@@ -62,7 +62,7 @@ The External File option opens a file located on the server.
 To open an external file, complete the following steps:
 
 1. Expand the **Logs** option under the **Information** topic
-2. Select on **External File**
+2. Select **External File**
 3. Select the **directory** where the external file is located
 4. Enter a *file name* in the **File Name** text box, or select one from the list
 5. *(Optional)* Select the **file type** in the **Files of type** list

@@ -26,10 +26,10 @@ Use this procedure to view Container Jobs' SubSchedules in Enterprise Manager.
 
 To view the SubSchedule, complete the following steps:
 
-1.  Select on **PERT** under the **Operation** topic. The **PERT** screen displays
-2.  Select on the **schedule** that contains the job
-3.  Right-click on the **Container job box**
-4.  Select on **Open SubSchedule** from the menu
+1.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
+2.  Select the **schedule** that contains the job
+3.  Right-click the **Container job box**
+4.  Select **Open SubSchedule** from the menu
 5.  Work with the jobs in the subschedule, as needed
 :::
 

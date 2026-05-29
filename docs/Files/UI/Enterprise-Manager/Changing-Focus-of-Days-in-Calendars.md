@@ -24,7 +24,7 @@ Use this procedure to change Focus of Days in Calendars in Enterprise Manager.
 
 To change the focus of a day, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic
+1. Select **Matrix** under the **Operation** topic
 2. Use the navigation buttons to change focus:
    - **First** — moves focus to the first day in the Daily tables
    - **Today** — moves focus to the current date

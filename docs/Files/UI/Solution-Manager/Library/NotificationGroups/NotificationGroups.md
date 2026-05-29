@@ -60,10 +60,6 @@ Select the **Add** button to quickly add a new category to the list.
 
 ## FAQs
 
-**Q: What does Notification Groups do?**
-
-title: Notification Groups
-
 **Q: Where can you find Notification Groups in OpCon?**
 
 Access Notification Groups in Solution Manager or Enterprise Manager.

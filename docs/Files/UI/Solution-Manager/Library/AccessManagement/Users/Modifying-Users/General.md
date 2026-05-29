@@ -44,10 +44,6 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: What does User General do?**
-
-title: Users - General
-
 **Q: Where can you find User General in OpCon?**
 
 Access User General in Solution Manager or Enterprise Manager.

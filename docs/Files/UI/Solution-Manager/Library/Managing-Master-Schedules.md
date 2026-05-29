@@ -32,10 +32,6 @@ Please check back for more content.
 
 ## FAQs
 
-**Q: What does Overview do?**
-
-title: Managing Master Schedules
-
 **Q: Where can you find Overview in OpCon?**
 
 Access Overview in Solution Manager or Enterprise Manager.

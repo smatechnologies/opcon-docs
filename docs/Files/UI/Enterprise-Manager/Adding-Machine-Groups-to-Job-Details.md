@@ -24,7 +24,7 @@ Use this procedure to add Machine Groups to Job Details in Enterprise Manager.
 
 To add machine group to details, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select a **machine group** in the **Group** list

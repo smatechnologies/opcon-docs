@@ -26,7 +26,7 @@ You can view which jobs use specific scripts.
 
 To show the cross references, complete the following steps:
 
-1. Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2. Select a script in the list
 3. Select the **Cross References** button on the toolbar. The **Cross References Details** dialog displays
 4. Toggle between tabs to view cross-referenced Master or Daily jobs for the selected script

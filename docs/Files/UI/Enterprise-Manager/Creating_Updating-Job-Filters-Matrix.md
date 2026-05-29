@@ -26,7 +26,7 @@ Job filters in Enterprise Manager let operators narrow the jobs displayed in the
 
 To create or update a job filter, complete the following steps:
 
-1.  Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1.  Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2.  Select **Open the job filter dialog** on the **Matrix** toolbar. The **Job Filter** dialog displays
 3.  Select the tab for the filter criteria (e.g., **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)
 4.  *(Optional)* For each tab, select the specific option(s) for the job filter, or select **Select/Unselect All** to select all

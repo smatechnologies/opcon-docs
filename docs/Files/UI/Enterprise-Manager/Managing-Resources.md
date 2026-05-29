@@ -24,7 +24,7 @@ The **Resources** editor defines and maintains OpCon Resources, providing a list
 
 ## Resources Toolbar
 
-The **Resources** editor has a toolbar for managing resources. Select on any specific icon on the toolbar below to learn more about its functionality.
+The **Resources** editor has a toolbar for managing resources. Select any specific icon on the toolbar below to learn more about its functionality.
 
 ![Resources toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Resources toolbar")
 

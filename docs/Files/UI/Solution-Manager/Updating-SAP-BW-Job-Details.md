@@ -56,7 +56,7 @@ To update SAP BW Job Task Details, complete the following steps:
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
 
    :::note
-   As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+   As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
    :::
 
    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(IBMi).png "Job Summary Tab in Operations")

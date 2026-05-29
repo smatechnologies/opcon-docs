@@ -26,7 +26,7 @@ Use this procedure to delete Script Versions in Enterprise Manager.
 
 To delete a script version, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select a **script** in the list
 3.  Select the **Show/Create Versions** button on the toolbar. The **Versions** dialog displays
 4.  Select the **script version** to delete

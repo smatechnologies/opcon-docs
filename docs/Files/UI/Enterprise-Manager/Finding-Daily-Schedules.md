@@ -26,7 +26,7 @@ The Daily Maintenance view in Enterprise Manager includes a search box that filt
 
 To perform this procedure, complete the following steps:
 
-1.  Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1.  Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2.  Type the first few characters or full name of the schedule or job in the **Daily** frame text box
 3.  View the schedule or job information
 4.  Select **Clear** to the right of the text box to return to all information

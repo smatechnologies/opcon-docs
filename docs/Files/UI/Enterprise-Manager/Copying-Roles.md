@@ -26,7 +26,7 @@ Copying a role creates an identical new role with the same name preceded by "co:
 
 To copy a role, complete the following steps:
 
-1.  Select on **Roles** under the **Security** topic. The **Roles** screen displays
+1.  Select **Roles** under the **Security** topic. The **Roles** screen displays
 2.  Select the **role name** in the **Select Role** list
 3.  Select **Copy** on the **Roles** toolbar. The **Copy Role** dialog displays
 4.  Enter the *name* for the role

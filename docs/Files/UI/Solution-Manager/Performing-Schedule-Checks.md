@@ -24,7 +24,7 @@ The **Operations** module allows you to perform schedule checks using a few simp
 
 To perform schedule check, complete the following steps:
 
-1. Right-click on Date or a Schedule record
+1. Right-click Date or a Schedule record
 
 2. On the right-side panel, select the **Schedule Check** section
 

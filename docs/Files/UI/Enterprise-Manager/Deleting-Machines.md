@@ -30,7 +30,7 @@ If the SAM is starting jobs while a machine is being deleted, Enterprise Manager
 
 To remove the Machine from the Daily Table, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -42,7 +42,7 @@ To remove the Machine from the Daily Table, complete the following steps:
 
 ## Remove the Machine from the Master Table
 
-1. Select on **Daily Maintenance** under the **Administration** topic
+1. Select **Daily Maintenance** under the **Administration** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -55,7 +55,7 @@ To remove the Machine from the Daily Table, complete the following steps:
 
 ## Delete the Machine
 
-1. Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1. Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2. Select the **machine** in the **Select Machine** list
 3. Right-click over the graphic to enable the menu in the **Communication Status** frame
 4. Select **Stop Communication** to stop communication with the agent

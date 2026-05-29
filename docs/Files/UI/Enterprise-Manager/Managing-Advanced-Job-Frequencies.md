@@ -28,7 +28,7 @@ Advanced frequency details enable or disable scheduling a job on specific dates 
 
 To set an advanced job frequency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -47,7 +47,7 @@ To set an advanced job frequency, complete the following steps:
 
 To edit an advanced job frequency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -64,7 +64,7 @@ To edit an advanced job frequency, complete the following steps:
 
 To delete Advanced Frequency Settings, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 

@@ -37,10 +37,6 @@ Select **Cross References** to see the list of master and daily jobs that use a 
 
 ## FAQs
 
-**Q: What does Resources do?**
-
-viewport: width=device-width, initial-scale=1.0
-
 **Q: Where can you find Resources in OpCon?**
 
 Access Resources in Solution Manager or Enterprise Manager.

@@ -26,7 +26,7 @@ Use this procedure to edit Thresholds in Enterprise Manager.
 
 To edit a threshold, complete the following steps:
 
-1.  Select on **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
+1.  Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
 2.  Select an existing **threshold** in the **Select Threshold** list
 3.  Enter changes
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Thresholds** toolbar

@@ -28,7 +28,7 @@ Changes made to the job properties in the Job Daily take place immediately. If t
 
 ## Editing Job Details
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** that has the schedule to edit
 3. Expand the **schedule** that has the job to edit
 4. Select the **job** to edit
@@ -40,7 +40,7 @@ Changes made to the job properties in the Job Daily take place immediately. If t
 
 ## Adding Properties to Daily Job Instances
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** that has the schedule to edit
 3. Expand the **schedule** that has the job to edit
 4. Select the **job** to edit
@@ -53,7 +53,7 @@ Changes made to the job properties in the Job Daily take place immediately. If t
 
 ## Editing Daily Job Instance Properties
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** that has the schedule to edit
 3. Expand the **schedule** that has the job to edit
 4. Select the **job** to edit
@@ -66,7 +66,7 @@ Changes made to the job properties in the Job Daily take place immediately. If t
 
 ## Removing Daily Job Instance Properties
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 
 2. Expand the **date** that has the schedule to edit
 3. Expand the **schedule** that has the job to edit
@@ -81,7 +81,7 @@ Changes made to the job properties in the Job Daily take place immediately. If t
 
 Editing Frequency details in the **Daily** editor allows changes to the time-related information for a job.
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 4. Select the **job**
@@ -96,7 +96,7 @@ Editing Frequency details in the **Daily** editor allows changes to the time-rel
 
 Editing Event details in the **Daily** editor allows changes to the job events set up to run on the date in the *Job Daily*. For conceptual information, refer to [Events](../../../job-components/events.md) in the **Concepts** online help.
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 4. Select the **job**
@@ -111,7 +111,7 @@ Editing Event details in the **Daily** editor allows changes to the job events s
 
 ## Adding Job Events
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -146,7 +146,7 @@ To add Job Events, complete the following steps:
     - Follow step 13 to select the placeholder
     - Select the ![Insert Token button](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button") **Insert token** button or press **Ctrl+T** to list available global properties
     - Locate the global property by scrolling or using the search field (Windows wildcards supported; filter by property name, value, or both)
-    - Select on the **global property** (e.g., $SCHEDULE DATE)
+    - Select the **global property** (e.g., $SCHEDULE DATE)
 
 :::note
 Double brackets are automatically placed around the token placeholder.
@@ -166,7 +166,7 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 
 ## Deleting Job Events
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -180,7 +180,7 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 
 ## Editing Threshold/Resource Updates
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -197,7 +197,7 @@ $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
 
 For conceptual information, refer to [Threshold Updates](../../../job-components/threshold-resource-updates.md#threshold-updates) or [Resource Updates](../../../job-components/threshold-resource-updates.md#resource-updates) in the **Concepts** online help.
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 4. Select the **job**
@@ -214,7 +214,7 @@ For conceptual information, refer to [Threshold Updates](../../../job-components
 
 ## Deleting Threshold/Resource Updates
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -228,7 +228,7 @@ For conceptual information, refer to [Threshold Updates](../../../job-components
 
 ## Editing Job Dependencies
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -246,7 +246,7 @@ For conceptual information, refer to [Threshold Updates](../../../job-components
 
 For conceptual information, refer to [Job Dependencies](../../../job-components/job-dependencies.md) in the **Concepts** online help.
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 4. Select the **job**
@@ -264,7 +264,7 @@ For conceptual information, refer to [Job Dependencies](../../../job-components/
 
 ## Deleting Job Dependencies
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -279,7 +279,7 @@ For conceptual information, refer to [Job Dependencies](../../../job-components/
 
 ## Editing Threshold/Resource Dependencies
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -297,7 +297,7 @@ For conceptual information, refer to [Job Dependencies](../../../job-components/
 
 For conceptual information, refer to [Threshold Dependencies](../../../job-components/threshold-resource-dependencies.md#threshold-dependencies) or [Resource Dependencies](../../../job-components/threshold-resource-dependencies.md#resource-dependencies) in the **Concepts** online help.
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 4. Select the **job**
@@ -315,7 +315,7 @@ For conceptual information, refer to [Threshold Dependencies](../../../job-compo
 
 ## Deleting Threshold/Resource Dependencies
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 
@@ -332,7 +332,7 @@ For conceptual information, refer to [Threshold Dependencies](../../../job-compo
 
 For conceptual information, refer to [Documentation](../../../job-components/documentation.md) in the **Concepts** online help.
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Expand the **date** for the schedule
 3. Expand the **schedule**
 4. Select the **job**

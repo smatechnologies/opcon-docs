@@ -40,10 +40,6 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: What does Role Batch Users do?**
-
-title: Roles - Batch Users
-
 **Q: Where can you find Role Batch Users in OpCon?**
 
 Access Role Batch Users in Solution Manager or Enterprise Manager.

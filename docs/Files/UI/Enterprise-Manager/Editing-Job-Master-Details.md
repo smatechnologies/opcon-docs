@@ -22,7 +22,7 @@ doc_type: procedural
 
 To edit Job Master Details in Enterprise Manager, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Ensure the **Job Details** tab is in focus in the **Job Properties** frame

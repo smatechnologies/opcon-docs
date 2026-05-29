@@ -27,7 +27,7 @@ To edit a profile, complete the following steps:
 1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select on **Connection Profiles**. The **Connection Profiles** settings display to the right
+4. Select **Connection Profiles**. The **Connection Profiles** settings display to the right
 5. Select the **Profile** and select **Edit**. The **Database Connection Profile** dialog displays
 6. Enter the profile modifications and select **Next**
 7. Select **Finish** once the connection to the database is made

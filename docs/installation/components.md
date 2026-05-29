@@ -19,7 +19,7 @@ doc_type: procedural
 
 ## What Is It?
 
-This topic contains instructions for installing Enterprise Manager and Optional Server components as stand-alone installations. Select on any of the following links to access the installation instructions:
+This topic contains instructions for installing Enterprise Manager and Optional Server components as stand-alone installations. Select any of the following links to access the installation instructions:
 
 - [Enterprise Manager](#enterprise-manager)
 - [SMA OpCon Configuration Utility](#SMA5)
@@ -78,7 +78,7 @@ Set up the EM profile to connect to the same database as the SAM as per the proc
    The list of databases will only be made available once each of the previous text boxes have been filled in.
    :::
 7. *(Optional)* Type the *Timeout (sec)* (It is set to 30 by default)
-8. *(Optional)* Select on the **Color** button, select the desired **profile color**, and select **OK**
+8. *(Optional)* Select the **Color** button, select the desired **profile color**, and select **OK**
 9. Select **Next** to advance to the next window
    :::note
    The next window will indicate whether the database connection has tested successfully.
@@ -152,7 +152,7 @@ Follow the procedure in this section to install Enterprise Manager on a supporte
    3. Rename the *folder* **«jre8»**
    4. Move the *folder* to an appropriate location (e.g., the EnterpriseManager install folder)
 5. Update the **EnterpriseManager.ini** file to point to the **jre8** downloaded in the previous step
-6. Right-click on **EnterpriseManager.app** and select *show packet content*
+6. Right-click **EnterpriseManager.app** and select *show packet content*
 7. In the app folder, drill-down into **Contents/MacOS**
 8. Open the **EnterpriseManager.ini** file
    1. Add the location of the **jre8** (e.g., a relative path to Enterprise Manager)
@@ -190,11 +190,11 @@ On some Windows 7 machines and Windows 2008 R2 Servers, the automatic updates wi
 #### Add an Update Site to Enterprise Manager
 
 1. Use menu path: **EnterpriseManager\>Preferences** to open the **Preferences** screen
-2. Select on the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
+2. Select the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
 3. Select **Update Sites**
 4. Select the **Add** button
 5. Select the **Local** button and search for the directory where the repository.zip file was extracted
-6. Select on the **directory** and then select **OK**
+6. Select the **directory** and then select **OK**
 7. Select **OK**
 
 :::note
@@ -206,7 +206,7 @@ The site Administrator can define multiple sites. This may include sites for tes
 An administrator may wish to export several update sites so a list will be available for each user to import.
 
 1. Shift/select or Ctrl/select to select multiple *Update Site Names*
-2. Select on the **Export** button
+2. Select the **Export** button
 3. Check the **location** and **file name** of the export file
 4. Select the **Save**button
 
@@ -219,7 +219,7 @@ This export file can be sent to each user or placed on a shared network location
 If an administrator has made an import file of available update sites, users can import this file to save time
 
 1. Use menu path: **Enterprise Manager\>Preferences** to open the **Preferences** screen
-2. Select on the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
+2. Select the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
 3. Select **Update Sites**
 4. Select the **Import** button
 5. Locate the correct import file in the **Import Sites** window
@@ -349,7 +349,7 @@ following:
 - Keep in mind that at any time you may reconfigure the API certificate without running the installer again. To register your own self-signed certificate outside of the installer:
   1. Create a self-signed certificate using IIS
   2. Open **certmgr** and make sure that the newly-created certificate is copied to (listed in) the **Trusted Root Certificate Authorities** certificate store
-  3. Select on the new certificate in the list
+  3. Select the new certificate in the list
   4. Switch to the **Details** tab, copy the "Thumbprint" value into a text editor (e.g., Notepad), and remove all the spaces. The value (free of any spaces) will replace <certificate thumbprint\> in the command specified in Step 6
   5. Open the **command prompt** in Administrator mode (*Run as administrator*)
   6. Run the following commands:
@@ -458,7 +458,7 @@ To install the SNMP Agent, complete the following steps:
 Follow these steps to enable the Windows SNMP Service, which is needed to process SNMP Trap notifications.
 
 1. Open the **Control Panel** on your Windows machine
-2. Select on **Programs and Features**
+2. Select **Programs and Features**
 3. Select the **Turn Windows features on or off** link at the left side of the window
 4. Select the **Simple Network Management Protocol (SNMP)** option in the **Windows Features** dialog
 5. Select **OK** to enable the service
@@ -483,10 +483,10 @@ To receive SNMP Trap notifications, follow these steps to configure the SNMP se
 
 Once the SNMP Service properties are configured, complete the steps in this section.
 
-1. Select on **Server Options**
+1. Select **Server Options**
 
-2. Select on the **Notification Settings** tab
-3. Select on **SNMP Notifications Enabled**
+2. Select the **Notification Settings** tab
+3. Select **SNMP Notifications Enabled**
 4. Select **True** in the list (bottom of screen) then select **Update**
 5. Select **Save** on the **Server Options** toolbar
 6. Select **Close** to the right of the **Server Options** tab to close the **Server Options** screen
@@ -524,7 +524,7 @@ The installation writes the log file named SMA_OpCon_Resource_Monitor_Install.lo
 
 #### Modify the SMAResourceMonitor.ini File
 
-1. Right-click on the **Start** button and select **Explore** from the menu
+1. Right-click the **Start** button and select **Explore** from the menu
 2. Browse to the <Configuration Directory\\**SMAResourceMonitor** directory
 3. Find the **SMAResourceMonitor.ini** file
 4. Right-click the **file** and select **Open With**
@@ -576,7 +576,7 @@ Continuous recommends the folder options on the Windows machine be configured to
 If file extensions are not displayed and you create a text document named test.txt, the operating system would create a file named **test.txt.txt**. If SMA Resource Monitor is looking for **test.txt**, it will not be able to find test.txt.txt.
 :::
 
-1. Right-click on the **Start** button and select **Explore** from the menu
+1. Right-click the **Start** button and select **Explore** from the menu
 2. Use menu path: **Tools \> Folder Options**
 3. Select the **View** tab
 4. Make sure the **Hide extensions of known file types** option is not selected

@@ -29,7 +29,7 @@ Unlike Editors, Views can be [dragged out of the workspace to another separate a
 To open Navigation Views, complete the following steps:
 
 1. Select the arrow to expand a Navigation topic in the [Navigation Panel](Navigation-Panel.md)
-2. Select on the **Navigation View** (e.g., **Workflow Designer**)
+2. Select the **Navigation View** (e.g., **Workflow Designer**)
 3. *(Optional)* Select and drag the **Navigation View** tab onto the tab bar if not already attached
 4. Repeat Step 2 to open more views
 

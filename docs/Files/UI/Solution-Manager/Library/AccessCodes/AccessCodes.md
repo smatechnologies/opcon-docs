@@ -48,10 +48,6 @@ Select the **Cross References** button to view master and daily jobs that use a 
 
 ## FAQs
 
-**Q: What does Access Codes do?**
-
-viewport: width=device-width, initial-scale=1.0
-
 **Q: Where can you find Access Codes in OpCon?**
 
 Access Access Codes in Solution Manager or Enterprise Manager.

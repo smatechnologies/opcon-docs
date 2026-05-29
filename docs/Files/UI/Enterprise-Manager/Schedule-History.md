@@ -35,9 +35,9 @@ The dialog includes the following per schedule iteration:
 
 To view Schedule History, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
+3. Right-click the **schedule**
 4. Select **Schedule History** from the menu. The **Schedule History** dialog displays
 5. Enter or select a **Start Date** and **End Date** using the text boxes or calendar icons
 6. Select the **Refresh** button to display the details

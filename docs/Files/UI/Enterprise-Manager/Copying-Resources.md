@@ -26,7 +26,7 @@ Use this procedure to copy Resources in Enterprise Manager.
 
 To copy a resource, complete the following steps:
 
-1.  Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2.  Select the **resource** in the **Select Resource** list, or select **Find** to locate the resource
 3.  Select **Copy** on the **Resources** toolbar. The **Copy Resource** dialog displays
 4.  Enter a new *resource name*

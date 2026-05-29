@@ -26,7 +26,7 @@ Use this procedure to add Thresholds in Enterprise Manager.
 
 To add a threshold, complete the following steps:
 
-1.  Select on **Thresholds** under the **Administration** topic
+1.  Select **Thresholds** under the **Administration** topic
 2.  Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Thresholds** toolbar
 3.  Enter an alphanumeric *property name* in the **Name** text box
 4.  *(Optional)* Enter documentation in the **Documentation** text box

@@ -78,10 +78,6 @@ The dialog contains the following fields:
 | Documentation tab | Documentation captured on the **Machines** editor dialog | — | — |
 ## FAQs
 
-**Q: What does Machine Information do?**
-
-title: Machine Information
-
 **Q: Where can you find Machine Information in OpCon?**
 
 Access Machine Information through the appropriate section in Enterprise Manager or Solution Manager navigation.

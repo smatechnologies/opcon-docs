@@ -32,9 +32,9 @@ For the SMA Notify Handler to be able to send SPO alerts, the SPO Agent must be 
 
 ### Configure the SMA Notify Handler to Use SPO
 
-1. Select on **Server Options** under the **Administration** topic
-2. Select on the **Notification Settings** tab
-3. Select on **SPO Notifications Enabled**
+1. Select **Server Options** under the **Administration** topic
+2. Select the **Notification Settings** tab
+3. Select **SPO Notifications Enabled**
 4. Select **True** in the list (bottom of screen) then select **Update**
 5. Select **Save** ![Save icon](../Resources/Images/Concepts/EMsave.png "Save icon") on the **Server Options** toolbar
 
@@ -46,9 +46,9 @@ For the SMA Notify Handler to be able to send SPO alerts, the SPO Agent must be 
 
 In order for ENS to send Schedule or Instant Events to SPO, define the SPO Default Alarm ID in the Server Options screen.
 
-1. Select on **Server Options**
-2. Select on the **Notification Settings** tab
-3. Select on **SPO Default Alarm ID**
+1. Select **Server Options**
+2. Select the **Notification Settings** tab
+3. Select **SPO Default Alarm ID**
 4. enter the *desired Alarm ID* in the **text box** and select **Update**
 5. Select **Save** ![Save icon](../Resources/Images/Concepts/EMsave.png) on the **Server Options** toolbar
 
@@ -78,23 +78,23 @@ The SMA Notify Handler uses SMTP for email and for text messages. Ensure an SMTP
 
 In EM Navigation under Administration:
 
-1. Select on **Server Options**
-2. In the Server Options screen: Select on the **SMTP Server Settings** tab
-3. Select on the **SMTP Server Name (Primary Email)**
+1. Select **Server Options**
+2. In the Server Options screen: Select the **SMTP Server Settings** tab
+3. Select the **SMTP Server Name (Primary Email)**
 
 4. Enter the *SMTP server name* in the text box (bottom of screen) and select **Update**
 5. If the SMTP server requires SSL Encryption:
-   1. Select on **SMTP Authentication - Enable SSL (Primary Email)**
+   1. Select **SMTP Authentication - Enable SSL (Primary Email)**
    2. Select **True** in the list (bottom of screen) then select **Update**
 6. If the *Enable SSL for SMTP Authentication (Primary Email)* value is **True** or if the SMTP server requires authentication:
-   1. Select on the **SMTP Authentication User (Primary Email)**
+   1. Select the **SMTP Authentication User (Primary Email)**
    2. Enter the *email address* in the text box (bottom of screen) then select **Update**
-   3. Select on the **Password (Primary Email)**
+   3. Select the **Password (Primary Email)**
    4. Enter the *password*in the text box (bottom of screen) then select **Update**
 To configure SMTP Notifications, complete the following steps:
 
 7. If the SMTP server does not require authentication:
-   1. Select on the **SMTP Notification Address (Primary Email)**
+   1. Select the **SMTP Notification Address (Primary Email)**
    2. Enter the *email address* in the text box (bottom of screen) then select **Update**
 8. If a Secondary SMTP server is available, repeat Steps 4 - 7 for the **(Secondary Email)** settings with the same names
 9. If alternate servers should be used for all text messaging, repeat Steps 4 - 7 for all **(Primary SMS)** and **(Secondary SMS)** settings with the same names
@@ -206,12 +206,12 @@ The values from this App Registration that you need for Notify Handler's configu
     2. Select *Single Tenant*
     3. leave *Redirect URI* blank
 3. Then go to the SMANotifyHandler's overview 
-    1. Select on *Customer Credentials* to add a new *Customer Secret*. Save this value for later for your SMTP configuration
+    1. Select *Customer Credentials* to add a new *Customer Secret*. Save this value for later for your SMTP configuration
     2. Then on the sidebar, go to Manage > API permissions. *Add a Permission* 
         1. Select *APIs my organization uses* 
         2. Select *Office 365 Exchange Online* 
         3. Select *Application permissions* 
-        4. Select on SMTP and enable *SMTP.SendAsApp* 
+        4. Select SMTP and enable *SMTP.SendAsApp* 
         5. *Grant admin consent*
 4. Setup the *Service Principal* for the App Registration. [Microsoft provides some instructions](https://learn.microsoft.com/en-us/exchange/customer-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 

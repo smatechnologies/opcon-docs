@@ -24,7 +24,7 @@ doc_type: procedural
 
 To view Additional Batch User Information in Enterprise Manager, complete the following steps:
 
-1.  Select on **Batch Users** under the **Security** topic
+1.  Select **Batch Users** under the **Security** topic
 2.  Select the **batch user** in the **Select the target OS** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
 

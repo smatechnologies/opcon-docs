@@ -48,7 +48,7 @@ Changes made to the job properties in the **Daily Job Definition** will take pla
 
 To perform this procedure:
 
-Select on the **Processes** button at the top-right of the **Operations
+Select the **Processes** button at the top-right of the **Operations
 Summary** page. The **Processes** page will display.
 
 Ensure that both the **Date** and **Schedule** toggle switches are
@@ -67,11 +67,11 @@ page in the form of a breadcrumb trail.
 
 ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-Select on the job record (e.g., 1 job(s)) in the status bar to display
+Select the job record (e.g., 1 job(s)) in the status bar to display
 the **Selection** panel.
 
 :::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
 :::
 
 ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")

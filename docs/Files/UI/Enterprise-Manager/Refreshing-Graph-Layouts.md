@@ -26,7 +26,7 @@ This causes the machine map to reform in a fresh layout.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
+1. Select **Machines Status** under the **Operation** topic
 2. Select the **Map** tab
 3. Right-click anywhere in the **Map** view
 4. Select **Re-Layout Graph**

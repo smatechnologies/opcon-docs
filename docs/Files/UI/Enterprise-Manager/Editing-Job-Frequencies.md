@@ -32,10 +32,10 @@ In the ocadm role, changes to a shared frequency affect all jobs and schedules u
 
 To edit a frequency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
-4. Select on the **Frequency** tab in the **Job Details** frame
+4. Select the **Frequency** tab in the **Job Details** frame
 5. Select the **existing frequency** in the **Frequency list**
 6. Select the **Edit** button. The **Frequency Definition Wizard** displays
 7. Enter the *changes* in the wizard

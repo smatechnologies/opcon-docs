@@ -26,7 +26,7 @@ Use this procedure to add Resources in Enterprise Manager.
 
 To add a resource, complete the following steps:
 
-1.  Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2.  Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Resources** toolbar
 3.  Enter an *alphanumeric name* in the **Resource Name** text box
 4.  *(Optional)* Enter the documentation in the **Documentation** text box

@@ -26,8 +26,8 @@ Use this procedure to view Job Information in Enterprise Manager.
 
 To view job information, complete the following steps:
 
-1.  Select on **PERT** under the **Operation** topic. The **PERT** screen displays
-2.  Select on the **schedule** that contains the job
+1.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
+2.  Select the **schedule** that contains the job
 3.  Select the **job** to open the **Job Information** dialog. Alternatively, right-click the **job box**, select **Job**, then **Job Information**. For more information, refer to [Job Information](Job-Information.md)
 4.  Select **OK** to close the **Job Information** dialog
 :::

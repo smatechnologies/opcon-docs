@@ -26,7 +26,7 @@ Use this procedure to delete Script Runners in Enterprise Manager.
 
 To delete a script runner, complete the following steps:
 
-1.  Select on **Runners** under the **Scripts** topic. The **Script Runners** screen displays
+1.  Select **Runners** under the **Scripts** topic. The **Script Runners** screen displays
 2.  Select the **script runner** to delete from the list
 3.  Select the **Remove Runner** button on the toolbar
 4.  Select **Yes** to confirm

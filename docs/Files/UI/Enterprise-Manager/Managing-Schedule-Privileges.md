@@ -26,7 +26,7 @@ The **Schedule Privileges** editor maintains Role privileges for Schedules, disp
 
 To grant a privilege, complete the following steps:
 
-1. Select on **Schedule Privileges** under the **Security** topic. The **Schedule Privileges** screen displays
+1. Select **Schedule Privileges** under the **Security** topic. The **Schedule Privileges** screen displays
 2. Select a **role** in the **Select Role** list
 3. Select the **schedule(s)** in the **Revoked** list box
 4. Select the **right arrow** to move privileges to the **Granted** list box
@@ -40,7 +40,7 @@ If a Role has the **Inherit Privileges for All Schedules** feature enabled insid
 
 To revoke a privilege, complete the following steps:
 
-1. Select on **Schedule Privileges** under the **Security** topic. The **Schedule Privileges** screen displays
+1. Select **Schedule Privileges** under the **Security** topic. The **Schedule Privileges** screen displays
 2. Select a **role** in the **Select Role** list
 3. Select the **schedule(s)** in the **Granted** list box
 4. Select the **left arrow** to move privileges to the **Revoked** list box

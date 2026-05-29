@@ -28,7 +28,7 @@ Each user must have an email address defined to receive escalations. Refer to [A
 
 To define a group, complete the following steps:
 
-1. Select on **Escalation Manager** under the **Management** topic. The **Escalation Manager** screen displays
+1. Select **Escalation Manager** under the **Management** topic. The **Escalation Manager** screen displays
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add Group** on the **Groups** toolbar. The **Group Add/Edit** dialog displays
 3. Enter a *group name* (e.g., Level One) in the **Group Name** field
 4. In the **Users** frame, add assigned users by doing one of the following:

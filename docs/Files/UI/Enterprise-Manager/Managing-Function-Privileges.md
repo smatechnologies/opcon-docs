@@ -26,7 +26,7 @@ The **Function Privileges** editor maintains Role privileges for specific functi
 
 To grant a privilege, complete the following steps:
 
-1. Select on **Function Privileges** under the **Security** topic. The **Function Privileges** screen displays
+1. Select **Function Privileges** under the **Security** topic. The **Function Privileges** screen displays
 2. Select a **role** in the **Select Role** list
 3. Select the **function(s)** in the **Revoked** list box
 4. Select the **right arrow** to move functions to the **Granted** list box
@@ -36,7 +36,7 @@ To grant a privilege, complete the following steps:
 
 To revoke a privilege, complete the following steps:
 
-1. Select on **Function Privileges** under the **Security** topic. The **Function Privileges** screen displays
+1. Select **Function Privileges** under the **Security** topic. The **Function Privileges** screen displays
 2. Select a **role** in the **Select Role** list
 3. Select the **function(s)** in the **Granted** list box
 4. Select the **left arrow** to move functions to the **Revoked** list box

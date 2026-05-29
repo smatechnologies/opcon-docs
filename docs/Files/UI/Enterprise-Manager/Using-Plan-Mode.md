@@ -26,8 +26,8 @@ The Plan mode in the **Gantt** chart can be used to alter a job's start time or 
 
 To use plan mode, complete the following steps:
 
-1.  Select on **Gantt** under the **Operation** topic. The **Gantt** screen displays
-2.  Select on the **Gantt** button on the **Gantt** toolbar
+1.  Select **Gantt** under the **Operation** topic. The **Gantt** screen displays
+2.  Select the **Gantt** button on the **Gantt** toolbar
 3.  *(Optional)* Hover over the **job box** until the **four directional arrow** appears
 4.  Select and drag the **job box** to the new estimated start time
 5.  *(Optional)* Hover over the **end of the job box** until the bi-directional arrow appears

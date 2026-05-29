@@ -26,7 +26,7 @@ Tags in Job Master can be searched using the Quick Search dialog, which lets eng
 
 To find a tag, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Tags** tab in the **Job Properties** frame

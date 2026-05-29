@@ -40,10 +40,6 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: What does Role Department Activities do?**
-
-title: Roles - Departments
-
 **Q: Where can you find Role Department Activities in OpCon?**
 
 Access Role Department Activities in Solution Manager or Enterprise Manager.

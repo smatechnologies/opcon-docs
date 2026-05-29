@@ -24,7 +24,7 @@ doc_type: procedural
 
 To view Additional Department Information in Enterprise Manager, complete the following steps:
 
-1.  Select on **Departments** under the **Security** topic
+1.  Select **Departments** under the **Security** topic
 2.  Select the **department** in the **Select a department** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
 4.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the Department, then select **Close**

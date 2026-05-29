@@ -26,7 +26,7 @@ Use this procedure to add Machine Groups in Enterprise Manager.
 
 To add a machine group, complete the following steps:
 
-1. Select on **Machine Groups** under the **Administration** topic
+1. Select **Machine Groups** under the **Administration** topic
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Machine Groups** toolbar
 3. Enter the *machine group name* in the **Name** text box
 4. *(Optional)* Enter any *documentation* about the machine group

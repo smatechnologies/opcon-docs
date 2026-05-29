@@ -94,9 +94,9 @@ With manual failover, the administrator decides when to initiate failover to the
 2. In the Control Panel window: Select the **Administrative Tools** icon
 3. In the Administrative Tools window: Select the **Services** icon
 
-4. In the Services window: Select on the **SMA OpCon Service Manager** service
+4. In the Services window: Select the **SMA OpCon Service Manager** service
 5. Change the SMAServMan's Startup Type to **Automatic (Delayed Start)** using the following steps:
-   1. Select on **SMA OpCon Service Manager**
+   1. Select **SMA OpCon Service Manager**
    2. Select **Automatic (Delayed Start)** in the **Startup type** list and select **OK**
 6. Select **Close ☒** to close the **Services** window
 
@@ -106,9 +106,9 @@ With manual failover, the administrator decides when to initiate failover to the
 2. In the Control Panel window: Select the **Administrative Tools** icon
 3. In the Administrative Tools window: Select the **Services** icon
 
-4. In the Services window: Select on the **SMA OpCon Service Manager** service
+4. In the Services window: Select the **SMA OpCon Service Manager** service
 5. Change the SMAServMan's Startup Type to **Manual** using the following steps:
-   1. Select on **SMA OpCon Service Manager**
+   1. Select **SMA OpCon Service Manager**
    2. In the SMA OpCon Service Manager Properties window:
    3. Select **Manual** in the **Startup type** list and select **OK**
 6. Select **Close ☒** to close the **Services** window

@@ -24,7 +24,7 @@ The **Roles** editor maintains Role privileges, displaying a list of Role names,
 
 ## Roles Toolbar
 
-The **Roles** editor has a toolbar for managing roles. Select on any specific icon on the toolbar below to learn more about its functionality.
+The **Roles** editor has a toolbar for managing roles. Select any specific icon on the toolbar below to learn more about its functionality.
 
 ![Roles toolbar](../../../Resources/Images/EM/EMsecurityusetoolbar.png "Roles toolbar")
 

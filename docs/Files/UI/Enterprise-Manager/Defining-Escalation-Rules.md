@@ -26,7 +26,7 @@ Use this procedure to define Escalation Rules in Enterprise Manager.
 
 To define a rule, complete the following steps:
 
-1. Select on **Escalation Manager** under the **Management** topic. The **Escalation Manager** screen displays
+1. Select **Escalation Manager** under the **Management** topic. The **Escalation Manager** screen displays
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add Rule** on the **Rules** toolbar. The **Escalation Rule Add/Edit** dialog displays
 3. Enter a *rule name* (e.g., Mission Critical) in the **Rule Name** field
 4. Select the **Add** button. The **Escalation Group Entry Add/Edit** dialog displays

@@ -28,7 +28,7 @@ The **Import Export** tool can be opened from within Enterprise Manager.
 
 To open the tool:
 
-Select on **Import Export** under the **External Tools** topic. The **Log in to Schedule Import/Export** dialog displays.
+Select **Import Export** under the **External Tools** topic. The **Log in to Schedule Import/Export** dialog displays.
 
 :::note
 For procedures on creating OpCon User Accounts, refer to [Managing User Accounts](Managing-User-Accounts.md).

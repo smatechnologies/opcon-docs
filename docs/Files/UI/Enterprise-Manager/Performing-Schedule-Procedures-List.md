@@ -30,25 +30,25 @@ If a completed schedule contains failed jobs, it displays in red with the text `
 
 To view Schedule Information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** to view
-4. Select on **Schedule Information** from the menu
+3. Right-click the **schedule** to view
+4. Select **Schedule Information** from the menu
 5. Select the **OK** button to close the **Schedule Information** dialog
 
 ## Viewing SubSchedule Information
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule** containing the subschedule
-4. Right-click on the **subschedule** to view
-5. Select on **SubSchedule Information** from the menu
+4. Right-click the **subschedule** to view
+5. Select **SubSchedule Information** from the menu
 6. View the information
 7. Select the **OK** button to close the **SubSchedule Information** dialog
 
 To view Jobs in a SubSchedule:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule** containing the subschedule
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **subschedule**
@@ -56,10 +56,10 @@ To view Jobs in a SubSchedule:
 
 ## Viewing Schedule History
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** to view
-4. Select on **Schedule History** from the menu
+3. Right-click the **schedule** to view
+4. Select **Schedule History** from the menu
 5. *(Optional)* Change the **Start Date** or **End Date**
 6. *(Optional)* Select the **View Detailed History** button
 7. *(Optional)* Select the **View Archived History** button
@@ -68,9 +68,9 @@ To view Jobs in a SubSchedule:
 
 ## Placing All Schedules for Selected Schedule Date On Hold
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **Date**
+3. Right-click the **Date**
 4. Hover over **Schedules** in the menu
 5. Select **Hold Schedules** from the second menu. The **Change Schedule Statuses** dialog displays
 6. Select the option(es) for the schedule statuses to update
@@ -79,9 +79,9 @@ To view Jobs in a SubSchedule:
 
 ## Releasing All Held Schedules for Selected Schedule Date
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **Date**
+3. Right-click the **Date**
 4. Hover over **Schedules** in the menu
 5. Select **Release Schedules** from the second menu. The **Change Schedule Statuses** dialog displays
 6. Select the option(es) for the schedule statuses to update
@@ -90,9 +90,9 @@ To view Jobs in a SubSchedule:
 
 ## Starting All Schedules for Selected Schedule Date
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **Date**
+3. Right-click the **Date**
 4. Hover over **Schedules** in the menu
 5. Select **Start Schedules** from the second menu. The **Change Schedule Statuses** dialog displays
 6. Select the option(es) for the schedule statuses to update
@@ -101,10 +101,10 @@ To view Jobs in a SubSchedule:
 
 ## Checking all Schedules for Specific Date
 
-1. Select on **List** under the **Operation** topic
-2. Right-click on the **date** to check all schedules
+1. Select **List** under the **Operation** topic
+2. Right-click the **date** to check all schedules
 3. Hover over **Schedules** in the menu
-4. Select on **Check Schedules** from the second menu. The **Check Schedules** dialog displays
+4. Select **Check Schedules** from the second menu. The **Check Schedules** dialog displays
 5. Select **Normal (No Circular)**, **Slow (Circular)**, or **Fast (Requires Only)**. The **Schedule Check** dialog displays
 6. Note the *log file name* for later access if required
 7. Select the **OK** button
@@ -113,17 +113,17 @@ To view Jobs in a SubSchedule:
 
 To delete All Schedules for Selected Schedule Date, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **Date**
+3. Right-click the **Date**
 4. Hover over **Schedules** in the menu
 5. Select **Delete all Schedules** from the second menu. The **Delete** dialog displays
 6. Select the **OK** button to confirm the deletion
 
 ## Changing Job Statuses for Jobs on Particular Schedule Date
 
-1. Select on **List** under the **Operation** topic
-2. Right-click on the **Date**
+1. Select **List** under the **Operation** topic
+2. Right-click the **Date**
 3. Hover over **Jobs** in the menu
 
 4. Select **Update Job Statuses** from the second menu. The **Update Job statuses** dialog displays
@@ -137,11 +137,11 @@ To delete All Schedules for Selected Schedule Date, complete the following steps
 
 Suspends processing of the selected schedule. Running jobs continue, but no new jobs start.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** to place on hold
-4. Select on **Hold** from the menu. The **HOLD** dialog displays
+3. Right-click the **schedule** to place on hold
+4. Select **Hold** from the menu. The **HOLD** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
 
@@ -149,11 +149,11 @@ Suspends processing of the selected schedule. Running jobs continue, but no new 
 
 Releases the selected schedule from a Held state. The SAM resumes processing jobs from where they were stopped.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** to release
-4. Select on **Release** from the menu. The **Release** dialog displays
+3. Right-click the **schedule** to release
+4. Select **Release** from the menu. The **Release** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
 
@@ -161,11 +161,11 @@ Releases the selected schedule from a Held state. The SAM resumes processing job
 
 Overrides a schedule's start date and time. The SAM begins processing immediately.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** to start
-4. Select on **Start** from the menu. The **Start** dialog displays
+3. Right-click the **schedule** to start
+4. Select **Start** from the menu. The **Start** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
 
@@ -177,11 +177,11 @@ Use **Close** to mark a schedule as Completed when it is still In Process only b
 This feature is not available for subschedules.
 :::
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** to close
-4. Select on **Close** from the menu. The **Close** dialog displays
+3. Right-click the **schedule** to close
+4. Select **Close** from the menu. The **Close** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
 
@@ -189,11 +189,11 @@ This feature is not available for subschedules.
 
 Cancels all jobs for the selected schedule based on a filter. Jobs dependent on canceled jobs will not have those dependencies met.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Cancel** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -208,10 +208,10 @@ Suspends processing of all jobs on the selected schedule based on a filter.
 Jobs already submitted for starting cannot be held.
 :::
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Hold** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -222,11 +222,11 @@ Jobs already submitted for starting cannot be held.
 
 Marks all jobs on the selected schedule as Failed based on a filter.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Mark Failed** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -237,11 +237,11 @@ Marks all jobs on the selected schedule as Failed based on a filter.
 
 Marks all jobs on the selected schedule as Finished OK based on a filter.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Mark Finished OK** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -252,10 +252,10 @@ Marks all jobs on the selected schedule as Finished OK based on a filter.
 
 Places all held jobs on a schedule back into a Qualifying state based on a filter. Jobs start as soon as all dependencies are met.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Release** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -266,11 +266,11 @@ Places all held jobs on a schedule back into a Qualifying state based on a filte
 
 Places all jobs on the selected schedule back in a Qualifying state based on a filter. Jobs start as soon as all dependencies are met.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Restart** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -285,10 +285,10 @@ Container jobs with statuses matching the filters in the **Jobs to update** fram
 - Leave the subschedules alone
 - Restart jobs with matching statuses in the subschedule
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Restart** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -303,10 +303,10 @@ Container jobs with statuses matching the filters in the **Jobs to update** fram
 
 Places all jobs on the selected schedule in a Job to be Skipped state until they qualify to start. When jobs qualify, they are skipped and downstream job dependencies are met.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
-4. Select on **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
+3. Right-click the **schedule**
+4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select **Skip** in the **Change all job statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
 7. Select the options for the preferred changes for jobs to update
@@ -315,22 +315,22 @@ Places all jobs on the selected schedule in a Job to be Skipped state until they
 
 ## Editing Daily Schedules
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
+3. Right-click the **schedule**
 4. Hover over **Maintenance** in the menu
-5. Select on **Edit Daily Schedule** from the second menu. The **Schedule Daily** screen displays
+5. Select **Edit Daily Schedule** from the second menu. The **Schedule Daily** screen displays
 6. Select the tabs and change the *information*. For more information, refer to [Using Daily Maintenance View](Using-Daily-Maintenance-View.md)
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar
 8. Select the **x** to the right of the **Schedule Daily** tab to close the screen
 
 ## Editing Master Schedules
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
+3. Right-click the **schedule**
 4. Hover over **Maintenance** in the menu
-5. Select on **Edit Master Schedule** from the second menu. The **Schedule Master** screen displays
+5. Select **Edit Master Schedule** from the second menu. The **Schedule Master** screen displays
 6. Select the tabs and change the *information*. For more information, refer to [Using Daily Maintenance View](Using-Daily-Maintenance-View.md)
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 8. Select the **x** to the right of the **Schedule Master** tab to close the screen
@@ -339,12 +339,12 @@ Places all jobs on the selected schedule in a Job to be Skipped state until they
 
 Runs a check of a schedule in the Daily tables.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
+3. Right-click the **schedule**
 4. Hover over **Maintenance** in the menu
-5. Select on **Check Schedule** from the second menu. The **Check Schedule** dialog displays
+5. Select **Check Schedule** from the second menu. The **Check Schedule** dialog displays
 6. Select **Normal (No Circular)**, **Slow (Circular)**, or **Fast (Requires Only)**. The **Schedule Check** dialog displays
 7. Note the *log file name* for later access if required
 8. Select the **OK** button to close the **Schedule Check** dialog
@@ -353,22 +353,22 @@ Runs a check of a schedule in the Daily tables.
 
 Deletes a schedule from the Daily tables.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
+3. Right-click the **schedule**
 4. Hover over **Maintenance** in the menu
-5. Select on **Delete Schedule** from the second menu. The **Delete Schedule** dialog displays
+5. Select **Delete Schedule** from the second menu. The **Delete Schedule** dialog displays
 6. Select **Yes** to confirm or **No** to cancel
 
 ## Adding Jobs
 
 Adds a job or jobs to the Daily schedule. For more information, refer to [Adding Jobs to Daily Schedules](../../../operations/adding-jobs.md) in the **Concepts** online help.
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule** and hover over **Maintenance** in the menu
-4. Select on **Add Jobs** from the second menu. The **Add Jobs to \<Schedule Name\>** dialog displays
+3. Right-click the **schedule** and hover over **Maintenance** in the menu
+4. Select **Add Jobs** from the second menu. The **Add Jobs to \<Schedule Name\>** dialog displays
 5. Select the **Job** option(es) to add, or select directly on the job to select it
 6. Select the **Add Job** button. The **Confirm Add Job to Schedule** dialog displays
 7. In the **Build Status** frame:

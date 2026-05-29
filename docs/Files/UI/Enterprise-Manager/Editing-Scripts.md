@@ -26,7 +26,7 @@ Use this procedure to edit Scripts in Enterprise Manager.
 
 To edit a script, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select the **script** to edit
 3.  Select **Edit Script** on the toolbar. The **Edit Script** dialog displays
 4.  Modify the name, type, and/or description

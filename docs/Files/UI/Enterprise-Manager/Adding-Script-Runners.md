@@ -42,7 +42,7 @@ If you have two versions of the Python runner for Windows, define at least one r
 
 To add a script runner, complete the following steps:
 
-1. Select on **Runners** under the **Scripts** topic. The **Script Runners** screen displays
+1. Select **Runners** under the **Scripts** topic. The **Script Runners** screen displays
 2. Select **Add Runner** on the toolbar. The **Add Runner** dialog displays
 3. Enter *a name* for the script runner
 4. Select the **OS** from the list. Supported platforms: UNIX and Windows

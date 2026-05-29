@@ -28,7 +28,7 @@ To delete a resource, complete the following procedures in order.
 
 To remove the Resource from the Daily Tables, complete the following steps:
 
-1. Select on **Daily Maintenance**
+1. Select **Daily Maintenance**
 2. In the **Daily** frame, select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -61,7 +61,7 @@ In the **Daily Maintenance** screen:
 
 ## Delete the Resource
 
-1. Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1. Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2. Select the **resource** in the **Select Resource** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Resources** toolbar
 

@@ -26,7 +26,7 @@ Use this procedure to view Additional Threshold Information in Enterprise Manage
 
 To view additional information, complete the following steps:
 
-1.  Select on **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
+1.  Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
 2.  Select the **threshold** in the **Select Threshold** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to refer to a list of Master threshold dependencies and updates
 4.  Select **OK**

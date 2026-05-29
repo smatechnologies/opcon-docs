@@ -24,7 +24,7 @@ Use this procedure to add User-defined System Properties in Enterprise Manager.
 
 To add a system property, complete the following steps:
 
-1. Select on **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
+1. Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Global Properties** toolbar
 3. Enter a *system property name followed by user-defined text* (e.g., $NOW spec) in the **Name** text box
 4. *(Optional)* Enter any relevant documentation in the **Documentation** text box

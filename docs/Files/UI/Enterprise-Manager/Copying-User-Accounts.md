@@ -26,7 +26,7 @@ Use this procedure to copy User Accounts in Enterprise Manager.
 
 To copy a user account, complete the following steps:
 
-1.  Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2.  In the **Select User** list, select the **user name** to copy
 3.  Select **Copy** on the **User Accounts** toolbar. The **Copy User** dialog displays
 4.  Enter the *new user name*

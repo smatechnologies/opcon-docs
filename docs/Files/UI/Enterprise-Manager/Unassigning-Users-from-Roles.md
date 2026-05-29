@@ -26,7 +26,7 @@ Use this procedure to unassign Users from Roles in Enterprise Manager.
 
 To unassign a user from a role, complete the following steps:
 
-1.  Select on **Roles** under the **Security** topic. The **Roles** screen displays
+1.  Select **Roles** under the **Security** topic. The **Roles** screen displays
 2.  Select the **role name** in the **Select Role** list
 3.  Select the **User Login ID(s)** in the **Granted** list
 4.  Select the **left arrow** to unassign the users from the role

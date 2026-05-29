@@ -122,7 +122,7 @@ through a single .ini file named SMAResouceMonitor.ini.
 
 ### Modify the SMAResourceMonitor.ini File
 
-1. Right-click on **Start** and select **Explore** from the menu
+1. Right-click **Start** and select **Explore** from the menu
 2. Browse to the <Configuration Directory\>\\SMAResourceMonitor\\
     directory on the OpCon server.
 3. Find the **SMAResourceMonitor.ini** file

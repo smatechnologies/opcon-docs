@@ -26,7 +26,7 @@ Use this procedure to add Machines in Enterprise Manager.
 
 To add a machine, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Machines** toolbar
 3. Enter the *official host name* or *alias* based on the agent machine
 4. Enter any relevant documentation for this agent machine in the **Documentation** text box

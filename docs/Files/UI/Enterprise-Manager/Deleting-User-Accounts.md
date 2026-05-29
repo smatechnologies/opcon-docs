@@ -32,12 +32,12 @@ To delete a user account:
 
 To disable inheritance of schedule privileges and revoke access code and schedule privileges from the associated role, complete the following steps:
 
-1.  Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2.  Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 3.  Clear the **Inherit Privileges for All Schedules** option if selected
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Roles** toolbar
 5.  Select **Close ☒** to the right of the **Roles** tab
-6.  Select on **Access Code Privileges** under the **Security** topic
+6.  Select **Access Code Privileges** under the **Security** topic
 7.  Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 8.  Select all **access codes** in the **Granted** list box
 9.  Select the **left arrow** to move the access code privileges to the **Revoked** list box
@@ -47,12 +47,12 @@ To disable inheritance of schedule privileges and revoke access code and schedul
 
 To revoke schedule, function, and departmental function privileges from the role, complete the following steps:
 
-1. Select on **Schedule Privileges** under the **Security** topic
+1. Select **Schedule Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 3. Select all **schedule privileges** in the **Granted** list box
 4. Select the **left arrow** to move the schedule privileges to the **Revoked** list box
 5. Select **Close ☒** to the right of the **Schedule Privileges** tab
-6. Select on **Function Privileges** under the **Security** topic
+6. Select **Function Privileges** under the **Security** topic
 7. Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 8. Select all **function privileges** in the **Granted** list box
 9. Select the **left arrow** to move the function privileges to the **Revoked** list box
@@ -62,12 +62,12 @@ To revoke schedule, function, and departmental function privileges from the role
 
 To revoke departmental function privileges and batch user privileges from the role, complete the following steps:
 
-1. Select on **Departmental Function Privileges** under the **Security** topic
+1. Select **Departmental Function Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 3. Select all **departmental function privileges** in the **Granted** list box
 4. Select the **left arrow** to move the departmental function privileges to the **Revoked** list box
 5. Select **Close ☒** to the right of the **Departmental Function Privileges** tab
-6. Select on **Batch User Privileges** under the **Security** topic
+6. Select **Batch User Privileges** under the **Security** topic
 7. Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 8. Select an **operating system** in the **Target Operating System** list
 9. Select all **security logins** in the **Granted** list box
@@ -78,7 +78,7 @@ To revoke departmental function privileges and batch user privileges from the ro
 
 To delete the user account, complete the following steps:
 
-1. Select on **User Accounts** under the **Security** topic
+1. Select **User Accounts** under the **Security** topic
 2. Select a **role** in the **Select Role** list. Use the **Find** (Ctrl+F) button to search if needed
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **User Accounts** toolbar
 4. Select **Yes** to confirm the deletion or **No** to cancel

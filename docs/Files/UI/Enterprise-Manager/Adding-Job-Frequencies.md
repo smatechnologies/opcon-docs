@@ -30,7 +30,7 @@ Job frequencies cannot be added if the job uses a schedule-defined frequency.
 
 To add a new frequency:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -87,7 +87,7 @@ To add New Job Frequencies, complete the following steps:
 
 To add an existing frequency:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame

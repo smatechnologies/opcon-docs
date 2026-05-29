@@ -26,7 +26,7 @@ Use this procedure to add New Schedules using Workflow Designer in Enterprise Ma
 
 To add a new schedule, complete the following steps:
 
-1. Select on **Workflow Designer** under the **Administration** topic
+1. Select **Workflow Designer** under the **Administration** topic
 2. Select the **Create Schedule** icon on the toolbar. The **Create Schedule** dialog displays
 3. Enter a name for the new schedule. The schedule is created with default settings
 4. Select **OK** to close the dialog

@@ -26,7 +26,7 @@ Use this procedure to edit Resources in Enterprise Manager.
 
 To edit a resource, complete the following steps:
 
-1.  Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2.  Select an **existing resource** in the **Select Resource** list
 3.  Enter the *changes*
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Resources** toolbar

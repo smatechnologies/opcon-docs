@@ -28,7 +28,7 @@ Use this procedure to edit Threshold/Resource Updates in Enterprise Manager.
 
 To edit a threshold or resource update, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Threshold/Resource Update** tab in the **Job Properties** list
@@ -44,7 +44,7 @@ To edit a threshold or resource update, complete the following steps:
 
 To edit a threshold or resource update, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Threshold/Resource Update** tab in the **Job Properties** frame

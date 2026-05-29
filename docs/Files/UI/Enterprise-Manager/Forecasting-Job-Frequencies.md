@@ -28,7 +28,7 @@ Use this procedure to forecast Job Frequencies in Enterprise Manager.
 
 To forecast a job frequency, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Frequency** tab in the **Job Properties** frame
@@ -43,7 +43,7 @@ To forecast a job frequency, complete the following steps:
 
 To forecast all job frequencies, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Frequency** tab in the **Job Properties** frame

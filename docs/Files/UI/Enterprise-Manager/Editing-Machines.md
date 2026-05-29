@@ -26,7 +26,7 @@ Use this procedure to edit Machines in Enterprise Manager.
 
 To edit a machine, complete the following steps:
 
-1.  Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1.  Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2.  Select the **machine** in the **Select Machine** list
 3.  Right-click over the graphic in the **Communication Status** frame and select **Stop Communication** to stop communication with the agent
 4.  Enter the *changes* to the **Name**, **Documentation**, or **General Settings** boxes

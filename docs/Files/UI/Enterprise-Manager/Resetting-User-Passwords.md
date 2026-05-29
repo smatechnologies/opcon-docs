@@ -26,7 +26,7 @@ Use this procedure to reset User Passwords in Enterprise Manager.
 
 To reset a user password, complete the following steps:
 
-1. Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1. Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2. Select a **role** in the **Select Role** list, or use the **Find** (Ctrl+F) button to locate the role
 3. Select the **Reset User Password** button
 4. Select **Close ☒** (to the right of the **User Accounts** tab) to close the **User Accounts** screen

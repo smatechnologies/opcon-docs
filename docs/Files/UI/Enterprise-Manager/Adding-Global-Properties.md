@@ -24,7 +24,7 @@ Use this procedure to add Global Properties in Enterprise Manager.
 
 To add a global property, complete the following steps:
 
-1. Select on **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
+1. Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
 2. Select **Add** on the **Global Properties** toolbar
 3. Enter an alphanumeric *property name* in the **Name** text box
 4. *(Optional)* Enter *documentation* in the **Documentation** text box

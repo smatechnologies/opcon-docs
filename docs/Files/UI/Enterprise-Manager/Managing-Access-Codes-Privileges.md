@@ -26,7 +26,7 @@ The **Access Codes Privileges** editor maintains Role privileges for Access Code
 
 To grant Privileges to Access Codes, complete the following steps:
 
-1. Select on **Access Codes Privileges** under the **Security** topic
+1. Select **Access Codes Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list
 3. Select the access code(s) in the **Revoked** list box
 4. Select the **right arrow** to move privileges to the **Granted** list box. This grants read-only privileges for all jobs with that access code
@@ -36,7 +36,7 @@ To grant Privileges to Access Codes, complete the following steps:
 
 To revoke Privileges from Access Codes, complete the following steps:
 
-1. Select on **Access Codes Privileges** under the **Security** topic
+1. Select **Access Codes Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list
 3. Select the access code(s) in the **Granted** list box
 

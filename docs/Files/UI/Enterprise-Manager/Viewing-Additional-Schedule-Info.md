@@ -26,7 +26,7 @@ Use this procedure to view Additional Schedule Information in Enterprise Manager
 
 To view additional information, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select the **schedule** in the **Schedule Selection** list
 3.  Select the ![Merge icon](../../../Resources/Images/EM/EMcrossref.png "Merge icon") **Cross Reference** button on the toolbar to refer to a list of jobs on the schedule
 4.  Select **OK**

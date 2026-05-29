@@ -28,7 +28,7 @@ Use this procedure to manage Tags in Enterprise Manager.
 
 To find a tag, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the ![](../../../Resources/Images/EM/EMfind.png) **Find** button
 3. Enter the tag name in the **Select an Item** text box
 4. Select **OK**
@@ -37,7 +37,7 @@ To find a tag, complete the following steps:
 
 To add a tag, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the ![](../../../Resources/Images/EM/EMadd.png) **Add** button. The **Add New Tag** window displays
 3. Enter a name in the **Enter Tag Name** text box
 4. *(Optional)* Enter a **schedule name** or **job name** to filter results
@@ -50,7 +50,7 @@ To add a tag, complete the following steps:
 
 To rename a tag, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the **tag** in the **Selection** list
 3. Update the name in the **Name** text box
 4. Select ![](../../../Resources/Images/EM/EMsave.png) **Save** on the toolbar
@@ -59,7 +59,7 @@ To rename a tag, complete the following steps:
 
 To delete a tag, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the **tag** in the **Selection** list
 3. Select ![](../../../Resources/Images/EM/EMdelete.png) **Remove** on the toolbar
 4. Select **Yes** to confirm or **No** to cancel
@@ -68,7 +68,7 @@ To delete a tag, complete the following steps:
 
 To edit a master job, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the **tag** in the **Selection** list to display associated jobs
 3. Select the **job** to edit
 4. *(Optional)* Use the **filter** text box to find a specific schedule/job
@@ -81,7 +81,7 @@ To edit a master job, complete the following steps:
 
 To associate a master job, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the **tag** in the **Selection** list
 3. Select the ![](../../../Resources/Images/EM/EMedit.png) **Associate Additional Jobs** button. The **Associate Master Jobs** window displays
 4. *(Optional)* Enter a **schedule name** or **job name** to filter results
@@ -95,7 +95,7 @@ To associate a master job, complete the following steps:
 
 To delete a job association, complete the following steps:
 
-1. Select on **Tag Manager** under the **Management** topic
+1. Select **Tag Manager** under the **Management** topic
 2. Select the **tag** in the **Selection** list
 3. Select the **job** to disassociate
 4. *(Optional)* Use the **filter** text box to find a specific schedule/job

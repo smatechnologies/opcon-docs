@@ -26,7 +26,7 @@ Use this procedure to rename Frequencies in Enterprise Manager.
 
 To rename a frequency, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Type the *frequency name* in the **Type Filter** text box or select the **frequency name**
 3. Select the **Rename a frequency** button on the **Frequency Manager** toolbar. The **Frequency Definition Wizard** displays
 4. Select inside the **Frequency Name** text box and enter the new name

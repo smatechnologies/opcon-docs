@@ -38,10 +38,6 @@ Select the **Cross References** button to view the master and daily jobs that us
 
 ## FAQs
 
-**Q: What does Departments do?**
-
-viewport: width=device-width, initial-scale=1.0
-
 **Q: Where can you find Departments in OpCon?**
 
 Access Departments in Solution Manager or Enterprise Manager.

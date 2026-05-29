@@ -29,7 +29,7 @@ Reset Settings in Solution Manager's Server Options lets administrators restore 
 To reset settings, you must have one of the following:
 
 - **Role**: Role_ocadm
-- **Function Privilege**: Maintian server options
+- **Function Privilege**: Maintain server options
 
 To access reset options, select the vertical ellipsis icon.
 
@@ -47,7 +47,7 @@ To access reset options, select the vertical ellipsis icon.
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| Function Privilege | Maintian server options | settings | — |
+| Function Privilege | Maintain server options | settings | — |
 | Reset all to default | Resets all server options to system default settings | settings | — |
 | Reset current tab to default | Resets all changes in the current tab to system default settings | settings | — |
 | Undo | Undoes changes made in the current session before saving | — | — |

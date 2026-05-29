@@ -34,7 +34,7 @@ The **Event** tab provides the following fields for defining an OpCon event laun
 
 To add Events, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
@@ -64,7 +64,7 @@ To add Events, complete the following steps:
 
 ## Editing Events
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
@@ -76,19 +76,19 @@ To add Events, complete the following steps:
 
 ## Copying Events
 
-1. Right-click on the **event** to copy in the **Events** table and select **Copy**
+1. Right-click the **event** to copy in the **Events** table and select **Copy**
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
 5. Select the appropriate **machine/schedule/job trigger**
 6. Select the **Event** tab
-7. Right-click on the **Events** table and select **Paste**
+7. Right-click the **Events** table and select **Paste**
 
 ## Deleting Events
 
 To delete Events, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information

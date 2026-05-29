@@ -30,9 +30,9 @@ This action suspends processing of the selected schedule. Currently running jobs
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to place on hold
+3. Right-click the **schedule** to place on hold
 4. Select **Hold** from the menu. The **HOLD** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
@@ -43,9 +43,9 @@ This action releases the selected schedule from a Held state. The SAM processes 
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to release
+3. Right-click the **schedule** to release
 4. Select **Release** from the menu. The **Release** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
@@ -56,9 +56,9 @@ This action overrides a schedule's start date and time. The SAM begins processin
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to start
+3. Right-click the **schedule** to start
 4. Select **Start** from the menu. The **Start** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
@@ -69,9 +69,9 @@ This action cannot be performed if the schedule has jobs that are currently runn
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to close
+3. Right-click the **schedule** to close
 4. Select **Close** from the menu. The **Close** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change* in the text box provided
 6. Select the **OK** button to confirm the schedule status change
@@ -80,9 +80,9 @@ To perform this procedure, complete the following steps:
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to update
+3. Right-click the **schedule** to update
 4. Select **Update Job Statuses** from the menu. The **Update Job statuses** dialog displays
 5. Select the **job status** in the **Change all jobs statuses to** list
 6. *(Optional)* Select the **Check All** option to select all available job statuses in the **Jobs to update** frame
@@ -96,9 +96,9 @@ This option allows you to edit the Daily schedule and make required changes.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to edit
+3. Right-click the **schedule** to edit
 4. Hover over **Maintenance** in the menu
 5. Select **Edit Daily Schedule** from the second menu. The **Schedule Daily** screen displays
 6. Select the tabs and change the *information*. For more information, refer to [Using Daily Maintenance View](Using-Daily-Maintenance-View.md)
@@ -111,9 +111,9 @@ This option allows you to edit the Master schedule and make required changes.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to edit
+3. Right-click the **schedule** to edit
 4. Hover over **Maintenance** in the menu
 5. Select **Edit Master Schedule** from the second menu. The **Schedule Master** screen displays
 6. Select the tabs and change the *information*. For more information, refer to [Using Daily Maintenance View](Using-Daily-Maintenance-View.md)
@@ -126,9 +126,9 @@ This option runs a check of a schedule in the Daily tables.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to check
+3. Right-click the **schedule** to check
 4. Hover over **Maintenance** in the menu
 5. Select **Check Schedule** from the second menu. The **Check Schedule** dialog displays
 6. Select the **Normal (No Circular)**, **Slow (Circular)**, or **Fast (Requires Only)** button. The **Schedule Check** dialog displays
@@ -141,9 +141,9 @@ This action deletes a schedule from the Daily tables.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** to delete
+3. Right-click the **schedule** to delete
 4. Hover over **Maintenance** in the menu
 5. Select **Delete Schedule** from the second menu. The **Delete Schedule** dialog displays
 6. Select the **Yes** button to confirm the deletion or select the **No** button to cancel
@@ -154,9 +154,9 @@ This action adds job(s) to the Daily schedule. For more information, refer to [A
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. Select the **number** for the day in the calendar that contains the schedule(s)
-3. Right-click on the **schedule** and hover over **Maintenance** in the menu
+3. Right-click the **schedule** and hover over **Maintenance** in the menu
 4. Select **Add Jobs** from the second menu. The **Add Jobs to <Schedule Name\>** dialog displays
 5. Select the **Job** option(es) to add to the schedule, or select a job directly
 6. Select the **Add Job** button. The **Confirm Add Job to Schedule** dialog displays

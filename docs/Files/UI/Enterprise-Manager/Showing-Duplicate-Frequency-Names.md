@@ -26,7 +26,7 @@ Use this procedure to show Duplicate Frequency Names Only in Enterprise Manager.
 
 To show duplicate frequency names, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Select the **Show duplicate frequency names only** option
 3. View the duplicate frequency names (if any)
 4. Right-click the duplicate frequency name and select **Edit**. The **Frequency Definition Wizard** displays

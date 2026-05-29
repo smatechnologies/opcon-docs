@@ -26,7 +26,7 @@ Use this procedure to delete Script Types in Enterprise Manager.
 
 To delete a script type, complete the following steps:
 
-1.  Select on **Types** under the **Scripts** topic. The **Script Types** screen displays
+1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
 2.  Select the **script type** to delete from the list
 3.  Select the **Remove Type** button on the toolbar
 4.  Select **Yes** to confirm

@@ -26,7 +26,7 @@ Use this procedure to copy Machines in Enterprise Manager.
 
 To copy a machine, complete the following steps:
 
-1.  Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1.  Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2.  Select a **machine** in the **Select Machine** list, or select the **Find** button to locate the machine
 3.  Select the **Copy** button on the **Machines** toolbar. The **Copy Machine** dialog displays
 4.  Enter a new *machine name*

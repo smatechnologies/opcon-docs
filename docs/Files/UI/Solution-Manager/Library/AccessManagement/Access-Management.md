@@ -41,10 +41,6 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: What does Access Management do?**
-
-title: Access Management
-
 **Q: Where can you find Access Management in OpCon?**
 
 Access Access Management in Solution Manager or Enterprise Manager.

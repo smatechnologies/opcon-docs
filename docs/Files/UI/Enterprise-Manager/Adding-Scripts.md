@@ -32,7 +32,7 @@ Users who are super users (ocadm role or All UI Functions) or members of more th
 
 To add a script, complete the following steps:
 
-1. Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2. Select **Add** on the toolbar. The **Add Script** dialog displays
 3. Enter a *name* for the script
 

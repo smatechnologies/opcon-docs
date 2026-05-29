@@ -24,7 +24,7 @@ For conceptual information about each field or option, refer to [Remote Instance
 
 To add a remote instance, complete the following steps:
 
-1. Select on **Remote Instances** under the **Administration** topic
+1. Select **Remote Instances** under the **Administration** topic
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Remote Instances** toolbar
 3. Enter the *remote instance name* in the **Name** text box
 4. Enter any relevant documentation in the **Documentation** text box

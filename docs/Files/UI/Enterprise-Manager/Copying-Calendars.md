@@ -26,7 +26,7 @@ Use this procedure to copy Calendars in Enterprise Manager.
 
 To copy a calendar, complete the following steps:
 
-1.  Select on **Calendars** under the **Administration** topic. The **Calendars** screen displays
+1.  Select **Calendars** under the **Administration** topic. The **Calendars** screen displays
 2.  Select a **calendar** in the **Calendar** list, or select the **Find** button to locate the calendar
 3.  Select the **Copy** button on the **Calendar** toolbar. The **Copy Calendar** dialog displays
 4.  Select a **calendar name** in the **Select Calendar** list

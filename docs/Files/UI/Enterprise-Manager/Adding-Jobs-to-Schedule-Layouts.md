@@ -24,7 +24,7 @@ Use this procedure to add Jobs to Schedule Layouts in Enterprise Manager.
 
 To add a job to the schedule layout:
 
-1. Select on **Workflow Designer** under the **Administration** topic
+1. Select **Workflow Designer** under the **Administration** topic
 2. Select a **schedule** in the **Select Schedule** tree view or expand a **schedule** to refer to its SubSchedule(s). Use the **filter** text box to filter to a specific **schedule** or **SubSchedule**
 3. Select, drag, and drop the **Add Job** icon in the **Tools** frame to the schedule diagram
 4. Enter the *job information*

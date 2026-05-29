@@ -28,7 +28,7 @@ Before adding a new machine, verify with the OpCon administrator that there is a
 
 ## Machines Toolbar
 
-The **Machines** editor has a toolbar for managing machines. Select on any specific icon on the toolbar below to learn more about its functionality.
+The **Machines** editor has a toolbar for managing machines. Select any specific icon on the toolbar below to learn more about its functionality.
 
 ![Machines toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Machines toolbar")
 

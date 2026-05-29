@@ -26,7 +26,7 @@ Use this procedure to change Sort Order of Machines Status Table in Enterprise M
 
 To perform this procedure, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
+1.  Select **Machines Status** under the **Operation** topic
 2.  Select the **Machines Status** column heading to sort ascending (arrow pointing down), select again for descending (arrow pointing up), or select a third time to reverse the sort order
 
 ## Glossary

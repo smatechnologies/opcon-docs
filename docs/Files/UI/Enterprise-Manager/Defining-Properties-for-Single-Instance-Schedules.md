@@ -26,7 +26,7 @@ Use this procedure to define Properties for Single Instance Schedules in Enterpr
 
 To define a property, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select the **schedule** in the **Schedule Selection** list
 3.  Select the **Schedule** tab in the **Schedule Details** frame
 4.  Clear the **Multi-Instance** option if it is selected

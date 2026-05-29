@@ -26,14 +26,14 @@ Use this procedure to view Machine Information in Enterprise Manager.
 
 To perform this procedure:
 
-Select on **Machines Status** under the **Operation** topic.
+Select **Machines Status** under the **Operation** topic.
 
-Select on the **Table** tab:
+Select the **Table** tab:
 
 a.  Select the **Machine Name**, or right-click the **machine** and select **Machine Information**.
 b.  Select **OK** to close the **Machine Information** dialog.
 
-Select on the **Map** tab.
+Select the **Map** tab.
 
 a.  Right-click the **machine** and select **Machine Information**. For additional information, refer to [Machine Information](Machine-Information.md).
 b.  Select **OK** to close the **Machine Information** dialog.

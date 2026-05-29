@@ -26,7 +26,7 @@ Use this procedure to edit Script Types in Enterprise Manager.
 
 To edit a script type, complete the following steps:
 
-1.  Select on **Types** under the **Scripts** topic. The **Script Types** screen displays
+1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
 2.  Select the **script type** to edit
 3.  Select **Edit Type** on the toolbar. The **Edit Script Type** dialog displays
 4.  Modify the name, file extension, and/or description

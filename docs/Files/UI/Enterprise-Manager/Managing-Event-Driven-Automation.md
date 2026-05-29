@@ -26,8 +26,8 @@ Use this procedure to manage Event Driven Automation in Enterprise Manager.
 
 To add a trigger, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
-2. Right-click on the preferred **SAP R/3 and CRM machine name**
+1. Select **Machines Status** under the **Operation** topic
+2. Right-click the preferred **SAP R/3 and CRM machine name**
 3. Hover over **SAP Machine** in the right-click menu and select **Event Driven Automation**. The **SAP Event Driven Automation** dialog displays
 4. Select the **Add** button. The **Create New Trigger** dialog displays
 5. Enter a *trigger name*, then select **OK**. The **SAP Event Driven Automation** dialog displays
@@ -38,8 +38,8 @@ To add a trigger, complete the following steps:
 
 To edit a trigger, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
-2. Right-click on the preferred **SAP R/3 and CRM machine name**
+1. Select **Machines Status** under the **Operation** topic
+2. Right-click the preferred **SAP R/3 and CRM machine name**
 3. Hover over **SAP Machine** in the right-click menu and select **Event Driven Automation**. The **SAP Event Driven Automation** dialog displays
 4. Select the **trigger** in the list, then select **Edit**
 5. Edit the *settings*, then select **OK**
@@ -47,8 +47,8 @@ To edit a trigger, complete the following steps:
 
 To remove a trigger, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
-2. Right-click on the preferred **SAP R/3 and CRM machine name**
+1. Select **Machines Status** under the **Operation** topic
+2. Right-click the preferred **SAP R/3 and CRM machine name**
 3. Hover over **SAP Machine** in the right-click menu and select **Event Driven Automation**. The **SAP Event Driven Automation** dialog displays
 4. Select the **trigger** in the list, then select **Remove**
 5. Select the **Save** button

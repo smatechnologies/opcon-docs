@@ -26,7 +26,7 @@ Use this procedure to copy Machine Groups in Enterprise Manager.
 
 To copy a machine group, complete the following steps:
 
-1.  Select on **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
+1.  Select **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
 2.  Select the **machine group** in the **Select Machine Group** list, or select the **Find** button to locate the machine group
 3.  Select the **Copy** button on the **Machines Groups** toolbar. The **Copy Machine Group** dialog displays
 4.  Select the **OK** button

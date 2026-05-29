@@ -26,7 +26,7 @@ Use this procedure to view Additional Machine Groups Information in Enterprise M
 
 To view additional information, complete the following steps:
 
-1.  Select on **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
+1.  Select **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
 2.  Select the **machine group** in the **Select Machine Group** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to refer to a list of jobs using the machine group
 4.  Select **OK**

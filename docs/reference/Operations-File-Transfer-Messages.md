@@ -219,7 +219,7 @@ The UNIXLSAM.log file contains these errors.
 
 | Message | Origination | Explanation |
 | --- | :---: | --- |
-| - Unable to open master socket (return : *return* errno: *errno*)<br />- Select on master socket failed (errno : *errno*)<br />- Accept on master socket failed (errno : *errno*)<br />- Could not set buffer size | FTServer | - The communications channel could not be initialzed.<br />- The return and errno field provide the specific reason. |
+| - Unable to open master socket (return : *return* errno: *errno*)<br />- Select master socket failed (errno : *errno*)<br />- Accept on master socket failed (errno : *errno*)<br />- Could not set buffer size | FTServer | - The communications channel could not be initialzed.<br />- The return and errno field provide the specific reason. |
 | fork() failed (errno : *errno*) | FTServer| - A child process to handle the JORS/FTServer durites fould not be spawned.<br />- The errno field provides the specific reason. |
 
 ## Windows File Transfer Error Codes
@@ -240,7 +240,7 @@ The UNIXLSAM.log file contains these errors.
 | 14012 | FTAgent<br />FTServer | "Delete Source File" is required, and the user does not have permission to delete file. |
 | 14013 | FTAgent<br />FTServer | Compression is not supported for files 2GB and larger. |
 | 14014 | FTAgent<br />FTServer | During a Windows to Windows file transfer where the transfer Starts on the Destination machine, this error will occur if the user specified for the Source Machine doesn't have the required privileges on that machine. |
-| 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click on the job and select Job Information > Configuration > Job Information. |
+| 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click the job and select Job Information > Configuration > Job Information. |
 
 ## FAQs
 

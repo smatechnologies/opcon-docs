@@ -24,7 +24,7 @@ Use this procedure to add Machines to Machine Groups in Enterprise Manager.
 
 To add a machine to a machine group, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select the **machine group** in the **Unassigned** list box
 3. Select the **right arrow** (green) to move the machine group to the **Assigned** list box
 4. Repeat step 3 to assign additional machine groups

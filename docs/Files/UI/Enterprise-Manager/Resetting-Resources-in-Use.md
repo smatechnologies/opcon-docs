@@ -32,9 +32,9 @@ Reducing Resources in Use while jobs are still using the resource may cause OpCo
 
 To reset a resource in use, complete the following steps:
 
-1. Select on **List** under the **Operations** topic. The **Daily list** screen displays
+1. Select **List** under the **Operations** topic. The **Daily list** screen displays
 2. Verify that all jobs using the resource have completed
-3. Select on **Resources** under the **Administration** topic
+3. Select **Resources** under the **Administration** topic
 4. Select the **resource** in the **Select Resource** list
 5. Select the **Edit Resource in Use value** button (to the right of the **Resources in Use** frame)
 6. Enter the *correct* value

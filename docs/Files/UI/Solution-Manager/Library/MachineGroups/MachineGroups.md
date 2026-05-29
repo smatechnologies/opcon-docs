@@ -46,10 +46,6 @@ Select the expansion arrow for **Daily Job** to view daily jobs using the select
 
 ## FAQs
 
-**Q: What does Machine Groups do?**
-
-title: Machine Groups
-
 **Q: Where can you find Machine Groups in OpCon?**
 
 Access Machine Groups in Solution Manager or Enterprise Manager.

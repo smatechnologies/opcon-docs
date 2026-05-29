@@ -36,10 +36,6 @@ The **Name** field must be unique when adding or editing a notification category
 
 ## FAQs
 
-**Q: What does Notification Categories do?**
-
-title: Notification Categories
-
 **Q: Where can you find Notification Categories in OpCon?**
 
 Access Notification Categories in Solution Manager or Enterprise Manager.

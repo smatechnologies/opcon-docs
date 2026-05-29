@@ -26,7 +26,7 @@ Use this procedure to delete Job Dependencies in Enterprise Manager.
 
 To delete a dependency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Dependencies** tab in the **Job Properties** frame

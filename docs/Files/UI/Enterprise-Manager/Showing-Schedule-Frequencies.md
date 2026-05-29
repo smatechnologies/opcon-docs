@@ -26,7 +26,7 @@ Use this procedure to show Schedule Frequencies Only in Enterprise Manager.
 
 To show schedule frequencies, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Select the **Show only Schedules using this Frequency** option
 3. Select the desired frequency name
 4. View the schedules using the selected frequency (if any)

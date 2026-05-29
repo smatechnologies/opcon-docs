@@ -96,7 +96,7 @@ To override defaults, use the following syntax in the `-Q` parameter:
 ##### Modify the Command File
 
 1. Log on to the SAM application server as a *Windows user* with access to the OpCon installation directories
-2. Right-click on **Start** and select **Explore**
+2. Right-click **Start** and select **Explore**
 3. Browse to the **<Configuration Directory\>\\Utilities\\Database\\** directory
 4. Right-click **Job_Avg.cmd** or **Job_Avg_WinAuth.cmd** and select **Edit**
 5. Modify the **--Q** parameter. Insert values for SW1 through SW5 in order, with one space after the **SMA_JOBAVG** procedure name, before the closing quotation mark (")
