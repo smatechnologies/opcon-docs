@@ -1,12 +1,16 @@
 ---
 title: Windows System Errors
 description: "Reference table of Microsoft Windows System Error Codes (0–499) for interpreting Windows job exit codes in OpCon."
+product_area: Reference
+audience: Automation Engineer, Business Analyst
+version_introduced: "[see release notes]"
 tags:
   - Reference
   - Automation Engineer
   - Business Analyst
   - System Configuration
   - Jobs
+last_updated: 2026-03-18
 doc_type: reference
 ---
 

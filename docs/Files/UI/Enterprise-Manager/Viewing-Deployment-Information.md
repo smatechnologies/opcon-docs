@@ -1,5 +1,6 @@
 ---
 lang: en-us
+viewport: width=device-width, initial-scale=1.0
 title: Viewing Deployment Information
 description: "View schedule deployment information on the Deploy Info tab in the Schedule Master editor in Enterprise Manager."
 product_area: Enterprise Manager
@@ -10,7 +11,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Enterprise Manager
-last_updated: 2026-06-01
+last_updated: 2026-03-18
 doc_type: procedural
 ---
 

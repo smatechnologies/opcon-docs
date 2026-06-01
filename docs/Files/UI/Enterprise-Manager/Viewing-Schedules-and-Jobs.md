@@ -5,6 +5,7 @@ title: Viewing Schedules and Jobs using Frequency Names
 description: "Use this procedure to view the schedules and jobs that use a given frequency name in Enterprise Manager Frequency Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator

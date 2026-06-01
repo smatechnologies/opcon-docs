@@ -1,4 +1,6 @@
 ---
+lang: en-us
+viewport: width=device-width, initial-scale=1.0
 title: Otto Skills Overview
 description: "Skills perform specific operational tasks in OpCon on your behalf through the Otto chatbot, without leaving Solution Manager."
 product_area: Solution Manager

@@ -1,16 +1,18 @@
 ---
 lang: en-us
+viewport: width=device-width, initial-scale=1.0
 title: Using Bar Chart View
 description: "The Bar Chart view in Enterprise Manager displays daily schedule and job statistics grouped by job status. Use it to monitor workload at a glance and drill into specific days or schedules."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Reference
   - System Administrator
   - Automation Engineer
   - Enterprise Manager
-last_updated: 2026-06-01
-doc_type: reference
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 # Using Bar Chart View

@@ -3,12 +3,13 @@ title: OpCon Job Names
 description: "How OpCon names jobs in Schedule Operations, including the automatic suffixes applied to multi-instance jobs and jobs configured to run on each machine in a group."
 product_area: Operations
 audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - Operations Staff
   - System Administrator
   - Schedules
-last_updated: 2026-06-01
+last_updated: 2026-03-18
 doc_type: conceptual
 ---
 

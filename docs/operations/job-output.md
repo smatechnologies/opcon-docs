@@ -1,12 +1,15 @@
 ---
 title: Viewing a Job Output File
 description: "When OpCon runs a job, the Agent on the target machine captures job output and saves it to one or more files that you can view through Solution Manager or Enterprise Manager."
+product_area: Operations
+audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
 tags:
   - Procedural
   - Operations Staff
   - System Administrator
   - Operations
-last_updated: 2026-06-01
+last_updated: 2026-03-18
 doc_type: procedural
 ---
 

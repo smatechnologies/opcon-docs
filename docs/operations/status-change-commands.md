@@ -3,6 +3,7 @@ title: Schedule and Job Status Change Commands
 description: "Schedule and job status change commands are used with events and graphical interfaces to control processing of schedules and jobs in OpCon."
 product_area: Operations
 audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - Operations Staff

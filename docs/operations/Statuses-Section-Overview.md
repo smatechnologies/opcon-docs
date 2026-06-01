@@ -1,12 +1,16 @@
 ---
 title: Job and Schedule Statuses Overview
 description: "Every job and schedule in the daily queue has a status reflecting its current state, and understanding those statuses helps you monitor and control automation workflows."
+product_area: Operations
+audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - Operations Staff
   - System Administrator
   - Schedules
   - Jobs
+last_updated: 2026-03-18
 doc_type: conceptual
 ---
 

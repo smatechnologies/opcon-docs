@@ -5,12 +5,13 @@ title: Viewing Additional Threshold Information
 description: "Use this procedure to view cross-reference details and audit records for a threshold in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
   - Enterprise Manager
-last_updated: 2026-06-01
+last_updated: 2026-03-18
 doc_type: procedural
 ---
 

@@ -1,11 +1,16 @@
 ---
 title: Schedule Dates Overview
 description: "OpCon uses specific rules to name and track schedules and jobs in the daily queue."
+product_area: Operations
+audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - Operations Staff
   - System Administrator
   - Schedules
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 ## Overview

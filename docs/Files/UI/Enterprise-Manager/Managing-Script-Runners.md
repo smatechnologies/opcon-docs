@@ -1,15 +1,18 @@
 ---
+lang: en-us
+viewport: width=device-width, initial-scale=1.0
 title: Managing Script Runners
 description: "The Script Runners editor in Enterprise Manager creates and manages interpreters and the command templates that tell Agents how to run embedded scripts."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Reference
   - System Administrator
   - Automation Engineer
   - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: reference
+doc_type: procedural
 ---
 
 # Managing Script Runners

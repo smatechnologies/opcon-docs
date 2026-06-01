@@ -1,11 +1,16 @@
 ---
 title: Managing Privileges
 description: "Privileges in Enterprise Manager control what each role can access and do in OpCon. Use Security > Privileges to assign Access Code, Schedule, Function, Departmental Function, Batch User, Machine, Machine Group, and Script privileges to roles."
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
   - System Configuration
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 # Managing Privileges

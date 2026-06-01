@@ -1,16 +1,18 @@
 ---
 lang: en-us
+viewport: width=device-width, initial-scale=1.0
 title: Adding Script Types
 description: "Step-by-step procedure to add a Script Type in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
   - Enterprise Manager
-last_updated: 2026-06-01
-doc_type: procedural
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 # Adding Script Types

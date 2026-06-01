@@ -1,11 +1,16 @@
 ---
 title: Deleting Daily Schedules
 description: "Deleting Daily Schedules removes Completed or unprocessed schedules from the Daily tables."
+product_area: Operations
+audience: Operations Staff, System Administrator
+version_introduced: "[see release notes]"
 tags:
   - Procedural
   - Operations Staff
   - System Administrator
   - Schedules
+last_updated: 2026-03-18
+doc_type: procedural
 ---
 
 # Deleting Daily Schedules

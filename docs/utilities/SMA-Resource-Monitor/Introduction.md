@@ -2,11 +2,16 @@
 sidebar_label: 'Introduction'
 title: SMA Resource Monitor Introduction
 description: "The SMA Resource Monitor for Windows monitors files and Windows counters and sends OpCon events when a monitored condition is met."
+product_area: Utilities
+audience: System Administrator, Automation Engineer
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
   - System Configuration
+last_updated: 2026-03-18
+doc_type: conceptual
 ---
 
 # SMA Resource Monitor Introduction
