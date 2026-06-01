@@ -1,6 +1,6 @@
 ---
 title: Job Instance Definition
-description: "The Instance Definition tab in the Job Master editor allows you to define and manage job instance properties."
+description: "The Instance Definition tab in Job Master lets you predefine property sets for one or more instances of a job."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,43 +8,31 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Jobs
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Job Instance Definition
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Instance Definition** tab in [Job Master](Using-Job-Master.md) lets you predefine property sets for one or more instances of a job. When OpCon builds the job into the Daily tables, these predefined properties are attached to the job as Job Instance Properties. You reference them in command lines and event strings using the token syntax `[[JI.PropertyName]]`.
 
-## What Is It?
+The tab behaves differently depending on whether the job allows multiple instances:
 
-The **Instance Definition** tab in the [**Job Master**](Using-Job-Master.md) editor allows you to define and manage job instance properties. Within the tab, you can:
+- **Single-instance jobs** — only one property set can be defined. The **Allow Multi-Instance** option on the **Job Details** tab must be cleared.
+- **Multi-instance jobs** — multiple property sets can be defined. Each set creates a separate instance of the job when it is built into the Daily tables. The **Allow Multi-Instance** option on the **Job Details** tab must be selected.
 
-- [Define Properties for Single Instance Jobs](Defining-Properties-for-Single-Instance-Jobs.md)
-- [Define Properties for Multi-Instance Jobs](Defining-Properties-for-Multi-Instance-Jobs.md)
-- [Update Job Instance Properties](Updating-Job-Instance-Properties.md)
-- [Delete Job Instance Properties](Deleting-Job-Instance-Properties.md)
+The value of the first property in each set is appended to the job name in Operations. Because a job name in Operations cannot exceed 128 characters, keep the first property value short and descriptive.
 
-For conceptual information, refer to [Instance Definition](../../../job-components/instances.md) in the **Concepts** online help.
+Property strings are entered in the format `PropertyName=PropertyValue`. To define multiple properties in a single string, separate each `PropertyName=PropertyValue` pair with a semicolon (`;`). Each complete string is stored as one row in the **Instances** table. The text field accepts up to 4,000 characters.
 
-## FAQs
+For conceptual background on instance definitions, refer to [Instance Definition](../../../job-components/instances.md) in the **Concepts** online help.
 
-**Q: What does Job Instance Definition do?**
+## Tasks
 
-The **Instance Definition** tab in the [**Job Master**](Using-Job-Master.md) editor allows you to define and manage job instance properties. Within the tab, you can:
-
-**Q: Where can you find Job Instance Definition in OpCon?**
-
-Access Job Instance Definition through the appropriate section in Enterprise Manager or Solution Manager navigation.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+| Task | Description |
+|---|---|
+| [Define Properties for Single Instance Jobs](Defining-Properties-for-Single-Instance-Jobs.md) | Predefine one property set for a job that runs as a single instance. |
+| [Define Properties for Multi-Instance Jobs](Defining-Properties-for-Multi-Instance-Jobs.md) | Predefine one or more property sets for a job that runs as multiple instances. |
+| [Update Job Instance Properties](Updating-Job-Instance-Properties.md) | Edit an existing property set in the **Instances** table. |
+| [Delete Job Instance Properties](Deleting-Job-Instance-Properties.md) | Remove a property set from the **Instances** table. |

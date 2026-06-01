@@ -1,6 +1,6 @@
 ---
 title: Job Frequency
-description: "The Frequency tab in the Job Master editor allows you to define and manage job frequencies: - Add Job Frequencies - Edit Job Frequencies - Delete Job Frequencies - Forecast Job Frequencies - Manage."
+description: "Use the Frequency tab in Job Master to add, edit, delete, forecast, and manage advanced job frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,46 +8,25 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Frequencies
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Job Frequency
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Frequency** tab in the [Job Master](Using-Job-Master.md) editor lets you define and manage the scheduling rules that control when a job runs. Each frequency specifies the weeks, days, and calendar criteria for job eligibility, along with timing details such as start offsets, late-to-start thresholds, retry behavior, and recurrence settings.
 
-## What Is It?
+A job can have multiple frequencies. When more than one frequency qualifies for the same date, OpCon uses the highest-priority frequency and ignores the others for that date.
 
-The **Frequency** tab in the **[Job Master](Using-Job-Master.md)** editor allows you to define and manage job frequencies:
+For conceptual background on how frequencies work, refer to [Job Frequency](../../../job-components/frequency.md) in the **Concepts** online help.
 
-- [Add Job Frequencies](Adding-Job-Frequencies.md)
-- [Edit Job Frequencies](Editing-Job-Frequencies.md)
-- [Delete Job Frequencies](Deleting-Job-Frequencies.md)
-- [Forecast Job Frequencies](Forecasting-Job-Frequencies.md)
-- [Manage Advanced Job Frequencies](Managing-Advanced-Job-Frequencies.md)
+## Available Actions
 
-For conceptual information, refer to [Job Frequency](../../../job-components/frequency.md) in the **Concepts** online help.
+From the **Frequency** tab in the **Job Master** editor, you can:
 
-## FAQs
-
-**Q: What does Job Frequency do?**
-
-The **Frequency** tab in the **[Job Master](Using-Job-Master.md)** editor allows you to define and manage job frequencies:
-
-**Q: Where can you find Job Frequency in OpCon?**
-
-Access Job Frequency through the appropriate section in Enterprise Manager or Solution Manager navigation.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Add Job Frequencies](Adding-Job-Frequencies.md) — create a new frequency or associate an existing one with the job
+- [Edit Job Frequencies](Editing-Job-Frequencies.md) — modify the frequency definition or timing details
+- [Delete Job Frequencies](Deleting-Job-Frequencies.md) — remove a frequency from the job
+- [Forecast Job Frequencies](Forecasting-Job-Frequencies.md) — preview the dates a frequency qualifies
+- [Manage Advanced Job Frequencies](Managing-Advanced-Job-Frequencies.md) — configure extended frequency properties

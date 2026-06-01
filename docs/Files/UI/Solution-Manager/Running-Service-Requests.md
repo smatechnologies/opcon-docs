@@ -1,6 +1,6 @@
 ---
 title: Running Service Requests
-description: "Use this procedure to run Service Requests in Solution Manager."
+description: "Run a Service Request in Solution Manager's Self Service module to trigger an OpCon automation workflow."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,34 +15,53 @@ doc_type: procedural
 
 # Running Service Requests
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this page to run a Service Request from the Self Service module in Solution Manager. Running a Service Request triggers the automation workflow associated with that request — for example, a schedule build, job submission, or OpCon event.
 
-## What Is It?
+## Before You Begin
 
-Use this procedure to run Service Requests in Solution Manager.
+To run a Service Request, your OpCon role must have the **View Service Requests** function privilege and your license must include the Self Service feature.
 
-To run the Service Request:
+## Running a Service Request
 
-Select the **Service Request** button.
+To run a Service Request, complete the following steps:
 
-![Sample Service Request buttons](../../../Resources/Images/SM/Running-Service-Requests.png "Sample Service Request buttons")
+1. Go to **Self Service** in Solution Manager.
 
-Proceed based on one of two prompts:
+2. Select the button for the Service Request you want to run.
 
-- If a confirmation message was configured with no user inputs, the Service Request stops and prompts you to select **Submit** to continue or **Cancel** to discard the run request
-- If user inputs were configured, the Service Request stops so that you can configure the User Input field(s)
+   ![Sample Service Request buttons](../../../Resources/Images/SM/Running-Service-Requests.png "Sample Service Request buttons")
 
-## FAQs
+3. Proceed based on how the Service Request is configured:
 
-**Q: What does running service requests do?**
+   - If the Service Request has no user inputs and no confirmation prompt configured, it runs immediately and you are taken to the execution status page. No further action is required.
+   - If a confirmation prompt is configured with no user inputs, a confirmation page appears with no input fields. Select **Submit** to proceed or **Cancel** to discard the run request.
+   - If user inputs are configured, a form appears. Complete the required input fields, then select **Submit** to run the request or **Cancel** to discard it.
 
-Running service requests runs the specified action or command in OpCon.
+**Result:** After you select **Submit**, a confirmation message displays the request name, submission time, and submission date. The execution status panel shows the progress of the request.
 
-## Glossary
+## Execution Status
 
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
+After submission, the execution status panel tracks the request through the following states:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+| Status | Description |
+|---|---|
+| Waiting | The request has been submitted and is queued for processing. |
+| In Process | The request is actively running. |
+| In Process (With error) | The request is running but one or more actions have encountered an error. |
+| Completed | The request finished successfully. |
+| Completed (With error) | The request finished but one or more actions encountered an error. |
+| Zombified | The request entered an unrecoverable state and did not complete normally. |
+| Submit Rejected | The request could not be submitted due to an error. |
+| Unknown | The execution status cannot be determined. |
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+Select **OK** to return to the Self Service page when you are finished reviewing the status.
+
+## Disabled Service Requests
+
+If you select a Service Request that has been disabled by an administrator, the form does not appear and a "Service Request disabled" message is displayed. Contact your administrator to enable the request before running it.
+
+## Related Topics
+
+- [Working in User Mode](Working-in-User-Mode.md)
+- [Filtering Service Requests](Filtering-Service-Requests.md)
+- [Self Service Overview](Self-Service-Section-Overview.md)

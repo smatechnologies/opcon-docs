@@ -1,76 +1,58 @@
 ---
 title: Deleting Daily Schedules
 description: "Deleting Daily Schedules removes Completed or unprocessed schedules from the Daily tables."
-product_area: Operations
-audience: Operations Staff, System Administrator
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - Operations Staff
   - System Administrator
   - Schedules
-last_updated: 2026-03-18
-doc_type: procedural
 ---
 
 # Deleting Daily Schedules
 
-**Theme:** Configure  
-**Who Is It For?** Operations Staff, System Administrator
+Deleting Daily Schedules removes Completed or unprocessed schedules from the Daily tables. OpCon does not delete schedules that are In Process or On Hold (and previously released). To delete a schedule that is In Process or On Hold, you must first cancel or mark all remaining jobs on the schedule as Finished OK or Failed, so that the schedule can terminate.
 
-## What Is It?
-
-Deleting Daily Schedules removes Completed or unprocessed schedules from the Daily tables. OpCon does not delete schedules that are In Process or On Hold (previously released). Continuous recommends keeping no more than two weeks of schedules in the Daily tables; the SAM and supporting services perform better with fewer days built.
+Continuous recommends keeping no more than two weeks of schedules in the Daily tables; SAM and the supporting services perform better with fewer days built.
 
 Processing is managed by the SMASchedMan program. Refer to [SMASchedMan](../server-programs/request-router.md#smasched) in the **Server Programs** online help.
 
-- When automatic schedule maintenance is configured, the SAM deletes daily schedules automatically. Refer to [Schedule Maintenance](../objects/schedules.md#schedule-definition)
-- If an automatic delete fails, the SAM processes events on the SMA_SKD_DELETE job. Refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule)
-- Schedule deletions can be automated using:
+Schedule deletions can be managed by:
+
+- Automatic schedule maintenance configured on each schedule definition — when enabled, SAM deletes daily schedules automatically each day
+- Automation using:
   - OpCon events (refer to [Schedule-Related Events](../events/types.md#schedule))
   - The DoBatch utility (refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md))
-- Schedule deletions can be requested through the graphical interfaces
+- Manual request through the graphical interfaces
 
-## Operations
+If an automatic delete fails, SAM processes events on the `SMA_SKD_DELETE` job on the AdHoc Schedule. Refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule).
 
-### Monitoring
-- Keep no more than two weeks of schedules in the Daily tables; the SAM and supporting services perform better with fewer days built.
-- Only Completed or unprocessed schedules can be deleted; OpCon does not delete schedules that are In Process or On Hold (previously released).
+## Deleting a Daily Schedule in Solution Manager
 
-### Common Tasks
-- Configure automatic schedule maintenance to have SAM delete daily schedules automatically; if an automatic delete fails, SAM processes events on the `SMA_SKD_DELETE` job on the AdHoc schedule.
-- Automate deletions using OpCon events (Schedule-Related Events) or the DoBatch utility, or request them through the graphical interfaces.
+To delete a daily schedule in Solution Manager, complete the following steps:
 
-### Alerts and Log Files
-- All schedule deletions are recorded in the OpCon audit log, providing traceability for compliance and change management reviews.
-- If an automatic delete fails, SAM processes events on the `SMA_SKD_DELETE` job on the AdHoc schedule; configure notifications on this job to alert operations staff of failures.
+<!-- GAP: Exact Solution Manager navigation path and interaction model for deleting a daily schedule (Operations > Processes > Schedules context menu or equivalent) needs SME/source verification. Solution Manager is a browser-based UI — right-click steps below are unverified. -->
 
-## FAQs
+1. In Solution Manager, go to **Operations**.
+2. Select the date containing the schedule you want to delete.
+3. In the Schedules list, select the schedule.
+4. Open the context menu for the schedule and select **Delete**.
+5. Confirm the deletion when prompted.
 
-**Q: What schedules can be deleted from the Daily tables?**
+**Result:** The schedule is removed from the Daily tables. Only schedules with a status of Completed or that have never been started are eligible for deletion.
 
-Only Completed or unprocessed schedules can be deleted. OpCon does not delete schedules that are In Process or On Hold (previously released).
+## Deleting a Daily Schedule in Enterprise Manager
 
-**Q: How many days of Daily schedules should be kept?**
+To delete a daily schedule in Enterprise Manager, complete the following steps:
 
-Continuous recommends keeping no more than two weeks of schedules in the Daily tables. The SAM and supporting services perform better with fewer days built.
+1. In the Enterprise Manager navigation panel, select **Operations**.
+2. In the **Daily list** view, locate the date and schedule you want to delete.
+3. Right-click the schedule and select **Delete Schedule**.
+4. Select **Yes** to confirm the deletion.
 
-**Q: What happens if an automatic schedule delete fails?**
+**Result:** The schedule is removed from the Daily tables. If the schedule cannot be deleted because it is In Process or On Hold, Enterprise Manager displays an error message.
 
-If an automatic delete fails, the SAM processes events on the SMA_SKD_DELETE job on the AdHoc schedule, allowing you to configure notifications or corrective actions.
+## Automating Schedule Deletions
 
-## Glossary
+To automate daily schedule deletions, configure the **Auto Delete Days** setting on the schedule definition. When configured, SAM automatically queues a delete request each day for the schedule date that is the specified number of days in the past.
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+Deletions can also be triggered on demand using the `$SCHEDULE:DELETE` event or the DoBatch utility. Refer to [Schedule-Related Events](../events/types.md#schedule) and [DoBatch](../utilities/Command-line-Utilities/DoBatch.md) for syntax and usage.

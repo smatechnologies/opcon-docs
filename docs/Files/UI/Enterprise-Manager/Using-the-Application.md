@@ -1,51 +1,39 @@
 ---
 title: Using the Application
-description: "For detailed information and procedures on using Enterprise Manager application, refer to: - Working with Administration - Working with Operation - Working with Security - Working with Management."
+description: "Enterprise Manager organizes its features into eight Navigation Panel topics: Solution Manager, Administration, Operation, Security, Management, External Tools, Information, and Support."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: conceptual
 ---
 
 # Using the Application
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager organizes its features into the following Navigation Panel topics. Select a topic to learn more about the editors and views it contains.
 
-## What Is It?
+| Topic | Purpose |
+| --- | --- |
+| [Solution Manager](Working-with-Solution-Manager.md) | Access Solution Manager modules and pages from within Enterprise Manager. |
+| [Administration](Working-with-Administration.md) | Define and manage schedules, jobs, machines, frequencies, and related automation objects. |
+| [Operation](Working-with-Operation.md) | Monitor and act on daily schedules and jobs across all views available to your user account. |
+| [Security](Working-with-Security.md) | Manage user accounts, roles, batch users, departments, access codes, and privileges. |
+| [Management](Working-with-Management.md) | Review audit history, manage historical data, and configure notifications. |
+| [External Tools](Working-with-External-Tools.md) | Open external tools directly from Enterprise Manager without losing focus. |
+| [Information](Working-with-Enterprise-Information.md) | Generate BIRT reports and review OpCon server logs. |
+| [Support](Working-with-Enterprise-Support.md) | Access Continuous contact information, problem-reporting tools, and the application log viewer. |
 
-For detailed information and procedures on using Enterprise Manager application, refer to:
+:::note
+Access to each topic and its editors or views depends on the privileges assigned to your OpCon role. Contact your system administrator if you need access to a topic that is not available to you.
+:::
 
-- [Working with Administration](Working-with-Administration.md)
-- [Working with Operation](Working-with-Operation.md)
-- [Working with Security](Working-with-Security.md)
-- [Working with Management](Working-with-Management.md)
-- [Working with External Tools](Working-with-External-Tools.md)
-- [Working with Enterprise Information](Working-with-Enterprise-Information.md)
-- [Working with Enterprise Support](Working-with-Enterprise-Support.md)
+## Related Topics
 
-## FAQs
-
-**Q: What can you do with the Application?**
-
-the Application allows you to manage and configure related settings.
-
-**Q: Who has access to the Application?**
-
-Access to the Application is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Navigation Panel](Navigation-Panel.md)
+- [Navigation Editors](Navigation-Editors.md)
+- [Navigation Views](Navigation-Views.md)

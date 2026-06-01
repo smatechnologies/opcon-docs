@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating Job Frequencies
-description: "The Frequency panel in Daily Job Definition displays all of the frequency information for a job."
+description: "The Frequency panel in Daily Job Definition displays all frequency information for a job and lets you update timing, offset, retry, and recurrence settings."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -9,324 +9,183 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
 # Viewing and Updating Job Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Frequency** panel in **Daily Job Definition** displays all frequency information for a job. In **Admin** mode you can update these settings to control when the job starts, how late-start and late-finish thresholds are calculated, priority, maximum run time, retry behavior, and post-completion recurrence.
 
-## What Is It?
-
-The **Frequency** panel in **Daily Job Definition** displays all of the
-frequency information for a job.
-
-- The panel can be placed in **Full Screen** mode by simply clicking
-    the icon (![Full Screen Panel Icon     ](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon"))
-    to the far-right side of the panel bar. Escape **Full Screen** mode
-    by clicking on the icon again.
-- When the panel contains defined properties, a blue circular
-    indicator containing a number (![Job Properties     Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator"))
-    will appear to the right of the panel name to indicate the number of
-    properties that have been defined.
-
-## Adding or Updating Job Frequencies
-
-In **Admin** mode, job frequencies can be updated. For conceptual
-information, refer to [Job Frequency](../../../job-components/frequency.md) in the
-**Concepts** online help.
+When the panel contains defined properties, a blue circular indicator containing a number appears to the right of the panel name, showing how many properties are set. Select the expand button at the far-right of the panel bar to enter **Full Screen** mode; select it again to exit.
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
+Only users with the appropriate permissions can see the **Lock** button and update job properties. For details, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
 :::
 
 :::note
-Changes made to the job properties in the **Daily Job Definition** will take place immediately. If the job has already run, the changes will take effect the next time the job runs.
+Changes saved in **Daily Job Definition** take effect immediately. If the job has already run, the changes apply the next time the job runs.
 :::
 
-To perform this procedure:
+For conceptual background on frequencies, refer to [Job Frequency](../../../job-components/frequency.md).
 
-Select the **Processes** button at the top-right of the **Operations
-Summary** page. The **Processes** page will display.
+## Update job frequency settings
 
-Ensure that both the **Date** and **Schedule** toggle switches are
-enabled so that you can make your date and schedule selection,
-respectively. Each switch will appear green when enabled.
+To update the frequency settings for a daily job, complete the following steps:
 
-![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
 
-Select the desired **date(s)** to display the associated schedule(s).
+   The **Processes** page opens.
 
-Select one or more **schedule(s)** in the list.
+2. Enable the **Date** and **Schedule** toggle switches so that you can make your date and schedule selections. Each switch appears green when enabled.
 
-Select one **job** in the list. A record of your selection will display
-in the [status bar](SM-UI-Layout.md#Status) at the bottom of the
-page in the form of a breadcrumb trail.
+   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+3. Select the desired date(s) to display the associated schedules.
 
-Select the job record (e.g., 1 job(s)) in the status bar to display
-the **Selection** panel.
+4. Select one or more schedules in the list.
+
+5. Select one job in the list. A breadcrumb record of your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page.
+
+   ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+
+6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
+
+   :::note
+   Alternatively, right-click the job in the list to open the **Selection** panel.
+   :::
+
+   ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+
+7. Select the **Daily Job Definition** button (![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")) at the top-left corner of the panel.
+
+   The **Daily Job Definition** page opens in **Read-only** mode.
+
+8. Select the **Lock** button (![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")) at the top-right corner to switch the page to **Admin** mode.
+
+   The button changes to a white unlocked lock on a green background (![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")).
+
+   :::note
+   The **Lock** button is not visible to users who do not have the appropriate permissions.
+   :::
+
+9. Expand the **Frequency** panel to expose its content.
+
+   ![Daily Job Definition Frequency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Frequency-Panel.png "Daily Job Definition Frequency Panel")
+
+10. Review or update the fields described in [Frequency panel fields](#frequency-panel-fields) below.
+
+11. Select the **Save** button.
+
+    :::note
+    Select the **Undo** button to discard any unsaved changes.
+    :::
+
+**Result:** The frequency settings for the daily job are saved and take effect immediately or at the next job run.
+
+## Frequency panel fields
+
+The **Frequency** panel is divided into the following sections.
+
+### Parent Schedule Start Time
+
+This section displays read-only start time information for the schedule that contains the selected job.
+
+| Field | Description |
+|---|---|
+| **Server Time** | The current time on the SAM server. Read-only. |
+
+### Estimated Job Start Time
+
+This section displays read-only fields showing the estimated start times OpCon will use for the job.
+
+| Field | Description |
+|---|---|
+| **Local** | The estimated start time in the local browser time zone. Read-only. |
+| **Server** | The estimated start time on the SAM server. Read-only. |
+| **Agent** | The estimated start time on the Agent machine. Read-only. |
+
+### Offset
+
+The **Offset** section defines the start offset and late-status thresholds for the job.
+
+| Field | Description |
+|---|---|
+| **Format** | Determines how offsets are calculated. Select **Absolute** to calculate from the schedule's assigned start time. Select **Relative** to calculate from the time the schedule was released to run. |
+| **Start Offset** | Positive hours and minutes to offset the job's start time from the schedule start time. Range: 1–5999 minutes. |
+| **Late-To-Start Offset** | Positive hours and minutes added to the Start Offset to determine when the job is marked **Late to Start**. The threshold is calculated as Schedule Start Time + Start Offset + Late-To-Start Offset. A value of `00:00` disables this feature. Range: 1–5999 minutes. |
+| **Late-To-Finish Offset** | Positive hours and minutes added to the Start Offset to determine when a running job is marked **Running; Late to Finish**. The threshold is calculated as Schedule Start Time + Start Offset + Late-To-Finish Offset. A value of `00:00` disables this feature. Range: 1–5999 minutes. |
+
+### Latest Offset
+
+The **Latest Offset** section defines the latest allowable start time for the job.
+
+| Field | Description |
+|---|---|
+| **Format** | Determines how the latest start offset is calculated. Select **Absolute** to calculate from the schedule's assigned start time. Select **Relative** to calculate from the time the schedule was released to run. |
+| **Latest Start Offset** | Positive hours and minutes that define the latest time the job may start. If this time passes before the job qualifies for execution, the job is set to **Missed Latest Start Time** status and will not run automatically. A value of `00:00` disables this feature. Range: 1–5999 minutes. |
+
+### Job Start Time Estimation Method
+
+This section controls how the SMA Start Time Calculator predicts the job's estimated start time.
+
+| Field | Description |
+|---|---|
+| **Estimated Run Time** | The expected duration of the job in minutes. Used by the Start Time Calculator for schedule forecasting. Minimum value: 0. |
+| **Estimated Source** | The source used to predict the job's estimated start time. Select **Calculated** (default) to use the job's start offset value and dependency chain — best when the job has no external dependencies. Select **History** to use the job's average start time by frequency from history — useful when a job depends on external events or user interaction. Select **User Defined** to use a hard-coded predicted start time offset from the schedule's start time — useful when **History** does not provide sufficient accuracy. |
+| **Predicted Start Time Offset** | Visible only when **Estimated Source** is **User Defined**. Specifies the days, hours, and minutes offset from the schedule's start time to use as the predicted start time. Range: 1–5759 minutes. |
+
+### Job Execution
+
+The **Job Execution** section sets the job's scheduling priority and maximum allowed run time.
+
+| Field | Description |
+|---|---|
+| **SAM Priority** | The priority value SAM uses when submitting jobs to a machine that has more queued jobs than it can accept at once. Higher values are submitted first. Range: 0 (lowest) – 32767. |
+| **Max Run time** | The maximum number of minutes the job is allowed to run. Range: 0–32767. A value of `0` disables the limit. |
+
+### When Job Fails
+
+The **When Job Fails** section controls automatic retry behavior after a job failure.
+
+| Field | Description |
+|---|---|
+| **Retry** | Toggle switch. Enable to allow OpCon to automatically restart the job after a failure. |
+| **Minutes Between Attempts** | The number of minutes to wait between restart attempts. Visible when **Retry** is enabled. Range: 0–1440. |
+| **Maximum Attempts** | The maximum number of restart attempts OpCon will make. Visible when **Retry** is enabled. Range: 1–999. |
 
 :::note
-As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
+OpCon processes events, threshold and resource updates, and subsequent job dependencies only after the job fails on the final retry attempt.
 :::
 
-![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+### When Job Finishes Ok
 
-Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")
-at the top-left corner of the panel to access the **Daily Job
-Definition** page. By default, this page will be in **Read-only** mode.
+The **When Job Finishes Ok** section controls whether the job is automatically rescheduled after a successful run.
 
-Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")
-at the top-right corner to place the page in **Admin** mode. The button
-will switch to display a white lock unlocked on a green background
-![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
-when enabled.
+**Run Again** field options:
 
-:::note
-The **Lock** button will not be visible to users who do not have the appropriate permissions.
-:::
+| Option | Description |
+|---|---|
+| **None** | The job is not rescheduled after a successful run. |
+| **Recurring Instances** | The job is rescheduled to run at specific fixed times throughout the day. |
+| **Restart Offset** | The job is rescheduled at regular intervals throughout the day. |
 
-Expand the **Frequency** panel to expose its content.
+#### Recurring Instances options
 
-![Daily Job Definition Frequency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Frequency-Panel.png "Daily Job Definition Frequency Panel")
+Available when **Run Again** is set to **Recurring Instances**.
 
-The **Parent Schedule Start Time** frame displays the start time
-information for the schedule containing the selected job. This frame has
-the following read-only field:
+| Field | Description |
+|---|---|
+| **Recurring Instance Time(s)** | The list of specific times at which the job will run again. Use the **Add**, **Edit**, and **Delete** controls to manage entries. Times appear in chronological order. |
+| **Action on Overlap of Job Recurrence** | Behavior when a previous run is still active at the next scheduled time. Select **Skip** to skip the overlapping occurrence. Select **Start On Completion** to start the next occurrence as soon as the previous run finishes. |
 
-- **Server Time**: The time on the SAM server
+#### Restart Offset options
 
-**In the Estimated Job Start Time frame:**
+Available when **Run Again** is set to **Restart Offset**.
 
-The **Estimated Job Start Time** frame displays the information about
-the estimated start times that OpCon will use. This frame has the
-following read-only fields:
-
-- **Local**: The time on the local client (web client)
-- **Server**: The time on the SAM server
-- **Agent**: The time on the start Agent machine
-
-**In the Offset frame:**
-
-The **Offset** frame is used to define and calculate start offsets for
-the job.
-
-Specify which of the following formats to use to calculate the Start
-Offset:
-
-- **Absolute**: This option indicates that the job's Start Offset
-    will be calculated from the assigned start time of the schedule.
-- **Relative**: This option indicates that the job's Start Offset
-    will be calculated from the time the schedule was released for
-    execution.
-
-Enter the positive number of hours and minutes to offset the start time
-of the job from the start time of the schedule (Start Offset).
-
-Enter the positive number of hours and minutes to offset the
-Late-To-Start Offset from the job Start Offset (taking into
-consideration the Absolute or Relative setting).
-
-:::note
-If the time arrives and the job has not yet started, it will be set to a status of Late to Start. The time at which the job will be set to a status of Late to Start is calculated by adding the **Schedule Start Time + Job Start Offset + Late to Start**. The default value of 00:00 disables this feature.
-:::
-
-Enter the positive number of hours and minutes to offset the
-Late-To-Finish Offset from the job Start Offset (taking into
-consideration the Absolute or Relative setting).
-
-:::note
-If the time arrives and the job is still running, it will be set to a status of Running; Late to Finish. The time at which the job will be set to a status of Late to Finish is calculated by adding the **Schedule Start Time + Job Start Offset + Late to Finish**. The default value of 00:00 disables this feature.
-:::
-
-**In the Latest Offset frame:**
-
-The **Latest Offset** frame is used to define and calculate the latest
-start offset for the job.
-
-Specify which of the following settings to use to calculate the Latest
-Start Offset:
-
-- **Absolute**: This option indicates that the job's Latest Start
-    Offset will be calculated from the assigned start time of the
-    schedule.
-- **Relative**: This option indicates that the job's Latest Start
-    Offset will be calculated from the time the schedule was released
-    for execution.
-
-Enter the positive number of hours and minutes to offset the latest
-start time of the job from the start time of the schedule (Latest Start
-Offset).
-
-:::note
-If the latest start time is passed before the job qualifies for execution, the job is set to a Missed Latest Start Time status and will not automatically run. The default value of 00:00 disables the feature.
-:::
-
-**In the Job Start Time Estimation Method frame:**
-
-The **Job Start Time Estimation Method** frame is used to define the
-method for the SMA Start Time Calculator to use when predicting the
-estimated start time of the job.
-
-Specify the estimated runtime in minutes for the job. Either manually
-input the estimated run time or use the input field selectors to
-make your selections.
-
-Select one of the following sources to use for predicting the estimated
-start time:
-
-- **Calculated**: (Default) This option uses the job's start offset
-    value and dependency chain to calculate the estimated start time.
-    When a job has no external dependencies, this is the best option.
-- **History**: This option uses the job's average start time by
-    frequency from history as the estimated start time. The History
-    option is useful when a job depends on external events or user
-    interaction to start the job.
-- **User Defined**: This option uses a hard-coded Predicted Start Time
-    in days, hours, and minutes offset from the schedule's start time.
-    The User Defined option is useful when the History option does not
-    prove to be an accurate enough estimated start time.
-
-**In the Job Execution frame:**
-
-The **Job Execution** frame is used to set the priority and maximum run
-time for the job.
-
-Specify a number for the job's priority, zero (0) being the lowest.
-Either manually input the priority number or use the input field
-selectors to make your selections.
-
-:::note
-If the SAM can submit more jobs at the same time to a machine than the machine allows, the SAM uses the priority values to submit the most important jobs first.
-:::
-
-Specify the maximum run time in minutes for the job. Either manually
-input the maximum run time or use the input field selectors to make
-your selections.
-
-**In the When Job Fails frame:**
-
-The **When Job Fails** frame is used to specify whether a job
-should be automatically restarted after a job failure.
-
-Specify whether there should be attempts made to restart the job
-if it fails by utilizing the **Retry** toggle switch. When enabled, the
-switch will appear green.
-
-Specify the interval between restart attempts in minutes. Either
-manually input the number or use the input field selectors to make
-your selections.
-
-Specify the maximum number of restart attempts that should be made.
-Either manually input the number or use the input field selectors to
-make your selections.
-
-:::note
-The Retry feature is useful for situations where a job may fail because of timing (e.g., a database is currently unavailable, or a file has not yet arrived). OpCon will process the events, threshold/resource updates, and subsequent job dependencies only upon job failure after the maximum retry.
-:::
-
-**In the When Job Finishes Ok frame:**
-
-The **When Job Finishes Ok** frame is used to specify whether a
-job is automatically rescheduled after a successful run.
-
-Select one of the following available options to determine if a job
-should be rescheduled after it runs successfully:
-
-**None**: This option indicates that a job reschedule will not take
-place after a successful run.
-
-**Recurring Instances**: This option allows you to reschedule a
-successful job to run at fixed times throughout the day. Available
-options are:
-
-- **Add**: Use this button to add new restart times in days, hours,
-    and minutes. Specified times appear in the Recurring Instance
-    Time(s) list box in chronological order.
-- **Delete**: Use this button to delete existing restart times
-- **Edit**: Use this button to update existing restart times
-- **Action on Overlap of Job Recurrence**: This option allows you to
-    specify what happens if a previous job run time overlaps the next
-    scheduled start time. Available options are:
-  - **Skip**: Select this option to skip the run for \[that\]         scheduled time after the previous run finishes successfully
-  - **Start On Completion**: Select this option to start the next
-        scheduled time as soon as the previous run finishes
-        successfully.
-
-**Restart Offset**: This option allows you to reschedule a successful
-job to run at regular intervals throughout the day. Available options
-are:
-
-- **Minutes from Start to Start**: This option is used to specify the
-    run interval. If selected from the **Run Interval** list, use
-    the **value** field to specify the number of minutes from the start
-    time of one iteration of the job to the start time for the next
-    iteration of the job.
-- **Minutes from End to Start**: This option is used to specify the
-    run interval. If selected from the **Run Interval** list, use
-    the **value** field to specify the number of minutes from the end of
-    one iteration of the job to the start time for the next iteration of
-    the job.
-- **Latest Run Time (Offset)**: This option is used to specify the
-    latest possible start time for the recurring job based on the
-    schedule's start time. The value entered in the field is an offset
-    that will be added to the schedule's defined Schedule Date and
-    scheduled Start Time in the Daily tables.
-- **Number of Runs**: This option is used to specify the total number
-    of times for the recurring job to run.
-
-:::note
-Select the **Undo** button if you wish to undo your changes for any reason.
-:::
-
-Select the **Save** button.
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Server Time | The time on the SAM server | — | — |
-| Local | The time on the local client (web client) | — | — |
-| Server | The time on the SAM server | — | — |
-| Agent | The time on the start Agent machine | — | — |
-| Absolute | This option indicates that the job's Start Offset | — | — |
-| Relative | This option indicates that the job's Start Offset | — | — |
-| Calculated | (Default) This option uses the job's start offset | — | — |
-| History | This option uses the job's average start time by frequency from history as the estimated start time. | — | — |
-| User Defined | This option uses a hard-coded Predicted Start Time | — | — |
-| None | This option indicates that a job reschedule will not take | — | — |
-| Recurring Instances | This option allows you to reschedule a successful job to run at fixed times throughout the day. | — | — |
-| Action on Overlap of Job Recurrence | This option allows you to specify what happens if a previous job run time overlaps the next scheduled start time. | — | — |
-| Restart Offset | This option allows you to reschedule a successful | — | — |
-| Minutes from Start to Start | This option is used to specify the run interval. | — | — |
-| Minutes from End to Start | This option is used to specify the run interval. | — | — |
-| Latest Run Time (Offset) | This option is used to specify the latest possible start time for the recurring job based on the schedule's start time. | — | — |
-| Number of Runs | This option is used to specify the total number | — | — |
-
-## FAQs
-
-**Q: What does Viewing and Updating Job Frequencies cover?**
-
-This page covers Adding or Updating Job Frequencies.
-
-## Glossary
-
-**SMA Start Time Calculator**: Periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database to keep start time estimates current.
-
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+| Field | Description |
+|---|---|
+| **Run Interval** | The interval type. Select **Minutes from Start to Start** to measure the interval from the start of one run to the start of the next. Select **Minutes from End to Start** to measure the interval from the end of one run to the start of the next. |
+| **Value** | The number of minutes for the selected run interval. Range: 0–1440. |
+| **Latest Run Time (Offset)** | Optional. The latest time offset (from the schedule start time) at which the recurring job may start. Range: 1–1439 minutes. |
+| **Number of Runs** | Optional. The total number of times the job will run. Range: 2–999. |

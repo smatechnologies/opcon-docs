@@ -1,6 +1,6 @@
 ---
 title: Checking Daily Schedules
-description: "Checking Daily Schedules validates job dependencies in the Daily tables."
+description: "Checking Daily Schedules validates job dependencies in the Daily tables to detect circular dependencies, unresolvable Requires dependencies, and unsatisfied Conflict or After dependencies."
 product_area: Operations
 audience: Operations Staff, System Administrator
 version_introduced: "[see release notes]"
@@ -15,71 +15,77 @@ doc_type: procedural
 
 # Checking Daily Schedules
 
-**Theme:** Configure  
-**Who Is It For?** Operations Staff, System Administrator
+Checking Daily Schedules validates job dependencies in the Daily tables. Run a schedule check against every new schedule and after major revisions to catch dependency problems before they affect production.
 
-## What Is It?
+The check can detect:
 
-Checking Daily Schedules validates job dependencies in the Daily tables. It can:
+- Circular dependencies (Slow mode only)
+- Requires dependencies that cannot be resolved
+- Conflict or After dependencies that are not satisfied
 
-- Detect circular dependencies
-- Determine if a Requires dependency cannot be resolved
-- Determine if Conflict or After dependencies are not satisfied
+All schedule check processing is managed by SMASchedMan on the OpCon server. For details, refer to [SMASchedMan](../server-programs/request-router.md#smasched) in the **Server Programs** online help.
 
-Continuous recommends running the check against every new schedule and after major revisions. The check can run against a date for all schedules or against specific schedules.
+## Check Modes
 
-- Checking specific schedules does not check their subschedules
-- To check a subschedule, specify it as the schedule to check
-- Specify a date to check all schedules and subschedules on that date
+When you initiate a schedule check through Enterprise Manager, you select one of three check modes:
 
-Processing is managed by the SMASchedMan program. Refer to [SMASchedMan](../server-programs/request-router.md#smasched) in the **Server Programs** online help.
+| Mode | What It Checks |
+|---|---|
+| **Normal (No Circular)** | Validates Requires, Conflict, and After dependencies; skips circular dependency detection |
+| **Slow (Circular)** | Validates all dependency types including circular dependencies; takes longer to complete |
+| **Fast (Requires Only)** | Validates Requires dependencies only; skips After, Conflict, and circular dependency checking |
 
-If the check fails and was started by an OpCon Event, the SAM processes events on the SMA_SKD_CHECK job. Refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule).
+## Scope of Schedule Checks
 
-Schedule checks can be managed by:
-
-- Automation using:
-  - OpCon events (refer to [Schedule-Related Events](../events/types.md#schedule))
-  - The DoBatch utility (refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md))
-- Request through the graphical interfaces
-
-## Operations
-
-### Common Tasks
-- Run a schedule check against every new schedule and after major revisions to detect circular dependencies, unresolvable Requires dependencies, and unsatisfied Conflict or After dependencies before production.
-- To check a specific schedule, specify it by name; checking a specific schedule does not check its subschedules — specify the subschedule separately if needed.
+- Checking a specific schedule does not check its subschedules. To check a subschedule, specify it as the schedule to check.
 - To check all schedules and subschedules for a date, specify the date rather than a specific schedule name.
-- Schedule checks can be automated using OpCon events (Schedule-Related Events) or the DoBatch utility, or requested through the graphical interfaces.
 
-### Alerts and Log Files
-- Check processing is managed by the SMASchedMan program; if the check fails and was started by an OpCon Event, SAM processes events on the `SMA_SKD_CHECK` job on the AdHoc schedule.
+## Required Privileges
 
-## FAQs
+Users must have both of the following privileges to run a schedule check through Enterprise Manager:
 
-**Q: What does checking a Daily Schedule validate?**
+- **Build Daily Schedules**
+- **Delete Daily Schedules**
 
-Checking a Daily Schedule validates job dependencies in the Daily tables. It detects circular dependencies, determines if a Requires dependency cannot be resolved, and identifies unsatisfied Conflict or After dependencies.
+## Initiating a Schedule Check
 
-**Q: Does checking a specific schedule also check its subschedules?**
+### Check a Specific Schedule
 
-No. Checking a specific schedule does not check its subschedules. To check a subschedule, specify it as the schedule to check. To check all schedules and subschedules on a date, specify the date rather than a specific schedule.
+To check a specific daily schedule, complete the following steps:
 
-**Q: When should you run a schedule check?**
+1. In Enterprise Manager, go to the Operations view.
+2. Right-click the schedule you want to check.
+3. Select **Maintenance** > **Check Schedule**.
+4. In the dialog, select a check mode: **Normal (No Circular)**, **Slow (Circular)**, or **Fast (Requires Only)**.
+5. Select **OK**.
 
-Continuous recommends running a check against every new schedule and after major revisions to catch dependency issues before they cause problems in production.
+**Result:** The check runs and the results display in the dialog. Any dependency problems found are listed by type.
 
-## Glossary
+### Check All Schedules for a Date
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+To check all schedules and subschedules for a specific date, complete the following steps:
 
-**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+1. In Enterprise Manager, go to the Operations view.
+2. Right-click the date node you want to check.
+3. Select **Schedules** > **Check Schedules**.
+4. In the dialog, select a check mode: **Normal (No Circular)**, **Slow (Circular)**, or **Fast (Requires Only)**.
+5. Select **OK**.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+**Result:** The check runs against all schedules and subschedules built for that date. Any dependency problems found are listed by type.
 
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+## Automating Schedule Checks
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+Schedule checks can be automated using:
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- **OpCon events**: Use the `$SCHEDULE:CHECK` event to check a specific schedule or `$SCHEDULE:CHECKALL` to check all schedules for a date. Both events require the **Build Daily Schedules** privilege. For details, refer to [Schedule-Related Events](../events/types.md#schedule).
+- **DoBatch utility**: Submit check requests from the command line. For details, refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md).
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+## Failure Handling
+
+If a schedule check is initiated through an OpCon event and the check fails, SAM processes the events defined on the `SMA_SKD_CHECK` job on the AdHoc schedule. This allows you to configure notifications — such as email alerts — when an automated schedule check fails.
+
+:::note
+Enterprise Manager check processes give interactive feedback and do not use the `SMA_SKD_CHECK` job for notification. The `SMA_SKD_CHECK` job applies only to checks initiated through events or automated processes.
+:::
+
+For details on configuring the `SMA_SKD_CHECK` job, refer to [SMA_SKD Jobs on the AdHoc Schedule](../objects/schedules.md#adhoc-schedule).

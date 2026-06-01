@@ -1,6 +1,6 @@
 ---
 title: Accessing Application Logs
-description: "Enterprise Manager application logs record your activities while the EM is open."
+description: "Enterprise Manager application logs record activity while Enterprise Manager is open. Use this procedure to open the log viewer and locate log files."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,44 +8,56 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Accessing Application Logs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager records application activity in log files while it is open. These logs are useful for diagnosing problems and can be attached automatically when you submit a report through the **[Report Problem](Reporting-Problems.md)** dialog.
 
-## What Is It?
-
-Enterprise Manager application logs record your activities while the EM is open. When you report a problem via the **[Report Problem](Reporting-Problems.md)** dialog, log files can automatically be attached to an email.
-
-EM logs are located in the **.enterpriseManager/.metadata/** directory in your home directory.
+EM log files are stored in the `.enterpriseManager/.metadata/` directory inside your home directory.
 
 :::tip Example
-For a Windows XP user, the path would be:
+On Windows, the default path resembles:
 
-C:\Documents and Settings\User\\.enterpriseManager\\.metadata\\.log
+`C:\Users\<username>\.enterpriseManager\.metadata\.log`
 :::
 
-Once a log file reaches 1,002 KB, the **.log** file is saved as **.bak_0.log** and a new **.log** file starts. Subsequent saved files are named **.bak_1.log**, **.bak_2.log**, and so on. Each saved log file contains a comment near the beginning listing the previous log file name and its creation date and time. The EM retains a maximum of 10 log files, overwriting the oldest when the limit is reached.
+<!-- GAP: The log rotation size threshold (1,002 KB) and maximum retained file count (10) stated in the original page are not confirmed in source code; needs SME or Eclipse platform documentation to verify -->
 
-## FAQs
+## Opening the Application Log
 
-**Q: What does Accessing Application Logs do?**
+To open the Enterprise Manager application log, complete the following steps:
 
-Enterprise Manager application logs record your activities while the EM is open. When you report a problem via the **[Report Problem](Reporting-Problems.md)** dialog, log files can automatically b
+1. In the Enterprise Manager navigation panel, expand **Support**.
+2. Select **Application Log**.
 
-**Q: Where can you find Accessing Application Logs in OpCon?**
+**Result:** The application log opens in the log viewer panel, displaying recent activity recorded during the current or previous Enterprise Manager sessions.
 
-Access Accessing Application Logs through the appropriate section in Enterprise Manager or Solution Manager navigation.
+## Server Log Files
 
-## Glossary
+In addition to the Enterprise Manager application log, you can view OpCon server log files directly from Enterprise Manager.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+To open a server log file, complete the following steps:
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+1. In the Enterprise Manager navigation panel, expand **Information**.
+2. Expand **Logs**.
+3. Select the log file you want to open.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The selected log file opens in the log viewer. The viewer monitors the file and displays new entries as they are written.
+
+The following server log files are available:
+
+| Log file | Description |
+|---|---|
+| `SAM.log` | Schedule Activity Monitor activity |
+| `Critical.log` | Critical system events |
+| `SMANetCom.log` | Network communications activity |
+| `SMANetComTrace.log` | Detailed network communications trace |
+| `SMAServMan.log` | Service Manager activity |
+| `SMANotifyHandler.log` | Event notification handler activity |
+| `SMARequestRouter.log` | Request Router activity |
+
+Server log files are located in the `SAM/Log/` subdirectory of the OpCon installation directory. Enterprise Manager reads these files either from a local path or from a remote SMB share, depending on your connection profile configuration.

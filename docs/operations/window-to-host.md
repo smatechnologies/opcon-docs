@@ -1,6 +1,6 @@
 ---
 title: Open Window to Host
-description: "The Open Window to Host feature opens an emulator for a remote connection to a machine defined in OpCon."
+description: "The Window to Host feature opens a configured terminal emulator to connect directly to a machine defined in OpCon from Enterprise Manager Operation views."
 product_area: Operations
 audience: Operations Staff, System Administrator
 version_introduced: "[see release notes]"
@@ -8,34 +8,46 @@ tags:
   - Conceptual
   - Operations Staff
   - System Administrator
-  - Schedules
+  - Machine
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Open Window to Host
 
-**Theme:** Configure  
-**Who Is It For?** Operations Staff, System Administrator
+The **Window to Host** feature opens a configured terminal emulator to connect directly to a machine defined in OpCon. The action is available from the context menu in Enterprise Manager Operation views, on both machines and jobs.
 
-## What Is It?
+## How it works
 
-The Open Window to Host feature opens an emulator for a remote connection to a machine defined in OpCon. Configure preferences in Enterprise Manager to set the commands for each platform when running the **Window to Host** shortcut from the Operation views. For more information, refer to [Setting Preferences for Window To Host](../Files/UI/Enterprise-Manager/Preferences-for-Windows-To-Host.md) in the **Enterprise Manager** online help.
+When you right-select a machine or job in an Operation view and select **Window To Host**, Enterprise Manager runs the emulator command you configured for that machine's platform type. It substitutes machine-specific values into the command before running it.
 
-## FAQs
+If no command is configured for the selected platform, Enterprise Manager opens the **Window To Host** preferences dialog automatically so you can enter one before continuing.
 
-**Q: What does the Open Window to Host feature do?**
+The action is not available for Container jobs, Null jobs, or jobs with no machine assigned.
 
-It opens an emulator for a remote connection to a machine defined in OpCon. The **Window to Host** shortcut is accessible from the Operation views.
+## Substitution variables
 
-**Q: How do you configure which emulator opens for each platform?**
+Use the following variables in the emulator command. Enterprise Manager replaces each variable with the corresponding value from the machine record at run time.
 
-Configure the emulator commands per platform in Enterprise Manager preferences. Refer to Setting Preferences for Window To Host in Enterprise Manager online help.
+| Variable | Replaced with |
+|---|---|
+| `[[IP]]` | Machine's IP address |
+| `[[HOSTNAME]]` | Machine's hostname (fully qualified domain name) |
+| `[[GATEWAY]]` | Machine's gateway |
+| `[[MACHNAME]]` | Machine's name as defined in OpCon |
 
-## Glossary
+## Configure Window to Host preferences
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+To configure the emulator command for each platform, complete the following steps:
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+1. Open Enterprise Manager.
+2. Go to **Enterprise Manager > Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the preferences tree.
+4. Select **Window To Host**. The **Window To Host** settings appear on the right.
+5. Select the platform from the **Platform** list.
+6. Enter the emulator command in the **Command** field. Use substitution variables as needed (see [Substitution variables](#substitution-variables)).
+7. Select **Apply**, then select **OK**.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** Enterprise Manager saves the command for the selected platform. The next time you select **Window To Host** for a machine of that platform type, it runs the configured command.
+
+For more information, see [Setting Preferences for Window To Host](../Files/UI/Enterprise-Manager/Preferences-for-Windows-To-Host.md).

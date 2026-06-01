@@ -2,42 +2,48 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Threshold Information
-description: "Use this procedure to view Additional Threshold Information in Enterprise Manager."
+description: "Use this procedure to view cross-reference details and audit records for a threshold in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
-#  Viewing Additional Threshold Information
+# Viewing Additional Threshold Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager provides two ways to inspect a threshold beyond its name and current value: the **Cross Reference** button shows which jobs in the Master and Daily schedules depend on or update the threshold, and the **View Audit** button shows a history of every change made to the threshold record.
 
-## What Is It?
+## View cross-reference details for a threshold
 
-Use this procedure to view Additional Threshold Information in Enterprise Manager.
+To view the jobs that depend on or update a threshold, complete the following steps:
 
-To view additional information, complete the following steps:
+1. Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays.
+2. Select the threshold in the **Select Threshold** list.
+3. Select the **Cross Reference** button on the toolbar.
 
-1.  Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
-2.  Select the **threshold** in the **Select Threshold** list
-3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to refer to a list of Master threshold dependencies and updates
-4.  Select **OK**
-5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the threshold
-6.  Select **Close**
-:::
+   The **Cross References** dialog opens and displays the following categories on separate tabs:
 
-## Glossary
+   - **Master Threshold/Resource Dependencies** — jobs in Master schedules configured with a dependency on this threshold.
+   - **Master Threshold/Resource Update** — jobs in Master schedules configured to update this threshold.
+   - **Daily Threshold/Resource Dependencies** — jobs in the Daily schedule with a dependency on this threshold.
+   - **Daily Threshold/Resource Update** — jobs in the Daily schedule configured to update this threshold.
 
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+4. Select **OK** to close the dialog.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** You can identify all jobs that reference the threshold before making changes or deleting it.
 
-**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
+## View the audit history for a threshold
+
+To view audit records for changes to a threshold, complete the following steps:
+
+1. Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays.
+2. Select the threshold in the **Select Threshold** list.
+3. Select the **View Audit** button on the toolbar. The audit dialog opens showing the history of changes to the selected threshold record.
+4. Select **Close** to dismiss the dialog.
+
+**Result:** The audit record shows the timestamp, user, and before/after values for each change made to the threshold.

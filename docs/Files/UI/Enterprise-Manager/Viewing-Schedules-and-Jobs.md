@@ -2,40 +2,26 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Schedules and Jobs using Frequency Names
-description: "Use this procedure to view Schedules and Jobs using Frequency Names in Enterprise Manager."
+description: "Use this procedure to view the schedules and jobs that use a given frequency name in Enterprise Manager Frequency Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Schedules and Jobs using Frequency Names
+# Viewing Schedules and Jobs using Frequency Names
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use Frequency Manager in Enterprise Manager to look up which schedules and jobs use a specific frequency name.
 
-## What Is It?
+To view schedules and jobs using a frequency name, complete the following steps:
 
-Use this procedure to view Schedules and Jobs using Frequency Names in Enterprise Manager.
-
-To view schedules and jobs using frequency names, complete the following steps:
-
-1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
-2.  Type the *frequency name* in the **Type Filter Text** box or select the **frequency name**
-3.  View the schedules/jobs using the selected frequency
-4.  Select **Close ☒** to close the **Frequency Manager** screen
-:::
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays.
+2. Type the frequency name in the **Type Filter Text** field, or select the frequency name directly from the **Frequencies** list.
+3. Select the frequency name in the **Frequencies** list. The **Master Schedules/Jobs using this Frequency** panel populates with the schedules and jobs that reference the selected frequency.
+4. Review the **Schedule** and **Job** columns in the **Master Schedules/Jobs using this Frequency** panel to identify which schedules and jobs use the frequency.
+5. Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen.

@@ -1,6 +1,6 @@
 ---
 title: Sending Notification Tests
-description: "Use this procedure to send Notification Tests in Enterprise Manager."
+description: "Send a test notification from Enterprise Manager to verify that notification definitions are configured correctly."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,40 +8,51 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
 # Sending Notification Tests
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to send a test notification from Enterprise Manager and verify that your notification definitions are working correctly. You can test all active notification definitions at once or test a single notification type individually.
 
-## What Is It?
+## Send a Test of All Active Notifications
 
-Use this procedure to send Notification Tests in Enterprise Manager.
+To send a test of all active notification definitions, complete the following steps:
 
-To send a notification test, complete the following steps:
+1. In Enterprise Manager, select **Notification Manager** under the **Management** topic.
 
-1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2. Select the options for the **Notification Definitions** to test
-3. Select the **Test All** button
+   The **Notification Manager** screen displays.
 
-Alternatively, to test a specific notification:
+2. In the **Notification Triggers** panel, select the trigger whose notification definitions you want to test.
 
-a. Select the option for the specific **Notification Definition** to test.
-b. Select the specific **Notification** tab.
-c. Select the **Test** button.
+3. In the **Notification Definitions** panel, select the **General** tab.
+
+4. Select **Test All**.
+
+**Result:** Enterprise Manager sends a test message for each active notification definition associated with the selected trigger. The confirmation message "The test message has been sent." displays when the test completes successfully.
+
+## Send a Test of a Single Notification Type
+
+To send a test of a specific notification type, complete the following steps:
+
+1. In Enterprise Manager, select **Notification Manager** under the **Management** topic.
+
+   The **Notification Manager** screen displays.
+
+2. In the **Notification Triggers** panel, select the trigger whose notification definition you want to test.
+
+3. In the **Notification Definitions** panel, select the tab for the specific notification type you want to test (for example, **Send Email (SMTP)** or **Send Windows Event Log**).
+
+4. Select **Test**.
+
+**Result:** Enterprise Manager sends a test message for that notification type. The confirmation message "The test message has been sent." displays when the test completes successfully.
 
 :::note
-If the notification has "default information," the Event Trigger value will be set to Test Notification.
+If the selected notification type is set to inactive, the test will not send and an error message displays instead.
 :::
 
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a defined status. Notifications can be sent as email, text message, Windows event log, SNMP trap, or OpCon events.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+:::note
+For both test types, the Event Trigger value is set to `Test Notification` when the test is sent.
+:::

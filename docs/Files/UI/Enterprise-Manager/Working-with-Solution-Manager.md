@@ -15,45 +15,41 @@ doc_type: procedural
 
 # Managing Solution Manager
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Solution Manager** topic in the Navigation Panel provides links to access Solution Manager modules and pages from within Enterprise Manager.
+The **Solution Manager** topic in the Navigation Panel provides links to open Solution Manager modules and pages from within Enterprise Manager. Selecting any item opens Solution Manager in an embedded browser panel.
 
 :::note
-The Solution Manager topic will only appear in the Navigation Panel if the **Solution Manager URL** General Server Option is defined. For more information, refer to [Solution Manager URL](../../../administration/server-options.md#general-settings) in the **Concepts** online help.
+The **Solution Manager** topic appears in the Navigation Panel only when the **Solution Manager URL** General Server Option is defined. After you define a URL and save the value, you must log out of Enterprise Manager and log back in for the **Solution Manager** option to appear. For more information, refer to [Solution Manager URL](../../../administration/server-options.md#general-settings) in the **Concepts** online help.
 :::
 
 :::note
 To view licensed modules or features, you must have the appropriate privileges. For additional information, refer to [Managing Self Service](../Solution-Manager/Managing-Self-Service.md) and [Working with Vision](../Solution-Manager/Working-with-Vision.md) in the **Solution Manager** online help.
 :::
 
-Select any **Solution Manager** function item in the graphic to learn more about that item.
+## Solution Manager Navigation Items
+
+The following items are available under the **Solution Manager** topic in the Navigation Panel.
+
+| Navigation Item | Description |
+|---|---|
+| **Home** | Opens the Solution Manager login page. |
+| **Operation** | Parent item for operational views. |
+| **Operation > Summary** | Opens the Operations Summary page. |
+| **Operation > Processes** | Opens the Operations Processes page. |
+| **Operation > Schedule Build** | Opens the Schedule Build page. |
+| **Operation > Agent Status** | Opens the Agent Status page. |
+| **Vision** | Parent item for Vision views. |
+| **Vision > Home** | Opens the Vision home page. |
+| **Vision > Live** | Opens the Vision Live page. |
+| **Vision > Settings** | Opens the Vision Settings page. |
+| **Profile** | Opens your Solution Manager user profile page. |
+
+## Open a Solution Manager Page from Enterprise Manager
+
+To open a Solution Manager page from within Enterprise Manager, complete the following steps:
+
+1. In the Navigation Panel, expand the **Solution Manager** topic.
+2. Select the item you want to open.
+
+**Result:** Solution Manager opens in an embedded browser panel inside Enterprise Manager, displaying the page associated with the item you selected.
 
 ![Solution Manager Topic](../../../Resources/Images/EM/EMsmmenu.png "Solution Manager Topic")
-
-## FAQs
-
-**Q: What does managing solution manager involve?**
-
-Managing solution manager includes adding, editing, and deleting records. Access solution manager through Enterprise Manager navigation pane.
-
-**Q: Who can manage solution manager in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage solution manager. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

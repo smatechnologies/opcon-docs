@@ -1,43 +1,49 @@
 ---
 title: Using Processes
-description: "The Processes link opens the Processes page in Solution Manager."
+description: "The Processes link in Enterprise Manager opens the Daily Processes page in Solution Manager, where you can view and manage schedules, jobs, and agents currently in operation."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
-doc_type: procedural
+last_updated: 2026-06-01
+doc_type: reference
 ---
 
 # Using Processes
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Processes** link in Enterprise Manager opens the **Daily Processes** page in Solution Manager. The Daily Processes page lets you view and manage the schedules, jobs, and agents currently in operation for a given date.
 
-## What Is It?
+For full documentation of the Daily Processes page, refer to [Managing Daily Processes](../Solution-Manager/Managing-Daily-Processes.md).
 
-The **Processes** link opens the **Processes** page in Solution Manager. For more information, refer to [Managing Daily Processes](../Solution-Manager/Managing-Daily-Processes.md) in the **Solution Manager** online help.
+## Navigation
 
-## FAQs
+The **Processes** link is located under **Operation** in the Enterprise Manager navigation pane.
 
-**Q: What can you do with Processes?**
+Selecting **Processes** opens Solution Manager in an embedded browser view and displays the Daily Processes page at the `operations/processes` route.
 
-Processes allows you to manage and configure related settings.
+## Daily Processes Page Capabilities
 
-**Q: Who has access to Processes?**
+The Daily Processes page provides the following capabilities:
 
-Access to Processes is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+| Capability | Description |
+|---|---|
+| Date/Schedule selection | Toggle switches enable or disable date and schedule selections. A green checkmark indicates enabled; a gray circle indicates disabled. |
+| Filter profiles | User-defined filters that can be saved persistently and shared by assigning them to a role, setting them as Public, or keeping them Private. |
+| Quick filtering | Filter the Schedules, Jobs, and Agents grids by keyword using the filter bar above each grid. |
+| In-depth filtering | Filter the Jobs grid by job status, tag, department, or access code using the filter panel. |
+| Interactive filtering | Filter by current status using the color-coded Statistics Bar above each grid. |
+| Column sorting and display | Sort columns ascending or descending; show or hide columns using the column display button. |
+| Right-click actions | Right-click any item in the Schedules, Jobs, or Agents grids to display a Selection panel for bulk or individual actions. |
+| Breadcrumb selection | Selections appear in the Status Bar as a breadcrumb trail. Select a record (not available for date records) to display a Status Update panel and perform actions on the current selection. |
 
-## Glossary
+## Related Topics
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Managing Daily Processes](../Solution-Manager/Managing-Daily-Processes.md)
+- [Using Summary](Using-Summary.md)
+- [Using Schedule Build](Using-Schedule-Build_SM.md)
+- [Using Agent Status](Using-Agent-Status.md)
+- [Using Operations](Using-Operations.md)
