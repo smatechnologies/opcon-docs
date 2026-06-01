@@ -50,7 +50,7 @@ To remove the department assignment from daily jobs, complete the following step
 3. Select the expand arrow next to the schedule you want to update.
 4. Select the job.
 5. Select **Edit Daily**. The **Job Daily** screen opens.
-6. In the **Job Details** frame, select **<General>** or a different department name in the **Department** list.
+6. In the **Job Details** frame, select **&lt;General&gt;** or a different department name in the **Department** list.
 7. Select **Save** on the **Job Daily** toolbar.
 8. Repeat steps 3–7 for every job assigned to the department being deleted.
 9. Select **Close** to close the **Job Daily** screen.
@@ -64,7 +64,7 @@ To remove the department assignment from master jobs, complete the following ste
 1. Select **Edit Master**. The **Job Master** screen opens.
 2. Select a schedule in the **Schedule** list.
 3. Select a job in the **Job** list.
-4. In the **Job Details** frame, select **<General>** or a different department name in the **Department** list.
+4. In the **Job Details** frame, select **&lt;General&gt;** or a different department name in the **Department** list.
 5. Select **Save** on the **Job Master** toolbar.
 6. Repeat steps 3–5 for every job assigned to the department being deleted.
 7. Select **Close** to close the **Job Master** screen.
