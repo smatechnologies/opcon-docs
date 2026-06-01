@@ -28,21 +28,14 @@ To perform a reverse lookup, you need the Notification ID. Obtain it from a noti
 
 To look up a notification source, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select **Notification Lookup** on the **Notification Manager** toolbar. The **Notification Lookup** dialog displays
 3. Enter the *Notification ID* number
 4. Select **Lookup** to search for the notification source record
 5. View the **Results** table showing Notification ID, Notification Type, Group Type, Group Name, and Trigger information
 6. Select **OK** to close the dialog
 
-## FAQs
-
-**Q: How many steps does the Looking up Notification Sources procedure involve?**
-
-The Looking up Notification Sources procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

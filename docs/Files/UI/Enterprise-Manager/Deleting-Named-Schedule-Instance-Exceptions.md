@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Named Schedule Instance Exceptions
-description: "Use this procedure to delete Named Schedule Instance Exceptions in the Enterprise Manager."
+description: "Use this procedure to delete Named Schedule Instance Exceptions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,13 +22,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Named Schedule Instance Exceptions in the Enterprise Manager.
+Use this procedure to delete Named Schedule Instance Exceptions in Enterprise Manager.
 
 ## Delete Job Patterns
 
 To delete a job pattern, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic
+1. Select **Schedule Master** under the **Administration** topic
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Instance Definition** tab in the **Schedule Details** frame
 4. Select the **instance name** associated with the job pattern to delete
@@ -41,7 +41,7 @@ To delete a job pattern, complete the following steps:
 
 To delete an exception rule, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic
+1. Select **Schedule Master** under the **Administration** topic
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Instance Definition** tab in the **Schedule Details** frame
 4. Select the **instance name** associated with the exception rule to delete
@@ -50,7 +50,6 @@ To delete an exception rule, complete the following steps:
 7. Select the **Remove** button
 8. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 9. Select **Close ☒** to close the **Schedule Master** screen
-
 
 ## FAQs
 

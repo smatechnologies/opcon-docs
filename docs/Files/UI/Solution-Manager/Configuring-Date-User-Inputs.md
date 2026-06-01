@@ -71,10 +71,6 @@ The date pattern format is based on the Javascript Moment format. The following 
 
 Configuring date user inputs defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure date user inputs?**
-
-The configuration procedure involves 6 steps. Complete all steps in order and select **Save** to apply the changes.
-
 ## Glossary
 
 **Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.

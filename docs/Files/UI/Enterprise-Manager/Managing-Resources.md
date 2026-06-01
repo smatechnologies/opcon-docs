@@ -24,7 +24,7 @@ The **Resources** editor defines and maintains OpCon Resources, providing a list
 
 ## Resources Toolbar
 
-The **Resources** editor has a toolbar for managing resources. Select on any specific icon on the toolbar below to learn more about its functionality.
+The **Resources** editor has a toolbar for managing resources. Select any specific icon on the toolbar below to learn more about its functionality.
 
 ![Resources toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Resources toolbar")
 
@@ -38,12 +38,11 @@ Related Topics
 - [Copying Resources](Copying-Resources.md)
 - [Deleting Resources](Deleting-Resources.md)
 
-
 ## FAQs
 
 **Q: What does managing resources involve?**
 
-Managing resources includes Resources Toolbar. Access resources through the Enterprise Manager navigation pane.
+Managing resources includes Resources Toolbar. Access resources through Enterprise Manager navigation pane.
 
 **Q: Who can manage resources in OpCon?**
 

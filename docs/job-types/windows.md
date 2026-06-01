@@ -44,7 +44,7 @@ file, the command line must have the .com extension.
          in the **Microsoft agent** online help.
   - If the User ID does not list the Domain User, register the
         Domain User in the EM. For information on registering a Domain
-        User in the Enterprise Manager (EM), refer to [Setting up a New         Microsoft (MS) agent Batch
+        User in Enterprise Manager (EM), refer to [Setting up a New         Microsoft (MS) agent Batch
         User](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md#Setting)
          in the **Enterprise Manager** online help.
 

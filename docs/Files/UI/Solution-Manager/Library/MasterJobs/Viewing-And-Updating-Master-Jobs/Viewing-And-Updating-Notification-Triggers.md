@@ -39,12 +39,7 @@ To perform this procedure, complete the following steps:
 2. Expand the **Notification Triggers** panel to expose its content
 3. Select the (![Manage Notification Triggers](../../../../../../Resources/Images/SM/Library/MasterJobs/manage-notification-triggers.png "Manage Notification Triggers Button")) button to Go to the Notification Triggers page
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Notification Triggers procedure involve?**
-
-The Viewing and Updating Notification Triggers procedure involves 3 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Notification Triggers cover?**
 

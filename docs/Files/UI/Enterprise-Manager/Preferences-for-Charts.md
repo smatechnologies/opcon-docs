@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences for Charts
-description: "Use this procedure to set Preferences for Charts in the Enterprise Manager."
+description: "Use this procedure to set Preferences for Charts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Charts in the Enterprise Manager.
+Use this procedure to set Preferences for Charts in Enterprise Manager.
 
 :::note
 Close and re-open the charts for changes in this section to take effect.
@@ -30,7 +30,7 @@ Close and re-open the charts for changes in this section to take effect.
 
 To open the chart preferences and configure general chart display options, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select **Charts**. The **Charts** settings display to the right
@@ -78,16 +78,6 @@ To configure workload chart display settings and save all preferences, complete 
 6. *(Optional)* Set the *value* in the **End value for Warning zone (%)** text box (default: 200)
 7. Select **Apply** to save the changes in this dialog
 8. Select **OK** to save the changes and close the **Preferences** dialog
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Setting Preferences for Charts procedure involve?**
-
-The Setting Preferences for Charts procedure is divided into four phases: general chart settings, bar chart settings, pie chart settings, and workload chart settings. Complete all relevant phases and select **OK** to save your changes.
 
 ## Glossary
 

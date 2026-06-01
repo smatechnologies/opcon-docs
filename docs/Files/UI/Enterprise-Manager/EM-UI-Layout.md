@@ -1,6 +1,6 @@
 ---
 title: Understanding the User Interface Layout
-description: "When the Enterprise Manager first opens, it displays the Home screen."
+description: "When Enterprise Manager first opens, it displays the Home screen."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,30 +20,26 @@ doc_type: conceptual
 
 ## What Is It?
 
-When the Enterprise Manager first opens, it displays the Home screen. The top shows the installed Enterprise Manager version number. The bottom shows the count of schedules and jobs in both the Daily and Master tables. The left side (the Navigation Panel) provides navigation topics, and the center provides links to frequently used topics.
+When Enterprise Manager first opens, it displays the Home screen. The top shows the installed Enterprise Manager version number. The bottom shows the count of schedules and jobs in both the Daily and Master tables. The left side (the Navigation Panel) provides navigation topics, and the center provides links to frequently used topics.
 
 ![Screen capture of application home screen, black text on white background](../../../Resources/Images/EM/EMhomescreenv19.jpg "Enterprise Manager Home Screen")
 
-The Enterprise Manager screen layout includes:
+Enterprise Manager screen layout includes:
 
 - [Menus](Menus.md)
 - [Navigation Panel](Navigation-Panel.md)
 - [Information Bar](Information-Bar.md)
 - [Keyboard Shortcuts](Keyboard-Shortcuts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Understanding the User Interface Layout do?**
 
-When the Enterprise Manager first opens, it displays the Home screen. The top shows the installed Enterprise Manager version number. The bottom shows the count of schedules and jobs in both the Daily 
+When Enterprise Manager first opens, it displays the Home screen. The top shows the installed Enterprise Manager version number. The bottom shows the count of schedules and jobs in both the Daily 
 
 **Q: Where can you find Understanding the User Interface Layout in OpCon?**
 
-Access Understanding the User Interface Layout through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Understanding the User Interface Layout through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

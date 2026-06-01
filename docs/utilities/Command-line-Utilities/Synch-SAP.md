@@ -87,10 +87,6 @@ from the SAP Server(s).
 C:\\Program Files\\OpConxps\\Utilities\\SMASynchSAP.exe C:\\Synch SAP Files\\MyServerCreds.txt -update
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the SMASynchSAP utility do?**

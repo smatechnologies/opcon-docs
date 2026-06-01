@@ -38,12 +38,11 @@ Related Topics
 - [Adding Machine Groups to Jobs details](Adding-Machine-Groups-to-Job-Details.md)
 - [Deleting Machine Groups](Deleting-Machine-Groups.md)
 
-
 ## FAQs
 
 **Q: What does managing machine groups involve?**
 
-Managing machine groups includes Machine Groups Toolbar. Access machine groups through the Enterprise Manager navigation pane.
+Managing machine groups includes Machine Groups Toolbar. Access machine groups through Enterprise Manager navigation pane.
 
 **Q: Who can manage machine groups in OpCon?**
 

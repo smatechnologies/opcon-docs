@@ -29,7 +29,7 @@ Use this procedure to manage Time Settings in Solution Manager.
 To configure the **Time** setting, you must have one of the following:
 
 - **Role**: Role_ocadm
-- **Function Privilege**: Maintian server options
+- **Function Privilege**: Maintain server options
 
 ---
 

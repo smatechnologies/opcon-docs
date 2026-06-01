@@ -1,6 +1,6 @@
 ---
 title: Menus
-description: "The menu bar at the top of the Enterprise Manager screen is always available when working with editors or views."
+description: "The menu bar at the top of Enterprise Manager screen is always available when working with editors or views."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-The menu bar at the top of the Enterprise Manager screen is always available when working with [editors](Navigation-Editors.md) or [views](Navigation-Views.md). It has two options: Enterprise Manager and Help.
+The menu bar at the top of Enterprise Manager screen is always available when working with [editors](Navigation-Editors.md) or [views](Navigation-Views.md). It has two options: Enterprise Manager and Help.
 
 ## Enterprise Manager
 
-The Enterprise Manager menu includes the following options:
+Enterprise Manager menu includes the following options:
 
 | Option | Description |
 |--- |--- |
@@ -39,9 +39,9 @@ The **Logout**, **Refresh**, and **Pause Refresh** toolbar icons also display be
 
 ### Encrypting Passwords
 
-Use the Enterprise Manager encryption tool when an OpCon configuration value requires an encrypted password.
+Use Enterprise Manager encryption tool when an OpCon configuration value requires an encrypted password.
 
-1. Log in to the Enterprise Manager
+1. Log in to Enterprise Manager
 2. Go to **EnterpriseManager > Password Update > Password Encryption Tool**. The **Password encryption tool** dialog displays
 3. *(Optional)* Select the **Visible** option to show the password characters
 4. Enter the password in the **Password** field
@@ -52,7 +52,7 @@ Use the Enterprise Manager encryption tool when an OpCon configuration value req
 
 ### Generating External Tokens
 
-1. Log in to the Enterprise Manager
+1. Log in to Enterprise Manager
 2. Go to **EnterpriseManager > Password Update > Generate External Token**. The **External Token Set** dialog displays
 3. Select **Yes** to copy the external token to the clipboard, or **No** to close the dialog
 4. Paste the external token to the desired location
@@ -61,7 +61,7 @@ Use the Enterprise Manager encryption tool when an OpCon configuration value req
 
 The **Help** menu includes the following options:
 
-- **Enterprise Manager (F1)**: Opens contextual help for the current location. From the main screen, opens the first topic of the Enterprise Manager online help
+- **Enterprise Manager (F1)**: Opens contextual help for the current location. From the main screen, opens the first topic of Enterprise Manager online help
 - **Documentation**: Provides links to all OpCon online product help
 - **Show Key Assist**: Lists functions and their keyboard shortcut keys
 - **Check for Updates**: Checks for a new version of Enterprise Manager (also runs at startup if configured). For more information, refer to [Setting Preferences](Setting-Preferences.md)
@@ -78,10 +78,6 @@ The **Help** menu includes the following options:
 | Legend | Opens the legend window explaining colors and icons for jobs, schedules, and dependencies in the views | — | — |
 | About OpCon Enterprise Manager | Displays Continuous contact information, product version details, and the option to Report a Problem. | — | — |
 ## FAQs
-
-**Q: How many steps does the Menus procedure involve?**
-
-The Menus procedure involves 12 steps. Complete all steps in order and save your changes.
 
 **Q: What does Menus cover?**
 

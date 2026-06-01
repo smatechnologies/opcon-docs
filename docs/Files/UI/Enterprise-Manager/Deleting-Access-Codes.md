@@ -26,7 +26,7 @@ Deleting an access code requires three procedures: revoking privileges, removing
 
 To revoke an Access Code, complete the following steps:
 
-1. Select on **Access Code Privileges** under the **Security** topic. The **Access Code Privileges** screen displays
+1. Select **Access Code Privileges** under the **Security** topic. The **Access Code Privileges** screen displays
 2. Select a **role** in the **Select Role** list. Use the **Find** (**Ctrl+F** magnifying glass) button to search for the role
 3. Select all **access codes** in the **Granted** list box (shift/select to select multiple)
 4. Select the **left arrow** to move all access codes to the **Revoked** list box
@@ -35,10 +35,10 @@ To revoke an Access Code, complete the following steps:
 
 ## Remove the Access Code from the Daily Tables
 
-1. Select on **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Select on the **job**
+4. Select the **job**
 5. Select **Edit Daily**. The **Job Daily** screen displays
 6. In the **Job Details** frame, select **<None\>** or a different **access code** in the **Access Code** list
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
@@ -58,13 +58,12 @@ To revoke an Access Code, complete the following steps:
 
 ## Delete Access Codes
 
-1. Select on **Access Codes** under the **Security** topic. The **Access Codes** screen displays
+1. Select **Access Codes** under the **Security** topic. The **Access Codes** screen displays
 2. Select an **access code** in the **Select Access Code** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Access Codes** toolbar
 
 4. Select **Yes** to confirm the deletion or **No** to cancel
 5. Select **Close ☒** to close the **Access Codes** screen
-
 
 ## FAQs
 

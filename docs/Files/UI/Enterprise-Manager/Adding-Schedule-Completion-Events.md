@@ -1,6 +1,6 @@
 ---
 title: Adding Schedule Completion Events
-description: "Use this procedure to add Schedule Completion Events in the Enterprise Manager."
+description: "Use this procedure to add Schedule Completion Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Schedule Completion Events in the Enterprise Manager.
+Use this procedure to add Schedule Completion Events in Enterprise Manager.
 
 To add a new schedule completion event, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **Events** tab in the **Schedule Details** frame
 4. Select **Add**. The **Event Definition Wizard** displays

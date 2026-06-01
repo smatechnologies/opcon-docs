@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing SAP Jobs
-description: "Use this procedure to edit SAP Jobs in the Enterprise Manager."
+description: "Use this procedure to edit SAP Jobs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,12 +22,12 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit SAP Jobs in the Enterprise Manager.
+Use this procedure to edit SAP Jobs in Enterprise Manager.
 
 To edit an SAP job, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
-2.  Right-click on the preferred **SAP R/3 and CRM machine name**
+1.  Select **Machines Status** under the **Operation** topic
+2.  Right-click the preferred **SAP R/3 and CRM machine name**
 3.  Hover over **SAP Machine** in the right-click menu and select **SAP Jobs**. The **View SAP Jobs** dialog displays
 4.  Enter a *job name* or a *name with a wildcard*
 5.  *(Optional)* Enter a *date range* for the job's creation date

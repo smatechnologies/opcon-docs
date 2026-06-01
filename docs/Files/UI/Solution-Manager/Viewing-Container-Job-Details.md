@@ -59,12 +59,6 @@ To view job details, complete the following steps:
    If the schedule has not been granted privilege to run as a sub-schedule, the Task Details field values are hidden.
    :::
 
-## FAQs
-
-**Q: How many steps does the Viewing Container Job Details procedure involve?**
-
-The Viewing Container Job Details procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.

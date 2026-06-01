@@ -1,6 +1,6 @@
 ---
 title: Managing Groups
-description: "Use this procedure to manage Groups in the Enterprise Manager."
+description: "Use this procedure to manage Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,15 +20,15 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage Groups in the Enterprise Manager.
+Use this procedure to manage Groups in Enterprise Manager.
 
 ## Adding Machine, Schedule, or Job Groups
 
 To add a group, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3. Right-click on the **notification type** (e.g., Machines, Schedules, or Jobs)
+3. Right-click the **notification type** (e.g., Machines, Schedules, or Jobs)
 4. Select **Add Group**. The **Add New Group** dialog displays
 5. Type the new *group name* and select **OK**
 
@@ -38,7 +38,7 @@ To add a group, complete the following steps:
 
 **Add Machines to a Group**
 
-1. Select on the **group** in the **Machines** tab
+1. Select the **group** in the **Machines** tab
 2. In the Machines selection frame, use one of the following approaches:
    - **To add specific machines:** Confirm **By default, ENS will treat all machines as: Excluded**. Select the **option** for the platform to add all machines for that platform, or expand the platform using the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** and select individual machine options
    - **To remove specific machines:** Change the selection to **By default, ENS will treat all machines as: Included**. Select the **option** for the platform to remove all machines, or expand the platform and deselect individual machine options
@@ -46,7 +46,7 @@ To add a group, complete the following steps:
 
 **Add Schedules to a Group**
 
-1. Select on the **group** in the **Schedules** tab
+1. Select the **group** in the **Schedules** tab
 2. In the Schedules selection frame, use one of the following approaches:
    - **To add schedules:** Confirm **By default, ENS will treat all schedules as: Excluded**. Select the **option** for each schedule to add
    - **To remove schedules:** Change the selection to **By default, ENS will treat all schedules as: Included**. Unselect the **option** for each schedule to remove
@@ -54,7 +54,7 @@ To add a group, complete the following steps:
 
 **Add Jobs to a Group**
 
-1. Select on the **group** in the **Jobs** tab
+1. Select the **group** in the **Jobs** tab
 2. In the Jobs selection frame, use one of the following approaches:
    - **To add jobs:** Confirm **By default, ENS will treat all jobs as: Excluded**. Select the **option** for the schedule to add all jobs, or expand the schedule using the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)**arrow** and select individual job options
    - **To remove jobs:** Change the selection to **By default, ENS will treat all jobs as: Included**. Select the **option** for the schedule to remove all jobs, or expand the schedule and deselect individual job options
@@ -64,10 +64,10 @@ To add a group, complete the following steps:
 
 To delete a group, complete the following steps:
 
-1.  Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1.  Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2.  Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3.  Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the group information
-4.  Right-click on the **group** to delete
+4.  Right-click the **group** to delete
 5.  Select **Delete Group**. The **Delete** dialog displays
 6.  Select **Yes** to confirm the deletion or **No** to cancel
 
@@ -75,19 +75,18 @@ To delete a group, complete the following steps:
 
 To rename a group, complete the following steps:
 
-1.  Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1.  Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2.  Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3.  Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the group information
-4.  Right-click on the **group** to rename
+4.  Right-click the **group** to rename
 5.  Select **Rename**
 6.  Type the new *group name* and select **OK**
-
 
 ## FAQs
 
 **Q: What does managing groups involve?**
 
-Managing groups includes Adding Machine, Schedule, or Job Groups, Deleting Machine, Schedule, or Job Groups, Renaming Machine, Schedule, or Job Groups. Access groups through the Enterprise Manager navigation pane.
+Managing groups includes Adding Machine, Schedule, or Job Groups, Deleting Machine, Schedule, or Job Groups, Renaming Machine, Schedule, or Job Groups. Access groups through Enterprise Manager navigation pane.
 
 **Q: Who can manage groups in OpCon?**
 

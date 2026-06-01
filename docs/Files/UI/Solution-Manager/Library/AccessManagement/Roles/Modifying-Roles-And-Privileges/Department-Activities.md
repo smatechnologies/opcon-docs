@@ -38,15 +38,7 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: What does Role Department Activities do?**
-
-title: Roles - Departments
 
 **Q: Where can you find Role Department Activities in OpCon?**
 

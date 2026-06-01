@@ -26,9 +26,9 @@ Use this procedure to view or edit machine information details.
 
 To perform this procedure, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
-2.  Select on the **Table** tab or the **Map** tab
-3.  *(Optional)* Right-click on the **machine** to edit
+1.  Select **Machines Status** under the **Operation** topic
+2.  Select the **Table** tab or the **Map** tab
+3.  *(Optional)* Right-click the **machine** to edit
 4.  Select **Edit Machine** from the menu. The **Machines** screen displays
 5.  *(Optional)* Edit the **machine** information
 6.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Machines** toolbar

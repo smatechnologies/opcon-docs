@@ -19,8 +19,6 @@ doc_type: conceptual
 
 The Studio canvas is the visual workspace for building and reviewing schedule definitions. From the canvas you can add, edit, copy, and delete master schedules, view dependency lines between jobs, and isolate specific dependency chains for focused review.
 
-## When would you use this section?
-
 - Add a new master schedule to the Studio canvas
 - View or edit the visual layout of an existing schedule
 - Isolate a dependency chain for review or documentation

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Changing Sort Order of Machines Status Table
-description: "Use this procedure to change Sort Order of Machines Status Table in the Enterprise Manager."
+description: "Use this procedure to change Sort Order of Machines Status Table in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,21 +22,14 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to change Sort Order of Machines Status Table in the Enterprise Manager.
+Use this procedure to change Sort Order of Machines Status Table in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
+1.  Select **Machines Status** under the **Operation** topic
 2.  Select the **Machines Status** column heading to sort ascending (arrow pointing down), select again for descending (arrow pointing up), or select a third time to reverse the sort order
 
-## FAQs
-
-**Q: How many steps does the Changing Sort Order of Machines Status Table procedure involve?**
-
-The Changing Sort Order of Machines Status Table procedure involves 2 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences for Status Colors
-description: "Use this procedure to set Preferences for Status Colors in the Enterprise Manager."
+description: "Use this procedure to set Preferences for Status Colors in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Status Colors in the Enterprise Manager.
+Use this procedure to set Preferences for Status Colors in Enterprise Manager.
 
 :::note
 Select the **Restore Defaults** button in the Color Preferences to restore the default color choices.
@@ -28,21 +28,11 @@ Select the **Restore Defaults** button in the Color Preferences to restore the d
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree
 4. Select **Colors**
 5. [Set the desired job status group colors](Setting-Job-Status-Group-Colors.md), [manage the individual job status colors](Managing-Individual-Status-Colors.md), or [set the desired schedule status colors](Setting-Schedule-Status-Colors.md)
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Setting Preferences for Status Colors procedure involve?**
-
-The Setting Preferences for Status Colors procedure involves 5 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

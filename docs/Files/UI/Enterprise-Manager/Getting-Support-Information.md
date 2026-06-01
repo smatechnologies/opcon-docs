@@ -26,18 +26,11 @@ The **Support** dialog includes contact and product version information. Note th
 
 To gather support info, complete the following steps:
 
-1.  Select on **Support** under the **Support** topic. The **Support** dialog displays
+1.  Select **Support** under the **Support** topic. The **Support** dialog displays
 2.  Note the **Continuous Contact Information** and **Production Information**
 3.  Select the **OK** button to close the dialog
 :::
 
-## FAQs
-
-**Q: How many steps does the Getting Support Information procedure involve?**
-
-The Getting Support Information procedure involves 3 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

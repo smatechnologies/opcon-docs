@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Schedule Completion Events
-description: "Use this procedure to copy Schedule Completion Events in the Enterprise Manager."
+description: "Use this procedure to copy Schedule Completion Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,14 +22,14 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Schedule Completion Events in the Enterprise Manager.
+Use this procedure to copy Schedule Completion Events in Enterprise Manager.
 
 To copy a schedule completion event, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select the **schedule** in the **Schedule Selection** list
 3.  Select the **Event** tab in the **Schedule Details** frame
-4.  Right-click on the **event** in the **Schedule Completion Events** list and select **Copy**
+4.  Right-click the **event** in the **Schedule Completion Events** list and select **Copy**
 5.  Select another **Schedule** in the **Schedule** list
 6.  Select the **Event** tab in the **Schedule Details** frame
 7.  Right-click inside the **Schedule Completion Events** list and select **Paste**. The **Event Definition Wizard** displays with the **Event Parameters** text box pre-populated
@@ -48,7 +48,6 @@ Copying schedule completion events is useful when you want to reuse an existing 
 Yes. The copy must be saved with a new unique name to distinguish it from the original schedule completion events record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

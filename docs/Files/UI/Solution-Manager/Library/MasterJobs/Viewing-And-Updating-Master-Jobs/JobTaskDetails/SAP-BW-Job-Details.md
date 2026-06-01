@@ -69,10 +69,6 @@ For conceptual information, refer to [SAP BW Jobs](../../../../../../../job-type
 
 ## FAQs
 
-**Q: How many steps does the Viewing SAP BW Job Details procedure involve?**
-
-The Viewing SAP BW Job Details procedure involves 4 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing SAP BW Job Details cover?**
 
 This page covers Editing SAP BW Job Details, More Information.

@@ -67,12 +67,6 @@ When submitting a Service Request via URL, the URL uses the Service Request Name
 
 ![Customized Service Request button](../../../Resources/Images/SM/Stylizing-Service-Request_1.png "Customized Service Request button")
 
-## FAQs
-
-**Q: How many steps does the Stylizing Service Request Buttons procedure involve?**
-
-The Stylizing Service Request Buttons procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.

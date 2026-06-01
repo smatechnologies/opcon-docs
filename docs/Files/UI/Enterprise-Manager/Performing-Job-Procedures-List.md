@@ -1,6 +1,6 @@
 ---
 title: Performing Job Procedures when Working in List View
-description: "Use this procedure to perform Job Procedures when Working in List View in the Enterprise Manager."
+description: "Use this procedure to perform Job Procedures when Working in List View in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,24 +20,24 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Job Procedures when Working in List View in the Enterprise Manager.
+Use this procedure to perform Job Procedures when Working in List View in Enterprise Manager.
 
 ## Viewing Job Information
 
 To view Job Information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Select the **job** to open the **Job Information** dialog. Alternatively, right-click on the **Jobs** icon and select **Job Information** from the menu
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Select the **job** to open the **Job Information** dialog. Alternatively, right-click the **Jobs** icon and select **Job Information** from the menu
 5. Select **OK** to close the dialog
 
 ## Viewing Job History
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **Jobs** icon and select **Job History** from the menu
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **Jobs** icon and select **Job History** from the menu
 5. Select **Close** to close the dialog
 
 ## Adding Job Completion Comments
@@ -48,10 +48,10 @@ This menu option is only available when the job is Finished OK, Marked Finished 
 
 To add Job Completion Comments, complete the following steps:
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **Jobs** icon and select **Comment** from the menu. The **Job Completion Comment** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **Jobs** icon and select **Comment** from the menu. The **Job Completion Comment** dialog displays
 5. Enter a *short comment* for the job
 6. Select **OK** or press **Enter** to save, or select **Cancel** to abort
 
@@ -59,10 +59,10 @@ To add Job Completion Comments, complete the following steps:
 
 This action opens a job's output file when the job is complete. Before proceeding, refer to [Viewing a Job Output File](../../../operations/job-output.md) in the **Concepts** online help.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **View Job Output** from the menu. The **Job Output Retriever** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **View Job Output** from the menu. The **Job Output Retriever** dialog displays
 5. Select the **Output File(s)** name to retrieve the output. The **Log Viewer** dialog displays
 6. *(Optional)* Select **Copy To Clipboard** or **Open external editor** to open the file in an external editor (e.g., Notepad)
 7. Select **Close** to close the **Log Viewer** dialog, then **Close** again to close the **Job Output Retriever** dialog
@@ -73,21 +73,21 @@ This action opens a job's output file when the job is complete. Before proceedin
 This action requires a configured emulator. For details, refer to [Preferences for Window To Host](Preferences-for-Windows-To-Host.md).
 :::
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Window to Host** from the menu. The **Window to Host Emulator** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Window to Host** from the menu. The **Window to Host Emulator** dialog displays
 5. Log in to the machine to manage the content
 
 ## Editing Daily Jobs
 
 This action allows editing job information in the Daily tables.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Maintenance > Edit Daily Job** from the menu. The **Job Daily** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Maintenance > Edit Daily Job** from the menu. The **Job Daily** dialog displays
 5. *(Optional)* Enter the *changes*
 6. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
 7. Select **Close ☒** to close the **Job Daily** screen
@@ -96,21 +96,21 @@ This action allows editing job information in the Daily tables.
 
 This action allows editing job information in the Master tables.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Maintenance > Edit Master Job** from the menu. The **Job Master** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Maintenance > Edit Master Job** from the menu. The **Job Master** dialog displays
 5. *(Optional)* Enter the *changes*
 6. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 7. Select **Close ☒** to close the **Job Master** screen
 
 ## Deleting Jobs
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Maintenance > Delete Job** from the menu. The **Delete Job** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Maintenance > Delete Job** from the menu. The **Delete Job** dialog displays
 5. Select **Yes** to confirm or **No** to cancel
 6. Select **Close ☒** to close the **Daily list** screen
 
@@ -122,11 +122,11 @@ This action suspends processing of the selected job. A job already submitted to 
 If performed when a schedule is selected, all jobs on the schedule are affected.
 :::
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Hold** from the menu. The **Hold** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Hold** from the menu. The **Hold** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -140,10 +140,10 @@ If performed when a schedule is selected, all jobs on the schedule are affected.
 
 To cancel Jobs, complete the following steps:
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Cancel** from the menu. The **Cancel** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Cancel** from the menu. The **Cancel** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -151,10 +151,10 @@ To cancel Jobs, complete the following steps:
 
 This action places the job in a Job to be Skipped state until it qualifies to start. When the job qualifies, it is skipped and subsequent job dependencies are met.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Skip** from the menu. The **Skip** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Skip** from the menu. The **Skip** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -166,11 +166,11 @@ This action sends a request to kill the job. Dependent jobs will not have their 
 This option is not available for the BIS, OpenVMS, IBM i, and OS 2200 platforms.
 :::
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Kill** from the menu. The **Kill** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Kill** from the menu. The **Kill** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -184,10 +184,10 @@ If performed when a schedule is selected, all jobs on the schedule are affected.
 
 To release Held Jobs, complete the following steps:
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Release** from the menu. The **Release** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Release** from the menu. The **Release** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -195,10 +195,10 @@ To release Held Jobs, complete the following steps:
 
 This action causes the job to ignore its start time and all dependencies. The job starts immediately as long as a machine is available.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Force Start** from the menu. The **Force Start** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Force Start** from the menu. The **Force Start** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -214,10 +214,10 @@ During restart qualifying, the SAM uses current details from the Daily tables an
 If a job is configured to "Run Again" when Finished OK, the actual run count is maintained across manual restarts. To reset the run count to zero, delete the job from the Daily and re-add it. See [Deleting Jobs](#Deleting).
 :::
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Restart** from the menu. The **Restart** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Restart** from the menu. The **Restart** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -225,10 +225,10 @@ If a job is configured to "Run Again" when Finished OK, the actual run count is 
 
 This action causes the job to restart and ignore its start time and all dependencies. The job restarts immediately as long as a machine is available.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Force Restart** from the menu. The **Force Restart** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Force Restart** from the menu. The **Force Restart** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -240,11 +240,11 @@ This action places the selected job back into a qualifying state.
 Not available for SAP R/3, SAP BW, File Transfer, Container, and Null platforms.
 :::
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Restart Without Prerun** from the menu. The **Restart Without Prerun** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Restart Without Prerun** from the menu. The **Restart Without Prerun** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -252,10 +252,10 @@ Not available for SAP R/3, SAP BW, File Transfer, Container, and Null platforms.
 
 This action allows you to select a step on which to restart (when supported by the job type).
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Restart On Step** from the menu. The **Restart On Step** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Restart On Step** from the menu. The **Restart On Step** dialog displays
 5. Select the specific **Start step** to restart
 6. Select the specific **End step** (only for platforms that support it)
 7. Select **Restart On Step**, then select **OK**
@@ -266,10 +266,10 @@ This action allows you to select a step on which to restart (when supported by t
 
 To restart Entire Jobs, complete the following steps:
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Restart On Step** from the menu. The **Restart On Step** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Restart On Step** from the menu. The **Restart On Step** dialog displays
 5. Select **Restart Entire Job**
 6. *(Optional)* Enter a *short explanation for the status change*
 7. Select **OK**
@@ -278,10 +278,10 @@ To restart Entire Jobs, complete the following steps:
 
 This action marks the selected job as Finished OK. If marked before the job starts, the start and finish times saved in history both equal the time the job is marked.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Mark Finished OK** from the menu. The **Marked Finished OK** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Mark Finished OK** from the menu. The **Marked Finished OK** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -289,11 +289,11 @@ This action marks the selected job as Finished OK. If marked before the job star
 
 This action marks the selected job as Failed. If marked before the job starts, the start and finish times saved in history both equal the time the job is marked.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Mark Failed** from the menu. The **Marked Failed** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Mark Failed** from the menu. The **Marked Failed** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -301,11 +301,11 @@ This action marks the selected job as Failed. If marked before the job starts, t
 
 This action marks the selected job as Under Review.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Under Review** from the menu. The **Under Review** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Under Review** from the menu. The **Under Review** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
@@ -313,20 +313,20 @@ This action marks the selected job as Under Review.
 
 This action marks the selected job as Fixed.
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
 
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job** and select **Fixed** from the menu. The **Fixed** dialog displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **job** and select **Fixed** from the menu. The **Fixed** dialog displays
 5. *(Optional)* Enter a *short explanation for the status change*
 6. Select **OK** to confirm
 
 ## Monitoring SAP Child Processes
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **SAP R/3 or CRM job** and select **SAP Child Processes** from the menu. The **SAP Child Processes** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **SAP R/3 or CRM job** and select **SAP Child Processes** from the menu. The **SAP Child Processes** dialog displays
 5. View the child processes
 6. *(Optional)* Clear options at the top to filter specific statuses, or type in **Filter Text** to find a process by name
 7. *(Optional)* Move the dialog aside to continue work while monitoring
@@ -334,10 +334,10 @@ This action marks the selected job as Fixed.
 
 ## Restarting SAP Child Processes
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **SAP R/3 or CRM job** and select **SAP Child Processes** from the menu. The **SAP Child Processes** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **SAP R/3 or CRM job** and select **SAP Child Processes** from the menu. The **SAP Child Processes** dialog displays
 5. Select the option(es) next to the child process(es) to restart
 6. *(Optional)* Clear options at the top to filter specific statuses, or type in **Filter Text** to find a process by name
 7. Select **Restart**
@@ -346,10 +346,10 @@ This action marks the selected job as Fixed.
 
 ## Viewing SAP Job Spools
 
-1. Select on **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **SAP R/3 or CRM job** and select **SAP Job Spools** from the menu. The **SAP Login** dialog displays
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
+4. Right-click the **SAP R/3 or CRM job** and select **SAP Job Spools** from the menu. The **SAP Login** dialog displays
 5. Enter the *SAP login credentials* and select **OK**. The **View SAP Job's Spools** dialog displays
 6. *(Optional)* Select **Refresh** to update the list
 7. Select the *job spool* to retrieve. The **SAP Spool Details** dialog displays
@@ -357,15 +357,7 @@ This action marks the selected job as Fixed.
 9. *(Optional)* Select **Copy To Clipboard** or **Open external editor** to open in an external editor (e.g., Notepad)
 10. Select **Close** to close the **SAP Spool Details** dialog, then **Close** again to close the **View SAP Job's Spools** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Performing Job Procedures when Working in List View procedure involve?**
-
-The Performing Job Procedures when Working in List View procedure involves 169 steps. Complete all steps in order and save your changes.
 
 **Q: What does Performing Job Procedures when Working in List View cover?**
 

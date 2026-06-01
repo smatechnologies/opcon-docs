@@ -1,6 +1,6 @@
 ---
 title: Adding Jobs from Job Master to Daily Schedule
-description: "Use this procedure to add Jobs from Job Master to Daily Schedule in the Enterprise Manager."
+description: "Use this procedure to add Jobs from Job Master to Daily Schedule in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Jobs from Job Master to Daily Schedule in the Enterprise Manager.
+Use this procedure to add Jobs from Job Master to Daily Schedule in Enterprise Manager.
 
 :::note
 Jobs can be added from the Job Master to the Daily Schedules regardless of the daily schedule's status or the Job's build status. For more information, refer to [Adding Jobs to Daily Schedules](../../../operations/adding-jobs.md) in the **Concepts** online help.
@@ -28,7 +28,7 @@ Jobs can be added from the Job Master to the Daily Schedules regardless of the d
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic
+1. Select **Daily Maintenance** under the **Operation** topic
 2. Select the ![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png)**arrow** to expand the **date** for the schedule, then select the **Schedule** that has the job to be added
 
 :::note

@@ -1,6 +1,6 @@
 ---
 title: Adding Departments
-description: "Use this procedure to add Departments in the Enterprise Manager."
+description: "Use this procedure to add Departments in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Departments in the Enterprise Manager.
+Use this procedure to add Departments in Enterprise Manager.
 
 To add a department, complete the following steps:
 
@@ -33,9 +33,9 @@ To add a department, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Departments in the Enterprise Manager?**
+**Q: Where do you access Departments in Enterprise Manager?**
 
-Select **Departments** under the **Security** topic in the Enterprise Manager navigation pane.
+Select **Departments** under the **Security** topic in Enterprise Manager navigation pane.
 
 **Q: What information is required to add departments?**
 

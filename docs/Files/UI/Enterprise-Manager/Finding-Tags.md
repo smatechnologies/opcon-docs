@@ -26,7 +26,7 @@ Tags in Job Master can be searched using the Quick Search dialog, which lets eng
 
 To find a tag, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Tags** tab in the **Job Properties** frame
@@ -34,16 +34,6 @@ To find a tag, complete the following steps:
 6.  Type the tag name in the **Select an Item** text box
 7.  Select **OK**
 :::
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Finding Tags procedure involve?**
-
-The Finding Tags procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

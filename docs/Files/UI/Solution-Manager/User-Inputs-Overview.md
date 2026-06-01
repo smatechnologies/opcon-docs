@@ -19,10 +19,6 @@ doc_type: conceptual
 
 User inputs allow Self Service requests to accept values from the end user at runtime. The input value is passed as a property into the triggered OpCon workflow. Supported input types: text, number, date, choice list, master job selector, master schedule selector, and text collection.
 
-## Configuration Options
-
-## When would you use this section?
-
 - Creating a service request that requires a user-provided date, filename, or other parameter
 - Configuring a choice list that limits users to approved values
 - Linking a user input to a specific master job or schedule

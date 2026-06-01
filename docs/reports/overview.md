@@ -25,10 +25,6 @@ OpCon includes [Predefined Reports](./predefined.md) for gathering information o
 
 Custom reports can be integrated into the database using the Report Management utility. Refer to [Using Report Management](../Files/UI/Enterprise-Manager/Using-Report-Management.md) in the **Enterprise Manager** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What reporting options does OpCon provide?**
@@ -41,7 +37,7 @@ Custom reports are built with the BIRT Report Designer (Eclipse BIRT). Download 
 
 **Q: How are custom reports made available in OpCon?**
 
-After creating a custom report with BIRT, use the Report Management utility in the Enterprise Manager to integrate the report into the OpCon database so it appears alongside predefined reports.
+After creating a custom report with BIRT, use the Report Management utility in Enterprise Manager to integrate the report into the OpCon database so it appears alongside predefined reports.
 
 ## Glossary
 

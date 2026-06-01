@@ -1,6 +1,6 @@
 ---
 title: Disabling User Logins
-description: "Use this procedure to disable User Logins in the Enterprise Manager."
+description: "Use this procedure to disable User Logins in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to disable User Logins in the Enterprise Manager.
+Use this procedure to disable User Logins in Enterprise Manager.
 
 To disable a user login, complete the following steps:
 
-1. Select on **User Accounts** under the **Security** topic
+1. Select **User Accounts** under the **Security** topic
 2. Select a **role** in the **Select Role** list, or use **Find** (Ctrl+F) to search
 3. Select the **Login disabled** option
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **User Accounts** toolbar
@@ -35,10 +35,6 @@ Manually disabling a user login releases any Self Service license(s) associated 
 :::
 
 ## FAQs
-
-**Q: How many steps does the Disabling User Logins procedure involve?**
-
-The Disabling User Logins procedure involves 5 steps. Complete all steps in order and save your changes.
 
 **Q: What happens to a user's Self Service license when their login is manually disabled?**
 

@@ -67,10 +67,6 @@ The Operation tools perform the functions listed below, depending on the active 
 ||Size list: Selects the preferred size for displayed objects.|
 ||Take Screenshot: Takes a screenshot and saves the visible area of the current view.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Operation Tools?**

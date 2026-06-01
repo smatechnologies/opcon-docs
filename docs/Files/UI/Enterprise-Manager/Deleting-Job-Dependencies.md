@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Job Dependencies
-description: "Use this procedure to delete Job Dependencies in the Enterprise Manager."
+description: "Use this procedure to delete Job Dependencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to delete Job Dependencies in the Enterprise Manager.
+Use this procedure to delete Job Dependencies in Enterprise Manager.
 
 To delete a dependency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Dependencies** tab in the **Job Properties** frame

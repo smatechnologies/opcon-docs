@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Old Dates
-description: "Use this procedure to delete Old Dates in the Enterprise Manager."
+description: "Use this procedure to delete Old Dates in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Old Dates in the Enterprise Manager.
+Use this procedure to delete Old Dates in Enterprise Manager.
 
 To delete old dates, complete the following steps:
 
-1. Select on **Calendars** under the **Administration** topic. The **Calendars** screen displays
+1. Select **Calendars** under the **Administration** topic. The **Calendars** screen displays
 2. Select the **calendar** in the **Selection** list
 3. Select **Delete Old Dates**
 4. To delete dates from the selected calendar only, select **No**. Select **Yes** to confirm, or **No** to cancel

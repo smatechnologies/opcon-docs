@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Global Properties
-description: "Use this procedure to edit Global Properties in the Enterprise Manager."
+description: "Use this procedure to edit Global Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to edit Global Properties in the Enterprise Manager.
+Use this procedure to edit Global Properties in Enterprise Manager.
 
 To edit a global property, complete the following steps:
 
-1.  Select on **Global Properties** under the **Administration** topic
+1.  Select **Global Properties** under the **Administration** topic
 2.  Select an existing **global property** in the **Select Global
     Property** list.
 3.  Enter the *changes*

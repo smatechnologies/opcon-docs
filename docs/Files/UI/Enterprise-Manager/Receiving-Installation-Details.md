@@ -22,7 +22,7 @@ doc_type: procedural
 
 The Installation Details dialog in Enterprise Manager displays plug-in names, version numbers, provider information, and signing data for the current installation. This information is used when reporting issues to support.
 
-To receive Enterprise Manager installation details (e.g., provider information, plug-in names and identification, version numbers), [initiate the Installation details setup](Setting-up-New-Profiles.md#OpConxps_data_location_details) in the Enterprise Manager Preferences first.
+To receive Enterprise Manager installation details (e.g., provider information, plug-in names and identification, version numbers), [initiate the Installation details setup](Setting-up-New-Profiles.md#OpConxps_data_location_details) in Enterprise Manager Preferences first.
 
 To get details about the installation, complete the following steps:
 
@@ -38,12 +38,6 @@ To get details about the installation, complete the following steps:
 10. *(Optional)* Select **View Error Log** if required and choose a program to open the file (e.g., Notepad)
 11. Select **Close** to close the **OpCon Enterprise Manager Installation Details** dialog
 12. Select **OK** to close the **Contact Information** dialog
-
-## FAQs
-
-**Q: How many steps does the Receiving Installation Details procedure involve?**
-
-The Receiving Installation Details procedure involves 12 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

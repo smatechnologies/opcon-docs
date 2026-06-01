@@ -44,7 +44,6 @@ Select the specific vision remote instances record you want to delete, then sele
 
 ## Glossary
 
-
 **OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.

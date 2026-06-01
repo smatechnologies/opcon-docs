@@ -54,12 +54,7 @@ To define a hide rule, complete the following steps:
 2. Toggle the **Hide Rule** switch on. A text field appears for entering the expression
 3. Enter a boolean value, a token, or a complex expression
 
-
 ## FAQs
-
-**Q: How many steps does the Disabling or Hiding Service Requests procedure involve?**
-
-The Disabling or Hiding Service Requests procedure involves 6 steps. Complete all steps in order and save your changes.
 
 **Q: What does Disabling or Hiding Service Requests cover?**
 

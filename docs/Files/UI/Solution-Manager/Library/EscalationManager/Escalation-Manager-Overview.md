@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Escalation Manager lets you define policies that automatically re-send or redirect notifications when an alert is not acknowledged within a defined time. Escalation rules specify the timing and sequence; escalation groups define who receives the repeated notifications.
 
-## When would you use this section?
-
 - Ensuring a critical job failure alert is not missed
 - Setting up an on-call escalation chain for after-hours alerts
 - Managing who receives escalated alerts and when

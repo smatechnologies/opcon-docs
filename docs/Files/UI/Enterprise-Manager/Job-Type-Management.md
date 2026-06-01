@@ -153,7 +153,6 @@ To define IBM i Job Details, complete the following steps:
 
 Managing Items in the Messages tab
 
-
 1. Select the **Messages** tab
 2. To add a message: enter the *field information*, then select **Add**
 3. To edit a message: select the message in the table, modify the fields, then select **Update**
@@ -280,7 +279,6 @@ To define SAP R/3 and CRM Job Details, complete the following steps:
 3. Select the **job** from the results table and select **OK**
 
 Create a new SAP Job
-
 
 1. Select the **New** button. The **Create new SAP Job** dialog displays
 2. Log in to SAP, then enter a **Job Name**, **Job Class**, and **Spool Recipient**
@@ -815,13 +813,11 @@ Verify the JCL selection for a job by:
 
 **In Batch Details under the JCL tab:**
 
-
 1. Verify or enter a *Member Name*. If the member name matches the first word of the job name, you may leave this field blank
 2. Verify or enter the *DDNAME*
 3. Save the job definition if any changes were made (Ctrl+S)
 
 **In the JCL/SYSOUT Access frame within z/OS Definition:**
-
 
 1. Select **JCL/Sysout Access**. The **JCL/Sysout Access** dialog displays
 2. Select **View JCL**
@@ -832,7 +828,6 @@ Edit the production JCL by:
 
 **In the JCL/SYSOUT Access frame within z/OS Definition:**
 
-
 1. Select **JCL/Sysout Access**. The **JCL/Sysout Access** dialog displays
 2. Select **View JCL** and edit the JCL. If using an external editor, save the results before closing and confirm loading the results
 3. Select **OK**
@@ -842,7 +837,6 @@ Edit the production JCL by:
 Edit the JCL for a single job instance by:
 
 **In the JCL/SYSOUT Access frame within z/OS Definition:**
-
 
 1. Select **JCL/Sysout Access**. The **JCL/Sysout Access** dialog displays
 2. Select **View JCL** and edit the JCL. If using an external editor, save the results before closing and confirm loading the results
@@ -856,7 +850,6 @@ Edit the submitted JCL directly for restarts by:
 
 **In the JCL/SYSOUT Access frame within z/OS Definition:**
 
-
 1. Select **JCL/Sysout Access**. The **JCL/Sysout Access** dialog displays
 2. Enter "0" in the **Outlimit** text box and select **View Sysout**
 3. *(Optional)* Edit the JCL
@@ -865,19 +858,11 @@ Edit the submitted JCL directly for restarts by:
 6. Select **OK**, then select **Save JCL**
 7. Close the **JCL/Sysout Access** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
-**Q: Where is Job Type Management located in the Enterprise Manager?**
+**Q: Where is Job Type Management located in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
-
-**Q: How many steps does the Job Type Management procedure involve?**
-
-The Job Type Management procedure involves 390 steps. Complete all steps in order and save your changes.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: What does Job Type Management cover?**
 
@@ -889,7 +874,7 @@ This page covers Defining BIS Job Details, Defining Container Job Details, Defin
 
 **DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

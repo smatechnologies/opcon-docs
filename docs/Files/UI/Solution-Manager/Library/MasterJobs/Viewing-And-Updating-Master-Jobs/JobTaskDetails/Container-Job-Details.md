@@ -79,12 +79,7 @@ To update Container Job Details, complete the following steps:
 
 For conceptual information, refer to [Container Jobs](../../../../../../../job-types/container.md) in the **Concepts** online help.
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Adding Container Job Details procedure involve?**
-
-The Viewing and Adding Container Job Details procedure involves 32 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Adding Container Job Details cover?**
 

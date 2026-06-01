@@ -43,16 +43,11 @@ The **Get Failed Schedules** skill retrieves a list of failed schedules for a sp
 
 ## FAQs
 
-**Q: How many steps does the Get Failed Schedules procedure involve?**
-
-The Get Failed Schedules procedure involves 2 steps. Complete all steps in order and save your changes.
-
 **Q: What does Get Failed Schedules cover?**
 
 This page covers Skill Details, Example.
 
 ## Glossary
-
 
 **OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
 

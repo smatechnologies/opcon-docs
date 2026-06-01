@@ -1,6 +1,6 @@
 ---
 title: Adding Job Events
-description: "Use this procedure to add Job Events in the Enterprise Manager."
+description: "Use this procedure to add Job Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Job Events in the Enterprise Manager.
+Use this procedure to add Job Events in Enterprise Manager.
 
 ## Setting Job-Related Events
 
 To add a new job event:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Events** tab in the **Job Properties** frame
@@ -67,7 +67,6 @@ To set Job-Related Events, complete the following steps:
     $JOB:ADD,\[\[$SCHEDULE DATE\]\],Payroll,Emp1,15thofMonth
     :::
 
-
 13. Select **Reset** to reset parameters to their original states, if needed
 14. Select **Finish** to save the job event, or **Cancel** to discard
 15. Select **Close ☒** to close the **Job Master** screen
@@ -76,7 +75,7 @@ To set Job-Related Events, complete the following steps:
 
 To add a new job event:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Events** tab in the **Job Properties** frame
@@ -107,7 +106,6 @@ To add a new job event:
 15. Select **Finish** to save the job event, or **Cancel** to discard
 16. Select **Close ☒** to close the **Job Master** screen
 
-
 ## FAQs
 
 **Q: What information is required to add job events?**
@@ -120,7 +118,7 @@ Yes. This page covers job events for multiple platforms or contexts: Setting Job
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

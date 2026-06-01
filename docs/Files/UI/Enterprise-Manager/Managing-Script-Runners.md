@@ -43,12 +43,11 @@ Related Topics
 
 :::
 
-
 ## FAQs
 
 **Q: What does managing script runners involve?**
 
-Managing script runners includes Script Runners Toolbar, Right-click Menu. Access script runners through the Enterprise Manager navigation pane.
+Managing script runners includes Script Runners Toolbar, Right-click Menu. Access script runners through Enterprise Manager navigation pane.
 
 **Q: Who can manage script runners in OpCon?**
 

@@ -24,9 +24,9 @@ Enterprise Manager supports keyboard shortcuts that speed up navigation and comm
 
 ## Enterprise Manager
 
-Press **F1** to open contextual help for the current location. From the main screen, this opens the first page of the Enterprise Manager Guide.
+Press **F1** to open contextual help for the current location. From the main screen, this opens the first page of Enterprise Manager Guide.
 
-The following shortcuts are available from the Enterprise Manager banner:
+The following shortcuts are available from Enterprise Manager banner:
 
 ||||
 |--- |--- |--- |
@@ -315,10 +315,6 @@ The following **Alt +** and **Ctrl +** shortcuts access required fields in *Sche
 |Alt+U|Go to Allow Job Updates field|
 |Enter Key|Move a selected item between Revoked and Granted|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Keyboard Shortcuts cover?**

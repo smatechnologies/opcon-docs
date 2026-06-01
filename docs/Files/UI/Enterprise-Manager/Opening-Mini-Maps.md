@@ -26,17 +26,11 @@ The **Mini Map** displays a miniature view of the entire **PERT** map of the sch
 
 To open the mini map, complete the following steps:
 
-1. Select on **PERT** under the **Operation** topic. The **PERT** screen displays
+1. Select **PERT** under the **Operation** topic. The **PERT** screen displays
 2. Select the **Open mini map** button on the **PERT** toolbar. The **Mini Map** dialog displays
 3. Select and drag the border of the dialog to the preferred location, if needed
 4. Select the **Close** button when finished viewing the mini map
 :::
-
-## FAQs
-
-**Q: How many steps does the Opening Mini Maps procedure involve?**
-
-The Opening Mini Maps procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

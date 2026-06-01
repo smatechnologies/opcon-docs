@@ -28,15 +28,7 @@ The Master Jobs tab allows you to manage master jobs.
 
 Please check back for more content.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: What does Overview do?**
-
-title: Managing Master Jobs
 
 **Q: Where can you find Overview in OpCon?**
 

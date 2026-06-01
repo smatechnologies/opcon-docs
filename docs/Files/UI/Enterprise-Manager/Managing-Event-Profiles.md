@@ -24,8 +24,8 @@ doc_type: procedural
 
 For all procedures, begin by navigating to the **SAP Event History Profiles** dialog:
 
-1.  Select on **Machines Status** under the **Operation** topic
-2.  Right-click on the preferred **SAP R/3 and CRM machine name**
+1.  Select **Machines Status** under the **Operation** topic
+2.  Right-click the preferred **SAP R/3 and CRM machine name**
 3.  Hover over **SAP Machine** and select **Event Profiles**. The **SAP Event History Profiles** dialog displays
 
 To create an event profile, complete the following steps:
@@ -66,7 +66,7 @@ To edit an event profile, complete the following steps:
 
 **Q: What does managing event profiles involve?**
 
-Managing event profiles includes adding, editing, and deleting records. Access event profiles through the Enterprise Manager navigation pane.
+Managing event profiles includes adding, editing, and deleting records. Access event profiles through Enterprise Manager navigation pane.
 
 **Q: Who can manage event profiles in OpCon?**
 

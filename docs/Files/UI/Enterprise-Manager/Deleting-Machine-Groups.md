@@ -1,6 +1,6 @@
 ---
 title: Deleting Machine Groups
-description: "Use this procedure to delete Machine Groups in the Enterprise Manager."
+description: "Use this procedure to delete Machine Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Machine Groups in the Enterprise Manager.
+Use this procedure to delete Machine Groups in Enterprise Manager.
 
 To delete a machine group, complete the following procedures.
 
@@ -30,7 +30,7 @@ Remove the Machine Group from the Daily Table
 
 To remove the Machine Group from the Daily Table, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -44,7 +44,7 @@ Remove the Machine Group from the Master Table
 
 To remove the Machine Group from the Master Table, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -58,7 +58,7 @@ Delete the Machine Group
 
 To delete the Machine Group, complete the following steps:
 
-1. Select on **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
+1. Select **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
 2. Select a **Machine Group** in the **Select a Machine Group** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Machine Groups** toolbar
 4. Select the **Yes** button to confirm the delete or **No** to cancel

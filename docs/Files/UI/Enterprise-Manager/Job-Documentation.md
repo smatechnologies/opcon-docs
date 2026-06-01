@@ -27,10 +27,6 @@ The **Documentation** tab in the [**Job Master**](Using-Job-Master.md) editor al
 
 For conceptual information, refer to [Documentation](../../../job-components/documentation.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Job Documentation do?**
@@ -39,7 +35,7 @@ The **Documentation** tab in the [**Job Master**](Using-Job-Master.md) editor al
 
 **Q: Where can you find Job Documentation in OpCon?**
 
-Access Job Documentation through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Job Documentation through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

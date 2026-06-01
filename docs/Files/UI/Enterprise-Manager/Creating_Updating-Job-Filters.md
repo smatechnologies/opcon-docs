@@ -26,21 +26,14 @@ Job filters in Enterprise Manager let operators narrow the jobs displayed in the
 
 To create or update a job filter, complete the following steps:
 
-1.  Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
 2.  Select the **Open the job filter dialog** button on the **Daily list** toolbar. The **Job Filter** dialog displays
 3.  Select the tab for the filter criteria (e.g., **Dates**, **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)
 4.  *(Optional)* For each filter tab (**Dates**, **Job Statuses**, **Departments**, **Access Codes**, **Tags**), select the specific options or select **Select/Unselect All** to select all
 5.  Select **OK** to save the job filter changes or **Cancel** to discard
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating/Updating Job Filters procedure involve?**
-
-The Creating/Updating Job Filters procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching privilege to view or act on objects tagged with a given Access Code.
 

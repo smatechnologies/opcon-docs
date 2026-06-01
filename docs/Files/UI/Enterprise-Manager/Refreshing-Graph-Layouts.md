@@ -26,19 +26,12 @@ This causes the machine map to reform in a fresh layout.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
+1. Select **Machines Status** under the **Operation** topic
 2. Select the **Map** tab
 3. Right-click anywhere in the **Map** view
 4. Select **Re-Layout Graph**
 
-## FAQs
-
-**Q: How many steps does the Refreshing Graph Layouts procedure involve?**
-
-The Refreshing Graph Layouts procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

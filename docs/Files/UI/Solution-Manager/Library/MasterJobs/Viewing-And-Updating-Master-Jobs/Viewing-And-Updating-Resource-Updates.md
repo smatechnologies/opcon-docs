@@ -43,12 +43,7 @@ To perform this procedure, complete the following steps:
 5. Select the **Save** button on the dialog
 6. Select the **Save** button on the Master Job Definition page
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Resource Updates procedure involve?**
-
-The Viewing and Updating Resource Updates procedure involves 6 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Resource Updates cover?**
 

@@ -29,13 +29,13 @@ The following fields apply:
 **Type**: Define the card as a group card or a tag card.
 
 - **Group**: Creates a parent card at the root level or as the child of an existing group
-- **Tag**: Creates a card for a tag (pattern) defined in the Enterprise Manager, at the root level or as a child of an existing group
+- **Tag**: Creates a card for a tag (pattern) defined in Enterprise Manager, at the root level or as a child of an existing group
 
 **Name**: Define the card name.
 
 **Instance**: Select a remote instance the card will monitor. Refer to [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md) for more information.
 
-**Pattern**: Select which tag defined in the Enterprise Manager the card will monitor.
+**Pattern**: Select which tag defined in Enterprise Manager the card will monitor.
 
 **Job Offset**: Specify an offset on the schedule date for Vision to look for jobs. Options range from **-5 Frequency Days** through **+5 Frequency Days**, including **Previous Frequency Day**, **Current Frequency Day**, and **Next Frequency Day**.
 
@@ -70,10 +70,10 @@ Related Topics
 | Parent Card | Select the parent card for the tag. | — | — |
 | Type | Define the card as a group card or a tag card | — | — |
 | Group | Creates a parent card at the root level or as the child of an existing group | — | — |
-| Tag | Creates a card for a tag (pattern) defined in the Enterprise Manager, at the root level or as a child of an existing group | — | — |
+| Tag | Creates a card for a tag (pattern) defined in Enterprise Manager, at the root level or as a child of an existing group | — | — |
 | Name | Define the card name | — | — |
 | Instance | Select a remote instance the card will monitor. | — | — |
-| Pattern | Select which tag defined in the Enterprise Manager the card will monitor | — | — |
+| Pattern | Select which tag defined in Enterprise Manager the card will monitor | — | — |
 | Job Offset | Specify an offset on the schedule date for Vision to look for jobs. | — | — |
 | Roles | Assign roles to the tag | — | — |
 | All granted | Select whether all roles are granted | — | — |

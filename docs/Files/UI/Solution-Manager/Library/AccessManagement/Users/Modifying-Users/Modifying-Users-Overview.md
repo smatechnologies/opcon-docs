@@ -19,8 +19,6 @@ doc_type: conceptual
 
 User account modifications are organized into three categories — general identity information, role assignments, and personal settings.
 
-## When would you use this section?
-
 - Changing a user's name, email, or password
 - Assigning a user to a new role or removing them from a role
 - Changing a user's default theme, date format, or application preferences

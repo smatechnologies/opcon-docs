@@ -29,12 +29,12 @@ Use this procedure to view Server Options in Solution Manager.
 To access the Server Options page you need one of the following:
 
 - **Role**: Role_ocadm
-- **Function Privilege**: View Server Options or Maintian server options
+- **Function Privilege**: View Server Options or Maintain server options
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| Function Privilege | View Server Options or Maintian server options | — | — |
+| Function Privilege | View Server Options or Maintain server options | — | — |
 
 ## FAQs
 

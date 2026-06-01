@@ -1,6 +1,6 @@
 ---
 title: Editing Schedules in Master Schedule Tables
-description: "Use this procedure to edit Schedules in Master Schedule Tables in the Enterprise Manager."
+description: "Use this procedure to edit Schedules in Master Schedule Tables in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Schedules in Master Schedule Tables in the Enterprise Manager.
+Use this procedure to edit Schedules in Master Schedule Tables in Enterprise Manager.
 
 :::note
 Changes made in the Master tables will take effect the next time the schedule is built.
@@ -28,7 +28,7 @@ Changes made in the Master tables will take effect the next time the schedule is
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule to edit
 3. Select the **schedule** to edit
 4. Select **Edit Master** in the **Maintenance** frame. The **Schedule Master** screen displays

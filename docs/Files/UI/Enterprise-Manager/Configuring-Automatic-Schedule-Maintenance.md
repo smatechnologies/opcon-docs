@@ -1,6 +1,6 @@
 ---
 title: Configuring Automatic Schedule Maintenance
-description: "Use this procedure to configure Automatic Schedule Maintenance in the Enterprise Manager."
+description: "Use this procedure to configure Automatic Schedule Maintenance in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to configure Automatic Schedule Maintenance in the Enterprise Manager.
+Use this procedure to configure Automatic Schedule Maintenance in Enterprise Manager.
 
 To configure auto maintenance, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Ensure that the **Schedule** tab is in focus
 4. Select the **Auto Build** option in the **Schedule Properties Build** frame
@@ -42,10 +42,6 @@ To configure auto maintenance, complete the following steps:
 **Q: What does configuring automatic schedule maintenance control?**
 
 Configuring automatic schedule maintenance defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
-
-**Q: How many steps are required to configure automatic schedule maintenance?**
-
-The configuration procedure involves 12 steps. Complete all steps in order and select **Save** to apply the changes.
 
 ## Glossary
 

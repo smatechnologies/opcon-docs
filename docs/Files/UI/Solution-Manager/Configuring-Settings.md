@@ -117,10 +117,6 @@ To reproduce an issue in the application, use the **InstantLog Mode** feature to
 
 Configuring settings defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure settings?**
-
-The configuration procedure involves 5 steps. Complete all steps in order and select **Save** to apply the changes.
-
 ## Glossary
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.

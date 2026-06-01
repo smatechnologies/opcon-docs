@@ -1,6 +1,6 @@
 ---
 title: Adding Roles
-description: "Use this procedure to add Roles in the Enterprise Manager."
+description: "Use this procedure to add Roles in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Roles in the Enterprise Manager.
+Use this procedure to add Roles in Enterprise Manager.
 
 To add a role, complete the following steps:
 
-1. Select on **Roles** under the **Security** topic. The **Roles** screen displays
+1. Select **Roles** under the **Security** topic. The **Roles** screen displays
 2. Select ![Add button](../../../Resources/Images/EM/EMadd.png "Add button") **Add** on the **Roles** toolbar
 3. Enter the new *role name* in the **Name** text box
 4. Enter the *role description* in the **Documentation** text box

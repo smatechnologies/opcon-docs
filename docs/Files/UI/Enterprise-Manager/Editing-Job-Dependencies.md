@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Job Dependencies
-description: "Use this procedure to edit Job Dependencies in the Enterprise Manager."
+description: "Use this procedure to edit Job Dependencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,20 +22,20 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to edit Job Dependencies in the Enterprise Manager.
+Use this procedure to edit Job Dependencies in Enterprise Manager.
 
 ## Editing Job-Related Job Dependencies
 
 To edit a dependency, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
-4.  Select on the **Dependencies** tab in the **Job Properties** frame
-5.  Select on the **Job Dependency** tab
+4.  Select the **Dependencies** tab in the **Job Properties** frame
+5.  Select the **Job Dependency** tab
 
 6.  Select the **Job Related** option
-7.  Select on the **dependency** to edit
+7.  Select the **dependency** to edit
 8.  Select the **Edit** button. The **Add Dependency** dialog displays
 9.  Enter the *changes*
 10. Select **OK** to save the changes or **Cancel** to discard them
@@ -45,20 +45,19 @@ To edit a dependency, complete the following steps:
 
 To edit a dependency, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
-4.  Select on the **Dependencies** tab in the **Job Properties** frame
-5.  Select on the **Job Dependency** tab
+4.  Select the **Dependencies** tab in the **Job Properties** frame
+5.  Select the **Job Dependency** tab
 
 6.  Select the **Frequency Related** option
 7.  Select the **frequency** in the **Frequency List**
-8.  Select on the **dependency** to edit
+8.  Select the **dependency** to edit
 9.  Select the **Edit** button. The **Add Dependency** dialog displays
 10. Enter the *changes*
 11. Select **OK** to save the changes or **Cancel** to discard them
 12. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
-
 
 ## FAQs
 

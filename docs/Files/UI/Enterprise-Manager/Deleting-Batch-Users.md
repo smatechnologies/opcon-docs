@@ -28,20 +28,20 @@ Revoke Privileges
 
 To revoke privileges, complete the following steps:
 
-1. Select on **Batch User Privileges** under the **Security** topic. The **Batch User Privileges** screen displays
+1. Select **Batch User Privileges** under the **Security** topic. The **Batch User Privileges** screen displays
 2. Select a **role** in the **Select Role** list. Use the **Find** ((Ctrl+F) magnifying glass) button to find the role
 3. Select an **operating system** in the **Target Operating System** list
-4. Select on the **batch user(s)** in the **Granted** privileges list box
+4. Select the **batch user(s)** in the **Granted** privileges list box
 5. Select the **left arrow** to move the batch user(s) to the **Revoked** list box
 6. Repeat Steps 2–5 for all user accounts with privileges to the batch user
 7. Select **Close ☒** to close the **Batch User Privileges** screen
 
 Remove the Batch User from the Daily Tables
 
-9. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+9. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 10. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 11. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-12. Select on the **job**
+12. Select the **job**
 13. Select **Edit Daily**. The **Job Daily** screen displays
 14. In the **Job Details** frame, select a different **batch user** in the **User ID** (**Group ID/User ID** for UNIX, **User Code** for MCP) list
 15. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
@@ -61,9 +61,9 @@ Remove the Batch User from the Master Tables
 
 Delete the Batch User
 
-26. Select on **Batch Users** under the **Security** topic. The **Batch User** screen displays
+26. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
 27. Select an **operating system** in the **Target Operating System** list
-28. Select on the **batch user** in the **Batch Users** list box
+28. Select the **batch user** in the **Batch Users** list box
 29. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Batch Users** toolbar
 30. Select **Yes** to confirm the deletion or **No** to cancel
 31. Select **Close ☒** to close the **Batch Users** screen

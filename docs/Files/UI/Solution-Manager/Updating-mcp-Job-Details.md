@@ -174,12 +174,7 @@ A Prerun tests required preconditions before job execution. If the Prerun fails,
 
 ![Failure Criteria Job: job information](../../../Resources/Images/SM/mcp-failure-criteria.png "Failure Criteria Job: job information")
 
-
 ## FAQs
-
-**Q: How many steps does the Updating MCP Job Details procedure involve?**
-
-The Updating MCP Job Details procedure involves 11 steps. Complete all steps in order and save your changes.
 
 **Q: What does Updating MCP Job Details cover?**
 

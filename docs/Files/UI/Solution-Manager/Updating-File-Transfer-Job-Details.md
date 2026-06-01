@@ -163,10 +163,6 @@ Select the **Save** button.
 
 ## FAQs
 
-**Q: How many steps does the Updating File Transfer Job Details procedure involve?**
-
-The Updating File Transfer Job Details procedure involves 9 steps. Complete all steps in order and save your changes.
-
 **Q: What does Updating File Transfer Job Details cover?**
 
 This page covers Updating File Transfer Job Details.

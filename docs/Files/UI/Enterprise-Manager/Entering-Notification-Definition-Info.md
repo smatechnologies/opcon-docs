@@ -24,7 +24,7 @@ Notification definition information specifies what action OpCon takes when a tri
 
 To enter notification definition information, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** containing the appropriate trigger
@@ -33,16 +33,6 @@ To enter notification definition information, complete the following steps:
 7. Select the **Notification** tab for the **Notification type**
 8. Enter the notification information
 9. Select **Save**
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Entering Notification Definition Information procedure involve?**
-
-The Entering Notification Definition Information procedure involves 9 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

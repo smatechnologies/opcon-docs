@@ -18,8 +18,6 @@ doc_type: reference
 
 OpCon supports jobs across a wide range of platforms. Each job type has platform-specific settings that control how the job is submitted, monitored, and completed on the target agent. Select the job type matching the platform where the work runs.
 
-## When would you use this section?
-
 - Adding a new job and configuring platform-specific settings
 - Setting up automation for a new agent platform
 - Referencing available fields and options for a specific job type

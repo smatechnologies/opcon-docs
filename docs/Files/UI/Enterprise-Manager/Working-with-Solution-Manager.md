@@ -1,6 +1,6 @@
 ---
 title: Managing Solution Manager
-description: "The Solution Manager topic in the Navigation Panel provides links to access Solution Manager modules and pages from within the Enterprise Manager."
+description: "The Solution Manager topic in the Navigation Panel provides links to access Solution Manager modules and pages from within Enterprise Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-The **Solution Manager** topic in the Navigation Panel provides links to access Solution Manager modules and pages from within the Enterprise Manager.
+The **Solution Manager** topic in the Navigation Panel provides links to access Solution Manager modules and pages from within Enterprise Manager.
 
 :::note
 The Solution Manager topic will only appear in the Navigation Panel if the **Solution Manager URL** General Server Option is defined. For more information, refer to [Solution Manager URL](../../../administration/server-options.md#general-settings) in the **Concepts** online help.
@@ -30,7 +30,7 @@ The Solution Manager topic will only appear in the Navigation Panel if the **Sol
 To view licensed modules or features, you must have the appropriate privileges. For additional information, refer to [Managing Self Service](../Solution-Manager/Managing-Self-Service.md) and [Working with Vision](../Solution-Manager/Working-with-Vision.md) in the **Solution Manager** online help.
 :::
 
-Select on any **Solution Manager** function item in the graphic to learn more about that item.
+Select any **Solution Manager** function item in the graphic to learn more about that item.
 
 ![Solution Manager Topic](../../../Resources/Images/EM/EMsmmenu.png "Solution Manager Topic")
 
@@ -38,7 +38,7 @@ Select on any **Solution Manager** function item in the graphic to learn more ab
 
 **Q: What does managing solution manager involve?**
 
-Managing solution manager includes adding, editing, and deleting records. Access solution manager through the Enterprise Manager navigation pane.
+Managing solution manager includes adding, editing, and deleting records. Access solution manager through Enterprise Manager navigation pane.
 
 **Q: Who can manage solution manager in OpCon?**
 

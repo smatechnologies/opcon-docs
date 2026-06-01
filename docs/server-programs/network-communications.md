@@ -210,10 +210,6 @@ Application Log of the Windows Event Viewer.
 |Msg|$SERVICENAME stopped.|Y|Defines the log message indicating SMANetCom has stopped. Modify the text for a different message. Set to NULL to disable this setting. $SERVICENAME is a supported token for this message type.|
 |Type|4|Y|Defines the message type: 1 equals Error, 2 equals Warning, 4 equals Information|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

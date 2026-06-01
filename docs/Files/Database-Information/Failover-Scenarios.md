@@ -94,9 +94,9 @@ With manual failover, the administrator decides when to initiate failover to the
 2. In the Control Panel window: Select the **Administrative Tools** icon
 3. In the Administrative Tools window: Select the **Services** icon
 
-4. In the Services window: Select on the **SMA OpCon Service Manager** service
+4. In the Services window: Select the **SMA OpCon Service Manager** service
 5. Change the SMAServMan's Startup Type to **Automatic (Delayed Start)** using the following steps:
-   1. Select on **SMA OpCon Service Manager**
+   1. Select **SMA OpCon Service Manager**
    2. Select **Automatic (Delayed Start)** in the **Startup type** list and select **OK**
 6. Select **Close ☒** to close the **Services** window
 
@@ -106,9 +106,9 @@ With manual failover, the administrator decides when to initiate failover to the
 2. In the Control Panel window: Select the **Administrative Tools** icon
 3. In the Administrative Tools window: Select the **Services** icon
 
-4. In the Services window: Select on the **SMA OpCon Service Manager** service
+4. In the Services window: Select the **SMA OpCon Service Manager** service
 5. Change the SMAServMan's Startup Type to **Manual** using the following steps:
-   1. Select on **SMA OpCon Service Manager**
+   1. Select **SMA OpCon Service Manager**
    2. In the SMA OpCon Service Manager Properties window:
    3. Select **Manual** in the **Startup type** list and select **OK**
 6. Select **Close ☒** to close the **Services** window
@@ -453,10 +453,6 @@ After remedying the problem that caused the failover, complete the following pro
 
 After remedying the problem that caused the failover, complete the procedures in the Failover and Recovery with Replication chapters. Refer to [Failover and Recovery with Replication](Failover-and-Recovery-with-Replication.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -481,10 +477,6 @@ After remedying the problem that caused the failover, complete the procedures in
 **After failover, returning the primary SMAServMan to active requires manual steps** — OpCon does not support automatic recovery back to the primary machine; when the secondary application group is active, starting the primary SMAServMan has no effect — The administrator must manually stop the secondary SMAServMan, resolve the issue on the primary machine, and restart the primary SMAServMan to restore normal operations.
 
 ## FAQs
-
-**Q: How many steps does the Failover Scenarios procedure involve?**
-
-The Failover Scenarios procedure involves 15 steps. Complete all steps in order and save your changes.
 
 **Q: What does Failover Scenarios cover?**
 

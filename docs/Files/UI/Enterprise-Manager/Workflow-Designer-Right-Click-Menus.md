@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Workflow Designer right-click Menus
-description: "Right-click on a node or dependency line in the Workflow Designer to display the following menu items: - Open SubSchedule: Changes the display to show the subschedule for the selected Container job -."
+description: "Right-click a node or dependency line in the Workflow Designer to display the following menu items: - Open SubSchedule: Changes the display to show the subschedule for the selected Container job -."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Right-click on a node or dependency line in the **Workflow Designer** to display the following menu items:
+Right-click a node or dependency line in the **Workflow Designer** to display the following menu items:
 
 -   **Open SubSchedule**: Changes the display to show the subschedule for the selected Container job
 
@@ -66,13 +66,9 @@ Right-click on a node or dependency line in the **Workflow Designer** to display
 | Take Screenshot | Saves an image of the current **Workflow Designer** layout. | — | — |
 ## FAQs
 
-**Q: What does Workflow Designer Right-click Menus do?**
-
-title: Workflow Designer Right-click Menus
-
 **Q: Where can you find Workflow Designer Right-click Menus in OpCon?**
 
-Access Workflow Designer Right-click Menus through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Workflow Designer Right-click Menus through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

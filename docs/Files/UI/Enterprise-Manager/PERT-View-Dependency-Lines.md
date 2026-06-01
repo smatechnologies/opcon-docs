@@ -33,10 +33,6 @@ In **[PERT](Using-PERT-View.md)** view, each dependency type is represented by a
 ||Resource Dependency: A solid gold line with arrow. The job at the arrow end has a requirement for the resource where the line starts.|
 ||Threshold Dependency: A solid royal blue line with arrow. The job at the arrow end has a dependency on the threshold where the line starts.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does PERT View Dependency Lines do?**
@@ -45,7 +41,7 @@ In **[PERT](Using-PERT-View.md)** view, each dependency type is represented by a
 
 **Q: Where can you find PERT View Dependency Lines in OpCon?**
 
-Access PERT View Dependency Lines through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access PERT View Dependency Lines through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

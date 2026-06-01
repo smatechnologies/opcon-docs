@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying User Accounts
-description: "Use this procedure to copy User Accounts in the Enterprise Manager."
+description: "Use this procedure to copy User Accounts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy User Accounts in the Enterprise Manager.
+Use this procedure to copy User Accounts in Enterprise Manager.
 
 To copy a user account, complete the following steps:
 
-1.  Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2.  In the **Select User** list, select the **user name** to copy
 3.  Select **Copy** on the **User Accounts** toolbar. The **Copy User** dialog displays
 4.  Enter the *new user name*
@@ -45,6 +45,5 @@ Copying user accounts is useful when you want to reuse an existing configuration
 Yes. The copy must be saved with a new unique name to distinguish it from the original user accounts record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.

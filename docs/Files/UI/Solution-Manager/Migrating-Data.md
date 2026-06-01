@@ -38,16 +38,6 @@ To perform data migration, complete the following steps:
 During migration, you can export migration settings for future use and/or download a full report.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Migrating Data procedure involve?**
-
-The Migrating Data procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.

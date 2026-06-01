@@ -159,10 +159,6 @@ $SCHEDULE:CANCEL,CURRENT,TestSched
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Exception Handling
 
 **Invalid event syntax or invalid field data causes the SAM to log an error and not process the event** — If the syntax of an OpCon event is not followed exactly, or if any field contains invalid data, the SAM cannot process the event and places an error message in the Critical.log — Review the event syntax in the Event Types reference, correct the text file, and resubmit the event through the MSGIN directory.

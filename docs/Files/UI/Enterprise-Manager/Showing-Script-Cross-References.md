@@ -26,7 +26,7 @@ You can view which jobs use specific scripts.
 
 To show the cross references, complete the following steps:
 
-1. Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2. Select a script in the list
 3. Select the **Cross References** button on the toolbar. The **Cross References Details** dialog displays
 4. Toggle between tabs to view cross-referenced Master or Daily jobs for the selected script
@@ -34,14 +34,7 @@ To show the cross references, complete the following steps:
 6. Select **Close ☒** to close the **Script Repository** screen
 :::
 
-## FAQs
-
-**Q: How many steps does the Showing Script Cross References procedure involve?**
-
-The Showing Script Cross References procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
 

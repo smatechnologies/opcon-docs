@@ -22,8 +22,6 @@ doc_type: procedural
 
 Configure the OpCon Server after a new installation. After an upgrade, review these items to confirm the server is still configured correctly.
 
-## Configuration Options
-
 ## Implement Temporary License
 
 The temporary license lets you run OpCon immediately while waiting for a permanent license.
@@ -52,7 +50,7 @@ OpCon uses a single database for all system data. Configure all components to co
 
 ### Server and User Interface Connections
 
-Confirm the Enterprise Manager is configured to communicate with the OpCon database.
+Confirm Enterprise Manager is configured to communicate with the OpCon database.
 
 :::note
 The OpCon Server component database connection is automatically configured during SMA OpCon SAM installation. Refer to the [SMA Connection Configuration Tool](../server-programs/schedule-activity-monitor.md#SMA) in the **Server Programs** online help.
@@ -136,7 +134,7 @@ Restart the OpCon REST API service after saving the file.
 12. Confirm the path to the OpCon directory on the SAM server
 13. Select **Finish** to save the profile
 
-**Result:** The Enterprise Manager database connection profile is saved and the EM can connect to the OpCon database using the configured credentials.
+**Result:** Enterprise Manager database connection profile is saved and the EM can connect to the OpCon database using the configured credentials.
 
 :::note
 OpCon installation details can also be set in Profiles or Preferences. Refer to [Setting up New Profiles](../Files/UI/Enterprise-Manager/Setting-up-New-Profiles.md) in the **Enterprise Manager** online help.
@@ -147,7 +145,6 @@ OpCon installation details can also be set in Profiles or Preferences. Refer to 
 #### Set Privileges for Utilities
 
 Configure utilities for compatibility with Windows before setting up database connections.
-
 
 1. Locate **LegacyAudit.exe** in **<Target Directory\>\\OpConxps\\Utilities\\**
 2. Right-click **LegacyAudit.exe** and select **Properties**
@@ -323,7 +320,6 @@ If SMA Service Manager runs as NT AUTHORITY\\SYSTEM and uses Windows Authenticat
 
 In SQL Server Management Studio:
 
-
 1. Expand the **Database Engine containing the OpCon Database**
 2. Expand **Security**
 3. If the SAM and database are on different machines:
@@ -382,7 +378,7 @@ If the LDAP Monitor is enabled, configure it to connect to your LDAP environment
 4. Define **DirectoryType** (valid values: ADS, OpenLDAP)
 5. Add the *Host* and *Port* settings
 6. *(Optional)* Define *UserNamePrefix* (required for automatic sign-on) and *Domain*
-7. Encrypt **UserName**, **Password**, and **DefaultUserPassword** using the Enterprise Manager password encryption tool (refer to [Encrypting Passwords](../Files/UI/Enterprise-Manager/Encrypting-Passwords.md)) or the built-in `--credentials` option:
+7. Encrypt **UserName**, **Password**, and **DefaultUserPassword** using Enterprise Manager password encryption tool (refer to [Encrypting Passwords](../Files/UI/Enterprise-Manager/Encrypting-Passwords.md)) or the built-in `--credentials` option:
 
 ```shell
 SMALDAPMon.exe --credentials --user=[username] --password=[password] --defaultpassword=[defaultUserPassword]
@@ -409,7 +405,7 @@ If the Connector for SAP and/or SAP BW is enabled, configure it to connect to yo
 
 ## Configure OpCon
 
-Most SAM configuration options are stored in the database and are configured through the Enterprise Manager.
+Most SAM configuration options are stored in the database and are configured through Enterprise Manager.
 
 ### Change the ocadm Password and Configure SAM Options
 
@@ -468,7 +464,6 @@ To configure OpCon, complete the following steps:
 
 Create a machine record for the SMA OpCon Agent for Windows installed on the Server.
 
-
 1. Select **Machines**
 2. Select the **Add** ![Add Button](../Resources/Images/Installation/EMadd.png) button on the **Machines** toolbar
 3. Enter the *official host name* or *alias* of the OpCon Server machine in the **Name** text box
@@ -505,7 +500,6 @@ Back up the OpCon database and transaction log regularly. If the transaction log
 :::
 
 #### Create DSNs for the Transport Databases
-
 
 1. Use menu path: **Start \> All Programs \> OpConxps \> Utilities \> Schedule Import Export**
 2. Select the **ODBC** button
@@ -574,7 +568,6 @@ Complete this procedure to automate OpCon reports.
 **Result:** The Report Generator schedule is imported into OpCon and OpCon reports are automated using the machine defined on the server.
 
 #### Validate Property Definitions
-
 
 1. Under Administration in the EM Navigation Panel, select **Global Properties**
 2. Select **SMADBCredentials** in the **Select Global Property** list
@@ -690,11 +683,11 @@ Place user scripts and custom programs in the folders below to prevent them from
 
 The ocadm account is created during installation with a default password of 12 asterisks. This password must be changed immediately after first login. The SMADBCredentials global property stores the username and password used by maintenance scripts; Continuous recommends updating this to a user other than ocadm.
 
-The Enterprise Manager database connection supports SQL Authentication (using opconui credentials) or Windows Authentication. For Windows Authentication, the SMA Service Manager must run as a user with privileges to the OpCon database. System DSNs used by utilities require the user to run ODBC Data Sources as Administrator.
+Enterprise Manager database connection supports SQL Authentication (using opconui credentials) or Windows Authentication. For Windows Authentication, the SMA Service Manager must run as a user with privileges to the OpCon database. System DSNs used by utilities require the user to run ODBC Data Sources as Administrator.
 
 For SMTP, if the server requires authentication, the SMTP Authentication User and encrypted Password must be configured. If SSL is required, SMTP Authentication - Enable SSL must be set to True. The SMTP Notification Address is ignored when authentication is configured.
 
-LDAP Monitor credentials (UserName, Password, DefaultUserPassword) must be encrypted using the Enterprise Manager password encryption tool or the `--credentials` command-line option before being stored in the SMALDAPMon.ini file.
+LDAP Monitor credentials (UserName, Password, DefaultUserPassword) must be encrypted using Enterprise Manager password encryption tool or the `--credentials` command-line option before being stored in the SMALDAPMon.ini file.
 
 ### Authorization
 

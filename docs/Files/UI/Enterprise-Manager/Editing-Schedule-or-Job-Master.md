@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Schedule or Job Master
-description: "Use this procedure to edit Schedule or Job Master in the Enterprise Manager."
+description: "Use this procedure to edit Schedule or Job Master in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Schedule or Job Master in the Enterprise Manager.
+Use this procedure to edit Schedule or Job Master in Enterprise Manager.
 
 To edit schedule or job master, complete the following steps:
 
-1.  Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2.  Select the **schedule** or **job** name to edit, or select it and select **Edit Selected Job or Schedule** (far right of screen). The **Job Master** screen displays
 3.  Edit the desired information
 4.  Select **Close ☒** (to the right of the **Schedule** or **Job Master** tab) to close the screen

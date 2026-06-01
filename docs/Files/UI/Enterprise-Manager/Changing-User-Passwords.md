@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Changing User Passwords
-description: "Use this procedure to change User Passwords in the Enterprise Manager."
+description: "Use this procedure to change User Passwords in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to change User Passwords in the Enterprise Manager.
+Use this procedure to change User Passwords in Enterprise Manager.
 
 To change a user password, complete the following steps:
 
-1. Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1. Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2. Select a **user** in the **Select User** list. Alternatively, use the **Find** (Ctrl+F) button to find the user
 3. Select **Change User Password**. The **Password Update** dialog displays
 4. Enter the *old password* in the **Old Password** field
@@ -35,14 +35,7 @@ To change a user password, complete the following steps:
 7. Select **OK**
 8. Select **Close ☒** to close the **User Accounts** screen
 
-## FAQs
-
-**Q: How many steps does the Changing User Passwords procedure involve?**
-
-The Changing User Passwords procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

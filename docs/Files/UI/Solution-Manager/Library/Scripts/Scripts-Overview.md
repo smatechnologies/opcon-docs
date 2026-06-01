@@ -19,8 +19,6 @@ doc_type: conceptual
 
 The Script Repository stores reusable scripts that can be referenced by multiple jobs. Scripts are versioned, typed (PowerShell, Shell, Python, etc.), and deployed to agents at runtime via a configured script runner. This eliminates the need to maintain script files on individual agents.
 
-## When would you use this section?
-
 - Adding a new script to the OpCon repository
 - Creating a new script version while preserving the existing one
 - Configuring a new script type or runner for a new scripting language

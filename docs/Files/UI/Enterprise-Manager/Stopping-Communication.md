@@ -26,22 +26,16 @@ If the agent is not in a stopped state, the status can be changed to stopped.
 
 To perform this procedure, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
-2.  Select on the **Table** tab or the **Map** tab
-3.  *(Optional)* Right-click on the **machine** that requires stopping
-4.  Select on **Stop Communication** from the menu
+1.  Select **Machines Status** under the **Operation** topic
+2.  Select the **Table** tab or the **Map** tab
+3.  *(Optional)* Right-click the **machine** that requires stopping
+4.  Select **Stop Communication** from the menu
 :::
 
  
 
-## FAQs
-
-**Q: How many steps does the Stopping Communication procedure involve?**
-
-The Stopping Communication procedure involves 4 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

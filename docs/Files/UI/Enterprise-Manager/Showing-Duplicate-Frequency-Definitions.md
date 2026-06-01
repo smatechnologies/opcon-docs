@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Showing Duplicate Frequency Definitions Only
-description: "Use this procedure to show Duplicate Frequency Definitions Only in the Enterprise Manager."
+description: "Use this procedure to show Duplicate Frequency Definitions Only in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to show Duplicate Frequency Definitions Only in the Enterprise Manager.
+Use this procedure to show Duplicate Frequency Definitions Only in Enterprise Manager.
 
 To show duplicate frequency definitions, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Select the **Show duplicate frequency definitions only** option
 3. View the duplicate frequency definitions (if any)
 4. Right-click the frequency name with the duplicate definition and select **Rename**. The **Frequency Definition Wizard** displays
@@ -36,14 +36,7 @@ To show duplicate frequency definitions, complete the following steps:
 8. Select **Close ☒** to close the **Frequency Manager** screen
 :::
 
-## FAQs
-
-**Q: How many steps does the Showing Duplicate Frequency Definitions Only procedure involve?**
-
-The Showing Duplicate Frequency Definitions Only procedure involves 8 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

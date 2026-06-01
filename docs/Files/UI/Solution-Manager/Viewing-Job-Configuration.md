@@ -64,12 +64,6 @@ Related Topics
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 - [Viewing Job Output](Viewing-Job-Output.md)
 
-## FAQs
-
-**Q: How many steps does the Viewing Job Configuration procedure involve?**
-
-The Viewing Job Configuration procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

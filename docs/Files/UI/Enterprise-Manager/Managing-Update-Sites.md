@@ -1,6 +1,6 @@
 ---
 title: Managing Update Sites
-description: "Use this procedure to manage Update Sites in the Enterprise Manager."
+description: "Use this procedure to manage Update Sites in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage Update Sites in the Enterprise Manager.
+Use this procedure to manage Update Sites in Enterprise Manager.
 
 ## Adding an Update Site
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow ](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select **Update Sites**. The **Update Sites** settings display to the right
@@ -88,12 +88,11 @@ An administrator can export update sites to make them available for other users 
 3. Select the **Export** button. The **Export Sites** dialog displays
 4. Verify the *location* and *file name* of the export file and select **Save**
 
-
 ## FAQs
 
 **Q: What does managing update sites involve?**
 
-Managing update sites includes Adding an Update Site, Editing an Update Site, Removing an Update Site, Reloading to an Update Site. Access update sites through the Enterprise Manager navigation pane.
+Managing update sites includes Adding an Update Site, Editing an Update Site, Removing an Update Site, Reloading to an Update Site. Access update sites through Enterprise Manager navigation pane.
 
 **Q: Who can manage update sites in OpCon?**
 

@@ -128,9 +128,9 @@ If the **StopRepl.cmd** or **StopRepl_WinAuth.cmd** file is in use in the enviro
 
 On the SAM application server:
 
-1. Right-click on the**Start** button and select **Explore** from the menu
+1. Right-click the**Start** button and select **Explore** from the menu
    :::note
-   On Server 2012, you must right-click on the Start menu (Windows logo) and select File Explorer from the menu.
+   On Server 2012, you must right-click the Start menu (Windows logo) and select File Explorer from the menu.
    :::
 2. Browse to the <Configuration Directory\>\\**Utilities**\\**Database**\\ directory
 3. Press the **Ctrl** key on the keyboard then select the **StopRepl.cmd** file (if in use)
@@ -204,7 +204,7 @@ On the Publishing Database Server:
 6. Expand (+) the **Replication** folder in the **Object Explorer** navigation pane
 
 7. Expand (+) the **Local Publications** folder
-8. Right-click on the **current publication** and select **Delete**
+8. Right-click the **current publication** and select **Delete**
 9. Select **Yes** to confirm the deletion
 
 ###### Stop_Replication_with_a_Pull_Subscription
@@ -222,7 +222,7 @@ On the Subscribing Database Server:
 6. Expand (+) the **Replication** folder in the **Object Explorer** navigation pane
 
 7. Expand (+) the **Local Subscriptions** folder
-8. Right-click on the **current subscription** and select **Delete**
+8. Right-click the **current subscription** and select **Delete**
 9. Select **Yes** to confirm the deletion
 
 On the Publishing Database Server:
@@ -236,7 +236,7 @@ On the Publishing Database Server:
 5. Select the **Connect** button
 6. Expand (+) the **Local Publications** folder in the **Object Explorer** navigation pane
 
-7. Right-click on the **current publication** and select **Delete**
+7. Right-click the **current publication** and select **Delete**
 8. Select **Yes** to confirm the deletion
 
 ###### Disable Replication
@@ -324,10 +324,6 @@ Continuous strongly recommends backing up the OpCon database before upgrading to
 
 Before the OpCon database can be upgraded, database replication and mirroring must be disabled. Replication scripts (StopRepl.cmd and supporting SQL files) in use in the environment must be backed up before the upgrade, as the upgrade replaces the files in the Database directory. The backed-up copies serve as a reference for reconfiguring replication after the upgrade completes.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks

@@ -561,10 +561,6 @@ Select the **Save** button to save changes.
 
 ## FAQs
 
-**Q: How many steps does the Viewing and Adding IBMi Job Details procedure involve?**
-
-The Viewing and Adding IBMi Job Details procedure involves 11 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing and Adding IBMi Job Details cover?**
 
 This page covers Viewing IBMi Job Details, Adding IBMi Job Details, Editing IBMi Details.

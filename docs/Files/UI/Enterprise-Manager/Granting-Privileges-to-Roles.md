@@ -1,6 +1,6 @@
 ---
 title: Granting Privileges to Roles
-description: "Use this procedure to grant Privileges to Roles in the Enterprise Manager."
+description: "Use this procedure to grant Privileges to Roles in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,14 +20,10 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to grant Privileges to Roles in the Enterprise Manager.
+Use this procedure to grant Privileges to Roles in Enterprise Manager.
 
 Refer to the [Managing Privileges](Managing-Privileges.md) section to grant specific privilege types to a role.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of granting privileges to roles?**

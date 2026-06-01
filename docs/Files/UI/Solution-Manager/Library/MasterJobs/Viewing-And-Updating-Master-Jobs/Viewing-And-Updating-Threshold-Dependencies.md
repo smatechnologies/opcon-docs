@@ -40,12 +40,7 @@ Only those with the appropriate permissions will have access to the **Lock** but
 5. Select the **Save** button on the dialog
 6. Select the **Save** button on the Master Job Definition page
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Threshold Dependencies procedure involve?**
-
-The Viewing and Updating Threshold Dependencies procedure involves 6 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Threshold Dependencies cover?**
 

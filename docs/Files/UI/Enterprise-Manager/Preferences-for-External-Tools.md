@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences for External Tools
-description: "Use this procedure to set Preferences for External Tools in the Enterprise Manager."
+description: "Use this procedure to set Preferences for External Tools in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for External Tools in the Enterprise Manager.
+Use this procedure to set Preferences for External Tools in Enterprise Manager.
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select **External Tools**. The **External Tools** settings display to the right
@@ -32,16 +32,6 @@ To set the preferences, complete the following steps:
 6. *(Optional)* Select **Restore Defaults** to clear all values
 7. Select **Apply** to save the changes
 8. Select **OK** to save and close the **Preferences** dialog
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Setting Preferences for External Tools procedure involve?**
-
-The Setting Preferences for External Tools procedure involves 8 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

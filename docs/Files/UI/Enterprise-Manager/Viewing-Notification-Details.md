@@ -24,20 +24,13 @@ The details of any escalation can be viewed and copied to the clipboard before a
 
 To view escalations, complete the following steps:
 
-1. Select on **Escalation Acknowledgment** under the **Operation** topic. The **Escalation Acknowledgment** screen displays
-2. Select on an escalation. The **Notification Details** dialog displays
+1. Select **Escalation Acknowledgment** under the **Operation** topic. The **Escalation Acknowledgment** screen displays
+2. Select an escalation. The **Notification Details** dialog displays
 3. *(Optional)* Select **Copy To Clipboard** to copy the notification details
 4. *(Optional)* Select **Open external editor** to open a text editor (e.g., Notepad) to preserve the notification details
 5. Close the **Notification Details** dialog when done
 
-## FAQs
-
-**Q: How many steps does the Viewing Notification Details procedure involve?**
-
-The Viewing Notification Details procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

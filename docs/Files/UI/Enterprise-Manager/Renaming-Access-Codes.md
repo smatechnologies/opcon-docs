@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Renaming Access Codes
-description: "Use this procedure to rename Access Codes in the Enterprise Manager."
+description: "Use this procedure to rename Access Codes in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,21 +22,15 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to rename Access Codes in the Enterprise Manager.
+Use this procedure to rename Access Codes in Enterprise Manager.
 
 To rename an access code, complete the following steps:
 
-1. Select on **Access Codes** under the **Security** topic. The **Access Codes** screen displays
+1. Select **Access Codes** under the **Security** topic. The **Access Codes** screen displays
 2. Select an **access code** in the **Select Access Code** list
 3. Enter the new *access code name* in the **Name** text box
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Access Codes** toolbar
 5. Select **Close ☒** (to the right of the **Access Codes** tab) to close the **Access Codes** screen
-
-## FAQs
-
-**Q: How many steps does the Renaming Access Codes procedure involve?**
-
-The Renaming Access Codes procedure involves 5 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

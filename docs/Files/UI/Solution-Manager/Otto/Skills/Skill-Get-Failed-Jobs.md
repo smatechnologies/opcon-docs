@@ -43,16 +43,11 @@ The **Get Failed Jobs** skill retrieves a list of failed jobs for a specified da
 
 ## FAQs
 
-**Q: How many steps does the Get Failed Jobs procedure involve?**
-
-The Get Failed Jobs procedure involves 2 steps. Complete all steps in order and save your changes.
-
 **Q: What does Get Failed Jobs cover?**
 
 This page covers Skill Details, Example.
 
 ## Glossary
-
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 

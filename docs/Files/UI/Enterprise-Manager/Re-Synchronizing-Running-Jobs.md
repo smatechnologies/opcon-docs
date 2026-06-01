@@ -26,16 +26,10 @@ Re-Synchronizing Running Jobs resets the count of jobs currently tracked as runn
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
+1. Select **Machines Status** under the **Operation** topic
 2. Select the **Table** tab or the **Map** tab
-3. *(Optional)* Right-click on the **machine** that requires the number of running jobs to be reset
+3. *(Optional)* Right-click the **machine** that requires the number of running jobs to be reset
 4. Select **Re-Synchronize Running Jobs** from the menu
-
-## FAQs
-
-**Q: How many steps does the Re-Synchronizing Running Jobs procedure involve?**
-
-The Re-Synchronizing Running Jobs procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

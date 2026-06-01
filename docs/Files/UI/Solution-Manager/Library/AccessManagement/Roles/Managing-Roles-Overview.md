@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Roles are the containers for privileges in OpCon's access control model. Each role holds a set of allowed activities, resource access permissions, and department restrictions. Users inherit all privileges from the roles they belong to.
 
-## When would you use this section?
-
 - Creating a new role for a specific team or user group
 - Adding, removing, or reviewing privileges granted to a role
 - Copying an existing role as a starting point for a new one

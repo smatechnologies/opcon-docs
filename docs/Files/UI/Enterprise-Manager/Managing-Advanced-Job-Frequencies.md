@@ -28,7 +28,7 @@ Advanced frequency details enable or disable scheduling a job on specific dates 
 
 To set an advanced job frequency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -47,7 +47,7 @@ To set an advanced job frequency, complete the following steps:
 
 To edit an advanced job frequency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -64,7 +64,7 @@ To edit an advanced job frequency, complete the following steps:
 
 To delete Advanced Frequency Settings, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 
@@ -75,12 +75,11 @@ To delete Advanced Frequency Settings, complete the following steps:
 8. Select the **Save** button to save changes
 9. Select **Close ☒** to close the **Job Master** screen
 
-
 ## FAQs
 
 **Q: What does managing advanced job frequencies involve?**
 
-Managing advanced job frequencies includes Setting Advanced Job Frequencies, Editing Advanced Job Frequencies, Deleting Advanced Frequency Settings. Access advanced job frequencies through the Enterprise Manager navigation pane.
+Managing advanced job frequencies includes Setting Advanced Job Frequencies, Editing Advanced Job Frequencies, Deleting Advanced Frequency Settings. Access advanced job frequencies through Enterprise Manager navigation pane.
 
 **Q: Who can manage advanced job frequencies in OpCon?**
 

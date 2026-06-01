@@ -1,6 +1,6 @@
 ---
 title: Deleting Threshold/Resource Updates
-description: "Use this procedure to delete Threshold/Resource Updates in the Enterprise Manager."
+description: "Use this procedure to delete Threshold/Resource Updates in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Threshold/Resource Updates in the Enterprise Manager.
+Use this procedure to delete Threshold/Resource Updates in Enterprise Manager.
 
 To delete a threshold or resource update, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Threshold/Resource** tab in the **Job Properties** frame

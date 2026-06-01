@@ -45,12 +45,7 @@ Create the job and general info as described in [Adding a Job](../../Adding-Mast
 
 For conceptual information, refer to [Null Jobs](../../../../../../../job-types/null.md) in the **Concepts** online help.
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Adding Null Job Details procedure involve?**
-
-The Viewing and Adding Null Job Details procedure involves 4 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Adding Null Job Details cover?**
 

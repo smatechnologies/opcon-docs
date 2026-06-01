@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Tags
-description: "Use this procedure to delete Tags in the Enterprise Manager."
+description: "Use this procedure to delete Tags in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,14 +22,14 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Tags in the Enterprise Manager.
+Use this procedure to delete Tags in Enterprise Manager.
 
 To delete a tag, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
-4.  Select on the **Tags** tab in the **Job Properties** frame
+4.  Select the **Tags** tab in the **Job Properties** frame
 5.  Select the **tag** in the **Tags** frame
 6.  Select ![Delete icon](../../../Resources/Images/EM/EMdelete.png "Delete icon") **Remove** to the right of the **Choose Tag** text box
 7.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar

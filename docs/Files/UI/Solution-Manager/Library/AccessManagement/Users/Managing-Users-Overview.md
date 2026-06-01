@@ -19,8 +19,6 @@ doc_type: conceptual
 
 User accounts control who can log in to OpCon and what they can do. Each account is assigned to one or more roles that determine privileges. Accounts also hold individual settings such as default theme, date format, and email address.
 
-## When would you use this section?
-
 - Creating a new user account for an employee or service account
 - Copying an existing user account as a template
 - Deleting a user who has left the organization

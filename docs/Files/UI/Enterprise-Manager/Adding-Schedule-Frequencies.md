@@ -1,6 +1,6 @@
 ---
 title: Adding Schedule Frequencies
-description: "Use this procedure to add Schedule Frequencies in the Enterprise Manager."
+description: "Use this procedure to add Schedule Frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Schedule Frequencies in the Enterprise Manager.
+Use this procedure to add Schedule Frequencies in Enterprise Manager.
 
 ## Adding New Schedule Frequencies
 
 To add a new frequency, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Frequency** tab in the **Schedule Details** frame
 4. Select **Add**. The **Frequency Definition Wizard** displays
@@ -43,7 +43,7 @@ To add a new frequency, complete the following steps:
 
 To add an existing frequency, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Frequency** tab in the **Schedule Details** frame
 4. Select **Add**. The **Frequency Definition Wizard** displays
@@ -56,7 +56,6 @@ To add an existing frequency, complete the following steps:
 10. Select **Finish** to save and close the wizard
 11. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
 :::
-
 
 ## FAQs
 

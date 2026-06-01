@@ -1,6 +1,6 @@
 ---
 title: Adding Thresholds to Layouts
-description: "Use this procedure to add Thresholds to Layouts in the Enterprise Manager."
+description: "Use this procedure to add Thresholds to Layouts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Thresholds to Layouts in the Enterprise Manager.
+Use this procedure to add Thresholds to Layouts in Enterprise Manager.
 
 :::note
 The **Select Threshold** tool is disabled without "Modify Jobs in Job Master" privileges in at least one department, or "All Administration Functions" or "All Functions."
@@ -74,12 +74,11 @@ The line thickens and becomes bold when selected.
 Refer to the [Delete a Dependency](Adding-Jobs-to-Schedule-Layouts.md#Delete_a_Dependency) procedure to delete threshold dependencies.
 :::
 
-
 ## FAQs
 
-**Q: Where do you access Thresholds to Layouts in the Enterprise Manager?**
+**Q: Where do you access Thresholds to Layouts in Enterprise Manager?**
 
-Select **Workflow Designer** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Workflow Designer** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new thresholds to layouts record?**
 

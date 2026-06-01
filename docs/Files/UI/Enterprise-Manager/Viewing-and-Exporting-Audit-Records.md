@@ -1,6 +1,6 @@
 ---
 title: Viewing and Exporting Audit Records
-description: "Use this procedure to view and Exporting Audit Records in the Enterprise Manager."
+description: "Use this procedure to view and Exporting Audit Records in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view and Exporting Audit Records in the Enterprise Manager.
+Use this procedure to view and Exporting Audit Records in Enterprise Manager.
 
 ## Viewing Records
 
 To view an audit record, complete the following steps:
 
-1. Select on **Audit Management** under the **Management** topic. The **Audit Management screen** displays
+1. Select **Audit Management** under the **Management** topic. The **Audit Management screen** displays
 2. Select a **user** in the **Users** list
 3. Select an **audit category** in the **Audit Categories** list
 4. Enter or select a **start date** and **end date** using the text box or the **calendar icon**
@@ -41,10 +41,6 @@ To view an audit record, complete the following steps:
 Select **Export Data** to open the **Save As** dialog and export records in comma-separated value (.csv) format.
 
 ## FAQs
-
-**Q: How many steps does the Viewing and Exporting Audit Records procedure involve?**
-
-The Viewing and Exporting Audit Records procedure involves 8 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Exporting Audit Records cover?**
 

@@ -160,12 +160,7 @@ To configure the script, runner, failure criteria, and environment variables, co
 13. Select the **OK** button to add the name/value
 14. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Updating Windows Job Details procedure involve?**
-
-The Updating Windows Job Details procedure involves 73 steps. Complete all steps in order and save your changes.
 
 **Q: What does Updating Windows Job Details cover?**
 

@@ -1,6 +1,6 @@
 ---
 title: Acknowledging Escalations
-description: "Escalations can be acknowledged while the Enterprise Manager is loading or after the application opens."
+description: "Escalations can be acknowledged while Enterprise Manager is loading or after the application opens."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Escalations can be acknowledged while the Enterprise Manager is loading or after the application opens.
+Escalations can be acknowledged while Enterprise Manager is loading or after the application opens.
 
 ## Acknowledging Escalations During Login to Enterprise Manager
 
 To acknowledge an escalation, complete the following steps:
 
-1. Open the Enterprise Manager application. Escalations requiring acknowledgment display in the **Escalation Acknowledgment** pop-up window while the application is loading
+1. Open Enterprise Manager application. Escalations requiring acknowledgment display in the **Escalation Acknowledgment** pop-up window while the application is loading
 2. *(Optional)* Select an escalation to view its notification details. Close the details dialog when done
 3. Select the option in the **Date** column next to any escalation you wish to acknowledge
 4. Select the **Acknowledge** button. Acknowledging an escalation stops the escalation process and removes the entry from the **Escalation Acknowledgment** screen
@@ -46,13 +46,9 @@ To acknowledge an escalation, complete the following steps:
 
 ## FAQs
 
-**Q: Where is Acknowledging Escalations located in the Enterprise Manager?**
+**Q: Where is Acknowledging Escalations located in Enterprise Manager?**
 
-Select **Escalation Acknowledgment** under the **Operation** topic in the Enterprise Manager navigation pane.
-
-**Q: How many steps does the Acknowledging Escalations procedure involve?**
-
-The Acknowledging Escalations procedure involves 8 steps. Complete all steps in order and save your changes.
+Select **Escalation Acknowledgment** under the **Operation** topic in Enterprise Manager navigation pane.
 
 **Q: What does Acknowledging Escalations cover?**
 

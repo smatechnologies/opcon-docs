@@ -24,7 +24,7 @@ The Deploy Version feature deploys a specific script version to all or a subset 
 
 To deploy a script version, complete the following steps:
 
-1. Select on **Repository** under the **Scripts** topic
+1. Select **Repository** under the **Scripts** topic
 2. Select a **script** in the list
 3. Select the **Show/Create Versions** button on the toolbar
 4. Select the **script version** to deploy
@@ -36,12 +36,6 @@ To deploy a script version, complete the following steps:
 10. Select **Yes** again to redeploy to additional jobs and repeat Steps 6–8, or select **No** to proceed
 11. Select the **Close** button in the **Versions** dialog
 12. Select **Close ☒** to close the **Script Repository** screen
-
-## FAQs
-
-**Q: How many steps does the Deploying Script Versions procedure involve?**
-
-The Deploying Script Versions procedure involves 12 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

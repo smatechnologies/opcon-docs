@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Job Events
-description: "Use this procedure to edit Job Events in the Enterprise Manager."
+description: "Use this procedure to edit Job Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,16 +22,16 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Job Events in the Enterprise Manager.
+Use this procedure to edit Job Events in Enterprise Manager.
 
 ## Editing Job-Related Events
 
 To edit the job event, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
-4.  Select on the **Events** tab in the **Job Properties** frame
+4.  Select the **Events** tab in the **Job Properties** frame
 5.  Select the **Job Related** radio button
 
 6.  Select the **event** to edit, or select it and select the **Edit** button. The **Event Definition Wizard** displays
@@ -43,10 +43,10 @@ To edit the job event, complete the following steps:
 
 To edit the job event, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
-4.  Select on the **Events** tab in the **Job Properties** frame
+4.  Select the **Events** tab in the **Job Properties** frame
 5.  Select the **Frequency Related** radio button
 
 6.  Select the **frequency** in the **Frequency list**
@@ -54,7 +54,6 @@ To edit the job event, complete the following steps:
 8.  Enter the *changes* in the wizard. Select **Reset** to revert parameters to their original states
 9.  Select **Finish** to save or **Cancel** to discard changes
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
-
 
 ## FAQs
 

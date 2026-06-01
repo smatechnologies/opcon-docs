@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Resources
-description: "Use this procedure to copy Resources in the Enterprise Manager."
+description: "Use this procedure to copy Resources in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Resources in the Enterprise Manager.
+Use this procedure to copy Resources in Enterprise Manager.
 
 To copy a resource, complete the following steps:
 
-1.  Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2.  Select the **resource** in the **Select Resource** list, or select **Find** to locate the resource
 3.  Select **Copy** on the **Resources** toolbar. The **Copy Resource** dialog displays
 4.  Enter a new *resource name*
@@ -45,7 +45,6 @@ Copying resources is useful when you want to reuse an existing configuration as 
 Yes. The copy must be saved with a new unique name to distinguish it from the original resources record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences from Enterprise Manager
-description: "Set display preferences for the Enterprise Manager."
+description: "Set display preferences for Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Set display preferences for the Enterprise Manager.
+Set display preferences for Enterprise Manager.
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
 3. Select **Enterprise Manager** if not selected by default
 4. *(Optional)* Select or clear the **Restore state at startup** option (selected by default)
@@ -39,16 +39,6 @@ To set the preferences, complete the following steps:
 13. Select **Apply** to save the changes
 14. Select the arrow (![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)) next to **Enterprise Manager** in the Preferences tree to expand and access more preference options
 15. Select **OK** to save and close the **Preferences** dialog
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Setting Preferences from Enterprise Manager procedure involve?**
-
-The Setting Preferences from Enterprise Manager procedure involves 15 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

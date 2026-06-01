@@ -19,8 +19,6 @@ doc_type: conceptual
 
 OpCon supports three specialized job types with dedicated operational procedures: Container jobs run embedded sub-schedules and can be monitored at the sub-schedule level; Window to Host sessions provide terminal-based access to legacy agents; and SAP Job Menu Options support SAP R3 and CRM background job management directly from Operations.
 
-## When would you use this section?
-
 - A container job has failed and you need to investigate its sub-schedule
 - You need to access a legacy terminal system through Window to Host
 - You are managing SAP background jobs using the SAP Job Menu Options

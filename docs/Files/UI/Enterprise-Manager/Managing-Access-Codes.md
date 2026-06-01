@@ -39,12 +39,11 @@ Related Topics
 - [Deleting Access Codes](Deleting-Access-Codes.md)
 - [Viewing Additional Access Code Information](Viewing-Additional-Access-Code-Info.md)
 
-
 ## FAQs
 
 **Q: What does managing access codes involve?**
 
-Managing access codes includes Access Codes Toolbar. Access access codes through the Enterprise Manager navigation pane.
+Managing access codes includes Access Codes Toolbar. Access access codes through Enterprise Manager navigation pane.
 
 **Q: Who can manage access codes in OpCon?**
 

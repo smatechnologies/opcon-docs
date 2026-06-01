@@ -34,8 +34,8 @@ The view displays estimated and actual run times for completed jobs, with a prog
 
 To create and Saving Custom Diagrams, complete the following steps:
 
-1.  Select on **List** under the **Operation** topic
-2.  Select on **Workload Chart** under the **Operation** topic
+1.  Select **List** under the **Operation** topic
+2.  Select **Workload Chart** under the **Operation** topic
 3.  Drag the **Workload Chart** tab to the right side of the screen. Release when the cursor changes to an arrow pointing right
 4.  Activate **Listen for selection changes in other views** on the **Workload Chart** toolbar
 5.  Activate **Send the current selection change to other views** on the **Daily list** toolbar
@@ -44,10 +44,6 @@ To create and Saving Custom Diagrams, complete the following steps:
 8.  Select **Take Screenshot**. The **Image Preview** dialog displays
 9.  Select **Save** to save the image, or **OK** to close the dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Workload Chart View?**

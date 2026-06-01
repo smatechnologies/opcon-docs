@@ -1,6 +1,6 @@
 ---
 title: Viewing Schedule and/or Job Information
-description: "Use this procedure to view Schedule and/or Job Information in the Enterprise Manager."
+description: "Use this procedure to view Schedule and/or Job Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Schedule and/or Job Information in the Enterprise Manager.
+Use this procedure to view Schedule and/or Job Information in Enterprise Manager.
 
 :::note
 If a completed schedule contains failed jobs, it displays in red with text like: `ScheduleName (Completed -- Contains Failed Jobs)`. If still in progress with failed jobs: `ScheduleName (In Progress -- Contains Failed Jobs)`.
@@ -28,7 +28,7 @@ If a completed schedule contains failed jobs, it displays in red with text like:
 
 To view schedule or job information, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. *(Optional)* Right-click a **schedule** in the schedule list and select **Schedule Information**. Select **OK** to close
 3. *(Optional)* Select a **schedule** to view its jobs in the **Job** table. Select a **job**, or right-click and select **Job Information**. Select **OK** to close
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) arrow to expand a **schedule** containing a subschedule
@@ -38,12 +38,6 @@ To view schedule or job information, complete the following steps:
 8. *(Optional)* Select and drag a **job column heading** to reposition it. Select the heading once to sort ascending, again to sort descending
 9. *(Optional)* Right-click a **schedule** and select **Schedule History**. Select **Close** to close
 10. Select a **schedule**, right-click a **job**, and select **Job History**. Select **OK** to close
-
-## FAQs
-
-**Q: How many steps does the Viewing Schedule and/or Job Information procedure involve?**
-
-The Viewing Schedule and/or Job Information procedure involves 10 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

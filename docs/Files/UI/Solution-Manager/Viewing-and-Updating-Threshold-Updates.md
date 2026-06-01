@@ -55,7 +55,6 @@ To add or Updating Threshold Updates, complete the following steps:
 
     ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-
 6. Select the job record (e.g., 1 job(s)) in the status bar to open the **Selection** panel
 
     :::note
@@ -89,12 +88,7 @@ To add or Updating Threshold Updates, complete the following steps:
 
 11. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Threshold Updates procedure involve?**
-
-The Viewing and Updating Threshold Updates procedure involves 11 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Threshold Updates cover?**
 

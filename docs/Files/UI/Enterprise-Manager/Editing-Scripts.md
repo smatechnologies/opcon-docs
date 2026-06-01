@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Scripts
-description: "Use this procedure to edit Scripts in the Enterprise Manager."
+description: "Use this procedure to edit Scripts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Scripts in the Enterprise Manager.
+Use this procedure to edit Scripts in Enterprise Manager.
 
 To edit a script, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select the **script** to edit
 3.  Select **Edit Script** on the toolbar. The **Edit Script** dialog displays
 4.  Modify the name, type, and/or description

@@ -190,10 +190,6 @@ The Output Directory was configured during installation. For more information, r
 |MaximumLogFileSize|150000|N|Maximum size in bytes for each log file before rollover. Min: 4096, Max: 1000000|
 |TraceLevel|0|N|Debug trace detail level. Valid values: 0 = Basic, 1 = Detailed, 2 = Very detailed|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

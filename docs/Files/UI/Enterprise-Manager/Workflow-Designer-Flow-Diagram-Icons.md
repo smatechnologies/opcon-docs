@@ -52,10 +52,6 @@ The diagram may also display any of the following information icons:
   ------------------------------------------------------------------------------------------------------- --------------------------------------------------------
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Workflow Designer Flow Diagram Icons cover?**

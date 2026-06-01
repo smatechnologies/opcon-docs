@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Thresholds
-description: "Use this procedure to edit Thresholds in the Enterprise Manager."
+description: "Use this procedure to edit Thresholds in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Thresholds in the Enterprise Manager.
+Use this procedure to edit Thresholds in Enterprise Manager.
 
 To edit a threshold, complete the following steps:
 
-1.  Select on **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
+1.  Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
 2.  Select an existing **threshold** in the **Select Threshold** list
 3.  Enter changes
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Thresholds** toolbar

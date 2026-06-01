@@ -22,14 +22,10 @@ doc_type: conceptual
 
 The **Security** topic in the Navigation Panel provides views to manage User Accounts and User Privileges information.
 
-Select on any **Administration** function item in the graphic to learn more about that item.
+Select any **Administration** function item in the graphic to learn more about that item.
 
 ![Security Topic](../../../Resources/Images/EM/EMsecuritymenu.png "Security Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Security?**

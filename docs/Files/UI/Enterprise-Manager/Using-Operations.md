@@ -27,10 +27,6 @@ doc_type: procedural
 - [Using Schedule Build](Using-Schedule-Build_SM.md)
 - [Using Agent Status](Using-Agent-Status.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Operations?**

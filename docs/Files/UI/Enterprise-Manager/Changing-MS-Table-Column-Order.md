@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Changing Machines Status Table Column Order
-description: "Use this procedure to change Machines Status Table Column Order in the Enterprise Manager."
+description: "Use this procedure to change Machines Status Table Column Order in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,21 +22,14 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to change Machines Status Table Column Order in the Enterprise Manager.
+Use this procedure to change Machines Status Table Column Order in Enterprise Manager.
 
 To change the column order, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
+1.  Select **Machines Status** under the **Operation** topic
 2.  *(Optional)* Drag a **Machines Status** column heading to the preferred position and release
 
-## FAQs
-
-**Q: How many steps does the Changing Machines Status Table Column Order procedure involve?**
-
-The Changing Machines Status Table Column Order procedure involves 2 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

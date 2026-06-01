@@ -55,7 +55,6 @@ To add or Updating Expression Dependencies, complete the following steps:
 
     ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-
 6. Select the job record (e.g., 1 job(s)) in the status bar to open the **Selection** panel
 
     :::note
@@ -76,7 +75,6 @@ To add or Updating Expression Dependencies, complete the following steps:
 
     ![Daily Job Definition Expression Dependency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Expression-Dependency-Panel.png "Daily Job Definition Expression Dependency Panel")
 
-
 10. Make any of the following updates:
 
     a. Edit or delete existing property expressions as needed.
@@ -88,12 +86,7 @@ To add or Updating Expression Dependencies, complete the following steps:
 
 11. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating Expression Dependencies procedure involve?**
-
-The Viewing and Updating Expression Dependencies procedure involves 11 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating Expression Dependencies cover?**
 

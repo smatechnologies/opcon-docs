@@ -1,6 +1,6 @@
 ---
 title: Defining Schedule Instances for Machines in Machine Groups
-description: "Use this procedure to define Schedule Instances for Machines in Machine Groups in the Enterprise Manager."
+description: "Use this procedure to define Schedule Instances for Machines in Machine Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to define Schedule Instances for Machines in Machine Groups in the Enterprise Manager.
+Use this procedure to define Schedule Instances for Machines in Machine Groups in Enterprise Manager.
 
 To define a schedule instance, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Schedule** tab in the **Schedule Details** frame
 4. Select the **Multi-Instance** option in the **Schedule Properties** frame
@@ -34,10 +34,6 @@ To define a schedule instance, complete the following steps:
 8. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 9. Select **Close ☒** to close the **Schedule Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining schedule instances for machines in machine groups?**

@@ -26,10 +26,10 @@ Use Copy functionality to replace properties or exceptions in a target named ins
 
 To copy named instance definitions, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select the **schedule** in the **Schedule Selection** list
 3.  Select the **Instance Definition** tab in the **Schedule Details** frame
-4.  Select on the **instance name** that is the source of the definitions to copy
+4.  Select the **instance name** that is the source of the definitions to copy
 5.  Select the target **named instance(s)** from the **Instance(s) to Replace** field
 6.  Select the **Replace Properties** and/or **Replace Exceptions** radio button(s) to specify which details to replicate
 7.  Select **OK**

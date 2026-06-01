@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Studio is the visual workflow design environment in Solution Manager. Use Studio to define schedules, place jobs on the canvas, draw dependencies, and visualize automation flow before it runs in production.
 
-## When would you use this section?
-
 - Designing a new schedule and want a visual representation of job flow
 - Adding, moving, or removing jobs from a schedule definition
 - Setting up dependencies between jobs on a canvas

@@ -1,6 +1,6 @@
 ---
 title: Working with External Tools
-description: "Once the OpCon installation directory has been configured in the Enterprise Manager, you can use the External Tools feature."
+description: "Once the OpCon installation directory has been configured in Enterprise Manager, you can use the External Tools feature."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,9 +20,9 @@ doc_type: conceptual
 
 ## What Is It?
 
-Once the [OpCon installation directory has been configured](Configuring-the-Installation-Directory.md) in the Enterprise Manager, you can use the **External Tools** feature. This feature gives you the opportunity to open external tools easily without having to move focus away from the Enterprise Manager. You can also [add other relevant external tools](Adding-External-Tools.md) to the list of tools.
+Once the [OpCon installation directory has been configured](Configuring-the-Installation-Directory.md) in Enterprise Manager, you can use the **External Tools** feature. This feature gives you the opportunity to open external tools easily without having to move focus away from Enterprise Manager. You can also [add other relevant external tools](Adding-External-Tools.md) to the list of tools.
 
-Select on any **External Tools** function item in the graphic to learn more about that item.
+Select any **External Tools** function item in the graphic to learn more about that item.
 
 ![External Tools Topic](../../../Resources/Images/EM/EMexternaltoolsmenu.png "External Tools Topic")
 
@@ -31,10 +31,6 @@ Select on any **External Tools** function item in the graphic to learn more abou
 - [Configuring the Installation Directory](Configuring-the-Installation-Directory.md)
 - [Adding External Tools](Adding-External-Tools.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in External Tools?**

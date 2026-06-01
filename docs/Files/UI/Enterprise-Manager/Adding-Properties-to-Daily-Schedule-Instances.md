@@ -1,6 +1,6 @@
 ---
 title: Adding Properties to Daily Schedule Instances
-description: "Use this procedure to add Properties to Daily Schedule Instances in the Enterprise Manager."
+description: "Use this procedure to add Properties to Daily Schedule Instances in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Properties to Daily Schedule Instances in the Enterprise Manager.
+Use this procedure to add Properties to Daily Schedule Instances in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic
+1. Select **Daily Maintenance** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
 3. Select the **schedule**
 4. Select the **Edit Daily** button in the **Maintenance** frame

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Renaming Frequencies
-description: "Use this procedure to rename Frequencies in the Enterprise Manager."
+description: "Use this procedure to rename Frequencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,25 +22,18 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to rename Frequencies in the Enterprise Manager.
+Use this procedure to rename Frequencies in Enterprise Manager.
 
 To rename a frequency, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Type the *frequency name* in the **Type Filter** text box or select the **frequency name**
 3. Select the **Rename a frequency** button on the **Frequency Manager** toolbar. The **Frequency Definition Wizard** displays
 4. Select inside the **Frequency Name** text box and enter the new name
 5. Select the **Finish** button
 6. Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
 
-## FAQs
-
-**Q: How many steps does the Renaming Frequencies procedure involve?**
-
-The Renaming Frequencies procedure involves 6 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

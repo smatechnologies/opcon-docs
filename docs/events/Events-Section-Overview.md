@@ -18,8 +18,6 @@ doc_type: conceptual
 
 OpCon events are commands that trigger system actions — building schedules, changing job status, updating properties, sending notifications, and more. Events can be attached to jobs, schedules, or notification triggers, and submitted externally via the External Event interface.
 
-## When would you use this section?
-
 - Understanding what events are available and what parameters they accept
 - Attaching events to a job to trigger downstream actions on completion or failure
 - Using the External Event interface to submit events from external systems

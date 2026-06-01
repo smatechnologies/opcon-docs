@@ -1,6 +1,6 @@
 ---
 title: Updating Named Schedule Instance Properties
-description: "Use this procedure to update Named Schedule Instance Properties in the Enterprise Manager."
+description: "Use this procedure to update Named Schedule Instance Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to update Named Schedule Instance Properties in the Enterprise Manager.
+Use this procedure to update Named Schedule Instance Properties in Enterprise Manager.
 
 To update a property, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Instance Definition** tab in the **Schedule Details** frame
 4. Select the **instance name** that has the property to update
@@ -35,12 +35,6 @@ To update a property, complete the following steps:
 9. Repeat Steps 5 - 8 to edit additional properties for the selected instance name
 10. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 11. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
-
-## FAQs
-
-**Q: How many steps does the Updating Named Schedule Instance Properties procedure involve?**
-
-The Updating Named Schedule Instance Properties procedure involves 11 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

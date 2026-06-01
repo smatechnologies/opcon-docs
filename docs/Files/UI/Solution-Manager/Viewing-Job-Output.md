@@ -32,7 +32,7 @@ Before attempting to view a job's output file, first refer to [Viewing a Job Out
 
 To view job output:
 
-Select on the **Failed**, **Running**, or **Completed** operation dial or use the **Quick Search** field (type the keyword and select **Enter**) in the **Jobs** section on the **Operations Summary** page.
+Select the **Failed**, **Running**, or **Completed** operation dial or use the **Quick Search** field (type the keyword and select **Enter**) in the **Jobs** section on the **Operations Summary** page.
 
 ![Jobs Operation Dials](../../../Resources/Images/SM/Job-Operation-Dials2.png "Jobs Operation Dials")
 
@@ -42,10 +42,10 @@ Select one **job** in the list. A record of your selection will display in the [
 
 ![Job Processes](../../../Resources/Images/SM/Job-Processes2.png "Job Processes")
 
-Select on the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
+Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
 :::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
 :::
 
 Select the **Job Output** accordion-style tab in the panel.

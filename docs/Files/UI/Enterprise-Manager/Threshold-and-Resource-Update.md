@@ -31,10 +31,6 @@ tab, you will be able to:
 For conceptual information, refer to [Threshold Updates](../../../job-components/threshold-resource-updates.md#threshold-updates) or [Resource Updates](../../../job-components/threshold-resource-updates.md#resource-updates) in the **Concepts** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Threshold/Resource Update do?**
@@ -43,7 +39,7 @@ The **Threshold/Resource Update** tab in the **[Job Master](Using-Job-Master.md)
 
 **Q: Where can you find Threshold/Resource Update in OpCon?**
 
-Access Threshold/Resource Update through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Threshold/Resource Update through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

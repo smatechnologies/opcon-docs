@@ -1,6 +1,6 @@
 ---
 title: Updating Job Instance Properties
-description: "Use this procedure to update Job Instance Properties in the Enterprise Manager."
+description: "Use this procedure to update Job Instance Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to update Job Instance Properties in the Enterprise Manager.
+Use this procedure to update Job Instance Properties in Enterprise Manager.
 
 To update a property, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Instance Definition** tab in the **Job Properties** frame
@@ -34,12 +34,6 @@ To update a property, complete the following steps:
 8. Repeat Steps 5 - 7 to edit additional properties in the **Instances** table
 9. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 10. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
-
-## FAQs
-
-**Q: How many steps does the Updating Job Instance Properties procedure involve?**
-
-The Updating Job Instance Properties procedure involves 10 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

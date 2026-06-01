@@ -1,6 +1,6 @@
 ---
 title: Adding Resources to Layouts
-description: "Use this procedure to add Resources to Layouts in the Enterprise Manager."
+description: "Use this procedure to add Resources to Layouts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Resources to Layouts in the Enterprise Manager.
+Use this procedure to add Resources to Layouts in Enterprise Manager.
 
 :::note
 If you do not have the privileges to "Modify Jobs in Job Master" in at least one department, or "All Administration Functions" or "All Functions," the **Select Threshold** tool is disabled.
@@ -28,7 +28,7 @@ If you do not have the privileges to "Modify Jobs in Job Master" in at least one
 
 To add a resource, complete the following steps:
 
-1. Select on **Workflow Designer** under the **Administration** topic
+1. Select **Workflow Designer** under the **Administration** topic
 2. Select a **schedule** in the **Select Schedule** list
 3. Select, drag, and drop the **Resource** icon in the **Tools** frame to the schedule diagram
 4. Select the **resource** and select **OK**

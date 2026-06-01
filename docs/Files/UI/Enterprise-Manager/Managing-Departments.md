@@ -39,12 +39,11 @@ Related Topics
 - [Deleting Departments](Deleting-Departments.md)
 - [Viewing Additional Department Information](Viewing-Additional-Department-Info.md)
 
-
 ## FAQs
 
 **Q: What does managing departments involve?**
 
-Managing departments includes Departments Toolbar. Access departments through the Enterprise Manager navigation pane.
+Managing departments includes Departments Toolbar. Access departments through Enterprise Manager navigation pane.
 
 **Q: Who can manage departments in OpCon?**
 

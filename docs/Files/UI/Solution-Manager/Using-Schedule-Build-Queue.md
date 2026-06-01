@@ -33,10 +33,6 @@ Related Topics
 
 - [Managing Schedules](Managing-Schedules.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Schedule Build Queue?**

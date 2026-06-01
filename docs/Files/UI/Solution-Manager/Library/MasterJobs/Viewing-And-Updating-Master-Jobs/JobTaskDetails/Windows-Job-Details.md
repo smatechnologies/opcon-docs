@@ -131,15 +131,7 @@ If you do not have the Script Privilege for the script, you will not be able to 
 
 For conceptual information, refer to [Windows Jobs](../../../../../../../job-types/windows.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Viewing, Adding, and Editing Windows Job Details procedure involve?**
-
-The Viewing, Adding, and Editing Windows Job Details procedure involves 42 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing, Adding, and Editing Windows Job Details cover?**
 

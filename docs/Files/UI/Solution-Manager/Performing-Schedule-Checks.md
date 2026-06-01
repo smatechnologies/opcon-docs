@@ -24,7 +24,7 @@ The **Operations** module allows you to perform schedule checks using a few simp
 
 To perform schedule check, complete the following steps:
 
-1. Right-click on Date or a Schedule record
+1. Right-click Date or a Schedule record
 
 2. On the right-side panel, select the **Schedule Check** section
 
@@ -59,16 +59,6 @@ Related Topics
 
 - [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Performing Schedule Checks procedure involve?**
-
-The Performing Schedule Checks procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

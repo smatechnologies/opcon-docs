@@ -41,12 +41,11 @@ Related Topics
 - [Viewing Additional Batch User Information](Viewing-Additional-Batch-User-Info.md)
 :::
 
-
 ## FAQs
 
 **Q: What does managing batch users involve?**
 
-Managing batch users includes Batch Users Toolbar. Access batch users through the Enterprise Manager navigation pane.
+Managing batch users includes Batch Users Toolbar. Access batch users through Enterprise Manager navigation pane.
 
 **Q: Who can manage batch users in OpCon?**
 

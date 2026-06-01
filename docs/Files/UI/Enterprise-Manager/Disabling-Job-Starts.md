@@ -26,17 +26,11 @@ Use this action to disable job starts when a machine is in a started state.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Machines Status** under the **Operation** topic
+1. Select **Machines Status** under the **Operation** topic
 2. Select the **Table** tab or the **Map** tab
 3. *(Optional)* Right-click the **machine** that requires job starts to be disabled
 4. Select **Disable Job Starts** from the menu
 :::
-
-## FAQs
-
-**Q: How many steps does the Disabling Job Starts procedure involve?**
-
-The Disabling Job Starts procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

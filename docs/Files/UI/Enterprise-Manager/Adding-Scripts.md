@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Scripts
-description: "Use this procedure to add Scripts in the Enterprise Manager."
+description: "Use this procedure to add Scripts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Scripts in the Enterprise Manager.
+Use this procedure to add Scripts in Enterprise Manager.
 
 :::note
 By default, new scripts are assigned to the role of a user who belongs to only one role.
@@ -32,7 +32,7 @@ Users who are super users (ocadm role or All UI Functions) or members of more th
 
 To add a script, complete the following steps:
 
-1. Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2. Select **Add** on the toolbar. The **Add Script** dialog displays
 3. Enter a *name* for the script
 

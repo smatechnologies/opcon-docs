@@ -26,7 +26,7 @@ In the Repository Editor, you can edit a script version and save it as a newer v
 
 To edit a script version, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select a **script** in the list
 3.  Select **Show/Create Versions** on the toolbar. The **Versions** dialog displays
 4.  Select the **script version** to edit

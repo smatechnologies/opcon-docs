@@ -26,21 +26,11 @@ Schedule layouts in Workflow Designer show the visual dependency map for a maste
 
 To display the schedule layout, complete the following steps:
 
-1. Select on **Workflow Designer** under the **Administration** topic
+1. Select **Workflow Designer** under the **Administration** topic
 2. Select a **schedule** in the **Select Schedule** tree view, or expand a **schedule** to see its subschedules. Use the **filter** text box to narrow results. Alternatively, right-click a Container job in the display area to see its subschedule
 3. *(Optional)* Select **Hide Thresholds and Resources** on the **Workflow Designer** toolbar to toggle the display of thresholds and resources
 4. *(Optional)* Select **Marquee** in the **Tools** frame, then select and drag to select a group of items and drag them to a new location in the display area
 :::
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Displaying Schedule Layouts procedure involve?**
-
-The Displaying Schedule Layouts procedure involves 4 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

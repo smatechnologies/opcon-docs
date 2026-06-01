@@ -22,8 +22,6 @@ doc_type: procedural
 
 Pingman is a utility that constantly pings a machine to determine network stability. It resides in the `<Target Directory>\OpConxps\Utilities\` directory.
 
-## Configuration Options
-
 ## Configuration
 
 To configure Pingman, modify `pingman.ini` in the `<Target Directory>\OpConxps\Utilities\` directory.

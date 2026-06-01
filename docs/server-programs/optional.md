@@ -134,10 +134,10 @@ processing.
 |EnableTls|N|False|Y|TLS encryption will be used for the connection when set to True. If set to True, the EnableSsl parameter will be ignored.|
 |Enable SSl|N|False|Y|SSL encryption will be used for the connection when set to True. If set to True, the EnableTls parameter will be ignored.|
 
-\*To encrypt the password manually, use the Password Encryption Tool in the Enterprise Manager. Then, copy and paste the encrypted password for the value of this setting. For more information, refer to [Encrypting Passwords](../Files/UI/Enterprise-Manager/Encrypting-Passwords.md) in the **Enterprise Manager** online help. To encrypt the values using SMALDAPMon, refer to [Command Line Arguments](#Command).
+\*To encrypt the password manually, use the Password Encryption Tool in Enterprise Manager. Then, copy and paste the encrypted password for the value of this setting. For more information, refer to [Encrypting Passwords](../Files/UI/Enterprise-Manager/Encrypting-Passwords.md) in the **Enterprise Manager** online help. To encrypt the values using SMALDAPMon, refer to [Command Line Arguments](#Command).
 
 :::note
-SMA LDAP Monitor passwords can be longer than 12 characters; however, the Enterprise Manager and Solution Manager have a 12-character limit for passwords. If the password is longer than 12 characters, you cannot use the SMA LDAP Monitor user name and password to log in interactively.
+SMA LDAP Monitor passwords can be longer than 12 characters; however, Enterprise Manager and Solution Manager have a 12-character limit for passwords. If the password is longer than 12 characters, you cannot use the SMA LDAP Monitor user name and password to log in interactively.
 :::
 
 :::note
@@ -198,10 +198,6 @@ SMALDAPMon.exe --credentials --user=admin --password=adminpassword --defaultpass
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -228,7 +224,7 @@ SMALDAPMon.exe --credentials --user=admin --password=adminpassword --defaultpass
 
 **Organizational Unit users are not found or synced** — SMA LDAP Monitor does not support Organizational Units (OUs) in Active Directory; users in OUs are not discovered during synchronization — Move OU users into an LDAP Group that is mapped in SMALDAPMon.ini so the monitor can find and sync them.
 
-**LDAP password longer than 12 characters prevents interactive login** — While SMA LDAP Monitor passwords can exceed 12 characters, the Enterprise Manager and Solution Manager enforce a 12-character limit; an LDAP user with a password longer than 12 characters cannot log in interactively — Use passwords of 12 characters or fewer if interactive login via the Enterprise Manager or Solution Manager is required for LDAP-synced users.
+**LDAP password longer than 12 characters prevents interactive login** — While SMA LDAP Monitor passwords can exceed 12 characters, Enterprise Manager and Solution Manager enforce a 12-character limit; an LDAP user with a password longer than 12 characters cannot log in interactively — Use passwords of 12 characters or fewer if interactive login via Enterprise Manager or Solution Manager is required for LDAP-synced users.
 
 **Multiple LDAP groups with the same name import all users from all matching groups** — If multiple Sync sections define the same group name, SMA LDAP Monitor imports users from all LDAP groups with that name — Fully qualify the group name in SMALDAPMon.ini (e.g., including domain path) to target only the intended group when multiple groups share a name.
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Machines
-description: "Use this procedure to add Machines in the Enterprise Manager."
+description: "Use this procedure to add Machines in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Machines in the Enterprise Manager.
+Use this procedure to add Machines in Enterprise Manager.
 
 To add a machine, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Machines** toolbar
 3. Enter the *official host name* or *alias* based on the agent machine
 4. Enter any relevant documentation for this agent machine in the **Documentation** text box
@@ -43,7 +43,7 @@ After completing the required fields, select the **Save** button on the toolbar 
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 

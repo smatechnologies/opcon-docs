@@ -187,8 +187,6 @@ Note: The `type` filter value `com.sma.MFT.Server.Logon` and the list label `MFT
 }
 ```
 
-## Configuration Options
-
 ## FAQs
 
 **Q: What does CloudEvents Triggers do?**

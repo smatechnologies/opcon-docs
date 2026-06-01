@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Calendars
-description: "Use this procedure to copy Calendars in the Enterprise Manager."
+description: "Use this procedure to copy Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Calendars in the Enterprise Manager.
+Use this procedure to copy Calendars in Enterprise Manager.
 
 To copy a calendar, complete the following steps:
 
-1.  Select on **Calendars** under the **Administration** topic. The **Calendars** screen displays
+1.  Select **Calendars** under the **Administration** topic. The **Calendars** screen displays
 2.  Select a **calendar** in the **Calendar** list, or select the **Find** button to locate the calendar
 3.  Select the **Copy** button on the **Calendar** toolbar. The **Copy Calendar** dialog displays
 4.  Select a **calendar name** in the **Select Calendar** list
@@ -44,7 +44,6 @@ Copying calendars is useful when you want to reuse an existing configuration as 
 Yes. The copy must be saved with a new unique name to distinguish it from the original calendars record.
 
 ## Glossary
-
 
 **Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine eligibility. Calendars can mark days to include or exclude from schedule builds.
 

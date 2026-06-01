@@ -1,6 +1,6 @@
 ---
 title: Deleting Named Schedule Instance Properties
-description: "Use this procedure to delete Named Schedule Instance Properties in the Enterprise Manager."
+description: "Use this procedure to delete Named Schedule Instance Properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Named Schedule Instance Properties in the Enterprise Manager.
+Use this procedure to delete Named Schedule Instance Properties in Enterprise Manager.
 
 To delete a property, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Instance Definition** tab in the **Schedule Details** frame
 4. Select the **instance name** that has the property to remove

@@ -89,12 +89,7 @@ For conceptual information, refer to [Tags](../../../job-components/tags.md) in 
 
 :::
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating General Info procedure involve?**
-
-The Viewing and Updating General Info procedure involves 20 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating General Info cover?**
 

@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Master schedules are the templates from which OpCon builds daily schedule instances. In Studio, automation engineers create and manage these definitions on a visual canvas — adding, copying, editing, and deleting schedules and exploring their full dependency maps.
 
-## When would you use this section?
-
 - Create a new master schedule definition
 - Edit an existing schedule's properties or canvas layout
 - Copy a schedule as a starting point for a new one

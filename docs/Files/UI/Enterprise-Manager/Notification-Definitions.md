@@ -82,7 +82,7 @@ The **Notification Definitions** frame provides tabs for configuring notificatio
 
 **Q: Where can you find Notification Definitions in OpCon?**
 
-Access Notification Definitions through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Notification Definitions through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Report Management enables administrators to view, add, delete, and edit report specifications in the database. Reports are created using BIRT Reports and viewed through the Enterprise Manager. You can create customized reports with the BIRT report writer tools and import them using the Report Management utility.
+Report Management enables administrators to view, add, delete, and edit report specifications in the database. Reports are created using BIRT Reports and viewed through Enterprise Manager. You can create customized reports with the BIRT report writer tools and import them using the Report Management utility.
 
 ## Opening Report Management
 
 **To open the utility:**
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 
 ## Understanding Report Management Options
@@ -68,7 +68,7 @@ The **Filter** frame has the following options:
 
 To add a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 3. Select the **Add** button
 4. Enter a *report name* in the **Title** text box
@@ -82,7 +82,7 @@ To add a report, complete the following steps:
 
 To edit a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **report name** from the **Report** list box
 3. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 4. Make the changes
@@ -92,7 +92,7 @@ To edit a report, complete the following steps:
 
 To delete a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **report name** from the **Report** list box
 3. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 4. Select the **Remove** button

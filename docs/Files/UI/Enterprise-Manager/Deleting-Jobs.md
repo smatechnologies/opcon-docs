@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Jobs
-description: "Use this procedure to delete Jobs in the Enterprise Manager."
+description: "Use this procedure to delete Jobs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Jobs in the Enterprise Manager.
+Use this procedure to delete Jobs in Enterprise Manager.
 
 To delete a job, you must first remove any dependencies.
 
@@ -30,7 +30,7 @@ To delete a job, you must first remove any dependencies.
 
 To remove Dependencies, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Dependencies** tab
@@ -45,7 +45,6 @@ To remove Dependencies, complete the following steps:
 1. Select ![](../../../Resources/Images/EM/EMdelete.png) **Remove** on the **Job Master** toolbar
 2. Select **Yes** to confirm or **No** to cancel
 3. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
-
 
 ## FAQs
 

@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Agents (referred to as machines in OpCon) are the execution targets for jobs. Each agent runs an OpCon agent that communicates with the OpCon server and runs submitted jobs. Machine groups pool agents so jobs can target any available machine in the group.
 
-## When would you use this section?
-
 - Adding a new agent to the OpCon environment
 - Configuring machine communication settings
 - Creating a machine group for load-balanced job execution

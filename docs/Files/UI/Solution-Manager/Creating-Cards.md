@@ -64,12 +64,6 @@ To set the QoS and SLA ranges, add frequencies, and save the tag card, complete 
 4. Select **OK** to save the changes. The new card name displays on the Vision Settings page
 5. Select **Save** in the bottom-left corner
 
-## FAQs
-
-**Q: How many steps does the Creating Cards procedure involve?**
-
-The Creating Cards procedure involves 25 steps. Complete all steps in order and save your changes.
-
 ## Glossary
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.

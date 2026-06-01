@@ -32,7 +32,7 @@ To create a DoBatch command file, complete the following steps:
 2. Enter the command to Go to the \<Configuration Directory\>\\Scripts directory on the OpCon server
 3. Add the appropriate DoBatch command(s) (BUILD, CHECK, DELETE, or FORECAST)
 4. Save with the **.cmd** extension in \<Configuration Directory\>**\\Scripts\\**
-5. Schedule the command file as a Windows job in the Enterprise Manager
+5. Schedule the command file as a Windows job in Enterprise Manager
 
 ## Syntax
 
@@ -203,7 +203,7 @@ Run DoBatch on the SAM application server to keep log files together. Save comma
 
 **Q: How do you schedule a DoBatch command file to run automatically?**
 
-Create the command file with the desired BUILD, CHECK, DELETE, or FORECAST instructions and schedule it as a Windows job in the Enterprise Manager.
+Create the command file with the desired BUILD, CHECK, DELETE, or FORECAST instructions and schedule it as a Windows job in Enterprise Manager.
 
 ## Glossary
 

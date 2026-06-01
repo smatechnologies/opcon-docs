@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Job Events
-description: "Use this procedure to copy Job Events in the Enterprise Manager."
+description: "Use this procedure to copy Job Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,22 +22,22 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Job Events in the Enterprise Manager.
+Use this procedure to copy Job Events in Enterprise Manager.
 
 To copy a job event, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
-4. Select on the **Event** tab in the **Job Properties** frame
+4. Select the **Event** tab in the **Job Properties** frame
 5. Select the **Job Related** or **Frequency Related** radio button depending on the type of event to copy
 6. Do one of the following:
     a. If Frequency Related: Select the **frequency** in the **Frequency list**, then proceed to Step 7.
     b. If Job Related: Proceed to Step 7.
-7. Right-click on the **event** in the **Events** list and select **Copy** from the context menu
+7. Right-click the **event** in the **Events** list and select **Copy** from the context menu
 8. *(Optional)* Select another **schedule** in the **Schedule** list
 9. Select the **destination job** in the **Job** list
-10. Select on the **Event** tab in the **Job Properties** frame
+10. Select the **Event** tab in the **Job Properties** frame
 11. Select the **Job Related** or **Frequency Related** radio button depending on the type of event
 12. Do one of the following:
     a. If Frequency Related: Select the **frequency** in the **Frequency list**, then proceed to Step 13.

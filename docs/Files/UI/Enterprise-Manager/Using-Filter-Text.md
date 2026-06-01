@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Filter Text
-description: "Use this procedure to use Filter Text in the Enterprise Manager."
+description: "Use this procedure to use Filter Text in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,19 +22,15 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to use Filter Text in the Enterprise Manager.
+Use this procedure to use Filter Text in Enterprise Manager.
 
 To use the filter text, complete the following steps:
 
-1.  Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
 2.  Enter *part of or the full name* for the schedule or job to filter results. Type an \* (asterisk) before a word to search strings that do not start with that word
 3.  Select the **Clear** button (to the right of the filter text box) to clear results and return to the full list
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Filter Text?**

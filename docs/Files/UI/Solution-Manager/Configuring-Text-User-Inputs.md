@@ -72,10 +72,6 @@ To configure the user input, complete the following steps:
 
 Configuring text user inputs defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure text user inputs?**
-
-The configuration procedure involves 6 steps. Complete all steps in order and select **Save** to apply the changes.
-
 ## Glossary
 
 **OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.

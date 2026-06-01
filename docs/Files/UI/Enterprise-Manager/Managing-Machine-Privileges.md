@@ -30,7 +30,7 @@ If a Role has the **Inherit Privileges for All Machines** feature enabled, the U
 
 To grant a privilege, complete the following steps:
 
-1. Select on **Machine Privileges** under the **Security** topic. The **Machine Privileges** screen displays
+1. Select **Machine Privileges** under the **Security** topic. The **Machine Privileges** screen displays
 2. Select a **role** in the **Select Role** list
 3. Select the **machine(s)** in the **Revoked** list box
 4. Select the **right arrow** to move privileges to the **Granted** list box. This gives the user read-only privileges for all jobs on the machine
@@ -40,18 +40,17 @@ To grant a privilege, complete the following steps:
 
 To revoke a privilege, complete the following steps:
 
-1. Select on **Machine Privileges** under the **Security** topic. The **Machine Privileges** screen displays
+1. Select **Machine Privileges** under the **Security** topic. The **Machine Privileges** screen displays
 2. Select a **role** in the **Select Role** list
 3. Select the **machine(s)** in the **Granted** list box
 4. Select the **left arrow** to move privileges to the **Revoked** list box
 5. Select **Close ☒** (to the right of the **Machine Privileges** tab) to close the screen
 
-
 ## FAQs
 
 **Q: What does managing machine privileges involve?**
 
-Managing machine privileges includes Granting Machine Privileges, Revoking Machine Privileges. Access machine privileges through the Enterprise Manager navigation pane.
+Managing machine privileges includes Granting Machine Privileges, Revoking Machine Privileges. Access machine privileges through Enterprise Manager navigation pane.
 
 **Q: Who can manage machine privileges in OpCon?**
 

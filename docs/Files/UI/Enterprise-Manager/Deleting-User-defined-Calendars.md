@@ -1,6 +1,6 @@
 ---
 title: Deleting Un-used User-defined Calendars
-description: "Use this procedure to delete Un-used User-defined Calendars in the Enterprise Manager."
+description: "Use this procedure to delete Un-used User-defined Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Un-used User-defined Calendars in the Enterprise Manager.
+Use this procedure to delete Un-used User-defined Calendars in Enterprise Manager.
 
 :::note
 Continuous recommends deleting user-defined calendars no longer in use to control the size of database tables. Holiday calendars are automatically deleted when the associated schedule is deleted.
@@ -32,7 +32,7 @@ Remove the Calendar from the Schedule Master Tables
 
 To remove the Calendar from the Schedule Master Tables, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **Schedule** in the **Schedule** list
 3. Select the **Frequency** tab
 4. Select the **frequency** with the user-defined calendar to delete and select the **Remove** button
@@ -43,7 +43,7 @@ Remove the Calendar from the Job Master Tables
 
 To remove the Calendar from the Job Master Tables, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule name** in the **Schedule** list
 3. Select the **job name** in the **Job** list
 4. Select the **Frequency** tab
@@ -56,7 +56,7 @@ Delete the Calendar
 
 To delete the Calendar, complete the following steps:
 
-1. Select on **Calendars** under the **Administration** topic. The **Calendars** screen displays
+1. Select **Calendars** under the **Administration** topic. The **Calendars** screen displays
 2. Select the calendar in the **Selection** list
 3. Ensure no schedules are using the calendar. If the box contains a schedule, refer to [Remove the Calendar from the Job Master Tables](#Remove_the_Calendar_from_the_Job_Master_Tables)
 4. Ensure no jobs are using the calendar. If the box contains a job, refer to [Remove the Calendar from the Job Master Tables](#Remove_the_Calendar_from_the_Job_Master_Tables)

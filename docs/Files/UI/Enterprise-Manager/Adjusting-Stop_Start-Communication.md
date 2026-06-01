@@ -24,20 +24,13 @@ Stop/Start communication controls whether OpCon actively communicates with an ag
 
 To adjust stop/start communication, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select the **machine** in the **Select Machine** list
 3. Right-click the graphic in the **Communication Status** frame to enable the menu
 4. Select **Start Communication** or **Stop Communication**
 5. Select **Close ☒** to close the **Machines** screen
 
-## FAQs
-
-**Q: How many steps does the Adjusting Stop/Start Communication with Machines procedure involve?**
-
-The Adjusting Stop/Start Communication with Machines procedure involves 5 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

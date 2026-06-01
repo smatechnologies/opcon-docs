@@ -35,19 +35,11 @@ Within the tab, you will be able to:
 
  
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: What does Tags do?**
-
-viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Tags in OpCon?**
 
-Access Tags through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Tags through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

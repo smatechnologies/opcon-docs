@@ -22,14 +22,10 @@ doc_type: conceptual
 
 The **Scripts** topic in the Navigation Panel provides views to manage the script repository, script runners, and script types.
 
-Select on any **Administration** function item in the graphic to learn more about that item.
+Select any **Administration** function item in the graphic to learn more about that item.
 
 ![Scripts Topic](../../../Resources/Images/EM/EMscriptsmenu.png "Scripts Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Scripts?**

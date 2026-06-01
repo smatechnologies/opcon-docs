@@ -42,7 +42,7 @@ automatically. Then the changed file can be transferred to SMADDI in the
 refer to [Automatic Change Files](#Automati).
 
 Before configuring jobs to run Schedule Extract, configure the
-command-line behavior in the Enterprise Manager preferences. For more
+command-line behavior in Enterprise Manager preferences. For more
 information, refer to [Setting Preferences for Schedule Extract](../../Files/UI/Enterprise-Manager/Preferences-for-Schedule-Extract.md)
  in the **Enterprise Manager** online help.
 
@@ -256,7 +256,7 @@ Runs the command line to Schedule Extract with the following parameters:
 [[EManagerTools]] -opconprofile PRODUCTION -opconuser ocadm -opconpassword opconxps -f c:/extract/schedules.txt
 ```
 
-Instructs the Enterprise Manager to run the Schedule Extract with the following parameters:
+Instructs Enterprise Manager to run the Schedule Extract with the following parameters:
 
 - Use the PRODUCTION profile
 - Use the OpCon user 'ocadm' and its password
@@ -640,7 +640,7 @@ The Schedule Extract Command Line Interface uses the following exit codes:
 
 **32-bit Enterprise Manager installed on a 64-bit machine causes the schedule_extract.cmd to fail** — If the EM is installed from the x86 folder onto a 64-bit machine, the Java launch command in schedule_extract.cmd does not resolve correctly because the default Java executable path differs — Edit schedule_extract.cmd to replace `command=java` with the full path to the 32-bit Java executable (e.g., `command="C:\Program Files (x86)\Java\jre6\bin\java"`); alternatively, install the EM from the x64 folder.
 
-**Invalid or missing Enterprise Manager profile name causes Schedule Extract to fail** — The -opconprofile argument must match a profile created by the Windows user running the job; if no matching profile exists on the machine, Schedule Extract cannot connect to the OpCon database — Log in to the machine as the job's run-as user, open the Enterprise Manager, and create or verify a profile for the OpCon database connection before scheduling the job.
+**Invalid or missing Enterprise Manager profile name causes Schedule Extract to fail** — The -opconprofile argument must match a profile created by the Windows user running the job; if no matching profile exists on the machine, Schedule Extract cannot connect to the OpCon database — Log in to the machine as the job's run-as user, open Enterprise Manager, and create or verify a profile for the OpCon database connection before scheduling the job.
 
 **-chg argument file not found causes schedules to be extracted without automatic changes applied** — If the -chg argument is specified and Schedule Extract cannot locate the change file (either because the path is wrong or the file does not exist in the Change File Directory preference), the extract completes silently without applying any automatic changes — Verify the full path and filename of the change file, or ensure the file exists in the Change File Directory defined in Enterprise Manager preferences.
 
@@ -656,7 +656,7 @@ The job must run on a Windows machine with both an agent and an Enterprise Manag
 
 **Q: Where must Schedule Extract command-line behavior be configured before running automated jobs?**
 
-Configure the command-line behavior in the Enterprise Manager preferences under Settings for Schedule Extract before scheduling any automated Schedule Extract jobs.
+Configure the command-line behavior in Enterprise Manager preferences under Settings for Schedule Extract before scheduling any automated Schedule Extract jobs.
 
 ## Glossary
 

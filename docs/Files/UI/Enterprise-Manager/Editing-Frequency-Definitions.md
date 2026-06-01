@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Frequency Definitions
-description: "Use this procedure to edit Frequency Definitions in the Enterprise Manager."
+description: "Use this procedure to edit Frequency Definitions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to edit Frequency Definitions in the Enterprise Manager.
+Use this procedure to edit Frequency Definitions in Enterprise Manager.
 
 To edit a frequency definition, complete the following steps:
 
-1.  Select on **Frequency Manager** under the **Management** topic
+1.  Select **Frequency Manager** under the **Management** topic
 2.  Type the *frequency name* in the **Type Filter** text box or select
     the **frequency name**.
 3.  Select the **Edit a frequency definition** button on the **Frequency

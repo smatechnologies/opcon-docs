@@ -36,9 +36,9 @@ The dialog shows the following per job iteration:
 
 To view job history, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **schedule**
+3. Right-click the **schedule**
 4. Select **Job History** from the menu. The **Job History** dialog displays
 5. View the job history information
 6. Enter or select a **Start Date** and **End Date** using the text boxes or the calendar icons
@@ -51,15 +51,7 @@ To view job history, complete the following steps:
 13. To delete a note, select the note row, select the **Remove** button, then select **Yes** to confirm
 14. Select the **OK** button to close the **Job History** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Job History procedure involve?**
-
-The Job History procedure involves 14 steps. Complete all steps in order and save your changes.
 
 **Q: What does Job History cover?**
 

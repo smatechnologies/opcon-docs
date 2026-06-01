@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating and Saving Custom Diagrams
-description: "Use this procedure to create and Saving Custom Diagrams in the Enterprise Manager."
+description: "Use this procedure to create and Saving Custom Diagrams in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,27 +22,20 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to create and Saving Custom Diagrams in the Enterprise Manager.
+Use this procedure to create and Saving Custom Diagrams in Enterprise Manager.
 
 To create and save a custom diagram, complete the following steps:
 
-1.  Select on **Pie Chart** under the **Operation** topic. The **Pie Chart** screen displays
+1.  Select **Pie Chart** under the **Operation** topic. The **Pie Chart** screen displays
 2.  Activate **Listen for selection changes in other views** on the **Pie Chart** toolbar
-3.  Select on **List** under the **Operation** topic. The **Daily list** screen displays
+3.  Select **List** under the **Operation** topic. The **Daily list** screen displays
 4.  Activate **Send the current selection change to other views** on the **Daily list** toolbar
 5.  Select a **date**, or select a **date** and a **schedule**, to display in the **Pie Chart** screen
 6.  Select **View Menu** (arrow pointing down) on the **Pie Chart** toolbar and select **Take Screenshot**. The **Image Preview** dialog displays
 7.  Select **Save** to save the image, or select **OK** to close the dialog
 :::
 
-## FAQs
-
-**Q: How many steps does the Creating and Saving Custom Diagrams procedure involve?**
-
-The Creating and Saving Custom Diagrams procedure involves 7 steps. Complete all steps in order and save your changes.
-
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

@@ -20,12 +20,8 @@ doc_type: conceptual
 
 ## What Is It?
 
-The Open Window to Host feature opens an emulator for a remote connection to a machine defined in OpCon. Configure preferences in the Enterprise Manager to set the commands for each platform when running the **Window to Host** shortcut from the Operation views. For more information, refer to [Setting Preferences for Window To Host](../Files/UI/Enterprise-Manager/Preferences-for-Windows-To-Host.md) in the **Enterprise Manager** online help.
+The Open Window to Host feature opens an emulator for a remote connection to a machine defined in OpCon. Configure preferences in Enterprise Manager to set the commands for each platform when running the **Window to Host** shortcut from the Operation views. For more information, refer to [Setting Preferences for Window To Host](../Files/UI/Enterprise-Manager/Preferences-for-Windows-To-Host.md) in the **Enterprise Manager** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the Open Window to Host feature do?**
@@ -34,7 +30,7 @@ It opens an emulator for a remote connection to a machine defined in OpCon. The 
 
 **Q: How do you configure which emulator opens for each platform?**
 
-Configure the emulator commands per platform in the Enterprise Manager preferences. Refer to Setting Preferences for Window To Host in the Enterprise Manager online help.
+Configure the emulator commands per platform in Enterprise Manager preferences. Refer to Setting Preferences for Window To Host in Enterprise Manager online help.
 
 ## Glossary
 

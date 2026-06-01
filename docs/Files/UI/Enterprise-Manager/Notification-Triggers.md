@@ -26,22 +26,14 @@ The **Notification Triggers** tab in the [**Job Master**](Using-Job-Master.md) e
 
 To view Job Event Notification Triggers, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Notification Triggers** tab in the **Job Properties** frame
 5. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Job Group**, **Machine Group**, and/or **Schedules Group** information
 6. View the **Trigger and Job Event** information
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Notification Triggers procedure involve?**
-
-The Notification Triggers procedure involves 6 steps. Complete all steps in order and save your changes.
 
 **Q: What does Notification Triggers cover?**
 

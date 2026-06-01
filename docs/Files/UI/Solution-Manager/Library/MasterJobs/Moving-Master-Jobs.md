@@ -48,10 +48,6 @@ Go to **Library** > **Master Jobs**, select a job, and select **Move**. The Mast
 | Departmental Function Privilege | All Function Privileges, Add Jobs To Master Schedules, or All Job Master Functions | — | — |
 ## FAQs
 
-**Q: How many steps does the Moving Master Jobs procedure involve?**
-
-The Moving Master Jobs procedure involves 2 steps. Complete all steps in order and save your changes.
-
 **Q: What does Moving Master Jobs cover?**
 
 This page covers Required Privileges, Moving a Job.

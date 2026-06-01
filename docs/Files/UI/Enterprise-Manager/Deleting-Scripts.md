@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Scripts
-description: "Use this procedure to delete Scripts in the Enterprise Manager."
+description: "Use this procedure to delete Scripts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Scripts in the Enterprise Manager.
+Use this procedure to delete Scripts in Enterprise Manager.
 
 To delete a script, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select the **script** to delete from the list
 3.  Select the **Remove Script** button on the toolbar
 4.  Select **Yes** to confirm
@@ -43,7 +43,6 @@ No. Deleting a scripts record permanently removes it from OpCon. Verify the reco
 Select the specific scripts record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
 
 ## Glossary
-
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
 

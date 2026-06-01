@@ -1,6 +1,6 @@
 ---
 title: Adding Documentation
-description: "Use this procedure to add Documentation in the Enterprise Manager."
+description: "Use this procedure to add Documentation in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Documentation in the Enterprise Manager.
+Use this procedure to add Documentation in Enterprise Manager.
 
 To add documentation, complete the following steps:
 
@@ -36,9 +36,9 @@ To add documentation, complete the following steps:
 
 ## FAQs
 
-**Q: Where do you access Documentation in the Enterprise Manager?**
+**Q: Where do you access Documentation in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: What information is required to add documentation?**
 

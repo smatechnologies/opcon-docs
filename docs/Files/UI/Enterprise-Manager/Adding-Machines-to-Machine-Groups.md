@@ -1,6 +1,6 @@
 ---
 title: Adding Machines to Machine Groups
-description: "Use this procedure to add Machines to Machine Groups in the Enterprise Manager."
+description: "Use this procedure to add Machines to Machine Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Machines to Machine Groups in the Enterprise Manager.
+Use this procedure to add Machines to Machine Groups in Enterprise Manager.
 
 To add a machine to a machine group, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select the **machine group** in the **Unassigned** list box
 3. Select the **right arrow** (green) to move the machine group to the **Assigned** list box
 4. Repeat step 3 to assign additional machine groups
@@ -37,7 +37,6 @@ To add a machine to a machine group, complete the following steps:
 After completing the required fields, select the **Save** button on the toolbar to save the machines to machine groups record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

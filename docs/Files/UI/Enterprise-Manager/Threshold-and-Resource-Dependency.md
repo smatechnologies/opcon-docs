@@ -31,10 +31,6 @@ tab, you will be able to:
 For conceptual information, refer to [Threshold Dependencies](../../../job-components/threshold-resource-dependencies.md#threshold-dependencies) or [Resource Dependencies](../../../job-components/threshold-resource-dependencies.md#resource-dependencies) in the **Concepts** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Threshold/Resource Dependency do?**
@@ -43,7 +39,7 @@ The **Threshold/Resource Dependency** tab allows you to define and
 
 **Q: Where can you find Threshold/Resource Dependency in OpCon?**
 
-Access Threshold/Resource Dependency through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Threshold/Resource Dependency through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

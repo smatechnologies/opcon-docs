@@ -24,8 +24,6 @@ SMAServMan manages the SAM-SS application group, handling startup, shutdown, and
 
 ![SMA Service Manager](../Resources/Images/Server-Programs/servmanconfig.png "SMA Service Manager")
 
-## Configuration Options
-
 ## Configuration
 
 SMAServMan configuration controls basic service settings, logging behavior, the application group, and failure actions. The SMAServMan.ini file resides in the <Configuration Directory\>\\SAM\\ folder. Parameters marked Dynamic (Y) take effect immediately upon saving; all others require a service restart.

@@ -42,15 +42,7 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: What does Role Resources do?**
-
-title: Roles - Resources
 
 **Q: Where can you find Role Resources in OpCon?**
 

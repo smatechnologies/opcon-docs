@@ -32,19 +32,11 @@ To activate or inactivate a notification, complete the following steps:
 6. Select the option to the left of the preferred notification
 7. Select the **green** Power symbol to the left of the **Notification** option
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
-**Q: Where is Activating/Inactivating Notifications located in the Enterprise Manager?**
+**Q: Where is Activating/Inactivating Notifications located in Enterprise Manager?**
 
-Select **Notification Manager** under the **Management** topic in the Enterprise Manager navigation pane.
-
-**Q: How many steps does the Activating/Inactivating Notifications procedure involve?**
-
-The Activating/Inactivating Notifications procedure involves 7 steps. Complete all steps in order and save your changes.
+Select **Notification Manager** under the **Management** topic in Enterprise Manager navigation pane.
 
 ## Glossary
 

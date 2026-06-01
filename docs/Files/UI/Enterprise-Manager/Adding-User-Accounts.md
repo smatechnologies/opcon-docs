@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding User Accounts
-description: "Use this procedure to add User Accounts in the Enterprise Manager."
+description: "Use this procedure to add User Accounts in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add User Accounts in the Enterprise Manager.
+Use this procedure to add User Accounts in Enterprise Manager.
 
 To add a user account, complete the following steps:
 
-1.  Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2.  Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **User Accounts** toolbar
 3.  Enter the *new user* in the **Name** text box
 4.  Enter the new user's *full name* in the **Full User Name** text box

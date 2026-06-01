@@ -1,6 +1,6 @@
 ---
 title: Setting Job Status Group Colors
-description: "Use this procedure to set Job Status Group Colors in the Enterprise Manager."
+description: "Use this procedure to set Job Status Group Colors in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to set Job Status Group Colors in the Enterprise Manager.
+Use this procedure to set Job Status Group Colors in Enterprise Manager.
 
 :::note
 Select the **Restore Defaults** button in Color Preferences to restore default colors.
@@ -28,7 +28,7 @@ Select the **Restore Defaults** button in Color Preferences to restore default c
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
 4. Select **Colors**. The **Colors** settings display to the right
@@ -37,16 +37,6 @@ To set the preferences, complete the following steps:
 7. Repeat steps 5 and 6 for each additional Job Status color to change
 8. Select **Apply** to save the changes
 9. Select **OK** to save and close the **Preferences** dialog
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Setting Job Status Group Colors procedure involve?**
-
-The Setting Job Status Group Colors procedure involves 9 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

@@ -96,7 +96,7 @@ To override defaults, use the following syntax in the `-Q` parameter:
 ##### Modify the Command File
 
 1. Log on to the SAM application server as a *Windows user* with access to the OpCon installation directories
-2. Right-click on **Start** and select **Explore**
+2. Right-click **Start** and select **Explore**
 3. Browse to the **<Configuration Directory\>\\Utilities\\Database\\** directory
 4. Right-click **Job_Avg.cmd** or **Job_Avg_WinAuth.cmd** and select **Edit**
 5. Modify the **--Q** parameter. Insert values for SW1 through SW5 in order, with one space after the **SMA_JOBAVG** procedure name, before the closing quotation mark (")
@@ -339,10 +339,6 @@ Schedule this job during a period when tokens are not being deleted and recreate
 **Threshold or token IDs reach the maximum value of 2,147,483,647 and SAM cannot process jobs** — Each create-and-delete cycle of a threshold, resource, or token increments the next ID; if the maximum is reached, the SAM cannot process jobs properly — Run SMA_COMPACTTHRESHIDS or SMA_COMPACTTOKENIDS at regular intervals to compact IDs back to lower values before the maximum is reached.
 
 ## FAQs
-
-**Q: How many steps does the OpCon Data Maintenance procedure involve?**
-
-The OpCon Data Maintenance procedure involves 16 steps. Complete all steps in order and save your changes.
 
 **Q: What does OpCon Data Maintenance cover?**
 

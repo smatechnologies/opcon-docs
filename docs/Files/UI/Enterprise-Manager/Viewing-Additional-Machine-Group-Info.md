@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Machine Groups Information
-description: "Use this procedure to view Additional Machine Groups Information in the Enterprise Manager."
+description: "Use this procedure to view Additional Machine Groups Information in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,23 +22,17 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view Additional Machine Groups Information in the Enterprise Manager.
+Use this procedure to view Additional Machine Groups Information in Enterprise Manager.
 
 To view additional information, complete the following steps:
 
-1.  Select on **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
+1.  Select **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
 2.  Select the **machine group** in the **Select Machine Group** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to refer to a list of jobs using the machine group
 4.  Select **OK**
 5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the machine group
 6.  Select **Close**
 :::
-
-## FAQs
-
-**Q: How many steps does the Viewing Additional Machine Groups Information procedure involve?**
-
-The Viewing Additional Machine Groups Information procedure involves 6 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

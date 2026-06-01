@@ -44,15 +44,15 @@ group level.
 
 Tag cards can be defined individually at the root level or as child
 cards of an existing group. The tag card definition must contain a
-pattern (which matches a tag defined in the Enterprise Manager), job
+pattern (which matches a tag defined in Enterprise Manager), job
 offset, role, and one or more frequencies.
 
 Cards can be assigned frequencies which will determine which days the
 card is displayed in the Vision module. When a card is displayed, it
 will show a summary containing the start time, duration, end time, and
-job statuses for any jobs defined in the Enterprise Manager that match
+job statuses for any jobs defined in Enterprise Manager that match
 the pattern defined for the card. If a card is blank, there are no jobs
-defined in the Enterprise Manager that match the pattern for that date.
+defined in Enterprise Manager that match the pattern for that date.
 
 ### Job Status Summary
 
@@ -129,15 +129,7 @@ To save the license file, complete the following steps:
 - [Managing Vision Actions](Managing-Vision-Actions.md)
 - [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Working with Vision procedure involve?**
-
-The Working with Vision procedure involves 9 steps. Complete all steps in order and save your changes.
 
 **Q: What does Working with Vision cover?**
 

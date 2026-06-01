@@ -391,13 +391,11 @@ Within the z/OS LSAM, externally submitted events can be trapped and tracked usi
 A `C` continuation character bypasses the TRACLASS and TRACMASK runtime tracking options.
 :::
 
-
 4. Add a job step running XPSTRACK
 
 All approaches can be combined. Define a job mask or JES tracking classes in the XPSPRMxx member of the OpCon Parmlib (XPSPARMS DD in the agent task). The following job illustrates all three setup methods:
 
 ![Dynamic job request](../../../../../../../Resources/Images/SM/Operations/ZOs/Dynamic-Job-Request.png "Dynamic job request")
-
 
 1. Job Name mask as defined in XPSPRMxx (e.g., TRACMASK=TRAC****)
 2. A special held class or class list as defined in XPSPRMxx (e.g., TRACLASS=TQA)
@@ -667,7 +665,6 @@ This likely results in a JCL Error.
 
 If the JCL syntax qualifies as an operand, replacement is forced. For example, `&UNIT=3420` matches both of these:
 
-
 1. `//STEP1 EXEC LIB=SYS1.OKLIB,UNIT=3380,MBR=TEMPNAME`
 2. `//MYDD DD DSN=SYS1.PARMLIB,DISP=SHR,UNIT=SYSDA`
 
@@ -724,15 +721,7 @@ The `$START COMMAND` property resolves to the start command the agent attempted 
 | Queued | `Q:jobname JobID\|machineID#programmer name` |
 | Tracked | `T:jobname JobID\|machineID#programmer name` |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Viewing, Adding, and Editing z/OS Job Details procedure involve?**
-
-The Viewing, Adding, and Editing z/OS Job Details procedure involves 32 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing, Adding, and Editing z/OS Job Details cover?**
 

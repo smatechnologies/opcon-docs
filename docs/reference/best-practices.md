@@ -71,7 +71,7 @@ Continuous provides **SMAReports.mdb**, a database file importable into OpCon. I
     - **No** to merge new information into the existing object
     - **Cancel** to terminate the transfer and roll back all changes
 11. Select **OK** on the termination message
-12. Log into the Enterprise Manager and go to **Job Master > Report Generator Schedule > Failed Jobs by date**
+12. Log into Enterprise Manager and go to **Job Master > Report Generator Schedule > Failed Jobs by date**
 
 :::note
 By default, all of these jobs are disabled.
@@ -203,7 +203,7 @@ Plan the shutdown during a period of low processing.
 2. In an Operations Machine view, monitor the running job count (e.g., 3/10). Wait until the count reaches zero (e.g., 0/10)
 3. On the agent machine, check for running jobs:
    a. IBM i: refer to [IBM i Procedures to shut down a Machine](#IBM_i_Procedures_to_shut_down_a_Machine).
-   b. MCP: the Enterprise Manager count should be accurate. To confirm from the agent, refer to [Interactive agent Window](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Interactive-agent-Window.md).
+   b. MCP: Enterprise Manager count should be accurate. To confirm from the agent, refer to [Interactive agent Window](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Interactive-agent-Window.md).
    c. MSLSAM: refer to [Check for Running Jobs](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Upgrading-from-a-Release-Prior-to-15.0.md#Check_for_Running_Jobs).
    d. OpenVMS: use the method in Step 2.
    e. OS 2200 and BIS: use the method in Step 2.
@@ -310,10 +310,6 @@ A "Flag Job As Late to Start" value causes ENS to send a notification if the fil
 5. Set up a notification event on the job for the Late to Start status trigger, or configure an ENS group to send notifications for the Late to Start status. Refer to [Job Automation Components](../job-components/events.md) or [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md)
 6. Configure a threshold update to reset the threshold to zero (0) when the job finishes. Refer to [Adding Threshold/Resource Updates](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Updates.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How should you handle jobs that need to avoid being affected by path changes?**

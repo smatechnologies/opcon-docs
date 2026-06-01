@@ -37,12 +37,11 @@ Related Topics
 - [Adding User-defined System Properties](Adding-System-Properties.md)
 - [Deleting Global Properties](Deleting-Global-Properties.md)
 
-
 ## FAQs
 
 **Q: What does managing global properties involve?**
 
-Managing global properties includes Global Properties Toolbar. Access global properties through the Enterprise Manager navigation pane.
+Managing global properties includes Global Properties Toolbar. Access global properties through Enterprise Manager navigation pane.
 
 **Q: Who can manage global properties in OpCon?**
 

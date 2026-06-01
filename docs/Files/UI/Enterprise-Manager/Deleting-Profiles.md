@@ -1,6 +1,6 @@
 ---
 title: Deleting Profiles
-description: "Use this procedure to delete Profiles in the Enterprise Manager."
+description: "Use this procedure to delete Profiles in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Profiles in the Enterprise Manager.
+Use this procedure to delete Profiles in Enterprise Manager.
 
 To delete a profile, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Go to **EnterpriseManager > Preferences**
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree
 4. Select **Connection Profiles**

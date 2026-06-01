@@ -38,7 +38,6 @@ Related Topics
 - [Deleting Calendars](Deleting-Calendars.md)
 - [Editing Calendars](Editing-Calendars.md)
 
-
 ## FAQs
 
 **Q: What does managing calendars involve?**

@@ -1,6 +1,6 @@
 ---
 title: Adding Job Dependencies
-description: "Use this procedure to add Job Dependencies in the Enterprise Manager."
+description: "Use this procedure to add Job Dependencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Job Dependencies in the Enterprise Manager.
+Use this procedure to add Job Dependencies in Enterprise Manager.
 
 ## Setting Job-Related Job Dependencies
 
 To set a dependency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Dependencies** tab in the **Job Properties** frame
@@ -49,7 +49,7 @@ To set a dependency, complete the following steps:
 
 To set a dependency, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Dependencies** tab in the **Job Properties** frame
@@ -69,7 +69,6 @@ To set a dependency, complete the following steps:
 
 16. Select **OK** to save or **Cancel** to discard
 17. Select **Close ☒** to close the **Job Master** screen
-
 
 ## FAQs
 

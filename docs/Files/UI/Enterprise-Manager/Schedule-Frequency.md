@@ -28,10 +28,6 @@ The **Frequency** tab in the [**Schedule Master**](Using-Schedule-Master.md) edi
 
 For conceptual information, refer to [Job and Schedule Frequencies](../../../automation-concepts/frequencies.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Schedule Frequency do?**
@@ -40,7 +36,7 @@ The **Frequency** tab in the [**Schedule Master**](Using-Schedule-Master.md) edi
 
 **Q: Where can you find Schedule Frequency in OpCon?**
 
-Access Schedule Frequency through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Schedule Frequency through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

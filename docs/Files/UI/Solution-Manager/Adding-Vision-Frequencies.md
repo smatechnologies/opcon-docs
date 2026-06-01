@@ -70,7 +70,6 @@ h.  Select **OK**.
 
 On the **Vision Settings** page, select the **Save** button.
 
-
 ## FAQs
 
 **Q: How do you save a new vision frequencies record?**

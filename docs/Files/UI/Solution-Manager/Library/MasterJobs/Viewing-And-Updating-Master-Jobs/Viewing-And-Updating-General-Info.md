@@ -60,12 +60,7 @@ To perform this procedure, complete the following steps:
 1. Select an **access code** from the **Access Code** combo box
 1. Select the **Save** button
 
-
 ## FAQs
-
-**Q: How many steps does the Viewing and Updating General Info procedure involve?**
-
-The Viewing and Updating General Info procedure involves 6 steps. Complete all steps in order and save your changes.
 
 **Q: What does Viewing and Updating General Info cover?**
 

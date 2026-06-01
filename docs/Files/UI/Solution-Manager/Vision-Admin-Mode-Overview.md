@@ -19,8 +19,6 @@ doc_type: conceptual
 
 Vision Admin Mode provides access to all Vision configuration options. From Admin Mode, you can enable editing, adjust Vision-wide settings, define frequency rules for cards, set up automated actions triggered by card state changes, and connect to remote OpCon instances.
 
-## When would you use this section?
-
 - Changing Vision-wide display or behavior settings
 - Defining frequency patterns that control card SLA thresholds
 - Automating an action (such as sending a notification or firing an event) when a card changes state

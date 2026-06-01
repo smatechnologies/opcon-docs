@@ -1,6 +1,6 @@
 ---
 title: Deleting Resources
-description: "Use this procedure to delete Resources in the Enterprise Manager."
+description: "Use this procedure to delete Resources in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Resources in the Enterprise Manager.
+Use this procedure to delete Resources in Enterprise Manager.
 
 To delete a resource, complete the following procedures in order.
 
@@ -28,7 +28,7 @@ To delete a resource, complete the following procedures in order.
 
 To remove the Resource from the Daily Tables, complete the following steps:
 
-1. Select on **Daily Maintenance**
+1. Select **Daily Maintenance**
 2. In the **Daily** frame, select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -61,13 +61,12 @@ In the **Daily Maintenance** screen:
 
 ## Delete the Resource
 
-1. Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1. Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2. Select the **resource** in the **Select Resource** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Resources** toolbar
 
 4. Select **Yes** to confirm or **No** to cancel. Repeat Steps 2–4 for all jobs with the resource to delete
 5. Select **Close ☒** to close the **Resources** screen
-
 
 ## FAQs
 

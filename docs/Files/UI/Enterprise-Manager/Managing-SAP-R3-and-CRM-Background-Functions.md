@@ -1,6 +1,6 @@
 ---
 title: Managing SAP R/3 and CRM Background Functions
-description: "Use this procedure to manage SAP R/3 and CRM Background Functions in the Enterprise Manager."
+description: "Use this procedure to manage SAP R/3 and CRM Background Functions in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to manage SAP R/3 and CRM Background Functions in the Enterprise Manager.
+Use this procedure to manage SAP R/3 and CRM Background Functions in Enterprise Manager.
 
 ## SAP Login
 
@@ -33,8 +33,8 @@ The first time you retrieve data from the SAP system, the User Interface display
 
 To log in to the SAP machine, complete the following steps:
 
-1. Select on **Machine Status** under the **Operation** topic
-2. Right-click on the preferred **SAP R/3 and CRM machine**
+1. Select **Machine Status** under the **Operation** topic
+2. Right-click the preferred **SAP R/3 and CRM machine**
 3. Hover over **SAP Machine** in the right-click menu and select on **SAP Jobs**
 
 ## SAP Machine
@@ -230,7 +230,7 @@ Related Topics
 
 **Q: What does managing sap r/3 and crm background functions involve?**
 
-Managing sap r/3 and crm background functions includes SAP Login, SAP Machine. Access sap r/3 and crm background functions through the Enterprise Manager navigation pane.
+Managing sap r/3 and crm background functions includes SAP Login, SAP Machine. Access sap r/3 and crm background functions through Enterprise Manager navigation pane.
 
 **Q: Who can manage sap r/3 and crm background functions in OpCon?**
 
@@ -238,7 +238,7 @@ Users with the appropriate privileges assigned through their role can manage sap
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

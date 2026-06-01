@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Roles
-description: "Use this procedure to delete Roles in the Enterprise Manager."
+description: "Use this procedure to delete Roles in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Roles in the Enterprise Manager.
+Use this procedure to delete Roles in Enterprise Manager.
 
 To delete a role, complete the following steps:
 
-1.  Select on **Roles** under the **Security** topic. The **Roles** screen displays
+1.  Select **Roles** under the **Security** topic. The **Roles** screen displays
 2.  Select the **role name** in the **Select Role** list
 3.  Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Roles** toolbar
 4.  Select **Yes** to confirm or **No** to cancel

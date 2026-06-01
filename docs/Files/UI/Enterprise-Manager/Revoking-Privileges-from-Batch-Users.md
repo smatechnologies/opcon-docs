@@ -26,19 +26,13 @@ Batch user privileges control which batch users a role can use when submitting j
 
 To revoke privileges, complete the following steps:
 
-1. Select on **Batch Users** under the **Security** topic. The **Batch User** screen displays
+1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
 2. Select the **Manage Privileges** button
 3. Select a **role** in the **Select Role** list, or use the **Find** (Ctrl+F) button to locate the role
 4. Select an **operating system** in the **Target Operating System** list
 5. Select the **batch user(s)** in the **Granted** list box
 6. Select the **left arrow** to move the batch user(s) to the **Revoked** list box
 7. Select **Close ☒** (to the right of the **Batch User Privileges** tab) to close the **Batch User Privileges** screen
-
-## FAQs
-
-**Q: How many steps does the Revoking Privileges from Batch Users procedure involve?**
-
-The Revoking Privileges from Batch Users procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

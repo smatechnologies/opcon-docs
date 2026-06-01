@@ -18,8 +18,6 @@ doc_type: conceptual
 
 OpCon's RBAC model assigns users to roles, and roles hold specific privileges. Privileges control access to administrative functions, schedule and machine management, script management, and department-restricted operations.
 
-## When would you use this section?
-
 - Defining roles for different user groups (operators, developers, administrators)
 - Granting or restricting access to specific schedules, machines, or scripts
 - Auditing privileges for a specific user or role

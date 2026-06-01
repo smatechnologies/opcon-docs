@@ -32,8 +32,6 @@ While a job frequency applies to an individual job, a schedule frequency applies
 You cannot add a schedule frequency to a schedule if any jobs on the schedule already have other frequencies.
 :::
 
-## Configuration Options
-
 ## Multiple Frequencies and Frequency Priority
 
 OpCon supports multiple frequency definitions on jobs and schedules for two reasons:
@@ -161,7 +159,7 @@ The "When to Schedule" options define logical scheduling groups. For each option
 
   - For a one-time request, the frequency qualifies for the requested date and then becomes inactive until it is reset
     :::note
-    If "Every Year" is checked, the database will store 1900 in the year field. The year will be displayed in the Enterprise Manager as 1900 with a option marked for "Every Year." If the "every Year" box is checked, the year portion of the date is ignored.
+    If "Every Year" is checked, the database will store 1900 in the year field. The year will be displayed in Enterprise Manager as 1900 with a option marked for "Every Year." If the "every Year" box is checked, the year portion of the date is ignored.
     :::
     :::note
     This frequency can be useful for recovery jobs. If the date is in the past, the job never qualifies during the schedule build. If the job is required on a given day, it can be added to a schedule manually or through an OpCon event.

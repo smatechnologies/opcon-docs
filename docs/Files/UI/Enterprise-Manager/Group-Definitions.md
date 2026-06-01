@@ -43,7 +43,7 @@ The **<Notification Trigger Type\>** frame provides options for selecting all or
 
 **Q: Where can you find Machines/Schedules/Jobs Group Definitions in OpCon?**
 
-Access Machines/Schedules/Jobs Group Definitions through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Machines/Schedules/Jobs Group Definitions through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

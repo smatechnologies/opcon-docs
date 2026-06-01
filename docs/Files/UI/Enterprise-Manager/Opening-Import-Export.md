@@ -24,11 +24,11 @@ doc_type: procedural
 Continuous is no longer actively developing the original ImpEx application. Continuous now offers a more advanced and reliable solution, Deploy. ImpEx will no longer receive updates; Deploy is its replacement.
 :::
 
-The **Import Export** tool can be opened from within the Enterprise Manager.
+The **Import Export** tool can be opened from within Enterprise Manager.
 
 To open the tool:
 
-Select on **Import Export** under the **External Tools** topic. The **Log in to Schedule Import/Export** dialog displays.
+Select **Import Export** under the **External Tools** topic. The **Log in to Schedule Import/Export** dialog displays.
 
 :::note
 For procedures on creating OpCon User Accounts, refer to [Managing User Accounts](Managing-User-Accounts.md).
@@ -52,15 +52,11 @@ Select the **OK** button to open **Schedule Import/Export**.
 For conceptual information about the Schedule Import/Export, refer to [Schedule Import/Export](../../../utilities/Graphical-Utilities/Schedule-Import_Export.md) in the **Utilities** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How do you open Import Export?**
 
-Follow the steps on this page to open Import Export in the Enterprise Manager.
+Follow the steps on this page to open Import Export in Enterprise Manager.
 
 ## Glossary
 

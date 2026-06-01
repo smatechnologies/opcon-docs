@@ -1,6 +1,6 @@
 ---
 title: Viewing and Exporting History Records
-description: "Use this procedure to view and Exporting History Records in the Enterprise Manager."
+description: "Use this procedure to view and Exporting History Records in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view and Exporting History Records in the Enterprise Manager.
+Use this procedure to view and Exporting History Records in Enterprise Manager.
 
 ## Viewing Records
 
@@ -46,16 +46,11 @@ The **Export Data** button exports records in comma-separated value (.csv) forma
 
 The **Reset View** button resets all selection options to their defaults.
 
-
 ## FAQs
 
-**Q: Where is Viewing and Exporting History Records located in the Enterprise Manager?**
+**Q: Where is Viewing and Exporting History Records located in Enterprise Manager?**
 
-Select **History Management** under the **Management** topic in the Enterprise Manager navigation pane.
-
-**Q: How many steps does the Viewing and Exporting History Records procedure involve?**
-
-The Viewing and Exporting History Records procedure involves 10 steps. Complete all steps in order and save your changes.
+Select **History Management** under the **Management** topic in Enterprise Manager navigation pane.
 
 **Q: What does Viewing and Exporting History Records cover?**
 

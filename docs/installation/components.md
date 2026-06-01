@@ -1,6 +1,6 @@
 ---
 title: Component Installations
-description: "This topic contains instructions for installing the Enterprise Manager and Optional Server components as stand-alone installations."
+description: "This topic contains instructions for installing Enterprise Manager and Optional Server components as stand-alone installations."
 product_area: Installation
 audience: System Administrator
 version_introduced: "[see release notes]"
@@ -19,7 +19,7 @@ doc_type: procedural
 
 ## What Is It?
 
-This topic contains instructions for installing the Enterprise Manager and Optional Server components as stand-alone installations. Select on any of the following links to access the installation instructions:
+This topic contains instructions for installing Enterprise Manager and Optional Server components as stand-alone installations. Select any of the following links to access the installation instructions:
 
 - [Enterprise Manager](#enterprise-manager)
 - [SMA OpCon Configuration Utility](#SMA5)
@@ -30,11 +30,9 @@ This topic contains instructions for installing the Enterprise Manager and Optio
 - [SMA Resource Monitor](#SMA10)
 - [Silent Mode](#Silent)
 
-## Configuration Options
-
 ## Enterprise Manager
 
-The Enterprise Manager (EM) is a rich client application for OpCon. To install the Enterprise Manager, use the following procedures:
+Enterprise Manager (EM) is a rich client application for OpCon. To install Enterprise Manager, use the following procedures:
 
 - [New Installation on Windows](#new-installation-on-windows)
 - [Upgrade Installation on Windows](#upgrade-installation-on-windows)
@@ -44,12 +42,12 @@ The Enterprise Manager (EM) is a rich client application for OpCon. To install 
 
 ### New Installation on Windows
 
-If the Enterprise Manager has never been installed on a Windows machine, complete the procedures in this section to install the EM.
+If Enterprise Manager has never been installed on a Windows machine, complete the procedures in this section to install the EM.
 
 1. Log in as a *Windows user with Local Administrative Rights*
 2. Exit all running applications on the desktop (including OpCon applications)
 3. Download the OpCon Web Installer (OWI) zip file from <https://github.com/smatechnologies/opcon-web-installer>.
-4. Run the **OpCon Web Installer.exe** file to download and open the installer for the Enterprise Manager application. *For a new install, once you determine which package on the **Packages** screen that you would like to install, you will select **Install** from the **Action** list then select the version.*
+4. Run the **OpCon Web Installer.exe** file to download and open the installer for Enterprise Manager application. *For a new install, once you determine which package on the **Packages** screen that you would like to install, you will select **Install** from the **Action** list then select the version.*
 5. Go through each screen to complete the wizard
 6. Select **Finish**
 
@@ -80,7 +78,7 @@ Set up the EM profile to connect to the same database as the SAM as per the proc
    The list of databases will only be made available once each of the previous text boxes have been filled in.
    :::
 7. *(Optional)* Type the *Timeout (sec)* (It is set to 30 by default)
-8. *(Optional)* Select on the **Color** button, select the desired **profile color**, and select **OK**
+8. *(Optional)* Select the **Color** button, select the desired **profile color**, and select **OK**
 9. Select **Next** to advance to the next window
    :::note
    The next window will indicate whether the database connection has tested successfully.
@@ -114,12 +112,12 @@ Continuous recommends automating distribution of a "central" Profiles.xml file w
 
 ### Upgrade Installation on Windows
 
-Continuous recommends configuring Automatic updates for the Enterprise Manager (EM). For more information, refer to [Automatic Updates](#automatic-updates). If a manual upgrade is required, complete the procedures in this section to uninstall and reinstall the EM.
+Continuous recommends configuring Automatic updates for Enterprise Manager (EM). For more information, refer to [Automatic Updates](#automatic-updates). If a manual upgrade is required, complete the procedures in this section to uninstall and reinstall the EM.
 
 1. Log in as a *Windows user with Local Administrative Rights*
 2. Exit all running applications on the desktop (including OpCon applications)
 3. Download the OpCon Web Installer (OWI) zip file from <https://github.com/smatechnologies/opcon-web-installer>.
-4. Run the **OpCon Web Installer.exe** file to download and open the installer for the Enterprise Manager application. *For an upgrade, once you determine which package on the **Packages** screen that you would like to upgrade, you will select **Upgrade** from the **Action** list then select the version.*
+4. Run the **OpCon Web Installer.exe** file to download and open the installer for Enterprise Manager application. *For an upgrade, once you determine which package on the **Packages** screen that you would like to upgrade, you will select **Upgrade** from the **Action** list then select the version.*
 5. Go through each screen to complete the wizard
 6. Select **Finish**
 
@@ -129,7 +127,7 @@ The installation writes the log file named SMA_OpCon_Enterprise_Manager\_<CPUTyp
 
 ### Installation on Linux
 
-Follow the procedure in this section to install the Enterprise Manager on a supported Linux system.
+Follow the procedure in this section to install Enterprise Manager on a supported Linux system.
 
 1. Remove the previous **Enterprise Manager folder**
 2. Extract the **zip file** to the desired location
@@ -137,7 +135,7 @@ Follow the procedure in this section to install the Enterprise Manager on a supp
 
 ### Installation on Mac OSX
 
-Follow the procedure in this section to install the Enterprise Manager on a supported Mac OSX system.
+Follow the procedure in this section to install Enterprise Manager on a supported Mac OSX system.
 
 1. Remove the previous **Enterprise Manager folder**
 2. Download the **EnterpriseManager-macosx.cocoa.x86_64.zip** file from the OpCon release
@@ -154,10 +152,10 @@ Follow the procedure in this section to install the Enterprise Manager on a supp
    3. Rename the *folder* **«jre8»**
    4. Move the *folder* to an appropriate location (e.g., the EnterpriseManager install folder)
 5. Update the **EnterpriseManager.ini** file to point to the **jre8** downloaded in the previous step
-6. Right-click on **EnterpriseManager.app** and select *show packet content*
+6. Right-click **EnterpriseManager.app** and select *show packet content*
 7. In the app folder, drill-down into **Contents/MacOS**
 8. Open the **EnterpriseManager.ini** file
-   1. Add the location of the **jre8** (e.g., a relative path to the Enterprise Manager)
+   1. Add the location of the **jre8** (e.g., a relative path to Enterprise Manager)
    2. Insert a *line 5* with `«-vm»`
    3. Insert a *line 6* with `«../../../jre8/Contents/Home/lib/jli/libjli.dylib»`
    4. Line 7 should now be `«-vmargs»` (which was line 5 before the file was edited)
@@ -167,7 +165,7 @@ You should be able to select and run the **EnterpriseManager.app**. You might se
 
 ### Automatic Updates
 
-The Enterprise Manager (EM) can automatically check for updates. The OpCon administrator should define the update site(s) allowed for the environment. EM supports update sites through an http site, FTP site, or a local network directory.
+Enterprise Manager (EM) can automatically check for updates. The OpCon administrator should define the update site(s) allowed for the environment. EM supports update sites through an http site, FTP site, or a local network directory.
 
 :::caution
 If choosing a local directory, do not place the Update directory inside the directory structure for an EM that will be updated. If the update location will be on the SAM server, Continuous recommends using a path similar to the following: C:\EM Updates.
@@ -185,18 +183,18 @@ On some Windows 7 machines and Windows 2008 R2 Servers, the automatic updates wi
 
 1. Log on to a machine *as a user with access to the EM Update Site(s)*
 2. Delete the **old repository(s)**
-3. Browse to the Enterprise Manager Updates directory on the OpCon Installation media
+3. Browse to Enterprise Manager Updates directory on the OpCon Installation media
 4. Select the **repository.zip** file
 5. Extract the **zip file** to the repository location(s). Be sure to choose the option to "**Use folder names**"
 
-#### Add an Update Site to the Enterprise Manager
+#### Add an Update Site to Enterprise Manager
 
 1. Use menu path: **EnterpriseManager\>Preferences** to open the **Preferences** screen
-2. Select on the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
+2. Select the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
 3. Select **Update Sites**
 4. Select the **Add** button
 5. Select the **Local** button and search for the directory where the repository.zip file was extracted
-6. Select on the **directory** and then select **OK**
+6. Select the **directory** and then select **OK**
 7. Select **OK**
 
 :::note
@@ -208,7 +206,7 @@ The site Administrator can define multiple sites. This may include sites for tes
 An administrator may wish to export several update sites so a list will be available for each user to import.
 
 1. Shift/select or Ctrl/select to select multiple *Update Site Names*
-2. Select on the **Export** button
+2. Select the **Export** button
 3. Check the **location** and **file name** of the export file
 4. Select the **Save**button
 
@@ -221,7 +219,7 @@ This export file can be sent to each user or placed on a shared network location
 If an administrator has made an import file of available update sites, users can import this file to save time
 
 1. Use menu path: **Enterprise Manager\>Preferences** to open the **Preferences** screen
-2. Select on the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
+2. Select the ![Expand Arrow](../Resources/Images/Installation/EMarrowtoexpand.png) **arrowhead** to expand the **Enterprise Manager**
 3. Select **Update Sites**
 4. Select the **Import** button
 5. Locate the correct import file in the **Import Sites** window
@@ -351,7 +349,7 @@ following:
 - Keep in mind that at any time you may reconfigure the API certificate without running the installer again. To register your own self-signed certificate outside of the installer:
   1. Create a self-signed certificate using IIS
   2. Open **certmgr** and make sure that the newly-created certificate is copied to (listed in) the **Trusted Root Certificate Authorities** certificate store
-  3. Select on the new certificate in the list
+  3. Select the new certificate in the list
   4. Switch to the **Details** tab, copy the "Thumbprint" value into a text editor (e.g., Notepad), and remove all the spaces. The value (free of any spaces) will replace <certificate thumbprint\> in the command specified in Step 6
   5. Open the **command prompt** in Administrator mode (*Run as administrator*)
   6. Run the following commands:
@@ -460,7 +458,7 @@ To install the SNMP Agent, complete the following steps:
 Follow these steps to enable the Windows SNMP Service, which is needed to process SNMP Trap notifications.
 
 1. Open the **Control Panel** on your Windows machine
-2. Select on **Programs and Features**
+2. Select **Programs and Features**
 3. Select the **Turn Windows features on or off** link at the left side of the window
 4. Select the **Simple Network Management Protocol (SNMP)** option in the **Windows Features** dialog
 5. Select **OK** to enable the service
@@ -485,10 +483,10 @@ To receive SNMP Trap notifications, follow these steps to configure the SNMP se
 
 Once the SNMP Service properties are configured, complete the steps in this section.
 
-1. Select on **Server Options**
+1. Select **Server Options**
 
-2. Select on the **Notification Settings** tab
-3. Select on **SNMP Notifications Enabled**
+2. Select the **Notification Settings** tab
+3. Select **SNMP Notifications Enabled**
 4. Select **True** in the list (bottom of screen) then select **Update**
 5. Select **Save** on the **Server Options** toolbar
 6. Select **Close** to the right of the **Server Options** tab to close the **Server Options** screen
@@ -526,7 +524,7 @@ The installation writes the log file named SMA_OpCon_Resource_Monitor_Install.lo
 
 #### Modify the SMAResourceMonitor.ini File
 
-1. Right-click on the **Start** button and select **Explore** from the menu
+1. Right-click the **Start** button and select **Explore** from the menu
 2. Browse to the <Configuration Directory\\**SMAResourceMonitor** directory
 3. Find the **SMAResourceMonitor.ini** file
 4. Right-click the **file** and select **Open With**
@@ -578,7 +576,7 @@ Continuous recommends the folder options on the Windows machine be configured to
 If file extensions are not displayed and you create a text document named test.txt, the operating system would create a file named **test.txt.txt**. If SMA Resource Monitor is looking for **test.txt**, it will not be able to find test.txt.txt.
 :::
 
-1. Right-click on the **Start** button and select **Explore** from the menu
+1. Right-click the **Start** button and select **Explore** from the menu
 2. Use menu path: **Tools \> Folder Options**
 3. Select the **View** tab
 4. Make sure the **Hide extensions of known file types** option is not selected
@@ -705,33 +703,33 @@ If you chose \_**siType=2**, the complete list of features that can be defined i
 
 |Feature|Description|
 |--- |--- |
-|MS_DynamicsAX_2009_EMPlugin_x64|Installs the Enterprise Manager x64 plug-in for MS Dynamics AX 2009 Connector|
-|MS_DynamicsAX_2009_EMPlugin_x86|Installs the Enterprise Manager x86 plug-in for MS Dynamics AX 2009 Connector|
+|MS_DynamicsAX_2009_EMPlugin_x64|Installs Enterprise Manager x64 plug-in for MS Dynamics AX 2009 Connector|
+|MS_DynamicsAX_2009_EMPlugin_x86|Installs Enterprise Manager x86 plug-in for MS Dynamics AX 2009 Connector|
 #### SMA OpCon MS Dynamics AX 2012 Connector
 
 |Feature|Description|
 |--- |--- |
-|MS_DynamicsAX_2012_EMPlugin_x64|Installs the Enterprise Manager plug-in for MS Dynamics AX 2012 Connector|
-|MS_DynamicsAX_2012_EMPlugin_x86|Installs the Enterprise Manager plug-in for MS Dynamics AX 2012 Connector|
+|MS_DynamicsAX_2012_EMPlugin_x64|Installs Enterprise Manager plug-in for MS Dynamics AX 2012 Connector|
+|MS_DynamicsAX_2012_EMPlugin_x86|Installs Enterprise Manager plug-in for MS Dynamics AX 2012 Connector|
 
 #### SMA OpCon MS Dynamics AX 2012 R3 Connector
 
 |Feature|Description|
 |--- |--- |
-|MS_DynamicsAX_2012_R3_EMPlugin_x64|Installs the Enterprise Manager plug-in for MS Dynamics AX 2012 R3 Connector|
-|MS_DynamicsAX_2012_R3_EMPlugin_x86|Installs the Enterprise Manager plug-in for MS Dynamics AX 2012 R3 Connector|
+|MS_DynamicsAX_2012_R3_EMPlugin_x64|Installs Enterprise Manager plug-in for MS Dynamics AX 2012 R3 Connector|
+|MS_DynamicsAX_2012_R3_EMPlugin_x86|Installs Enterprise Manager plug-in for MS Dynamics AX 2012 R3 Connector|
 
 #### SMA OpCon MS Orchestrator Connector
 
 |Feature|Description|
 |--- |--- |
-|MS_Orchestrator_EMPlugin|Installs the Enterprise Manager plug-in for the SMA MS Orchestrator Connector|
+|MS_Orchestrator_EMPlugin|Installs Enterprise Manager plug-in for the SMA MS Orchestrator Connector|
 
 #### SMA OpCon MS SQL Connector
 
 |Feature|Description|
 |--- |--- |
-|SMA_MSSQL_EMPlugin|Installs the Enterprise Manager plug-in for the MS SQL Connector|
+|SMA_MSSQL_EMPlugin|Installs Enterprise Manager plug-in for the MS SQL Connector|
 
 #### SMA OpCon SAM
 
@@ -743,29 +741,29 @@ If you chose \_**siType=2**, the complete list of features that can be defined i
 
 |Feature|Description|
 |--- |--- |
-|SAP_Business_Objects \_EMPlugin_x64|Installs the Enterprise Manager plug-in for the SAP Business Objects Connector|
-|SAP_Business_Objects \_EMPlugin_x86|Installs the Enterprise Manager plug-in for the SAP Business Objects Connector|
+|SAP_Business_Objects \_EMPlugin_x64|Installs Enterprise Manager plug-in for the SAP Business Objects Connector|
+|SAP_Business_Objects \_EMPlugin_x86|Installs Enterprise Manager plug-in for the SAP Business Objects Connector|
 
 #### SMA OpCon SAP Data Services Connector
 
 |Feature|Description|
 |--- |--- |
-|SAP_Data_Services \_EMPlugin_x64|Installs the Enterprise Manager plug-in for the SAP Data Services Connector|
-|SAP_Data_Services \_EMPlugin_x86|Installs the Enterprise Manager plug-in for the SAP Data Services Connector|
+|SAP_Data_Services \_EMPlugin_x64|Installs Enterprise Manager plug-in for the SAP Data Services Connector|
+|SAP_Data_Services \_EMPlugin_x86|Installs Enterprise Manager plug-in for the SAP Data Services Connector|
 
 #### SMA OpCon VMWare Connector
 
 |Feature|Description|
 |--- |--- |
-|VMWare_EMPlugin_x64|Installs the Enterprise Manager plug-in for the VMWare Connector|
-|VMWare_EMPlugin_x86|Installs the Enterprise Manager plug-in for the VMWare Connector|
+|VMWare_EMPlugin_x64|Installs Enterprise Manager plug-in for the VMWare Connector|
+|VMWare_EMPlugin_x86|Installs Enterprise Manager plug-in for the VMWare Connector|
 
 #### SMA OpCon Web Services (RESTful) Connector
 
 |Feature|Description|
 |--- |--- |
-|Web_Services_RESTful \_EMPlugin_x64|Installs the Enterprise Manager plug-in for the Web Services (RESTful) Connector|
-|Web_Services_RESTful_EMPlugin_x86|Installs the Enterprise Manager plug-in for the Web Services (RESTful) Connector|
+|Web_Services_RESTful \_EMPlugin_x64|Installs Enterprise Manager plug-in for the Web Services (RESTful) Connector|
+|Web_Services_RESTful_EMPlugin_x86|Installs Enterprise Manager plug-in for the Web Services (RESTful) Connector|
 
 ### Silent Install Parameters
 
@@ -838,7 +836,7 @@ The complete list of parameters that can be defined by a space-separated string 
 |INSTANCENAME|Appends an instance name description to the agent Long Service name and Service Description per instance.|
 |PATH_OPCONXPS|Specifies the physical path to the location of the configuration files to be migrated to PROGRAMDATA if different from the folder specified for installation.|
 |PATH_OUTPUT|Determines if the installation will configure a custom physical path for the location where the programs will write their output files. If specified, this must be a path on a local hard drive.|
-|PORT_NUMBER_JORS|Defines the socket number used for communicating job output information with the Enterprise Manager. Default value: 13110|
+|PORT_NUMBER_JORS|Defines the socket number used for communicating job output information with Enterprise Manager. Default value: 13110|
 |PORT_NUMBER_SAM|Defines the port number through which the agent and the SMANetCom communicate. Default value: 13100|
 
 ### SMA OpCon Agent for SAP BW
@@ -848,7 +846,7 @@ The complete list of parameters that can be defined by a space-separated string 
 |INSTANCENAME|Appends an instance name description to the agent Long Service name and Service Description per instance.|
 |PATH_OPCONXPS|Specifies the physical path to the location of the configuration files to be migrated to PROGRAMDATA if different from the folder specified for installation.|
 |PATH_OUTPUT|Determines if the installation will configure a custom physical path for the location where the programs will write their output files. If specified, this must be a path on a local hard drive.|
-|PORT_NUMBER_JORS|Defines the socket number used for communicating job output information with the Enterprise Manager. Default value: 13110|
+|PORT_NUMBER_JORS|Defines the socket number used for communicating job output information with Enterprise Manager. Default value: 13110|
 |PORT_NUMBER_SAM|Defines the port number through which the agent and the SMANetCom communicate. Default value: 13100|
 
 ### SMA OpCon Agent for SQL
@@ -858,7 +856,7 @@ The complete list of parameters that can be defined by a space-separated string 
 |INSTANCENAME|Appends an instance name description to the agent Long Service name and Service Description per instance.|
 |PATH_OPCONXPS|Specifies the physical path to the location of the configuration files to be migrated to PROGRAMDATA if different from the folder specified for installation.|
 |PATH_OUTPUT|Determines if the installation will configure a custom physical path for the location where the programs will write their output files. If specified, this must be a path on a local hard drive.|
-|PORT_NUMBER_JORS|Defines the socket number used for communicating job output information with the Enterprise Manager. Default value: 13110|
+|PORT_NUMBER_JORS|Defines the socket number used for communicating job output information with Enterprise Manager. Default value: 13110|
 |PORT_NUMBER_SAM|Defines the port number through which the agent and the SMANetCom communicate. Default value: 13100|
 
 ### SMA OpCon Resource Monitor
@@ -914,8 +912,8 @@ The complete list of parameters that can be defined by a space-separated string 
 
 ### Common Tasks
 
-- **New EM installation on Windows**: Download the OpCon Web Installer (OWI) from <https://github.com/smatechnologies/opcon-web-installer>, run `OpCon Web Installer.exe`, select the Enterprise Manager component with the **Install** action, and complete the wizard.
-- **Create an EM database connection profile**: Open the Enterprise Manager; on the Database Connection Profile screen, enter the profile name, authentication credentials (`opconui`), SQL Server name or IP, and select the database. Test the connection before saving.
+- **New EM installation on Windows**: Download the OpCon Web Installer (OWI) from <https://github.com/smatechnologies/opcon-web-installer>, run `OpCon Web Installer.exe`, select Enterprise Manager component with the **Install** action, and complete the wizard.
+- **Create an EM database connection profile**: Open Enterprise Manager; on the Database Connection Profile screen, enter the profile name, authentication credentials (`opconui`), SQL Server name or IP, and select the database. Test the connection before saving.
 - **Distribute EM connection profiles**: Copy the `profiles.xml` file from `<user directory>\.enterpriseManager\` on a configured machine to the same path on other EM machines. Back up existing profiles before overwriting.
 
 ### Alerts and Log Files
@@ -930,7 +928,7 @@ The complete list of parameters that can be defined by a space-separated string 
 
 **EM database connection test fails during profile setup** — If the connection test in the EM profile wizard does not succeed, the wizard cannot proceed — Select the Back button, correct the server name, authentication method, or credentials, and test again; the database list only populates after all previous fields are filled in correctly.
 
-**Enterprise Manager cannot log in because no database connection profile exists** — After a new EM installation, users cannot log in until a Database Connection Profile for the OpCon database is created on that machine — Create a profile using the Database Connection Profile screen that appears when the Enterprise Manager is first opened, or via the procedure to Create a Profile for the EM to Connect to the Database.
+**Enterprise Manager cannot log in because no database connection profile exists** — After a new EM installation, users cannot log in until a Database Connection Profile for the OpCon database is created on that machine — Create a profile using the Database Connection Profile screen that appears when Enterprise Manager is first opened, or via the procedure to Create a Profile for the EM to Connect to the Database.
 
 **Automatic EM updates fail on some Windows 7 and Windows 2008 R2 machines due to insufficient privileges** — The automatic update mechanism may fail because the EnterpriseManager folder does not grant sufficient write permissions to the logged-in user — Modify the permissions on the EnterpriseManager folder to grant Full Control to Creator Owner, Users, and the LogonUser accounts.
 
@@ -938,11 +936,11 @@ The complete list of parameters that can be defined by a space-separated string 
 
 **Q: What components can be installed as stand-alone installations?**
 
-Stand-alone component installations include the Enterprise Manager, SMA OpCon Configuration Utility, SMA OpCon Core, SMA OpCon DDI, SMA Resource Monitor, SMA OpCon SNMP Agent, and SMA OpCon Schedule Import Export (Deprecated).
+Stand-alone component installations include Enterprise Manager, SMA OpCon Configuration Utility, SMA OpCon Core, SMA OpCon DDI, SMA Resource Monitor, SMA OpCon SNMP Agent, and SMA OpCon Schedule Import Export (Deprecated).
 
-**Q: On what platforms can the Enterprise Manager be installed?**
+**Q: On what platforms can Enterprise Manager be installed?**
 
-The Enterprise Manager can be installed on Windows (new or upgrade), Linux, and Mac OSX. It also supports automatic updates.
+Enterprise Manager can be installed on Windows (new or upgrade), Linux, and Mac OSX. It also supports automatic updates.
 
 **Q: Is there a silent mode for OpCon component installation?**
 

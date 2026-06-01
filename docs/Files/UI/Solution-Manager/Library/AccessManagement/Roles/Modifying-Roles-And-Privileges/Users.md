@@ -40,15 +40,7 @@ For conceptual help, see:
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: What does Role Users do?**
-
-viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Role Users in OpCon?**
 

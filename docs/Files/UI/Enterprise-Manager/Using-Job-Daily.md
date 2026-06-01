@@ -58,10 +58,6 @@ The **Job Daily** editor has a toolbar for managing jobs in daily. Select any ic
     -   [Adding Documentation](Editing-Job-Automation-Components.md#Adding5)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Job Daily?**

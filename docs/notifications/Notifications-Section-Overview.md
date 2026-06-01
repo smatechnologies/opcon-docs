@@ -19,8 +19,6 @@ doc_type: reference
 
 OpCon notifications fire when jobs or schedules reach specific status conditions. Notification triggers define the condition (job failed, schedule completed, etc.) and the delivery action (email, text message, SNMP trap, Windows Event Log, etc.). Groups and categories organize triggers; escalation rules ensure critical alerts are not missed.
 
-## When would you use this section?
-
 - Setting up email or text alerts for failed jobs
 - Configuring SNMP traps or Windows Event Log entries for system monitoring
 - Defining escalation rules so alerts are re-sent if not acknowledged

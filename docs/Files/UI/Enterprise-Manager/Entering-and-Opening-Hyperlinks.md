@@ -26,7 +26,7 @@ The Documentation frame in Job Master supports hyperlinks — file paths or URLs
 
 To enter and open a hyperlink, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Documentation** tab in the **Job Properties** frame
@@ -34,12 +34,6 @@ To enter and open a hyperlink, complete the following steps:
 6.  Select the file path or URL. The **Open** dialog displays
 7.  Select **Yes** to open the file
 :::
-
-## FAQs
-
-**Q: How many steps does the Entering and Opening Hyperlinks in the Documentation Frame procedure involve?**
-
-The Entering and Opening Hyperlinks in the Documentation Frame procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

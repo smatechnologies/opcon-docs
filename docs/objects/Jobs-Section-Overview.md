@@ -19,8 +19,6 @@ doc_type: conceptual
 
 A job is the individual unit of work in OpCon. Jobs are assigned to a schedule, run on a target agent, and connect to other jobs through dependencies. The job object model covers all supported job types, the distinction between master and daily job definitions, and the full set of automation components that control job behavior.
 
-## When would you use this section?
-
 - Designing a new automated workflow and choosing the right job type
 - Understanding how master job definitions relate to daily instances
 - Adding a new platform (SAP, IBM i, UNIX, SQL, etc.) and needing job type details

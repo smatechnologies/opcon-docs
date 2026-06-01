@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Jobs
-description: "Use this procedure to copy Jobs in the Enterprise Manager."
+description: "Use this procedure to copy Jobs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Jobs in the Enterprise Manager.
+Use this procedure to copy Jobs in Enterprise Manager.
 
 To copy a job, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select a **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the **Copy** button on the **Job Master** toolbar. The **Copy** dialog displays

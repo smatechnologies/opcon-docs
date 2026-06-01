@@ -1,6 +1,6 @@
 ---
 title: Logging In/Out
-description: "Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions."
+description: "Logging in to Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,13 +20,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Logging in to the Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions.
+Logging in to Enterprise Manager (EM) involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions.
 
 Upon initial installation, the only valid user is **ocadm**, the full administrative user. The OpCon administrator should log in as **ocadm** and [create individual accounts](Working-with-Security.md#chapter_4_-_security_3886353224_useraccounts) for all users.
 
-## Log in to the Enterprise Manager
+## Log in to Enterprise Manager
 
-1. Open the Enterprise Manager application (e.g., **Start \> Programs \> OpConxps \> Enterprise Manager**)
+1. Open Enterprise Manager application (e.g., **Start \> Programs \> OpConxps \> Enterprise Manager**)
 2. In the **Username** text box:
    - For manual login, enter a case-sensitive User Login ID (e.g., ocadm)
    - For first-time automatic login, leave this field blank. The EM retrieves your network login and passes it to the database
@@ -43,7 +43,7 @@ For procedures on creating OpCon user accounts, refer to [Managing User Accounts
 For automatic login, Enterprise Manager remembers your profile and logs in automatically on the next open.
 :::
 
-To log in to the Enterprise Manager, complete the following steps:
+To log in to Enterprise Manager, complete the following steps:
 
 4. Select a profile:
    - **No profile defined:** Select the **Add** button to create one. Refer to [Managing Connection Profiles](Managing-Connection-Profiles.md)
@@ -59,7 +59,7 @@ The profile list is sorted. Entering the first letter of a profile name jumps to
 As a security measure, some users are presented with a Security message after login. Select **Accept** to proceed or **Decline** to close the application. This applies to both manual and automatic login users. The Security message is configured under the Generals tab in the Server Options editor. Refer to the [Login Security Message](../../../administration/server-options.md#general-settings) parameter in the Concepts online help.
 :::
 
-## Log out of the Enterprise Manager
+## Log out of Enterprise Manager
 
 Select **EnterpriseManager \> Logout** at the top of the application to disconnect from the current database.
 
@@ -67,7 +67,7 @@ Select **EnterpriseManager \> Logout** at the top of the application to disconne
 
 ### Authentication
 
-Logging in to the Enterprise Manager involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions. Manual login requires a case-sensitive User Login ID and password. Automatic login uses the user's network account; the EM retrieves the network login and passes it to the database automatically, remembering the profile for subsequent logins.
+Logging in to Enterprise Manager involves a dual login: the EM connects to SQL Server with a valid database user, then checks OpCon Role privileges to verify access to OpCon functions. Manual login requires a case-sensitive User Login ID and password. Automatic login uses the user's network account; the EM retrieves the network login and passes it to the database automatically, remembering the profile for subsequent logins.
 
 Upon initial installation, the only valid user is ocadm, the full administrative user. The OpCon administrator should log in as ocadm first and create individual accounts for all other users before granting shared access.
 
@@ -77,19 +77,11 @@ A configurable security message can be displayed to users after login. Users mus
 
 After successful database authentication, OpCon Role privileges are checked to determine which functions the user can access. Users with no role assigned cannot log in.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Logging In/Out procedure involve?**
-
-The Logging In/Out procedure involves 5 steps. Complete all steps in order and save your changes.
 
 **Q: What does Logging In/Out cover?**
 
-This page covers Log in to the Enterprise Manager, Log out of the Enterprise Manager.
+This page covers Log in to Enterprise Manager, Log out of Enterprise Manager.
 
 ## Glossary
 

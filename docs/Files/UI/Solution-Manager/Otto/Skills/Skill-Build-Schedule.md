@@ -55,16 +55,11 @@ The **Build Schedule** skill builds a schedule for a specified date, places it o
 | Schedule Name | The name of the daily schedule to build | — | — |
 ## FAQs
 
-**Q: How many steps does the Build Schedule procedure involve?**
-
-The Build Schedule procedure involves 3 steps. Complete all steps in order and save your changes.
-
 **Q: What does Build Schedule cover?**
 
 This page covers Skill Details, Example.
 
 ## Glossary
-
 
 **Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 

@@ -29,10 +29,6 @@ The **Events** tab in the [**Job Master**](Using-Job-Master.md) editor allows yo
 
 For conceptual information, refer to [Events](../../../job-components/events.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Job Events do?**
@@ -41,7 +37,7 @@ The **Events** tab in the [**Job Master**](Using-Job-Master.md) editor allows yo
 
 **Q: Where can you find Job Events in OpCon?**
 
-Access Job Events through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Job Events through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Script Runners
-description: "Use this procedure to edit Script Runners in the Enterprise Manager."
+description: "Use this procedure to edit Script Runners in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Script Runners in the Enterprise Manager.
+Use this procedure to edit Script Runners in Enterprise Manager.
 
 To edit a script runner, complete the following steps:
 
-1.  Select on **Runners** under the **Scripts** topic. The **Script Runners** screen displays
+1.  Select **Runners** under the **Scripts** topic. The **Script Runners** screen displays
 2.  Select the **script runner** to edit
 3.  Select **Edit Runner** on the toolbar. The **Edit Runner** dialog displays
 4.  Modify the name, OS, type, and/or command

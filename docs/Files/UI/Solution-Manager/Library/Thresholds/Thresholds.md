@@ -35,15 +35,7 @@ The **Name** field is unique across Resources _and_ Thresholds
 Select the **Cross References** button to see the list of master and daily jobs that use a particular Threshold:
 ![Threshold CrossReferences](../../../../../Resources/Images/SM/Library/Thresholds/Threshold-CrossReference.png "Threshold Cross References")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: What does Thresholds do?**
-
-viewport: width=device-width, initial-scale=1.0
 
 **Q: Where can you find Thresholds in OpCon?**
 

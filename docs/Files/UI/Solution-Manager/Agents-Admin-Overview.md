@@ -19,8 +19,6 @@ doc_type: conceptual
 
 The Agents administration section lets you monitor all registered agents, start and stop communication, and perform bulk status updates. This is the operational view for agent health management.
 
-## When would you use this section?
-
 - An agent shows as offline and you need to investigate or restart communication
 - You need to perform a bulk status update across multiple agents
 - You are monitoring which agents are running and their current job load

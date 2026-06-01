@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Schedule Completion Events
-description: "Use this procedure to delete Schedule Completion Events in the Enterprise Manager."
+description: "Use this procedure to delete Schedule Completion Events in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,13 +22,13 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Schedule Completion Events in the Enterprise Manager.
+Use this procedure to delete Schedule Completion Events in Enterprise Manager.
 
 To delete a schedule completion event, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select the **schedule** in the **Schedule Selection** list
-3.  Select on the **Event** tab in the **Schedule Details** frame
+3.  Select the **Event** tab in the **Schedule Details** frame
 4.  Select the **event** in the **Schedule Completion Events** list
 5.  Select **Remove**
 6.  Select **Yes** to confirm or **No** to cancel

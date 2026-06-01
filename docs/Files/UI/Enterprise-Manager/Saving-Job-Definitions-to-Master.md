@@ -28,7 +28,7 @@ The **Save Job Definition to Master** feature does not include any other informa
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
 4. Select the **job**
@@ -36,16 +36,6 @@ To perform this procedure, complete the following steps:
 6. Select the **Save Job Definition to Master** button on the **Job Daily** toolbar
 7. Select **OK** to copy the job details to the Master definition
 8. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-## FAQs
-
-**Q: How many steps does the Saving Job Definitions to Master procedure involve?**
-
-The Saving Job Definitions to Master procedure involves 8 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

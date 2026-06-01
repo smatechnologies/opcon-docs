@@ -1,6 +1,6 @@
 ---
 title: Adding Schedules
-description: "Use this procedure to add Schedules in the Enterprise Manager."
+description: "Use this procedure to add Schedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Schedules in the Enterprise Manager.
+Use this procedure to add Schedules in Enterprise Manager.
 
 To add a schedule, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select ![Add](../../../Resources/Images/EM/EMadd.png) **Add** on the **Schedule Master** toolbar
 3. Enter a *schedule name* in the **Name** text box
 4. *(Optional)* Enter *any text* in the **Documentation** text box

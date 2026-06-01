@@ -1,6 +1,6 @@
 ---
 title: Deleting Remote Instances
-description: "Use this procedure to delete Remote Instances in the Enterprise Manager."
+description: "Use this procedure to delete Remote Instances in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to delete Remote Instances in the Enterprise Manager.
+Use this procedure to delete Remote Instances in Enterprise Manager.
 
 :::note
 There are no cross-reference checks on remote instance deletion. If a schedule, job, or machine references a deleted remote instance in a complex expression, that expression becomes orphaned.
@@ -28,7 +28,7 @@ There are no cross-reference checks on remote instance deletion. If a schedule, 
 
 To delete a remote instance, complete the following steps:
 
-1. Select on **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
+1. Select **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
 2. Select the **remote instance** in the **Selection** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Remote Instances** toolbar
 4. Select **Yes** to confirm, or **No** to cancel

@@ -56,7 +56,7 @@ To update SAP BW Job Task Details, complete the following steps:
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
 
    :::note
-   As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+   As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
    :::
 
    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(IBMi).png "Job Summary Tab in Operations")
@@ -110,10 +110,6 @@ Select the **Save** button to save your changes.
 | Description | Text matching the description of the desired Process Chain. | — | — |
 
 ## FAQs
-
-**Q: How many steps does the Updating SAP BW Job Details procedure involve?**
-
-The Updating SAP BW Job Details procedure involves 10 steps. Complete all steps in order and save your changes.
 
 **Q: What does Updating SAP BW Job Details cover?**
 

@@ -120,15 +120,7 @@ If the browser session expires, a pop-up displays so you can log back in without
 
 Select the **Logout** button in the **Navigation** menu to log out.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
-
-**Q: How many steps does the Logging In/Out procedure involve?**
-
-The Logging In/Out procedure involves 16 steps. Complete all steps in order and save your changes.
 
 **Q: What does Logging In/Out cover?**
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Showing Schedule Frequencies Only
-description: "Use this procedure to show Schedule Frequencies Only in the Enterprise Manager."
+description: "Use this procedure to show Schedule Frequencies Only in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,23 +22,17 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to show Schedule Frequencies Only in the Enterprise Manager.
+Use this procedure to show Schedule Frequencies Only in Enterprise Manager.
 
 To show schedule frequencies, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Select the **Show only Schedules using this Frequency** option
 3. Select the desired frequency name
 4. View the schedules using the selected frequency (if any)
 5. Clear the **Show only Schedules using this Frequency** option
 6. Select **Close ☒** to close the **Frequency Manager** screen
 :::
-
-## FAQs
-
-**Q: How many steps does the Showing Schedule Frequencies Only procedure involve?**
-
-The Showing Schedule Frequencies Only procedure involves 6 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

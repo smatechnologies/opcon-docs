@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Machine Groups
-description: "Use this procedure to copy Machine Groups in the Enterprise Manager."
+description: "Use this procedure to copy Machine Groups in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Machine Groups in the Enterprise Manager.
+Use this procedure to copy Machine Groups in Enterprise Manager.
 
 To copy a machine group, complete the following steps:
 
-1.  Select on **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
+1.  Select **Machine Groups** under the **Administration** topic. The **Machine Groups** screen displays
 2.  Select the **machine group** in the **Select Machine Group** list, or select the **Find** button to locate the machine group
 3.  Select the **Copy** button on the **Machines Groups** toolbar. The **Copy Machine Group** dialog displays
 4.  Select the **OK** button
@@ -43,7 +43,6 @@ Copying machine groups is useful when you want to reuse an existing configuratio
 Yes. The copy must be saved with a new unique name to distinguish it from the original machine groups record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

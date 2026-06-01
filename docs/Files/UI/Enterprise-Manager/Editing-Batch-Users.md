@@ -1,6 +1,6 @@
 ---
 title: Editing Batch Users
-description: "Use this procedure to edit Batch Users in the Enterprise Manager."
+description: "Use this procedure to edit Batch Users in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Batch Users in the Enterprise Manager.
+Use this procedure to edit Batch Users in Enterprise Manager.
 
 To edit a batch user, complete the following steps:
 
-1. Select on **Batch Users** under the **Security** topic
+1. Select **Batch Users** under the **Security** topic
 2. Select the *OS* from the **Select the target OS** list
 3. Select the *batch user* to edit
 4. Enter the *changes*

@@ -1,6 +1,6 @@
 ---
 title: Editing Job Master Details
-description: "To edit Job Master Details in the Enterprise Manager, complete the following steps: 1."
+description: "To edit Job Master Details in Enterprise Manager, complete the following steps: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,9 +20,9 @@ doc_type: procedural
 
 ## What Is It?
 
-To edit Job Master Details in the Enterprise Manager, complete the following steps:
+To edit Job Master Details in Enterprise Manager, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Ensure the **Job Details** tab is in focus in the **Job Properties** frame

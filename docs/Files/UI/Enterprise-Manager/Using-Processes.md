@@ -22,10 +22,6 @@ doc_type: procedural
 
 The **Processes** link opens the **Processes** page in Solution Manager. For more information, refer to [Managing Daily Processes](../Solution-Manager/Managing-Daily-Processes.md) in the **Solution Manager** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Processes?**

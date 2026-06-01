@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Schedules
-description: "Use this procedure to copy Schedules in the Enterprise Manager."
+description: "Use this procedure to copy Schedules in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Schedules in the Enterprise Manager.
+Use this procedure to copy Schedules in Enterprise Manager.
 
 To copy a schedule, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select a **schedule** in the **Schedule** list, or select **Find** to locate the schedule
 3.  Select **Copy Schedule** on the **Schedule Master** toolbar. The **Copy Schedule** dialog displays
 4.  Enter the *New Schedule Name*

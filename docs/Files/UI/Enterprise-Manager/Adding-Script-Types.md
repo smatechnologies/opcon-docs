@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Script Types
-description: "Use this procedure to add Script Types in the Enterprise Manager."
+description: "Use this procedure to add Script Types in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to add Script Types in the Enterprise Manager.
+Use this procedure to add Script Types in Enterprise Manager.
 
 To add a script type, complete the following steps:
 
-1.  Select on **Types** under the **Scripts** topic. The **Script Types** screen displays
+1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
 2.  Select **Add Type** on the toolbar. The **Add Script Type** dialog displays
 3.  Enter a *name* for the script type (e.g., PERL)
 4.  *(Optional)* Enter the *file extension* for the script type (e.g., pl)
@@ -46,7 +46,6 @@ After completing the required fields, select the **Save** button on the toolbar 
 No. The Documentation field is optional. You can enter notes about the script types to track its purpose, but it is not required to save the record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

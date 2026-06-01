@@ -1,6 +1,6 @@
 ---
 title: Setting Preferences for Log Viewer
-description: "Use this procedure to set Preferences for Log Viewer in the Enterprise Manager."
+description: "Use this procedure to set Preferences for Log Viewer in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,14 +20,14 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Log Viewer in the Enterprise Manager.
+Use this procedure to set Preferences for Log Viewer in Enterprise Manager.
 
 To set the preferences, complete the following steps:
 
-1. Open the Enterprise Manager application
+1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select on **Log Viewer**. The **Log Viewer** settings display to the right
+3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
+4. Select **Log Viewer**. The **Log Viewer** settings display to the right
 5. *(Optional)* Configure any of the following options:
    - **Remove empty lines** – removes empty lines from log file displays (selected by default)
    - **Use background colors** – applies different background colors per log file (selected by default)
@@ -37,12 +37,6 @@ To set the preferences, complete the following steps:
    - **Background color** – sets the background color for the selected log file; select **OK** to confirm
 6. *(Optional)* Select a **Regular Expression** word to change its color, then select a color and select **OK**
 7. Select **Apply**, then **OK** to save and close the **Preferences** dialog
-
-## FAQs
-
-**Q: How many steps does the Setting Preferences for Log Viewer procedure involve?**
-
-The Setting Preferences for Log Viewer procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

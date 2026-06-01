@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Service Requests
-description: "Select on one of the buttons at top-right corner of each Service Request to edit, copy, or delete that Service Request."
+description: "Select one of the buttons at top-right corner of each Service Request to edit, copy, or delete that Service Request."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Select on one of the buttons at top-right corner of each Service Request to [edit](Editing-Service-Requests.md), [copy](Copying-Service-Requests.md), or [delete](Deleting-Service-Requests.md) that Service Request.
+Select one of the buttons at top-right corner of each Service Request to [edit](Editing-Service-Requests.md), [copy](Copying-Service-Requests.md), or [delete](Deleting-Service-Requests.md) that Service Request.
 
 ### Service Request Button Management Options
 

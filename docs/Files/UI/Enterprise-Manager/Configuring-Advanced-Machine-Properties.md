@@ -32,25 +32,25 @@ To configure an advanced machine property:
 
 To modify advanced machine parameters, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1. Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2. Select the **machine** in the **Select Machine** list
 3. Right-click over the graphic to enable the menu in the **Communication Status** frame
-4. Select on **Stop Communication** to put the agent in a stopped state while changes are made
-5. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
-6. Select on the appropriate **Machine Properties** tab
-7. Select on the **machine property**
+4. Select **Stop Communication** to put the agent in a stopped state while changes are made
+5. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+6. Select the appropriate **Machine Properties** tab
+7. Select the **machine property**
 8. Enter or select the *new value* in the **\<Property Name\>** list
 9. Select the **Update** button to save the change, or select **Defaults** to restore the parameter to system defaults
 10. Repeat Steps 7–9 to modify additional parameters
 11. Select the **Save** button
 12. Right-click over the graphic to enable the menu in the **Communication Status** frame
-13. Select on **Start Communication** to put the agent in a started state
+13. Select **Start Communication** to put the agent in a started state
 
 ### Add Available Properties
 
 To add available properties to the machine, complete the following steps:
 
-1. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+1. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
 2. Select **Available Property** in the **Administrative Machine Information** tab
 3. Select the **Add** button. The **Add** dialog displays
 4. Enter a *name* and a *value* (e.g., ProgramPath="C:\\Program Files\\OpConxps\\Utilities")
@@ -63,8 +63,8 @@ To add available properties to the machine, complete the following steps:
 
 To edit existing available properties, complete the following steps:
 
-1. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
-2. Select on **Available Property** in the **Administrative Machine Information** tab
+1. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+2. Select **Available Property** in the **Administrative Machine Information** tab
 3. Select the **Edit** button. The **Edit** dialog displays
 4. Edit the *name* and the *value*
 5. Select the **OK** button
@@ -76,8 +76,8 @@ To edit existing available properties, complete the following steps:
 
 To configure the JORS port number, complete the following steps:
 
-1. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
-2. Select on **JORS Port Number**
+1. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+2. Select **JORS Port Number**
 3. Enter the *JORS Port Number* in the text box
 4. Select the **Update** button, then select the **Save** button
 
@@ -85,9 +85,9 @@ To configure the JORS port number, complete the following steps:
 
 To remove available properties from the machine, complete the following steps:
 
-1. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
-2. Select on the **Available Property** in the **Administrative Machine Information** tab
-3. Select on the **property** to remove and select the **Remove** button
+1. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+2. Select the **Available Property** in the **Administrative Machine Information** tab
+3. Select the **property** to remove and select the **Remove** button
 4. Select the **Update** button to save, or select **Defaults** to reset the **Available Property** parameter to the system default
 5. Repeat Steps 3–4 until all available properties to be removed have been removed
 6. Select the **Save** button
@@ -97,15 +97,15 @@ To remove available properties from the machine, complete the following steps:
 To configure advanced properties for an SAP BW machine, complete the following steps:
 
 1. Select the **SAP BW machine** in the **Select Machine** list
-2. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
-3. Select on the **Communications Settings** tab
-4. Select on the **TCP/IP Address** parameter and enter the appropriate **IP Address** for the SAP BW machine
+2. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+3. Select the **Communications Settings** tab
+4. Select the **TCP/IP Address** parameter and enter the appropriate **IP Address** for the SAP BW machine
 5. Select the **Update** button
-6. Select on the **SAP BW Details** tab
-7. Select on the **RFC Trace** parameter and set to **On** (default is **Off**) if required. Select the **Update** button
-8. Select on **System Number**, enter the *two-digit SAP Business Warehouse system number*, then select the **Update** button
-9. Select on the **Gateway**, enter the *full connection string* for the SAP Business Warehouse system, then select the **Update** button
-10. Select on the **Customer ID**, enter the *three-digit SAP BW Customer ID*, then select the **Update** button
+6. Select the **SAP BW Details** tab
+7. Select the **RFC Trace** parameter and set to **On** (default is **Off**) if required. Select the **Update** button
+8. Select **System Number**, enter the *two-digit SAP Business Warehouse system number*, then select the **Update** button
+9. Select the **Gateway**, enter the *full connection string* for the SAP Business Warehouse system, then select the **Update** button
+10. Select the **Customer ID**, enter the *three-digit SAP BW Customer ID*, then select the **Update** button
 11. Select the **Save** button
 
 ### Configure SAP R/3 and CRM Machine Properties
@@ -113,14 +113,14 @@ To configure advanced properties for an SAP BW machine, complete the following s
 To configure advanced properties for an SAP R/3 and CRM machine, complete the following steps:
 
 1. Select the **SAP R/3 and CRM machine** in the **Select Machine** list
-2. Select on **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
-3. Select on the **Communications Settings** tab
-4. Select on the **TCP/IP Address** parameter and enter the appropriate **IP Address** for the SAP R/3 and CRM machine. Select the **Update** button
-5. Select on the **SAP R/3 and CRM Details** tab
-6. Select on the **Customer ID**, enter the *three-digit SAP BW Customer ID*, then select the **Update** button
-7. Select on the **Gateway**, enter the *full connection string* for the SAP Business Warehouse system, then select the **Update** button
-8. Select on the **RFC Trace** parameter and set to **On** (default is **Off**) if required. Select the **Update** button
-9. Select on **System Number**, enter the *two-digit SAP system number*, then select the **Update** button
+2. Select **Open Advanced Settings Panel** under **Advanced Settings**. The **Advanced Machine Properties** dialog displays
+3. Select the **Communications Settings** tab
+4. Select the **TCP/IP Address** parameter and enter the appropriate **IP Address** for the SAP R/3 and CRM machine. Select the **Update** button
+5. Select the **SAP R/3 and CRM Details** tab
+6. Select the **Customer ID**, enter the *three-digit SAP BW Customer ID*, then select the **Update** button
+7. Select the **Gateway**, enter the *full connection string* for the SAP Business Warehouse system, then select the **Update** button
+8. Select the **RFC Trace** parameter and set to **On** (default is **Off**) if required. Select the **Update** button
+9. Select **System Number**, enter the *two-digit SAP system number*, then select the **Update** button
 10. Select the **Save** button to save all changes to the Advanced Machine Properties
 
 ## FAQs
@@ -129,17 +129,13 @@ To configure advanced properties for an SAP R/3 and CRM machine, complete the fo
 
 Configuring advanced machine parameters and properties defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
 
-**Q: How many steps are required to configure advanced machine parameters and properties?**
-
-The configuration procedure is organized into six phases: modifying parameters, adding available properties, editing available properties, configuring the JORS port, removing available properties, and configuring SAP-specific machine properties. Complete all relevant phases and select **Save** to apply the changes.
-
 ## Glossary
 
 **JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
 
 **SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 

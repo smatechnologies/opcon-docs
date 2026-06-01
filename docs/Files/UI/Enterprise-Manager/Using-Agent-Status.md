@@ -24,10 +24,6 @@ doc_type: procedural
 
 The **Agent Status** link provides access to the **Agent Status** page in Solution Manager. For more information, refer to [Performing Agent Status Updates](../Solution-Manager/Performing-Agent-Status-Updates.md) in the **Solution Manager** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Agent Status?**

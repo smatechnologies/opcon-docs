@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating User-defined Calendars
-description: "Use this procedure to create User-defined Calendars in the Enterprise Manager."
+description: "Use this procedure to create User-defined Calendars in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to create User-defined Calendars in the Enterprise Manager.
+Use this procedure to create User-defined Calendars in Enterprise Manager.
 
 To create a user-defined calendar, complete the following steps:
 
-1.  Select on **Calendars** under the **Administration** topic. The **Calendars** screen displays
+1.  Select **Calendars** under the **Administration** topic. The **Calendars** screen displays
 2.  Select ![](../../../Resources/Images/EM/EMadd.png) **Add** on the **Calendars** toolbar
 3.  Enter the *calendar name* in the **Name** text box
 4.  *(Optional)* Enter the purpose for the calendar in the **Documentation** text box
@@ -34,12 +34,6 @@ To create a user-defined calendar, complete the following steps:
 6.  Select the **days** (displayed in green) to associate with the calendar
 7.  Select **Close ☒** (to the right of the **Calendars** tab) to close the **Calendars** screen
 :::
-
-## FAQs
-
-**Q: How many steps does the Creating User-defined Calendars procedure involve?**
-
-The Creating User-defined Calendars procedure involves 7 steps. Complete all steps in order and save your changes.
 
 ## Glossary
 

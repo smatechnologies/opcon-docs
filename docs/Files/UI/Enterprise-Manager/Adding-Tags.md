@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Tags
-description: "Use this procedure to add Tags in the Enterprise Manager."
+description: "Use this procedure to add Tags in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Tags in the Enterprise Manager.
+Use this procedure to add Tags in Enterprise Manager.
 
 ## Adding Job-Related Tags
 
@@ -55,12 +55,11 @@ To add a tag, complete the following steps:
 9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
 10. Select **Close** to close the **Job Master** screen
 
-
 ## FAQs
 
-**Q: Where do you access Tags in the Enterprise Manager?**
+**Q: Where do you access Tags in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new tags record?**
 

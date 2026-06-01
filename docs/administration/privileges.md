@@ -368,7 +368,7 @@ Grants users, who are not already members of a role with Maintain Embedded Scrip
 
 ### View License Information
 
-Grants access to the **License Information** tab in the **About OpCon Enterprise Manager** window accessible from the **Help** menu in the Enterprise Manager.
+Grants access to the **License Information** tab in the **About OpCon Enterprise Manager** window accessible from the **Help** menu in Enterprise Manager.
 
 ### View Service Requests
 

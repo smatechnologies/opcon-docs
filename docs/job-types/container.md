@@ -147,7 +147,7 @@ To set this up, the company, complete the following steps:
 
 As a result:
 
-- When the schedule MasterSchedule is built, the List view in the Enterprise Manager Operations shows the following:
+- When the schedule MasterSchedule is built, the List view in Enterprise Manager Operations shows the following:
 
   ![EM List View](../Resources/Images/Concepts/subsched.png)
 

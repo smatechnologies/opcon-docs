@@ -1,6 +1,6 @@
 ---
 title: Adding Threshold/Resource Dependencies
-description: "Use this procedure to add Threshold/Resource Dependencies in the Enterprise Manager."
+description: "Use this procedure to add Threshold/Resource Dependencies in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Threshold/Resource Dependencies in the Enterprise Manager.
+Use this procedure to add Threshold/Resource Dependencies in Enterprise Manager.
 
 ## Setting Job-Related Threshold/Resource Dependencies
 
@@ -64,12 +64,11 @@ To set Frequency-Related Threshold/Resource Dependencies, complete the following
 12. Select **OK** to save, or **Cancel** to discard
 13. Select **Close ☒** to close **Job Master**
 
-
 ## FAQs
 
-**Q: Where do you access Threshold/Resource Dependencies in the Enterprise Manager?**
+**Q: Where do you access Threshold/Resource Dependencies in Enterprise Manager?**
 
-Select **Job Master** under the **Administration** topic in the Enterprise Manager navigation pane.
+Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
 
 **Q: How do you save a new threshold/resource dependencies record?**
 

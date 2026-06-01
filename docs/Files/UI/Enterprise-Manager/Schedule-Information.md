@@ -40,9 +40,9 @@ The dialog contains the following information:
 
 To get Schedule Information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **Schedules** icon
+3. Right-click the **Schedules** icon
 4. Select **Schedule Information** from the menu. The **Schedule Information** dialog displays
 5. Select the various **tabs** for additional information
 6. Select the **OK** button to close the dialog
@@ -63,10 +63,6 @@ To get Schedule Information, complete the following steps:
 | Documentation Tab | Provides access to documentation relating to the selected schedule | — | — |
 | Configuration Tab | View and define Schedule Instance Properties | — | — |
 ## FAQs
-
-**Q: How many steps does the Schedule Information procedure involve?**
-
-The Schedule Information procedure involves 6 steps. Complete all steps in order and save your changes.
 
 **Q: What does Schedule Information cover?**
 

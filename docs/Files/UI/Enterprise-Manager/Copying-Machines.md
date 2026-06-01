@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Machines
-description: "Use this procedure to copy Machines in the Enterprise Manager."
+description: "Use this procedure to copy Machines in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -22,11 +22,11 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to copy Machines in the Enterprise Manager.
+Use this procedure to copy Machines in Enterprise Manager.
 
 To copy a machine, complete the following steps:
 
-1.  Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1.  Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2.  Select a **machine** in the **Select Machine** list, or select the **Find** button to locate the machine
 3.  Select the **Copy** button on the **Machines** toolbar. The **Copy Machine** dialog displays
 4.  Enter a new *machine name*
@@ -44,7 +44,6 @@ Copying machines is useful when you want to reuse an existing configuration as a
 Yes. The copy must be saved with a new unique name to distinguish it from the original machines record.
 
 ## Glossary
-
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

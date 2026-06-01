@@ -63,10 +63,6 @@ To view and acknowledge notifications, complete the following steps:
 
 ## FAQs
 
-**Q: How many steps does the Viewing Notification Acknowledgement procedure involve?**
-
-The Viewing Notification Acknowledgement procedure involves 6 steps. Complete all steps in order and save your changes.
-
 **Q: What does Viewing Notification Acknowledgement cover?**
 
 This page covers Acknowledging Escalations.

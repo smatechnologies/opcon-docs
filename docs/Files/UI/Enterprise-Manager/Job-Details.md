@@ -29,10 +29,6 @@ The **Job Details** tab in the [**Job Master**](Using-Job-Master.md) editor allo
 - [Deleting Jobs](Deleting-Jobs.md)
 - [Viewing Additional Job Information](Viewing-Additional-Schedule-Info.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Job Details do?**
@@ -41,7 +37,7 @@ The **Job Details** tab in the [**Job Master**](Using-Job-Master.md) editor allo
 
 **Q: Where can you find Job Details in OpCon?**
 
-Access Job Details through the appropriate section in the Enterprise Manager or Solution Manager navigation.
+Access Job Details through the appropriate section in Enterprise Manager or Solution Manager navigation.
 
 ## Glossary
 
