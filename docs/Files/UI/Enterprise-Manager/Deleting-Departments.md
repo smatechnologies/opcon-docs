@@ -21,7 +21,7 @@ Before you can delete a department in Enterprise Manager, you must complete thre
 2. Reassign all jobs that reference the department in the daily tables.
 3. Reassign all jobs that reference the department in the master tables.
 
-Only after completing those steps can you delete the department record itself. The **<General>** department is a system default and cannot be deleted.
+Only after completing those steps can you delete the department record itself. The **&lt;General&gt;** department is a system default and cannot be deleted.
 
 :::note
 If a department still has cross-references — roles with granted privileges, or jobs assigned to it in either the daily or master tables — the **Remove** button displays an error and the deletion is blocked.
