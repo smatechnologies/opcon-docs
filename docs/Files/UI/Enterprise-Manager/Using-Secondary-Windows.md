@@ -24,4 +24,4 @@ The following secondary windows are available depending on the object you select
 | [Schedule History](Schedule-History.md) | Right-click a schedule and select **Schedule History** in the **List**, **Matrix**, or **PERT** view |
 | [Job History](Job-History.md) | Right-click a job and select **Job History** in the **List**, **Matrix**, or **PERT** view |
 | [Machine Information](Machine-Information.md) | Right-click a machine on the **Table** tab or **Map** tab of the **Machine Status** view and select **Machine Information** |
-| [Managing SAP R/3 and CRM Background Functions](Managing-SAP-R3-and-CRM-Background-Functions.md) | Right-click an SAP R/3 or CRM machine on the **Machine Status** view <!-- GAP: trigger context sourced from Managing-SAP-R3-and-CRM-Background-Functions.md procedure, not from a secondary-window description; confirm whether this page belongs in the secondary-windows list --> |
+| [Managing SAP R/3 and CRM Background Functions](Managing-SAP-R3-and-CRM-Background-Functions.md) | Right-click an SAP R/3 or CRM machine on the **Machine Status** view and select **Background Functions** |
