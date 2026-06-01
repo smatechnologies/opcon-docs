@@ -65,11 +65,11 @@ $CALENDAR:ADD,<calendar name>,<calendar dates>
 
 ### $CALENDAR:DEL
 
-The $CALENDAR:DEL event deletes one or more dates a calendar. If the calendar does not exist, the event will fail.
+The $CALENDAR:DEL event deletes one or more dates from a calendar. If the calendar does not exist, the event fails.
 
 :::caution
 
-Adding and removing dates on a calendar can have a direct impact to whether jobs will run or not.
+Adding and removing dates on a calendar can directly affect whether jobs run.
 
 :::
 
@@ -81,8 +81,8 @@ $CALENDAR:DEL,<calendar name>,<calendar dates>
 
 **Parameters**:
 
-- **<calendar name\>**: The calendar name to which to add the dates
-- **<calendar dates\>**: A semicolon (;) separated list of dates to remove from the calendar. The dates must be defined using a date syntax recognized by the regional settings of the user running SMA Service Manager
+- **\<calendar name\>**: The name of the calendar from which to remove the dates. The calendar must already exist.
+- **\<calendar dates\>**: A semicolon (;) separated list of dates to remove from the calendar. Dates must use a format recognized by the regional settings of the user running SMA Service Manager.
 
 **Required Privileges**:
 
@@ -92,14 +92,14 @@ $CALENDAR:DEL,<calendar name>,<calendar dates>
 
 ```xml
 <EVENT>
-   <TYPE>CALENDAR</TYPE>
-   <ACTION>DEL</ACTION>
-   <CALNAME></CALNAME>
-   <DATES>
-       <CALDATE></CALDATE>
-       <CALDATE></CALDATE>\...</DATES>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>CALENDAR</TYPE>
+   <ACTION>DEL</ACTION>
+   <CALNAME></CALNAME>
+   <DATES>
+       <CALDATE></CALDATE>
+       <CALDATE></CALDATE>\...</DATES>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -151,10 +151,10 @@ $JOB:MAXRUNTIME,<schedule date>,<schedule name>,<job name>,<minutes>
 
 **Parameters**:
 
-- **<schedule date\>**: The date of the Daily schedule containing the job
-- **<schedule name\>**:The name of the schedule containing the job
-- **<job name\>**: The name of the job to affect on in the Daily schedule
-- **<minutes\>**: The number of minutes to set the Max Run Time for the job to use in the Daily schedule
+- **\<schedule date\>**: The date of the Daily schedule containing the job.
+- **\<schedule name\>**: The name of the schedule containing the job.
+- **\<job name\>**: The name of the job to update in the Daily schedule.
+- **\<minutes\>**: The maximum runtime in whole minutes for the job in the Daily schedule. Valid range: 1–32767. The event fails if the value is not a whole number or is less than 1.
 
 **Required Privileges**:
 
@@ -164,14 +164,14 @@ $JOB:MAXRUNTIME,<schedule date>,<schedule name>,<job name>,<minutes>
 
 ```xml
 <EVENT>
-   <TYPE>JOB</TYPE>
-   <ACTION>MAXRUNTIME</ACTION>
-   <SKDDATE></SKDDATE>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <MAXMINS></MAXMINS>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>MAXRUNTIME</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <MAXMINS></MAXMINS>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -187,10 +187,10 @@ $JOB:PRIORITY,<schedule date>,<schedule name>,<job name>,<SAM priority>
 
 **Parameters**:
 
-- **<schedule date\>**: The date of the Daily schedule containing the job
-- **<schedule name\>**: The name of the schedule containing the job
-- **<job name\>**: The name of the job to affect on in the Daily schedule
-- **<SAM priority\>**: The new SAM priority value for the job to use in the Daily schedule
+- **\<schedule date\>**: The date of the Daily schedule containing the job.
+- **\<schedule name\>**: The name of the schedule containing the job.
+- **\<job name\>**: The name of the job to update in the Daily schedule.
+- **\<SAM priority\>**: The SAM priority value for the job in the Daily schedule. Valid range: 0 (lowest) to 32767 (highest). The event fails if the value is not a whole number or is less than 0.
 
 **Required Privileges**:
 
@@ -200,14 +200,14 @@ $JOB:PRIORITY,<schedule date>,<schedule name>,<job name>,<SAM priority>
 
 ```xml
 <EVENT>
-   <TYPE>JOB</TYPE>
-   <ACTION>PRIORITY</ACTION>
-   <SKDDATE></SKDDATE>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <PRIORITY></PRIORITY>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>PRIORITY</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <PRIORITY></PRIORITY>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -262,7 +262,7 @@ $JOB:TAGDEL,<schedule date>,<schedule name>,<job name>,<tags>
 **Parameters**:
 
 - **<schedule date\>**: The date of the Daily schedule containing the job
-- **<schedule name\>**:The name of the schedule containing the job
+- **<schedule name\>**: The name of the schedule containing the job
 - **<job name\>**: The name of the job to affect on in the Daily schedule
 - **<tags\>**: A semicolon (;) separated list of tags to delete from the Daily job
 
@@ -281,7 +281,7 @@ $JOB:TAGDEL,<schedule date>,<schedule name>,<job name>,<tags>
    <JOBNAME></JOBNAME>
    <TAGS>
        <TAG></TAG>
-       <TAG></TAG>\...</TAGS>
+       <TAG></TAG>...</TAGS>
    <USERNAME></USERNAME>
    <USERPWD></USERPWD>
 </EVENT>
@@ -294,7 +294,7 @@ The $JOB:USER event changes the Batch User on the job in the Daily.
 **Syntax**:
 
 ```shell
-$JOB:USER,<schedule date\>,<schedule name\>,<job name\>,<batch user\>
+$JOB:USER,<schedule date>,<schedule name>,<job name>,<batch user>
 ```
 
 **Parameters**:
@@ -312,14 +312,14 @@ $JOB:USER,<schedule date\>,<schedule name\>,<job name\>,<batch user\>
 
 ```xml
 <EVENT>
-   <TYPE>JOB</TYPE>
-   <ACTION>USER</ACTION>
-   <SKDDATE></SKDDATE>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <USER></USER>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>USER</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <USER></USER>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -335,7 +335,7 @@ $JOBMASTER:BUILDSTATE,<schedule name>,<job name>,<frequency name>,<build state>
 
 **Parameters**:
 
-- **<schedule name\>**:The name of the schedule containing the job
+- **<schedule name\>**: The name of the schedule containing the job
 - **<job name\>**: The name of the job to affect on in the Master schedule
 - **<frequency name\>**: The frequency name of the job to associate the Build Status with in the Master schedule
 - **<build state\>**: The build status to set for the frequency on the job in the Master. Valid values include:
@@ -353,14 +353,14 @@ $JOBMASTER:BUILDSTATE,<schedule name>,<job name>,<frequency name>,<build state>
 
 ```xml
 <EVENT>
-   <TYPE>JOBMASTER</TYPE>
-   <ACTION>BUILDSTATE</ACTION>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <FREQNAME></FREQNAME>
-   <BLDSTATE></BLDSTATE>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOBMASTER</TYPE>
+   <ACTION>BUILDSTATE</ACTION>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <FREQNAME></FREQNAME>
+   <BLDSTATE></BLDSTATE>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -376,7 +376,7 @@ $JOBMASTER:TAGADD,<schedule name>,<job name>,<frequency name>,<tags>
 
 **Parameters**:
 
-- **<schedule name\>**:The name of the schedule containing the job
+- **<schedule name\>**: The name of the schedule containing the job
 - **<job name\>**: The name of the job to affect on in the Master schedule
 - **<frequency name\>**: The frequency name of the job to associate the tag with in the Master schedule. To associate the tag at the job level, leave this field blank
 - **<tags\>**: A semicolon (;) separated list of tags to add to the Master job
@@ -389,16 +389,16 @@ $JOBMASTER:TAGADD,<schedule name>,<job name>,<frequency name>,<tags>
 
 ```xml
 <EVENT>
-   <TYPE>JOBMASTER</TYPE>
-   <ACTION>TAGADD</ACTION>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <FREQNAME></FREQNAME>
-   <TAGS>
-       <TAG></TAG>
-       <TAG></TAG>\...</TAGS>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOBMASTER</TYPE>
+   <ACTION>TAGADD</ACTION>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <FREQNAME></FREQNAME>
+   <TAGS>
+       <TAG></TAG>
+       <TAG></TAG>...</TAGS>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -414,7 +414,7 @@ $JOBMASTER:TAGDEL,<schedule name>,<job name>,<frequency name>,<tags>
 
 **Parameters**:
 
-- **<schedule name\>**:The name of the schedule containing the job
+- **<schedule name\>**: The name of the schedule containing the job
 - **<job name\>**: The name of the job to affect on in the Master schedule
 - **<frequency name\>**: The frequency name the tag is associated with on the job with in the Master schedule. To delete the tag at the job level, leave this field blank
 - **<tags\>**: A semicolon (;) separated list of tags to delete from the Master job
@@ -427,16 +427,16 @@ $JOBMASTER:TAGDEL,<schedule name>,<job name>,<frequency name>,<tags>
 
 ```xml
 <EVENT>
-   <TYPE>JOBMASTER</TYPE>
-   <ACTION>TAGDEL</ACTION>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <FREQNAME></FREQNAME>
-   <TAGS>
-       <TAG></TAG>
-       <TAG></TAG>\...</TAGS>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOBMASTER</TYPE>
+   <ACTION>TAGDEL</ACTION>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <FREQNAME></FREQNAME>
+   <TAGS>
+       <TAG></TAG>
+       <TAG></TAG>...</TAGS>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -489,13 +489,13 @@ When you rename a resource, internal and external events that reference the reso
 **Syntax**:
 
 ```shell
-$RESOURCE:RENAME,<old resource name>, <new resource name>
+$RESOURCE:RENAME,<old resource name>,<new resource name>
 ```
 
 **Parameters**:
 
-- **<old resource name\>**: An OpCon Resource Name
-- **<new resource name\>**: An update value for the resource
+- **\<old resource name\>**: The current name of the resource to rename.
+- **\<new resource name\>**: The new name for the resource. The name must not exceed 20 characters and cannot contain single quotes.
 
 **Required Privileges**:
 
@@ -505,18 +505,18 @@ $RESOURCE:RENAME,<old resource name>, <new resource name>
 
 ```xml
 <EVENT>
-   <TYPE>RESOURCE</TYPE>
-   <ACTION>RENAME</ACTION>
-   <OLDNAME></OLDNAME>
-   <NEWNAME></NEWNAME>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>RESOURCE</TYPE>
+   <ACTION>RENAME</ACTION>
+   <OLDNAME></OLDNAME>
+   <NEWNAME></NEWNAME>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
 ### $THRESHOLD:DEL
 
-The $THRESHOLD:DEL event deletes the threshold from the administrative tables. This event will only succeed if a cross reference check reveals that there are no jobs in the Master or Daily using this resource for a Threshold Dependency or Threshold Update.
+The $THRESHOLD:DEL event deletes the threshold from the administrative tables. This event will only succeed if a cross-reference check confirms that no jobs in the Master or Daily tables reference this threshold for a Threshold Dependency or Threshold Update.
 
 :::warning
 
@@ -532,7 +532,7 @@ $THRESHOLD:DEL,<threshold name>
 
 **Parameters**:
 
-- **<threshold name\>**: The name of the threshold to delete
+- **\<threshold name\>**: The name of the threshold to delete.
 
 **Required Privileges**:
 
@@ -542,11 +542,11 @@ $THRESHOLD:DEL,<threshold name>
 
 ```xml
 <EVENT>
-   <TYPE>THRESHOLD</TYPE>
-   <ACTION>DEL</ACTION>
-   <THRESHNAME></THRESHNAME>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>THRESHOLD</TYPE>
+   <ACTION>DEL</ACTION>
+   <THRESHNAME></THRESHNAME>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -568,8 +568,8 @@ $THRESHOLD:RENAME,<old threshold name>,<new threshold name>
 
 **Parameters**:
 
-- **<old threshold name\>**: An OpCon Threshold Name
-- **<new threshold name\>**: An update value for the threshold
+- **\<old threshold name\>**: The current name of the threshold to rename.
+- **\<new threshold name\>**: The new name for the threshold. The name must not exceed 20 characters and cannot contain single quotes.
 
 **Required Privileges**:
 
@@ -579,12 +579,12 @@ $THRESHOLD:RENAME,<old threshold name>,<new threshold name>
 
 ```xml
 <EVENT>
-   <TYPE>THRESHOLD</TYPE>
-   <ACTION>RENAME</ACTION>
-   <OLDNAME></OLDNAME>
-   <NEWNAME></NEWNAME>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>THRESHOLD</TYPE>
+   <ACTION>RENAME</ACTION>
+   <OLDNAME></OLDNAME>
+   <NEWNAME></NEWNAME>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -1165,7 +1165,7 @@ The $JOB:RESTART event places the job back in a Qualifying state. The job is sta
 **Syntax**:
 
 ```shell
-$JOB:RESTART,<schedule date>,<schedule name>,<job name>,\[Force Restart (optional)\],\[Restart Step (optional)\]
+$JOB:RESTART,<schedule date>,<schedule name>,<job name>,[Force Restart (optional)],[Restart Step (optional)]
 ```
 
 **Parameters**:
@@ -1174,13 +1174,13 @@ $JOB:RESTART,<schedule date>,<schedule name>,<job name>,\[Force Restart (optiona
 - **<schedule name\>**: The name of the schedule containing the job
 - **<job name\>**: The name of the job on which to run command in the Daily schedule
 - **\[Force Restart (optional)\]:** Indicates whether to force start the job. This parameter is optional. Valid values are:
-  - **Y**: Force start the job
+  - **Y**: Force start the job
   - **N**: Do not force start the job
   - If the parameter is not set or specified, the default value will be set to **N**
 - **\[Restart Step (optional)\]**: Specifies whether to restart the job on a pre-configured step setting. This parameter is optional and is only supported for the SAP R/3 and CRM, SAP BW, UNIX, and z/OS platforms. Valid values are dependent on the host system:
-  - SAP: For more on the valid values for the SAP system, refer to the [SAP LSAM Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
-  - SAP BW: For more on the valid values for the SAP BW system, refer to the [SAP BW agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Advanced-Features.md)in the SAP BW agent documentation
-  - UNIX: For more on the valid values for the UNIX system, refer to [sma_job_step](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_job_step.md#UNIX/Operations-and-Component/Operating-the-agent/Utilities/sma_job_step) in the UNIX agent documentation
+  - SAP: For more on the valid values for the SAP system, refer to the [SAP Agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
+  - SAP BW: For more on the valid values for the SAP BW system, refer to the [SAP BW agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Advanced-Features.md) in the SAP BW agent documentation
+  - UNIX: For more on the valid values for the UNIX system, refer to [sma_job_step](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_job_step.md#UNIX/Operations-and-Component/Operating-the-agent/Utilities/sma_job_step) in the UNIX agent documentation
   - z/OS: The start and end steps can be specified in the 'JCL' format (jobstep or jobstep.procstep), separated by a pipe character. If there is no pipe, or it is not followed by a step name, the job will run to the end. If there is no starting step (i.e., the restart step starts with a pipe), then the job will be restarted without using the step restart feature
 
 **Required Privileges**:
@@ -1191,13 +1191,15 @@ $JOB:RESTART,<schedule date>,<schedule name>,<job name>,\[Force Restart (optiona
 
 ```xml
 <EVENT>
-   <TYPE>JOB</TYPE>
-   <ACTION>RESTART</ACTION>
-   <SKDDATE></SKDDATE>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>RESTART</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <FORCE></FORCE><!-- optional: Y or N; defaults to N -->
+   <STARTSTEP></STARTSTEP><!-- optional: restart step; supported on SAP, SAP BW, UNIX, z/OS -->
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -1208,7 +1210,7 @@ The $JOB:RESTARTHLD event places the job back in a Held state. The job will be s
 **Syntax**:
 
 ```shell
-$JOB:RESTARTHLD,<schedule date>,<schedule name>,<job name>,\[Force Restart (optional)\],\[Restart Step (optional)\]
+$JOB:RESTARTHLD,<schedule date>,<schedule name>,<job name>,[Force Restart (optional)],[Restart Step (optional)]
 ```
 
 **Parameters**:
@@ -1217,13 +1219,13 @@ $JOB:RESTARTHLD,<schedule date>,<schedule name>,<job name>,\[Force Restart (opti
 - **<schedule name\>**: The name of the schedule containing the job
 - **<job name\>**: The name of the job on which to run command in the Daily schedule
 - **\[Force Restart (optional)\]:** Indicates whether to force start the job. This parameter is optional. Valid values are:
-  - **Y**: Force start the job
+  - **Y**: Force start the job
   - **N**: Do not force start the job
   - If the parameter is not set or specified, the default value will be set to **N**
 - **\[Restart Step (optional)\]**: Specifies whether to restart the job on a pre-configured step setting. This parameter is optional and is only supported for the SAP R/3 and CRM, SAP BW, UNIX, and z/OS platforms. Valid values are dependent on the host system:
-  - SAP: For more on the valid values for the SAP system, refer to the [SAP LSAM Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
-  - SAP BW: For more on the valid values for the SAP BW system, refer to the [SAP BW agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Advanced-Features.md)in the SAP BW agent documentation
-  - UNIX: For more on the valid values for the UNIX system, refer to [sma_job_step](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_job_step.md#UNIX/Operations-and-Component/Operating-the-agent/Utilities/sma_job_step) in the UNIX agent documentation
+  - SAP: For more on the valid values for the SAP system, refer to the [SAP Agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
+  - SAP BW: For more on the valid values for the SAP BW system, refer to the [SAP BW agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Advanced-Features.md) in the SAP BW agent documentation
+  - UNIX: For more on the valid values for the UNIX system, refer to [sma_job_step](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_job_step.md#UNIX/Operations-and-Component/Operating-the-agent/Utilities/sma_job_step) in the UNIX agent documentation
   - z/OS: The start and end steps can be specified in the 'JCL' format (jobstep or jobstep.procstep), separated by a pipe character. If there is no pipe, or it is not followed by a step name, the job will run to the end. If there is no starting step (i.e., the restart step starts with a pipe), then the job will be restarted without using the step restart feature
 
 **Required Privileges**:
@@ -1234,13 +1236,15 @@ $JOB:RESTARTHLD,<schedule date>,<schedule name>,<job name>,\[Force Restart (opti
 
 ```xml
 <EVENT>
-   <TYPE>JOB</TYPE>
-   <ACTION>RESTARTHLD</ACTION>
-   <SKDDATE></SKDDATE>
-   <SKDNAME></SKDNAME>
-   <JOBNAME></JOBNAME>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>RESTARTHLD</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <FORCE></FORCE><!-- optional: Y or N; defaults to N -->
+   <STARTSTEP></STARTSTEP><!-- optional: restart step; supported on SAP, SAP BW, UNIX, z/OS -->
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -1377,24 +1381,59 @@ $JOB:REVIEW,<schedule date>,<schedule name>,<job name>
 
 **Parameters**:
 
-- **<schedule date\>**: The date of the Daily schedule containing the job
-- **<schedule name\>**: The name of the schedule containing the job
-- **<job name\>**: The name of the job on which to run command in the Daily schedule
+- **\<schedule date\>**: The date of the Daily schedule containing the job
+- **\<schedule name\>**: The name of the schedule containing the job
+- **\<job name\>**: The name of the job to mark as Under Review
 
-## Machine-Related Events
+**Required Privileges**:
 
-### $MACHINE:MAXJOBS
+- Mark Jobs as Completed Unsuccessfully
 
 **XML Syntax**:
 
 ```xml
 <EVENT>
-   <TYPE>MACHINE</TYPE>
-   <ACTION>MAXJOBS</ACTION>
-   <MACHNAME></MACHNAME>
-   <MACHMAX></MACHMAX>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>JOB</TYPE>
+   <ACTION>REVIEW</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <JOBNAME></JOBNAME>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
+</EVENT>
+```
+
+## Machine-Related Events
+
+### $MACHINE:MAXJOBS
+
+The $MACHINE:MAXJOBS event changes the maximum number of concurrent jobs allowed on a machine.
+
+**Syntax**:
+
+```shell
+$MACHINE:MAXJOBS,<machine name>,<max jobs>
+```
+
+**Parameters**:
+
+- **\<machine name\>**: An OpCon machine name
+- **\<max jobs\>**: The maximum number of concurrent jobs for the machine. Must be a non-negative integer.
+
+**Required Privileges**:
+
+- Maintain Machines
+
+**XML Syntax**:
+
+```xml
+<EVENT>
+   <TYPE>MACHINE</TYPE>
+   <ACTION>MAXJOBS</ACTION>
+   <MACHINENAME></MACHINENAME>
+   <MACHMAX></MACHMAX>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
@@ -1416,26 +1455,26 @@ $MACHINE:STATUS,<machine name>,<U/D/L>
 
 **Parameters**:
 
-- **<machine name\>**: An OpCon Machine Name
-- **<U/D/L\>**: The requested machine state
+- **\<machine name\>**: An OpCon machine name
+- **\<U/D/L\>**: The requested machine communication state
   - **U**: Places the machine in an up state
   - **D**: Places the machine in a down state
   - **L**: Places the machine in a limited state (no job starts will be sent)
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Machines
 
 **XML Syntax**:
 
 ```xml
 <EVENT>
-   <TYPE>MACHINE</TYPE>
-   <ACTION>STATUS</ACTION>
-   <MACHNAME></MACHNAME>
-   <MACHSTATUS></MACHSTATUS>
-   <USERNAME></USERNAME>
-   <USERPWD></USERPWD>
+   <TYPE>MACHINE</TYPE>
+   <ACTION>STATUS</ACTION>
+   <MACHINENAME></MACHINENAME>
+   <MACHSTATUS></MACHSTATUS>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 
