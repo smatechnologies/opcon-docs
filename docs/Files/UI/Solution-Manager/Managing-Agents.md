@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Agents
-description: "Use this procedure to manage Agents in Solution Manager."
+description: "Use the Agents page in Solution Manager to view agent status, filter the list, and select agents for communication status updates."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,38 +17,82 @@ doc_type: procedural
 
 # Managing Agents
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to manage Agents in Solution Manager.
-
-See:
-
-- [Adding Agents](Adding-Agents.md)
-- [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
+The **Agents** page in Solution Manager displays all registered agents and their current communication status. From this page you can filter and sort agents and select one or more to perform status updates.
 
 ![Managing Agents](../../../Resources/Images/SM/Library/ManagingLibrary/ManagingAgents.png "Managing Agents")
 
-## FAQs
+## Administration
 
-**Q: What does managing agents involve?**
+### Required Privileges
 
-Managing agents includes adding, editing, and deleting records. Access agents in Solution Manager or Enterprise Manager.
+To view and manage agents, your role must have one of the following privileges:
 
-**Q: Who can manage agents in OpCon?**
+- **Function Privilege**: Maintain Machines
+- **Function Privilege**: All Function Privileges
 
-Users with the appropriate privileges assigned through their role can manage agents. Contact your OpCon system administrator if you do not have access.
+For more information, refer to [Managing Roles and Privileges](Library/AccessManagement/Roles/Managing-Roles-And-Privileges.md).
 
-## Glossary
+## Accessing the Agents page
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+To open the Agents page from the Operations Summary, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+1. In Solution Manager, go to **Operations**.
+2. On the **Operations Summary** page, select one of the five agent status cards (**Error**, **Limited**, **Stopped**, **Waiting**, or **Operational**) in the **Agents** section, or enter a name in the **Quick Search** field.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+**Result:** The **Agents** page opens with the list filtered to the selected status or search term.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+## Agents list
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+The Agents page displays a grid of all agents that match the current filter. The grid supports multi-select — you can select more than one agent to perform a bulk status update.
+
+The grid contains the following columns:
+
+| Column | Description |
+|---|---|
+| **Status** | Current communication state: Communicating, Stopped, Waiting Response, Limited, or Not Responding |
+| **Name** | The agent name as defined in OpCon |
+| **Platform** | The agent platform type |
+| **Lastupdate** | Date and time of the last status update (format: `yyyy/MM/dd HH:mm`) |
+| **Running Jobs** | Current running jobs versus the configured maximum (format: `current / max`) |
+| **Groups** | Machine groups the agent belongs to |
+| **Version** | Agent software version |
+| **Socket** | Socket number used for communication |
+| **TLS (Scheduling)** | Whether TLS is enabled for scheduling communication |
+
+Columns are hidable and reorderable. To show or hide a column, use the column visibility menu in the grid header.
+
+### Statistics bar
+
+A color-coded statistics bar appears above the grid. Select a status segment in the bar to filter the list to agents in that state. The available states are: **Waiting Response**, **Not Responding**, **Limited**, **Stopped**, and **Communicating**.
+
+### Column filters
+
+Each column header row contains a filter field. Text columns accept a name pattern; the **Status** and **TLS (Scheduling)** columns provide a list to select from. Active filters appear as tags above the grid. To remove a filter, clear the filter field or select the tag.
+
+## Selecting agents
+
+To select agents for a status update, complete the following steps:
+
+1. On the **Agents** page, select one or more agents in the grid. Selected agents appear as a breadcrumb in the status bar at the bottom of the page.
+2. Select the breadcrumb in the status bar to open the **Agent Status Update** panel. Alternatively, right-click any selected agent to open the panel.
+3. In the **Agent Status Update** panel, choose the communication status action to apply.
+
+**Result:** The selected agents' communication status changes to the chosen state. The grid updates to reflect the new status.
+
+For the full list of available actions and their descriptions, refer to [Performing Agent Status Updates](Performing-Agent-Status-Updates.md).
+
+## Toolbar
+
+The Agents page toolbar contains the following controls:
+
+| Button | Description |
+|---|---|
+| **Back** | Returns to the previous page |
+| **Summary** | Goes to the Operations Summary page |
+| **Refresh** | Reloads the agent list with current data |
+
+## Related topics
+
+- [Adding Agents](Adding-Agents.md)
+- [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
+- [Agents Admin Overview](Agents-Admin-Overview.md)

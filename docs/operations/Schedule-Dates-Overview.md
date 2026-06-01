@@ -13,44 +13,31 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** Administrators and operations staff who manage how OpCon names and tracks schedule and job instances in the daily queue
+## Overview
 
-## What Is It?
+OpCon uses specific rules to name and track schedules and jobs in the daily queue. When schedules are built for a schedule date, OpCon analyzes all schedule and job information together to create a day's automation. Understanding these naming conventions is essential for building date-based automation, filtering in operations views, and identifying specific schedule or job instances.
 
-OpCon uses specific rules to name and track schedules and jobs in the daily queue. Understanding these naming conventions is essential for building date-based automation, filtering in operations views, and identifying specific schedule or job instances.
-
-- Understand how OpCon assigns and displays dates for daily schedules
-- Design schedule names that include date tokens
-- Understand how job instance names are formed and used
-- Filter or search for specific schedule or job instances in the daily queue
-
-## What is in this section?
+## In This Section
 
 | Page | Description |
 |------|-------------|
-| Schedule Dates | How OpCon assigns and formats dates in the daily schedule queue |
-| Schedule Names | Naming rules and conventions for schedules in the daily queue |
-| Job Names | How job instance names are formed and displayed |
+| [Schedule Dates and Automation](schedule-dates.md) | How OpCon assigns and formats dates when building the daily schedule queue, and how schedule and job information combine to create a day's automation |
+| [OpCon Schedule Names](schedule-names.md) | Naming rules and conventions for schedules in the daily queue, including multi-instance schedules and subschedules |
+| [OpCon Job Names](job-names.md) | How job instance names are formed and displayed, including multi-instance jobs and jobs run on each machine in a group |
 
-## Glossary
+## Key Concepts
 
-| Term | Definition |
-| --- | --- |
-| Daily Schedule | A schedule instance that OpCon builds for a specific date. Changes affect only that date and do not modify the master definition. |
-| Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Role | A named collection of privileges assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
-| Schedule | A named group of jobs in OpCon representing a business process. Schedules are built each day based on their defined frequencies and calendars. |
+**Daily Schedule**
+A schedule instance that OpCon builds for a specific date. Changes to a daily schedule affect only that date and do not modify the master definition.
 
-## FAQs
+**Schedule Date**
+The date for which OpCon builds a schedule. All schedule and job information is analyzed together against the schedule date to produce that day's automation.
 
-**Q: What does the Schedule Dates Overview cover?**
+**Multi-Instance Schedule**
+A schedule configured to allow multiple copies to run simultaneously. OpCon appends a suffix to each copy's name to distinguish instances — either a `$XXXX` counter or the value of the first Schedule Instance property.
 
-OpCon uses specific rules to name and track schedules and jobs in the daily queue. Understanding these conventions is essential for date-based automation, filtering in operations views, and identifying specific instances.
+**Subschedule**
+A schedule that runs as a child of a Container job. OpCon builds the subschedule into the daily tables using the format `ParentSchedule_ContainerJobName[SubSchedule]`.
 
-**Q: Who manages Operations in OpCon?**
-
-Administrators and automation engineers manage Operations, including configuring settings, managing user access, and monitoring related components.
-
-**Q: Where should I start in the Operations section?**
-
-Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.
+**Multi-Instance Job**
+A job configured to allow multiple copies to run simultaneously. OpCon appends either a `$XXXX` counter or the value of the first Job Instance property to distinguish instances.

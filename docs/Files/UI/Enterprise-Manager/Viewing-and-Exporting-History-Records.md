@@ -1,6 +1,6 @@
 ---
 title: Viewing and Exporting History Records
-description: "Use this procedure to view and Exporting History Records in Enterprise Manager."
+description: Use History Management in Enterprise Manager to filter, view, and export schedule and job history records.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,62 +8,43 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Viewing and Exporting History Records
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **History Management** view in Enterprise Manager lets you filter and review past schedule and job run data. You can choose between the active history table and the archive, narrow results by date range, duration, and job status, then export the results to a CSV file.
 
-## What Is It?
+## View History Records
 
-Use this procedure to view and Exporting History Records in Enterprise Manager.
+To view history records, complete the following steps:
 
-## Viewing Records
+1. In the Enterprise Manager navigation pane, select **History Management** under the **Management** topic. The **History Management** view opens.
+2. In the **View** group, select the **History** or **Archive** option to specify which data set to query.
+3. (Optional) In the **Duration** group, select an **Operator** and enter a value in **Minutes** to filter results by run time.
+4. (Optional) In the **Job Statuses** group, select one or more status options: **Failed**, **Finished OK**, **Marked Failed**, **Marked Finished OK**, or **Skipped**.
+5. In the **Run Dates** group, enter a **Start** date and an **End** date.
+6. Select **View History**. Enterprise Manager populates the schedule and job tree.
+7. Select the expand button next to a schedule in the tree to expand its associated jobs.
+8. Select a schedule in the tree to display its history records in the detail table. The table shows **Schedule Date**, **Schedule Started**, **Schedule Ended**, **Run Time**, and **Ran As Schedule Name**.
+9. Select a job in the tree to display its history records in the detail table. The table shows **Schedule Date**, **Job Started**, **Job Ended**, **Run Time**, **Machine Name**, **Final Job Status**, **Exit Description**, and **Ran As Job Name**.
 
-To view a history record, complete the following steps:
+**Result:** The detail table displays the matching history records. A status message shows the count of returned schedules or jobs. If the maximum record limit is reached, a message prompts you to modify the filter criteria.
 
-1. Select **History Management** under the **Management** topic. The **History Management screen** displays
-2. Select the **History** or **Archive** radio button
-3. *(Optional)* Select the **operator** and **minutes**
-4. *(Optional)* Select the preferred **Job Statuses** options
-5. Enter or select a **start date** and **end date** using the text box or the **calendar icon**
+## Export History Records
 
-6. Select the **View History** button
-7. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) arrow next to the schedule to expose its associated jobs
-8. Select the specific **schedule** to display its history information
-9. Select the specific **job** to display its history information
-10. Select **Close ☒** to close the **History Management** screen
+To export the currently displayed history records to a CSV file, complete the following steps:
 
-## Exporting Records
+1. In the **History Management** view, view the records you want to export (see [View History Records](#view-history-records)).
+2. Select **Export Data**. A **Save As** dialog opens with `History.csv` as the default file name.
+3. Choose a save location and select **Save**.
 
-The **Export Data** button exports records in comma-separated value (.csv) format via the **Save As** dialog.
+**Result:** Enterprise Manager saves the displayed records as a comma-separated values (`.csv`) file at the specified location.
 
-## Resetting the View
+## Reset the View
 
-The **Reset View** button resets all selection options to their defaults.
+To reset all filter options to their defaults, select **Reset View**.
 
-## FAQs
-
-**Q: Where is Viewing and Exporting History Records located in Enterprise Manager?**
-
-Select **History Management** under the **Management** topic in Enterprise Manager navigation pane.
-
-**Q: What does Viewing and Exporting History Records cover?**
-
-This page covers Viewing Records, Exporting Records, Resetting the View.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The **View** option returns to **History**, all **Job Statuses** options are cleared, **Operator** is cleared, **Minutes** returns to `0`, and both **Start** and **End** dates return to today's date. The tree and detail table are also cleared.

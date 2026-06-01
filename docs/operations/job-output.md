@@ -1,6 +1,6 @@
 ---
 title: Viewing a Job Output File
-description: "When OpCon runs a job, the agent on the target machine captures job output and saves it to one or more files."
+description: "When OpCon runs a job, the Agent on the target machine captures job output and saves it to one or more files that you can view through Solution Manager or Enterprise Manager."
 product_area: Operations
 audience: Operations Staff, System Administrator
 version_introduced: "[see release notes]"
@@ -8,61 +8,48 @@ tags:
   - Procedural
   - Operations Staff
   - System Administrator
-  - Schedules
+  - Operations
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Viewing a Job Output File
 
-**Theme:** Configure  
-**Who Is It For?** Operations Staff, System Administrator
+When OpCon runs a job, the Agent on the target machine captures the output and saves it to one or more files. The files vary by platform based on operating system behavior — for example, UNIX saves standard out and standard error as separate files. OpCon retrieves these files using the Job Output Retrieval System (JORS), which is accessible through both Solution Manager and Enterprise Manager.
 
-## What Is It?
-
-When OpCon runs a job, the agent on the target machine captures job output and saves it to one or more files. The files vary by platform based on operating system behavior (for example, UNIX saves standard out and standard error). OpCon graphical interfaces retrieve these files using the Job Output Retrieval System (JORS), accessed via the **View Job Output** menu option from a job in Operations.
+Job output is not available for Null Jobs, Container jobs, or jobs with an Unknown job type. The job must have run at least once — its status must be Running, Held, or a completed (Ended) state — before output is accessible.
 
 :::note
-Configuring job scheduling for TLS Security also secures JORS communications using the same digital certificate configuration. Refer to [TLS Security](../server-programs/network-communications.md#tls) in the **Server Programs** online help for details.
+Configuring TLS Security for job scheduling also secures JORS communications using the same digital certificate configuration. For details, refer to [TLS Security](../server-programs/network-communications.md#tls) in the **Server Programs** documentation.
 :::
 
-To view job output successfully, complete the following setup:
+## Prerequisites
 
-- On the target machine:
-  - The agent must be running
-  - The JORS component must be running
-- In the agent's configuration file:
-  - Enable "Capture Job Output"
-  - Set the JORS port number to match the value in the OpCon database for that machine
-- In the **Enterprise Manager**:
-  - Set the **JORS Port number** in *Advanced Machine Properties* to match the agent's configuration file. Refer to [Set JORS Port Number for the Machine](../Files/UI/Enterprise-Manager/Configuring-Advanced-Machine-Properties.md#Set_JORS_Port_Number_for_the_Machine) in the **Enterprise Manager** online help
+Before you can view job output, verify that all of the following conditions are met:
 
-## FAQs
+- The Agent is running on the target machine.
+- The JORS component is running on the target machine.
+- The Agent configuration file has job output capture enabled.
+- The **JORS Port Number** in Enterprise Manager **Advanced Machine Properties** matches the JORS port configured in the Agent's configuration file.
 
-**Q: What is JORS?**
+For instructions on setting the JORS port in Enterprise Manager, refer to [Set JORS Port Number for the Machine](../Files/UI/Enterprise-Manager/Configuring-Advanced-Machine-Properties.md#Set_JORS_Port_Number_for_the_Machine).
 
-JORS (Job Output Retrieval System) is the OpCon component that retrieves job output files from the agent on the target machine. It is accessed via the View Job Output menu option from a job in Operations.
+## View job output in Solution Manager
 
-**Q: What must be configured before job output can be viewed?**
+To view job output in Solution Manager, complete the following steps:
 
-The agent and JORS component must be running on the target machine, "Capture Job Output" must be enabled in the agent configuration, and the JORS port number must match between the agent configuration file and the OpCon database entry for that machine.
+1. Go to **Operations**.
+2. Select the job whose output you want to view. The job must have a status of Running, Held, or a completed state.
+3. In the right panel, select the **Job Output** tab.
+4. Select **Refresh** to request the list of output files from the Agent.
+5. Select the file you want to open.
 
-**Q: Is job output communication secured by TLS?**
+**Result:** The **Job Output** dialog opens and displays the file content. From this dialog, you can select **Refresh** to reload the file, select **Export** to download the file as a `.log` file, or select **Close** to dismiss the dialog.
 
-Yes. Configuring TLS Security for job scheduling also secures JORS communications using the same digital certificate configuration.
+## View job output in Enterprise Manager
 
-## Glossary
+To view job output in Enterprise Manager, complete the following steps:
 
-**JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
+1. In the Operations views, right-click the job whose output you want to view and select **View Job Output**. The job must have run at least once.
 
-**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The **Job Output Retriever** dialog opens and displays a list of available output files. Double-click a file name to view its content. Select **Refresh** to request an updated file list, or select **Close** to dismiss the dialog.

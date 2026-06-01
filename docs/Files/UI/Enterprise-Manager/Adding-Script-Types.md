@@ -2,53 +2,34 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Script Types
-description: "Use this procedure to add Script Types in Enterprise Manager."
+description: "Step-by-step procedure to add a Script Type in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-#  Adding Script Types
+# Adding Script Types
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Script Type defines the scripting language and optional file extension associated with scripts stored in the OpCon Script Repository. Defining Script Types before adding scripts ensures that runners and jobs can correctly identify the script format.
 
-## What Is It?
+You must have the **Maintain Scripts** function privilege to add Script Types.
 
-Use this procedure to add Script Types in Enterprise Manager.
+## Add a Script Type
 
-To add a script type, complete the following steps:
+To add a Script Type, complete the following steps:
 
-1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
-2.  Select **Add Type** on the toolbar. The **Add Script Type** dialog displays
-3.  Enter a *name* for the script type (e.g., PERL)
-4.  *(Optional)* Enter the *file extension* for the script type (e.g., pl)
-5.  *(Optional)* Enter a *description* for the script type
-6.  Select **Save** in the dialog
-7.  Select **Close ☒** (to the right of the **Script Types** tab) to close the **Script Types** screen
-:::
+1. In Enterprise Manager, select **Types** under the **Scripts** navigation category. The **Script Types** screen opens.
+2. Select **Add** on the **Script Types** toolbar. The **Add Script Type** dialog opens.
+3. In the **Name** field, enter a name for the Script Type (for example, `PERL`). The name is required and must be unique.
+4. (Optional) In the **File Extension** field, enter the file extension for the Script Type (for example, `pl`). Enter only alphanumeric characters; Enterprise Manager automatically prepends the period.
+5. (Optional) In the **Description** field, enter a description for the Script Type.
+6. Select **Save**.
 
-## FAQs
-
-**Q: How do you save a new script types record?**
-
-After completing the required fields, select the **Save** button on the toolbar to save the script types record.
-
-**Q: Is documentation required when adding script types?**
-
-No. The Documentation field is optional. You can enter notes about the script types to track its purpose, but it is not required to save the record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** The Script Type is saved and appears in the Script Types list.

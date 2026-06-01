@@ -1,6 +1,6 @@
 ---
 title: Job Details
-description: "The Job Details tab in the Job Master editor allows you to define and maintain general and platform-specific job information."
+description: "The Job Details tab in the Job Master editor lets you define the job type, department, access code, and instance settings for a job."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,7 +8,7 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
@@ -18,35 +18,28 @@ doc_type: conceptual
 **Theme:** Configure  
 **Who Is It For?** System Administrator, Automation Engineer
 
-## What Is It?
+The **Job Details** tab is the first tab in the [Job Master](Using-Job-Master.md) editor. It contains the fields that classify a job — what type it is, which department owns it, which access code restricts it, and whether it can run as multiple simultaneous instances.
 
-The **Job Details** tab in the [**Job Master**](Using-Job-Master.md) editor allows you to define and maintain general and platform-specific job information. For more information, refer to [Job Type Management](Job-Type-Management.md), [Job Details](../../../objects/jobs.md#job-details) in the **Concepts** online help, or the relevant Job Type Details for platform-specific information.
+When you select a **Job Type**, the lower portion of the tab refreshes to show the platform-specific fields for that job type. For more information about each job type's fields, see [Job Type Management](Job-Type-Management.md).
 
-- [Add Jobs](Adding-Jobs.md)
-- [Edit Job Master Details](Editing-Job-Master-Details.md)
+## Fields
+
+| Field | Description |
+|---|---|
+| **Job Type** | The platform or Agent type the job runs on. The list contains only job types for which a machine or machine group is currently defined, plus built-in job types. Selecting a job type loads the platform-specific detail section below. |
+| **Job Sub-Type** | A secondary classification within the selected job type. Only available when sub-types are defined for the chosen **Job Type**; otherwise the field is disabled. |
+| **Department** | The department that owns the job. You can select only departments for which your role has the appropriate privilege. |
+| **Access Code** | The access code that controls who can view and modify the job. The list shows only access codes your role has update rights for. |
+| **Allow Multi-Instance** | When selected, OpCon allows the job to run as more than one simultaneous instance. This option cannot be cleared while multiple instances are defined for the job. Not available when editing a daily job. |
+| **Disable Build** | When selected, the job is excluded from schedule builds. A warning label appears next to the option when build is disabled. Not available when editing a daily job. |
+
+## Related Topics
+
+- [Adding Jobs](Adding-Jobs.md)
+- [Editing Job Master Details](Editing-Job-Master-Details.md)
 - [Copying Jobs](Copying-Jobs.md)
 - [Moving Jobs](Moving-Jobs.md)
 - [Deleting Jobs](Deleting-Jobs.md)
 - [Viewing Additional Job Information](Viewing-Additional-Schedule-Info.md)
-
-## FAQs
-
-**Q: What does Job Details do?**
-
-The **Job Details** tab in the [**Job Master**](Using-Job-Master.md) editor allows you to define and maintain general and platform-specific job information. For more information, refer to [Job Type Ma
-
-**Q: Where can you find Job Details in OpCon?**
-
-Access Job Details through the appropriate section in Enterprise Manager or Solution Manager navigation.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Job Type Management](Job-Type-Management.md)
+- [Job Details](../../../objects/jobs.md#job-details) in **Concepts**

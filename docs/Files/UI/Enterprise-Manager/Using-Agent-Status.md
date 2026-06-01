@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Agent Status
-description: "The Agent Status link provides access to the Agent Status page in Solution Manager."
+description: "Open the Agent Status page in Solution Manager directly from Enterprise Manager to view and update communication status for Agents."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,29 +17,21 @@ doc_type: procedural
 
 # Using Agent Status
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Agent Status** link in Enterprise Manager opens the **Agents** page in Solution Manager. From that page, you can view each Agent's current communication state and change it to Enable Full Comm. (Job Start Enabled), Enable Limited Comm. (Job Start Disabled), or Disable Communication.
 
-## What Is It?
+## Open Agent Status
 
-The **Agent Status** link provides access to the **Agent Status** page in Solution Manager. For more information, refer to [Performing Agent Status Updates](../Solution-Manager/Performing-Agent-Status-Updates.md) in the **Solution Manager** online help.
+To open Agent Status from Enterprise Manager, complete the following steps:
 
-## FAQs
+1. In the Enterprise Manager navigation pane, expand **Operation**.
+2. Select **Agent Status**.
 
-**Q: What can you do with Agent Status?**
+**Result:** Solution Manager opens in an embedded browser view and displays the **Agents** page. The page lists all defined Agents with columns for **Status**, **Name**, **Platform**, **Lastupdate**, **Running Jobs**, **Groups**, **Version**, **Socket**, and **TLS (Scheduling)**.
 
-Agent Status allows you to manage and configure related settings.
+:::note
+If Enterprise Manager cannot reach Solution Manager, an error message appears: "Could not access Solution Manager Server Option URL." Verify that the Solution Manager URL is configured correctly in the OpCon Server Options.
+:::
 
-**Q: Who has access to Agent Status?**
+## Next steps
 
-Access to Agent Status is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+For full instructions on filtering Agents, selecting one or more Agents, and applying a communication status change, see [Performing Agent Status Updates](../Solution-Manager/Performing-Agent-Status-Updates.md).

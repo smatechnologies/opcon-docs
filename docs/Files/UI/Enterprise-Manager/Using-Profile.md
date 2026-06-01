@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Profile
-description: "The Profile link opens the Profile page in Solution Manager."
+description: "The Profile link in Enterprise Manager opens the Profile page in Solution Manager, where you can update your account settings."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,37 +10,41 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Using Profile
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Profile** link in Enterprise Manager opens the **Profile** page in Solution Manager. From the **Profile** page, you can update your own user account settings, including your full name, password, and event password.
 
-## What Is It?
-
-The **Profile** link opens the **Profile** page in Solution Manager. For more information, refer to [Configuring Account Settings](../Solution-Manager/Configuring-Account-Settings.md) in the **Solution Manager** online help.
+:::note
+The **E-mail** field is read-only and cannot be changed from this page.
 :::
 
-## FAQs
+To open the Profile page from Enterprise Manager, complete the following steps:
 
-**Q: What can you do with Profile?**
+1. In the Enterprise Manager navigation panel, under **Solution Manager**, select **Profile**.
 
-Profile allows you to manage and configure related settings.
+   The **Profile** page opens in Solution Manager.
 
-**Q: Who has access to Profile?**
+2. Update any of the following fields:
 
-Access to Profile is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+   | Field | Description |
+   |---|---|
+   | **Login** | Read-only. Your OpCon login name. |
+   | **Full User Name** | Your display name. Required. |
+   | **E-mail** | Read-only. <!-- GAP: "Contact your administrator to change this value" unverified --> |
+   | **Notes** | Optional notes associated with your account. |
+   | **Comments** | Optional comments associated with your account. |
+   | **User Password** | Your OpCon login password. |
+   | **Confirm User Password** | Confirm the new password. |
+   | **Event Password** | The password used to authenticate OpCon events submitted under your account. |
+   | **Confirm Event Password** | Confirm the new event password. |
 
-## Glossary
+3. Select **Save**.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+   **Result:** Your account settings are updated in the OpCon database.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+For full details on configuring account settings, refer to [Configuring Account Settings](../Solution-Manager/Configuring-Account-Settings.md).

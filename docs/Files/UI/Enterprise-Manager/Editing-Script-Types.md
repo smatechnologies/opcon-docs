@@ -2,46 +2,33 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Script Types
-description: "Use this procedure to edit Script Types in Enterprise Manager."
+description: "How to edit a script type's name, file extension, and description in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Editing Script Types
+# Editing Script Types
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A script type defines the category of a script and associates it with a file extension. You can update a script type's name, file extension, and description at any time.
 
-## What Is It?
-
-Use this procedure to edit Script Types in Enterprise Manager.
+:::note
+Editing a script type requires the **Maintain Scripts** privilege (or **All Administration Functions** or **All User Interface Functions**).
+:::
 
 To edit a script type, complete the following steps:
 
-1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
-2.  Select the **script type** to edit
-3.  Select **Edit Type** on the toolbar. The **Edit Script Type** dialog displays
-4.  Modify the name, file extension, and/or description
-5.  Select **Save** in the dialog
-6.  Select **Close ☒** to close the **Script Types** screen
-:::
+1. In the navigation pane, select **Types** under **Scripts**. The **Script Types** editor opens.
+2. Select the script type you want to edit.
+3. Select **Edit** on the toolbar. The **Edit Script Type** dialog opens.
+4. Modify the **Name**, **File Extension**, and/or **Description** fields as needed.
+5. Select **Save**.
 
-## FAQs
-
-**Q: Do edits to script types take effect immediately?**
-
-Changes saved to script types in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The script type is updated and the **Script Types** list refreshes to reflect the changes.

@@ -1,6 +1,6 @@
 ---
 title: Using Logs
-description: "The Logs option provides links to display the SAM server log files."
+description: "Use the Logs viewer in Enterprise Manager to open and monitor SAM server log files, including the SAM Log, Critical Log, SMANetCom logs, and more."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,48 +8,42 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Using Logs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Logs** option in Enterprise Manager provides links to open the [SAM server log files](Types-of-Logs.md). The log viewer monitors files in real time and displays new entries as they are written.
 
-## What Is It?
+Before you can open remote log files, you must share the `OpConxps` folder on the SAM server and configure the Enterprise Manager connection profile to point to that directory. For more information, refer to [Setting up New Profiles](Managing-Connection-Profiles.md) and [Setting Preferences for Log Viewer](Preferences-for-Log-Viewer.md).
 
-The **Logs** option provides links to display the [SAM server log files](Types-of-Logs.md). To enable this feature, share the **OpConxps** folder on the SAM server and configure Enterprise Manager connection profile to point to that directory. For more information, refer to [Setting up New Profiles](Managing-Connection-Profiles.md) and [Setting Preferences for Log Viewer](Preferences-for-Log-Viewer.md).
+## Open a log file
 
-## Logs Toolbar and Right-click Menu
+To open a log file in the Logs viewer, complete the following steps:
 
-The **Logs** have a standard toolbar for managing logs. Select any icon to learn more about its functionality. All toolbar options are also available by right-clicking inside any log you are viewing.
+1. In the Enterprise Manager navigation pane, expand the **Information** topic.
+2. Expand **Logs**.
+3. Select the log file you want to view (for example, **SAM Log** or **Critical Log**). The log file opens in the Logs viewer and displays the current contents.
+
+**Result:** The viewer loads the selected log file and highlights new entries in bold as they are appended. If the path to the log directory is not configured or is invalid, Enterprise Manager prompts you to configure the OpCon installation directory in the connection profile.
+
+## Logs toolbar and right-click menu
+
+The Logs viewer toolbar provides the following actions. All toolbar actions are also available by right-clicking inside an open log.
+
+| Button | Description |
+|---|---|
+| **Activate On Event** | Brings the log viewer to the front automatically when a new log entry arrives. |
+| **Scroll down** | Keeps the view scrolled to the most recent entry. When selected, the viewer automatically scrolls as new lines are appended. |
+| **Clear** | Removes all currently displayed entries from the view. The underlying log file is not modified. |
+| **Copy to Clipboard** | Copies the selected log entries to the clipboard as plain text. |
 
 ![Logs toolbar](../../../Resources/Images/EM/EMlogstoolbar.png)
 
-## FAQs
+## Related topics
 
-**Q: What can you do with Logs?**
-
-Logs allows you to logs toolbar and right-click menu.
-
-**Q: Who has access to Logs?**
-
-Access to Logs is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Types of Logs](Types-of-Logs.md)
+- [Setting Preferences for Log Viewer](Preferences-for-Log-Viewer.md)
+- [Setting up New Profiles](Managing-Connection-Profiles.md)

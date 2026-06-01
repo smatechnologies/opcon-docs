@@ -1,6 +1,6 @@
-﻿---
+---
 title: Accessing and Updating Profile Settings
-description: "!User Profile Button !Profile Account Tab Access the Profile page from the Navigation menu to configure settings from one of these tabs: - Account - External Token - Settings - Application Settings"
+description: "Open the Profile page in Solution Manager to update your account details, manage external tokens, and configure display and application settings."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,39 +15,28 @@ doc_type: procedural
 
 # Accessing and Updating Profile Settings
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Profile** page in Solution Manager lets you update personal account details, manage external tokens, and configure display and application preferences. The page is organized into four tabs, each covering a distinct set of settings.
 
-## What Is It?
+## Profile tabs
 
- ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
- ![Profile Account Tab](../../../Resources/Images/SM/Profile-Account-Tab.png "Profile Account Tab")
+| Tab | Purpose |
+|---|---|
+| [Account](Configuring-Account-Settings.md) | Update your full name, notes, comments, password, and event password. |
+| [External Token](Generating-External-Tokens.md) | Generate and manage external tokens for API authentication. |
+| [Settings](Configuring-Settings.md) | Configure display preferences such as date format and theme. |
+| [Application Settings](Configuring-Application-Settings.md) | Configure application-level preferences for Solution Manager. |
 
-Access the **Profile** page from the [Navigation menu](SM-UI-Layout.md#Navigati) to configure settings from one of these tabs:
+## Open the Profile page
 
-- [Account](Configuring-Account-Settings.md)
-- [External Token](Generating-External-Tokens.md)
-- [Settings](Configuring-Settings.md)
-- [Application Settings](Configuring-Application-Settings.md)
+To open the Profile page, complete the following steps:
 
-## FAQs
+1. Log in to Solution Manager.
+2. Select the user profile button in the navigation menu.
 
-**Q: What does Accessing and Updating Profile Settings do?**
+   ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
 
-![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
+**Result:** The **Profile** page opens, displaying the **Account** tab by default.
 
-**Q: Where can you find Accessing and Updating Profile Settings in OpCon?**
+3. Select the tab for the settings you want to update.
 
-Access Accessing and Updating Profile Settings in Solution Manager.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+For detailed steps on each tab, see the linked pages in the table above.

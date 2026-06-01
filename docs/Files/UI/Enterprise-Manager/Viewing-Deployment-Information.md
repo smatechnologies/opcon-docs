@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Deployment Information
-description: "Use this procedure to view Deployment Information in Enterprise Manager."
+description: "View schedule deployment information on the Deploy Info tab in the Schedule Master editor in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,29 +10,31 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Deployment Information
+# Viewing Deployment Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Deploy Info** tab in the [Schedule Master](Using-Schedule-Master.md) editor displays read-only deployment information for a schedule that has been deployed to a local OpCon instance. If the schedule has not been deployed, the tab displays **N/A**.
 
-## What Is It?
+The tab shows the following fields when deployment information is available:
 
-Use this procedure to view Deployment Information in Enterprise Manager.
+| Field | Description |
+|---|---|
+| **Version** | The version number of the deployed package. |
+| **Package** | The name of the deployment package. |
+| **Description** | The description associated with the deployment package. |
+| **Record Id** | The unique identifier for the deployment record. |
+| **Deployed** | The user who performed the deployment and the deployment date and time. |
 
-To view deployment information, complete the following steps:
+To view deployment information for a schedule, complete the following steps:
 
-1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2.  Select the **Deploy Info** tab
-3.  View the information
-:::
+1. In Enterprise Manager, select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
+2. Select the schedule you want to view.
+3. Select the **Deploy Info** tab.
 
-## Glossary
+**Result:** The tab displays the deployment details for the selected schedule. If the schedule has not been deployed, the tab displays **N/A**.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+For conceptual information about schedule deployment, refer to [Schedule Deployment Information](Schedule-Deployment-Information.md).

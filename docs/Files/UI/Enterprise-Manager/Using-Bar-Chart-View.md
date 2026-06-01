@@ -2,90 +2,67 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Bar Chart View
-description: "The Bar Chart view displays Daily statistics with each bar representing schedules for that day grouped by job status."
+description: "The Bar Chart view in Enterprise Manager displays daily schedule and job statistics grouped by job status. Use it to monitor workload at a glance and drill into specific days or schedules."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-#  Using Bar Chart View
+# Using Bar Chart View
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Bar Chart** view displays daily schedule statistics. Each bar represents a schedule for a given day, color-coded by job status. You can drill down from an overview of all days to a specific schedule, and open related charts or job lists from the context menu.
 
-## What Is It?
+To adjust chart display preferences such as bar size, tube rendering, and sort order, see [Setting Preferences for Charts](Preferences-for-Charts.md).
 
-The **Bar Chart** view displays Daily statistics with each bar representing schedules for that day grouped by job status. To change chart preferences, refer to [Setting Preferences for Charts](Preferences-for-Charts.md).
+## Prerequisites
 
-The **Bar Chart** screen shows jobs grouped by status for either a schedule or a day. The schedule name or date appears above the bar chart. To display schedule and job information, you **must** first select the **Listen for selection changes in other views** button on the **Bar Chart** toolbar.
+Before the Bar Chart view updates in response to selections in other views, you must activate cross-view selection synchronization:
 
-The **Send the current selection to other views** button must also be activated in another view (e.g., **Daily list** and/or **Matrix**).
+1. In the **Bar Chart** toolbar, select the **Listen Selection** button to enable the view to receive selections from other views.
+2. In the source view (for example, **Daily list** or **Matrix**), select the **Send Selection** button to broadcast the current selection.
+
+Both buttons must be active for the views to stay in sync.
 
 ## Bar Chart Toolbar
 
-The **Bar Chart** view has a toolbar for performing actions in the view. Select any icon on the toolbar below to learn more about its functionality.
+The **Bar Chart** toolbar provides the following buttons.
+
+| Button | Description |
+|---|---|
+| **Listen Selection** | Toggles the view to listen for schedule and date selections made in other Enterprise Manager views. When active, the chart updates whenever another view broadcasts a selection. |
+| **Drill up** | Returns the display to the parent level (for example, from a single schedule back to all days). Disabled when the chart is already at the top-level daily view. |
+| **Open the job filter dialog** | Opens the job filter dialog, where you can filter the chart by job status, access code, department, and tag. When a filter is active, the view title appends **(Filtered)**. |
+| **Change Chart between tube/bars** | Toggles the bar series between flat bars and 3D tube rendering. |
+| **Show/Hide legend** | Shows or hides the chart legend. |
+| **Render chart with depth** | Toggles the 3D depth effect on bars. |
+| **Render chart translucent** | Toggles transparency on bar series. |
+| **Transpose the chart** | Rotates the chart orientation. <!-- GAP: exact axis-swap direction (job statuses on horizontal vs vertical) unverified from source — source only exposes setTransposed(boolean) with no axis-label documentation --> |
 
 ![Bar Chart toolbar](../../../Resources/Images/EM/EMbarcharttoolbar.png "Bar Chart toolbar")
 
-## Bar Chart Right-click Menu
+## Bar Chart Right-Select Menu
 
-Selecting a bar or tube in the **Bar Chart** view displays the following menu items:
+Right-selecting a bar or tube in the **Bar Chart** view displays the following options:
 
--   **Drill down**: Takes the display down a level (e.g., from all daily schedules to schedules for a specific day)
--   **Drill up**: Takes the display up a level (e.g., from a schedule on a specific day to all days in the Daily tables)
--   **Jobs list**: Opens the **Jobs list** dialog showing jobs that match the selected bar or tube. Provides **Edit Master** and **Edit Daily** options. Refer to [Editing Master Jobs](Performing-Job-Procedures-List.md#Editing) or [Monitoring SAP R/3 and CRM Background Process Resources](Monitoring-SAP-R3-and-CRM-Background-Process-Resources.md)
--   **Refresh Chart**: Refreshes the displayed items in the **Bar Chart** view
--   **Pie Chart**: Opens the **Pie Chart** for the matching selection
--   **Workload chart**: Opens the **Workload Chart** for the matching selection
+| Option | Description |
+|---|---|
+| **Drill down** | Moves the display down one level (for example, from all daily schedules to schedules for a specific day). Disabled when the selected bar represents the currently displayed node. |
+| **Drill up** | Moves the display up one level (for example, from a schedule on a specific day to all days in the Daily tables). Disabled at the top-level view. |
+| **Jobs list** | Opens the **Jobs list** dialog showing jobs that match the selected bar or tube. From this dialog you can access **Edit Master** and **Edit Daily** options. |
+| **Refresh Chart** | Reloads data and redraws the chart. |
+| **Pie chart** | Opens the **Pie Chart** view for the matching selection. |
+| **Workload chart** | Opens the **Workload Chart** view for the matching selection. |
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")Related
-Topics
+## Related Topics
 
--   [Creating and Saving Custom Diagrams](Creating-Custom-Diagrams-Bar.md)
--   [Synchronizing Data between List and Bar Chart Views](Synchronizing-Data-between-List-and-Bar-Chart-Views.md)
--   [Creating/Updating Job Filters](Creating_Updating-Job-Filters-Bar.md)
--   [Viewing Job Lists for Schedules](Viewing-Job-Lists-for-Schedules-Bar.md)
-:::
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Drill down | Takes the display down a level (e.g., from all daily schedules to schedules for a specific day) | — | — |
-| Drill up | Takes the display up a level (e.g., from a schedule on a specific day to all days in the Daily tables) | — | — |
-| Jobs list | Opens the **Jobs list** dialog showing jobs that match the selected bar or tube. | — | — |
-| Refresh Chart | Refreshes the displayed items in the **Bar Chart** view | — | — |
-| Pie Chart | Opens the **Pie Chart** for the matching selection | — | — |
-| Workload chart | Opens the **Workload Chart** for the matching selection | — | — |
-## FAQs
-
-**Q: What can you do with Bar Chart View?**
-
-Bar Chart View allows you to bar chart toolbar, bar chart right-click menu.
-
-**Q: Who has access to Bar Chart View?**
-
-Access to Bar Chart View is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Creating and Saving Custom Diagrams](Creating-Custom-Diagrams-Bar.md)
+- [Synchronizing Data between List and Bar Chart Views](Synchronizing-Data-between-List-and-Bar-Chart-Views.md)
+- [Creating/Updating Job Filters](Creating_Updating-Job-Filters-Bar.md)
+- [Viewing Job Lists for Schedules](Viewing-Job-Lists-for-Schedules-Bar.md)

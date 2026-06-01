@@ -1,6 +1,7 @@
 ---
+lang: en-us
 title: Managing Resources
-description: "The Resources editor defines and maintains OpCon Resources, providing a list of Resources and their corresponding values."
+description: "Use the Resources editor in Enterprise Manager to add, edit, copy, delete, and reset resources that limit concurrent job execution across schedules."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,54 +9,46 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Resources
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Resources** editor in Enterprise Manager lets you define and maintain OpCon resources — numeric pools that limit the number of concurrently running jobs across schedules. For conceptual background, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help.
 
-## What Is It?
+## Required privilege
 
-The **Resources** editor defines and maintains OpCon Resources, providing a list of Resources and their corresponding values. For additional information, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help.
+You must have the **Maintain Thresholds/Resources** function privilege assigned through your role to use the Resources editor.
 
-## Resources Toolbar
+## Resources editor fields
 
-The **Resources** editor has a toolbar for managing resources. Select any specific icon on the toolbar below to learn more about its functionality.
+When you open the **Resources** editor and select a resource, the following fields are available:
 
-![Resources toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Resources toolbar")
+| Field | Description |
+|---|---|
+| **Select Resource** | List of all defined resources. Select a resource to load its details. |
+| **Resource Name** | Alphanumeric name that identifies the resource. |
+| **Max Resources** | Numeric maximum number of resource units available. |
+| **Documentation** | Optional free-text notes describing the resource's purpose. |
+| **Resources In Use** | Read-only display showing current units in use as a fraction of the maximum (for example, `3/10`) and a progress bar. |
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Open the Resources editor
 
-- [Adding Resources](Adding-Resources.md)
-- [Resetting Resources in Use](Resetting-Resources-in-Use.md)
-- [Editing Resources](Editing-Resources.md)
-- [Viewing Additional Resource Information](Viewing-Additional-Resource-Info.md)
-- [Copying Resources](Copying-Resources.md)
-- [Deleting Resources](Deleting-Resources.md)
+To open the Resources editor, complete the following steps:
 
-## FAQs
+1. In Enterprise Manager, select **Resources** under the **Administration** topic.
 
-**Q: What does managing resources involve?**
+**Result:** The **Resources** screen opens.
 
-Managing resources includes Resources Toolbar. Access resources through Enterprise Manager navigation pane.
+## Available tasks
 
-**Q: Who can manage resources in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage resources. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+| Task | Description |
+|---|---|
+| [Adding Resources](Adding-Resources.md) | Define a new resource with a name and maximum value. |
+| [Editing Resources](Editing-Resources.md) | Modify the name, maximum value, or documentation for an existing resource. |
+| [Copying Resources](Copying-Resources.md) | Duplicate an existing resource as a starting point for a new one. |
+| [Deleting Resources](Deleting-Resources.md) | Remove a resource after clearing all job dependencies and updates that reference it. |
+| [Resetting Resources in Use](Resetting-Resources-in-Use.md) | Manually correct the **Resources In Use** value when it is inaccurate due to an unusual occurrence. |
+| [Viewing Additional Resource Information](Viewing-Additional-Resource-Info.md) | View cross-references (job dependencies and updates) and audit records for a resource. |
