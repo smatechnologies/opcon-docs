@@ -1,6 +1,6 @@
 ---
 title: Editing Daily Schedules
-description: "Editing Daily Schedules modifies jobs and schedules in the Daily tables."
+description: "How to modify schedule and job information in the Daily tables, where each change applies only to a specific date's instance and does not affect Job Master records."
 product_area: Operations
 audience: Operations Staff, System Administrator
 version_introduced: "[see release notes]"
@@ -9,70 +9,77 @@ tags:
   - Operations Staff
   - System Administrator
   - Schedules
-last_updated: 2026-03-18
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
 # Editing Daily Schedules
 
-**Theme:** Configure  
-**Who Is It For?** Operations Staff, System Administrator
+Editing a Daily Schedule modifies schedule or job information for a single date's instance in the Daily tables. Changes do not propagate to Job Master records or to any other date in the Daily tables. For example, changing a job's start time from 19:00 to 20:00 on a specific date leaves all other instances at 19:00.
 
-## What Is It?
-
-Editing Daily Schedules modifies jobs and schedules in the Daily tables. Each change affects only that iteration — it does not affect Job Master records or any other date in the Daily tables. For example, changing a job's start time from 19:00 to 20:00 applies only to that specific occurrence; all other executions remain at 19:00.
-
-Modifiable schedule information:
+You can modify the following schedule-level information:
 
 - Schedule Start Time
 - Schedule Completion Events
 - Available properties for the schedule instance
 
-Modifiable job information:
+You can modify the following job-level information:
 
 - General and platform-specific job details
 - All Job Automation components for the job instance
 - Available properties for the job instance
 
-Jobs can also be deleted from Daily schedules.
+You can also delete jobs from Daily Schedules.
 
 :::note
-Deleting a Container job whose subschedule(s) have never started also deletes all of that Container job's subschedule(s), including any spawned subschedules.
+Deleting a Container job whose subschedule(s) have never started also deletes all of that Container job's subschedules, including any spawned subschedules.
 :::
 
-## Operations
+## Required privileges
 
-### Common Tasks
-- Edits to Daily Schedules affect only that specific date's iteration; changes do not propagate to the Job Master or to any other date in the Daily tables.
-- Modifiable schedule information includes: Schedule Start Time, Schedule Completion Events, and available properties for the schedule instance.
-- Modifiable job information includes: general and platform-specific job details, all Job Automation components, and available properties for the job instance.
-- Jobs can be deleted from Daily schedules; deleting a Container job whose subschedule(s) have never started also deletes all of that Container job's subschedules, including any spawned subschedules.
+To modify jobs in a Daily Schedule, your role must include one of the following department-level function privileges:
 
-### Alerts and Log Files
-- All changes to Daily Schedules are recorded in the OpCon audit log, providing a complete modification history for compliance and troubleshooting.
+- **Modify Jobs in Daily Schedules** (together with **View Jobs in Daily Schedules**)
+- **All Daily Schedule Functions**
 
-## FAQs
+To modify schedule-level properties, your role must include the **Modify Schedule** privilege for the target schedule.
 
-**Q: Does editing a Daily Schedule affect the Job Master record?**
+To delete jobs from a Daily Schedule, your role must include the **Delete Jobs from Daily Schedules** privilege.
 
-No. Edits to Daily Schedules apply only to that specific iteration. Job Master records and other dates in the Daily tables are not affected.
+## Edit schedule information
 
-**Q: What job information can be modified in a Daily Schedule?**
+To edit schedule information in the Daily tables, complete the following steps:
 
-You can modify general and platform-specific job details, all Job Automation components for the job instance, and available properties for the job instance.
+1. In Solution Manager, go to **Operations**.
+2. Select **Processes**.
+3. Locate and select the schedule for the date you want to modify.
+4. In the right panel, select the edit icon to open the **Daily Schedule Definition** page.
+5. Modify the **Start Time**, **Completion Events**, or **Instance Properties** fields as needed.
+6. Select **Save**.
 
-**Q: What happens when you delete a Container job from a Daily Schedule?**
+**Result:** The changes apply to the selected date's schedule instance only. The Job Master record and all other dates are unchanged.
 
-If a Container job's subschedule(s) have never started, deleting the Container job also deletes all of its subschedules, including any spawned subschedules.
+## Edit job information
 
-## Glossary
+To edit job information in a Daily Schedule, complete the following steps:
 
-**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+1. In Solution Manager, go to **Operations**.
+2. Select **Processes**.
+3. Locate the job you want to edit.
+4. In the right panel, select the edit icon to open the **Daily Job Definition** page.
+5. Modify the applicable fields across the **Task Details**, **Frequency**, **Properties**, or **Documentation** panels.
+6. Select **Save**.
 
-**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+**Result:** The changes apply to the selected job instance only. The Job Master record and all other dates are unchanged.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+## Delete a job from a Daily Schedule
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+To delete a job from a Daily Schedule, complete the following steps:
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+1. In Solution Manager, go to **Operations**.
+2. Select **Processes**.
+3. Select the job you want to delete.
+4. In the right panel, select **Delete Selected Job(s)**.
+5. Confirm the deletion when prompted.
+
+**Result:** The job is removed from the Daily Schedule for the selected date. If the deleted job is a Container job and its subschedule(s) have never started, all associated subschedules — including any spawned subschedules — are also deleted.

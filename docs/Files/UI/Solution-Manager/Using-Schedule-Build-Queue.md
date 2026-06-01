@@ -2,55 +2,82 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Schedule Build Queue
-description: "The Schedule Build Queue page displays all schedules that are building or have completed building."
+description: "The Schedule Build Queue page lists all active and completed schedule build requests, showing status, progress, and links to build logs."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: reference
 ---
 
 # Using Schedule Build Queue
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Schedule Build Queue** page displays all schedule build requests that are currently building or have completed building. Each request is listed in reverse chronological order by the time it was submitted.
 
-## What Is It?
-
-The **Schedule Build Queue** page displays all schedules that are building or have completed building.
+To access the Schedule Build Queue, select the **Queue** button from the Schedule Build page toolbar.
 
 ![Schedule Build Queue](../../../Resources/Images/SM/Schedule-Build-Queue.png "Schedule Build Queue")
 
-Selecting the .log path following the link icon (![Schedule Build Link Icon](../../../Resources/Images/SM/Schedule-Build-Link-Icon.png "Schedule Build Link Icon")) displays the build log.
+## Required Privileges
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+- **Build Daily Schedules** — required to access the Schedule Build page and submit build requests.
+- **View Schedule Build Log** — required to access the Schedule Build Queue page and open build log files.
+
+## Queue Layout
+
+The queue displays build requests in a tree structure. Select a row to expand or collapse it. Right-click a row to expand or collapse it and all its child rows recursively.
+
+### Build Request Row
+
+Each top-level row represents one build request and shows the following columns:
+
+| Column | Description |
+|--------|-------------|
+| Request time | The date and time the build was submitted, with a status icon indicating the overall result. |
+| Requested by | The login name of the user who submitted the request. |
+| Progress | When building is still in progress, shows a spinner and the count of completed builds out of the total (for example, `Building 2/5`). |
+
+### Date Row
+
+Expanding a build request row reveals one child row per build date. Each date row shows the date and an aggregate status icon for all schedules built on that date.
+
+### Schedule Result Row
+
+Expanding a date row reveals one child row per schedule. Each result row shows:
+
+| Column | Description |
+|--------|-------------|
+| Schedule name | The name of the schedule, with a status icon. Select the name to go to the Processes view filtered to that schedule and date. |
+| Jobs built | The number of jobs built for the schedule, or **Failed** if the build failed. |
+| Log file | The name of the build log file. Select the log file name to open the **Schedule Build Log** dialog. Requires the **View Schedule Build Log** privilege. |
+
+## Status Icons
+
+| Status | Icon | Meaning |
+|--------|------|---------|
+| Building | Circle (outline) | The schedule build request is still in progress. |
+| Success | Check circle | The schedule built successfully and contains at least one job. |
+| Warning | Exclamation triangle | The schedule built successfully but contains no jobs. |
+| Failed | Times circle | The schedule build failed or contains at least one failed build result. |
+
+## Viewing a Build Log
+
+To view the build log for a completed schedule build, complete the following steps:
+
+1. Expand the build request row, then expand the date row to see the schedule result rows.
+2. In the **Log file** column of the result row, select the log file name.
+
+**Result:** The **Schedule Build Log** dialog opens and displays the log content for that build result.
+
+:::note
+The log file link is only active if you have the **View Schedule Build Log** function privilege. If you do not have this privilege, a lock icon is shown next to the log file name and selecting it has no effect.
+:::
+
+## Related Topics
 
 - [Managing Schedules](Managing-Schedules.md)
-
-## FAQs
-
-**Q: What can you do with Schedule Build Queue?**
-
-Schedule Build Queue allows you to manage and configure related settings.
-
-**Q: Who has access to Schedule Build Queue?**
-
-Access to Schedule Build Queue is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

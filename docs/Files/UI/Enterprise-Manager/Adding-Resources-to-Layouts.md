@@ -1,6 +1,6 @@
 ---
 title: Adding Resources to Layouts
-description: "Use this procedure to add Resources to Layouts in Enterprise Manager."
+description: "Use these procedures to add a resource to a Workflow Designer layout, create a resource dependency, and edit a resource dependency in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,77 +15,61 @@ doc_type: procedural
 
 # Adding Resources to Layouts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to add Resources to Layouts in Enterprise Manager.
+The Workflow Designer lets you visually place resources on a schedule diagram and draw dependency links between resources and jobs. Use the procedures on this page to add a resource to the layout, create a resource dependency, and edit an existing resource dependency.
 
 :::note
-If you do not have the privileges to "Modify Jobs in Job Master" in at least one department, or "All Administration Functions" or "All Functions," the **Select Threshold** tool is disabled.
+If you do not have the **Modify Jobs in Master Schedules** privilege in at least one department, resource dependency creation will fail.
 :::
 
-To add a resource, complete the following steps:
+## Add a Resource to the Layout
 
-1. Select **Workflow Designer** under the **Administration** topic
-2. Select a **schedule** in the **Select Schedule** list
-3. Select, drag, and drop the **Resource** icon in the **Tools** frame to the schedule diagram
-4. Select the **resource** and select **OK**
+To add a resource to the Workflow Designer layout, complete the following steps:
 
-Add a Resource Dependency
+1. Select **Workflow Designer** under the **Administration** topic in the navigation pane.
+2. Select a schedule from the **Select Schedule** list.
+3. Select, drag, and drop the **Select Resource** tool from the **Tools** panel onto the schedule diagram.
+4. Select the resource in the selection dialog, then select **OK**.
 
-Establish the dependency link using one of the following procedures:
+The resource node appears on the schedule diagram.
 
-a.  Select **Add Dependency** in the **Tools** frame.
-b.  Select the **resource** that is the object of the dependency.
-c.  Select the **job** in which to create the dependency.
-d.  Proceed to Step 7.
+## Add a Resource Dependency
 
-OR
+To create a resource dependency link on a job, complete the following steps using one of two methods.
 
-a.  Select **Select**.
-b.  Press **Ctrl** and select the **resource** that is the object of the dependency.
-c.  Drag the line to the **job** in which to create the dependency.
-d.  Proceed to Step 7.
+**Method 1 — Use the Add Dependency tool:**
 
-5. Select the **Resource** option information (e.g., Value, Frequency) in the **Resource Dependency** dialog
-6. Select **OK** to save the added resource
+1. Select **Add Dependency** in the **Tools** panel.
+2. Select the resource node that is the source of the dependency.
+3. Select the job on which to create the dependency.
+4. In the **Threshold/Resource Dependency** dialog, configure the dependency options (resource, value, and frequency).
+5. Select **OK** to save the dependency.
 
-Edit a Resource Dependency
+**Method 2 — Drag from the resource node:**
 
-1. Right-click the **resource dependency** link (line) whose details need to be changed
+1. Select **Select** in the **Tools** panel.
+2. Hold **Ctrl** and select the resource node that is the source of the dependency.
+3. Drag the connection line to the job on which to create the dependency.
+4. In the **Threshold/Resource Dependency** dialog, configure the dependency options (resource, value, and frequency).
+5. Select **OK** to save the dependency.
+
+The dependency link appears as a line connecting the resource to the job on the diagram.
+
+## Edit a Resource Dependency
+
+To edit an existing resource dependency, complete the following steps:
+
+1. Right-click the resource dependency link (the line connecting the resource to the job).
+
+   :::note
+   When you select the resource dependency link, the line thickens and becomes bold to indicate it is selected.
+   :::
+
+2. Select **Edit**. The **Threshold/Resource Dependency** dialog opens.
+3. Change the dependency options as needed (resource, value, or frequency).
+4. Select **OK** to save the changes.
+
+The dependency link updates to reflect the new settings.
 
 :::note
-When selecting the Resource Dependency link line, the line should thicken and become bold.
+To delete a resource dependency, refer to the [Delete a Dependency](Adding-Jobs-to-Schedule-Layouts.md#Delete_a_Dependency) procedure.
 :::
-
-2. Select **Edit**. The **Editing Job Dependency** dialog displays
-3. Change the *Resource Dependency* option information (e.g., Value, Frequency)
-4. Select **OK** to save the changes
-
-:::note
-Refer to the [Delete a Dependency](Adding-Jobs-to-Schedule-Layouts.md#Delete_a_Dependency) procedure to delete resource dependencies.
-:::
-
-## FAQs
-
-**Q: How do you save a new resources to layouts record?**
-
-After completing the required fields, select the **Save** button on the toolbar to save the resources to layouts record.
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

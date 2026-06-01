@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Live
-description: "The Live link provides access to the Vision Live page in Solution Manager."
+description: "Open the Vision Live page in Solution Manager directly from Enterprise Manager to monitor Vision card status in real time."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,30 +17,31 @@ doc_type: procedural
 
 # Using Live
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Live** link in Enterprise Manager opens the **Vision Live** page in Solution Manager. Vision Live displays real-time status for all Vision cards. You can filter cards by day and select any card to drill into underlying job data.
 
-## What Is It?
-
-The **Live** link provides access to the **Vision Live** page in Solution Manager. For more information, refer to [Viewing Cards in Vision Live](../Solution-Manager/Viewing-Cards-in-Vision-Live.md) in the **Solution Manager** online help.
+:::note
+You must have the **View Vision Workspaces** function privilege to view the Vision Live page. Contact your system administrator if you cannot access this page.
 :::
 
-## FAQs
+## Open Vision Live from Enterprise Manager
 
-**Q: What can you do with Live?**
+To open Vision Live from Enterprise Manager, complete the following steps:
 
-Live allows you to manage and configure related settings.
+1. In the Enterprise Manager navigation panel, expand the **Solution Manager** section.
+2. Expand **Vision**.
+3. Select **Live**.
 
-**Q: Who has access to Live?**
+**Result:** Solution Manager opens in an embedded browser and displays the **Vision Live** page.
 
-Access to Live is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+## Filter Cards by Day
 
-## Glossary
+To filter Vision cards by day, complete the following steps:
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+1. On the **Vision Live** page, locate the date filter at the top of the page.
+2. Select one of the available options: **Today**, **Yesterday**, or **Tomorrow**.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+**Result:** The page refreshes and displays cards for the selected day.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+## Related Topics
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+For complete information about working with Vision cards, see [Viewing Cards in Vision Live](../Solution-Manager/Viewing-Cards-in-Vision-Live.md).

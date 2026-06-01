@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Job Information
-description: "Use this procedure to view Job Information in Enterprise Manager."
+description: "How to open the Job Information dialog from the PERT view in Enterprise Manager to review the daily copy of a selected job."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,30 +10,25 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
-#  Viewing Job Information
+# Viewing Job Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Job Information** dialog shows the daily copy of a selected job, including its status, dependencies, events, and configuration. You can open it from the PERT view using the context menu.
 
-## What Is It?
+For a full description of the dialog fields and tabs, refer to [Job Information](Job-Information.md).
 
-Use this procedure to view Job Information in Enterprise Manager.
+## View job information from the PERT view
 
-To view job information, complete the following steps:
+To view job information from the PERT view, complete the following steps:
 
-1.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
-2.  Select the **schedule** that contains the job
-3.  Select the **job** to open the **Job Information** dialog. Alternatively, right-click the **job box**, select **Job**, then **Job Information**. For more information, refer to [Job Information](Job-Information.md)
-4.  Select **OK** to close the **Job Information** dialog
-:::
+1. Under the **Operation** topic, select **PERT**. The **PERT** view opens.
+2. Select the schedule that contains the job you want to review.
+3. Open the context menu on the job box, select **Job**, then select **Job Information**. The **Job Information** dialog opens.
+4. Review the job details across the available tabs.
+5. Select **OK** to close the dialog.
 
-## Glossary
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The **Job Information** dialog closes and you return to the **PERT** view.

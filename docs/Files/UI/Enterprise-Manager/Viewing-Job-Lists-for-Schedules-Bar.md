@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Job Lists for Schedules
-description: "Use this procedure to view Job Lists for Schedules in Enterprise Manager."
+description: "Use this procedure to view the Jobs list dialog for a schedule or subschedule in the Bar Chart view of Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,37 +10,37 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Job Lists for Schedules
+# Viewing Job Lists for Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Jobs list** dialog displays all jobs in a selected schedule or subschedule, filtered by job status category. You can open master or daily job and schedule editors directly from this dialog.
 
-## What Is It?
+## View the job list for a schedule
 
-Use this procedure to view Job Lists for Schedules in Enterprise Manager.
+To view the job list for a schedule in the Bar Chart view, complete the following steps:
 
-To view the job list, complete the following steps:
+1. Select **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays.
+2. Select a date or schedule to display in the **Bar Chart** screen.
+3. Right-click the bar for the schedule.
+4. Select **Jobs list** from the menu. The **Jobs list** dialog displays.
+5. Review the list of jobs for the schedule.
+6. Select **OK** to close the dialog.
 
-1.  Select **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays
-2.  Select a **date** or **schedule** to display in the **Bar Chart** screen
-3.  Right-click the **bar** for the schedule
-4.  Select **Jobs list** from the menu. The **Jobs list** dialog displays
-5.  Select **OK** to close the dialog
-6.  To view a subschedule's job list, select on a **date** (and optionally a **schedule** containing the subschedule), then select on the **subschedule**
-7.  Right-click the **bar** for the subschedule and select **Jobs list**. The **Jobs list** dialog displays
-8.  View the **list of jobs** in the subschedule
-9.  Select **OK** to close the **Jobs list** dialog
-:::
+**Result:** The **Jobs list** dialog closes and the **Bar Chart** view remains active.
 
-## Glossary
+## View the job list for a subschedule
 
-**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+To view the job list for a subschedule in the Bar Chart view, complete the following steps:
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+1. Select a date in the **Bar Chart** screen, and optionally select a schedule that contains the subschedule.
+2. Select the subschedule bar in the chart.
+3. Right-click the bar for the subschedule.
+4. Select **Jobs list** from the menu. The **Jobs list** dialog displays.
+5. Review the list of jobs in the subschedule.
+6. Select **OK** to close the **Jobs list** dialog.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The **Jobs list** dialog closes and the **Bar Chart** view remains active.

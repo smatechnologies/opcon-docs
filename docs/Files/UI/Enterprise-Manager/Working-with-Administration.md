@@ -1,6 +1,6 @@
 ---
 title: Working with Administration
-description: "The Administration topic in the Navigation Panel provides screen information and procedures for the editors and views."
+description: "The Administration topic in Enterprise Manager's Navigation Panel provides editors for managing schedules, jobs, machines, resources, thresholds, global properties, calendars, and server configuration."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,44 +8,42 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Working with Administration
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Administration** topic in the Navigation Panel provides screen information and procedures for the [editors](Navigation-Editors.md) and [views](Navigation-Views.md).
+The **Administration** topic in Enterprise Manager's Navigation Panel gives you access to editors for defining and maintaining the core configuration objects that OpCon uses to run automation: schedules, jobs, machines, machine groups, resources, thresholds, global properties, calendars, and server options.
 
 :::note
-To perform any functions, you must have the appropriate privileges. For additional information, refer to [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges) in the **Concepts** online help.
+Each editor is visible only when your OpCon role grants the corresponding function privilege. For details, refer to [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges) in the **Concepts** online help.
 :::
 
-Select any **Administration** function item in the graphic to learn more.
+Select any **Administration** item in the following graphic to learn more.
 
 ![Administration Topic](../../../Resources/Images/EM/EMadminmenu.png "Administration Topic")
 
-## FAQs
+## Editors in the Administration topic
 
-**Q: What can you do in Administration?**
+The Administration topic provides the following editors. Each item opens a [Navigation Editor](Navigation-Editors.md) in the workspace.
 
-Administration provides access to related configuration and management tasks. Use the navigation options to add, edit, or delete records as needed.
+| Editor | Purpose | Required privilege |
+|---|---|---|
+| **Schedule Master** | Define master schedule properties, frequencies, and build settings | Maintain Schedules |
+| **Job Master** | Define jobs within master schedules, including platform details, frequencies, and dependencies | View Jobs in Master Schedules (departmental) |
+| **Calendars** | Create and maintain named date collections used by schedules and frequencies | Maintain Calendars |
+| **Global Properties** | Define global tokens (name/value pairs) referenced across jobs and events | Maintain Global Properties |
+| **Thresholds** | Define numeric threshold variables used for job dependency and event conditions | Maintain Thresholds/Resources |
+| **Resources** | Define resource pools that limit concurrent job execution | Maintain Thresholds/Resources |
+| **Machines** | Define and configure agent connections for job execution | Maintain Machines |
+| **Machine Groups** | Group agents for use in schedule and job assignments | Maintain Machine Groups |
+| **Remote Instances** | Configure connections to remote OpCon environments | OCADM role only |
+| **Server Options** | Configure OpCon server-wide settings | OCADM role only |
 
-**Q: Who can access administration in OpCon?**
+## Related topics
 
-Access is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access to administration.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Navigation Editors](Navigation-Editors.md) — how to open, arrange, and manage editor tabs
+- [Navigation Views](Navigation-Views.md) — read-only operational views available from the Navigation Panel
+- [Navigation Panel](Navigation-Panel.md) — overview of all Navigation Panel topics
