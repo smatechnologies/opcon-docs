@@ -28,7 +28,7 @@ Only users in the ocadm role can add, edit, or delete remote instances.
 
 ## Remote Instances Toolbar
 
-The **Remote Instances** editor has a toolbar for managing remote instances. Select on any specific icon on the toolbar below to learn more about its functionality.
+The **Remote Instances** editor has a toolbar for managing remote instances. Select any specific icon on the toolbar below to learn more about its functionality.
 
 ![Remote Instances toolbar](../../../Resources/Images/EM/EMdashboardtoolbar.png "Remote Instances toolbar")
 

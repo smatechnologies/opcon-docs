@@ -24,7 +24,7 @@ Use this procedure to send Notification Tests in Enterprise Manager.
 
 To send a notification test, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the options for the **Notification Definitions** to test
 3. Select the **Test All** button
 

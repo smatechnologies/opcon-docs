@@ -24,7 +24,7 @@ Use this procedure to delete Schedule Completion Events in Enterprise Manager.
 
 To delete a schedule completion event from the daily tables, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
 3. Select the **schedule**
 4. Select the **Edit Daily** button in the **Maintenance** frame. The **Schedule Daily** screen displays

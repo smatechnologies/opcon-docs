@@ -26,7 +26,7 @@ Revoke privileges
 
 To revoke privileges, complete the following steps:
 
-1. Select on **Departmental Function Privileges** under the **Security** topic. The **Departmental Function Privileges** screen displays
+1. Select **Departmental Function Privileges** under the **Security** topic. The **Departmental Function Privileges** screen displays
 2. Select a **role** in the **Select Role** list. Use the **Find** ((Ctrl+F) magnifying glass) button to find the role
 3. Select a **department** in the **Departments** list
 4. Select all **functions** in the **Granted** list box (shift/select to select multiple)
@@ -36,10 +36,10 @@ To revoke privileges, complete the following steps:
 
 Remove the Department from the Daily Table
 
-1. Select on **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Select on the **job**
+4. Select the **job**
 5. Select **Edit Daily**. The **Job Daily** screen displays
 6. In the **Job Details** frame, select **<General\>** or a different **department name** in the **Department** list
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
@@ -60,7 +60,7 @@ Delete the Department
 
 To delete the department, complete the following steps:
 
-1. Select on **Departments** under the **Security** topic. The **Departments** screen displays
+1. Select **Departments** under the **Security** topic. The **Departments** screen displays
 2. Select the **department** in the **Select a department** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Departments** toolbar
 4. Select **Yes** to confirm the deletion or **No** to cancel

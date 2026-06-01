@@ -26,10 +26,10 @@ Remove the Global Property from the Daily Tables
 
 To remove the global property from the daily tables, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
-4. Select on the **job**
+4. Select the **job**
 5. Select **Edit Daily** in the **Maintenance** frame at the bottom-right of the screen
 6. In the **Command Line** text box, replace any *tokens* representing the property to delete with a hardcoded value or another token
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
@@ -44,10 +44,10 @@ To remove the global property from the daily tables, complete the following step
 
 Remove the Global Property from the Master Tables
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
-4. Select on the **job**
+4. Select the **job**
 5. Select **Edit Master** in the **Maintenance** frame at the bottom-right of the screen
 6. In the **Command Line** text box, replace any *tokens* representing the property to delete with a hardcoded value or another token
 7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
@@ -62,7 +62,7 @@ Remove the Global Property from the Master Tables
 
 Delete the Global Property
 
-1. Select on **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
+1. Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
 2. Select the **global property** in the **Select Global Property** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Global Properties** toolbar
 4. Select **Yes** to confirm the deletion or **No** to discard

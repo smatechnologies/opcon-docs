@@ -24,7 +24,7 @@ Use this procedure to update Schedule Instance Properties in Enterprise Manager.
 
 To update a property, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Instance Definition** tab in the **Schedule Details** frame
 4. Select the **property** to update

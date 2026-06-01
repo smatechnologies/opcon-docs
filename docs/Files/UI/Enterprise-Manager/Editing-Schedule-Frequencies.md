@@ -28,9 +28,9 @@ A previously defined frequency can be edited only if it is used by that one sche
 
 To edit a frequency, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
-3. Select on the **Frequency** tab in the **Schedule Details** frame
+3. Select the **Frequency** tab in the **Schedule Details** frame
 4. Select the **existing frequency** in the **Frequency list**
 5. Select the **Edit** button. The **Frequency Definition Wizard** displays
 6. Enter the changes in the wizard

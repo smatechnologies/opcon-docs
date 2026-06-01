@@ -30,7 +30,7 @@ Batch User IDs are required for processing jobs on Windows, IBM i, MCP, UNIX, an
 
 To grant a privilege, complete the following steps:
 
-1. Select on **Batch User Privileges** under the **Security** topic
+1. Select **Batch User Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list
 3. Select an **operating system** in the **Target Operating System** list
 4. Select the **batch user(s)** in the **Revoked** list box
@@ -41,7 +41,7 @@ To grant a privilege, complete the following steps:
 
 To revoke a privilege, complete the following steps:
 
-1. Select on **Batch User Privileges** under the **Security** topic
+1. Select **Batch User Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list
 3. Select an **operating system** in the **Target Operating System** list
 4. Select the **batch user(s)** in the **Granted** list box

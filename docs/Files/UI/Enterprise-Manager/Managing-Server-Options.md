@@ -30,7 +30,7 @@ Only the ocadm role can access this editor.
 
 To modify a server option parameter, complete the following steps:
 
-1. Select on **Server Options** under the **Administration** topic
+1. Select **Server Options** under the **Administration** topic
 2. Select the **tab** containing the parameter to modify
 3. Select the **parameter** to modify
 4. Enter or select the **Parameter Information**

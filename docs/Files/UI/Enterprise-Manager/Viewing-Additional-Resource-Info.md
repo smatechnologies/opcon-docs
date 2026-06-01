@@ -26,7 +26,7 @@ Use this procedure to view Additional Resource Information in Enterprise Manager
 
 To view additional information, complete the following steps:
 
-1.  Select on **Resources** under the **Administration** topic. The **Resources** screen displays
+1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
 2.  Select the **resource** in the **Select Resource** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to refer to a list of Master resource dependencies and updates
 4.  Select **OK**

@@ -28,7 +28,7 @@ To perform a reverse lookup, you need the Notification ID. Obtain it from a noti
 
 To look up a notification source, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select **Notification Lookup** on the **Notification Manager** toolbar. The **Notification Lookup** dialog displays
 3. Enter the *Notification ID* number
 4. Select **Lookup** to search for the notification source record

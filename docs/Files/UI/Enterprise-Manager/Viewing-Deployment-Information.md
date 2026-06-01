@@ -26,7 +26,7 @@ Use this procedure to view Deployment Information in Enterprise Manager.
 
 To view deployment information, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2.  Select the **Deploy Info** tab
 3.  View the information
 :::

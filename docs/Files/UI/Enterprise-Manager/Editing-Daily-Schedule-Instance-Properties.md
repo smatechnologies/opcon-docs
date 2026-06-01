@@ -22,12 +22,12 @@ doc_type: procedural
 
 To edit Daily Schedule Instance Properties in Enterprise Manager, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic
-2. Select on the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
+1. Select **Daily Maintenance** under the **Operation** topic
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)
     **arrow** to expand the specific **date** for the schedule.
-3. Select on the **schedule**
-4. Select on the **Edit Daily** button in the **Maintenance** frame
-5. Select on the **Instance Definition** tab
+3. Select the **schedule**
+4. Select the **Edit Daily** button in the **Maintenance** frame
+5. Select the **Instance Definition** tab
 6. Select the **property name** in the **Available Properties** table
 7. Make the changes to the *property definition*
 8. Select the **Update** button

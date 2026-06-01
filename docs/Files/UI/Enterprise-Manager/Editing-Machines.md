@@ -26,7 +26,7 @@ Use this procedure to edit Machines in Enterprise Manager.
 
 To edit a machine, complete the following steps:
 
-1.  Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1.  Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2.  Select the **machine** in the **Select Machine** list
 3.  Right-click over the graphic in the **Communication Status** frame and select **Stop Communication** to stop communication with the agent
 4.  Enter the *changes* to the **Name**, **Documentation**, or **General Settings** boxes
@@ -42,7 +42,7 @@ Changes saved to machines in the Job Master take effect the next time the record
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 

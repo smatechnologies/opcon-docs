@@ -26,7 +26,7 @@ Use this procedure to edit Remote Instances in Enterprise Manager.
 
 To edit a remote instance, complete the following steps:
 
-1.  Select on **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
+1.  Select **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
 2.  Select an **existing remote instance** in the **Selection** list
 3.  Enter the *changes*
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Remote Instances** toolbar

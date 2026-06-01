@@ -26,7 +26,7 @@ Use this procedure to copy Access Codes in Enterprise Manager.
 
 To copy an access code, complete the following steps:
 
-1.  Select on **Access Codes** under the **Security** topic. The **Access Codes** screen displays
+1.  Select **Access Codes** under the **Security** topic. The **Access Codes** screen displays
 2.  Select the **access code** in the **Select Access Code** list
 3.  Select the **Copy** button on the **Access Codes** toolbar. The **Copy Access Code** dialog displays
 4.  Enter the *new access code name*

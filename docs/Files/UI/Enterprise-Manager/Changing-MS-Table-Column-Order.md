@@ -26,7 +26,7 @@ Use this procedure to change Machines Status Table Column Order in Enterprise Ma
 
 To change the column order, complete the following steps:
 
-1.  Select on **Machines Status** under the **Operation** topic
+1.  Select **Machines Status** under the **Operation** topic
 2.  *(Optional)* Drag a **Machines Status** column heading to the preferred position and release
 
 ## Glossary

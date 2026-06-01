@@ -28,13 +28,13 @@ Changes to the schedule start time and events take effect immediately. If the sc
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
-3. Select on the **schedule** to edit
+3. Select the **schedule** to edit
 4. Select **Edit Daily** in the **Maintenance** frame at the bottom-right. The **Schedule Daily** screen displays
 5. *(Optional)* Select inside the **Start Time** text box to modify the start time
 6. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar
-7. Select on the **Events** tab
+7. Select the **Events** tab
 8. *(Optional)* Select the **schedule event** to modify, then select **Edit** in the **Events** frame. The **Event Definition Wizard** displays
 9. Enter the *changes* and select **Finish** to save
 10. Select **Close ☒** (to the right of the **Schedule Daily** tab) to close the **Schedule Daily** screen

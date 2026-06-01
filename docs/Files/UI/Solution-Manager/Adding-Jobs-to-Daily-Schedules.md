@@ -24,7 +24,7 @@ The **Operations** module allows you to add jobs to daily schedules.
 
 To add a job to a Daily Schedule, complete the following steps:
 
-1. Right-click on a Schedule record and select the **+** icon to open the Add Job(s) dialog
+1. Right-click a Schedule record and select the **+** icon to open the Add Job(s) dialog
    ![Opening Add Job(s) dialog](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule1.png "Opening Add Job(s) dialog")
 
 2. Find and select job(s) by searching or browsing

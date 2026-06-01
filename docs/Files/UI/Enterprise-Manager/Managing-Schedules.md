@@ -32,7 +32,7 @@ The **Schedule Build** dialog contains a list of schedules to build and the buil
 
 To build a daily schedule:
 
-1. Select on **Schedule Build** under the **Operation** topic. The **Build Schedules** dialog displays
+1. Select **Schedule Build** under the **Operation** topic. The **Build Schedules** dialog displays
 2. Select the **schedule(s)** in the **Schedule Selection** list. Alternatively, type the first few letters or numbers in the **Schedule Selection** text box to filter the list. You can also select the **Show schedules with auto-build** or **Show schedules without auto-build** option
 3. In the **Start** text box, enter the start date or select it using the **calendar** button
 4. In the **Stop** text box, enter the stop date or select it using the **calendar** button

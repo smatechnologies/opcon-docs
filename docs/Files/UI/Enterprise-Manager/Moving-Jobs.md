@@ -26,7 +26,7 @@ Use this procedure to move Jobs in Enterprise Manager.
 
 To move a job, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select a **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Move** button on the **Job Master** toolbar. The **Move** dialog displays

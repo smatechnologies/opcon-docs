@@ -44,10 +44,6 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: What does Role General do?**
-
-title: Roles - General
-
 **Q: Where can you find Role General in OpCon?**
 
 Access Role General in Solution Manager or Enterprise Manager.

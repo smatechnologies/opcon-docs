@@ -26,7 +26,7 @@ Use this procedure to add Script Types in Enterprise Manager.
 
 To add a script type, complete the following steps:
 
-1.  Select on **Types** under the **Scripts** topic. The **Script Types** screen displays
+1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
 2.  Select **Add Type** on the toolbar. The **Add Script Type** dialog displays
 3.  Enter a *name* for the script type (e.g., PERL)
 4.  *(Optional)* Enter the *file extension* for the script type (e.g., pl)

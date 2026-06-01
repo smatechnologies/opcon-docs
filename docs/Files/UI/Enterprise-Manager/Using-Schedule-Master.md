@@ -31,7 +31,7 @@ The editor contains a list of schedules and uses tabs to provide the
 schedule details, instance definitions, frequencies, and/or events for
 each schedule.
 
-Select on any specific tab below to learn more about its functionality in
+Select any specific tab below to learn more about its functionality in
 **Schedule Master**.
 
 ![Schedule Master tab bar](../../../Resources/Images/EM/EMschedmastertabbar.png "Schedule Master tab bar")
@@ -39,7 +39,7 @@ Select on any specific tab below to learn more about its functionality in
 ## Schedule Master Toolbar
 
 The **Schedule Master** editor also has a toolbar that allows you to
-perform functions for managing the schedules. Select on any specific icon
+perform functions for managing the schedules. Select any specific icon
 on the toolbar below to learn more about its functionality.
 
 ![Schedule Master toolbar](../../../Resources/Images/EM/EMschedmastoolbar.png "Schedule Master toolbar")

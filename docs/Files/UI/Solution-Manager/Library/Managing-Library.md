@@ -34,10 +34,6 @@ Please check back for more content.
 
 ## FAQs
 
-**Q: What does Overview do?**
-
-title: Managing Library
-
 **Q: Where can you find Overview in OpCon?**
 
 Access Overview in Solution Manager.

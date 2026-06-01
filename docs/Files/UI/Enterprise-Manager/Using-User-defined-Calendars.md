@@ -28,7 +28,7 @@ Use this procedure to use User-defined Calendars in Enterprise Manager.
 
 To use as Additional Holiday Calendars, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic
+1.  Select **Schedule Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **user-defined calendar** in the **Additional Holiday** list
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
@@ -36,7 +36,7 @@ To use as Additional Holiday Calendars, complete the following steps:
 
 ## Using as Annual Plan Calendars
 
-1.  Select on **Schedule Master** under the **Administration** topic
+1.  Select **Schedule Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **Frequency** tab and select the **Add** button. The **Frequency Definition Wizard** displays
 
@@ -51,7 +51,7 @@ To use as Additional Holiday Calendars, complete the following steps:
 
 ## Using as Negative Annual Plan Calendars
 
-1.  Select on **Schedule Master** under the **Administration** topic
+1.  Select **Schedule Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **Frequency** tab and select the **Add** button. The **Frequency Definition Wizard** displays
 

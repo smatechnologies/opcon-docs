@@ -26,7 +26,7 @@ The **Script Privileges** editor maintains Role privileges for Embedded Scripts.
 
 To grant a privilege, complete the following steps:
 
-1. Select on **Script Privileges** under the **Security** topic
+1. Select **Script Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list
 3. Select the **script(s)** in the **Revoked** list box
 4. Select the **right arrow** to move privileges to the **Granted** list box
@@ -40,7 +40,7 @@ If a Role has **Inherit Privileges for All Scripts** enabled, revoking privilege
 
 To revoke a privilege, complete the following steps:
 
-1. Select on **Script Privileges** under the **Security** topic
+1. Select **Script Privileges** under the **Security** topic
 2. Select a **role** in the **Select Role** list
 3. Select the **script(s)** in the **Granted** list box
 4. Select the **left arrow** to move privileges to the **Revoked** list box

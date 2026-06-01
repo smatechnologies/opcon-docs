@@ -24,7 +24,7 @@ Use this procedure to run Reports in Enterprise Manager.
 
 To run a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the preferred **report** in the **Reports** list
 3. If required: Select the **schedule** in the **Schedule** list box
 4. If required: Select the **date** in the **Schedule Date** list box

@@ -40,9 +40,9 @@ The dialog contains the following information:
 
 To get Schedule Information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click on the **Schedules** icon
+3. Right-click the **Schedules** icon
 4. Select **Schedule Information** from the menu. The **Schedule Information** dialog displays
 5. Select the various **tabs** for additional information
 6. Select the **OK** button to close the dialog

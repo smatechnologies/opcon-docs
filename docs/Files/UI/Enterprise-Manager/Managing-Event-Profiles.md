@@ -24,8 +24,8 @@ doc_type: procedural
 
 For all procedures, begin by navigating to the **SAP Event History Profiles** dialog:
 
-1.  Select on **Machines Status** under the **Operation** topic
-2.  Right-click on the preferred **SAP R/3 and CRM machine name**
+1.  Select **Machines Status** under the **Operation** topic
+2.  Right-click the preferred **SAP R/3 and CRM machine name**
 3.  Hover over **SAP Machine** and select **Event Profiles**. The **SAP Event History Profiles** dialog displays
 
 To create an event profile, complete the following steps:

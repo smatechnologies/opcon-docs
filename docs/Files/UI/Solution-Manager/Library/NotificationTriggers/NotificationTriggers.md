@@ -109,10 +109,6 @@ For customers who migrated from versions prior to 21.6: In Enterprise Manager, y
 | Categories | Shows triggers associated with all selected categories | — | — |
 ## FAQs
 
-**Q: What does Notification Triggers do?**
-
-title: Notification Triggers
-
 **Q: Where can you find Notification Triggers in OpCon?**
 
 Access Notification Triggers in Solution Manager or Enterprise Manager.

@@ -26,7 +26,7 @@ The **Schedule Extract** is an Enterprise Manager plug-in that extracts informat
 
 To extract a schedule, complete the following steps:
 
-1. Select on **Schedule Extract** under the **Management** topic. The **Schedule Extract** screen displays
+1. Select **Schedule Extract** under the **Management** topic. The **Schedule Extract** screen displays
 2. Select the **schedule** to extract from the **Schedule to Extract** list. Alternatively, use the **Browse** button to locate the schedule
 3. Enter the target directory for the created SMADDI files in the **Extract To** field. Alternatively, use the **Browse** button to locate the directory
 4. *(Optional)* Select the **Apply Global Change File** option to apply global change files to extracted schedules

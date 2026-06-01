@@ -62,7 +62,7 @@ The External File option opens a file located on the server.
 To open an external file, complete the following steps:
 
 1. Expand the **Logs** option under the **Information** topic
-2. Select on **External File**
+2. Select **External File**
 3. Select the **directory** where the external file is located
 4. Enter a *file name* in the **File Name** text box, or select one from the list
 5. *(Optional)* Select the **file type** in the **Files of type** list
@@ -85,7 +85,7 @@ This page covers SAM Log, Critical Log, Netcom Log.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **TCP/IP**: The network communication protocol used for all data exchange between SMANetCom on the OpCon server and agents on target machines.
 

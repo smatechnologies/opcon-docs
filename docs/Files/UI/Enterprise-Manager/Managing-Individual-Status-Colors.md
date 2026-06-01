@@ -33,7 +33,7 @@ To set the preferences, complete the following steps:
 1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
 3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select on **Colors**. The **Colors** settings display to the right
+4. Select **Colors**. The **Colors** settings display to the right
 5. Select the **specific Job Status** in the **Individual Job Status Colors** frame
 6. Select the **Edit** button. The **Colors Preference - Individual Job Status Color** dialog displays
 7. Select the **Color** button. The **Color** dialog displays

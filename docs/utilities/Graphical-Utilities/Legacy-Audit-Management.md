@@ -135,7 +135,7 @@ Log in as a *Windows user with Local Administrative Rights*.
 If you disable a login that is defined as a user's Network Account name (e.g., Domain\\User), the user will not be able to log in to any interactive applications. The Legacy Audit Management will inform the user that they are disabled and shut down the program.
 :::
 
-Right-click on **Start** and select **Explore**.
+Right-click **Start** and select **Explore**.
 
 In the Explorer window:
 

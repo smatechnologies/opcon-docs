@@ -24,9 +24,9 @@ Use this procedure to delete Schedule Instance Properties in Enterprise Manager.
 
 To delete a property, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
-3. Select on the **Instance Definition** tab in the **Schedule Details** frame
+3. Select the **Instance Definition** tab in the **Schedule Details** frame
 4. Select the **property** to remove, then select **Remove**. Repeat for additional properties
 5. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 6. Select **Close ☒** to close the **Schedule Master** screen

@@ -24,7 +24,7 @@ Use this procedure to delete Jobs from Daily Schedules in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic
+1. Select **Daily Maintenance** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the schedule
 4. Select the **job** to delete

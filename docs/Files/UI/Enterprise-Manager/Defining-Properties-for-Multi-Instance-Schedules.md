@@ -24,7 +24,7 @@ Use this procedure to define Properties for Multi-Instance Schedules in Enterpri
 
 To define a property, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select the **Schedule** tab in the **Schedule Details** frame
 4. Select the **Multi-Instance** option in the **Schedule Properties** frame

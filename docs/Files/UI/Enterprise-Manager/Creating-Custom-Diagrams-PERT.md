@@ -26,7 +26,7 @@ Use this procedure to create and Saving Custom Diagrams in Enterprise Manager.
 
 To create and save a custom diagram, complete the following steps:
 
-1.  Select on **PERT** under the **Operation** topic. The **PERT** screen displays
+1.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
 2.  Select the **schedule** that contains the related job(s)
 3.  Drag the **job boxes** into the preferred configuration
 4.  Select **Take Screenshot** on the **PERT** toolbar. The **Image Preview** dialog displays

@@ -37,10 +37,6 @@ Select the **Cross References** button to see the list of master and daily jobs 
 
 ## FAQs
 
-**Q: What does Thresholds do?**
-
-viewport: width=device-width, initial-scale=1.0
-
 **Q: Where can you find Thresholds in OpCon?**
 
 Access Thresholds in Solution Manager or Enterprise Manager.

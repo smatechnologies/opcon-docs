@@ -28,7 +28,7 @@ There are no cross-reference checks on remote instance deletion. If a schedule, 
 
 To delete a remote instance, complete the following steps:
 
-1. Select on **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
+1. Select **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
 2. Select the **remote instance** in the **Selection** list
 3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Remote Instances** toolbar
 4. Select **Yes** to confirm, or **No** to cancel

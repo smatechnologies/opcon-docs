@@ -24,7 +24,7 @@ Use this procedure to delete Notification Definition Information in Enterprise M
 
 To delete notification definition information, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic
+1. Select **Notification Manager** under the **Management** topic
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** containing the trigger

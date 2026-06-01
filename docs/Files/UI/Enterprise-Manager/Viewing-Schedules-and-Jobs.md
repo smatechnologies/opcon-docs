@@ -26,7 +26,7 @@ Use this procedure to view Schedules and Jobs using Frequency Names in Enterpris
 
 To view schedules and jobs using frequency names, complete the following steps:
 
-1.  Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2.  Type the *frequency name* in the **Type Filter Text** box or select the **frequency name**
 3.  View the schedules/jobs using the selected frequency
 4.  Select **Close ☒** to close the **Frequency Manager** screen

@@ -26,7 +26,7 @@ Use this procedure to use Filter Text in Enterprise Manager.
 
 To use the filter text, complete the following steps:
 
-1.  Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
 2.  Enter *part of or the full name* for the schedule or job to filter results. Type an \* (asterisk) before a word to search strings that do not start with that word
 3.  Select the **Clear** button (to the right of the filter text box) to clear results and return to the full list
 :::

@@ -24,7 +24,7 @@ Use this procedure to remove Machines from Machine Groups in Enterprise Manager.
 
 To remove a machine from a machine group, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select the **machine group** in the **Assigned** list box
 3. Select the **left arrow** (red) to move the machine group to the **Unassigned** list box
 4. Repeat Step 3 for any additional machine groups to un-assign

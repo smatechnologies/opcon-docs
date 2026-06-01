@@ -26,8 +26,8 @@ To set the preferences, complete the following steps:
 
 1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select on **Date Formats**. The **Date Formats** settings display to the right
+3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
+4. Select **Date Formats**. The **Date Formats** settings display to the right
 5. *(Optional)* Modify any of the following format fields:
    - **Full date format** – date and time (default: **M/d/yy h:mm a**)
    - **Long date format** – date only (default: **MMMM d, yyyy**)

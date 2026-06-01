@@ -42,10 +42,6 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: What does Role Users do?**
-
-viewport: width=device-width, initial-scale=1.0
-
 **Q: Where can you find Role Users in OpCon?**
 
 Access Role Users in Solution Manager or Enterprise Manager.

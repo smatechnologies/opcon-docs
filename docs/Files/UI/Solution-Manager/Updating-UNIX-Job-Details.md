@@ -45,7 +45,7 @@ Changes made to the job properties in the **Daily Job Definition** will take pla
 
 To perform this procedure:
 
-Select on the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display.
+Select the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display.
 
 Ensure that both the **Date** and **Schedule** toggle switches are enabled so that you can make your date and schedule selection, respectively. Each switch will appear green when enabled.
 
@@ -59,10 +59,10 @@ Select one **job** in the list. A record of your selection will display in the [
 
 ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-Select on the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
+Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
 :::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
 :::
 
 ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
@@ -188,12 +188,12 @@ Select the **Save** button.
 
 To go to the daily job definition for the File Arrival job, complete the following steps:
 
-1. Select on the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display
+1. Select the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display
 2. Ensure that both the **Date** and **Schedule** toggle switches are enabled so that you can make your date and schedule selection, respectively. Each switch will appear green when enabled
 3. Select the desired **date(s)** to display the associated schedule(s)
 4. Select one or more **schedule(s)** in the list
 5. Select one **job** in the list. A record of your selection will display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page in the form of a breadcrumb trail
-6. Select on the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
+6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
 7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel to access the **Daily Job Definition** page. By default, this page will be in **Read-only** mode
 8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button will switch to display a white lock unlocked on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
 9. Expand the **Task Details** panel to expose its content
@@ -222,7 +222,7 @@ If you do not have the Script Privilege for the script, you will not be able to 
 
 To perform this procedure:
 
-Select on the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display.
+Select the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display.
 
 Ensure that both the **Date** and **Schedule** toggle switches are enabled so that you can make your date and schedule selection, respectively. Each switch will appear green when enabled.
 
@@ -236,10 +236,10 @@ Select one **job** in the list. A record of your selection will display in the [
 
 ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-Select on the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
+Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
 :::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
 :::
 
 ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")

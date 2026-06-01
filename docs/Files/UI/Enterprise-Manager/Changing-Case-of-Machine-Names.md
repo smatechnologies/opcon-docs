@@ -28,12 +28,12 @@ If the database being used by OpCon is not binary, the case of a machine name ca
 
 To change the case of a machine name:
 
-1. Select on **Machines** under the **Administration** topic. The
+1. Select **Machines** under the **Administration** topic. The
     **Machines** screen displays.
 2. Select the **machine** in the **Select Machine** list
 3. Right-click over the graphic to enable the menu in the
     **Communication Status** frame.
-4. Select on **Stop Communication** to stop the communication
+4. Select **Stop Communication** to stop the communication
     with the agent.
 5. Change the case of the machine name and append an additional
     character (e.g., change TESTMACH to testmach1) in the **Name** text
@@ -45,13 +45,13 @@ To change the case of a machine name:
     on the **Machines** toolbar.
 9. Right-click over the graphic to enable the menu in the
     **Communication Status** frame.
-10. Select on **Start Communication**
+10. Select **Start Communication**
 11. Select **Close ☒** (to the right of the **Machines** tab) to close
     the **Machines** screen.
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 

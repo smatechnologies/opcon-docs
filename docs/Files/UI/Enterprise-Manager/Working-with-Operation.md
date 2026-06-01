@@ -22,7 +22,7 @@ doc_type: reference
 
 The **Operation** views display all schedules to which the current user account has access in the Daily tables. Each view provides different ways of looking at schedules and jobs.
 
-Select on any **Operation** function item in the graphic to learn more about that item.
+Select any **Operation** function item in the graphic to learn more about that item.
 
 ![Operation Topic](../../../Resources/Images/EM/EMoperationmenu.png "Operation Topic")
 
@@ -63,7 +63,7 @@ Select on any **Operation** function item in the graphic to learn more about tha
 
 ## Operation Right-click Menus
 
-In the **Operation** views, right-click on a schedule or job to access the **Operations** right-click menus.
+In the **Operation** views, right-click a schedule or job to access the **Operations** right-click menus.
 
 ### Schedule Right-click Menu
 

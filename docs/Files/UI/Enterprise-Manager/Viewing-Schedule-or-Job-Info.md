@@ -28,7 +28,7 @@ If a completed schedule contains failed jobs, it displays in red with text like:
 
 To view schedule or job information, complete the following steps:
 
-1. Select on **Matrix** under the **Operation** topic. The **Matrix** screen displays
+1. Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
 2. *(Optional)* Right-click a **schedule** in the schedule list and select **Schedule Information**. Select **OK** to close
 3. *(Optional)* Select a **schedule** to view its jobs in the **Job** table. Select a **job**, or right-click and select **Job Information**. Select **OK** to close
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) arrow to expand a **schedule** containing a subschedule

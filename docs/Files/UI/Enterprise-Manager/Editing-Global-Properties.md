@@ -26,7 +26,7 @@ Use this procedure to edit Global Properties in Enterprise Manager.
 
 To edit a global property, complete the following steps:
 
-1.  Select on **Global Properties** under the **Administration** topic
+1.  Select **Global Properties** under the **Administration** topic
 2.  Select an existing **global property** in the **Select Global
     Property** list.
 3.  Enter the *changes*

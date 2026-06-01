@@ -26,7 +26,7 @@ Use this procedure to show Duplicate Frequency Definitions Only in Enterprise Ma
 
 To show duplicate frequency definitions, complete the following steps:
 
-1. Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2. Select the **Show duplicate frequency definitions only** option
 3. View the duplicate frequency definitions (if any)
 4. Right-click the frequency name with the duplicate definition and select **Rename**. The **Frequency Definition Wizard** displays

@@ -30,7 +30,7 @@ Job frequencies cannot be added if the job uses a schedule-defined frequency.
 
 To add a new frequency:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -87,7 +87,7 @@ To add New Job Frequencies, complete the following steps:
 
 To add an existing frequency:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Frequency** tab in the **Job Properties** frame
@@ -115,7 +115,7 @@ Yes. This page covers job frequencies for multiple platforms or contexts: Adding
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

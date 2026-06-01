@@ -26,7 +26,7 @@ Merging two schedules combines all jobs from both into a single schedule.
 
 To merge schedules, complete the following steps:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select a **schedule** in the **Schedule** list, or select the **Find** button to locate it
 3. Select the **Merge Schedule** button on the **Schedule Master** toolbar. The **Merge Schedules** dialog displays
 4. Select the **schedule** to merge into the current schedule

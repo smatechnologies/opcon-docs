@@ -26,7 +26,7 @@ Report Management enables administrators to view, add, delete, and edit report s
 
 **To open the utility:**
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 
 ## Understanding Report Management Options
@@ -68,7 +68,7 @@ The **Filter** frame has the following options:
 
 To add a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 3. Select the **Add** button
 4. Enter a *report name* in the **Title** text box
@@ -82,7 +82,7 @@ To add a report, complete the following steps:
 
 To edit a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **report name** from the **Report** list box
 3. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 4. Make the changes
@@ -92,7 +92,7 @@ To edit a report, complete the following steps:
 
 To delete a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **report name** from the **Report** list box
 3. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
 4. Select the **Remove** button

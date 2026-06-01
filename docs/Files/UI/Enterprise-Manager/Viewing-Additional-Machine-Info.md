@@ -26,7 +26,7 @@ Use this procedure to view Additional Machine Information in Enterprise Manager.
 
 To view additional information, complete the following steps:
 
-1.  Select on **Machines** under the **Administration** topic. The **Machines** screen displays
+1.  Select **Machines** under the **Administration** topic. The **Machines** screen displays
 2.  Select the **machine** in the **Select Machine** list
 3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") button on the toolbar to refer to a list of jobs using the machine
 4.  Select **OK**

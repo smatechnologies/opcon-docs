@@ -60,11 +60,11 @@ The **Schedule Details** tab includes:
 
 To get the information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **schedule** that has the Container job
-5. Select on **subschedule Information** from the menu
+4. Right-click the **schedule** that has the Container job
+5. Select **subschedule Information** from the menu
 6. *(Optional)* Select the various **tabs** for added information about the *Job Container Details*
 7. *(Optional)* Select the various **tabs** for added information about the *Schedule Details*
 8. Select the **OK** button to close the **subschedule Information** dialog

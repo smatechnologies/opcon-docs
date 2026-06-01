@@ -24,7 +24,7 @@ Use this procedure to print Reports in Enterprise Manager.
 
 To print a report, complete the following steps:
 
-1. Select on **Reports** under the **Information** topic. The **Reports** screen displays
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays
 2. Select the **report** in the **Reports** list
 3. *(Optional)* Follow the steps to [run a report](Running-Reports.md) if necessary
 4. Select **Export report** on the toolbar

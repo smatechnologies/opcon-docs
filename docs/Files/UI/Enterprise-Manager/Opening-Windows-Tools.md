@@ -26,7 +26,7 @@ To open a tool:
 
 Expand the **Windows Tools** option (select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to the left) under the **External Tools** topic.
 
-Select on the specific tool to open it in its own window. Your options are:
+Select the specific tool to open it in its own window. Your options are:
 
 - Computer Management
 - Services

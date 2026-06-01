@@ -26,7 +26,7 @@ Use this procedure to create Script Versions in Enterprise Manager.
 
 To create a new script version, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select a **script** in the list
 3.  Select **Show/Create Versions** on the toolbar. The **Versions** dialog displays
 4.  Select **New**. The **Add Version** dialog displays

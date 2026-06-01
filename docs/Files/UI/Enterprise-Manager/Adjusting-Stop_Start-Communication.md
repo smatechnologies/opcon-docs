@@ -24,7 +24,7 @@ Stop/Start communication controls whether OpCon actively communicates with an ag
 
 To adjust stop/start communication, complete the following steps:
 
-1. Select on **Machines** under the **Administration** topic
+1. Select **Machines** under the **Administration** topic
 2. Select the **machine** in the **Select Machine** list
 3. Right-click the graphic in the **Communication Status** frame to enable the menu
 4. Select **Start Communication** or **Stop Communication**

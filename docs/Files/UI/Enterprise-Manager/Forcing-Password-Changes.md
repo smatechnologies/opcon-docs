@@ -26,7 +26,7 @@ Use this procedure to force Password Changes at Next Logon in Enterprise Manager
 
 To force a password change, complete the following steps:
 
-1.  Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2.  Select a **role** in the **Select Role** list, or use the **Find** (Ctrl+F) button
 3.  Select **Force user to change password at next logon**
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **User Accounts** toolbar

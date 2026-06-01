@@ -180,7 +180,7 @@ Continuous provides the following command files to set scripting variables requi
 
 On the OpCon Server:
 
-1. Right-click on **Start** and select **Explore**
+1. Right-click **Start** and select **Explore**
 2. Browse to the <Configuration Directory\>**\\Utilities\\Database\\** directory
    :::note
    The Configuration Directory location is based on where you installed your programs. For more information, refer to [File Locations](../../file-locations.md) in the **Concepts** online help.
@@ -227,7 +227,7 @@ The snapshot folder on the Distributer server must be shared, and the SQL Agent 
 #### Create the Snapshot Folder Share and Grant Permissions
 
 1. Log on to the Distributer Database Server as a *Windows user* with local administrative privileges
-2. Right-click on **Start** and select **Explore**
+2. Right-click **Start** and select **Explore**
 3. In the Explorer window: Browse to the **repldata** folder in the SQL installation path. The default path is **C:\\Program Files\\Microsoft SQL Server\\MSSQL.10.MSSQLServer\\MSSQL\\repldata**
 4. If the **repldata** folder does not exist:
    1. Select the **MSSQL** folder
@@ -287,7 +287,7 @@ The first time the utility is activated, there is a prompt to select a DSN for t
 
 #### Import the SMAReplication Schedules
 
-1. Select on one of the four schedules in the **Transport Database** list box to select them all
+1. Select one of the four schedules in the **Transport Database** list box to select them all
 2. Select the **Import from Transport Database** button on the toolbar
 3. Select the **Machine** tab
 4. Select the machine named **SMAReplicationPrimary**
@@ -317,7 +317,7 @@ The agents on the Primary and Secondary SAM application servers must have certai
 2. Select the **Primary Machine** in the **Select Machine** list
 3. Right-click over the graphic and select **Stop Communication** from the menu
 
-4. Select on **Open Advanced Settings Panel**
+4. Select **Open Advanced Settings Panel**
 5. Select **Allow "Kill Job"**
 6. Select **True** from the list and select **Update**
 7. Select the **Communication Settings** tab
@@ -785,9 +785,9 @@ After properly configuring the SMA Service Manager on the primary server, comple
 3. In the Administrative Tools window: Select the **Services** icon
 4. In the Services window: Scroll down to the **SMA OpCon Service Manager** service
 5. Change the *SMAServMan's* **Startup Type** to **Automatic (Delayed Start)** using the following steps:
-   1. Select on **SMA OpCon Service Manager**
+   1. Select **SMA OpCon Service Manager**
    2. Select **Automatic (Delayed Start)** in the **Startup type** list and select **OK**
-6. In the Services List: Select on **SMA OpCon Service Manager** and select **Start**
+6. In the Services List: Select **SMA OpCon Service Manager** and select **Start**
 7. Use menu path: **Start \> Programs \> OpConxps \> Log Monitors \>Log File Name**
 8. View the SMAServMan, SAM, Critical, SMANetCom, and SMANetComTrace logs to verify that the SAM and SMANetCom connected successfully to the database
 

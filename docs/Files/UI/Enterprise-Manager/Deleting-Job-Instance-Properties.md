@@ -24,7 +24,7 @@ Use this procedure to delete Job Instance Properties in Enterprise Manager.
 
 To delete a property, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic
+1. Select **Job Master** under the **Administration** topic
 2. Select the **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 4. Select the **Instance Definition** tab in the **Job Properties** frame

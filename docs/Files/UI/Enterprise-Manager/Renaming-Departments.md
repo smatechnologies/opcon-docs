@@ -26,7 +26,7 @@ Use this procedure to rename Departments in Enterprise Manager.
 
 To rename a department, complete the following steps:
 
-1. Select on **Departments** under the **Security** topic. The **Departments** screen displays
+1. Select **Departments** under the **Security** topic. The **Departments** screen displays
 2. Select the **department** in the **Select a department** list
 3. Enter the new *department name* in the **Name** text box
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Departments** toolbar

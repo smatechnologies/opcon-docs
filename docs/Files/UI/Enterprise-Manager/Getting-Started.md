@@ -32,10 +32,6 @@ After logging into Enterprise Manager, you can customize the application using t
 
 ## FAQs
 
-**Q: What does Getting Started do?**
-
-title: Getting Started
-
 **Q: Where can you find Getting Started in OpCon?**
 
 Access Getting Started through the appropriate section in Enterprise Manager or Solution Manager navigation.

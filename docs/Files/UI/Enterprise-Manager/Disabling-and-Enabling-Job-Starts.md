@@ -26,7 +26,7 @@ Disabling or enabling job starts on a machine controls whether OpCon submits new
 
 To disable or enable job starts for a machine, complete the following steps:
 
-1.  Select on **Machines** under the **Administration** topic
+1.  Select **Machines** under the **Administration** topic
 2.  Select the **machine** in the **Select Machine** list
 3.  Right-click the graphic in the **Communication Status** frame
 4.  Select **Enable Job Starts** or **Disable Job Starts**

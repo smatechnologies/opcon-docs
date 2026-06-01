@@ -26,7 +26,7 @@ Use this procedure to grant Privileges to Batch Users in Enterprise Manager.
 
 To grant privileges, complete the following steps:
 
-1.  Select on **Batch Users** under the **Security** topic. The **Batch User** screen displays
+1.  Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
 2.  Select the **Manage Privileges** button
 3.  Select a **role** in the **Select Role** list. You can also use the **Find** (Ctrl+F) button to locate the role
 4.  Select an **operating system** in the **Target Operating System** list

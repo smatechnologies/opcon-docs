@@ -26,7 +26,7 @@ Use this procedure to delete Schedules in Enterprise Manager.
 
 To delete a schedule:
 
-1. Select on **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select ![](../../../Resources/Images/EM/EMdelete.png) **Remove** on the **Schedule Master** toolbar
 4. Select **Yes** to confirm or **No** to cancel
@@ -44,10 +44,10 @@ Before deleting a schedule from the Master tables, delete all job dependencies f
 
 To delete Schedules from Master Tables, complete the following steps:
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select a **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
-4. Select on the **Dependencies** tab in the **Job Properties** frame
+4. Select the **Dependencies** tab in the **Job Properties** frame
 5. Select the **dependency** in the **Job Dependency** frame, then select **Remove**
 
 6. Select **Yes** to confirm or **No** to cancel. Repeat Steps 5–6 for all other job dependencies
@@ -55,7 +55,7 @@ To delete Schedules from Master Tables, complete the following steps:
 
 ### Delete All Jobs from the Schedule
 
-1. Select on **Job Master** under the **Administration** topic. The **Job Master** screen displays
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
 2. Select a **schedule** in the **Schedule** list
 3. Select the **job** in the **Job** list
 
@@ -65,7 +65,7 @@ To delete Schedules from Master Tables, complete the following steps:
 
 ### Delete the Schedule
 
-1. Select on **Schedule Master** under the **Administration** topic
+1. Select **Schedule Master** under the **Administration** topic
 2. Select the **schedule** in the **Schedule Selection** list
 3. Select ![](../../../Resources/Images/EM/EMdelete.png) **Remove** on the **Schedule Master** toolbar
 

@@ -26,7 +26,7 @@ Use this procedure to delete Scripts in Enterprise Manager.
 
 To delete a script, complete the following steps:
 
-1.  Select on **Repository** under the **Scripts** topic. The **Script Repository** screen displays
+1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
 2.  Select the **script** to delete from the list
 3.  Select the **Remove Script** button on the toolbar
 4.  Select **Yes** to confirm

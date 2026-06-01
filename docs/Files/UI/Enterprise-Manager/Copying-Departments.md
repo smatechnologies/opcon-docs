@@ -26,7 +26,7 @@ Use this procedure to copy Departments in Enterprise Manager.
 
 To copy a department, complete the following steps:
 
-1.  Select on **Departments** under the **Security** topic. The **Departments** screen displays
+1.  Select **Departments** under the **Security** topic. The **Departments** screen displays
 2.  Select the **department** in the **Select a department** list
 3.  Select the **Copy** button on the **Departments** toolbar. The **Copy Department** dialog displays
 4.  Enter the *new department name*

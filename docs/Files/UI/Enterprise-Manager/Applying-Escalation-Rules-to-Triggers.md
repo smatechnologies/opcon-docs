@@ -24,7 +24,7 @@ Use this procedure to apply Escalation Rules to Triggers in Enterprise Manager.
 
 To apply a rule to a trigger, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic
+1. Select **Notification Manager** under the **Management** topic
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand a folder and select the desired **trigger**
 4. Select the **option** to the left of **Send Email (SMTP)**. The **Email** tab appears and the **Escalation Rule** sub-frame activates

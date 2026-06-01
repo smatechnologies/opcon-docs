@@ -24,7 +24,7 @@ doc_type: procedural
 
 To view Additional Job Information in Enterprise Manager, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic
+1.  Select **Job Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
 4.  Select the ![Merge icon](../../../Resources/Images/EM/EMcrossref.png "Merge icon") **Cross Reference** button on the toolbar to view a list of jobs on the schedule, then select **OK**

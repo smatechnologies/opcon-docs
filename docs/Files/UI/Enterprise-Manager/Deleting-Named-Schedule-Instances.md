@@ -26,7 +26,7 @@ Use this procedure to delete Named Schedule Instances in Enterprise Manager.
 
 To delete a named schedule instance, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic
+1.  Select **Schedule Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule Selection** list
 3.  Select the **Instance Definition** tab in the **Schedule Details** frame
 4.  Select the **instance name** to remove

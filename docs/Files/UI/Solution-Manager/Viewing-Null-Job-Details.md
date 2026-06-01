@@ -38,10 +38,10 @@ Select one **Null job** in the list. A record of your selection will display in 
 
 ![Job Processes](../../../Resources/Images/SM/Job-ProcessesNull.png "Job Processes")
 
-Select on the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
+Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
 :::note
-As an alternative, you can right-click on the job selected in the list to display the **Selection** panel.
+As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
 :::
 
 ![Job Summary Tab for Null Jobs](../../../Resources/Images/SM/Job-Summary-Tab-(Null).png "Job Summary Tab for Null Jobs")

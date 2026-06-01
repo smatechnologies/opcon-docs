@@ -26,7 +26,7 @@ Use this procedure to change User Passwords in Enterprise Manager.
 
 To change a user password, complete the following steps:
 
-1. Select on **User Accounts** under the **Security** topic. The **User Accounts** screen displays
+1. Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
 2. Select a **user** in the **Select User** list. Alternatively, use the **Find** (Ctrl+F) button to find the user
 3. Select **Change User Password**. The **Password Update** dialog displays
 4. Enter the *old password* in the **Old Password** field

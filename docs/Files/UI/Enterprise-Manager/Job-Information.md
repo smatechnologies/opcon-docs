@@ -64,13 +64,13 @@ The dialog contains the following information:
 
 To get job information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Select on the **job** or right-click on the **job** then select **Job Information**. The **Job Information** dialog displays
+4. Select the **job** or right-click the **job** then select **Job Information**. The **Job Information** dialog displays
 5. View the job information
-6. *(Optional)* Select on a **dependent job** to view its job information
-7. *(Optional)* Select on a **SubSequent job** to view its job information
+6. *(Optional)* Select a **dependent job** to view its job information
+7. *(Optional)* Select a **SubSequent job** to view its job information
 8. Select the other tabs for additional information
 9. Select the **OK** button to close the dialog
 
@@ -78,10 +78,10 @@ To get job information, complete the following steps:
 
 To add configuration parameters, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job**
+4. Right-click the **job**
 5. Select **Job Information** from the menu. The **Job Information** dialog displays
 6. Select the **Configuration** tab
 7. Select **Available Property** in the parameter table
@@ -97,10 +97,10 @@ To add configuration parameters, complete the following steps:
 
 To edit configuration parameters, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job**
+4. Right-click the **job**
 5. Select **Job Information** from the menu. The **Job Information** dialog displays
 6. Select the **Configuration** tab
 7. Select **Available Property** in the parameter table
@@ -115,10 +115,10 @@ To edit configuration parameters, complete the following steps:
 
 To remove properties from job information, complete the following steps:
 
-1. Select on **List** under the **Operation** topic
+1. Select **List** under the **Operation** topic
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Right-click on the **job**
+4. Right-click the **job**
 5. Select **Job Information** from the menu. The **Job Information** dialog displays
 6. Select the **Configuration** tab
 7. Select **Available Property** in the parameter table
@@ -162,7 +162,7 @@ This page covers Getting Job information, Adding Job Configuration Parameters, E
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

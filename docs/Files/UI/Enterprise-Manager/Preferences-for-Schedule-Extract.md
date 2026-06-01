@@ -26,8 +26,8 @@ To set the preferences, complete the following steps:
 
 1. Open Enterprise Manager application
 2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select on the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select on **Schedule Extract**. The **Schedule Extract** settings display to the right
+3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
+4. Select **Schedule Extract**. The **Schedule Extract** settings display to the right
 5. Configure the following fields:
    - **Output Directory** – location where Schedule Extract generates SMADDI files (default: **C:\\Extract\\Output**)
    - **Change File Directory** – location Schedule Extract searches for change files (default: **C:\\Extract\\ChangeFiles**)

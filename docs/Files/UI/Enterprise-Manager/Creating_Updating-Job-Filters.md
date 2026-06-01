@@ -26,7 +26,7 @@ Job filters in Enterprise Manager let operators narrow the jobs displayed in the
 
 To create or update a job filter, complete the following steps:
 
-1.  Select on **List** under the **Operation** topic. The **Daily list** screen displays
+1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
 2.  Select the **Open the job filter dialog** button on the **Daily list** toolbar. The **Job Filter** dialog displays
 3.  Select the tab for the filter criteria (e.g., **Dates**, **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)
 4.  *(Optional)* For each filter tab (**Dates**, **Job Statuses**, **Departments**, **Access Codes**, **Tags**), select the specific options or select **Select/Unselect All** to select all

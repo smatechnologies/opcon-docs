@@ -26,7 +26,7 @@ Use this procedure to view and Exporting Audit Records in Enterprise Manager.
 
 To view an audit record, complete the following steps:
 
-1. Select on **Audit Management** under the **Management** topic. The **Audit Management screen** displays
+1. Select **Audit Management** under the **Management** topic. The **Audit Management screen** displays
 2. Select a **user** in the **Users** list
 3. Select an **audit category** in the **Audit Categories** list
 4. Enter or select a **start date** and **end date** using the text box or the **calendar icon**

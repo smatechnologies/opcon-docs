@@ -30,7 +30,7 @@ Triggers can only be placed on the lowest-level groups. If child groups exist wi
 
 To add a trigger, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic
+1. Select **Notification Manager** under the **Management** topic
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
@@ -43,7 +43,7 @@ To add a trigger, complete the following steps:
 
 To delete a trigger, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic
+1. Select **Notification Manager** under the **Management** topic
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** containing the trigger to delete

@@ -24,7 +24,7 @@ Use this procedure to disable User Logins in Enterprise Manager.
 
 To disable a user login, complete the following steps:
 
-1. Select on **User Accounts** under the **Security** topic
+1. Select **User Accounts** under the **Security** topic
 2. Select a **role** in the **Select Role** list, or use **Find** (Ctrl+F) to search
 3. Select the **Login disabled** option
 4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **User Accounts** toolbar

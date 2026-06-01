@@ -78,10 +78,6 @@ The dialog contains the following fields:
 | Documentation tab | Documentation captured on the **Machines** editor dialog | — | — |
 ## FAQs
 
-**Q: What does Machine Information do?**
-
-title: Machine Information
-
 **Q: Where can you find Machine Information in OpCon?**
 
 Access Machine Information through the appropriate section in Enterprise Manager or Solution Manager navigation.
@@ -94,7 +90,7 @@ Access Machine Information through the appropriate section in Enterprise Manager
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

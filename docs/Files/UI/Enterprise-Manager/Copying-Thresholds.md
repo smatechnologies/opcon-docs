@@ -26,7 +26,7 @@ Use this procedure to copy Thresholds in Enterprise Manager.
 
 To copy a threshold, complete the following steps:
 
-1.  Select on **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
+1.  Select **Thresholds** under the **Administration** topic. The **Thresholds** screen displays
 2.  Select a **threshold** in the **Select Threshold** list, or select **Find** to locate the threshold
 3.  Select **Copy** on the **Thresholds** toolbar. The **Copy** dialog displays
 4.  Enter a new *threshold name*

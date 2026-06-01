@@ -26,7 +26,7 @@ Use this procedure to apply Master Calendars to Schedules in Enterprise Manager.
 
 To apply a master calendar to a schedule, complete the following steps:
 
-1.  Select on **Schedule Master** under the **Administration** topic
+1.  Select **Schedule Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **Use Master Holiday** option
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar

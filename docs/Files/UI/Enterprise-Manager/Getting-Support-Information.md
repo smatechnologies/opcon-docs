@@ -26,7 +26,7 @@ The **Support** dialog includes contact and product version information. Note th
 
 To gather support info, complete the following steps:
 
-1.  Select on **Support** under the **Support** topic. The **Support** dialog displays
+1.  Select **Support** under the **Support** topic. The **Support** dialog displays
 2.  Note the **Continuous Contact Information** and **Production Information**
 3.  Select the **OK** button to close the dialog
 :::

@@ -31,11 +31,11 @@ The **Email** tab provides the following fields for defining an SMTP email notif
 - **Message**: A user-defined message
 - **Attachments**: Files to include with the message. Wildcards are not allowed in filenames
 
-### Navigate to the Notification Trigger
+### Go to the Notification Trigger
 
-To navigate to the notification trigger and enable the email notification, complete the following steps:
+To go to the notification trigger and enable the email notification, complete the following steps:
 
-1. Select on **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
 2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
 3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
 4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** containing the appropriate trigger

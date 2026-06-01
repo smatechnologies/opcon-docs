@@ -24,9 +24,9 @@ Use this procedure to check Daily Schedules in Enterprise Manager.
 
 To perform this procedure, complete the following steps:
 
-1. Select on **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
 2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule to check
-3. Select on the **schedule** to check
+3. Select the **schedule** to check
 4. Select one of the following radio buttons in the **Check** frame:
     - **Normal (No Circular)**
     - **Slow (Circular)**

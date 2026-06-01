@@ -37,10 +37,6 @@ See also:
 
 ## FAQs
 
-**Q: What does Overview do?**
-
-title: Managing Escalations
-
 **Q: Where can you find Overview in OpCon?**
 
 Access Overview in Solution Manager or Enterprise Manager.

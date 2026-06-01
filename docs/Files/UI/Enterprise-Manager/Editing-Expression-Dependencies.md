@@ -26,11 +26,11 @@ Use this procedure to edit Expression Dependencies in Enterprise Manager.
 
 To edit a dependency, complete the following steps:
 
-1.  Select on **Job Master** under the **Administration** topic
+1.  Select **Job Master** under the **Administration** topic
 2.  Select the **schedule** in the **Schedule** list
 3.  Select the **job** in the **Job** list
-4.  Select on the **Dependencies** tab in the **Job Properties** frame
-5.  Select on the **Expression Dependency** tab
+4.  Select the **Dependencies** tab in the **Job Properties** frame
+5.  Select the **Expression Dependency** tab
 6.  Edit the *expression* in the **Job Expression** text box
 7.  Edit the *expression* in the **Frequency Expression** text box
 8.  Select ![](../../../Resources/Images/EM/EMsave.png) **Save** on the

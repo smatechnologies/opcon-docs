@@ -80,7 +80,7 @@ To install the Environment, complete the following steps:
 
 18. Select **Yes**
 
-19. Select on the **x** to the right of the **Welcome** tab to close the
+19. Select the **x** to the right of the **Welcome** tab to close the
     Welcome screen (if displayed).
 
 20. The resulting screen should look similar to the following:
@@ -110,7 +110,7 @@ Now you can edit SMA Reports or create your own.
 
 To create a New Report, complete the following steps:
 
-1. Right-click on **OpConXPS_Reports**
+1. Right-click **OpConXPS_Reports**
 
 2. Use menu path: **New \> Report**
 
@@ -127,11 +127,11 @@ To create a New Report, complete the following steps:
 
     ![Resource     Explorer](../Resources/Images/Reports/Custom-Reports---Resource-Explorer.png "Resource Explorer")
 
-7. Right-click on **opconxps** and add it to the report
+7. Right-click **opconxps** and add it to the report
 
 8. Go to the **Data Explorer** tab
 
-9. Select on **opconxps** under **Data Sources**
+9. Select **opconxps** under **Data Sources**
 
 10. Enter **net.sourceforge.jtds.jdbs.Driver(v1.2)** in the **Driver
     Class** field to connect to BIRT.
@@ -160,9 +160,9 @@ To connect to the database, import these two parameters:
 To import the Database Connection Parameters, complete the following steps:
 
 2. Expand the **Report Parameters** folder
-3. Right-click on **Parameter Group - Data_Source_Connection** and
+3. Right-click **Parameter Group - Data_Source_Connection** and
     select **Add to report**.
-4. Right-click on **User-Id** and select **Add to report**
+4. Right-click **User-Id** and select **Add to report**
 
 In the workplace section, you should see the following:
 

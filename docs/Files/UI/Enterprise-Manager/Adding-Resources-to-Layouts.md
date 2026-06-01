@@ -28,7 +28,7 @@ If you do not have the privileges to "Modify Jobs in Job Master" in at least one
 
 To add a resource, complete the following steps:
 
-1. Select on **Workflow Designer** under the **Administration** topic
+1. Select **Workflow Designer** under the **Administration** topic
 2. Select a **schedule** in the **Select Schedule** list
 3. Select, drag, and drop the **Resource** icon in the **Tools** frame to the schedule diagram
 4. Select the **resource** and select **OK**

@@ -79,7 +79,7 @@ To access PERT View, complete the following steps:
 
 3. Select the desired **date(s)** to display the associated schedules
 4. Select one or more **schedules** or **jobs** in the perspective list
-5. Right-click on the selection to display the **Selection** panel
+5. Right-click the selection to display the **Selection** panel
 6. Select the **Diagram** accordion-style tab in the panel
 
    ![Diagram Tab for PERT View](../../../Resources/Images/SM/Diagram-Tab.png "Diagram Tab for PERT View")

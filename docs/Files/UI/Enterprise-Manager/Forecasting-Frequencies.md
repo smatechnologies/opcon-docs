@@ -26,7 +26,7 @@ Use this procedure to forecast Frequencies in Enterprise Manager.
 
 To forecast a frequency, complete the following steps:
 
-1.  Select on **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
+1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
 2.  Select the **frequency name**, or select it and select **Forecast** on the toolbar. The **Forecast** dialog displays
 3.  View the forecast
 4.  Select **OK**
