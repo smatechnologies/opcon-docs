@@ -989,7 +989,7 @@ None
 
 **Required Privileges**:
 
-- TBD
+- All Function Privileges
 
 **XML Syntax**:
 
@@ -1009,7 +1009,7 @@ None
 
 :::info More Info
 
-For IBM i, visit the following section in the **IBM i LSAM** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
+For IBM i, visit the following section in the **IBM i Agent** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#Tracking)
 
@@ -1341,9 +1341,9 @@ Pre-defined tracked jobs can be controlled by the multi-instance box to prevent 
 
 Provided here are references for implementing the Job Tracking concept.
 
-For IBM i, visit the following section in the **IBM i LSAM** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
+For IBM i, visit the following section in the **IBM i Agent** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
 
-For MCP, visit the following section in the **MCP LSAM** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
+For MCP, visit the following section in the **MCP Agent** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#tracking)
 
