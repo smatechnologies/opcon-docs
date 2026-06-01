@@ -1,89 +1,81 @@
 ---
 lang: en-us
-viewport: width=device-width, initial-scale=1.0
-title: Workflow Designer right-click Menus
-description: "Right-click a node or dependency line in the Workflow Designer to display the following menu items: - Open SubSchedule: Changes the display to show the subschedule for the selected Container job -."
+title: Workflow Designer Right-Click Menu
+description: "Reference for the right-click menu items available on nodes and dependency lines in the Enterprise Manager Workflow Designer, including Open SubSchedule, Edit, Delete, Find, Isolate, Layout, zoom, Print, and Take Screenshot."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
-doc_type: conceptual
+  - Enterprise Manager
+last_updated: 2026-05-29
+doc_type: reference
 ---
 
-#  Workflow Designer Right-click Menus
-
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+# Workflow Designer Right-Click Menu
 
 ## What Is It?
 
-Right-click a node or dependency line in the **Workflow Designer** to display the following menu items:
+The Workflow Designer is the Enterprise Manager view where you build and arrange a Schedule as a graph of nodes (jobs, thresholds, and resources) connected by dependency lines. Right-click a node or a dependency line in the **Workflow Designer** to open a menu of actions for editing the selected item and for controlling how the map is laid out, zoomed, printed, and captured.
 
--   **Open SubSchedule**: Changes the display to show the subschedule for the selected Container job
+The same menu is available whether you right-click a job node, a threshold or resource node, or a dependency line, but some actions apply only to specific item types. Several actions are also available on the **Workflow Designer** toolbar.
 
--   **Edit**: Opens the appropriate editor for the selected node or dependency line. Requires the appropriate privileges
+## Menu Items
 
--   **Delete**: Deletes the selected item. Requires the appropriate privileges
-    -   Deleting a job removes it from the **Job Master** and the **Workflow Designer** view
-    -   Deleting a threshold or resource removes it from the map but not from Administration. A threshold or resource cannot be deleted if dependencies are involved
+The following table lists each menu item, what it does, and notes on its behavior.
 
--   **Find**: Opens the **Quick Search** dialog to find any node. Also available on the **Workflow Designer** toolbar
+| Menu item | What it does | Notes |
+|---|---|---|
+| **Open SubSchedule** | Changes the display to show the subschedule for the selected Container job. | Available only when a single Container job is selected. |
+| **Edit** | Opens the appropriate editor for the selected node or dependency line. | Requires the appropriate privileges. |
+| **Delete** | Deletes the selected item. | Requires the appropriate privileges. Deleting a job removes it from the **Job Master** and the **Workflow Designer** view. Deleting a threshold or resource removes it from the map but not from Administration; a threshold or resource cannot be deleted if dependencies are involved. |
+| **Find** | Opens a **Find** dialog that lists every node so you can select one and reveal it in the map. | Also available on the **Workflow Designer** toolbar. |
+| **Isolate** | Highlights a subset of the map relative to the selected node and fades out all other nodes. See [Isolate options](#isolate-options). | — |
+| **Layout** | Rearranges the nodes using the selected layout. See [Layout options](#layout-options). | — |
+| **Zoom in** | Zooms in 10% at a time, to a maximum of 200%. | — |
+| **Zoom out** | Zooms out 10% at a time, to a minimum of 10%. | — |
+| **Print** | Prints the full map image. | Also available on the **Workflow Designer** toolbar. |
+| **Take Screenshot** | Saves an image of the current **Workflow Designer** layout. | Also available on the **Workflow Designer** toolbar. |
 
--   **Isolate**: Presents the following options:
-    -   **Previous Dependencies**: Shows the selected node and all preceding dependencies; fades out all others
-    -   **Subsequent Dependencies**: Shows the selected node and all subsequent dependencies; fades out all others
-    -   **Dependency Chain**: Shows the entire dependency chain connected to the selected node; fades out all others
-    -   **Shortest Path**: Shows the shortest path among all dependency chains to the selected job
+### Isolate options
 
--   **Layout**: Presents the following options:
-    -   **Top to Bottom**: Lays out nodes using a top-to-bottom flow
-    -   **Left to Right**: Lays out nodes using a left-to-right flow
-    -   **Grid**: Lays out nodes using a grid
+| Option | What it does |
+|---|---|
+| **Previous Dependencies** | Shows the selected node and all preceding dependencies; fades out all others. |
+| **Subsequent Dependencies** | Shows the selected node and all subsequent dependencies; fades out all others. |
+| **Dependency Chain** | Shows the entire dependency chain connected to the selected node; fades out all others. |
+| **Shortest Path** | Shows the shortest path among all dependency chains to the selected job. |
 
--   **Zoom in**: Zooms in 10% at a time to a maximum of 200%
+### Layout options
 
--   **Zoom out**: Zooms out 10% at a time to a minimum of 10%
+| Option | What it does |
+|---|---|
+| **Top to Bottom** | Lays out nodes using a top-to-bottom flow. |
+| **Left to Right** | Lays out nodes using a left-to-right flow. |
+| **Grid** | Lays out nodes using a grid. |
 
--   **Print**: Prints the full map image. Also available on the **Workflow Designer** toolbar
-
--   **Take Screenshot**: Saves an image of the current **Workflow Designer** layout. Also available on the **Workflow Designer** toolbar
-:::
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Open SubSchedule | Changes the display to show the subschedule for the selected Container job | — | — |
-| Isolate | Presents the following options: | — | — |
-| Layout | Presents the following options: | — | — |
-| Zoom in | Zooms in 10% at a time to a maximum of 200% | — | — |
-| Zoom out | Zooms out 10% at a time to a minimum of 10% | — | — |
-| Take Screenshot | Saves an image of the current **Workflow Designer** layout. | — | — |
 ## FAQs
 
-**Q: Where can you find Workflow Designer Right-click Menus in OpCon?**
+**Q: Where do you find the right-click menu?**
 
-Access Workflow Designer Right-click Menus through the appropriate section in Enterprise Manager or Solution Manager navigation.
+Open the **Workflow Designer** in Enterprise Manager, then right-click a node or a dependency line on the map.
+
+**Q: Why are Edit and Delete unavailable?**
+
+The **Edit** and **Delete** items require the appropriate privileges. If you do not have them, the actions do not apply to the selected item.
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Enterprise Manager**: OpCon's graphical user interface used to define schedules and jobs, manage automation data, and perform operational tasks.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+**Container Job**: A job type that runs a subschedule, enabling hierarchical schedule structures.
 
-**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+**Subschedule**: A schedule that runs as a child of a Container job, allowing nested workflow automation.
 
-**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+**Threshold**: A numeric variable stored in the OpCon database used to control when jobs run. Jobs can be made dependent on threshold values.
 
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent runs.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Job Master**: The store of master (definition) job records in OpCon.

@@ -1,6 +1,6 @@
 ---
 title: Working with Enterprise Support
-description: "The Enterprise Support topic in the Navigation Panel provides information for reporting issues to the Continuous support team."
+description: "The Support section of the Enterprise Manager Navigation Panel provides contact information and tools for reporting issues to the Continuous support team."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,40 +8,54 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Working with Enterprise Support
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Support** section of the Enterprise Manager Navigation Panel gives you access to Continuous contact information, a problem-reporting tool, and the application log viewer.
 
-## What Is It?
+![Support Topic](../../../Resources/Images/EM/EMsupportmenu.png "Support Topic")
 
-The **Enterprise Support** topic in the Navigation Panel provides information for reporting issues to the Continuous support team.
+## Support items
 
-Select any **Support** function item in the graphic to learn more.
+The **Support** category contains two navigation items.
 
-![Support Topic ](../../../Resources/Images/EM/EMsupportmenu.png "Support Topic ")
+### Support
 
-## FAQs
+Selecting **Support** opens the **OpCon Enterprise Manager** dialog. The dialog displays:
 
-**Q: What can you do in Enterprise Support?**
+- **Contact Information** — Continuous support email, license email, website links, phone, fax, and toll-free number.
+- **Product Version** tab — Installed versions of OpCon, Enterprise Manager, the database schema, stored procedures, database functions, SMALookup, audit triggers, PDSA Framework, and PDSA Data.
+- **License Information** tab — License details for the current installation. This tab is visible only to users whose role includes the **View License Information** function privilege.
 
-Enterprise Support provides access to related configuration and management tasks. Use the navigation options to add, edit, or delete records as needed.
+The dialog also provides two action buttons:
 
-**Q: Who can access enterprise support in OpCon?**
+| Button | Description |
+|---|---|
+| **Installation Details** | Opens the Eclipse installation details dialog, which lists installed plug-ins and configuration properties. |
+| **Report Problem** | Opens the Report Problem wizard so you can submit diagnostic information to the Continuous support team. |
 
-Access is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access to enterprise support.
+#### Report Problem wizard
 
-## Glossary
+The Report Problem wizard guides you through submitting diagnostic information. To report a problem, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+1. On the **Problem Type** page, confirm that **Enterprise Manager** is selected as the product source, then select **Next**.
+2. On the **Choose Method** page, select how you want to deliver the logs:
+   - **Save logs as an archive on my computer** — saves an `application_logs.zip` file to a location you choose. Select **Finish** to save the archive and close the wizard.
+   - **Send logs by email with a description of the problem** — continues through the email configuration pages. Select **Next**.
+3. On the **Email settings** page, enter the **SMTP Server**. To require authentication, select **Use SMTP Authentication** and then enter your **User** and **Password**. Select **Next**.
+4. On the **Description** page, describe the problem and the steps to reproduce it. You can also attach screenshots. Select **Next**.
+5. On the **Send Mail** page, confirm the recipient address and select **Finish** to send the diagnostic email.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+**Result:** Enterprise Manager gathers the log files, packages them, and either saves the archive or sends the email to the Continuous support team.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+### Application Log
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+Selecting **Application Log** opens the Enterprise Manager log viewer, which displays internal application log entries. Use this view to review errors and diagnostic messages generated by Enterprise Manager during the current session.
+
+## Access
+
+Access to the **Support** section is available to all users who can log in to Enterprise Manager. The **License Information** tab within the dialog requires the **View License Information** function privilege, which your system administrator assigns through your OpCon role.

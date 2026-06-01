@@ -1,6 +1,6 @@
 ---
 title: URL Shortcuts
-description: "URL shortcuts let users navigate directly to specific areas of Solution Manager — such as Self Service, Vision, or Operations — by appending a path to the base URL, bypassing the Home page."
+description: "URL shortcuts let you go directly to specific areas of Solution Manager — such as Self Service, Vision, or Operations — by appending a path to the base URL, bypassing the Home page."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -9,7 +9,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: conceptual
 ---
 
@@ -20,50 +20,63 @@ doc_type: conceptual
 
 ## What Is It?
 
-URL shortcuts let users navigate directly to specific areas of Solution Manager — such as Self Service, Vision, or Operations — by appending a path to the base URL, bypassing the Home page.
+URL shortcuts let you go directly to specific areas of Solution Manager — such as Self Service, Vision, or Operations — by appending a path to the base URL. A URL shortcut bypasses the Home page and takes you straight to the target area. If you are not already logged in, Solution Manager prompts you to log in first and then redirects you to the shortcut destination.
+
+Use URL shortcuts to bookmark a frequently used Service Request, link to a Service Request from an internal portal, or send operators a direct link to the form they need.
 
 ## Self Service Shortcut
 
-To go directly to Self Service, bypassing the Home page, use this URL syntax: `https://server:port/selfservice`
+To go directly to Self Service, bypassing the Home page, use this URL:
 
-If not already logged in, you will be prompted to log into SMA Solution Manager before being redirected to Self Service.
+```
+https://server:port/selfservice
+```
+
+If you are not already logged in, Solution Manager prompts you to log in before redirecting you to Self Service.
 
 ## Service Request Shortcut
 
-To go directly to a Service Request, use this URL syntax: `https://server:port/selfservice/servicerequest/execution/servicerequestname`
+To go directly to a specific Service Request, use this URL, replacing `servicerequestname` with the name of the Service Request:
+
+```
+https://server:port/selfservice/servicerequest/execution/servicerequestname
+```
 
 :::tip Example
 
-`https://server:port/selfservice/servicerequest/execution/run backup`
+For a Service Request named `run backup`, use:
 
-Modern browsers handle special characters automatically, so "run backup" may be transformed to:
+```
+https://server:port/selfservice/servicerequest/execution/run backup
+```
 
-`https://server:port/selfservice/servicerequest/execution/run-backup`
+Modern browsers handle special characters automatically, so the space in `run backup` may appear in the address bar as a hyphen:
 
-If not already logged in, you will be prompted to log in before being redirected to the Service Request form.
+```
+https://server:port/selfservice/servicerequest/execution/run-backup
+```
+
+If you are not already logged in, Solution Manager prompts you to log in before redirecting you to the Service Request form.
 
 :::
 
-Hide/Disable rules applied to a Service Request affect URL shortcut access:
+## How Hide and Disable Settings Affect Shortcuts
 
-- **Disabled**: The URL shortcut will not be honored
-- **Hidden (not Disabled)**: The URL shortcut will be honored. Only users with the shortcut can access the hidden Service Request
-:::
+The **Disabled** and **Hidden** settings configured on a Service Request determine whether its URL shortcut works:
 
-## Configuration Options
+| Service Request setting | Shortcut behavior |
+|---|---|
+| **Disabled** | The URL shortcut is not honored. |
+| **Hidden** (not Disabled) | The URL shortcut is honored. Because a hidden Service Request does not appear in the Self Service page, only users who have the shortcut can reach it. |
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Disabled | The URL shortcut will not be honored | — | — |
-| Hidden (not Disabled) | The URL shortcut will be honored. | — | — |
 ## FAQs
 
-**Q: What does URL Shortcuts cover?**
+**Which Solution Manager areas have URL shortcuts?**
 
-This page covers Self Service Shortcut, Service Request Shortcut.
+This page documents the Self Service shortcut and the Service Request shortcut. Solution Manager also exposes top-level routes for the Vision (`/vision`) and Operations (`/operations`) areas.
 
 ## Glossary
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
+**Service Request**: A Solution Manager feature that lets operators trigger predefined automation using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.

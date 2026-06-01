@@ -1,6 +1,6 @@
 ---
 title: Information Bar
-description: "The Information Bar is located at the bottom of Enterprise Manager screen and is always visible when working with editors or views."
+description: "The Information Bar appears at the bottom of the Enterprise Manager window and displays SAM status, connection details, escalation alerts, and system notifications."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,61 +8,48 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-01
 doc_type: conceptual
 ---
 
 # Information Bar
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The Information Bar is the status strip at the bottom of the Enterprise Manager window. It is always visible when you are working in any editor or view. Reading left to right, it displays escalation alerts, system notifications, SAM status, and connection details.
 
-## What Is It?
+## Information Bar components
 
-The Information Bar is located at the bottom of Enterprise Manager screen and is always visible when working with editors or views. It displays the SAM last pulse message, user information, and database connection details, reading left to right.
+The bar contains the following components, displayed in left-to-right order.
 
-The Information Bar displays the following:
+### Escalation Acknowledgment
 
-- **Escalation Acknowledgment**: Appears only when escalations require acknowledgment. Shows the count of pending acknowledgments and flashes a yellow pop-up. Selecting the icon opens the **[Escalation Acknowledgment](Using-Escalation-Acknowlegement.md)** screen
-- **Status Line**: Blank until status information is available. When a job is selected in List view, displays the date, schedule, and job name
-- **SAM Pulse**: A green color circles the icon when SAM is running. If SAM stops, the color turns red and a red dot appears in the center. When SAM restarts, the indicator returns to green. Hover over the icon to see the SAM pulse date and time
-- **Connection Information**: Shows the logged-in user, SAM server name, and database name
-- **Activity Information**: Flashes brief status messages on the right (e.g., *fetching bar chart data*)
-- **Notifications**: License-related or other notifications appear above the Information Bar at login and require acknowledgment. An x in a red circle in the bar indicates an unacknowledged notification. Hover over the red circle to redisplay the notification
+The **Escalation Acknowledgment** indicator appears only when one or more escalations are pending acknowledgment for the logged-in user. When active, it shows the count of pending acknowledgments (for example, `(3)`) and displays a timed pop-up above the bar. The pop-up closes automatically after approximately 4 seconds, or immediately when you click it.
 
-## Configuration Options
+Double-click the indicator to open the **[Escalation Acknowledgment](Using-Escalation-Acknowlegement.md)** view.
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Escalation Acknowledgment | Appears only when escalations require acknowledgment. | — | — |
-| Status Line | Blank until status information is available. | — | — |
-| SAM Pulse | A green color circles the icon when SAM is running. | — | — |
-| Connection Information | Shows the logged-in user, SAM server name, and database name | — | — |
-| Activity Information | Flashes brief status messages on the right (e.g., *fetching bar chart data*) | — | — |
-| Notifications | License-related or other notifications appear above the Information Bar at login and require acknowledgment. | — | — |
-## FAQs
+When no escalations are pending, this area is hidden.
 
-**Q: What does Information Bar do?**
+### Notifications
 
-The Information Bar is located at the bottom of Enterprise Manager screen and is always visible when working with editors or views. It displays the SAM last pulse message, user information, and da
+The **Notifications** indicator displays license-related or other system messages. When a notification is active, a pop-up appears above the bar; the pop-up closes automatically after approximately 5 seconds, or when you move the pointer away from the indicator. Multiple notifications are shown together. The most severe message (error before warning before information) determines the indicator's icon color.
 
-**Q: Where can you find Information Bar in OpCon?**
+Hover over the indicator to redisplay notifications. When no active notifications exist, this area is hidden.
 
-Access Information Bar through the appropriate section in Enterprise Manager or Solution Manager navigation.
+### SAM Pulse
 
-## Glossary
+The **SAM Pulse** indicator shows the health of the SAM (Schedule Activity Monitor) connection:
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+| Indicator color | Meaning |
+|---|---|
+| Green (animated) | SAM is running and the pulse is updating normally |
+| Red (animated) | SAM is not running, the pulse has not updated within the expected interval, or the pulse check encountered an error |
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+Enterprise Manager checks the SAM pulse in the database every 60 seconds. Hover over the indicator to see the last SAM pulse timestamp and SAM time zone. Double-click the indicator to open a dialog with the full pulse details, including any additional status message.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+### Connection Information
 
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+The **Connection Information** area shows the currently logged-in user and database in the format `username@server/database`. When no user is logged in, this area displays a disconnected state.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+<!-- GAP: "Status Line" component (shows date/schedule/job name when a job is selected in List view) was present in the original page but omitted from this draft — source evidence exists (DailyTreeViewStatusLineInfoProvider.java) but its inclusion in the status line was not independently confirmed by this rewrite. Restore from original if needed. -->
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+<!-- GAP: "Activity Information" component (flashes brief status messages) was present in the original page but omitted from this draft — no distinct named contribution was found in source to confirm or deny. Restore from original if needed. -->

@@ -1,66 +1,88 @@
 ---
 title: Reset Settings
-description: "Reset Settings in Solution Manager's Server Options lets administrators restore server option values to their system defaults — either for all options at once or for just the current tab — without manually reverting each setting individually."
+description: "Reset Settings in Solution Manager's Server Options lets you restore server option values to their system defaults — for all options at once or for just the current tab — without reverting each setting individually."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
-doc_type: conceptual
+last_updated: 2026-05-29
+doc_type: procedural
 ---
 
 # Reset Settings
 
-**Theme:** Configure  
+**Theme:** Configure
 **Who Is It For?** System Administrator, Automation Engineer
 
 ## What Is It?
 
-Reset Settings in Solution Manager's Server Options lets administrators restore server option values to their system defaults — either for all options at once or for just the current tab — without manually reverting each setting individually.
+Reset Settings on the **Server Options** page in Solution Manager lets you restore server option values to their system defaults. You can reset every option across all tabs at once, or reset only the options on the tab you are currently viewing. Resetting stages the default values in the form; the changes are not stored until you save them, so you can review or undo them first.
 
-## Administration
+Use Reset Settings when configuration changes need to be rolled back to a known baseline without reverting each field by hand.
 
-### Required Privileges
+## Required Privileges
 
 To reset settings, you must have one of the following:
 
 - **Role**: Role_ocadm
-- **Function Privilege**: Maintain server options
+- **Function Privilege**: Maintain Server Options
 
-To access reset options, select the vertical ellipsis icon.
+If you do not have this privilege, the **Server Options** fields are read-only and the Save and reset buttons are not available.
 
-![Server Options - Reset Settings](../../../../../Resources/Images/SM/Library/ServerOptions/server-option-reset-settings.png "Reset Options")
+## Reset all server options
 
-- **Reset all to default**: Resets all server options to system default settings
-- **Reset current tab to default**: Resets all changes in the current tab to system default settings
+To reset every server option across all tabs to its system default, complete the following steps:
 
-![Server Options - Save Undo](../../../../../Resources/Images/SM/Library/ServerOptions/server-option-save-undo.png "Undo option")
+1. In Solution Manager, go to **Server Options**.
+2. Select **Reset All to Default**.
+3. Review the staged default values across the tabs.
+4. Select **Save** to store the defaults, or select **Cancel** to discard them.
 
-- **Save**: Saves current changes
-- **Undo**: Undoes changes made in the current session before saving
+**Result:** All server options are restored to their system default values once you save.
 
-## Configuration Options
+> The **Reset All to Default** button is unavailable when all tabs already hold their default values.
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Function Privilege | Maintain server options | settings | — |
-| Reset all to default | Resets all server options to system default settings | settings | — |
-| Reset current tab to default | Resets all changes in the current tab to system default settings | settings | — |
-| Undo | Undoes changes made in the current session before saving | — | — |
+## Reset the current tab
+
+To reset only the options on the tab you are currently viewing, complete the following steps:
+
+1. In Solution Manager, go to **Server Options**.
+2. Open the tab whose options you want to reset.
+3. Select **Reset Current Tab to Default**.
+4. Review the staged default values on the tab.
+5. Select **Save** to store the defaults, or select **Cancel** to discard them.
+
+**Result:** The options on the current tab are restored to their system default values once you save.
+
+> The **Reset Current Tab to Default** button is unavailable when the current tab already holds its default values.
+
+## Buttons
+
+The button bar at the bottom of the **Server Options** page provides the following actions:
+
+| Button | What It Does |
+|---|---|
+| **Save** | Stores the current changes, including any staged default values. |
+| **Reset All to Default** | Stages system default values for every server option across all tabs. |
+| **Reset Current Tab to Default** | Stages system default values for the options on the current tab. |
+| **Cancel** | Discards unsaved changes made in the current session. |
+
+<!-- GAP: The existing page referenced a vertical ellipsis menu and screenshots (server-option-reset-settings.png, server-option-save-undo.png). The current Solution Manager source exposes these actions as buttons in a button bar rather than a vertical ellipsis menu; confirm the current UI presentation and update the screenshots with an SME before republishing. -->
+
 ## FAQs
 
-**Q: What does Reset Settings cover?**
+**Does resetting take effect immediately?**
 
-This page covers Required Privileges.
+No. Resetting stages the default values in the form. The defaults are stored only after you select **Save**. Select **Cancel** to discard them before saving.
 
-## Glossary
+**Can I reset a single field instead of a whole tab?**
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+<!-- GAP: Source does not confirm a per-field reset control on the Server Options page; the available actions reset the current tab or all tabs. Confirm with an SME whether field-level reset exists. -->
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+## Related Topics
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+<!-- GAP: Add links to the Server Options overview and related Solution Manager Library pages once their paths are confirmed. -->

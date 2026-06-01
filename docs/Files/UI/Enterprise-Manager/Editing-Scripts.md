@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Scripts
-description: "Use this procedure to edit Scripts in Enterprise Manager."
+description: "Use this procedure to edit a script's name, type, or description in the Script Repository in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,38 +10,21 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Scripts
+# Editing Scripts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to edit Scripts in Enterprise Manager.
+Use this procedure to update a script's **Name**, **Type of Script**, or **Description** in Enterprise Manager. You must have the **Maintain Scripts** function privilege (or an equivalent all-access privilege) to edit scripts.
 
 To edit a script, complete the following steps:
 
-1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
-2.  Select the **script** to edit
-3.  Select **Edit Script** on the toolbar. The **Edit Script** dialog displays
-4.  Modify the name, type, and/or description
-5.  Select **OK** in the dialog
-6.  Select **Close ☒** to close the **Script Repository** screen
-:::
+1. In the navigation panel, select **Repository** under the **Scripts** topic. The **Script Repository** screen opens.
+2. Select the script you want to edit.
+3. Select **Edit Script** on the toolbar. The **Edit Script** dialog opens.
+4. Modify the **Name**, **Type of Script**, and/or **Description** fields as needed.
+5. Select **OK** to save your changes.
 
-## FAQs
-
-**Q: Do edits to scripts take effect immediately?**
-
-Changes saved to scripts in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The **Script Repository** screen refreshes and reflects the updated script details.

@@ -1,6 +1,6 @@
 ---
-title: Viewing Os2200 Job Details
-description: "Use this procedure to view Os2200 Job Details in Solution Manager."
+title: Viewing OS 2200 Job Details
+description: "View and update the OS 2200 Task Details of a master job in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -9,129 +9,147 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-05-29
 doc_type: procedural
 ---
 
-# Viewing Os2200 Job Details
+# Viewing OS 2200 Job Details
 
-**Theme:** Configure  
+**Theme:** Configure
 **Who Is It For?** System Administrator, Automation Engineer
 
 ## What Is It?
 
-Use this procedure to view Os2200 Job Details in Solution Manager.
+The **OS 2200 Definition** in the **Task Details** panel defines how OpCon submits an ECL (Executive Control Language) stream to a Unisys OS 2200 Agent. It captures the start command, run card control, completion-status evaluation, OpCon/xps tokens, and any Agent-resolved dependencies for an OS 2200 master job.
 
-To view an Os2200 job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
+For conceptual information about this job type, refer to [OS 2200 Jobs](../../../../../../../job-types/os-2200.md).
 
-## Editing Os2200 Job Details
+## Required Privileges
 
-To edit Os2200 Job Details, complete the following steps:
+To view or update an OS 2200 job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
-1. To view an Os2200 job, go to **Library** > **Master Jobs**
-1. Select an Os2200 job in the list
-1. Select **Edit**
-1. Expand the **Task Details** panel to expose its content
+## Opening the OS 2200 Task Details
 
-**In the Os2200 Definition frame:**
+To open the OS 2200 Task Details of a master job, complete the following steps:
+
+1. Go to **Library** > **Master Jobs**.
+2. Select an OS 2200 job in the list.
+3. Select **Edit**.
+4. Expand the **Task Details** panel.
+
+**Result:** The **OS 2200 Definition** appears, showing the fields described in the following sections.
+
+## OS 2200 Definition Fields
+
+### Machines
+
+| Field | Description |
+|---|---|
+| **Machines or Machine Group** | Selects the OS 2200 Agent or Machine Group on which the job runs. |
 
 ### Start Command
 
-- **Qualifier**: Defines the qualifier of the ECL file
-- **File Name**: Defines the filename of the ECL file
-- **Element Name**: Defines the element name of the file containing the ECL; include Version when needed (e.g., ELT/VERSION)
-- **Priority**: Defines the priority placed on the start statement when submitting the job to the Exec
-- **Options**: Defines valid options for inclusion on the start statement
-- **Condition Word (octal)**: Defines an octal number placed in the middle third of the condition word for this job (sets T2 of the run's condition word, the "set" parameter of the start statement)
+| Field | Description |
+|---|---|
+| **Qualifier** | Qualifier of the ECL file. Maximum 12 characters. |
+| **File Name** | Filename of the ECL file. Maximum 20 characters. |
+| **Element Name** | Element name of the file containing the ECL. Include the version when needed (for example, `ELT/VERSION`). Maximum 25 characters. |
+| **Priority** | Priority placed on the start statement when the job is submitted to the Exec. Maximum 1 character. |
+| **Options** | Valid options for inclusion on the start statement. Maximum 12 characters. |
+| **Condition Word (Octal)** | An octal number placed in the middle third of the condition word for this job (sets T2 of the run's condition word, the \"set\" parameter of the start statement). Entered as a 4-digit value. |
 
 ### Run Card Control
 
-- **Run ID**: Defines the run to the Exec and replaces the Run ID on the \@RUN card of the ECL
-- **Account**: Defines the account code used for billing and on the start statement
-- **User ID**: Defines the user of the account, used with the account code on the start statement. When User ID = "-SECURITY-", agent issues an ST \<ELT\> to start the job, enabling security officer jobs from SYS$LIB$\*RUN$ when Auto Answer for Security is on
-- **Project**: Defines the project for file access and accounting, used on the start statement
-- **Max Pages and Max Cards**: Defines maximum values for page and card generation on the start statement
+| Field | Description |
+|---|---|
+| **Run ID** | Defines the run to the Exec and replaces the Run ID on the `@RUN` card of the ECL. Maximum 6 characters. |
+| **Account** | Account code used for billing and on the start statement. Maximum 12 characters. |
+| **User ID** | User of the account, used with the account code on the start statement. When **User ID** is `-SECURITY-`, the Agent issues an `ST <ELT>` to start the job, enabling security officer jobs from `SYS$LIB$*RUN$` when Auto Answer for Security is on. Maximum 12 characters. |
+| **Project** | Project for file access and accounting, used on the start statement. Maximum 12 characters. |
+| **Max Pages** | Maximum value for page generation on the start statement. Entered as a 4-digit value. |
+| **Max Cards** | Maximum value for card generation on the start statement. Entered as a 4-digit value. |
 
-### agent Resolved Dependencies
+### Completion Status based on Condition Word
 
-Indicates whether the job should include a Prerun job or a File dependency. Valid values: **\<None\>**, **Pre Run**, **File**.
+When an Agent-started job terminates, the run condition word is evaluated for completion status. Define one or more tests to compare divisions of the condition word against your own values.
 
-### Prerun Information
+| Field | Description | Values |
+|---|---|---|
+| **And/Or** | Determines the association between multiple tests. | `AND`, `OR` |
+| **Word Part** | The portion of the word to analyze. | `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `T1`, `T2`, `T3` |
+| **Condition** | How the word part is tested. | `LAND`, `LT`, `LE`, `EQ`, `NE`, `GE`, `GT`, `Range` |
+| **Value** | The value compared against the selected word part. | — |
+| **End Value** | The upper bound when **Condition** is `Range`. | — |
+| **Fin Status** | The completion status assigned when the test is met. | `GOOD FIN`, `BAD FIN` |
 
-If **Pre Run** is set for agent Resolved Dependencies, the Prerun Information can be defined using the same fields as Start Command and Run Card Control.
+<!-- GAP: meaning of the LAND condition (\"logical AND between the value and the run's condition word\") unverified — only the enum value name 'LAND' is confirmed in source. -->
 
-- Specifies an ECL to run immediately before the job defined in Job Information
-- If the Prerun ECL terminates with an error, it is rescheduled at a user-defined interval
-- The Prerun ECL repeats at the user-defined interval until it succeeds, then the Job Information ECL processes. Its primary purpose is to test required preconditions for job execution
+### Default Fin Status
 
-### File Dependencies
+| Field | Description | Values |
+|---|---|---|
+| **Default Fin Status** | The completion status assigned when no completion-status test is met. <!-- GAP: \"assigned when no completion-status test is met\" unverified; source confirms the field and its values only. --> | `GOOD FIN`, `BAD FIN` |
 
-If **File** is set for agent Resolved Dependencies, define the following:
+### Tokens
 
-- **Qualifier**: Defines the qualifier for the file dependency. Placing \# before or after the qualifier directs the agent to search the SHARED File Directory; without \# indicates the STD File Directory
-- **File Name**: Defines the filename the ECL depends on
-- **Type**: Defines the type of dependency:
-  - **Exists**: The file must exist
-  - **Created**: The file must exist and was catalogued today
-  - **Deleted**: The file must not exist
-  - **Size**: The file exceeds the entered size value
-  - **Referenced**: The file has been referenced today
-  - **Assigned**: The file is currently assigned
-  - **BackedUp**: The file has a current backup (backed up and not yet modified)
-  - **Unloaded**: The file is currently unloaded
+| Field | Description |
+|---|---|
+| **Tokens** | OS 2200 Exec tokens that use OpCon/xps Global Properties. Maximum 250 characters. |
 
-### Completion Status Based on Condition Word
+### LSAM Resolved Dependencies
 
-Upon termination of an agent-started job, the run condition word is evaluated for completion status. User-defined values can be used for range testing of any standard condition word division.
+The **LSAM Resolved Dependencies** field determines whether the job includes a Prerun or a File dependency that the Agent resolves before the job runs.
 
-- **And/Or**: Determines the association between multiple tests
-- **Word Part**: Defines the portion of the word to analyze. Valid values: S1–S6, T1–T3
-- **Condition**: Defines how the word part is tested:
-  - **Streamlined workflow**: Logical And between the associated Value and the run's condition word
-  - **LT**: Less than
-  - **EQ**: Equal
-  - **GE**: Greater than or equal to
-  - **NE**: Not equal
-  - **LE**: Less than or equal to
-  - **GT**: Greater than
-  - **Range**: Range of values
+| Value | Description |
+|---|---|
+| **None** | No Agent-resolved dependency. |
+| **Prerun** | The Agent runs a Prerun ECL before the main job. See [Prerun Information](#prerun-information). |
+| **File** | The Agent checks one or more file conditions before the job runs. See [File Dependencies](#file-dependencies). |
 
----
+#### Prerun Information
 
-## More Information
+When **LSAM Resolved Dependencies** is set to **Prerun**, the Prerun ECL runs immediately before the job defined in the main definition. If the Prerun ECL terminates with an error, it is rescheduled at a user-defined interval and repeats until it succeeds, after which the main ECL processes. Its primary purpose is to test required preconditions for the job.
 
-For conceptual information, refer to [SAP BW Jobs](../../../../../../../job-types/os-2200.md) in the **Concepts** online help.
+The Prerun Information uses the same field groups as the main definition:
 
-## Configuration Options
+- **Prerun Start Command** — **Qualifier**, **File Name**, **Element Name**, **Priority**, **Options**, and **Condition Word (Octal)**.
+- **Prerun Card Control** — **Run ID**, **Account**, **User ID**, **Project**, **Max Pages**, and **Max Cards**.
+- **Prerun Completion Statuses** — the same fields as [Completion Status based on Condition Word](#completion-status-based-on-condition-word).
+- **Pre Run Default Fin Status** — `GOOD FIN` or `BAD FIN`.
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Qualifier | Defines the qualifier of the ECL file | — | — |
-| File Name | Defines the filename of the ECL file | — | — |
-| Element Name | Defines the element name of the file containing the ECL; include Version when needed (e.g., ELT/VERSION) | — | — |
-| Priority | Defines the priority placed on the start statement when submitting the job to the Exec | — | — |
-| Options | Defines valid options for inclusion on the start statement | — | — |
-| Condition Word (octal) | Defines an octal number placed in the middle third of the condition word for this job (sets T2 of the run's condition word, the "set" parameter of the... | — | — |
-| Run ID | Defines the run to the Exec and replaces the Run ID on the \@RUN card of the ECL | — | Valid values: **\<None\>**, **Pre Run**, **File**. |
-| Account | Defines the account code used for billing and on the start statement | — | Valid values: **\<None\>**, **Pre Run**, **File**. |
-| User ID | Defines the user of the account, used with the account code on the start statement. | — | Valid values: **\<None\>**, **Pre Run**, **File**.  ### Prerun Information |
-| Project | Defines the project for file access and accounting, used on the start statement | — | Valid values: **\<None\>**, **Pre Run**, **File**.  ### Prerun Information |
-| Max Pages and Max Cards | Defines maximum values for page and card generation on the start statement | — | Valid values: **\<None\>**, **Pre Run**, **File**.  ### Prerun Information  If **Pre Run** is set for agent Resolve |
-| Type | Defines the type of dependency: | — | — |
-| And/Or | Determines the association between multiple tests | — | Valid values: S1–S6, T1–T3. - **Condition**: Defines how the word part is tested:   - **Streamlined workflow**: Logical And betwe |
-| Word Part | Defines the portion of the word to analyze. | — | Valid values: S1–S6, T1–T3. - **Condition**: Defines how the word part is tested:   - **Streamlined workflow**: Logical And betwe |
-| Condition | Defines how the word part is tested: | — | — |
+#### File Dependencies
 
-## FAQs
+When **LSAM Resolved Dependencies** is set to **File**, define one or more file conditions:
 
-**Q: What does Viewing Os2200 Job Details cover?**
+| Field | Description |
+|---|---|
+| **Qualifier** | Qualifier for the file dependency. Placing `#` before or after the qualifier directs the Agent to search the SHARED File Directory; without `#`, the Agent searches the STD File Directory. Maximum 12 characters. |
+| **File Name** | Filename the ECL depends on. Maximum 12 characters. |
+| **Type** | The type of dependency. See the **Type** values below. |
+| **Size** | The size value used when **Type** is `Size`. |
 
-This page covers Editing Os2200 Job Details, More Information.
+The **Type** field supports the following values:
+
+| Value | Meaning |
+|---|---|
+| **Exists** | The file must exist. |
+| **Created** | The file must exist and was catalogued today. |
+| **Deleted** | The file must not exist. |
+| **Size** | The file exceeds the entered **Size** value. |
+| **Referenced** | The file has been referenced today. |
+| **Assigned** | The file is currently assigned. |
+| **Backed Up** | The file has a current backup (backed up and not yet modified). |
+| **Unloaded** | The file is currently unloaded. |
+
+## Related Topics
+
+- [OS 2200 Jobs](../../../../../../../job-types/os-2200.md)
+- [Accessing Master Jobs](../Accessing-Master-Jobs.md)
 
 ## Glossary
 
 **Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+
+**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type.

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Self Service
-description: "The Self Service link provides access to the Self Service page in Solution Manager."
+description: "The Self Service link in the Enterprise Manager Navigation Panel opens the Self Service page in Solution Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,29 +17,32 @@ doc_type: procedural
 
 # Using Self Service
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Self-Service** link in the Enterprise Manager Navigation Panel opens the **Self-Service** page in Solution Manager. Self Service is a licensed OpCon module that lets designated users trigger OpCon workflows without IT involvement.
 
-## What Is It?
+## Prerequisites
 
-The **Self Service** link provides access to the **Self Service** page in Solution Manager. For more information, refer to [Managing Self Service](../Solution-Manager/Managing-Self-Service.md) in the **Solution Manager** online help.
+Before you can access Self-Service from Enterprise Manager, confirm:
 
-## FAQs
+- Your OpCon license includes the **Self Service** feature.
+- Your OpCon user account has the **Self-Service** option enabled. A system administrator enables this per user in the **Licenses** section of the user's account in Enterprise Manager.
+- Your role includes the **View Service Requests** function privilege.
 
-**Q: What can you do with Self Service?**
+If you are missing any of these, contact your system administrator.
 
-Self Service allows you to manage and configure related settings.
+## Open Self Service from Enterprise Manager
 
-**Q: Who has access to Self Service?**
+To open Self-Service from Enterprise Manager, complete the following steps:
 
-Access to Self Service is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+1. Open Enterprise Manager.
+2. In the **Navigation Panel**, expand **Solution Manager**.
+3. Select **Self-Service**.
 
-## Glossary
+**Result:** The Self-Service page opens in Solution Manager.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+:::note
+The **Solution Manager** topic only appears in the Navigation Panel when the **Solution Manager URL** General Server Option is configured. For more information, see [Managing Solution Manager](Working-with-Solution-Manager.md).
+:::
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+## Manage Self Service content
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+To manage service requests, categories, and settings in Self Service, see [Managing Self Service](../Solution-Manager/Managing-Self-Service.md) in the Solution Manager help.

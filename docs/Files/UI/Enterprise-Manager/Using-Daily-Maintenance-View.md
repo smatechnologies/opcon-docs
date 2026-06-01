@@ -3,44 +3,73 @@ title: Using Daily Maintenance View
 description: "The Daily Maintenance view allows you to manage daily schedules and validate job dependencies in the Daily tables."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Using Daily Maintenance View
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Daily Maintenance** view allows you to manage daily schedules and validate job dependencies in the Daily tables.
+The **Daily Maintenance** view in Enterprise Manager provides a central workspace for managing schedules and jobs in the Daily tables. Use this view to check dependencies, delete schedules, and open editors for both Daily and Master table records.
 
 :::note
-Continuous recommends keeping no more than two weeks of schedules in the Daily tables. The SAM-SS performs better with fewer days of schedules built.
+Continuous recommends keeping no more than 14 days of schedules in the Daily tables. The default **Days Kept in Daily** preference is 14. Performance improves with fewer days of schedules built.
 
-To perform any Daily Maintenance functions, you must have the appropriate privileges. Refer to [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges) in the Concepts online help.
+To perform any Daily Maintenance functions, you must have the appropriate privileges. For details, see [Departmental Function Privileges](../../../administration/privileges.md#departmental-function-privileges).
 :::
 
-The **Daily Maintenance** view allows you to:
+## Overview
 
-- Check and/or delete daily schedules
-- Validate job dependencies in the Daily tables (e.g., detect circular dependencies or unmet "Requires" dependencies)
-- Edit schedules and/or jobs in the Daily or Master tables
+The **Daily Maintenance** view lets you:
 
-## Daily Maintenance Toolbar
+- Check daily schedules and jobs for dependency issues
+- Delete schedules or jobs from the Daily tables
+- Open schedules and jobs in the Daily or Master editors
+- Add jobs from the Master tables to a daily schedule
 
-The **Daily Maintenance** view has a toolbar for performing actions in the view. Select any icon on the toolbar below to learn more about its functionality.
+The view contains two panels side by side:
 
-![Daily Maintenance toolbar](../../../Resources/Images/EM/EMdailymainttoolbar.png "Daily Maintenance toolbar")
+- **Daily** — A tree that lists all dates and their associated daily schedules and jobs.
+- **Master** — A job list showing jobs available to add from the Master tables to the selected daily schedule.
 
-The following procedures apply to Daily Maintenance functionality for schedules and jobs in the Master and Daily tables:
+## Toolbar
+
+The **Daily Maintenance** toolbar contains one action:
+
+| Button | Description |
+|---|---|
+| **Delete Old Schedules** | Removes daily schedule records older than the configured **Days Kept in Daily** preference value. This button is active only when you are an OCADM user, or when you have the **Delete Daily Schedules** privilege and access to all schedules. |
+
+## Maintenance Panel Buttons
+
+The **Maintenance** group at the lower right of the view contains buttons for acting on your selection in the **Daily** tree.
+
+### Check Options
+
+Select one of the following options before selecting **Check**:
+
+| Option | Behavior |
+|---|---|
+| **Normal (No Circular)** | Validates schedule dependencies, excluding circular dependency detection. This is the default selection. |
+| **Slow (Circular)** | Validates schedule dependencies and detects circular dependencies. |
+| **Fast (Requires Only)** | Validates only "Requires" dependencies. |
+
+### Action Buttons
+
+| Button | Active When | Required Privilege |
+|---|---|---|
+| **Check** | A date, schedule, or sub-schedule is selected | None beyond login |
+| **Edit Master** | A schedule, job, or sub-schedule is selected | **Maintain Schedules** (when a schedule is selected); **View Jobs in Master Schedules** (departmental, when a job or sub-schedule is selected) |
+| **Edit Daily** | A schedule, job, or sub-schedule is selected | **Maintain Schedules** (when a schedule is selected); **View Jobs in Daily Schedules** (departmental, when a job or sub-schedule is selected) |
+| **Delete** | A date, schedule, job, or sub-schedule is selected | **Delete Daily Schedules**; additionally **Delete Jobs from Daily Schedules** (departmental) is required when deleting a job |
+
+## Procedures
+
+The following procedures describe how to use Daily Maintenance functionality:
 
 - [Finding Daily Schedules or Jobs](Finding-Daily-Schedules.md)
 - [Checking Daily Schedules](Checking-Daily-Schedules.md)
@@ -49,32 +78,3 @@ The following procedures apply to Daily Maintenance functionality for schedules 
 - [Deleting Jobs from Daily Schedules](Deleting-Jobs-from-Daily-Schedules.md)
 - [Adding Jobs from Job Master to Daily Schedule](Adding-Jobs-from-Job-Master-to-Daily-Schedule.md)
 - [Deleting Old Schedules](Deleting-Old-Schedules.md)
-:::
-
-## FAQs
-
-**Q: What can you do with Daily Maintenance View?**
-
-Daily Maintenance View allows you to daily maintenance toolbar.
-
-**Q: Who has access to Daily Maintenance View?**
-
-Access to Daily Maintenance View is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**SAM-SS (SAM and Supporting Services)**: The collective term for the OpCon server-side processing programs: SAM, SMANetCom, SMA Notify Handler, SMA Request Router, and SMA Start Time Calculator.
-
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

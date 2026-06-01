@@ -1,16 +1,16 @@
 ---
 title: Using Script Tools
-description: "The Scripts tools perform the following functions depending on the current screen."
+description: "Reference for the Scripts toolbar buttons in Enterprise Manager and the actions each one performs."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
-doc_type: procedural
+  - Enterprise Manager
+last_updated: 2026-05-29
+doc_type: reference
 ---
 
 # Using Script Tools
@@ -20,28 +20,40 @@ doc_type: procedural
 
 ## What Is It?
 
-The Scripts tools perform the following functions depending on the current screen.
+The Scripts tools are the toolbar buttons that appear in the Scripts views and dialogs in Enterprise Manager, such as the Repository Editor and the Versions dialog. The buttons available depend on the current screen and on the item you have selected. Use these buttons to add, edit, and remove scripts; to manage script versions; and to review where a script is used before you change or delete it.
 
-|||
+The following table lists the Scripts toolbar buttons and the action each one performs.
+
+| Button | Action |
 |--- |--- |
-||Add: Opens a dialog to add a new item.|
-||Edit: Opens a dialog to edit the selected item.|
-||Remove: Deletes the selected item.|
-||Show/Create Versions: In the Repository Editor, opens a dialog listing existing script versions and allows you to create, edit, or delete them.|
-||Cross References: In the Repository Editor, opens a dialog listing cross references (jobs and/or schedules) that use the selected script.|
-||Minimize: Minimizes the editor and/or view and places an icon in the sidebar.|
-||Maximize: Opens the editor and/or view to its maximum size. The Maximize button changes to a Restore button when maximized.|
-||Restore: Returns the editor view to its original location and size.|
+| **Add** | Opens a dialog to add a new item. In the Repository Editor, opens the **Add Script** dialog. |
+| **Edit** | Opens a dialog to edit the selected item. In the Repository Editor, opens the **Edit Script** dialog. |
+| **Remove** | Deletes the selected item. In the Repository Editor, prompts you to confirm before deleting the selected script. |
+| **Show/Create Versions** | In the Repository Editor, opens the **Versions** dialog, which lists existing versions of the selected script and lets you create, edit, view, remove, and deploy versions. |
+| **Cross References** | In the Repository Editor, opens a dialog that lists the cross references (jobs and schedules) that use the selected script. Review cross references before you change or delete a script. |
+| **Minimize** | Minimizes the editor or view and places a button in the sidebar. |
+| **Maximize** | Opens the editor or view to its maximum size. The **Maximize** button changes to a **Restore** button when the view is maximized. |
+| **Restore** | Returns the editor or view to its original location and size. |
+
+<!-- GAP: The Minimize, Maximize, and Restore behaviors are standard Eclipse view/editor controls and are not defined in the com.sma.ui.scripts message resources; confirm exact button labels and behavior with an SME or screenshots. -->
 
 ## FAQs
 
-**Q: What can you do with Script Tools?**
+**Q: Which buttons appear on the Scripts toolbar?**
 
-Script Tools allows you to manage and configure related settings.
+The buttons that appear depend on the current screen. In the Repository Editor, the toolbar shows **Add**, **Edit**, and **Remove**, followed by **Show/Create Versions** and **Cross References**. The **Show/Create Versions** and **Cross References** buttons are enabled only when a single script is selected.
+
+**Q: Why should you check Cross References before deleting a script?**
+
+The **Cross References** dialog lists the jobs and schedules that use the selected script. If your role does not have privileges to view every referencing record, a warning notes that not all cross references are listed, and the script cannot be deleted until all cross references are cleared.
 
 **Q: Who has access to Script Tools?**
 
 Access to Script Tools is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+
+## Related Topics
+
+<!-- GAP: No related topic pages were confirmed from source. Add links to the Scripts Repository, Versions, and Script Types documentation when those page paths are confirmed. -->
 
 ## Glossary
 
@@ -53,4 +65,6 @@ Access to Script Tools is controlled by the privileges assigned to your OpCon ro
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Cross reference**: A link that records where a script is used. Cross references identify the jobs and schedules that reference a script so that you can review the impact before you change or delete it.
+
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

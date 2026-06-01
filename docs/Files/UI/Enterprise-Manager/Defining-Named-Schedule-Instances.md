@@ -1,6 +1,6 @@
 ---
 title: Defining Named Schedule Instances
-description: "A multi-instance schedule may be associated with one or more instance names."
+description: "How to define named instances for a multi-instance schedule in Enterprise Manager, including instance properties and exception rules."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,173 +8,158 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Defining Named Schedule Instances
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A multi-instance schedule can be associated with one or more named instances. Each named instance can carry its own schedule instance properties and exception rules that modify job fields at build time.
 
-## What Is It?
+For conceptual background, refer to [Named Schedule Instances](../../../automation-concepts/named-schedule-instances.md) in the **Concepts** online help.
 
-A multi-instance schedule may be associated with one or more instance names. Each named schedule instance can be associated with schedule instance properties and exceptions. For conceptual information, refer to [Named Schedule Instances](../../../automation-concepts/named-schedule-instances.md) in the **Concepts** online help.
+## Define a Named Instance
 
-To define a named schedule instance, complete the following steps:
+To define a named instance for a multi-instance schedule, complete the following steps:
 
-1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2. Select the **schedule** in the **Schedule Selection** list
-3. Select the **Schedule** tab in the **Schedule Details** frame
-4. Select the **Multi-Instance** option in the **Schedule Properties** frame
-5. Select the **Instance Definition** tab in the **Schedule Details** frame
-6. Select the **Named Instance** radio button
-7. Select **Add** in the **Instances** frame. The **Select Instance** dialog displays
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
+2. Select the schedule in the **Schedule Selection** list.
+3. Select the **Schedule** tab in the **Schedule Details** frame.
+4. Select the **Multi-Instance** option in the **Schedule Properties** frame.
+5. Select the **Instance Definition** tab in the **Schedule Details** frame.
+6. Select the **Named Instance** option.
+7. Select **Add** in the **Instances** frame. The **Select Instance** dialog displays.
 8. Do one of the following:
-   - Select **Add New Schedule Instance**, enter the *instance name*, then select **OK**
-   - Select an existing **instance name** from the **Instance** list, or use **Find** (Ctrl+F) to search
-9. Select **OK** to save or **Cancel** to cancel
+   - Select the add button next to the **Instance** field, enter the instance name in the **Instance Name** field, then select **OK** to create and assign a new instance.
+   - Select an existing instance name from the **Instance** list.
+9. Select **OK** to confirm the selection, or **Cancel** to cancel.
 
-Define Properties
+**Result:** The instance name appears in the **Instances** list and the **Instance Details** frame becomes active.
 
-Associate schedule instance properties.
+## Define Instance Properties
 
-1. Enter a *property name* in the **Property Name** field
-2. Enter an associated *property value* in the **Property Value** field
-3. Select **Add**
+To associate properties with the selected named instance, complete the following steps:
 
-Define Exceptions
-
-Add exception rules to apply to an associated job pattern. These exceptions are applied during the schedule build.
-
-:::note
-Only users in the ocadm role can define exceptions.
-:::
-
-**In the Instance Details frame > Exceptions tab:**
-
-1. Select **Add** in the **Job Patterns** frame. The **Job Pattern** dialog displays
-2. Enter the *job pattern*. Wildcards (\*) are supported
+1. Select the instance in the **Instances** list.
+2. Select the **Properties** tab in the **Instance Details** frame.
+3. Enter a property name in the **Property Name** field.
+4. Enter a property value in the **Property Value** field.
+5. Select **Add**.
 
 :::note
-Exceptions apply to all jobs matching the specified pattern. Using only \* applies exceptions to all jobs.
+Property names cannot contain the characters `= ' ( ) \ , |` or end with a space. Duplicate property names within the same instance are not allowed.
 :::
 
-3. Select **OK** to save the job pattern or **Cancel** to cancel
-4. Select **Add** in the **Exception Rules** frame. The **Add Exception Rule** dialog displays
+## Define Exception Rules
+
+Exception rules override specific job field values for all jobs matching a pattern when the schedule is built.
 
 :::note
-For fields supporting tokens, press **Ctrl+T** to open the **Global Property Selector** to access global properties and named instance properties. You can also type a token manually. For more on tokens, refer to [Tokens](../../../objects/using-properties.md#tokens) in the **Concepts** online help.
+Only users in the `ocadm` role can define exception rules.
 :::
 
-5. In the **Job Field**, select the job field to modify
+To define exception rules for a named instance, complete the following steps:
 
-:::note
-Fields that do not allow exceptions are handled during schedule build time.
-:::
+1. Select the instance in the **Instances** list.
+2. Select the **Exceptions** tab in the **Instance Details** frame.
+3. Select **Add** in the **Job Patterns** frame. The **Job Pattern** dialog displays.
+4. Enter the job pattern. Wildcards (`*`) are supported.
 
-6. In the **To Replace** field, provide the existing string to replace, or leave blank to replace everything
+   :::note
+   The exception rules apply to all jobs whose names match the specified pattern. Using `*` alone applies exception rules to all jobs in the schedule.
+   :::
 
-:::note
-Steps 6–8 apply to all predefined job fields except **Job Build Status**. For Job Build Status, select one of the following from the **New Value** list, then proceed to Step 9:
+5. Select **OK** to save the job pattern, or **Cancel** to cancel.
+6. Select **Add** in the **Exception Rules** frame. The **Add Exception Rule** dialog displays.
 
-- Cancelled
-- Disable Build
-- On Hold
-- Release
-- To Be Skipped
-:::
+   :::note
+   For fields that support tokens, press **Ctrl+T** to open the **Global Property Selector** and access global properties and named instance properties. You can also type a token manually. For more information, refer to [Tokens](../../../objects/using-properties.md#tokens) in the **Concepts** online help.
+   :::
 
-When defining the **To Replace** string:
+7. In the **Job Field** list, select the job field to modify.
 
-- The value may be an empty string (`""`), a fixed string (`"abc"`), or a string with instance properties (`[[$this.Property]]`)
-- The value may not be a property expression
-- `[[@name]]` refers to the current instance name (case-sensitive)
-- `[[@current]]` refers to the current value of the job field (case-sensitive)
-- `$this` is a case-sensitive placeholder for the instance property named in the instance definition
+   :::note
+   Some job fields do not allow exceptions and are handled at schedule build time.
+   :::
 
-7. In the **New Value** field, provide the replacement value
+8. In the **To Replace** field, enter the existing string to replace, or leave it blank to replace the entire field value.
 
-When defining the new value, the value may be:
+   :::note
+   Steps 8–10 apply to all predefined job fields except **Job Build Status**. For **Job Build Status**, select one of the following values from the **New Value** list, then skip to step 11:
 
-- A fixed string (`"abc"`)
-- A string with instance properties (`[[$this.Property]]`)
-- A property expression (`[[@current]] + ToOaTime("02:00")`)
+   - `Cancelled`
+   - `Disable Build`
+   - `On Hold`
+   - `Released`
+   - `To Be Skipped`
+   :::
 
-8. Select the **Is Expression** option if the new value is a property expression
+   When defining the **To Replace** value:
 
-:::tip Examples
-**Scenario #1**: Add an argument to a command line.
+   - The value may be an empty string (`""`), a fixed string (`"abc"`), or a string containing instance properties (`[[$this.Property]]`).
+   - The value may not be a property expression.
+   - `[[@name]]` refers to the current instance name (case-sensitive).
+   - `[[@current]]` refers to the current value of the job field (case-sensitive).
+   - `$this` is a case-sensitive placeholder for the instance property named in the instance definition.
 
-**Job Field**: (Windows) Command Line
-**To Replace**: C:\MyFolder\MyApp.exe -arg1 firstArg -arg2 secondArg
-**New Value**: C:\MyFolder\MyApp.exe -arg1 firstArg -arg2 secondArg -arg3 thirdArg
-**Is Expression**: false
+9. In the **New Value** field, enter the replacement value.
 
-**Scenario #2**: Change the primary machine using an instance property.
+   The replacement value may be:
 
-**Job Field**: Primary Machine
-**To Replace**: MyMachine
-**New Value**: My[[$this.Property]]Machine
-**Is Expression**: false
+   - A fixed string (`"abc"`)
+   - A string containing instance properties (`[[$this.Property]]`)
+   - A property expression (`[[@current]] + ToOaTime("02:00")`)
 
-**Scenario #3**: Append the instance name to the current department value.
+10. Select the **Is Expression** option if the new value is a property expression.
+11. Select **OK** to save the exception rule, or **Cancel** to cancel.
+12. Repeat steps 3–11 to define additional job patterns and exception rules.
 
-**Job Field**: Department
-**To Replace**:
-**New Value**: [[@current]][[@name]]
-**Is Expression**: false
+**Result:** The exception rules are saved and will be applied to matching jobs when the schedule is built.
 
-**Scenario #4**: Add 10 minutes to the current start offset using an expression.
+### Exception rule examples
 
-**Job Field**: Start Offset
-**To Replace**:
-**New Value**: [[@current]] + ToOaTime("00:10")
-**Is Expression**: true
-:::
+The following examples show common exception rule configurations.
 
-9. Select **OK** to save the exception rule or **Cancel** to cancel
-10. Repeat Steps 7–9 to define additional named instances
-11. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
-12. Select **Close ☒** to close the **Schedule Master** screen
+**Example 1: Add an argument to a command line**
 
-## Configuration Options
+| Field | Value |
+|---|---|
+| **Job Field** | (Windows) Command Line |
+| **To Replace** | `C:\MyFolder\MyApp.exe -arg1 firstArg -arg2 secondArg` |
+| **New Value** | `C:\MyFolder\MyApp.exe -arg1 firstArg -arg2 secondArg -arg3 thirdArg` |
+| **Is Expression** | No |
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Scenario #1 | Add an argument to a command line | — | — |
-| Job Field | (Windows) Command Line | — | — |
-| To Replace | C:\MyFolder\MyApp.exe -arg1 firstArg -arg2 secondArg | — | — |
-| New Value | C:\MyFolder\MyApp.exe -arg1 firstArg -arg2 secondArg -arg3 thirdArg | — | — |
-| Is Expression | false | — | — |
-| Scenario #2 | Change the primary machine using an instance property | — | — |
-| Scenario #3 | Append the instance name to the current department value | — | — |
-| Scenario #4 | Add 10 minutes to the current start offset using an expression | — | — |
-## FAQs
+**Example 2: Change the primary machine using an instance property**
 
-**Q: What is the purpose of defining named schedule instances?**
+| Field | Value |
+|---|---|
+| **Job Field** | Primary Machine |
+| **To Replace** | `MyMachine` |
+| **New Value** | `My[[$this.Property]]Machine` |
+| **Is Expression** | No |
 
-Defining named schedule instances establishes the configuration or properties that OpCon uses when processing the related job, schedule, or automation object.
+**Example 3: Append the instance name to the current department value**
 
-**Q: What is required when defining named schedule instances?**
+| Field | Value |
+|---|---|
+| **Job Field** | Department |
+| **To Replace** | *(leave blank)* |
+| **New Value** | `[[@current]][[@name]]` |
+| **Is Expression** | No |
 
-Required information includes **Property Name**. Complete all required fields before saving.
+**Example 4: Add 10 minutes to the current start offset using an expression**
 
-## Glossary
+| Field | Value |
+|---|---|
+| **Job Field** | Start Offset |
+| **To Replace** | *(leave blank)* |
+| **New Value** | `[[@current]] + ToOaTime("00:10")` |
+| **Is Expression** | Yes |
 
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+## Save Changes
 
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+To save the named instance configuration, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+1. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar.
+2. Select **Close ☒** to close **Schedule Master**.

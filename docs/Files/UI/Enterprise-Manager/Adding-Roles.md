@@ -1,6 +1,6 @@
 ---
 title: Adding Roles
-description: "Use this procedure to add Roles in Enterprise Manager."
+description: "Step-by-step procedure for adding a Role in the Enterprise Manager Security editor."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,54 +8,37 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Security
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Roles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Roles group privileges together and are assigned to user accounts to control access to schedules, jobs, machines, and administrative functions. To manage roles, your user account must belong to a role with **All Administrative Functions**, **All Function Privileges**, or be in the `ocadm` role.
 
-## What Is It?
+To add a role in Enterprise Manager, complete the following steps:
 
-Use this procedure to add Roles in Enterprise Manager.
+1. In the Navigation panel, select **Roles** under the **Security** topic. The **Roles** editor opens.
+2. Select **Add** on the **Roles** toolbar.
+3. In the **Name** field, enter a unique name for the role (maximum 20 characters).
+4. In the **Documentation** field, enter a description of the role (optional; maximum 4,000 characters).
+5. In the **Privileges** section, select any of the following options as needed:
 
-To add a role, complete the following steps:
+   | Option | Behavior |
+   |---|---|
+   | **Inherit Privileges for All Schedules** | The role automatically gains access to all current and future Schedules. When cleared, the role retains previously inherited Schedule privileges but does not gain access to new Schedules. For details, see [Roles](../../../administration/roles.md). |
+   | **Inherit Privileges for All Machines** | The role automatically gains access to all current and future Machines. |
+   | **Inherit Privileges for All Machine Groups** | The role automatically gains access to all current and future Machine Groups. |
+   | **Inherit Privileges for All Scripts** | The role automatically gains access to all current and future Embedded Scripts. |
 
-1. Select **Roles** under the **Security** topic. The **Roles** screen displays
-2. Select ![Add button](../../../Resources/Images/EM/EMadd.png "Add button") **Add** on the **Roles** toolbar
-3. Enter the new *role name* in the **Name** text box
-4. Enter the *role description* in the **Documentation** text box
-5. *(Optional)* Select any of the following options as needed. For information on the **Inherit Privileges for All Schedules** option, refer to [Roles](../../../administration/roles.md) in the **Concepts** online help
-   - **Inherit Privileges for All Schedules**
-   - **Inherit Privileges for All Machines**
-   - **Inherit Privileges for All Machine Groups**
-6. Assign users to the role using one of the following methods:
-   - Select a **User Login ID** in the **Revoked** list to move it to the **Granted** list
-   - Shift-select or Ctrl-select to select multiple **User Login IDs**, then select the **right arrow** to assign them
-7. Select ![Save button](../../../Resources/Images/EM/EMsave.png "Save button") **Save** on the **Roles** toolbar
-8. Select **Close ☒** (to the right of the **Roles** tab) to close the **Roles** screen
+6. In the **User Assignment** section, assign users to the role using one of the following methods:
+   - Select a **User Login ID** in the **Revoked** list, then select the right arrow to move it to the **Granted** list.
+   - Hold Shift or Ctrl and select multiple **User Login IDs** in the **Revoked** list, then select the right arrow to assign them all.
+7. Select **Save** on the **Roles** toolbar.
 
-## FAQs
+**Result:** The new role is saved and appears in the **Roles** selection list. Users assigned to the role inherit all privileges configured on it.
 
-**Q: What information is required to add roles?**
+## Related Topics
 
-The required fields include **Documentation**. Select **Save** on the toolbar to save the new record.
-
-**Q: Is documentation required when adding roles?**
-
-No. The Documentation field is optional. You can enter notes about the roles to track its purpose, but it is not required to save the record.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+- [Roles](../../../administration/roles.md) — Conceptual overview of role fields, inheritance behavior, and security considerations.

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Schedule Build
-description: "The Schedule Build link opens the Schedule Build page in Solution Manager."
+description: "The Schedule Build link in the Enterprise Manager Solution Manager navigation panel opens the Schedule Build page in Solution Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,32 +17,20 @@ doc_type: procedural
 
 # Using Schedule Build
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Schedule Build** link in the Enterprise Manager **Solution Manager** navigation panel opens the **Schedule Build** page in Solution Manager, where you can build daily schedules for one or more dates.
 
-## What Is It?
-
-The **Schedule Build** link opens the **Schedule Build** page in Solution Manager. For more information, refer to [Managing Schedules](../Solution-Manager/Managing-Schedules.md) in the **Solution Manager** online help.
+:::note
+You must have the **Build Daily Schedules** departmental function privilege and the appropriate Schedule Privileges to use this feature. For more information, refer to [Departmental Function Privileges](../../../administration/privileges.md#build-daily-schedules).
 :::
 
-## FAQs
+## Opening Schedule Build from Enterprise Manager
 
-**Q: What can you do with Schedule Build?**
+To open Schedule Build from Enterprise Manager, complete the following steps:
 
-Schedule Build allows you to manage and configure related settings.
+1. In the Enterprise Manager navigation panel, expand the **Solution Manager** topic.
+2. Expand the **Operation** sub-topic.
+3. Select **Schedule Build**.
 
-**Q: Who has access to Schedule Build?**
+**Result:** The **Schedule Build** page opens in Solution Manager.
 
-Access to Schedule Build is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+For instructions on building daily schedules, refer to [Managing Schedules](../Solution-Manager/Managing-Schedules.md) in the **Solution Manager** online help.

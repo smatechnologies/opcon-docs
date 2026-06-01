@@ -1,6 +1,6 @@
 ---
 title: Working with Scripts
-description: "The Scripts topic in the Navigation Panel provides views to manage the script repository, script runners, and script types."
+description: "The Scripts topic in Enterprise Manager provides editors to manage the script repository, script runners, and script types for embedded scripts stored in the OpCon database."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,33 +15,26 @@ doc_type: conceptual
 
 # Working with Scripts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Scripts** topic in the Navigation Panel provides views to manage the script repository, script runners, and script types.
-
-Select any **Administration** function item in the graphic to learn more about that item.
+The **Scripts** topic in Enterprise Manager provides editors to manage embedded scripts stored centrally in the OpCon database. From this topic you can organize scripts by type, configure the runners that interpret them on Agent machines, and maintain the script repository itself.
 
 ![Scripts Topic](../../../Resources/Images/EM/EMscriptsmenu.png "Scripts Topic")
 
-## FAQs
+## Scripts Editors
 
-**Q: What can you do in Scripts?**
+The **Scripts** topic contains three editors, accessible from the navigation panel.
 
-Scripts provides access to related configuration and management tasks. Use the navigation options to add, edit, or delete records as needed.
+| Editor | Description |
+|---|---|
+| [Script Repository](Using-Script-Repository.md) | Stores and versions job scripts in the OpCon database. Use this editor to add, edit, and delete scripts and their versions, and to review where each script is used before making changes. |
+| [Script Runners](Managing-Script-Runners.md) | Creates and manages interpreters and their associated command templates. Templates are passed to the Agent machine so the Agent knows how to run scripts it receives from the database. |
+| [Script Types](Managing-Script-Types.md) | Creates and manages the script types that categorize scripts and control which runners can run them. |
 
-**Q: Who can access scripts in OpCon?**
+## Access Control
 
-Access is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access to scripts.
+Access to Scripts editors is controlled by the privileges assigned to your OpCon role. Script-level access is managed separately through [Script Privileges](Managing-Script-Privileges.md) under the **Security** topic.
 
-## Glossary
+## Related Topics
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Embedded Scripts](../../../automation-concepts/embedded-scripts.md)
+- [Managing Script Privileges](Managing-Script-Privileges.md)
+- [Using Script Tools](Using-Scripts-Tools.md)
