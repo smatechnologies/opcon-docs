@@ -1,43 +1,34 @@
 ---
 title: Using Summary
-description: "The Summary link provides access to the Operations Summary page in Solution Manager."
+description: "The Summary link in Enterprise Manager opens the Operations Summary page in Solution Manager, providing high-level summary information (by way of graphical dials) for schedules, jobs, and Agent machines."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
-doc_type: procedural
+last_updated: 2026-06-01
+doc_type: reference
 ---
 
 # Using Summary
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Summary** link in Enterprise Manager opens the **Operations Summary** page in Solution Manager. The Operations Summary page displays graphical dials showing high-level summary information for schedules, jobs, and Agent machines currently in operation. Each dial has drill-down capability to view the details or processes on which the summary information is based.
 
-## What Is It?
+For full documentation of the Operations Summary page, refer to [Working with Operations](../Solution-Manager/Working-with-Operations.md).
 
-The **Summary** link provides access to the **Operations Summary** page in Solution Manager. For more information, refer to [Working with Operations](../Solution-Manager/Working-with-Operations.md) in the **Solution Manager** online help.
+## Navigation
 
-## FAQs
+The **Summary** link is located under **Operation** in the Enterprise Manager navigation pane.
 
-**Q: What can you do with Summary?**
+Selecting **Summary** opens Solution Manager in an embedded browser view and displays the Operations Summary page at the `operations` route.
 
-Summary allows you to manage and configure related settings.
+## Related Topics
 
-**Q: Who has access to Summary?**
-
-Access to Summary is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Working with Operations](../Solution-Manager/Working-with-Operations.md)
+- [Using Processes](Using-Processes.md)
+- [Using Schedule Build](Using-Schedule-Build_SM.md)
+- [Using Agent Status](Using-Agent-Status.md)
+- [Using Operations](Using-Operations.md)

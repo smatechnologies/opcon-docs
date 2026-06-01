@@ -1,54 +1,55 @@
 ---
 lang: en-us
-viewport: width=device-width, initial-scale=1.0
 title: Editing SAP Jobs
-description: "Use this procedure to edit SAP Jobs in Enterprise Manager."
-product_area: Enterprise Manager
-audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
+description: "How to locate and edit an SAP job definition from the Machines Status view in Enterprise Manager."
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+product_area: Enterprise Manager
+audience: System Administrator, Automation Engineer
 doc_type: procedural
+last_updated: 2026-06-01
 ---
 
-#  Editing SAP Jobs
+# Editing SAP Jobs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to locate an SAP job from the SAP R/3 and CRM machine list and edit its definition in Enterprise Manager.
 
-## What Is It?
+## Before you begin
 
-Use this procedure to edit SAP Jobs in Enterprise Manager.
+You must have access to the **Machines Status** view and a configured SAP R/3 and CRM machine in your environment.
+
+## Edit an SAP job
 
 To edit an SAP job, complete the following steps:
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Right-click the preferred **SAP R/3 and CRM machine name**
-3.  Hover over **SAP Machine** in the right-click menu and select **SAP Jobs**. The **View SAP Jobs** dialog displays
-4.  Enter a *job name* or a *name with a wildcard*
-5.  *(Optional)* Enter a *date range* for the job's creation date
-6.  *(Optional)* Enter an *event* in the **Event ID** list
-7.  Select the **Scheduled** status box and clear all other status boxes
-8.  Select the **Search SAP** button
-9.  Select the **SAP job** in the list
-10. Select the **Edit Job** button. The **Editing SAP Job** dialog displays
-11. Edit the *information*
-12. Select the **Save** button
+1. In the **Navigation** panel, select **Machines Status** under the **Operation** topic.
+2. Right-click the SAP R/3 and CRM machine name you want to work with.
+3. Hover over **SAP Machine** in the right-click menu and select **SAP Jobs**.
 
-## FAQs
+   The **View SAP Jobs** dialog opens.
 
-**Q: Do edits to sap jobs take effect immediately?**
+4. In the **Job Name Criteria** field, enter a job name or a name with a wildcard (for example, `*`).
+5. (Optional) Enter a date range in the **Filter by Create Date or Event ID** section to filter jobs by their creation date.
+6. (Optional) Enter a value in the **Event ID** field to filter by event.
+7. In the **Filter by Job Status** section, select **Scheduled** and clear all other status options.
+8. Select **Search SAP**.
 
-Changes saved to sap jobs in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+   The **SAP Jobs** list populates with jobs that match your filter criteria.
 
-## Glossary
+9. Select the SAP job you want to edit from the list.
+10. Select **Edit Job**.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+    The **Editing SAP Job** dialog opens.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+11. Make your changes to the job definition.
+12. Select **Save**.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** Your changes are saved to the SAP job definition. If you edited a job in the Daily tables, the changes apply to the current instance only. If you edited a job in the Job Master, the changes take effect the next time the record is built or referenced.
+
+## Related information
+
+- To copy an SAP job, select the job in the **SAP Jobs** list and select **Copy Job**.
+- To view the execution log for a finished or canceled job, select the job and select **Job Log**.

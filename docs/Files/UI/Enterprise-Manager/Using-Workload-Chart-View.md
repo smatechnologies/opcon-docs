@@ -10,60 +10,45 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
-#  Using Workload Chart View
+# Using Workload Chart View
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Workload Chart** view shows at a glance whether schedules have overrun their estimated runtime. The view displays a meter chart and a progress bar indicating how many jobs have finished versus those still waiting or running. The Schedule Name or Date appears above the chart.
 
-## What Is It?
+To receive schedule and job updates in the Workload Chart, you must connect it to another view using the selection synchronization buttons. Activate **Listen for selection changes in other views** on the **Workload Chart** toolbar, and activate **Send the current selection to other views** on the **List** or **Matrix** view toolbar.
 
-The **Workload Chart** view shows at a glance whether schedules have overrun their estimated runtime. For preferences related to this view, refer to [Setting Preferences for Charts](Preferences-for-Charts.md).
-
-The view displays estimated and actual run times for completed jobs, with a progress bar indicating how many jobs have finished versus those still waiting or running. The Schedule Name or Date appears above the chart. To display schedule and job information, activate the **Listen for selection changes in other views** button on the **Workload Chart** toolbar. The **Send the current selection to other views** button must also be activated in another view (e.g., **List** and/or **Matrix**).
+For chart display preferences, refer to [Setting Preferences for Charts](Preferences-for-Charts.md).
 
 ## Workload Chart Toolbar
 
 ![Workload Chart toolbar](../../../Resources/Images/EM/EMworkloadcharttoolbar.png "Workload Chart toolbar")
 
-## Creating and Saving Custom Diagrams
+| Button | Description |
+|---|---|
+| **Listen for selection changes in other views** | Enables the Workload Chart to update when you select a date or schedule in another view. |
 
-To create and Saving Custom Diagrams, complete the following steps:
+## Workload Chart View Menu
 
-1.  Select **List** under the **Operation** topic
-2.  Select **Workload Chart** under the **Operation** topic
-3.  Drag the **Workload Chart** tab to the right side of the screen. Release when the cursor changes to an arrow pointing right
-4.  Activate **Listen for selection changes in other views** on the **Workload Chart** toolbar
-5.  Activate **Send the current selection change to other views** on the **Daily list** toolbar
-6.  Select a **date**, or a **date** then a **schedule**, to view
-7.  Select **View Menu** (arrow pointing down) on the **Workload Chart** toolbar
-8.  Select **Take Screenshot**. The **Image Preview** dialog displays
-9.  Select **Save** to save the image, or **OK** to close the dialog
+| Item | Description |
+|---|---|
+| **Take Screenshot** | Opens the **Image Preview** dialog so you can save a PNG image of the current chart. |
 
-## FAQs
+## Saving a Screenshot of the Workload Chart
 
-**Q: What can you do with Workload Chart View?**
+To save a screenshot of the Workload Chart, complete the following steps:
 
-Workload Chart View allows you to workload chart toolbar, creating and saving custom diagrams.
+1. In the **Operation** topic, select **List**.
+2. In the **Operation** topic, select **Workload Chart**.
+3. Drag the **Workload Chart** tab to the right side of the screen. Release when the cursor changes to a right-pointing arrow.
+4. On the **Workload Chart** toolbar, activate **Listen for selection changes in other views**.
+5. On the **List** view toolbar, activate **Send the current selection to other views**.
+6. Select a date, or select a date and then a schedule, to view the chart data.
+7. On the **Workload Chart** toolbar, select the View Menu button (the arrow pointing down).
+8. Select **Take Screenshot**. The **Image Preview** dialog opens.
+9. Select **Save** to save the image as a PNG file.
 
-**Q: Who has access to Workload Chart View?**
-
-Access to Workload Chart View is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The chart image is saved to the location you specify.

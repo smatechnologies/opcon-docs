@@ -1,77 +1,67 @@
 ---
 title: Copying Daily Job Definitions to Master Job
-description: "Use this procedure to copy Daily Job Definitions to Master Job in Solution Manager."
+description: "Use this procedure to push daily job definitions to the master job record in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Copying Daily Job Definitions to Master Job
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+## Overview
 
-## What Is It?
+The **copy to master job** feature lets you propagate changes made to a daily job back to the corresponding master job record. Use this when you have modified a daily job's properties and want those changes to become permanent in the master job definition.
 
-Use this procedure to copy Daily Job Definitions to Master Job in Solution Manager.
+The dropdown in the split button shows one contextual option depending on whether the form has unsaved changes:
 
-## Administration
+- **Push changes to Master Job**: Available when the form has no unsaved changes. Copies the current daily job definitions to the master job immediately.
+- **Save Daily Job & push changes to Master Job**: Available when the form has unsaved changes. Saves the daily job first, then copies the updated definitions to the master job.
 
-### Required Privileges
+## Required Privileges
 
-To copy daily job definitions to master job, you must have permissions to [View Daily Job](Accessing-Daily-Job-Definition.md) and [Update Master Job](Library\MasterJobs\Viewing-And-Updating-Master-Jobs\Accessing-Master-Jobs.md).
+To copy daily job definitions to a master job, you must have both of the following privileges:
 
-## Daily Job Definition
+- **View Jobs In Schedule Operations** — required to access the daily job definition.
+- **Modify Jobs In Master Schedules** — required to update the master job record.
 
-Refer to [Accessing Daily Job](Accessing-Daily-Job-Definition.md) for information on accessing the daily jobs page.
+For information on accessing the daily job, see [Accessing Daily Job Definition](Accessing-Daily-Job-Definition.md).
 
-After enabling admin mode, a split button appears in the bottom-left of your screen.
+## Push Changes from the Daily Job Configuration Page
 
-![Split button](../../../Resources/Images/SM/Daily-Job-Split-Button.png "Split button")
+To push daily job changes to the master job from the daily job configuration page, complete the following steps:
 
-Selecting the arrow displays two options:
+1. Open the daily job definition. See [Accessing Daily Job Definition](Accessing-Daily-Job-Definition.md) for instructions.
+2. Enable **Admin Mode** using the toggle in the toolbar.
+3. Make any required changes to the daily job definition.
+4. Select the arrow on the split button in the bottom-left of the screen to expand the options.
 
-- **Push Changes to Master Job**: Copies current daily job definitions to the master job
-- **Save Daily Job & push changes to Master Job**: Saves the daily job and copies the new definitions to the master job
+   ![Split button](../../../Resources/Images/SM/Daily-Job-Split-Button.png "Split button")
 
-# Job Selection Right Panel
+5. Select the option that appears:
+   - **Push changes to Master Job** — appears when there are no unsaved changes. Copies the current daily job definitions to the master job.
+   - **Save Daily Job & push changes to Master Job** — appears when there are unsaved changes. Saves the daily job and copies the updated definitions to the master job.
 
-On the process page, selecting a daily job and expanding the right panel reveals a copy button. Selecting it performs the same action as **Push Changes to Master Job**.
-
-![Job selection copy button](../../../Resources/Images/SM/Daily-Job-Right-Panel-Copy-Button.png "Job selection copy button")
+**Result:** The master job record is updated with the definitions from the daily job.
 
 :::note
-The split button does not display if the selected daily job is a null or unsupported job type. In those cases, a Save button displays instead.
+The split button does not appear if the selected daily job is a Null Job or an unsupported job type. In those cases, a **Save** button appears instead.
 :::
 
-## Configuration Options
+## Push Changes from the Processes Page
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Push Changes to Master Job | Copies current daily job definitions to the master job | — | — |
-| Save Daily Job & push changes to Master Job | Saves the daily job and copies the new definitions to the master job | — | — |
+To push daily job changes to the master job from the Processes page, complete the following steps:
 
-## FAQs
+1. Go to the **Processes** page in the **Operations** module.
+2. Select a daily job to open the right panel.
+3. Expand the right panel and select the copy button.
 
-**Q: Why would you copy daily job definitions to master job instead of creating a new one?**
+   ![Job selection copy button](../../../Resources/Images/SM/Daily-Job-Right-Panel-Copy-Button.png "Job selection copy button")
 
-Copying daily job definitions to master job is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
-
-**Q: Does copying daily job definitions to master job require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original daily job definitions to master job record.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The action copies the daily job definitions to the master job. The copy button is disabled for Null Jobs and unsupported job types.

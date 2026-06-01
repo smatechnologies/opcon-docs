@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating and Saving Custom Diagrams
-description: "Use this procedure to create and Saving Custom Diagrams in Enterprise Manager."
+description: "Use the PERT view in Enterprise Manager to arrange job boxes into a custom layout and save a screenshot of the diagram as a PNG file."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,31 +10,20 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Creating and Saving Custom Diagrams
+# Creating and Saving Custom Diagrams
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to create and Saving Custom Diagrams in Enterprise Manager.
+The PERT view in Enterprise Manager lets you rearrange job boxes into a custom layout and save the result as a PNG image. Use this procedure when you need a snapshot of a schedule's job dependencies in a specific visual arrangement.
 
 To create and save a custom diagram, complete the following steps:
 
-1.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
-2.  Select the **schedule** that contains the related job(s)
-3.  Drag the **job boxes** into the preferred configuration
-4.  Select **Take Screenshot** on the **PERT** toolbar. The **Image Preview** dialog displays
-5.  Select **Save** to save the image, or select **OK** to close the dialog
-:::
-
-## Glossary
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+1. Select **PERT** under the **Operation** topic. The **PERT** screen displays.
+2. Select the Schedule that contains the jobs you want to diagram.
+3. Drag the job boxes into the preferred arrangement.
+4. Select **Take Screenshot** on the **PERT** toolbar. The **Image Preview** dialog displays.
+5. Select **Save**. A file dialog opens — choose a location and file name, then confirm to save the image as a `.png` file.
+6. Select **Cancel** to close the **Image Preview** dialog without saving, if needed.

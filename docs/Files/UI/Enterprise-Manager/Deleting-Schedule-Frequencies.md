@@ -2,47 +2,44 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Schedule Frequencies
-description: "Use this procedure to delete Schedule Frequencies in Enterprise Manager."
+description: "Use this procedure to delete a Schedule Frequency from a schedule in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Schedules
+  - Frequencies
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Deleting Schedule Frequencies
+# Deleting Schedule Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+To delete a frequency from a schedule, complete the following steps:
 
-## What Is It?
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
+2. Select the schedule in the **Schedule Selection** list.
+3. Select the **Frequency** tab in the **Schedule Details** section.
+4. Select the frequency in the **Frequency list**.
+5. Select **Remove**. A confirmation dialog displays.
+6. Select **Yes** to confirm the deletion or **No** to cancel.
+7. Repeat steps 4–6 to delete additional frequencies.
+8. Select **Close** ☒ to close the **Schedule Master** screen.
 
-Use this procedure to delete Schedule Frequencies in Enterprise Manager.
+**Result:** The selected frequency is permanently removed from the schedule in OpCon.
 
-To delete a frequency, complete the following steps:
+## Frequently Asked Questions
 
-1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2.  Select the **schedule** in the **Schedule Selection** list
-3.  Select the **Frequency** tab in the **Schedule Details** frame
-4.  Select the **existing frequency** in the **Frequency list**
-5.  Select **Remove**
-6.  Select **Yes** to confirm or **No** to cancel
-7.  Select **Close ☒** to close the **Schedule Master** screen
+**Can a deleted schedule frequency be recovered?**
 
-## FAQs
+No. Deleting a schedule frequency permanently removes it from OpCon. Verify the frequency is no longer needed before deleting it.
 
-**Q: Can a schedule frequencies record be recovered after deletion?**
+**Can you delete more than one schedule frequency at a time?**
 
-No. Deleting a schedule frequencies record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many schedule frequencies records can you delete at once?**
-
-Select the specific schedule frequencies record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+No. You must select and remove one frequency at a time. Repeat the procedure for each frequency you want to delete.
 
 ## Glossary
 
@@ -50,4 +47,4 @@ Select the specific schedule frequencies record you want to delete, then select 
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform that automates and monitors jobs across distributed systems.

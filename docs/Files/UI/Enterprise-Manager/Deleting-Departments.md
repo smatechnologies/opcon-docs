@@ -1,6 +1,6 @@
 ---
 title: Deleting Departments
-description: "Deleting a department requires three procedures: revoking privileges, removing the department from the daily and master tables, then deleting the department."
+description: "Deleting a department requires three sequential procedures: revoking departmental function privileges, reassigning jobs in the daily and master tables, then removing the department record."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,89 +8,77 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-01
 doc_type: procedural
 ---
 
 # Deleting Departments
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Before you can delete a department in Enterprise Manager, you must complete three prerequisite steps in order:
 
-## What Is It?
+1. Revoke all departmental function privileges granted to roles for that department.
+2. Reassign all jobs that reference the department in the daily tables.
+3. Reassign all jobs that reference the department in the master tables.
 
-Deleting a department requires three procedures: revoking privileges, removing the department from the daily and master tables, then deleting the department.
+Only after completing those steps can you delete the department record itself. The **<General>** department is a system default and cannot be deleted.
 
-Revoke privileges
-
-To revoke privileges, complete the following steps:
-
-1. Select **Departmental Function Privileges** under the **Security** topic. The **Departmental Function Privileges** screen displays
-2. Select a **role** in the **Select Role** list. Use the **Find** ((Ctrl+F) magnifying glass) button to find the role
-3. Select a **department** in the **Departments** list
-4. Select all **functions** in the **Granted** list box (shift/select to select multiple)
-5. Select the **left arrow** to move all functions to the **Revoked** list box
-6. Repeat Steps 2–5 for all user accounts with privileges for the department to be deleted
-7. Select **Close ☒** to close the **Departmental Function Privileges** screen
-
-Remove the Department from the Daily Table
-
-1. Select **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-4. Select the **job**
-5. Select **Edit Daily**. The **Job Daily** screen displays
-6. In the **Job Details** frame, select **<General\>** or a different **department name** in the **Department** list
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
-8. Repeat Steps 3–7 for all jobs assigned to the department to be deleted
-9. Select **Close ☒** to close the **Job Daily** screen
-
-Remove the Department from the Master Tables
-
-10. Select **Edit Master**. The **Job Master** screen displays
-11. Select a **schedule** in the **Schedule** list
-12. Select a **job** in the **Job** list
-13. In the **Job details** frame, select **<General\>** or a different **department name** in the **Department** list
-14. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-15. Repeat Steps 12–14 for all jobs assigned to the department to be deleted
-16. Select **Close ☒** to close the **Job Master** screen
-
-Delete the Department
-
-To delete the department, complete the following steps:
-
-1. Select **Departments** under the **Security** topic. The **Departments** screen displays
-2. Select the **department** in the **Select a department** list
-3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Departments** toolbar
-4. Select **Yes** to confirm the deletion or **No** to cancel
-5. Select **Close ☒** to close the **Departments** screen
+:::note
+If a department still has cross-references — roles with granted privileges, or jobs assigned to it in either the daily or master tables — the **Remove** button displays an error and the deletion is blocked.
 :::
 
-## FAQs
+## Revoke Departmental Function Privileges
 
-**Q: Can a departments record be recovered after deletion?**
+To revoke departmental function privileges for all roles, complete the following steps:
 
-No. Deleting a departments record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+1. In Enterprise Manager, select **Departmental Function Privileges** under the **Security** topic. The **Departmental Function Privileges** screen opens.
+2. Select a role in the **Select Role** list. Use the **Find** (Ctrl+F) button to search for a role by name.
+3. Select the department to be deleted in the **Departments** list.
+4. In the **Granted** list, select all functions. Use Shift+select to select multiple items.
+5. Select the left-arrow button to move all selected functions to the **Revoked** list.
+6. Repeat steps 2–5 for every role that has privileges for this department.
+7. Select **Close** to close the **Departmental Function Privileges** screen.
 
-**Q: What should you check before deleting departments?**
+**Result:** No roles retain granted functions for the department.
 
-Verify the departments is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
+## Reassign Jobs in the Daily Table
 
-## Glossary
+To remove the department assignment from daily jobs, complete the following steps:
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+1. Select **Daily Maintenance** under the **Administration** topic. The **Daily Maintenance** screen opens.
+2. Select the expand arrow next to the date you want to update.
+3. Select the expand arrow next to the schedule you want to update.
+4. Select the job.
+5. Select **Edit Daily**. The **Job Daily** screen opens.
+6. In the **Job Details** frame, select **<General>** or a different department name in the **Department** list.
+7. Select **Save** on the **Job Daily** toolbar.
+8. Repeat steps 3–7 for every job assigned to the department being deleted.
+9. Select **Close** to close the **Job Daily** screen.
 
-**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+**Result:** No daily jobs reference the department being deleted.
 
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+## Reassign Jobs in the Master Tables
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To remove the department assignment from master jobs, complete the following steps:
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+1. Select **Edit Master**. The **Job Master** screen opens.
+2. Select a schedule in the **Schedule** list.
+3. Select a job in the **Job** list.
+4. In the **Job Details** frame, select **<General>** or a different department name in the **Department** list.
+5. Select **Save** on the **Job Master** toolbar.
+6. Repeat steps 3–5 for every job assigned to the department being deleted.
+7. Select **Close** to close the **Job Master** screen.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+**Result:** No master jobs reference the department being deleted.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+## Delete the Department
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+To delete the department record, complete the following steps:
+
+1. Select **Departments** under the **Security** topic. The **Departments** screen opens.
+2. Select the department in the **Select a department** list.
+3. Select **Remove** on the **Departments** toolbar.
+4. Select **Yes** to confirm the deletion, or **No** to cancel.
+5. Select **Close** to close the **Departments** screen.
+
+**Result:** The department record is permanently removed from OpCon and no longer appears in any department list.

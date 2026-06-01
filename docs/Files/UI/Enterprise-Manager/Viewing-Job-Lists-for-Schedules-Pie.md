@@ -1,49 +1,45 @@
 ---
 title: Viewing Job Lists for Schedules
-description: "Use this procedure to view Job Lists for Schedules in Enterprise Manager."
+description: "View the list of jobs for a specific job status in a schedule or subschedule using the Pie Chart view in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
 doc_type: procedural
 ---
 
 # Viewing Job Lists for Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Pie Chart** view in Enterprise Manager lets you see all jobs for a particular job status in a schedule. You can link the **Pie Chart** view with the **Daily list** view so that selections in one view automatically update the other. Right-clicking a pie slice opens a context menu where you can open the **Jobs list** dialog for the selected status.
 
-## What Is It?
+## View the job list for a schedule
 
-Use this procedure to view Job Lists for Schedules in Enterprise Manager.
+To view the job list for a schedule, complete the following steps:
 
-To view the job list, complete the following steps:
+1. Select **List** under the **Operation** topic. The **Daily list** screen displays.
+2. Select **Pie Chart** under the **Operation** topic. The **Pie Chart** screen displays.
+3. Select and drag the **Pie Chart** tab to the right side of the screen until the pointer changes to a right-pointing arrow, then release.
+4. Select the **Listen Selection** button on the **Pie Chart** toolbar to enable the view to receive selection changes from other views.
+5. Select the **Send Selection** button on the **Daily list** toolbar to enable the view to send selection changes to other views.
+6. In the **Daily list** view, select a date, or select a date and then a schedule.
+7. Right-click the pie or a pie slice in the **Pie Chart** view.
+8. *(Optional)* Select **Refresh Chart** to update the chart data.
+9. Select **Jobs list**. The **Jobs \<job status name\>** dialog displays, listing all jobs with that status.
+10. Select **OK** to close the dialog.
 
-1. Select **List** under the **Operation** topic. The **Daily list** screen displays
-2. Select **Pie Chart** under the **Operation** topic. The **Pie Chart** screen displays
-3. Select and drag the **Pie Chart** tab to the right side of the screen until the mouse changes to a right-pointing **arrow symbol**, then release
-4. Activate the **Listen for selection changes in other views** button on the **Pie Chart** toolbar
-5. Activate the **Send the current selection change to other views** button on the **Daily list** toolbar
-6. Select a **date** or a **date** then a **schedule** to view
-7. Right-click the **pie** or **pie slice**
-8. *(Optional)* Select **Refresh Chart** to update the chart information
-9. Select **Jobs list**. The **Jobs \<job status name\>** dialog displays
-10. View the **jobs** for the specific job status in the schedule
-11. Select **OK** to close the dialog
-12. To view a subschedule's job list, select on a **date** (and optionally a **schedule** containing the subschedule), then select on the **subschedule**
-13. Right-click the **pie slice** for the subschedule and select **Jobs list**. The **Jobs \<job status name\>** dialog displays
-14. View the **list of jobs** in the subschedule
-15. Select **OK** to close the **Jobs list** dialog
+**Result:** The **Jobs \<job status name\>** dialog closes and you return to the **Pie Chart** view.
 
-## Glossary
+## View the job list for a subschedule
 
-**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+To view the job list for a subschedule, complete the following steps:
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+1. In the **Daily list** view, select a date, and optionally select a schedule that contains the subschedule.
+2. Select the subschedule.
+3. Right-click the pie slice for the subschedule in the **Pie Chart** view.
+4. Select **Jobs list**. The **Jobs \<job status name\>** dialog displays, listing all jobs in the subschedule with that status.
+5. Select **OK** to close the **Jobs list** dialog.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The **Jobs \<job status name\>** dialog closes and you return to the **Pie Chart** view.

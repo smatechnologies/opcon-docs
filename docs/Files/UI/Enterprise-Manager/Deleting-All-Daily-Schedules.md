@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting All Daily Schedules for Particular Days
-description: "To delete All Daily Schedules for Particular Days in Enterprise Manager, complete the following steps: 1."
+description: Use the Daily Maintenance view in Enterprise Manager to delete all Schedules built for a specific date from the daily tables.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,40 +10,30 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Deleting All Daily Schedules for Particular Days
+# Deleting All Daily Schedules for Particular Days
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Daily Maintenance** view lets you remove all Schedules that have been built for a specific date from the OpCon daily tables. Only Schedules in a completed status or not yet started are removed; Schedules that are running or otherwise active are not deleted.
 
-## What Is It?
+:::warning
+Deletion is permanent. Schedules removed from the daily tables cannot be recovered. Confirm the date is correct and that no automation is still running before you proceed.
+:::
 
-To delete All Daily Schedules for Particular Days in Enterprise Manager, complete the following steps:
+## Before you begin
 
-1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2. Select the **date** to delete
-3. Select **Delete** in the **Maintenance** frame at the bottom-right of the screen
-4. Select **OK** to delete all schedules from the Daily tables on this date, or select **Cancel** to disregard the deletion
-5. Select **Close ☒** to close the **Daily Maintenance** screen
+Your role must have the **Delete Daily Schedules** function privilege assigned.
 
-## FAQs
+## Delete all daily Schedules for a date
 
-**Q: Can a all daily schedules for particular days record be recovered after deletion?**
+To delete all daily Schedules for a particular day, complete the following steps:
 
-No. Deleting a all daily schedules for particular days record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+1. In the Enterprise Manager navigation panel, under **Operation**, select **Daily Maintenance**. The **Daily Maintenance** view opens.
+2. In the **Daily** pane, select the date whose Schedules you want to delete.
+3. In the **Maintenance** group at the bottom right of the view, select **Delete**.
+4. In the confirmation dialog, review the date shown, then select **OK** to confirm the deletion or **Cancel** to abort.
 
-**Q: How many all daily schedules for particular days records can you delete at once?**
-
-Select the specific all daily schedules for particular days record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** OpCon removes all completed Schedules (and any Schedules that had not yet started) for the selected date from the daily tables. Schedules that are running or otherwise in an active status remain.

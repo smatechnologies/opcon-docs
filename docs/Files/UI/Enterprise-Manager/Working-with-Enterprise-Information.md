@@ -1,6 +1,6 @@
 ---
 title: Working with Enterprise Information
-description: "The Information topic in the Navigation Panel provides views to manage Reports and Log file information."
+description: "The Information section of the Enterprise Manager Navigation Panel provides access to Reports and Logs views for monitoring and diagnosing OpCon system activity."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,40 +8,40 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Working with Enterprise Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Information** section of the Enterprise Manager Navigation Panel gives you access to two views: **Reports** and **Logs**. Use these views to generate operational reports and review OpCon server log files for monitoring and troubleshooting.
 
-## What Is It?
-
-The **Information** topic in the Navigation Panel provides views to manage Reports and Log file information.
-
-Select any **Information** function item in the graphic to learn more.
+Select any **Information** item in the graphic to learn more.
 
 ![Information Topic](../../../Resources/Images/EM/EMinformationmenu.png "Information Topic")
 
-## FAQs
+## Reports
 
-**Q: What can you do in Enterprise Information?**
+The **Reports** view lets you select and view predefined BIRT reports based on OpCon data. Reports are generated using the embedded BIRT (Business Intelligence and Reporting Tools) reporting engine.
 
-Enterprise Information provides access to related configuration and management tasks. Use the navigation options to add, edit, or delete records as needed.
+For full details on working with this view, see [Using Reports](Using-Reports.md).
 
-**Q: Who can access enterprise information in OpCon?**
+## Logs
 
-Access is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access to enterprise information.
+The **Logs** section provides direct access to the OpCon server log files. Expanding **Logs** in the Navigation Panel displays the following entries:
 
-## Glossary
+| Log entry | File name | Description |
+|---|---|---|
+| **SAM Log** | `SAM.log` | Records schedule and job starts, completions, and event processing. Also records configuration information at startup or regeneration. |
+| **Critical Log** | `Critical.log` | Records processing errors, including machine communication failures, database connection problems, event processing failures, and license expiration notifications. |
+| **Netcom Log** | `SMANetCom.log` | Records configuration parameters, basic communication information, and the configuration for each agent machine. |
+| **Netcom Trace Log** | `SMANetComTrace.log` | Records all SMANetCom processing details, including TCP/IP messages and socket connection errors, for debugging purposes. |
+| **ServMan Log** | `SMAServMan.log` | Records information related to the management of all listed OpCon server applications. |
+| **ENS Log** | `SMANotifyHandler.log` | Records all notification processing information from the SMA Notify Handler. |
+| **Request Router Log** | `SMARequestRouter.log` | Records all information related to request routing. |
+| **External File** | *(user-selected)* | Opens a log or text file located on the server that is not part of the standard log set. |
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To view logs, the **OpConxps** folder on the SAM server must be shared, and your Enterprise Manager connection profile must be configured to point to that directory. For more information, see [Setting Preferences for Log Viewer](Preferences-for-Log-Viewer.md).
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+For full details on working with this view, see [Using Logs](Using-Logs.md) and [Types of Logs](Types-of-Logs.md).

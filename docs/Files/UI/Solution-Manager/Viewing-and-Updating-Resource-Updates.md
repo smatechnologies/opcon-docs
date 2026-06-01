@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating Resource Updates
-description: "The Resource Update panel in Daily Job Definition displays defined resource updates for the selected job."
+description: "The Resource Update panel in Daily Job Definition displays defined resource updates for the selected job. Users with the appropriate privileges can add, edit, or delete resource updates in Admin mode."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,19 +15,9 @@ doc_type: procedural
 
 # Viewing and Updating Resource Updates
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Resource Update** panel in **Daily Job Definition** displays defined resource updates for the selected job. A resource update instructs OpCon to change the maximum number of resources for a named resource when a job enters a specific status, such as Finished OK or Failed.
 
-## What Is It?
-
-The **Resource Update** panel in **Daily Job Definition** displays defined resource updates for the selected job.
-
-- Select the icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
-- When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the property count
-
-## Adding or Updating Resource Updates
-
-In **Admin** mode, resource updates can be updated. For conceptual information, refer to [Threshold/Resource Updates](../../../job-components/threshold-resource-updates.md).
+For conceptual background, refer to [Threshold/Resource Updates](../../../job-components/threshold-resource-updates.md).
 
 :::note
 Only users with the appropriate permissions can access the **Lock** button and update job properties. Refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) for details.
@@ -37,25 +27,30 @@ Only users with the appropriate permissions can access the **Lock** button and u
 Changes made in **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time the job runs.
 :::
 
-To perform this procedure:
+## Panel indicators
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
+- Select the **Full Screen** button (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode.
+- When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the property count.
 
-2. Ensure both the **Date** and **Schedule** toggle switches are enabled (green)
+## Add or update a resource update
+
+To add or update a resource update for a daily job, complete the following steps:
+
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+
+2. Confirm that both the **Date** and **Schedule** toggle switches are enabled (green).
 
     ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-To add or Updating Resource Updates, complete the following steps:
+3. Select the desired **date(s)** to display associated schedules.
 
-3. Select the desired **date(s)** to display associated schedules
+4. Select one or more **schedule(s)** in the list.
 
-4. Select one or more **schedule(s)** in the list
-
-5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail
+5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail.
 
     ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-6. Select the job record (e.g., 1 job(s)) in the status bar to open the **Selection** panel
+6. Select the job record (e.g., **1 job(s)**) in the status bar to open the **Selection** panel.
 
     :::note
     Alternatively, right-click the job in the list to open the **Selection** panel.
@@ -63,45 +58,34 @@ To add or Updating Resource Updates, complete the following steps:
 
     ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default.
 
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
 
     :::note
     The **Lock** button is not visible to users without the appropriate permissions.
     :::
 
-9. Expand the **Resource Update** panel
+9. Expand the **Resource Update** panel.
 
-10. Make any of the following updates:
+10. Make any of the following changes:
 
-    - Edit or delete existing resource updates as needed
-    - Select the green **Add** button (**+**) to define a new resource update. In the **Resource Update** dialog:
-      - Select the job status that triggers the update
-      - Select the resource name from the list
-      - Select the value to specify the maximum number of resources
-      - Select **Save** to save and close the dialog
+    - To edit an existing resource update, select it and modify the fields as needed.
+    - To delete an existing resource update, select the delete control next to the entry.
+    - To add a new resource update, select the green **Add** button (**+**). In the **Resource Update** dialog, complete the following fields:
+
+      | Field | Description |
+      |---|---|
+      | **Job Status** | The job status that triggers the update (for example, **Finished OK** or **Failed**). |
+      | **Resource** | The resource name to update. |
+      | **Value** | The maximum number of resources to set for the resource when the update triggers. |
+
+      Select **Save** to save and close the dialog.
 
     :::note
-    Select the **Undo** button to discard changes.
+    Select the **Undo** button to discard unsaved changes.
     :::
 
-11. Select the **Save** button
+11. Select the **Save** button.
 
-## FAQs
-
-**Q: What does Viewing and Updating Resource Updates cover?**
-
-This page covers Adding or Updating Resource Updates.
-
-## Glossary
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The resource update is saved to the daily job definition and takes effect the next time the job runs.
