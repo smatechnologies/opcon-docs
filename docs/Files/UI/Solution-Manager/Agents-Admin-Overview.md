@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Agents Admin Overview
+
 **Theme:** Overview | **Who is it for?** Administrators who manage agent connections and operational status
 
 ## What Is It?

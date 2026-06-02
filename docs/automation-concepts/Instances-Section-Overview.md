@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Instances Section Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who run multiple concurrent instances of the same schedule or connect to remote OpCon environments
 
 ## What Is It?
@@ -35,7 +37,7 @@ OpCon supports running the same schedule multiple times simultaneously using nam
 
 | Term | Definition |
 | --- | --- |
-| Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Agent) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Schedule | A named group of jobs in OpCon that represents a business process. Schedules are built each day based on their defined frequencies and calendars. |
 | Vision | A Solution Manager dashboard module that provides real-time status views of OpCon jobs and schedules, organized by business area or SLA. |

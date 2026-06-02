@@ -44,7 +44,7 @@ To create an External Event, complete the following steps:
 4. Verify processing by reviewing the SAM.log from `<Output Directory>\SAM\Log\`. If the event did not process, review the Critical.log in the same directory for errors
 5. If errors are found, correct the text file and repeat steps 3 and 4
 
-**Result:** The external event is processed by the SAM and the corresponding OpCon action (such as building a schedule or updating a property) is executed.
+**Result:** The external event is processed by the SAM and the corresponding OpCon action (such as building a schedule or updating a property) runs.
 
 ### MSGIN
 
@@ -183,7 +183,7 @@ The SAM continuously monitors the MSGIN directory. When a valid ASCII text file 
 
 ## Glossary
 
-**MSGIN**: A directory monitored by an agent for incoming OpCon event files. Placing a properly formatted event file in MSGIN causes the agent to forward it to SAM for processing.
+**MSGIN**: The directory monitored by SAM for incoming external OpCon event files. Placing a properly formatted event file in MSGIN causes SAM to read and process the event.
 
 **SMAServMan (SMA Service Manager)**: Manages the starting, stopping, and restarting of all OpCon server programs. Monitors configured applications and restarts them automatically if they fail unexpectedly.
 

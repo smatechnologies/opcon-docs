@@ -20,7 +20,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Departments can be used to secure function privileges associated with individual job records. The department object is simply a name. To use a department, function privileges must be granted (refer to [OpCon User Account and Role Management](../administration/privileges.md#departmental-function-privileges)), and the access code must be associated with the jobs needing this type of security (refer to [Jobs](../objects/jobs.md)). A single department can be used to secure as many different jobs as necessary.
+Departments can be used to secure function privileges associated with individual job records. The department object is simply a name. To use a department, function privileges must be granted (refer to [OpCon User Account and Role Management](../administration/privileges.md#departmental-function-privileges)), and the department must be associated with the jobs needing this type of security (refer to [Jobs](../objects/jobs.md)). A single department can be used to secure as many different jobs as necessary.
 
 The following information applies to defining departments:
 
@@ -59,4 +59,4 @@ Departmental Function Privileges must be granted to the appropriate role. Refer 
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

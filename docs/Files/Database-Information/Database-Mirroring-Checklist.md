@@ -60,9 +60,13 @@ Before configuring mirroring in [Setup for Automatic Microsoft SQL Mirroring](Se
 
 ## FAQs
 
-**Q: What does Database Mirroring Checklist cover?**
+**Q: What is the purpose of the Database Mirroring Checklist?**
 
-This page covers Mirroring Information Worksheet.
+The checklist collects all scripting variable values needed before running the Continuous SQL mirroring scripts. Completing the worksheet before starting the [Setup for Automatic Microsoft SQL Mirroring](Setup-for-Automatic-Microsoft-SQL-Mirroring.md) procedure reduces errors during configuration.
+
+**Q: Where is the SMA_SetDBMirroringScriptingVariables.cmd script located?**
+
+The script is installed with SAM-SS in `&lt;Configuration Directory>\Utilities\Database\`. The default path is `C:\Program Files\OpConxps\Utilities\Database\`.
 
 ## Glossary
 
@@ -70,4 +74,4 @@ This page covers Mirroring Information Worksheet.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
