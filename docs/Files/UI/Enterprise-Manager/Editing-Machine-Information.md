@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Machine Information
-description: "Use this procedure to view or edit machine information details."
+description: "Use this procedure to view or edit machine information and advanced machine properties in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,45 +10,45 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Machine Information
+# Editing Machine Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to view or edit the definition and advanced properties of a machine in Enterprise Manager. You must have the **Maintain Machines** function privilege to save changes.
 
-## What Is It?
+## Edit machine information
 
-Use this procedure to view or edit machine information details.
+To edit machine information, complete the following steps:
 
-To perform this procedure, complete the following steps:
+1. Select **Machines Status** under the **Operation** topic in the navigation panel.
+2. Select the **Table** tab or the **Map** tab.
+3. Right-click the machine you want to edit.
+4. Select **Edit Machine** from the context menu.
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Select the **Table** tab or the **Map** tab
-3.  *(Optional)* Right-click the **machine** to edit
-4.  Select **Edit Machine** from the menu. The **Machines** screen displays
-5.  *(Optional)* Edit the **machine** information
-6.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Machines** toolbar
-7.  *(Optional)* Select **Advanced Settings Panel**. The **Advanced Machine Properties** dialog displays
-8.  Edit the *machine properties* information
-9.  Select the **Save** button in the dialog
-10. Select **Close ☒** (to the right of the **Machines** tab) to close the **Machines** screen
+   The **Machines** screen opens.
 
-## FAQs
+5. Edit the machine information fields as needed.
+6. Select **Save** on the **Machines** toolbar to save the changes.
 
-**Q: Do edits to machine information take effect immediately?**
+   **Result:** The machine definition is updated in the OpCon database.
 
-Changes saved to machine information in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+## Edit advanced machine properties
 
-## Glossary
+To edit advanced machine properties, complete the following steps:
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+1. With the **Machines** screen open, select the **Open Advanced Settings Panel** link in the **Advanced Settings** section.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+   The **Advanced Machine Properties** dialog opens.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+   :::note
+   If the machine status is **Enabled** or **Limited**, the dialog opens in read-only mode because the machine is actively communicating with SAM.
+   :::
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+2. Edit the machine properties as needed.
+3. Select **Save** to save the changes.
+4. Select **Close** (to the right of the **Machines** tab) to close the **Machines** screen.
+
+   **Result:** The updated advanced machine properties are saved to the OpCon database.

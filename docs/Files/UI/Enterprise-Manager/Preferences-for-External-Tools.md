@@ -1,44 +1,35 @@
 ---
 title: Setting Preferences for External Tools
-description: "Use this procedure to set Preferences for External Tools in Enterprise Manager."
+description: Configure the OpCon installation directory in Enterprise Manager to enable access to the Import Export utility and other external tools.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Setting Preferences for External Tools
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **External Tools** preference specifies the OpCon installation directory that Enterprise Manager uses to locate utilities such as the Import Export tool (`ImpEx.exe`). You must set this path before Enterprise Manager can open those utilities from the navigation view.
 
-## What Is It?
+## Set the External Tools directory
 
-Use this procedure to set Preferences for External Tools in Enterprise Manager.
+To configure the External Tools preference, complete the following steps:
 
-To set the preferences, complete the following steps:
+1. Open Enterprise Manager.
+2. Go to **Enterprise Manager** > **Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+4. Select **External Tools**. The External Tools settings appear on the right.
+5. In the **Opcon/xps installation directory** field, enter the path to the OpCon installation directory. Alternatively, select **Browse** and select the directory.
+6. Select **Apply** to save the changes without closing the dialog, or select **OK** to save and close.
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **External Tools**. The **External Tools** settings display to the right
-5. Enter the *OpCon Installation Directory* in the text box to enable opening the Schedule Import Export utility. Alternatively, select **Browse** and select the **directory**
-6. *(Optional)* Select **Restore Defaults** to clear all values
-7. Select **Apply** to save the changes
-8. Select **OK** to save and close the **Preferences** dialog
+**Result:** Enterprise Manager stores the directory path. External tools that depend on this path, such as **Import Export**, become available in the navigation view.
 
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+:::note
+Select **Restore Defaults** to clear the **Opcon/xps installation directory** field and reset it to the empty default.
+:::

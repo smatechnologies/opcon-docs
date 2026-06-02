@@ -1,6 +1,6 @@
 ---
 title: Managing Machine Groups
-description: "The Machine Groups editor defines and maintains OpCon Machine Groups."
+description: "The Machine Groups editor in Enterprise Manager defines and maintains OpCon Machine Groups, including machine type assignment and machine membership."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,58 +8,50 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Machine Groups
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Machine Groups** editor in Enterprise Manager defines and maintains OpCon Machine Groups. It lists all existing machine groups and lets you view and edit the machine type and machine membership for each group. For conceptual information, refer to [Machine Groups](../../../objects/machine-groups.md) in the **Concepts** online help.
 
-## What Is It?
+## Machine Groups editor
 
-The **Machine Groups** editor defines and maintains OpCon Machine Groups. It lists machine groups with their machine type and lets you view and edit assigned and unassigned machines. For conceptual information, refer to [Machine Groups](../../../objects/machine-groups.md) in the **Concepts** online help.
+The **Machine Groups** editor contains the following sections:
 
-## Machine Groups Toolbar
+| Section | Description |
+|---|---|
+| **Name** | The name of the machine group. Maximum 20 characters. Required. |
+| **Documentation** | Optional notes about the machine group. Maximum 4,000 characters. |
+| **Machine Type** | The operating system type for all machines in the group. Set when the group is created and cannot be changed after machines are assigned. |
+| **Unassigned Machines** | Machines of the selected type that are not yet members of the group. |
+| **Assigned Machines** | Machines that are members of the group. A group must have at least one assigned machine to be saved. |
 
-The **Machine Groups** editor has a toolbar for managing machine groups. Select any icon on the toolbar below to learn more about its functionality.
+All machines in a group must share the same machine type and the same data format (XML or Non-XML). The editor prevents mixing XML and Non-XML machines in the same group.
 
-![Machine Groups toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Machine Groups toolbar")
+## Machine Groups toolbar
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+The **Machine Groups** toolbar provides the following actions:
+
+| Button | Description |
+|---|---|
+| **Add** | Creates a new machine group record. |
+| **Save** | Saves changes to the current machine group. |
+| **Cancel** | Discards unsaved changes. |
+| **Delete** | Deletes the selected machine group. If the group has cross-references to master schedules or jobs, Enterprise Manager displays a confirmation dialog before deleting. |
+| **Copy** | Opens the **Copy Machine Group** dialog to create a copy of the selected group under a new name. |
+| **View Audit** | Opens the audit history for the selected machine group. |
+| **Cross-References** | Displays the master schedules, master jobs, and daily jobs that reference the selected machine group. |
+
+## Procedures
+
+Use the following procedures to work with machine groups:
 
 - [Adding Machine Groups](Adding-Machine-Groups.md)
 - [Viewing Additional Machine Group Information](Viewing-Additional-Machine-Group-Info.md)
 - [Copying Machine Groups](Copying-Machine-Groups.md)
 - [Excluding Machines from Machine Groups](Excluding-Machines-from-Machine-Groups.md)
-- [Adding Machine Groups to Jobs details](Adding-Machine-Groups-to-Job-Details.md)
+- [Adding Machine Groups to Job Details](Adding-Machine-Groups-to-Job-Details.md)
 - [Deleting Machine Groups](Deleting-Machine-Groups.md)
-
-## FAQs
-
-**Q: What does managing machine groups involve?**
-
-Managing machine groups includes Machine Groups Toolbar. Access machine groups through Enterprise Manager navigation pane.
-
-**Q: Who can manage machine groups in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage machine groups. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

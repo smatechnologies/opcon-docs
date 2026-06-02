@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Using Plan Mode
-description: "The Plan mode in the Gantt chart can be used to alter a job's start time or run duration."
+description: "Use Plan Mode in the Gantt chart to adjust a job's estimated start time or run duration by dragging job boxes on the chart."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,45 +10,46 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Using Plan Mode
+# Using Plan Mode
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Plan Mode is a toggle on the Gantt chart toolbar that lets you adjust job start times and durations by dragging job boxes directly on the chart. When Plan Mode is active, automatic chart refresh pauses and all job boxes become moveable and resizable. Exiting Plan Mode resumes the refresh cycle.
 
-## What Is It?
+## Enable Plan Mode
 
-The Plan mode in the **Gantt** chart can be used to alter a job's start time or run duration.
+To enable Plan Mode in the Gantt chart, complete the following steps:
 
-To use plan mode, complete the following steps:
+1. In Enterprise Manager, go to **Operation > Gantt**. The **Gantt** view opens.
+2. On the Gantt toolbar, select **Mode plan**. The view title changes to `[PLAN MODE] Gantt`, and all job boxes become moveable and resizable.
 
-1.  Select **Gantt** under the **Operation** topic. The **Gantt** screen displays
-2.  Select the **Gantt** button on the **Gantt** toolbar
-3.  *(Optional)* Hover over the **job box** until the **four directional arrow** appears
-4.  Select and drag the **job box** to the new estimated start time
-5.  *(Optional)* Hover over the **end of the job box** until the bi-directional arrow appears
-6.  Hold the left mouse button and drag the end of the **job box** to the new estimated end time
+**Result:** Auto-refresh is paused and the **Show Dependencies** and **Listen Selection** toolbar actions are disabled while Plan Mode is active.
 
-## FAQs
+## Adjust a job's start time
 
-**Q: What can you do with Plan Mode?**
+To move a job to a new estimated start time, complete the following steps:
 
-Plan Mode allows you to manage and configure related settings.
+1. In the Gantt chart, hover over the job box until the four-directional arrow appears.
+2. Select and drag the job box to the new estimated start time.
 
-**Q: Who has access to Plan Mode?**
+**Result:** The job box moves to the new position. If the job has dependent jobs, those jobs shift forward automatically to maintain their dependency relationships. A job cannot be moved before its predecessor job's end time.
 
-Access to Plan Mode is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
+## Adjust a job's run duration
 
-## Glossary
+To change a job's estimated run duration, complete the following steps:
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+1. In the Gantt chart, hover over the right edge of the job box until the bi-directional arrow appears.
+2. Hold the left mouse button and drag the right edge to the new estimated end time.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+**Result:** The job box is resized to reflect the new estimated duration.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+## Disable Plan Mode
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+To exit Plan Mode and resume normal Gantt operation, complete the following steps:
+
+1. On the Gantt toolbar, select **Mode plan** again to toggle it off.
+
+**Result:** Auto-refresh resumes, the view title returns to `Gantt`, and the **Show Dependencies** and **Listen Selection** actions are re-enabled. The chart refreshes with current schedule data.

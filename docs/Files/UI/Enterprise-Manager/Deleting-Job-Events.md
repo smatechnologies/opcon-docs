@@ -1,6 +1,6 @@
 ---
 title: Deleting Job Events
-description: "Use this procedure to delete Job Events in Enterprise Manager."
+description: "Use this procedure to delete job events from a job definition in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,50 +8,32 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Deleting Job Events
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Job events trigger OpCon actions when a job reaches a specific state or when a frequency condition is met. Use this procedure to permanently remove a job event from a job definition in Enterprise Manager.
 
-## What Is It?
-
-Use this procedure to delete Job Events in Enterprise Manager.
+:::warning
+Deleting a job event is permanent. OpCon does not retain the event definition after deletion. Verify the event is no longer needed before you proceed.
+:::
 
 To delete a job event, complete the following steps:
 
-1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2. Select the **schedule** in the **Schedule** list
-3. Select the **job** in the **Job** list
-4. Select the **Event** tab in the **Job Properties** frame
-5. Select the **Job Related** or **Frequency Related** option, depending on the type of event to delete
-   - If **Frequency Related**: Select the **frequency** in the **Frequency list**, then continue to Step 6
-   - If **Job Related**: Continue to Step 6
-6. Select the **event** in the **Events** list
-7. Select the **Remove** button
-8. Select **Yes** to confirm or **No** to cancel
-9. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+1. Go to **Administration** and select **Job Master**. The **Job Master** screen opens.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Events** tab in the **Job Properties** frame.
+5. Select the **Job Related** or **Frequency Related** option, depending on the type of event to delete.
+   - If **Frequency Related**: Select the frequency in the **Frequency** list, then continue to the next step.
+   - If **Job Related**: Continue to the next step.
+6. Select the event in the **Events** list.
+7. Select **Remove**.
+8. Select **Yes** to confirm the deletion, or **No** to cancel.
 
-## FAQs
+**Result:** The event is permanently removed from the job definition. The **Events** list refreshes to reflect the change.
 
-**Q: Can a job events record be recovered after deletion?**
-
-No. Deleting a job events record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: What should you check before deleting job events?**
-
-Verify the job events is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+9. Select **Close** (to the right of the **Job Master** tab) to close **Job Master**.

@@ -8,75 +8,64 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Using Escalation Manager
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Escalation Manager is an editor in Enterprise Manager that lets you define escalation rules for ENS triggers that use email. You create escalation user groups, assign users to those groups, and then attach the groups to rules. Rules are applied to triggers in [Notification Manager](Notification-Definitions.md).
 
-## What Is It?
+For conceptual information about the Event Notification System (ENS), refer to [Event Notification](../../../notifications/Components.md) in the **Concepts** online help.
 
-The **Escalation Manager** editor defines escalation rules for any ENS trigger that uses email. User-defined escalation user groups are created and assigned to rules. Rules are applied to triggers in [Notification Definitions](Notification-Definitions.md) in **Notification Manager**. For conceptual information about the Event Notification System (ENS), refer to [Event Notification](../../../notifications/Components.md) in the **Concepts** online help.
+## Escalation Manager layout
 
-The **Escalation Manager** screen displays escalation rules and groups.
+Escalation Manager displays two sections side by side:
 
-Use the **Type Filter Text** box to filter rules and groups by entering part of or the full name. Type an \* (asterisk) before a word to search for strings that do not start with that word.
+- **Rules** — lists all escalation rules. You must create at least one group before you can add a rule.
+- **Groups** — lists all escalation user groups. Each group row shows the group name and the users assigned to it.
+
+Each section has its own filter field and toolbar with **Add**, **Edit**, and **Remove** buttons. The same actions are available from the right-click menu on each table.
 
 :::note
-In the Escalation Manager screen, type **Level** to find a specific rule or group that includes "Level" somewhere in the string.
+The filter fields support the `*` wildcard. Enter `*Level` to match names that contain "Level" anywhere in the string, not only at the start.
 :::
 
-The **Escalation Manager** has two areas for managing escalations:
+When you apply a filter, the section title updates to show the number of visible items — for example, **Rules [3 - Filtered]**.
 
-**Rules**: Lists escalation rules. You must add escalation user groups to the **Groups** frame before adding rules. The **Rules** frame toolbar and right-click menu provide:
+## Open Escalation Manager
 
-- **[Add](Defining-Escalation-Rules.md)**: Opens the **Escalation Rule Add/Edit** dialog
-- **Edit**: Opens the **Escalation Rule Add/Edit** dialog
-- **Delete**: Deletes the selected rule
+To open Escalation Manager, complete the following steps:
 
-**Groups**: Lists escalation user groups. You must create user groups before assigning them to rules in the **Rules** frame. The **Groups** frame toolbar and right-click menu provide:
+1. In Enterprise Manager, select **Information** from the menu.
+2. Select **Escalation Manager**.
 
-- **[Add](Defining-Escalation-Groups.md)**: Opens the **Group Add/Edit** dialog
-- **Edit**: Opens the **Group Add/Edit** dialog
-- **Delete**: Deletes the selected group
+**Result:** The Escalation Manager editor opens, displaying the **Rules** and **Groups** sections.
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Manage escalation groups
+
+Groups must exist before you can assign them to rules. To manage groups, complete the following steps:
+
+1. In the **Groups** section, select **Add** to create a new group, or select a group and select **Edit** to modify it.
+2. In the **Group Add/Edit** dialog, enter the group name and assign the users who should receive escalated notifications.
+3. Select **OK** to save.
+
+To delete a group, select it and select **Remove**. If the group is assigned to one or more rules, Escalation Manager displays those rule names and prevents deletion until the group is removed from each rule.
+
+## Manage escalation rules
+
+To manage rules, complete the following steps:
+
+1. In the **Rules** section, select **Add**.
+   - If no groups exist, Escalation Manager prompts you to create one before continuing.
+2. In the **Escalation Rule Add/Edit** dialog, configure the rule details. For field-level guidance, see [Defining Escalation Rules](Defining-Escalation-Rules.md).
+3. Select **OK** to save.
+
+To delete a rule, select it and select **Remove**. If the rule is currently assigned to one or more notification triggers, Escalation Manager displays those trigger names and prevents deletion until the rule is removed from each trigger.
+
+## Related topics
 
 - [Defining Escalation Groups](Defining-Escalation-Groups.md)
 - [Defining Escalation Rules](Defining-Escalation-Rules.md)
 - [Applying Escalation Rules to Triggers](Applying-Escalation-Rules-to-Triggers.md)
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Rules | Lists escalation rules. | — | — |
-| [Add](Defining-Escalation-Rules.md) | Opens the **Escalation Rule Add/Edit** dialog | — | — |
-| Groups | Lists escalation user groups. | — | — |
-| [Add](Defining-Escalation-Groups.md) | Opens the **Group Add/Edit** dialog | — | — |
-## FAQs
-
-**Q: What can you do with Escalation Manager?**
-
-Escalation Manager allows you to manage and configure related settings.
-
-**Q: Who has access to Escalation Manager?**
-
-Access to Escalation Manager is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

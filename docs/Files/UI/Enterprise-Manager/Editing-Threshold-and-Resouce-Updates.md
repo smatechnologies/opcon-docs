@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Threshold/Resource Updates
-description: "Use this procedure to edit Threshold/Resource Updates in Enterprise Manager."
+description: "How to edit job-related and frequency-related threshold or resource updates in Enterprise Manager Job Master."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,69 +10,58 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Threshold/Resource Updates
+# Editing Threshold/Resource Updates
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A threshold/resource update instructs OpCon to set a threshold or resource value when a job reaches a specific status. You can configure an update to apply to all frequencies for a job (job-related) or to a specific frequency (frequency-related). Use Enterprise Manager Job Master to edit existing updates in the master schedule definition.
 
-## What Is It?
+## Editing a Job-Related Threshold or Resource Update
 
-Use this procedure to edit Threshold/Resource Updates in Enterprise Manager.
+To edit a job-related threshold or resource update, complete the following steps:
 
-## Editing Job-Related Threshold or Resource Updates
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Threshold/Resource Update** tab in the **Job Properties** frame.
+5. Select the **Job Related** option.
+6. Select the existing threshold or resource entry in the **Threshold/Resource Updates** list.
+7. Select **Edit**. The **Threshold/Resource Update** dialog displays.
+8. Update the **Threshold/Resource**, **Job Status**, and **Value** fields as needed.
+9. Select **OK** to save the changes, or select **Cancel** to discard them.
+10. Select **Close** to close the **Job Master** screen.
 
-To edit a threshold or resource update, complete the following steps:
+**Result:** The updated threshold or resource definition is saved to the master schedule. The change takes effect the next time the schedule is built for a date.
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the **Threshold/Resource Update** tab in the **Job Properties** list
-5.  Select the **Job Related** radio button
+## Editing a Frequency-Related Threshold or Resource Update
 
-6.  Select the existing threshold/resource in the **Threshold/Resource Updates** frame
-7.  Select **Edit**. The **Threshold/Resource Update** dialog displays
-8.  Enter changes
-9.  Select **OK** to save or **Cancel** to discard
-10. Select **Close ☒** to close the **Job Master** screen
+To edit a frequency-related threshold or resource update, complete the following steps:
 
-## Editing Frequency-Related Threshold or Resource Updates
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Threshold/Resource Update** tab in the **Job Properties** frame.
+5. Select the **Frequency Related** option.
+6. Select the frequency in the **Frequency** list.
+7. Select the existing threshold or resource entry in the **Threshold/Resource Updates** list.
+8. Select **Edit**. The **Threshold/Resource Update** dialog displays.
+9. Update the **Threshold/Resource**, **Job Status**, and **Value** fields as needed.
+10. Select **OK** to save the changes, or select **Cancel** to discard them.
 
-To edit a threshold or resource update, complete the following steps:
+**Result:** The updated threshold or resource definition is saved for the selected frequency. The change takes effect the next time the schedule is built for a date.
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the **Threshold/Resource Update** tab in the **Job Properties** frame
-5.  Select the **Frequency Related** radio button
+## Threshold/Resource Update Dialog Fields
 
-6.  Select the **frequency** in the **Frequency list**
-7.  Select the existing threshold/resource in the **Threshold/Resource Updates** list
-8.  Select **Edit**. Enter changes
-9.  Select **OK** to save or **Cancel** to discard
-10. Select **Close ☒** to close the **Job Master** screen
-:::
+| Field | Description |
+|---|---|
+| **Threshold/Resource** | The threshold or resource to set when the job reaches the configured status. Select from the list of defined thresholds and resources. |
+| **Job Status** | The job completion status that triggers the update. Valid statuses include Finished OK, Failed, Skipped, Exceeded Max Run Time, Late to Start, Late to Finish, Missed Latest Start Time, Still Attempting Start, Start Attempted, Under Review, and Fixed. |
+| **Value** | The numeric value to assign to the threshold or resource. Must be a non-negative integer. |
 
-## FAQs
+## Notes
 
-**Q: Do edits to threshold/resource updates take effect immediately?**
-
-Changes saved to threshold/resource updates in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- Edits made in Job Master update the master schedule definition. Changes apply the next time the schedule is built or the daily record is rebuilt.
+- Edits made to daily schedule records (opened from Operations or the Operations views) apply only to the current date instance and do not affect the master definition.

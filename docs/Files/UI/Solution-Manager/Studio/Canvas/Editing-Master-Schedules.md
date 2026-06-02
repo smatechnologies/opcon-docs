@@ -1,6 +1,6 @@
 ---
 title: Editing Master Schedules
-description: "Use this procedure to edit Master Schedules in Solution Manager."
+description: "Use this procedure to edit a Master Schedule in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,26 +15,21 @@ doc_type: procedural
 
 # Editing Master Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+## Required Privileges
 
-## What Is It?
-
-Use this procedure to edit Master Schedules in Solution Manager.
-
-## Administration
-
-### Required Privileges
-
-n/a
+<!-- GAP: The existing page lists "n/a" for required privileges. The Copying Master Schedules sibling page requires "All Function Privileges" or "Maintain Schedules". Confirm whether editing a master schedule requires the same privileges or is unrestricted — needs SME/source verification. -->
 
 ## Editing a Schedule
 
-To edit a Master Schedule, go to **Studio**.
+To edit a Master Schedule, complete the following steps:
 
-Select a schedule and select **Edit**. The Create Master Schedule page opens with form values populated from the selected schedule.
+1. Go to **Studio**.
+2. Select the schedule you want to edit.
+3. Select **Edit**. The Create Master Schedule page opens with the existing schedule values populated.
+4. Update the fields as needed. For details on each field, refer to [Adding Master Schedules](./Adding-Master-Schedules.md).
+5. Select **Save** to apply the changes, or **Back** to discard them.
 
-Make edits as needed, then select **Save** to save changes or **Back** to cancel.
+**Result:** The schedule definition is updated in the Master tables. Changes take effect the next time the schedule is built or the existing Daily table record is rebuilt.
 
 ## FAQs
 
@@ -42,12 +37,6 @@ Make edits as needed, then select **Save** to save changes or **Back** to cancel
 
 Changes saved to master schedules in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
 
-## Glossary
+**Q: Can I edit a schedule that is currently running?**
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+<!-- GAP: Behavior when editing a master schedule that has an active Daily instance is unconfirmed — needs SME/source verification. -->

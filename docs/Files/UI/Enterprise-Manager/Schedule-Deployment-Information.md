@@ -1,6 +1,6 @@
 ---
 title: Schedule Deployment Information
-description: "The Deploy Info tab in the Schedule Master editor allows you to view schedule deployment information when the schedule has been deployed on a local OpCon instance."
+description: "The Deploy Info tab in the Schedule Master editor displays read-only deployment details for a schedule that has been deployed to a local OpCon instance."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,44 +8,27 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
 # Schedule Deployment Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Deploy Info** tab in the [Schedule Master](Using-Schedule-Master.md) editor displays read-only deployment details for a schedule that has been deployed to a local OpCon instance. When no deployment record exists for the selected schedule, the tab displays **N/A**.
 
-## What Is It?
+## Deploy Info tab fields
 
-The **Deploy Info** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor allows you to view schedule deployment information when the schedule has been deployed on a local OpCon instance. Within the tab, you can:
+The following fields appear on the **Deploy Info** tab when deployment information is available.
 
-- [View Deployment Information](Viewing-Deployment-Information.md)
+| Field | Description |
+|---|---|
+| **Version** | The version number of the deployed package. |
+| **Package** | The name of the deployment package. |
+| **Description** | The description associated with the deployment package. |
+| **Record Id** | The unique identifier for the deployment record. |
+| **Deployed** | The user who performed the deployment and the date and time of the deployment. |
 
-For conceptual information, refer to [Job and Schedule Frequencies](../../../automation-concepts/frequencies.md) in the **Concepts** online help.
+## Related procedures
 
-## FAQs
-
-**Q: What does Schedule Deployment Information do?**
-
-The **Deploy Info** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor allows you to view schedule deployment information when the schedule has been deployed on a local OpCon instance. 
-
-**Q: Where can you find Schedule Deployment Information in OpCon?**
-
-Access Schedule Deployment Information through the appropriate section in Enterprise Manager or Solution Manager navigation.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Viewing Deployment Information](Viewing-Deployment-Information.md)

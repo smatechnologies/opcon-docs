@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Synchronizing Data between List and Matrix Views
-description: "Use this procedure to synchronize Data between List and Matrix Views in Enterprise Manager."
+description: "Use this procedure to synchronize data between the Daily list and Matrix views in Enterprise Manager so that a date or schedule selection in one view is reflected in the other."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,39 +10,28 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Synchronizing Data between List and Matrix Views
+# Synchronizing Data between List and Matrix Views
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager lets you link the **Daily list** view and the **Matrix** view so that a selection made in one view automatically updates the other. This is useful when you want to monitor schedule and job details side-by-side without switching between views manually.
 
-## What Is It?
+## Synchronize the Daily list and Matrix views
 
-Use this procedure to synchronize Data between List and Matrix Views in Enterprise Manager.
+To synchronize data between the Daily list and Matrix views, complete the following steps:
 
-To synchronize the data between views, complete the following steps:
+1. Under the **Operation** topic, select **List**. The **Daily list** view opens.
+2. Under the **Operation** topic, select **Matrix**. The **Matrix** view opens.
+3. Select and drag the **Matrix** tab to the right side of the screen.
+4. When the mouse pointer changes to a right-pointing arrow, release the **Matrix** tab. The Matrix view docks on the right side of the workspace.
+5. On the **Matrix** toolbar, select the **Listen Selection** button to activate it. When active, the Matrix view responds to selection changes made in other views.
+6. On the **Daily list** toolbar, select the **Send Selection** button to activate it. When active, the Daily list view broadcasts selection changes to other views.
+7. In the **Daily list** view, select a date, or select a date and then a schedule, to view.
+8. View the schedule and related job information that appears in the **Matrix** view.
 
-1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
-2.  Select **Matrix** under the **Operation** topic. The **Matrix** screen displays
-3.  Select and drag the **Matrix** tab to the right side of the screen
-4.  When the mouse changes to an **arrow symbol** pointing right, release the **Matrix** tab
-5.  Select to activate the ![Listen for Selection icon](../../../Resources/Images/EM/EMlistenforchanges.png "Listen for Selection icon") **Listen for selection changes in other views** button on the **Matrix** toolbar
-6.  Select to activate the ![Send Current Selection icon](../../../Resources/Images/EM/EMsendchanges.png "Send for Current Selection icon") **Send the current selection change to other views** button on the **Daily list** toolbar
-7.  Select a **date**, or select on a **date** then a **schedule**, to view
-8.  View the schedule and related job information in the **Matrix** view
-9.  Select to deactivate the **Listen for selection changes in other views** button on the **Matrix** toolbar
-:::
+**Result:** Selecting a date or schedule in the **Daily list** view now updates the **Matrix** view automatically.
 
- 
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+To stop synchronization, select the **Listen Selection** button on the **Matrix** toolbar to deactivate it.

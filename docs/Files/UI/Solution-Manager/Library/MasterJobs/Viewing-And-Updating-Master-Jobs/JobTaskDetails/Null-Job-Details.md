@@ -1,6 +1,6 @@
 ---
 title: Viewing and Adding Null Job Details
-description: "Use this procedure to view and Adding Null Job Details in Solution Manager."
+description: "Null jobs have no platform-specific task details. Use this procedure to add a Null job or view its general settings in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -18,43 +18,43 @@ doc_type: procedural
 **Theme:** Configure  
 **Who Is It For?** System Administrator, Automation Engineer
 
-## What Is It?
+## Overview
 
-Use this procedure to view and Adding Null Job Details in Solution Manager.
+A Null job has no platform-specific task details. The **Task Details** panel contains no configurable fields because the Null job type does not run on any agent. The job always finishes with a status of **Finished OK** as soon as it starts.
+
+You can use a Null job to:
+
+- Keep a schedule open after all other jobs complete
+- Initialize thresholds at a specific point in a schedule
+- Trigger OpCon events
 
 To view, add, or edit a Null job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
 ## Viewing Null Job Details
 
-To view Null Job Details, complete the following steps:
+To view Null job details, complete the following steps:
 
-1. Go to **Library** > **Master Jobs**
-1. Select a null job in the list
-1. Select **Edit**
-1. Expand the **Task Details** panel
+1. Go to **Library** > **Master Jobs**.
+1. Select a Null job in the list.
+1. Select **Edit**.
+1. Expand the **Task Details** panel.
+
+**Result**: The **Task Details** panel displays with no configurable fields. All automation settings for a Null job — such as frequencies, dependencies, and events — are configured in the other panels on the **Master Job Definition** page.
 
 ---
 
-## Adding Null Job Details
+## Adding a Null Job
 
-Create the job and general info as described in [Adding a Job](../../Adding-Master-Jobs.md).
+To add a Null job, complete the following steps:
+
+1. Go to **Library** > **Master Jobs** and select **Add**. See [Adding a Job](../../Adding-Master-Jobs.md) for steps to complete the general job information.
+1. In the **Job Type** field, select **Null**.
+1. Select **Save**.
+
+**Result**: The Null job is saved. The **Task Details** panel contains no fields to configure.
 
 ---
 
 ### More Information
 
 For conceptual information, refer to [Null Jobs](../../../../../../../job-types/null.md) in the **Concepts** online help.
-
-## FAQs
-
-**Q: What does Viewing and Adding Null Job Details cover?**
-
-This page covers Viewing Null Job Details, Adding Null Job Details.
-
-## Glossary
-
-**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

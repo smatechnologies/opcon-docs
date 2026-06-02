@@ -1,6 +1,6 @@
 ---
 title: Deleting Daily Schedules
-description: "To delete Daily Schedules in Enterprise Manager, complete the following steps: 1."
+description: Delete one or more daily schedule instances from the Daily Maintenance view in Enterprise Manager.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,41 +8,54 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Deleting Daily Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the **Daily Maintenance** view in Enterprise Manager to permanently remove a daily schedule instance for a specific date. Deletion requires the **Delete Daily Schedules** function privilege. A schedule that is currently running cannot be deleted.
 
-## What Is It?
+:::warning
+Deleting a daily schedule permanently removes it from OpCon. This action cannot be undone. Verify the schedule is no longer needed before proceeding.
+:::
 
-To delete Daily Schedules in Enterprise Manager, complete the following steps:
+## Delete a single daily schedule
 
-1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
-3. Select the **schedule** to delete
-4. Select **Delete** in the **Maintenance** frame at the bottom-right of the screen
-5. Select **OK** to delete the schedule, or select **Cancel** to disregard the deletion
-6. Select **Close ☒** to close the **Daily Maintenance** screen
+To delete a single daily schedule, complete the following steps:
+
+1. Under the **Operation** topic, select **Daily Maintenance**. The **Daily Maintenance** view opens.
+2. Select the expand arrow next to the date that contains the schedule you want to delete.
+3. Select the schedule to delete.
+4. In the **Maintenance** group at the bottom-right of the view, select **Delete**.
+5. When prompted, select **OK** to confirm the deletion or **Cancel** to cancel.
+
+**Result:** The daily schedule is permanently removed from OpCon for that date.
+
+## Delete all schedules for a date
+
+To delete all schedules for a specific date, complete the following steps:
+
+1. Under the **Operation** topic, select **Daily Maintenance**. The **Daily Maintenance** view opens.
+2. Select the date node in the tree to highlight the entire date.
+3. In the **Maintenance** group at the bottom-right of the view, select **Delete**.
+4. When prompted, select **OK** to confirm the deletion or **Cancel** to cancel.
+
+**Result:** All daily schedule instances for the selected date are permanently removed from OpCon.
 
 ## FAQs
 
-**Q: Can a daily schedules record be recovered after deletion?**
+**Q: Can a deleted daily schedule be recovered?**
 
-No. Deleting a daily schedules record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting a daily schedule permanently removes it from OpCon. Verify the schedule is no longer needed before deleting it.
 
-**Q: How many daily schedules records can you delete at once?**
+**Q: Why is the Delete button unavailable?**
 
-Select the specific daily schedules record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+The **Delete** button is unavailable when no schedule is selected, when the selected schedule is currently running, or when your user role does not have the **Delete Daily Schedules** function privilege. Contact your OpCon administrator to request the required privilege.
 
 ## Glossary
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Daily schedule**: An instance of a master schedule built for a specific date. It contains the jobs scheduled to run on that date and tracks their execution status.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Disabling Job Starts
-description: "Use this action to disable job starts when a machine is in a started state."
+description: "How to disable job starts on a machine in Enterprise Manager using the Machines Status view."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,30 +10,26 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Disabling Job Starts
+# Disabling Job Starts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Disabling job starts places a machine into a limited state, which prevents OpCon from sending new jobs to that machine while allowing it to remain connected. Use this procedure when you need to stop job activity on a specific machine without fully stopping it.
 
-## What Is It?
-
-Use this action to disable job starts when a machine is in a started state.
-
-To perform this procedure, complete the following steps:
-
-1. Select **Machines Status** under the **Operation** topic
-2. Select the **Table** tab or the **Map** tab
-3. *(Optional)* Right-click the **machine** that requires job starts to be disabled
-4. Select **Disable Job Starts** from the menu
+:::note
+You must have the **Maintain Machines** function privilege to perform this procedure.
 :::
 
-## Glossary
+## Disable job starts on a machine
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+To disable job starts on a machine, complete the following steps:
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+1. In Enterprise Manager, go to **Machines Status** under the **Operation** topic.
+2. Select the **Table** tab or the **Map** tab.
+3. Right-click the machine on which you want to disable job starts.
+4. Select **Disable Job Starts** from the menu.
+
+**Result:** The machine status changes to **Limited**. OpCon stops sending new jobs to the machine. Jobs already running on the machine continue until they finish.

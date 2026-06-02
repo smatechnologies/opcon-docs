@@ -1,6 +1,6 @@
 ---
 title: EM Layout Overview
-description: "Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout."
+description: "Overview of the Enterprise Manager interface layout, including the menu bar, toolbar, Navigation panel, editor area, and status bar."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,44 +8,78 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-02
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** All Enterprise Manager users who need to understand the desktop client interface
+Enterprise Manager is an Eclipse-based desktop application that provides a multi-panel interface for configuring and managing OpCon automation objects. The interface consists of five regions: the menu bar, the toolbar, the Navigation panel, the editor area, and the status bar.
 
-## What Is It?
+## Interface regions
 
-Enterprise Manager is an Eclipse-based desktop client with a multi-panel layout. Understanding the layout — menus, navigation panel, editor area, and information bar — is essential for working efficiently in Enterprise Manager.
+### Menu bar
 
-- You are using Enterprise Manager for the first time
-- You need to find a specific editor or view within the application
-- You want to set up keyboard shortcuts or learn the available hotkeys
+The menu bar contains two top-level menus.
 
-## What is in this section?
+| Menu | Description |
+|------|-------------|
+| **Enterprise Manager** | Contains actions for Refresh, Pause Refresh, Logout, password management (Change User Password, Change Event Password, Password Encryption Tool), Preferences, and Exit. |
+| **Help** | Contains Enterprise Manager Help, a Documentation submenu with links to OpCon and agent documentation, Legend, and About. |
+
+### Toolbar
+
+The toolbar, located below the menu bar, provides one-select access to frequently used actions.
+
+| Button | Description |
+|--------|-------------|
+| **Logout** | Ends the current session and returns to the login screen. |
+| **Refresh** | Manually refreshes data displayed in the active editor or view. |
+| **Pause Refresh** | Pauses the automatic background data refresh. |
+
+### Navigation panel
+
+The **Navigation** panel is on the left side of the window. It displays automation objects grouped into categories. You can open any editor by double-selecting an item in the panel.
+
+The panel supports two presentation modes:
+
+- **Tree view** — a single hierarchical tree with a filter field for quick search.
+- **Shelf view** — collapsible category sections (PShelf), each containing a tree of items.
+
+The presentation mode is set in **Enterprise Manager > Preferences**.
+
+### Editor area
+
+The editor area occupies the center and right portion of the window. When you open an object from the Navigation panel, a corresponding editor tab opens in this area. Multiple editors can be open simultaneously; select a tab to bring that editor into focus.
+
+### Status bar
+
+The status bar runs across the bottom of the window and displays real-time system information.
+
+| Indicator | Description |
+|-----------|-------------|
+| Escalation acknowledgment | Shows pending escalation notifications that require acknowledgment. |
+| Notifications | Displays system and license notification messages. |
+| SAM Pulse | Shows the timestamp of the last heartbeat received from the Schedule Activity Monitor (SAM). |
+| Connection status | Displays the current logged-in user and database connection information. |
+
+A progress indicator in the status bar shows when a background operation is running.
+
+## Window title
+
+The title bar displays **OpCon Enterprise Manager**. After you log in, the active connection profile name is appended — for example, **OpCon Enterprise Manager - Production**.
+
+## Related pages
 
 | Page | Description |
 |------|-------------|
-| EM UI Layout | Overview of Enterprise Manager interface panels and regions |
-| Menus | The menu bar items and what each menu contains |
-| Navigation Panel | How to use the left-side navigation tree to open editors |
-| Information Bar | The status bar at the bottom of the EM window |
-| Keyboard Shortcuts | Available keyboard shortcuts for common EM actions |
+| Menus | Menu bar items and the actions each menu contains. |
+| Navigation Panel | How to use the Navigation panel to open editors. |
+| Information Bar | Details on each status bar indicator. |
+| Keyboard Shortcuts | Available keyboard shortcuts for common Enterprise Manager actions. |
 
 ## Glossary
 
 | Term | Definition |
-| --- | --- |
-| Enterprise Manager (EM) | A rich client interface for OpCon installable on Windows and Linux. Used to configure and manage automation objects such as schedules, jobs, and machines. |
-| Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
-
-## FAQs
-
-**Q: Who manages Enterprise Manager in OpCon?**
-
-System administrators, automation engineers, and operations staff manage Enterprise Manager, including configuring settings, managing user access, and monitoring processes.
-
-**Q: Where should I start in Enterprise Manager section?**
-
-Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.
+|------|------------|
+| Enterprise Manager | An Eclipse-based desktop interface for OpCon, installable on Windows. Used to configure and manage automation objects such as schedules, jobs, and agents. |
+| Role | A named collection of privileges assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |

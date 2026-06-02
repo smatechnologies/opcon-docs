@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Jobs
-description: "Use this procedure to delete Jobs in Enterprise Manager."
+description: "Use this procedure to delete jobs in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,58 +10,48 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Deleting Jobs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Deleting a job permanently removes it from the master schedule. Before you delete a job, remove any job dependencies that reference it as a predecessor, then use the **Remove** button on the **Job Master** toolbar to complete the deletion.
 
-## What Is It?
+:::warning
+Deletion is permanent. Verify the job is no longer needed before proceeding.
+:::
 
-Use this procedure to delete Jobs in Enterprise Manager.
+## Prerequisites
 
-To delete a job, you must first remove any dependencies.
+Your user account must have the **Delete Jobs from Master Schedules** department function privilege for the department that owns the job.
 
-## Remove Dependencies
+## Remove Job Dependencies
 
-To remove Dependencies, complete the following steps:
+If other jobs depend on the job you want to delete, remove those dependencies first. If you attempt to delete a job that still has dependents, Enterprise Manager displays a **Cross Reference Details** dialog listing the dependent jobs. You can either cancel and remove the dependencies manually, or select **Force Delete** to remove the job and its dependency relationships in one operation.
 
-1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2. Select the **schedule** in the **Schedule** list
-3. Select the **job** in the **Job** list
-4. Select the **Dependencies** tab
-5. Confirm the **Job Related** option is selected in the **Dependencies Filters** frame
+To remove job dependencies before deleting, complete the following steps:
 
-6. Select the **dependency** in the **Job Dependency** list
-7. Select the **Remove** button
-8. Select **Yes** to confirm or **No** to cancel
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen opens.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Dependencies** tab.
+5. Confirm the **Job Related** option is selected in the **Dependencies Filters** frame.
+6. Select the dependency in the **Job Dependency** list.
+7. Select **Remove**.
+8. Select **Yes** to confirm, or **No** to cancel.
+
+Repeat steps 6–8 for each dependency to remove.
+
+**Result:** The dependency is removed from the job record.
 
 ## Delete the Job
 
-1. Select ![](../../../Resources/Images/EM/EMdelete.png) **Remove** on the **Job Master** toolbar
-2. Select **Yes** to confirm or **No** to cancel
-3. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+To delete the job, complete the following steps:
 
-## FAQs
+1. In **Job Master**, confirm the correct job is selected in the **Job** list.
+2. Select ![Remove button](../../../Resources/Images/EM/EMdelete.png) **Remove** on the **Job Master** toolbar.
+3. Select **Yes** to confirm, or **No** to cancel.
 
-**Q: Can a jobs record be recovered after deletion?**
-
-No. Deleting a jobs record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: What should you check before deleting jobs?**
-
-Verify the jobs is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The job is permanently deleted from the master schedule. Select **Close** (the X next to the **Job Master** tab) to close the screen.

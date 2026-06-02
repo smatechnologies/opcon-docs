@@ -1,6 +1,6 @@
 ---
 title: Managing Update Sites
-description: "Use this procedure to manage Update Sites in Enterprise Manager."
+description: "Add, edit, remove, reload, disable, enable, import, and export update sites in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,104 +8,122 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Update Sites
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to manage Update Sites in Enterprise Manager.
+Update sites are repositories that Enterprise Manager checks when looking for software updates. You can add local directory repositories or archived repository files, and manage each site's enabled state. The procedures below cover all update site management tasks.
 
 ## Adding an Update Site
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow ](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Update Sites**. The **Update Sites** settings display to the right
-5. Select the **Add** button. The **Add Site** dialog displays
-6. Select the **Local** or **Archive** button
-   - For the **Local** site, search for the directory where the repository file was extracted
+To add an update site, complete the following steps:
+
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog opens.
+3. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+4. Select **Update Sites**. The **Update Sites** settings appear on the right.
+5. Select **Add**. The **Add Site** dialog opens.
+6. Select **Local** or **Archive**:
+   - **Local** — Select the directory where the repository file was extracted. Browse to the directory in the **Browse For Folder** dialog and select **OK**.
 
      :::tip Example
-     **\<media\>**:\\Install\\Enterprise Manager\\repository\\
+     `<media>:\Install\Enterprise Manager\repository\`
      :::
 
-     Select the **directory** in the **Browse For Folder** dialog and select **OK**. Select **OK** in the **Add Site** dialog.
-   - For the **Archive** site, search for and select the archived file
-To add an Update Site, complete the following steps:
+   - **Archive** — Browse to and select the archived repository file.
+7. Select **OK** in the **Add Site** dialog.
+8. Select **Reload** to verify that Enterprise Manager can reach the new site.
 
-7. Select the **Reload** button to test the update site
+**Result:** The new update site appears in the **Update Sites** list.
 
 ## Editing an Update Site
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Select the **Name** of the update site to edit and select the **Edit** button. The **Edit Site** dialog displays
-3. Make changes in the **Name** or **Location** text box and select **OK**
+To edit an update site, complete the following steps:
+
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Select the name of the update site you want to edit, then select **Edit**. The **Edit Site** dialog opens.
+5. Update the **Name** or **Location** field as needed.
+6. Select **OK**.
+
+**Result:** The updated site name or location is saved.
 
 ## Removing an Update Site
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Select the **Name** of the update site to remove and select the **Remove** button. The **Remove Sites** dialog displays
-3. Select **Yes** to confirm or **No** to cancel
+To remove an update site, complete the following steps:
 
-## Reloading to an Update Site
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Select the name of the update site you want to remove, then select **Remove**. The **Remove Sites** dialog opens.
+5. Select **Yes** to confirm, or **No** to cancel.
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Select the **Name** of the update site to reload and select the **Reload** button
-3. Select **OK** to close the **Reload** dialog
+**Result:** The selected update site is removed from the list.
+
+## Reloading an Update Site
+
+Reloading an update site refreshes its metadata and verifies that Enterprise Manager can connect to it.
+
+To reload an update site, complete the following steps:
+
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Select the name of the update site you want to reload, then select **Reload**.
+5. Select **OK** to close the **Reload** dialog.
 
 ## Disabling an Update Site
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Clear the option next to the *Name* of the update site, or select the **Name** and select the **Disable** button
+To disable an update site, complete the following steps:
+
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Clear the option next to the update site name, or select the site name and select **Disable**.
+
+**Result:** Enterprise Manager stops checking the site for updates.
 
 ## Enabling an Update Site
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Select the option next to the *Name* of the update site, or select the **Name** and select the **Enable** button
+To enable an update site, complete the following steps:
 
-## Importing an Update Site
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Select the option next to the update site name, or select the site name and select **Enable**.
 
-If an administrator has created an import file of available update sites, you can import it to save time.
+**Result:** Enterprise Manager resumes checking the site for updates.
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Select the **Import** button. The **Import Sites** dialog displays
-3. Select the *correct import file*
-4. Select the **Open** button to load the update sites into the Update Sites list
+## Importing Update Sites
+
+If an administrator has created an import file of available update sites, you can import it to add multiple sites at once.
+
+To import update sites, complete the following steps:
+
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Select **Import**. The **Import Sites** dialog opens.
+5. Browse to and select the import file.
+6. Select **Open** to load the update sites into the **Update Sites** list.
+
+**Result:** All sites from the import file are added to the **Update Sites** list.
 
 ## Exporting Update Sites
 
-An administrator can export update sites to make them available for other users to import.
+Administrators can export update sites to share them with other users as an import file.
 
-1. [Follow Steps 1 - 4 of Adding an Update Site](#Adding) to access the **Preferences** dialog then proceed
-2. Shift+select or Ctrl+select to select multiple **Update Site Names**
-3. Select the **Export** button. The **Export Sites** dialog displays
-4. Verify the *location* and *file name* of the export file and select **Save**
+To export update sites, complete the following steps:
 
-## FAQs
+1. Go to **EnterpriseManager > Preferences**.
+2. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Update Sites**.
+4. Select the update site names you want to export. Use Shift+select or Ctrl+select to select multiple sites.
+5. Select **Export**. The **Export Sites** dialog opens.
+6. Verify the location and file name, then select **Save**.
 
-**Q: What does managing update sites involve?**
-
-Managing update sites includes Adding an Update Site, Editing an Update Site, Removing an Update Site, Reloading to an Update Site. Access update sites through Enterprise Manager navigation pane.
-
-**Q: Who can manage update sites in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage update sites. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The selected update sites are saved to the export file.

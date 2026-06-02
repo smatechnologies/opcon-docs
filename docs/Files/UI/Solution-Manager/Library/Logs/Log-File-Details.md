@@ -1,6 +1,6 @@
-﻿---
+---
 title: Log File Details
-description: "The Log File Details page displays the description and content of the selected log file."
+description: "The Log File Details page displays the description and content of a selected log file from the Application Logs tab."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,39 +15,33 @@ doc_type: conceptual
 
 # Log File Details
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Log File Details** page displays the description and content of a selected log file. You open it by selecting a row on the **Application Logs** tab.
 
-## What Is It?
+To view this page, you must be a member of a role with at least one of the following privileges:
 
-The **Log File Details** page displays the description and content of the selected log file.
+- All Function Privileges
+- View Application Logs
 
 ![A screen showing log file details](../../../../../Resources/Images/SM/Library/Logs/LogDetails.png "Log File Details")
 
-### Search
+## Page contents
 
-Search for text using the browser's Find feature. Press `Ctrl+F`, enter the search text, and press `Enter`.
+The **Log File Details** page displays the following sections:
 
-### Download File
+| Section | Description |
+|---|---|
+| **Description** | A brief description of the selected log file. |
+| **General Information** | Metadata about the log file, such as its name and path. |
+| **Contents** | The full text content of the log file. |
 
-Select the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
+## Search log content
 
-## FAQs
+Search within the displayed log content using the browser's Find feature. Press `Ctrl+F`, enter your search text, and press `Enter`.
 
-**Q: What does Log File Details do?**
+## Download a log file
 
-The **Log File Details** page displays the description and content of the selected log file.
+Select the **Download** button to download a copy of the log file to your computer.
 
-**Q: Where can you find Log File Details in OpCon?**
+## Related topics
 
-Access Log File Details in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [List Application Logs](./List-Log-Files.md)

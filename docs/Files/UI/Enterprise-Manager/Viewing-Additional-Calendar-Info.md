@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Calendar Information
-description: "To view Additional Calendar Information in Enterprise Manager, complete the following steps: 1."
+description: How to view cross-references and audit records for a calendar in Enterprise Manager.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,35 +10,33 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Additional Calendar Information
+# Viewing Additional Calendar Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the **Calendars** editor in Enterprise Manager to see which schedules, jobs, and frequencies reference a calendar and to review the audit history of changes made to it.
 
-## What Is It?
+## View cross-references for a calendar
 
-To view Additional Calendar Information in Enterprise Manager, complete the following steps:
+The Cross Reference dialog lists every schedule, job, and frequency that uses the selected calendar, grouped by relationship type.
 
-1.  Select **Calendars** under the **Administration** topic
-2.  Select a **calendar** in the **Calendar** list
-3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of schedules, jobs, and frequencies using the calendar, then select **OK**
-4.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the calendar, then select **Close**
+To view cross-references for a calendar, complete the following steps:
 
-## Glossary
+1. Under the **Administration** topic, select **Calendars**.
+2. In the **Calendar** list, select a calendar.
+3. On the toolbar, select the **Cross Reference** button.
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+**Result:** The Cross Reference dialog opens and displays the schedules, jobs, and frequencies that reference the calendar. Select **OK** to close the dialog.
 
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
+## View audit records for a calendar
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To view the audit history for a calendar, complete the following steps:
 
-**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
+1. Under the **Administration** topic, select **Calendars**.
+2. In the **Calendar** list, select a calendar.
+3. On the toolbar, select the **View Audit** button.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The audit dialog opens and displays all recorded changes to the calendar, including the timestamp, user, and before-and-after values for each change. Select **Close** to dismiss the dialog.

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Stopping Communication
-description: "If the agent is not in a stopped state, the status can be changed to stopped."
+description: "Stop communication with an Agent from the Machines Status view in Enterprise Manager when the Agent status is Up or Limited."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,32 +10,22 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Stopping Communication
+# Stopping Communication
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to stop communication between OpCon and an Agent. The **Stop Communication** option is available only when the Agent's current status is **Up** or **Limited**. After you stop communication, the Agent status changes to **Down**.
 
-## What Is It?
+You must have the **Maintain Machines** function privilege to perform this procedure.
 
-If the agent is not in a stopped state, the status can be changed to stopped.
+To stop communication with an Agent, complete the following steps:
 
-To perform this procedure, complete the following steps:
+1. In Enterprise Manager, go to **Operation** and select **Machines Status**.
+2. Select the **Table** tab or the **Map** tab.
+3. Right-click the Agent whose communication you want to stop.
+4. Select **Stop Communication** from the context menu.
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Select the **Table** tab or the **Map** tab
-3.  *(Optional)* Right-click the **machine** that requires stopping
-4.  Select **Stop Communication** from the menu
-:::
-
- 
-
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Result:** The Agent's status changes to **Down**, and OpCon stops sending job requests to that Agent.

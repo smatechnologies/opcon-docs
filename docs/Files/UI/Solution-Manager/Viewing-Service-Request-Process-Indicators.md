@@ -2,62 +2,81 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Service Request Process Indicators
-description: "When you submit a Service Request and form validation succeeds, a page displays the execution status via a progress bar."
+description: "After you submit a Service Request, Solution Manager displays an execution status page with a progress bar and execution indicators that track concurrent and historical runs."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: reference
 ---
 
 # Viewing Service Request Process Indicators
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+After you submit a Service Request and form validation succeeds, Solution Manager displays an execution status page. The page shows a progress bar and a status label that update automatically as the Service Request runs.
 
-## What Is It?
+## Execution Status Page
 
-When you submit a Service Request and form validation succeeds, a page displays the execution status via a progress bar. Select the **OK** button to exit the page.
+The execution status page appears immediately after a successful Service Request submission. It contains:
 
-### Service Request Execution Status Pages
+- A status label that identifies the Service Request name, submission time, and date.
+- A progress bar that reflects how many steps have completed relative to the total.
+- An **OK** button that returns you to the Service Request list.
+
+The page refreshes on a periodic schedule until the execution reaches a terminal state.
 
 ![Service Request Execution Status Waiting](../../../Resources/Images/SM/Service-Request-Process-Indicators.png "Service Request Execution Status Waiting")
 
 ![Service Request Execution Status In Process](../../../Resources/Images/SM/Service-Request-Process-Indicators_1.png "Service Request Execution Status In Process")
 
-Once a Service Request is run, an **Execution** indicator appears at the top-left corner of the Service Request button.
+### Execution States
 
-### Execution Indicator on Service Request Button
+The status label and progress bar reflect the current execution state. The following states are possible:
+
+| State | Description |
+|---|---|
+| Waiting | The Service Request has been submitted and is queued. |
+| In Process | The Service Request is running with no errors. |
+| In Process with Error | The Service Request is running but one or more steps have encountered an error. |
+| Completed | The Service Request finished successfully. |
+| Completed with Error | The Service Request finished but one or more steps failed. |
+| Zombified | The Service Request reached an unrecoverable state. |
+
+When the execution reaches **Completed** or **Completed with Error**, the progress bar is replaced by a status icon. A check-circle icon indicates success; an exclamation-circle icon indicates failure. A bomb icon indicates the **Zombified** state.
+
+Select **OK** to return to the Service Request list.
+
+## Execution Indicator on the Service Request Button
+
+After a Service Request has been submitted at least once, an **Execution** indicator appears in the top-left corner of its button on the Service Request list.
 
 ![Execution Indicator on Service Request Button](../../../Resources/Images/SM/Service-Request-Indicator.png "Execution Indicator on Service Request Button")
 
-* The **Execution** indicator displayed as ![Execution Indicator Concurrent](../../../Resources/Images/SM/Service-Request-Indicator_1.png "Execution Indicator Concurrent") indicates the number of concurrent Service Request executions still in process
-* The **Execution** indicator displayed as ![Execution Indicator Previous History](../../../Resources/Images/SM/Service-Request-Indicator_2.png "Execution Indicator Previous History") indicates that the Service Request has a previous execution history record
+The indicator has two forms:
 
-Select the **Execution** indicator to access the history record of any processing or processed instances. This history is a sortable table that displays:
+- ![Execution Indicator Concurrent](../../../Resources/Images/SM/Service-Request-Indicator_1.png "Execution Indicator Concurrent") — A number badge showing how many concurrent executions of this Service Request are still in progress (not yet in a terminal state).
+- ![Execution Indicator Previous History](../../../Resources/Images/SM/Service-Request-Indicator_2.png "Execution Indicator Previous History") — A history marker indicating that the Service Request has at least one completed execution record.
 
-* The date on which the Service Request was triggered
-* The current state and progress of the Service Request
-* The user who triggered the Service Request
+Select the **Execution** indicator to open the execution history for that Service Request.
 
-### Service Request Execution History Record
+## Execution History
+
+The execution history displays all processing and processed instances for the selected Service Request in a sortable table. The table includes the following columns:
+
+| Column | Description |
+|---|---|
+| (Status icon) | A visual indicator of the overall execution result: check-circle for success, exclamation-circle for failure, or bomb for zombified. No icon appears for executions still in progress. |
+| Date | The date and time at which the Service Request was submitted. |
+| State | The current or final execution state. |
+| Progress | A progress bar showing completed steps relative to the total. |
+| User | The login name of the user who submitted the Service Request. |
+
+The table defaults to sort by **Date** in descending order.
 
 ![Service Request Execution History Record](../../../Resources/Images/SM/Service-Request-Indicator_3.png "Service Request Execution History Record")
-:::
 
-## FAQs
-
-**Q: What information does the Service Request Process Indicators view display?**
-
-The Service Request Process Indicators view displays the current state and details for the selected item. Use this view to monitor status and take action as needed.
-
-## Glossary
-
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+Select **OK** to return to the Service Request list.

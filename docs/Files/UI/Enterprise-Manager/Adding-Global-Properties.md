@@ -1,6 +1,6 @@
 ---
 title: Adding Global Properties
-description: "Use this procedure to add Global Properties in Enterprise Manager."
+description: "Add a Global Property in Enterprise Manager to store a named value that job definitions and events can reference at runtime."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,47 +8,25 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Global Properties
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Global Properties are named values stored in the OpCon database. Job definitions and events reference them using the `[[PropertyName]]` syntax to pass dynamic values at runtime. Use this procedure to add a Global Property in Enterprise Manager.
 
-## What Is It?
+To add a Global Property, complete the following steps:
 
-Use this procedure to add Global Properties in Enterprise Manager.
+1. Under the **Administration** topic, select **Global Properties**. The **Global Properties** screen opens.
+2. On the **Global Properties** toolbar, select **Add**.
+3. In the **Name** field, enter a property name of up to 64 characters.
+4. (Optional) In the **Documentation** field, enter notes about the property's purpose. The field accepts up to 4,000 characters.
+5. (Optional) Select the **Encrypted** option to store the value in encrypted form. When selected, the value is limited to 2,800 characters. System-type properties cannot be encrypted.
+6. In the **Value** field, enter the property value. The field accepts up to 4,000 characters for unencrypted properties.
+7. On the **Global Properties** toolbar, select **Save**.
 
-To add a global property, complete the following steps:
+**Result:** The new Global Property is saved to the OpCon database and is available for reference in job definitions and events.
 
-1. Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
-2. Select **Add** on the **Global Properties** toolbar
-3. Enter an alphanumeric *property name* in the **Name** text box
-4. *(Optional)* Enter *documentation* in the **Documentation** text box
-5. *(Optional)* Select the **Encrypted** option
-6. Enter an alphanumeric *property value* in the **Value** text box
-7. Select **Save** on the **Global Properties** toolbar
-8. Select **Close ☒** to close the **Global Properties** screen
-
-## FAQs
-
-**Q: What information is required to add global properties?**
-
-The required fields include **Documentation**. Select **Save** on the toolbar to save the new record.
-
-**Q: Is documentation required when adding global properties?**
-
-No. The Documentation field is optional. You can enter notes about the global properties to track its purpose, but it is not required to save the record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using the [[PropertyName]] syntax to pass dynamic values at runtime.
+8. Select **Close** to close the **Global Properties** screen.

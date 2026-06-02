@@ -1,6 +1,6 @@
 ---
 title: Changing Case of Machine Names
-description: "Use this procedure to change Case of Machine Names in Enterprise Manager."
+description: "How to change the case of a machine name in Enterprise Manager when the OpCon database uses binary collation."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,53 +8,29 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Changing Case of Machine Names
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to change Case of Machine Names in Enterprise Manager.
-
 :::note
-If the database being used by OpCon is not binary, the case of a machine name cannot be changed. A non-binary database considers the entry to be the same. Complete the following steps if the case of the machine name needs to be changed.
+This procedure applies only when the OpCon database uses binary collation. A non-binary database treats names that differ only in case as identical, so a direct rename is not possible. Use the workaround steps below to force the case change through a temporary intermediate name.
 :::
 
-To change the case of a machine name:
+To change the case of a machine name in Enterprise Manager, complete the following steps:
 
-1. Select **Machines** under the **Administration** topic. The
-    **Machines** screen displays.
-2. Select the **machine** in the **Select Machine** list
-3. Right-click over the graphic to enable the menu in the
-    **Communication Status** frame.
-4. Select **Stop Communication** to stop the communication
-    with the agent.
-5. Change the case of the machine name and append an additional
-    character (e.g., change TESTMACH to testmach1) in the **Name** text
-    box.
-6. Select ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
-    on the **Machines** toolbar.
-7. Delete the **additional character** from the machine name
-8. Select ![Save     icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
-    on the **Machines** toolbar.
-9. Right-click over the graphic to enable the menu in the
-    **Communication Status** frame.
-10. Select **Start Communication**
-11. Select **Close ☒** (to the right of the **Machines** tab) to close
-    the **Machines** screen.
+1. In Enterprise Manager, select **Machines** under the **Administration** topic. The **Machines** screen opens.
+2. In the **Select Machine** list, select the machine whose name you want to change.
+3. Right-click the graphic in the **Communication Status** frame to open the status menu.
+4. Select **Stop Communication** to stop communication with the agent.
+5. In the **Name** field, change the case of the machine name and append one additional character to create a temporary unique name (for example, change `TESTMACH` to `testmach1`).
+6. Select **Save** on the **Machines** toolbar. OpCon saves the temporary name to the database.
+7. In the **Name** field, delete the additional character so only the intended case-corrected name remains (for example, `testmach`).
+8. Select **Save** on the **Machines** toolbar. OpCon saves the final name.
+9. Right-click the graphic in the **Communication Status** frame to open the status menu.
+10. Select **Start Communication** to resume communication with the agent.
+11. Select **Close** (to the right of the **Machines** tab) to close the **Machines** screen.
 
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The machine name now reflects the corrected case, and the agent resumes normal communication with OpCon.

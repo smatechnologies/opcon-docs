@@ -1,6 +1,6 @@
 ---
 title: Isolate Dependency Chain
-description: "right-clicking a node opens the Node Options menu in the right panel."
+description: "Use the Node Options menu in Studio to isolate and display the dependency chain for a selected job on the canvas."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,49 +15,28 @@ doc_type: conceptual
 
 # Isolate Dependency Chain
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-right-clicking a node opens the **Node Options** menu in the right panel. The isolation options allow you to configure the display of nodes and dependencies from a given start node.
+The Isolate Dependency Chain feature in Studio lets you narrow the canvas view to only the jobs that are directly relevant to a selected job's dependency relationships. Right-clicking a job node opens the **Node Options** menu, which provides isolation options for displaying predecessors, successors, or the full dependency chain.
 
 ![Node Options in Studio View](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-view.png "Node Options in Studio View")
 
 ![Node Options Panel](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-node-options-panel.png "Node Options Panel")
 
-## Previous Dependencies
+## Isolate Predecessors
 
-Displays all preceding jobs in a dependent chain.
+Select **Isolate Predecessors** to display only the jobs that the selected job depends on — that is, all preceding jobs in the dependency chain that must complete before the selected job can run.
 
 ![Isolate - Previous Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-previous-deps.png "Isolate - Previous Dependencies")
 
-## Subsequent Dependencies
+## Isolate Successors
 
-Displays all subsequent jobs in a dependent chain.
+Select **Isolate Successors** to display only the jobs that depend on the selected job — that is, all subsequent jobs in the dependency chain that cannot run until the selected job completes.
 
 ![Isolate - Subsequent Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-subsequent-deps.png "Isolate - Subsequent Dependencies")
 
-## Dependency Chain
+## Isolate Dependency Chain
 
-Displays an entire dependency chain (preceding and subsequent jobs).
+Select **Isolate Dependency Chain** to display the full dependency chain for the selected job, including all preceding and subsequent jobs.
 
 ![Isolate - Full Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-full-deps.png "Isolate - Full Dependencies")
 
-## Shortest Path
-
-Shows the shortest path among all dependency chains to the selected job (its shortest terminal previous dependency path).
-
-![Isolate - Shortest Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-shortest-deps.png "Isolate - Shortest Dependencies")
-
-## FAQs
-
-**Q: What does Isolate Dependency Chain cover?**
-
-This page covers Previous Dependencies, Subsequent Dependencies, Dependency Chain.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+<!-- GAP: The existing page describes a "Shortest Path" option that shows the shortest terminal predecessor path to the selected job. This option is not confirmed in the codebase button definitions (ButtonId.java) or i18n property files. Needs SME/source verification before re-adding. -->

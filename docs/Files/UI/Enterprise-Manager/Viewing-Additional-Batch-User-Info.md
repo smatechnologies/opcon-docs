@@ -1,8 +1,8 @@
 ---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
-title: Viewing Additional Batch User Information
-description: "To view Additional Batch User Information in Enterprise Manager, complete the following steps: 1."
+title: Viewing Batch User Cross-References
+description: How to view the Master and Daily schedule jobs that reference a batch user in Enterprise Manager.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,26 +10,31 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Additional Batch User Information
+# Viewing Batch User Cross-References
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the **Cross Reference** button in the Batch Users editor to see every job in the Master and Daily schedules that is configured to run under a selected batch user. This is useful when auditing batch user assignments or before renaming or deleting a batch user.
 
-## What Is It?
+## Prerequisites
 
-To view Additional Batch User Information in Enterprise Manager, complete the following steps:
+You must have the **All User Interface Functions** function privilege to open the Batch Users editor.
 
-1.  Select **Batch Users** under the **Security** topic
-2.  Select the **batch user** in the **Select the target OS** list
-3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
+## View cross-references for a batch user
 
-## Glossary
+To view jobs that reference a batch user, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+1. In Enterprise Manager, select **Batch Users** under the **Security** topic.
+2. In the **Operating System Selection** section, select the target operating system from the **Select the target OS** list.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+   The supported operating systems are Windows, UNIX, IBM i, MCP, OpenVMS, and SQL.
+
+3. In the **Batch Users** list, select the batch user whose cross-references you want to view.
+4. Select the **Cross Reference** button on the toolbar.
+
+**Result:** The Cross Reference Detail dialog opens and displays two tabs — **Master Jobs** and **Daily Jobs** — each listing the jobs that reference the selected batch user. Jobs appear in the format `Schedule Name : Job Name`. If no jobs reference the batch user, an informational message is displayed instead.
+
+5. Select **OK** to close the dialog.

@@ -1,65 +1,44 @@
-﻿---
+---
 title: Network Message
-description: "!Network Message The Network dialog provides the following fields for defining a Network Pop-up Message notification: The SMANotifyHandler always attempts to use Msg.exe first."
+description: "Field reference for the Network Message notification type in Notification Triggers. Use this type to send pop-up messages to Windows machines or users when a Machine, Schedule, or Job changes status."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # Network Message
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-![Network Message](../../../../../../Resources/Images/SM/Library/NotificationTriggers/network-message-dialog.png "Network Message")
-
-The **Network** dialog provides the following fields for defining a Network Pop-up Message notification:
+A Network Message notification sends a Windows pop-up message to one or more recipients when a Machine, Schedule, or Job changes to a triggered status. SMA Notify Handler delivers the message using `Msg.exe` on Windows Server 2008 and later, or falls back to `net send` on earlier operating systems.
 
 :::caution
-The SMANotifyHandler always attempts to use **Msg.exe** first. For a successful message, Authentication User (UNC Access) and Authentication Password (UNC Access) must be defined in the Server Options. You must be an Administrator on the SAM application server and on every target machine. For more information, refer to **Authentication User (UNC Access)** and **Authentication Encrypted Password (UNC Access)** in [Server Options](../../../../../../administration/server-options.md#smtp-server-settings) in the **Concepts** online help.
+SMA Notify Handler always attempts to use `Msg.exe` first. When SMA Notify Handler runs as the SYSTEM account, **Authentication User (UNC Access)** and **Authentication Encrypted Password (UNC Access)** must be configured in Server Options so the handler can impersonate a user account with rights to send messages. You must have Administrator rights on the SAM application server and on every target machine. For more information, see [Server Options](../../../../../../administration/server-options.md).
 :::
 
-- **Recipient Name(s)** (Required): Machine host names, TCP/IP addresses, or Windows User Names separated by semicolons (;). Maximum 3,000 characters
-- **Message**: A user-defined message up to 3,000 characters. The message also includes default trigger information: trigger type and triggering status change event
+## Fields
 
-## Configuration Options
+![Network Message dialog](../../../../../../Resources/Images/SM/Library/NotificationTriggers/network-message-dialog.png "Network Message dialog")
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Message | A user-defined message up to 3,000 characters. | trigger information: trigger t | up to 3,000 characters. The message also includes default |
-## FAQs
+| Field | Required | Description |
+|---|---|---|
+| **Recipient Name(s)** | Yes | One or more machine host names, TCP/IP addresses, or Windows user names. Separate multiple recipients with semicolons (`;`). To target a specific user on a remote machine, use the format `machinename\username`. Maximum 3,000 characters. |
+| **Message** | No | A user-defined message up to 3,000 characters. The delivered message prepends a default prefix that includes the trigger type and triggering status-change event. |
 
-**Q: What does Network Message do?**
+## How SMA Notify Handler sends the message
 
-The **Network** dialog provides the following fields for defining a Network Pop-up Message notification:
+SMA Notify Handler parses the **Recipient Name(s)** field on semicolons to build a recipient list. For each recipient:
 
-**Q: Where can you find Network Message in OpCon?**
+- If the value contains a backslash (`\`), the handler constructs a `MSG username /SERVER:machinename` command targeting that specific user on that machine.
+- If the value does not contain a backslash, the handler constructs a `MSG * /SERVER:machinename` command to reach all sessions on the machine.
 
-Access Network Message in Solution Manager or Enterprise Manager.
+If `Msg.exe` fails and the operating system version is earlier than Windows Server 2008 (version < 6), the handler retries using `net send`.
 
-## Glossary
+If **Authentication User (UNC Access)** is not configured and SMA Notify Handler runs as SYSTEM, the handler falls back to `net send` without impersonation.
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**TCP/IP**: The network communication protocol used for all data exchange between SMANetCom on the OpCon server and agents on target machines.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+<!-- GAP: Confirmation needed on whether Network Message notifications are supported on non-Windows OpCon server installations. Source code logs "Invalid Notification type for Non-Windows platform : Network Message" but product support scope needs SME confirmation. -->

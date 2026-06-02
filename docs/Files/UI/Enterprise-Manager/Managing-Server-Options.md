@@ -1,6 +1,6 @@
 ---
 title: Managing Server Options
-description: "The Server Options editor controls global settings for OpCon, displaying server parameter values and source information for viewing and editing."
+description: "Use the Server Options editor in Enterprise Manager to view and modify global OpCon server parameter values."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,55 +8,30 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Server Options
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Server Options** editor controls global settings for OpCon, displaying server parameter values and source information for viewing and editing. For conceptual information, refer to [OpCon Server Options](../../../administration/server-options.md) in the **Concepts** online help.
+The **Server Options** editor in Enterprise Manager lets you view and modify global OpCon server parameter values. For descriptions of every parameter and its default value, refer to [OpCon Server Options](../../../administration/server-options.md).
 
 :::note
-Only the ocadm role can access this editor.
+Only users assigned to the **ocadm** role can access the Server Options editor.
 :::
 
-## Modifying Server Option Parameter(s)
+## Modify a server option parameter
 
 To modify a server option parameter, complete the following steps:
 
-1. Select **Server Options** under the **Administration** topic
-2. Select the **tab** containing the parameter to modify
-3. Select the **parameter** to modify
-4. Enter or select the **Parameter Information**
-5. Select **Update** to save, or **Defaults** to reset to the system default
-6. Repeat steps 3–5 for each parameter that requires changes
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Server Options** toolbar
-8. Select **Close ☒** to close the **Server Options** screen
+1. In the **Administration** navigation pane, select **Server Options**.
+2. Select the tab that contains the parameter you want to modify.
+3. Select the parameter.
+4. Enter or select the new value in the **Parameter Information** area.
+5. Select **Update** to apply the change, or select **Defaults** to reset the parameter to its system default.
+6. Repeat steps 3–5 for each additional parameter you want to change.
+7. Select **Save** on the **Server Options** toolbar.
+8. Select **Close** to close the **Server Options** editor.
 
-## FAQs
-
-**Q: What does managing server options involve?**
-
-Managing server options includes Modifying Server Option Parameter(s). Access server options through Enterprise Manager navigation pane.
-
-**Q: Who can manage server options in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage server options. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The updated values are saved and the SAM reloads the configuration automatically.

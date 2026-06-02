@@ -1,6 +1,6 @@
 ---
 title: Defining Properties for Multi-Instance Jobs
-description: "Use this procedure to define Properties for Multi-Instance Jobs in Enterprise Manager."
+description: "Define instance properties for multi-instance jobs in Enterprise Manager Job Master so each job instance runs with distinct parameter values."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,47 +8,32 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Defining Properties for Multi-Instance Jobs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A multi-instance job runs as multiple simultaneous copies, each identified by a unique set of instance properties. Instance properties use the format `PropertyName=PropertyValue` and let each copy receive distinct parameter values at run time.
 
-## What Is It?
+To define properties for a multi-instance job, complete the following steps:
 
-Use this procedure to define Properties for Multi-Instance Jobs in Enterprise Manager.
+1. In Enterprise Manager, select **Job Master** under the **Administration** topic. The **Job Master** screen opens.
+2. In the **Schedule** list, select the schedule that contains the job.
+3. In the **Job** list, select the job.
+4. In the **Job Properties** frame, select the **Job Details** tab.
+5. Select the **Allow Multi-Instance** option.
+6. Select **Save** on the **Job Master** toolbar to save the multi-instance setting.
+7. Select the **Instance Definition** tab.
+8. In the entry field, type the property definition using the format `PropertyName=PropertyValue`. To define multiple properties for a single instance, separate each name-value pair with a semicolon (`;`), for example: `PName1=PValue1;PName2=PValue2`.
+9. Select **Add**. The definition appears in the **Instances** list.
+10. Repeat steps 8 and 9 for each additional instance.
+11. Select **Save** on the **Job Master** toolbar to save the instance definitions.
+12. Select **Close** to close the **Job Master** screen.
 
-To define a property, complete the following steps:
+**Result:** OpCon stores one instance definition per entry in the **Instances** list. When the schedule builds, OpCon creates one copy of the job for each defined instance and passes the corresponding properties to that copy.
 
-1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2. Select the **schedule** in the **Schedule** list
-3. Select the **job** in the **Job** list
-4. Select the **Job Details** tab in the **Job Properties** frame
-5. Select the **Multi-Instance** option
-6. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-7. Select the **Instance Definition** tab
-8. Define properties using the format **PropertyName=PropertyValue**, separating each definition with a semicolon (**;**)
-9. Select **Add**
-10. Repeat Steps 8 and 9 for additional instances
-11. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar to save the property definitions
-12. Select **Close ☒** to close the **Job Master** screen
-
-## FAQs
-
-**Q: What is the purpose of defining properties for multi-instance jobs?**
-
-Defining properties for multi-instance jobs establishes the configuration or properties that OpCon uses when processing the related job, schedule, or automation object.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+:::note
+Property names cannot contain the characters `= ' ( ) \ , |`. Each property string has a maximum length of 4000 characters. If instance definitions already exist, you cannot clear the **Allow Multi-Instance** option until you remove all definitions.
+:::

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Working with Operations
-description: "Operations is an SMA Solution Manager module that shows high-level summary information (by way of graphical dials) for schedules, jobs, and Agent machines in operation."
+description: "Operations is a Solution Manager module that displays a summary of schedule, job, and Agent status using donut cards, with drill-down access to detailed views."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -11,118 +11,110 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: conceptual
 ---
 
 # Working with Operations
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Operations** module in Solution Manager provides a high-level summary of schedule, job, and Agent activity for your OpCon environment. The summary displays three groups of donut cards — one each for Schedules, Jobs, and Agents — each showing counts by status. Selecting a donut card drills down to a filtered view of the matching records.
 
-## What Is It?
-
-Operations is an SMA Solution Manager module that shows high-level
-summary information (by way of graphical dials) for schedules, jobs, and
-Agent machines in operation. Each dial has drill-down capability to view
-the details or processes on which the summary information is based.
-
-Solution Manager Operations
+You must have the **View Jobs in Schedule Operations** function privilege to access this module.
 
 ![Solution Manager Operations](../../../Resources/Images/SM/Operations-with-Labels.png "Solution Manager Operations")
 
-## Filtering
+## Date filter
 
-The Filter bar at the top of the page can be used to filter the
-schedules, jobs, and Agent machines based on what is stored in the
-system for the current day, the day before, the day after, the last
-seven days, and/or the next seven days.
+The filter bar at the top of the **Operations** page controls which dates are included in the summary counts. You can select one or more of the following options:
 
-Filtering Options
+| Option | Records included |
+|---|---|
+| Today | Current date (default) |
+| Yesterday | Previous date |
+| Tomorrow | Next date |
+| Last Seven Days | The seven days before today |
+| Next Seven Days | The seven days after today |
 
-![Operations Filtering Options](../../../Resources/Images/SM/Operations-Filtering-Options.png "Operations Filtering Options")
+The selected date periods apply to all three donut card groups. When you select a donut card to drill down, the active date filter is carried forward to the resulting view.
+
+## Donut cards
+
+Each donut card group shows counts grouped by status. Selecting a card opens the corresponding detail view filtered to that status and the active date periods.
+
+### Schedules
+
+| Card | Status |
+|---|---|
+| Failed | Schedules completed with errors |
+| Blocked | Schedules on hold |
+| Waiting | Schedules waiting to run |
+| Running | Schedules in process |
+| Completed | Schedules completed successfully |
+
+### Jobs
+
+| Card | Status |
+|---|---|
+| Failed | Jobs in a failed status category |
+| Blocked | Jobs in a blocked status category |
+| Waiting | Jobs in a waiting status category |
+| Running | Jobs currently running |
+| Completed | Jobs completed successfully |
+| Ignored | Jobs in an ignored status category |
+
+### Agents
+
+| Card | Status |
+|---|---|
+| Error | Agents not responding |
+| Limited | Agents in limited communication mode |
+| Stopped | Agents that are down |
+| Waiting | Agents waiting for a response |
+| Operational | Agents communicating normally |
 
 ## Quick Search
 
-For each of the OpCon object types (schedules, jobs, and Agent
-machines), a Quick Search field is provided. You simply type in the
-keyword in the appropriate field and select **Enter** to access the
-search criteria results.
+A **Quick Search** field appears to the right of each donut card group header. Type a keyword in the field and press **Enter** to open the corresponding detail view filtered to names matching your search term.
 
-Quick Search
+- Use the **Schedules** Quick Search field to search by schedule name.
+- Use the **Jobs** Quick Search field to search by job name.
+- Use the **Agents** Quick Search field to search by Agent name.
 
 ![Quick Search](../../../Resources/Images/SM/Quick-Search.png "Quick Search")
 
-## Direct Links
+## Direct links
 
-Clicking on any of these links grants you direct access to the
-**Processes** page for the OpCon object type.
+Each donut card group header is a link. Select the header link to open the **Processes** page for that object type, showing all records for the active date periods.
 
-- Select the [Schedules](Performing-Schedule-Status-Changes.md)
-    link to access all schedules. Any filter selection(s) made on the
-    main **Operations** page before clicking on the link may be
-    reflected in the initial data that is displayed.
-- Select the [Jobs](Performing-Job-Status-Changes.md) link to
-    access all jobs. Any filter selection(s) made on the main
-    **Operations** page before clicking on the link may be reflected
-    in the initial data that is displayed.
-- Select the [Agents](Performing-Agent-Status-Updates.md) link
-    to access all Agent machines.
+- Select **Schedules** to view all schedules.
+- Select **Jobs** to view all jobs.
+- Select **Agents** to view all Agents.
 
-## Daily Processes Access
+Any date filter selections active on the **Operations** page are carried forward when you select a Schedules or Jobs link.
 
-The ![Processes Button](../../../Resources/Images/SM/Processes-Button.png "Processes Button")
-button takes you to the page where you can [view and manage](Managing-Daily-Processes.md) the Daily processes in
-operation.
+## Toolbar buttons
 
-## Schedule Build Access
+The toolbar at the top of the **Operations** page provides the following buttons.
 
-The ![Build Button](../../../Resources/Images/SM/Schedule-Build-Operations-Summary-Build-Button.png "Build Button")
-button takes you to the page where you can [view and build](Managing-Schedules.md) schedules.
+| Button | Action |
+|---|---|
+| **Processes** | Opens the **Processes** page to [view and manage daily processes](Managing-Daily-Processes.md). |
+| **Build** | Opens the **Schedule Build** page to [view and build schedules](Managing-Schedules.md). |
 
 ## Filter Profiles
 
-The ![Filter Profile Button](../../../Resources/Images/SM/Filter-Profile-Button.png "Filter Profile Button")
-**Filter Profile** button allows users to apply stored filters on the
-Operations Summary screen. When selected, the ability to Go to the
-**Processes** page with filtering is limited to the direct link next to
-the profile name. This button will only be displayed in the top toolbar
-if at least one profile is defined.
-
-Solution Manager Operations with Filter Profiles
+The **Filter Profile** button appears in the toolbar when at least one filter profile has been defined. Selecting the button applies a stored filter to the Operations Summary. When a filter profile is active, drill-down access to the **Processes** page is limited to the direct link next to the profile name.
 
 ![Solution Manager Operations Filter Profiles](../../../Resources/Images/SM/Operations-with-Filter-Profiles.png "Solution Manager Operations Filter Profiles")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Related topics
 
-- [Performing Schedule Status     Changes](Performing-Schedule-Status-Changes.md)
-- [Performing Job Status     Changes](Performing-Job-Status-Changes.md)
-- [Performing Bulk Status Job Updates (Schedule     Level)](Performing-Bulk-Job-Status-Updates-Schedule-Level.md)
-- [Performing Agent Status     Updates](Performing-Agent-Status-Updates.md)
+- [Performing Schedule Status Changes](Performing-Schedule-Status-Changes.md)
+- [Performing Job Status Changes](Performing-Job-Status-Changes.md)
+- [Performing Bulk Status Job Updates (Schedule Level)](Performing-Bulk-Job-Status-Updates-Schedule-Level.md)
+- [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
 - [Viewing Job Output](Viewing-Job-Output.md)
 - [Viewing Job Configuration](Viewing-Job-Configuration.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 - [Using Schedule Build](Managing-Schedules.md)
-:::
-
-## FAQs
-
-**Q: What does Working with Operations cover?**
-
-This page covers Filtering, Quick Search, Direct Links.
-
-## Glossary
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

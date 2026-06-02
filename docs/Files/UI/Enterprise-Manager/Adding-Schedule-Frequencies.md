@@ -1,6 +1,6 @@
 ---
 title: Adding Schedule Frequencies
-description: "Use this procedure to add Schedule Frequencies in Enterprise Manager."
+description: "Use this procedure to add schedule frequencies to a schedule in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,64 +8,47 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Schedule Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A schedule frequency controls which dates OpCon builds a schedule. You can assign a new frequency or reuse an existing one using the **Frequency Definition Wizard** in Enterprise Manager.
 
-## What Is It?
+## Add a new schedule frequency
 
-Use this procedure to add Schedule Frequencies in Enterprise Manager.
+To add a new frequency to a schedule, complete the following steps:
 
-## Adding New Schedule Frequencies
+1. In the **Administration** navigation category, select **Schedule Master**. The **Schedule Master** editor opens.
+2. In the **Schedule Selection** list, select the schedule you want to modify.
+3. In the **Schedule Details** section, select the **Frequency** tab.
+4. Select **Add**. The **Frequency Definition Wizard** opens.
+5. Select the **Create new frequency** option.
+6. In the **Frequency Name** field, enter a name for the new frequency. Names are limited to 20 characters and cannot contain special characters such as spaces, quotes, or punctuation symbols.
+7. Select **Next**.
+8. Define the frequency rules. For more information, see [Frequency Definition](../../../automation-concepts/frequencies.md#frequency-definition).
+9. (Optional) Select **Forecast** to preview the calendar dates for the new frequency, then select **OK** to close the forecast window.
+10. Select **Finish** to save the frequency and close the wizard.
 
-To add a new frequency, complete the following steps:
+**Result:** The new frequency is saved and associated with the selected schedule. OpCon also assigns the frequency to all jobs within that schedule.
 
-1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2. Select the **schedule** in the **Schedule Selection** list
-3. Select the **Frequency** tab in the **Schedule Details** frame
-4. Select **Add**. The **Frequency Definition Wizard** displays
-5. Select the **Create new frequency** radio button
+## Add an existing schedule frequency
 
-6. Enter a *name* describing the new frequency in the **Frequency Name** text box
-7. Select **Next**
-8. Define the **Schedule Frequency**. For more information, refer to [Frequency Definition](../../../automation-concepts/frequencies.md#frequency-definition) in the **Concepts** online help
-9. *(Optional)* Select **Forecast** to view the calendar for the new frequency, then select **OK** to close the **Forecast** window
-10. Select **Finish** to save and close the wizard
-11. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
+To assign an existing frequency to a schedule, complete the following steps:
 
-## Adding Existing Schedule Frequencies
+1. In the **Administration** navigation category, select **Schedule Master**. The **Schedule Master** editor opens.
+2. In the **Schedule Selection** list, select the schedule you want to modify.
+3. In the **Schedule Details** section, select the **Frequency** tab.
+4. Select **Add**. The **Frequency Definition Wizard** opens.
+5. Select the **Use existing frequency** option.
+6. In the **Frequency** list, select an existing frequency.
+7. Select **Next**.
+8. (Optional) Select **Forecast** to confirm the frequency selection, then select **OK** to close the forecast window.
+9. Select **Finish** to save the assignment and close the wizard.
 
-To add an existing frequency, complete the following steps:
-
-1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2. Select the **schedule** in the **Schedule Selection** list
-3. Select the **Frequency** tab in the **Schedule Details** frame
-4. Select **Add**. The **Frequency Definition Wizard** displays
-5. Select the **Using existing frequency** radio button
-
-6. Select an **existing frequency** in the **Frequency** list or use **Find** to locate it
-7. Select **Next**
-8. Select **Forecast** to confirm the frequency selection, then select **OK** to close the **Forecast** window
-9. Select **Back** to select another existing or [create a new frequency](#Adding_New_Schedule_Frequency)
-10. Select **Finish** to save and close the wizard
-11. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
-:::
-
-## FAQs
-
-**Q: How do you save a new schedule frequencies record?**
-
-After completing the required fields, select the **Save** button on the toolbar to save the schedule frequencies record.
-
-**Q: Can you add schedule frequencies for multiple platforms?**
-
-Yes. This page covers schedule frequencies for multiple platforms or contexts: Adding New Schedule Frequencies, Adding Existing Schedule Frequencies.
+**Result:** The selected frequency is assigned to the schedule.
 
 ## Glossary
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Roles and Privileges Report
 description: "The Roles and Privileges Report combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view with a Privilege Type column."
 product_area: Solution Manager
@@ -15,12 +15,7 @@ doc_type: conceptual
 
 # Roles and Privileges Report
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Roles and Privileges Report** combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view with a Privilege Type column identifying the source of each record.
+The **Roles and Privileges Report** combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view. A **Privilege Type** column identifies the source category of each record.
 
 :::note
 This report has a maximum return limit of 100,000 records.
@@ -28,40 +23,29 @@ This report has a maximum return limit of 100,000 records.
 
 ![A screen showing the Roles and Privileges Report](../../../../../Resources/Images/SM/Library/Reporting/RolesAndPrivilegesReport.png "Roles and Privileges Report")
 
-### Filtering & Sorting
+## Report Columns
 
-This report provides filters for role name, role description, privilege type, privilege name, can update, and department name. Open the filters panel by selecting the menu (three dots) in any column header and choosing **Filter**.
+| Column | Description |
+|---|---|
+| **Role Name** | The name of the role the privilege belongs to. |
+| **Role Description** | The description configured for the role. |
+| **Privilege Type** | The category of privilege: Machine, Machine Group, Batch User, Schedule, Script, Access Code, or Function. |
+| **Privilege Name** | The name of the specific object or function the privilege grants access to. |
+| **Can Update** | Indicates whether the role has update permission for the privilege object. Applies to Machine, Machine Group, and Access Code privilege types. |
+| **Department Name** | The department associated with the privilege, when applicable. |
+
+## Filtering
+
+To filter the report, complete the following steps:
+
+1. Select the menu button (three dots) in any column header.
+2. Select **Filter**.
+3. Enter or select filter criteria for one or more columns: role name, role description, privilege type, privilege name, can update, or department name.
+
+**Result:** The report updates to display only records that match the active filters.
 
 ![A screen showing how to open the column menu](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
 
-### Exporting to CSV
+## Exporting to CSV
 
-Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
-
-## FAQs
-
-**Q: What does Roles and Privileges Report do?**
-
-The **Roles and Privileges Report** combines all role privilege types — Machine, Machine Group, Batch User, Schedule, Script, Access Code, and Function — into a single view with a Privilege Type colum
-
-**Q: Where can you find Roles and Privileges Report in OpCon?**
-
-Access Roles and Privileges Report in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
-
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+To export the report, select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button. The report downloads as a CSV file. Any active filters are applied to the export.

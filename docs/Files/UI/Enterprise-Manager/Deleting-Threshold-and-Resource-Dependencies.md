@@ -2,62 +2,37 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Threshold/Resource Dependencies
-description: "Use this procedure to delete Threshold/Resource Dependencies in Enterprise Manager."
+description: "How to delete a threshold or resource dependency from a job in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Deleting Threshold/Resource Dependencies
+# Deleting Threshold/Resource Dependencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A threshold/resource dependency defines a condition a job must meet before it can run, based on a threshold value or resource availability. Deleting a dependency permanently removes it from the job definition; this action cannot be undone.
 
-## What Is It?
+## Delete a Threshold/Resource Dependency
 
-Use this procedure to delete Threshold/Resource Dependencies in Enterprise Manager.
+To delete a threshold or resource dependency from a job, complete the following steps:
 
-To delete a dependency, complete the following steps:
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen opens.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Dependencies** tab in the **Job Properties** frame.
+5. Select the **Threshold/Resource Dependency** tab.
+6. Select the **Job Related** option, the **Frequency Related** option, or both, depending on the dependency type you want to delete.
+7. If you selected **Frequency Related**, select the frequency in the **Frequency List**. If you selected only **Job Related**, proceed to the next step.
+8. Select the dependency to delete.
+9. Select **Remove**. A confirmation dialog opens with the title **Delete**.
+10. Select **Yes** to confirm the deletion, or select **No** to cancel.
+11. Select **Close** to close the **Job Master** screen.
 
-1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2. Select the **schedule** in the **Schedule** list
-3. Select the **job** in the **Job** list
-4. Select the **Dependencies** tab in the **Job Properties** frame
-5. Select the **Threshold/Resource Dependency** tab
-6. Select the **Job Related** and/or **Frequency Related** radio button depending on the dependency type to delete
-7. If Frequency Related, select the **frequency** in the **Frequency List**. If Job Related, proceed to the next step
-8. Select the **dependency** to delete
-9. Select **Remove**
-10. Select **Yes** to confirm or **No** to cancel
-11. Select **Close ☒** to close the **Job Master** screen
-
-## FAQs
-
-**Q: Can a threshold/resource dependencies record be recovered after deletion?**
-
-No. Deleting a threshold/resource dependencies record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: What should you check before deleting threshold/resource dependencies?**
-
-Verify the threshold/resource dependencies is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The selected dependency is permanently removed from the job definition.

@@ -2,75 +2,75 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Job Dependencies
-description: "Use this procedure to edit Job Dependencies in Enterprise Manager."
+description: "How to edit job-related and frequency-related job dependencies in Enterprise Manager Job Master."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Editing Job Dependencies
+# Editing Job Dependencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A job dependency defines the relationship one job has to another before it is allowed to run. In Enterprise Manager, you can define job-level dependencies that apply across all frequencies, or frequency-level dependencies that apply only when a specific frequency is active.
 
-## What Is It?
+## Edit a job-related dependency
 
-Use this procedure to edit Job Dependencies in Enterprise Manager.
+A job-related dependency applies regardless of frequency. To edit a job-related dependency, complete the following steps:
 
-## Editing Job-Related Job Dependencies
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen opens.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Dependencies** tab in the **Job Properties** frame.
+5. Select the **Job Dependency** tab.
+6. Select the **Job Related** option.
+7. Select the dependency you want to edit.
+8. Select **Edit**. The **Edit Dependency** dialog opens.
+9. Change any of the following fields as needed:
 
-To edit a dependency, complete the following steps:
+   | Field | Description |
+   |---|---|
+   | **Dependency Type** | Select **Requires**, **After**, **Excludes**, or **Conflict**. |
+   | **Exit Value** | For **Requires** or **After** types, select **Finished OK**, **Failed**, or **Ignore Exit Code**. |
+   | **Check All Days** | Available for **Conflict** type. Select this option to check all days for the conflict condition. |
+   | **Job Name Like** | Available for **Conflict** type. Select this option and enter a name pattern to match multiple jobs. |
+   | **Offset** | Enter the number of days offset for cross-day dependencies (range: -999 to 999). |
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the **Dependencies** tab in the **Job Properties** frame
-5.  Select the **Job Dependency** tab
+10. Select **OK** to save, or **Cancel** to discard the changes.
+11. Select **Close** (to the right of the **Job Master** tab) to close the **Job Master** screen.
 
-6.  Select the **Job Related** option
-7.  Select the **dependency** to edit
-8.  Select the **Edit** button. The **Add Dependency** dialog displays
-9.  Enter the *changes*
-10. Select **OK** to save the changes or **Cancel** to discard them
-11. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+**Result:** The dependency is updated in the job master record and takes effect the next time the schedule is built or the record is referenced.
 
-## Editing Frequency-Related Job Dependencies
+## Edit a frequency-related dependency
 
-To edit a dependency, complete the following steps:
+A frequency-related dependency applies only when the job runs under a specific frequency. To edit a frequency-related dependency, complete the following steps:
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the **Dependencies** tab in the **Job Properties** frame
-5.  Select the **Job Dependency** tab
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen opens.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Dependencies** tab in the **Job Properties** frame.
+5. Select the **Job Dependency** tab.
+6. Select the **Frequency Related** option.
+7. Select the frequency in the **Frequency List**.
+8. Select the dependency you want to edit.
+9. Select **Edit**. The **Edit Dependency** dialog opens.
+10. Change any of the following fields as needed:
 
-6.  Select the **Frequency Related** option
-7.  Select the **frequency** in the **Frequency List**
-8.  Select the **dependency** to edit
-9.  Select the **Edit** button. The **Add Dependency** dialog displays
-10. Enter the *changes*
-11. Select **OK** to save the changes or **Cancel** to discard them
-12. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+    | Field | Description |
+    |---|---|
+    | **Dependency Type** | Select **Requires**, **After**, **Excludes**, or **Conflict**. |
+    | **Exit Value** | For **Requires** or **After** types, select **Finished OK**, **Failed**, or **Ignore Exit Code**. |
+    | **Check All Days** | Available for **Conflict** type. Select this option to check all days for the conflict condition. |
+    | **Job Name Like** | Available for **Conflict** type. Select this option and enter a name pattern to match multiple jobs. |
+    | **Offset** | Enter the number of days offset for cross-day dependencies (range: -999 to 999). |
+    | **Frequency** | Select the frequency name to associate with this dependency. |
 
-## FAQs
+11. Select **OK** to save, or **Cancel** to discard the changes.
+12. Select **Close** (to the right of the **Job Master** tab) to close the **Job Master** screen.
 
-**Q: Do edits to job dependencies take effect immediately?**
-
-Changes saved to job dependencies in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The dependency is updated for the selected frequency and takes effect the next time the schedule is built or the record is referenced.

@@ -1,6 +1,6 @@
 ---
 title: Adding Jobs to Daily Schedules
-description: "The Operations module allows you to add jobs to daily schedules."
+description: "Add one or more jobs to a daily schedule from the Operations module in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,49 +15,45 @@ doc_type: procedural
 
 # Adding Jobs to Daily Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the **Operations** module in Solution Manager to add one or more jobs to a daily schedule that has already been built for a specific date.
 
-## What Is It?
+## Before You Begin
 
-The **Operations** module allows you to add jobs to daily schedules.
+Your role must have the **Add Jobs to Daily Schedules** department function privilege for the relevant department. Users with the `ocadm` role have this privilege for all departments by default.
 
-To add a job to a Daily Schedule, complete the following steps:
+## Add Jobs to a Daily Schedule
 
-1. Right-click a Schedule record and select the **+** icon to open the Add Job(s) dialog
+To add jobs to a daily schedule, complete the following steps:
+
+1. Go to **Operations** in Solution Manager.
+
+2. In the Schedules grid, right-click the Schedule record for the target date and select **+** to open the **Add Job(s)** dialog.
+
    ![Opening Add Job(s) dialog](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule1.png "Opening Add Job(s) dialog")
 
-2. Find and select job(s) by searching or browsing
+3. Search for the jobs you want to add, or browse the available jobs, then select the jobs to add.
+
    ![Searching and Selecting Jobs](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule2.png "Searching and Selecting Jobs")
 
-3. Configure the selected job(s)
+4. Configure the selected jobs as required.
+
    ![Configuring Jobs to add](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule3.png "Configuring Jobs to add")
 
-4. Review the configured job(s) before submitting
+5. Review the configured jobs, then select **Submit**.
+
    ![Reviewing Jobs and configurations](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule4.png "Reviewing Jobs and configurations")
 
-5. Wait for the results
+6. Wait for the operation to complete.
+
    ![Waiting for the Add Job results](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule5.png "Waiting for the Add Job results")
 
-6. Review the results
+7. Review the results to confirm that all jobs were added successfully.
+
    ![Reviewing Add Job results](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule6.png "Reviewing Add Job results")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+**Result:** The selected jobs appear in the daily schedule for the target date and are available for processing.
+
+## Related Topics
 
 - [Performing Schedule Checks](Performing-Schedule-Checks.md)
 - [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
-
-## FAQs
-
-**Q: How do you save a new jobs to daily schedules record?**
-
-After completing the required fields, select the **Save** button on the toolbar to save the jobs to daily schedules record.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

@@ -1,6 +1,6 @@
 ---
 title: Viewing Notification Details
-description: "The details of any escalation can be viewed and copied to the clipboard before acknowledging the notification."
+description: "View and copy the full notification message for a pending escalation before acknowledging it in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,30 +8,31 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
 # Viewing Notification Details
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+When an escalation is pending acknowledgment, you can review the full notification message before acknowledging it. The **Notification Details** dialog lets you read, copy, or open the message in an external text editor.
 
-## What Is It?
+## View notification details
 
-The details of any escalation can be viewed and copied to the clipboard before acknowledging the notification.
+To view the details of a pending escalation, complete the following steps:
 
-To view escalations, complete the following steps:
+1. In the Enterprise Manager navigation panel, select **Escalation Acknowledgment** under the **Operation** topic.
 
-1. Select **Escalation Acknowledgment** under the **Operation** topic. The **Escalation Acknowledgment** screen displays
-2. Select an escalation. The **Notification Details** dialog displays
-3. *(Optional)* Select **Copy To Clipboard** to copy the notification details
-4. *(Optional)* Select **Open external editor** to open a text editor (e.g., Notepad) to preserve the notification details
-5. Close the **Notification Details** dialog when done
+   The **Escalation Acknowledgment** view opens and lists all pending escalations assigned to your user account. The table includes **Date**, **Notification**, **Escalation Level**, and **Status** columns.
 
-## Glossary
+2. Double-click an escalation row.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+   The **Notification Details** dialog opens and displays the full notification message for the selected escalation.
 
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a defined status. Notifications can be sent as email, text message, Windows event log, SNMP trap, or OpCon events.
+3. *(Optional)* Select **Copy To Clipboard** to copy the notification text to the clipboard.
+
+4. *(Optional)* Select **Open external editor** to write the notification text to a temporary file and open it in the system default text editor (for example, Notepad).
+
+5. Select **Close** to dismiss the **Notification Details** dialog.
+
+**Result:** The notification details dialog closes and you return to the **Escalation Acknowledgment** view, where you can select the escalation and acknowledge it.

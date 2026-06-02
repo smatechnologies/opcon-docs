@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Schedule Completion Events
-description: "Use this procedure to edit Schedule Completion Events in Enterprise Manager."
+description: "How to edit an existing Schedule Completion Event on a schedule definition in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,45 +10,32 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Schedule Completion Events
+# Editing Schedule Completion Events
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to edit Schedule Completion Events in Enterprise Manager.
+Schedule Completion Events are OpCon events attached to a schedule definition that trigger when the schedule completes. Use this procedure to modify an existing event on a schedule in Enterprise Manager.
 
 To edit a schedule completion event, complete the following steps:
 
-1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2.  Select the **schedule** in the **Schedule Selection** list
-3.  Select the **Events** tab in the **Schedule Details** frame
-4.  Select the **existing event** in the **Schedule Completion Events** list
-5.  Select the **Edit** button. The **Event Definition Wizard** displays
-6.  Enter the *changes* for the OpCon event. For details on editing event parameters, refer to [Add Schedule Completion Events](Adding-Schedule-Completion-Events.md#Place_your_mouse_cursor)
-7.  Select **Finish** to save changes or **Cancel** to discard them
-8.  Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
+2. Select the schedule in the **Schedule Selection** list.
+3. Select the **Events** tab in the **Schedule Details** frame.
+4. Select the existing event in the **Schedule Completion Events** list.
+5. Select **Edit**. The **Event Definition Wizard** displays.
+6. Update the event parameters as needed. For details on event parameter syntax, refer to [Adding Schedule Completion Events](Adding-Schedule-Completion-Events.md).
+7. Select **Finish** to save the changes, or select **Cancel** to discard them.
+8. Select **Close** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen.
 
-## FAQs
+**Result:** The updated event is saved to the Schedule Master. Changes take effect the next time the schedule record is built or referenced.
 
-**Q: Do edits to schedule completion events take effect immediately?**
+:::note
+If you edit a schedule completion event on a daily schedule record (an already-built instance), the change applies only to that current instance and does not affect the Schedule Master definition.
+:::
 
-Changes saved to schedule completion events in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+## Related topics
 
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Adding Schedule Completion Events](Adding-Schedule-Completion-Events.md)

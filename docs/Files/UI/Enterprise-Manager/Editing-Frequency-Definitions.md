@@ -2,50 +2,39 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Frequency Definitions
-description: "Use this procedure to edit Frequency Definitions in Enterprise Manager."
+description: "How to edit a frequency definition in the Enterprise Manager Frequency Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Editing Frequency Definitions
+# Editing Frequency Definitions
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the Enterprise Manager Frequency Manager to update the rules that control when jobs or schedules are eligible to run.
 
-## What Is It?
-
-Use this procedure to edit Frequency Definitions in Enterprise Manager.
+## Edit a frequency definition
 
 To edit a frequency definition, complete the following steps:
 
-1.  Select **Frequency Manager** under the **Management** topic
-2.  Type the *frequency name* in the **Type Filter** text box or select
-    the **frequency name**.
-3.  Select the **Edit a frequency definition** button on the **Frequency
-    Manager** toolbar.
-4.  Edit the *frequency definition* information
-5.  Select the **Finish** button
-6.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to
-    close the **Frequency Manager** screen.
+1. In the navigation panel, select **Frequency Manager** under the **Management** topic.
+2. In the **Type Filter** text box, type the frequency name, or select the frequency name directly in the list.
+3. On the **Frequency Manager** toolbar, select the **Edit** button (tooltip: *Edit a frequency definition*).
+4. Edit the frequency definition settings on the **Frequency Definition** page.
+5. Select **Finish**.
 
-## FAQs
+**Result:** The frequency definition is updated. If the change affects more than one job or schedule, Enterprise Manager displays an impact review dialog listing all affected jobs and schedules before committing the update.
 
-**Q: Do edits to frequency definitions take effect immediately?**
+6. Select **Close** (to the right of the **Frequency Manager** tab) to close the Frequency Manager.
 
-Changes saved to frequency definitions in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+## Notes
 
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- Changes saved to a frequency definition apply to all jobs and schedules that share the same frequency name and definition code. Enterprise Manager prompts for confirmation when a change would affect more than one record.
+- Users without the **All User Interface Functions** privilege cannot edit a frequency that is used by more than one job.
+- To rename a frequency without changing its definition, use the **Rename** button on the **Frequency Manager** toolbar instead of **Edit**.

@@ -1,6 +1,6 @@
 ---
 title: Editing Profiles
-description: "Use this procedure to edit Profiles in Enterprise Manager."
+description: "Use this procedure to modify an existing database connection profile in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,43 +8,39 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Editing Profiles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Connection Profile stores the database server name, credentials, and connection settings that Enterprise Manager uses to connect to the OpCon database. You can edit an existing profile to update any of these settings without creating a new profile.
 
-## What Is It?
+## Edit a connection profile
 
-Use this procedure to edit Profiles in Enterprise Manager.
+To edit a connection profile, complete the following steps:
 
-To edit a profile, complete the following steps:
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+4. Select **Connection Profiles**. The **Connection Profiles** settings appear on the right.
+5. Select the profile you want to modify from the list, then select **Edit**. The profile wizard opens to the **Profile Definition** page.
+6. Update the fields as needed:
 
-1. Open Enterprise Manager application
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Connection Profiles**. The **Connection Profiles** settings display to the right
-5. Select the **Profile** and select **Edit**. The **Database Connection Profile** dialog displays
-6. Enter the profile modifications and select **Next**
-7. Select **Finish** once the connection to the database is made
-8. Select **Apply** to save the changes, then select **OK** to close the **Preferences** dialog
+   | Field | Description |
+   |---|---|
+   | **Profile Name** | The display name for this connection profile. |
+   | **Use Windows Authentication** | When selected, Enterprise Manager uses the current Windows credentials instead of a SQL Server username and password. Available on Windows only. |
+   | **User Name** | The SQL Server login username. Disabled when **Use Windows Authentication** is selected. |
+   | **Password** | The SQL Server login password. Disabled when **Use Windows Authentication** is selected. |
+   | **SQL Server** | The hostname or IP address of the SQL Server instance. |
+   | **Database** | The OpCon database name. Select the refresh button to list available databases on the specified server. |
+   | **Timeout** | The connection timeout value in seconds. |
+   | **Profile Color** | A color used to visually distinguish this profile in the profile list. |
 
-## FAQs
+7. Select **Next**. Enterprise Manager tests the connection to the database.
+8. Select **Finish** after the connection test succeeds.
+9. Select **Apply** to save the changes, then select **OK** to close the **Preferences** dialog.
 
-**Q: Do edits to profiles take effect immediately?**
-
-Changes saved to profiles in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The profile is updated and saved. The updated settings take effect the next time you connect using this profile.

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Vision Actions
-description: "Use this procedure to delete Vision Actions in Solution Manager."
+description: "How to permanently delete one or more Vision Actions in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,33 +17,22 @@ doc_type: procedural
 
 # Deleting Vision Actions
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Deleting a Vision Action permanently removes it from OpCon. You cannot recover a deleted Vision Action, so confirm the action is no longer needed before proceeding.
 
-## What Is It?
+You must have the **Maintain Vision Actions** function privilege to delete Vision Actions.
 
-Use this procedure to delete Vision Actions in Solution Manager.
-
-To delete a Vision Action, complete the following steps:
-
-1. Select the **Actions** button on the **Vision Live** or **Vision Settings** page
-2. Select the option for the action to delete
-3. Select the **Delete** button
-4. Select **Yes**
+:::warning
+A Vision Action that is currently assigned to one or more Vision cards cannot be deleted. Remove the action from all Vision cards before attempting deletion.
 :::
 
-## FAQs
+## Delete a Vision Action
 
-**Q: Can a vision actions record be recovered after deletion?**
+To delete one or more Vision Actions, complete the following steps:
 
-No. Deleting a vision actions record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+1. In Solution Manager, go to **Vision Settings**.
+2. Select **Actions** to open the Actions list.
+3. Select the checkbox next to each Vision Action you want to delete. You can select multiple actions.
+4. Select **Delete**.
+5. In the confirmation dialog, select **OK**.
 
-**Q: How many vision actions records can you delete at once?**
-
-Select the specific vision actions record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.
+**Result:** The selected Vision Actions are permanently removed from OpCon. The Actions list refreshes automatically.

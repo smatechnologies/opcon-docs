@@ -1,56 +1,33 @@
 ---
 title: Managing Connection Profiles
-description: "When using Enterprise Manager for the first time or when setting up a new database connection, define a profile with the database name, login, and password."
+description: "Connection profiles store the database name, authentication credentials, and optional display color that Enterprise Manager uses to connect to an OpCon database."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Conceptual
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: conceptual
 ---
 
 # Managing Connection Profiles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A connection profile stores the information Enterprise Manager needs to connect to an OpCon database: the SQL server name or IP address, the database name, authentication credentials, an optional connection timeout, and an optional background color. You must define at least one profile before Enterprise Manager can connect to OpCon.
 
-## What Is It?
-
-When using Enterprise Manager for the first time or when setting up a new database connection, define a profile with the database name, login, and password. You can also set a background color for a profile to distinguish between databases (e.g., production vs. test).
+You can assign a background color to a profile to visually distinguish between databases — for example, to differentiate a production environment from a test environment.
 
 ![Color-coded Navigational Views](../../../Resources/Images/EM/EMprofilepics.png "Color-coded Navigational Views")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
+Connection profiles are stored locally in Enterprise Manager preferences and are not shared across workstations.
 
-Related Topics
+## Profile management tasks
+
+Use the **Connection Profiles** settings page under **EnterpriseManager > Preferences** to manage profiles. The following tasks are available:
 
 - [Setting up New Profiles](Setting-up-New-Profiles.md)
 - [Editing Profiles](Editing-Profiles.md)
-- [Deleting Profiles](Deleting-Profiles.md)
 - [Copying Profiles](Copying-Profiles.md)
-
-## FAQs
-
-**Q: What does managing connection profiles involve?**
-
-Managing connection profiles includes adding, editing, and deleting records. Access connection profiles through Enterprise Manager navigation pane.
-
-**Q: Who can manage connection profiles in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage connection profiles. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Deleting Profiles](Deleting-Profiles.md)

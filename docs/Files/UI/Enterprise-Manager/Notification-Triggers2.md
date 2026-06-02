@@ -6,6 +6,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Notifications
+doc_type: reference
 ---
 
 # Notification Triggers
@@ -21,19 +22,19 @@ To search for a specific trigger, type part of or the full trigger name in the *
 The following rules apply to group organization:
 
 - You can add groups inside other groups to better organize triggers.
-- You must add triggers to the lowest-level groups within a group tree.
+- You must add triggers to the lowest-level groups within a group tree. A group that already contains child groups cannot also contain triggers.
 
 ## Right-Click Menu
 
-The right-click menu is available on any item in the **Machines**, **Schedules**, or **Jobs** tab tree. The options that appear depend on the current selection.
+Right-click any item in the **Machines**, **Schedules**, or **Jobs** tab tree to open the context menu. The options that appear depend on the current selection.
 
 | Option | Description |
 |---|---|
 | **Add Root Group** | Adds a new group to the root level of the **Jobs**, **Machines**, or **Schedules** tab. Available regardless of selection. |
-| [**Add Group**](Managing-Groups.md#Adding) | Adds a child group within the selected group. Only available on groups that already contain child groups or are empty. |
+| [**Add Group**](Managing-Groups.md#Adding) | Adds a child group within the selected group. Only available when the selected group already contains child groups or is empty (contains no triggers). |
 | [**Delete Group**](Managing-Groups.md#Deleting) | Deletes the selected group and all items within its tree. |
-| [**Add Machine Trigger**](Managing-Triggers.md#Adding) | Available in the **Machines** tab. Opens a list of machine triggers. For trigger definitions, see [Machine Triggers](../../../notifications/Notification-Triggers.md#Machine). |
-| [**Add Schedule Trigger**](Managing-Triggers.md#Adding) | Available in the **Schedules** tab. Opens a list of schedule triggers. For trigger definitions, see [Schedule Triggers](../../../notifications/Notification-Triggers.md#Schedule). |
-| [**Add Job Trigger**](Managing-Triggers.md#Adding) | Available in the **Machines**, **Schedules**, and **Jobs** tabs. Opens a list of job triggers. For trigger definitions, see [Job Triggers](../../../notifications/Notification-Triggers.md#Job). |
+| [**Add Machine Trigger**](Managing-Triggers.md#Adding) | Available in the **Machines** tab. Opens a list of machine triggers to add to the selected group. For trigger definitions, see [Machine Triggers](../../../notifications/Notification-Triggers.md#Machine). |
+| [**Add Schedule Trigger**](Managing-Triggers.md#Adding) | Available in the **Schedules** tab. Opens a list of schedule triggers to add to the selected group. For trigger definitions, see [Schedule Triggers](../../../notifications/Notification-Triggers.md#Schedule). |
+| [**Add Job Trigger**](Managing-Triggers.md#Adding) | Available in the **Machines**, **Schedules**, and **Jobs** tabs. Opens a list of job triggers to add to the selected group. For trigger definitions, see [Job Triggers](../../../notifications/Notification-Triggers.md#Job). |
 | [**Rename**](Managing-Groups.md#Renaming) | Renames the selected group. |
 | [**Delete Trigger**](Managing-Triggers.md#Deleting) | Deletes the selected trigger within the active tab. |

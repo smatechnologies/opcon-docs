@@ -1,4 +1,4 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Machine Groups
@@ -17,49 +17,110 @@ doc_type: conceptual
 
 # Machine Groups
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Machine Group is a named collection of Agents of the same type. You can assign a Machine Group to a job so that OpCon selects any available Agent in the group at run time, distributing workload across multiple Agents without requiring a specific Agent assignment.
 
-## What Is It?
+Machine Groups are managed under **Library > Machine Groups** in Solution Manager.
 
-Available Machine Groups in OpCon are shown in the grid under **Library > Machine Groups**.
 ![Machine Groups Grid](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-Grid.png "Machine Groups Grid")
 
-Select **Add**, **Copy**, or a record in the grid to enable the bottom panel:
-![Machine Group Add, Copy, and Edit](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-AddEditCopy.png "Editable panel for machine groups")
+## Required privilege
 
-:::note
-The **Name** field must be unique when adding or copying a machine group.
-:::
+To add, edit, copy, or delete Machine Groups, your role must have the **Maintain Machine Groups** function privilege.
 
-Select the **Cross References** button to view master and daily jobs that use a particular Machine Group.
+## Machine Group fields
 
-![Machine Group CrossReferences](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-CrossReferenceSummary.png "Machine Groups Cross References")
+| Field | Required | Description |
+|---|---|---|
+| **Name** | Yes | A unique display name for the Machine Group. |
+| **Type** | Yes | The Agent type for the group. All Agents assigned to the group must match this type. The **Type** field is read-only when editing or copying an existing group. |
+| **Description** | No | Optional documentation text for the group (up to 4,000 characters). |
+| Machines | Yes | One or more Agents to include in the group. At least one Agent must be assigned before you can save. |
 
-Select the expansion arrow for **Master Job** to view master jobs using the selected machine group.
+## Add a Machine Group
 
-![Machine Group Master Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-MasterJobCrossReference.png "Machine Group Master Job References Dialog")
+To add a Machine Group, complete the following steps:
 
-Select the expansion arrow for **Daily Job** to view daily jobs using the selected machine group.
+1. Go to **Library > Machine Groups**.
+2. Select **Add**.
 
-![Machine Group Daily Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-DailyJobCrossReference.png "Machine Group Daily Job Cross References Dialog")
+   The detail panel opens at the bottom of the page.
 
-## FAQs
+3. Enter a unique value in the **Name** field.
+4. Select the Agent type from the **Type** list.
 
-**Q: Where can you find Machine Groups in OpCon?**
+   The available Agents for that type appear in the machine transfer list.
 
-Access Machine Groups in Solution Manager or Enterprise Manager.
+5. Optionally, enter text in the **Description** field.
+6. In the machine transfer list, move one or more Agents to the assigned column.
+7. Select **Save**.
 
-## Glossary
+**Result:** The new Machine Group appears in the grid.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+## Copy a Machine Group
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+To copy a Machine Group, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+1. Go to **Library > Machine Groups**.
+2. Select the Machine Group you want to copy in the grid.
+3. Select **Copy**.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+   The detail panel opens with the copied group's **Type** and Agents pre-populated. The **Name** field is blank and must be filled in.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+4. Enter a unique value in the **Name** field.
+5. Optionally, update the **Description** or Agents.
+6. Select **Save**.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The copied Machine Group appears in the grid.
+
+## Edit a Machine Group
+
+To edit a Machine Group, complete the following steps:
+
+1. Go to **Library > Machine Groups**.
+2. Select the Machine Group in the grid.
+
+   The detail panel opens with the group's current values.
+
+3. Update the **Name**, **Description**, or Agents as needed.
+
+   The **Type** field cannot be changed for an existing Machine Group.
+
+4. Select **Save**.
+
+**Result:** The Machine Group is updated.
+
+## Delete a Machine Group
+
+You cannot delete a Machine Group that is assigned to master jobs or daily jobs. Use **Cross References** to review assignments before deleting.
+
+To delete a Machine Group, complete the following steps:
+
+1. Go to **Library > Machine Groups**.
+2. Select the Machine Group in the grid.
+3. Select **Delete**.
+
+   A confirmation dialog appears. If the group has active job assignments, an informational dialog shows the cross references instead, and deletion is blocked.
+
+4. Confirm the deletion.
+
+**Result:** The Machine Group is removed.
+
+## View cross references
+
+Cross References show which master jobs and daily jobs use a particular Machine Group.
+
+To view cross references for a Machine Group, complete the following steps:
+
+1. Go to **Library > Machine Groups**.
+2. Select the Machine Group in the grid.
+3. Select **Cross References**.
+
+   ![Machine Group Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-CrossReferenceSummary.png "Machine Groups Cross References")
+
+4. Select the expansion arrow next to **Master Job** to view master jobs using the group.
+
+   ![Machine Group Master Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-MasterJobCrossReference.png "Machine Group Master Job References Dialog")
+
+5. Select the expansion arrow next to **Daily Job** to view daily jobs using the group.
+
+   ![Machine Group Daily Job Cross References](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-DailyJobCrossReference.png "Machine Group Daily Job Cross References Dialog")

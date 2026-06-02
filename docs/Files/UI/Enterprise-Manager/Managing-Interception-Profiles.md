@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Interception Profiles
-description: "For all procedures, begin by navigating to the SAP Interception Profiles dialog: 1."
+description: "Create, edit, activate, deactivate, and delete SAP interception profiles in Enterprise Manager to control which SAP jobs OpCon intercepts on an SAP R/3 or CRM machine."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,76 +10,81 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Managing Interception Profiles
+# Managing Interception Profiles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+An SAP interception profile defines the criteria OpCon uses to intercept SAP jobs on a specific SAP R/3 or CRM machine. Each profile contains one or more criterion rows that filter jobs by **Client**, **Job Class**, **Job Name**, and **Job Creator**. Profiles can be activated or deactivated independently, giving you control over which criteria are in effect without deleting them.
 
-## What Is It?
+All procedures in this topic begin from the **SAP Interception Profiles** dialog for the target machine.
 
-For all procedures, begin by navigating to the **SAP Interception Profiles** dialog:
+## Open the SAP Interception Profiles Dialog
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Right-click the preferred **SAP R/3 and CRM machine name**
-3.  Hover over **SAP Machine** and select **Interception Profiles**. The **SAP Interception Profiles** dialog displays
+To open the **SAP Interception Profiles** dialog, complete the following steps:
+
+1. In the **Operation** topic, select **Machines Status**.
+2. Right-click the SAP R/3 or CRM machine name.
+3. Hover over **SAP Machine** and select **Interception Profiles**.
+
+**Result:** The **SAP Interception Profiles** dialog opens and loads the existing profiles. The profile list displays four columns: **Profile ID**, **Description**, **State**, and **Author**.
+
+## Create an Interception Profile
 
 To create an interception profile, complete the following steps:
 
-1.  Go to the **SAP Interception Profiles** dialog
-2.  Select the **Create** button. The **Create New Profile** dialog displays
-3.  Enter a *profile description* and select **OK**. The **SAP Interception Profile** dialog displays
-4.  Set the *criteria*
-5.  Select the **Create** button
+1. In the **SAP Interception Profiles** dialog, select **Create**. The **Create New Profile** dialog opens.
+2. Enter a profile description in the **New Profile Description** field and select **OK**. The **SAP Interception Profile** dialog opens for the new profile.
+3. Define the interception criteria. Each criterion row can filter on **Client**, **Job Class**, **Job Name**, and **Job Creator**. At least one field must have a value before the row can be saved.
+4. Select **Save** to save the criteria.
+
+**Result:** The new profile appears in the profile list with a **State** of inactive. The profile is not in effect until you activate it.
+
+## Edit an Interception Profile
 
 To edit an interception profile, complete the following steps:
 
-1.  Go to the **SAP Interception Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Edit** button. The **SAP Interception Profile** dialog displays
-4.  Edit the *criteria*
-5.  Select the **Save** button
+1. In the **SAP Interception Profiles** dialog, select the profile in the list.
+2. Select **Edit**. The **SAP Interception Profile** dialog opens.
+3. Modify the interception criteria as needed.
+4. Select **Save**.
 
-**To activate an interception profile:**
+**Result:** The updated criteria take effect the next time OpCon evaluates the profile, provided the profile is active.
 
-1.  Go to the **SAP Interception Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Activate** button
+## Activate an Interception Profile
 
-**To deactivate an interception profile:**
+To activate an interception profile, complete the following steps:
 
-1.  Go to the **SAP Interception Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Deactivate** button
+1. In the **SAP Interception Profiles** dialog, select the profile in the list.
+2. Select **Activate**.
 
-**To delete an interception profile:**
+**Result:** The profile **State** changes to active. OpCon begins intercepting SAP jobs that match the profile criteria.
 
-1.  Go to the **SAP Interception Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Delete** button
+:::note
+The **Activate** button is available only when the selected profile is inactive or has no state set. If the profile is already active, use **Deactivate** first.
+:::
 
-## FAQs
+## Deactivate an Interception Profile
 
-**Q: What does managing interception profiles involve?**
+To deactivate an interception profile, complete the following steps:
 
-Managing interception profiles includes adding, editing, and deleting records. Access interception profiles through Enterprise Manager navigation pane.
+1. In the **SAP Interception Profiles** dialog, select the profile in the list.
+2. Select **Deactivate**.
 
-**Q: Who can manage interception profiles in OpCon?**
+**Result:** The profile **State** changes to inactive. OpCon stops intercepting SAP jobs based on this profile's criteria, but the profile remains in the list and can be reactivated.
 
-Users with the appropriate privileges assigned through their role can manage interception profiles. Contact your OpCon system administrator if you do not have access.
+## Delete an Interception Profile
 
-## Glossary
+To delete an interception profile, complete the following steps:
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+1. In the **SAP Interception Profiles** dialog, select the profile in the list.
+2. Select **Delete**. A confirmation dialog appears asking whether you want to delete the profile.
+3. Select **Yes** to confirm the deletion.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+**Result:** The profile is permanently removed from the list.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+:::caution
+Deleting a profile is permanent. If you want to stop interception temporarily, use **Deactivate** instead.
+:::

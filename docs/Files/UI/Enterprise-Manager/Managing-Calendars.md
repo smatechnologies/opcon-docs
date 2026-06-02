@@ -1,6 +1,6 @@
 ---
 title: Managing Calendars
-description: "The Calendars editor defines and maintains OpCon Calendars."
+description: "The Calendars editor in Enterprise Manager defines and maintains OpCon Calendars, including holiday calendars and user-defined calendars."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,28 +8,51 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Calendars
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Calendars
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Calendars** editor in Enterprise Manager defines and maintains OpCon Calendars. You can use the editor to add or remove calendar dates, copy calendars, view cross-reference information, and delete unused user-defined calendars.
 
-## What Is It?
+For conceptual information, refer to [Calendars](../../../objects/calendars.md).
 
-The **Calendars** editor defines and maintains OpCon Calendars. It contains a list of existing calendars with a date list indicating the month and day(s) involved, and a table showing the schedules, jobs, and frequencies using each calendar. For conceptual information, refer to [Calendars](../../../objects/calendars.md) in the **Concepts** online help.
+:::note
+You must have the **Maintain Calendars** function privilege assigned to your role to create, modify, or delete calendars.
+:::
 
-## Calendars Toolbar
+## Calendars editor overview
 
-The **Calendars** editor has a toolbar for managing calendars. Select any icon on the toolbar below to learn more about its functionality.
+The **Calendars** editor contains the following areas:
+
+- **Selection list** — lists all existing calendars. Select a calendar name to load it in the editor.
+- **Name** — the calendar name (maximum 50 characters). This field is read-only for the Master Holiday calendar and schedule-specific holiday calendars.
+- **Documentation** — optional description of the calendar's purpose (maximum 4000 characters).
+- **Date List** — a date field and calendar control for viewing and selecting dates. Selected dates appear highlighted in **red** for holiday and excluding calendars, and in **green** for user-defined (included) calendars.
+- **Year** — a spinner control that navigates the calendar view to a specific year.
+- **Delete Old Dates** — removes dates prior to the current period from the selected calendar or from all calendars.
+- **Schedules using for holidays** — lists schedules that use the selected calendar as a holiday calendar. This section appears only for user-defined calendars.
+- **Schedules/Jobs/Frequencies using this calendar** — lists the schedules, jobs, and frequencies that reference the selected calendar. This section appears only for user-defined calendars.
+
+## Calendars toolbar
+
+The **Calendars** editor toolbar provides the following actions:
 
 ![Calendars toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Calendars toolbar")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+| Button | Description |
+|---|---|
+| **Add** | Creates a new user-defined calendar. |
+| **Save** | Saves changes to the current calendar name and documentation. |
+| **Remove** | Deletes the selected user-defined calendar. Not available for the Master Holiday calendar or schedule-specific holiday calendars. |
+| **Find** | Searches for a calendar by name. |
+| **Copy** | Opens the **Copy Calendar** dialog to copy the selected calendar to a new calendar. |
+| **Cross Reference** | Opens a dialog listing all schedules, jobs, and frequencies that reference the selected calendar. |
+| **View Audit** | Opens the audit history for changes made to the selected calendar. |
+
+## Related procedures
 
 - [Adding Holidays or Non-Working Days to Calendars](Adding-Days-to-Calendars.md)
 - [Applying Master Calendars to Schedules](Applying-Master-Calendars-to-Schedules.md)
@@ -41,31 +64,3 @@ Related Topics
 - [Copying Calendars](Copying-Calendars.md)
 - [Deleting Un-used User-defined Calendars](Deleting-User-defined-Calendars.md)
 - [Deleting Old Dates](Deleting-Old-Dates.md)
-
-## FAQs
-
-**Q: What does managing calendars involve?**
-
-Managing calendars includes Calendars Toolbar. Access calendars through Enterprise Manager navigation pane.
-
-**Q: Who can manage calendars in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage calendars. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

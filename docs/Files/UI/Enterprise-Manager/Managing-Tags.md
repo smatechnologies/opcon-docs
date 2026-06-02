@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Tags
-description: "Use this procedure to manage Tags in Enterprise Manager."
+description: "Use Tag Manager in Enterprise Manager to create, rename, delete, and associate tags with master jobs."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,121 +10,113 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
 # Managing Tags
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Tags are labels you assign to master jobs to group and identify related work across schedules. Use Tag Manager in Enterprise Manager to create tags, associate them with master jobs, rename them, and remove them.
 
-## What Is It?
-
-Use this procedure to manage Tags in Enterprise Manager.
-
-## Finding Tags
+## Finding a Tag
 
 To find a tag, complete the following steps:
 
-1. Select **Tag Manager** under the **Management** topic
-2. Select the ![](../../../Resources/Images/EM/EMfind.png) **Find** button
-3. Enter the tag name in the **Select an Item** text box
-4. Select **OK**
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the **Find** button on the toolbar.
+3. Enter the tag name in the **Select an Item** field.
+4. Select **OK**.
 
-## Adding Tags
+**Result:** The tag is highlighted in the **Selection** list.
 
-To add a tag, complete the following steps:
+## Adding a Tag
 
-1. Select **Tag Manager** under the **Management** topic
-2. Select the ![](../../../Resources/Images/EM/EMadd.png) **Add** button. The **Add New Tag** window displays
-3. Enter a name in the **Enter Tag Name** text box
-4. *(Optional)* Enter a **schedule name** or **job name** to filter results
-5. Select **Filter** to search for schedules/jobs
-6. *(Optional)* Select **Select All** or **Deselect All**
-7. Select the options for the schedules/jobs to tag
-8. Select **Associate Jobs**
+To add a tag and associate it with jobs, complete the following steps:
 
-## Renaming Tags
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the **Add** button on the toolbar. The **Add New Tag** dialog opens.
+3. Enter a name in the **Enter Tag Name** field.
+4. *(Optional)* Enter a schedule name in the **Schedule Name** field or a job name in the **Job Name** field under **Job Filter Criteria** to narrow results.
+5. Select **Filter** to load matching jobs in the **Available Jobs** list.
+6. Select the jobs to associate with the tag.
+7. Select **Associate Jobs**.
+
+**Result:** The tag is created and the selected jobs are associated with it. Enterprise Manager prompts you to associate additional jobs with the same tag.
+
+## Renaming a Tag
+
+Renaming a tag updates the tag name across all associated master schedules and jobs.
 
 To rename a tag, complete the following steps:
 
-1. Select **Tag Manager** under the **Management** topic
-2. Select the **tag** in the **Selection** list
-3. Update the name in the **Name** text box
-4. Select ![](../../../Resources/Images/EM/EMsave.png) **Save** on the toolbar
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the tag in the **Selection** list.
+3. Update the name in the **Name** field.
+4. Select **Save** on the toolbar.
 
-## Deleting Tags
+**Result:** The tag is renamed in all master schedules and jobs that reference it.
+
+## Deleting a Tag
+
+Deleting a tag removes it from all associated master schedules and jobs.
 
 To delete a tag, complete the following steps:
 
-1. Select **Tag Manager** under the **Management** topic
-2. Select the **tag** in the **Selection** list
-3. Select ![](../../../Resources/Images/EM/EMdelete.png) **Remove** on the toolbar
-4. Select **Yes** to confirm or **No** to cancel
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the tag in the **Selection** list.
+3. Select **Remove** on the toolbar.
+4. Select **Yes** to confirm.
 
-## Editing Master Jobs
+**Result:** The tag and all its job associations are permanently removed.
 
-To edit a master job, complete the following steps:
+## Editing a Master Job from Tag Manager
 
-1. Select **Tag Manager** under the **Management** topic
-2. Select the **tag** in the **Selection** list to display associated jobs
-3. Select the **job** to edit
-4. *(Optional)* Use the **filter** text box to find a specific schedule/job
-5. Select the ![](../../../Resources/Images/EM/EMeditjobs.png) **Edit Master Job** button. The **Job Master** screen displays
-6. Edit the job
-7. Select ![](../../../Resources/Images/EM/EMsave.png) **Save** on the **Job Master** toolbar
-8. Select **Close ☒** to close the **Job Master** screen
+To edit a master job from Tag Manager, complete the following steps:
 
-## Associating Master Jobs
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the tag in the **Selection** list. The **Master Schedules/Jobs using this Tag** section displays associated jobs.
+3. *(Optional)* Enter text in the filter field to search by schedule name or job name.
+4. Select the job to edit.
+5. Select the **Edit Master Job** button. The **Job Master** screen opens.
+6. Edit the job as needed.
+7. Select **Save** on the **Job Master** toolbar.
+8. Select **Close** to close the **Job Master** screen.
 
-To associate a master job, complete the following steps:
+**Result:** Changes to the master job are saved.
 
-1. Select **Tag Manager** under the **Management** topic
-2. Select the **tag** in the **Selection** list
-3. Select the ![](../../../Resources/Images/EM/EMedit.png) **Associate Additional Jobs** button. The **Associate Master Jobs** window displays
-4. *(Optional)* Enter a **schedule name** or **job name** to filter results
-5. Select **Filter** to search for schedules/jobs
-6. *(Optional)* Select **Select All** or **Deselect All**
-7. Select the options for the schedules/jobs to tag
-8. Select **Associate Jobs**
-9. Select **Yes** to associate more jobs or **No** to close the dialog
-
-## Deleting Job Associations
-
-To delete a job association, complete the following steps:
-
-1. Select **Tag Manager** under the **Management** topic
-2. Select the **tag** in the **Selection** list
-3. Select the **job** to disassociate
-4. *(Optional)* Use the **filter** text box to find a specific schedule/job
-5. Select the ![](../../../Resources/Images/EM/EMdelete.png) **Remove Job Association** button
-6. Select **Yes** to confirm
+:::tip
+You can also double-click a job in the list, or press **Enter** with a single job selected, to open the Job Master editor.
 :::
 
-## FAQs
+## Associating Additional Jobs with a Tag
 
-**Q: What does managing tags involve?**
+To associate additional master jobs with an existing tag, complete the following steps:
 
-Managing tags includes Finding Tags, Adding Tags, Renaming Tags, Deleting Tags. Access tags through Enterprise Manager navigation pane.
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the tag in the **Selection** list.
+3. Select the **Associate Additional Jobs** button. The **Associate Master Jobs** dialog opens.
+4. *(Optional)* Enter a schedule name in the **Schedule Name** field or a job name in the **Job Name** field to narrow results.
+5. Select **Filter** to load matching jobs in the **Available Jobs** list.
+6. Select the jobs to associate.
+7. Select **Associate Jobs**.
+8. Select **Yes** to associate more jobs with the same tag, or **No** to close the dialog.
 
-**Q: Who can manage tags in OpCon?**
+**Result:** The selected jobs are associated with the tag.
 
-Users with the appropriate privileges assigned through their role can manage tags. Contact your OpCon system administrator if you do not have access.
+## Removing Job Associations from a Tag
 
-## Glossary
+To remove one or more job associations from a tag, complete the following steps:
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+1. Select **Tag Manager** under the **Management** topic in the navigation pane.
+2. Select the tag in the **Selection** list.
+3. *(Optional)* Enter text in the filter field to locate specific jobs.
+4. Select one or more jobs in the **Master Schedules/Jobs using this Tag** list.
+5. Select the **Remove Job Association(s)** button.
+6. Select **Yes** to confirm.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** The selected jobs are disassociated from the tag. The tag itself is not deleted.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+:::note
+You can also right-click a job in the list and select **Remove Job Association(s)** from the context menu.
+:::

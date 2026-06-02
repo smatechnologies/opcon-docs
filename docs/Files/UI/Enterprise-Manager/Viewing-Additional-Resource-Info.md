@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Resource Information
-description: "Use this procedure to view Additional Resource Information in Enterprise Manager."
+description: "View cross-reference dependencies and audit records for a resource in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,32 +10,37 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Additional Resource Information
+# Viewing Additional Resource Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to view cross-reference dependencies and audit records for a resource in Enterprise Manager.
 
-## What Is It?
+## View cross-references for a resource
 
-Use this procedure to view Additional Resource Information in Enterprise Manager.
+The **Cross Reference** button shows every Master and Daily job that depends on or updates the selected resource.
 
-To view additional information, complete the following steps:
+To view cross-references for a resource, complete the following steps:
 
-1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
-2.  Select the **resource** in the **Select Resource** list
-3.  Select the ![Cross Reference icon](../../../Resources/Images/EM/EMcrossref.png "Cross Reference icon") **Cross Reference** button on the toolbar to refer to a list of Master resource dependencies and updates
-4.  Select **OK**
-5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the resource
-6.  Select **Close**
-:::
+1. In Enterprise Manager, go to **Administration** > **Resources**. The **Resources** screen displays.
+2. In the **Select Resource** list, select the resource you want to inspect.
+3. Select the **Cross Reference** button on the toolbar. A dialog lists the Master resource dependencies, Master resource updates, Daily resource dependencies, and Daily resource updates associated with the resource.
+4. Select **OK** to close the dialog.
 
-## Glossary
+**Result:** The cross-reference dialog closes and you return to the **Resources** screen.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+## View audit records for a resource
 
-**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
+The **View Audit** button shows the complete audit history of changes made to the selected resource.
+
+To view audit records for a resource, complete the following steps:
+
+1. In Enterprise Manager, go to **Administration** > **Resources**. The **Resources** screen displays.
+2. In the **Select Resource** list, select the resource you want to inspect.
+3. Select the **View Audit** button on the toolbar. The audit record dialog opens and displays a history of all changes made to the resource, including timestamps and the user or application that made each change.
+4. Select **Close** to close the dialog.
+
+**Result:** The audit dialog closes and you return to the **Resources** screen.

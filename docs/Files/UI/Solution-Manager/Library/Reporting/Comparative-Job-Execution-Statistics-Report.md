@@ -1,6 +1,6 @@
-﻿---
+---
 title: Comparative Job Execution Statistics Report
-description: "The Comparative Job Execution Statistics Report displays job runtime analytics including average runtime, standard deviation, estimated runtime, and variance analysis."
+description: "The Comparative Job Execution Statistics Report displays per-job runtime analytics — including run count, estimated runtime, average runtime, standard deviation, and the difference between average and estimated runtime — drawn from historical job execution data."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,51 +15,47 @@ doc_type: conceptual
 
 # Comparative Job Execution Statistics Report
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Comparative Job Execution Statistics Report** displays job runtime analytics including average runtime, standard deviation, estimated runtime, and variance analysis.
+The **Comparative Job Execution Statistics Report** shows runtime analytics for every job in the OpCon history, grouped by schedule, job, and frequency. Use this report to compare a job's estimated runtime against its actual average runtime and identify jobs whose estimates are significantly off.
 
 :::note
-This report has a maximum return limit of 100,000 records.
+This report returns a maximum of 100,000 records.
 :::
 
 ![A screen showing the Comparative Job Execution Statistics Report](../../../../../Resources/Images/SM/Library/Reporting/ComparativeJobExecutionStatisticsReport.png "Comparative Job Execution Statistics Report")
 
-### Filtering & Sorting
+## Access requirements
 
-This report provides filters for schedule, job, frequency, count, runtime (estimated), runtime (average), runtime (standard deviation), and difference (average - estimated). Open the filters panel by selecting the menu (three dots) in any column header and choosing **Filter**.
+To view this report, your user account must meet one of the following conditions:
+
+- Assigned the **ocadm** (administrator) role, or
+- Granted all function privileges, or
+- Granted all administrative privileges and the **View Reports** privilege.
+
+## Report columns
+
+The report displays the following columns for each job grouped by schedule and frequency.
+
+| Column | Description |
+|---|---|
+| **Schedule** | Name of the schedule that contains the job. |
+| **Job** | Name of the job. |
+| **Frequency** | Name of the frequency under which the job ran. |
+| **Count** | Number of times the job has run under this frequency. |
+| **Runtime (estimated)** | Estimated runtime (in minutes) configured for the job. |
+| **Runtime (average)** | Average actual runtime (in minutes) across all recorded runs. |
+| **Runtime (standard deviation)** | Standard deviation of the actual runtime across all recorded runs. A value of 0 indicates only one run exists. |
+| **Difference (average - estimated)** | Difference between the average actual runtime and the estimated runtime. A positive value means the job runs longer than estimated; a negative value means it runs shorter. |
+
+Results are sorted by **Schedule** ascending, then **Job** ascending, then **Frequency** ascending by default.
+
+## Filtering and sorting
+
+You can filter and sort any column in the report. To open the filter options for a column, select the menu button (three dots) in that column header, then select **Filter**.
 
 ![A screen showing how to open the column menu](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
 
-### Exporting to CSV
+You can filter on both text columns (Schedule, Job, Frequency) and numeric columns (Count, Runtime (estimated), Runtime (average), Runtime (standard deviation), Difference (average - estimated)). Multiple filters combine with AND logic by default.
 
-Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
+## Exporting to CSV
 
-## FAQs
-
-**Q: What does Comparative Job Execution Statistics Report do?**
-
-The **Comparative Job Execution Statistics Report** displays job runtime analytics including average runtime, standard deviation, estimated runtime, and variance analysis.
-
-**Q: Where can you find Comparative Job Execution Statistics Report in OpCon?**
-
-Access Comparative Job Execution Statistics Report in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report data as a CSV file. The export applies any active filters and includes up to 100,000 records. The CSV columns follow this order by default: Schedule, Job, Frequency, Count, Runtime (estimated), Runtime (average), Runtime (standard deviation), Difference (average - estimated).

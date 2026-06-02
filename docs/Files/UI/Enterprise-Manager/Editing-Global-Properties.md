@@ -2,51 +2,41 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Global Properties
-description: "Use this procedure to edit Global Properties in Enterprise Manager."
+description: "Use this procedure to edit an existing Global Property in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Editing Global Properties
+# Editing Global Properties
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Global Property is a named value stored in the OpCon database. Job definitions and events reference a property using the `[[PropertyName]]` syntax to pass dynamic values — such as file paths, dates, or counters — into automation workflows. Use this procedure to update the name, value, documentation, or encryption setting of an existing Global Property in Enterprise Manager.
 
-## What Is It?
+## Edit a Global Property
 
-Use this procedure to edit Global Properties in Enterprise Manager.
+To edit a Global Property, complete the following steps:
 
-To edit a global property, complete the following steps:
+1. Under the **Administration** topic, select **Global Properties**. The **Global Properties** screen opens.
+2. In the **Select Global Property** list, select the property you want to edit.
+3. Update one or more of the following fields:
+   - **Name** — The property name (up to 64 characters).
+   - **Documentation** — Optional notes describing the property's purpose (up to 4,000 characters).
+   - **Encrypted** — Select this option to mask the value. Once encrypted, this option cannot be cleared.
+   - **Value** — The property value (up to 4,000 characters). If **Encrypted** is selected, select **Reveal Value** to view the current value before editing.
+4. On the **Global Properties** toolbar, select **Save**.
+5. Select **Close ☒** to the right of the **Global Properties** tab to close the screen.
 
-1.  Select **Global Properties** under the **Administration** topic
-2.  Select an existing **global property** in the **Select Global
-    Property** list.
-3.  Enter the *changes*
-4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save**
-    on the **Global Properties** toolbar.
-5.  Select **Close ☒** (to the right of the **Global Properties** tab) to
-    close the **Global Properties** screen.
+**Result:** The updated property is saved to the OpCon database. Any schedule or job that references this property will use the new value the next time the record is built or referenced.
 
-## FAQs
+## Notes
 
-**Q: Do edits to global properties take effect immediately?**
-
-Changes saved to global properties in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- Changes saved to a Global Property in the Job Master take effect the next time the record is built or referenced.
+- Edits applied directly to a Daily table record affect only that current instance of the job or schedule.
+- System-managed tokens display as read-only in the **Name** and **Documentation** fields; only the **Value** field remains editable for those properties.

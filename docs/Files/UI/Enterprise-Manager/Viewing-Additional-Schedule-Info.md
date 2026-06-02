@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Schedule Information
-description: "Use this procedure to view Additional Schedule Information in Enterprise Manager."
+description: "Use this procedure to view cross references, audit records, and run history for a schedule in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,38 +10,38 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Additional Schedule Information
+# Viewing Additional Schedule Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager provides three toolbar actions on Schedule Master that let you inspect a schedule's cross references, audit history, and run history without leaving the editor.
 
-## What Is It?
+## View cross references for a schedule
 
-Use this procedure to view Additional Schedule Information in Enterprise Manager.
+To view the jobs that cross-reference a schedule, complete the following steps:
 
-To view additional information, complete the following steps:
+1. Under the **Administration** topic, select **Schedule Master**. The **Schedule Master** screen displays.
+2. In the **Schedule Selection** list, select the schedule you want to inspect.
+3. On the toolbar, select the **Cross References** button. The **Cross References** dialog opens and lists all jobs on the schedule that are referenced elsewhere.
+4. Select **OK** to close the dialog.
 
-1.  Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2.  Select the **schedule** in the **Schedule Selection** list
-3.  Select the ![Merge icon](../../../Resources/Images/EM/EMcrossref.png "Merge icon") **Cross Reference** button on the toolbar to refer to a list of jobs on the schedule
-4.  Select **OK**
-5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the schedule
-6.  Select **Close**
-7.  Select the ![View Schedule History icon](../../../Resources/Images/EM/EMviewhist.png "View Schedule History icon") **View Schedule History** button to view execution history for the schedule
-8.  Select **Close**
-:::
+## View audit records for a schedule
 
-## Glossary
+To view the audit history for a schedule, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+1. Under the **Administration** topic, select **Schedule Master**. The **Schedule Master** screen displays.
+2. In the **Schedule Selection** list, select the schedule you want to inspect.
+3. On the toolbar, select the **View Audit** button. The **View Audit** dialog opens and displays all recorded changes to the schedule, including the timestamp, user, and before/after values for each change.
+4. Select **Close** to close the dialog.
 
-**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
+## View run history for a schedule
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+To view the run history for a schedule, complete the following steps:
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+1. Under the **Administration** topic, select **Schedule Master**. The **Schedule Master** screen displays.
+2. In the **Schedule Selection** list, select the schedule you want to inspect.
+3. On the toolbar, select the **View Schedule History** button. The **View Schedule History** dialog opens and displays the run history for the schedule.
+4. Select **Close** to close the dialog.

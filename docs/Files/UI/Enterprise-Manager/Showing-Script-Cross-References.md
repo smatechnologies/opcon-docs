@@ -2,42 +2,35 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Showing Script Cross References
-description: "You can view which jobs use specific scripts."
+description: "View which jobs reference a specific script in the Script Repository."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Showing Script Cross References
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the **Cross References** feature in the Script Repository to identify which Master and Daily jobs reference a specific embedded script.
 
-## What Is It?
+To view the cross references for a script, complete the following steps:
 
-You can view which jobs use specific scripts.
+1. In Enterprise Manager, select **Repository** under the **Scripts** topic. The **Script Repository** screen opens.
+2. Select a script in the list.
+3. Select the **Cross References** button on the toolbar. The **Cross Reference Details** dialog opens.
 
-To show the cross references, complete the following steps:
+   :::note
+   If no jobs reference the selected script, an information message appears instead of the dialog.
+   :::
 
-1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
-2. Select a script in the list
-3. Select the **Cross References** button on the toolbar. The **Cross References Details** dialog displays
-4. Toggle between tabs to view cross-referenced Master or Daily jobs for the selected script
-5. Select **OK** to close the dialog
-6. Select **Close ☒** to close the **Script Repository** screen
-:::
+4. Select the **Master Jobs** tab or the **Daily Jobs** tab to view jobs that reference the script.
+5. Select **OK** to close the dialog.
+6. Select **Close** to close the **Script Repository** screen.
 
-## Glossary
-
-**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** You have identified which Master and Daily jobs reference the selected script.

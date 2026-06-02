@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Calendars
-description: "Use this procedure to edit Calendars in Solution Manager."
+description: "Use this procedure to edit an existing calendar in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,29 +17,24 @@ doc_type: procedural
 
 # Editing Calendars
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A calendar is a named collection of dates that schedules and frequencies use to determine when automation runs or is excluded. You can update the name, description, year view, or selected dates for any existing calendar in the **Library** section of Solution Manager.
 
-## What Is It?
+## Edit a Calendar
 
-Use this procedure to edit Calendars in Solution Manager.
+To edit an existing calendar, complete the following steps:
 
-To edit a calendar, complete the following steps:
+1. In Solution Manager, go to **Library** > **Calendars**.
+2. Select the calendar you want to edit, then select **Edit**. The **Calendar** dialog opens.
+3. Update any of the following fields as needed:
+   - **Name** — Required. The unique identifier for the calendar.
+   - **Description** — Optional. A brief description of the calendar's purpose.
+   - **Year** — The year displayed in the date picker. Change the year to add or remove dates in a different year.
+   - **Dates** — Select individual dates to include in the calendar. To remove all selected dates, select **Clear**.
+4. Select **Save** to apply your changes, or **Cancel** to discard them.
 
-1. Select the **Edit** button. The **Calendar** dialog displays
-2. Make the desired changes. To remove all dates, select **Clear**
-3. Select **Save** to save changes or **Cancel** to discard
+**Result:** The calendar is updated and available for use by schedules and frequencies.
 
-## FAQs
+## Considerations
 
-**Q: Do edits to calendars take effect immediately?**
-
-Changes saved to calendars in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
-
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- Changes saved to a master calendar take effect the next time a schedule record that references it is built or rebuilt.
+- Selecting **Clear** removes all dates from the calendar for the currently displayed year. Dates in other years are not affected.

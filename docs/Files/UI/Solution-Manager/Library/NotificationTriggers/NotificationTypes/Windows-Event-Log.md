@@ -1,66 +1,41 @@
-﻿---
+---
 title: Windows Event Log
-description: "!Windows Event Log The Windows Event Log dialog provides the following fields for defining a Windows Event Log notification: - Event ID (Optional): A user-defined ID usable as search criteria in."
+description: "Configure a Windows Event Log notification to write entries to the Windows Application log when Machine, Schedule, or Job status changes occur in OpCon."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # Windows Event Log
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Windows Event Log** notification type writes an entry to the Windows Application event log when a Machine, Schedule, or Job status change triggers a notification. Any third-party monitoring product that reads the Windows Application log can then send its own alerts based on these entries.
 
-## What Is It?
+![Windows Event Log dialog](../../../../../../Resources/Images/SM/Library/NotificationTriggers/windows-event-log-dialog.png "Windows Event Log")
 
-![Windows Event Log](../../../../../../Resources/Images/SM/Library/NotificationTriggers/windows-event-log-dialog.png "Windows Event Log")
+## Fields
 
-The **Windows Event Log** dialog provides the following fields for defining a Windows Event Log notification:
+| Field | Required | Description |
+|---|---|---|
+| **Event ID** | Optional | A user-defined identifier usable as search criteria in third-party notification filters. Maximum 64 characters. Disallowed characters: `~ # % ! @ $ ^`. SMA Notify Handler prefixes the value in the written message as `EventID= XXXXXX`. |
+| **Severity** | Required | The severity level written to the event log. Options: **Information**, **Warning**, or **Error**. |
+| **Custom Event Source** | Optional | Enables the **Event Source** field. When set, SMA Notify Handler prepends `OPCON:` to the value and uses it as the Source ID in the Windows event log entry. Maximum 64 characters. Allowed characters: `a-Z`, `0-9`, `-`, `_`, space, `,`, `.`, `=`, `(`, `)`. When not set, the source defaults to `OPCON_ENS`. |
+| **Message** | Required | A user-defined message up to 3,000 characters. OpCon also prepends default trigger information to the message — including Event ID, trigger type, and the triggering status change event. |
 
-- **Event ID** (Optional): A user-defined ID usable as search criteria in third-party notification filters. Maximum 64 characters
-  - SMA Notify Handler formats this as: `EventID= XXXXXX`
-  - Disallowed characters: ~ \# % ! @ $ ^
-- **Severity**: Message severity level. Choices: Information, Warning, or Error
-- **Custom Event Source** (Optional): Enables the **Event Source** field, which defines a custom Source ID for OpCon when writing to the Windows Event Log. Maximum 64 characters
-  - SMA Notify Handler prefixes the value with `OPCON:` to prevent conflicts
-  - Allowed characters: a-Z, 0-9, - \_ space , . = ( )
-- **Message**: User-defined message up to 3,000 characters. Also includes default trigger information: Event ID, trigger type, and triggering status change event
+## Behavior
 
-When the message appears in the Windows Event Log, any notification product that reads this log can send notifications.
+- SMA Notify Handler writes the entry to the **Application** log on the OpCon server.
+- When **Custom Event Source** is not set, the entry is written under the source `OPCON_ENS`.
+- When **Custom Event Source** is set, SMA Notify Handler registers a new source (if it does not already exist) formatted as `OPCON:<your value>` before writing the entry.
+- Windows Event Log notifications are only supported when the OpCon server is running on Windows. Notifications attempted on non-Windows platforms are logged as invalid and not written.
 
-## Configuration Options
+## Related topics
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Severity | Message severity level. | trigger information: Event ID | Maximum 64 characters.   - SMA Notify Handler prefixes the v |
-| Message | User-defined message up to 3,000 characters. | trigger information: Event ID | up to 3,000 characters. Also includes default trigger inf |
-## FAQs
-
-**Q: What does Windows Event Log do?**
-
-The **Windows Event Log** dialog provides the following fields for defining a Windows Event Log notification:
-
-**Q: Where can you find Windows Event Log in OpCon?**
-
-Access Windows Event Log in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Notification Triggers Overview](./Notification-Types-Overview.md)
+- [Look Up Notification Sources](./Look-up-Notification-Sources.md)

@@ -1,6 +1,6 @@
 ---
 title: Setting the Language
-description: "The EM detects your local language and defaults to English if that language is unavailable."
+description: "Enterprise Manager detects your local language and defaults to English if that language is unavailable. You can override the language by adding the --nl parameter to the Enterprise Manager executable or to the EnterpriseManager.ini file."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,59 +8,51 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Setting the Language
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager detects your local language and defaults to English if that language is unavailable. You can set the language by adding a `--nl` parameter with the Locale ID either to the Enterprise Manager executable or to the **EnterpriseManager.ini** file.
 
-## What Is It?
-
-The EM detects your local language and defaults to English if that language is unavailable. You can set the language by adding a `--nl` parameter with the Locale ID either to Enterprise Manager executable or to the **EnterpriseManager.ini** file.
-
-## Adding a Parameter on the Executable
-
-To set the language, complete the following steps:
-
-1. Right-click the **Enterprise Manager** shortcut and select **Properties**
-2. On the **Shortcut** tab, find the **Target** text box
-3. Add the language parameter after **EnterpriseManager.exe**. Alternatively, create a .bat file and add the parameter there
-
-## Updating the Configuration File
-
-To set the language, complete the following steps:
-
-1. Browse to Enterprise Manager directory
-2. Open **EnterpriseManager.ini** with WordPad
-3. Insert a line before the `--startup` line with the required language parameter
-4. Save and close the file, then restart Enterprise Manager executable
+## Supported Languages
 
 | Language | Locale ID |
-|--- |--- |
-| Chinese (Simplified) | zh |
-| Chinese (Traditional) | zh-TW |
-| Dutch (Nederland) | nl |
-| English | en |
-| French | fr |
-| German | de |
-| Italian | it |
-| Japanese | ja |
-| Korean | ko |
-| Portuguese (Brazil) | pt |
-| Spanish | es |
+|---|---|
+| Chinese (Simplified) | `zh` |
+| Chinese (Traditional) | `zh-TW` |
+| Dutch (Nederland) | `nl` |
+| English | `en` |
+| French | `fr` |
+| German | `de` |
+| Italian | `it` |
+| Japanese | `ja` |
+| Korean | `ko` |
+| Portuguese (Brazil) | `pt` |
+| Spanish | `es` |
 
-## FAQs
+## Add the Parameter to the Executable
 
-**Q: What does Setting the Language cover?**
+To set the language using the executable shortcut, complete the following steps:
 
-This page covers Adding a Parameter on the Executable, Updating the Configuration File.
+1. Right-click the **Enterprise Manager** shortcut and select **Properties**.
+2. Select the **Shortcut** tab and locate the **Target** field.
+3. Add the language parameter after `EnterpriseManager.exe`. For example: `EnterpriseManager.exe --nl de`.
 
-## Glossary
+   Alternatively, create a `.bat` file and add the parameter there.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Result:** Enterprise Manager starts in the specified language the next time you open it.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+## Update the Configuration File
+
+To set the language using the configuration file, complete the following steps:
+
+1. Go to the Enterprise Manager installation directory.
+2. Open **EnterpriseManager.ini** with WordPad or a text editor.
+3. Insert a new line before the `--startup` line with the required language parameter. For example: `--nl de`.
+4. Save and close the file.
+5. Restart Enterprise Manager.
+
+**Result:** Enterprise Manager starts in the specified language on the next restart.
