@@ -182,7 +182,7 @@ Release 26.1.0 focuses on relay management and high availability, reporting reli
 
 :white_check_mark: **OC-6348: SNMP Trap Test Button Fix** Fixed an issue where the SNMP Trap test button was not triggering the test action in the SNMP Trap notification dialog.
 
-:white_check_mark: **OC-6136: Self-Service Execution History Overflow Fix** Fixed an overflow issue on the self-service service request execution history page.
+:white_check_mark: **OC-6136: Self-Service running History Overflow Fix** Fixed an overflow issue on the self-service service request running history page.
 
 :white_check_mark: **OC-6694: Chatbot Upgrade** Upgraded chatbot functionality — improves security and increases model handler support.
 
@@ -529,7 +529,7 @@ Release 26.0.1 focuses on better visibility, stronger reliability, and a more un
 
 :white_check_mark: **OC-3284**: Improved error messaging in the Batch Users API for cases where the platform or platform ID is null in POST and PUT requests.
 
-:white_check_mark: **OC-3366**: Fixed an issue where SQL database scripts included an extra character on the GO line, which could cause execution errors during deployment.
+:white_check_mark: **OC-3366**: Fixed an issue where SQL database scripts included an extra character on the GO line, which could cause running errors during deployment.
 
 :white_check_mark: **OC-3620**: Fixed an issue in Schedule Build, where a schedule is selected after selecting the date and other build options, the selections shown in the UI are ignored and it attempts to build the schedule for the current date.
 
@@ -619,7 +619,7 @@ Release 26.0.1 focuses on better visibility, stronger reliability, and a more un
 
 :white_check_mark: **OC-59**: Fixed an issue where renaming a group in Notification Triggers was experiencing the cursor jumping to end of name after typing one character.
 
-:white_check_mark: **OC-161**: Fixed an issue where French translations were not applied on the Execution History view for Daily Jobs.
+:white_check_mark: **OC-161**: Fixed an issue where French translations were not applied on the running History view for Daily Jobs.
 
 :white_check_mark: **OC-165**: Fixed an issue where the User Input Caption value was cleared when changing the User Input Type when configuring User Inputs for a Service Request.
 

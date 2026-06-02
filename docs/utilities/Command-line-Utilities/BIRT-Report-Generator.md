@@ -32,7 +32,7 @@ The Report Generator schedule should have been imported during installation with
 
 - **BIRTRptgen.exe**: The BIRT Report Generator program
 - **-r** <report\>: **Required.** File name for the report; no extension needed
-- **-j\[\[$JOBID\]\]**: Unique internal job number for the job. Define this to see the output location and file name in "Additional Job Information" for any Operations Job Information view. Use `[[$JOBID]]` to accurately retrieve the unique internal job number on each execution
+- **-j\[\[$JOBID\]\]**: Unique internal job number for the job. Define this to see the output location and file name in "Additional Job Information" for any Operations Job Information view. Use `[[$JOBID]]` to accurately retrieve the unique internal job number on each running
 - **-t** <file type\>: Output format. Optional; default is PDF. Valid options: PDF, HTML, XLS
 
     :::note

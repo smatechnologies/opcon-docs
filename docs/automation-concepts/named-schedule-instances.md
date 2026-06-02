@@ -28,7 +28,7 @@ Predefined properties can be associated with a named instance of a schedule. Ref
 
 ## Exception Management
 
-Exception management associates exception definitions with named instances by applying execution rules to job patterns. The exceptions are applied during the schedule build.
+Exception management associates exception definitions with named instances by applying running rules to job patterns. The exceptions are applied during the schedule build.
 
 :::note
 If only the asterisk wildcard character (\*) is specified in the job pattern field, the exceptions apply to all jobs.

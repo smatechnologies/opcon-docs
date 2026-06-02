@@ -65,7 +65,7 @@ Do not run SMA_JOBAVG independently if SAM is configured to calculate Job Averag
 
 #### Modifying the Command File
 
-By default, SMA_JOBAVG averages the last 10 executions of all schedules and jobs, doubling the weight of the last execution. Modify the command file to change these defaults.
+By default, SMA_JOBAVG averages the last 10 executions of all schedules and jobs, doubling the weight of the last running. Modify the command file to change these defaults.
 
 ##### Syntax
 

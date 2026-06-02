@@ -29,7 +29,7 @@ platform.
     Started Task, Command, REXX, Tracked, and Queued. The default is a
     standard Batch Job (submitted from a standard JCL library and
     run in a JES initiator). Each job type has a different
-    execution profile and method of resolving security and access
+    running profile and method of resolving security and access
     permissions.
 
 ## Job Fields
@@ -129,7 +129,7 @@ Task Control.
 - **Started Task Name**: This is the name of the started task defined
     in a system procedure library. The Name must be defined (as normal
     with any started task) to the SAF security product.
-- **Execution Parms**: The parms will be appended to the started task
+- **running Parms**: The parms will be appended to the started task
     name, after a comma, to complete the start command (e.g.,
     TYPE=WARM). It may contain any properties allowed in a Stared Task
     EXEC parameter.
@@ -156,7 +156,7 @@ Task Control.
 ### Command Control Fields
 
 The *Command Control Fields* are required when *Console Command
-Execution* is defined for the *Event Type*. Console Commands can be
+running* is defined for the *Event Type*. Console Commands can be
 scheduled to run on the machine defined in the Primary Machine ID
 entry. Console Command Executions are the only events that have no
 completion or exit codes available. Each command scheduled is run
@@ -188,7 +188,7 @@ file, and runs the program from the designated DD. The following
 information applies to defining REXX Control:
 
 - **Exec Name**: The Exec name is taken from the job name
-- **Execution Parms**: Defines any input parameters required for the
+- **running Parms**: Defines any input parameters required for the
     REXX procedure.
 - **Submit DDName**: Defines the DD Name in the OPCONxx PROC that
     points to the library containing the REXX program. The default is
@@ -285,7 +285,7 @@ Job Controls*:
 ## Step Control
 
 Step Control allows the definition of up to 80 step condition codes or
-step condition code ranges. Special schedule or execution handling can
+step condition code ranges. Special schedule or running handling can
 be defined depending on the condition code at step completion, or step
 control definitions can be used to override Job Minimum and Maximum
 condition codes. Only the first matching Step Control definition will be
@@ -793,7 +793,7 @@ Tasks, Dynamic REXX, Operator Command, Tracked Job, and Queued Job.
 
   Function        Description
   --------------- -----------------------------------------------------------------------------------------
-  Execution       JES initiated batch from JCL.
+  running       JES initiated batch from JCL.
   Security        Assigned by normal rules during job submission. Not under agent control.   Event Control   Provided by JCL submitted from a source external to the agent.
 
   : Supported Scheduled Events: Tracked Jobs

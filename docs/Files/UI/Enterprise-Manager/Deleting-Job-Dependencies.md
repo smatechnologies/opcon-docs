@@ -5,6 +5,7 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
+doc_type: procedural
   - Jobs
 ---
 

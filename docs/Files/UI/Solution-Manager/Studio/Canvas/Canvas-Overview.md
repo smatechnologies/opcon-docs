@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Canvas Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who use the Studio canvas to design and visualize workflows
 
 ## What Is It?

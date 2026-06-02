@@ -31,7 +31,7 @@ To delete one or more Vision Actions, complete the following steps:
 
 1. In Solution Manager, go to **Vision Settings**.
 2. Select **Actions** to open the Actions list.
-3. Select the checkbox next to each Vision Action you want to delete. You can select multiple actions.
+3. Select the option next to each Vision Action you want to delete. You can select multiple actions.
 4. Select **Delete**.
 5. In the confirmation dialog, select **OK**.
 

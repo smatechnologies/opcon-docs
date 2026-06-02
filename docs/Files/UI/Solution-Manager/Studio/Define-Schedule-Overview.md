@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Define Schedule Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who create and manage master schedule definitions in Studio
 
 ## What Is It?

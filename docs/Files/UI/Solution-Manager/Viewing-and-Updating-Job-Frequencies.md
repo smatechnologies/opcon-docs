@@ -123,7 +123,7 @@ The **Latest Offset** section defines the latest allowable start time for the jo
 | Field | Description |
 |---|---|
 | **Format** | Determines how the latest start offset is calculated. Select **Absolute** to calculate from the schedule's assigned start time. Select **Relative** to calculate from the time the schedule was released to run. |
-| **Latest Start Offset** | Positive hours and minutes that define the latest time the job may start. If this time passes before the job qualifies for execution, the job is set to **Missed Latest Start Time** status and will not run automatically. A value of `00:00` disables this feature. Range: 1–5999 minutes. |
+| **Latest Start Offset** | Positive hours and minutes that define the latest time the job may start. If this time passes before the job qualifies for running, the job is set to **Missed Latest Start Time** status and will not run automatically. A value of `00:00` disables this feature. Range: 1–5999 minutes. |
 
 ### Job Start Time Estimation Method
 

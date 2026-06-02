@@ -227,7 +227,7 @@ Access to PERT View is controlled by the privileges assigned to your OpCon role.
 
 **Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for running. Changes to daily tables affect only the current day's automation.
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

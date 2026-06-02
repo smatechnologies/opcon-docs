@@ -96,7 +96,7 @@ If the override DD name begins with `TEMP` and the Override Member name is blank
 Started Task events require no batch JES initiator. Jobs such as CICS or IMS regions are common uses of this event type. Like Batch Jobs, these events are tracked at the step level.
 
 - **Started Task Name:** Name of the started task defined in a system procedure library. Must be defined to the SAF security product.
-- **Execution Parms:** Appended to the started task name after a comma to complete the start command (e.g., `TYPE=WARM`). May contain any properties allowed in a Started Task EXEC parameter.
+- **running Parms:** Appended to the started task name after a comma to complete the start command (e.g., `TYPE=WARM`). May contain any properties allowed in a Started Task EXEC parameter.
 
 ### Command
 
@@ -114,7 +114,7 @@ The z/OS agent has no method for verifying whether a command is correct or achie
 REXX procedures require no JCL and can be used for a variety of automation interfaces. The REXX Event functions like a Console Command. The z/OS agent dynamically allocates a print file and runs the program from the designated DD.
 
 - **Exec Name:** Taken from the job name.
-- **Execution Parms:** Input parameters required for the REXX procedure.
+- **running Parms:** Input parameters required for the REXX procedure.
 - **Submit DDName:** DD Name in the OPCONxx PROC pointing to the library containing the REXX program. Defaults to SYSEXEC.
   - Maximum 8 characters; may contain letters, numbers, and @#$; first character cannot be a number.
 
@@ -304,7 +304,7 @@ OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | JES initiated batch from JCL in a specific library already defined (by DDName) to the agent. |
+| running | JES initiated batch from JCL in a specific library already defined (by DDName) to the agent. |
 | Security  | <ul><li>Security ID from the SAM schedule record is inserted or replaces USER= on the Job Card.</li><li>If no Security ID is defined, USER= on the Job Card remains.</li><li>If no USER= can be built or found, the default USERID from XPSPRMxx is inserted as USER=.</li><li>If USERID=NONE is set in XPSPRMxx and no USER= can be built or found, the USER= keyword is omitted, giving the job the SAF authority of the agent.</li></ul> |
 | Event Control | <ul><li>Provided by JCL statements in a member of a predefined JCL library allocated to the agent task. No practical limit on libraries or DDNAMEs.</li><li>If no DDNAME is defined on the SAM schedule record, the default JCLDD= from XPSPRMxx is used (XPSJCL is the installation default).</li></ul> |
 
@@ -314,7 +314,7 @@ OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | Agent-initiated address space requiring a JCL Proc. |
+| running | Agent-initiated address space requiring a JCL Proc. |
 | Security | Single level: Proc Member Name and its access authority must be defined to the SAF product. |
 | Event Control | Provided by JCL statements in a predefined member in the system PROCLIB concatenation and PARMS passed to Proc. |
 
@@ -324,7 +324,7 @@ OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | Agent-initiated address space. |
+| running | Agent-initiated address space. |
 | Security | Single level: REXX Exec Name and its access authority must be defined to the SAF product. The userid is assigned by STARTED class resource `jobname.jobname`. |
 | Event Control | Provided by dynamic allocation of SYSEXEC, SYSTSPRT, SYSTSIN, and PARMS passed to REXX Routine. |
 
@@ -334,7 +334,7 @@ OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | Agent-initiated address space via IEESYSAS. |
+| running | Agent-initiated address space via IEESYSAS. |
 | Security | Single level: Command authority must be defined to the SAF product for STARTED class resource `jobname.jobname`. |
 | Event Control | None |
 
@@ -344,7 +344,7 @@ OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | JES initiated batch from JCL. |
+| running | JES initiated batch from JCL. |
 | Security | Assigned by normal rules during job submission. Not under agent control. |
 | Event Control | Provided by JCL submitted from a source external to the agent. |
 
@@ -354,14 +354,14 @@ OpCon supports several scheduled event types for z/OS: Batch Jobs, Started Tasks
 
 | Function  | Description|
 | --------- | ---------- |
-| Execution | JES initiated batch from JCL submitted on hold and released by the agent when all scheduled requirements are met. |
+| running | JES initiated batch from JCL submitted on hold and released by the agent when all scheduled requirements are met. |
 | Security | Assigned by normal rules during job submission. Not under agent control. |
 | Event Control | Provided by JCL submitted from a source external to the agent. |
 
-#### REXX Execution in OpCon
+#### REXX running in OpCon
 
 **REXX as a Batch Job**
-This method is transparent to OpCon. Use Batch TSO or the REXX batch utility (IRXJCL). JCL for execution is contained in a JCL member like any production Batch Job. Parameters are hard-coded in the EXEC statement PARM= keyword. Security is provided by the USERID= keyword on the job card. Parms may be altered via OpCon `@`.
+This method is transparent to OpCon. Use Batch TSO or the REXX batch utility (IRXJCL). JCL for running is contained in a JCL member like any production Batch Job. Parameters are hard-coded in the EXEC statement PARM= keyword. Security is provided by the USERID= keyword on the job card. Parms may be altered via OpCon `@`.
 
 **REXX as a Started Task**
 For long-running routines that provide control interfaces or monitoring, a started task (STC) is preferable to a batch job. An STC does not tie up a JES initiator, is more isolated from performance problems, and can remain active with minimal resource consumption. Running REXX as an STC is transparent to OpCon. Use TSO Batch or IRXJCL. Run parameters can be coded in the SAM schedule record "Params" field. Security is provided by the Proc name.
@@ -384,7 +384,7 @@ A Dynamic REXX routine can be defined to run before a Batch Job or other event. 
 Within the z/OS agent, externally submitted events can be trapped and tracked using three approaches:
 
 1. Define a single job name "mask" always trapped by the z/OS agent.
-2. Define one to eight single-character JES execution classes to monitor and trap for tracking.
+2. Define one to eight single-character JES running classes to monitor and trap for tracking.
 3. Insert a tracking indicator (`T` or `Q`) as the continuation character of the first Job card.
 
 :::note
@@ -473,7 +473,7 @@ The trigger is deleted as soon as it fires. Only events within the scheduled tim
 
 | Prerun Message | Meaning | Job Status |
 | -------------- | ------- | ---------- |
-| Awaiting Execution | On JES2 Input Queue, JES3 CI, or awaiting MAIN | Runs as soon as JES assigns an available initiator. |
+| Awaiting running | On JES2 Input Queue, JES3 CI, or awaiting MAIN | Runs as soon as JES assigns an available initiator. |
 | SSSS Not in SYSPLEX | System ID SSSS is not available to the OpCon agent | Job is resubmitted when system SSSS returns or is adopted by another system. |
 
 #### Defining File Resource (DSN) Triggers
@@ -521,7 +521,7 @@ All pre-runs are tested at a user-defined interval once all other schedule depen
 
 #### Restart
 
-An MVS job controlled by JCL may contain multiple steps. An error in a late step may not require re-execution of earlier steps. IBM provides a RESTART keyword on the JOB card to designate a starting step.
+An MVS job controlled by JCL may contain multiple steps. An error in a late step may not require re-running of earlier steps. IBM provides a RESTART keyword on the JOB card to designate a starting step.
 
 **Restart Solutions in OpCon**
 

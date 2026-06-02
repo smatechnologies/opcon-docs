@@ -32,7 +32,7 @@ Other job details are attached to a defined frequency, which provides the flexib
 - [Latest Start Offset](#latest-start-offset)
 - [Late-To-Start / Late-To-Finish](#late-to-start--late-to-finish)
 - [Start Time Estimation](#start-time-estimation)
-- [Job Execution](#job-execution)
+- [Job Execution](#job-running)
 - [Retry on Failure](#retry-on-failure)
 - [Job Recurrence](#job-recurrence)
 

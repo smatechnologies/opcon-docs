@@ -12,6 +12,8 @@ last_updated: 2026-03-18
 doc_type: reference
 ---
 
+# Job Types Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who need to configure platform-specific job settings
 
 ## What Is It?

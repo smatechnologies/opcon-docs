@@ -12,6 +12,8 @@ tags:
 last_updated: 2026-03-18
 doc_type: reference
 ---
+# Notification Types Overview
+
 
 Each notification trigger can deliver alerts through one or more delivery channels. OpCon supports eight notification types: Email, Text Message, OpCon Event, Windows Event Log, Network Message, SNMP Trap, Run Command, and SPO Event. Each type has distinct configuration fields and character limits.
 
@@ -21,7 +23,7 @@ Each notification trigger can deliver alerts through one or more delivery channe
 |------|-------------|
 | **Email** | Sends an email notification through the configured SMTP server. Supports To, CC, and BCC recipients and optional JORS output attachment. |
 | **Text Message** | Sends an SMS message through the configured SMS gateway. The message body is limited to 160 characters. |
-| **OpCon Event** | Fires one or more OpCon events as the notification action. Each event is associated with a user account that provides the execution context. |
+| **OpCon Event** | Fires one or more OpCon events as the notification action. Each event is associated with a user account that provides the running context. |
 | **Windows Event Log** | Writes an entry to the Windows Application Event Log. Requires a severity level, an event ID (up to 64 characters), and a message (up to 3,000 characters). |
 | **Network Message** | Sends a network message to a specified recipient. The message body is limited to 895 characters. |
 | **SNMP Trap** | Sends an SNMP trap to a configured SNMP manager. Requires an event ID (up to 64 characters) and a message (up to 250 characters). |

@@ -240,9 +240,9 @@ To run the queries that repair the SQL login ID mappings, complete the following
 2. On the Standard toolbar, select the **New Query** button
 3. Select the **OpCon Database** from the list at the top of the screen
 4. Enter the query: `dbo.sp_change_users_login 'update_one','opconsam','opconsam'`
-5. Select **Execute** or press **F5**
+5. Select **run** or press **F5**
 6. Enter the query: `dbo.sp_change_users_login 'update_one' ,'opconui','opconui'`
-7. Select **Execute** or press **F5**
+7. Select **run** or press **F5**
 
 ### Deleting Stored Procedures from Last Replication Setup
 

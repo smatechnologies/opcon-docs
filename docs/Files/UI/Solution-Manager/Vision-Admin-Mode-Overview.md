@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Vision Admin Mode Overview
+
 **Theme:** Overview | **Who is it for?** Administrators who configure Vision settings, frequencies, actions, and remote instance connections
 
 ## What Is It?

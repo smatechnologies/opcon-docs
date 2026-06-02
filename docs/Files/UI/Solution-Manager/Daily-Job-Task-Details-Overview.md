@@ -1,6 +1,6 @@
 ---
 title: Daily Job Task Details Overview
-description: "Daily Job Task Details show the platform-specific execution settings for a job currently in the daily queue."
+description: "Daily Job Task Details show the platform-specific running settings for a job currently in the daily queue."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -13,11 +13,13 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Daily Job Task Details Overview
+
 **Theme:** Overview | **Who is it for?** Operations staff who review or temporarily modify platform-specific job settings in the daily queue
 
 ## What Is It?
 
-Daily Job Task Details show the platform-specific execution settings for a job currently in the daily queue. These settings reflect the master job definition at build time and can be temporarily modified for the current day's run.
+Daily Job Task Details show the platform-specific running settings for a job currently in the daily queue. These settings reflect the master job definition at build time and can be temporarily modified for the current day's run.
 
 - You need to verify what command line or script a job will run today.
 - You need to make a temporary parameter change for today's run only.

@@ -24,7 +24,7 @@ Job Task Details contain the platform-specific settings that control how a job r
 Use Job Task Details when you need to:
 
 - Set up a job for a specific platform and need to know which fields are required
-- Update a job's command line, script reference, or execution parameters
+- Update a job's command line, script reference, or running parameters
 - Troubleshoot a job failure by reviewing its task configuration
 
 ## Supported Task Detail Types
@@ -34,7 +34,7 @@ Use Job Task Details when you need to:
 | Container Job Details | Settings for jobs that run a sub-schedule |
 | File Transfer Job Details | Source, destination, and transfer options for file movement jobs |
 | IBM i Job Details | Job description, library list, and IBM i-specific parameters |
-| Null Job Details | No execution settings — Null jobs complete immediately |
+| Null Job Details | No running settings — Null jobs complete immediately |
 | SAP BW Job Details | Process chain and variant settings for SAP BW jobs |
 | OS 2200 Job Details | Run ID and ECL settings for Unisys OS 2200 jobs |
 | SAP R3/CRM Job Details | Job class, variant, and scheduling settings for SAP R3 jobs |
@@ -42,7 +42,7 @@ Use Job Task Details when you need to:
 | UNIX Job Details | Command line, shell, and environment settings for UNIX jobs |
 | Windows Job Details | Command line, working directory, and Windows-specific settings |
 | MCP Job Details | Job initiation string and MCP-specific settings |
-| z/OS Job Details | JCL and execution settings for IBM mainframe jobs |
+| z/OS Job Details | JCL and running settings for IBM mainframe jobs |
 | BIS Job Details | Run ID and Unisys BIS-specific settings |
 
 ## Glossary

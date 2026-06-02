@@ -5,6 +5,7 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
+doc_type: conceptual
   - Solution Manager
 ---
 

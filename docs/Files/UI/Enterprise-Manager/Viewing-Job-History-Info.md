@@ -34,7 +34,7 @@ To view job history information, complete the following steps:
 1. Select **PERT** under the **Operation** topic. The **PERT** screen displays.
 2. Select the **Schedule** that contains the job.
 3. Right-click the job box and select **Job**, then **Job History**. The **Job Execution History** dialog displays. For more information, refer to [Job History](Job-History.md).
-4. Select a row in the **Execution History** table, or right-click a row and select **Job History Detail**. The **Job History Detail** dialog displays for the selected record.
+4. Select a row in the **running History** table, or right-click a row and select **Job History Detail**. The **Job History Detail** dialog displays for the selected record.
 5. Review the **Field Name** and **Field Value** entries for the detail record. For more information, refer to [Job History](Job-History.md).
 6. Select **OK** to close the **Job History Detail** dialog.
 7. Right-click any row and select **View Job Output** to view the job output for the selected record.

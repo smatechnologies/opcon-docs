@@ -237,7 +237,7 @@ A Restricted Mode job does not have access to the **Messages** or **Spool Files*
 | Job Queue | **Library** | The library associated with the batch queue name. |
 | File Arrival Information | **User ID** | The IBM i user profile under which the job is submitted. |
 | File Arrival Information | **File Name** | The file path and name of the file to detect. |
-| Check File Authority | **Read** / **Write** / **Execute** | The type of object authority to verify for the named User ID. |
+| Check File Authority | **Read** / **Write** / **run** | The type of object authority to verify for the named User ID. |
 | File Arrival Information | **Check Lock on DB2 File** | Whether to verify that there are no in-use locks on any DB2 database files. |
 | File Arrival Information | **Failure Condition** | The action to take based on the job failure or success status. Options include **Fail On Error**, **Always Succeed**, **Fail On Error Except Reach End Time**, and **Fail If File Contains Zero Records or Zero Bytes**. |
 | File Creation Window — Start Time, Relative to Midnight | **Start Days** / **Start Time** | The File Arrival job does not start looking for a file until the Start Time has passed. You can use a **Token** instead. |
@@ -245,8 +245,8 @@ A Restricted Mode job does not have access to the **Messages** or **Spool Files*
 | File Size Stable Duration | **Seconds** | The amount of time the file size must remain stable to indicate the file has finished arriving. You can use a **Token** instead. |
 | Job End Time | **ReCheck Frequency** | Enables a continuous loop of checking until a matching file is found, used with the Job End Time or Create End Time. A value of zero performs a one-time check and ignores the Job End Time. |
 | Job End Time | **Days** / **Job End Time, Relative to Midnight** | The job's end time for looped file arrival checks. You can use a **Token** instead. |
-| LSAM Dynamic Variables | **File Name to Variable** | The root name of the file (including extension for IFS stream files), stored similarly to the OpCon system property `$ARRIVED FILE SHORT NAME`. |
-| LSAM Dynamic Variables | **Record Count to Variable** | The number of records (for DB2 files or tables) or data bytes (for IFS non-DB2 file systems) stored when a file is found. |
+| Agent Dynamic Variables | **File Name to Variable** | The root name of the file (including extension for IFS stream files), stored similarly to the OpCon system property `$ARRIVED FILE SHORT NAME`. |
+| Agent Dynamic Variables | **Record Count to Variable** | The number of records (for DB2 files or tables) or data bytes (for IFS non-DB2 file systems) stored when a file is found. |
 | File Arrival Information | **Failure Code to Variable** | When a variable name is provided, the IBM i Agent stores a job failure code to the Agent local Dynamic Variables table. The Agent also sends the code and interim status information to the OpCon Detailed Job Messages table, and sends Agent feedback codes for optional Event processing. See [Job Completion Codes](https://help.smatechnologies.com/opcon/agents/ibm-i/commands-utilities/file-arrival#command-feedback-methods) for failure codes. |
 | OpCon Properties | **File Size to Property** | Sends the number of records (DB2 tables) or total bytes (IBM i file systems outside DB2) to an OpCon property. Defaults to zero for a file not found or an empty file. |
 | OpCon Properties | **Failure Code to Property** | Sends a failure code to OpCon when the File Arrival job detects an expected exception or unexpected program failure. The code can be stored in an OpCon property for end-of-job Event processing. |

@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Auditing Overview
+
 **Theme:** Overview | **Who is it for?** System administrators and compliance officers who need to review OpCon activity logs
 
 ## What Is It?

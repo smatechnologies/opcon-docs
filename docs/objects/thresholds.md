@@ -33,7 +33,7 @@ Jamie needs to create an External Application Dependency for an OpCon job named 
 
 - In OpCon Administration, Jamie creates a threshold called **EXTERNALAPP** with the default value **0**
 - In Job Master, Jamie creates a threshold dependency for 'Testing', setting the dependent value equal (**EQ**) to **1**
-- In Job Master, Jamie creates a threshold update for 'Testing' that sets **EXTERNALAPP** back to **0** when the job status is **Finished OK**, resetting it for the next execution
+- In Job Master, Jamie creates a threshold update for 'Testing' that sets **EXTERNALAPP** back to **0** when the job status is **Finished OK**, resetting it for the next running
 - Jamie builds the schedule; the 'Testing' job enters a Wait Threshold/Resource Dependency state
 - On the external machine, Jamie configures the external job to copy or FTP an ASCII file to the SAM MSGIN directory on completion. The file contains: `$THRESHOLD:SET,EXTERNALAPP,1,username,event_password`
 

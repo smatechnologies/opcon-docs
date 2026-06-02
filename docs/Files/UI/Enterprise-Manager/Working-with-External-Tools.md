@@ -33,7 +33,7 @@ Tool commands defined in `externaltools.xml` support the following substitution 
 
 ## External Tools navigation
 
-The **External Tools** section appears in the Enterprise Manager **Navigation Panel**. Select any tool entry in the list to run it. Categories group related tools and can be nested.
+The **External Tools** section appears in Enterprise Manager **Navigation Panel**. Select any tool entry in the list to run it. Categories group related tools and can be nested.
 
 ![External Tools Topic](../../../Resources/Images/EM/EMexternaltoolsmenu.png "External Tools Topic")
 

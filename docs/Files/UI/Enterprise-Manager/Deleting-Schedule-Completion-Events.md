@@ -40,12 +40,12 @@ To delete a schedule completion event, complete the following steps:
 
 No. Deleting a schedule completion events record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
 
-**Q: How many schedule completion events records can you delete at once?**
+**Q: How do you delete a schedule completion event?**
 
-Select the specific schedule completion events record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+Select the event in the **Schedule Completion Events** list, select **Remove**, then confirm the deletion when prompted.
 
 ## Glossary
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

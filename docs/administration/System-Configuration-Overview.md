@@ -12,6 +12,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# System Configuration Overview
+
 **Theme:** Overview | **Who is it for?** System administrators who configure, install, upgrade, or maintain the OpCon platform
 
 ## What Is It?

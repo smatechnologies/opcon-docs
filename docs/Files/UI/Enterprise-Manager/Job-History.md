@@ -20,7 +20,7 @@ The **Job History** dialog displays all run iterations of a job. You can access 
 The dialog contains two areas:
 
 - A sortable table listing each run occurrence with the columns described below.
-- A **Job Run Time Trend** chart that plots runtime (in minutes) over execution occurrence.
+- A **Job Run Time Trend** chart that plots runtime (in minutes) over running occurrence.
 
 ## Job History Table Columns
 

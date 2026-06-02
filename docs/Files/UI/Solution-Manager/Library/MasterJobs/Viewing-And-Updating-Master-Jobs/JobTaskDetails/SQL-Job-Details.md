@@ -84,7 +84,7 @@ Running an MS SQL DTExec job requires the DTExec utility to be installed on the 
   - **User Id**: Allows retrieval of a package protected by SQL Server authentication.
   - **Windows Authentication**: Specifies whether the **User Id** is a Windows or SQL user for correct authentication.
 - **FILE**:
-  - **Config File Name**: Defines a configuration file to extract values from, allowing a run-time configuration that differs from the design-time configuration. Store settings in an XML configuration file and load them before package execution.
+  - **Config File Name**: Defines a configuration file to extract values from, allowing a run-time configuration that differs from the design-time configuration. Store settings in an XML configuration file and load them before package running.
 - **ISSERVER**:
   - **Server Name**: Defines the SQL Server name where the package to run is stored.
   - **User Id**: The Windows Authentication user that runs the package on Integration Services Server.

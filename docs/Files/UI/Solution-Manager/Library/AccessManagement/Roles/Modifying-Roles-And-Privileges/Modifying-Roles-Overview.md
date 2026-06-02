@@ -42,7 +42,7 @@ Within each role, privileges are organized into categories. Each category contro
 | Term | Definition |
 | --- | --- |
 | Department | A named object used to apply function-level security to individual job records. A single department can secure as many jobs as necessary. |
-| Machine (Agent) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Agent) | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Privilege | A permission that controls which actions a user can perform or which resources a user can access in OpCon. |
 | Resource | A user-defined object with a name and a numeric limit. Used to restrict how many jobs run concurrently across schedules and machines in OpCon. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |

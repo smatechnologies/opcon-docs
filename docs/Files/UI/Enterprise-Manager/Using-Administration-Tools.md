@@ -66,7 +66,7 @@ Access to Administration Tools is controlled by the privileges assigned to your 
 
 ## Glossary
 
-**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+**Null Job**: A job type that performs no running on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

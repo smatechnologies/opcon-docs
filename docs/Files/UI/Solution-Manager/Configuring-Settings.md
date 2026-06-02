@@ -65,7 +65,7 @@ The **Refresh Intervals** section sets the auto-refresh interval (0–600 second
 - Application Status (s)
 - Escalated Notification (s)
 - Self Service (s)
-- Self Service Execution (s)
+- Self Service running (s)
 - Vision Live (s)
 - Operations Summary (s)
 - Operations Processes (s)

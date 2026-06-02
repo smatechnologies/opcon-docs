@@ -35,7 +35,7 @@ To configure the **Single Sign-On** setting, you must have one of the following:
 
 ## Configuring SSO
 
-To configure SSO Settings, go to **Library** > **Server Options** > select on the **SSO** tab.
+To configure SSO Settings, go to **Library** > **Server Options** > Select the **SSO** tab.
 
 #### SSO Configuration Fields
 
