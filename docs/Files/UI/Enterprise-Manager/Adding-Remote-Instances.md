@@ -1,6 +1,6 @@
 ---
 title: Adding Remote Instances
-description: "For conceptual information about each field or option, refer to Remote Instances in the Concepts online help."
+description: "How to add a remote instance in Enterprise Manager so that OpCon environments can share properties and cross-environment expression dependencies can resolve."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,50 +8,45 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Remote Instances
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-For conceptual information about each field or option, refer to [Remote Instances](../../../objects/remote-instances.md) in the **Concepts** online help.
+A remote instance defines the connection information for another OpCon environment running on a separate server. Once defined, tokens used in expression dependencies in one environment can reference properties in the remote environment. For conceptual details about each field, refer to [Remote Instances](../../../objects/remote-instances.md).
 
 To add a remote instance, complete the following steps:
 
-1. Select **Remote Instances** under the **Administration** topic
-2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Remote Instances** toolbar
-3. Enter the *remote instance name* in the **Name** text box
-4. Enter any relevant documentation in the **Documentation** text box
-5. In the **Remote OpCon** frame:
-   - Enter the *remote server name*
-   - Enter the *remote server database*
-   - Specify the authentication method:
-     - For Windows Authentication, select the **Windows Authentication** option
-     - For SQL Authentication, enter a valid *username* and *password*
-6. In the **Options** frame:
-   - Select the **Mirroring On** option if the remote instance uses mirroring
-   - Select the **Transparent IP Network Resolution** method: Auto, Disabled, or Enabled
+1. In Enterprise Manager, go to **Administration** and select **Remote Instances**.
+2. Select **Add** on the **Remote Instances** toolbar.
+3. In the **Name** field, enter a name for the remote instance.
+4. (Optional) In the **Documentation** field, enter any relevant notes or descriptions.
+5. In the **Remote OpCon** section, enter the **Server** name where the remote database resides.
+6. In the **Database** field, enter the name of the remote OpCon database.
+7. Specify the authentication method:
+   - To use Windows Authentication, select the **Windows Authentication** option. The **User** and **Password** fields are disabled when this option is selected.
+   - To use SQL Server authentication, clear the **Windows Authentication** option, then enter a valid **User** name and **Password**.
+8. In the **Options** section, select the **Mirroring On** option if the remote instance uses database mirroring.
+9. In the **Transparent Network IP Resolution** field, select a resolution method: **Auto**, **Enabled**, or **Disabled**.
 
 :::note
-Auto resolution is best in most cases for ensuring a successful connection.
+**Auto** is the default and works correctly in most environments.
 :::
 
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Remote Instances** toolbar
+10. Select **Save** on the **Remote Instances** toolbar.
 
-## FAQs
+The remote instance is saved and available for use in cross-environment expression dependencies.
 
-**Q: What information is required to add remote instances?**
+## Required Fields
 
-The required fields include **Name**. Select **Save** on the toolbar to save the new record.
+The following fields must be completed before you can save a remote instance:
 
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+| Field | Required when |
+|---|---|
+| **Name** | Always |
+| **Server** | Always |
+| **Database** | Always |
+| **User** | **Windows Authentication** is not selected |
+| **Password** | **Windows Authentication** is not selected |

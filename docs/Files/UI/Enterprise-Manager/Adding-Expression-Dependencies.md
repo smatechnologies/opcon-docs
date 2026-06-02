@@ -1,6 +1,6 @@
 ---
 title: Adding Expression Dependencies
-description: "Use this procedure to add Expression Dependencies in Enterprise Manager."
+description: "Add an expression dependency to a job in Enterprise Manager so the job only runs when a specified expression evaluates to True."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,51 +8,30 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Expression Dependencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+An expression dependency controls whether a job is eligible to run based on a Boolean expression. OpCon evaluates the expression before starting the job; the job does not start until the expression resolves to `True`. You can set one expression at the job level and a separate expression per frequency.
 
-## What Is It?
+To add an expression dependency to a job, complete the following steps:
 
-Use this procedure to add Expression Dependencies in Enterprise Manager.
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Dependencies** tab in the **Job Properties** frame.
+5. Select the **Expression Dependency** tab.
+6. Enter the expression in the **Job Expression** field. The expression must resolve to `True` before the job starts.
+7. Select a frequency in the **Frequency List**.
+8. Enter the expression in the **Frequency Expression** field. The expression must resolve to `True` before the job starts for the selected frequency.
+9. Select **Save** on the **Job Master** toolbar.
+10. Select **Close** (to the right of the **Job Master** tab) to close the screen.
 
-To set a dependency, complete the following steps:
+**Result:** The expression dependency is saved to the job definition. OpCon evaluates the expression each time the job is eligible to run and holds the job until the expression resolves to `True`.
 
-1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2. Select the **schedule** in the **Schedule** list
-3. Select the **job** in the **Job** list
-4. Select the **Dependencies** tab in the **Job Properties** frame
-5. Select the **Expression Dependency** tab
-6. Enter the *expression* in the **Job Expression** text box. This expression must resolve to "True" before the job starts
-7. Select the **frequency** in the **Frequency List**
-8. Enter the *expression* in the **Frequency Expression** text box. This expression must resolve to "True" before the job starts
-9. Select ![Save icon](../../../Resources/Images/EM/EMsave.png) **Save** on the **Job Master** toolbar
-10. Select **Close ☒** (to the right of the **Job Master** tab) to close the screen
-
-## FAQs
-
-**Q: Where do you access Expression Dependencies in Enterprise Manager?**
-
-Select **Job Master** under the **Administration** topic in Enterprise Manager navigation pane.
-
-**Q: What information is required to add expression dependencies?**
-
-The required fields include **Job Expression**, **Frequency Expression**. Select **Save** on the toolbar to save the new record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+:::note
+The **Frequency Expression** field is disabled until you select a frequency in the **Frequency List**. Each frequency can have its own expression.
+:::

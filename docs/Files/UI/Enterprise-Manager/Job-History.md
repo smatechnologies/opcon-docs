@@ -1,70 +1,94 @@
 ---
 title: Job History
-description: "The Job History dialog displays all iterations of a job."
+description: "The Job History dialog in Enterprise Manager displays all run iterations of a job, including start and end times, runtime, termination status, and exit code."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # Job History
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Job History** dialog displays all run iterations of a job. You can access it by right-clicking a job and selecting **Job History** in the **List**, **Matrix**, or **PERT** views under **Operations**.
 
-## What Is It?
+The dialog contains two areas:
 
-The **Job History** dialog displays all iterations of a job. Access it by right-clicking a job and selecting **Job History** in the **List**, **Matrix**, or **PERT** views.
+- A sortable table listing each run occurrence with the columns described below.
+- A **Job Run Time Trend** chart that plots runtime (in minutes) over execution occurrence.
 
-The dialog shows the following per job iteration:
+## Job History Table Columns
 
-- Start Time
-- End Time
-- Run Time (min)
-- Machine
-- Termination Status
-- Exit Code
-- Exit Description
+| Column | Description |
+|---|---|
+| **Schedule Date** | The date the Schedule ran when the job ran. |
+| **Start Time** | The date and time the job started. |
+| **End Time** | The date and time the job ended. |
+| **Runtime (min)** | The total run duration in minutes. |
+| **Machine** | The Agent on which the job ran. |
+| **Termination Status** | The job's final status (for example, Finished OK, Failed). |
+| **Exit Code** | The exit code and description returned by the job. |
 
 ## Viewing Job History
 
-To view job history, complete the following steps:
+To view job history for a job, complete the following steps:
 
-1. Select **List** under the **Operation** topic
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click the **schedule**
-4. Select **Job History** from the menu. The **Job History** dialog displays
-5. View the job history information
-6. Enter or select a **Start Date** and **End Date** using the text boxes or the calendar icons
-7. Select the **Refresh** button to display the details
-8. Right-click a record and select **View Job Output** to open the **Job Output Retriever** screen
-9. Select any row or right-click and select **Job History Detail** to open the **Job History Detail** screen
-10. View the **Field Names** and **Field Values** for the selected record
-11. Select the **Add Note** option, enter note information in the field, then select the **Add** button to save the note
-12. To edit a note, select the note row, make changes, then select the **Update** button
-13. To delete a note, select the note row, select the **Remove** button, then select **Yes** to confirm
-14. Select the **OK** button to close the **Job History** dialog
+1. Go to **Operations** and select **List** (or **Matrix** or **PERT**).
+2. Select the arrow to expand the specific date.
+3. Right-click the job.
+4. Select **Job History** from the menu.
 
-## FAQs
+   The **Job History** dialog opens and loads run data for the current date.
 
-**Q: What does Job History cover?**
+5. Enter or select a **Start Date** and **End Date** using the date fields.
+6. Select **Refresh** to reload the table for the selected date range.
 
-This page covers Viewing Job History.
+   The table updates to show all run iterations within the date range.
 
-## Glossary
+## Viewing Job Output
 
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
+**View Job Output** is available for jobs that are not Container or Null Job types.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To view output for a specific run, complete the following steps:
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+1. Right-click a row in the **Job History** table.
+2. Select **View Job Output**.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+   The **Job Output Retriever** dialog opens.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+## Viewing Job History Detail
+
+To view the full detail record for a specific run, complete the following steps:
+
+1. Double-click a row in the **Job History** table, or right-click a row and select **Job History Detail**.
+
+   The **Job History Detail** dialog opens, showing **Field Name** and **Field Value** columns for all recorded fields associated with that run.
+
+## Managing Notes
+
+You can add, edit, or delete notes on a job history record from the **Job History Detail** dialog.
+
+To add a note, complete the following steps:
+
+1. Select **Add Note**.
+2. Enter the note text in the field (limit: 3,800 characters).
+3. Select **Add**.
+
+   The note is saved and displays in the detail table with your username and timestamp.
+
+To edit a note, complete the following steps:
+
+1. Select the note row in the detail table.
+2. Make your changes in the text field.
+3. Select **Update**.
+
+To delete a note, complete the following steps:
+
+1. Select the note row in the detail table.
+2. Select **Remove**.
+3. Select **Yes** to confirm deletion.

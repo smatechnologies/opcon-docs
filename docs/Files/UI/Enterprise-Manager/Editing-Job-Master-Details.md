@@ -1,6 +1,6 @@
 ---
 title: Editing Job Master Details
-description: "To edit Job Master Details in Enterprise Manager, complete the following steps: 1."
+description: Edit job master details in Enterprise Manager to update job configuration, change the job type, or modify other job-level settings.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,41 +8,47 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Job Master Details
+# Editing Job Master Details
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to edit job master details in Enterprise Manager. Changes saved to master records take effect the next time the schedule or job is built or referenced. To modify the current day's job instance instead, edit the record in the Daily tables.
 
-## What Is It?
+## Edit job master details
 
-To edit Job Master Details in Enterprise Manager, complete the following steps:
+To edit job master details, complete the following steps:
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Ensure the **Job Details** tab is in focus in the **Job Properties** frame
-5.  To change the job type, select **Reset Job Details** in the toolbar, then select a **job type** in the **Job Type** list
-6.  Edit the **Job Details**. Refer to [Adding Jobs](Adding-Jobs.md) for details on individual fields
-7.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png) **Save** on the **Job Master** toolbar
-8.  Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Job Details** tab in the **Job Properties** frame.
+5. Edit the **Job Details** fields. For descriptions of individual fields, see [Adding Jobs](Adding-Jobs.md).
+6. Select **Save** on the **Job Master** toolbar.
 
-## FAQs
+**Result:** The updated job master details are saved to the OpCon database.
 
-**Q: Do edits to job master details take effect immediately?**
+7. Select **Close** (to the right of the **Job Master** tab) to close the **Job Master** screen.
 
-Changes saved to job master details in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+## Change the job type
 
-## Glossary
+To change the job type for an existing job, complete the following steps:
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select **Reset Job Type** in the toolbar. A confirmation dialog asks whether you want to reset the job to a Null Job.
+5. Select **OK** to confirm. The job is reset to a Null Job and all platform-specific configuration is removed.
+6. Select the new job type in the **Job Type** list.
+7. Complete the **Job Details** fields for the new job type. For field descriptions, see [Adding Jobs](Adding-Jobs.md).
+8. Select **Save** on the **Job Master** toolbar.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** The job is saved with the updated job type. The previous platform-specific configuration is not retained.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+9. Select **Close** (to the right of the **Job Master** tab) to close the **Job Master** screen.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+## Related topics
+
+- [Adding Jobs](Adding-Jobs.md)

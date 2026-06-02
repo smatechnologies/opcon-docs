@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Adding Machine Groups
-description: "Use this procedure to add Machine Groups in Enterprise Manager."
+description: "Step-by-step instructions for adding a Machine Group in Enterprise Manager, including assigning machines to the group."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,45 +10,40 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Machine Groups
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
-#  Adding Machine Groups
+# Adding Machine Groups
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Machine Group is a named collection of agents that share the same operating system type. Jobs and schedules can target a Machine Group instead of a specific agent, letting OpCon balance work across the group.
 
-## What Is It?
+To add a Machine Group, complete the following steps:
 
-Use this procedure to add Machine Groups in Enterprise Manager.
+1. In the **Administration** navigation list, select **Machine Groups**.
+2. On the **Machine Groups** toolbar, select **Add**.
+3. In the **Name** field, enter a name for the group (maximum 20 characters).
+4. *(Optional)* In the **Documentation** field, enter notes about the group (maximum 4,000 characters).
+5. In the **Machine Type** list, select the operating system type for the group.
+6. To assign machines to the group, use one of the following methods in the **Machine Assignment** section:
+   - Select a machine in the **Unassigned Machines** list to move it to **Assigned Machines**.
+   - Use Shift+select or Ctrl+select to select multiple machines, then select the right-arrow button to move them to **Assigned Machines**.
 
-To add a machine group, complete the following steps:
+   :::note
+   At least one machine must be assigned before the group can be saved. Only machines that match the selected machine type appear in the **Unassigned Machines** list.
+   :::
 
-1. Select **Machine Groups** under the **Administration** topic
-2. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Machine Groups** toolbar
-3. Enter the *machine group name* in the **Name** text box
-4. *(Optional)* Enter any *documentation* about the machine group
-5. Select the **type of operating system** for the group in the **Machine Type** list
-6. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Machine Groups** toolbar
-7. *(Optional)* Assign machines to the group:
-   - Select a **machine** in the **Unassigned Machines** list to move it directly to **Assigned Machines**, or
-   - Use Shift+select or Ctrl+select to select multiple machines, then select the **Right Arrow** to move them
-8. Select **Close ☒** (to the right of the **Machine Groups** tab) to close the **Machine Groups** screen
+7. On the **Machine Groups** toolbar, select **Save**.
+8. Select **Close** (to the right of the **Machine Groups** tab) to close the editor.
 
-## FAQs
+**Result:** The new Machine Group is saved to the OpCon database. It is now available for selection on jobs and schedules that use a Machine Group instead of a specific agent.
 
-**Q: What information is required to add machine groups?**
+## Required fields
 
-The required fields include **Name**. Select **Save** on the toolbar to save the new record.
-
-**Q: Is documentation required when adding machine groups?**
-
-No. The Documentation field is optional. You can enter notes about the machine groups to track its purpose, but it is not required to save the record.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+| Field | Required | Limit |
+|---|---|---|
+| **Name** | Yes | 20 characters |
+| **Machine Type** | Yes | — |
+| **Assigned Machines** (at least one) | Yes | — |
+| **Documentation** | No | 4,000 characters |
