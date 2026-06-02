@@ -1,6 +1,6 @@
 ---
 title: Synch SAP
-description: "Learn how to synch sap in OpCon."
+description: "Use the SMASynchSAP utility to re-synchronize SAP job numbers in OpCon after changes on the SAP Server cause job definitions to fall out of sync."
 product_area: Utilities
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,100 +15,103 @@ doc_type: procedural
 
 # Synch SAP
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
 :::note
-The information presented in this topic pertains largely to running the SMASynchSAP utility as a Windows job. For instructions on running this utility in the OpCon Docker container, see [Running on OpCon in Docker](#Running).
+The information in this topic applies primarily to running SMASynchSAP as a Windows job. For Docker container usage, see [Running SMASynchSAP in Docker](#running-smasynchsap-in-docker).
 :::
 
-The SMASynchSAP utility (SMASynchSAP.exe) reads the
-OpCon Master jobs and requests the SAP Job
-Number from the SAP Server. This utility is found in the UTILITY folder
-and uses the SMAODBCConfig.dat file found in the SAM folder. Output is
-found in SAM\\Logs folder.
+## Overview
 
-SAP Login User and Password are required for each SAP Server connection.
-If the Server Name cannot be found in the Server Login File, then a
-request is made to the user to supply the user name and password for SAP
-R/3 and CRM jobs.
+The SMASynchSAP utility (`SMASynchSAP.exe`) reads the OpCon master jobs and requests the current SAP Job Number from the SAP Server. Use this utility to re-synchronize OpCon SAP job definitions when job numbers on the SAP Server no longer match what was originally captured in OpCon — for example, after a system migration or configuration change on the SAP Server.
 
-## Usage
+The utility is located in the `Utilities` folder. It reads database connection information from `SMAODBCConfiguration.DAT` in the `SAM` folder. Log output is written to `SMASynchSAP.log` in the `SAM\Log` folder.
 
-This utility is used to re-synch the OpCon
-SAP jobs with an SAP Server. This is usually only necessary when a
-change has occurred on the SAP Server causing the job definitions to
-have Job Numbers that no longer match with the data originally captured
-in OpCon when the job was initially added. SAP Server credentials are
-required to communicate with it to extract the job definition
-information. The Server User and Password will be requested if not found
-in a simple text file that matches the same database definition as the
-SMA Import Export (ImpEx) program. Name the full path and file name on
-the command line as the first input parameter.
+SAP login credentials are required for each SAP Server connection. If the SAP Server name is not found in a credentials file, the utility either prompts interactively (when run with `-ask`) or skips that server and logs a warning.
 
-:::tip Example
-C:\\Program Files\\OpConxps\\Utilities\\SMASynchSAP.exe C:\\Synch SAP Files\\MyServerCreds.txt
-:::
+## Syntax
 
-This will cause SMASynchSAP to look in the Utility folder for a file by
-that name and will expect each line to represent an SAP Server and
-credentials in the form: SERVERNAME,USER,PWD.
+```
+SMASynchSAP.exe [<credentials-file>] [-update] [-ask]
+```
 
-The server credentials file can be located anywhere, simply supply a
-full path.
+### Parameters
 
-### Running on OpCon in Docker
+| Parameter | Required | Description |
+|---|---|---|
+| `<credentials-file>` | Recommended | Full path to a text file listing SAP Server credentials. Each line must follow the format `SERVERNAME,USERID,PWD`. If omitted, supply credentials inline or use `-ask`. |
+| `-update` | No | Writes the new SAP Job Numbers back to the OpCon database. Without this switch, the utility reports differences but does not change any data. |
+| `-ask` | No | Prompts for SAP Server credentials interactively at the console. Cannot be used when running the utility as an OpCon job. |
 
-To run the utility successfully in a Docker container, using
-the Linux agent embedded in it, keep the following things in mind:
+### Credentials file format
 
-1. When running in Docker, the Linux job needs to be set up similar to
-    a Windows job with the same parameters.
-2. The start image for the Linux job should be: *dotnet
-    /app/SMASynchSAP.dll <arguments\>*.
-3. The SMASynchSAP server credentials file can use the same location as
-    other OpCon configuration files
-    (**/app/config**) or any location on the host machine with a mapping
-    to a directory in the container.
-4. Use the default **OpConOnLinux** agent machine (available in the
-    container) to run the utility jobs.
-5. Logs are found in **/app/log/Utilities** in the container
+Each line in the credentials file represents one SAP Server:
 
-## Updating
+```
+SERVERNAME,USERID,PWD
+```
 
-This utility can be used to detect only or detect and update. The
-command-line switch -update must be included to update the
-OpCon database with the Job Numbers extracted
-from the SAP Server(s).
+You can also pass credentials inline as the first argument using the same comma-separated format:
 
-:::tip Example
-C:\\Program Files\\OpConxps\\Utilities\\SMASynchSAP.exe C:\\Synch SAP Files\\MyServerCreds.txt -update
-:::
+```
+SMASynchSAP.exe SERVERNAME,USERID,PWD -update
+```
 
-## FAQs
+The credentials file can reside anywhere on the file system. Provide the full path on the command line.
 
-**Q: What does the SMASynchSAP utility do?**
+## Running SMASynchSAP
 
-SMASynchSAP reads OpCon Master jobs and requests the current SAP Job Number from the SAP Server. It is used to re-synchronize OpCon SAP job definitions when job numbers on the SAP Server no longer match what was originally captured in OpCon.
+### Detect-only run (no database changes)
 
-**Q: When is SMASynchSAP typically needed?**
+To review SAP job number mismatches without updating the OpCon database, complete the following steps:
 
-It is typically needed after a change on the SAP Server causes job definitions to have Job Numbers that no longer match the data in OpCon, such as after a system migration or configuration change.
+1. Open a command prompt on the OpCon server.
+2. Run the utility with the path to your credentials file:
 
-**Q: How do you provide SAP Server credentials to SMASynchSAP?**
+   ```
+   "C:\Program Files\OpConxps\Utilities\SMASynchSAP.exe" "C:\Synch SAP Files\MyServerCreds.txt"
+   ```
 
-Pass a full path to a credentials file as the first command-line parameter. The file must list each SAP Server on its own line in the format `SERVERNAME,USER,PWD`. If no file is provided, the utility prompts for credentials interactively.
+**Result:** The utility logs each job that would be updated to `SAM\Log\SMASynchSAP.log` and exits without modifying the database. Review the log to confirm the expected changes before proceeding.
 
-## Glossary
+### Detect and update run
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+To synchronize SAP job numbers and write the changes to the OpCon database, complete the following steps:
 
-**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
+1. Open a command prompt on the OpCon server.
+2. Run the utility with the `-update` switch:
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+   ```
+   "C:\Program Files\OpConxps\Utilities\SMASynchSAP.exe" "C:\Synch SAP Files\MyServerCreds.txt" -update
+   ```
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The utility updates each affected master job in the OpCon database with the new SAP Job Number. A summary of all changes is written to `SAM\Log\SMASynchSAP.log`.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+## Running SMASynchSAP in Docker
+
+When running the utility in a Docker container using the embedded Linux Agent, keep the following in mind:
+
+1. Set up the Linux job with the same parameters you would use for a Windows job.
+2. Set the start image for the Linux job to:
+
+   ```
+   dotnet /app/SMASynchSAP.dll <arguments>
+   ```
+
+3. Place the credentials file in `/app/config` or any directory on the host machine that is mapped into the container.
+4. Use the default **OpConOnLinux** Agent machine to run the utility job.
+5. Logs are written to `/app/log/Utilities` inside the container.
+
+## Exit codes
+
+| Code | Meaning |
+|---|---|
+| `0` | Completed successfully; no errors. |
+| `-32001` | SAP Server credentials failed or missing. |
+| `-32002` | One or more jobs could not be retrieved from the SAP Server. |
+| `-32003` | Multiple matching job entries returned for a job; cannot determine the correct number. |
+| `-101` | Unexpected internal error. |
+
+## Troubleshooting
+
+- **Credentials not found:** If the credentials file path is omitted and `-ask` is not specified, the utility logs `"SAP Server login file name must be provided."` and skips all servers for which credentials are absent.
+- **Multiple matches:** If SAP returns more than one `JobCount` element for a job, the utility logs each match and skips the update for that job. Resolve the ambiguity on the SAP Server before re-running.
+- **Malformed SAP response:** If the XML response from SAP is malformed, the utility logs `"Malformed XML response. Please consult SMA Support"`.

@@ -2,40 +2,32 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Comparing Frequencies
-description: "You can compare two frequencies side by side."
+description: "How to compare two frequencies side by side in Enterprise Manager Frequency Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Comparing Frequencies
+# Comparing Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use Frequency Manager to open two Frequency Definition Wizards side by side so you can review and compare the settings of any two frequencies.
 
-## What Is It?
+## Compare two frequencies
 
-You can compare two frequencies side by side.
+To compare two frequencies, complete the following steps:
 
-To compare frequencies, complete the following steps:
+1. In the navigation panel, select **Frequency Manager** under the **Management** category. The **Frequency Manager** screen opens.
+2. Select the first frequency name you want to compare.
+3. Hold **Ctrl** and select the second frequency name. The **Compare** button on the toolbar becomes active when exactly two frequencies are selected.
+4. Select **Compare** on the **Frequency Manager** toolbar. Two **Frequency Definition Wizard** dialogs open side by side.
+5. Review the frequency settings in each **Frequency Definition Wizard**.
+6. Select **Finish** in each **Frequency Definition Wizard** dialog when you are done.
 
-1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
-2.  Select the first **frequency name** to compare
-3.  Hold down the **Ctrl** key and select the second **frequency name** to compare
-4.  Select the **Select frequencies to compare** tool on the **Frequency Manager** toolbar. Two **Frequency Definition Wizards** display
-5.  Compare the two **Frequency Definition** frames
-6.  Select the **Finish** button in both **Frequency Definition** frames
-7.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** Both dialogs close. If you modified a frequency, Frequency Manager refreshes to reflect the changes.

@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating Resource Updates
-description: "The Resource Update panel in Master Job Definition displays resource updates for the job."
+description: "The Resource Update panel in Master Job Definition displays and manages resource updates for the job — rules that change a resource's maximum count when the job reaches a specific status."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,46 +15,57 @@ doc_type: procedural
 
 # Viewing and Updating Resource Updates
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+## Overview
 
-## What Is It?
+The **Resource Update** panel in **Master Job Definition** displays resource updates for the job. A resource update causes OpCon to change the maximum number of resources for a defined resource when the job enters a specific status, such as **Finished OK** or **Failed**. Resource updates can be defined at the job level or for a specific frequency. For background information, refer to [Threshold/Resource Updates](../../../../../../job-components/threshold-resource-updates.md).
 
-The **Resource Update** panel in **Master Job Definition** displays resource updates for the job.
+The panel bar includes two controls:
 
-- Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
-- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
+- Select the full-screen button (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode.
+- When the panel contains defined resource updates, a blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined updates.
 
-## Adding or Updating Resource Updates
-
-In **Admin** mode, resource updates can be updated. For conceptual information, refer to [Threshold/Resource Updates](../../../../../../job-components/threshold-resource-updates.md) in the **Concepts** online help.
+## Add or Update Resource Updates
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
-
+Only users with the appropriate privileges have access to the **Lock** button and can update job properties. For details about required privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
 :::
 
-To perform this procedure, complete the following steps:
+To add or update resource updates, complete the following steps:
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-2. Expand the **Resource Update** panel to expose its content
-3. Enter changes to existing **Resource Updates** and/or add new ones with the green plus icon button
-4. Fill out the resource update dialog form
-5. Select the **Save** button on the dialog
-6. Select the **Save** button on the Master Job Definition page
+1. Go to **Library** > **Master Jobs** and open the master job definition. See [Accessing Master Jobs](Accessing-Master-Jobs.md) for full instructions.
+2. Select the **Lock** button to switch to **Admin** mode if you are not already in it.
+3. Expand the **Resource Update** panel.
+4. To add a new resource update, select the **+** button. To edit an existing resource update, select it in the list.
+5. Complete the fields in the resource update dialog:
+   - **Frequency Name**: Select a frequency to apply the update only when the job runs with that frequency, or leave blank to apply the update for all runs.
+   - **Job Status**: Select the job status that triggers the update.
+   - **Resource**: Select the resource whose maximum count will be changed.
+   - **Value**: Enter the maximum resources value to set for the resource when the update triggers.
+6. Select **Save** on the dialog to confirm the entry.
+7. Select **Save** on the **Master Job Definition** page to save all changes.
 
-## FAQs
+**Result**: The resource update is saved. When the job reaches the specified status during a run, OpCon updates the maximum count for the selected resource.
 
-**Q: What does Viewing and Updating Resource Updates cover?**
+## Resource Update Fields
 
-This page covers Adding or Updating Resource Updates.
+The following fields apply when configuring a resource update:
 
-## Glossary
+| Field | Description |
+|---|---|
+| **Frequency Name** | The frequency name if the update applies to a specific frequency. Leave blank to apply the update for all runs. |
+| **Job Status** | The job status that triggers the resource update. |
+| **Resource** | The resource whose maximum count will be changed. |
+| **Value** | The maximum resources value to set for the resource when the update triggers. |
 
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+### Valid Job Statuses
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+The following job statuses can trigger a resource update:
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- **Exceeded Max Run Time**: The job ran longer than the specified Max Run Time.
+- **Finished OK**: The job terminated successfully.
+- **Late to Start**: Time passed the late-to-start time and the job has not started.
+- **Late to Finish**: Time passed the late-to-finish time and the job is still running.
+- **Job Still Attempting Start**: The job remains in Start Attempted status when SAM checks again after the configured interval.
+- **Failed**: The job failed.
+- **Missed Latest Start Time**: The job missed its latest start time.
+- **Skipped**: The job was skipped.

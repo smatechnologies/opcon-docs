@@ -2,39 +2,67 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Role Department Activities
-description: "How OpCon roles grant function privileges that are scoped to individual departments, controlling which departments' jobs a user can work with."
+description: "Reference for departmental function privileges in OpCon roles — the per-department permissions that control which jobs a user can view and manage within each department."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-05-29
-doc_type: conceptual
+last_updated: 2026-06-02
+doc_type: reference
 ---
 
 # Role Department Activities
 
-**Theme:** Configure
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
 A **role** is a named security profile that groups privileges together and is assigned to user accounts. Some function privileges in OpCon are *departmental*: instead of applying system-wide, they are granted to a role for one or more specific **departments**. This lets you control which departments' jobs a user can view and work with based on the role assigned to that user.
 
-For example, departmental function privileges determine whether a role can view jobs in master schedules, view jobs in daily schedules, build daily schedules, view standard reports, and view jobs in schedule operations for a given department.
+Departments are an organizational grouping in OpCon used to assign jobs to logical divisions. When a privilege is departmental, OpCon evaluates whether the user's role has that privilege for at least one department before allowing the related action.
 
-<!-- GAP: The original page described a \"Departments\" tab under \"Library > Access Management > Roles\" that \"displays the departments assigned to the selected role.\" The Solution Manager Roles editor (Administration > Security > Roles) does not contain a Departments tab — its editor exposes Name, the Inherit Privileges switches, and a Permissions form with Access codes and Batch users tabs (Core-SolutionManager RoleView.java, PermissionsForm.java). The exact UI surface where a role's per-department privileges are assigned, and whether it is labeled \"Departments,\" needs SME/source confirmation. -->
+## Departmental Function Privileges
 
-<!-- GAP: Original screenshot reference (roles-departments-tab.png) and the \"Edit the fields and select Save to modify them\" procedure could not be verified against source and have been removed pending confirmation of the actual UI. -->
+The following table lists all departmental function privileges. Each privilege applies per department. To affect a specific job, the role must also have [Schedule Privileges](../../../../../../../administration/privileges.md#schedule-privileges), [Access Code Privileges](../../../../../../../administration/privileges.md#access-code-privileges), and where applicable [Machine Privileges](../../../../../../../administration/privileges.md#machine-privileges) and [Machine Group Privileges](../../../../../../../administration/privileges.md#machine-group-privileges) for that job.
 
-## How It Works
+| Privilege | Description |
+|---|---|
+| **All Job Master Functions** | Grants all privileges related to the Job Master for the department (equivalent to granting the four Job Master privileges individually). |
+| **Add Jobs to Master Schedules** | Grants the ability to add new jobs, copy jobs, view history, and view Job Master PERT for jobs in the department. |
+| **Delete Jobs from Master Schedules** | Grants the ability to delete jobs, view history, and view Job Master PERT for jobs in the department. |
+| **Modify Jobs in Master Schedules** | Grants the ability to modify job details, documentation, events, frequencies, dependencies, and threshold/resource updates for jobs in the department. |
+| **View Jobs in Master Schedules** | Grants the ability to view job details, documentation, events, frequencies, dependencies, history, PERT, and threshold/resource updates for jobs in the department. |
+| **All Daily Schedule Functions** | Grants all privileges related to daily Schedule maintenance for the department (equivalent to granting the four Daily Schedule privileges individually). |
+| **Add Jobs to Daily Schedules** | Grants the ability to add jobs from the Job Master to daily schedules for the department. Users must also have View Jobs in Master Schedules and View Jobs in Daily Schedules. |
+| **Delete Jobs from Daily Schedules** | Grants the ability to delete jobs from daily schedules for the department. Users must also have View Jobs in Daily Schedules and Modify Jobs in Daily Schedules. |
+| **Modify Jobs in Daily Schedules** | Grants the ability to modify job details, documentation, events, dependencies, and threshold/resource updates for daily jobs in the department. Users must also have View Jobs in Daily Schedules. |
+| **View Jobs in Daily Schedules** | Grants the ability to view job details, documentation, events, dependencies, and threshold/resource updates for daily jobs in the department. |
+| **View Standard Reports** | Grants the ability to view all non-administrative OpCon reports for jobs in the department. To view administrative reports, the role must also have All Function Privileges. |
+| **All Schedule Operation Functions** | Grants all Schedule Operations privileges for the department, including all job status change actions and schedule-level Hold, Release, and Force-Start. |
+| **View Jobs in Schedule Operations** | Grants the ability to view jobs in Schedule Operations for the department. |
+| **Hold Jobs** | Grants the ability to run the Hold status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Release Jobs** | Grants the ability to run the Release status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Force-Start Jobs** | Grants the ability to run the Force-Start status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Cancel Jobs** | Grants the ability to run the Cancel status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Restart Jobs** | Grants the ability to run the Restart status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Mark Jobs Finished OK** | Grants the ability to run the Mark Jobs Finished OK status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Mark Jobs Failed** | Grants the ability to run the Mark Jobs Failed status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Skip Jobs** | Grants the ability to run the Skip status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
+| **Kill Jobs** | Grants the ability to run the Kill status change command on jobs in the department. Requires View Jobs in Schedule Operations. |
 
-Departments are an organizational grouping in OpCon used to assign jobs to logical divisions. When a privilege is departmental, OpCon evaluates whether the user's role has that privilege for at least one department before allowing the related action. For instance, access to schedule and report features is gated by checks such as \"has at least one department for View Jobs in Master Schedules\" or \"has at least one department for View Standard Reports.\"
+:::note
+The `<General>` department is the default department for all jobs. Departmental privileges can also be associated with `<All Departments>`, which applies the privilege to every department at once.
+:::
 
-Roles can also be configured to bypass per-object scoping using the inheritance options exposed in the Solution Manager Role editor:
+## Where Departmental Privileges Are Managed
+
+Departmental function privileges are managed in the **Departmental Function Privileges** editor in Enterprise Manager under **Security > Privileges > Departmental Function Privileges**.
+
+<!-- GAP: The exact Solution Manager UI surface where per-department function privileges are assigned to a role (if any) could not be confirmed in Core-SolutionManager source. The Solution Manager Roles editor (Administration > Security > Roles) exposes Name, Inherit Privileges for All Schedules, Inherit Privileges for All Machines, Inherit Privileges for All Machines Groups, Access Codes, and Batch Users — no Departments tab was found. Confirm with SME whether departmental function privileges can be managed in Solution Manager or only in Enterprise Manager. -->
+
+## Role Inheritance Options
+
+In Solution Manager under **Administration > Security > Roles**, the role editor provides the following options that affect how object-level privileges are inherited. These apply to schedules, machines, and machine groups — not to departments.
 
 | Option | Effect |
 |---|---|
@@ -42,39 +70,9 @@ Roles can also be configured to bypass per-object scoping using the inheritance 
 | **Inherit Privileges for All Machines** | The role inherits privileges for every machine. |
 | **Inherit Privileges for All Machines Groups** | The role inherits privileges for every machine group. |
 
-<!-- GAP: A comparable \"inherit all departments\" option was not found in source. Confirm with SME whether departmental privileges support an inherit-all equivalent. -->
-
-## Where Roles And Departments Are Managed
-
-In Solution Manager, roles are maintained under **Administration > Security > Roles**.
-
-<!-- GAP: Departments are not maintained in Solution Manager (no department management labels exist in the Solution Manager core resources; departments appear only as an operations filter). Department definitions are maintained in Enterprise Manager. The exact Enterprise Manager menu path for the Department editor needs SME/source confirmation. -->
-
 ## Related Topics
 
 - [Managing Roles](../Managing-Roles-And-Privileges.md)
 - [Privileges](../../../../../../../administration/privileges.md)
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
-
-## FAQs
-
-**Q: Where do you manage roles in Solution Manager?**
-
-Roles are maintained under **Administration > Security > Roles**.
-
-**Q: What makes a privilege \"departmental\"?**
-
-A departmental function privilege is granted for one or more specific departments rather than system-wide. OpCon checks whether the user's role holds the privilege for at least one department before permitting the related action, such as viewing jobs in a schedule for that department.
-
-## Glossary
-
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. Role privileges can be scoped to specific departments, controlling which departments' jobs a user can manage.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Function privileges can be system-wide or scoped to individual departments.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Enterprise Manager**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.

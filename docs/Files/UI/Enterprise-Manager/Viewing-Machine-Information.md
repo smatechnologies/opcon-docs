@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Machine Information
-description: "View detailed information about a machine from the Machines Status view in Enterprise Manager."
+description: "View detailed configuration and status for a machine from the Machines Status view in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -11,36 +11,25 @@ tags:
   - System Administrator
   - Automation Engineer
   - Enterprise Manager
-last_updated: 2026-05-29
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
 # Viewing Machine Information
 
-## What Is It?
-
-The **Machines Status** view in Enterprise Manager lists the machines defined in your environment and lets you open the **Machine Information** dialog for any one of them. The dialog shows detailed configuration and status for a single machine, including its name, protocol, status, type, networking details, concurrent job limits, and time zone. It also provides tabs for the machine's groups, available properties, and documentation.
-
-Use this procedure when you need to confirm how a machine is configured or to check its current operational state.
-
-## Open the Machines Status view
-
-To open the Machines Status view, complete the following steps:
-
-1. Under the **Operation** topic, select **Machines Status**.
-
-The view opens with two tabs: **Table** and **Map**.
+The **Machines Status** view in Enterprise Manager lists the machines defined in your environment. From this view, you can open the **Machine Information** dialog for any machine to review its configuration and current operational state. The dialog displays the machine's name, protocol, status, type, networking details, concurrent job limits, and time zone, along with tabs for machine groups, available properties, and documentation.
 
 ## View machine information from the Table tab
 
 To view machine information from the **Table** tab, complete the following steps:
 
-1. Select the **Table** tab.
-2. Double-click the machine name, or right-click the machine and select **Machine Information**.
+1. Under the **Operation** topic, select **Machines Status**.
+2. Select the **Table** tab.
+3. Double-click the machine name, or right-click the machine and select **Machine Information**.
 
    The **Machine Information** dialog opens.
-3. Review the machine details. For a description of each field, see [Machine Information fields](#machine-information-fields).
-4. Select **OK** to close the **Machine Information** dialog.
+4. Review the machine details. For a description of each field, see [Machine Information fields](#machine-information-fields).
+5. Select **OK** to close the dialog.
 
 **Result:** The **Machine Information** dialog closes and you return to the **Table** tab.
 
@@ -48,12 +37,13 @@ To view machine information from the **Table** tab, complete the following steps
 
 To view machine information from the **Map** tab, complete the following steps:
 
-1. Select the **Map** tab.
-2. Right-click the machine and select **Machine Information**.
+1. Under the **Operation** topic, select **Machines Status**.
+2. Select the **Map** tab.
+3. Right-click the machine and select **Machine Information**.
 
    The **Machine Information** dialog opens.
-3. Review the machine details. For a description of each field, see [Machine Information fields](#machine-information-fields).
-4. Select **OK** to close the **Machine Information** dialog.
+4. Review the machine details. For a description of each field, see [Machine Information fields](#machine-information-fields).
+5. Select **OK** to close the dialog.
 
 **Result:** The **Machine Information** dialog closes and you return to the **Map** tab.
 
@@ -92,22 +82,6 @@ The dialog also includes the following tabs:
 | **Machine Properties** | The properties available on the machine. |
 | **Documentation** | The documentation text stored for the machine. |
 
-## FAQs
-
-**Q: How do I open the Machine Information dialog?**
-
-From the **Table** tab, double-click the machine name or right-click the machine and select **Machine Information**. From the **Map** tab, right-click the machine and select **Machine Information**.
-
-**Q: Does opening the Machine Information dialog change the machine configuration?**
-
-No. The dialog is read-only and is used to view machine details and status.
-
 ## Related Topics
 
 - [Machine Information](Machine-Information.md)
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job run requests to machines through SMANetCom, and machines report job completion status back to SAM.

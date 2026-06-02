@@ -9,55 +9,50 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
+  - Self Service
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** Administrators who configure input fields on Self Service requests
+## Overview
 
-## What Is It?
+User inputs allow Self Service requests to accept values from the end user at runtime. When a variable is defined within an OpCon Event definition, it becomes available as a user input. When a user selects the service request button, any configured user input fields display so the user can supply a value. The system inserts that value into the event before SAM receives it.
 
-User inputs allow Self Service requests to accept values from the end user at runtime. The input value is passed as a property into the triggered OpCon workflow. Supported input types: text, number, date, choice list, master job selector, master schedule selector, and text collection.
+By default, a new variable is set to the **Text** type with no validation, allowing users to enter any value.
 
-- Creating a service request that requires a user-provided date, filename, or other parameter
-- Configuring a choice list that limits users to approved values
-- Linking a user input to a specific master job or schedule
-- Setting up a text collection input for multi-value scenarios
+OpCon supports the following user input types:
 
-## What is in this section?
+| Input type | Description |
+|---|---|
+| **Text** | Free-text field with optional minimum/maximum character limits, invalid character rules, padding, secret masking, and regular expression validation. |
+| **Number** | Numeric field with optional minimum and maximum value constraints. |
+| **Date** | Date picker with optional start date, end date, and format pattern. |
+| **Choice** | Predefined list of caption-and-value pairs; the user selects one option. |
+| **Master Job** | List of Master Jobs to which the logged-in user has privileges. |
+| **Master Schedule** | List of Master Schedules to which the logged-in user has privileges. |
+| **Text Collection** | Multi-value text field with a configurable delimiter, optional duplicate restriction, and character validation. |
+
+You can reorder user inputs using the up and down arrows in the **User Inputs** list. The order shown is the order the fields display to users when they run the service request.
+
+## In this section
 
 | Page | Description |
-|------|-------------|
-| Set Up User Inputs | How to add input fields to a service request |
-| Configure Master Job User Inputs | Link an input to a master job selection |
-| Configure Master Schedule User Inputs | Link an input to a master schedule selection |
-| Configure Text User Inputs | Free-text input field configuration |
-| Configure Number User Inputs | Numeric input with optional min/max constraints |
-| Configure Choice User Inputs | list with predefined options |
-| Configure Date User Inputs | Date picker input field |
-| Configure Text Collection User Inputs | Multi-value text input for lists of entries |
+|---|---|
+| [Setting up User Inputs](Setting-up-User-Inputs.md) | Add user input fields to a service request and reorder them. |
+| [Configuring Text User Inputs](Configuring-Text-User-Inputs.md) | Configure a free-text input field with validation rules. |
+| [Configuring Number User Inputs](Configuring-Number-User-Inputs.md) | Configure a numeric input with optional minimum and maximum constraints. |
+| [Configuring Date User Inputs](Configuring-Date-User-Inputs.md) | Configure a date picker input with optional date range and format. |
+| [Configuring Choice User Inputs](Configuring-Choice-User-Inputs.md) | Configure a predefined list of selectable options. |
+| [Configuring Master Job User Inputs](Configuring-Master-Job-User-Inputs.md) | Link an input to a list of Master Jobs the user has privileges to select. |
+| [Configuring Master Schedule User Inputs](Configuring-Master-Schedule-User-Inputs.md) | Link an input to a list of Master Schedules the user has privileges to select. |
+| [Configuring Text Collection User Inputs](Configuring-Text-Collection-User-Inputs.md) | Configure a multi-value text input with delimiter and duplication settings. |
+
 ## Glossary
 
 | Term | Definition |
-| --- | --- |
-| Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Master Schedule | The template definition of a schedule stored in OpCon's master tables. Changes to the master affect all future builds but not already-built daily schedules. |
-| Property | A name-value pair stored in OpCon. Properties can be referenced in job definitions using token syntax to pass dynamic values at runtime. |
-| Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
-| Schedule | A named group of jobs in OpCon that represents a business process. Schedules are built each day based on their defined frequencies and calendars. |
-| Self Service | A Solution Manager module that allows non-technical users to trigger OpCon jobs and workflows through a simplified, button-based interface. |
-| Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
-
-## FAQs
-
-**Q: What does the User Inputs Overview cover?**
-
-User inputs allow Self Service requests to accept values from the end user at runtime. The input value is passed as a property into the triggered OpCon workflow. Supported input types: text, number, date, choice list, master job selector, master schedule selector, and text collection.
-
-**Q: Who manages Solution Manager - Self Service in OpCon?**
-
-Administrators manage Solution Manager - Self Service, including settings, user access, and monitoring.
-
-**Q: Where should I start in the Solution Manager - Self Service section?**
-
-Review the overview pages in the sidebar. If you are new to this area, confirm access and role requirements with your OpCon system administrator before making changes.
+|---|---|
+| **OpCon Event** | A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, or changing a job or schedule status. |
+| **Property** | A name-value pair stored in OpCon. Properties can be referenced in job definitions using token syntax to pass dynamic values at runtime. |
+| **SAM (Schedule Activity Monitor)** | The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands, and processes OpCon events. |
+| **Self Service** | A Solution Manager module that allows non-technical users to trigger OpCon automation workflows through a simplified, button-based interface. |
+| **Service Request** | A Self Service button that encapsulates one or more OpCon events. Administrators define the events; end users run the request without needing direct access to schedule definitions. |

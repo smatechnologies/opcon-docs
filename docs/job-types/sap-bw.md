@@ -1,72 +1,42 @@
 ---
 title: SAP BW Job Details
-description: "Use this section to define an SAP BW job."
+description: "Field reference for defining an SAP BW job in OpCon, including machine selection, process chain name, and the Process Chain List search dialog."
 product_area: Job Types
 audience: Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - Automation Engineer
   - Jobs
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # SAP BW Job Details
 
-**Theme:** Configure  
-**Who Is It For?** Automation Engineer
+This page describes the fields available when defining an SAP BW job in OpCon. For platform-specific features and Agent configuration, refer to [SAP BW Agent Getting Started](https://help.smatechnologies.com/opcon/agents/sap-bw/) in the **SAP BW Agent** online help.
 
-## What Is It?
+## Machine Selection
 
-Use this section to define an SAP BW job. For platform details, refer to [SAP BW Agent Getting started](https://help.smatechnologies.com/opcon/agents/sap-bw/) in the **SAP BW Agent** online help.
+- **Machines or Machine Group**: The SAP BW Agent machine or machine group on which the job runs. For information on adding an Agent machine to OpCon, refer to [Adding Machines](../Files/UI/Enterprise-Manager/Adding-Machines.md) in the **Enterprise Manager** online help.
 
-## SAP Query
+## SAP BW Definition
 
-- **Machine**: Defines the SAP BW agent Machine name. For information on adding an agent machine to OpCon, refer to [Adding Machines](../Files/UI/Enterprise-Manager/Adding-Machines.md) in the **Enterprise Manager** online help
-- **Language**: Defines the two-character language abbreviation (e.g., enter EN for English)
-
-## General Data
-
-- **Process Chain Name**: Defines the name of the Business Warehouse job as defined in the SAP Business Warehouse system
+- **Process Chain Name**: The name of the Business Warehouse process chain as defined in the SAP Business Warehouse system. This field is required and read-only; use **Query SAP** to search for and select a process chain name from the connected SAP BW system.
 
 ## Process Chain List
 
-- **Chain**: Text matching the desired Process Chain name. Use wildcards (\*) if the full name is unknown
-- **Description**: Text matching the desired Process Chain description
-- **Search SAP**: Retrieves all Process Chain names from the SAP BW system matching the search criteria
+Select **Query SAP** next to the **Process Chain Name** field to open the **Process Chain List** dialog. Use this dialog to search the SAP BW system and select a process chain.
 
-## Configuration Options
+| Field | Description |
+|---|---|
+| **Machine** | The SAP BW Agent machine to query. Defaults to the machine selected in the job definition. |
+| **Language** | A two-character language abbreviation (for example, `EN` for English). Maximum 2 characters. |
+| **Chain** | Text matching the desired process chain name. Use wildcards (`*`) if the full name is unknown. Defaults to `*`. |
+| **Description** | Text matching the desired process chain description. Use wildcards (`*`) if the full description is unknown. Defaults to `*`. |
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Language | Defines the two-character language abbreviation (e.g., enter EN for English) | — | — |
-| Process Chain Name | Defines the name of the Business Warehouse job as defined in the SAP Business Warehouse system | — | — |
-| Chain | Text matching the desired Process Chain name. | — | — |
-| Description | Text matching the desired Process Chain description | — | — |
-| Search SAP | Retrieves all Process Chain names from the SAP BW system matching the search criteria | — | — |
-## FAQs
+Select **Query SAP** in the dialog to retrieve all process chains from the SAP BW system that match the search criteria. Results display in a grid showing **Chain Id** and **Description**. Select a row and then select **OK** to populate the **Process Chain Name** field, or double-click a row to select it directly.
 
-**Q: What does an SAP BW job run?**
-
-An SAP BW job triggers and monitors SAP Business Warehouse process chains, identified by their Process Chain Name as defined in the SAP Business Warehouse system.
-
-**Q: Can you search for a Process Chain if you don't know the exact name?**
-
-Yes. Use wildcards (*) in the Chain or Description fields when searching. Select **Search SAP** to retrieve all Process Chain names from the SAP BW system matching the criteria.
-
-**Q: What information is needed to define an SAP BW job?**
-
-You need the SAP BW agent Machine name, the Language abbreviation (e.g., EN for English), and the Process Chain Name.
-
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+:::note
+Using `*` for both **Chain** and **Description** queries all process chains. For faster results, provide a more specific value in at least one field.
+:::

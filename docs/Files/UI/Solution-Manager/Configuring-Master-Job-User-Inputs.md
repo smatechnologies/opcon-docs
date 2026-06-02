@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Configuring Master Job User Inputs
-description: "When configured, the Master Job User Input displays as a list of all Master Jobs for which the logged-in user has privileges when running the Service Request."
+description: "A Master Job user input presents a list of jobs from a specified schedule when an operator runs a Service Request. Use this procedure to add and configure a Master Job user input on a Service Request."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,44 +15,49 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Configuring Master Job User Inputs
+# Configuring Master Job User Inputs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Master Job user input presents the operator with a filtered list of jobs from a specified schedule when they run a Service Request. Only jobs for which the logged-in user has privileges appear in the list.
 
-## What Is It?
+## Before You Begin
 
-When configured, the Master Job User Input displays as a list of all Master Jobs for which the logged-in user has privileges when running the Service Request.
+You must have the **View Service Requests** function privilege and an active Self Service license to access Service Request configuration.
 
-To configure the user input, complete the following steps:
+## Configure a Master Job User Input
 
-1. Select a User Input in the **User Inputs** list on the **Service Request definition** page, or select the blue **Edit** button next to the desired user input
+To configure a Master Job user input, complete the following steps:
+
+1. In Solution Manager, go to **Self Service**.
+
+2. Open the Service Request you want to edit and go to the **User Inputs** section.
+
+3. Select a user input in the **User Inputs** list, or select **Edit** next to the user input you want to configure.
 
    ![Edit User Input](../../../Resources/Images/SM/Editing-User-Input.png "Edit User Input")
 
-2. The **Configure User Input** page displays
+   The **Configure User Input** page opens.
 
    ![Configure User Input Screen](../../../Resources/Images/SM/Setting-Up-User-Inputs_master-job.png "Configure User Input Screen")
 
-3. Enter the **User Input Caption** to display when users run the Service Request. The Variable name is used by default
-4. Toggle the **Required Variable** switch to require a value for this field
-5. Select **Job Master** in the **User Input Type** list
-6. Select **OK** to confirm, or **Cancel** to discard changes and return to the **Service Request definition** page
+4. In the **User Input Caption** field, enter the label to display when operators run the Service Request. If you leave this field blank, the variable name is used as the caption.
 
-## FAQs
+5. To make this field required, enable the **Required Variable** option.
 
-**Q: What does configuring master job user inputs control?**
+6. In the **User Input Type** list, select **Master Job**.
 
-Configuring master job user inputs defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
+   An additional **Schedule Name** field appears below the type selector.
 
-## Glossary
+7. In the **Schedule Name** field, select or enter the name of the schedule whose jobs you want to present to the operator. You can also reference another user input variable using the variable expression syntax to populate the schedule name dynamically.
 
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
+8. Select **OK** to save the user input, or **Cancel** to discard changes and return to the **Service Request definition** page.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** The user input is saved. When an operator runs the Service Request, the Master Job field displays a list of jobs from the configured schedule that the operator has privileges to access.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+## Field Reference
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+| Field | Description |
+|---|---|
+| **User Input Caption** | The label displayed to operators when running the Service Request. Defaults to the variable name if left blank. |
+| **Required Variable** | When enabled, the operator must select a value before submitting the Service Request. |
+| **User Input Type** | The type of input control. Select **Master Job** to show a job list. |
+| **Schedule Name** | The schedule from which jobs are retrieved. Required when the type is **Master Job**. Accepts a direct schedule name or a variable expression referencing another user input. |

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Cards
-description: "Use this procedure to edit Cards in Solution Manager."
+description: "How to edit Vision cards in Solution Manager using the Vision Settings view."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,34 +17,34 @@ doc_type: procedural
 
 # Editing Cards
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Vision cards define the tag-based groupings that appear on the **Vision Live** page. You can edit a card's name, type, associated frequencies, thresholds, and role assignments from the **Vision Settings** view.
 
-## What Is It?
-
-Use this procedure to edit Cards in Solution Manager.
-
-To edit a card, complete the following steps:
-
-1. Perform one of the following:
-    a. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) directly on the card on the **Vision Live** page **- or -**
-    b. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) next to **Home** on the **Vision Live** page.
-2. Select the **Card** to edit from the list
-3. Modify the existing information or settings
-4. Select **OK** at the bottom of the **Modify Card** window
-5. Select **Save**
+:::note
+Editing Vision cards requires the **Maintain Vision Workspaces** privilege. The **Settings** button is only visible to users who hold this privilege.
 :::
 
-## FAQs
+## Edit a Vision card
 
-**Q: Do edits to cards take effect immediately?**
+To edit a Vision card, complete the following steps:
 
-Changes saved to cards in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+1. In Solution Manager, go to **Vision**.
+2. Select **Settings** in the toolbar on the **Vision Live** page.
+3. In the card tree on the left, select the card you want to edit.
+4. In the edit form that opens on the right, modify one or more of the following fields:
 
-## Glossary
+   | Field | Description |
+   |---|---|
+   | **Parent Card** | The group card that contains this card. |
+   | **Type** | Read-only after creation. Displays **Group** or **Tag**. |
+   | **Name** | The display name for the card. Must be unique within the parent group. |
+   | **Instance** | (Tag cards only) The remote OpCon instance whose tags this card monitors. Leave blank to use the current instance. |
+   | **Pattern** | (Tag cards only) The job tag pattern this card tracks. |
+   | **Job Offset** | (Tag cards only) The day offset used to match jobs to the card. |
+   | **Roles** | The roles that can view this card. The **ocadm** role and your own user role are required. |
+   | **Thresholds** | QoS and SLA tolerable and critical percentage thresholds used in the Vision Health view. |
+   | **Frequency(ies)** | (Tag cards only) The Vision frequencies associated with this card. At least one frequency is required. |
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+5. Select **OK** to save the card and close the form.
+6. Select **Save** at the bottom of the **Vision Settings** view to commit all pending changes.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The updated card settings take effect on the **Vision Live** page on the next refresh.

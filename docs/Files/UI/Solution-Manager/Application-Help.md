@@ -1,6 +1,6 @@
-﻿---
+---
 title: Application Help
-description: "Web-based help is available directly within the application, covering the entire OpCon product suite."
+description: "Web-based help is available directly within Solution Manager, providing context-specific documentation for the entire OpCon product suite."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,35 +15,19 @@ doc_type: conceptual
 
 # Application Help
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Solution Manager includes built-in web-based help that opens context-specific documentation for the current page. The help content covers the entire OpCon product suite.
 
-## What Is It?
+## Accessing Application Help
 
-Web-based help is available directly within the application, covering the entire OpCon product suite. Select the **Help** button ![Help Button](../../../Resources/Images/SM/Help-Button.png "Help Button") at the top of the page or press **Ctrl+Alt+H** to access content-specific topics or all product help.
+To open help, use either of the following methods:
+
+- Select the **Help** button ![Help Button](../../../Resources/Images/SM/Help-Button.png "Help Button") in the toolbar at the top of the page.
+- Press **Ctrl+Alt+H**.
+
+The help documentation opens in a new browser window or tab, displaying content relevant to the page you are currently viewing. If no context-specific topic is available, the Solution Manager home documentation opens.
 
 ![Solution Manager Web-based Product Help](../../../Resources/Images/SM/SMWeb-basedHelp.png "Solution Manager Web-based Product Help")
 
 :::note
 You may need to disable your browser pop-up blocker to open help in the browser window.
 :::
-
-## FAQs
-
-**Q: What does Application Help do?**
-
-Web-based help is available directly within the application, covering the entire OpCon product suite. Select the **Help** button ![Help Button](../../../Resources/Images/SM/Help-Button.png "Help Butto
-
-**Q: Where can you find Application Help in OpCon?**
-
-Access Application Help in Solution Manager.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

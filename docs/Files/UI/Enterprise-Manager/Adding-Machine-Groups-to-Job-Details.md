@@ -1,6 +1,6 @@
 ---
 title: Adding Machine Groups to Job Details
-description: "Use this procedure to add Machine Groups to Job Details in Enterprise Manager."
+description: "Assign a machine group to a job in the Job Master editor in Enterprise Manager so OpCon can distribute the job across multiple agents."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,42 +8,28 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Machine Groups to Job Details
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A machine group is a named collection of agents in OpCon. Assigning a machine group to a job lets OpCon run the job on the least-tasked agent in the group or on every agent in the group, depending on your configuration. Use this procedure to assign a machine group to a job in Enterprise Manager.
 
-## What Is It?
+## Assign a machine group to a job
 
-Use this procedure to add Machine Groups to Job Details in Enterprise Manager.
+To assign a machine group to a job, complete the following steps:
 
-To add machine group to details, complete the following steps:
+1. In Enterprise Manager, select **Job Master** under the **Administration** topic.
+2. In the **Schedule** list, select the schedule that contains the job.
+3. In the **Job** list, select the job.
+4. In the **Machine Group Selection** section, select the machine group from the **Group** list.
+5. Select the run behavior:
+   - **Run on Least Tasked Machine** — OpCon sends the job to the agent in the group that currently has the fewest active jobs.
+   - **Run on Each Machine** — OpCon runs the job on every agent in the group. This option is available for master jobs only, not daily jobs.
+6. Select **Save** on the **Job Master** toolbar.
 
-1. Select **Job Master** under the **Administration** topic
-2. Select the **Schedule** in the **Schedule** list
-3. Select the **job** in the **Job** list
-4. Select a **machine group** in the **Group** list
-5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-6. Repeat steps 3–5 for each job requiring the machine group
-7. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+**Result:** The machine group assignment is saved to the job definition. OpCon uses the selected group and run behavior the next time the job is built into a daily schedule.
 
-## FAQs
-
-**Q: How do you save a new machine groups to job details record?**
-
-After completing the required fields, select the **Save** button on the toolbar to save the machine groups to job details record.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+To assign a machine group to additional jobs in the same schedule, repeat steps 3–6 for each job. When finished, select **Close** (to the right of the **Job Master** tab) to close Job Master.

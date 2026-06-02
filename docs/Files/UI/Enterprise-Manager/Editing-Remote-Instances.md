@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Remote Instances
-description: "Use this procedure to edit Remote Instances in Enterprise Manager."
+description: "Step-by-step procedure for editing an existing remote instance in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,38 +10,45 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Remote Instances
+# Editing Remote Instances
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A remote instance defines the connection details that OpCon uses to communicate with a separate OpCon database. Use this procedure to update the connection properties of an existing remote instance in Enterprise Manager.
 
-## What Is It?
+For conceptual information about each field, refer to [Remote Instances](../../../objects/remote-instances.md) in the **Concepts** online help.
 
-Use this procedure to edit Remote Instances in Enterprise Manager.
+## Edit a remote instance
 
 To edit a remote instance, complete the following steps:
 
-1.  Select **Remote Instances** under the **Administration** topic. The **Remote Instances** screen displays
-2.  Select an **existing remote instance** in the **Selection** list
-3.  Enter the *changes*
-4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Remote Instances** toolbar
-5.  Select **Close ☒** (to the right of the **Remote Instances** tab) to close the **Remote Instances** screen
+1. Select **Remote Instances** under the **Administration** topic. The **Remote Instances** screen opens.
+2. Select the remote instance you want to change in the **Selection** list. The instance details populate the form.
+3. Update any of the following fields as needed:
 
-## FAQs
+   **Remote OpCon section**
 
-**Q: Do edits to remote instances take effect immediately?**
+   | Field | Description |
+   |---|---|
+   | **Name** | Unique name for the remote instance (maximum 255 characters). |
+   | **Documentation** | Optional free-text notes for the remote instance (maximum 8,000 characters). |
+   | **Server** | Hostname or IP address of the remote SQL Server. Required. |
+   | **Database** | Name of the remote OpCon database. Required. |
+   | **Windows Authentication** | When selected, OpCon connects using the Windows service account. The **User** and **Password** fields are disabled. |
+   | **User** | SQL Server login name. Required when **Windows Authentication** is not selected. |
+   | **Password** | Password for the SQL Server login. Required when **Windows Authentication** is not selected. Stored encrypted (AES). |
 
-Changes saved to remote instances in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+   **Options section**
 
-## Glossary
+   | Field | Description |
+   |---|---|
+   | **Mirroring On** | Select when the remote SQL Server uses database mirroring. |
+   | **Transparent Network IP Resolution** | Controls SQL Server multi-subnet failover behavior. Options: **Auto** (default), **Enabled**, **Disabled**. **Auto** is recommended in most environments. |
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Remote Instances** toolbar.
+5. Select **Close** (to the right of the **Remote Instances** tab) to close the **Remote Instances** screen.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The updated connection details are saved to the OpCon database and take effect the next time the remote instance connection is referenced.

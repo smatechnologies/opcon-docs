@@ -1,7 +1,7 @@
 ---
 sidebar_label: 'Whats New'
 title: What's New in Installation
-description: "The What's New section provides information related to changes with installing or upgrading all of the OpCon components except the agents (also referred to as Agents)."
+description: "The What's New section provides information related to changes with installing or upgrading all of the OpCon components except the Agents."
 product_area: Installation
 audience: System Administrator
 version_introduced: "[see release notes]"
@@ -15,92 +15,32 @@ doc_type: conceptual
 
 # What's New in Installation
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator
+This section describes changes related to installing or upgrading OpCon components, excluding Agents. For installation information on a specific Agent, refer to the corresponding Agent online help. Changes that require action or introduce new behaviors are documented in the [Breaking Changes](./breaking-changes.md) section.
 
-## What Is It?
+## Self-Contained .NET Core
 
-The **What's New** section provides information related to changes with
-installing or upgrading all of the OpCon
-components except the agents (also referred to as Agents). For
-installation information on a specific agent, refer to the corresponding
-agent online help. Any changes requiring actions or changed behaviors
-will be noted in the [Breaking Changes](./breaking-changes.md) section.
+SAM, the REST API, and supporting applications included in the **SMA OpCon** installer are now self-contained .NET Core assemblies. .NET Core no longer needs to be installed separately on the OpCon server. Maintenance releases apply patches to the .NET Core version packaged with the programs to keep the software current.
 
-### Self-Contained .NET Core
+## Chronoman and SMAHoliday Included in SMA OpCon
 
-SAM, the REST API, and supporting applications included in the **SMA
-OpCon** install are now self-contained .NET Core assemblies. .NET Core
-is no longer required to be installed on the OpCon server. Maintenance
-releases will apply patches to the .NET Core version the programs are
-packaged with to keep the software up to date.
+The applications **Chronoman** and **SMAHoliday** are now included in the SAM folder. Run these applications from the SAM folder instead of from an installed Windows Agent. Both applications are distributed with both installers.
 
-### Chronoman and SMAHoliday - Included in SMA OpCon
+## SMA OpCon ImpEx2 — New Standalone Installer
 
-The applications **Chronoman** and **SMAHoliday** are now included in
-the SAM folder. Moving forward these applications should be run from the
-SAM folder instead of from an installed Windows LSAM. The applications
-are distributed with both installers.
+SMA OpCon ImpEx2 has been separated from the Deploy installer, where it was previously known as the **Server** component. A new standalone installer is now available for the SMA OpCon ImpEx2 service. See the [Breaking Changes](./breaking-changes.md) section for required actions. The installer is included in all future OpCon releases, including maintenance releases for supported versions.
 
-### SMA OpCon ImpEx2 - New Installer
+## OpCon Web Installer — Download All Agents
 
-SMA OpCon ImpEx2 has been split from the Deploy install, where it was
-known as the **Server** component. A new stand-alone installer has been
-created for the SMA OpCon ImpEx2 service. Please read the Breaking
-Changes for more information. The installer will be included in all
-future OpCon releases, including maintenance releases for supported
-versions.
+**OpCon Web Installer** (OWI) now supports downloading all Agents, including those that do not have a Windows installer.
 
-### OpCon Web Installer - Download All Agents
+## OpCon Web Installer
 
-**OpCon Web Installer** (OWI) now can download all
-agents, including those that do not have a Windows installer.
+**OpCon Web Installer** is the preferred option for acquiring OpCon installation media. This application runs on Windows and downloads and runs installers for all OpCon core components, OpCon Deploy, Agents, and core utilities. For more information, see the [GitHub repository](https://github.com/smatechnologies/opcon-web-installer), or download the `OpConWebInstaller.zip` file directly from the [latest release](https://github.com/smatechnologies/opcon-web-installer/releases/latest).
 
-### OpCon Web Installer
+## SMA OpCon Install
 
-There is a new preferred option for acquiring the OpCon installation
-media, **OpCon Web Installer**. This new application works on Windows
-machines to download and run installers all OpCon core components, OpCon
-Deploy, Agents, and core utilities. Read more about it at the [Github repository](https://github.com/smatechnologies/opcon-web-installer), or
-download the OpConWebInstaller.zip file directly
-[here](./(<https://github.com/smatechnologies/opcon-web-installer/releases/latest>).
+Several previous product installers have been consolidated into one. The new installer combines **SMA OpCon Database Scripts**, **SMA OpCon SAM**, and **SMA OpCon Solution Manager** into a single installed program named **SMA OpCon**.
 
-### SMA OpCon Install
+## Online Help
 
-Several previous products installers have been consolidated into one.
-The new installer combines the *SMA OpCon Database Scripts*, *SMA OpCon
-SAM*, and *SMA OpCon Solution Manager* into a single installed program
-named **SMA OpCon**.
-
-### Online Help
-
-Beginning with release 20.0, web documentation is now available on
-<https://help.smatechnologies.com>! Supported releases for all products
-that provide web documentation will be available, allowing you to read
-about releases before downloading and installing them.
-
-## FAQs
-
-**Q: What does the What's New section cover?**
-
-The What's New section describes changes related to installing or upgrading OpCon components (excluding agents/Agents). Changes requiring action or introducing new behaviors are also documented in the Breaking Changes section.
-
-**Q: Is .NET Core still required to be installed separately on the OpCon server?**
-
-No. Beginning with the current release, SAM, the REST API, and supporting applications are self-contained .NET Core assemblies. .NET Core no longer needs to be installed separately on the OpCon server.
-
-**Q: Where should Chronoman and SMAHoliday be run from?**
-
-Beginning with the current release, Chronoman and SMAHoliday are included in the SAM folder. They should now be run from the SAM folder rather than from an installed Windows LSAM.
-
-## Glossary
-
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+Beginning with release 20.0, web documentation is available at <https://help.smatechnologies.com>. Supported releases for all products that provide web documentation are available, allowing you to review release information before downloading and installing.

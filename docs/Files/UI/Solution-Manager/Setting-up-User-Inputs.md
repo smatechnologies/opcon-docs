@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Setting up User Inputs
-description: "When a Variable is defined within the OpCon Event definition, it becomes available as a User Input."
+description: "When a Variable is defined within an OpCon Event definition, it becomes available as a User Input that operators complete when they run the Service Request."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,22 +17,53 @@ doc_type: procedural
 
 # Setting up User Inputs
 
-**Theme:** Build  
-**Who Is It For?** System Administrator, Automation Engineer
+When a Variable is defined within an OpCon Event definition, it becomes available as a User Input. User Input fields display to users when they select the Service Request button.
 
-## What Is It?
+By default, OpCon sets a new Variable as a User Input of type **Text** with no validation, allowing users to type any value. That text is placed in the OpCon Event just before SAM processes it.
 
-When a Variable is defined within the OpCon Event definition, it becomes available as a User Input. User Input fields display to users when they select the Service Request button.
+## User Input types
 
-By default, the system sets a new Variable as User Input of type **Text** with no validation, allowing users to type any value. That text is placed in the OpCon Event just before SAM receives it.
+The following User Input types are available when configuring a Service Request:
 
-To change the order of the User Inputs, use the up/down arrows in the User Input list. The order shown here is the order fields display to users when they select the Service Request button.
+| Type | Description |
+|---|---|
+| **Text** | Displays a text field. Supports validation rules such as minimum/maximum characters, restricted characters, regular expressions, and output formatting. |
+| **Number** | Displays a numeric field with optional minimum and maximum value constraints. |
+| **Date** | Displays a date picker with optional start date, end date, and date format settings. |
+| **Choice** | Displays a list of predefined caption-and-value pairs for the user to select from. |
+| **Text Collection** | Displays a multi-value text field. Supports delimiter configuration and optional duplicate restriction. |
+| **Master Job** | Displays a job selector scoped to a master schedule. |
+| **Master Schedule** | Displays a schedule selector from the master schedule list. |
 
-### User Inputs Reordering Buttons
+## Configure a User Input
 
-![User Inputs](../../../Resources/Images/SM/Setting-Up-User-Inputs.png "User Inputs with Reordering Options")
+To configure an individual User Input, complete the following steps:
 
-### ![Related Topics](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon") Related Topics
+1. Go to the Service Request definition page and locate the **User Inputs** list.
+2. Select the User Input you want to configure, or select the **Edit** button next to it.
+
+   The **Configure User Input** page opens.
+
+3. Enter a value in the **User Input Caption** field. This caption displays to users when they run the Service Request. If left blank, the Variable name is used.
+4. Toggle the **Required Variable** option to require users to supply a value before submitting the Service Request.
+5. Select a type in the **User Input Type** list.
+6. Configure any additional settings that appear for the selected type.
+7. Select **OK** to save, or **Cancel** to discard changes and return to the Service Request definition page.
+
+**Result:** The User Input is saved with the selected type and settings. The updated caption and validation rules apply the next time a user runs the Service Request.
+
+## Reorder User Inputs
+
+The order of User Inputs in the list determines the order in which fields appear to users when they run the Service Request.
+
+To reorder User Inputs, complete the following steps:
+
+1. Go to the Service Request definition page and locate the **User Inputs** list.
+2. Use the up and down arrows next to a User Input to move it to the desired position.
+
+**Result:** The updated order takes effect the next time a user opens the Service Request.
+
+## Related topics
 
 - [Configuring Text User Inputs](Configuring-Text-User-Inputs.md)
 - [Configuring Number User Inputs](Configuring-Number-User-Inputs.md)
@@ -41,25 +72,3 @@ To change the order of the User Inputs, use the up/down arrows in the User Input
 - [Configuring Master Schedule User Inputs](Configuring-Master-Schedule-User-Inputs.md)
 - [Configuring Master Job User Inputs](Configuring-Master-Job-User-Inputs.md)
 - [Configuring Choice User Inputs](Configuring-Choice-User-Inputs.md)
-
-## FAQs
-
-**Q: What does setting up user inputs configure?**
-
-Setting up user inputs defines the preferences or options that control how this feature behaves in OpCon.
-
-## Glossary
-
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
-
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

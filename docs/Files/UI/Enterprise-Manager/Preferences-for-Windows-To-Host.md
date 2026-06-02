@@ -1,39 +1,50 @@
 ---
 title: Setting Preferences for Window To Host
-description: "Use Window to Host preferences to configure third-party emulators that the EM calls when running the Window to Host shortcut from Operation views."
+description: "Configure the Window to Host emulator command for each Agent platform so Enterprise Manager can open a terminal session directly from Operation views."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Setting Preferences for Window To Host
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use **Window to Host** preferences to configure the terminal emulator command that Enterprise Manager runs when you select the **Window to Host** shortcut from an Operation view. You must configure a command for each Agent platform in your environment.
 
-## What Is It?
+When you select **Window to Host** for a machine that has no command configured, Enterprise Manager opens this preferences page automatically so you can enter one before continuing.
 
-Use **Window to Host** preferences to configure third-party emulators that the EM calls when running the **Window to Host** shortcut from **Operation** views. Configure an emulator for each platform in the environment.
+## Configure the Window to Host command
 
-To set the preferences, complete the following steps:
+To configure the emulator command for an Agent platform, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Window To Host**. The **Window To Host** settings display to the right
-5. Select the **platform** from the **Platform** list
-6. Enter the *Command* to run for the platform
-7. Select **Apply**, then select **OK**
+1. Open Enterprise Manager.
+2. Go to **Enterprise Manager > Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the Preferences tree to expand the list.
+4. Select **Window To Host**. The **Window To Host** settings appear on the right.
+5. Select the platform from the **Platform** list.
+6. Enter the emulator command in the **Command** field. Use the substitution variables listed below to pass machine information to the command.
+7. Select **Apply**, then select **OK**.
 
-## Glossary
+**Result:** Enterprise Manager saves the command for the selected platform. When you select **Window to Host** from an Operation view for a machine of that platform type, Enterprise Manager runs the command and substitutes the machine variables.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+## Substitution variables
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+The **Command** field supports the following variables. Enterprise Manager replaces each variable with the corresponding value from the machine definition at the time the command runs.
+
+| Variable | Description |
+|---|---|
+| `[[IP]]` | Machine IP address |
+| `[[HOSTNAME]]` | Machine hostname (fully qualified domain name) |
+| `[[GATEWAY]]` | Machine gateway address |
+| `[[MACHNAME]]` | Machine name as defined in OpCon |
+
+**Examples:**
+
+- UNIX: `/usr/bin/xterm -e ssh [[IP]]`
+- Windows: `mstsc /v:[[IP]]`

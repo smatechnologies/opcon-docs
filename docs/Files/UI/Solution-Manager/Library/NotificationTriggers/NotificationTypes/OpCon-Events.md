@@ -1,72 +1,86 @@
-﻿---
+---
 title: OpCon Events
-description: "!OpCon Events The OpCon Events dialog lists existing events and provides options to add, edit, or delete them."
+description: "Reference for the OpCon Events notification type in Solution Manager. Use this notification type to send one or more OpCon events when a notification trigger fires."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # OpCon Events
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
+The **OpCon Events** notification type sends one or more OpCon events when a notification trigger fires. You configure the events using the **OpCon Events** dialog, which lists existing events for the trigger and provides options to add, edit, or delete them.
 
 ![OpCon Events](../../../../../../Resources/Images/SM/Library/NotificationTriggers/opcon-events-dialog.png "OpCon Events")
 
-The **OpCon Events** dialog lists existing events and provides options to add, edit, or delete them.
+## OpCon Events dialog
 
-- **Test**: Sends a test for the activated notification of the trigger
+The **OpCon Events** dialog displays the events currently associated with the notification trigger. From this dialog you can:
 
-The **OpCon Event** dialog provides fields for defining an event. Select an **Event Template** from the list to begin.
+- Add a new event
+- Edit an existing event
+- Delete an existing event
+- **Test** — sends a test for the activated notification of the trigger
+
+## OpCon Event dialog
+
+Selecting **Add** or editing an existing event opens the **OpCon Event** dialog.
 
 ![OpCon Event](../../../../../../Resources/Images/SM/Library/NotificationTriggers/opcon-event-dialog.png "OpCon Event")
 
-Once you choose a template, the screen dynamically updates to assist with filling out event details.
+### Event Template
 
-Insert variables into any part of the Event using the notation **${variable}**. The same variable can be used multiple times in the same Event or across Events for the same Service Request; it appears as a single User Input, and the value supplied applies to every instance.
+Select an **Event Template** from the list to begin. The form updates dynamically based on the template you select, showing the required and optional parameter fields for that event type.
 
-The following system variables are available in Solution Manager:
+A preview of the complete event string displays below the **Event Template** field as you fill in the parameters.
 
-- **${SM.USER.LOGIN}** - Name of the OpCon user who selected the Service Request button
-- **${SM.USER.NAME}** - Full User Name of the OpCon user who selected the Service Request button
-- **${SM.USER.EMAIL}** - Email Address of the OpCon user who selected the Service Request button
-- **${SM.USER.COMMENTS}** - Comments of the OpCon user who selected the Service Request button
+### Add an OpCon event to a notification trigger
 
-Variables are resolved before the Event is sent to OpCon. A preview of the defined Event displays below the **Event Template** list.
+To add an OpCon event to a notification trigger, complete the following steps:
 
-Complete the Event definition, then select **OK** to apply changes and return to the **OpCon Events** page, or select **Cancel** to discard changes.
+1. In the **OpCon Events** dialog, select **Add**.
+2. In the **OpCon Event** dialog, select an **Event Template** from the list.
+3. Fill in the required and optional parameter fields.
+4. Select **Save** to save the event and return to the **OpCon Events** dialog.
 
-## FAQs
+**Result:** The new event appears in the events list and runs when the notification trigger fires.
 
-**Q: What does OpCon Events do?**
+### Edit an OpCon event
 
-The **OpCon Events** dialog lists existing events and provides options to add, edit, or delete them.
+To edit an existing OpCon event, complete the following steps:
 
-**Q: Where can you find OpCon Events in OpCon?**
+1. In the **OpCon Events** dialog, select the event you want to change.
+2. Select the edit option to open the **OpCon Event** dialog.
+3. Update the parameter fields as needed.
+4. Select **Save** to apply the changes.
 
-Access OpCon Events in Solution Manager or Enterprise Manager.
+### Delete an OpCon event
 
-## Glossary
+To delete an OpCon event, complete the following steps:
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+1. In the **OpCon Events** dialog, select the event you want to remove.
+2. Select the delete option.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+**Result:** The event is removed from the list.
 
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+## Variables in events
 
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+You can insert variables into any part of an event definition using the notation `${variable}`. The same variable can appear multiple times in the same event or across events for the same Service Request; it is treated as a single user input, and the value you supply applies to every instance.
 
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
+Variables are resolved before the event is sent to OpCon.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+### System variables
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+The following system variables are available when OpCon events are used within a Service Request:
+
+| Variable | Description |
+|---|---|
+| `${SM.USER.LOGIN}` | Login name of the OpCon user who selected the Service Request button |
+| `${SM.USER.NAME}` | Full name of the OpCon user who selected the Service Request button |
+| `${SM.USER.EMAIL}` | Email address of the OpCon user who selected the Service Request button |
+| `${SM.USER.COMMENTS}` | Comments entered by the OpCon user who selected the Service Request button |

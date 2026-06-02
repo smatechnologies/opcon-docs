@@ -1,6 +1,6 @@
 ---
 title: Adding Batch Users
-description: "Use this procedure to add Batch Users in Enterprise Manager."
+description: "Add Batch Users for Windows, UNIX, IBM i, MCP, OpenVMS, and SQL platforms in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,104 +8,102 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding Batch Users
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Batch User is an OS-level account that OpCon passes to the Agent when running a job. Enterprise Manager supports Batch User definitions for six platforms: Windows, UNIX, IBM i, MCP, OpenVMS, and SQL.
 
-## What Is It?
+To access Batch Users, select **Batch Users** under the **Security** topic in the Enterprise Manager navigation pane.
 
-Use this procedure to add Batch Users in Enterprise Manager.
+## Add a Windows Batch User
 
-## Setting up a New Microsoft (MS) agent Batch User
+To add a Windows Batch User, complete the following steps:
 
-To add a Windows batch user, complete the following steps:
+1. Select **Batch Users** under the **Security** topic. The **Batch Users** screen opens.
+2. Select **Windows** in the **Select the target OS** list.
+3. Select **Add** on the **Batch Users** toolbar.
+4. Enter a valid Windows account in `Domain\User` format in the **User** field. The value is stored in uppercase.
+5. Enter the account password in the **Password** field.
+6. Enter the password again in the **Confirm Password** field.
+7. Select **Save** on the **Batch Users** toolbar.
 
-1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-2. Select **Windows** in the **Select the target OS** list
-3. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Batch Users** toolbar
-4. Enter a valid *Windows User* in the **User** text box
-5. Enter the *user's password* in the **Password** text box
+**Result:** The new Windows Batch User appears in the Batch Users list for the Windows platform.
 
-6. Enter the *user's password* again in the **Confirm Password** text box
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
+## Add a UNIX Batch User
 
-## Adding a Batch User for IBM i
+To add a UNIX Batch User, complete the following steps:
 
-To add an IBM i batch user, complete the following steps:
+1. Select **Batch Users** under the **Security** topic. The **Batch Users** screen opens.
+2. Select **UNIX** in the **Select the target OS** list.
+3. Select **Add** on the **Batch Users** toolbar.
+4. Enter the group ID and user ID in `group/user` format in the **Group/User** field. Both the group and user portions accept letters, digits, hyphens, and underscores.
+5. Select **Save** on the **Batch Users** toolbar.
 
-1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-2. Select **IBM i** in the **Select the target OS** list
-3. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Batch Users** toolbar
-4. Enter a valid *user profile* in the **User Profile** text box
-5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
+**Result:** The new UNIX Batch User appears in the Batch Users list for the UNIX platform.
 
-## Adding a Batch User for MCP
+## Add an IBM i Batch User
 
-To add an MCP batch user, complete the following steps:
+To add an IBM i Batch User, complete the following steps:
 
-1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-2. Select **MCP** in the **Select the target OS** list
-3. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Batch Users** toolbar
-4. Enter a valid *identifier* in the **Identifier** text box
-5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
+1. Select **Batch Users** under the **Security** topic. The **Batch Users** screen opens.
+2. Select **IBM i** in the **Select the target OS** list.
+3. Select **Add** on the **Batch Users** toolbar.
+4. Enter a valid IBM i user profile name in the **User Profile** field.
+5. Select **Save** on the **Batch Users** toolbar.
 
-## Adding a Batch User for OpenVMS
+**Result:** The new IBM i Batch User appears in the Batch Users list for the IBM i platform.
 
-To add an OpenVMS batch user, complete the following steps:
+## Add an MCP Batch User
 
-1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-2. Select **OpenVMS** in the **Select the target OS** list
-3. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Batch Users** toolbar
-4. Enter a valid *identifier* (maximum 12 characters) in the **Identifier** text box
-5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
+To add an MCP Batch User, complete the following steps:
 
-## Adding a Batch User for SQL
+1. Select **Batch Users** under the **Security** topic. The **Batch Users** screen opens.
+2. Select **MCP** in the **Select the target OS** list.
+3. Select **Add** on the **Batch Users** toolbar.
+4. Enter a valid MCP user identifier in the **Identifier** field.
+5. Select **Save** on the **Batch Users** toolbar.
 
-To add an SQL batch user, complete the following steps:
+**Result:** The new MCP Batch User appears in the Batch Users list for the MCP platform.
 
-1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-2. Select **SQL** in the **Select the target OS** list
-3. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Batch Users** toolbar
-4. Enter a valid *Windows User* in the **User** text box
-5. Enter the *user's password* in the **Password** text box
+## Add an OpenVMS Batch User
 
-6. Enter the *user's password* again in the **Confirm Password** text box
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
+To add an OpenVMS Batch User, complete the following steps:
 
-## Adding a Batch User for UNIX
+1. Select **Batch Users** under the **Security** topic. The **Batch Users** screen opens.
+2. Select **OpenVMS** in the **Select the target OS** list.
+3. Select **Add** on the **Batch Users** toolbar.
+4. Enter a valid OpenVMS user identifier (maximum 12 characters) in the **Identifier** field.
+5. Select **Save** on the **Batch Users** toolbar.
 
-To add a UNIX batch user, complete the following steps:
+**Result:** The new OpenVMS Batch User appears in the Batch Users list for the OpenVMS platform.
 
-1. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-2. Select **UNIX** in the **Select the target OS** list
-3. Select ![Add icon](../../../Resources/Images/EM/EMadd.png "Add icon") **Add** on the **Batch Users** toolbar
-4. Enter the *group ID* (number or name), a *slash (/)*, and the *user ID* (number or name) in the **Group/User** text box
-5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
+## Add a SQL Batch User
 
-## FAQs
+To add a SQL Batch User, complete the following steps:
 
-**Q: Where do you access Batch Users in Enterprise Manager?**
+1. Select **Batch Users** under the **Security** topic. The **Batch Users** screen opens.
+2. Select **SQL** in the **Select the target OS** list.
+3. Select **Add** on the **Batch Users** toolbar.
+4. Enter a valid Windows account in `Domain\User` format in the **User** field.
+5. Enter the account password in the **Password** field.
+6. Enter the password again in the **Confirm Password** field.
+7. Select **Save** on the **Batch Users** toolbar.
 
-Select **Batch Users** under the **Security** topic in Enterprise Manager navigation pane.
+**Result:** The new SQL Batch User appears in the Batch Users list for the SQL platform.
 
-**Q: What information is required to add batch users?**
+## Default Batch Users
 
-The required fields include **Password**, **Password**. Select **Save** on the toolbar to save the new record.
+Each supported platform includes a pre-configured default Batch User that OpCon provides. Default Batch Users are read-only and cannot be deleted or modified.
 
-**Q: Can you add batch users for multiple platforms?**
+| Platform | Default Batch User |
+|---|---|
+| Windows | `use service account` |
+| SQL | `use service account` |
+| MCP | `*` |
+| IBM i | `*` |
 
-Yes. This page covers batch users for multiple platforms or contexts: Setting up a New Microsoft (MS) agent Batch User, Adding a Batch User for IBM i, Adding a Batch User for MCP.
-
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+<!-- GAP: No default Batch User confirmed for UNIX or OpenVMS platforms; needs SME review -->

@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating General Info
-description: "The Daily Job Definition page displays general job details at the top: - Scheduled Date (read-only) - Schedule Path (read-only) - Schedule Name (read-only) - Job Name (read-only) - Department -."
+description: "The Daily Job Definition page displays read-only job identification fields and editable fields for Department, Access Code, and Tags. This page explains how to update those fields in Admin mode."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,96 +15,89 @@ doc_type: procedural
 
 # Viewing and Updating General Info
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **General Info** section at the top of the **Daily Job Definition** page displays identifying information about the selected job and provides fields you can update in **Admin** mode. The following fields appear in this section:
 
-## What Is It?
+| Field | Editable | Description |
+|---|---|---|
+| **Schedule Date** | No | The date for which the daily job was built |
+| **Schedule Path** | No | The path of the parent schedule |
+| **Schedule Name** | No | The name of the parent schedule |
+| **Job Name** | No | The name of the job |
+| **Department** | Yes (Admin mode) | The department assigned to the job |
+| **Access Code** | Yes (Admin mode) | The access code assigned to the job |
+| **Tags** | Yes (Admin mode) | Keywords associated with the job |
 
-The **Daily Job Definition** page displays general job details at the top:
-
-- Scheduled Date (read-only)
-- Schedule Path (read-only)
-- Schedule Name (read-only)
-- Job Name (read-only)
-- Department
-- Access Code
-- Tags
-
-Read-only properties cannot be changed. Department, access code, and tags can be updated in **Admin** mode.
-
-## Updating General Information
+Read-only fields cannot be changed. **Department**, **Access Code**, and **Tags** can be updated after you switch to **Admin** mode.
 
 :::note
-Only users with the appropriate permissions can access the **Lock** button and update job properties. For details, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
+Only users with the appropriate privileges can access the **Lock** button and update job properties. For details, refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) in the **Accessing Daily Job Definition** topic.
 :::
 
 :::note
 Changes to job properties in the **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time the job runs.
 :::
 
-### Navigating to the Daily Job Definition page
+## Opening the Daily Job Definition Page
 
-Complete steps 1-8 before performing any general info update:
+To open the **Daily Job Definition** page and switch to **Admin** mode, complete the following steps:
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
-2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled
-3. Select the desired **date(s)** to display the associated schedules
-4. Select one or more **schedules** in the list
-5. Select one **job** in the list. Your selection appears as a breadcrumb trail in the [status bar](SM-UI-Layout.md#Status)
-6. Select the job record (e.g., 1 job(s)) in the status bar to open the **Selection** panel
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled.
+3. Select the desired date or dates to display the associated schedules.
+4. Select one or more schedules in the list.
+5. Select one job in the list. Your selection appears as a breadcrumb trail in the [status bar](SM-UI-Layout.md#Status).
+6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to switch to **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
 
-### Updating Departments
+**Result:** The **Daily Job Definition** page is now in **Admin** mode and the **Department**, **Access Code**, and **Tags** fields are editable.
 
-For conceptual information, refer to [Departments](../../../objects/departments.md) in the **Concepts** online help.
+## Updating the Department
 
-1. Complete steps 1-8 above
-2. Select another **department** from the **Department** combo box. If needed, select the **Search** button ![Daily Job Definition Search Button](../../../Resources/Images/SM/Daily-Job-Definition-Search-Button.png "Daily Job Definition Search Button"), enter search criteria to filter the list, make your selection, then select **OK**
-3. Select the **Save** button
+For conceptual information, refer to [Departments](../../../objects/departments.md).
 
-### Updating Access Codes
+To update the department assigned to a job, complete the following steps:
 
-For conceptual information, refer to [Access Codes](../../../objects/access-codes.md) in the **Concepts** online help.
+1. Complete all steps in [Opening the Daily Job Definition Page](#opening-the-daily-job-definition-page).
+2. Select a department from the **Department** field. If needed, select the **Search** button ![Daily Job Definition Search Button](../../../Resources/Images/SM/Daily-Job-Definition-Search-Button.png "Daily Job Definition Search Button"), enter search criteria to filter the list, make your selection, then select **OK**.
+3. Select **Save**.
 
-1. Complete steps 1-8 above
-2. Select another **access code** from the **Access Code** combo box. If needed, select the **Search** button ![Daily Job Definition Search Button](../../../Resources/Images/SM/Daily-Job-Definition-Search-Button.png "Daily Job Definition Search Button"), enter search criteria to filter the list, make your selection, then select **OK**
-3. Select the **Save** button
+**Result:** The department assignment is updated for the daily job.
 
-### Adding Tags
+## Updating the Access Code
 
-For conceptual information, refer to [Tags](../../../job-components/tags.md) in the **Concepts** online help.
+For conceptual information, refer to [Access Codes](../../../objects/access-codes.md).
 
-1. Complete steps 1-8 above
-2. Enter the *tag name* in the **Tag** field and press **Enter**. Repeat to add more tags
-3. Select the **Save** button
+To update the access code assigned to a job, complete the following steps:
 
-### Removing Tags
+1. Complete all steps in [Opening the Daily Job Definition Page](#opening-the-daily-job-definition-page).
+2. Select an access code from the **Access Code** field. If needed, select the **Search** button ![Daily Job Definition Search Button](../../../Resources/Images/SM/Daily-Job-Definition-Search-Button.png "Daily Job Definition Search Button"), enter search criteria to filter the list, make your selection, then select **OK**.
+3. Select **Save**.
 
-For conceptual information, refer to [Tags](../../../job-components/tags.md) in the **Concepts** online help.
+**Result:** The access code assignment is updated for the daily job.
 
-1. Complete steps 1-8 above
-2. Select the **x** next to the tag name to delete it
-3. Select the **Save** button
+## Adding Tags
 
-:::
+For conceptual information, refer to [Tags](../../../job-components/tags.md).
 
-## FAQs
+Tags can contain letters, numbers, hyphens, underscores, and spaces, and must not exceed 128 characters each.
 
-**Q: What does Viewing and Updating General Info cover?**
+To add one or more tags to a job, complete the following steps:
 
-This page covers Updating General Information.
+1. Complete all steps in [Opening the Daily Job Definition Page](#opening-the-daily-job-definition-page).
+2. Type a tag name in the **Tags** field and press **Enter**. Repeat to add more tags.
+3. Select **Save**.
 
-## Glossary
+**Result:** The tags are added to the daily job.
 
-**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+## Removing Tags
 
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
+For conceptual information, refer to [Tags](../../../job-components/tags.md).
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To remove a tag from a job, complete the following steps:
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+1. Complete all steps in [Opening the Daily Job Definition Page](#opening-the-daily-job-definition-page).
+2. Select the **x** next to the tag name to remove it.
+3. Select **Save**.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The tag is removed from the daily job.

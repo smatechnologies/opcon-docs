@@ -2,47 +2,32 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Synchronizing Data between List and PERT Views
-description: "Use this procedure to synchronize Data between List and PERT Views in Enterprise Manager."
+description: "Step-by-step procedure for synchronizing date and schedule selections between the Daily List and PERT views in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
-#  Synchronizing Data between List and PERT Views
+# Synchronizing Data between List and PERT Views
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+When both the **Daily List** and **PERT** views are open in Enterprise Manager, you can link them so that selecting a date or schedule in one view automatically updates the other. This is useful for monitoring job dependencies visually while tracking schedule status in the list.
 
-## What Is It?
+To synchronize data between the Daily List and PERT views, complete the following steps:
 
-Use this procedure to synchronize Data between List and PERT Views in Enterprise Manager.
+1. Under the **Operation** topic, select **List**. The **Daily list** screen displays.
+2. Under the **Operation** topic, select **PERT**. The **PERT** screen displays.
+3. Select and drag the **PERT** tab to the right side of the screen.
+4. When the cursor changes to a right-pointing arrow, release the **PERT** tab to dock it.
+5. On the **PERT** toolbar, select the **Listen for selection changes in other views** button to activate it.
+6. On the **Daily list** toolbar, select the **Send Selection** button to activate it. When active, selection changes in the **Daily list** view are sent to all listening views.
+7. In the **Daily list** view, select a date, or select a date and then a schedule.
 
-To synchronize the data between views, complete the following steps:
+**Result:** The **PERT** view updates to display the schedule and related job information that corresponds to your selection in the **Daily list** view.
 
-1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
-2.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
-3.  Select and drag the **PERT** tab to the right side of the screen
-4.  When the mouse changes to an **arrow symbol** pointing right, release the **PERT** tab
-5.  Select to activate the ![Listen for Selection icon](../../../Resources/Images/EM/EMlistenforchanges.png "Listen for Selection icon") **Listen for selection changes in other views** button on the **PERT** toolbar
-6.  Select to activate the ![Send Current Selection icon](../../../Resources/Images/EM/EMsendchanges.png "Send for Current Selection icon") **Send the current selection change to other views** button on the **Daily list** toolbar
-7.  Select a **date**, or select on a **date** then a **schedule**, to view
-8.  View the schedule and related job information in the **PERT** view
-9.  Select to deactivate the **Listen for selection changes in other views** button on the **PERT** toolbar
-:::
-
- 
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+To stop synchronization, select the **Listen for selection changes in other views** button on the **PERT** toolbar to deactivate it.

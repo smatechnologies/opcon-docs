@@ -13,40 +13,45 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** System administrators who create and maintain OpCon user accounts
+# Managing Users Overview
 
-## What Is It?
+User accounts control who can log in to OpCon and what they can do. Each account is assigned to one or more roles that determine privileges. Accounts also store individual settings such as language, email address, and Solution Manager preferences.
 
-User accounts control who can log in to OpCon and what they can do. Each account is assigned to one or more roles that determine privileges. Accounts also hold individual settings such as default theme, date format, and email address.
+Use the pages in this section to perform the following tasks:
 
-- Creating a new user account for an employee or service account
-- Copying an existing user account as a template
-- Deleting a user who has left the organization
-- Reviewing or changing a user's role memberships or settings
+- Create a new user account for an employee or service account.
+- Copy an existing user account as a template.
+- Delete a user who has left the organization.
+- Review or change a user's role memberships or personal settings.
 
-## What is in this section?
+## Required Privileges
+
+To create, modify, or delete user accounts, your role must have the **All Administrative Functions** privilege or the **All Function Privileges** departmental privilege. Users without these privileges can update only their own account settings and cannot change role assignments, disable accounts, force password changes, or set passwords to never expire.
+
+## User Account Properties
+
+Each user account includes the following core properties:
+
+| Property | Description |
+|---|---|
+| **Login Name** | The unique name the user enters to log in. Cannot contain the characters `[ ] : ; | = , + * ? " < >`. Must not match the password. |
+| **Name** | The display name for the account. |
+| **Password** | The OpCon login password. Must meet the active password policy. |
+| **External Password** | A secondary credential used by certain integrations. |
+| **Email** | Optional email address stored on the account. |
+| **Language** | Interface language. Supported values: English, German, French, Portuguese, Italian, Spanish. Default: English. |
+| **Roles** | One or more roles that grant privileges to the account. |
+| **Is Disabled** | When enabled, prevents the user from logging in. Default: false. |
+| **Force Password Change** | When enabled, requires the user to change their password at next login. Default: false. |
+| **Password Never Expires** | When enabled, the account password does not expire regardless of the system password policy. Default: false. |
+| **Is Self Service User** | When enabled, grants access to Self Service features (subject to license limits). Default: false. |
+
+## In This Section
 
 | Page | Description |
-|------|-------------|
-| Manage Users | User list view — search, filter, and open user records |
-| Add Users | Create a new user account |
-| Copy Users | Duplicate an existing user account |
-| Delete Users | Remove a user account |
-| Modifying Users | Subtopics for general settings, role assignments, and user preferences |
-
-## Glossary
-
-| Term | Definition |
-| --- | --- |
-| Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
-| Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
-
-## FAQs
-
-**Q: Who manages user accounts in OpCon?**
-
-System administrators are responsible for creating and maintaining user accounts, including role assignments, settings, and access management.
-
-**Q: Where should I start?**
-
-Review the overview pages in the sidebar. If you are new to this area, confirm access and role requirements with your OpCon system administrator before making changes.
+|---|---|
+| [Managing Users](Managing-Users.md) | User list view — search and open user records. |
+| [Adding Users](Adding-Users.md) | Create a new user account. |
+| [Copying Users](Copying-Users.md) | Duplicate an existing user account. |
+| [Deleting Users](Deleting-Users.md) | Remove a user account permanently. |
+| [Modifying Users](Modifying-Users/Modifying-Users-Overview.md) | Update general settings, role assignments, and personal preferences for a user account. |

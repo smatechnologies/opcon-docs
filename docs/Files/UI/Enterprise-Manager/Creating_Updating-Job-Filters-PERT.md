@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating/Updating Job Filters
-description: "Job filters in Enterprise Manager narrow the jobs displayed in operation views by status, department, access code, or tag."
+description: "Use the Job Filter dialog in Enterprise Manager to narrow the jobs displayed in the PERT view by job status, department, access code, or tag."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,37 +10,26 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Creating/Updating Job Filters
+# Creating/Updating Job Filters
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Job filters in Enterprise Manager let operators narrow the jobs displayed in the PERT view by status, department, access code, or tag. Filters can be created or updated at any time to focus on the jobs that matter.
+Job filters in Enterprise Manager narrow the jobs displayed in the PERT view. You can filter by job status, department, access code, or tag, and you can update filters at any time.
 
 To create or update a job filter, complete the following steps:
 
-1.  Select **PERT** under the **Operation** topic. The **PERT** screen displays
-2.  Select **Open the job filter dialog** on the **PERT** toolbar. The **Job Filter** dialog displays
-3.  Select the tab for the filter criteria (e.g., **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)
-4.  *(Optional)* For each tab, select the specific option(s) for the job filter, or select **Select/Unselect All** to select all
-5.  Select **OK** to save the job filter changes, or select **Cancel** to discard the changes
+1. In Enterprise Manager, select **PERT** under the **Operation** topic. The **PERT** view opens.
+2. On the **PERT** toolbar, select **Job Filter**. The **Job Filter** dialog opens.
+3. Select the tab for the filter criteria you want to apply: **Job Statuses**, **Departments**, **Access Codes**, or **Tags**.
+4. On the selected tab, select one or more items to include in the filter. To select all items on the tab at once, select **Select/Unselect All**.
+5. Repeat steps 3–4 for any additional filter tabs.
+6. Select **OK** to apply the filter, or select **Cancel** to discard changes.
+
+**Result:** The PERT view refreshes and displays only jobs that match the selected criteria. The view tab name updates to show **(Filtered)** when any filter is active.
+
+:::note
+To remove all active filters at once, open the **Job Filter** dialog and select **Reset**. This clears all selections across every tab.
 :::
-
-## Glossary
-
-**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching privilege to view or act on objects tagged with a given Access Code.
-
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. Used with function privileges to restrict which users can view or manage specific jobs.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

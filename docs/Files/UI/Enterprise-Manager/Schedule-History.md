@@ -1,58 +1,73 @@
 ---
 title: Schedule History
-description: "The Schedule History dialog displays all iterations of a schedule."
+description: "Use the Schedule History dialog in Enterprise Manager to review past run times, start times, end times, and status change notes for a schedule across a date range."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # Schedule History
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Schedule History** dialog displays past run records for a selected schedule. Each row represents one run instance and shows when the schedule started, ended, how long it ran, and any status change notes recorded for that instance.
 
-## What Is It?
+You can access Schedule History from the right-click context menu on any schedule in the **List**, **Matrix**, or **PERT** views under the **Operations** topic.
 
-The **Schedule History** dialog displays all iterations of a schedule. Access it by right-clicking a schedule and selecting **Schedule History** in the **List**, **Matrix**, or **PERT** views.
+## Schedule History dialog fields
 
-The dialog includes the following per schedule iteration:
+The dialog contains the following date range controls and result columns.
 
-- Schedule Date
-- Start Time
-- End Time
-- Run Time (min)
-- History Details (if selected)
-- History Archive (if selected)
+### Date range controls
 
-## Viewing Schedule History
+| Field | Description |
+|---|---|
+| **Start Date** | The earliest schedule date to include in results. Defaults to the date of the schedule you right-clicked. If you set Start Date later than End Date, End Date adjusts automatically to match. |
+| **End Date** | The latest schedule date to include in results. Defaults to the date of the schedule you right-clicked. If you set End Date earlier than Start Date, Start Date adjusts automatically to match. |
 
-To view Schedule History, complete the following steps:
+### Options
 
-1. Select **List** under the **Operation** topic
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-3. Right-click the **schedule**
-4. Select **Schedule History** from the menu. The **Schedule History** dialog displays
-5. Enter or select a **Start Date** and **End Date** using the text boxes or calendar icons
-6. Select the **Refresh** button to display the details
-7. Select the **Close** button to close the dialog
+| Option | Description |
+|---|---|
+| **View Detailed History** | Includes status change explanation notes in the **Note** column for each matching run record. |
+| **View Archived History** | Retrieves records from the history archive rather than active history. Select this option to view run records that have been moved to long-term storage. |
 
-## FAQs
+You can select both options simultaneously to view archived records with status change notes included.
 
-**Q: What does Schedule History cover?**
+### Results columns
 
-This page covers Viewing Schedule History.
+| Column | Description |
+|---|---|
+| **Schedule Date** | The date the schedule ran. |
+| **Start Time** | The date and time the schedule started. |
+| **End Time** | The date and time the schedule ended. |
+| **Runtime (min)** | The total run duration in minutes. |
+| **Note** | Status change explanation text. Populated only when **View Detailed History** is selected. A single run record may display multiple rows if more than one status change explanation was recorded. |
 
-## Glossary
+All columns except **Note** support sorting. Select a column header to sort results by that column.
 
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
+## View schedule history
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To view the history for a schedule, complete the following steps:
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+1. In Enterprise Manager, go to **Operations** and select **List**, **Matrix**, or **PERT**.
+2. Select the arrow to expand the date that contains the schedule.
+3. Right-click the schedule.
+4. Select **Schedule History** from the context menu.
+
+   The **Schedule History** dialog opens with the date range defaulting to the schedule's current date.
+
+5. Set the **Start Date** and **End Date** to define the date range you want to review.
+6. Select the **View Detailed History** option if you want status change notes included in results.
+7. Select the **View Archived History** option if you want to retrieve records from the history archive.
+8. Select **Refresh** to load results.
+
+   The table populates with all run records for the schedule within the selected date range.
+
+9. Select **Close** to close the dialog.

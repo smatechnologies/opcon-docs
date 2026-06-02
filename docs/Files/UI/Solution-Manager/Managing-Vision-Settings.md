@@ -1,113 +1,92 @@
-﻿---
+---
 title: Managing Vision Settings
-description: "Vision Settings allows you to create, edit, and delete cards and view the hierarchy of existing cards."
+description: "Reference for Vision Settings card fields in Solution Manager, including Parent Card, Type, Name, Instance, Pattern, Job Offset, Roles, Thresholds, and Frequencies."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: reference
 ---
 
 # Managing Vision Settings
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Vision Settings is the configuration area in Solution Manager where you create, edit, and delete Vision cards and view the hierarchy of existing cards. Cards are organized as a tree of Group cards and Tag cards.
 
-## What Is It?
+To access Vision Settings, you must have the **Maintain Vision Workspaces** function privilege assigned through your role.
 
-Vision Settings allows you to create, edit, and delete cards and view the hierarchy of existing cards.
-
-The following fields apply:
-
-**Parent Card**: Select the parent card for the tag. Group and tag cards can be defined at the root (/) level.
-
-**Type**: Define the card as a group card or a tag card.
-
-- **Group**: Creates a parent card at the root level or as the child of an existing group
-- **Tag**: Creates a card for a tag (pattern) defined in Enterprise Manager, at the root level or as a child of an existing group
-
-**Name**: Define the card name.
-
-**Instance**: Select a remote instance the card will monitor. Refer to [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md) for more information.
-
-**Pattern**: Select which tag defined in Enterprise Manager the card will monitor.
-
-**Job Offset**: Specify an offset on the schedule date for Vision to look for jobs. Options range from **-5 Frequency Days** through **+5 Frequency Days**, including **Previous Frequency Day**, **Current Frequency Day**, and **Next Frequency Day**.
-
-**Roles**: Assign roles to the tag.
-
-- **All granted**: Select whether all roles are granted
-- **Revoked**: Define which roles have revoked privileges
-- **Granted**: Define which roles have granted privileges
-
-**Thresholds**: Define the numerical range for QoS or SLA success rates.
-
-- **QoS**: Measures how often jobs complete successfully. Set **Critical** and **Tolerable** threshold values
-- **SLA**: Measures how often jobs complete within defined SLAs. Set **Critical** and **Tolerable** threshold values
-
-**Frequency(ies)**: Select an existing frequency or define a new one. Refer to [Managing Vision Frequencies](Managing-Vision-Frequencies.md) for more information.
-
-:::note
-This field is optional for Group cards.
-:::
-
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+The following topics describe each field available when creating or editing a card:
 
 - [Creating Cards](Creating-Cards.md)
 - [Editing Cards](Editing-Cards.md)
 - [Deleting Cards](Deleting-Cards.md)
 
-## Configuration Options
+## Card fields
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Parent Card | Select the parent card for the tag. | — | — |
-| Type | Define the card as a group card or a tag card | — | — |
-| Group | Creates a parent card at the root level or as the child of an existing group | — | — |
-| Tag | Creates a card for a tag (pattern) defined in Enterprise Manager, at the root level or as a child of an existing group | — | — |
-| Name | Define the card name | — | — |
-| Instance | Select a remote instance the card will monitor. | — | — |
-| Pattern | Select which tag defined in Enterprise Manager the card will monitor | — | — |
-| Job Offset | Specify an offset on the schedule date for Vision to look for jobs. | — | — |
-| Roles | Assign roles to the tag | — | — |
-| All granted | Select whether all roles are granted | — | — |
-| Revoked | Define which roles have revoked privileges | — | — |
-| Granted | Define which roles have granted privileges | — | — |
-| Thresholds | Define the numerical range for QoS or SLA success rates | — | — |
-| QoS | Measures how often jobs complete successfully. | — | — |
-| SLA | Measures how often jobs complete within defined SLAs. | — | — |
-| Frequency(ies) | Select an existing frequency or define a new one. | — | — |
+### Parent Card
 
-## FAQs
+Specifies the parent card for the card being created or edited. Group and Tag cards can be placed at the root (`/`) level or as children of an existing Group card.
 
-**Q: What does managing vision settings involve?**
+### Type
 
-Managing vision settings includes adding, editing, and deleting records. Access vision settings in Solution Manager.
+Defines the card as a Group card or a Tag card. You can only set this field when creating a card; it cannot be changed on an existing card.
 
-**Q: Who can manage vision settings in OpCon?**
+| Option | Description |
+|---|---|
+| **Group** | Creates a parent card at the root level or as the child of an existing Group card. A Group card must contain at least one child card before you can save the workspace. |
+| **Tag** | Creates a card for a tag pattern defined in Enterprise Manager, at the root level or as the child of an existing Group card. |
 
-Users with the appropriate privileges assigned through their role can manage vision settings. Contact your OpCon system administrator if you do not have access.
+### Name
 
-## Glossary
+Defines the display name for the card. The name must be unique within its parent level. For Group cards, you may enter a path using forward slashes to create nested groups in a single step (for example, `Finance/Payroll`).
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+### Instance
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+Selects the remote OpCon instance the Tag card monitors. Leave this field empty to monitor the current (local) instance. Refer to [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md) for more information.
 
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+This field is available on Tag cards only.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+### Pattern
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+Selects the tag pattern defined in Enterprise Manager that the Tag card monitors. The list is populated from the tags available on the selected Instance.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+This field is available on Tag cards only.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+### Job Offset
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+Specifies an offset from the schedule date that Vision uses when looking for jobs. Options range from **-5 Frequency Days** through **+5 Frequency Days**, and include **Previous Frequency Day**, **Current Frequency Day**, and **Next Frequency Day**.
+
+This field is available on Tag cards only and is required.
+
+### Roles
+
+Assigns roles to the card to control which users can see it.
+
+| Sub-field | Description |
+|---|---|
+| **All Granted** | When selected, grants access to all roles. |
+| **Revoked** | Lists roles that have their access explicitly revoked. |
+| **Granted** | Lists roles that have been explicitly granted access. |
+
+The ocadm role and the current user's role are always required and cannot be removed.
+
+### Thresholds
+
+Defines the numerical ranges (0–100) for Quality of Service (QoS) and Service Level Agreement (SLA) success rates. Set the **Critical** and **Tolerable** threshold values for each. A color bar previews the resulting ranges as you enter values.
+
+| Sub-field | Description |
+|---|---|
+| **QoS** | Measures how often jobs complete successfully. Set **Critical** and **Tolerable** threshold values. |
+| **SLA** | Measures how often jobs complete within their defined SLA windows. Set **Critical** and **Tolerable** threshold values. |
+
+### Frequency(ies)
+
+Selects one or more Vision frequencies to associate with the card. You can select an existing frequency or define a new one. At least one frequency is required for Tag cards. Refer to [Managing Vision Frequencies](Managing-Vision-Frequencies.md) for more information.
+
+:::note
+This field is optional for Group cards.
+:::

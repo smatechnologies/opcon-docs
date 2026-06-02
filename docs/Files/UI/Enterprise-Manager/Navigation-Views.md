@@ -1,6 +1,6 @@
 ---
 title: Navigation Views
-description: "In Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status)."
+description: "Navigation Views in Enterprise Manager provide visual representations of schedule and job data. Learn how to open, arrange, move, and manage views such as Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, and Machine Status."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,87 +8,73 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Navigation Views
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Navigation Views in Enterprise Manager provide visual representations that support the editors. Examples include **Workflow Designer**, **Daily Maintenance**, **Daily List**, **Matrix Chart**, **Gantt Chart**, **PERT View**, **Bar Chart**, **Pie Chart**, **Workload Chart**, and **Machine Status**.
 
-## What Is It?
+Any number of views can be open simultaneously, but only one view is active at a time. Unlike editors, you can drag views out of the workspace frame to a separate area such as a second monitor.
 
-In Enterprise Manager, Navigation Views (e.g., Workflow Designer, Daily Maintenance, Daily List, Matrix Chart, Gantt Chart, PERT View, Bar Chart, Pie Chart, Workload Chart, Machine Status) provide visual representations supporting the editors. Any number of views can be open simultaneously, but only one can be active at a time.
+## Opening a Navigation View
 
-Unlike Editors, Views can be [dragged out of the workspace to another separate area](#Moving) on their own.
+To open a Navigation View, complete the following steps:
 
-## Opening Navigation Views
+1. In the [Navigation Panel](Navigation-Panel.md), select the arrow next to a navigation topic to expand it.
+2. Select the **Navigation View** you want to open (for example, **Workflow Designer**).
+3. *(Optional)* Select and drag the view tab onto the tab bar if it is not already attached.
+4. Repeat step 2 to open additional views.
 
-To open Navigation Views, complete the following steps:
-
-1. Select the arrow to expand a Navigation topic in the [Navigation Panel](Navigation-Panel.md)
-2. Select the **Navigation View** (e.g., **Workflow Designer**)
-3. *(Optional)* Select and drag the **Navigation View** tab onto the tab bar if not already attached
-4. Repeat Step 2 to open more views
+**Result:** The selected view opens in the workspace.
 
 ## Changing Navigation View Tab Order
 
-Select and drag the **Navigation View** tab to the new location on the tab bar, then release.
+To reorder view tabs, select and drag a **Navigation View** tab to the new position on the tab bar, then release.
 
 :::note
-A stack symbol (![Three white folders with black borders stacked](../../../Resources/Images/EM/stacked-folders.png "Stacked icon")) appears as you drag the view over other view tabs.
+A stack symbol appears as you drag the view over other view tabs.
 :::
 
 ## Arranging Navigation Views
 
-1. Select and drag the **Navigation View** tab in the direction where you want it to display (left, right, top, or bottom)
-2. Release the tab once the stack symbol changes to an arrow. The view drops into place
+To arrange views side by side or in a split layout, complete the following steps:
 
-## Moving Navigation Views of the Workspace Frame
+1. Select and drag a **Navigation View** tab in the direction where you want it to display (left, right, top, or bottom).
+2. Release the tab when the stack symbol changes to an arrow.
 
-1. Select and drag the **Navigation View** tab outside Enterprise Manager workspace (e.g., to a second monitor)
-2. Release the tab in the preferred location
+**Result:** The view drops into place in the selected position.
 
-Alternatively, right-click the **Navigation View** tab, select **Detached**, then drag it to the preferred location.
+## Moving a Navigation View Outside the Workspace
 
-## Returning Navigation Views to the Workspace Frame
+To move a view outside the Enterprise Manager workspace (for example, to a second monitor), complete the following steps:
 
-Select and drag the **Navigation View** tab back to the preferred location inside the workspace. Alternatively, right-click the tab and select **Detached** to un-detach it and return it to the workspace.
+1. Select and drag the **Navigation View** tab outside the workspace frame.
+2. Release the tab in the preferred location.
 
-## Right-click Menu for Views
+Alternatively, right-click the **Navigation View** tab, select **Detached**, then drag the view to the preferred location.
 
-- **Detached**: Detaches the view to move it outside the workspace frame
-- **Restore**: Restores the view to its previous location
-- **Move**: Frees one view or a view tab group to move to another location
-  - **View**: Moves the view to a new location
-  - **Tab Group**: Moves the tab group (two or more side-by-side views) to a new location
-- **Size**: Adds a bold border to make it easier to resize the view pane
-  - **Left / Right / Top / Bottom**: Bolds the respective border edge for resizing
-- **Minimize**: Minimizes the view and places an icon on the right vertical sidebar
-- **Maximize**: Maximizes the view to its maximum size
-- **Close**: Closes the open view
+## Returning a Navigation View to the Workspace
 
-## Configuration Options
+To return a detached view to the workspace, complete the following steps:
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Detached | Detaches the view to move it outside the workspace frame | — | — |
-| Restore | Restores the view to its previous location | — | — |
-| Size | Adds a bold border to make it easier to resize the view pane | — | — |
-| Minimize | Minimizes the view and places an icon on the right vertical sidebar | — | — |
-| Maximize | Maximizes the view to its maximum size | — | — |
-## FAQs
+- Select and drag the **Navigation View** tab back to the preferred location inside the workspace.
 
-**Q: What does Navigation Views cover?**
+Alternatively, right-click the tab and select **Detached** again to re-attach it to the workspace.
 
-This page covers Opening Navigation Views, Changing Navigation View Tab Order, Arranging Navigation Views.
+## Right-Click Menu Options
 
-## Glossary
+Right-clicking a **Navigation View** tab displays the following options:
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+| Option | Description |
+|---|---|
+| **Detached** | Detaches the view so you can move it outside the workspace frame. Select again to re-attach. |
+| **Restore** | Restores the view to its previous location. |
+| **Move > View** | Frees the view to move to a new location. |
+| **Move > Tab Group** | Frees the tab group (two or more side-by-side views) to move to a new location. |
+| **Size** | Adds a bold border to the view pane to make resizing easier. Sub-options (**Left**, **Right**, **Top**, **Bottom**) bold the corresponding edge. |
+| **Minimize** | Minimizes the view and places it on the right vertical sidebar. |
+| **Maximize** | Maximizes the view to its full size. |
+| **Close** | Closes the open view. |

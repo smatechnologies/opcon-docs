@@ -1,6 +1,6 @@
 ---
 title: Copying Master Jobs
-description: "Use this procedure to copy Master Jobs in Solution Manager."
+description: "Copy an existing master job to reuse its configuration as the starting point for a new job in the same or a different schedule."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,57 +15,33 @@ doc_type: procedural
 
 # Copying Master Jobs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Copying a master job duplicates all settings from the original, including job type details, frequencies, and dependencies, and saves them as a new job. You must give the copy a name that is unique within the destination schedule.
 
-## What Is It?
+## Required Privileges
 
-Use this procedure to copy Master Jobs in Solution Manager.
+To copy a master job, your role must have at least one of the following **Departmental Function Privileges**:
 
-## Administration
+- All Function Privileges
+- All Job Master Functions
+- Add Jobs To Master Schedules
 
-### Required Privileges
+## Copy a Master Job
 
-To copy a master job, your role must have at least one of the following privileges:
+To copy a master job, complete the following steps:
 
-- **Departmental Function Privilege**: All Function Privileges, Add Jobs To Master Schedules, or All Job Master Functions
+1. Go to **Library** > **Master Jobs**.
+2. Select the job you want to copy.
+3. Select **Copy**. The **Master Job Copy** dialog opens.
 
----
+   ![Master Job Copy](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-copy.png "Master Job Copy")
 
-## Copying a Job
+4. In the **Name** field, enter a unique name for the new job. The field is pre-populated with the original job name.
+5. In the **Schedule** field, select the schedule where the new job will be saved. You can select the same schedule as the original or a different one.
+6. Select **OK**.
 
-Go to **Library** > **Master Jobs**, select a job, and select **Copy**. The Master Job Copy dialog opens:
+**Result:** The new job is saved with all settings copied from the original. If the destination schedule has frequencies that do not match the original job, a warning dialog appears. Select **Yes** to continue — the copied job adopts the destination schedule's frequencies, loses any frequency-level components that did not match, and is set to **Disable Build** so you can validate the job configuration before it runs. Select **No** to cancel the copy without saving.
 
-![Master Job Copy](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-copy.png "Master Job Copy")
+## Notes
 
-1. Enter a **Name**
-1. Select a **Schedule**
-1. Select **OK** to copy the job or **Cancel** to cancel
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Departmental Function Privilege | All Function Privileges, Add Jobs To Master Schedules, or All Job Master Functions | — | — |
-
-## FAQs
-
-**Q: Why would you copy master jobs instead of creating a new one?**
-
-Copying master jobs is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
-
-**Q: Does copying master jobs require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original master jobs record.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- The job name must be unique within the selected schedule. If the name already exists in that schedule, an error message appears and the copy is not saved.
+- After copying a job with frequency or dependency incompatibilities, review all job automation components — especially the **Frequency** tab and **Job Dependencies** — before clearing the **Disable Job** option on the **Job Details** tab to re-enable the job.

@@ -1,6 +1,6 @@
 ---
 title: Editing Batch Users
-description: "Use this procedure to edit Batch Users in Enterprise Manager."
+description: "Use this procedure to edit existing Batch Users in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,43 +8,37 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Editing Batch Users
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Batch users are OS-level credentials that OpCon uses to run jobs on target platforms. You can edit any batch user record that is not reserved by the system.
 
-## What Is It?
+:::note
+Reserved batch users cannot be edited. The following batch users are reserved and read-only: **Use Service Account** (Windows and SQL), `*` (MCP and IBM i).
+:::
 
-Use this procedure to edit Batch Users in Enterprise Manager.
+## Edit a Batch User
 
 To edit a batch user, complete the following steps:
 
-1. Select **Batch Users** under the **Security** topic
-2. Select the *OS* from the **Select the target OS** list
-3. Select the *batch user* to edit
-4. Enter the *changes*
-5. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Batch Users** toolbar
-6. Select **Close ☒** to close the **Batch Users** screen
+1. In Enterprise Manager, select **Batch Users** under the **Security** topic.
+2. In the **Select the target OS** list, select the operating system for the batch user you want to edit.
+3. In the **Batch Users** list, select the batch user to edit.
+4. In the **Batch User Details** section, update the fields as needed.
 
-:::note
-Reserved batch users, e.g., "Use Service Account" for Windows, cannot be edited at this time.
-:::
+   - **Windows / SQL** — Update the **User** field (format: `DOMAIN\User`) and the **Password** and **Confirm Password** fields if the password is changing.
+   - **UNIX** — Update the **Group/User** field using the format `group/user`.
+   - **IBM i** — Update the **User Profile** field.
+   - **MCP / OpenVMS** — Update the **Identifier** field.
 
-## FAQs
+5. Select **Save** on the **Batch Users** toolbar.
 
-**Q: Do edits to batch users take effect immediately?**
+**Result:** The batch user record is saved. Jobs that reference this batch user in the Master will use the updated credentials the next time the job record is built. Changes to daily job records apply only to the current instance.
 
-Changes saved to batch users in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+## Manage Batch User Privileges
 
-## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+To open the Batch User Privileges editor from the Batch Users screen, select **Manage Privileges** in the **Batch User Privileges** section. You must have the **All User Interface Functions** privilege to access the privileges editor.

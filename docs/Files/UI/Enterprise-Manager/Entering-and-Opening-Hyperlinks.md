@@ -10,33 +10,29 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Entering and Opening Hyperlinks in the Documentation Frame
+# Entering and Opening Hyperlinks in the Documentation Frame
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Documentation** frame in Job Master supports hyperlinks — file paths or URLs — that open directly from Enterprise Manager. You can attach reference documents or web resources to a job definition so that operators and engineers can open them without leaving the application.
 
-## What Is It?
+## Enter and Open a Hyperlink
 
-The Documentation frame in Job Master supports hyperlinks — file paths or URLs — that open directly from Enterprise Manager. This allows operators and engineers to attach reference documents or web resources to a job definition.
+To enter and open a hyperlink in the Documentation frame, complete the following steps:
 
-To enter and open a hyperlink, complete the following steps:
+1. Go to **Administration** and select **Job Master**. The **Job Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Documentation** tab in the **Job Properties** frame.
+5. Type the file path or URL (for example, `www.smatechnologies.com`) in the **Documentation** text area.
+6. Double-click the file path or URL text you entered. The **Open** dialog displays with the prompt "Do you want to open [path]?"
+7. Select **Yes** to open the file or URL.
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the **Documentation** tab in the **Job Properties** frame
-5.  Enter the file path or URL (e.g., www.smatechnologies.com) in the **Documentation** frame
-6.  Select the file path or URL. The **Open** dialog displays
-7.  Select **Yes** to open the file
+**Result:** The operating system opens the file or URL using the default associated application.
+
+:::note
+To open a specific path when the Documentation field contains multiple entries, position your cursor on the target path before double-clicking. Enterprise Manager uses the word under the cursor position to determine which path to open. You can also select the path text before double-clicking to open that specific value.
 :::
-
-## Glossary
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

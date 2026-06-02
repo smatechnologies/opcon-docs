@@ -15,44 +15,36 @@ doc_type: procedural
 
 # Viewing and Updating Expression Dependencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+## Overview
 
-## What Is It?
+The **Expression Dependency** panel in **Master Job Definition** displays expression dependencies defined for the job and its frequencies.
 
-The **Expression Dependency** panel in **Master Job Definition** displays expression dependencies for the job and its frequencies.
+- Job-level expression dependencies apply every time the job runs.
+- Frequency-level expression dependencies apply only when the job runs on the associated frequency.
 
-- Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
-- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
-
-## Adding or Updating Expression Dependencies
-
-In **Admin** mode, job dependencies can be updated. For conceptual information, refer to [Expression Dependencies](../../../../../../job-components/expression-dependencies.md) in the **Concepts** online help.
+For conceptual background, refer to [Expression Dependencies](../../../../../../job-components/expression-dependencies.md).
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
-
+Only users with the appropriate privileges have access to the **Lock** button and can update job properties. For details, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
 :::
 
-To perform this procedure, complete the following steps:
+## Panel Controls
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-2. Expand the **Expression Dependency** panel to expose its content
-3. Enter changes in the **Job** and/or **Frequency** frames
-4. Select the **Save** button
+The **Expression Dependency** panel includes the following controls:
 
-## FAQs
+- **Full Screen** button: Select the full-screen button (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far right of the panel bar to enter or exit **Full Screen** mode.
+- **Property count indicator**: A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined expression dependencies.
 
-**Q: What does Viewing and Updating Expression Dependencies cover?**
+## Add or Update Expression Dependencies
 
-This page covers Adding or Updating Expression Dependencies.
+In **Admin** mode, expression dependencies can be added or updated.
 
-## Glossary
+To add or update expression dependencies, complete the following steps:
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+1. Go to the **Master Job Definition** page for the job you want to edit. See [Accessing Master Jobs](Accessing-Master-Jobs.md).
+2. Select the **Lock** button to switch to **Admin** mode if the page is in **Read-only** mode.
+3. Expand the **Expression Dependency** panel to expose its content.
+4. Enter or update values in the **Job** and **Frequency** frames as needed.
+5. Select **Save**.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result**: The updated expression dependencies are saved to the master job definition and will be evaluated the next time the job is built.
