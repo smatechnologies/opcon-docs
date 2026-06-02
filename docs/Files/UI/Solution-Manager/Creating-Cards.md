@@ -15,54 +15,56 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Creating Cards
+# Creating Cards
 
 **Theme:** Configure  
 **Who Is It For?** System Administrator, Automation Engineer
 
-## What Is It?
-
-### Create a Group Card
+## Create a Group Card
 
 To create a Group card, complete the following steps:
 
-1.  Select the **Create** button on the **Vision Live** page, or select the **+** button on the **Vision Settings** page
-2.  *(Optional)* Select a *card* from the **Parent Card** list
-3.  Select the **Group** radio button
-4.  Enter a *Name* for the card
-5.  Toggle the **All granted** switch to control whether the card inherits roles
-6.  *(Optional)* Define *Roles* as **Revoked** or **Granted** using the arrow buttons
-7.  *(Optional)* Define values for **Critical** and **Tolerable** to set the **QoS** range
-8.  *(Optional)* Define values for **Critical** and **Tolerable** to set the **SLA** range
-9.  *(Optional)* Add one or more **Frequencies**. Refer to [Adding Vision Frequencies](Adding-Vision-Frequencies.md) for details
-10. Select **OK** to save the changes. The new card name displays on the Vision Settings page
-11. Select **Save** in the bottom-left corner
+1. Select the **Create** button on the **Vision Live** page, or select the **+** button on the **Vision Settings** page.
+2. *(Optional)* Select a card from the **Parent Card** list.
+3. Select the **Group** radio button.
+4. Enter a name for the card.
+5. Toggle the **All granted** switch to control whether the card inherits roles.
+6. *(Optional)* Define roles as **Revoked** or **Granted** using the arrow buttons.
+7. *(Optional)* Define values for **Critical** and **Tolerable** to set the **QoS** range.
+8. *(Optional)* Define values for **Critical** and **Tolerable** to set the **SLA** range.
+9. *(Optional)* Add one or more **Frequencies**. Refer to [Adding Vision Frequencies](Adding-Vision-Frequencies.md) for details.
+10. Select **OK** to save the changes. The new card name displays on the Vision Settings page.
+11. Select **Save** in the bottom-left corner.
 
-### Create a Tag Card
+**Result:** The new Group card is saved and appears in the Vision Settings list.
 
-#### Configure Tag Card Identity and Pattern
+## Create a Tag Card
+
+### Configure Tag Card Identity and Pattern
 
 To configure the tag card name, pattern, and role settings, complete the following steps:
 
-1.  Select the **Create** button on the **Vision Live** page, or select the **+** button on the **Vision Settings** page
-2.  Select a *card* from the **Parent Card** list
-3.  Select the **Tag** radio button
-4.  Enter a *Name* for the card
-5.  *(Optional)* Select a *remote instance* from the **Instance** list
-6.  Select a *tag* from the **Pattern** list
-7.  Select a *Job Offset* from the **Job Offset** list
-8.  Toggle the **All granted** switch to control whether the card inherits roles
-9.  *(Optional)* Define *Roles* as **Revoked** or **Granted** using the arrow buttons
+1. Select the **Create** button on the **Vision Live** page, or select the **+** button on the **Vision Settings** page.
+2. Select a card from the **Parent Card** list.
+3. Select the **Tag** radio button.
+4. Enter a name for the card.
+5. *(Optional)* Select a remote instance from the **Instance** list.
+6. Select a tag from the **Pattern** list.
+7. Select a **Job Offset** from the **Job Offset** list.
+8. Toggle the **All granted** switch to control whether the card inherits roles.
+9. *(Optional)* Define roles as **Revoked** or **Granted** using the arrow buttons.
 
-#### Set QoS, SLA, Frequencies, and Save
+### Set QoS, SLA, Frequencies, and Save
 
 To set the QoS and SLA ranges, add frequencies, and save the tag card, complete the following steps:
 
-1. *(Optional)* Define values for **Critical** and **Tolerable** to set the **QoS** range
-2. *(Optional)* Define values for **Critical** and **Tolerable** to set the **SLA** range
-3. Add one or more **Frequencies**. Refer to [Adding Vision Frequencies](Adding-Vision-Frequencies.md) for details
-4. Select **OK** to save the changes. The new card name displays on the Vision Settings page
-5. Select **Save** in the bottom-left corner
+1. *(Optional)* Define values for **Critical** and **Tolerable** to set the **QoS** range.
+2. *(Optional)* Define values for **Critical** and **Tolerable** to set the **SLA** range.
+3. Add one or more **Frequencies**. Refer to [Adding Vision Frequencies](Adding-Vision-Frequencies.md) for details.
+4. Select **OK** to save the changes. The new card name displays on the Vision Settings page.
+5. Select **Save** in the bottom-left corner.
+
+**Result:** The new Tag card is saved and appears in the Vision Settings list.
 
 ## Glossary
 

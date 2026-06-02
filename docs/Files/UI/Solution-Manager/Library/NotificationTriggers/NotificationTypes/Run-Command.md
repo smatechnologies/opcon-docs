@@ -1,4 +1,4 @@
-﻿---
+---
 title: Run Command
 description: "!Run Command The Run Command dialog provides the following fields for defining a command to run for the selected trigger: - Command (Required): Defines the full path and name of the program to run."
 product_area: Solution Manager
@@ -30,20 +30,18 @@ The **Run Command** dialog provides the following fields for defining a command 
 
 ## FAQs
 
-**Q: What does Run Command do?**
+**Q: What does the Run Command notification type do?**
 
-The **Run Command** dialog provides the following fields for defining a command to run for the selected trigger:
+The **Run Command** dialog defines a program to run on the OpCon server when a notification trigger fires. You specify the full path to the executable, an optional working directory, and the batch user that has permission to run the program.
 
 **Q: Where can you find Run Command in OpCon?**
 
-Access Run Command in Solution Manager or Enterprise Manager.
+Go to **Library > Notification Triggers** in Solution Manager, then select or create a trigger and choose **Run Command** as the notification type.
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

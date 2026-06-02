@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Showing Duplicate Frequency Names Only
-description: "Use this procedure to show Duplicate Frequency Names Only in Enterprise Manager."
+description: "Filter the Frequency Manager to display only frequencies that share a name, then resolve duplicates using the Frequency Definition Wizard."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,36 +10,45 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Showing Duplicate Frequency Names Only
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Frequency Manager** in Enterprise Manager lets you filter the frequency list to show only frequencies that share the same name. Duplicate frequencies with the same name are highlighted in matching colors so you can identify them at a glance and resolve the duplicates.
 
-## What Is It?
-
-Use this procedure to show Duplicate Frequency Names Only in Enterprise Manager.
-
-To show duplicate frequency names, complete the following steps:
-
-1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
-2. Select the **Show duplicate frequency names only** option
-3. View the duplicate frequency names (if any)
-4. Right-click the duplicate frequency name and select **Edit**. The **Frequency Definition Wizard** displays
-5. Change the frequency definition to match the definition of the other duplicate frequency name
-6. Select the **Finish** button
-7. Clear the **Show duplicate frequency names only** option to show all frequency names
-8. Select **Close ☒** to close the **Frequency Manager** screen
+:::note
+Selecting **Show duplicate frequency names only** automatically clears the **Show duplicate frequency definitions only** option. The two filters are mutually exclusive.
 :::
 
-## Glossary
+## View and resolve duplicate frequency names
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+To view and resolve duplicate frequency names, complete the following steps:
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+1. In Enterprise Manager, select **Frequency Manager** under the **Management** topic.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+   **Result:** The **Frequency Manager** screen opens.
+
+2. Select the **Show duplicate frequency names only** option.
+
+   **Result:** The frequency list filters to show only frequencies whose names appear more than once. Frequencies that share a name are highlighted in the same color.
+
+3. Review the color-grouped entries to identify which frequency names have duplicates.
+
+4. Right-click the frequency name you want to resolve and select **Edit**.
+
+   **Result:** The **Frequency Definition Wizard** opens.
+
+5. Modify the frequency definition so it matches the intended definition for that frequency name.
+
+6. Select **Finish**.
+
+   **Result:** The wizard saves the updated frequency definition and closes.
+
+7. Repeat steps 4–6 for each remaining duplicate frequency name until no duplicates remain.
+
+8. Clear the **Show duplicate frequency names only** option to return to the full frequency list.
+
+9. Select **Close** to close the **Frequency Manager** screen.

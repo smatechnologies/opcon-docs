@@ -2,44 +2,51 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Showing Script Version Cross References
-description: "You can view which jobs use specific script versions."
+description: "View which jobs use a specific embedded script version in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Showing Script Version Cross References
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the Script Repository in Enterprise Manager to view which jobs reference a specific version of an embedded script. The **Cross References** dialog lists both master jobs and daily jobs that use the selected version.
 
-## What Is It?
-
-You can view which jobs use specific script versions.
-
-To show the cross references, complete the following steps:
-
-1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
-2. Select a script in the list
-3. Select the **Show/Create Versions** button on the toolbar. The **Versions** dialog displays
-4. Select the script version
-5. Select the **Cross References** button. The **Cross References Details** dialog displays
-6. Select **OK** to close the **Cross References Details** dialog
-7. Select **Close** in the **Versions** dialog
-8. Select **Close ☒** to close the **Script Repository** screen
+:::note
+The **Cross References** button is available only to users with the **Maintain Scripts** function privilege. Users with only the **View Script Contents** privilege cannot access this feature.
 :::
 
-## Glossary
+To view cross references for a script version, complete the following steps:
 
-**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
+1. In the navigation pane, select **Repository** under the **Scripts** topic.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+   The **Script Repository** screen opens.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+2. Select a script from the list.
+
+3. Select **Show/Create Versions** on the toolbar.
+
+   The **Versions** dialog opens, showing all versions of the selected script.
+
+4. Select the script version you want to inspect.
+
+5. Select **Cross References**.
+
+   The **Cross References** dialog opens. If the version has no cross references, an information message is displayed instead.
+
+6. Review the **Master Jobs** and **Daily Jobs** tabs to identify which jobs use this script version.
+
+7. Select **OK** to close the **Cross References** dialog.
+
+8. Select **Close** to close the **Versions** dialog.
+
+9. Select **Close** to close the **Script Repository** screen.
+
+**Result:** You have confirmed which jobs are assigned to the selected script version.

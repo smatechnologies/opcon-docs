@@ -44,18 +44,16 @@ The **SETTINGS** tab displays configuration settings related to standard report 
 ![Reports Settings Tab 2](../../../../../Resources/Images/Reports/Reports-Settings-Tab-2.png "Reports Settings Tab 2")
 
 :::note
-Users must have the [Maintain Reports](../../../../../administration/privileges.md) privilege or be in the ocadm role to view the SETTINGS tab.
+Users must have the [Maintain Reports](../../../../../administration/privileges.md) privilege or be in the ocadm role to view the **SETTINGS** tab.
 :::
 
 ## FAQs
 
-**Q: What does Reports cover?**
+**Q: What does the Reports page cover?**
 
-This page covers REPORTS Tab, SETTINGS Tab.
+The **Reporting** page provides access to all available reports and report configuration settings. The **REPORTS** tab lists reports the current user has permission to view. The **SETTINGS** tab is available only to users with the Maintain Reports privilege or the ocadm role.
 
 ## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
 

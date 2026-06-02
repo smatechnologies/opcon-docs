@@ -19,9 +19,9 @@ doc_type: conceptual
 
 Daily Job Task Details show the platform-specific execution settings for a job currently in the daily queue. These settings reflect the master job definition at build time and can be temporarily modified for the current day's run.
 
-- You need to verify what command line or script a job will run today
-- You need to make a temporary parameter change for today's execution only
-- A job failed because of a configuration issue and you want to correct it before restarting
+- You need to verify what command line or script a job will run today.
+- You need to make a temporary parameter change for today's run only.
+- A job failed because of a configuration issue and you want to correct it before restarting.
 
 ## Supported Task Detail Types (Daily)
 
@@ -49,7 +49,7 @@ Daily Job Task Details show the platform-specific execution settings for a job c
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Schedule | A named group of jobs in OpCon that represents a business process. Schedules are built each day based on their defined frequencies and calendars. |
 | Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
-| Sub-Schedule (Sub-Schedule (Subschedule)) | A schedule that is embedded inside another schedule and called by a Container job. The SAM force-starts the subschedule when the Container job qualifies. |
+| Sub-Schedule | A schedule that is embedded inside another schedule and called by a Container job. The SAM force-starts the subschedule when the Container job qualifies. |
 
 ## FAQs
 

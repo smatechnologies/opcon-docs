@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Retrieve Application Log
-description: "The Retrieve Application Log skill retrieves the application log for a specified file name."
+description: "The Retrieve Application Log skill fetches an OpCon application log file from within the Otto chat, without leaving Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,31 +17,36 @@ doc_type: conceptual
 
 # Retrieve Application Log
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Retrieve Application Log** skill fetches an OpCon application log file by name from within the Otto chat. Use this skill when you need to inspect a specific application log without leaving Solution Manager.
 
-## What Is It?
+## How It Works
 
-The **Retrieve Application Log** skill retrieves the application log for a specified file name.
+When you ask Otto to retrieve an application log, the skill takes the log file name you provide and returns the contents of that file. Otto confirms the action before running it. If the file cannot be found or the request fails, Otto responds with an error message.
 
-## Skill Details
+## Required Privileges
 
-### Parameters
+To use Otto skills, your account must have the **Chatbot Privileges** function privilege, or hold administrator or all-function privileges.
 
-- **Log File Name**: The name of the application log file to retrieve
+## Parameters
 
-## Example
+The **Retrieve Application Log** skill uses the following parameter.
 
-`Retrieve application log for SMAOpConRestApi`
+| Parameter | Required | What It Does |
+|---|---|---|
+| **Log File Name** | Yes | The name of the application log file to retrieve. |
 
-`Please get the application log with name SMAOpConRestApi.`
+## Example Prompts
 
-## FAQs
+```
+Retrieve application log for SMAOpConRestApi
+```
 
-**Q: What does Retrieve Application Log cover?**
-
-This page covers Skill Details, Example.
+```
+Please get the application log with name SMAOpConRestApi.
+```
 
 ## Glossary
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Otto**: The Solution Manager chat assistant. Otto runs skills that retrieve information and perform actions in OpCon from a conversational prompt.
+
+**Solution Manager**: The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration.

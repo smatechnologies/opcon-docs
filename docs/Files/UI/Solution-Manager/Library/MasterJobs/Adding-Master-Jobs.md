@@ -28,7 +28,7 @@ Use this procedure to add Master Jobs in Solution Manager.
 
 To add a master job, your role must have at least one of the following privileges:
 
-- **Departmental Function Privilege**: All Function Privileges, Add Jobs To Master Schedules, or All Job Master Functions
+- **Departmental Function Privilege**: All Function Privileges, Add Jobs to Master Schedules, or All Job Master Functions
 
 ---
 
@@ -38,17 +38,17 @@ Go to **Library** > **Master Jobs** and select **Add**. The Master Job Details p
 
 ![Master Job Details](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-details.png "Master Job Details")
 
-1. Select a **Schedule**
-1. Enter a **Name**
-1. Select a **Job Type**
+To add a master job, complete the following steps:
 
-1. Select a **Department**
-1. Select an **Access Code**
+1. Select a **Schedule**.
+1. Enter a **Name**.
+1. Select a **Job Type**.
+1. Select a **Department**.
+1. Select an **Access Code**.
 1. _(Optional)_ Select the **Disable Build** option. See [Jobs](../../../../../objects/jobs.md)
 1. _(Optional)_ Select the **Allow Multi-Instance** option. See [Multi-Instance Jobs](../../../../../operations/job-names.md#multi-instance-jobs)
-1. Expand **Task Details** and enter the required information for the selected **Job Type**
-
-1. Select **Save**
+1. Expand **Task Details** and enter the required information for the selected **Job Type**.
+1. Select **Save**.
 
 ---
 
@@ -81,17 +81,17 @@ Go to **Library** > **Master Jobs** and select **Add**. The Master Job Details p
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| Departmental Function Privilege | All Function Privileges, Add Jobs To Master Schedules, or All Job Master Functions | — | — |
+| Departmental Function Privilege | All Function Privileges, Add Jobs to Master Schedules, or All Job Master Functions | — | — |
 
 ## FAQs
 
-**Q: How do you save a new master jobs record?**
+**Q: How do you save a new master job record?**
 
-After completing the required fields, select the **Save** button on the toolbar to save the master jobs record.
+After completing the required fields, select the **Save** button on the toolbar to save the master job record.
 
 **Q: Can you add master jobs for multiple platforms?**
 
-Yes. This page covers master jobs for multiple platforms or contexts: Required Privileges, Adding a Job.
+Yes. When adding a master job, you select the job type that matches the target platform. Supported job types include Windows, Unix, SAP BW, SAP R/3 and CRM, SQL, File Transfer, Container, and Null.
 
 ## Glossary
 

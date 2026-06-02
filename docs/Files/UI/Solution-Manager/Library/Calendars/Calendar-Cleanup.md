@@ -22,30 +22,38 @@ doc_type: procedural
 
 ## What Is It?
 
-Calendar cleanup deletes calendar dates older than 30 days. You can clean up all calendars or specific calendars.
+Calendar cleanup deletes calendar dates older than 30 days. You can clean up all calendars or only selected calendars.
 
 ## Clean up all calendars
 
 To clean up all calendars, complete the following steps:
 
-1. Select the **Calendar Cleanup** button
-2. Select the **All calendars** option
-3. Select **Delete** to delete dates older than 30 days or **Cancel** to cancel
+1. Select the **Calendar Cleanup** button.
+2. Select the **All calendars** option.
+3. Select **Delete** to delete dates older than 30 days, or **Cancel** to cancel.
+
+**Result:** Dates older than 30 days are removed from all calendars.
 
 ## Clean up specific calendars
 
 To clean up specific calendars, complete the following steps:
 
-1. Select the calendars to clean up from the list
-2. Select the **Calendar Cleanup** button
-3. Select the **Selected calendars** option
-4. Select **Delete** to delete dates older than 30 days or **Cancel** to cancel
+1. Select the calendars to clean up from the list.
+2. Select the **Calendar Cleanup** button.
+3. Select the **Selected calendars** option.
+4. Select **Delete** to delete dates older than 30 days, or **Cancel** to cancel.
+
+**Result:** Dates older than 30 days are removed from the selected calendars.
 
 ## FAQs
 
-**Q: What does Calendar Cleanup cover?**
+**Q: What is the date threshold for Calendar Cleanup?**
 
-This page covers Clean up all calendars, Clean up specific calendars.
+Calendar cleanup removes calendar dates that are more than 30 days old.
+
+**Q: Can I undo a Calendar Cleanup?**
+
+No. Deleting calendar dates is permanent. Verify that the dates are no longer needed before running a cleanup.
 
 ## Glossary
 

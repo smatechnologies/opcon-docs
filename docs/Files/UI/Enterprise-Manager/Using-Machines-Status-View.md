@@ -5,89 +5,77 @@ product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: reference
 ---
 
 # Using Machines Status View
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Machines Status** view displays the status and details of every machine (Agent) defined in the OpCon database. The view provides three tabs — **Table**, **Map**, and **Statistics** — and a right-click menu for performing machine actions.
 
-## What Is It?
+## View Tabs
 
-The **Machines Status** view displays information about each machine defined in the OpCon database in three formats: **Table**, **Map**, and **Statistics**.
+### Table
 
-- **Table** ![Machines Status Table Tab](../../../Resources/Images/EM/EMmachstsTableview.png "Machines Status Table Tab"): The default view. Lists machine information (Machine Status, Machine Name, Operating System, Last Update, Running Jobs, Groups, Socket number, Version number, TLS, and Activity) in a table format. Status column colors indicate machine state:
-  - **Gray**: SMANetCom is not attempting communication with the agent (machine is marked down by a user)
-  - **Blue**: Machine is marked up and the agent is communicating with SMANetCom
-  - **Red**: Machine is marked up, but the agent is not communicating with SMANetCom
-  - **Orange**: Machine is marked up, but communication is limited (SMANetCom is not sending job start information to the agent). Refer to [Job Starts](../../../objects/machines.md#job-starts) in the **Machines** section of the **Concepts** online help
-- **Map** ![Machines Status Map Tab](../../../Resources/Images/EM/EMmachstsMapview.png "Machines Status Map Tab"): Lists machines in a map format using the same color coding as the **Table** tab. The same right-click menu is available on both tabs
-- **Statistics** ![Machines Status Stat Tab](../../../Resources/Images/EM/EMmachstsStatview.png "Machines Status Stat Tab"): Displays two pie charts:
-  - **Communication Status Trend**: Shows the number of machines defined and how many are communicating or disabled
-  - **Operating System Trend**: Shows machine types defined in the OpCon environment, each assigned a color with a legend below the chart
+The **Table** tab is the default view. It lists all machines in a sortable table with the following columns:
 
-## Machines Status View Right-click Menu
+| Column | Description |
+|---|---|
+| **Machine Status** | Color-coded status indicator (see [Status Colors](#status-colors)) |
+| **Machine Name** | The machine name as defined in OpCon |
+| **Operating System** | The agent platform type |
+| **Last Update** | Timestamp of the last status update from the agent |
+| **Running Jobs** | Number of currently running jobs / maximum allowed running jobs |
+| **Groups** | Machine groups the machine belongs to |
+| **Socket** | TCP/IP socket number used for communication |
+| **Version** | Agent version number; displays **Not Reported** if the agent has not provided a version |
+| **TLS** | Whether TLS is enabled for communication (`True` or `False`) |
 
-- **Machine Information**: Refer to [Viewing Machine Information](Viewing-Machine-Information.md)
-- **Re-Synchronize Running Jobs**: Counts jobs in the database showing as running for that machine and sets the running job count accordingly. Refer to [Re-Synchronizing Running Jobs](Re-Synchronizing-Running-Jobs.md)
-- **Start Communication**: Changes agent status to started. Refer to [Starting Communication](Starting-Communication.md)
-- **Stop Communication**: Changes agent status to stopped. Refer to [Stopping Communication](Stopping-Communication.md)
-- **Enable Job Starts**: Enables job starts when machine status is Limited. Refer to [Enabling Job Starts](Enabling-Job-Starts.md)
-- **Disable Job Starts**: Disables job starts when machine is in a started state. Refer to [Disabling Job Starts](Disabling-Job-Starts.md)
-- **SAP Machine**: Provides access to SAP Background Functions from any SAP R/3 and CRM machine. Refer to [Managing SAP R/3 and CRM Background Functions](Managing-SAP-R3-and-CRM-Background-Functions.md)
-- **Window To Host**: Opens a program to connect to the host system. Refer to [Preferences for Window To Host](Preferences-for-Windows-To-Host.md)
-- **Edit Machine**: Refer to [Editing Machine Information](Editing-Machine-Information.md)
+#### Status Colors
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+The status column uses color coding to indicate communication state:
+
+| Color | Meaning |
+|---|---|
+| Gray | SMANetCom is not attempting communication with the agent; the machine is marked down by a user |
+| Blue | The machine is marked up and the agent is communicating with SMANetCom |
+| Red | The machine is marked up, but the agent is not communicating with SMANetCom |
+| Orange | The machine is marked up, but communication is limited; SMANetCom is not sending job start information to the agent. See [Job Starts](../../../objects/machines.md#job-starts) |
+| Black | The machine is marked up and SMANetCom is waiting for the agent to respond (connection is being established) |
+
+### Map
+
+The **Map** tab displays machines in a graphical layout connected to the OpCon server node. Each machine uses the same color coding as the **Table** tab. Hovering over a machine node shows a tooltip with status, name, last update, running jobs, groups, socket, and version. The same right-click menu is available on the **Map** tab.
+
+### Statistics
+
+The **Statistics** tab displays two pie charts:
+
+- **Communication Status Trend**: Shows the count of machines by communication state — Communicating, Limited, Not Responding, and Disabled.
+- **Operating System Trend**: Shows the distribution of machine types (operating systems) defined in the OpCon environment. Each OS type is assigned a color with a legend below the chart.
+
+## Right-Click Menu
+
+Right-click a machine in the **Table** or **Map** tab to access the following actions. Actions that change machine state require the **Maintain Machines** function privilege.
+
+| Action | Description |
+|---|---|
+| **Machine Information** | Opens machine details. See [Viewing Machine Information](Viewing-Machine-Information.md) |
+| **Re-Synchronize Running Jobs** | Counts jobs in the database showing as running for that machine and sets the running job count accordingly. See [Re-Synchronizing Running Jobs](Re-Synchronizing-Running-Jobs.md) |
+| **Start Communication** | Sets the machine status to started. Available when the machine is in a stopped state. See [Starting Communication](Starting-Communication.md) |
+| **Stop Communication** | Sets the machine status to stopped. Available when the machine is in a started or limited state. See [Stopping Communication](Stopping-Communication.md) |
+| **Enable Job Starts** | Enables job starts when the machine status is Limited. See [Enabling Job Starts](Enabling-Job-Starts.md) |
+| **Disable Job Starts** | Disables job starts when the machine is in a started state, setting it to Limited. See [Disabling Job Starts](Disabling-Job-Starts.md) |
+| **SAP Machine** | Provides access to SAP Background Functions from any SAP R/3 and CRM machine. See [Managing SAP R/3 and CRM Background Functions](Managing-SAP-R3-and-CRM-Background-Functions.md) |
+| **Window To Host** | Opens a program to connect to the host system. See [Preferences for Window To Host](Preferences-for-Windows-To-Host.md) |
+| **Edit Machine** | Opens the machine editor. See [Editing Machine Information](Editing-Machine-Information.md) |
+
+## Related Topics
 
 - [Changing Machines Status Table Column Order](Changing-MS-Table-Column-Order.md)
 - [Changing Sort Order of Machines Status Table](Changing-Sort-Order-of-MS-Table.md)
 - [Refreshing Graph Layouts](Refreshing-Graph-Layouts.md)
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Machine Information | Refer to Viewing Machine Information | — | — |
-| Re-Synchronize Running Jobs | Counts jobs in the database showing as running for that machine and sets the running job count accordingly. | — | — |
-| Start Communication | Changes agent status to started. | — | — |
-| Stop Communication | Changes agent status to stopped. | — | — |
-| Enable Job Starts | Enables job starts when machine status is Limited. | — | — |
-| Disable Job Starts | Disables job starts when machine is in a started state. | — | — |
-| SAP Machine | Provides access to SAP Background Functions from any SAP R/3 and CRM machine. | — | — |
-| Window To Host | Opens a program to connect to the host system. | — | — |
-| Edit Machine | Refer to Editing Machine Information | — | — |
-## FAQs
-
-**Q: What can you do with Machines Status View?**
-
-Machines Status View allows you to machines status view right-click menu.
-
-**Q: Who has access to Machines Status View?**
-
-Access to Machines Status View is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
-
-**SMANetCom (SMA Network Communications Module)**: Handles TCP/IP communication of platform-specific automation information between SAM and all agents. Uses database tables to maintain reliable communication and data integrity.
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

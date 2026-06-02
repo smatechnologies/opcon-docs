@@ -1,56 +1,83 @@
 ---
 title: Threshold/Resource Dependency
-description: "The Threshold/Resource Dependency tab allows you to define and maintain job dependencies on threshold and resource values."
+description: "The Threshold/Resource Dependency tab in Enterprise Manager lets you view, add, edit, and remove job dependencies on threshold and resource values."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # Threshold/Resource Dependency
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Threshold/Resource Dependency** tab displays the threshold and resource dependencies defined for a job and provides controls to add, edit, and remove them. The tab is available in **Job Master** under the **Administration** topic, on the **Dependencies** tab of the **Job Properties** frame.
 
-## What Is It?
+## Tab layout
 
-The **Threshold/Resource Dependency** tab allows you to define and
-maintain job dependencies on threshold and resource values. Within the
-tab, you will be able to:
+The tab contains a dependency filter panel and a dependency table.
 
-- [Add Threshold/Resource Dependencies](Adding-Threshold-and-Resource-Dependencies.md)
-- [Edit Threshold/Resource Dependencies](Editing-Threshold-and-Resource-Dependencies.md)
-- [Delete Threshold/Resource Dependencies](Deleting-Threshold-and-Resource-Dependencies.md)
+### Dependency filters (master jobs only)
 
-For conceptual information, refer to [Threshold Dependencies](../../../job-components/threshold-resource-dependencies.md#threshold-dependencies) or [Resource Dependencies](../../../job-components/threshold-resource-dependencies.md#resource-dependencies) in the **Concepts** online help.
-:::
+| Control | Description |
+|---|---|
+| **Job Related** | When selected, the table shows dependencies that apply to all frequencies of the job. |
+| **Frequency Related** | When selected, the table shows dependencies scoped to one or more specific frequencies. |
+| **Frequency List** | Lists the frequencies defined for the job. Select one or more frequencies to filter the table when **Frequency Related** is active. |
 
-## FAQs
+### Dependency table columns
 
-**Q: What does Threshold/Resource Dependency do?**
+The columns shown depend on whether you are viewing a master job or a daily job.
 
-The **Threshold/Resource Dependency** tab allows you to define and
+**Master job view**
 
-**Q: Where can you find Threshold/Resource Dependency in OpCon?**
+| Column | Description |
+|---|---|
+| **Frequency** | The frequency the dependency applies to, or blank if job-related (applies to all frequencies). |
+| **Name** | The name of the threshold or resource. |
+| **Operator** | The comparison operator for a threshold dependency (=, ≠, <, >, ≥, ≤). Resources always use **Requires**. |
+| **Value** | The numeric value the threshold must satisfy, or the number of resource units required. Displays **All** when the dependency requires all available units of a resource. |
+| **Type** | Indicates whether the dependency is a **Threshold** or a **Resource**. |
 
-Access Threshold/Resource Dependency through the appropriate section in Enterprise Manager or Solution Manager navigation.
+**Daily job view**
 
-## Glossary
+The daily view includes the same columns except **Frequency**, and adds:
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+| Column | Description |
+|---|---|
+| **Current Value** | The current value of the threshold or resource as of the last refresh. For resources, displays the current in-use count and the maximum. |
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+### Action buttons
 
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+| Button | Description |
+|---|---|
+| **Add** | Opens the **Threshold/Resource Dependency** dialog to create a new dependency. |
+| **Edit** | Opens the **Threshold/Resource Dependency** dialog for the selected dependency. |
+| **Remove** | Deletes the selected dependency after confirmation. |
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+## Threshold/Resource Dependency dialog fields
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+When you select **Add** or **Edit**, the **Threshold/Resource Dependency** dialog opens. The dialog contains the following fields:
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+| Field | Description |
+|---|---|
+| **Threshold/Resource** | Select the threshold or resource from the list of all defined thresholds and resources. |
+| **Operator** | For thresholds: select the comparison operator (=, ≠, <, >, ≥, ≤). For resources, the operator is fixed to **Requires** and cannot be changed. |
+| **Value** | Enter the numeric value. For resources, selecting **All** sets the dependency to require all available units and disables the **Value** field. |
+| **Frequency** | (Master jobs only) Select the frequency this dependency applies to, or leave blank to apply to all frequencies. |
+
+OpCon prevents saving a dependency if the same threshold or resource is already defined for the same job and frequency combination.
+
+## Related procedures
+
+- [Adding Threshold/Resource Dependencies](Adding-Threshold-and-Resource-Dependencies.md)
+- [Editing Threshold/Resource Dependencies](Editing-Threshold-and-Resource-Dependencies.md)
+- [Deleting Threshold/Resource Dependencies](Deleting-Threshold-and-Resource-Dependencies.md)
+
+## Related concepts
+
+For conceptual information about how threshold and resource dependencies control job execution, refer to [Threshold Dependencies](../../../job-components/threshold-resource-dependencies.md#threshold-dependencies) and [Resource Dependencies](../../../job-components/threshold-resource-dependencies.md#resource-dependencies).

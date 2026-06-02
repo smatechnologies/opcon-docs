@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Roles
-description: "Copying a role creates an identical new role with the same name preceded by 'co:' (e.g., 'co:RoleName')."
+description: "Step-by-step procedure for copying a role in the Enterprise Manager Security editor."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,42 +10,29 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Security
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Copying Roles
+# Copying Roles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Copying a role creates a new role that duplicates all privileges from the original. This is useful when you want to use an existing role as a starting point and then modify the copy.
 
-## What Is It?
-
-Copying a role creates an identical new role with the same name preceded by "co:" (e.g., "co:RoleName"). All privileges from the original role are copied to the new role.
-
-To copy a role, complete the following steps:
-
-1.  Select **Roles** under the **Security** topic. The **Roles** screen displays
-2.  Select the **role name** in the **Select Role** list
-3.  Select **Copy** on the **Roles** toolbar. The **Copy Role** dialog displays
-4.  Enter the *name* for the role
-5.  Select **OK**
-6.  Select **Close ☒** (to the right of the **Roles** tab) to close the **Roles** screen
+:::note
+The **Copy** button on the **Roles** toolbar is disabled when the editor has unsaved changes. Save or discard any changes before copying. The `ocadm` role cannot be copied.
 :::
 
-## FAQs
+To copy a role in Enterprise Manager, complete the following steps:
 
-**Q: Why would you copy roles instead of creating a new one?**
+1. In the Navigation panel, select **Roles** under the **Security** topic. The **Roles** editor opens.
+2. In the **Select Role** list, select the role you want to copy.
+3. Select **Copy** on the **Roles** toolbar. The **Copy Role** dialog opens with the original role name pre-filled in the **New Role Name** field.
+4. In the **New Role Name** field, enter a unique name for the new role (maximum 20 characters).
+5. Select **OK**.
 
-Copying roles is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
+**Result:** The new role is created with all privileges copied from the original role. The new role appears in the **Select Role** list.
 
-**Q: Does copying roles require a new unique name?**
+## Related Topics
 
-Yes. The copy must be saved with a new unique name to distinguish it from the original roles record.
-
-## Glossary
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+- [Adding Roles](./Adding-Roles.md) — Procedure for creating a new role from scratch.

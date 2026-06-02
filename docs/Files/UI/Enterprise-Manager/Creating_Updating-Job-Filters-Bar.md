@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating/Updating Job Filters
-description: "Job filters in Enterprise Manager narrow the jobs displayed in operation views by status, department, access code, or tag."
+description: "Job filters in Enterprise Manager narrow the jobs displayed in the Bar Chart view by status, department, access code, or tag."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,32 +10,29 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Creating/Updating Job Filters
+# Creating/Updating Job Filters
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Job filters in Enterprise Manager let you narrow the jobs displayed in the Bar Chart view by one or more criteria: job status, department, access code, or tag. You can apply filters at any time, and the view title updates to **Bar Chart (Filtered)** to indicate an active filter. Saved filter selections persist until you reset or change them.
 
-## What Is It?
+## Apply or Update a Job Filter
 
-Job filters in Enterprise Manager let operators narrow the jobs displayed in the Bar Chart view by status, department, access code, or tag. Filters are saved and can be updated as monitoring needs change.
+To apply or update a job filter in the Bar Chart view, complete the following steps:
 
-To create or update a job filter, complete the following steps:
+1. Under the **Operation** topic, select **Bar Chart**. The **Bar Chart** view opens.
+2. Select a date, or select a date and a schedule, to display in the **Bar Chart** view.
+3. On the **Bar Chart** toolbar, select **Open the job filter dialog**. The **Job Filter** dialog opens.
+4. Select the tab for the filter criteria you want to apply: **Job Statuses**, **Departments**, **Access Codes**, or **Tags**.
+5. On the selected tab, select one or more items to include in the filter, or select **Select/Unselect All** to select all available items.
+6. Repeat steps 4–5 for each additional filter tab you want to configure.
+7. Select **OK** to save the filter, or select **Cancel** to discard your changes.
 
-1.  Select **Bar Chart** under the **Operation** topic. The **Bar Chart** screen displays
-2.  Select a **date**, or select a **date** and a **schedule**, to display in the **Bar Chart** screen
-3.  Select **Open the job filter dialog** on the **Bar Chart** toolbar. The **Job Filter** dialog displays
-4.  Select the tab for the filter criteria (e.g., **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)
-5.  *(Optional)* For each tab, select the specific option(s) for the job filter, or select **Select/Unselect All** to select all
-6.  Select **OK** to save the job filter changes, or select **Cancel** to discard the changes
+**Result:** The Bar Chart view refreshes and displays only the jobs matching your selected criteria. The view title changes to **Bar Chart (Filtered)** when at least one filter is active.
+
+:::tip
+To clear all active filters at once, open the **Job Filter** dialog and select **Reset**. This unchecks all selections across every tab.
 :::
-
-## Glossary
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

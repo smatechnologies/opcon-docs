@@ -22,16 +22,16 @@ doc_type: procedural
 
 Use this procedure to remove Daily Schedule Instance Properties in Enterprise Manager.
 
-To perform this procedure, complete the following steps:
+To remove a daily schedule instance property, complete the following steps:
 
-1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule
-3. Select the **schedule**
-4. Select the **Edit Daily** button in the **Maintenance** frame at the bottom-right of the screen
-5. Select the **Instance Definition** tab
-6. Select the **property definition** in the **Available Properties** table
-7. Select the **Remove** button
-8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar to confirm, or select **Cancel** to cancel
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays.
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date** for the schedule.
+3. Select the **schedule**.
+4. Select the **Edit Daily** button in the **Maintenance** frame at the bottom-right of the screen.
+5. Select the **Instance Definition** tab.
+6. Select the **property definition** in the **Available Properties** table.
+7. Select the **Remove** button.
+8. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Daily** toolbar to confirm, or select **Cancel** to cancel.
 
 ## Glossary
 

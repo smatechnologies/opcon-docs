@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating Documentation
-description: "The Documentation panel in Master Job Definition displays documentation for the job and its frequencies, including clickable hyperlinks in Read-only mode."
+description: "The Documentation panel in Master Job Definition displays job and frequency documentation text, with hyperlinks rendered as clickable links in Read-only mode."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,50 +15,39 @@ doc_type: procedural
 
 # Viewing and Updating Documentation
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Documentation** panel in **Master Job Definition** lets you view and edit free-text documentation for a job and its frequencies. In **Read-only** mode, any URLs in the documentation text are rendered as clickable hyperlinks.
 
-## What Is It?
-
-The **Documentation** panel in **Master Job Definition** displays documentation for the job and its frequencies, including clickable hyperlinks in **Read-only** mode.
-
-- Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
-- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
-
-## Adding or Updating Documentation
-
-In **Admin** mode, documentation properties can be updated. For conceptual information, refer to [Documentation](../../../../../../job-components/documentation.md) in the **Concepts** online help.
-
-<!-- 1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page.
-1. Select an **access code** from the **Access Code** combo box
-1. Select the **Save** button. -->
+For conceptual background on job documentation, refer to [Documentation](../../../../../../job-components/documentation.md).
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
-
+Only users with the appropriate edit privileges can select the **Lock** button to switch to **Admin** mode and update job properties. For details, refer to [Required Privileges](Accessing-Master-Jobs.md#required-privileges).
 :::
 
-To perform this procedure, complete the following steps:
+## Panel indicators
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-2. Expand the **Documentation** panel to expose its content
-3. Enter changes in the **Job** and/or **Frequency** frames. Hyperlinks may be included
-4. Select the **Save** button
+- Select the full-screen button (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode.
+- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of fields that contain documentation (0, 1, or 2).
 
-## FAQs
+## View documentation
 
-**Q: What does Viewing and Updating Documentation cover?**
+In **Read-only** mode, the **Documentation** panel displays only the fields that contain text. Any URLs in the text appear as clickable links.
 
-This page covers Adding or Updating Documentation.
+To view documentation for a master job, complete the following steps:
 
-## Glossary
+1. Go to the **Master Job Definition** page. See [Accessing Master Jobs](Accessing-Master-Jobs.md).
+1. Expand the **Documentation** panel.
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+**Result**: The **Job** and **Frequency** fields display any saved documentation text. URLs in the text are clickable.
 
-**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+## Add or update documentation
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To add or update documentation for a master job, complete the following steps:
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+1. Go to the **Master Job Definition** page. See [Accessing Master Jobs](Accessing-Master-Jobs.md).
+1. Select the **Lock** button to switch to **Admin** mode.
+1. Expand the **Documentation** panel.
+1. Enter or update text in the **Job** field to add documentation that always appears with the job.
+1. Enter or update text in the **Frequency** field to add documentation that appears only when the job runs on the associated frequency.
+1. Select **Save**.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result**: The documentation is saved and displayed in Read-only mode. Any URLs entered in the text fields are rendered as clickable links.

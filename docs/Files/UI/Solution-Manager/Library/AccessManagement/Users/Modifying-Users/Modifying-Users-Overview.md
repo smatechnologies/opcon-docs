@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Modifying Users Overview
+
 **Theme:** Overview | **Who is it for?** System administrators who update user account details
 
 ## What Is It?
@@ -37,7 +39,6 @@ User account modifications are organized into three categories — general ident
 | --- | --- |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
-| Token | A reference to a property value using the `[[ ]]` syntax. The SAM replaces tokens with their runtime values when processing jobs. |
 
 ## FAQs
 

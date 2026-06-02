@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Tags
-description: "Use this procedure to delete Tags in Enterprise Manager."
+description: "Remove a tag from a job in Enterprise Manager Job Master."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,47 +10,33 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Deleting Tags
+# Deleting Tags
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Tags are labels you assign to jobs in Job Master to help organize and filter your automation. Removing a tag from a job does not delete the tag from OpCon — it only removes the association between that job and the tag.
 
-## What Is It?
+:::warning
+This action cannot be undone. Verify the tag is no longer needed on the job before you remove it.
+:::
 
-Use this procedure to delete Tags in Enterprise Manager.
+To remove a tag from a job, complete the following steps:
 
-To delete a tag, complete the following steps:
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen opens.
+2. Select the schedule in the **Schedule** list.
+3. Select the job in the **Job** list.
+4. Select the **Tags** tab in the **Job Properties** frame.
+5. Select the tag you want to remove in the **Tags** frame.
+6. Select the **Remove** button to the right of the **Choose Tag** field.
+7. Select the **Save** button on the **Job Master** toolbar.
+8. Select **Close** to close the **Job Master** screen.
 
-1.  Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the **Tags** tab in the **Job Properties** frame
-5.  Select the **tag** in the **Tags** frame
-6.  Select ![Delete icon](../../../Resources/Images/EM/EMdelete.png "Delete icon") **Remove** to the right of the **Choose Tag** text box
-7.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-8.  Select **Close ☒** to close the **Job Master** screen
+**Result:** The tag is removed from the job. The tag itself remains available in OpCon and can still be assigned to other jobs.
 
-## FAQs
+## Related topics
 
-**Q: Can a tags record be recovered after deletion?**
-
-No. Deleting a tags record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many tags records can you delete at once?**
-
-Select the specific tags record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Adding Tags](Adding-Tags.md)
+- [Tag Manager](Using-Tag-Manager.md)

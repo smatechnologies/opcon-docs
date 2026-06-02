@@ -15,19 +15,12 @@ doc_type: procedural
 
 # Viewing and Updating Threshold Updates
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Threshold Update** panel in **Daily Job Definition** displays the threshold updates defined for the selected job. Each update specifies a job status that triggers the update, the threshold to update, and the new value to set.
 
-## What Is It?
+- Select the full screen button at the far right of the panel bar to enter or exit **Full Screen** mode.
+- When the panel contains defined threshold updates, a blue circular indicator appears to the right of the panel name showing the count.
 
-The **Threshold Update** panel in **Daily Job Definition** displays defined threshold updates for the selected job.
-
-- Select the icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to enter or exit **Full Screen** mode
-- When the panel contains defined properties, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the property count
-
-## Adding or Updating Threshold Updates
-
-In **Admin** mode, threshold updates can be updated. For conceptual information, refer to [Threshold/Resource Updates](../../../job-components/threshold-resource-updates.md).
+For conceptual background, refer to [Threshold/Resource Updates](../../../job-components/threshold-resource-updates.md).
 
 :::note
 Only users with the appropriate permissions can access the **Lock** button and update job properties. Refer to [Required Privileges](Accessing-Daily-Job-Definition.md#Required) for details.
@@ -37,25 +30,25 @@ Only users with the appropriate permissions can access the **Lock** button and u
 Changes made in **Daily Job Definition** take effect immediately. If the job has already run, changes apply the next time the job runs.
 :::
 
-To perform this procedure:
+## Add or Update a Threshold Update
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
+To add or update a threshold update on a daily job, complete the following steps:
 
-2. Ensure both the **Date** and **Schedule** toggle switches are enabled (green)
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+
+2. Confirm that the **Date** and **Schedule** toggle switches are enabled (green).
 
     ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-To add or Updating Threshold Updates, complete the following steps:
+3. Select the desired **date(s)** to display the associated schedules.
 
-3. Select the desired **date(s)** to display associated schedules
+4. Select one or more **schedule(s)** in the list.
 
-4. Select one or more **schedule(s)** in the list
-
-5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail
+5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail.
 
     ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
 
-6. Select the job record (e.g., 1 job(s)) in the status bar to open the **Selection** panel
+6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
 
     :::note
     Alternatively, right-click the job in the list to open the **Selection** panel.
@@ -63,45 +56,34 @@ To add or Updating Threshold Updates, complete the following steps:
 
     ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default.
 
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
 
     :::note
     The **Lock** button is not visible to users without the appropriate permissions.
     :::
 
-9. Expand the **Threshold Update** panel
+9. Expand the **Threshold Update** panel.
 
-10. Make any of the following updates:
+10. Do one of the following:
 
-    - Edit or delete existing threshold updates as needed
-    - Select the green **Add** button (**+**) to define a new threshold update. In the **Threshold Update** dialog:
-      - Select the job status that triggers the update
-      - Select the threshold name from the list
-      - Select the value to update the threshold to
-      - Select **Save** to save and close the dialog
+    - To add a new threshold update, select the **Add** button (**+**). In the **Threshold Update** dialog, complete the following fields and then select **Save**:
+
+      | Field | Description |
+      |---|---|
+      | **Job Status** | The job status that triggers the threshold update. Available statuses: Finished Ok, Failed, Exceeded Max Run Time, Still Attempting Start, Start Attempted, Late To Finish, Late To Start, Missed Start Time, Skipped, Fixed, Under Review. |
+      | **Threshold** | The threshold to update. Each job status and threshold combination must be unique on a job. |
+      | **Value** | The numeric value to set the threshold to. Valid range: 0–2147483647. |
+
+    - To edit an existing threshold update, select the **Edit** button next to the entry, update the fields in the **Threshold Update** dialog, and then select **Save**.
+
+    - To delete an existing threshold update, select the **Delete** button next to the entry.
 
     :::note
-    Select the **Undo** button to discard changes.
+    Select the **Undo** button to discard unsaved changes.
     :::
 
-11. Select the **Save** button
+11. Select the **Save** button.
 
-## FAQs
-
-**Q: What does Viewing and Updating Threshold Updates cover?**
-
-This page covers Adding or Updating Threshold Updates.
-
-## Glossary
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The threshold update is saved to the daily job. OpCon sets the specified threshold to the configured value when the job reaches the selected status.

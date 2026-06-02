@@ -1,4 +1,4 @@
-﻿---
+---
 title: Keyboard Shortcuts
 description: "The table lists keyboard shortcuts for Solution Manager."
 product_area: Solution Manager
@@ -48,4 +48,4 @@ Access Keyboard Shortcuts in Solution Manager.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

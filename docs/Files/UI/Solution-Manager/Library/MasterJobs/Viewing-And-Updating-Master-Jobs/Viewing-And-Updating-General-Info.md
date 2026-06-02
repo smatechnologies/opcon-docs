@@ -44,27 +44,31 @@ Only those with the appropriate permissions will have access to the **Lock** but
 
 For conceptual information, refer to [Departments](../../../../../../objects/departments.md) in the **Concepts** online help.
 
-To perform this procedure, complete the following steps:
+To update the department, complete the following steps:
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-1. Select a **department** from the **Department** combo box
-1. Select the **Save** button
+1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to go to the master job definition page.
+2. Select a **department** from the **Department** combo box.
+3. Select the **Save** button.
+
+**Result:** The department assignment is saved for the job.
 
 ### Updating Access Codes
 
 For conceptual information, refer to [Access Codes](../../../../../../objects/access-codes.md) in the **Concepts** online help.
 
-To perform this procedure, complete the following steps:
+To update the access code, complete the following steps:
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-1. Select an **access code** from the **Access Code** combo box
-1. Select the **Save** button
+1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to go to the master job definition page.
+2. Select an **access code** from the **Access Code** combo box.
+3. Select the **Save** button.
+
+**Result:** The access code assignment is saved for the job.
 
 ## FAQs
 
 **Q: What does Viewing and Updating General Info cover?**
 
-This page covers Updating General Information.
+This page covers updating general information, including departments and access codes.
 
 ## Glossary
 

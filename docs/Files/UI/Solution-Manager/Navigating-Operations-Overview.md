@@ -13,16 +13,20 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Navigating Operations Overview
+
 **Theme:** Overview | **Who is it for?** Operations staff who use the Solution Manager Operations interface daily
 
 ## What Is It?
 
 The Operations interface is the main workspace for monitoring and managing daily schedule and job execution. It provides views for daily processes, schedule and job status, machine status, and application settings — all accessible from a consistent navigation panel.
 
-- Learning the Operations interface for the first time
-- Configuring application settings or your personal profile
-- Understanding the daily processes view and schedule presentation
-- Setting up or adjusting Operations display preferences
+Use the Operations interface when you need to:
+
+- Learn the Operations interface for the first time
+- Configure application settings or your personal profile
+- Understand the daily processes view and schedule presentation
+- Set up or adjust Operations display preferences
 
 ## What is in this section?
 
@@ -53,10 +57,10 @@ The Operations interface is the main workspace for monitoring and managing daily
 
 The Operations interface is the main workspace for monitoring and managing daily schedule and job execution, covering layout, navigation, and application-level settings.
 
-**Q: Who manages Solution Manager - Operations in OpCon?**
+**Q: Who manages Solution Manager Operations in OpCon?**
 
-Operations staff and administrators manage Solution Manager - Operations, including settings, user access, and monitoring.
+Operations staff and administrators manage Solution Manager Operations, including settings, user access, and monitoring.
 
-**Q: Where should I start in the Solution Manager - Operations section?**
+**Q: Where should I start in the Solution Manager Operations section?**
 
 Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.

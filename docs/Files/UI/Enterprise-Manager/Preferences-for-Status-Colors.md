@@ -1,45 +1,37 @@
 ---
 title: Setting Preferences for Status Colors
-description: "Use this procedure to set Preferences for Status Colors in Enterprise Manager."
+description: Set the display colors for job and schedule statuses in Enterprise Manager to customize how status information appears in the interface.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedure
 ---
 
 # Setting Preferences for Status Colors
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Enterprise Manager lets you customize the colors used to display job and schedule statuses throughout the interface. You can set colors for status groups (which apply to all jobs sharing that status), override colors for individual job statuses, or configure schedule status colors separately.
 
-## What Is It?
+To open the Colors preferences page, complete the following steps:
 
-Use this procedure to set Preferences for Status Colors in Enterprise Manager.
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager** > **Preferences**.
+3. Select the arrow next to **Enterprise Manager** in the Preferences tree to expand it.
+4. Select **Colors**.
+
+**Result:** The Colors preferences page opens, showing sections for Jobs and Schedules.
+
+From the Colors preferences page, you can complete any of the following tasks:
+
+- [Set job status group colors](Setting-Job-Status-Group-Colors.md) — Configure a single color for each status group (Running, Waiting, Held, Missed Start Time, Canceled, Skipped, Finished OK, Failed, Fixed, Under Review) under **Status Group Colors**.
+- [Manage individual job status colors](Managing-Individual-Status-Colors.md) — Add, edit, or remove color overrides for specific job statuses under **Individual Job Status Colors** using the **Add...**, **Edit...**, and **Remove** buttons.
+- [Set schedule status colors](Setting-Schedule-Status-Colors.md) — Configure colors for schedule statuses (Held, Finished OK, Running, Waiting) under the **Schedules** section.
 
 :::note
-Select the **Restore Defaults** button in the Color Preferences to restore the default color choices.
+To reset all color settings to their defaults, select **Restore Defaults** on the Colors preferences page. This action resets both the status group colors and all individual job status color overrides.
 :::
-
-To set the preferences, complete the following steps:
-
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree
-4. Select **Colors**
-5. [Set the desired job status group colors](Setting-Job-Status-Group-Colors.md), [manage the individual job status colors](Managing-Individual-Status-Colors.md), or [set the desired schedule status colors](Setting-Schedule-Status-Colors.md)
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.

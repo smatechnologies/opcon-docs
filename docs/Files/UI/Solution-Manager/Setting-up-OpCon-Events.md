@@ -1,6 +1,6 @@
 ---
 title: Setting up OpCon Events
-description: "#### To add an OpCon event to the Service Request To add an OpCon event to the Service Request, complete the following steps: 1."
+description: Add and configure OpCon events on a Service Request in Solution Manager, including variable syntax and system variables.
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,51 +15,58 @@ doc_type: procedural
 
 # Setting up OpCon Events
 
-**Theme:** Build  
-**Who Is It For?** System Administrator, Automation Engineer
+An OpCon event is a command sent to OpCon that triggers an automated action, such as adding a job to a Schedule, updating a property value, sending a notification, or changing a job or Schedule status. You can attach one or more events to a Service Request so that OpCon carries out those actions when a user submits the request.
 
-## What Is It?
+## Add an event to a Service Request
 
-#### To add an OpCon event to the Service Request
+To add an OpCon event to a Service Request, complete the following steps:
 
-To add an OpCon event to the Service Request, complete the following steps:
+1. Open the **New Service Request** page in Solution Manager.
+2. Under the **Events** label, select the **Add** button.
 
-1. Select the green **Add** button below the **Events** label on the **New Service Request** page
-![Events toolbar with Add button](../../../Resources/Images/SM/Setting-Up-OpCon-Events.png "Events toolbar with Add button")
-2. The **Create New Event** window displays
-![Create New Event Screen](../../../Resources/Images/SM/Setting-Up-OpCon-Events_1.png "Create New Event Screen")
-3. Select an OpCon **Event Template** to start defining event details
-:::note
-The **Event Template** list contains several Administrative Events for advanced operations. For more information, refer to [Administrative Events](../../../events/types.md#Administ) in the **OpCon Events** online help.
-:::
-   - Once you choose a template, the screen dynamically updates to assist with filling out event details
-   - A preview of the defined Event displays below the **Event Template** list in the dark grey box
-   - Variables are resolved before the Event is sent to OpCon
-:::note
-Use the **Manual Edit** button (pencil icon) to define or edit an Event manually.
-![Manual Edit](../../../Resources/Images/SM/Setting-Up-OpCon-Events_3.png "Manual Edit")
-:::
-4. Complete the **Event definition**
-5. Select **OK** to apply your changes and return to the **Service Request definition** page, or select **Cancel** to discard the Event changes
+   ![Events toolbar with Add button](../../../Resources/Images/SM/Setting-Up-OpCon-Events.png "Events toolbar with Add button")
 
-### Using Variables
+   The **Create New Event** window opens.
 
-- Specify variables in Events using the syntax `${variable name}`
-- The same variable can be used multiple times in the same Event or across Events for the same Service Request. Each reuse maps to a single User Input, so the value the user supplies applies to every instance
-- The following system variables are available in Solution Manager:
-  - **${SM.USER.LOGIN}** - Resolves to the Name defined for the OpCon user who selected the Service Request button
-  - **${SM.USER.NAME}** - Resolves to the Full User Name defined for the OpCon user who selected the Service Request button
-  - **${SM.USER.EMAIL}** - Resolves to the Email Address defined for the OpCon user who selected the Service Request button
-  - **${SM.USER.COMMENTS}** - Resolves to the Comments defined for the OpCon user who selected the Service Request button
+   ![Create New Event Screen](../../../Resources/Images/SM/Setting-Up-OpCon-Events_1.png "Create New Event Screen")
 
-## Glossary
+3. In the **Event Template** field, select the event template you want to use.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+   :::note
+   The **Event Template** list includes Administrative Events for advanced operations. For more information, refer to [Administrative Events](../../../events/types.md#Administ) in the **OpCon Events** online help.
+   :::
 
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+   After you select a template:
+   - The form updates dynamically to display the fields for that event type.
+   - A preview of the fully defined event appears below the **Event Template** field in the dark area.
+   - Variables in the event are resolved before the event is sent to OpCon.
 
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
+4. Complete the event definition fields.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+   :::note
+   To define or edit an event manually instead of using the template form, select the **Manual Edit** button.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+   ![Manual Edit](../../../Resources/Images/SM/Setting-Up-OpCon-Events_3.png "Manual Edit")
+   :::
+
+5. Select **OK** to save the event and return to the Service Request definition, or select **Cancel** to discard your changes.
+
+**Result:** The event appears in the **Events** list on the Service Request definition page and runs when a user submits the request.
+
+## Use variables in events
+
+You can include variables in event definitions to pass dynamic values at run time.
+
+- Use the syntax `${variable name}` to specify a variable anywhere in the event definition.
+- You can use the same variable multiple times within a single event or across multiple events on the same Service Request. Each reuse maps to the same User Input, so the value the user supplies applies to every instance.
+
+### System variables
+
+Solution Manager provides the following system variables that resolve automatically when a user submits a Service Request. You do not need to define User Inputs for these variables.
+
+| Variable | Resolves to |
+|---|---|
+| `${SM.USER.LOGIN}` | The login name of the OpCon user who submitted the Service Request |
+| `${SM.USER.NAME}` | The full name of the OpCon user who submitted the Service Request |
+| `${SM.USER.EMAIL}` | The email address of the OpCon user who submitted the Service Request |
+| `${SM.USER.COMMENTS}` | The comments field defined on the OpCon user account of the user who submitted the Service Request |

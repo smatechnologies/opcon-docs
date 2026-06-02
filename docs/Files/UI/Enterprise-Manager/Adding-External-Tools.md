@@ -1,6 +1,6 @@
 ---
 title: Adding External Tools
-description: "Add frequently used tools to the External Tools navigation list in Enterprise Manager by modifying externaltools.xml."
+description: "Add frequently used tools to the External Tools navigation list in Enterprise Manager by editing externaltools.xml."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,48 +8,79 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adding External Tools
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Add frequently used tools to the **External Tools** navigation list in Enterprise Manager by modifying **externaltools.xml**, located at userhome\\.enterpriseManager\\externaltools.xml. This file is copied from the EM installation directory into the EM preference directory so each user on the machine can configure it independently.
+The **External Tools** section of the Navigation Panel in Enterprise Manager displays shortcuts to frequently used system utilities. You configure these shortcuts by editing `externaltools.xml`, located in the Enterprise Manager user settings directory. Because this file is copied from the Enterprise Manager installation directory into the user settings directory at first run, each user on the machine can configure it independently.
 
 :::note
-If the file is not in the preference directory, copy it from EM installation directory\\tools\\exernaltools.xml to userhome\\.enterpriseManager\\externaltools.xml.
+If `externaltools.xml` is not present in the user settings directory, copy it from `<EM installation directory>\tools\externaltools.xml` to `<user home>\.enterpriseManager\externaltools.xml`.
 :::
 
-The following example shows how to add *Internet Information Services* to the **External Tools** navigation list.
+## Supported Variables
+
+You can use the following variables in the `command` attribute or `parameter` values. Enterprise Manager resolves these variables at runtime before running the tool.
+
+| Variable | Resolved value |
+|---|---|
+| `[[SERVER]]` | Current connected database server |
+| `[[DATABASE]]` | Current connected database name |
+| `[[USER]]` | Current logged-in user name |
+| `[[PASSWORD]]` | Current user's encrypted password |
+| `[[EM_INSTALLDIR]]` | Enterprise Manager installation directory |
+| `[[OPCON_INSTALLDIR]]` | OpCon tools installation directory |
+
+## XML Structure
+
+Each entry in `externaltools.xml` is an `<application>` element. You can optionally group entries inside a `<category>` element.
+
+**Application attributes:**
+
+| Attribute | Required | Description |
+|---|---|---|
+| `name` | Yes | Label shown in the Navigation Panel |
+| `command` | Yes | Executable to run |
+| `icon` | Yes | Relative or absolute path to a 16x16 PNG icon |
+| `os` | Yes | Target operating system: `win32`, `linux`, `macos`, `solaris`, `aix`, or `hpux` |
+
+Use one or more `<parameter value="..."/>` child elements to pass arguments to the command.
+
+**Category attributes:**
+
+| Attribute | Required | Description |
+|---|---|---|
+| `name` | Yes | Group label shown in the Navigation Panel |
+| `icon` | Yes | Relative or absolute path to a 16x16 PNG icon |
+
+## Add an External Tool
+
+The following example adds *Internet Information Services* to the **External Tools** navigation list.
 
 To add an external tool, complete the following steps:
 
-1. Copy **externaltools.xml** from **userhome\\.enterpriseManager\\** to a working location
-2. Open the working copy in a text editor (e.g., Notepad)
-3. Add an entry that calls the external tool
-4. Save the changes to **externaltools.xml**
-5. Create a 16x16 icon file for the new tool
-6. Place the icon file in **\....\\EnterpriseManager\\tools\\icons**
-7. Select the **Close** button to exit Enterprise Manager
-8. Save a backup of **userhome\\.enterpriseManager\\externaltools.xml**
-9. Copy the updated **externaltools.xml** into **userhome\\.enterpriseManager\\**
-10. Open Enterprise Manager and go to **External Tools** in the **Navigation Panel** to verify the entry for Internet Information Services
-11. Select **Internet Information Services** to confirm it works correctly
+1. Open `<user home>\.enterpriseManager\externaltools.xml` in a text editor.
+2. Add an `<application>` element with the required attributes and any `<parameter>` child elements. For example:
 
-## FAQs
+   ```xml
+   <application name="Internet Information Services"
+       icon="icons/iis.png"
+       os="win32"
+       command="cmd.exe">
+     <parameter value="/c"/>
+     <parameter value="mmc.exe"/>
+     <parameter value="%SystemRoot%/System32/inetsrv/iis.msc"/>
+   </application>
+   ```
 
-**Q: How do you save a new external tools record?**
+3. Save `externaltools.xml`.
+4. Create a 16x16 PNG icon for the new tool and place it in `<EM installation directory>\tools\icons\`.
+5. Back up the existing `<user home>\.enterpriseManager\externaltools.xml`.
+6. Copy the updated `externaltools.xml` to `<user home>\.enterpriseManager\`.
+7. Close Enterprise Manager.
+8. Open Enterprise Manager and go to **External Tools** in the **Navigation Panel**.
 
-After completing the required fields, select the **Save** button on the toolbar to save the external tools record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Result:** The new entry appears in the **External Tools** list. Select it to confirm the tool opens correctly.

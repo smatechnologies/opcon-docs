@@ -22,61 +22,63 @@ doc_type: procedural
 
 The **Operations** module allows you to perform schedule status changes.
 
-To perform schedule status changes:
+To perform schedule status changes, complete the following steps:
 
-Select one of the five operation dials (Failed, Blocked, Waiting, Running, or Completed) or use the **Quick Search** field (type the keyword and press **Enter**) in the **Schedules** section on the **Operations Summary** page.
+1. Select one of the five operation dials (**Failed**, **Blocked**, **Waiting**, **Running**, or **Completed**) or use the **Quick Search** field (type the keyword and press **Enter**) in the **Schedules** section on the **Operations Summary** page.
 
-![Schedules Operation Dials](../../../Resources/Images/SM/Schedule-Operation-Dials.png "Schedules Operation Dials")
+   ![Schedules Operation Dials](../../../Resources/Images/SM/Schedule-Operation-Dials.png "Schedules Operation Dials")
 
-The **Processes** page will display.
+   The **Processes** page displays.
 
-Ensure that both the **Date** and **Schedule** toggle switches are enabled. Each switch appears green when enabled.
+2. Ensure that both the **Date** and **Schedule** toggle switches are enabled. Each switch appears green when enabled.
 
-![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-Select the desired **date(s)** and **schedule(s)**. Your selection(s) display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
+3. Select the desired date(s) and schedule(s). Your selections display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
-![Schedule Processes](../../../Resources/Images/SM/Schedule-Processes.png "Schedule Processes")
+   ![Schedule Processes](../../../Resources/Images/SM/Schedule-Processes.png "Schedule Processes")
 
-:::note
-You may wish to filter and/or sort the schedule list:
+   :::note
+   You may wish to filter or sort the schedule list:
 
-- **Filter**: Use the **Filter Bar** above the list. Type a keyword in the appropriate field and press **Enter**
-- **Sort**: Select a column heading to sort ascending (arrow pointing down); select again to sort descending (arrow pointing up)
-:::
+   - **Filter**: Use the **Filter Bar** above the list. Type a keyword in the appropriate field and press **Enter**
+   - **Sort**: Select a column heading to sort ascending (arrow pointing down); select again to sort descending (arrow pointing up)
+   :::
 
-Select the schedule record (e.g., 3 schedule(s)) in the status bar to display the **Selection** panel with the **Schedule Status Update** tab in focus.
+4. Select the schedule record (e.g., **3 schedule(s)**) in the status bar to display the **Selection** panel with the **Schedule Status Update** tab in focus.
 
-![Schedule Status Update Panel](../../../Resources/Images/SM/Schedule-Status-Update-Panel.png "Schedule Status Update Panel")
+   ![Schedule Status Update Panel](../../../Resources/Images/SM/Schedule-Status-Update-Panel.png "Schedule Status Update Panel")
 
-:::note
-As an alternative, right-click any selected schedule in the list to display the **Selection** panel.
-:::
+   :::note
+   As an alternative, right-click any selected schedule in the list to display the **Selection** panel.
+   :::
 
-*(Optional)* Select **Refresh available actions** to verify which status update actions are available for the current selection. This is helpful when multiple schedules are selected, since all status update buttons are enabled by default.
+5. *(Optional)* Select **Refresh available actions** to verify which status update actions are available for the current selection. This is helpful when multiple schedules are selected, since all status update buttons are enabled by default.
 
-*(Optional)* Enter or select a change status reason.
+6. *(Optional)* Enter or select a change status reason.
 
-:::note
-Depending on application configuration, the **Change Status Reason** list may store previous reasons entered for job or schedule status updates.
-:::
+   :::note
+   Depending on application configuration, the **Change Status Reason** list may store previous reasons entered for job or schedule status updates.
+   :::
 
-Select one of the following status updates to apply to the selected schedule(s):
+7. Select one of the following status updates to apply to the selected schedule(s):
 
-:::note
-Status updates applied to selected Schedule Names affect ALL jobs scheduled to run on that date, not only those visible in the current scope.
-:::
+   :::note
+   Status updates applied to selected Schedule Names affect ALL jobs scheduled to run on that date, not only those visible in the current scope.
+   :::
 
-- **Release**: Releases the selected schedule(s) from a Held state. Jobs continue processing from where they stopped. Subschedules in Parent Hold status are also released
-- **Hold**: Suspends processing of the selected schedule(s). Running jobs complete, but no new jobs start. Subschedules in Waiting or In Process status are placed in Parent Hold
-- **Start**: Overrides the selected schedule's start date(s) and time(s) and runs them immediately. SAM begins processing as soon as this option is selected. Subschedules in Parent Hold status are also started
-- **Close**: Marks the selected schedule(s) as Completed when they are still In Process only because they contain failed jobs
+   - **Release**: Releases the selected schedule(s) from a Held state. Jobs continue processing from where they stopped. Subschedules in Parent Hold status are also released
+   - **Hold**: Suspends processing of the selected schedule(s). Running jobs complete, but no new jobs start. Subschedules in Waiting or In Process status are placed in Parent Hold
+   - **Start**: Overrides the selected schedule's start date(s) and time(s) and runs them immediately. SAM begins processing as soon as this option is selected. Subschedules in Parent Hold status are also started
+   - **Close**: Marks the selected schedule(s) as Completed when they are still In Process only because they contain failed jobs
 
-:::note
-For more on job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
-:::
+   :::note
+   For more on schedule status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
+   :::
 
-Close the **Selection** panel when done.
+8. Close the **Selection** panel when done.
+
+**Result:** The selected status update is applied to the schedule(s). The Operations Summary page reflects the updated status.
 
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
@@ -89,13 +91,6 @@ Related Topics
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Sort | Select a column heading to sort ascending (arrow pointing down); select again to sort descending (arrow pointing up) | — | — |
-| Release | Releases the selected schedule(s) from a Held state. | — | — |
-| Hold | Suspends processing of the selected schedule(s). | — | — |
 ## FAQs
 
 **Q: What happens to subschedules when a parent schedule is placed on Hold?**
@@ -113,8 +108,6 @@ Both the Date and Schedule toggle switches on the Processes page must be enabled
 ## Glossary
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 

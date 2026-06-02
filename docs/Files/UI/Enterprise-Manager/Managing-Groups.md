@@ -1,6 +1,6 @@
 ---
 title: Managing Groups
-description: "Use this procedure to manage Groups in Enterprise Manager."
+description: "Add, rename, and delete Machine, Schedule, and Job groups in Notification Manager in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,104 +8,91 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Groups
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to manage Groups in Enterprise Manager.
+Groups in Notification Manager organize notification triggers by Machine, Schedule, or Job. You can nest child groups under a parent group to further organize triggers. Each group name can be up to 255 characters.
 
 ## Adding Machine, Schedule, or Job Groups
 
 To add a group, complete the following steps:
 
-1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3. Right-click the **notification type** (e.g., Machines, Schedules, or Jobs)
-4. Select **Add Group**. The **Add New Group** dialog displays
-5. Type the new *group name* and select **OK**
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Right-click the notification type node (for example, **Machines**, **Schedules**, or **Jobs**).
+4. Select **Add Group**. The **Add New Group** dialog displays.
+5. Type a group name (up to 255 characters) and select **OK**.
+
+**Result:** The new group appears in the tree under the selected notification type.
 
 :::note
-(Optional) You can create child groups to further organize triggers.
+To create a child group, right-click an existing group instead of the root notification type node, then select **Add Group**.
 :::
 
-**Add Machines to a Group**
+### Adding Machines to a Group
 
-1. Select the **group** in the **Machines** tab
-2. In the Machines selection frame, use one of the following approaches:
-   - **To add specific machines:** Confirm **By default, ENS will treat all machines as: Excluded**. Select the **option** for the platform to add all machines for that platform, or expand the platform using the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** and select individual machine options
-   - **To remove specific machines:** Change the selection to **By default, ENS will treat all machines as: Included**. Select the **option** for the platform to remove all machines, or expand the platform and deselect individual machine options
-3. Select the **Save** button
+To add machines to a group, complete the following steps:
 
-**Add Schedules to a Group**
+1. Select the group in the **Machines** tab.
+2. In the selection frame, choose how the group treats unspecified machines:
+   - To add specific machines — confirm **By default, ENS will treat all machines as: Excluded**. Select the option for a platform to include all machines on that platform, or expand the platform using the arrow and select individual machine options.
+   - To remove specific machines — change the selection to **By default, ENS will treat all machines as: Included**. Select the option for a platform to exclude all machines on that platform, or expand the platform and clear individual machine options.
+3. Select **Save**.
 
-1. Select the **group** in the **Schedules** tab
-2. In the Schedules selection frame, use one of the following approaches:
-   - **To add schedules:** Confirm **By default, ENS will treat all schedules as: Excluded**. Select the **option** for each schedule to add
-   - **To remove schedules:** Change the selection to **By default, ENS will treat all schedules as: Included**. Unselect the **option** for each schedule to remove
-3. Select the **Save** button
+**Result:** The group membership is saved and the selection is applied to notification triggers that use this group.
 
-**Add Jobs to a Group**
+### Adding Schedules to a Group
 
-1. Select the **group** in the **Jobs** tab
-2. In the Jobs selection frame, use one of the following approaches:
-   - **To add jobs:** Confirm **By default, ENS will treat all jobs as: Excluded**. Select the **option** for the schedule to add all jobs, or expand the schedule using the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)**arrow** and select individual job options
-   - **To remove jobs:** Change the selection to **By default, ENS will treat all jobs as: Included**. Select the **option** for the schedule to remove all jobs, or expand the schedule and deselect individual job options
-3. Select the **Save** button
+To add schedules to a group, complete the following steps:
 
-## Deleting Machine, Schedule, or Job Groups
+1. Select the group in the **Schedules** tab.
+2. In the selection frame, choose how the group treats unspecified schedules:
+   - To add specific schedules — confirm **By default, ENS will treat all schedules as: Excluded**. Select the option for each schedule to include.
+   - To remove specific schedules — change the selection to **By default, ENS will treat all schedules as: Included**. Clear the option for each schedule to exclude.
+3. Select **Save**.
 
-To delete a group, complete the following steps:
+**Result:** The group membership is saved.
 
-1.  Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2.  Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3.  Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the group information
-4.  Right-click the **group** to delete
-5.  Select **Delete Group**. The **Delete** dialog displays
-6.  Select **Yes** to confirm the deletion or **No** to cancel
+### Adding Jobs to a Group
+
+To add jobs to a group, complete the following steps:
+
+1. Select the group in the **Jobs** tab.
+2. In the selection frame, choose how the group treats unspecified jobs:
+   - To add specific jobs — confirm **By default, ENS will treat all jobs as: Excluded**. Select the option for a schedule to include all its jobs, or expand the schedule using the arrow and select individual job options.
+   - To remove specific jobs — change the selection to **By default, ENS will treat all jobs as: Included**. Select the option for a schedule to exclude all its jobs, or expand the schedule and clear individual job options.
+3. Select **Save**.
+
+**Result:** The group membership is saved.
 
 ## Renaming Machine, Schedule, or Job Groups
 
 To rename a group, complete the following steps:
 
-1.  Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2.  Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3.  Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the group information
-4.  Right-click the **group** to rename
-5.  Select **Rename**
-6.  Type the new *group name* and select **OK**
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Select the arrow to expand the group information.
+4. Right-click the group to rename.
+5. Select **Rename Group**. The rename dialog displays with the current group name pre-filled.
+6. Type the new group name and select **OK**.
 
-## FAQs
+**Result:** The group name is updated in the tree.
 
-**Q: What does managing groups involve?**
+## Deleting Machine, Schedule, or Job Groups
 
-Managing groups includes Adding Machine, Schedule, or Job Groups, Deleting Machine, Schedule, or Job Groups, Renaming Machine, Schedule, or Job Groups. Access groups through Enterprise Manager navigation pane.
+Deleting a group also deletes all child groups and triggers associated with it. This action cannot be undone.
 
-**Q: Who can manage groups in OpCon?**
+To delete a group, complete the following steps:
 
-Users with the appropriate privileges assigned through their role can manage groups. Contact your OpCon system administrator if you do not have access.
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Select the arrow to expand the group information.
+4. Right-click the group to delete.
+5. Select **Delete Group**. A confirmation dialog displays the message: *This group may include child groups and triggers. If you click 'Yes', all child groups and triggers will be deleted as well. Are you sure you want to delete the whole group?*
+6. Select **Yes** to confirm the deletion, or **No** to cancel.
 
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The group and all its child groups and triggers are permanently removed.

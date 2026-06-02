@@ -15,84 +15,67 @@ doc_type: procedural
 
 # Deleting Global Properties
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Deleting a global property is a three-step process: first remove all token references from the daily tables, then remove them from the master tables, and finally delete the property itself. Complete the procedures in this order to avoid broken token references in active or future schedules.
 
-## What Is It?
-
-Deleting a global property requires three procedures: removing the property from the daily tables, removing it from the master tables, then deleting the property.
-
-Remove the Global Property from the Daily Tables
-
-To remove the global property from the daily tables, complete the following steps:
-
-1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
-4. Select the **job**
-5. Select **Edit Daily** in the **Maintenance** frame at the bottom-right of the screen
-6. In the **Command Line** text box, replace any *tokens* representing the property to delete with a hardcoded value or another token
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
-8. Select the **Events** tab
-9. Select the **OpCon event** in the **Events** list box
-10. Select **Edit** in the **Events** frame. The **Events Definition Wizard** displays
-11. Replace any *tokens* in the OpCon event representing the property to delete with a hardcoded value or another token
-12. Select **OK** to save the changes
-13. Repeat Steps 4–12 for all jobs using the token
-14. Select **Close ☒** to close the **Job Daily** screen
-15. Select **Close ☒** to close the **Daily Maintenance** screen
-
-Remove the Global Property from the Master Tables
-
-1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
-4. Select the **job**
-5. Select **Edit Master** in the **Maintenance** frame at the bottom-right of the screen
-6. In the **Command Line** text box, replace any *tokens* representing the property to delete with a hardcoded value or another token
-7. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-8. Select the **Events** tab
-9. Select the **OpCon event** containing the token
-10. Select **Edit** in the **Events** frame. The **Event Definition Wizard** displays
-11. Replace any *tokens* in the OpCon event representing the property to delete with a hardcoded value or another token
-12. Select **OK** to save the changes
-13. Repeat Steps 4–12 for all jobs using the token
-14. Select **Close ☒** to close the **Job Master** screen
-15. Select **Close ☒** to close the **Daily Maintenance** screen
-
-Delete the Global Property
-
-1. Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
-2. Select the **global property** in the **Select Global Property** list
-3. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Global Properties** toolbar
-4. Select **Yes** to confirm the deletion or **No** to discard
-5. Select **Close ☒** to close the **Global Properties** screen
+:::warning
+Deletion is permanent. OpCon does not provide a way to recover a deleted global property. Verify the property is no longer needed before proceeding.
 :::
 
-## FAQs
+:::note
+System-managed global properties cannot be deleted. The **Remove** button is disabled when a system-managed property is selected.
+:::
 
-**Q: Can a global properties record be recovered after deletion?**
+## Remove the Global Property from the Daily Tables
 
-No. Deleting a global properties record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+To remove all token references from the daily tables, complete the following steps:
 
-**Q: How many global properties records can you delete at once?**
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays.
+2. Select the **arrow** to expand the **date** for the schedule.
+3. Select the **arrow** to expand the **schedule**.
+4. Select the **job**.
+5. Select **Edit Daily** in the **Maintenance** frame at the bottom-right of the screen.
+6. In the **Command Line** text box, replace any tokens representing the property to delete with a hardcoded value or another token.
+7. Select **Save** on the **Job Daily** toolbar.
+8. Select the **Events** tab.
+9. Select the **OpCon event** in the **Events** list box.
+10. Select **Edit** in the **Events** frame. The **Event Definition Wizard** displays.
+11. Replace any tokens in the OpCon event representing the property to delete with a hardcoded value or another token.
+12. Select **OK** to save the changes.
+13. Repeat steps 4–12 for all jobs using the token.
+14. Select **Close** to close the **Job Daily** screen.
+15. Select **Close** to close the **Daily Maintenance** screen.
 
-Select the specific global properties record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+**Result:** All daily job definitions and events no longer reference the global property.
 
-## Glossary
+## Remove the Global Property from the Master Tables
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+To remove all token references from the master tables, complete the following steps:
 
-**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays.
+2. Select the **arrow** to expand the **date** for the schedule.
+3. Select the **arrow** to expand the **schedule**.
+4. Select the **job**.
+5. Select **Edit Master** in the **Maintenance** frame at the bottom-right of the screen.
+6. In the **Command Line** text box, replace any tokens representing the property to delete with a hardcoded value or another token.
+7. Select **Save** on the **Job Master** toolbar.
+8. Select the **Events** tab.
+9. Select the **OpCon event** containing the token.
+10. Select **Edit** in the **Events** frame. The **Event Definition Wizard** displays.
+11. Replace any tokens in the OpCon event representing the property to delete with a hardcoded value or another token.
+12. Select **OK** to save the changes.
+13. Repeat steps 4–12 for all jobs using the token.
+14. Select **Close** to close the **Job Master** screen.
+15. Select **Close** to close the **Daily Maintenance** screen.
 
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
+**Result:** All master job definitions and events no longer reference the global property.
 
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
+## Delete the Global Property
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To permanently delete the global property, complete the following steps:
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+1. Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays.
+2. Select the global property in the **Select Global Property** list.
+3. Select **Remove** on the **Global Properties** toolbar.
+4. Select **Yes** to confirm the deletion, or **No** to cancel.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The global property is permanently removed from OpCon.

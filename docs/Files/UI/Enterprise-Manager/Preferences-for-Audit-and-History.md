@@ -20,16 +20,15 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Audit and History Management Records in Enterprise Manager.
+The **History/Audit** preferences in Enterprise Manager control the maximum number of records returned in Audit Management and History views. The default value is 100,000 records.
 
 To set the preferences, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **History/Audit**. The **History/Audit** settings display to the right
-5. Define the number of records to return (the default value is 100,000)
-6. Select **OK** to save the changes and close the **Preferences** dialog
+1. Go to **EnterpriseManager &gt; Preferences**. The **Preferences** dialog displays.
+2. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **History/Audit**. The **History/Audit** settings display to the right.
+4. Define the number of records to return (the default value is 100,000).
+5. Select **OK** to save the changes and close the **Preferences** dialog.
 
 ## Glossary
 

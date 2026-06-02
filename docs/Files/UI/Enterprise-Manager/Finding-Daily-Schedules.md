@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Finding Daily Schedules or Jobs
-description: "The Daily Maintenance view in Enterprise Manager includes a search box that filters the schedule and job list as you type."
+description: "Use the search box in the Daily Maintenance view to filter the schedule and job list by name as you type."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,30 +10,22 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Finding Daily Schedules or Jobs
+# Finding Daily Schedules or Jobs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Daily Maintenance** view includes a search box in the **Daily** frame that filters the schedule and job tree as you type. Use this feature to locate a specific Schedule or Job by name without scrolling through the full list.
 
-## What Is It?
+## Find a Schedule or Job
 
-The Daily Maintenance view in Enterprise Manager includes a search box that filters the schedule and job list as you type, letting operators quickly locate a specific schedule or job by name without scrolling through the full list.
+To find a daily Schedule or Job by name, complete the following steps:
 
-To perform this procedure, complete the following steps:
+1. In Enterprise Manager, go to **Operation > Daily Maintenance**. The **Daily Maintenance** view opens and displays the **Daily** frame.
+2. In the search box at the top of the **Daily** frame, type the first few characters or the full name of the Schedule or Job. The tree filters to show only matching items as you type.
+3. Select the Schedule or Job in the filtered tree to view its details or take action.
+4. To return to the full list, select the clear button to the right of the search box.
 
-1.  Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2.  Type the first few characters or full name of the schedule or job in the **Daily** frame text box
-3.  View the schedule or job information
-4.  Select **Clear** to the right of the text box to return to all information
-:::
-
-## Glossary
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The **Daily** frame displays all Schedules and Jobs again.

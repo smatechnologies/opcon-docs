@@ -2,41 +2,34 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Forecasting Frequencies
-description: "Use this procedure to forecast Frequencies in Enterprise Manager."
+description: "How to preview the scheduled dates for a frequency using the Forecast dialog in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
-doc_type: conceptual
+  - Enterprise Manager
+last_updated: 2026-06-02
+doc_type: procedural
 ---
 
-#  Forecasting Frequencies
+# Forecasting Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Forecast** dialog in Enterprise Manager displays a 12-month calendar view showing every date on which a frequency will cause a job to run. You can step through years and compare frequencies side by side before committing changes.
 
-## What Is It?
+## Forecast a frequency
 
-Use this procedure to forecast Frequencies in Enterprise Manager.
+To forecast a frequency from Frequency Manager, complete the following steps:
 
-To forecast a frequency, complete the following steps:
+1. In the Enterprise Manager navigation pane, select **Frequency Manager** under the **Management** category. The **Frequency Manager** screen opens.
+2. Select the frequency name in the list.
+3. Select **Forecast** on the toolbar. The **Forecast** dialog opens and displays the current calendar year starting from January.
+4. Review the highlighted dates across the 12-month calendar view.
+   - To show four months per row instead of three, select the **Wide View** option.
+   - To view a different year, select the left or right arrow button to move backward or forward one year at a time.
+5. Select **OK** to close the **Forecast** dialog.
+6. Select **Close** to close the **Frequency Manager** screen.
 
-1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
-2.  Select the **frequency name**, or select it and select **Forecast** on the toolbar. The **Forecast** dialog displays
-3.  View the forecast
-4.  Select **OK**
-5.  Select **Close ☒** to close the **Frequency Manager** screen
-:::
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** The forecasted dates confirm when the frequency will schedule jobs, allowing you to verify the frequency definition before it is applied.

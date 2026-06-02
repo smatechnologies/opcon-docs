@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Starting Communication
-description: "If the agent is not in a started state, the status can be changed to 'started'."
+description: "Start communication on an agent machine that is not currently enabled or limited, using the Machines Status view in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,32 +10,24 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Starting Communication
+# Starting Communication
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use the **Start Communication** action to bring an agent machine from a stopped state into communication with OpCon. This action is available only when the machine is not already enabled or in a limited state.
 
-## What Is It?
+**Required privilege:** Maintain Machines
 
-If the agent is not in a started state, the status can be changed to 'started'.
+## Start communication on an agent machine
 
-To perform this procedure, complete the following steps:
+To start communication on an agent machine, complete the following steps:
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Select the **Table** tab or the **Map** tab
-3.  *(Optional)* Right-click the **machine** that requires starting
-4.  Select **Start Communication** from the menu
-:::
+1. In the **Operation** section of the navigation pane, select **Machines Status**.
+2. Select the **Table** tab or the **Map** tab.
+3. Right-click the machine that requires communication to be started.
+4. Select **Start Communication** from the context menu.
 
- 
-
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Result:** OpCon sets the machine's operational status to Up and its network status to Waiting. The machine attempts to establish communication with its agent.

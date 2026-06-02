@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying SAP Jobs
-description: "Use this procedure to copy SAP Jobs in Enterprise Manager."
+description: "Use this procedure to copy an SAP job from the View SAP Jobs dialog in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,48 +10,28 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Copying SAP Jobs
+# Copying SAP Jobs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to copy SAP Jobs in Enterprise Manager.
+Use this procedure to copy an existing SAP R/3 or CRM job to a new job name using the **View SAP Jobs** dialog in Enterprise Manager. Copying a job duplicates all settings from the original, giving you a starting point you can then modify.
 
 To copy an SAP job, complete the following steps:
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Right-click the preferred **SAP R/3 and CRM machine name**
-3.  Hover over **SAP Machine** in the right-click menu and select **SAP Jobs**. The **View SAP Jobs** dialog displays
-4.  Enter a *job name* or a *name with a wildcard*
-5.  *(Optional)* Enter a *date range* for the job's creation date
-6.  *(Optional)* Enter an *event* in the **Event ID** list
-7.  Select the **Scheduled** status box and clear all other status boxes
-8.  Select **Search SAP**
-9.  Select the **SAP job** in the list
-10. Select **Copy Job**. The **New Job Name** dialog displays
-11. Enter a *new job name*
-12. Select **OK**
-:::
+1. Go to the **Operation** topic and select **Machines Status**.
+2. Right-click the SAP R/3 and CRM machine name you want to work with.
+3. Hover over **SAP Machine** in the right-click menu and select **SAP Jobs**. The **View SAP Jobs** dialog opens.
+4. In the **Job Name Criteria** field, enter a job name or a name with a wildcard (the field defaults to `*`).
+5. (Optional) Enter a date range in the **Filter by Create Date or Event ID** section to filter jobs by creation date.
+6. (Optional) Enter an event identifier in the **Event ID** field to filter by event.
+7. In the **Filter by Job Status** section, select the **Scheduled** option and clear all other status options.
+8. Select **Search SAP**. The matching jobs appear in the **SAP Jobs** list.
+9. Select the SAP job you want to copy from the results list.
+10. Select **Copy Job**. The **New Job Name** dialog opens.
+11. Enter a unique name for the copied job.
+12. Select **OK**.
 
-## FAQs
-
-**Q: Why would you copy sap jobs instead of creating a new one?**
-
-Copying sap jobs is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
-
-**Q: Does copying sap jobs require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original sap jobs record.
-
-## Glossary
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The job is copied to the SAP system under the new name. A confirmation message appears in the dialog indicating the job was successfully copied.

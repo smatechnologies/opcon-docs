@@ -39,7 +39,7 @@ The toolbar resides at the top-right corner of the screen.
 
 ## Right-click Menu
 
-right-clicking on a script opens a menu with the same options as the toolbar.
+Right-clicking on a script opens a menu with the same options as the toolbar.
 
 Related Topics
 
@@ -57,7 +57,7 @@ Related Topics
 
 **Q: What can you do with Script Repository?**
 
-Script Repository allows you to script repository toolbar, right-click menu.
+Script Repository allows you to add, edit, delete, and version scripts stored in the OpCon database, and deploy script versions to Agent machines.
 
 **Q: Who has access to Script Repository?**
 
@@ -73,8 +73,8 @@ Access to Script Repository is controlled by the privileges assigned to your OpC
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

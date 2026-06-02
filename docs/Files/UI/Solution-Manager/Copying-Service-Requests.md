@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Service Requests
-description: "To copy a service request, complete the following steps: 1."
+description: How to copy an existing Service Request in Solution Manager to reuse its configuration as a starting point for a new one.
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,32 +15,24 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Copying Service Requests
+# Copying Service Requests
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Copying a Service Request duplicates all settings from the original and opens the copy in the Service Request editor, where you can rename it and modify any settings before saving. Use this approach when a new Service Request shares most of its configuration with an existing one.
 
-## What Is It?
+You must have the **Maintain Service Request** function privilege and be in admin mode to see the copy controls.
 
-To copy a service request, complete the following steps:
+## Copy a Service Request
 
-1.  Select the **Copy** icon on the Service Request button
-2.  Enter a different name for the copied Service Request
-3.  _(Optional)_ Modify any existing information or settings
-4.  Select the **Save** button
+To copy a Service Request, complete the following steps:
 
-## FAQs
+1. In Solution Manager, go to **Self Service**.
+2. Enable admin mode by selecting the admin mode toggle in the toolbar.
+3. On the Service Request button you want to copy, select the **Copy** button.
 
-**Q: Why would you copy service requests instead of creating a new one?**
+   The Service Request editor opens with all fields populated from the original.
 
-Copying service requests is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
+4. In the **Name** field, enter a unique name for the copied Service Request (maximum 64 characters).
+5. *(Optional)* Modify any other fields as needed.
+6. Select **Save**.
 
-**Q: Does copying service requests require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original service requests record.
-
-## Glossary
-
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows on demand, optionally collecting user input through a form before submitting.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.
+**Result:** Solution Manager saves the new Service Request and returns you to the Self Service view, where the copy appears alongside the original.

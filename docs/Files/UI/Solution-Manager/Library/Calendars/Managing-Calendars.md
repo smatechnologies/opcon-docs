@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Calendars
-description: "The Calendars page is used to define and maintain OpCon Calendars and displays a list of existing calendars."
+description: "The Calendars page in Solution Manager lets you add, edit, copy, delete, and clean up OpCon calendars from a single list view."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,47 +17,35 @@ doc_type: procedural
 
 # Managing Calendars
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Calendars** page in Solution Manager displays a list of all OpCon calendars and provides toolbar actions to add, edit, copy, delete, and clean up calendars.
 
-## What Is It?
+OpCon supports two types of calendars:
 
-The **Calendars** page is used to define and maintain OpCon Calendars and displays a list of existing calendars. For conceptual information, refer to [Calendars](../../../../../objects/calendars.md) in the **Concepts** online help.
+- **Holiday Calendars** — store non-working days and are identified by the `(HC:)` prefix in the calendar name. Each schedule has its own individual Holiday Calendar created automatically at schedule creation.
+- **Annual Plan Calendars** — store user-defined date collections used by schedules and frequencies to determine when automation runs or is excluded.
 
-## Calendars Toolbar
+For conceptual information about calendar types and how OpCon uses them, see [Calendars](../../../../../objects/calendars.md).
 
-The **Calendars** page has a toolbar for managing calendars.
+## Calendars Page
+
+The **Calendars** page lists all defined calendars. Each row displays the calendar **Name** and **Description**.
 
 ![Calendar Page](../../../../../Resources/Images/SM/Library/Calendars/Calendars.png "Calendar Page")
 
-Related Topics
+Use the toolbar buttons to perform the following actions:
+
+| Action | Description |
+|---|---|
+| **Add** | Create a new user-defined calendar. |
+| **Edit** | Modify the selected calendar's name, description, or dates. |
+| **Copy** | Duplicate the selected calendar as a starting point for a new calendar. |
+| **Delete** | Permanently remove the selected calendar. |
+| **Cleanup** | Remove past dates from calendars to keep the date list current. |
+
+## Related Procedures
 
 - [Adding Calendars](Adding-Calendars.md)
-- [Calendar Cleanup](Calendar-Cleanup.md)
+- [Editing Calendars](Editing-Calendars.md)
 - [Copying Calendars](Copying-Calendars.md)
 - [Deleting Calendars](Deleting-Calendars.md)
-- [Editing Calendars](Editing-Calendars.md)
-
-## FAQs
-
-**Q: What does managing calendars involve?**
-
-Managing calendars includes Calendars Toolbar. Access calendars in Solution Manager or Enterprise Manager.
-
-**Q: Who can manage calendars in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage calendars. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Calendar Cleanup](Calendar-Cleanup.md)

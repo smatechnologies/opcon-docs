@@ -1,61 +1,32 @@
-﻿---
+---
 title: SNMP Trap
-description: "!SNMP Trap The SNMP Trap dialog provides the following fields for defining an SNMP trap notification: - Event ID (Optional): Defines a user-defined ID usable as search criteria in a third-party."
+description: "Reference for the SNMP Trap notification type in OpCon, including the Event ID, Severity, and Message fields used to define an outbound SNMP trap."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # SNMP Trap
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **SNMP Trap** notification type sends an outbound SNMP trap to a third-party network management system when a Machine, Schedule, or Job changes to a specific status. SMA Notify Handler processes and routes the trap through a named pipe connection on Windows.
 
-## What Is It?
+:::note
+SNMP trap notifications are supported on Windows only. SMA Notify Handler does not process SNMP traps on non-Windows platforms.
+:::
 
 ![SNMP Trap](../../../../../../Resources/Images/SM/Library/NotificationTriggers/snmp-dialog.png "SNMP Trap")
 
-The **SNMP Trap** dialog provides the following fields for defining an SNMP trap notification:
+## Field reference
 
-- **Event ID** (Optional): Defines a user-defined ID usable as search criteria in a third-party notification filter. The maximum for this field is 64 characters
-  - The SMA Notify Handler places this ID in the message as: `EventID= XXXXXX`
-  - The following characters are not allowed: ~ # % ! @ $ ^
-- **Severity**: Defines the message's severity level. Choices are: Information, Warning, or Error
-- **Message**: Defines a user-defined message up to 3,000 characters. The message also includes default trigger information: Event ID, trigger type, and triggering status change event
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Severity | Defines the message's severity level. | trigger information: Event ID | up to 3,000 characters. The message also includes default |
-| Message | Defines a user-defined message up to 3,000 characters. | trigger information: Event ID | up to 3,000 characters. The message also includes default |
-## FAQs
-
-**Q: What does SNMP Trap do?**
-
-The **SNMP Trap** dialog provides the following fields for defining an SNMP trap notification:
-
-**Q: Where can you find SNMP Trap in OpCon?**
-
-Access SNMP Trap in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+| Field | Required | Description |
+|---|---|---|
+| **Event ID** | No | A user-defined identifier, up to 64 characters, that third-party notification filters can use as search criteria. SMA Notify Handler prepends this value to the outbound message as `EventID= <value>`. The following characters are not allowed: `~` `!` `@` `#` `$` `%` `^` |
+| **Severity** | Yes | The severity level of the trap. Accepted values: **Information** (default), **Warning**, **Minor**, **Major**, **Critical**. |
+| **Message** | No | A user-defined message up to 250 characters. The outbound trap also includes default trigger information: Event ID, trigger type, and the triggering status-change event. |

@@ -1,6 +1,6 @@
-﻿---
+---
 title: List Archive Files
-description: "The Archives tab displays archived log files."
+description: "The Archives tab displays archived OpCon log files for viewing and download."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,38 +20,45 @@ doc_type: conceptual
 
 ## What Is It?
 
-The **Archives** tab displays archived log files.
+The **Archives** tab displays archived OpCon log files. Use it to review older log activity, open an archived file to see its details and contents, or download a file for offline analysis and support cases.
+
+The **Archives** tab is one of three tabs on the **Logs** page in Solution Manager, alongside **Application Logs** and **Schedule Build Logs**.
 
 ![A screen showing list of log files](../../../../../Resources/Images/SM/Library/Logs/ArchiveLog.png "List of Archived Log Files")
 
-### Filtering & Sorting
+## How It Works
 
-Filter and sort log files using the column headers. Filter by text in the **Name** or **Size** field (case insensitive), or enter a date range in the **Date** field.
+The **Archives** tab lists archived log files in a grid with the following columns:
+
+| Column | Description |
+|---|---|
+| **Date** | The date and time associated with the archived log file. |
+| **Name** | The archived log file name. |
+| **Size** | The archived log file size. |
+
+### Filtering and sorting
+
+Sort the list by selecting a column header. Filter the list by entering text in the **Name** or **Size** field. The filter matches any file whose value contains the text you enter (case insensitive). To filter by date, enter a date range in the **Date** field.
 
 ### Log File Details
 
-Select a row to open the Log File Details page.
+Select a row to open the **Log File Details** page, which shows the file's description, general information, and contents.
 
-### Download File
+### Download an archived log file
 
-Select the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
+Select the download button next to the file to download a copy of the archived log file to your computer.
 
 ## FAQs
 
-**Q: What does List Archive Files do?**
+**Q: Where do I find the Archives tab in OpCon?**
 
-The **Archives** tab displays archived log files.
+Go to **Library** in Solution Manager, select **Logs**, then select the **Archives** tab.
 
-**Q: Where can you find List Archive Files in OpCon?**
+**Q: Why can't I see the Archives tab?**
 
-Access List Archive Files in Solution Manager or Enterprise Manager.
+<!-- GAP: Required privilege for the Archives tab is not confirmed in source code; the sibling Application Logs tab requires "All Function Privileges" or "View Application Logs" — needs SME to confirm whether the same privilege applies to Archives. -->
 
-## Glossary
+## Related Topics
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [List Application Logs](./List-Log-Files.md)
+- [Log File Details](./Log-File-Details.md)

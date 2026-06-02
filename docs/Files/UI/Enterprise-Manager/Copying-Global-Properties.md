@@ -2,49 +2,35 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Global Properties
-description: "Use this procedure to copy Global Properties in Enterprise Manager."
+description: "Copy a Global Property in Enterprise Manager to create a duplicate with a new name, reusing the existing value, documentation, and encryption settings."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Copying Global Properties
+# Copying Global Properties
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Copying a Global Property creates a new property that inherits the value, documentation, and encryption settings of the original. Use this approach when you want an existing property as the starting point for a new one rather than configuring the new property from scratch.
 
-## What Is It?
+To copy a Global Property, complete the following steps:
 
-Use this procedure to copy Global Properties in Enterprise Manager.
+1. Under the **Administration** topic, select **Global Properties**. The **Global Properties** screen opens.
+2. In the **Global Properties** list, select the property you want to copy.
+3. On the **Global Properties** toolbar, select **Copy**. The **Copy Global Property** dialog opens.
+4. In the **New Global Property Name** field, enter a unique name of up to 64 characters.
+5. Select **OK**.
 
-To copy a global property, complete the following steps:
+**Result:** The new Global Property is saved to the OpCon database with the same value, documentation, and encryption settings as the original. The copy appears in the **Global Properties** list and is available for reference in job definitions and events.
 
-1.  Select **Global Properties** under the **Administration** topic. The **Global Properties** screen displays
-2.  Select a **global property** in the **Global Properties** list, or select the **Find** button to locate the property
-3.  Select the **Copy** button on the **Global Property** toolbar. The **Copy Global Property** dialog displays
-4.  Enter a new *global property name*
-5.  Select the **OK** button
-6.  Select **Close ☒** (to the right of the **Global Properties** tab) to close the **Global Properties** screen
+6. Select **Close** to close the **Global Properties** screen.
 
-## FAQs
-
-**Q: Why would you copy global properties instead of creating a new one?**
-
-Copying global properties is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
-
-**Q: Does copying global properties require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original global properties record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using the [[PropertyName]] syntax to pass dynamic values at runtime.
+:::note
+The **Copy** button is only available when a property is selected and the editor has no unsaved changes. Save or discard any pending changes before copying.
+:::

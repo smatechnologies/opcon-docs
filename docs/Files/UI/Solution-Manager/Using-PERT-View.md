@@ -28,11 +28,11 @@ PERT View in Solution Manager
 
 ## PERT View Tips
 
-- Use the **Refresh** button to update the PERT representation
-- Use the **Auto-refresh** toggle switch to control auto-refreshing. When enabled, structural changes are detected and the view refreshes automatically
-- Press **Ctrl** and scroll the mouse wheel to zoom in or out on the diagram
-- A dashed royal blue border appears around nodes to indicate what was originally selected for visualization
-- Tooltips are available for Status and Alert icons within nodes
+- Use the **Refresh** button to update the PERT representation.
+- Use the **Auto-refresh** toggle switch to control auto-refreshing. When enabled, structural changes are detected and the view refreshes automatically.
+- Press **Ctrl** and scroll the mouse wheel to zoom in or out on the diagram.
+- A dashed royal blue border appears around nodes to indicate what was originally selected for visualization.
+- Tooltips are available for Status and Alert icons within nodes.
 
 Node colors reflect the underlying job status:
 
@@ -56,15 +56,15 @@ Enable the **Include Thresholds/Resources** switch (![Threshold/Resource Toggle 
 
 ![Thresholds & Resources displayed in PERT](../../../Resources/Images/SM/Threshold_Resource_Deps.png "Thresholds & Resources displayed in PERT")
 
-- Hovering over a resource dependency line shows the number of resources the job requires
-- Hovering over a threshold dependency line shows the threshold value with one of these operators: equal (=), greater than (\>), less than (<), greater than or equal to (≥), less than or equal to (≤), not equal (≠)
+- Hovering over a resource dependency line shows the number of resources the job requires.
+- Hovering over a threshold dependency line shows the threshold value with one of these operators: equal (=), greater than (\>), less than (<), greater than or equal to (≥), less than or equal to (≤), not equal (≠).
 
 Icons within nodes:
 
-- ![Threshold/Recource Update Icon in PERT View](../../../Resources/Images/SM/PERTThresResIcon.png "Threshold/Recource Update Icon in PERT View") - Threshold/resource updates exist for underlying Daily jobs. Hover to see the associated update
-- ![OpCon Events Icon in PERT View](../../../Resources/Images/SM/PERTEventsIcon.png "OpCon Events Icon in PERT View") - OpCon Events exist for underlying Daily jobs. Hover to see the associated event
-- ![Expression Dependency Icon in PERT View](../../../Resources/Images/SM/PERTExprDepsIcon.png "Expression Dependency Icon in PERT View") - Expression dependencies exist for underlying Daily jobs. Hover to see the associated expression dependency
-- ![Required Deps Missing Icon in PERT View](../../../Resources/Images/SM/PERTMissingDepsIcon.png "Required Deps Missing Icon in PERT View") - A required dependency is missing. Hover to see the number of missing dependencies
+- ![Threshold/Recource Update Icon in PERT View](../../../Resources/Images/SM/PERTThresResIcon.png "Threshold/Recource Update Icon in PERT View") - Threshold/resource updates exist for underlying Daily jobs. Hover to see the associated update.
+- ![OpCon Events Icon in PERT View](../../../Resources/Images/SM/PERTEventsIcon.png "OpCon Events Icon in PERT View") - OpCon Events exist for underlying Daily jobs. Hover to see the associated event.
+- ![Expression Dependency Icon in PERT View](../../../Resources/Images/SM/PERTExprDepsIcon.png "Expression Dependency Icon in PERT View") - Expression dependencies exist for underlying Daily jobs. Hover to see the associated expression dependency.
+- ![Required Deps Missing Icon in PERT View](../../../Resources/Images/SM/PERTMissingDepsIcon.png "Required Deps Missing Icon in PERT View") - A required dependency is missing. Hover to see the number of missing dependencies.
 
 For extremely complex diagrams with many jobs, nodes, or dependencies, the diagram renders with a simplified layout.
 
@@ -72,21 +72,21 @@ For extremely complex diagrams with many jobs, nodes, or dependencies, the diagr
 
 To access PERT View, complete the following steps:
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
-2. Enable both the **Date** and **Schedule** toggle switches. Each switch shows a green checkmark when enabled
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+2. Enable both the **Date** and **Schedule** toggle switches. Each switch shows a green checkmark when enabled.
 
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-3. Select the desired **date(s)** to display the associated schedules
-4. Select one or more **schedules** or **jobs** in the perspective list
-5. Right-click the selection to display the **Selection** panel
-6. Select the **Diagram** accordion-style tab in the panel
+3. Select the desired **date(s)** to display the associated schedules.
+4. Select one or more **schedules** or **jobs** in the perspective list.
+5. Right-click the selection to display the **Selection** panel.
+6. Select the **Diagram** accordion-style tab in the panel.
 
    ![Diagram Tab for PERT View](../../../Resources/Images/SM/Diagram-Tab.png "Diagram Tab for PERT View")
 
-7. Enable the **Group by Schedule** switch (![Group by Schedule Toggle Switch Enabled](../../../Resources/Images/SM/Group-by-Schedule.png "Group by Schedule Toggle Switch Enabled")) to organize the workflow by schedule. When disabled, jobs are integrated in the diagram
+7. Enable the **Group by Schedule** switch (![Group by Schedule Toggle Switch Enabled](../../../Resources/Images/SM/Group-by-Schedule.png "Group by Schedule Toggle Switch Enabled")) to organize the workflow by schedule. When disabled, jobs are integrated in the diagram.
 
-   - Enabling **Group by Schedule** also displays a **Schedule Status** indicator and tooltip near the schedule name to help you take appropriate actions
+   - Enabling **Group by Schedule** also displays a **Schedule Status** indicator and tooltip near the schedule name to help you take appropriate actions.
 
 8. Select one of the following options:
 
@@ -110,14 +110,16 @@ To access PERT View, complete the following steps:
 
    ![Progressive Discovery](../../../Resources/Images/SM/Progressive-Discovery2.png "Progressive Discovery")
 
-   - In Progressive Discovery mode, right-clicking a threshold dependency line opens the **Selection** panel. From there, look up and add dependent jobs (jobs that depend on the threshold) or update jobs (jobs that update the threshold). Results can be sorted by name, date, or schedule path. Select the left arrow next to a job, or select the job, to add it to the diagram. Jobs already in the diagram appear grayed out and cannot be selected
-   - In Progressive Discovery mode, right-clicking a resource dependency line opens the **Selection** panel. From there, add dependent jobs or update jobs. Dependent jobs can also be filtered to show only jobs currently using the resource or all jobs dependent on it. Select the left arrow or the job to add it to the diagram. Jobs already in the diagram appear grayed out and cannot be selected
+   - In Progressive Discovery mode, right-clicking a threshold dependency line opens the **Selection** panel. From there, look up and add dependent jobs (jobs that depend on the threshold) or update jobs (jobs that update the threshold). Results can be sorted by name, date, or schedule path. Select the left arrow next to a job, or select the job, to add it to the diagram. Jobs already in the diagram appear grayed out and cannot be selected.
+   - In Progressive Discovery mode, right-clicking a resource dependency line opens the **Selection** panel. From there, add dependent jobs or update jobs. Dependent jobs can also be filtered to show only jobs currently using the resource or all jobs dependent on it. Select the left arrow or the job to add it to the diagram. Jobs already in the diagram appear grayed out and cannot be selected.
 
-9. Select the **Export** button to save the current view as a PNG file
+9. Select the **Export** button to save the current view as a PNG file.
 
    :::note
    To export the entire PERT representation, use the zoom options to ensure all content is on screen before exporting.
    :::
+
+**Result:** The PERT diagram renders showing the selected jobs, schedules, and their dependency relationships.
 
 ## PERT View Dependency Lines
 
@@ -211,9 +213,9 @@ Right-click to display the **Selection** panel, then select the **Bulk Job Statu
 
 ## FAQs
 
-**Q: What can you do with PERT View?**
+**Q: What can I do from PERT View?**
 
-PERT View allows you to pert view tips, pert view access, pert view dependency lines.
+PERT View lets you view job dependency diagrams, update job and schedule statuses, retrieve job output, view job summaries, access daily job definitions, and review job run history — all from a single interactive diagram.
 
 **Q: Who has access to PERT View?**
 
@@ -225,14 +227,14 @@ Access to PERT View is controlled by the privileges assigned to your OpCon role.
 
 **Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for running. Changes to daily tables affect only the current day's automation.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
+**Threshold**: A numeric variable stored in the OpCon database used to control job running. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
 
 **OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent runs and preventing resource contention.
 
 **Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.

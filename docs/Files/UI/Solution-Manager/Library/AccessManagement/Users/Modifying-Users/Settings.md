@@ -2,57 +2,49 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: User Settings
-description: "The Users page is found in _Library > Access Management > Users_."
+description: "Modify password expiration and external token settings for a user on the Settings tab in Solution Manager Access Management."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
   - Solution Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # User Settings
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Settings** tab in **Library > Access Management > Users** lets you control password expiration and external token access for a user account.
 
-## What Is It?
+The Settings tab includes the following options:
 
-The Users page is found in _Library > Access Management > Users_. The Settings tab displays the **Enable password expiration** and **Enable external tokens** settings.
-
-To modify a user, edit the preferred fields and select **Save**.
+| Option | Description |
+|---|---|
+| **Enable password expiration** | When selected, the user's password is subject to the system password expiration policy. When cleared, the password never expires. |
+| **Enable external tokens** | When selected, the user can authenticate using external tokens. When cleared, external token access is disabled for this user. |
 
 ![User Settings](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-settings-tab.png 'User Settings')
 
-## Email Dialog
-*If Server Options -> Security -> "Ask user to enter a recovery email address upon login" is enabled.*
+## Modify user settings
 
-When saving, an email dialog appears if the user has no email set and no SSO role. Enter an email to continue. Selecting **Cancel** cancels the save.
+To modify a user's settings, complete the following steps:
 
-![Email Dialog](../../../../../../../Resources/Images/SM/Library/AccessManagement/users-email-dialog.png 'Email Dialog')
+1. Go to **Library > Access Management > Users**.
+2. Select the user you want to modify.
+3. Select the **Settings** tab.
+4. Select or clear the options you want to change.
+5. Select **Save**.
 
----
+**Result:** Solution Manager saves the updated settings for the user.
 
-For more information see:
+:::note
+If **Server Options > Security > Ask User to Enter a Recovery Email Address Upon Login** is enabled and the user has no email address set and no SSO role, an email dialog appears when you select **Save**. Enter an email address to complete the save operation. Selecting **Cancel** in the dialog cancels the save.
+:::
+
+## Related Topics
 
 - [Managing Users](../Managing-Users.md)
-
-For conceptual help, see:
-
 - [Users](../../../../../../../administration/user-accounts.md)
-
-## FAQs
-
-**Q: What does User Settings cover?**
-
-This page covers Email Dialog.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.

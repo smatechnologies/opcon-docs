@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Configuring Master Schedule User Inputs
-description: "When configured, the Master Schedule User Input displays as a list of Master Schedules for which the logged-in user has privileges when running the Service Request."
+description: "When configured, the Master Schedule User Input displays as a filterable list of Master Schedules for which the logged-in user has privileges when running the Service Request."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,44 +15,25 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Configuring Master Schedule User Inputs
+# Configuring Master Schedule User Inputs
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Master Schedule** User Input type presents a filterable list of Master Schedules when a user runs a Service Request. Only Schedules for which the logged-in user has privileges appear in the list.
 
-## What Is It?
+## Configure a Master Schedule User Input
 
-When configured, the Master Schedule User Input displays as a list of Master Schedules for which the logged-in user has privileges when running the Service Request.
+To configure a Master Schedule User Input, complete the following steps:
 
-To configure the user input, complete the following steps:
-
-1. Select a User Input in the **User Inputs** list on the **Service Request definition** page, or select the blue **Edit** button next to the desired user input
+1. On the **Service Request definition** page, select a user input in the **User Inputs** list, or select **Edit** next to the desired user input.
 
    ![Edit User Input](../../../Resources/Images/SM/Editing-User-Input.png "Edit User Input")
 
-2. The **Configure User Input** page displays
+   The **Configure User Input** page opens.
 
    ![Configure User Input Screen](../../../Resources/Images/SM/Setting-Up-User-Inputs_master-schedule.png "Configure User Input Screen")
 
-3. Enter the **User Input Caption** to display when users run the Service Request. The Variable name is used by default
-4. Toggle the **Required Variable** switch to require a value for this field
-5. Select **Schedule Master** in the **User Input Type** list
-6. Select **OK** to confirm, or **Cancel** to discard changes and return to the **Service Request definition** page
+2. In the **User Input Caption** field, enter the label to display when users run the Service Request. The variable name is used by default.
+3. To require a value before the Service Request can be submitted, enable the **Required Variable** option.
+4. In the **User Input Type** field, select **Master Schedule**.
+5. Select **OK** to save, or **Cancel** to discard changes and return to the **Service Request definition** page.
 
-## FAQs
-
-**Q: What does configuring master schedule user inputs control?**
-
-Configuring master schedule user inputs defines the settings that determine how OpCon behaves for this feature. Review the available options and set values appropriate for your environment.
-
-## Glossary
-
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The user input is saved. When a user runs the Service Request, a filterable list of Master Schedules appears for that field. If **Required Variable** is enabled, the list does not allow an empty selection.

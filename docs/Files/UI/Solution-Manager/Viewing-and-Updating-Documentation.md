@@ -22,8 +22,8 @@ doc_type: procedural
 
 The **Documentation** panel in **Daily Job Definition** displays documentation for the job and frequency, including clickable hyperlinks in **Read-only** mode.
 
-- Select the Full Screen icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far right of the panel bar to enter **Full Screen** mode. Select it again to exit
-- When properties are defined, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the number of defined properties
+- Select the Full Screen icon (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far right of the panel bar to enter **Full Screen** mode. Select it again to exit.
+- When properties are defined, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the number of defined properties.
 
 ## Adding or Updating Documentation
 
@@ -37,27 +37,25 @@ Only users with appropriate permissions can access the **Lock** button and updat
 Changes to job properties in **Daily Job Definition** take effect immediately. If the job has already run, changes take effect the next time the job runs.
 :::
 
-To perform this procedure, complete the following steps:
+To add or update documentation for a daily job, complete the following steps:
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
-2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled
-3. Select the desired **date(s)** to display the associated schedule(s)
-4. Select one or more **schedule(s)** in the list
-5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail
-6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")
-9. Expand the **Documentation** panel
-10. Enter changes in the **Job** and/or **Frequency** frames. Hyperlinks may be included
-11. Select the **Save** button
-
-:::
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled.
+3. Select the desired **date(s)** to display the associated schedule(s).
+4. Select one or more **schedule(s)** in the list.
+5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail.
+6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
+9. Expand the **Documentation** panel.
+10. Enter changes in the **Job** and/or **Frequency** frames. Hyperlinks may be included.
+11. Select the **Save** button.
 
 ## FAQs
 
 **Q: What does Viewing and Updating Documentation cover?**
 
-This page covers Adding or Updating Documentation.
+This page covers viewing and updating documentation in the Daily Job Definition panel, including adding or editing job and frequency documentation text.
 
 ## Glossary
 

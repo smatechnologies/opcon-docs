@@ -1,6 +1,6 @@
 ---
 title: Managing Global Properties
-description: "The Global Properties editor defines and maintains OpCon Properties."
+description: "Use the Global Properties editor in Enterprise Manager to add, edit, copy, and delete global properties used across OpCon automation."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,48 +15,20 @@ doc_type: procedural
 
 # Managing Global Properties
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Global Properties** editor in Enterprise Manager lets you define and maintain OpCon global properties and their values. Global properties are named values stored in the OpCon database and referenced in job definitions and events as tokens using the `[[PropertyName]]` syntax.
 
-## What Is It?
-
-The **Global Properties** editor defines and maintains OpCon Properties. It provides a list of global properties and their values. For conceptual information, refer to [Properties](../../../objects/properties.md) in the **Concepts** online help.
+For conceptual information about property types and token usage, refer to [Properties](../../../objects/properties.md).
 
 ## Global Properties Toolbar
 
-The **Global Properties** editor has a toolbar for managing global properties. Select any icon on the toolbar below to learn more about its functionality.
+The **Global Properties** editor toolbar contains buttons for adding, editing, copying, and deleting global properties.
 
 ![Global Properties toolbar](../../../Resources/Images/EM/EMglobalpropertytoolbar.png "Global Properties toolbar")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Related Procedures
 
 - [Adding Global Properties](Adding-Global-Properties.md)
 - [Editing Global Properties](Editing-Global-Properties.md)
 - [Copying Global Properties](Copying-Global-Properties.md)
 - [Adding User-defined System Properties](Adding-System-Properties.md)
 - [Deleting Global Properties](Deleting-Global-Properties.md)
-
-## FAQs
-
-**Q: What does managing global properties involve?**
-
-Managing global properties includes Global Properties Toolbar. Access global properties through Enterprise Manager navigation pane.
-
-**Q: Who can manage global properties in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage global properties. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

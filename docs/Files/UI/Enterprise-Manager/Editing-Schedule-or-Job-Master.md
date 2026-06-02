@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Schedule or Job Master
-description: "Use this procedure to edit Schedule or Job Master in Enterprise Manager."
+description: "Use this procedure to open the Job Master or Schedule Master editor for a schedule or job from within Frequency Manager in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,40 +10,46 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Schedule or Job Master
+# Editing Schedule or Job Master
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to open the **Job Master** or **Schedule Master** editor for a schedule or job directly from Frequency Manager in Enterprise Manager.
 
-## What Is It?
+## Before You Begin
 
-Use this procedure to edit Schedule or Job Master in Enterprise Manager.
+- Frequency Manager must be open. If it is not open, see [Using Frequency Manager](Using-Frequency-Manager.md).
+- You must have the appropriate privileges to edit master records.
 
-To edit schedule or job master, complete the following steps:
+## Edit a Schedule or Job Master Record
 
-1.  Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays
-2.  Select the **schedule** or **job** name to edit, or select it and select **Edit Selected Job or Schedule** (far right of screen). The **Job Master** screen displays
-3.  Edit the desired information
-4.  Select **Close ☒** (to the right of the **Schedule** or **Job Master** tab) to close the screen
-5.  Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen
+To edit a schedule or job master record from Frequency Manager, complete the following steps:
 
-## FAQs
+1. Select **Frequency Manager** under the **Management** topic. The **Frequency Manager** screen displays.
+2. In the **Frequencies** list, select the frequency whose schedules or jobs you want to view.
+3. In the **Master Schedules/Jobs using this Frequency** panel, locate the schedule or job you want to edit.
+4. Open the master editor using one of the following methods:
+   - Double-click the row.
+   - Select the row and press **Enter**.
+   - Select the row and select **Edit Selected Job or Schedule** in the panel toolbar.
 
-**Q: Do edits to schedule or job master take effect immediately?**
+   The **Job Master** or **Schedule Master** editor opens for the selected record.
 
-Changes saved to schedule or job master in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+5. Make the required changes in the editor.
+6. Select **Close** (to the right of the **Job Master** or **Schedule Master** tab) to close the editor.
+7. Select **Close** (to the right of the **Frequency Manager** tab) to close Frequency Manager.
 
-## Glossary
+**Result:** Your changes are saved to the master record. The updates take effect the next time the schedule or job is built or referenced by the Schedule Activity Monitor.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+:::note
+Changes saved to master records do not affect daily table records that are already built. Edits to daily table records apply only to the current instance.
+:::
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+## Related Topics
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- [Using Frequency Manager](Using-Frequency-Manager.md)
+- [Editing Frequency Definitions](Editing-Frequency-Definitions.md)
+- [Viewing Schedules and Jobs using Frequency Names](Viewing-Schedules-and-Jobs.md)

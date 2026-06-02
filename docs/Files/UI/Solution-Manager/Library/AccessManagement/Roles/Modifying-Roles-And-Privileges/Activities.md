@@ -17,11 +17,6 @@ doc_type: reference
 
 # Role Activities
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
 The **Activities** tab (_Library > Access Management > Roles_) lists the function privileges assigned to the selected role. Each activity is a function privilege that applies across all departments. Select an activity to grant the role that privilege, clear it to remove the privilege, and then select **Save** to apply your changes.
 
 Activities are grouped into expandable categories. Select a category heading to expand it and view the activities it contains.
@@ -43,57 +38,57 @@ The following activities are available, grouped by category.
 
 | Activity | Description |
 |---|---|
-| **All Function Privileges** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **All Administrative Functions** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **All Notification Manager Functions** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **All Function Privileges** | Grants the role every non-departmental function privilege in OpCon. |
+| **All Administrative Functions** | Grants the role all administrative function privileges. |
+| **All Notification Manager Functions** | Grants the role all Notification Manager function privileges. |
 | **Chatbot Privileges** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
 
 ### Embedded Script
 
 | Activity | Description |
 |---|---|
-| **Maintain Embedded Scripts** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **View Embedded Script Contents** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Embedded Script** | Allows the role to add, modify, and delete embedded scripts. |
+| **View Embedded Script Content** | Allows the role to view the contents of embedded scripts. |
 
 ### License
 
 | Activity | Description |
 |---|---|
-| **View License Information** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **View License Information** | Allows the role to view the OpCon license details. |
 
 ### Logs
 
 | Activity | Description |
 |---|---|
-| **View Schedule Build Log** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **View Schedule Build Log** | Allows the role to view the Schedule Build log. |
 | **View Application Logs** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
 
 ### Machine
 
 | Activity | Description |
 |---|---|
-| **Maintain Machines** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Machine Groups** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Machines** | Allows the role to add, modify, and delete Agents. |
+| **Maintain Machine Groups** | Allows the role to add, modify, and delete Agent groups. |
 
 ### Report
 
 | Activity | Description |
 |---|---|
-| **Maintain Reports** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Audit History** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Job History** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Reports** | Allows the role to add, modify, and delete reports. |
+| **Maintain Audit History** | Allows the role to view and purge audit history records. |
+| **Maintain Job History** | Allows the role to view and purge job history records. |
 
 ### Schedule
 
 | Activity | Description |
 |---|---|
-| **Maintain Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Import And Export Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Build Daily Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Delete Daily Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Release Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Hold Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Force Start Schedules** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Schedules** | Allows the role to add, modify, and delete master Schedules. |
+| **Import And Export Schedules** | Allows the role to import and export Schedules. |
+| **Build Daily Schedules** | Allows the role to build daily Schedules. |
+| **Delete Daily Schedules** | Allows the role to delete daily Schedules. |
+| **Release Schedules** | Allows the role to release held Schedules. |
+| **Hold Schedules** | Allows the role to place Schedules on hold. |
+| **Force-Start Schedules** | Allows the role to force-start Schedules. |
 
 ### Server Options
 
@@ -106,36 +101,36 @@ The following activities are available, grouped by category.
 
 | Activity | Description |
 |---|---|
-| **Maintain Service Requests** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **View Service Requests** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Service Request** | Allows the role to add, modify, and delete Service Requests. |
+| **View Service Request** | Allows the role to view Service Requests. |
 
 ### Vision
 
 | Activity | Description |
 |---|---|
-| **Maintain Vision Workspaces** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **View Vision Workspaces** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Vision Actions** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Vision Frequencies** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Vision Workspaces** | Allows the role to add, modify, and delete Vision workspaces. |
+| **View Vision Workspaces** | Allows the role to view Vision workspaces. |
+| **Maintain Vision Actions** | Allows the role to add, modify, and delete Vision actions. |
+| **Maintain Vision Frequencies** | Allows the role to add, modify, and delete Vision frequencies. |
 
 ### Workflow
 
 | Activity | Description |
 |---|---|
-| **Maintain Access Codes** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Departments** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Calendars** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Thresholds Resources** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **Maintain Global Properties** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Access Codes** | Allows the role to add, modify, and delete access codes. |
+| **Maintain Departments** | Allows the role to add, modify, and delete departments. |
+| **Maintain Calendars** | Allows the role to add, modify, and delete calendars. |
+| **Maintain Thresholds/Resources** | Allows the role to add, modify, and delete thresholds and resources. |
+| **Maintain Global Properties** | Allows the role to add, modify, and delete global properties. |
 | **Maintain Tags** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
 
-## FAQs
+## Frequently Asked Questions
 
-**Q: Where can you find Role Activities in OpCon?**
+**Where do you find Role Activities in Solution Manager?**
 
-Open Solution Manager and go to _Library > Access Management > Roles_. Select a role, and then select the **Activities** tab.
+Go to _Library > Access Management > Roles_. Select a role, and then select the **Activities** tab.
 
-**Q: Why can't you change the activities for some roles?**
+**Why can't you change the activities for some roles?**
 
 For the predefined OpCon administrator role (`ocadm`), all activities are selected and cannot be changed. The options on the **Activities** tab are disabled for that role.
 
@@ -145,15 +140,3 @@ For the predefined OpCon administrator role (`ocadm`), all activities are select
 - [Privileges](../../../../../../../administration/privileges.md)
 - [Roles](../../../../../../../administration/roles.md)
 - [Users](../../../../../../../administration/user-accounts.md)
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's Windows graphical user interface, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as function privileges, machine privileges, and schedule privileges.
-
-**Activity**: A function privilege that a role grants across all departments. Activities are assigned on the **Activities** tab of a role.

@@ -1,6 +1,6 @@
 ---
 title: Managing Departments
-description: "The Departments editor defines and maintains OpCon Departments."
+description: "The Departments editor in Enterprise Manager defines and maintains OpCon Departments used to organize jobs and scope role-based access."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,59 +8,47 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Departments
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Departments** editor in Enterprise Manager lets you create and maintain the departments used to organize jobs and control role-based access. Each department has a name and an optional documentation field.
 
-## What Is It?
+For conceptual background, refer to [Departments](../../../objects/departments.md) in the **Concepts** online help.
 
-The **Departments** editor defines and maintains OpCon Departments. It contains a list of department names and related documentation. For conceptual information, refer to [Departments](../../../objects/departments.md) in the **Concepts** online help.
+## Opening the Departments Editor
+
+To open the Departments editor, complete the following steps:
+
+1. In Enterprise Manager, expand the **Security** topic in the navigation pane.
+2. Select **Departments**.
+
+The **Departments** editor opens and displays the list of existing departments.
+
+## Departments Editor Fields
+
+The editor contains the following fields:
+
+| Field | Description |
+|---|---|
+| **Name** | The department name. Maximum 20 characters. Required. |
+| **Documentation** | Optional free-text notes about the department. Maximum 4,000 characters. |
 
 ## Departments Toolbar
 
-The **Departments** editor has a toolbar for managing departments. Select any icon on the toolbar below to learn more about its functionality.
+The **Departments** toolbar provides actions for managing departments.
 
 ![Departments toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Departments toolbar")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Related Topics
 
 - [Adding Departments](Adding-Departments.md)
 - [Copying Departments](Copying-Departments.md)
-- [Granting Department Function Privileges](Managing-Dept-Function-Privileges.md#Granting)
-- [Adding Departments to Job Details](Adding-Departments-to-Job-Details.md)
 - [Renaming Departments](Renaming-Departments.md)
 - [Deleting Departments](Deleting-Departments.md)
+- [Granting Department Function Privileges](Managing-Dept-Function-Privileges.md#Granting)
+- [Adding Departments to Job Details](Adding-Departments-to-Job-Details.md)
 - [Viewing Additional Department Information](Viewing-Additional-Department-Info.md)
-
-## FAQs
-
-**Q: What does managing departments involve?**
-
-Managing departments includes Departments Toolbar. Access departments through Enterprise Manager navigation pane.
-
-**Q: Who can manage departments in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage departments. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

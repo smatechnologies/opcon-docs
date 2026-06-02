@@ -22,15 +22,19 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to add Calendars in Solution Manager.
+Use this procedure to add calendars in Solution Manager.
+
+## Adding a Calendar
 
 To add a user-defined calendar, complete the following steps:
 
-1. Select the **Add** button. The **Calendar** dialog displays
-2. Enter a name in the **Name** field
-3. _(Optional)_ Enter a description in the **Description** field
-4. _(Optional)_ Add dates to the calendar. To remove all dates, select **Clear**
-5. Select **Save** to save the calendar or **Cancel** to discard changes
+1. Select the **Add** button. The **Calendar** dialog displays.
+2. Enter a name in the **Name** field.
+3. *(Optional)* Enter a description in the **Description** field.
+4. *(Optional)* Add dates to the calendar. To remove all dates, select **Clear**.
+5. Select **Save** to save the calendar or **Cancel** to discard changes.
+
+**Result:** The new calendar is saved and appears in the calendars list.
 
 ## FAQs
 

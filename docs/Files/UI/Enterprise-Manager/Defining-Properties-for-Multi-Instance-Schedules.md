@@ -1,6 +1,6 @@
 ---
 title: Defining Properties for Multi-Instance Schedules
-description: "Use this procedure to define Properties for Multi-Instance Schedules in Enterprise Manager."
+description: "Use this procedure to define instance properties for a multi-instance schedule in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,46 +8,32 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
 # Defining Properties for Multi-Instance Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+When a schedule is marked as multi-instance and the **Properties** option is selected, OpCon builds one schedule instance for each property set you define. Each property set is a semicolon-delimited list of `PropertyName=PropertyValue` pairs.
 
-## What Is It?
+To define properties for a multi-instance schedule, complete the following steps:
 
-Use this procedure to define Properties for Multi-Instance Schedules in Enterprise Manager.
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
+2. Select the schedule in the **Schedule Selection** list.
+3. Select the **Schedule** tab in the **Schedule Details** frame.
+4. Select the **Multi-Instance** option in the **Schedule Properties** frame.
+5. Select the **Instance Definition** tab in the **Schedule Details** frame.
+6. Select the **Properties** option.
+7. Select the **Build an instance for each set of Properties** option.
+8. Enter a property set using the format `PropertyName=PropertyValue`, separating multiple property pairs with a semicolon (`;`). For example: `PName1=PValue1;PName2=PValue2`.
+9. Select **Add**.
+10. Repeat steps 8 and 9 for each additional instance.
+11. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar.
+12. Select **Close** to close the **Schedule Master** screen.
 
-To define a property, complete the following steps:
+**Result:** OpCon saves the property definitions. When the schedule is built, one instance is created for each property set.
 
-1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2. Select the **schedule** in the **Schedule Selection** list
-3. Select the **Schedule** tab in the **Schedule Details** frame
-4. Select the **Multi-Instance** option in the **Schedule Properties** frame
-5. Select the **Instance Definition** tab in the **Schedule Details** frame
-6. Select the **Build an instance for each set of Properties** radio button
-7. Define properties using the format **PropertyName=PropertyValue**, separating each definition with a semicolon (**;**)
-8. Select **Add**
-9. Repeat Steps 7 and 8 for additional instances
-10. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar to save the property definitions
-11. Select **Close ☒** to close the **Schedule Master** screen
-
-## FAQs
-
-**Q: What is the purpose of defining properties for multi-instance schedules?**
-
-Defining properties for multi-instance schedules establishes the configuration or properties that OpCon uses when processing the related job, schedule, or automation object.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+:::note
+You cannot clear the **Multi-Instance** option after property sets are defined. Remove all property sets before disabling multi-instance.
+:::

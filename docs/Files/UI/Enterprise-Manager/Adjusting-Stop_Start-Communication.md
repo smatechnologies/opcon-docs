@@ -1,6 +1,6 @@
 ---
 title: Adjusting Stop/Start Communication with Machines
-description: "Stop/Start communication controls whether OpCon actively communicates with an agent on a given machine."
+description: "Stop/Start communication controls whether OpCon actively communicates with an Agent on a given machine. Use this procedure to start or stop communication from the Machines editor in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,32 +8,25 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Adjusting Stop/Start Communication with Machines
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Stop/Start communication controls whether OpCon actively communicates with an Agent on a given machine. Stopping communication prevents new jobs from starting on that machine. Starting communication resumes normal job submission.
 
-## What Is It?
+You must have the **Maintain Machines** function privilege to start or stop communication.
 
-Stop/Start communication controls whether OpCon actively communicates with an agent on a given machine. Stopping communication prevents new jobs from starting on that machine; starting it resumes normal job submission.
+## Stop or start communication on a machine
 
-To adjust stop/start communication, complete the following steps:
+To stop or start communication on a machine, complete the following steps:
 
-1. Select **Machines** under the **Administration** topic
-2. Select the **machine** in the **Select Machine** list
-3. Right-click the graphic in the **Communication Status** frame to enable the menu
-4. Select **Start Communication** or **Stop Communication**
-5. Select **Close ☒** to close the **Machines** screen
+1. In Enterprise Manager, go to **Administration** and select **Machines**.
+2. In the **Select Machine** list, select the machine.
+3. In the **Communication Status** section, right-click the status graphic.
+4. Select **Start Communication** or **Stop Communication** from the menu.
+5. Select **Close** to close the **Machines** editor.
 
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** OpCon updates the machine's operational status. When you select **Start Communication**, the machine status changes to **Up** and begins waiting for the Agent connection. When you select **Stop Communication**, the machine status changes to **Down** and OpCon stops sending jobs to that machine.

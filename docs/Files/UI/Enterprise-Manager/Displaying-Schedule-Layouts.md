@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Displaying Schedule Layouts
-description: "Schedule layouts in Workflow Designer show the visual dependency map for a master schedule, including its jobs, thresholds, and resources."
+description: "Schedule layouts in the Workflow Designer show the visual dependency map for a master schedule, including its jobs, thresholds, and resources."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,36 +10,57 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Displaying Schedule Layouts
+# Displaying Schedule Layouts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The Workflow Designer displays a visual dependency map for a master schedule, showing its jobs, thresholds, and resources. You can navigate between schedules and subschedules, adjust the layout orientation, and optionally hide thresholds and resources from the display.
 
-## What Is It?
+## Display a Schedule Layout
 
-Schedule layouts in Workflow Designer show the visual dependency map for a master schedule, including its jobs, thresholds, and resources. Operators can navigate between schedules and subschedules and optionally hide thresholds and resources from the display.
+To display the layout for a schedule, complete the following steps:
 
-To display the schedule layout, complete the following steps:
+1. In Enterprise Manager, select **Workflow Designer** under the **Administration** topic.
+2. In the **Select Schedule** panel, select a schedule from the tree.
+   - To see subschedules, expand the schedule in the tree.
+   - To filter the list, type in the filter text box above the tree.
+3. To open a subschedule directly from the display area, right-click a Container job and select **Open SubSchedule**.
 
-1. Select **Workflow Designer** under the **Administration** topic
-2. Select a **schedule** in the **Select Schedule** tree view, or expand a **schedule** to see its subschedules. Use the **filter** text box to narrow results. Alternatively, right-click a Container job in the display area to see its subschedule
-3. *(Optional)* Select **Hide Thresholds and Resources** on the **Workflow Designer** toolbar to toggle the display of thresholds and resources
-4. *(Optional)* Select **Marquee** in the **Tools** frame, then select and drag to select a group of items and drag them to a new location in the display area
-:::
+**Result:** The schedule layout appears in the display area, showing jobs and their dependencies.
 
-## Glossary
+## Adjust the Layout Orientation
 
-**Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
+To change the arrangement of items in the display area, complete the following steps:
 
-**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+1. Select **Layout** on the Workflow Designer toolbar.
+2. Select one of the following layout options:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+   | Option | Description |
+   |---|---|
+   | **Arrange All** | Reapplies the current layout to all items in the display area. |
+   | **Left to Right** | Arranges items in a left-to-right flow. |
+   | **Top to Bottom** | Arranges items in a top-to-bottom flow. |
+   | **Grid** | Arranges items in a grid pattern. |
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+**Result:** The display area rearranges according to the selected layout.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+## Show or Hide Thresholds and Resources
+
+To toggle the display of thresholds and resources, complete the following steps:
+
+1. On the Workflow Designer toolbar, select **Hide Thresholds and Resources** to hide them, or select **Show Thresholds and Resources** to show them.
+
+**Result:** Thresholds and resources appear or disappear from the display area. When the number of thresholds and resources exceeds the configured preference limit, they are hidden automatically and a message is shown in the display area.
+
+## Select and Move Multiple Items
+
+To select and reposition a group of items in the display area, complete the following steps:
+
+1. In the **Tools** panel, select **Marquee**.
+2. In the display area, select and drag to draw a selection around the items you want to move.
+3. Drag the selected items to a new location.
+
+**Result:** The selected items move to the new location in the display area.

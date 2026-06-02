@@ -22,7 +22,7 @@ doc_type: procedural
 
 The **Notification Acknowledgement** page is used to view and acknowledge escalations. For more conceptual information, refer to [Escalation](../../../notifications/Escalation.md) in the **Concepts** online help.
 
-The screen lists unacknowledged escalations and shows the following information for each:
+The page lists unacknowledged escalations and shows the following information for each:
 
 - **Date & Time**: The date and time of the escalation
 - **Notification**: The subject of the email notification pending acknowledgment
@@ -35,23 +35,23 @@ The screen lists unacknowledged escalations and shows the following information 
 ## Acknowledging Escalations
 
 :::note
-The Notification indicator will not be visible if there are no notifications to acknowledge.
+The Notification indicator is not visible if there are no notifications to acknowledge.
 :::
 
 :::note
-The pop-up will only appear for new notifications.
+The pop-up appears only for new notifications.
 :::
 
 To view and acknowledge notifications, complete the following steps:
 
-1. Perform one of the following:
-   - Select the **Review** button on the **You have notifications to acknowledge** pop-up **- or -**
+1. Open the Notification Acknowledgement page by doing one of the following:
+   - Select the **Review** button on the **You have notifications to acknowledge** pop-up
    - Select the **Notification** indicator (![Notification Icon](../../../Resources/Images/SM/NotificationIndicator.png "Notification Icon")) at the bottom-right of the page
-2. Select the *notification* to view the **Notification Details** window
-3. *(Optional)* Select **Acknowledge** to acknowledge the notification or **Close** to return to the **Notification Acknowledgement** page
-4. Select the option(s) next to the notification(s) you want to acknowledge
-5. Select the **Acknowledge** button (either next to a notification or at the top of the page for multi-select)
-6. Select **Close**
+2. Select the notification to view the **Notification Details** window.
+3. *(Optional)* Select **Acknowledge** to acknowledge the notification or **Close** to return to the **Notification Acknowledgement** page.
+4. Select the option(s) next to the notification(s) you want to acknowledge.
+5. Select the **Acknowledge** button (either next to a notification or at the top of the page for multi-select).
+6. Select **Close**.
 
 ## Configuration Options
 
@@ -59,13 +59,13 @@ To view and acknowledge notifications, complete the following steps:
 |---|---|---|---|
 | Date & Time | The date and time of the escalation | — | — |
 | Escalation Level | The current level of the escalation, as defined in the rule sequence | — | — |
-| Status | The current state of the escalation's acknowledgment: | — | — |
+| Status | The current state of the escalation's acknowledgment | — | — |
 
 ## FAQs
 
 **Q: What does Viewing Notification Acknowledgement cover?**
 
-This page covers Acknowledging Escalations.
+This page covers viewing and acknowledging escalations on the Notification Acknowledgement page.
 
 ## Glossary
 

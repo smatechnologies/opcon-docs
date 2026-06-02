@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Batch Users
-description: "Deleting a batch user requires three procedures: revoking privileges, removing the user from the daily and master tables, then deleting the user."
+description: How to safely delete a batch user in Enterprise Manager by revoking privileges, reassigning jobs in the daily and master tables, and then removing the record.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,89 +10,72 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Deleting Batch Users
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Deleting a batch user is a three-phase operation: revoke privileges from all roles, reassign any jobs that reference the batch user in the daily and master tables, then delete the record. Completing all three phases prevents orphaned job references.
 
-## What Is It?
-
-Deleting a batch user requires three procedures: revoking privileges, removing the user from the daily and master tables, then deleting the user.
-
-Revoke Privileges
-
-To revoke privileges, complete the following steps:
-
-1. Select **Batch User Privileges** under the **Security** topic. The **Batch User Privileges** screen displays
-2. Select a **role** in the **Select Role** list. Use the **Find** ((Ctrl+F) magnifying glass) button to find the role
-3. Select an **operating system** in the **Target Operating System** list
-4. Select the **batch user(s)** in the **Granted** privileges list box
-5. Select the **left arrow** to move the batch user(s) to the **Revoked** list box
-6. Repeat Steps 2–5 for all user accounts with privileges to the batch user
-7. Select **Close ☒** to close the **Batch User Privileges** screen
-
-Remove the Batch User from the Daily Tables
-
-9. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-10. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **date**
-11. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the specific **schedule**
-12. Select the **job**
-13. Select **Edit Daily**. The **Job Daily** screen displays
-14. In the **Job Details** frame, select a different **batch user** in the **User ID** (**Group ID/User ID** for UNIX, **User Code** for MCP) list
-15. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Daily** toolbar
-16. Repeat Steps 9–15 for all jobs using the batch user to be deleted
-17. Select **Close ☒** to close the **Job Daily** screen
-
-Remove the Batch User from the Master Tables
-
-18. Select **Edit Master**. The **Job Master** screen displays
-19. Select a **schedule** in the **Schedule** list
-20. Select a **job** in the **Job** list
-21. Select a different **batch user** in the **User ID** (**Group ID/User ID** for UNIX, **User Code** for MCP) list
-22. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-23. Repeat Steps 20–22 for all jobs using the batch user to be deleted
-24. Select **Close** to close the **Job Master** screen
-25. Select **Close ☒** to close the **Daily Maintenance** screen
-
-Delete the Batch User
-
-26. Select **Batch Users** under the **Security** topic. The **Batch User** screen displays
-27. Select an **operating system** in the **Target Operating System** list
-28. Select the **batch user** in the **Batch Users** list box
-29. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Batch Users** toolbar
-30. Select **Yes** to confirm the deletion or **No** to cancel
-31. Select **Close ☒** to close the **Batch Users** screen
+:::note
+Default batch users (`use service account` for Windows and SQL, `*` for MCP and IBM i) cannot be deleted.
 :::
 
-## FAQs
+## Phase 1: Revoke privileges
 
-**Q: Can a batch users record be recovered after deletion?**
+To revoke batch user privileges from all roles, complete the following steps:
 
-No. Deleting a batch users record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+1. Under the **Security** topic, select **Batch User Privileges**. The **Batch User Privileges** screen opens.
+2. In the **Select Role** list, select a **role**. Use the **Find** (Ctrl+F) button to locate a role by name.
+3. In the **Target Operating System** list, select an operating system.
+4. In the **Granted** list, select the batch user or users to revoke.
+5. Select the left arrow to move the selected batch users to the **Revoked** list.
+6. Repeat steps 2–5 for every role that has privileges to this batch user.
+7. Select **Close** to close the **Batch User Privileges** screen.
 
-**Q: How many batch users records can you delete at once?**
+## Phase 2: Reassign jobs in the daily tables
 
-Select the specific batch users record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+To remove the batch user from daily job records, complete the following steps:
 
-## Glossary
+1. Under the **Operation** topic, select **Daily Maintenance**. The **Daily Maintenance** screen opens.
+2. Select the expand arrow next to the target date.
+3. Select the expand arrow next to the target schedule.
+4. Select the job that references the batch user.
+5. Select **Edit Daily**. The **Job Daily** screen opens.
+6. In the **Job Details** section, select a replacement batch user in the **User ID** field (labeled **Group ID/User ID** for UNIX jobs or **User Code** for MCP jobs).
+7. Select **Save** on the **Job Daily** toolbar.
+8. Repeat steps 4–7 for every job in the daily tables that references the batch user.
+9. Select **Close** to close the **Job Daily** screen.
+10. Select **Close** to close the **Daily Maintenance** screen.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+## Phase 3: Reassign jobs in the master tables
 
-**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
+To remove the batch user from master job records, complete the following steps:
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+1. On the **Daily Maintenance** screen, select **Edit Master**. The **Job Master** screen opens.
+2. In the **Schedule** list, select a schedule.
+3. In the **Job** list, select a job that references the batch user.
+4. Select a replacement batch user in the **User ID** field (labeled **Group ID/User ID** for UNIX jobs or **User Code** for MCP jobs).
+5. Select **Save** on the **Job Master** toolbar.
+6. Repeat steps 3–5 for every job in the master tables that references the batch user.
+7. Select **Close** to close the **Job Master** screen.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+## Phase 4: Delete the batch user
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+To delete the batch user record, complete the following steps:
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+1. Under the **Security** topic, select **Batch Users**. The **Batch Users** screen opens.
+2. In the **Target Operating System** list, select the operating system for the batch user.
+3. In the **Batch Users** list, select the batch user to delete.
+4. Select **Remove** on the **Batch Users** toolbar.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+   :::note
+   If the batch user is still referenced by jobs in the master or daily tables, Enterprise Manager displays a cross-reference dialog listing the affected jobs. You can force the deletion from the dialog or cancel and reassign the jobs manually.
+   :::
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+5. Select **Yes** to confirm the deletion.
+6. Select **Close** to close the **Batch Users** screen.
+
+**Result:** The batch user record is permanently removed from OpCon. The batch user no longer appears in any privilege or job assignment lists.

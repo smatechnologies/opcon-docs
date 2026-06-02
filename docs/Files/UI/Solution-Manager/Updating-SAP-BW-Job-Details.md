@@ -38,38 +38,36 @@ Changes made to job properties in the **Daily Job Definition** take place immedi
 
 ## Updating SAP BW Job Task Details
 
-To perform this procedure:
+To update SAP BW Job Task Details, complete the following steps:
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page will display
-2. Ensure that both the **Date** and **Schedule** toggle switches are enabled. Each switch will appear green when enabled
+1. Select the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page displays.
+2. Ensure that both the **Date** and **Schedule** toggle switches are enabled. Each switch appears green when enabled.
 
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles_IBMi.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-To update SAP BW Job Task Details, complete the following steps:
-
-3. Select the desired **date(s)** to display the associated schedule(s)
-4. Select one or more **schedule(s)** in the list
-5. Select one **job** in the list. A record of your selection will display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
+3. Select the desired **date(s)** to display the associated schedule(s).
+4. Select one or more **schedule(s)** in the list.
+5. Select one **job** in the list. A record of your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
    ![Job Processes](../../../Resources/Images/SM/Job-ProcessesIBMi.png "Job Processes")
 
-6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
+6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
    :::note
-   As an alternative, you can right-click the job selected in the list to display the **Selection** panel.
+   As an alternative, right-click the job selected in the list to display the **Selection** panel.
    :::
 
    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(IBMi).png "Job Summary Tab in Operations")
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. By default, this page will be in **Read-only** mode
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button will switch to a white lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. By default, this page opens in **Read-only** mode.
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button switches to a white lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled.
 
    :::note
-   The **Lock** button will not be visible to users who do not have the appropriate permissions.
+   The **Lock** button is not visible to users who do not have the appropriate permissions.
    :::
 
-9. Expand the **Task Details** panel to expose its content
-10. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To specify a machine group instead, toggle the **Machines** switch to *Machine Group* and select the **machine group** from the list. When toggled to Machine Group, the button will appear green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch")
+9. Expand the **Task Details** panel to expose its content.
+10. From the **Machines or Machine Group** list, select the **machine** where the Agent is installed. To specify a machine group instead, toggle the **Machines** switch to **Machine Group** and select the **machine group** from the list. When toggled to Machine Group, the button appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch").
 
 **In the SAP BW Definition frame:**
 
@@ -80,15 +78,15 @@ To update SAP BW Job Task Details, complete the following steps:
 
 **In the SAP Query dialog:**
 
-- **Machine**: The SAP BW agent Machine name
+- **Machine**: The SAP BW Agent machine name
 - **Language**: The two-character language abbreviation (e.g., EN for English)
 - **Chain**: Text matching the name of the desired Process Chain. Use wildcards (\*) if the full process chain name is unknown
 - **Description**: Text matching the description of the desired Process Chain. Use wildcards (\*) if the full description is unknown
 
 ![SAP Query Dialog](../../../Resources/Images/SM/SAP-Query-Dialog.png "SAP Query Dialog")
 
-- Select the search button ![Query SAP Button](../../../Resources/Images/SM/Query-SAP-Button.png "Query SAP Button") to retrieve all Process Chain names matching the search criteria from the SAP BW system
-- Select a process chain from the list and select **Ok** to assign it to the process chain name in the SAP BW Daily Job Definition
+11. Select the search button ![Query SAP Button](../../../Resources/Images/SM/Query-SAP-Button.png "Query SAP Button") to retrieve all Process Chain names matching the search criteria from the SAP BW system.
+12. Select a process chain from the list and select **Ok** to assign it to the process chain name in the SAP BW Daily Job Definition.
 
 ![Process Chain List](../../../Resources/Images/SM/Proccess-Chain-List.png "Process Chain List")
 
@@ -98,7 +96,7 @@ To update SAP BW Job Task Details, complete the following steps:
 Select the **Undo** button to undo any changes.
 :::
 
-Select the **Save** button to save your changes.
+13. Select the **Save** button to save your changes.
 
 ## Configuration Options
 
@@ -106,14 +104,14 @@ Select the **Save** button to save your changes.
 |---|---|---|---|
 | Process Chain Name | The name of the Business Warehouse job as defined in the SAP Business Warehouse system | — | — |
 | Language | The two-character language abbreviation (e.g., EN for English) | — | — |
-| Chain | Text matching the name of the desired Process Chain. | — | — |
-| Description | Text matching the description of the desired Process Chain. | — | — |
+| Chain | Text matching the name of the desired Process Chain | — | — |
+| Description | Text matching the description of the desired Process Chain | — | — |
 
 ## FAQs
 
 **Q: What does Updating SAP BW Job Details cover?**
 
-This page covers Updating SAP BW Job Task Details.
+This page covers updating SAP BW Job Task Details in the Daily Job Definition.
 
 ## Glossary
 
@@ -123,7 +121,7 @@ This page covers Updating SAP BW Job Task Details.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 

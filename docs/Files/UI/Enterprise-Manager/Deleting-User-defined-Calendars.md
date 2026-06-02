@@ -1,6 +1,6 @@
 ---
 title: Deleting Un-used User-defined Calendars
-description: "Use this procedure to delete Un-used User-defined Calendars in Enterprise Manager."
+description: "Step-by-step procedure for removing user-defined calendars no longer in use from Enterprise Manager, including removing calendar references from Schedule Master and Job Master records first."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,84 +8,62 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Deleting Un-used User-defined Calendars
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to delete Un-used User-defined Calendars in Enterprise Manager.
-
 :::note
-Continuous recommends deleting user-defined calendars no longer in use to control the size of database tables. Holiday calendars are automatically deleted when the associated schedule is deleted.
+Delete user-defined calendars that are no longer in use to control the size of database tables. Holiday calendars are automatically deleted when the associated schedule is deleted.
 :::
 
-To delete an un-used calendar:
+Before you can delete a user-defined calendar, you must remove all references to it from Schedule Master and Job Master records. Enterprise Manager blocks deletion if any schedule or job/frequency still references the calendar.
 
-Remove the Calendar from the Schedule Master Tables
+## Remove the Calendar from Schedule Master
 
-To remove the Calendar from the Schedule Master Tables, complete the following steps:
+To remove the calendar from Schedule Master records, complete the following steps:
 
-1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays
-2. Select the **Schedule** in the **Schedule** list
-3. Select the **Frequency** tab
-4. Select the **frequency** with the user-defined calendar to delete and select the **Remove** button
-5. Select the **Yes** button to confirm the deletion or **No** to cancel
-6. Repeat Steps 4 and 5 for all jobs using the calendar to delete
+1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
+2. Select the schedule in the **Schedule** list.
+3. Select the **Frequency** tab.
+4. Select the frequency that references the calendar you want to delete, then select **Remove**.
+5. Select **Yes** to confirm the removal, or **No** to cancel.
+6. Repeat steps 4–5 for every frequency in every schedule that references the calendar.
 
-Remove the Calendar from the Job Master Tables
+## Remove the Calendar from Job Master
 
-To remove the Calendar from the Job Master Tables, complete the following steps:
+To remove the calendar from Job Master records, complete the following steps:
 
-1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays
-2. Select the **schedule name** in the **Schedule** list
-3. Select the **job name** in the **Job** list
-4. Select the **Frequency** tab
-5. Select the **frequency** with the user-defined calendar to delete and select the **Remove** button
-6. Select the **Yes** button to confirm the deletion or **No** to cancel
-7. Repeat Step 6 for all jobs using the calendar to be deleted
-8. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+1. Select **Job Master** under the **Administration** topic. The **Job Master** screen displays.
+2. Select the schedule name in the **Schedule** list.
+3. Select the job name in the **Job** list.
+4. Select the **Frequency** tab.
+5. Select the frequency that references the calendar you want to delete, then select **Remove**.
+6. Select **Yes** to confirm the removal, or **No** to cancel.
+7. Repeat steps 3–6 for every job in every schedule that references the calendar.
+8. Select **Close** (to the right of the **Job Master** tab) to close the **Job Master** screen.
 
-Delete the Calendar
+## Delete the Calendar
 
-To delete the Calendar, complete the following steps:
+To delete the calendar, complete the following steps:
 
-1. Select **Calendars** under the **Administration** topic. The **Calendars** screen displays
-2. Select the calendar in the **Selection** list
-3. Ensure no schedules are using the calendar. If the box contains a schedule, refer to [Remove the Calendar from the Job Master Tables](#Remove_the_Calendar_from_the_Job_Master_Tables)
-4. Ensure no jobs are using the calendar. If the box contains a job, refer to [Remove the Calendar from the Job Master Tables](#Remove_the_Calendar_from_the_Job_Master_Tables)
-5. Select ![Remove icon](../../../Resources/Images/EM/EMdelete.png "Remove icon") **Remove** on the **Calendars** toolbar
-6. Select the **Yes** button to confirm the deletion or **No** to cancel
-7. Select **Close ☒** (to the right of the **Calendars** tab) to close the **Calendars** screen
+1. Select **Calendars** under the **Administration** topic. The **Calendars** screen displays.
+2. Select the calendar in the **Selection** list.
+3. Review the **Schedules using for holidays** list. If any schedule is listed, complete [Remove the Calendar from Schedule Master](#remove-the-calendar-from-schedule-master) before continuing.
+4. Review the **Schedules/Jobs/Frequencies using this calendar** list. If any record is listed, complete [Remove the Calendar from Job Master](#remove-the-calendar-from-job-master) before continuing.
+5. Select **Remove** on the **Calendars** toolbar.
+6. Select **Yes** to confirm the deletion, or **No** to cancel.
+
+**Result:** The calendar is permanently removed from OpCon. This action cannot be undone.
 
 ## FAQs
 
-**Q: Can a un-used user-defined calendars record be recovered after deletion?**
+**Q: Can a deleted user-defined calendar be recovered?**
 
-No. Deleting a un-used user-defined calendars record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting a user-defined calendar permanently removes it from OpCon. Verify the calendar is no longer needed before deleting it.
 
-**Q: What should you check before deleting un-used user-defined calendars?**
+**Q: What should you check before deleting a user-defined calendar?**
 
-Verify the un-used user-defined calendars is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
-
-## Glossary
-
-**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Changes to master tables affect all future schedule builds.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+Confirm that no schedules, jobs, or frequencies reference the calendar. Enterprise Manager displays a cross-reference dialog and blocks deletion if references still exist.

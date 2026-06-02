@@ -1,90 +1,73 @@
 ---
 title: Managing Individual Job Status Colors
-description: "Use this procedure to manage Individual Job Status Colors in Enterprise Manager."
+description: "Add, edit, or remove individual job status color overrides in Enterprise Manager to distinguish specific job statuses from their default status group colors."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Managing Individual Job Status Colors
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to manage Individual Job Status Colors in Enterprise Manager.
+The **Individual Job Status Colors** frame in Enterprise Manager Preferences lets you assign a unique display color to a specific job status, overriding that status's default status group color. You can add new overrides, edit existing ones, or remove overrides you no longer need.
 
 :::note
-Select the **Restore Defaults** button in the Color Preferences to restore the default color choices.
+To restore all individual status color overrides to their defaults, select **Restore Defaults** on the **Colors** preferences page.
 :::
 
 ## Editing an Individual Status Color
 
-To set the preferences, complete the following steps:
+To edit an existing individual job status color override, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Colors**. The **Colors** settings display to the right
-5. Select the **specific Job Status** in the **Individual Job Status Colors** frame
-6. Select the **Edit** button. The **Colors Preference - Individual Job Status Color** dialog displays
-7. Select the **Color** button. The **Color** dialog displays
-8. Select the **color** and select **OK**
-9. Select the **Update List** button
-10. Repeat Steps 5 - 9 for additional colors
+1. Open Enterprise Manager.
+2. Go to **Enterprise Manager > Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the preferences tree to expand the list.
+4. Select **Colors**. The Colors settings appear on the right.
+5. In the **Individual Job Status Colors** frame, select the job status you want to edit.
+6. Select **Edit...**. The **Colors Preference - Individual Job Status Color** dialog opens.
+7. Select the color swatch next to **Please select a Color:** to open the color picker, choose a color, and select **OK**.
+8. Select **Update List**. The updated color appears in the **Individual Job Status Colors** list.
+9. Repeat steps 5–8 for each additional color you want to edit.
+10. Select **Apply** to save your changes, then select **OK** to close the **Preferences** dialog.
 
-11. Select **Apply** to save, then **OK** to close the **Preferences** dialog
+**Result:** The selected job status displays the new color in Enterprise Manager views.
 
 ## Adding an Individual Status Color
 
-To add an Individual Status Color, complete the following steps:
+To add a new individual job status color override, complete the following steps:
 
-1. [Follow Steps 1 - 4 of Editing an Individual Status Color](#Editing) to access the **Preferences** dialog, then proceed
-2. Select the **Add** button in the **Individual Job Status Colors** frame. The **Colors Preference - Individual Job Status Color** dialog displays
-3. Select the **Job Status** from the **Please select a Job Status** list
-4. Select the **Color** button. The **Color** dialog displays
-5. Select the *color* and select **OK**
-6. Select the **Add To List** button
-7. Repeat Steps 2 - 6 for additional colors
-8. Select **Apply** to save, then **OK** to close the **Preferences** dialog
+1. Open Enterprise Manager.
+2. Go to **Enterprise Manager > Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the preferences tree to expand the list.
+4. Select **Colors**. The Colors settings appear on the right.
+5. In the **Individual Job Status Colors** frame, select **Add...**. The **Colors Preference - Individual Job Status Color** dialog opens.
+6. In the **Please select a Job Status:** field, select the job status you want to override.
+7. Select the color swatch next to **Please select a Color:** to open the color picker, choose a color, and select **OK**.
+8. Select **Add To List**. The new override appears in the **Individual Job Status Colors** list.
+9. Repeat steps 5–8 for each additional job status you want to override.
+10. Select **Apply** to save your changes, then select **OK** to close the **Preferences** dialog.
+
+**Result:** The selected job status displays the custom color in Enterprise Manager views.
+
+:::note
+The **Add...** button is disabled when every available job status already has an override defined.
+:::
 
 ## Removing an Individual Status Color
 
-To remove an Individual Status Color, complete the following steps:
+To remove an individual job status color override, complete the following steps:
 
-1. [Follow Steps 1 - 4 of Editing an Individual Status Color](#Editing) to access the **Preferences** dialog, then proceed
-2. Select the **specific Job Status** in the **Individual Job Status Colors** frame
-3. Select the **Remove** button
-4. Select **Apply** to save, then **OK** to close the **Preferences** dialog
+1. Open Enterprise Manager.
+2. Go to **Enterprise Manager > Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the preferences tree to expand the list.
+4. Select **Colors**. The Colors settings appear on the right.
+5. In the **Individual Job Status Colors** frame, select the job status override you want to remove.
+6. Select **Remove**. The override is removed from the list.
+7. Select **Apply** to save your changes, then select **OK** to close the **Preferences** dialog.
 
-## FAQs
-
-**Q: What does managing individual job status colors involve?**
-
-Managing individual job status colors includes Editing an Individual Status Color, Adding an Individual Status Color, Removing an Individual Status Color. Access individual job status colors through Enterprise Manager navigation pane.
-
-**Q: Who can manage individual job status colors in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage individual job status colors. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The job status reverts to its default status group color.

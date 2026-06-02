@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Tags
-description: "Available Tags in OpCon are shown in the grid under Library > Tags."
+description: "Use the Tags page in Solution Manager to add, copy, edit, delete, and associate tags with jobs and frequencies."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,51 +17,69 @@ doc_type: procedural
 
 # Managing Tags
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Tags are labels you assign to jobs to group and identify related work across schedules. Use **Library > Tags** in Solution Manager to add, copy, edit, delete, and manage tag associations.
 
-## What Is It?
+For background on how tags work, see [Tags](../../../../job-components/tags.md).
 
-Available Tags in OpCon are shown in the grid under **Library > Tags**.
+## Viewing Tags
+
+The Tags page displays all existing tags in a grid. Select any tag in the grid to view its associations — the schedules, jobs, and frequencies linked to that tag — in the associations panel.
+
 ![Tags Grid](../../../../Resources/Images/SM/Library/Tags/tags-manager.png "Tags Grid")
 
-Select **Add**, **Copy**, or **Edit** to open the tag dialog:
-![Tags Add Edit Copy](../../../../Resources/Images/SM/Library/Tags/tags-dialog.png "Tags Add & Edit & Copy Dialog Screen")
+## Adding a Tag
 
-Select **Filter** to expose the schedule-job-frequency tree for associating items with the tag. A tag can be associated with a job or its frequencies, but not both. Selecting a frequency associates the tag to that frequency only; selecting a job associates the tag to the job and disassociates it from all its frequencies.
+To add a tag, complete the following steps:
+
+1. Go to **Library > Tags**.
+2. Select **Add**. The tag dialog opens.
+3. Enter a unique name in the **Tag Name** field.
+4. *(Optional)* Select **Filter** to open the schedule-job-frequency tree and associate the tag with jobs or frequencies.
+5. In the tree, select the jobs or frequencies to associate with the tag.
+6. Select **Save**.
+
+**Result:** The tag is created and any selected associations are saved.
 
 :::note
-The **Tag Name** field must be unique across all tags.
+The **Tag Name** value must be unique across all tags.
 :::
 
-Select a tag in the list to view the tag associations grid, which displays the schedules, jobs, and frequencies associated with the tag.
+:::note
+A tag can be associated with a job or its frequencies, but not both. Selecting a frequency associates the tag to that frequency only. Selecting a job associates the tag to the job and removes any existing frequency-level associations for that job.
+:::
 
-See [Tag Concepts](../../../../job-components/tags.md).
+## Copying a Tag
 
-## FAQs
+To copy an existing tag, complete the following steps:
 
-**Q: What does managing tags involve?**
+1. Go to **Library > Tags**.
+2. Select the tag you want to copy in the grid.
+3. Select **Copy**. The tag dialog opens with the copied tag's values.
+4. Enter a unique name in the **Tag Name** field.
+5. *(Optional)* Modify the associations using **Filter**.
+6. Select **Save**.
 
-Managing tags includes adding, editing, and deleting records. Access tags in Solution Manager or Enterprise Manager.
+**Result:** A new tag is created with the values from the copied tag.
 
-**Q: Who can manage tags in OpCon?**
+## Editing a Tag
 
-Users with the appropriate privileges assigned through their role can manage tags. Contact your OpCon system administrator if you do not have access.
+To edit an existing tag, complete the following steps:
 
-## Glossary
+1. Go to **Library > Tags**.
+2. Select the tag you want to edit in the grid.
+3. Select **Edit**. The tag dialog opens.
+4. Update the **Tag Name** or associations as needed.
+5. Select **Save**.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Result:** The tag is updated with the new values.
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+## Deleting a Tag
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To delete a tag, complete the following steps:
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+1. Go to **Library > Tags**.
+2. Select the tag you want to delete in the grid.
+3. Select **Delete**.
+4. Confirm the deletion when prompted.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The tag and its associations are permanently removed.

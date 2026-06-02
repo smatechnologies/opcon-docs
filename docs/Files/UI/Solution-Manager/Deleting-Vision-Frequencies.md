@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Vision Frequencies
-description: "Use this procedure to delete Vision Frequencies in Solution Manager."
+description: "Delete one or more Vision Frequencies from the Vision Frequencies page in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,38 +17,21 @@ doc_type: procedural
 
 # Deleting Vision Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Vision Frequency can only be deleted when it is not assigned to any Vision card. If the frequency is in use, Solution Manager displays an error notification listing the cards that reference it. Deletion is permanent; the frequency cannot be recovered after it is removed.
 
-## What Is It?
-
-Use this procedure to delete Vision Frequencies in Solution Manager.
+You must have the **Maintain Vision Frequencies** function privilege to perform this procedure.
 
 To delete a Vision Frequency, complete the following steps:
 
-1. Perform one of the following:
-    a. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) directly on the card on the **Vision Live** page **- or -**
-    b. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) next to **Home** on the **Vision Live** page. The **Vision Settings** page displays.
-2. Select the **Card** to edit from the list
-3. Select the **Delete** button next to the frequency to delete
-4. Select **OK** in the **Modify Card** window
-5. Select **Save**
-:::
+1. Select the **Frequencies** button on the **Vision Live** page or the **Vision Settings** page. The **Vision Frequencies** page opens.
+2. Select one or more frequencies from the list.
+3. Select the **Delete** button.
+4. Select **Yes** in the confirmation dialog.
 
-## FAQs
+**Result:** Solution Manager permanently removes the selected frequencies. If a selected frequency is assigned to a card, an error notification appears and the deletion is blocked for that frequency.
 
-**Q: Can a vision frequencies record be recovered after deletion?**
+## Related Topics
 
-No. Deleting a vision frequencies record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many vision frequencies records can you delete at once?**
-
-Select the specific vision frequencies record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Adding Vision Frequencies](Adding-Vision-Frequencies.md)
+- [Editing Vision Frequencies](Editing-Vision-Frequencies.md)
+- [Managing Vision Frequencies](Managing-Vision-Frequencies.md)

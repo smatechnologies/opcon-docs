@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying User Accounts
-description: "Use this procedure to copy User Accounts in Enterprise Manager."
+description: "Copy an existing user account in Enterprise Manager to reuse its settings as the starting point for a new account."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,40 +10,29 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Copying User Accounts
+# Copying User Accounts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Copying a user account duplicates all settings from an existing account into a new account. Use this approach when the new account requires the same role assignments and privileges as an existing one.
 
-## What Is It?
+:::note
+You cannot copy the `ocadm` built-in account.
+:::
 
-Use this procedure to copy User Accounts in Enterprise Manager.
+## Copy a user account
 
 To copy a user account, complete the following steps:
 
-1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
-2.  In the **Select User** list, select the **user name** to copy
-3.  Select **Copy** on the **User Accounts** toolbar. The **Copy User** dialog displays
-4.  Enter the *new user name*
-5.  Select **OK**
-6.  Select **Close ☒** (to the right of the **User Accounts** tab) to close the **User Accounts** screen
-:::
+1. In the **Security** topic, select **User Accounts**. The **User Accounts** screen opens.
+2. In the **Select User** list, select the user account to copy.
+3. On the **User Accounts** toolbar, select **Copy**. The **Copy User** dialog opens.
+4. In the **New User Name** field, enter a unique name for the new account. Names may be up to 128 characters and cannot contain the characters `` [ ] : ; | = , + * ? < > " ``.
+5. Select **OK**. Enterprise Manager creates the new account and prompts you to set a temporary password.
+6. In the password prompt, confirm whether to copy the generated password to the clipboard, then select the appropriate option.
+7. Select **Close** (to the right of the **User Accounts** tab) to close the **User Accounts** screen.
 
-## FAQs
-
-**Q: Why would you copy user accounts instead of creating a new one?**
-
-Copying user accounts is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
-
-**Q: Does copying user accounts require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original user accounts record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Result:** The new user account appears in the **Select User** list with all settings copied from the original account. The new account requires a password change at first sign-in.

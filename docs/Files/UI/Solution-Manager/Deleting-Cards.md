@@ -1,6 +1,6 @@
 ---
 title: Deleting Cards
-description: "Use this procedure to delete Cards in Solution Manager."
+description: "Delete a Vision card in Solution Manager using either the Vision Live page or the Vision Settings page."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,38 +15,34 @@ doc_type: procedural
 
 # Deleting Cards
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to delete Cards in Solution Manager.
-
-To delete a card, complete the following steps:
+Use these procedures to delete Vision cards in Solution Manager. You can delete a card directly from the **Vision Live** page or from the **Vision Settings** page.
 
 :::note
-Deleting a card will also delete any child cards.
+Deleting a card also deletes all child cards nested under it. Deletion is permanent and cannot be undone. Verify the card is no longer needed before proceeding.
 :::
 
-1. Perform one of the following:
-    a. Select the **Delete** button (![Vision Delete Button](../../../Resources/Images/SM/Vision-Delete-Button.png "Vision Delete Button")) directly on the card on the **Vision Live** page, then select **Yes** in the confirmation window **- or -**
-    b. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) next to **Home** on the **Vision Live** page.
-2. Select the **Card** to delete from the list
-3. Select the **Delete** button at the bottom of the **Modify Card** window
-4. Select **Save**
+## Delete a card from Vision Live
 
-## FAQs
+To delete a card directly from the **Vision Live** page, complete the following steps:
 
-**Q: Can a cards record be recovered after deletion?**
+1. Go to **Vision Live**.
+2. Locate the card you want to delete.
+3. Select the **Delete** button on the card.
+4. Select **Yes** in the confirmation window.
 
-No. Deleting a cards record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+**Result:** The card and any child cards are permanently removed from OpCon.
 
-**Q: How many cards records can you delete at once?**
+## Delete a card from Vision Settings
 
-Select the specific cards record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+To delete a card using the **Vision Settings** page, complete the following steps:
 
-## Glossary
+1. Go to **Vision Live**.
+2. Select the **Edit** button next to **Home**.
+3. Select the card you want to delete from the list.
+4. Select the **Delete** button.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+   <!-- GAP: The exact label of the panel or window that contains the Delete button in Vision Settings could not be confirmed in source. Source shows a form panel with a Delete button (ButtonId.DELETE) in the edit button layout of MasterVisionCardItemPanel.java. -->
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+5. Select **Save**.
+
+**Result:** The card and any child cards are permanently removed from OpCon.

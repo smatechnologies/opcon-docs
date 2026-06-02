@@ -1,4 +1,4 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Notification Groups
@@ -22,7 +22,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Available Notification Groups in OpCon are shown in the grid under **Library > Triggers > Manage Notification Groups**.
+Available Notification Groups in OpCon are shown in the grid under **Library** > **Triggers** > **Manage Notification Groups**.
 
 ![Notification Groups Grid](../../../../../Resources/Images/SM/Library/NotificationGroups/NotificationGroups-Grid.png "Notification Groups Grid")
 
@@ -62,11 +62,9 @@ Select the **Add** button to quickly add a new category to the list.
 
 **Q: Where can you find Notification Groups in OpCon?**
 
-Access Notification Groups in Solution Manager or Enterprise Manager.
+Access Notification Groups in Solution Manager under **Library** > **Triggers** > **Manage Notification Groups**.
 
 ## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
@@ -74,10 +72,10 @@ Access Notification Groups in Solution Manager or Enterprise Manager.
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

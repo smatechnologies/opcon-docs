@@ -1,6 +1,6 @@
 ---
 title: Viewing and Adding Container Job Details
-description: "Use this procedure to view and Adding Container Job Details in Solution Manager."
+description: "Use this procedure to view, add, and update Container Job Details in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to view and Adding Container Job Details in Solution Manager.
+Use this procedure to view, add, and update Container Job Details in Solution Manager. A Container job runs a sub-schedule, enabling hierarchical schedule structures.
 
 To view, add, or edit a Container job, you must have the required privileges as defined in [Required Privileges](../Accessing-Master-Jobs.md#required-privileges).
 
@@ -28,28 +28,30 @@ To view, add, or edit a Container job, you must have the required privileges as 
 
 To view Container Job Details, complete the following steps:
 
-1. Go to **Library** > **Master Jobs**
-1. Select a container job in the list
-1. Select **Edit**
-1. Expand the **Task Details** panel to expose its content
+1. Go to **Library** > **Master Jobs**.
+1. Select a container job in the list.
+1. Select **Edit**.
+1. Expand the **Task Details** panel to expose its content.
 
 ---
 
 ## Adding Container Job Details
 
-1. Go to **Library** > **Master Jobs**
-1. Select **Add**
-1. Expand the **Task Details** panel
-1. Select a **Schedule** to update the schedule
-1. Enter a **Name** to update the job name
-1. Select a **Department** to update the department
-1. Select an **Access Code** to update the access code
-1. Update the **Disable Build** option. For more information, refer to [Jobs](../../../../../../../objects/jobs.md) in the **Concepts** online help
-1. Select the **Allow Multi-Instance** option. For more information, refer to [Multi-Instance Jobs](../../../../../../../operations/job-names.md#multi-instance-jobs) in the **Concepts** online help
-1. Select **Master Sub-Schedule**
-1. Select **Edit Sub-Schedule Jobs** to go to the Master Jobs page and display the sub-schedule's jobs
-1. Select **Edit Sub-Schedule** to go to the Master Schedule page and display the sub-schedule
-1. Select **Save**
+To add Container Job Details, complete the following steps:
+
+1. Go to **Library** > **Master Jobs**.
+1. Select **Add**.
+1. Select a **Schedule**.
+1. Enter a **Name**.
+1. Select a **Department**.
+1. Select an **Access Code**.
+1. _(Optional)_ Select the **Disable Build** option. For more information, refer to [Jobs](../../../../../../../objects/jobs.md) in the **Concepts** online help.
+1. _(Optional)_ Select the **Allow Multi-Instance** option. For more information, refer to [Multi-Instance Jobs](../../../../../../../operations/job-names.md#multi-instance-jobs) in the **Concepts** online help.
+1. Expand the **Task Details** panel.
+1. Select **Master Sub-Schedule**.
+1. _(Optional)_ Select **Edit Sub-Schedule Jobs** to go to the Master Jobs page and display the sub-schedule's jobs.
+1. _(Optional)_ Select **Edit Sub-Schedule** to go to the Master Schedule page and display the sub-schedule.
+1. Select **Save**.
 
 ---
 
@@ -57,21 +59,21 @@ To view Container Job Details, complete the following steps:
 
 To update Container Job Details, complete the following steps:
 
-1. Go to **Library** > **Master Jobs**
-1. Select a container job
-1. Select **Edit**
-1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button')) in **Read-only** mode and green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button')) in **Admin** mode
-1. Expand the **Task Details** panel
-1. Select a **Schedule** to update the schedule
-1. Enter a **Name** to update the job name
-1. Select a **Department** to update the department
-1. Select an **Access Code** to update the access code
-1. Update the **Disable Build** option. For more information, refer to [Jobs](../../../../../../../objects/jobs.md) in the **Concepts** online help
-1. Select the **Allow Multi-Instance** option. For more information, refer to [Multi-Instance Jobs](../../../../../../../operations/job-names.md#multi-instance-jobs) in the **Concepts** online help
-1. Select **Master Sub-Schedule**
-1. Select **Edit Sub-Schedule Jobs** to go to the Master Jobs page and display the sub-schedule's jobs
-1. Select **Edit Sub-Schedule** to go to the Master Schedule page and display the sub-schedule
-1. Select **Save**
+1. Go to **Library** > **Master Jobs**.
+1. Select a container job.
+1. Select **Edit**.
+1. Select the lock icon. The button appears gray and locked (![Master Job Definition Read-only Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png 'Master Job Definition Read-only Button')) in **Read-only** mode and green and unlocked (![Job Definition Admin Button](../../../../../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png 'Job Definition Admin Button')) in **Admin** mode.
+1. Expand the **Task Details** panel.
+1. Select a **Schedule** to update the schedule.
+1. Enter a **Name** to update the job name.
+1. Select a **Department** to update the department.
+1. Select an **Access Code** to update the access code.
+1. _(Optional)_ Update the **Disable Build** option. For more information, refer to [Jobs](../../../../../../../objects/jobs.md) in the **Concepts** online help.
+1. _(Optional)_ Select the **Allow Multi-Instance** option. For more information, refer to [Multi-Instance Jobs](../../../../../../../operations/job-names.md#multi-instance-jobs) in the **Concepts** online help.
+1. Select **Master Sub-Schedule**.
+1. _(Optional)_ Select **Edit Sub-Schedule Jobs** to go to the Master Jobs page and display the sub-schedule's jobs.
+1. _(Optional)_ Select **Edit Sub-Schedule** to go to the Master Schedule page and display the sub-schedule.
+1. Select **Save**.
 
 ---
 
@@ -83,11 +85,11 @@ For conceptual information, refer to [Container Jobs](../../../../../../../job-t
 
 **Q: What does Viewing and Adding Container Job Details cover?**
 
-This page covers Viewing Container Job Details, Adding Container Job Details, Updating Container Job Details.
+This page covers viewing, adding, and updating Container Job Details in Solution Manager.
 
 ## Glossary
 
-**Container Job**: A job type that runs a subschedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
+**Container Job**: A job type that runs a sub-schedule. Container jobs enable hierarchical schedule structures and support properties and events just like standard jobs.
 
 **Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
 

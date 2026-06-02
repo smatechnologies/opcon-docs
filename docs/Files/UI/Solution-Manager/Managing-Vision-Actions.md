@@ -1,6 +1,6 @@
-﻿---
+---
 title: Managing Vision Actions
-description: "Vision Actions are OpCon Events defined for a Vision Frequency Trigger."
+description: "Vision Actions are OpCon Events defined for a Vision Frequency Trigger. Use the Vision Actions page in Solution Manager to view, add, edit, and delete actions."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,72 +15,77 @@ doc_type: procedural
 
 # Managing Vision Actions
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Vision Action is a named set of OpCon Events that is triggered when a Vision Frequency condition is met. Each action must have a unique name and at least one event.
 
-## What Is It?
+:::note
+A Vision license is required to define Vision Actions. See [License File Request and Storing](Working-with-Vision.md#License).
+:::
 
-Vision Actions are OpCon Events defined for a Vision Frequency Trigger.
+:::note
+You must be in the `ocadm` role or have the **Maintain Vision Actions** privilege to create, edit, or delete Vision Actions. See [Function Privileges](../../../administration/privileges.md#function-privileges).
+:::
 
-The following fields apply for setting Vision Actions:
+## Vision Actions fields
 
-- **Name**: The event name
-- **Events:** A list of Events defined for the Action. Select the Add button to open the **Create new Event** window
-  - **Event Template**: Select an event template. The page updates dynamically to assist with filling out event details
+The following fields are available when you create or edit a Vision Action:
 
-## Using the Vision Action Admin Page
+| Field | Description |
+|---|---|
+| **Name** | A unique name for the action. Maximum 255 characters. Required. |
+| **Events** | One or more OpCon Events assigned to the action. Select **Add** to open the **Create new Event** dialog. Each event is defined by selecting an **Event Template**, then completing the template fields. |
 
-The **Vision Actions** page is where you can view, add, edit, and delete actions.
+## View Vision Actions
 
-Vision Actions Admin Page
+The **Vision Actions** page displays all defined actions. Each row shows the action **Name** and its associated **Details** (a comma-separated list of configured event strings). Actions are sorted by name in ascending order by default.
+
+To open the **Vision Actions** page, complete the following steps:
+
+1. In Solution Manager, go to **Vision** > **Vision Settings**.
+2. Select **Vision Actions**.
+
+**Result:** The **Vision Actions** page opens, listing all existing actions with their name and event details.
 
 ![Vision Actions Admin Page](../../../Resources/Images/SM/Vision-Actions-Admin-Page.png "Vision Actions Admin Page")
 
-:::note
-A Vision license is required to define Actions. See [License File Request and Storing](Working-with-Vision.md#License) in the **Solution Manager** online help.
-:::
+## Add a Vision Action
 
-:::note
-A user must be in the «ocadm» role or have the «Maintain Vision Actions» privilege to define Actions. See [Function Privileges](../../../administration/privileges.md#function-privileges) in the **Concepts** online help.
-:::
+To add a Vision Action, complete the following steps:
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+1. On the **Vision Actions** page, select **Add**.
+2. In the **Vision Action** dialog, enter a unique value in the **Name** field.
+3. In the **Events** section, select **Add** to open the **Create new Event** dialog.
+4. Select an **Event Template** from the list. The form updates dynamically based on the selected template.
+5. Complete the event fields, then save the event.
+6. Repeat steps 3–5 to add additional events as needed.
+7. Select **Save**.
+
+**Result:** The new Vision Action is saved and appears in the **Vision Actions** list.
+
+## Edit a Vision Action
+
+To edit a Vision Action, complete the following steps:
+
+1. On the **Vision Actions** page, select the action you want to edit.
+2. Select **Edit**, or double-click the action row.
+3. In the **Vision Action** dialog, update the **Name** or **Events** fields as needed.
+4. Select **Save**.
+
+**Result:** The Vision Action is updated with the new values.
+
+## Delete a Vision Action
+
+You cannot delete a Vision Action that is referenced by one or more Vision cards. If you attempt to delete an action in use, Solution Manager displays an error listing the affected cards.
+
+To delete a Vision Action, complete the following steps:
+
+1. On the **Vision Actions** page, select one or more actions.
+2. Select **Delete**.
+3. In the confirmation dialog, select **OK**.
+
+**Result:** The selected Vision Actions are removed from the list.
+
+## Related topics
 
 - [Adding Vision Actions](Adding-Vision-Actions.md)
 - [Editing Vision Actions](Editing-Vision-Actions.md)
 - [Deleting Vision Actions](Deleting-Vision-Actions.md)
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Name | The event name | — | — |
-
-## FAQs
-
-**Q: What does managing vision actions involve?**
-
-Managing vision actions includes Using the Vision Action Admin Page. Access vision actions in Solution Manager.
-
-**Q: Who can manage vision actions in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage vision actions. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

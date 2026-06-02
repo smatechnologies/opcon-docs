@@ -1,90 +1,82 @@
 ---
 title: Setting Preferences for Charts
-description: "Use this procedure to set Preferences for Charts in Enterprise Manager."
+description: "Configure chart display options in Enterprise Manager, including general chart settings, bar chart layout, pie chart layout, and meter chart thresholds."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Setting Preferences for Charts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to set Preferences for Charts in Enterprise Manager.
+Enterprise Manager provides four preference pages for charts: general chart settings, bar chart display, pie chart display, and meter chart display. Changes to chart preferences take effect only after you close and reopen the chart views.
 
 :::note
-Close and re-open the charts for changes in this section to take effect.
+Close and reopen all chart views after saving preferences for changes to take effect.
 :::
 
-### Open Chart Preferences
+## Configure General Chart Preferences
 
-To open the chart preferences and configure general chart display options, complete the following steps:
+To configure general chart display options, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Charts**. The **Charts** settings display to the right
-5. *(Optional)* Select the **Show Legend** option to show the legend on the charts. (Checked by default.)
-6. *(Optional)* Select the **Use Transparency** option to show the charts with transparency
-7. *(Optional)* Select the **Use Depth** option to show 3-D charts
-8. *(Optional)* Select the **Beep and Notify for failed jobs** option to send a notification and beep three times when a job fails in chart view. (Checked by default.)
-9. Select **Apply** to save the changes in this window
+1. In Enterprise Manager, select **EnterpriseManager > Preferences**. The **Preferences** dialog opens.
+2. In the **Preferences** tree, select the expand arrow next to **Enterprise Manager** to expand the list.
+3. Select **Charts**. The **Charts** settings appear on the right.
+4. (Optional) Select the **Show Legend** option to display the legend on charts. This option is selected by default.
+5. (Optional) Select the **Use Transparency** option to render charts with transparency. This option is cleared by default.
+6. (Optional) Select the **Use Depth** option to render charts in 3-D. This option is cleared by default.
+7. (Optional) Select the **Beep and Notify for failed jobs** option to play a beep three times and display a notification when a job fails in chart view. This option is selected by default.
+8. Select **Apply** to save the changes.
 
-### Configure Bar Chart Settings
+**Result:** The general chart settings are saved and apply to all chart views.
+
+## Configure Bar Chart Preferences
 
 To configure bar chart display settings, complete the following steps:
 
-1. Select the arrow (![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)) next to **Charts** in the Preferences tree to expand the list
-2. Select **Bar Chart** in the Preferences tree. The **Bar Chart** settings display to the right
-3. *(Optional)* Select the **Oldest date on top** option to show the oldest date at the top when viewing all dates
-4. *(Optional)* Select the **Tube** option to show tubes instead of rectangles. (Selected by default.)
-5. *(Optional)* Select the **Transposed** option to view bars horizontally. (Checked by default.) Clear the option to view bars vertically
-6. *(Optional)* Set the *value* in the **Minimum height before scroll (pixels)** text box (default: 500; valid range: 100–5000)
-7. *(Optional)* Set the *value* in the **Minimum width (pixels)** text box (default: 16; valid range: 8–90)
-8. Select **Apply** if any changes were made
+1. In the **Preferences** tree, select the expand arrow next to **Charts** to expand the list.
+2. Select **Bar Chart**. The **Bar Chart** settings appear on the right.
+3. (Optional) Select **Oldest date on top** to display the oldest date at the top of the chart when viewing multiple dates. This option is cleared by default.
+4. (Optional) Select **Tube** to display bars as tubes instead of rectangles. This option is selected by default.
+5. (Optional) Select **Transposed** to display bars horizontally. Clear the option to display bars vertically. This option is selected by default.
+6. (Optional) In **Minimum height before scroll (pixels)**, enter a value between `100` and `5000`. The default is `500`.
+7. (Optional) In **Minimum width (pixels)**, enter a value between `8` and `90`. The default is `16`.
+8. Select **Apply** to save the changes.
 
-### Configure Pie Chart Settings
+**Result:** The bar chart settings are saved and apply when bar chart views are opened.
+
+## Configure Pie Chart Preferences
 
 To configure pie chart display settings, complete the following steps:
 
-1. Select **Pie Chart** in the Preferences tree. The **Pie Chart** settings display to the right
-2. *(Optional)* Set the *value* in the **Space between slices (pixels)** text box (default: 10; valid range: 0–50)
-3. *(Optional)* Set the *value* in the **Minimum width before scroll (pixels)** text box (default: 150)
-4. *(Optional)* Set the *value* in the **Minimum height before scroll (pixels)** text box (default: 150)
-5. *(Optional)* Clear the **Show labels** option to remove job count labels from each pie section
-6. *(Optional)* Set the *value* in the **Ratio** text box (default: 10)
-7. *(Optional)* Set the *value* in the **Rotation** text box (default: 0)
-8. Select **Apply** if any changes were made
+1. In the **Preferences** tree, select **Pie Chart**. The **Pie Chart** settings appear on the right.
+2. (Optional) In **Space between slices (pixels)**, enter a value between `0` and `50`. The default is `10`.
+3. (Optional) In **Minimum width before scroll (pixels)**, enter a value. The default is `150`.
+4. (Optional) In **Minimum height before scroll (pixels)**, enter a value. The default is `150`.
+5. (Optional) Clear the **Show labels** option to remove job count labels from each pie section. This option is selected by default.
+6. (Optional) In **Ratio**, enter a value between `1` and `50`. The default is `10`.
+7. (Optional) In **Rotation**, enter a value between `0` and `360`. The default is `0`.
+8. Select **Apply** to save the changes.
 
-### Configure Workload Chart Settings
+**Result:** The pie chart settings are saved and apply when pie chart views are opened.
 
-To configure workload chart display settings and save all preferences, complete the following steps:
+## Configure Meter Chart Preferences
 
-1. Select **Workload Chart** in the Preferences tree. The **Workload Chart** settings display to the right
-2. *(Optional)* Select the **Show labels** option to display labels on the Workload Chart. (Checked by default.)
-3. *(Optional)* Set the *value* in the **Minimum width before scroll (pixels)** text box (default: 200)
-4. *(Optional)* Set the *value* in the **Minimum height before scroll (pixels)** text box (default: 200)
-5. *(Optional)* Set the *value* in the **End value for Alert zone (%)** text box (default: 150)
-6. *(Optional)* Set the *value* in the **End value for Warning zone (%)** text box (default: 200)
-7. Select **Apply** to save the changes in this dialog
-8. Select **OK** to save the changes and close the **Preferences** dialog
+To configure meter chart display settings and save all preferences, complete the following steps:
 
-## Glossary
+1. In the **Preferences** tree, select **Meter Chart**. The **Meter Chart** settings appear on the right.
+2. (Optional) Select the **Show labels** option to display labels on the meter chart. This option is selected by default.
+3. (Optional) In **Minimum width before scroll (pixels)**, enter a value between `100` and `2000`. The default is `200`.
+4. (Optional) In **Minimum height before scroll (pixels)**, enter a value between `100` and `2000`. The default is `200`.
+5. (Optional) In **End Value for Alert zone (%)**, enter a value between `100` and `2000`. The default is `150`.
+6. (Optional) In **End Value for Warning zone (%)**, enter a value. The default is `200`. The warning value must be greater than or equal to the alert value.
+7. Select **Apply** to save the changes.
+8. Select **OK** to save all changes and close the **Preferences** dialog.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** All chart preferences are saved. Close and reopen chart views for the new settings to take effect.

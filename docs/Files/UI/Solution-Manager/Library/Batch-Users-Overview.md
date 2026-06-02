@@ -1,6 +1,7 @@
 ---
+lang: en-us
 title: Batch Users Overview
-description: "Batch users are operating system credentials that OpCon uses to authenticate job submissions to agents."
+description: "Batch users are operating system credentials that OpCon uses to authenticate job submissions to agents on IBM i, MCP, OpenVMS, SQL, UNIX, and Windows platforms."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -13,14 +14,16 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** Administrators who configure OS-level credentials for job execution
+# Batch Users Overview
 
-## What Is It?
+Batch users are operating system credentials that OpCon uses to authenticate job submissions to agents. Each batch user is associated with a specific platform type and holds the login name — and, where required, the password — that the agent uses to run submitted jobs.
 
-Batch users are operating system credentials that OpCon uses to authenticate job submissions to agents. Each batch user is associated with a specific machine or platform type and holds the username and password the agent uses to run submitted jobs.
+Most platforms require a valid batch user on every job that OpCon submits. Without a correctly configured batch user, OpCon cannot run jobs on the target machine.
+
+Common tasks in this area include:
 
 - Configuring credentials for a new platform or agent
-- Updating a batch user's password after it changes
+- Updating a batch user password after it changes in the operating system
 - Granting or revoking a role's access to a specific batch user
 - Auditing which batch users are configured and which roles can use them
 
@@ -28,25 +31,38 @@ Batch users are operating system credentials that OpCon uses to authenticate job
 
 | Page | Description |
 |------|-------------|
-| Manage Batch Users | View, add, and manage batch user credentials |
-| Batch Users Privileges | Configure which roles can use each batch user |
+| [Managing Batch Users](./Managing-Batch-Users.md) | View, add, edit, and delete batch user credentials for all supported platforms |
+| [Role Batch Users](./AccessManagement/Roles/Modifying-Roles-And-Privileges/Batch-Users.md) | Configure which roles can use each batch user |
+
+## Required privileges
+
+To create, edit, or delete batch users, your role must have the **All Administrative Functions** or **All Function Privileges** function privilege.
+
+The `Role_ocadm` role automatically has access to all batch users and cannot be restricted.
+
+## Supported platforms
+
+OpCon supports batch users for the following platform types:
+
+| Platform | Login name field | Password required |
+|----------|-----------------|-------------------|
+| IBM i | **User Profile** | No |
+| MCP | **Identifier** | No |
+| OpenVMS | **Identifier** (12-character limit) | No |
+| SQL | **User** | Optional |
+| UNIX | **Group/User** (for example, `operators/jsmith`) | No |
+| Windows | **User** | Yes |
+
+:::note
+The Windows batch user **Use Service Account** is a system-reserved record that cannot be edited or deleted.
+:::
 
 ## Glossary
 
 | Term | Definition |
-| --- | --- |
-| Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| LSAM (Local Schedule Activity Monitor) | An agent that resides on the platform where jobs run. LSAMs communicate with SMANetCom for job processing and to send OpCon events. |
-| Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+|------|------------|
+| Batch User | An operating system account (login name and, where applicable, a password) that OpCon uses to run jobs on a target machine. Batch users are scoped to a specific platform type. |
+| Job | A unit of work defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
+| Machine | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
-| Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
-
-## FAQs
-
-**Q: Who manages batch users in OpCon?**
-
-System administrators are responsible for configuring batch user credentials, managing role access, and monitoring related processes.
-
-**Q: Where should I start?**
-
-Review the overview pages in the sidebar. If you are new to this area, confirm access and role requirements with your OpCon system administrator before making changes.
+| Solution Manager | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |

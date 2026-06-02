@@ -1,62 +1,72 @@
 ---
 title: Machines/Schedules/Jobs Group Definitions
-description: "The Notification Trigger Type frame provides options for selecting all or specific machines, schedules, and jobs for the notification group."
+description: "Reference for the Group Definitions panel in the Notification Manager, which controls which machines, schedules, and jobs belong to a notification group."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # Machines/Schedules/Jobs Group Definitions
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The Group Definitions panel appears when you select a Machines, Schedules, or Jobs notification group in the Notification Manager. It lets you control which items belong to the group and how ENS evaluates membership when new items are added to OpCon in the future.
 
-## What Is It?
+## Panel fields
 
-The **<Notification Trigger Type\>** frame provides options for selecting all or specific machines, schedules, and jobs for the notification group.
+### By default, ENS will treat all \<type\> as
 
-- **By default, ENS will treat all Items as**: Determines whether all Machines, Schedules, or Jobs are included or excluded from the notification group by default
-  - **Included**: Includes all items by default, including new items added in the future. Deselect specific items to exclude them
-  - **Excluded**: Excludes all items by default. Select the specific items to include in the group
-- **Show**: Filters what items appear in the selection list
-  - **All**: Shows all items (default)
-  - **Selected**: Shows only selected items
-  - **Not Selected**: Shows only unselected items
+Two options control the default membership rule for the group. The label dynamically reflects the group type (**Machines**, **Schedules**, or **Jobs**).
 
-## Configuration Options
+| Option | Behavior |
+|---|---|
+| **Included** | All items are included by default, including items added to OpCon after the group is saved. Select specific items to exclude them from the group. |
+| **Excluded** | All items are excluded by default. Select specific items to include them in the group. |
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| By default, ENS will treat all Items as | Determines whether all Machines, Schedules, or Jobs are included or excluded from the notification group by default | — | — |
-## FAQs
+When you switch between **Included** and **Excluded**, ENS clears any previously saved item selections so the group starts from a clean state.
 
-**Q: What does Machines/Schedules/Jobs Group Definitions do?**
+### Show
 
-The **<Notification Trigger Type\>** frame provides options for selecting all or specific machines, schedules, and jobs for the notification group.
+Filters which items appear in the selection list.
 
-**Q: Where can you find Machines/Schedules/Jobs Group Definitions in OpCon?**
+| Value | Behavior |
+|---|---|
+| **All** | Displays every item. This is the default view. |
+| **Selected** | Displays only items that are currently selected (checked). |
+| **Not Selected** | Displays only items that are not currently selected. |
 
-Access Machines/Schedules/Jobs Group Definitions through the appropriate section in Enterprise Manager or Solution Manager navigation.
+### Selection list
 
-## Glossary
+A tree list of all available machines, schedules, or jobs in OpCon. Select or clear each item to include or exclude it from the group, depending on the active **By default, ENS will treat all \<type\> as** setting.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+Use **Select All** or **Deselect All** to apply a selection to all items currently visible in the list. These buttons apply only to items shown under the active **Show** filter.
 
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
+## Buttons
 
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
+| Button | Action |
+|---|---|
+| **Select All** | Selects all items visible in the current **Show** filter view. |
+| **Deselect All** | Clears all items visible in the current **Show** filter view. |
+| **Save** | Saves the group membership selections to the database. |
+| **Cancel** | Discards unsaved changes and resets the panel to its last saved state. |
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+## Privileges required
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+Your OpCon role must have sufficient privileges to change the **Included** / **Excluded** setting:
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- **Jobs groups**: Your role must have access to all schedules, all machines, all machine groups, and all departments for the View Jobs in Master Schedules function privilege. Your role must also have access to all access codes defined in OpCon.
+- **Schedules groups**: Your role must have access to all schedules.
+- **Machines groups**: Your role must have access to all machines.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+The `ocadm` user bypasses these checks and can always change the group type.
+
+## Behavior notes
+
+- When the group type changes (from **Included** to **Excluded** or vice versa), all previously saved item selections are deleted before the new selections are committed.
+- When viewing an EnsAction (trigger action) rather than an EnsGroup, the selection list is read-only. To modify the membership, go back to the group level.
+- The **Show** filter defaults to **All** after a save.

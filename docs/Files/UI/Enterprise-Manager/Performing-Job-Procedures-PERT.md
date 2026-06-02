@@ -20,14 +20,18 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to perform Additional Job Procedures when Working in the PERT View in Enterprise Manager.
+Use this procedure to perform additional job procedures when working in the PERT View in Enterprise Manager.
+
+## Performing Additional Job Procedures
 
 To perform additional job procedures, complete the following steps:
 
-1. Select **PERT** under the **Operation** topic
-2. In the List and/or Matrix view, select the **schedule** that contains the job
-3. In the PERT view, right-click the **job box**
-4. Select **Job** from the menu, then select the active **command** to perform
+1. Select **PERT** under the **Operation** topic.
+2. In the List and/or Matrix view, select the **schedule** that contains the job.
+3. In the PERT view, right-click the **job box**.
+4. Select **Job** from the menu, then select the active **command** to perform.
+
+**Result:** The selected job command is applied.
 
 If additional information is needed, go to the preferred **Job procedure** under [Performing Job Procedures when Working in the Gantt View](Performing-Job-Procedures-Gantt.md) and start on Step 2.
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Job Information
-description: "To view Additional Job Information in Enterprise Manager, complete the following steps: 1."
+description: View cross-reference, audit, and run history information for a job in the Enterprise Manager Job Master editor.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,33 +10,24 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Additional Job Information
+# Viewing Additional Job Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The Enterprise Manager Job Master editor provides three toolbar buttons for viewing supplemental information about a selected job: cross-references, audit records, and run history. Use these buttons to investigate job dependencies, review change history, and inspect past run results without leaving the editor.
 
-## What Is It?
+## View Additional Job Information
 
-To view Additional Job Information in Enterprise Manager, complete the following steps:
+To view additional information for a job, complete the following steps:
 
-1.  Select **Job Master** under the **Administration** topic
-2.  Select the **schedule** in the **Schedule** list
-3.  Select the **job** in the **Job** list
-4.  Select the ![Merge icon](../../../Resources/Images/EM/EMcrossref.png "Merge icon") **Cross Reference** button on the toolbar to view a list of jobs on the schedule, then select **OK**
-5.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button to view audit records for changes to the job, then select **Close**
-6.  Select the ![View Schedule History icon](../../../Resources/Images/EM/EMviewhist.png "View Schedule History icon") **View Job History** button to view execution history for the job, then select **Close**
+1. Go to **Administration** and select **Job Master**.
+2. Select a schedule from the **Schedule** list.
+3. Select a job from the **Job** list.
+4. Select the **Cross References** button on the toolbar to view other objects that reference the job, then select **OK** to close the dialog.
+5. Select the **View Audit** button on the toolbar to view the audit record for changes made to the job, then select **Close**.
+6. Select the **View Job History** button on the toolbar to view the run history for the job, then select **Close**.
 
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** You have reviewed cross-references, audit records, and run history for the selected job.

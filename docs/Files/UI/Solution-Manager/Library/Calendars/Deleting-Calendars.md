@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Calendars
-description: "Learn how to deleting calendars in OpCon."
+description: "Learn how to delete calendars in OpCon."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -28,10 +28,15 @@ Continuous recommends deleting user-defined calendars that are no longer in use 
 
 Calendars can only be deleted if not in use. To verify if a calendar is in use, select the calendar and select the **Edit** button, then select the **CALENDAR ASSOCIATIONS** tab to see the schedules, jobs, and frequencies using it.
 
-To delete calendar(s), complete the following steps:
+## Deleting a Calendar
 
-1. Select the calendar(s) to delete from the list
-2. Select **Yes** to confirm deletion or **No** to cancel
+To delete one or more calendars, complete the following steps:
+
+1. Select the calendar(s) to delete from the list.
+2. Select the **Delete** button.
+3. Select **Yes** to confirm deletion or **No** to cancel.
+
+**Result:** The selected calendar(s) are permanently removed.
 
 ## FAQs
 
@@ -41,7 +46,7 @@ No. Deleting a calendars record permanently removes it from OpCon. Verify the re
 
 **Q: What should you check before deleting calendars?**
 
-Verify the calendars is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
+Verify the calendar is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
 
 ## Glossary
 
@@ -53,4 +58,4 @@ Verify the calendars is not currently in use or assigned to other records before
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

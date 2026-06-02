@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating Script Versions
-description: "Use this procedure to create Script Versions in Enterprise Manager."
+description: "Step-by-step procedure for creating a new version of an embedded script in the Enterprise Manager Script Repository."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,36 +15,20 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Creating Script Versions
+# Creating Script Versions
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to create Script Versions in Enterprise Manager.
+Embedded scripts stored in the OpCon database are versioned. Each version captures the script content, a timestamp, the author, and optional comments. You must have the **Maintain Scripts** function privilege (or **All Administration Functions** / **All User Interface Functions**) to create a new version.
 
 To create a new script version, complete the following steps:
 
-1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
-2.  Select a **script** in the list
-3.  Select **Show/Create Versions** on the toolbar. The **Versions** dialog displays
-4.  Select **New**. The **Add Version** dialog displays
-5.  Select **Open File** to browse to and locate the script version to import
-6.  Enter *notes or comments* about the script version
-7.  Select **OK** in the **Add Version** dialog
-8.  Select **Close** in the **Versions** dialog
-9.  Select **Close ☒** (to the right of the **Script Repository** tab) to close the **Script Repository** screen
-:::
+1. In Enterprise Manager, select **Repository** under the **Scripts** topic. The **Script Repository** screen opens.
+2. Select a script in the list.
+3. Select **Show/Create Versions** on the toolbar. The **Versions** dialog opens, showing existing versions with their version number, timestamp, author, and comments.
+4. Select **New**. The **Add Version** dialog opens.
+5. Select **Open File ...** to browse to the script file you want to import. The file content loads into the script content area.
+6. Optionally, enter notes or comments in the **Comments** field.
+7. Select **OK**. The new version is saved to the Script Repository.
+8. Select **Close** in the **Versions** dialog.
+9. Select the close button to the right of the **Script Repository** tab to close the screen.
 
-## Glossary
-
-**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+**Result:** The new script version appears in the **Versions** dialog with an auto-incremented version number, the current timestamp, and your user name as the author.

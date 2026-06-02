@@ -1,52 +1,48 @@
 ---
 title: Saving Job Definitions to Master
-description: "If you are in the ocadm role, or have function privileges to Modify Jobs in Daily Schedule and Modify Jobs in Job Master Schedules, this tool saves the platform-specific job definition information to."
+description: "How to use the Save Job Definition to Master button in the Job Daily editor to copy platform-specific job definition details from a daily job back to the Job Master."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Saving Job Definitions to Master
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-If you are in the ocadm role, or have function privileges to *Modify Jobs in Daily Schedule* and *Modify Jobs in Job Master Schedules*, this tool saves the platform-specific job definition information to the Master (starting below the **Machine Selection** section).
+The **Save Job Definition to Master** button in the Job Daily editor copies the platform-specific job definition (the content of the **Job Details** tab) from a daily job back to its corresponding Job Master record. Only the job definition information is copied; all other daily job settings are not affected.
 
 :::note
-The **Save Job Definition to Master** feature does not include any other information on the screen.
+The **Save Job Definition to Master** button is available only when the **Job Details** tab is selected and the daily job has no unsaved changes. The button is not available for Null jobs.
 :::
 
-To perform this procedure, complete the following steps:
+## Before you begin
 
-1. Select **Daily Maintenance** under the **Operation** topic. The **Daily Maintenance** screen displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **date** for the schedule
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **schedule**
-4. Select the **job**
-5. Select the **Edit Daily** button in the **Maintenance** frame at the bottom-right of the screen. The **Job Daily** screen displays
-6. Select the **Save Job Definition to Master** button on the **Job Daily** toolbar
-7. Select **OK** to copy the job details to the Master definition
-8. Select **Close ☒** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen
+To use this feature, you must meet one of the following conditions:
 
-## Glossary
+- Your user account is assigned to the **ocadm** role.
+- Your role has both the **Modify Jobs in Daily Schedules** and **Modify Jobs in Master Schedules** function privileges for the job's department.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+If your user account is not in the ocadm role, the access code and department of the daily job must also match the master job. If they do not match, Enterprise Manager displays an error and the copy does not proceed.
 
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+## Save a job definition to master
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+To save a daily job's definition to the Job Master, complete the following steps:
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+1. In the **Operations** view, select **Daily Maintenance**. The **Daily Maintenance** screen opens.
+2. Select the expand arrow next to the date to expand it.
+3. Select the expand arrow next to the schedule to expand it.
+4. Select the job you want to update.
+5. Select **Edit Daily** in the **Maintenance** panel at the bottom-right of the screen. The **Job Daily** editor opens.
+6. Select the **Job Details** tab to display the job definition section.
+7. Select **Save Job Definition to Master** on the **Job Daily** toolbar.
+8. Select **OK** at the confirmation prompt to copy the job definition to the master record.
 
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
+**Result:** Enterprise Manager displays a confirmation message indicating that the job has been successfully saved to Master. The Job Master record is updated with the platform-specific job definition from the daily job.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+9. Select **Close** (to the right of the **Daily Maintenance** tab) to close the **Daily Maintenance** screen.

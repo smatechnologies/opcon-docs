@@ -19,10 +19,10 @@ doc_type: reference
 
 The Daily Job Definition is the runtime instance of a master job. You can view all configured settings for a job running in the daily queue and, in some cases, make temporary changes that apply only to today's instance without affecting the master definition.
 
-- You need to see exactly how a job is configured for today's run
-- You want to make a one-time change to a job parameter for today only
-- You need to copy a daily job's configuration back to the master to make a permanent change
-- You are reviewing job dependencies or frequencies for a specific daily instance
+- You need to see exactly how a job is configured for today's run.
+- You want to make a one-time change to a job parameter for today only.
+- You need to copy a daily job's configuration back to the master to make a permanent change.
+- You are reviewing job dependencies or frequencies for a specific daily instance.
 
 ## What is in this section?
 
@@ -40,6 +40,7 @@ The Daily Job Definition is the runtime instance of a master job. You can view a
 | View and Update Threshold Dependencies | Threshold conditions for the daily job |
 | View and Update Resource Updates | Resource counter changes on job completion |
 | View and Update Threshold Updates | Threshold counter changes on job completion |
+
 ## Glossary
 
 | Term | Definition |
@@ -48,7 +49,7 @@ The Daily Job Definition is the runtime instance of a master job. You can view a
 | Dependency (Job Dependency) | A condition that must be met before a job is allowed to start. OpCon supports job dependencies, threshold dependencies, resource dependencies, and expression dependencies. |
 | Frequency | A named rule that specifies the recurring days on which a schedule or job runs. OpCon uses frequencies during the Schedule Build process. |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Agent) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Property | A name-value pair stored in OpCon. Properties can be referenced in job definitions using token syntax to pass dynamic values at runtime. |
 | Resource | A user-defined object with a name and a numeric limit. Used to restrict how many jobs run concurrently across schedules and machines in OpCon. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |

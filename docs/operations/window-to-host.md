@@ -19,7 +19,7 @@ The **Window to Host** feature opens a configured terminal emulator to connect d
 
 ## How it works
 
-When you right-select a machine or job in an Operation view and select **Window To Host**, Enterprise Manager runs the emulator command you configured for that machine's platform type. It substitutes machine-specific values into the command before running it.
+When you right-click a machine or job in an Operation view and select **Window To Host**, Enterprise Manager runs the emulator command you configured for that machine's platform type. It substitutes machine-specific values into the command before running it.
 
 If no command is configured for the selected platform, Enterprise Manager opens the **Window To Host** preferences dialog automatically so you can enter one before continuing.
 

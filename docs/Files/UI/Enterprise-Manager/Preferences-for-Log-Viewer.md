@@ -1,45 +1,39 @@
 ---
 title: Setting Preferences for Log Viewer
-description: "Use this procedure to set Preferences for Log Viewer in Enterprise Manager."
+description: "Configure Log Viewer display options in Enterprise Manager, including line limits, background colors, character set, and regular expression highlighting."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
 # Setting Preferences for Log Viewer
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Log Viewer** preferences in Enterprise Manager control how log files are displayed, including line visibility limits, background colors per log file, character encoding, and color highlighting for regular expression matches.
 
-## What Is It?
+To set Log Viewer preferences, complete the following steps:
 
-Use this procedure to set Preferences for Log Viewer in Enterprise Manager.
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager \> Preferences**. The **Preferences** dialog opens.
+3. Select the expand arrow next to **Enterprise Manager** in the **Preferences** tree to expand the list.
+4. Select **Log Viewer**. The Log Viewer settings appear to the right.
+5. Configure any of the following options:
 
-To set the preferences, complete the following steps:
+   | Option | Description | Default |
+   |---|---|---|
+   | **Remove empty lines** | Removes empty lines from log file displays. | Enabled |
+   | **Use background colors** | Applies a distinct background color to each log file. | Enabled |
+   | **Limit visible lines to** | Sets the maximum number of lines displayed. Valid range: 1–10000. | 2000 |
+   | **Log files Charset** | Sets the character encoding used to read log files. | System default |
 
-1. Open Enterprise Manager application
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Log Viewer**. The **Log Viewer** settings display to the right
-5. *(Optional)* Configure any of the following options:
-   - **Remove empty lines** – removes empty lines from log file displays (selected by default)
-   - **Use background colors** – applies different background colors per log file (selected by default)
-   - **Limit visible lines to** – sets the maximum lines displayed (default: 2000; maximum: 10000)
-   - **Log files Charset** – sets the default character set for the language
-   - **Select log file** – selects a file to change its background color
-   - **Background color** – sets the background color for the selected log file; select **OK** to confirm
-6. *(Optional)* Select a **Regular Expression** word to change its color, then select a color and select **OK**
-7. Select **Apply**, then **OK** to save and close the **Preferences** dialog
+6. To change the background color for a specific log file, select the file from the **Select log file** list, then select the desired color in the **Background color** field and select **OK**.
+7. To change the highlight color for a regular expression pattern, select a pattern from the **Regular Expressions** list, select the desired color, and select **OK**.
+8. Select **Apply**, then select **OK** to save your changes and close the **Preferences** dialog.
 
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** Enterprise Manager applies the updated Log Viewer settings immediately when you next open a log file.

@@ -20,17 +20,19 @@ doc_type: procedural
 
 ## What Is It?
 
-The Look up Notification Sources dialog in Solution Manager performs a reverse lookup — given a Notification ID, it identifies the trigger, group type, group name, and notification type that generated the notification.
+The **Look up Notification Sources** dialog in Solution Manager performs a reverse lookup — given a Notification ID, it identifies the trigger, group type, group name, and notification type that generated the notification.
 
 ![Lookup Notification Source](../../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup-dialog.png "Lookup Notification Source")
 
-1. Enter the *Notification ID* number
-2. Select **Lookup** to search for the notification source record
-3. View the **Results** table, which shows the Notification ID, Notification Type, Group Type, Group Name, and Trigger information
-4. Select **Close** to close the dialog
+## Looking up a Notification Source
+
+To look up a notification source, complete the following steps:
+
+1. Enter the **Notification ID** number.
+2. Select **Lookup** to search for the notification source record.
+3. Review the **Results** table, which shows the Notification ID, Notification Type, Group Type, Group Name, and Trigger information.
+4. Select **Close** to close the dialog.
 
 ## Glossary
 
 **Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.

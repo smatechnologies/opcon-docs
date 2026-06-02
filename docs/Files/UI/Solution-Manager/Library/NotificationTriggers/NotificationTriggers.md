@@ -1,8 +1,8 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Notification Triggers
-description: "Available Notification Triggers in OpCon are shown in the grid under Library > Notification Triggers."
+description: "Notification Triggers in Solution Manager let you define conditions that send alerts when a Machine, Schedule, or Job changes status. Each trigger belongs to a group and can deliver one or more notification types."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,42 +17,49 @@ doc_type: conceptual
 
 # Notification Triggers
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Notification Trigger defines the conditions and delivery methods that alert you when a Machine, Schedule, or Job changes to a specific status. Each trigger belongs to a notification group and can deliver notifications through one or more channels simultaneously.
 
-## What Is It?
+Notification Triggers are available in Solution Manager under **Library > Notification Triggers** and in Enterprise Manager through Notification Manager.
 
-Available Notification Triggers in OpCon are shown in the grid under **Library > Notification Triggers**.
+## Notification Triggers grid
+
+The **Notification Triggers** page displays all configured triggers in a grid.
 
 ![Notification Triggers Grid](../../../../../Resources/Images/SM/Library/NotificationTriggers/NotificationTriggers-Grid.png "Notification Triggers Grid")
 
-Selecting **Add** or selecting a record in the grid enables the bottom panel:
+Selecting **Add** or selecting a row in the grid opens the edit panel below the grid.
 
 ![Notification Trigger Add and Edit](../../../../../Resources/Images/SM/Library/NotificationTriggers/NotificationTriggers-AddEdit.png "Editable panel for Notification Triggers")
 
 :::note
-The **Group Name** - **Trigger Name** combination must be unique when adding a notification trigger.
+The **Group Name** and **Trigger Name** combination must be unique. You cannot save a trigger that duplicates an existing name within the same group.
 :::
 
-**Description**: Provides a description and purpose for the notification trigger.
+## Trigger settings
 
-**Include Internal Job Number in Job Name frame**: Determines whether the job name in the Prefix Information is unique each time a notification is processed. The unique job name combines the original job name with a SAM-generated job number.
+The edit panel contains the following settings for each trigger.
 
-**Escalation Rule**: Specifies an optional escalation rule for email notifications. The list and search function are hidden by default and appear only when an email notification option is selected.
+**Description** — An optional description of the trigger's purpose.
 
-The bottom panel provides options for configuring the following **Notification Types**: Email, Text Notification, OpCon Events, Windows Event Log, Network Notification, SNMP Trap, Run Command, and SPO Event Report.
+**Include Internal Job Number in Job Name frame** — When enabled, OpCon combines the original job name with a SAM-generated job number to produce a unique job name in the notification prefix. Use this option when the same job runs multiple times concurrently and you need to distinguish individual instances in notification output.
 
-- Select **Add** (![Add Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/add.png "Add Notification")) to add a new notification for the selected trigger
-- Select **Edit** (![Edit Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/edit.png "Edit Notification")) to edit an existing notification
-- Select **Delete** (![Delete Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/delete.png "Delete Notification")) to remove an existing notification
-
-**Active/Inactive Notification Status**: The toggle to the left of each notification type indicates *Active* (![Active Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/active.png "Active Notification")) or *Inactive* (![Inactive Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/inactive.png "Inactive Notification")) status. The toggle is hidden by default; select it to switch between states.
+**Escalation Rule** — An optional escalation rule for email notifications. The search field appears only when at least one Email notification type is configured for the trigger. An escalation rule can only be assigned when the trigger includes at least one Email notification.
 
 :::note
-Modifications take effect only after selecting the **Save** button.
+Selecting **Save** is required for any modifications to take effect.
 :::
 
-Select a notification type to view its configuration instructions:
+## Notification types
+
+Each trigger supports one or more of the following notification types. Select a notification type to add or edit its configuration.
+
+- Select **Add** (![Add Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/add.png "Add Notification")) to add a notification for the selected trigger.
+- Select **Edit** (![Edit Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/edit.png "Edit Notification")) to edit an existing notification.
+- Select **Delete** (![Delete Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/delete.png "Delete Notification")) to remove a notification.
+
+The toggle to the left of each notification type indicates its active status. An active notification (![Active Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/active.png "Active")) is sent when the trigger fires. An inactive notification (![Inactive Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/inactive.png "Inactive")) is retained but not sent. Select the toggle to switch between states.
+
+Select a notification type for configuration details:
 
 - [Send Email (SMTP)](./NotificationTypes/Email)
 - [Send Short Text Message](./NotificationTypes/Text-Message)
@@ -63,70 +70,38 @@ Select a notification type to view its configuration instructions:
 - [Send SPO Event Report](./NotificationTypes/SPO-Event-Report)
 - [Run Command](./NotificationTypes/Run-Command)
 
-**Lookup Dialog**: To reverse-look up an event, you need the Notification ID, which is available from a notification message or from the SMANotifyHandler.log. Select the ![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source") button to open the Lookup dialog.
+## Lookup dialog
+
+To reverse-look up the source of a notification event, you need the Notification ID. This ID is available in the notification message or in `SMANotifyHandler.log`.
+
+Select the Lookup button (![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source")) to open the Lookup dialog.
 
 - [Lookup Dialog](./NotificationTypes/Look-up-Notification-Sources)
 
-Select the ![Copy Dialog](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Copy Dialog") button to open the copy dialog.
+## Copy dialog
+
+Select the Copy button (![Copy Dialog](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Copy Dialog")) to open the Copy dialog and duplicate an existing trigger.
 
 - [Copy Dialog](./NotificationTypes/Copy-Notification-Trigger)
 
-**Advanced Filtering**: Use the Advanced Filters at the top right of the screen to filter notification triggers.
+## Advanced filtering
+
+Use **Advanced Filters** (top-right of the screen) to narrow the triggers displayed in the grid.
 
 ![Advanced Filtering](../../../../../Resources/Images/SM/Library/NotificationTriggers/advanced-filtering.png "Advanced Filtering")
 
-- **Contents**: Shows triggers containing the specified text in any notification
-- **Notification Type**: Shows triggers that have all selected notification types configured
+| Filter | Behavior |
+|---|---|
+| **Contents** | Shows triggers that contain the specified text in any configured notification. |
+| **Notification Type** | Shows triggers that have all selected notification types configured. |
+| **Categories** | Shows triggers associated with all selected categories. |
 
-  ![Filter By Notification Type](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-notification-type.png "Filter By Notification Type")
-
-- **Categories**: Shows triggers associated with all selected categories
-
-:::note
-For customers who migrated from versions prior to 21.6: In Enterprise Manager, you reached a notification group by navigating through the parent group tree. In Solution Manager, use the Categories filter and select categories corresponding to the parent group name. This migration is backwards compatible — Notification Manager in EM remains available.
-:::
-
-**Using Enterprise Manager**
-
-![Notification Manager EM](../../../../../Resources/Images/SM/Library/NotificationTriggers/notification-manager-em.png "Notification Manager EM")
-
-**Using Solution Manager**
+![Filter By Notification Type](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-notification-type.png "Filter By Notification Type")
 
 ![Filter By Categories](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-categories.png "Filter By Categories")
 
-## Configuration Options
+:::note
+For customers who migrated from versions prior to 21.6: Enterprise Manager organized notifications through a parent group tree in Notification Manager. In Solution Manager, use the **Categories** filter and select categories that correspond to the former parent group names. This migration is backward compatible — Notification Manager in Enterprise Manager remains available.
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Description | Provides a description and purpose for the notification trigger | — | — |
-| Include Internal Job Number in Job Name frame | Determines whether the job name in the Prefix Information is unique each time a notification is processed. | — | — |
-| Escalation Rule | Specifies an optional escalation rule for email notifications. | — | — |
-| Active/Inactive Notification Status | The toggle to the left of each notification type indicates *Active* (!Active Notification) or *Inactive* (!Inactive Notification) status. | — | — |
-| Lookup Dialog | To reverse-look up an event, you need the Notification ID, which is available from a notification message or from the SMANotifyHandler.log. | — | — |
-| Advanced Filtering | Use the Advanced Filters at the top right of the screen to filter notification triggers | — | — |
-| Contents | Shows triggers containing the specified text in any notification | — | — |
-| Notification Type | Shows triggers that have all selected notification types configured | — | — |
-| Categories | Shows triggers associated with all selected categories | — | — |
-## FAQs
-
-**Q: Where can you find Notification Triggers in OpCon?**
-
-Access Notification Triggers in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**OpCon Event**: A command sent to OpCon that triggers an automated action, such as adding a job to a schedule, updating a property value, sending a notification, or changing a job or schedule status.
-
-**Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+![Notification Manager EM](../../../../../Resources/Images/SM/Library/NotificationTriggers/notification-manager-em.png "Notification Manager EM")
+:::

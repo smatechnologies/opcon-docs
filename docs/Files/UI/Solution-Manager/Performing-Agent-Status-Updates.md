@@ -1,6 +1,6 @@
 ---
 title: Performing Agent Status Updates
-description: "The Operations module allows you to perform Agent status updates."
+description: "Update the communication status of one or more Agents from the Operations module in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,59 +15,61 @@ doc_type: procedural
 
 # Performing Agent Status Updates
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Operations** module in Solution Manager lets you change the communication status of one or more Agents. You can enable full communication, restrict new job starts, or disable communication entirely.
 
-## What Is It?
+## Update Agent communication status
 
-The **Operations** module allows you to perform Agent status updates.
+To update Agent communication status, complete the following steps:
 
-To perform agent status updates:
+1. On the **Operations Summary** page, select one of the five status cards — **Not Responding**, **Limited**, **Stopped**, **Waiting Response**, or **Communicating** — or enter a name in the **Quick Search** field in the **Agents** section.
 
-Select one of the five operation dials (Error, Limited, Stopped, Waiting, or Operational) or use the **Quick Search** field in the **Agents** section on the **Operations Summary** page.
+   ![Agent Operation Dials](../../../Resources/Images/SM/Agent-Operation-Dials.png "Agent Operation Dials")
 
-![Agent Operation Dials](../../../Resources/Images/SM/Agent-Operation-Dials.png "Agent Operation Dials")
+   The **Agents** page opens.
 
-The **Agents** page will display.
+2. (Optional) Use the **Filter Bar** to narrow the list by status, name, platform, group, socket, version, or TLS setting.
 
-*(Optional)* Use the **Filter Bar** to filter the list of Agent machines.
+   ![Agent Filter Bar](../../../Resources/Images/SM/Agent-Filter-Bar.png "Agent Filter Bar")
 
-![Agent Filter Bar](../../../Resources/Images/SM/Agent-Filter-Bar.png "Agent Filter Bar")
+   :::note
+   You can also select a segment on the color-coded **Statistics Bar** above the list to filter by status. For more information, see [Managing Daily Processes](Managing-Daily-Processes.md#Interactive).
+   :::
 
-:::note
-As an [alternative filtering option](Managing-Daily-Processes.md#Interactive), you can use the interactive color-coded **Statistics Bar** above the list to filter by status.
-:::
+   :::note
+   Select a column heading to sort the list in ascending or descending order.
+   :::
 
-:::note
-Select a column heading to sort ascending (arrow pointing down) or descending (arrow pointing up).
-:::
+3. Select one or more Agents from the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb.
 
-Select any **Agent(s)** in the list. Your selections display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
+   ![Agent Processes](../../../Resources/Images/SM/Agent-Processes.png "Agent Processes")
 
-![Agent Processes](../../../Resources/Images/SM/Agent-Processes.png "Agent Processes")
+4. Select the Agent entry in the status bar to open the **Action** panel.
 
-Select the Agent record in the status bar to display the **Action** panel.
+   ![Agent Status Update Panel](../../../Resources/Images/SM/Agent-Status-Update-Panel.png "Agent Status Update Panel")
 
-![Agent Status Update Panel](../../../Resources/Images/SM/Agent-Status-Update-Panel.png "Agent Status Update Panel")
+   :::note
+   You can also right-click any selected Agent in the list to open the **Action** panel.
+   :::
 
-:::note
-As an alternative, you can right-click any selected Agent machine to display the **Action** panel.
-:::
+5. (Optional) Select **Refresh available actions** to verify which status updates are valid for the current selection. This is useful when more than one Agent is selected, because all status update buttons are enabled by default regardless of the actual Agent states.
 
-*(Optional)* Select the **Refresh available actions** button to verify which status update actions are available for the current selection. This is helpful when more than one Agent is selected, since all status update buttons are enabled by default.
+6. Select one of the following actions:
 
-Select one of the following actions (if enabled):
+   | Action | Behavior |
+   |---|---|
+   | **Enable Full Comm. (Job Start Enabled)** | Allows the Agent to send job results to OpCon and allows OpCon to send job start requests to the Agent. |
+   | **Enable Limited Comm. (Job Start Disabled)** | Prevents OpCon from sending new job start requests to the Agent. Jobs already running on the Agent continue to report completion status to OpCon. |
+   | **Disable Communication** | Stops all communication between the Agent and OpCon in both directions. |
 
-- **Enable Full Communication (Job Start Enabled)**: Allows the Agent to send job execution results to OpCon and OpCon to send job start/execution requests to the Agent
-- **Enable Limited Communication (Job Start Disabled)**: Prevents OpCon from sending new job start/execution requests to the Agent. Completion status of tasks already running on the Agent is still reported to OpCon
-- **Disable Communication**: Disables all communication between the Agent and OpCon in both directions
+   If the selected action cannot be applied to the current selection, Solution Manager displays the message: *Cannot apply this action to the current selection.*
 
-*(Optional)* When a single Agent is selected, the **View Active Jobs** button navigates to the **Processes** page filtered to show jobs in a Waiting, Held, or Running status for that machine.
+7. (Optional) When a single Agent is selected, select **View Active Jobs** to go to the **Processes** page filtered to show jobs in a Waiting, Held, or Running status for that Agent.
 
-Close the **Action** panel when done.
+8. Close the **Action** panel when finished.
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+**Result:** The selected Agent(s) move to the requested communication state. A confirmation message appears when the update succeeds. If one or more updates fail, a warning or error notification identifies the affected Agents.
+
+## Related topics
 
 - [Performing Schedule Status Changes](Performing-Schedule-Status-Changes.md)
 - [Performing Job Status Changes](Performing-Job-Status-Changes.md)
@@ -76,36 +78,3 @@ Related Topics
 - [Viewing Job Configuration](Viewing-Job-Configuration.md)
 - [Using PERT View](Using-PERT-View.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Enable Full Communication (Job Start Enabled) | Allows the Agent to send job execution results to OpCon and OpCon to send job start/execution requests to the Agent | — | — |
-| Enable Limited Communication (Job Start Disabled) | Prevents OpCon from sending new job start/execution requests to the Agent. | — | — |
-| Disable Communication | Disables all communication between the Agent and OpCon in both directions | — | — |
-## FAQs
-
-**Q: What are the three communication states available for an Agent?**
-
-Full Communication allows the Agent to send and receive job execution data in both directions. Limited Communication prevents new job starts but still reports completion of already-running jobs. Disable Communication stops all communication between the Agent and OpCon in both directions.
-
-**Q: How do you access the Action panel for an Agent status update?**
-
-Select an Agent from the list, then select the Agent record in the status bar at the bottom of the page. Alternatively, right-click any selected Agent machine to display the Action panel.
-
-**Q: What does the Refresh available actions button do when updating Agent status?**
-
-It verifies which status update actions are currently valid for the selected Agent(s). This is especially useful when multiple Agents are selected, since all buttons are enabled by default regardless of actual availability.
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

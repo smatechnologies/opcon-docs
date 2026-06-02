@@ -202,8 +202,7 @@ SMADDI.ini file. The .ini file contains:
 
 ### Modify the SMADDI Configuration File
 
-1. Right select **Start** then select **Explore** to open **Windows
-    Explorer**.
+1. Right-click **Start** then select **Explore** to open **Windows Explorer**.
 2. Browse to the **DDI** directory
 3. Right-click the **SMADDI.ini** file
 4. Select **Open With** in the right-click menu

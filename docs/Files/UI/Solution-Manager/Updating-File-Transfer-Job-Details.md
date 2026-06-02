@@ -36,22 +36,20 @@ Changes to job properties in the **Daily Job Definition** take effect immediatel
 
 ## Updating File Transfer Job Details
 
-To perform this procedure:
+To update file transfer job details, complete the following steps:
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
-2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled.
 
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-To update File Transfer Job Details, complete the following steps:
-
-3. Select the desired **date(s)** to display associated schedules
-4. Select one or more **schedule(s)** in the list
-5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
+3. Select the desired date(s) to display associated schedules.
+4. Select one or more schedules in the list.
+5. Select one job in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
    ![Job Processes](../../../Resources/Images/SM/Job-ProcessesFile-Transfer.png "Job Processes")
 
-6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
+6. Select the job record (e.g., **1 job(s)**) in the status bar to display the **Selection** panel.
 
    :::note
    Alternatively, right-click the job in the list to display the **Selection** panel.
@@ -59,14 +57,14 @@ To update File Transfer Job Details, complete the following steps:
 
    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(File-Transfer).png "Job Summary Tab in Operations")
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button displays a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
+7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button displays a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled.
 
    :::note
    The **Lock** button is not visible to users without appropriate permissions.
    :::
 
-9. Expand the **Task Details** panel
+9. Expand the **Task Details** panel.
 
    :::note
    All required fields are marked with a red asterisk.
@@ -119,7 +117,7 @@ Define the destination file information:
   - **Source**: Starts on the source machine
   - **Destination**: Starts on the destination machine
 
-- **Maximum Transfer Rate (kbits/s)**: Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second
+- **Maximum Transfer Rate (kbits/s)**: Valid values are 64, 128, 256, 512, 1024, 2048, and &gt;2048 kbits/second
 
 - **Compression**: Supported types are tar, gzip, and zip:
   - **None**: No compression
@@ -148,30 +146,19 @@ Define the destination file information:
 
 Select **Fails if preferred settings not satisfied** to fail the job when the transfer succeeds but preferred settings for Delete Source File, Compression, or Encryption were not met.
 
-Select the **Save** button.
+10. Select the **Save** button.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Delete Source File | Determines deletion behavior after transfer (Windows agent only): | — | — |
-| Start Transfer On | Determines where the job initiates: | — | Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second.  - **Compression**: Supported types are t |
-| Maximum Transfer Rate (kbits/s) | Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second | — | Valid values are 64, 128, 256, 512, 1024, 2048, and >2048 kbits/second.  - **Compression**: Supported types are t |
-| Compression | Supported types are tar, gzip, and zip: | — | — |
-| Encryption | Supported types are 3DES, AES, and DES: | — | — |
-| TLS Security Override | Determines TLS Security usage for file transfers: | — | — |
+**Result:** The file transfer job properties are saved. Changes take effect immediately for future runs.
 
 ## FAQs
 
 **Q: What does Updating File Transfer Job Details cover?**
 
-This page covers Updating File Transfer Job Details.
+This page describes how to open a file transfer job's daily job definition in Admin mode and update source, destination, options, and failure criteria settings.
 
 ## Glossary
 
 **TLS (Transport Layer Security)**: An encryption protocol used to secure TCP/IP communications between SMANetCom and agents, ensuring that job start and status data is transmitted safely.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
@@ -181,4 +168,4 @@ This page covers Updating File Transfer Job Details.
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

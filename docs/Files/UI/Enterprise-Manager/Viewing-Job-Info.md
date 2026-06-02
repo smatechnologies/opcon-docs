@@ -27,7 +27,7 @@ To view job information from the PERT view, complete the following steps:
 
 1. Under the **Operation** topic, select **PERT**. The **PERT** view opens.
 2. Select the schedule that contains the job you want to review.
-3. Open the context menu on the job box, select **Job**, then select **Job Information**. The **Job Information** dialog opens.
+3. Right-click the job box, select **Job**, then select **Job Information**. The **Job Information** dialog opens.
 4. Review the job details across the available tabs.
 5. Select **OK** to close the dialog.
 

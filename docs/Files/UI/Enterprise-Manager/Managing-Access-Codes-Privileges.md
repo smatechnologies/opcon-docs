@@ -47,7 +47,7 @@ To revoke Privileges from Access Codes, complete the following steps:
 
 **Q: What does managing access codes privileges involve?**
 
-Managing access codes privileges includes Granting Privileges to Access Codes, Revoking Privileges from Access Codes. Access access codes privileges through Enterprise Manager navigation pane.
+Managing access codes privileges includes granting and revoking access code privileges for roles. Access **Access Codes Privileges** through the **Security** topic in the Enterprise Manager navigation pane.
 
 **Q: Who can manage access codes privileges in OpCon?**
 
@@ -65,4 +65,4 @@ Users with the appropriate privileges assigned through their role can manage acc
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

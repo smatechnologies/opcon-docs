@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Vision Frequencies
-description: "Use this procedure to edit Vision Frequencies in Solution Manager."
+description: "Edit an existing Vision Frequency definition from the Vision Frequencies page in Solution Manager."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -17,37 +17,37 @@ doc_type: procedural
 
 # Editing Vision Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Vision Frequency defines a set of dates that controls when a Vision card is displayed. You can update the name, description, date policy, or selected dates for any existing frequency from the **Vision Frequencies** page.
 
-## What Is It?
-
-Use this procedure to edit Vision Frequencies in Solution Manager.
+You must have the **Maintain Vision Frequencies** function privilege to perform this procedure.
 
 To edit a Vision Frequency, complete the following steps:
 
-1. Perform one of the following:
-    a. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) directly on the card on the **Vision Live** page **- or -**
-    b. Select the **Edit** button (![Vision Edit Button](../../../Resources/Images/SM/Vision-Edit-Button.png "Vision Edit Button")) next to **Home** on the **Vision Live** page.
-2. Select the **Card** to edit from the list
-3. Select the frequency to edit
-4. Modify the existing information or settings
-5. Select **OK** in the **Modify Card** window
-6. Select **Save**
-:::
+1. Select the **Frequencies** button on the **Vision Live** page or the **Vision Settings** page. The **Vision Frequencies** page opens and lists all existing frequencies.
+2. Select the frequency you want to edit from the list.
+3. Select the **Edit** button.
 
-## FAQs
+   :::tip
+   You can also double-click a frequency row to open it directly in the editor.
+   :::
 
-**Q: Do edits to vision frequencies take effect immediately?**
+   The **Vision Frequency** dialog opens.
 
-Changes saved to vision frequencies in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+4. Update any of the following fields as needed:
 
-## Glossary
+   | Field | Description |
+   |---|---|
+   | **Name** | Required. A unique name for the frequency (maximum 255 characters). |
+   | **Description** | Optional. A description of the frequency (maximum 4000 characters). |
+   | **Date Policy** | Select **Include Selected Dates** to specify dates the card is displayed, or **Exclude Selected Dates** to specify dates the card is not displayed. |
+   | Calendar | Select or clear individual dates on the calendar. Use the **+** or **−** buttons to add or remove dates in bulk. |
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+5. Select **Save**.
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+**Result:** Solution Manager saves the updated frequency. The **Vision Frequencies** list refreshes to reflect the changes. Any Vision cards that reference this frequency will use the updated settings on their next evaluation.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+## Related Topics
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- [Adding Vision Frequencies](Adding-Vision-Frequencies.md)
+- [Deleting Vision Frequencies](Deleting-Vision-Frequencies.md)
+- [Managing Vision Frequencies](Managing-Vision-Frequencies.md)

@@ -13,17 +13,21 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Operations Overview
+
 **Theme:** Overview | **Who is it for?** Operations staff and administrators who monitor and manage daily job and schedule execution
 
 ## What Is It?
 
 Operations in Solution Manager is where OpCon jobs and schedules are monitored and controlled in real time. From here, operators navigate the daily queue, change job and schedule statuses, manage container jobs, and interact with the Otto AI assistant.
 
-- Monitoring daily schedule and job execution
-- Responding to a schedule that failed to build or complete
-- Changing job or schedule statuses, restarting failed jobs, or holding work
-- Adding or deleting jobs from a running daily schedule
-- Using Otto AI to answer questions or perform operational tasks
+Use Operations when you need to:
+
+- Monitor daily schedule and job execution
+- Respond to a schedule that failed to build or complete
+- Change job or schedule statuses, restart failed jobs, or hold work
+- Add or delete jobs from a running daily schedule
+- Use Otto AI to answer questions or perform operational tasks
 
 ## What is in this section?
 
@@ -51,10 +55,10 @@ Operations in Solution Manager is where OpCon jobs and schedules are monitored a
 
 Monitoring and controlling OpCon jobs and schedules in the daily queue — navigating the Operations interface, changing statuses, managing containers, and using the Otto AI assistant.
 
-**Q: Who manages Solution Manager - Operations in OpCon?**
+**Q: Who manages Solution Manager Operations in OpCon?**
 
-Operations staff and administrators manage Solution Manager - Operations, including settings, user access, and monitoring.
+Operations staff and administrators manage Solution Manager Operations, including settings, user access, and monitoring.
 
-**Q: Where should I start in the Solution Manager - Operations section?**
+**Q: Where should I start in the Solution Manager Operations section?**
 
 Begin with the overview pages in the sidebar. If you are new to this area, review access and role requirements with your OpCon system administrator before making configuration changes.

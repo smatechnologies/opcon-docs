@@ -1,6 +1,6 @@
 ---
 title: Deleting Profiles
-description: "Use this procedure to delete Profiles in Enterprise Manager."
+description: "Use this procedure to permanently delete a connection profile in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,45 +8,26 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Deleting Profiles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Deleting a connection profile permanently removes it from Enterprise Manager. The profile cannot be recovered after deletion. Confirm that the profile is no longer needed before proceeding.
 
-## What Is It?
+## Delete a Connection Profile
 
-Use this procedure to delete Profiles in Enterprise Manager.
+To delete a connection profile, complete the following steps:
 
-To delete a profile, complete the following steps:
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager > Preferences**.
+3. In the **Preferences** tree, select the expand arrow next to **Enterprise Manager**.
+4. Select **Connection Profiles**.
+5. Select the profile you want to delete.
+6. Select **Remove**.
+7. In the confirmation dialog, select **Yes** to confirm the deletion or **No** to cancel.
+8. Select **Apply** to save the change, or select **OK** to save and close the **Preferences** dialog.
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree
-4. Select **Connection Profiles**
-5. Select the **Profile** to delete, then select **Remove**
-6. Select **Yes** to confirm or **No** to cancel
-7. Select **Apply** to save changes
-8. Select **OK** to save and close the **Preferences** dialog
-
-## FAQs
-
-**Q: Can a profiles record be recovered after deletion?**
-
-No. Deleting a profiles record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many profiles records can you delete at once?**
-
-Select the specific profiles record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**Result:** The profile is permanently removed from Enterprise Manager and no longer appears in the **Connection Profiles** list.

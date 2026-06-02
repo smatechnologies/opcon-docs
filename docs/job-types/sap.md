@@ -1,298 +1,135 @@
 ---
 title: SAP R/3 and CRM Job Details
-description: "The information in this section applies to defining an SAP R/3 and CRM job."
+description: "Field reference for defining an SAP R/3 and CRM job in OpCon, including login settings, general data, job step types, and print specifications."
 product_area: Job Types
 audience: Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Reference
   - Automation Engineer
   - Jobs
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: reference
 ---
 
 # SAP R/3 and CRM Job Details
 
-**Theme:** Configure  
-**Who Is It For?** Automation Engineer
-
-## What Is It?
-
-The information in this section applies to defining an SAP R/3 and CRM
-job. For additional information about this platform, refer to [SAP LSAM Configuration and
-Operation](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Configuration-and-Operation.md)
- in the **SAP LSAM** online help for special features to enhance
-the automation capabilities of OpCon on this
-platform.
+This page describes the fields available when defining an SAP R/3 or SAP CRM job in OpCon. For platform-specific features that extend OpCon automation capabilities on SAP, refer to [SAP Agent Configuration and Operation](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Configuration-and-Operation.md) in the **SAP Agent** online help.
 
 ## Login
 
-- **Machine**: Defines the SAP R/3 and CRM Machine name. For
-    information on adding an agent Machine to     OpCon, refer to [Adding
-    Machines](../Files/UI/Enterprise-Manager/Adding-Machines.md)
-     in the **Enterprise Manager** online help.
-- **User ID**: Defines the valid SAP login ID
-- **Password**: Defines the correct SAP password for the User ID
-- **Language**: Defines the two-character language abbreviation (e.g.,
-    enter EN for English), and forces the abbreviation to all capital
-    letters.
+- **Machine**: The SAP R/3 or CRM Agent machine name. For information on adding an Agent machine to OpCon, refer to [Adding Machines](../Files/UI/Enterprise-Manager/Adding-Machines.md) in the **Enterprise Manager** online help.
+- **User ID**: A valid SAP login ID.
+- **Password**: The SAP password for the specified User ID.
+- **Language**: A two-character language abbreviation (for example, `EN` for English). The value is forced to uppercase.
 
 ## General Data
 
-- **Job Name**: Defines the name of the job as defined in the SAP R/3
-    and SAP CRM system.
-- **Job Class**: Defines the classification of SAP R/3 and SAP CRM
-    Background Jobs according to priority.
-  - **Class A**: The highest class for SAP R/3 and CRM jobs. The SAP
-        system always processes Class A jobs before jobs of other
-        classes.
-  - **Class B**: The second highest class for SAP R/3 and SAP CRM
-        jobs. These jobs normally run at regular intervals. The SAP
-        system processes Class B jobs before Class C jobs but after
-        Class A jobs.
-  - **Class C**: The lowest class for SAP R/3 and SAP CRM jobs. Jobs
-        in the default Class normally run at standard processing
-        intervals and after Classes A and B.
-- **Job Number**: Defines the SAP R/3 and SAP CRM Job number (Job ID)
-    as defined in the SAP system.
-- **Start SAP Job**: Configures SAP start criteria for the job
-  - **A.S.A.P.**: Configures the job to start as soon as a
-        background process is available.
-  - **Immediately**: Configures the job to start as soon as it
-        qualifies to run in OpCon. The job
-        does not wait for an available SAP background process before
-        running. If all background processes are in use, an immediately
-        started job fails.
-- **Exec. Target**: Defines the name of the SAP Application Server on
-    which the job processes.
+- **Job Name**: The name of the job as defined in the SAP R/3 or SAP CRM system.
+- **Job Class**: The priority classification of the SAP background job.
+  - **Class A**: Highest priority. SAP always processes Class A jobs before jobs of other classes.
+  - **Class B**: Second-highest priority. These jobs normally run at regular intervals. SAP processes them after Class A jobs but before Class C jobs.
+  - **Class C**: Lowest priority. Jobs in this class run at standard processing intervals after Classes A and B.
+- **Job Number**: The SAP R/3 or SAP CRM Job number (Job ID) as defined in the SAP system.
+- **Start SAP Job**: The SAP start criteria for the job.
+  - **A.S.A.P.**: Starts the job as soon as a background process is available.
+  - **Immediately**: Starts the job as soon as it qualifies to run in OpCon, without waiting for an available SAP background process. If all background processes are in use when the job starts, the job fails.
+- **Exec. Target**: The name of the SAP Application Server on which the job runs.
 
-### Job Setup Details
+## Job Steps
 
-The OpCon graphical interfaces support
-creation and modification of SAP job steps. When the step definition is
-saved, the information is sent back to the SAP server for storage.
+OpCon supports creating and modifying SAP job steps through its graphical interfaces. When a step definition is saved, OpCon sends the information to the SAP server for storage.
 
-Step definition in OpCon requires the
-definition of the program name and the order for the step. Each step
-represents a program which can be any one of three program types:
+Each step defines a program name and an execution order. Each step corresponds to one of three program types:
 
-- [ABAP Program Details](#ABAP)
-- [External Command Details](#External)
-- [External Program Details](#External2)
+- [ABAP Program](#abap-program-details)
+- [External Command](#external-command-details)
+- [External Program](#external-program-details)
 
-#### ABAP Program Details
+### ABAP Program Details
 
-OpCon supports the definition and
-modification of the following information for ABAP Programs:
+The following fields apply to ABAP program steps.
 
-- **ABAP Program**: Defines the ABAP program name
-- **Variant**: Defines the ABAP program Variant
-- **Variant List**: Defines the following variant parameter names and
-    values:
-  - **Parameter**: Defines the technical name associated with a
-        group of values for the Variant.
-  - **Low Value**: Defines a variable value associated with the
-        Parameter name.
-    - If the Kind is set to '**P**' (simple parameter), the Low
-            Value is the variable used to represent that parameters'
-            value.
-    - If the Kind is set to '**S**' (selection), the Low Value,
-            High Value, and Option are used with the Sign to qualify the
-            parameter.
-  - **High Value**: Defines a variable value associated with the
-        Parameter name.
-    - If Kind is set to '**P**', the High Value does not apply
-            and cannot be modified.
-    - If the Kind is set to '**S**', the Low Value, High Value,
-            and Option are used with the Sign to qualify the parameter.
-  - **Kind**: Defines the parameter type. Parameter types are:
-    - **S** - Selection type: For modifying '**S**' type
-            parameters, refer to the 'Modify' information below.
-    - **P** - Simple Parameter type: For information on the Low
-            Value, refer to the [Job Dependency             Types](#Job_Dependency_Types) table.
-  - **Option**: Options are operators that apply to the Low Value
-        and High Value when the Kind is set to '**S**'. Additionally,
-        the *Sign* modifies the manner in which SAP applies the Option
-        to qualify the parameter.
-  - **Sign**: Determines whether to Include or Exclude the value
-        resolved through the Low Value, High Value, and Option.
+- **ABAP Program**: The ABAP program name.
+- **Variant**: The ABAP program variant.
+- **Variant List**: The variant parameter names and values. Each row in the list contains the following fields:
+  - **Parameter**: The technical name associated with a group of values for the variant.
+  - **Low Value**: A variable value associated with the Parameter name.
+    - When **Kind** is `P` (simple parameter), Low Value represents that parameter's value.
+    - When **Kind** is `S` (selection), Low Value is used together with High Value and Option, modified by Sign.
+  - **High Value**: A second variable value associated with the Parameter name.
+    - When **Kind** is `P`, High Value does not apply and cannot be modified.
+    - When **Kind** is `S`, High Value is used together with Low Value and Option, modified by Sign.
+  - **Kind**: The parameter type.
+    - `S` — Selection type
+    - `P` — Simple Parameter type
+  - **Option**: An operator applied to Low Value and High Value when **Kind** is `S`.
+  - **Sign**: Determines whether to include or exclude the value resolved through Low Value, High Value, and Option.
 
-  Low Value   High Value   Option         Sign
-  ----------- ------------ -------------- -----------------------------
-  X                        EQ (=)         I or E (Include or Exclude)
-  X                        GT (\>)        I or E (Include or Exclude)
-  X                        GE (\>=)       I or E (Include or Exclude)
-  X                        LT (<)        I or E (Include or Exclude)
-  X                        LE (<=)       I or E (Include or Exclude)
-  X                        NE (!=)        I or E (Include or Exclude)
-  X           X            BT (Between)   I or E (Include or Exclude)
+The following table shows valid combinations of Low Value, High Value, Option, and Sign for `S`-kind parameters:
 
-- **Language**: Defines the two-character language abbreviation (e.g.,
-    EN for English). The language characters will automatically populate
-    if a Variant was defined.
-- **Print Specifications**: Defines the numerous print parameters and
-    specifications. The following information applies to defining the
-    Print Specifications:
-  - **General Attributes**:
-    - **Output Device**: Defines the name of the output device
-    - **Number of Copies**: Defines how many copies of the
-            document to print.
-    - **Text Only**: Defines the text-only printing option
-    - **Time of Printing**: Defines the time to print a spool
-            request. Valid options include:
-      - Send to SAP spooler for now
-      - Print immediately
-    - **Print Format**: Defines the format of the spool request to
-            be sent. Essentially, it defines the page format (i.e., the
-            maximum number of lines and columns per printed page).
-  - **Spool Request**: Allows users to assign a name and title to
-        the spool request reports that are spooled for later printing.
-    - **Name**: Defines the name of the spool request. It may
-            consist of letters, numerals, special characters, or blanks.
-            The standard name proposed by the system for a spool request
-            comprises the eight-character report name, the separator
-            (\_), and the first three characters of the user name.
-    - **Title**: Defines the description of the spool request. It
-            may consist of letters, digits, special characters, or
-            blanks.
-    - **Authorization**: Defines the authorization for the spool
-            request. Only users with this authorization can display the
-            contents of the spool request.
-  - **Cover Sheets**: Determines whether a cover page containing
-        details about the print request such as recipient, department,
-        and format is to be sent with the spool request.
-    - **SAP Cover Page**: Determines whether a cover page
-            containing details about the print request - such as
-            recipient, department, and format - is to be sent with the
-            spool request. There are three options:
-      - System Administrator: Default setting
-      - Do not print
-      - Print
-    - **Selection cover sheet**: Determines whether the report
-            output should include a cover page with the report
-            selections. Valid options are '*Yes*' and '*No*'.
-    - **Recipient**: Defines the name of the spool request
-            recipient. On the print out, this name appears on the cover
-            sheet. The default value for the recipient name is the
-            current user name.
-    - **Department**: Defines the name of the department sending
-            the spool request. On the printout, this name is displayed
-            on the cover sheet.
-  - **Output Options**:
-    - **Delete Immediately After Printing**: Determines if the
-            spool request will be deleted immediately after it has been
-            sent to the output device. If this option is disabled, the
-            spool request will be deleted only after the spool retention
-            period has expired.
-    - **Spool Retention Period**: Defines how many days a spool
-            request stays in the spool system before it is deleted. The
-            maximum number of days to keep is eight.
-    - **New Spool Request**: Determines if the current spool
-            request will be added to the existing request with the same
-            properties.
-      - To be able to append the current spool request to an
-                existing one, their respective specifications for Name,
-                Output device, Number of copies and Format must match.
-      - Additionally, the existing spool request must be
-                unfinished. This normally occurs when a spool request is
-                released for output. If no spool request is found, a new
-                one is generated.
-    - **Do not Append Print Jobs**: Defines whether to
-            append print jobs.
-    - **Storage Mode**: Defines the type of storage mode to use
-            for the job.
-
-#### External Command Details
-
-OpCon supports the definition and
-modification of the following information for External Commands:
-
-- **Command**: Defines the external command name
-- **Parameters**: Defines the parameter string to pass to the external
-    command when the step runs.
-- **Operating System**: Defines the Operating System on which the
-    background job processes (e.g., AS400, Windows, SunOS).
-- **Target Server**: Defines the name of the application server for
-    running the background job.
-- **Control Flags**: Defines the options to provide additional control
-    for the job:
-  - **Log external output to the job log**: Writes the standard job
-        output to the job log on the SAP system.
-  - **Log external errors in job log**: Writes the standard error
-        job output to the job log on the SAP system.
-  - **Job waiting for external termination**: Informs SAP to wait
-        for the termination of the external command before returning any
-        exit condition.
-  - **Activate trace**: Turns on detailed flow trace for the job
-
-#### External Program Details
-
-OpCon supports the definition and
-modification of the following information for External Programs:
-
-- **Program**: Defines the external program name
-- **Parameters**: Defines the parameter string to pass to the external
-    command when the step runs.
-- **Target Server**: Defines the host name of the SAP system for
-    running the external program.
-- **Control Flags**: Defines various options to provide additional
-    control for the job:
-  - **Log external output to the job log**: Writes the standard job
-        output to the job log on the SAP system.
-  - **Log external errors in job log**: Writes the standard error
-        job output to the job log on the SAP system.
-  - **Job waiting for external termination**: Informs SAP to wait
-        for the termination of the external command before returning any
-        exit condition.
-  - **Activate trace**: Turns on detailed flow trace for the job
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
+| Low Value | High Value | Option | Sign |
 |---|---|---|---|
-| User ID | Defines the valid SAP login ID | — | — |
-| Password | Defines the correct SAP password for the User ID | — | — |
-| Language | Defines the two-character language abbreviation (e.g | — | — |
-| Job Name | Defines the name of the job as defined in the SAP R/3 | — | — |
-| Job Class | Defines the classification of SAP R/3 and SAP CRM | — | — |
-| Job Number | Defines the SAP R/3 and SAP CRM Job number (Job ID) | — | — |
-| Start SAP Job | Configures SAP start criteria for the job | — | — |
-| Exec. Target | Defines the name of the SAP Application Server on which the job processes | — | — |
-| ABAP Program | Defines the ABAP program name | — | — |
-| Variant | Defines the ABAP program Variant | — | — |
-| Variant List | Defines the following variant parameter names and values: | — | — |
-| Print Specifications | Defines the numerous print parameters and specifications. | — | — |
-| Command | Defines the external command name | — | — |
-| Parameters | Defines the parameter string to pass to the external | — | — |
-| Operating System | Defines the Operating System on which the background job processes (e.g., AS400, Windows, SunOS) | — | — |
-| Target Server | Defines the name of the application server for running the background job | — | — |
-| Control Flags | Defines the options to provide additional control | — | — |
-| Program | Defines the external program name | — | — |
-## FAQs
+| X | | `EQ` (=) | `I` or `E` (Include or Exclude) |
+| X | | `GT` (>) | `I` or `E` (Include or Exclude) |
+| X | | `GE` (>=) | `I` or `E` (Include or Exclude) |
+| X | | `LT` (<) | `I` or `E` (Include or Exclude) |
+| X | | `LE` (<=) | `I` or `E` (Include or Exclude) |
+| X | | `NE` (!=) | `I` or `E` (Include or Exclude) |
+| X | X | `BT` (Between) | `I` or `E` (Include or Exclude) |
 
-**Q: What login information is required for an SAP R/3 and CRM job?**
+- **Language**: A two-character language abbreviation (for example, `EN` for English). This field populates automatically when a variant is defined.
+- **Print Specifications**: Print parameters for the ABAP step. The following fields apply:
+  - **General Attributes**:
+    - **Output Device**: The name of the output device.
+    - **Number of Copies**: The number of copies to print.
+    - **Text Only**: Enables text-only printing.
+    - **Time of Printing**: When to print a spool request. Options are:
+      - `Send to SAP spooler for now`
+      - `Print immediately`
+    - **Print Format**: The page format for the spool request, defining the maximum number of lines and columns per printed page.
+  - **Spool Request**: Name and title settings for spool requests.
+    - **Name**: The name of the spool request. May contain letters, numerals, special characters, or spaces. The system-proposed default name uses the eight-character report name, an underscore separator, and the first three characters of the user name.
+    - **Title**: A description of the spool request. May contain letters, digits, special characters, or spaces.
+    - **Authorization**: The authorization required to display the spool request contents. Only users with this authorization can view the spool request.
+  - **Cover Sheets**: Controls whether a cover page is sent with the spool request.
+    - **SAP Cover Page**: Determines whether a cover page containing print request details (recipient, department, format) is sent with the spool request. Options are:
+      - `System Administrator` (default)
+      - `Do not print`
+      - `Print`
+    - **Selection cover sheet**: Determines whether the report output includes a cover page with report selections. Options are `Yes` and `No`.
+    - **Recipient**: The name of the spool request recipient, displayed on the cover sheet. Defaults to the current user name.
+    - **Department**: The name of the department sending the spool request, displayed on the cover sheet.
+  - **Output Options**:
+    - **Delete Immediately After Printing**: When enabled, deletes the spool request immediately after it is sent to the output device. When disabled, the spool request is deleted only after the spool retention period expires.
+    - **Spool Retention Period**: The number of days a spool request remains in the spool system before deletion. The maximum value is eight days.
+    - **New Spool Request**: Controls whether the current spool request is appended to an existing request with the same properties. To append, the Name, Output device, Number of copies, and Format fields must match, and the existing spool request must be unfinished. If no matching spool request is found, a new one is created.
+    - **Do not Append Print Jobs**: Prevents appending print jobs to an existing spool request.
+    - **Storage Mode**: The storage mode type for the job.
 
-An SAP R/3 and CRM job requires a Machine name (the SAP LSAM), a valid SAP User ID and Password, and a two-character Language abbreviation (e.g., EN for English).
+### External Command Details
 
-**Q: What does the "Activate trace" option do for an SAP job?**
+The following fields apply to external command steps.
 
-When enabled, Activate trace turns on detailed flow trace for the SAP job, writing trace output to the job log on the SAP system.
+- **Command**: The external command name.
+- **Parameters**: The parameter string passed to the external command when the step runs.
+- **Operating System**: The operating system on which the background job runs (for example, `AS400`, `Windows`, `SunOS`).
+- **Target Server**: The name of the SAP application server on which the background job runs.
+- **Control Flags**: Additional execution options for the step.
+  - **Log external output to the job log**: Writes standard job output to the SAP job log.
+  - **Log external errors in job log**: Writes standard error output to the SAP job log.
+  - **Job waiting for external termination**: Instructs SAP to wait for the external command to finish before returning an exit condition.
+  - **Activate trace**: Turns on detailed flow trace for the job.
 
-**Q: What is the "Job waiting for external termination" option?**
+### External Program Details
 
-This option instructs SAP to wait for the termination of the external command before returning any exit condition, ensuring the job status in OpCon accurately reflects the SAP job's completion.
+The following fields apply to external program steps.
 
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- **Program**: The external program name.
+- **Parameters**: The parameter string passed to the external program when the step runs.
+- **Target Server**: The host name of the SAP system on which the external program runs.
+- **Control Flags**: Additional execution options for the step.
+  - **Log external output to the job log**: Writes standard job output to the SAP job log.
+  - **Log external errors in job log**: Writes standard error output to the SAP job log.
+  - **Job waiting for external termination**: Instructs SAP to wait for the external command to finish before returning an exit condition.
+  - **Activate trace**: Turns on detailed flow trace for the job.

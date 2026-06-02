@@ -12,6 +12,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Running Work Overview
+
 **Theme:** Overview | **Who is it for?** Administrators who configure how OpCon connects to agents and authenticates job submissions
 
 ## What Is It?
@@ -40,7 +42,7 @@ Before OpCon can submit jobs to an agent, the agent must be connected and config
 
 ## FAQs
 
-**Q: What does the Executing Work section cover?**
+**Q: What does the Running Work section cover?**
 
 Agent management, batch user configuration, and relay communication settings needed to connect OpCon to agents and authenticate job submissions.
 

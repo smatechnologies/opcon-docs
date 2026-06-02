@@ -1,6 +1,6 @@
 ---
 title: Working in User Mode
-description: "Users without the «ocadm» role, or without the «Maintain Vision Actions», «Maintain Vision Frequencies», or «Maintain Vision Workspaces» privileges, see a read-only Vision Live page."
+description: "Users without the ocadm role, or without the Maintain Vision Actions, Maintain Vision Frequencies, or Maintain Vision Workspaces privileges, see a read-only Vision Live page."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,39 +15,24 @@ doc_type: conceptual
 
 # Working in User Mode
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+User Mode is the read-only experience of the Vision Live page shown to users who do not hold the **ocadm** role and do not hold any of the following function privileges:
 
-## What Is It?
+- **Maintain Vision Actions**
+- **Maintain Vision Frequencies**
+- **Maintain Vision Workspaces**
 
-Users without the «ocadm» role, or without the «Maintain Vision Actions», «Maintain Vision Frequencies», or «Maintain Vision Workspaces» privileges, see a read-only Vision Live page. These users must have the «View Vision Workspaces» privilege and can only view cards — they cannot create, edit, or delete them.
+To access Vision Live at all, a user must hold the **View Vision Workspaces** privilege. Without it, the Vision Live page is not visible.
 
-User Mode Vision Page Display
+In User Mode, users can view Vision cards but cannot create, edit, or delete them.
 
 ![User Mode Vision Page Display](../../../Resources/Images/SM/Vision-Live-Page-User.png "User Mode Vision Page Display")
 
-From this page, you can do any of the following:
+## What you can do in User Mode
+
+From the Vision Live page in User Mode, you can:
 
 - [View Cards in Vision Live](Viewing-Cards-in-Vision-Live.md)
 
-## FAQs
+## Related topics
 
-**Q: What can you do in User Mode?**
-
-User Mode provides access to related configuration and management tasks. Use the navigation options to add, edit, or delete records as needed.
-
-**Q: Who can access user mode in OpCon?**
-
-Access is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access to user mode.
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Viewing Cards in Vision Live](Viewing-Cards-in-Vision-Live.md)

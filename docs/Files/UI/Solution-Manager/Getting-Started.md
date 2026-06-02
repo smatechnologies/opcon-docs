@@ -30,6 +30,7 @@ Solution Manager uses global application links. Each page URL contains the curre
 
 Supported browsers:
 
+<!-- GAP: Browser minimum versions could not be confirmed from current source; values below are from existing documentation -->
 - Firefox 77.0 and later
 - Google Chrome 85.0 and later
 - Microsoft Edge (Chromium-based, Blink Engine) 85.0 and later

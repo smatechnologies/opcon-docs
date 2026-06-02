@@ -1,4 +1,4 @@
-﻿---
+---
 title: Frequencies and Associated Jobs Report
 description: "The Frequencies and Associated Jobs Report shows all frequencies with their associated schedules and jobs, sorted by frequency name."
 product_area: Solution Manager
@@ -15,12 +15,7 @@ doc_type: conceptual
 
 # Frequencies and Associated Jobs Report
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Frequencies and Associated Jobs Report** shows all frequencies with their associated schedules and jobs, sorted by frequency name.
+The **Frequencies and Associated Jobs Report** shows all frequencies with their associated schedules and jobs. Results are sorted first by frequency name, then by frequency code, and then by schedule name.
 
 :::note
 Report data is updated nightly at 2:00 AM.
@@ -28,40 +23,26 @@ Report data is updated nightly at 2:00 AM.
 
 ![A screen showing the Frequencies and Associated Jobs Report](../../../../../Resources/Images/SM/Library/Reporting/FrequenciesAndAssociatedJobsReport.png "Frequencies and Associated Jobs Report")
 
-### Filtering & Sorting
+## Filtering and Sorting
 
-This report provides filters for frequency name, schedule name, and job name. Open the filters panel by selecting the menu (three dots) in any column header and choosing **Filter**.
+This report provides filters for frequency name, schedule name, and job name. To open the filters panel, select the menu (three dots) in any column header and choose **Filter**.
 
- ![A screen showing how to open the column menu](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
+![A screen showing how to open the column menu](../../../../../Resources/Images/SM/Library/Reporting/FilterMenu.png "Column Menu")
 
- ![A screen showing the available filters](../../../../../Resources/Images/SM/Library/Reporting/FrequenciesAndAssociatedJobsFilters.png "Column Filters")
+![A screen showing the available filters](../../../../../Resources/Images/SM/Library/Reporting/FrequenciesAndAssociatedJobsFilters.png "Column Filters")
 
-### Exporting to CSV
+## Exporting to CSV
 
-Select the export ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Export") button to download the report as a CSV. Any active filters are applied to the export.
+Select the **Export** button to download the report as a CSV file. Any active filters are applied to the exported data.
 
-## FAQs
+## Columns
 
-**Q: What does Frequencies and Associated Jobs Report do?**
+| Column | Description |
+|---|---|
+| **Frequency Name** | The name of the frequency defined in the master schedule. |
+| **Schedule Name** | The name of the schedule that uses the frequency. |
+| **Job Name** | The name of the job assigned to the frequency within the schedule. |
 
-The **Frequencies and Associated Jobs Report** shows all frequencies with their associated schedules and jobs, sorted by frequency name.
+## Related Topics
 
-**Q: Where can you find Frequencies and Associated Jobs Report in OpCon?**
-
-Access Frequencies and Associated Jobs Report in Solution Manager or Enterprise Manager.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [List Reports](./List-Reports.md)

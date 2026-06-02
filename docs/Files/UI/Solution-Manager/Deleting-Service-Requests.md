@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Service Requests
-description: "Use this procedure to delete Service Requests in Solution Manager."
+description: "How to delete a Service Request in Solution Manager using Admin Mode."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -11,36 +11,32 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
 # Deleting Service Requests
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use this procedure to permanently delete a Service Request in Solution Manager. Deletion cannot be undone, so confirm that the Service Request is no longer needed before proceeding.
 
-## What Is It?
+## Before you begin
 
-Use this procedure to delete Service Requests in Solution Manager.
+Your role must have the **Maintain Service Request** function privilege to delete Service Requests. The **Admin Mode** toolbar button appears only when this privilege is assigned.
 
-To delete a service request, complete the following steps:
+## Delete a Service Request
 
-1. Select the **Delete** icon on the Service Request button
-2. Select **Yes** in the **Delete** window
+To delete a Service Request, complete the following steps:
 
-## FAQs
+1. In Solution Manager, go to **Self Service**.
+2. Select the **Admin Mode** toolbar button to enter Admin Mode. The button displays a lock icon; selecting it unlocks editing controls on each Service Request button.
+3. Locate the Service Request you want to delete.
+4. Select the **Delete** button on that Service Request button.
+5. In the confirmation dialog, select **Yes**.
 
-**Q: Can a service requests record be recovered after deletion?**
+**Result:** The Service Request is permanently removed from OpCon. A success notification confirms the deletion.
 
-No. Deleting a service requests record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+## Notes
 
-**Q: How many service requests records can you delete at once?**
-
-Select the specific service requests record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- You can delete one Service Request at a time. There is no bulk-delete option.
+- Deleting a Service Request does not affect jobs or schedules that were previously triggered by it.
+- To exit Admin Mode without deleting, select the **Admin Mode** toolbar button again to lock editing controls.

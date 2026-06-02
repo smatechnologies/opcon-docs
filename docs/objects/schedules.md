@@ -386,7 +386,8 @@ command lines of the jobs.
     OpCon folder.
   - Default Value: **C:\\Program Files\\OpConxps**
 - **UNIXLSAMPath**: This property defines the path to the
-    LSAM binary directory for UNIX LSAMs.     -   Default Value: **/usr/local/lsam/bin/**
+    Agent binary directory for UNIX Agents.
+  - Default Value: **/usr/local/lsam/bin/**
 - **DB_SERVER_NAME**: This property defines the
     OpCon database server name as used by the
     SMAUtility schedule jobs.

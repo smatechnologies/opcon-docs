@@ -26,11 +26,11 @@ Use this procedure to rename Access Codes in Enterprise Manager.
 
 To rename an access code, complete the following steps:
 
-1. Select **Access Codes** under the **Security** topic. The **Access Codes** screen displays
-2. Select an **access code** in the **Select Access Code** list
-3. Enter the new *access code name* in the **Name** text box
-4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Access Codes** toolbar
-5. Select **Close ☒** (to the right of the **Access Codes** tab) to close the **Access Codes** screen
+1. Select **Access Codes** under the **Security** topic. The **Access Codes** screen displays.
+2. Select an **access code** in the **Select Access Code** list.
+3. Enter the new *access code name* in the **Name** text box.
+4. Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Access Codes** toolbar.
+5. Select **Close ☒** (to the right of the **Access Codes** tab) to close the **Access Codes** screen.
 
 ## Glossary
 

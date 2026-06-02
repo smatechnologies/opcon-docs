@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Scripts
-description: "Use this procedure to delete Scripts in Enterprise Manager."
+description: "How to permanently delete a script from the Script Repository in Enterprise Manager."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,42 +10,22 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Deleting Scripts
+# Deleting Scripts
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Deleting a script permanently removes it from the OpCon database. The deletion cannot be undone. If the script is currently assigned to any jobs — in either the master schedule or daily schedule — Enterprise Manager blocks the deletion and displays a Cross References dialog showing which jobs are using the script.
 
-## What Is It?
-
-Use this procedure to delete Scripts in Enterprise Manager.
+You must have the **Maintain Scripts** function privilege (or **All Administration Functions** or **All User Interface Functions**) to delete scripts.
 
 To delete a script, complete the following steps:
 
-1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
-2.  Select the **script** to delete from the list
-3.  Select the **Remove Script** button on the toolbar
-4.  Select **Yes** to confirm
-5.  Select **Close ☒** to close the **Script Repository** screen
+1. In Enterprise Manager, go to **Scripts** and select **Repository**. The **Script Repository** screen opens.
+2. Select the script you want to delete from the list.
+3. Select **Remove Script** on the toolbar.
+4. Select **Yes** to confirm the deletion.
 
-## FAQs
-
-**Q: Can a scripts record be recovered after deletion?**
-
-No. Deleting a scripts record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many scripts records can you delete at once?**
-
-Select the specific scripts record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts run on target machines via the agent's script runner and are maintained in the Script Repository.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** The script is permanently removed from the Script Repository. If the script is assigned to one or more jobs, the deletion is blocked and a **Cross References** dialog appears listing the jobs that reference the script. Reassign or remove those jobs from the script before retrying.

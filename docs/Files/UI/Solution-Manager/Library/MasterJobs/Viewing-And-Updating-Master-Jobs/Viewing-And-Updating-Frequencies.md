@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating Frequencies
-description: "The Frequencies panel in Master Job Definition displays the frequencies relating to the job."
+description: "Use the Frequencies panel in Master Job Definition to assign, remove, and configure the frequencies that control when a job is eligible to run."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,48 +15,93 @@ doc_type: procedural
 
 # Viewing and Updating Frequencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-The **Frequencies** panel in **Master Job Definition** displays the frequencies relating to the job.
-
-- Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
-- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
-
-## Adding or Updating Frequencies
-
-In **Admin** mode, frequencies can be updated. For conceptual information, refer to [Frrequency](../../../../../../job-components/frequency.md) in the **Concepts** online help.
+The **Frequencies** panel in **Master Job Definition** displays the frequencies associated with a job and lets you assign, remove, and configure per-frequency job-execution settings.
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
+Only users with the appropriate edit privileges can access the **Lock** button and modify job properties. For details, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
 :::
 
-To perform this procedure, complete the following steps:
+For conceptual information about frequencies, refer to [Frequency](../../../../../../job-components/frequency.md) in the **Concepts** online help.
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-2. Expand the **Frequency** panel to expose its content
-3. Select a frequency from the **Active** left side list (Note: More than one frequency can be selected for Multi-Forecasting)
-   ![Frequency Active List](../../../../../../Resources/Images/SM/Library/MasterJobs/active-frequencies.png)
-4. Select one of the available buttons (![Frequency Buttons](../../../../../../Resources/Images/SM/Library/MasterJobs/frequency-buttons.png "Frequency Buttons")), or edit the job-specific settings
-5. To remove a frequency, select it from the **Active** list and select the right arrow button (![Frequency Remove Button](../../../../../../Resources/Images/SM/Library/MasterJobs/remove-frequency.png))
-6. To add a frequency, select it from the **Inactive** right side list and select the left arrow button (![Frequency Assign Button](../../../../../../Resources/Images/SM/Library/MasterJobs/assign-frequency.png))
-   ![Frequency Inactive List](../../../../../../Resources/Images/SM/Library/MasterJobs/inactive-frequencies.png)
-7. Select the **Save** button
+## Assign or remove a frequency
 
-## FAQs
+To assign or remove a frequency from a job, complete the following steps:
 
-**Q: What does Viewing and Updating Frequencies cover?**
+1. Go to the master job definition page. See [Accessing Master Jobs](Accessing-Master-Jobs.md) for instructions.
+2. Select the **Lock** button to switch to **Admin** mode.
+3. Expand the **Frequencies** panel to display its content.
+4. To assign a frequency, select it in the **Inactive** list and select the right-arrow button to move it to the **Active** list.
+5. To remove a frequency, select it in the **Active** list and select the left-arrow button to move it to the **Inactive** list.
 
-This page covers Adding or Updating Frequencies.
+   :::note
+   If the frequency has associated records (documentation, expression dependencies, threshold or resource dependencies, threshold or resource updates, tags, or events), a confirmation dialog appears before removal.
+   :::
 
-## Glossary
+6. Select **Save**.
 
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
+**Result:** The frequency appears in (or is removed from) the **Active** list and the job's schedule eligibility is updated accordingly.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+## Adjust frequency priority
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+The order of frequencies in the **Active** list determines their priority. To change the priority of a frequency, complete the following steps:
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+1. In the **Active** list, select exactly one frequency.
+2. Select the **Higher Priority** arrow to move it up, or the **Lower Priority** arrow to move it down.
+3. Select **Save**.
+
+**Result:** The selected frequency is reordered in the **Active** list. OpCon evaluates frequencies in list order when determining job eligibility.
+
+## Add or edit a frequency definition
+
+To create a new frequency or modify an existing frequency definition, complete the following steps:
+
+1. Go to the master job definition page. See [Accessing Master Jobs](Accessing-Master-Jobs.md) for instructions.
+2. Select the **Lock** button to switch to **Admin** mode.
+3. Expand the **Frequencies** panel.
+4. To create a frequency, select **New Frequency** and complete the **Frequency Configuration** dialog.
+5. To edit a frequency, select one frequency in the **Active** list, then select **Edit** and update the **Frequency Configuration** dialog.
+6. Select **Save** in the dialog to apply the frequency definition changes.
+
+**Result:** The new or updated frequency is available in the **Inactive** list (newly created frequencies) or reflects your changes in the **Active** list (edited frequencies).
+
+## Configure advanced frequency settings
+
+To configure advanced scheduling settings for a frequency (such as interval days, start and end scheduling dates, or month exclusions), complete the following steps:
+
+1. Select one frequency in the **Active** list.
+2. Select **Advanced**.
+3. In the **Advanced Frequency Settings** dialog, update the desired settings.
+4. Select **Save** in the dialog.
+
+**Result:** The advanced settings are saved for that frequency on the job.
+
+## Forecast a frequency
+
+To preview the dates on which a frequency will cause the job to be scheduled, complete the following steps:
+
+1. Select one frequency in the **Active** list.
+2. Select **Forecast**.
+
+The **Forecast** dialog opens and displays the upcoming scheduled dates for that frequency.
+
+## Multi-Forecast multiple frequencies
+
+To compare scheduled dates across multiple frequencies simultaneously, complete the following steps:
+
+1. Select two or more frequencies in the **Active** list.
+2. Select **Multi-Forecast**.
+
+The **Forecast** dialog opens and displays the upcoming scheduled dates for all selected frequencies.
+
+:::note
+Frequencies with a Job Build Status of **Disable Frequency** are excluded from Multi-Forecast results.
+:::
+
+## View cross-references for a frequency
+
+To see all jobs, schedules, and other objects that reference a frequency, complete the following steps:
+
+1. Select one frequency in the **Active** list.
+2. Select **Cross References**.
+
+The cross-reference dialog opens and lists all objects associated with the selected frequency.

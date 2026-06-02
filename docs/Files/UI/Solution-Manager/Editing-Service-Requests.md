@@ -22,23 +22,30 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to edit Service Requests in Solution Manager.
+Use this procedure to edit Service Requests in Solution Manager. A Service Request encapsulates a predefined automation workflow — such as a schedule build, job submission, or event — that operators can trigger using a simple form without direct access to schedule definitions.
+
+## Required Privileges
+
+To edit a service request, your role must have the **Maintain Service Request** function privilege.
+
+## Editing a Service Request
 
 To edit a service request, complete the following steps:
 
-1. Select the **Edit** icon on the Service Request button
-2. Modify the existing information or settings
-3. Select **Save**
+1. Go to **Self Service**.
+2. Select the **Edit** icon on the Service Request button you want to modify.
+3. Modify the existing information or settings as needed.
+4. Select **Save**.
+
+**Result:** The updated service request is saved and available immediately.
 
 ## FAQs
 
 **Q: Do edits to service requests take effect immediately?**
 
-Changes saved to service requests in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+Yes. Changes saved to a service request in Self Service take effect immediately for any subsequent submissions.
 
 ## Glossary
-
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 
 **Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
 

@@ -1,6 +1,6 @@
 ---
 title: Deleting Master Schedules
-description: "Use this procedure to delete Master Schedules in Solution Manager."
+description: "Use this procedure to delete one or more Master Schedules in Solution Manager Studio."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,45 +15,38 @@ doc_type: procedural
 
 # Deleting Master Schedules
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Use Solution Manager **Studio** to permanently delete one or more Master Schedules from OpCon. Deletion cannot be undone, so confirm that a schedule is no longer needed before proceeding.
 
-## What Is It?
+## Required Privileges
 
-Use this procedure to delete Master Schedules in Solution Manager.
-
-## Administration
-
-### Required Privileges
-
-n/a
+No additional privileges beyond standard Schedule access are required to delete a Master Schedule.
 
 ## Deleting a Schedule
 
-To delete one or more Master Schedules, go to **Studio**.
+To delete one or more Master Schedules, complete the following steps:
 
-Select a schedule or schedules and select **Delete**. A confirmation dialog is displayed:
+1. Go to **Studio**.
+2. Select one or more schedules from the list.
+3. Select **Delete**. A confirmation dialog appears.
 
-![Master Schedule Delete](../../../../../Resources/Images/SM/Studio/MasterSchedules/master-schedule-delete.png "Master Schedule Delete")
+   ![Master Schedule Delete](../../../../../Resources/Images/SM/Studio/MasterSchedules/master-schedule-delete.png "Master Schedule Delete")
 
-Select **Yes** to delete the schedule(s) or **No** to cancel.
+4. Select **Yes** to confirm the deletion, or **No** to cancel.
+
+**Result:** The selected schedule or schedules are permanently removed from OpCon.
 
 ## FAQs
 
-**Q: Can a master schedules record be recovered after deletion?**
+**Q: Can a deleted Master Schedule be recovered?**
 
-No. Deleting a master schedules record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting a Master Schedule permanently removes it from OpCon. Verify that the schedule is no longer needed before deleting it.
 
-**Q: How many master schedules records can you delete at once?**
+**Q: How many Master Schedules can you delete at once?**
 
-Select the specific master schedules record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+You can select multiple schedules at the same time and delete them in a single operation. Select each schedule you want to remove, then select **Delete** and confirm when prompted.
 
 ## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

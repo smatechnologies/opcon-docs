@@ -22,7 +22,7 @@ doc_type: procedural
 
 The **Audit Management** view displays the history of user updates to the OpCon database. For conceptual information, refer to [Legacy Audit Management](../../../utilities/Graphical-Utilities/Legacy-Audit-Management.md) in the **Utilities** online help.
 
-The **Audit Management** screen provides list lists for user selection, audit category selection, and date range. Available categories include:
+The **Audit Management** screen provides lists for user selection, audit category selection, and date range. Available categories include:
 
 - **All Categories**: Displays changes across all categories
 - **Access Code**: Displays changes to Access Code definitions
@@ -69,11 +69,12 @@ In the Audit Management screen, type **\*JobName** to find a specific job name i
 | Schedule Maintenance | Displays user-submitted requests for Schedule Build, Schedule Check, and Date level Schedule Deletes | — | — |
 | Threshold/Resource | Displays changes to Threshold and Resource definitions | — | — |
 | User Account | Displays changes to User Account definitions, Last Login, Last Log out, and Enterprise Manager version used | — | — |
+
 ## FAQs
 
 **Q: What can you do with Audit Management?**
 
-Audit Management allows you to manage and configure related settings.
+Audit Management allows you to view, filter, and export audit records for changes made to the OpCon database.
 
 **Q: Who has access to Audit Management?**
 

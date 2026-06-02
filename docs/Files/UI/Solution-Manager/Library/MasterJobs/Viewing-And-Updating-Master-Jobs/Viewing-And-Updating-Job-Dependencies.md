@@ -1,6 +1,6 @@
 ---
 title: Viewing and Updating Job Dependencies
-description: "The Job Dependency panel in Master Job Definition displays job dependencies for the job."
+description: "Use the Job Dependency panel in Master Job Definition to view, add, and update job-to-job dependencies."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,44 +15,57 @@ doc_type: procedural
 
 # Viewing and Updating Job Dependencies
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Job Dependency** panel in **Master Job Definition** displays all job-to-job dependencies defined for the selected job. In **Admin** mode, you can add, edit, and remove dependencies.
 
-## What Is It?
-
-The **Job Dependency** panel in **Master Job Definition** displays job dependencies for the job.
-
-- Select the full-screen icon (![Full Screen Panel Icon](../../../../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) on the far-right of the panel bar to enter or exit **Full Screen** mode
-- A blue circular indicator (![Job Properties Indicator](../../../../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties
-
-## Adding or Updating Job Dependencies
-
-In **Admin** mode, job dependencies can be updated. For conceptual information, refer to [Job Dependencies](../../../../../../job-components/job-dependencies.md) in the **Concepts** online help.
+For conceptual information about dependency types and options, refer to [Job Dependencies](../../../../../../job-components/job-dependencies.md).
 
 :::note
-Only those with the appropriate permissions will have access to the **Lock** button and can update job properties. For details about privileges, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.
-
+A blue circular indicator appears to the right of the panel name showing the count of defined dependencies. Select the **Full Screen** button on the far-right of the panel bar to enter or exit full-screen mode for the panel.
 :::
 
-To perform this procedure, complete the following steps:
+## Required Privileges
 
-1. See [Accessing Master Jobs](Accessing-Master-Jobs.md) to Go to the master job definition page
-2. Expand the **Job Dependency** panel to expose its content
-3. Enter changes to existing **Job Dependencies** and/or add new ones with the green plus icon button
-4. Fill out the job dependency dialog form
-5. Select the **Save** button on the dialog
-6. Select the **Save** button on the Master Job Definition page
+To add or update job dependencies, you must have the edit privileges described in [Accessing Master Job Definition](Accessing-Master-Jobs.md#required-privileges).
 
-## FAQs
+## Add a Job Dependency
 
-**Q: What does Viewing and Updating Job Dependencies cover?**
+To add a job dependency, complete the following steps:
 
-This page covers Adding or Updating Job Dependencies.
+1. Open the **Master Job Definition** page for the job. See [Open a Master Job Definition](Accessing-Master-Jobs.md#open-a-master-job-definition).
+2. Select the **Lock** button to switch to **Admin** mode.
+3. Expand the **Job Dependency** panel.
+4. Select the **+** button to open the job dependency dialog.
+5. In the dialog, complete the following fields:
 
-## Glossary
+   | Field | Description |
+   |---|---|
+   | **Predecessor Schedule Name** | The name of the schedule that contains the predecessor job. |
+   | **Predecessor Job Name** | The name of the job this job depends on. |
+   | **Predecessor Instance Name** | The schedule instance for the predecessor job. Available only for multi-instance schedules. Use `*` to apply to all instances. |
+   | **Dependency Type** | The type of dependency: **After**, **Conflict**, **Exclude**, or **Requires**. |
+   | **Options** | Additional dependency behavior. See [Dependency Options](../../../../../../job-components/job-dependencies.md) for valid options per type. |
+   | **Successor Frequency Name** | Leave blank to apply the dependency for all runs. Select a frequency name to apply the dependency only when the job runs with that frequency. |
+   | **Successor Instance Name** | The schedule instance for the successor job. |
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+6. Select **Save** in the dialog.
+7. Select **Save** on the **Master Job Definition** page.
 
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
+**Result**: The new job dependency is saved and appears in the **Job Dependency** panel.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+## Update a Job Dependency
+
+To update an existing job dependency, complete the following steps:
+
+1. Open the **Master Job Definition** page for the job. See [Open a Master Job Definition](Accessing-Master-Jobs.md#open-a-master-job-definition).
+2. Select the **Lock** button to switch to **Admin** mode.
+3. Expand the **Job Dependency** panel.
+4. Select the dependency you want to edit.
+5. Update the fields as needed in the dialog.
+6. Select **Save** in the dialog.
+7. Select **Save** on the **Master Job Definition** page.
+
+**Result**: The updated dependency is saved.
+
+## Remove a Job Dependency
+
+<!-- GAP: The page does not document a Remove/Delete action for individual job dependencies. Confirm whether a delete button or row action exists in the Job Dependency panel; needs SME or UI verification. -->

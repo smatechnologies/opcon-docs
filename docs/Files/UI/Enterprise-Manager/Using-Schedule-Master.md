@@ -1,80 +1,60 @@
 ---
-lang: en-us
-viewport: width=device-width, initial-scale=1.0
 title: Using Schedule Master
-description: "The Schedule Master editor is used to define and maintain OpCon schedules."
+description: "Reference overview of the Schedule Master editor in Enterprise Manager, including its tabs, toolbar actions, and related procedures."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Procedural
+  - Reference
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: procedural
+doc_type: reference
 ---
 
 # Using Schedule Master
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Schedule Master** editor is where you define and maintain OpCon Schedules. Open it by selecting **Schedule Master** under the **Administration** topic in Enterprise Manager.
 
-## What Is It?
+The editor presents a **Schedule Selection** list at the top. Select a Schedule from the list to load its details into the editor. When no Schedule is selected, the detail tabs and toolbar actions are disabled.
 
-The **Schedule Master** editor is used to define and maintain
-OpCon schedules.
+## Tabs
 
-## Schedule Master Tabs
+The editor organizes Schedule settings across five tabs.
 
-The editor contains a list of schedules and uses tabs to provide the
-schedule details, instance definitions, frequencies, and/or events for
-each schedule.
+| Tab | Purpose |
+|---|---|
+| **Schedule** | Configure start time, workdays per week, holiday calendars, and schedule properties (Multi-Instance, SubSchedule, Conflict with Other Days), plus auto-build and auto-delete settings. |
+| **Instance Definitions** | Define instance types and named instance properties when the Schedule is configured as a multi-instance Schedule. |
+| **Frequency** | Add, edit, or remove Frequency definitions that control when the Schedule is eligible to run. |
+| **Events** | Define Schedule completion events that OpCon triggers when the Schedule finishes. |
+| **Deploy Info** | View deployment information for the Schedule (read-only). Displays `N/A` when no deployment record exists. |
 
-Select any specific tab below to learn more about its functionality in
-**Schedule Master**.
+## Toolbar Actions
 
-![Schedule Master tab bar](../../../Resources/Images/EM/EMschedmastertabbar.png "Schedule Master tab bar")
+The toolbar provides the following actions. All actions are disabled when the editor has unsaved changes or no Schedule is selected.
 
-## Schedule Master Toolbar
+| Action | Description |
+|---|---|
+| **View Audit** | Opens the audit record dialog showing all changes made to the selected Schedule. |
+| **View Schedule History** | Opens the Schedule history dialog showing run history for the selected Schedule. |
+| **Merge Schedule** | Opens the Merge Schedules dialog to merge the selected Schedule into another Schedule. |
+| **Copy** | Opens the Copy Schedule dialog to create a copy of the selected Schedule under a new name. |
+| **Edit Jobs** | Opens the Job Master editor filtered to the jobs on the selected Schedule. |
 
-The **Schedule Master** editor also has a toolbar that allows you to
-perform functions for managing the schedules. Select any specific icon
-on the toolbar below to learn more about its functionality.
+## Field Limits
 
-![Schedule Master toolbar](../../../Resources/Images/EM/EMschedmastoolbar.png "Schedule Master toolbar")
+| Field | Limit |
+|---|---|
+| **Name** | 40 characters maximum |
+| **Documentation** | 4,000 characters maximum |
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Related Procedures
 
 - [Adding Schedules](Adding-Schedules.md)
-- [Configuring Automatic Schedule     Maintenance](Configuring-Automatic-Schedule-Maintenance.md)
+- [Configuring Automatic Schedule Maintenance](Configuring-Automatic-Schedule-Maintenance.md)
 - [Copying Schedules](Copying-Schedules.md)
 - [Deleting Schedules](Deleting-Schedules.md)
 - [Merging Schedules](Merging-Schedules.md)
-- [Viewing Additional Schedule     Information](Viewing-Additional-Schedule-Info.md)
-:::
-
-## FAQs
-
-**Q: What can you do with Schedule Master?**
-
-Schedule Master allows you to schedule master tabs, schedule master toolbar.
-
-**Q: Who has access to Schedule Master?**
-
-Access to Schedule Master is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+- [Viewing Additional Schedule Information](Viewing-Additional-Schedule-Info.md)

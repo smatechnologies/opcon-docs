@@ -1,6 +1,6 @@
 ---
 title: Working in User Mode
-description: "Users not in the «ocadm» role or a role with the «Maintain Service Request» privilege see a Self Service page showing only the Service Request buttons their roles permit."
+description: "Users without the Maintain Service Request privilege see the Self Service page in user mode, which shows only the Service Request buttons their roles are granted access to."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,41 +15,36 @@ doc_type: conceptual
 
 # Working in User Mode
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+User mode is the default view of the **Self Service** page for any user who does not hold the **Maintain Service Request** function privilege. In user mode, the page displays only the Service Request buttons that the user's assigned roles are granted access to. The admin mode toggle does not appear in the toolbar.
 
-## What Is It?
+Users who do hold the **Maintain Service Request** privilege see an admin mode toggle in the toolbar, which lets them switch between managing Service Requests and running them. See [Self Service](../../../Resources/Images/SM/Service-Request-View-User.png) for the admin view.
 
-Users not in the «ocadm» role or a role with the «Maintain Service Request» privilege see a Self Service page showing only the Service Request buttons their roles permit.
+## User Mode Self Service Page
 
-### User Mode Self Service Page Display
+The following screenshot shows the Self Service page as it appears in user mode.
 
 ![User Mode Self Service Screen Display](../../../Resources/Images/SM/Service-Request-View-User.png "User Mode Self Service Screen Display")
 
-### ![Related Topics](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon") Related Topics
+## Access Requirements
+
+To open the **Self Service** page (in any mode), a user must have:
+
+- The **View Service Requests** function privilege assigned through their role.
+
+Users with only **View Service Requests** always see the page in user mode. The admin mode toggle is visible only to users who also hold the **Maintain Service Request** privilege.
+
+## Filtering Service Requests
+
+In user mode, you can narrow the list of visible Service Requests using the filter fields at the top of the page:
+
+| Filter | Description |
+|---|---|
+| **Filter by Name** | Shows only Service Requests whose names match the text you enter. |
+| **Filter by Category** | Shows only Service Requests assigned to the category you enter. |
+| **Filter by Role** | Shows only Service Requests granted to the selected role. |
+
+## Related Topics
 
 - [Run Service Requests](Running-Service-Requests.md)
 - [Filter Service Requests](Filtering-Service-Requests.md)
 - [View Service Request Processes](Viewing-Service-Request-Process-Indicators.md)
-
-## FAQs
-
-**Q: What can you do in User Mode?**
-
-User Mode provides access to related configuration and management tasks. Use the navigation options to add, edit, or delete records as needed.
-
-**Q: Who can access user mode in OpCon?**
-
-Access is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access to user mode.
-
-## Glossary
-
-**Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

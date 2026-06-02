@@ -209,7 +209,7 @@ Parent schedules in the breadcrumbs are selectable (the selected schedule itself
 
 #### Selecting a Subschedule from a Container Job
 
-right-clicking a container job in the canvas opens the right panel with its contained subschedule. Selecting the subschedule redirects to that subschedule's view.
+Right-clicking a container job in the canvas opens the right panel with its contained subschedule. Selecting the subschedule redirects to that subschedule's view.
 
 ![Studio View Container Job Subschedule](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-container-job-subschedule.png "Studio View Container Job Subschedule")
 

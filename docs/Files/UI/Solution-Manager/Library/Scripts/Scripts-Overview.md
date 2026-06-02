@@ -1,6 +1,6 @@
 ---
 title: Scripts Overview
-description: "The Script Repository stores reusable scripts that can be referenced by multiple jobs."
+description: "The Script Repository stores reusable scripts that can be referenced by multiple jobs across OpCon."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -13,43 +13,30 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** Automation engineers who create and maintain reusable scripts in OpCon
+# Scripts Overview
 
-## What Is It?
+The **Script Repository** stores reusable scripts that can be referenced by multiple jobs across OpCon. Scripts are versioned, categorized by type (such as PowerShell, Shell, or Python), and deployed to agents at runtime through a configured script runner. This approach eliminates the need to maintain individual script files on each agent.
 
-The Script Repository stores reusable scripts that can be referenced by multiple jobs. Scripts are versioned, typed (PowerShell, Shell, Python, etc.), and deployed to agents at runtime via a configured script runner. This eliminates the need to maintain script files on individual agents.
+## How the Script Repository works
 
-- Adding a new script to the OpCon repository
-- Creating a new script version while preserving the existing one
-- Configuring a new script type or runner for a new scripting language
-- Checking which jobs reference a script before modifying it
+The Script Repository organizes scripts through four related components:
 
-## What is in this section?
+- **Script** — The named unit stored in the repository. A script contains one or more versions of script content and belongs to a script type.
+- **Script Version** — A numbered revision of a script's content. When you update a script, you create a new version rather than overwriting the existing one. Jobs can reference either a specific version or the latest version.
+- **Script Type** — A category that identifies the scripting language (for example, PowerShell or Shell). Script types determine which runners are available for a script.
+- **Script Runner** — The program on an agent that runs a script of a given type. Each runner is associated with a script type and defines the command used to run scripts of that type.
+
+When a job that references a script runs, OpCon deploys the script content from the repository to the target agent and runs it using the configured runner for that script's type.
+
+## Cross-references and delete restrictions
+
+Scripts, script versions, script types, and script runners all track cross-references to other objects. You cannot delete an item that has active cross-references. Review cross-references before modifying shared scripts to understand which jobs will be affected.
+
+## In this section
 
 | Page | Description |
 |------|-------------|
-| Manage Scripts | View, search, and manage all scripts in the repository |
-| Manage Script Versions | Create and manage versions of existing scripts |
-| Manage Script Types | Define the categories (languages) available for scripts |
-| Manage Script Runners | Configure the runner programs that run each script type on agents |
-
-## Glossary
-
-| Term | Definition |
-| --- | --- |
-| Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
-| Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
-
-## FAQs
-
-**Q: What does the Scripts Overview cover?**
-
-The Script Repository stores reusable scripts that can be referenced by multiple jobs. Scripts are versioned, typed (PowerShell, Shell, Python, etc.), and deployed to agents at runtime via a configured script runner. This eliminates the need to maintain script files on individual agents.
-
-**Q: Who manages Solution Manager - Library in OpCon?**
-
-Automation engineers and administrators manage Solution Manager - Library settings, user access, and related processes.
-
-**Q: Where should I start in the Solution Manager - Library section?**
-
-Begin with the overview pages in the sidebar. Each page covers a distinct feature or workflow. Review access and role requirements with your OpCon system administrator before making configuration changes.
+| [Managing Scripts](Managing-Scripts.md) | View, search, add, edit, delete, deploy, and check cross-references for scripts |
+| [Managing Script Versions](Managing-Script-Versions.md) | Create, copy, delete, deploy, and check cross-references for script versions |
+| [Managing Script Types](Managing-Script-Types.md) | Add, edit, delete, and check cross-references for script types |
+| [Managing Script Runners](Managing-Script-Runners.md) | Add, edit, delete, and check cross-references for script runners |

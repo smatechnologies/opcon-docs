@@ -20,27 +20,31 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Gantt in Enterprise Manager.
+Use this procedure to set preferences for the Gantt chart in Enterprise Manager.
 
 :::note
 Close and re-open the charts for changes to take effect.
 :::
 
+## Setting Gantt Preferences
+
 To set the preferences, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Gantt**. The **Gantt** settings display to the right
-5. *(Optional)* Select **Show job names** to display job names on the chart (selected by default)
-6. *(Optional)* Select **Show progression** to display percent complete for each job based on estimated run time (selected by default)
-7. *(Optional)* Select **Show dependencies** to display job dependency lines on the chart (selected by default)
-8. *(Optional)* Select **Refresh while moving events (slower)** to move dependent job boxes in real time while dragging a target job in Plan Mode (not selected by default). When cleared, dependent job boxes move after the target job is dropped
-9. *(Optional)* In the **Space between jobs (pixels)** field, enter a value to adjust job spacing (default: 5; maximum: 10)
-10. *(Optional)* In the **Themes** list, select a theme for the date/time bar at the top of the Gantt chart (default: *Windows Blue*)
-11. *(Optional)* In the **Type of dependencies** list, select how job dependency lines are displayed
-12. Select **Apply** to save the changes
-13. Select **OK** to save and close the **Preferences** dialog
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager &gt; Preferences**. The **Preferences** dialog displays.
+3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list.
+4. Select **Gantt**. The **Gantt** settings display to the right.
+5. *(Optional)* Select **Show job names** to display job names on the chart (selected by default).
+6. *(Optional)* Select **Show progression** to display percent complete for each job based on estimated run time (selected by default).
+7. *(Optional)* Select **Show dependencies** to display job dependency lines on the chart (selected by default).
+8. *(Optional)* Select **Refresh while moving events (slower)** to move dependent job boxes in real time while dragging a target job in Plan Mode (not selected by default). When cleared, dependent job boxes move after the target job is dropped.
+9. *(Optional)* In the **Space between jobs (pixels)** field, enter a value to adjust job spacing (default: 5; maximum: 10).
+10. *(Optional)* In the **Themes** list, select a theme for the date/time bar at the top of the Gantt chart (default: *Windows Blue*).
+11. *(Optional)* In the **Type of dependencies** list, select how job dependency lines are displayed.
+12. Select **Apply** to save the changes.
+13. Select **OK** to save and close the **Preferences** dialog.
+
+**Result:** The Gantt preferences are saved and take effect after the Gantt chart is closed and reopened.
 
 ## Glossary
 

@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Forcing Password Changes at Next Logon
-description: "Use this procedure to force Password Changes at Next Logon in Enterprise Manager."
+description: "Use this procedure to require a user to change their password the next time they log in to OpCon."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,31 +10,21 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Forcing Password Changes at Next Logon
+# Forcing Password Changes at Next Logon
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+When you enable the **Force user to change password at next logon** option on a user account, OpCon requires that user to set a new password the next time they log in. Use this procedure to enable that option in Enterprise Manager.
 
-## What Is It?
+To force a password change at next logon, complete the following steps:
 
-Use this procedure to force Password Changes at Next Logon in Enterprise Manager.
+1. In Enterprise Manager, go to **Security** and select **User Accounts**. The **User Accounts** screen opens.
+2. Select the user account from the **Select User** list, or use the **Find** (Ctrl+F) function to locate the account.
+3. In the **Options** section, select **Force user to change password at next logon**.
+4. Select the **Save** button on the **User Accounts** toolbar.
+5. Select **Close** to close the **User Accounts** screen.
 
-To force a password change, complete the following steps:
-
-1.  Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
-2.  Select a **role** in the **Select Role** list, or use the **Find** (Ctrl+F) button
-3.  Select **Force user to change password at next logon**
-4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **User Accounts** toolbar
-5.  Select **Close ☒** to close the **User Accounts** screen
-:::
-
-## Glossary
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
+**Result:** The next time the user logs in to OpCon, they are prompted to set a new password before they can continue.

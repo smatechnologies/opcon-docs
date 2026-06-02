@@ -20,19 +20,23 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to run Reports in Enterprise Manager.
+Use this procedure to run reports in Enterprise Manager.
+
+## Running a Report
 
 To run a report, complete the following steps:
 
-1. Select **Reports** under the **Information** topic. The **Reports** screen displays
-2. Select the preferred **report** in the **Reports** list
-3. If required: Select the **schedule** in the **Schedule** list box
-4. If required: Select the **date** in the **Schedule Date** list box
-5. Select **OK**
-6. View the **Report**
-7. *(Optional)* Use the **left** and **right** arrows to navigate pages, or type a *page number* in the **Go to Page:** text box and select the **right** arrow to jump to that page
-8. *(Optional)* Select **Refresh** to refresh the data
-9. *(Optional)* Select **Run report** to run another report
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays.
+2. Select the preferred **report** in the **Reports** list.
+3. If required: Select the **schedule** in the **Schedule** list box.
+4. If required: Select the **date** in the **Schedule Date** list box.
+5. Select **OK**.
+6. View the **Report**.
+7. *(Optional)* Use the **left** and **right** arrows to navigate pages, or type a *page number* in the **Go to Page:** text box and select the **right** arrow to jump to that page.
+8. *(Optional)* Select **Refresh** to refresh the data.
+9. *(Optional)* Select **Run report** to run another report.
+
+**Result:** The selected report displays with current data.
 
 ## Glossary
 

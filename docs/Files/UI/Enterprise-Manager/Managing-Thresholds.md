@@ -1,6 +1,6 @@
 ---
 title: Managing Thresholds
-description: "The Thresholds editor defines and maintains OpCon Thresholds, displaying a list of thresholds and their corresponding values."
+description: "The Thresholds editor in Enterprise Manager defines and maintains OpCon Thresholds, displaying a list of thresholds and their corresponding values."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,48 +15,46 @@ doc_type: procedural
 
 # Managing Thresholds
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Thresholds** editor in Enterprise Manager defines and maintains OpCon Thresholds. It displays a list of defined thresholds and their corresponding values. For conceptual background, refer to [Thresholds](../../../objects/thresholds.md).
 
-## What Is It?
+## Opening the Thresholds Editor
 
-The **Thresholds** editor defines and maintains OpCon Thresholds, displaying a list of thresholds and their corresponding values. For additional information, refer to [Thresholds](../../../objects/thresholds.md) in the **Concepts** online help.
+To open the Thresholds editor, complete the following steps:
+
+1. In the Enterprise Manager navigation pane, select **Administration**.
+2. Select **Thresholds**.
+
+**Result:** The **Thresholds** editor opens, displaying the list of existing thresholds.
 
 ## Thresholds Toolbar
 
-The toolbar allows you to perform threshold management functions. Select any icon to learn more about its functionality.
+The **Thresholds** toolbar provides the following actions:
+
+| Button | Description |
+|---|---|
+| **Add** | Creates a new threshold record. |
+| **Save** | Saves changes to the selected threshold. |
+| **Copy** | Copies the selected threshold to a new threshold with a different name. |
+| **View Audit** | Opens the audit history for the selected threshold. |
+| **Cross References** | Displays all jobs in the Master and Daily tables that reference the selected threshold as a dependency or update. |
+| **Delete** | Deletes the selected threshold. A threshold cannot be deleted while cross-references exist. |
 
 ![Thresholds toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Thresholds toolbar")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Threshold Fields
+
+Each threshold record contains the following fields:
+
+| Field | Required | Description |
+|---|---|---|
+| **Name** | Yes | A unique alphanumeric name for the threshold. Maximum 20 characters. |
+| **Threshold Value** | Yes | A numeric value for the threshold. Minimum 0; maximum 2,147,483,647. Defaults to 0. |
+| **Documentation** | No | Free-text notes describing the threshold's purpose. Maximum 4,000 characters. |
+
+## Related Topics
 
 - [Adding Thresholds](Adding-Thresholds.md)
 - [Editing Thresholds](Editing-Thresholds.md)
 - [Viewing Additional Threshold Information](Viewing-Additional-Threshold-Info.md)
 - [Copying Thresholds](Copying-Thresholds.md)
 - [Deleting Thresholds](Deleting-Thresholds.md)
-
-## FAQs
-
-**Q: What does managing thresholds involve?**
-
-Managing thresholds includes Thresholds Toolbar. Access thresholds through Enterprise Manager navigation pane.
-
-**Q: Who can manage thresholds in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage thresholds. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Threshold**: A numeric variable stored in the OpCon database used to control job execution. Jobs can be made dependent on threshold values, and OpCon events can update threshold values at runtime.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.

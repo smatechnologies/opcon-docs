@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Agents Section Overview
+
 **Theme:** Overview | **Who is it for?** Administrators who manage agent connections and targeting
 
 ## What Is It?
@@ -37,7 +39,7 @@ Agents (referred to as machines in OpCon) are the execution targets for jobs. Ea
 | Term | Definition |
 | --- | --- |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| LSAM (Local Schedule Activity Monitor) | An agent that resides on the platform where jobs run. LSAMs communicate with SMANetCom for job processing and to send OpCon events. |
+| Agent | An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon. |
 | Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Machine Group | A pool of machines (agents) that allows jobs to target any available machine in the group, enabling load balancing and failover. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |

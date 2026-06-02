@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Viewing Additional Access Code Information
-description: "To view Additional Access Code Information in Enterprise Manager, complete the following steps: 1."
+description: Use the Cross References and View Audit toolbar buttons in the Enterprise Manager Access Codes editor to see which jobs use an access code and to review its change history.
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,31 +10,31 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Viewing Additional Access Code Information
+# Viewing Additional Access Code Information
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Access Codes** editor in Enterprise Manager provides two toolbar actions that let you inspect how an access code is used and review its change history: **Cross References** and **View Audit**.
 
-## What Is It?
+## View jobs that use an access code
 
-To view Additional Access Code Information in Enterprise Manager, complete the following steps:
+To view the jobs assigned to an access code, complete the following steps:
 
-1.  Select **Access Codes** under the **Security** topic
-2.  Select the **access code** in the **Select Access Code** list
-3.  Select the ![Cross References icon](../../../Resources/Images/EM/EMcrossref.png "Cross References icon") **Cross Reference** button on the toolbar to view a list of jobs, then select **OK**
-4.  Select the ![View Audit icon](../../../Resources/Images/EM/EMviewaudit.png "View Audit icon") **View Audit** button on the toolbar to view audit records for changes to the access code, then select **Close**
+1. In the Enterprise Manager navigation pane, select **Access Codes** under the **Security** topic.
+2. In the **Select Access Code** list, select the access code you want to inspect.
+3. Select the **Cross References** button on the toolbar.
 
-## Glossary
+**Result:** A dialog lists the Master Jobs and Daily Jobs that reference the selected access code. Select **OK** to close the dialog.
 
-**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
+## View the audit history for an access code
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+To view the audit records for changes made to an access code, complete the following steps:
 
-**Audit Record**: An automatically created log entry recording every change made to an OpCon object. Each record captures the timestamp, the user or application that made the change, the item affected, and the original and final values.
+1. In the Enterprise Manager navigation pane, select **Access Codes** under the **Security** topic.
+2. In the **Select Access Code** list, select the access code you want to inspect.
+3. Select the **View Audit** button on the toolbar.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The audit dialog opens and displays a record of every change made to the access code. Select **Close** to dismiss the dialog.

@@ -1,6 +1,6 @@
 ---
 title: SMAHoliday
-description: "Learn how to smaholiday in OpCon."
+description: "Use SMAHoliday.exe to populate an OpCon calendar with holiday dates by running a configurable rule set from an INI file."
 product_area: Utilities
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,203 +15,176 @@ doc_type: procedural
 
 # SMAHoliday
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
 :::note
-The information presented in this topic pertains largely to running the SMAHoliday utility as a Windows job. For instructions on running this utility in the OpCon Docker container, see [Running on OpCon in Docker](#Running).
+This topic describes running SMAHoliday as a Windows job. For instructions on running this utility in the OpCon Docker container, see [Running on OpCon in Docker](#running-on-opcon-in-docker).
 :::
 
-SMAHoliday (SMAHoliday.exe) is a utility that updates the OpCon database
-with Calendar dates that represent holidays. SMAHoliday.exe is installed
-to the <Target Directory\>\\OpConxps\\ MSLSAM\\ directory with the
-Microsoft agent package. The SMAHoliday utility can be run as a job if
-desired.
+SMAHoliday (`SMAHoliday.exe`) is a utility that updates the OpCon database with calendar dates that represent holidays. The utility is installed to `<Target Directory>\OpConxps\MSLSAM\` with the Microsoft Agent package. You can run SMAHoliday as a scheduled OpCon job so that dependent jobs automatically receive updated calendar dates.
 
 ## Backwards Compatibility
 
-This utility is compatible with Holiday.exe. Customers who wish to
-convert should contact Continuous.
+SMAHoliday is compatible with the legacy `Holiday.exe` utility. Customers who want to convert should contact Continuous.
 
 ### Legacy Parameters
 
-|Parameter|Description|
-|--- |--- |
-|/C:|This parameter specifies the CalendarName that will be updated with holidays.|
-|/Y:|This parameter specifies the year where the holiday dates must be processed and added to the database.|
-|/S:|This parameter works with the configuration file and will only read and process rules that match the tag entered in the command-line parameter.|
+The following forward-slash parameters are accepted for backwards compatibility with `Holiday.exe`:
+
+| Parameter | Description |
+|---|---|
+| `/C:` | Specifies the calendar name to update with holidays. |
+| `/Y:` | Specifies the year for which holiday dates are processed and added to the database. |
+| `/S:` | Works with the configuration file and processes only rules that match the specified tag. |
+
 ### Forward Slash Arguments
 
-The SMAHoliday utility accepts arguments using the forward slash to
-provide backwards compatibility for users already running the old
-version called Holiday.exe. This program can be found under the
-Utilities folder and the new utility can be found under the MSLSAM
-folder.
+SMAHoliday accepts forward-slash arguments to support users already running `Holiday.exe`. The old `Holiday.exe` is found under the Utilities folder; `SMAHoliday.exe` is under the MSLSAM folder.
 
-The following is an example of the old command-line syntax:
+The following is an example of the legacy command-line syntax:
 
-SMAHoliday.exe /C:"MasterHoliday"/Y:2017 /S:FR
+```
+SMAHoliday.exe /C:"MasterHoliday" /Y:2017 /S:FR
+```
 
 :::note
-To get the full capability of this utility, Continuous recommends using the dash (-) argument.
+For full utility capability, Continuous recommends using the dash (`-`) argument syntax.
 :::
 
 ## Requirements
 
-The SMAHoliday utility requires the following:
+SMAHoliday requires the following:
 
-- Microsoft agent
+- Microsoft Agent
 - Microsoft .NET Framework 4.5
-- SMAODBCConfig.dat file
+- `SMAODBCConfig.dat` file
 
 ## Configuration
 
-To configure SMAHoliday, update the SMAHoliday configuration file
-(SMAHoliday.ini) after installation.
+To configure SMAHoliday, update the configuration file (`SMAHoliday.ini`) after installation.
 
 ### Configuration File Settings
 
-The SMAHoliday configuration file (SMAHoliday.ini) is used to configure
-the utility.
+The `SMAHoliday.ini` file controls the utility's behavior.
 
 #### General Settings
 
-|General Settings|Definition|
-|--- |--- |
-|CalendarName|Defines the name of the calendar being configured.|
-|StartDate|Defines the date the utility begins calculating holidays. Use the following format:MM/DD/YYYY (for US)|
-|DebugMode|Indicates whether the program provides messages that can help debug the program. Valid values: ON, OFF|
+| Setting | Description |
+|---|---|
+| `CalendarName` | Defines the name of the calendar to update. Default: `Master Holiday`. |
+| `StartDate` | Defines the date from which the utility begins calculating holidays. Use MM/DD/YYYY format. |
+| `DebugMode` | Controls whether the program outputs diagnostic messages. Valid values: `ON`, `OFF`. Default: `OFF`. |
 
 #### FixedHolidays Settings
 
-FixedHolidays defines rules that describe one or more dates to be
-calculated and entered in a calendar. Each FixedHoliday contains a rule,
-tag, and description. There are two types of FixedRules: Customized and
-Non-customized.
+The `[FixedHolidays]` section defines rules that describe one or more dates to be calculated and added to a calendar. Each entry contains a rule, an optional tag, and an optional description. There are two types of fixed rules: Customized and Non-customized.
 
-|||
-|--- |--- |
-|Rule|Defines the FixedHoliday expression.|
-|Tag|Defines the tag for the rule. This tag will only work with the tag entered in the command line.|
-|Description|Defines the description of the rule, e.g., a description of the holiday.|
+| Field | Description |
+|---|---|
+| Rule | Defines the FixedHoliday expression. |
+| Tag | Optional. Limits processing to rules matching the tag specified on the command line. |
+| Description | Optional. Describes the holiday (for example, `Labor Day`). |
 
 :::tip Example
+```
 09/mo-1=usa ; Labor Day
+```
 
-- 09/mo-1 defines the Rule
-- usa defines the Tag
-- Labor Day defines the Description
-
+- `09/mo-1` is the Rule (first Monday of September)
+- `usa` is the Tag
+- `Labor Day` is the Description
 :::
 
-|||
-|--- |--- |
-|Easter Sunday|The Easter Sunday date is currently calculated by an astrological algorithm for all years until 4099 A.D (refer to www.assa.org.au/edm for more information). The additional Customized settings are calculated based on the same algorithm.|
-|Easter Monday (Le lundi de Pâques)|Calculated based on the Paschal-algorithm Easter date plus one day.|
-|Good Friday (Vendredi saint)|Calculated based on the Paschal-algorithm Easter date minus two days.|
-|Ascension Day (L'Ascension)|Calculated based on the Paschal-algorithm Easter date plus thirty-nine days.|
-|Whit Sunday (Pentecôte)|Calculated based on the Paschal-algorithm Easter date plus forty-nine days.|
-|Whit Monday (Le lundi de Pentecôte)|Calculated based on the Paschal-algorithm Easter date plus fifty days.|
+**Customized fixed rules** use underscore-prefixed keywords for algorithmically calculated dates:
 
-|||
-|--- |--- |
-|Short Date composed by month and day|The month is written as a number and the day is written as a number. use Month/Day format to specify individual dates as a holiday (e.g., 01/01 is New Years' Day, 02/29 is the leap year date). Note: To specify February 29th as a holiday, add the date to the configuration file. A year does not need to be specified; the utility only processes February 29th as a holiday during leap years.|
-|d = day of week|The day of week abbreviation must be followed by a number between 1 and 7 (e.g., d1).|
-|w = week of month|The week can be followed by a number between 1 and 4 (e.g., w3). You must enter the letter "l" (lowercase L) for the last week of the month (e.g., wl).|
-|m = month|The month must be followed by a number between 1 and 12 (e.g. m12).|
-|DN = day number|The day number abbreviation must be followed by a number no greater than the maximum number of days in a year (e.g., 365 or 366).|
-|Month number/Short day name-Week number|The month is written as a number, the day is written using a two-letter abbreviation, and the week is written as a number (e.g., 11/fr-4 ; Black Friday). Valid values for week number are 1 to 3; you must enter the letter "l" (lowercase L) for the last week of the month (e.g., wl).|
+| Keyword | Calculation |
+|---|---|
+| `Easter_Sun` | Easter Sunday, calculated using the Paschal algorithm (valid through year 4099 A.D.). |
+| `Easter_Monday` | Paschal algorithm Easter date plus one day. |
+| `Easter_Friday` | Paschal algorithm Easter date minus two days. |
+| `Ass_Thu` | Paschal algorithm Easter date plus 39 days (Ascension Day). |
+| `Whit_Sunday` | Paschal algorithm Easter date plus 49 days (Pentecôte). |
+| `Whit_Monday` | Paschal algorithm Easter date plus 50 days (Le lundi de Pentecôte). |
+
+**Non-customized fixed rules** use the following expression syntax:
+
+| Expression | Description |
+|---|---|
+| `MM/DD` | A specific month and day (for example, `01/01` for New Year's Day). To specify February 29, add `02/29`; the utility processes this date only in leap years. |
+| `d` + 1–7 | Day of week (for example, `d1` = Sunday, `d7` = Saturday). |
+| `w` + 1–4 or `wl` | Week of month (for example, `w3` = third week; `wl` = last week, using lowercase L). |
+| `m` + 1–12 | Month (for example, `m12` = December). |
+| `DN` + number | Day number of the year, not to exceed 365 or 366 (for example, `DN365`). |
+| `MM/dd-N` | Month number, two-letter day abbreviation, and week number (for example, `11/fr-4` for Black Friday). Valid week numbers: 1–3 or `l` (lowercase L) for last week. |
 
 :::tip Example
-The following examples describe FixedHoliday scenarios:
+Common FixedHoliday rules:
 
-- WN20 = Week 20 is a holiday week
-- d1 = All Sundays; 6 day workweek
-- d7 = All Saturdays; 5 day workweek
-- d1/w1 = First day of first week for all months
-- wl/m1 = Last week of first month
-- d2/w3/m1 or 01/mo-3=usa ; Martin Luther King, Jr. Day
-- d2/w3/m1 or 02/mo-3=usa ; Presidents Day
-- d2/wl/m5 or 05/mo-l=usa ; Memorial Day
-- d2/w1/m9 or 09/mo-1=usa ; Labor Day
-- d2/w2/m10 or 10/mo-2=usa ; Columbus Day
-- d5/w4/m11 or 11/th-4=usa ; Thanksgiving Day
-- Easter_Sun = Easter Sunday
-- Easter_Monday = Easter Monday
-- Easter_Friday = Easter Friday
-- Whit_Sunday = Pentecoste
-- Whit_Monday = Lundi Pentecoste
-- Ass_Thu = Jeudi Assencion
-
+- `WN20` — Week 20 is a holiday week
+- `d1` — All Sundays (six-day workweek)
+- `d7` — All Saturdays (five-day workweek)
+- `d1/w1` — First day of the first week for all months
+- `wl/m1` — Last week of January
+- `d2/w3/m1` or `01/mo-3=usa ; Martin Luther King, Jr. Day`
+- `d2/w3/m1` or `02/mo-3=usa ; Presidents Day`
+- `d2/wl/m5` or `05/mo-l=usa ; Memorial Day`
+- `d2/w1/m9` or `09/mo-1=usa ; Labor Day`
+- `d2/w2/m10` or `10/mo-2=usa ; Columbus Day`
+- `d5/w4/m11` or `11/th-4=usa ; Thanksgiving Day`
+- `Easter_Sun=usa ; Easter Sunday`
+- `Easter_Monday=usa ; Easter Monday`
+- `Easter_Friday=usa ; Easter Friday`
+- `Whit_Sunday=fr ; Pentecôte`
+- `Whit_Monday=fr ; Lundi Pentecôte`
+- `Ass_Thu=fr ; Jeudi Ascension`
 :::
 
 #### VariableHoliday Settings
 
-VariableHoliday defines a type of FixedHoliday composed of a date,
-condition, and description that can change the output date based on an
-If-Then condition. A variable rule is a fixed rule with additional
-parameters that allow conditional expressions to manipulate the output
-date result of the rule.
+A `[VariableHoliday#N]` section defines a date with an If-Then condition that shifts the output date when a fixed date falls on a weekend. Each section is numbered sequentially starting from `#1`.
 
-|||
-|--- |--- |
-|Date|Defines the VariableHoliday expression.|
-|Condition|The If-Then condition must be configured using the following format: `if outputdate == d1 then +1 || if outputdate == d7 then -1`. Conditions can be simple or complex. Complex conditions can use `AND` or `OR` using the `&&` or the `||` respective. Note: More than one condition can be defined.|
-|Tag|Defines the tag for the date. This tag will only work with the tag defined in the command line.|
-|Inclusive Date|Valid values: No (Default), Yes - Use yes to yield two dates: the Date input in the configuration file and the Output date from the conditional expression if equal to True.|
+| Field | Description |
+|---|---|
+| `date` | Defines the base date expression for the variable holiday. |
+| `condition` | Defines the If-Then condition. Format: `if outputdate == d1 then +1 \|\| if outputdate == d7 then -1`. Multiple conditions are allowed; combine with `&&` (AND) or `\|\|` (OR). |
+| `tag` | Optional. Matches the tag from the command line. Comma-separated values are supported (for example, `Colombia,USA`). |
+| `InclusiveDate` | Valid values: `No` (default), `Yes`. When set to `Yes`, the utility yields two dates — the original date and the shifted date — when the condition is true. |
 
-:::tip Example
-The following example describes a VariableHoliday scenario where InclusiveDate=No:
+:::tip Example — InclusiveDate=No
+```ini
+date=01/01
+condition=if outputdate == d1 then +1 || if outputdate == d7 then -1
+tag=New Years Day
+InclusiveDate=No
+```
 
-- date=01/01
-- condition=if outputdate == d1 then +1 || if outputdate == d7 then -1
-- tag=New Years Day
-- InclusiveDate=No
-
-If 01/01 falls on a d1=Sunday, then the output date will move one day forwards (the holiday will be Monday=01/02) This will yield one date as a result.
-**\- or \-**
-If 01/01 falls on a d7=Saturday, then the output date will move one day backwards (the holiday will be Friday=12/31) This will yield one date as a result.
+- If 01/01 falls on Sunday (d1), the output date moves forward one day (Monday, 01/02). Result: one date.
+- If 01/01 falls on Saturday (d7), the output date moves back one day (Friday, 12/31). Result: one date.
 :::
 
-:::tip Example
-The following example describes a VariableHoliday scenario where InclusiveDate=Yes:
+:::tip Example — InclusiveDate=Yes
+```ini
+date=01/01
+condition=if outputdate == d1 then +1 || if outputdate == d7 then -1
+tag=New Years Day
+InclusiveDate=Yes
+```
 
-- date=01/01
-- condition=if outputdate == d1 then +1 || if outputdate == d7 then -1
-- tag=New Years Day
-- InclusiveDate=Yes
-
-If 01/01 falls on a d1=Sunday, then the output date will move one day forwards (the holiday will be Monday=01/02 and will also include Sunday=01/01). This will yield two dates as a result.
-**\- or \-**
-If 01/01 falls on a d7=Saturday, then the output date will move one day backwards (the holiday will be Friday=12/31 and it will also include Saturday=01/01). This will yield two dates as a result.
+- If 01/01 falls on Sunday (d1), the output date moves forward one day (Monday, 01/02) and also includes Sunday (01/01). Result: two dates.
+- If 01/01 falls on Saturday (d7), the output date moves back one day (Friday, 12/31) and also includes Saturday (01/01). Result: two dates.
 :::
 
 #### RangeHoliday Settings
 
-RangeHoliday defines a range of dates that need to be marked in a
-calendar. A RangeHoliday is composed of two fixed rules (Customized or
-Non-customized) separated by an equal sign (=). Range holidays have the
-following restrictions: they must be included in the Range section and
-they cannot be a Tag.
+A `[RangeHolidays]` section defines a continuous range of dates to mark in a calendar. Each entry consists of two fixed rules separated by an equal sign (`=`). Range rules cannot include a tag and must be placed in the `[RangeHolidays]` or `[Range]` section.
 
 :::tip Example
+```
 02/15=02/20
+```
 
-This rule will result in the following dates:
-
-02/15
-02/16
-02/17
-02/18
-02/19
-02/20
+This rule adds the following dates: 02/15, 02/16, 02/17, 02/18, 02/19, 02/20.
 :::
 
 :::tip Example
-The following is an example of different Range rules that can be configured in a calendar:
-
 ```ini
 [Range]
 01/mo-3=02/mo-1
@@ -219,47 +192,46 @@ The following is an example of different Range rules that can be configured in a
 01/01=-4
 Easter_Fri=4
 ```
-
 :::
 
-## Command-line Syntax
-
-This utility supports the following types of arguments: dash and forward
-slash.
+## Command-Line Syntax
 
 :::note
-SMAHoliday is standardized to use (US) English localization, exclusively. The utility only processes US date formats.
+SMAHoliday is standardized to US English localization. The utility processes only US date formats (MM/DD/YYYY).
 :::
 
-To override a setting in the SMAHoliday.ini file without having to
-modify the configuration file, you can run SMAHoliday as a command-line
-job. Use the following command-line syntax for the SMAHoliday.exe
-program:
+To override a setting in `SMAHoliday.ini` without modifying the file, run SMAHoliday as a command-line job. Use the following syntax:
 
-`SMAHoliday.exe -c MyCalendarName -t USA -i <INIPathAndFileName\> -d 01/01/2017`
+```
+SMAHoliday.exe -c MyCalendarName -t USA -i <INIPathAndFileName> -d 01/01/2017
+```
 
-### Optional Parameters
+### Parameters
 
-|Parameter|Description|
-|--- |--- |
-|-c|This parameter specifies the CalendarName that will be updated with holidays.|
-|-d|This parameter specifies the StartDate for this job. Use this parameter to override the StartDate in the main ini file.|
-|-t|This parameter specifies the tag SMAHoliday.exe will include when this job runs. Only holidays with the tag specified will be processed.|
-|-i|This parameter specifies the configuration path and ini file name to be read for this job. Use this parameter to read ini files saved in a different location or by a different name than the main ini file.|
-|-o|This parameter is for conversion purposes only. This parameter reads the path to the configuration file from the old Holiday.exe and generates a new configuration file to be processed by SMAHoliday.exe.|
+| Parameter | Description |
+|---|---|
+| `-c` | Specifies the calendar name to update with holidays. |
+| `-d` | Specifies the start date for this run. Overrides `StartDate` in `SMAHoliday.ini`. |
+| `-t` | Specifies the tag to match when processing rules. Only rules with this tag are processed. |
+| `-i` | Specifies the path and file name of the configuration file. Use this parameter to read an INI file in a non-default location or with a non-default name. |
+| `-o` | Converts a legacy `Holiday.exe` configuration file to the format used by SMAHoliday. Provide the path to the old configuration file. |
+| `-b` | Specifies the path to the `SMAODBCConnection.DAT` file. Use when the connection file is in a non-default location. |
+| `-p` | Specifies the country-language culture code (for example, `en-US`, `fr-FR`). |
+| `-g` | Enables debug mode for this run (flag; no value required). |
+| `-y` | Specifies the year to process. Equivalent to setting `StartDate` to January 1 of that year. |
+| `-s` | Legacy compatibility alias for `-t` (tag/country filter). |
 
 ### Tags
 
-Tag is an optional command-line parameter that works in conjunction with
-the configuration (ini) file. You must set the tag in the configuration
-file. Right after the rule, you need to add an equal sign then type the
-desired tag.
+The `-t` parameter works with the tag defined in `[FixedHolidays]` and `[VariableHoliday#N]` sections. A tag is placed after the rule, following an equal sign:
 
-For example, `d1 = usa ; 6 day workweek`. When running the program, enter `-t usa` and the program will only read
-and process rules that match the tag entered in the command-line
-parameter, which is *usa* in this case.
+```
+d1 = usa ; 6 day workweek
+```
 
-The following is a sample configuration file for SMAHoliday.exe:
+When you run the utility with `-t usa`, it processes only rules that include the `usa` tag. Tag matching is case-insensitive, and multiple tags can be specified as comma-separated values in the INI file.
+
+### Sample Configuration File
 
 ```ini
 [General]
@@ -274,14 +246,14 @@ d7 =usa; 5 day workweek
 02/mo-3 =usa; 3rd Monday February Presidents Day
 05/mo-l =usa; 4th Monday of May - Memorial Day (uses L versus 1 (one), can be either)
 09/mo-1 =usa; 1st Monday of September - Labor Day
-10/mo-2 =usa; 2nd Monday of October - Colombus day
+10/mo-2 =usa; 2nd Monday of October - Columbus day
 11/th-4 =usa; 4th Thursday of November - Thanksgiving Day
 Easter_Sun =usa; Easter Sunday
 Easter_Monday =usa; Easter Monday
 Easter_Friday =usa; Easter Friday
 Whit_Sunday =fr; Pentecôte
 Whit_Monday =fr; Lundi Pentecôte
-Ass_Thu =fr ; Jeudi Assencion
+Ass_Thu =fr ; Jeudi Ascension
 
 [VariableHoliday#1]
 date=05/24
@@ -304,9 +276,7 @@ tag=usa
 InclusiveDate=No
 ```
 
-## Example ini File Template
-
-The following is an example of a SMAHoliday.ini file:
+## Example INI File Template
 
 ```ini
 [General]
@@ -321,7 +291,7 @@ d7; All Saturdays
 02/mo-3; 3rd Monday February Presidents Day
 05/mo-l; 4th Monday of May - Memorial Day
 09/mo-1; 1st Monday of September - Labor Day
-10/mo-2; 2nd Monday of October - Colombus day
+10/mo-2; 2nd Monday of October - Columbus day
 11/th-4; 4th Thursday of November - Thanksgiving Day
 
 [VariableHoliday#1]
@@ -345,91 +315,28 @@ InclusiveDate=No
 
 ## Exit Codes
 
-The SMAHoliday.exe program can exit with the following codes:
+The following console message codes indicate the result of a SMAHoliday run:
 
-|Status Number|Status Description|
-|--- |--- |
-|02|Warning during holiday process.|
-|04|The file SMAHoliday.ini is invalid or cannot be found.|
-|06|Error setting culture settings.|
-|07|Invalid calendar name or calendar does not exist.|
-|08|Incorrect date format.|
-|10|Could not connect to the database. Invalid or missing SMAODBCConfiguration.dat file.|
-|12|Calendar not found in the database.|
+| Code | Description |
+|---|---|
+| `02` | Warning during holiday processing. |
+| `04` | `SMAHoliday.ini` is invalid or cannot be found. |
+| `06` | Error applying culture settings. |
+| `07` | Invalid calendar name or calendar does not exist. |
+| `08` | Incorrect date format. |
+| `10` | Could not connect to the database. The `SMAODBCConfiguration.dat` file is missing or invalid. |
+| `12` | Calendar not found in the database. |
 
 ### Exit Code Override File (E.C.O.F.)
 
-SMAHoliday supports the Exit Code Override File (E.C.O.F.) feature for
-further processing and debugging by writing the exit code and a message
-into this file. For more information, refer to [Exit Code Override File (E.C.O.F.)](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Exit-Code-Override-File-(E.C.O.F.).md)
- in the **Microsoft agent** online help.
+SMAHoliday supports the Exit Code Override File (E.C.O.F.) feature. When an exit code occurs, the utility writes the code and a diagnostic message to the E.C.O.F. file for further processing and debugging. For more information, see [Exit Code Override File (E.C.O.F.)](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Exit-Code-Override-File-(E.C.O.F.).md) in the Microsoft Agent online help.
 
 ## Running on OpCon in Docker
 
-To run the utility successfully in a Docker container, using
-the Linux agent embedded in it, keep the following things in mind:
+To run SMAHoliday in a Docker container using the embedded Linux Agent, follow these guidelines:
 
-1. When running in Docker, the Linux job needs to be set up similar to
-    a Windows job with the same parameters.
-2. The start image for the Linux job should be: *dotnet
-    /app/SMAHoliday.dll <arguments\>*.
-3. The SMAHoliday.ini file will be located in the **/app/config**
-    directory in the container, mapped to any folder on the host machine
-    just like all other INI files.
-4. Use the default **OpConOnLinux** agent machine (available in the
-    container) to run the utility jobs.
-5. Logs are found in **/app/log/Utilities** in the container
-
-## Operations
-
-### Common Tasks
-- Schedule SMAHoliday.exe as an OpCon Windows job; any jobs that depend on the updated calendar dates should have a job dependency on the SMAHoliday job.
-- Use the `-t` (tag) parameter to limit processing to rules matching a specific tag, enabling separate runs for different regions or rule sets from the same ini file.
-- Use the `-i` parameter to specify an alternate ini file path, allowing multiple configurations to coexist on the same machine.
-- When running in Docker, set the start image to `dotnet /app/SMAHoliday.dll <arguments>` and use the **OpConOnLinux** agent; the ini file is in `/app/config/` inside the container.
-
-### Alerts and Log Files
-- When running in Docker, logs are written to `/app/log/Utilities` inside the container.
-- Exit code `10` indicates the `SMAODBCConfiguration.dat` file is missing or invalid; verify the file exists in `<Target Directory>\OpConxps\MSLSAM\` and contains valid connection settings.
-- Exit code `04` (ini file not found), `07` (invalid calendar name), `08` (incorrect date format), and `12` (calendar not found in database) all indicate configuration issues requiring correction before the next run.
-- SMAHoliday supports the Exit Code Override File (E.C.O.F.) for further processing and debugging of exit codes.
-
-## Exception Handling
-
-**Exit code 04: SMAHoliday.ini is invalid or cannot be found** — The utility cannot locate or parse the configuration file — Verify the path to SMAHoliday.ini is correct and that the file is a valid INI format; use the `-i` parameter to specify an alternate path if the file is in a non-default location.
-
-**Exit code 07: Invalid calendar name or calendar does not exist** — The calendar name specified on the command line or in the configuration file does not match any existing calendar in the OpCon database — Confirm the calendar name is correct and that it exists in OpCon before running the utility.
-
-**Exit code 08: Incorrect date format** — The date provided does not match the required US date format (MM/DD/YYYY) — SMAHoliday is standardized to US English localization and only processes US date formats; correct the StartDate or command-line date parameter to use MM/DD/YYYY format.
-
-**Exit code 10: Could not connect to the database** — The SMAODBCConfiguration.dat file is missing or contains invalid connection information — Verify the SMAODBCConfiguration.dat file exists in the `<Target Directory>\OpConxps\MSLSAM\` directory and contains valid server, database, and credential settings generated by the SMA Connection Configuration utility.
-
-**Exit code 12: Calendar not found in the database** — The specified calendar exists by name but cannot be located during processing — Verify the calendar is properly defined and accessible in OpCon; the calendar name is case-sensitive.
-
-## FAQs
-
-**Q: What does SMAHoliday.exe do?**
-
-SMAHoliday.exe updates the OpCon database with calendar dates that represent holidays. It is installed to the `<Target Directory>\OpConxps\MSLSAM\` directory and can be scheduled as an OpCon Windows job.
-
-**Q: Is SMAHoliday.exe backwards compatible with the older Holiday.exe utility?**
-
-Yes. SMAHoliday.exe accepts forward slash arguments for backwards compatibility with Holiday.exe. Continuous recommends using the dash (`-`) argument syntax for full utility capability.
-
-**Q: What legacy parameters does SMAHoliday support for backwards compatibility?**
-
-The legacy forward-slash parameters are `/C:` (calendar name), `/Y:` (year to process), and `/S:` (tag filter to match specific rules in the configuration file).
-
-## Glossary
-
-**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
-
-**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+1. Set up the Linux job with the same parameters you would use for a Windows job.
+2. Set the start image to: `dotnet /app/SMAHoliday.dll <arguments>`.
+3. Place the `SMAHoliday.ini` file in the `/app/config` directory inside the container, mapped to any folder on the host machine.
+4. Use the default **OpConOnLinux** Agent machine (available in the container) to run the utility jobs.
+5. Find utility logs in `/app/log/Utilities` inside the container.

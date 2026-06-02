@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Copying Resources
-description: "Use this procedure to copy Resources in Enterprise Manager."
+description: "How to copy an existing Resource in Enterprise Manager to create a new Resource with the same configuration."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,42 +10,28 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Copying Resources
+# Copying Resources
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A Resource is a numeric counter in OpCon that represents a finite pool of units. Jobs can require a set number of Resource units before they run, which limits concurrent executions and prevents contention. Copying a Resource duplicates its configuration — including the maximum value and documentation — so you can use it as a starting point for a new Resource without rebuilding settings from scratch.
 
-## What Is It?
-
-Use this procedure to copy Resources in Enterprise Manager.
-
-To copy a resource, complete the following steps:
-
-1.  Select **Resources** under the **Administration** topic. The **Resources** screen displays
-2.  Select the **resource** in the **Select Resource** list, or select **Find** to locate the resource
-3.  Select **Copy** on the **Resources** toolbar. The **Copy Resource** dialog displays
-4.  Enter a new *resource name*
-5.  Select **OK**
-6.  Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen
+:::note
+The **Copy** button is available only when a Resource is selected and there are no unsaved changes in the editor.
 :::
 
-## FAQs
+## Copy a Resource
 
-**Q: Why would you copy resources instead of creating a new one?**
+To copy a Resource, complete the following steps:
 
-Copying resources is useful when you want to reuse an existing configuration as a starting point. All settings from the original are duplicated, and you can then modify the copy as needed.
+1. In Enterprise Manager, select **Resources** under the **Administration** topic. The **Resources** screen opens.
+2. In the **Select Resource** list, select the Resource you want to copy. To find a specific Resource, select **Find**.
+3. On the **Resources** toolbar, select **Copy**. The **Copy Resource** dialog opens.
+4. In the **New Resource Name** field, enter a unique name for the copy. The name must not exceed 20 characters.
+5. Select **OK**. The copy is saved and automatically selected in the **Select Resource** list.
+6. Select **Close** (to the right of the **Resources** tab) to close the **Resources** screen.
 
-**Q: Does copying resources require a new unique name?**
-
-Yes. The copy must be saved with a new unique name to distinguish it from the original resources record.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
+**Result:** A new Resource is created with the same maximum value and documentation as the original. The **Resources In Use** counter for the new Resource starts at zero.

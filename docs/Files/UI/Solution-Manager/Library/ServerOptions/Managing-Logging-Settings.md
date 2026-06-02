@@ -35,7 +35,7 @@ To configure the **Logging** setting, you must have one of the following:
 
 ## Configuring Logging
 
-To configure Logging Settings, go to **Library** > **Server Options** > select on the **LOGGIGN** tab.
+To configure Logging Settings, go to **Library** > **Server Options** > select the **Logging** tab.
 
 ![A screen showing logging settings under server options](../../../../../Resources/Images/SM/Library/ServerOptions/Logging-Settings.png "Configuring Logging Settings")
 

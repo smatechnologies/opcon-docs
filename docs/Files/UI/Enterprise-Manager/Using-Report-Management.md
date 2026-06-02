@@ -1,6 +1,6 @@
 ---
 title: Using Report Management
-description: "Report Management enables administrators to view, add, delete, and edit report specifications in the database."
+description: "Report Management enables administrators to view, add, edit, and delete report definitions in the database."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,132 +8,108 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Using Report Management
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Report Management enables users with appropriate privileges to view, add, edit, and delete BIRT report definitions stored in the OpCon database. You can create custom reports with the BIRT report writer tools and register them in OpCon using this utility. Reports are viewed from the **Reports** screen in Enterprise Manager.
 
-## What Is It?
+:::note
+Opening the **Report Management** dialog requires the **Maintain Reports** function privilege. Users without this privilege can view and run reports but cannot manage report definitions.
+:::
 
-Report Management enables administrators to view, add, delete, and edit report specifications in the database. Reports are created using BIRT Reports and viewed through Enterprise Manager. You can create customized reports with the BIRT report writer tools and import them using the Report Management utility.
+## Report Management dialog
 
-## Opening Report Management
+The **Report Management** dialog contains two sections: **General** and **Filter**.
 
-**To open the utility:**
+### General section
 
-1. Select **Reports** under the **Information** topic. The **Reports** screen displays
-2. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
+| Field or option | Description |
+|---|---|
+| **Report Locked** | When selected, the report definition is locked. Only users in the *ocadm* role can manage, lock, or unlock a locked report. Users without the *ocadm* role can view locked reports but all fields are disabled. Only the *ocadm* role can select or clear this option. |
+| **Report** | Lists all BIRT report definitions currently stored in the database. |
+| **Title** | The unique title of the selected report. Maximum 64 characters. |
+| **Template** | The BIRT report template filename. Do not include a path — all report files must be in the `reports\OpConXPS_Reports` directory under the Enterprise Manager installation folder. Use the **Open** button to browse for a file. Maximum 128 characters. |
+| **Administrator** | Restricts report visibility to users in the *ocadm* role or users with the **All User Interface Functions** privilege. Available only when the current user has the **All User Interface Functions** privilege. |
+| **All Users** | Makes the report visible in Enterprise Manager to all users with the **View Standard Reports** department function privilege. |
 
-## Understanding Report Management Options
+:::note
+The **Administrator** and **All Users** authorization options are only available when your role includes the **All User Interface Functions** privilege. Otherwise, **All Users** is set automatically and cannot be changed.
+:::
 
-The Report Management utility has two frames: General and Filter.
+### Filter section
 
-The **General** frame has the following options:
+| Field or option | Description |
+|---|---|
+| **Schedule Dates** | When selected, the Schedule Dates filter applies to data shown when the report runs. This filter is an integral part of the report template — do not change it without a corresponding change in the report file. |
+| **Schedules** | When selected, the Schedules filter applies to data shown when the report runs. This filter is an integral part of the report template — do not change it without a corresponding change in the report file. |
+| **Departments** | When selected, the Departments filter applies to data shown when the report runs. This filter is an integral part of the report template — do not change it without a corresponding change in the report file. |
+| **Special Filter** | Defines a custom filter for reports that require one. Most reports do not require a special filter. Maximum 1000 characters. See [Special filter syntax](#special-filter-syntax) below. |
 
-- **Report Locked**: When selected, the report definition is locked so that only users in the *ocadm* role can manage, lock, or unlock the report. Users with report management privileges can view locked reports and manage unlocked definitions, but all fields will be disabled
-- **Report**: Lists all BIRT reports currently defined in the database, matching the list in the **Reports** screens
-- **Title**: The unique title of the selected report
-- **Template**: The BIRT report template file name. Do not include a path — all reports must be located in the **OpConxps\\EnterpriseManager\\reports\\OpConXPS_Reports** directory. Use the **Open** button to browse for a file
-- **Administrator**: Authorization level visible only to *ocadm* or users with equivalent status
-- **All Users**: Authorization level visible in Enterprise Manager to all users with Report Function authorization
+### Special filter syntax
 
-The **Filter** frame has the following options:
+Use the following syntax for the **Special Filter** field:
 
-- **Standard Filters**: The **Schedule Dates**, **Schedules**, and **Departments** filters apply to the data shown when running reports. If a option is selected, the filter applies to the report
+```
+Title:{Table.Column}:SQL Select statement
+```
 
-    :::note
-    The standard filters are an integral part of the report file by design. Never change these filters without changes in the report template.
-    :::
+:::tip Example
+The special filter for the Jobs Using a Calendar report is:
 
-- **Special Filter**: Defines custom filters for reports. Most reports do not require a special filter. Use the following syntax:
+```
+Calendars:{CALDESC.CALID}:SELECT CALNAME,CALID FROM CALDESC WHERE SKDID = 0 AND CALNAME <> 'Master Holiday' ORDER BY CALNAME
+```
 
-    ``` {xml:space="preserve"}
-    Title:{Table.Column}:SQL Select statement
-    ```
+The selection list displayed after the **Reports** button is selected has the title **Calendars** and contains all user-defined calendars.
+:::
 
-  :::tip Example
-  The Special Filter field for the Jobs Using a Calendar report contains the following text:
+## Open Report Management
 
-  Calendars:{CALDESC.CALID}:SELECT CALNAME,CALID FROM CALDESC WHERE SKDID = 0 AND CALNAME <\> 'Master Holiday' ORDER BY CALNAME.
+To open the Report Management dialog, complete the following steps:
 
-  The selection box displayed after the Reports button is clicked will have a title of Calendars. The list box will contain a list of all user-defined calendars.
-  :::
+1. In Enterprise Manager, go to **Information** and select **Reports**. The **Reports** screen opens.
+2. On the **Reports** toolbar, select **Manage Reports**. The **Report Management** dialog opens.
 
-## Adding Reports
+## Add a report
 
-To add a report, complete the following steps:
+To add a report definition, complete the following steps:
 
-1. Select **Reports** under the **Information** topic. The **Reports** screen displays
-2. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
-3. Select the **Add** button
-4. Enter a *report name* in the **Title** text box
-5. Enter the *BIRT Report Template file name* in the **Template** text box
+1. In Enterprise Manager, go to **Information** and select **Reports**. The **Reports** screen opens.
+2. On the **Reports** toolbar, select **Manage Reports**. The **Report Management** dialog opens.
+3. Select **Add**.
+4. In the **Title** field, enter a unique name for the report.
+5. In the **Template** field, enter the BIRT report template filename, or select **Open** to browse for the file.
+6. Select the **Administrator** or **All Users** authorization option.
+7. In the **Filter** section, select any applicable standard filter options.
+8. If required, enter a special filter expression in the **Special Filter** field.
+9. Select **Save**.
 
-6. Select the **Administrator** or **All Users** radio button
-7. Select any preferred filter options and/or enter a *special filter*
-8. Select **Save**, or select **Cancel** to discard changes and display the previously selected report
+**Result:** The new report definition is saved to the database and appears in the **Report** list.
 
-## Editing Reports
+## Edit a report
 
-To edit a report, complete the following steps:
+To edit an existing report definition, complete the following steps:
 
-1. Select **Reports** under the **Information** topic. The **Reports** screen displays
-2. Select the **report name** from the **Report** list box
-3. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
-4. Make the changes
-5. Select **Save**, or select **Cancel** to discard changes and display the previously selected report
+1. In Enterprise Manager, go to **Information** and select **Reports**. The **Reports** screen opens.
+2. On the **Reports** toolbar, select **Manage Reports**. The **Report Management** dialog opens.
+3. In the **Report** list, select the report to edit.
+4. Update the fields as needed.
+5. Select **Save**, or select **Cancel** to discard changes.
 
-## Deleting Reports
+**Result:** The updated report definition is saved to the database.
 
-To delete a report, complete the following steps:
+## Delete a report
 
-1. Select **Reports** under the **Information** topic. The **Reports** screen displays
-2. Select the **report name** from the **Report** list box
-3. Select the **Manage Reports** button on the **Reports** toolbar. The **Report Management** dialog displays
-4. Select the **Remove** button
-5. Select **Yes** to confirm the report deletion
+To delete a report definition, complete the following steps:
 
-## Configuration Options
+1. In Enterprise Manager, go to **Information** and select **Reports**. The **Reports** screen opens.
+2. In the **Report** list, select the report to delete.
+3. On the **Reports** toolbar, select **Manage Reports**. The **Report Management** dialog opens.
+4. Select **Remove**.
+5. Select **Yes** to confirm the deletion.
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Report Locked | When selected, the report definition is locked so that only users in the *ocadm* role can manage, lock, or unlock the report. | — | must be located in the **OpConxps\\EnterpriseManager\\reports\\OpConXPS_Reports** direct |
-| Report | Lists all BIRT reports currently defined in the database, matching the list in the **Reports** screens | — | must be located in the **OpConxps\\EnterpriseManager\\reports\\OpConXPS_Reports** direct |
-| Title | The unique title of the selected report | — | must be located in the **OpConxps\\EnterpriseManager\\reports\\OpConXPS_Reports** direct |
-| Template | The BIRT report template file name. | — | must be located in the **OpConxps\\EnterpriseManager\\reports\\OpConXPS_Reports** direct |
-| Administrator | Authorization level visible only to *ocadm* or users with equivalent status | — | — |
-| All Users | Authorization level visible in Enterprise Manager to all users with Report Function authorization | — | — |
-| Standard Filters | The **Schedule Dates**, **Schedules**, and **Departments** filters apply to the data shown when running reports. | — | — |
-| Special Filter | Defines custom filters for reports. | — | — |
-## FAQs
-
-**Q: What can you do with Report Management?**
-
-Report Management allows you to opening report management, understanding report management options, adding reports.
-
-**Q: Who has access to Report Management?**
-
-Access to Report Management is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-## Glossary
-
-**BIRT (Business Intelligence and Reporting Tools)**: The open-source reporting engine used by OpCon to generate predefined and custom reports. Reports are run using the BIRTRptgen.exe utility.
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
-
-**Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+**Result:** The report definition is removed from the database and no longer appears in the **Reports** screen.

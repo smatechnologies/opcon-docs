@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Creating/Updating Job Filters
-description: "Job filters in Enterprise Manager narrow the jobs displayed in operation views by status, department, access code, or tag."
+description: "Job filters in Enterprise Manager narrow the jobs displayed in the Daily list view by date, status, department, access code, or tag."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,37 +10,36 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Creating/Updating Job Filters
+# Creating/Updating Job Filters
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Job filters in Enterprise Manager let you narrow the jobs displayed in the **Daily list** view by date, status, department, access code, or tag. You can create or update a filter at any time to focus on the jobs that matter most.
 
-## What Is It?
+When a filter is active, the view title updates to show **(Filtered)** to indicate that not all jobs are displayed.
 
-Job filters in Enterprise Manager let operators narrow the jobs displayed in the Daily List view by date, status, department, access code, or tag. Filters can be created or updated at any time to focus on the jobs that matter.
+## Apply or Update a Job Filter
 
-To create or update a job filter, complete the following steps:
+To apply or update a job filter in the Daily list view, complete the following steps:
 
-1.  Select **List** under the **Operation** topic. The **Daily list** screen displays
-2.  Select the **Open the job filter dialog** button on the **Daily list** toolbar. The **Job Filter** dialog displays
-3.  Select the tab for the filter criteria (e.g., **Dates**, **Job Statuses**, **Departments**, **Access Codes**, or **Tags**)
-4.  *(Optional)* For each filter tab (**Dates**, **Job Statuses**, **Departments**, **Access Codes**, **Tags**), select the specific options or select **Select/Unselect All** to select all
-5.  Select **OK** to save the job filter changes or **Cancel** to discard
-:::
+1. In Enterprise Manager, go to **Operation** and select **List**. The **Daily list** view opens.
+2. On the **Daily list** toolbar, select the **Open the job filter dialog** button. The **Job Filter** dialog opens.
+3. Select the tab for the criteria you want to filter by: **Dates**, **Job Statuses**, **Departments**, **Access Codes**, or **Tags**.
+4. On the selected tab, select the specific items you want to include, or select **Select/Unselect All** to select every item in that list.
+5. Repeat steps 3–4 for any additional filter tabs as needed.
+6. Select **OK** to save the filter.
 
-## Glossary
+**Result:** The **Daily list** view refreshes and displays only jobs that match the selected filter criteria. The view title shows **(Filtered)** while any filter is active.
 
-**Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching privilege to view or act on objects tagged with a given Access Code.
+## Clear a Job Filter
 
-**Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. Used with function privileges to restrict which users can view or manage specific jobs.
+To remove all active filter criteria, complete the following steps:
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+1. On the **Daily list** toolbar, select the **Open the job filter dialog** button. The **Job Filter** dialog opens.
+2. Select **Reset** to clear all selections across every tab.
+3. Select **OK** to apply the cleared filter.
 
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** The **Daily list** view returns to showing all jobs and the **(Filtered)** indicator is removed from the view title.

@@ -2,48 +2,40 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Deleting Script Types
-description: "Use this procedure to delete Script Types in Enterprise Manager."
+description: "How to delete a script type in Enterprise Manager using the Remove Type button."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
 tags:
-  - Conceptual
+  - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
-doc_type: conceptual
+doc_type: procedural
 ---
 
-#  Deleting Script Types
+# Deleting Script Types
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+A script type defines the file extension and runtime environment for scripts managed in OpCon. You can delete a script type from the **Script Types** editor in Enterprise Manager when it is no longer needed.
 
-## What Is It?
+:::warning
+Deletion is permanent. OpCon does not retain a deleted script type record. Verify the script type is no longer in use before proceeding.
 
-Use this procedure to delete Script Types in Enterprise Manager.
+If the script type is referenced by existing scripts, runners, or jobs, Enterprise Manager displays a cross-reference dialog instead of deleting the record. Resolve those references before attempting deletion.
+:::
+
+## Before you begin
+
+You must have the **Maintain Scripts** privilege (or **All Administration Functions** or **All User Interface Functions**) to remove a script type.
+
+## Delete a script type
 
 To delete a script type, complete the following steps:
 
-1.  Select **Types** under the **Scripts** topic. The **Script Types** screen displays
-2.  Select the **script type** to delete from the list
-3.  Select the **Remove Type** button on the toolbar
-4.  Select **Yes** to confirm
-5.  Select **Close ☒** to close the **Script Types** screen
+1. In Enterprise Manager, select **Types** under the **Scripts** topic. The **Script Types** editor opens.
+2. Select the script type you want to delete from the list.
+3. Select the **Remove Type** button on the toolbar. The **Confirm Remove** dialog opens.
+4. Select **Yes** to confirm the deletion.
 
-## FAQs
-
-**Q: Can a script types record be recovered after deletion?**
-
-No. Deleting a script types record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
-
-**Q: How many script types records can you delete at once?**
-
-Select the specific script types record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
+**Result:** The script type is permanently removed from OpCon and no longer appears in the list.

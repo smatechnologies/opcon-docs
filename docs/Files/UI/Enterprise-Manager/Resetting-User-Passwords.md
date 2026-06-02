@@ -2,39 +2,26 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Resetting User Passwords
-description: "Use this procedure to reset User Passwords in Enterprise Manager."
+description: "How to reset a user account password in Enterprise Manager."
 product_area: Enterprise Manager
-audience: System Administrator, Automation Engineer
+audience: System Administrator
 version_introduced: "[see release notes]"
 tags:
   - Procedural
   - System Administrator
-  - Automation Engineer
-  - Solution Manager
+  - Enterprise Manager
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
 # Resetting User Passwords
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
-
-## What Is It?
-
-Use this procedure to reset User Passwords in Enterprise Manager.
+Use this procedure when a user is locked out or cannot recover their own password. Enterprise Manager generates a random password, then either displays it for you to copy to the clipboard or sends it to the user's email address if SMTP is configured. The user's account is also flagged to require a password change at next logon.
 
 To reset a user password, complete the following steps:
 
-1. Select **User Accounts** under the **Security** topic. The **User Accounts** screen displays
-2. Select a **role** in the **Select Role** list, or use the **Find** (Ctrl+F) button to locate the role
-3. Select the **Reset User Password** button
-4. Select **Close ☒** (to the right of the **User Accounts** tab) to close the **User Accounts** screen
+1. In the **Security** topic, select **User Accounts**. The **User Accounts** screen opens.
+2. In the **Select User** list, select the user account whose password you want to reset. You can also use **Find** (Ctrl+F) to locate the user by name.
+3. Select **Reset User Password**. Enterprise Manager generates a random password and resets the account.
 
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control what each user can see and do.
+**Result:** If the user's email address is on file and SMTP is configured, Enterprise Manager sends the new password to that address and displays a confirmation message. If email is not configured, a dialog appears showing the new password and asking whether you want to copy it to the clipboard. The account is flagged to require a password change at next logon.

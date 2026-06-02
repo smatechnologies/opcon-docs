@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Editing Roles
-description: "Use this procedure to edit Roles in Enterprise Manager."
+description: "Step-by-step procedure for editing a Role in the Enterprise Manager Security editor."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -10,40 +10,48 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
+  - Security
 last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Editing Roles
+# Editing Roles
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+Roles group privileges together and are assigned to user accounts to control access to schedules, jobs, machines, and administrative functions. To manage roles, your user account must belong to a role with **All Administrative Functions**, **All Function Privileges**, or be in the `ocadm` role.
 
-## What Is It?
+:::note
+You cannot edit the `ocadm` role unless your account belongs to the `ocadm` role. All inherit-privilege options are locked and always enabled for the `ocadm` role.
+:::
 
-Use this procedure to edit Roles in Enterprise Manager.
+To edit a role in Enterprise Manager, complete the following steps:
 
-To edit a role, complete the following steps:
+1. In the Navigation panel, select **Roles** under the **Security** topic. The **Roles** editor opens.
+2. In the **Select Role** list, select the role you want to edit.
+3. Update any of the following fields as needed:
 
-1.  Select **Roles** under the **Security** topic. The **Roles** screen displays
-2.  Select the **role name** in the **Select Role** list
-3.  Edit the preferred *fields*
-4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Roles** toolbar
-5.  Select **Close ☒** (to the right of the **Roles** tab) to close the **Roles** screen
+   | Field | Description |
+   |---|---|
+   | **Name** | Unique name for the role (maximum 20 characters). |
+   | **Documentation** | Optional description of the role (maximum 4,000 characters). |
 
-## FAQs
+4. In the **Privileges** section, select or clear any of the following options as needed:
 
-**Q: Do edits to roles take effect immediately?**
+   | Option | Behavior |
+   |---|---|
+   | **Inherit Privileges for All Schedules** | The role automatically gains access to all current and future Schedules. |
+   | **Inherit Privileges for All Machines** | The role automatically gains access to all current and future Machines. |
+   | **Inherit Privileges for All Machine Groups** | The role automatically gains access to all current and future Machine Groups. |
+   | **Inherit Privileges for All Scripts** | The role automatically gains access to all current and future Embedded Scripts. |
 
-Changes saved to roles in the Job Master take effect the next time the record is built or referenced. Edits to Daily table records apply only to the current instance.
+5. In the **User Assignment** section, update the users assigned to this role:
+   - To assign a user: select a **User Login ID** in the **Revoked** list, then select the right arrow to move it to the **Granted** list.
+   - To unassign a user: select a **User Login ID** in the **Granted** list, then select the left arrow to move it to the **Revoked** list.
+6. Select **Save** on the **Roles** toolbar.
+7. Select **Close** (the X to the right of the **Roles** tab) to close the editor.
 
-## Glossary
+**Result:** The updated role is saved. If the edited role is assigned to the currently logged-in user, privileges refresh immediately for that session.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
+## Related Topics
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
+- [Adding Roles](./Adding-Roles.md) — Procedure for creating a new role.
+- [Roles](../../../administration/roles.md) — Conceptual overview of role fields, inheritance behavior, and security considerations.

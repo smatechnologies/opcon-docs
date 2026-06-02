@@ -42,7 +42,7 @@ If the "Show Job Containers" preference is turned off, the **Job Matrix** table 
 - **Schedule Name**: The OpCon schedule for the job
 - **Job Name**: The OpCon job name
 - **Department**: The OpCon schedule department
-- **Local Start Time**: The estimated start time based on where the EM is running (tooltip only)
+- **Local Start Time**: The estimated start time based on where Enterprise Manager is running (tooltip only)
 - **Server Start Time**: The actual date and time the job started on the OpCon Server. A clock icon indicates an estimated start time when the job has not yet started
 - **Server End Time**: The date and time the job ended. A clock icon with "Running" indicates the job has not ended
 - **Duration**: The time the job took to run
@@ -71,18 +71,19 @@ Related Topics
 | Machine Name | The OpCon machine used by the job | — | — |
 | Schedule Name | The OpCon schedule for the job | — | — |
 | Job Name | The OpCon job name | — | — |
-| Local Start Time | The estimated start time based on where the EM is running (tooltip only) | — | — |
-| Server Start Time | The actual date and time the job started on the OpCon Server. | — | — |
-| Server End Time | The date and time the job ended. | — | — |
+| Local Start Time | The estimated start time based on where Enterprise Manager is running (tooltip only) | — | — |
+| Server Start Time | The actual date and time the job started on the OpCon Server | — | — |
+| Server End Time | The date and time the job ended | — | — |
 | Duration | The time the job took to run | — | — |
 | Job Status | The current status of the job | — | — |
 | Priority | The priority defined for the job | — | — |
 | Term Description | The termination description for the job | — | — |
+
 ## FAQs
 
 **Q: What can you do with Matrix View?**
 
-Matrix View allows you to matrix toolbar, job matrix table, matrix right-click menus.
+Matrix View allows you to view job statuses in a grid format, perform schedule and job procedures via right-click menus, filter jobs, and synchronize selections with other views such as Gantt, PERT, Bar Chart, Pie Chart, and Workload Chart.
 
 **Q: Who has access to Matrix View?**
 
@@ -104,4 +105,4 @@ Access to Matrix View is controlled by the privileges assigned to your OpCon rol
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.

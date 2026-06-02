@@ -22,7 +22,7 @@ doc_type: conceptual
 **Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression. Refer to [OpCon Events](../events/introduction.md). All [System Properties](../objects/properties.md#system) can be referenced with tokens in events, which are stored in the database after definition.
 
 :::note
-If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and ? (question mark) are treated as wild cards in Schedule, Job, and Machine Names in Event strings
+If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and ? (question mark) are treated as wild cards in Schedule, Job, and Machine Names in Event strings.
 :::
 
 - **Schedule Name**: Schedule name
@@ -41,8 +41,8 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
     - **Missed Latest Start Time**: Job missed its latest start time
     - **Skipped**: Job was skipped
     - **Start Attempted**: Occurs just before job start info is sent to the agent. If the event is not processed, SAM places the job On Hold
-  - **LSAM Feedback**: Evaluation string based on a specific LSAM feedback value. Fields:
-    - **LSAM Feedback**: Platform-specific LSAM feedback values (e.g., SAP R/3 includes Child Process). Values vary by job type. Supported job types:
+  - **Agent Feedback** (labeled "LSAM Feedback" in the UI): Evaluation string based on a specific agent feedback value. Fields:
+    - **Agent Feedback**: Platform-specific agent feedback values (e.g., SAP R/3 includes Child Process). Values vary by job type. Supported job types:
       - File Transfer
       - IBM i
       - MCP
@@ -51,7 +51,7 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
       - UNIX
       - Windows
       - z/OS
-    - **String to match**: String to compare against the agent Feedback value using SQL pattern matching
+    - **String to match**: String to compare against the agent feedback value using SQL pattern matching
       - Use `%` (not `*`) as a wildcard
       - Use `_` (not `?`) for a single-character wildcard
       - Single quotes (`'`) are invalid
@@ -86,8 +86,9 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
 | Schedule Name | Schedule name | — | — |
 | Job Name | Job name | — | — |
 | Frequency Name | Frequency name, if the event applies to a specific frequency | — | — |
-| Event Details | OpCon event details. | — | — |
-| Event | OpCon event that runs when the trigger fires. | — | — |
+| Event Details | OpCon event details | — | — |
+| Event | OpCon event that runs when the trigger fires | — | — |
+
 ## FAQs
 
 **Q: What triggers can fire a job event?**

@@ -1,6 +1,6 @@
 ---
 title: Viewing Master Job Cross References
-description: "Use this procedure to view Master Job Cross References in Solution Manager."
+description: "View all schedules and jobs that reference a selected master job to understand its dependencies before making changes or deleting it."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,25 +15,20 @@ doc_type: procedural
 
 # Viewing Master Job Cross References
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Cross References** view shows all schedules and jobs that reference a selected master job. Use it to understand the impact of changes before modifying or deleting a job.
 
-## What Is It?
+## Required Privileges
 
-Use this procedure to view Master Job Cross References in Solution Manager.
+To view master job cross references, your role must meet the requirements described in [Accessing Master Job Definition](Viewing-And-Updating-Master-Jobs/Accessing-Master-Jobs.md#required-privileges).
 
-To view a Master Job's cross references, go to **Library** > **Master Jobs**. Select a job and select **Cross References**.
+## View Cross References for a Master Job
 
-## FAQs
+To view cross references for a master job, complete the following steps:
 
-**Q: What information does the Master Job Cross References view display?**
+1. Go to **Library** > **Master Jobs**.
+2. Select the job you want to check.
+3. Select **Cross References**.
 
-The Master Job Cross References view displays the current state and details for the selected item. Use this view to monitor status and take action as needed.
+**Result:** The **Cross References** panel opens and lists the schedules and jobs that reference the selected master job.
 
-## Glossary
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**Master Tables**: The OpCon database tables that hold the permanent definitions of schedules and jobs. Master data is the template from which Daily tables are built.
-
-**Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operations, and building self-service requests. Accessible from any modern web browser.
+<!-- GAP: The specific categories shown in the Master Jobs Cross References panel (e.g., "Job Dependencies," "Schedule Dependencies," or similar groupings) are not confirmed in the available source. Confirm the exact panel sections with an SME or UI review. -->

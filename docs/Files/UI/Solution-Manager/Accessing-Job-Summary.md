@@ -69,14 +69,14 @@ Time values may include icons that indicate special conditions:
 
 To access job summary, complete the following steps:
 
-1. Select the **Processes** button at the top-right of the **Operations Summary** page
-2. Ensure that both the **Date** and **Schedule** toggle switches are enabled (green) so you can make your date and schedule selection
-3. Select the desired **date(s)** to display the associated schedule(s)
-4. Select one or more **schedule(s)** in the list
-5. Select one **job** in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
-6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel with the **Job Summary** tab in focus
-7. Select the **Refresh** button if the panel has been open for a lengthy period of time
-8. Close the **Selection** panel when done
+1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+2. Ensure that both the **Date** and **Schedule** toggle switches are enabled (green) so you can make your date and schedule selection.
+3. Select the desired **date(s)** to display the associated schedule(s).
+4. Select one or more **schedule(s)** in the list.
+5. Select one **job** in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
+6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel with the **Job Summary** tab in focus.
+7. Select the **Refresh** button if the panel has been open for a lengthy period of time.
+8. Close the **Selection** panel when done.
 
 :::note
 The job summary can also be accessed in PERT View. For more information, refer to [PERT View Job Summary Access](Using-PERT-View.md#PERT9).
@@ -115,12 +115,13 @@ Related Topics
 | Late to Start Time | The positive hours and minutes offset from the job Start Offset for the Late to Start time | — | — |
 | Expected/Effective End Time | The time the selected job is expected to end (real or estimated) | — | — |
 | Late to Finish Time | The positive hours and minutes offset from the job Start Offset for the Late to Finish time | — | — |
-| Start Time | The actual time the selected job started on the OpCon server. | — | — |
+| Start Time | The actual time the selected job started on the OpCon server | — | — |
+
 ## FAQs
 
 **Q: What does Accessing Job Summary cover?**
 
-This page covers Time Representations in Job Summary.
+This page covers the job summary fields available in the Operations module and the time representation icons used in Job Summary, as well as how to access the Job Summary panel.
 
 ## Glossary
 
@@ -134,7 +135,7 @@ This page covers Time Representations in Job Summary.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 

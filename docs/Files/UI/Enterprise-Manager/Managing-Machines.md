@@ -1,6 +1,6 @@
 ---
 title: Managing Machines
-description: "The Machines editor defines and maintains OpCon Machines, providing a list of machines, general settings (e.g., Socket Number, NetComName, IP address), machine group assignments, and communication."
+description: "The Machines editor in Enterprise Manager defines and maintains OpCon Machines, providing access to general settings, machine group assignments, and communication status controls."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -8,32 +8,28 @@ tags:
   - Procedural
   - System Administrator
   - Automation Engineer
-  - Solution Manager
-last_updated: 2026-03-18
+  - Enterprise Manager
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
 # Managing Machines
 
-**Theme:** Configure  
-**Who Is It For?** System Administrator, Automation Engineer
+The **Machines** editor in Enterprise Manager defines and maintains OpCon Machines. Use it to configure general settings (such as Socket Number, NetCom name, and IP address), assign machines to machine groups, and control communication status between OpCon and the Agent.
 
-## What Is It?
-
-The **Machines** editor defines and maintains OpCon Machines, providing a list of machines, general settings (e.g., Socket Number, NetComName, IP address), machine group assignments, and communication status. For conceptual information, refer to [Machines](../../../objects/machines.md) in the **Concepts** online help.
+For conceptual information about machines, refer to [Machines](../../../objects/machines.md) in the **Concepts** online help.
 
 :::note
-Before adding a new machine, verify with the OpCon administrator that there is an available license for the machine. If a license is unavailable, contact Continuous Technical Support([<support@smatechnologies.com>]).
+Before adding a new machine, confirm with your OpCon administrator that an available license exists for the machine. If a license is unavailable, contact Continuous Technical Support at [support@smatechnologies.com](mailto:support@smatechnologies.com).
 :::
 
 ## Machines Toolbar
 
-The **Machines** editor has a toolbar for managing machines. Select any specific icon on the toolbar below to learn more about its functionality.
+The **Machines** editor includes a toolbar for managing machines. Select any icon on the toolbar to learn more about its functionality.
 
 ![Machines toolbar](../../../Resources/Images/EM/EMcalendarstoolbar.png "Machines toolbar")
 
-![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
-Related Topics
+## Related Topics
 
 - [Adding Machines](Adding-Machines.md)
 - [Configuring Advanced Machine Properties](Configuring-Advanced-Machine-Properties.md)
@@ -46,29 +42,3 @@ Related Topics
 - [Removing Machines from Machine Groups](Removing-Machines-from-Machine-Groups.md)
 - [Changing Case of Machine Names](Changing-Case-of-Machine-Names.md)
 - [Deleting Machines](Deleting-Machines.md)
-
-## FAQs
-
-**Q: What does managing machines involve?**
-
-Managing machines includes Machines Toolbar. Access machines through Enterprise Manager navigation pane.
-
-**Q: Who can manage machines in OpCon?**
-
-Users with the appropriate privileges assigned through their role can manage machines. Contact your OpCon system administrator if you do not have access.
-
-## Glossary
-
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
-
-**Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
-
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
-
-**Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
