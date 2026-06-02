@@ -1,4 +1,4 @@
-﻿---
+---
 title: Schedule and Job History Report
 description: "The Schedule and Job History Report is used to view schedule and job history information."
 product_area: Solution Manager
@@ -20,11 +20,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-The **Schedule and Job History Report** is used to view schedule and job history information.
+The **Schedule and Job History Report** displays schedule and job history information.
 
 ![A screen showing the Schedule and Job History Report](../../../../../Resources/Images/SM/Library/Reporting/ScheduleJobReport.png "Schedule and Job History Report")
 
-### Filtering & Sorting
+### Filtering and Sorting
 
 Two filters are applied by default: one limits start time to the current day, and the other pulls only non-archived records. You can adjust these or add filters to other columns using the filters panel. Open the filters panel by selecting the filter icon in the header, selecting any column with an active filter, or selecting the menu (three dots) in any column header and choosing **Filter**. Both default filters are required but can be adjusted.
 
@@ -42,24 +42,20 @@ Select the export ![Download button](../../../../../Resources/Images/SM/Library/
 
 ## FAQs
 
-**Q: What does Schedule and Job History Report do?**
+**Q: What does the Schedule and Job History Report display?**
 
-The **Schedule and Job History Report** is used to view schedule and job history information.
+The **Schedule and Job History Report** displays schedule and job history information. By default, results are filtered to the current day and non-archived records only.
 
-**Q: Where can you find Schedule and Job History Report in OpCon?**
+**Q: Where can you find the Schedule and Job History Report in OpCon?**
 
-Access Schedule and Job History Report in Solution Manager or Enterprise Manager.
+Go to **Library > Reporting** in Solution Manager and select **Schedule and Job History Report** from the REPORTS tab.
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

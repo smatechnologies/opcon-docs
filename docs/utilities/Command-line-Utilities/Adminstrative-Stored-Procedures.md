@@ -41,46 +41,33 @@ SMA_CHGMACHINE increases job-processing performance by changing a heavily used a
 
 ### Syntax
 
-EXEC SMA_CHGMACHINE '<Machine Name\>'
+EXEC SMA_CHGMACHINE '&lt;Machine Name&gt;'
 
 #### Parameters
 
-- **<Machine Name\>**: The name of the agent whose MachineID is changed to 1
+- **&lt;Machine Name&gt;**: The name of the agent whose MachineID is changed to 1
 
 ### Changing a Machine's ID
 
-To change the Machine ID, run SMA_CHGMACHINE, then stop and restart the SMA Service Manager.
+To change the agent Machine ID, complete the following steps:
 
-To change the agent Machine ID:
-
-Run SMA_CHGMACHINE
+**Run SMA_CHGMACHINE**
 
 On the OpCon Database Server:
 
-Log in as a *local administrative user*.
-
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
-
-In the Connect to Server dialog:
-
-Select **Database Engine** in the **Server type** list.
-
-Select the desired \[OpCon Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-In the Microsoft SQL Server Management Studio window:
-
-Expand (+) the **Databases** folder and select the **OpCon Database**.
-
-Select the **New Query** button on the toolbar.
-
-Enter the command for the **SMA_CHGMACHINE** stored procedure.
+1. Log in as a *local administrative user*.
+2. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+3. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the desired OpCon Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
+4. In the Microsoft SQL Server Management Studio window:
+   - Expand (+) the **Databases** folder and select the **OpCon Database**
+   - Select the **New Query** button on the toolbar
+   - Enter the command for the **SMA_CHGMACHINE** stored procedure
 
 :::tip Example
 The command for the SMA_CHGMACHINE stored procedure:
@@ -91,21 +78,22 @@ EXEC SMA_CHGMACHINE 'NEPTUNE'
 
 :::
 
-Select the **Execute** button on the toolbar or press **F5** to run the query.
+5. Select the **Execute** button on the toolbar or press **F5** to run the query.
 
-Stop and Restart the SMA Service Manager
+**Stop and Restart the SMA Service Manager**
 
-To stop and Restart the SMA Service Manager, complete the following steps:
+To stop and restart the SMA Service Manager, complete the following steps:
 
-1. Log in as a *Windows user with Local Administrative Rights*
-2. Use menu path: **Start \> Control Panel**
-3. Select **Administrative Tools**
+1. Log in as a *Windows user with Local Administrative Rights*.
+2. Use menu path: **Start \> Control Panel**.
+3. Select **Administrative Tools**.
+4. Select the **Services** icon.
+5. Scroll through the list and select the **SMA Service Manager**.
+6. Select the **Stop** button on the toolbar.
+7. Select the **Start** button when the **SMA Service Manager** has stopped.
+8. Select **OK** to exit.
 
-4. Select the **Services** icon
-5. Scroll through the list and select the **SMA Service Manager**
-6. Select the **Stop** button on the toolbar
-7. Select the **Start** button when the **SMA Service Manager** has stopped
-8. Select **OK** to exit
+**Result:** The machine ID is updated to 1 and the SAM loop now processes this agent first.
 
 ## SMA_CHG_UNIX_GIDUID
 
@@ -160,32 +148,21 @@ EXEC SMA_CHG_UNIX_GIDUID NULL,'789',NULL,'56', 'ProdSched1'
 
 ### Running SMA_CHG_UNIX_GIDUID
 
-On the OpCon Database Server:
+To run SMA_CHG_UNIX_GIDUID, complete the following steps:
 
-Log in as a *local administrative user*.
-
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
-
-In the Connect to Server dialog:
-
-Select **Database Engine** in the **Server type** list.
-
-Select the desired \[OpCon Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-In the Microsoft SQL Server Management Studio window:
-
-Expand (+) the **Databases** folder and select the **OpCon Database**.
-
-Select the **New Query** button on the toolbar.
-
-Enter the command for the **SMA_CHG_UNIX_GIDUID** stored procedure.
+1. Log in as a *local administrative user*.
+2. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+3. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the desired OpCon Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
+4. In the Microsoft SQL Server Management Studio window:
+   - Expand (+) the **Databases** folder and select the **OpCon Database**
+   - Select the **New Query** button on the toolbar
+   - Enter the command for the **SMA_CHG_UNIX_GIDUID** stored procedure
 
 :::tip Example
 
@@ -201,7 +178,9 @@ EXEC SMA_CHG_UNIX_GIDUID NULL,'789',NULL,'56','ProdSched1'
 
 :::
 
-Select the **Execute** button on the toolbar or press **F5** to run the query.
+5. Select the **Execute** button on the toolbar or press **F5** to run the query.
+
+**Result:** The UNIX Group IDs and/or User IDs are updated in the specified schedule or all schedules.
 
 ## SMA_CLEAN_ENS
 
@@ -224,40 +203,28 @@ The stored procedure:
 
 ### Running SMA_CLEAN_ENS
 
-On the OpCon Database Server:
+To run SMA_CLEAN_ENS, complete the following steps:
 
-Log in as a *local administrative user*.
-
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
-
-In the Connect to Server dialog:
-
-Select **Database Engine** in the **Server type** list.
-
-Select the desired \[OpCon Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-In the Microsoft SQL Server Management Studio window:
-
-Expand (+) the **Databases** folder and select the **OpCon Database**.
-
-Select the **New Query** button on the toolbar.
-
-Enter the command for the **SMA_CLEAN_ENS** stored procedure.
+1. Log in as a *local administrative user*.
+2. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+3. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the desired OpCon Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
+4. In the Microsoft SQL Server Management Studio window:
+   - Expand (+) the **Databases** folder and select the **OpCon Database**
+   - Select the **New Query** button on the toolbar
+   - Enter the command for the **SMA_CLEAN_ENS** stored procedure
 
 :::tip Example
 EXEC SMA_CLEAN_ENS
 :::
 
-Select the **Execute** button on the toolbar or press **F5** to run the query.
-
-View the feedback from the stored procedure.
+5. Select the **Execute** button on the toolbar or press **F5** to run the query.
+6. View the feedback from the stored procedure.
 
 :::tip Example
 The following is a summary displayed by the execution of SMA CLEAN_ENS:
@@ -278,6 +245,8 @@ TOTAL REFERENCES REMOVED : 1
 
 :::
 
+**Result:** Orphaned ENS notification records are updated or deleted and the ENSSELECTED table is cleaned up.
+
 ## SMA_CLEARSCHED
 
 SMA_CLEARSCHED deletes all jobs in a schedule while retaining all schedule information, history, and associated privileges. Use this when restoring an old version saved via Schedule Extract without losing schedule-related information.
@@ -288,11 +257,11 @@ This process is irreversible. Continuous recommends backing up the database befo
 
 ### Syntax
 
-EXEC SMA_CLEARSCHED '<ScheduleName\>'
+EXEC SMA_CLEARSCHED '&lt;ScheduleName&gt;'
 
 #### Parameters
 
-- **<ScheduleName\>**: The name of the schedule from which jobs will be cleared
+- **&lt;ScheduleName&gt;**: The name of the schedule from which jobs will be cleared
   - Must not exceed 40 characters
   - Enclose in single quotation marks (e.g., 'Production Schedule')
 
@@ -308,9 +277,9 @@ Declare \@errortext Varchar(255)
 
 BEGIN
 
-exec SMA_COPYSCHED '<SourceSchedule\>'
+exec SMA_COPYSCHED '&lt;SourceSchedule&gt;'
 
-,'<TargetSchedule\>'
+,'&lt;TargetSchedule&gt;'
 
 ,'Copy Privileges (Y/N)'
 
@@ -326,10 +295,10 @@ END
 
 #### Parameters
 
-- **<SourceSchedule\>**: The name of the schedule to copy
+- **&lt;SourceSchedule&gt;**: The name of the schedule to copy
   - Must not exceed 40 characters
   - Enclose in single quotation marks (e.g., 'Schedule Name')
-- **<TargetSchedule\>**: The name of the new schedule to create
+- **&lt;TargetSchedule&gt;**: The name of the new schedule to create
   - Must not exceed 40 characters
   - Enclose in single quotation marks (e.g., 'New Schedule')
 - **Copy Privileges (Y/N)**: Indicates whether to copy privileges to the new schedule. Enclose Y or N in single quotation marks
@@ -343,32 +312,21 @@ END
 
 ### Running SMA_COPYSCHED
 
-On the OpCon Database Server:
+To run SMA_COPYSCHED, complete the following steps:
 
-Log in as a *local administrative user*.
-
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
-
-In the Connect to Server dialog:
-
-Select **Database Engine** in the **Server type** list.
-
-Select the desired \[OpCon Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-In the Microsoft SQL Server Management Studio window:
-
-Expand (+) the **Databases** folder and select the **OpCon Database**.
-
-Select the **New Query** button on the toolbar.
-
-Copy and paste the following syntax into the query window:
+1. Log in as a *local administrative user*.
+2. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+3. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the desired OpCon Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
+4. In the Microsoft SQL Server Management Studio window:
+   - Expand (+) the **Databases** folder and select the **OpCon Database**
+   - Select the **New Query** button on the toolbar
+   - Copy and paste the following syntax into the query window:
 
 :::tip Example
 
@@ -389,7 +347,7 @@ END
 
 :::
 
-Replace the parameters with the *desired information*, as shown in the example:
+5. Replace the parameters with the *desired information*, as shown in the example:
 
 :::tip Example
 
@@ -410,7 +368,9 @@ END
 
 :::
 
-Select the **Execute** button on the toolbar or press **F5** to run the query.
+6. Select the **Execute** button on the toolbar or press **F5** to run the query.
+
+**Result:** The source schedule and all its jobs are copied to a new schedule with the specified name.
 
 ## SMA_DELETESCHED
 
@@ -422,48 +382,39 @@ This process is irreversible. Continuous recommends backing up the database befo
 
 ### Syntax
 
-EXEC SMA_DELETESCHED '<Schedule Name\>'
+EXEC SMA_DELETESCHED '&lt;Schedule Name&gt;'
 
 #### Parameters
 
-- **<Schedule Name\>**: The name of the schedule to delete
+- **&lt;Schedule Name&gt;**: The name of the schedule to delete
   - Must not exceed 20 characters
   - Enclose in single quotation marks (e.g., 'OldSched')
 
 ### Running SMA_DELETESCHED
 
-On the OpCon Database Server:
+To run SMA_DELETESCHED, complete the following steps:
 
-Log in as a *local administrative user*.
-
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
-
-In the Connect to Server dialog:
-
-Select **Database Engine** in the **Server type** list.
-
-Select the desired \[OpCon Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-In the Microsoft SQL Server Management Studio window:
-
-Expand (+) the **Databases** folder and select the **OpCon Database**.
-
-Select the **New Query** button on the toolbar.
-
-Enter the command for the **SMA_DELETESCHED** stored procedure.
+1. Log in as a *local administrative user*.
+2. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+3. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the desired OpCon Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
+4. In the Microsoft SQL Server Management Studio window:
+   - Expand (+) the **Databases** folder and select the **OpCon Database**
+   - Select the **New Query** button on the toolbar
+   - Enter the command for the **SMA_DELETESCHED** stored procedure
 
 :::tip Example
 EXEC SMA_DELETESCHED 'Shipping'
 :::
 
-Select the **Execute** button on the toolbar or press **F5** to run the query.
+5. Select the **Execute** button on the toolbar or press **F5** to run the query.
+
+**Result:** The schedule and all associated jobs, dependencies, and the holiday calendar are permanently deleted from the OpCon database.
 
 ## SMA_MERGESCHED
 
@@ -513,32 +464,21 @@ END
 
 ### Running SMA_MERGESCHED
 
-On the OpCon Database Server:
+To run SMA_MERGESCHED, complete the following steps:
 
-Log in as a *local administrative user*.
-
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
-
-In the Connect to Server dialog:
-
-Select **Database Engine** in the **Server type** list.
-
-Select the desired \[OpCon Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-In the Microsoft SQL Server Management Studio window:
-
-Expand (+) the **Databases** folder and select the **OpCon Database**.
-
-Select the **New Query** button on the toolbar.
-
-Enter the command for the **SMA_MERGESCHED** stored procedure.
+1. Log in as a *local administrative user*.
+2. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+3. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the desired OpCon Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
+4. In the Microsoft SQL Server Management Studio window:
+   - Expand (+) the **Databases** folder and select the **OpCon Database**
+   - Select the **New Query** button on the toolbar
+   - Enter the command for the **SMA_MERGESCHED** stored procedure
 
 :::tip Example
 
@@ -559,7 +499,9 @@ END
 
 :::
 
-Select the **Execute** button on the toolbar or press **F5** to run the query.
+5. Select the **Execute** button on the toolbar or press **F5** to run the query.
+
+**Result:** Jobs from the source schedule are merged into the target schedule.
 
 ## SMA_SAMWATCH
 
@@ -567,7 +509,7 @@ SMA_SAMWATCH monitors the SAM by creating a special SAMID with the same timestam
 
 ### Syntax
 
-EXEC SMA_SAMWATCH SAMID,'Recipient',<\#1\>,<\#2\>
+EXEC SMA_SAMWATCH SAMID,'Recipient',&lt;#1&gt;,&lt;#2&gt;
 
 #### Parameters
 
@@ -602,9 +544,9 @@ EXEC SMA_SAMWATCH 1,'C:\ProgramData\OpConxps\Scripts\sma_samwatch.cmd'
 
 :::
 
-**<\#1\>**: The number of retries when a SAMPULSE record for the requested SAMID is absent (e.g., when SAM is not running or during SAM regeneration). Default is 1.
+**&lt;#1&gt;**: The number of retries when a SAMPULSE record for the requested SAMID is absent (e.g., when SAM is not running or during SAM regeneration). Default is 1.
 
-**<\#2\>**: The number of seconds between retry attempts. Valid values are integers from 0 to 59. Default is 5.
+**&lt;#2&gt;**: The number of seconds between retry attempts. Valid values are integers from 0 to 59. Default is 5.
 
 :::tip Example
 The following command attempts to detect the SAM seven times at 20-second intervals, then runs the command file if the SAM is not detected:
@@ -621,103 +563,57 @@ EXEC SMA_SAMWATCH 1,'C:\ProgramData\OpConxps\Scripts\sma_samwatch.cmd',7,20
 Do not schedule SMA_SAMWATCH through OpCon. OpCon cannot send notifications when the SAM-SS is not processing.
 :::
 
-To schedule the stored procedure:
+To schedule the stored procedure, complete the following steps:
 
-Log in to Management Studio
+**Log in to Management Studio**
 
-On the OpCon Database Server:
+1. Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+2. In the Connect to Server dialog:
+   - Select **Database Engine** in the **Server type** list
+   - Select the OpCon Publishing Database Server in the **Server name** list
+   - Select one of the following options in the **Authentication** list:
+     - **Windows Authentication** to log in with the current Windows User with local administrative authority
+     - **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
+   - Select the **Connect** button
 
-Use menu path: **Start \> All Programs \> Microsoft SQL Server \> SQL Server Management Studio**.
+**Create an SQL Job**
 
-In the Connect to Server dialog:
+1. Go to the **Object Explorer** frame.
+2. Expand (+) the **SQL Server Agent** icon.
+3. Right-click the **Jobs** folder and choose **New > Job**.
+4. Enter a *job name* in the **Name** text box.
+5. Go to the **Select a page** frame and select **Steps**.
+6. Select the **New** button.
+7. Enter a *name* in the **Step Name** text box.
+8. Select **Transact-SQL Script** (T-SQL) in the **Type** list.
+9. Select the **OpConxps Database** in the **Database** list.
+10. Enter the *SMA_SAMWATCH* command in the **Command** text box.
+11. Select **OK**.
 
-Select **Database Engine** in the **Server type** list.
+**Schedule the SQL Job**
 
-Select the \[OpCon Publishing Database Server\] in the **Server name** list.
-
-Select one of the following options in the **Authentication** list:
-
-- **Windows Authentication** to log in with the current Windows User with local administrative authority
-- **SQL Server Authentication** then enter *sa* in the **Login** text box and the *sa's password* in the **Password** text box
-
-Select the **Connect** button.
-
-Create an SQL Job
-
-To create an SQL Job, complete the following steps:
-
-1. Go to the **Object Explorer** frame
-2. Expand (+) the **SQL Server Agent** icon
-3. Right-click the **Jobs** folder and choose **New\>Job**
-4. Enter a *job name* in the **Name** text box
-5. Go to the **Select a page** frame and select **Steps**
-6. Select the **New** button
-7. Enter a *name* in the **Step Name** text box
-8. Select **Transact-SQL Script** (T-SQL) in the **Type** list
-9. Select the **OpConxps Database** in the **Database** list
-10. Enter the *SMA_SAMWATCH* command in the **Command** text box
-11. Select **OK**
-
-Schedule the SQL Job
-
-On the New Job screen:
-
-Go to the **Select a page** frame and select the **Schedules** tab.
-
-On the Schedules tab's screen:
-
-Select the **New** button.
-
-In the New Job Schedule window:
-
-Enter a *name for the schedule* in the **Name** text box.
-
-Select **Recurring** in the **Schedule type** list.
-
-Go to the **Frequency** frame and select **Daily** in the **Occurs** list.
-
-Go to the **Daily frequency** frame and:
-
-a.  Select the **Occurs every** radio button.
-b.  Select either **Minute(s)** or **Hour(s)** in the **Occurs every** list.
-c.  Enter the *number of minutes/hours* in the **Occurs every** field.
+1. Go to the **Select a page** frame and select the **Schedules** tab.
+2. Select the **New** button.
+3. In the New Job Schedule window, enter a *name for the schedule* in the **Name** text box.
+4. Select **Recurring** in the **Schedule type** list.
+5. Go to the **Frequency** frame and select **Daily** in the **Occurs** list.
+6. Go to the **Daily frequency** frame and:
+   a. Select the **Occurs every** radio button.
+   b. Select either **Minute(s)** or **Hour(s)** in the **Occurs every** list.
+   c. Enter the *number of minutes/hours* in the **Occurs every** field.
 
 :::tip Example
 Occurs every: 3 Minute(s)
 :::
 
-Leave all other settings at their default values and select **OK**.
+7. Leave all other settings at their default values and select **OK**.
+8. Select **OK** in the **New Job** window.
 
-Select **OK** in the **New Job** window.
+**Result:** SMA_SAMWATCH is scheduled as a recurring SQL Server Agent job that monitors the SAM and sends an alert when the SAM stops processing.
 
-:::
-
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| <Machine Name\> | The name of the agent whose MachineID is changed to 1 | — | — |
-| OLDGID | The existing UNIX Group ID to search for | — | — |
-| NEWGID | The updated UNIX Group ID | — | — |
-| OLDUID | The existing UNIX User ID to search for | — | — |
-| NEWUID | The updated UNIX User ID | — | — |
-| SKDNAME | The name of the target schedule | — | — |
-| <ScheduleName\> | The name of the schedule from which jobs will be cleared | — | — |
-| <SourceSchedule\> | The name of the schedule to copy | — | — |
-| <TargetSchedule\> | The name of the new schedule to create | — | — |
-| Copy Privileges (Y/N) | Indicates whether to copy privileges to the new schedule. | — | — |
-| Copy Jobs (Y/N) | Indicates whether to copy jobs to the new schedule. | — | — |
-| \@errorcode | A variable to receive the exit code from SQL Server | — | — |
-| \@errortext | A variable to receive the text description of the error code | — | — |
-| <Schedule Name\> | The name of the schedule to delete | — | — |
-| TargetSchedule | The schedule to retain. | — | — |
-| SourceSchedule | The schedule to merge into the target schedule | — | — |
-| SAMID | The number assigned to the SAM processing in the OpCon database. | — | — |
-| <\#1\> | The number of retries when a SAMPULSE record for the requested SAMID is absent (e.g., when SAM is not running or during SAM regeneration). | is 1 | Valid values are integers from 0 to 59. Default is 5.  :::tip Example The following command attempts to detect th |
-| <\#2\> | The number of seconds between retry attempts. | is 5 | Valid values are integers from 0 to 59. Default is 5.  :::tip Example The following command attempts to detect th |
 ## Exception Handling
 
-**SMA_CLEAN_ENS permanently deletes notification records and cannot be reversed** — Running SMA_CLEAN_ENS deletes ENS notification records irreversibly; there is no undo operation — Back up the OpCon database before running SMA_CLEAN_ENS; confirm the intent to permanently delete the records before executing.
+**SMA_CLEAN_ENS permanently deletes notification records and cannot be reversed** — Running SMA_CLEAN_ENS deletes ENS notification records irreversibly; there is no undo operation — Back up the OpCon database before running SMA_CLEAN_ENS; confirm the intent to permanently delete the records before running.
 
 **SMA_CLEARSCHED permanently removes all jobs from a schedule and cannot be reversed** — Running SMA_CLEARSCHED deletes all jobs within the specified schedule irreversibly; schedule information, history, and privileges are preserved, but the jobs themselves are gone — Back up the OpCon database before running SMA_CLEARSCHED; this operation is intended for use when restoring an old schedule version via Schedule Extract without losing schedule-level data.
 

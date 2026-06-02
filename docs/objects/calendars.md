@@ -72,15 +72,6 @@ When any [When to Schedule](../automation-concepts/frequencies.md#frequency-defi
 - If the calculated frequency date falls in the Negative Annual Plan Calendar, the job is not scheduled
 - If the calculated frequency date is a non-workday and not in the Negative Annual Plan Calendar, surrounding Negative Annual Plan dates are treated as additional holidays for A/O/B/N resolution
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| Name | The calendar name | Holiday Calendar | — |
-| Documentation | Descriptions, explanations, and notes for the calendar | Holiday Calendar | — |
-| Date List | All dates defined for the calendar | Holiday Calendar | — |
-| Schedules using for holidays (\#) | Schedules using this calendar to define holidays in addition to the schedule's default Holiday Calendar (HC). | Holiday Calendar | — |
-| Schedules/Jobs/Frequencies Using this Calendar (\#) | Each schedule, job, and frequency using the calendar | — | — |
 ## FAQs
 
 **Q: What is the difference between a Holiday Calendar and an Annual Plan Calendar?**
@@ -109,4 +100,4 @@ Yes. Additional Holiday Calendars are user-defined and can be associated with mu
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

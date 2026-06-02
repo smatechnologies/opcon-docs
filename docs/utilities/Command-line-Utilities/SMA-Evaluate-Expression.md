@@ -32,20 +32,20 @@ In fresh installations of OpCon version 23 and later, **SMAConnectionConfig.exe*
 
 To configure the Database Connection Information, complete the following steps:
 
-1. Open SMAConnectionConfig.exe from `<Target Directory>\OpConxps\MSLSAM\` (e.g., `C:\Program Files\OpConxps\MSLSAM\`)
-2. In the **SMAConnectionConfig** window, enter the server name (include the instance name if needed, using `<Server>\<Instance Name>` syntax) in the **Server Instance Name** field
-3. Enter the database name in the **Database Name** field
+1. Open SMAConnectionConfig.exe from `<Target Directory>\OpConxps\MSLSAM\` (e.g., `C:\Program Files\OpConxps\MSLSAM\`).
+2. In the **SMAConnectionConfig** window, enter the server name (include the instance name if needed, using `<Server>\<Instance Name>` syntax) in the **Server Instance Name** field.
+3. Enter the database name in the **Database Name** field.
 4. Configure authentication using one of these methods:
    - Select the **Use Windows Authentication** option
    - Enter `opconsam` in the **Database Login ID** field and the password in the **Database Password** field
-
 5. Select a **Configuration** option:
    - **None**: No setting (default)
    - **SQL Always On**: SQL Server configured for high availability
    - **SQL Mirroring**: SQL Server configured for mirroring
-6. Select **Connect**
+6. Select **Connect**.
+7. Select **OK** to confirm the connection, then **OK** to close.
 
-7. Select **OK** to confirm the connection, then **OK** to close
+**Result:** The database connection file is configured and SMAEvalExp.exe can connect to the OpCon database.
 
 ## Syntax
 
@@ -96,7 +96,7 @@ The command succeeds if true and fails if false. When run as an OpCon job, event
 
 #### Trigger Events Based the Exit Code of a Job
 
-Use the `ToIntNE` function (with a default of 0) and the **<** operator to check a job's exit code.
+Use the `ToIntNE` function (with a default of 0) and the **&lt;** operator to check a job's exit code.
 
 :::tip Example
 The following checks whether the DNSEntries job termination value is less than 20, defaulting to "True" if no termination value exists:
@@ -172,7 +172,7 @@ If "Source1" is 85 and "Source2" is 21, SMAEvalExp.exe returns exit code 0 and s
 
 ## Logging
 
-SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows LSAM to capture job output to use the View Job Output feature from Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List#viewing-job-output) for details.
+SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows Agent to capture job output to use the View Job Output feature from Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List#viewing-job-output) for details.
 
 ## Exit Codes
 
@@ -181,14 +181,6 @@ SMAEvalExp writes logging to the standard Job Output. Continuous recommends conf
 | 0 | Expression evaluation succeeded. The result is included in the Job Output. |
 | -1 | Expression evaluation failed. The error detail is included in the Job Output. |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
-| SMAEvalExp.exe | The executable in `\OpConxps\MSLSAM\` | — | — |
-| Expression | A logic, numeric, or property-assignment expression | — | — |
-| Scenario | If Windows JobA fails with exit code 0000000033, run FixFiles to repair the environment, then rerun JobA | — | — |
-| Solution | Create a job named EvalJobAExit on the same schedule as JobA | — | — |
 ## FAQs
 
 **Q: What API does SMAEvalExp.exe use, and what can it evaluate?**
@@ -217,6 +209,6 @@ The full expression must always be enclosed in double quotes for the Windows com
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 
-**Machine**: A platform defined in the OpCon database that has an LSAM installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

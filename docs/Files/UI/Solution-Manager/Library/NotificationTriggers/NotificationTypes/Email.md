@@ -1,4 +1,4 @@
-﻿---
+---
 title: Email (SMTP) dialog
 description: "!Email Notification The Email dialog provides the following fields for defining an SMTP email notification: - To (Required): SMTP email address(es) separated by semicolons (;)."
 product_area: Solution Manager
@@ -37,31 +37,28 @@ The **Email** dialog provides the following fields for defining an SMTP email no
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| JORS Output | Select this option to include JORS output files as attachments for job triggers | — | — |
-| Exclude Prefix Information | Select this option to exclude prefix information from the email (e.g., Schedule Date, Machine Name, Schedule Name, Job Name \[and Internal Job Number\... | — | — |
-| Message | A user-defined message | — | — |
-| Attachments | Files to include with the message. | — | — |
+| JORS Output | Includes JORS output files as attachments for job triggers | Off | Applies to job triggers only |
+| Exclude Prefix Information | Excludes prefix information (Schedule Date, Machine Name, Schedule Name, Job Name, trigger type, and triggering status change event) from the email | Off | — |
+| Message | A user-defined message body | — | — |
+| Attachments | Files to include with the message | — | Wildcards are not allowed in filenames |
+
 ## FAQs
 
-**Q: What does Email (SMTP) dialog do?**
+**Q: What does the Email (SMTP) dialog do?**
 
-The **Email** dialog provides the following fields for defining an SMTP email notification:
+The **Email** dialog defines the fields for an SMTP email notification sent by the SMA Notify Handler when a trigger fires.
 
-**Q: Where can you find Email (SMTP) dialog in OpCon?**
+**Q: Where can you find the Email (SMTP) dialog in OpCon?**
 
-Access Email (SMTP) dialog in Solution Manager or Enterprise Manager.
+Go to **Library > Notification Triggers** in Solution Manager, then select or create a trigger and choose **Email** as the notification type.
 
 ## Glossary
 
 **JORS (Job Output Retrieval System)**: The system used to retrieve and display job output — logs and reports — from agent machines directly within the OpCon graphical interfaces.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
 **Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 

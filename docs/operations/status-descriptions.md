@@ -46,7 +46,7 @@ The Close schedule option is needed when there are failed jobs in the schedule a
 Job statuses are grouped into categories. The last column lists permitted status changes.
 
 :::info
-Remember that even though Kill is listed for all Running statuses, Kill is only valid for Machines that have enabled this feature.
+Even though Kill is listed for all Running statuses, Kill is only valid for machines that have enabled this feature.
 :::
 
 |Category|Job Status|Description|Allowed Status Changes|
@@ -65,9 +65,9 @@ Remember that even though Kill is listed for all Running statuses, Kill is only 
 |Waiting|Wait Machine|The job is waiting for the agent to become available. Either the agent is processing its maximum number of jobs or SMANetCom is not communicating with the agent.|Hold, Start, Cancel, Skip, Mark Finished OK, Mark Failed|
 |Waiting|Wait to Start|The job has qualified to process, but is waiting for SMANetCom to send the start message to the agent.|Hold, Start, Cancel, Skip, Mark Finished OK, Mark Failed|
 |Waiting|Wait to Start:Forced|Forces a job to start regardless of Job Dependencies or whether the machine has an available job slot.|Hold, Start, Cancel, Skip, Mark Finished OK, Mark Failed|
-|Running|Attempt to Start|The first step towards starting the job. When the job is sent to the Agent, the status is changed to Start Attempted.|Mark Finished OK, Mark Failed|
+|Running|Attempt to Start|The first step towards starting the job. When the job is sent to the agent, the status is changed to Start Attempted.|Mark Finished OK, Mark Failed|
 |Running|Job Running|The agent has successfully started the job.|Kill, Mark Finished OK, Mark Failed|
-|Running|Job Running: To be Terminated|This status alerts SAM to send a Kill command to the Agent. Once sent, the Job reverts back to a Job Running status until confirmation is received from the Agent that the job was killed.|Mark Finished OK, Mark Failed|
+|Running|Job Running: To be Terminated|This status alerts SAM to send a Kill command to the agent. Once sent, the job reverts back to a Job Running status until confirmation is received from the agent that the job was killed.|Mark Finished OK, Mark Failed|
 |Running|Late to Finish|Indicates that the time is now past the late to finish time for the job to finish, and the job is still running.|Kill, Mark Finished OK, Mark Failed|
 |Running|Prerun Active|The agent has successfully started the prerun job.|Kill, Mark Finished OK, Mark Failed|
 |Running|Start Attempted|The SAM has submitted the job (via SMANetCom) to the agent for processing.|Kill, Mark Finished OK, Mark Failed|
