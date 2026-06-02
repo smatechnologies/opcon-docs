@@ -35,7 +35,7 @@ To log in to the SAP machine, complete the following steps:
 
 1. Select **Machine Status** under the **Operation** topic
 2. Right-click the preferred **SAP R/3 and CRM machine**
-3. Hover over **SAP Machine** in the right-click menu and select on **SAP Jobs**
+3. Hover over **SAP Machine** in the right-click menu and select **SAP Jobs**
 
 ## SAP Machine
 

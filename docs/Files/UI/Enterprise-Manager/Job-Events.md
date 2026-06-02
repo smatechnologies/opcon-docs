@@ -34,7 +34,7 @@ The events table displays each event defined for the current scope. The table co
 | Column | Description |
 |---|---|
 | **Event** | The full event command string. |
-| **Trigger** | The condition that fires the event: Job Status, LSAM Feedback, Exit Description, or Job Completion Complex Expression. |
+| **Trigger** | The condition that fires the event: Job Status, Agent Feedback, Exit Description, or Job Completion Complex Expression. |
 | **Match** | The specific status, feedback value, exit code, or expression that must match to fire the event. |
 | **User** | The OpCon user who created the event. |
 
@@ -55,7 +55,7 @@ When you add or edit a job event, the **Event Definition Wizard** prompts you to
 | Trigger type | Description |
 |---|---|
 | **Job Status** | Fires when the job reaches a selected status (for example, Finished OK or Failed). |
-| **LSAM Feedback** | Fires when the agent running the job reports a specific feedback value that matches a string you define. |
+| **Agent Feedback** | Fires when the agent running the job reports a specific feedback value that matches a string you define. |
 | **Exit Description** | Fires when the job's exit description matches an operator comparison (for example, Equal To `0`). |
 | **Job Completion Complex Expression** | Fires when a property expression you define evaluates to true at job completion. Refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md) for syntax details. |
 

@@ -52,7 +52,6 @@ To remove a trigger, complete the following steps:
 3. Hover over **SAP Machine** in the right-click menu and select **Event Driven Automation**. The **SAP Event Driven Automation** dialog displays
 4. Select the **trigger** in the list, then select **Remove**
 5. Select the **Save** button
-:::
 
 ## FAQs
 

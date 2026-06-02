@@ -24,7 +24,7 @@ Use this procedure to configure Account Settings in Solution Manager.
 
 To configure account settings, complete the following steps:
 
-1. Log into the Solution Manager
+1. Log in to Solution Manager
 2. Select the **user profile** button in the **Navigation** menu
 
    ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
