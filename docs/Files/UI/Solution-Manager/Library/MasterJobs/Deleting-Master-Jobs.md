@@ -31,18 +31,24 @@ To delete a job, you must be in the ocadm role or have all of the following priv
 - **Schedule Privilege**: Access to the job's parent schedule
 - **Access Code Privilege**: Access to the assigned job access code with **Allow job updates** set to true
 - **Machine / Machine Group Privilege**: Access to the assigned job machine or machine group
-- **Departmental Function Privilege**: All Function Privileges, or Modify Jobs In Master Schedules, Delete Jobs From Master Schedules, or Modify Jobs In Master Schedules with department privilege
+- **Departmental Function Privilege**: All Function Privileges, Delete Jobs from Master Schedules, or Modify Jobs in Master Schedules
 - **Department Privilege**: Access to the assigned job department or All Departments
 
 ---
 
 ## Deleting a Job
 
-Go to **Library** > **Master Jobs**, select one or more jobs, and select **Delete**. A confirmation dialog opens:
+To delete a master job, complete the following steps:
 
-![Master Job Delete](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-delete.png "Confirm Delete")
+1. Go to **Library** > **Master Jobs**.
+2. Select one or more jobs in the list.
+3. Select **Delete**. A confirmation dialog opens:
 
-Select **Yes** to delete or **No** to cancel.
+   ![Master Job Delete](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-delete.png "Confirm Delete")
+
+4. Select **Yes** to confirm the deletion or **No** to cancel.
+
+**Result:** The selected master job records are permanently removed from OpCon.
 
 ## Configuration Options
 
@@ -51,18 +57,18 @@ Select **Yes** to delete or **No** to cancel.
 | Schedule Privilege | Access to the job's parent schedule | — | — |
 | Access Code Privilege | Access to the assigned job access code with **Allow job updates** set to true | — | — |
 | Machine / Machine Group Privilege | Access to the assigned job machine or machine group | — | — |
-| Departmental Function Privilege | All Function Privileges, or Modify Jobs In Master Schedules, Delete Jobs From Master Schedules, or Modify Jobs In Master Schedules with department pri... | — | — |
+| Departmental Function Privilege | All Function Privileges, Delete Jobs from Master Schedules, or Modify Jobs in Master Schedules | — | — |
 | Department Privilege | Access to the assigned job department or All Departments | — | — |
 
 ## FAQs
 
-**Q: Can a master jobs record be recovered after deletion?**
+**Q: Can a master job record be recovered after deletion?**
 
-No. Deleting a master jobs record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting a master job record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
 
-**Q: What should you check before deleting master jobs?**
+**Q: What should you check before deleting a master job?**
 
-Verify the master jobs is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
+Verify the master job is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
 
 ## Glossary
 
@@ -76,7 +82,7 @@ Verify the master jobs is not currently in use or assigned to other records befo
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an Agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Global Properties
@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Global Properties in OpCon are listed in the grid under Library > Global Properties. Select the Add, Edit, or Copy button to open the Global Property Editor.
+Global Properties in OpCon are listed in the grid under **Library** > **Global Properties**. Select **Add**, **Edit**, or **Copy** to open the Global Property Editor.
 
 ![Managing Library](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Managing Library")
 
@@ -30,7 +30,7 @@ Global Properties in OpCon are listed in the grid under Library > Global Propert
 
 **Q: What does managing global properties involve?**
 
-Managing global properties includes adding, editing, and deleting records. Access global properties in Solution Manager or Enterprise Manager.
+Managing global properties includes adding, editing, and deleting records. Access global properties in Solution Manager under **Library** > **Global Properties**.
 
 **Q: Who can manage global properties in OpCon?**
 
@@ -38,7 +38,7 @@ Users with the appropriate privileges assigned through their role can manage glo
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
+**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
 **Token (Global Property)**: A named value stored in the OpCon database, referenced in job definitions and events using [[PropertyName]] syntax. Tokens pass dynamic values — such as dates, file paths, or counts — into automation workflows.
 
@@ -48,4 +48,4 @@ Users with the appropriate privileges assigned through their role can manage glo
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

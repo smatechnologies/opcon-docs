@@ -57,23 +57,23 @@ The **Notification indicator** ![Notification Icon](../../../Resources/Images/SM
 
 **InstantLog Mode** captures logs temporarily to send to Continuous Customer Support. Use it when you can reproduce the issue in the application.
 
-To activate this mode, complete the following steps:
+To activate InstantLog Mode, complete the following steps:
 
-1. Start from a fresh login and Go to the **Home** page
-2. Press **Ctrl+Alt+L**. A red bug icon ![InstaLog Icon](../../../Resources/Images/SM/InstaLog-Icon.png "InstaLog Icon") appears in the bottom-right of the status bar
-3. Reproduce your issue by navigating to the page where it occurs
-4. Press **Ctrl+Alt+L** again to generate the **debug.log** file
-5. Send the generated file to Continuous Customer Support
+1. Start from a fresh login and go to the **Home** page.
+2. Press **Ctrl+Alt+L**. A red bug icon ![InstaLog Icon](../../../Resources/Images/SM/InstaLog-Icon.png "InstaLog Icon") appears in the bottom-right of the status bar.
+3. Reproduce your issue by going to the page where it occurs.
+4. Press **Ctrl+Alt+L** again to generate the **debug.log** file.
+5. Send the generated file to Continuous Customer Support.
 
 :::note
-For all buttons in the Solution Manager, you only have to select once to trigger the action.
+For all buttons in Solution Manager, you only have to select once to trigger the action.
 :::
 
 ## FAQs
 
 **Q: What does Understanding the User Interface Layout cover?**
 
-This page covers Navigation Menu, Solutions, Status Bar.
+This page covers Navigation Menu, Solutions, and Status Bar.
 
 ## Glossary
 
@@ -87,4 +87,4 @@ This page covers Navigation Menu, Solutions, Status Bar.
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.
