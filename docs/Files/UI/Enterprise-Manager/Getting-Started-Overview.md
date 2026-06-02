@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# EM Getting Started Overview
+
 **Theme:** Overview | **Who is it for?** New Enterprise Manager users completing initial setup
 
 ## What Is It?

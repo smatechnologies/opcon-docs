@@ -12,6 +12,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# User Security Overview
+
 **Theme:** Overview | **Who is it for?** System administrators who manage OpCon user access and security
 
 ## What Is It?

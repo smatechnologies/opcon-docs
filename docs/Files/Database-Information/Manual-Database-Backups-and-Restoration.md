@@ -188,10 +188,10 @@ On the OpCon Database Server, connect to SQL Server Management Studio (as above)
 1. Select the **New Query** button
 2. Select the **OpCon Database** in the toolbar list
 3. Enter the query: `dbo.sp_change_users_login 'update_one','opconsam','opconsam'`
-4. Select the **Execute** button or press **F5**
+4. Select the **run** button or press **F5**
 5. Enter the query: `dbo.sp_change_users_login 'update_one','opconui','opconui'`
 
-6. Select the **Execute** button or press **F5**
+6. Select the **run** button or press **F5**
 
 #### Setting up Replication
 

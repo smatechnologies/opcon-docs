@@ -61,7 +61,7 @@ All required fields are designated by a red asterisk.
 
 - **Job Name**: Name of the job as defined in the SAP R/3 and SAP CRM system.
 - **Job Number**: SAP R/3 and SAP CRM job number (Job ID) as defined in the SAP system.
-- **Execution Target**: Name of the SAP Application Server on which the job processes.
+- **running Target**: Name of the SAP Application Server on which the job processes.
 - **Start the SAP Job**: Configures SAP start criteria:
   - **A.S.A.P**: Starts the job as soon as a background processor is available.
   - **Start Immediately**: Starts the job as soon as it qualifies to run in OpCon, without waiting for an available SAP background processor. If all background processors are in use, the job fails.
@@ -301,9 +301,9 @@ Select the **Print Specifications** button to open the dialog.
 - **Active trace**: Activates trace.
   ![External Program Details](../../../../../../../Resources/Images/SM/Operations/SapR3/External-Program-Details.png 'External Program Details')
 
-### Select Execution Target
+### Select running Target
 
-Select the search button next to **Execution Target** to open the SAP Query dialog.
+Select the search button next to **running Target** to open the SAP Query dialog.
 ![Search Button](../../../../../../../Resources/Images/SM/Operations/SapR3/Search-Exec-Sap-Button.png 'Search Button')
 
 #### In the SAP Query dialog:
@@ -315,16 +315,16 @@ Select the search button next to **Execution Target** to open the SAP Query dial
 
 ![SAP Query Dialog](../../../../../../../Resources/Images/SM/Operations/SapR3/SAP-Exec-Query-Dialog.png 'SAP Query Dialog')
 
-Enter SAP credentials and select the search button to retrieve all execution targets.
+Enter SAP credentials and select the search button to retrieve all running targets.
 ![Query SAP Button](../../../../../../../Resources/Images/SM/Operations/SapR3/Query-SAP-Button.png 'Query SAP Button')
 
-Select a target from the list and select **Ok** to assign it to the **Execution Target** field.
+Select a target from the list and select **Ok** to assign it to the **running Target** field.
 ![Exec List](../../../../../../../Resources/Images/SM/Operations/SapR3/Sap-Exec-Dialog-List.png 'Exec List')
 ![Exec. Target](../../../../../../../Resources/Images/SM/Operations/SapR3/Sap-Exec-Target-Update.png 'Exec. Target')
 
-### Remove Execution Target
+### Remove running Target
 
-To remove the **Execution Target**, select the delete button.
+To remove the **running Target**, select the delete button.
 
 ---
 

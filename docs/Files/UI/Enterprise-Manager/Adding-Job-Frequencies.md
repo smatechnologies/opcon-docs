@@ -44,7 +44,7 @@ To add a new frequency to a job, complete the following steps:
 
 **Result:** The new frequency appears in the **Frequency list** on the **Frequency** tab.
 
-After adding the frequency, you can configure optional timing and execution settings for it in the **Frequency** tab:
+After adding the frequency, you can configure optional timing and running settings for it in the **Frequency** tab:
 
 **Job Build Status** — Select one of the following options:
 

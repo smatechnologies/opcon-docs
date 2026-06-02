@@ -52,4 +52,4 @@ To edit an SAP job, complete the following steps:
 ## Related information
 
 - To copy an SAP job, select the job in the **SAP Jobs** list and select **Copy Job**.
-- To view the execution log for a finished or canceled job, select the job and select **Job Log**.
+- To view the running log for a finished or canceled job, select the job and select **Job Log**.

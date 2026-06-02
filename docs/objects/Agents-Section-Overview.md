@@ -1,6 +1,6 @@
 ---
 title: Agents Section Overview
-description: "Agents (referred to as machines in OpCon) are the execution targets for jobs."
+description: "Agents (referred to as machines in OpCon) are the running targets for jobs."
 product_area: Core Concepts
 audience: Automation Engineer, Application Owner
 version_introduced: "[see release notes]"
@@ -19,7 +19,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Agents (referred to as machines in OpCon) are the execution targets for jobs. Each agent runs an OpCon agent that communicates with the OpCon server and runs submitted jobs. Machine groups pool agents so jobs can target any available machine in the group.
+Agents (referred to as machines in OpCon) are the running targets for jobs. Each agent runs an OpCon agent that communicates with the OpCon server and runs submitted jobs. Machine groups pool agents so jobs can target any available machine in the group.
 
 - Adding a new agent to the OpCon environment
 - Configuring machine communication settings
@@ -40,7 +40,7 @@ Agents (referred to as machines in OpCon) are the execution targets for jobs. Ea
 | --- | --- |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
 | Agent | An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon. |
-| Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Machine (Agent)) | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Machine Group | A pool of machines (agents) that allows jobs to target any available machine in the group, enabling load balancing and failover. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Schedule | A named group of jobs in OpCon that represents a business process. Schedules are built each day based on their defined frequencies and calendars. |
@@ -57,4 +57,4 @@ Begin with the overview pages in the sidebar. If you are new to this area, revie
 
 **Q: What is the difference between a machine and a machine group in OpCon?**
 
-A machine (agent) is a single execution target where OpCon runs jobs. A machine group is a pool of machines that allows jobs to target any available machine in the group, enabling load balancing and failover without changing individual job definitions.
+A machine (agent) is a single running target where OpCon runs jobs. A machine group is a pool of machines that allows jobs to target any available machine in the group, enabling load balancing and failover without changing individual job definitions.

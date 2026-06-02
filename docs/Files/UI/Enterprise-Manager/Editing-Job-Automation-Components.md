@@ -136,11 +136,11 @@ To add a job event in Job Daily, complete the following steps:
 5. Select the **Edit Daily** button in the **Maintenance** frame. The **Job Daily** screen displays.
 6. Select the **Events** tab.
 7. Select the **Add** button in the **Events** frame. The **Event Definition Wizard** displays.
-8. Select the **Job Status**, **LSAM Feedback**, **Exit Description**, or **Job Completion Complex Expression** option on the **Event Trigger** screen.
+8. Select the **Job Status**, **Agent Feedback**, **Exit Description**, or **Job Completion Complex Expression** option on the **Event Trigger** screen.
 9. Select **Next** to proceed to the **Trigger Details** screen.
 10. Complete the trigger details based on your selection in the previous step:
     - **(Job Status)** Select the job status in the **Job Status** list.
-    - **(LSAM Feedback)** Select the feedback name in the **LSAM Feedback** list. Enter a string in the **String to match** field.
+    - **(Agent Feedback)** Select the feedback name in the **Agent Feedback** list. Enter a string in the **String to match** field.
     - **(Exit Description)** Select an operator in the **Comparison Operator** list. Enter values in the **Value** and **End Value** fields.
     - **(Job Completion Complex Expression)** Enter the expression in the **Expression** field. For syntax, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md).
 11. Select **Next** to advance to the **Event Definition** screen.

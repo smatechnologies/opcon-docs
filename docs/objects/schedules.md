@@ -284,7 +284,7 @@ maintaining history records, refer to [Using History Management](../Files/UI/Ent
 
 #### AdHoc Schedule
 
-The AdHoc schedule allows the execution of jobs that run outside normal
+The AdHoc schedule allows the running of jobs that run outside normal
 schedule activity. The AdHoc schedule behaves the same as any other
 schedule, but never requires a Build process. The SAM automatically puts
 the AdHoc schedule in the Daily tables if any job on the schedule is
@@ -387,7 +387,7 @@ command lines of the jobs.
   - Default Value: **C:\\Program Files\\OpConxps**
 - **UNIXLSAMPath**: This property defines the path to the
     Agent binary directory for UNIX Agents.
-  - Default Value: **/usr/local/lsam/bin/**
+  - Default Value: **/usr/local/Agent/bin/**
 - **DB_SERVER_NAME**: This property defines the
     OpCon database server name as used by the
     SMAUtility schedule jobs.

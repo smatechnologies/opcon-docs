@@ -12,6 +12,8 @@ tags:
 last_updated: 2026-06-02
 doc_type: conceptual
 ---
+# EM Layout Overview
+
 
 Enterprise Manager is an Eclipse-based desktop application that provides a multi-panel interface for configuring and managing OpCon automation objects. The interface consists of five regions: the menu bar, the toolbar, the Navigation panel, the editor area, and the status bar.
 

@@ -41,7 +41,7 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
     - **Missed Latest Start Time**: Job missed its latest start time
     - **Skipped**: Job was skipped
     - **Start Attempted**: Occurs just before job start info is sent to the agent. If the event is not processed, SAM places the job On Hold
-  - **Agent Feedback** (labeled "LSAM Feedback" in the UI): Evaluation string based on a specific agent feedback value. Fields:
+  - **Agent Feedback** (labeled "Agent Feedback" in the UI): Evaluation string based on a specific agent feedback value. Fields:
     - **Agent Feedback**: Platform-specific agent feedback values (e.g., SAP R/3 includes Child Process). Values vary by job type. Supported job types:
       - File Transfer
       - IBM i

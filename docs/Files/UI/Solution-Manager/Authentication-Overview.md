@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Authentication Overview
+
 **Theme:** Overview | **Who is it for?** All users who access Solution Manager and administrators who configure authentication
 
 ## What Is It?

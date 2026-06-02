@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: reference
 ---
 
+# Daily Job Definition Overview
+
 **Theme:** Overview | **Who is it for?** Operations staff who need to view or edit a job's daily instance definition
 
 ## What Is It?
@@ -49,7 +51,7 @@ The Daily Job Definition is the runtime instance of a master job. You can view a
 | Dependency (Job Dependency) | A condition that must be met before a job is allowed to start. OpCon supports job dependencies, threshold dependencies, resource dependencies, and expression dependencies. |
 | Frequency | A named rule that specifies the recurring days on which a schedule or job runs. OpCon uses frequencies during the Schedule Build process. |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Machine (Agent) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Agent) | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Property | A name-value pair stored in OpCon. Properties can be referenced in job definitions using token syntax to pass dynamic values at runtime. |
 | Resource | A user-defined object with a name and a numeric limit. Used to restrict how many jobs run concurrently across schedules and machines in OpCon. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |

@@ -49,7 +49,7 @@ Go to **Enterprise Manager > Preferences** and update the **Days to maintain in 
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
-**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for running. Changes to daily tables affect only the current day's automation.
+**Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 

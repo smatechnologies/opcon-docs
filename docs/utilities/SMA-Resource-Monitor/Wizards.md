@@ -207,12 +207,12 @@ The average value is calculated by taking 1 sample every second and averaging la
 
 ### Third Screen: Define Actions
 
-- **Execution Condition**: Appears only for Counter monitors, and contains the execution condition that triggers the actions. The conditions include:
+- **running Condition**: Appears only for Counter monitors, and contains the running condition that triggers the actions. The conditions include:
   - **Above/Below Average**: The Action Group is triggered when the value of the counter exceeds or falls below the average value (depending on the setting defined on the previous screen of the wizard).
   - **Above Max Value**: The Action Group is triggered when the value of the counter exceeds the max value set.
   - **Below Min Value**: The Action group is triggered when the value of the counter falls below the min value set.
 - **Action Group Name**: Defines the Action Group names. The maximum characters for the Action Group Name is 60.
-  - **Create**: This button launches the Action Group Wizard to add an *Action Group Name*. When the Action wizard is complete, the new group name is added to the **Action Group Name** list in the Monitor Wizard.
+  - **Create**: This button opens the Action Group Wizard to add an *Action Group Name*. When the Action wizard is complete, the new group name is added to the **Action Group Name** list in the Monitor Wizard.
 - **Actions Table**:
   - **Active**: Indicates if each action is active or inactive. This setting is only updateable from the Action Groups tab since the status is global for all monitors using the group.
   - **Action Details**: Contains the external event string to process. This string is only updateable from the Action Groups tab since the actions in a group are global for all monitors using the group.

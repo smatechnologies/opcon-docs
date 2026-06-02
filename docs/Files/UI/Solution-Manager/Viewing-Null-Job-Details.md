@@ -58,7 +58,7 @@ To view Null job details in Daily Job Definition, complete the following steps:
 
 ## Glossary
 
-**Null Job**: A job type that performs no execution on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
+**Null Job**: A job type that performs no running on any platform. Null jobs are used to hold dependencies, trigger OpCon events, and keep schedules open after all other jobs complete.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 

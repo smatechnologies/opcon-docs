@@ -35,7 +35,7 @@ To configure the **General** setting, you must have one of the following:
 
 ## Configuring General
 
-To configure General Settings, go to **Library** > **Server Options** > select on the **GENERAL** tab.
+To configure General Settings, go to **Library** > **Server Options** > Select the **GENERAL** tab.
 
 ![Server Options - General Settings](../../../../../Resources/Images/SM/Library/ServerOptions/General-Settings-Textboxes.png "General Settings")
 ![Server Options - General Settings](../../../../../Resources/Images/SM/Library/ServerOptions/General-Settings-Switches.png "General Settings Continued")
@@ -57,7 +57,7 @@ The General category contains default behavior settings for the SAM.
 |Incident Management System|*blank*|Y|Identifies the ticketing system used for incident management. When specified, this value replaces the "Incident Ticket ID" label in the Daily Job Information dialog.|
 |Allow Job Events to Restart Schedules|False|Y|When True, the following events can restart a completed schedule: $JOB:ADD, $JOB:RESTART, $JOB:RESCHEDULE. By default, the SAM does not restart completed schedules and logs the event as an error in Critical.log. Valid values: True, False.|
 |Failed jobs should keep the Schedule "In Process"|False|Y|When True, schedules containing Failed or Marked Failed jobs remain In Process. By default, the SAM closes a schedule when all jobs are Cancelled, Skipped, Finished OK, or Failed. Valid values: True, False.|
-|Number of Days to Keep a Service Request Execution|7|Y|Defines the number of days to retain service request execution history.|
+|Number of Days to Keep a Service Request running|7|Y|Defines the number of days to retain service request running history.|
 |Solution Manager URL|*blank*|N|Defines the Solution Manager URL for opening Solution Manager within Enterprise Manager. When specified, a Solution Manager option appears in the Navigation frame. Note: Log out and back in to Enterprise Manager after saving this value for the option to appear.|
 
 ## FAQs

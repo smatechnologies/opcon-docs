@@ -54,7 +54,7 @@ Running a MS SQL DTExec job requires the DTExec utility to be installed for runn
       that was specified at design time for the package. You can
       store different configuration settings in an XML
       configuration file and then load the settings before package
-      execution by using this option.
+      running by using this option.
   - **ISSERVER**:
     - **Server Name**: Defines the SQL Server name where the
       package to run is stored.

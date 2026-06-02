@@ -36,7 +36,7 @@ To move a master job to a different schedule, complete the following steps:
    ![Master Job Move](../../../../../Resources/Images/SM/Library/MasterJobs/master-jobs-move.png "Master Job Move")
 
 4. In the **Schedule** field, select or type the destination schedule name.
-5. (Optional) Select the **Navigate to Master Job Definition Page after move** option to open the job definition page when the move completes.
+5. (Optional) Select the **Go to Master Job Definition Page after move** option to open the job definition page when the move completes.
 6. Select **OK** to move the job, or select **Cancel** to discard the change.
 
 **Result:** The job moves to the destination schedule. If you selected the navigate option, the Master Job Definition page for the moved job opens. If the job name already exists in the destination schedule, an error message appears and the move is not completed.

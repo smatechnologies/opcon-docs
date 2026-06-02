@@ -1,6 +1,6 @@
 ---
 title: Sending OpCon Events
-description: "The Event tab provides the following fields for defining an OpCon event launched for the selected trigger: - Event Command: The Event Command definition."
+description: "The Event tab provides the following fields for defining an OpCon event opened for the selected trigger: - Event Command: The Event Command definition."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -20,7 +20,7 @@ doc_type: procedural
 
 ## What Is It?
 
-The **Event** tab provides the following fields for defining an OpCon event launched for the selected trigger:
+The **Event** tab provides the following fields for defining an OpCon event opened for the selected trigger:
 
 - **Event Command**: The Event Command definition. Refer to the [OpCon Events](../../../events/introduction.md) online help for additional information.
 - **Parameters**: The event parameters associated with the Event Command.

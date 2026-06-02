@@ -96,9 +96,9 @@ When an Agent-started job terminates, the run condition word is evaluated for co
 |---|---|
 | **Tokens** | OS 2200 Exec tokens that use OpCon/xps Global Properties. Maximum 250 characters. |
 
-### LSAM Resolved Dependencies
+### Agent Resolved Dependencies
 
-The **LSAM Resolved Dependencies** field determines whether the job includes a Prerun or a File dependency that the Agent resolves before the job runs.
+The **Agent Resolved Dependencies** field determines whether the job includes a Prerun or a File dependency that the Agent resolves before the job runs.
 
 | Value | Description |
 |---|---|
@@ -108,7 +108,7 @@ The **LSAM Resolved Dependencies** field determines whether the job includes a P
 
 #### Prerun Information
 
-When **LSAM Resolved Dependencies** is set to **Prerun**, the Prerun ECL runs immediately before the job defined in the main definition. If the Prerun ECL terminates with an error, it is rescheduled at a user-defined interval and repeats until it succeeds, after which the main ECL processes. Its primary purpose is to test required preconditions for the job.
+When **Agent Resolved Dependencies** is set to **Prerun**, the Prerun ECL runs immediately before the job defined in the main definition. If the Prerun ECL terminates with an error, it is rescheduled at a user-defined interval and repeats until it succeeds, after which the main ECL processes. Its primary purpose is to test required preconditions for the job.
 
 The Prerun Information uses the same field groups as the main definition:
 
@@ -119,7 +119,7 @@ The Prerun Information uses the same field groups as the main definition:
 
 #### File Dependencies
 
-When **LSAM Resolved Dependencies** is set to **File**, define one or more file conditions:
+When **Agent Resolved Dependencies** is set to **File**, define one or more file conditions:
 
 | Field | Description |
 |---|---|

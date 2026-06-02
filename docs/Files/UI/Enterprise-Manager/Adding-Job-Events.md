@@ -27,10 +27,10 @@ To add a job-related event, complete the following steps:
 4. Select the **Events** tab in the **Job Properties** frame.
 5. Select the **Job Related** option.
 6. Select **Add**. The **Event Definition Wizard** displays.
-7. On the **Event Trigger** screen, select one of the following options: **Job Status**, **LSAM Feedback**, **Exit Description**, or **Job Completion Complex Expression**.
+7. On the **Event Trigger** screen, select one of the following options: **Job Status**, **Agent Feedback**, **Exit Description**, or **Job Completion Complex Expression**.
 8. Select **Next** to proceed to the **Trigger Details** screen. Complete the fields based on your selection in the previous step:
    - **Job Status**: Select the job status in the **Job Status** list.
-   - **LSAM Feedback**: Select the feedback name in the **LSAM Feedback** list, then enter a string in the **String to match** field. Use `%` as a wildcard to match zero or more characters, and `_` to match any single character.
+   - **Agent Feedback**: Select the feedback name in the **Agent Feedback** list, then enter a string in the **String to match** field. Use `%` as a wildcard to match zero or more characters, and `_` to match any single character.
    - **Exit Description**: Select the operator in the **Comparison Operator** list, enter a value in the **Value** field, and — if you selected the **Range** operator — enter the upper bound in the **End Value** field.
    - **Job Completion Complex Expression**: Enter the expression in the **Expression** text box. For more information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md).
 9. Select **Next** to advance to the **Event Definition** screen.

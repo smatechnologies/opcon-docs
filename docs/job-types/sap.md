@@ -40,7 +40,7 @@ This page describes the fields available when defining an SAP R/3 or SAP CRM job
 
 OpCon supports creating and modifying SAP job steps through its graphical interfaces. When a step definition is saved, OpCon sends the information to the SAP server for storage.
 
-Each step defines a program name and an execution order. Each step corresponds to one of three program types:
+Each step defines a program name and an running order. Each step corresponds to one of three program types:
 
 - [ABAP Program](#abap-program-details)
 - [External Command](#external-command-details)
@@ -115,7 +115,7 @@ The following fields apply to external command steps.
 - **Parameters**: The parameter string passed to the external command when the step runs.
 - **Operating System**: The operating system on which the background job runs (for example, `AS400`, `Windows`, `SunOS`).
 - **Target Server**: The name of the SAP application server on which the background job runs.
-- **Control Flags**: Additional execution options for the step.
+- **Control Flags**: Additional running options for the step.
   - **Log external output to the job log**: Writes standard job output to the SAP job log.
   - **Log external errors in job log**: Writes standard error output to the SAP job log.
   - **Job waiting for external termination**: Instructs SAP to wait for the external command to finish before returning an exit condition.
@@ -128,7 +128,7 @@ The following fields apply to external program steps.
 - **Program**: The external program name.
 - **Parameters**: The parameter string passed to the external program when the step runs.
 - **Target Server**: The host name of the SAP system on which the external program runs.
-- **Control Flags**: Additional execution options for the step.
+- **Control Flags**: Additional running options for the step.
   - **Log external output to the job log**: Writes standard job output to the SAP job log.
   - **Log external errors in job log**: Writes standard error output to the SAP job log.
   - **Job waiting for external termination**: Instructs SAP to wait for the external command to finish before returning an exit condition.

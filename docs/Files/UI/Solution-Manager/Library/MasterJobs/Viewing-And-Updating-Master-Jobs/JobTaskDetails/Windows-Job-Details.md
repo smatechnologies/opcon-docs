@@ -122,7 +122,7 @@ To configure an Embedded Script, complete the following steps:
 1. Select the **version (or revision) of the script** to run. The **Comments** field populates with any notes about the script.
 1. Select the **runner** (interpreter). The **Run Command Template** field populates with the runner syntax.
 1. Enter any *arguments* to pass to the script at runtime (up to 4000 characters).
-1. Enter the *working directory* for script execution (up to 255 characters).
+1. Enter the *working directory* for script running (up to 255 characters).
 1. Select an **operator** and enter or select the **exit code integer**.
 1. Specify whether the criteria determine if the job **Failed** or **Finished OK**.
 1. Select the green **Add** button (**+**) to define environment variables:

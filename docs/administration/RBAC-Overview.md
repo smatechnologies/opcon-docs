@@ -12,6 +12,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# RBAC Overview
+
 **Theme:** Overview | **Who is it for?** System administrators who control what users can see and do in OpCon
 
 ## What Is It?
@@ -37,7 +39,7 @@ OpCon's RBAC model assigns users to roles, and roles hold specific privileges. P
 | Term | Definition |
 | --- | --- |
 | Department | A named object used to apply function-level security to individual job records. A single department can secure as many jobs as necessary. |
-| Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Machine (Agent)) | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Privilege | A permission that controls which actions a user can perform or which resources a user can access in OpCon. |
 | RBAC (Role-Based Access Control) | A security model in which user permissions are assigned through roles rather than directly to individual users, simplifying access management. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |

@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: reference
 ---
 
+# Otto Skills Overview
+
 **Theme:** Overview | **Who is it for?** Cloud customers who want to use Otto skills to automate operational tasks
 
 ## What Is It?
@@ -21,7 +23,7 @@ Skills are the specific actions Otto can perform in OpCon on your behalf. Each s
 
 - Identifying what actions Otto can take so you can phrase requests correctly
 - Looking up detailed parameters and behavior for a specific skill
-- Reviewing skill requirements after unexpected execution
+- Reviewing skill requirements after unexpected running
 
 ## Available Skills
 
@@ -46,7 +48,7 @@ Skills are the specific actions Otto can perform in OpCon on your behalf. Each s
 | Term | Definition |
 | --- | --- |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Machine (Agent)) | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Schedule | A named group of jobs in OpCon that represents a business process. Schedules are built each day based on their defined frequencies and calendars. |
 | Schedule Build | The process by which OpCon creates daily schedule instances from master schedule definitions, applying frequencies, calendars, and properties. |

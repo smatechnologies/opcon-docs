@@ -13,7 +13,9 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-**Theme:** Overview | **Who is it for?** Operations staff who control schedule execution in the daily queue
+# Schedule Actions Overview
+
+**Theme:** Overview | **Who is it for?** Operations staff who control schedule running in the daily queue
 
 ## What Is It?
 
