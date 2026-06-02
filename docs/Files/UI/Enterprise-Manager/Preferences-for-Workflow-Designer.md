@@ -20,24 +20,28 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this procedure to set Preferences for Workflow Designer and PERT in Enterprise Manager.
+Use this procedure to set preferences for Workflow Designer and PERT in Enterprise Manager.
+
+## Setting Workflow Designer and PERT Preferences
 
 To set the preferences, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Workflow Designer/PERT**. The settings display to the right
-5. *(Optional)* Enter the spacing value between nodes (default: 20)
-6. *(Optional)* Enter the maximum number of Threshold/Resource dependencies to display before the display turns off automatically (default: 300). Enter 0 for unlimited
-7. *(Optional)* Select **Top to Bottom** or **Left to Right** from the **Default layout** list
-8. *(Optional)* Select the **color** button for a dependency type (e.g., Requires, After, Excludes, Conflict) to open the **Color** dialog, then select a color and select **OK**
-9. Select the **Show frequency names** option to show frequency names in job boxes (off by default)
-10. Select the **Show Job status description** option to show the job status name in job boxes (on by default)
-11. Select the **Analyze circular dependencies** option to check for circular dependencies (off by default)
-12. Select the **Do not draw PERT on date selection** option to skip drawing the PERT on date selection (off by default)
-13. Select **Apply** to save changes
-14. Select **OK** to save and close the **Preferences** dialog
+1. Open Enterprise Manager.
+2. Go to **EnterpriseManager &gt; Preferences**. The **Preferences** dialog displays.
+3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list.
+4. Select **Workflow Designer/PERT**. The settings display to the right.
+5. *(Optional)* Enter the spacing value between nodes (default: 20).
+6. *(Optional)* Enter the maximum number of Threshold/Resource dependencies to display before the display turns off automatically (default: 300). Enter 0 for unlimited.
+7. *(Optional)* Select **Top to Bottom** or **Left to Right** from the **Default layout** list.
+8. *(Optional)* Select the **color** button for a dependency type (e.g., Requires, After, Excludes, Conflict) to open the **Color** dialog, then select a color and select **OK**.
+9. Select the **Show frequency names** option to show frequency names in job boxes (off by default).
+10. Select the **Show Job status description** option to show the job status name in job boxes (on by default).
+11. Select the **Analyze circular dependencies** option to check for circular dependencies (off by default).
+12. Select the **Do not draw PERT on date selection** option to skip drawing the PERT on date selection (off by default).
+13. Select **Apply** to save changes.
+14. Select **OK** to save and close the **Preferences** dialog.
+
+**Result:** The Workflow Designer and PERT preferences are saved.
 
 ## Glossary
 

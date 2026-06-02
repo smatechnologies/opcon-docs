@@ -1,6 +1,6 @@
 ---
 title: Resetting Resources in Use
-description: "Learn how to resetting resources in use in OpCon."
+description: "Learn how to reset resources in use in OpCon."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -30,16 +30,20 @@ If the **Resources in Use** value is incorrect due to an unusual occurrence, use
 Reducing Resources in Use while jobs are still using the resource may cause OpCon to exceed the defined resource maximum.
 :::
 
+## Resetting a Resource in Use
+
 To reset a resource in use, complete the following steps:
 
-1. Select **List** under the **Operations** topic. The **Daily list** screen displays
-2. Verify that all jobs using the resource have completed
-3. Select **Resources** under the **Administration** topic
-4. Select the **resource** in the **Select Resource** list
-5. Select the **Edit Resource in Use value** button (to the right of the **Resources in Use** frame)
-6. Enter the *correct* value
-7. Select **OK** to save, or **Cancel** to discard
-8. Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen. For more information, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help
+1. Select **List** under the **Operations** topic. The **Daily list** screen displays.
+2. Verify that all jobs using the resource have completed.
+3. Select **Resources** under the **Administration** topic.
+4. Select the **resource** in the **Select Resource** list.
+5. Select the **Edit Resource in Use value** button (to the right of the **Resources in Use** frame).
+6. Enter the *correct* value.
+7. Select **OK** to save, or **Cancel** to discard.
+8. Select **Close ☒** (to the right of the **Resources** tab) to close the **Resources** screen. For more information, refer to [Resources](../../../objects/resources.md) in the **Concepts** online help.
+
+**Result:** The Resources in Use value is updated to the correct amount.
 
 ## Glossary
 
@@ -49,4 +53,4 @@ To reset a resource in use, complete the following steps:
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

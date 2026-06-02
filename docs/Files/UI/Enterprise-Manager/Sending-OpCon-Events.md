@@ -22,9 +22,9 @@ doc_type: procedural
 
 The **Event** tab provides the following fields for defining an OpCon event launched for the selected trigger:
 
-- **Event Command**: The Event Command definition. Refer to the [OpCon Events](../../../events/introduction.md) online help for additional information
-- **Parameters**: The event parameters associated with the Event Command
-- **Test**: Sends a test for the activated notification of the trigger
+- **Event Command**: The Event Command definition. Refer to the [OpCon Events](../../../events/introduction.md) online help for additional information.
+- **Parameters**: The event parameters associated with the Event Command.
+- **Test**: Sends a test for the activated notification of the trigger.
 
 :::tip Example Notification Message
 03/11/08 09:41:23 Logged [NTLOG] EventID= 77777 | Schedule Date= Mar 11 2008 | Sched/Job Info= TestSched:Conversion:12345 | Machine Name= machine01 | Message= The conversion failed.
@@ -32,22 +32,22 @@ The **Event** tab provides the following fields for defining an OpCon event laun
 
 ## Adding Events
 
-To add Events, complete the following steps:
+To add events, complete the following steps:
 
-1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
-4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
-5. Select the appropriate **machine/schedule/job trigger**
-6. In the **General** tab under **Notification Definitions**, select the option for **Send OpCon Events**
-7. Select the **Event** tab, then select the **Add** button. The **Event Definition Wizard** displays
-8. Select the **event** in the **Event Template** list
-9. In the **Event Parameters** frame, place your cursor at the beginning of a **\<syntax placeholder\>** in the **Event Parameters** text box, then drag to select the entire placeholder, excluding surrounding commas (for example: ,\<schedule name\>,)
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information.
+4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information.
+5. Select the appropriate **machine/schedule/job trigger**.
+6. In the **General** tab under **Notification Definitions**, select the option for **Send OpCon Events**.
+7. Select the **Event** tab, then select the **Add** button. The **Event Definition Wizard** displays.
+8. Select the **event** in the **Event Template** list.
+9. In the **Event Parameters** frame, place your cursor at the beginning of a **\<syntax placeholder\>** in the **Event Parameters** text box, then drag to select the entire placeholder, excluding surrounding commas (for example: ,\<schedule name\>,).
 10. Replace the selected placeholder with valid OpCon event information. To use a token instead:
-    - Select the placeholder as described in step 9
-    - Select the ![Insert Token button](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button") **Insert token** button or press **Ctrl+T** to list available global properties
-    - Locate the property by scrolling or using the search field (Windows wildcards supported; filter by property name, value, or both)
-    - Select the **global property** (e.g., $SCHEDULE DATE)
+    - Select the placeholder as described in step 9.
+    - Select the ![Insert Token button](../../../Resources/Images/EM/EMinserttoken.png "Insert Token button") **Insert token** button or press **Ctrl+T** to list available global properties.
+    - Locate the property by scrolling or using the search field (Windows wildcards supported; filter by property name, value, or both).
+    - Select the **global property** (e.g., $SCHEDULE DATE).
 
     :::note
     Double brackets are automatically placed around the token placeholder.
@@ -59,55 +59,68 @@ To add Events, complete the following steps:
     ```
     :::
 
-11. Select the **Finish** button when all event parameters are complete
-12. Select **Save** to save, or **Cancel** to discard
+11. Select the **Finish** button when all event parameters are complete.
+12. Select **Save** to save, or **Cancel** to discard.
+
+**Result:** The event is added to the notification trigger.
 
 ## Editing Events
 
-1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
-4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
-5. Select the appropriate **machine/schedule/job trigger**
-6. Select the **Event** tab, then select the **event** to edit
-7. Select the **Edit** button. The **Event Definition Wizard** displays
-8. Apply the changes, then select the **Finish** button
-9. Select **Save** to save the change, or **Cancel** to discard
+To edit events, complete the following steps:
+
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information.
+4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information.
+5. Select the appropriate **machine/schedule/job trigger**.
+6. Select the **Event** tab, then select the **event** to edit.
+7. Select the **Edit** button. The **Event Definition Wizard** displays.
+8. Apply the changes, then select the **Finish** button.
+9. Select **Save** to save the change, or **Cancel** to discard.
+
+**Result:** The event is updated.
 
 ## Copying Events
 
-1. Right-click the **event** to copy in the **Events** table and select **Copy**
-2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
-4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
-5. Select the appropriate **machine/schedule/job trigger**
-6. Select the **Event** tab
-7. Right-click the **Events** table and select **Paste**
+To copy events, complete the following steps:
+
+1. Right-click the **event** to copy in the **Events** table and select **Copy**.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information.
+4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information.
+5. Select the appropriate **machine/schedule/job trigger**.
+6. Select the **Event** tab.
+7. Right-click the **Events** table and select **Paste**.
+
+**Result:** The event is copied to the selected trigger.
 
 ## Deleting Events
 
-To delete Events, complete the following steps:
+To delete events, complete the following steps:
 
-1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays
-2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame
-3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information
-4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information
-5. Select the appropriate **machine/schedule/job trigger**
-6. Select the **Event** tab, then select the **event** to delete
-7. Select the **Remove** button. The **Remove** dialog displays
-8. Select **Yes** to confirm the deletion, or **No** to cancel
+1. Select **Notification Manager** under the **Management** topic. The **Notification Manager** screen displays.
+2. Select the **Machines**, **Schedules**, or **Jobs** tab in the **Notification Triggers** frame.
+3. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Machines**, **Schedules**, or **Jobs** information.
+4. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Notification Group** information.
+5. Select the appropriate **machine/schedule/job trigger**.
+6. Select the **Event** tab, then select the **event** to delete.
+7. Select the **Remove** button. The **Remove** dialog displays.
+8. Select **Yes** to confirm the deletion, or **No** to cancel.
+
+**Result:** The event is permanently removed from the notification trigger.
 
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
 | Event Command | The Event Command definition. | — | — |
-| Parameters | The event parameters associated with the Event Command | — | — |
+| Parameters | The event parameters associated with the Event Command. | — | — |
+
 ## FAQs
 
 **Q: What does Sending OpCon Events cover?**
 
-This page covers Adding Events, Editing Events, Copying Events.
+This page covers adding events, editing events, copying events, and deleting events.
 
 ## Glossary
 
@@ -125,4 +138,4 @@ This page covers Adding Events, Editing Events, Copying Events.
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

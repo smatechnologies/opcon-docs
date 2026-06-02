@@ -1,4 +1,4 @@
-﻿---
+---
 title: License & Support
 description: "The License & Support page displays your license information, Solution Manager version, and SMA support resources."
 product_area: Solution Manager
@@ -28,7 +28,7 @@ SMA support resources including the website, release notes, and community portal
 
 ### Licensing
 
-License status details including relevant IDs, expiration date, machine usage, and enabled UI features. For more information, refer to [Licensing Documentation](../../../../../server-programs/licensing.md)
+License status details including relevant IDs, expiration date, machine usage, and enabled UI features. For more information, refer to [Licensing Documentation](../../../../../server-programs/licensing.md).
 
 ## FAQs
 
@@ -38,7 +38,7 @@ The **License & Support** page displays your license information, Solution Manag
 
 **Q: Where can you find License & Support in OpCon?**
 
-Access License & Support in Solution Manager or Enterprise Manager.
+Access License & Support in Solution Manager.
 
 ## Glossary
 
@@ -50,4 +50,4 @@ Access License & Support in Solution Manager or Enterprise Manager.
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

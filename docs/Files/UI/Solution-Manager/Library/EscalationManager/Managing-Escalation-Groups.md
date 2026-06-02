@@ -1,4 +1,4 @@
-﻿---
+---
 title: Managing Escalation Groups
 description: "Use Escalation Manager to add, edit, delete, and check cross-references for escalation groups."
 product_area: Solution Manager
@@ -22,37 +22,58 @@ doc_type: procedural
 
 Use **Escalation Manager** to add, edit, delete, and check cross-references for escalation groups.
 
-### Creating Escalation Group
+## Creating an Escalation Group
 
-Select the Add button above the list and fill out the Escalation Group form.
+To create an escalation group, complete the following steps:
+
+1. Select the **Add** button above the list. The **Escalation Group** form displays.
+2. Complete the **Escalation Group** form.
 
 ![A screen showing add escalation group form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Add.png "Add Escalation Group Form")
 
 :::note
-Escalation group must have at least one user or token user.
+An escalation group must have at least one user or token user.
 :::
 
-### Editing Escalation Group
+**Result:** The new escalation group is saved and appears in the list.
 
-Select an Escalation Group, select the Edit button above the list, and fill out the Escalation Group form.
+## Editing an Escalation Group
+
+To edit an escalation group, complete the following steps:
+
+1. Select an escalation group from the list.
+2. Select the **Edit** button above the list. The **Escalation Group** form displays.
+3. Update the form as needed.
 
 ![A screen showing edit escalation group form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Edit.png "Edit Escalation Manager Form")
 
-### Deleting Escalation Group
+**Result:** The escalation group changes are saved.
 
-Select an Escalation Group and select the Delete button above the list.
+## Deleting an Escalation Group
+
+To delete an escalation group, complete the following steps:
+
+1. Select an escalation group from the list.
+2. Select the **Delete** button above the list.
 
 ![A screen asking for confirmation to delete escalation group](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Delete.png "Delete Escalation Group")
 
 :::note
-Delete is not allowed if the Escalation Group has any cross-references.
+Delete is not allowed if the escalation group has any cross-references.
 :::
 
-### Checking Cross References
+**Result:** The escalation group is permanently removed.
 
-Select an Escalation Group and select the Cross References button above the list.
+## Checking Cross References
+
+To check cross-references for an escalation group, complete the following steps:
+
+1. Select an escalation group from the list.
+2. Select the **Cross References** button above the list.
 
 ![A screen showing cross references for an escalation group](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Cross-References.png "Escalation Group Cross References")
+
+**Result:** All cross-references for the selected escalation group are displayed.
 
 ![White "person reading" icon on blue circular background](../../../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
@@ -63,7 +84,7 @@ Related Topics
 
 **Q: What does managing escalation groups involve?**
 
-Managing escalation groups includes adding, editing, and deleting records. Access escalation groups in Solution Manager or Enterprise Manager.
+Managing escalation groups includes adding, editing, and deleting records. Access escalation groups in Solution Manager.
 
 **Q: Who can manage escalation groups in OpCon?**
 
@@ -81,4 +102,4 @@ Users with the appropriate privileges assigned through their role can manage esc
 
 **Privilege**: A specific permission granted through an OpCon role that controls access to a feature, function, or object type. Privileges are organized into categories such as Function Privileges, Machine Privileges, Schedule Privileges, and Access Codes.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

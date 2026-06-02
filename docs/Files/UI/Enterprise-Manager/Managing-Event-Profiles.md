@@ -2,7 +2,7 @@
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Managing Event Profiles
-description: "For all procedures, begin by navigating to the SAP Event History Profiles dialog: 1."
+description: "For all procedures, begin by opening the SAP Event History Profiles dialog: 1."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -15,58 +15,78 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Managing Event Profiles
+# Managing Event Profiles
 
 **Theme:** Configure  
 **Who Is It For?** System Administrator, Automation Engineer
 
 ## What Is It?
 
-For all procedures, begin by navigating to the **SAP Event History Profiles** dialog:
+For all procedures, open the **SAP Event History Profiles** dialog first:
 
-1.  Select **Machines Status** under the **Operation** topic
-2.  Right-click the preferred **SAP R/3 and CRM machine name**
-3.  Hover over **SAP Machine** and select **Event Profiles**. The **SAP Event History Profiles** dialog displays
+1. Select **Machines Status** under the **Operation** topic.
+2. Right-click the preferred **SAP R/3 and CRM machine name**.
+3. Hover over **SAP Machine** and select **Event Profiles**. The **SAP Event History Profiles** dialog displays.
+
+## Creating an Event Profile
 
 To create an event profile, complete the following steps:
 
-1.  Go to the **SAP Event History Profiles** dialog
-2.  Select the **Create** button. The **Create New Profile** dialog displays
-3.  Enter a *profile description* and select **OK**. The **SAP Event History Profile** dialog displays
-4.  Set the *criteria*
-5.  Select the **Create** button
+1. Go to the **SAP Event History Profiles** dialog.
+2. Select the **Create** button. The **Create New Profile** dialog displays.
+3. Enter a *profile description* and select **OK**. The **SAP Event History Profile** dialog displays.
+4. Set the *criteria*.
+5. Select the **Create** button.
+
+**Result:** The new event profile is saved and appears in the profiles list.
+
+## Editing an Event Profile
 
 To edit an event profile, complete the following steps:
 
-1.  Go to the **SAP Event History Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Edit** button. The **SAP Event History Profile** dialog displays
-4.  Edit the *criteria*
-5.  Select the **Save** button
+1. Go to the **SAP Event History Profiles** dialog.
+2. Select the **SAP profile** in the list.
+3. Select the **Edit** button. The **SAP Event History Profile** dialog displays.
+4. Edit the *criteria*.
+5. Select the **Save** button.
 
-**To activate an event profile:**
+**Result:** The updated event profile is saved.
 
-1.  Go to the **SAP Event History Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Activate** button
+## Activating an Event Profile
 
-**To deactivate an event profile:**
+To activate an event profile, complete the following steps:
 
-1.  Go to the **SAP Event History Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Deactivate** button
+1. Go to the **SAP Event History Profiles** dialog.
+2. Select the **SAP profile** in the list.
+3. Select the **Activate** button.
 
-**To delete an event profile:**
+**Result:** The event profile is set to active status.
 
-1.  Go to the **SAP Event History Profiles** dialog
-2.  Select the **SAP profile** in the list
-3.  Select the **Delete** button
+## Deactivating an Event Profile
+
+To deactivate an event profile, complete the following steps:
+
+1. Go to the **SAP Event History Profiles** dialog.
+2. Select the **SAP profile** in the list.
+3. Select the **Deactivate** button.
+
+**Result:** The event profile is set to inactive status.
+
+## Deleting an Event Profile
+
+To delete an event profile, complete the following steps:
+
+1. Go to the **SAP Event History Profiles** dialog.
+2. Select the **SAP profile** in the list.
+3. Select the **Delete** button.
+
+**Result:** The event profile is permanently removed.
 
 ## FAQs
 
 **Q: What does managing event profiles involve?**
 
-Managing event profiles includes adding, editing, and deleting records. Access event profiles through Enterprise Manager navigation pane.
+Managing event profiles includes creating, editing, activating, deactivating, and deleting records. Access event profiles through Enterprise Manager navigation pane.
 
 **Q: Who can manage event profiles in OpCon?**
 
@@ -82,4 +102,4 @@ Users with the appropriate privileges assigned through their role can manage eve
 
 **Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

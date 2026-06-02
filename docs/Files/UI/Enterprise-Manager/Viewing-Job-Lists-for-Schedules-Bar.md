@@ -19,7 +19,7 @@ doc_type: procedural
 
 The **Jobs list** dialog displays all jobs in a selected schedule or subschedule, filtered by job status category. You can open master or daily job and schedule editors directly from this dialog.
 
-## View the job list for a schedule
+## View the Job List for a Schedule
 
 To view the job list for a schedule in the Bar Chart view, complete the following steps:
 
@@ -32,7 +32,7 @@ To view the job list for a schedule in the Bar Chart view, complete the followin
 
 **Result:** The **Jobs list** dialog closes and the **Bar Chart** view remains active.
 
-## View the job list for a subschedule
+## View the Job List for a Subschedule
 
 To view the job list for a subschedule in the Bar Chart view, complete the following steps:
 

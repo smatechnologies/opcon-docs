@@ -22,40 +22,46 @@ doc_type: procedural
 
 The **Quick Search** function displays a dialog to search for and edit schedules and/or jobs. The dialog lists schedules and their corresponding jobs, which can be viewed and edited in the **Schedule Master** or **Job Master** screen.
 
-## Searching Schedule/Job Details
+## Searching Schedule and Job Details
 
 To perform a search, complete the following steps:
 
-1. Select **Quick Search** under the **Administration** topic. The **Find Master Schedule/Job** dialog displays
-2. Type the name, first few letters (case insensitive), and/or values for the schedule and/or job in the **Type Filter Text** box. You can also type an \* (asterisk) in front of a word to search mid-string
-3. Select the **Clear** icon (far right of the text box) to re-display all schedules and jobs
-4. Close the **Find Master Schedule/Job** dialog
+1. Select **Quick Search** under the **Administration** topic. The **Find Master Schedule/Job** dialog displays.
+2. Type the name, first few letters (case insensitive), and/or values for the schedule and/or job in the **Type Filter Text** box. You can also type an \* (asterisk) in front of a word to search mid-string.
+3. Select the **Clear** icon (far right of the text box) to re-display all schedules and jobs.
+4. Close the **Find Master Schedule/Job** dialog.
+
+**Result:** The dialog filters results based on your search input.
 
 ## Editing Schedule Details
 
 To edit the schedule details, complete the following steps:
 
-1. Select **Quick Search** under the **Administration** topic. The **Find Master Schedule/Job** dialog displays
-2. Select the **schedule** to edit
-3. Select the **Edit Schedule** button. The **Schedule Master** screen displays
-4. Enter the *changes* and select ![Green circular with white check mark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
-5. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen
+1. Select **Quick Search** under the **Administration** topic. The **Find Master Schedule/Job** dialog displays.
+2. Select the **schedule** to edit.
+3. Select the **Edit Schedule** button. The **Schedule Master** screen displays.
+4. Enter the *changes* and select ![Green circular with white check mark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar.
+5. Select **Close ☒** (to the right of the **Schedule Master** tab) to close the **Schedule Master** screen.
+
+**Result:** The schedule changes are saved.
 
 ## Editing Job Details
 
 To edit the job details, complete the following steps:
 
-1. Select **Quick Search** under the **Administration** topic. The **Find Master Schedule/Job** dialog displays
-2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)**arrow** to the left of the schedule that has the job to edit
-3. Select the **job** to be edited and select **Edit Job**. The **Job Master** screen displays
-4. Enter the *changes* and select ![Green circular with white check mark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar
-5. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen
+1. Select **Quick Search** under the **Administration** topic. The **Find Master Schedule/Job** dialog displays.
+2. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png)**arrow** to the left of the schedule that has the job to edit.
+3. Select the **job** to be edited and select **Edit Job**. The **Job Master** screen displays.
+4. Enter the *changes* and select ![Green circular with white check mark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Job Master** toolbar.
+5. Select **Close ☒** (to the right of the **Job Master** tab) to close the **Job Master** screen.
+
+**Result:** The job changes are saved.
 
 ## FAQs
 
 **Q: What can you do with Quick Search?**
 
-Quick Search allows you to searching schedule/job details, editing schedule details, editing job details.
+Quick Search allows you to search schedule and job details, edit schedule details, and edit job details.
 
 **Q: Who has access to Quick Search?**
 
@@ -73,4 +79,4 @@ Access to Quick Search is controlled by the privileges assigned to your OpCon ro
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

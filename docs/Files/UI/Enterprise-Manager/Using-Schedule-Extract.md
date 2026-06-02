@@ -26,22 +26,24 @@ The **Schedule Extract** is an Enterprise Manager plug-in that extracts informat
 
 To extract a schedule, complete the following steps:
 
-1. Select **Schedule Extract** under the **Management** topic. The **Schedule Extract** screen displays
-2. Select the **schedule** to extract from the **Schedule to Extract** list. Alternatively, use the **Browse** button to locate the schedule
-3. Enter the target directory for the created SMADDI files in the **Extract To** field. Alternatively, use the **Browse** button to locate the directory
-4. *(Optional)* Select the **Apply Global Change File** option to apply global change files to extracted schedules
-5. *(Optional)* Select the **Extract Associated HC and Annual Plan Calendar Dates** option to extract calendars and dates associated with the schedule
-6. *(Optional)* Select the **Extract Associated Global Properties** option to extract global properties referenced by events or command lines within the schedule
-7. *(Optional)* Select the **Extract Associated Threshold/Resource Variables** option to extract threshold or resource definitions used by jobs or events within the schedule
-8. Select the **Extract Schedule** button
-9. Select a **schedule** in the **Extracted Schedules** list to view the generated XML information
-10. Select the appropriate **schedule to extract** within the **Dependent Schedules Discovered** list
+1. Select **Schedule Extract** under the **Management** topic. The **Schedule Extract** screen displays.
+2. Select the **schedule** to extract from the **Schedule to Extract** list. Alternatively, use the **Browse** button to locate the schedule.
+3. Enter the target directory for the created SMADDI files in the **Extract To** field. Alternatively, use the **Browse** button to locate the directory.
+4. *(Optional)* Select the **Apply Global Change File** option to apply global change files to extracted schedules.
+5. *(Optional)* Select the **Extract Associated HC and Annual Plan Calendar Dates** option to extract calendars and dates associated with the schedule.
+6. *(Optional)* Select the **Extract Associated Global Properties** option to extract global properties referenced by events or command lines within the schedule.
+7. *(Optional)* Select the **Extract Associated Threshold/Resource Variables** option to extract threshold or resource definitions used by jobs or events within the schedule.
+8. Select the **Extract Schedule** button.
+9. Select a **schedule** in the **Extracted Schedules** list to view the generated XML information.
+10. Select the appropriate **schedule to extract** within the **Dependent Schedules Discovered** list.
+
+**Result:** SMADDI XML files are created in the specified target directory.
 
 ## FAQs
 
 **Q: What can you do with Schedule Extract?**
 
-Schedule Extract allows you to extracting schedules.
+Schedule Extract allows you to extract schedules to SMADDI XML format files.
 
 **Q: Who has access to Schedule Extract?**
 
