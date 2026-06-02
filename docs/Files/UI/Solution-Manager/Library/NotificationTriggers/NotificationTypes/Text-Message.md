@@ -1,6 +1,6 @@
-﻿---
+---
 title: Text Message
-description: "!Text Message The Text Message dialog provides the following fields for defining a notification to a pager, phone, or other SMS-capable device."
+description: "The Text Message dialog provides the following fields for defining a notification to a pager, phone, or other SMS-capable device."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -29,7 +29,7 @@ The **Text Message** dialog provides the following fields for defining a notific
   - T-Mobile: phonenumber@tmomail.net
   - Sprint: phonenumber@messaging.sprintpcs.com
   - Verizon: phonenumber@vtext.com
-- **Message** (Required): Defines a user-defined message up to 160 characters
+- **Message** (Required): Defines a user-defined message up to 160 characters.
 
 :::note
 The SMA Notify Handler inserts a Notification ID in the format `ID=nnn` before any other message content. For more information, refer to [Looking up Notification Sources](Look-up-Notification-Sources).
@@ -37,24 +37,20 @@ The SMA Notify Handler inserts a Notification ID in the format `ID=nnn` before a
 
 ## FAQs
 
-**Q: What does Text Message do?**
+**Q: What is the maximum message length for a Text Message notification?**
 
-The **Text Message** dialog provides the following fields for defining a notification to a pager, phone, or other SMS-capable device.
+The **Message** field supports up to 160 characters. Note that the SMA Notify Handler prepends a Notification ID (`ID=nnn`) to the message, which reduces the effective character count available for the user-defined message content.
 
-**Q: Where can you find Text Message in OpCon?**
+**Q: Where can I configure Text Message notifications in OpCon?**
 
-Access Text Message in Solution Manager or Enterprise Manager.
+Go to **Library > Notification Triggers** in Solution Manager, select or create a notification trigger, and choose **Text Message** as the notification type.
 
 ## Glossary
 
 **SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 
 **Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
 
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
-
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

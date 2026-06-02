@@ -1,6 +1,6 @@
 ---
 title: Chronoman
-description: "Learn how to chronoman in OpCon."
+description: "Chronoman (Chronoman.exe) updates OpCon user-defined properties with complex calculated dates."
 product_area: Utilities
 audience: System Administrator, Automation Engineer
 version_introduced: "[see release notes]"
@@ -21,12 +21,12 @@ doc_type: procedural
 ## What Is It?
 
 :::note
-The information presented in this topic pertains largely to running the Chronoman utility as a Windows job. For instructions on running this utility in the OpCon Docker container, see [Running on OpCon in Docker](#Running).
+The information presented in this topic pertains largely to running the Chronoman utility as a Windows job. For instructions on running this utility in the OpCon Docker container, see [Running on OpCon in Docker](#running-on-opcon-in-docker).
 :::
 
-OpCon user-defined properties can be updated with calculated dates using an executable called Chronoman (Chronoman.exe). The SAM can calculate simple dates based on calendar offsets from the $SCHEDULE DATE or $DATE; however, Chronoman is used to make complex date calculations (e.g., a property may need to be updated with the date of the last working day of the month).
+OpCon user-defined properties can be updated with calculated dates using an executable called Chronoman (Chronoman.exe). The SAM can calculate simple dates based on calendar offsets from the $SCHEDULE DATE or $DATE; however, Chronoman is used to make complex date calculations (for example, a property may need to be updated with the date of the last working day of the month).
 
-Chronoman.exe is installed in the <Target Directory\>\\OpConxps\\MSLSAM\\ directory. Chronoman should be scheduled using a Windows OpCon job. Any jobs requiring the property value should be dependent on the associated Chronoman job. For information on setting up job dependencies, refer to [Adding Job Dependencies](../../Files/UI/Enterprise-Manager/Adding-Job-Dependencies.md).
+Chronoman.exe is installed in the &lt;Target Directory&gt;\\OpConxps\\MSLSAM\\ directory. Chronoman should be scheduled using a Windows OpCon job. Any jobs requiring the property value should be dependent on the associated Chronoman job. For information on setting up job dependencies, refer to [Adding Job Dependencies](../../Files/UI/Enterprise-Manager/Adding-Job-Dependencies.md).
 
 ## Configuration
 
@@ -42,14 +42,15 @@ The Chronoman configuration file (Chronoman.ini) is used to configure the utilit
 |--- |--- |--- |
 |PathToMsgInDir|.\MSGIN|Location of the MSGIN directory of the Microsoft agent. Chronoman uses this directory to communicate any errors to the SAM.|
 |PathToLogDir|.\Log|The directory to which Chronoman logs errors. The default directory is the Log subdirectory below the installation directory.|
+
 #### Chronoman Fiscal Quarter Begin Dates
 
 |Setting|Default|Definition|
 |--- |--- |--- |
-|Q1|<blank\>|Defines the first day of the First Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based Fiscal the current Fiscal year.|
-|Q2|<blank\>|Defines the first day of the Second Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based Fiscal the current Fiscal year.|
-|Q3|<blank\>|Defines the first day of the Third Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based Fiscal the current Fiscal year.|
-|Q4|<blank\>|Defines the first day of the Fourth Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based Fiscal the current Fiscal year.|
+|Q1|&lt;blank&gt;|Defines the first day of the First Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based on the current Fiscal year.|
+|Q2|&lt;blank&gt;|Defines the first day of the Second Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based on the current Fiscal year.|
+|Q3|&lt;blank&gt;|Defines the first day of the Third Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based on the current Fiscal year.|
+|Q4|&lt;blank&gt;|Defines the first day of the Fourth Fiscal Quarter. Specify the date with the Month and Day to start. The date must match the syntax recognized by the regional settings of the user running the utility. Do not define the year. Chronoman automatically calculates the year each time it runs based on the current Fiscal year.|
 
 ### Configuration File Example
 
@@ -75,7 +76,7 @@ Q4=04/01
 Chronoman uses the following command-line syntax:
 
 ```shell
-chronoman =t<Property Name\> =o<Sign><Number> =u<unit> =f<format> [=b<Date and Time>][=c<File Path>][=j< Julian Date and Time>][=n<Date and Time>][=s<Schedule>][=z<insertion_point, desired_length_of_string>]
+chronoman =t<Property Name> =o<Sign><Number> =u<unit> =f<format> [=b<Date and Time>][=c<File Path>][=j<Julian Date and Time>][=n<Date and Time>][=s<Schedule>][=z<insertion_point, desired_length_of_string>]
 ```
 
 ### Required Parameters
@@ -84,7 +85,7 @@ chronoman =t<Property Name\> =o<Sign><Number> =u<unit> =f<format> [=b<Date and T
 |--- |--- |
 |=f|This parameter is the output format to use when updating the property. For valid date format characters, refer to System Properties in the Concepts online help. The format parameter can be omitted if the format is defined in the command file (=c).|
 |=o|This parameter is the plus (+) or minus (-) the number of units by which to change the base time. Do not use the offset parameter if a command file (=c) is specified. If it has been specified, the command file contains the required date manipulations.|
-|=t|This parameter is the name of the property to set. Do not specify any of the system properties (including managed system properties). The property name must conform to the rules for User -defined Property names. For more information, refer to Properties in the Concepts online help. If the property does not exist in the database, Chronoman will automatically create it. The property parameter can be omitted if the property name is defined in the command file (=c). If specifying the property name with the =t switch and the property name requires quotes (") because it contains a period (.), escape the quotes with a backslash (\) on the command line. For example: `=tJI.\"My.Property\".[[$DATE]].[[$SCHEDULE NAME]].Job3.` Windows will strip the quotes out of the parameter if they are not escaped, and Chronoman requires the quotes to properly identify any property with a period in the name.|
+|=t|This parameter is the name of the property to set. Do not specify any of the system properties (including managed system properties). The property name must conform to the rules for User-defined Property names. For more information, refer to Properties in the Concepts online help. If the property does not exist in the database, Chronoman will automatically create it. The property parameter can be omitted if the property name is defined in the command file (=c). If specifying the property name with the =t switch and the property name requires quotes (") because it contains a period (.), escape the quotes with a backslash (\) on the command line. For example: `=tJI.\"My.Property\".[[$DATE]].[[$SCHEDULE NAME]].Job3.` Windows will strip the quotes out of the parameter if they are not escaped, and Chronoman requires the quotes to properly identify any property with a period in the name.|
 |=u|This parameter is the type of unit to use with the offset parameter (=o). Refer to the Chronoman Offset Parameters table for valid units of offset. Do not use the units of offset if a command file (=c) is specified. If it has been specified, the command file contains the required date manipulations. The characters below are valid for the units of offset (=u). Only WD should be upper case. All other characters should be lower case.|
 
 ### Chronoman Offset Parameters
@@ -111,7 +112,7 @@ chronoman =t<Property Name\> =o<Sign><Number> =u<unit> =f<format> [=b<Date and T
 |=c|This parameter is the path to the command file. If the =c parameter is specified, do not specify =o or =u. If it has been specified, the command file contains the required date manipulations.|
 |=j|This parameter is the base date in Julian format on which to calculate the output for the property. The format parameter (=f) must be set to YYYYy. If the =j parameter is not specified and the format (=f) specifies Julian, current Julian date and time is used. Do not specify =j and =b together.|
 |=n|This parameter is the name of the Negative Annual Plan Calendar. In addition to the Holiday Calendar, Chronoman includes the Negative Annual Plan dates to determine non-working days.|
-|=s|This parameter is the name of the schedule to use if the <units of offset\> are WD (Working Days) or if a command file computes working days. Chronoman uses the schedule's Holiday Calendar to determine non-working days. The schedule parameter can be omitted if a command file is specified and the command file defines the name of the schedule before performing a calculation requiring Working Days. This parameter is not needed if Working Days are not calculated.|
+|=s|This parameter is the name of the schedule to use if the units of offset are WD (Working Days) or if a command file computes working days. Chronoman uses the schedule's Holiday Calendar to determine non-working days. The schedule parameter can be omitted if a command file is specified and the command file defines the name of the schedule before performing a calculation requiring Working Days. This parameter is not needed if Working Days are not calculated.|
 |=z|This parameter is the final formatting of the string done by padding it with zeros. Specify the column where leading zeros should be inserted and the length the string should be. The insertion point must be between 1 and the current length of the string. Syntax: `Insertion_point,desired_length_of_string`|
 
 ### Command-line Example
@@ -137,15 +138,15 @@ The command file is an ASCII text file containing date manipulations. The date m
 Command file directives override the equivalent command-line parameters if both are specified. The exception to this is the *units of offset* and *offset* must be specified in either the command file or on the command line. An error is generated if a conflict is found.
 :::
 
-The basic format for the command file is: `<Units of offset\>, <offset\>`
+The basic format for the command file is: `<Units of offset>, <offset>`
 
-- **<Units of offset\>**: This field is the type of unit to use with the offset parameter. Refer to [Chronoman Offset Parameters](#chronoman-offset-parameters)
-- **<offset\>**: This field is a positive or negative integer
+- **&lt;Units of offset&gt;**: This field is the type of unit to use with the offset parameter. Refer to [Chronoman Offset Parameters](#chronoman-offset-parameters).
+- **&lt;offset&gt;**: This field is a positive or negative integer.
 
 If special calculations on the date are required, the following syntax is also supported:
 
 ```xml
-<Special Directive\>, <argument if applicable\>
+<Special Directive>, <argument if applicable>
 ```
 
 ### Special Directives
@@ -170,18 +171,18 @@ There are several special directives that allow for necessary date/time control.
 |FIND_CALENDAR_YEAR_END|The date is set to the last day of the year for the computed date from all previous steps. For example, if the base date was June 3 and previous directives moved the date to May 25, FIND_CALENDAR_YEAR_END would set the date to December 31 of the computed date's current year.|
 |FIND_DAY_OF_WEEK_BACKWARD|Finds the date of the first occurrence of the specified day of the week before the computed date. If the computed date from all previous steps matches the specified day of week, processing stops and the date is used in future steps (or returned). If the computed date does not match the day of week, the date is decremented and tested until the day of week specified is found. A day of week argument must be passed to this directive. Day of Week arguments range from 1 to 7 (i.e., Sunday to Saturday). `FIND_DAY_OF_WEEK_BACKWARD,4`|
 |FIND_DAY_OF_WEEK_FORWARD|Finds the date of the first occurrence of the specified day of the week after the computed date. If the computed date from all previous steps matches the specified day of week, processing stops and the date is used in future steps (or returned). If the computed date does not match the day of week, the date is incremented and tested until the day of week specified is found. A day of week argument must be passed as an argument to this directive. Day of Week arguments range from 1 to 7 (i.e., Sunday to Saturday). `FIND_DAY_OF_WEEK_FORWARD,4`|
-|FIND_FISCAL_QUARTER_BEGIN|The date is set to the first day of the fiscal quarter for the computed date from all previous steps. The date for the first day of each fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chornoman.ini file and the base date was August 3, FIND_FISCAL_QUARTER_BEGIN would set the date to July 1 of the current fiscal year.|
-|FIND_FISCAL_QUARTER_END|The date is set to the last day of the fiscal quarter for the computed date from all previous steps. The date for the first day of each fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chornoman.ini file and the base date was August 3, FIND_FISCAL_QUARTER_END would set the date to September 30 of the current fiscal year.|
-|FIND_FISCAL_Q1_BEGIN|The date is set to the first day of the first fiscal quarter of the year for the computed date from all previous steps. The date for the first day of the first fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q1_BEGIN would set the date to July 1 of the current fiscal year.|
-|FIND_FISCAL_Q1_END|The date is set to the last day of the first fiscal quarter of the year for the computed date from all previous steps. The date for the first day of the first fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q1_END would set the date to September 30 of the current fiscal year.|
-|FIND_FISCAL_Q2_BEGIN|The date is set to the first day of the second fiscal quarter of the year for the computed date from all previous steps. The date for the first day of the second fiscal quarter must be defined in the Chronoman.ini file. Refer to Refer to Configuration File Settings. For example, if the Fiscal Q2 begin date is set to October 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q2_BEGIN would set the date to October 1 of the current fiscal year.|
-|FIND_FISCAL_Q2_END|The date is set to the last day of the second quarter of the year for the computed date from all previous steps. The date for the first day of the second fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q2 begin date is set to October 1  in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q2_END would set the date to December 31 of the current fiscal year.|
-|FIND_FISCAL_Q3_BEGIN|The date is set to the first day of the third quarter of the year for the computed date from all previous steps. The date for the first day of the third fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q3 begin date is set to January 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q3_BEGIN would set the date to January 1 of the current fiscal year.|
-|FIND_FISCAL_Q3_END|The date is set to the last day of the third quarter of the year for the computed date from all previous steps. The date for the first day of the third fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q3 begin date is set to January 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q3_END would set the date to March 31 of the current fiscal year.|
-|FIND_FISCAL_Q4_BEGIN|The date is set to the first day of the fourth quarter of the year for the computed date from all previous steps. The date for the first day of the fourth fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q4 begin date is set to April 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q4_BEGIN would set the date to April 1 of the current fiscal year.|
-|FIND_FISCAL_Q4_END|The date is set to the last day of the fourth quarter of the year for the computed date from all previous steps. The date for the first day of the fourth fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q4 begin date is set to April 1 in the Chornoman.ini file and the base date was June 3, FIND_FISCAL_Q4_END would set the date to June 30 of the current fiscal year.|
-|FIND_FISCAL_YEAR_BEGIN|The date is set to the first day of the first fiscal quarter for the computed date from all previous steps. The date for the first day of the first fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chornoman.ini file and the base date was February 3, FIND_FISCAL_YEAR_BEGIN would set the date to July 1 of the current fiscal year.|
-|FIND_FISCAL_YEAR_END|The date is set to the last day of the fourth fiscal quarter for the computed date from all previous steps. The date for the first day of the fourth fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q4 begin date is set to April 1 in the Chornoman.ini file and the base date was August 3, FIND_FISCAL_YEAR_END would set the date to June 30 of the current fiscal year.|
+|FIND_FISCAL_QUARTER_BEGIN|The date is set to the first day of the fiscal quarter for the computed date from all previous steps. The date for the first day of each fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chronoman.ini file and the base date was August 3, FIND_FISCAL_QUARTER_BEGIN would set the date to July 1 of the current fiscal year.|
+|FIND_FISCAL_QUARTER_END|The date is set to the last day of the fiscal quarter for the computed date from all previous steps. The date for the first day of each fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chronoman.ini file and the base date was August 3, FIND_FISCAL_QUARTER_END would set the date to September 30 of the current fiscal year.|
+|FIND_FISCAL_Q1_BEGIN|The date is set to the first day of the first fiscal quarter of the year for the computed date from all previous steps. The date for the first day of the first fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q1_BEGIN would set the date to July 1 of the current fiscal year.|
+|FIND_FISCAL_Q1_END|The date is set to the last day of the first fiscal quarter of the year for the computed date from all previous steps. The date for the first day of the first fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q1_END would set the date to September 30 of the current fiscal year.|
+|FIND_FISCAL_Q2_BEGIN|The date is set to the first day of the second fiscal quarter of the year for the computed date from all previous steps. The date for the first day of the second fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q2 begin date is set to October 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q2_BEGIN would set the date to October 1 of the current fiscal year.|
+|FIND_FISCAL_Q2_END|The date is set to the last day of the second quarter of the year for the computed date from all previous steps. The date for the first day of the second fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q2 begin date is set to October 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q2_END would set the date to December 31 of the current fiscal year.|
+|FIND_FISCAL_Q3_BEGIN|The date is set to the first day of the third quarter of the year for the computed date from all previous steps. The date for the first day of the third fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q3 begin date is set to January 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q3_BEGIN would set the date to January 1 of the current fiscal year.|
+|FIND_FISCAL_Q3_END|The date is set to the last day of the third quarter of the year for the computed date from all previous steps. The date for the first day of the third fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q3 begin date is set to January 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q3_END would set the date to March 31 of the current fiscal year.|
+|FIND_FISCAL_Q4_BEGIN|The date is set to the first day of the fourth quarter of the year for the computed date from all previous steps. The date for the first day of the fourth fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q4 begin date is set to April 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q4_BEGIN would set the date to April 1 of the current fiscal year.|
+|FIND_FISCAL_Q4_END|The date is set to the last day of the fourth quarter of the year for the computed date from all previous steps. The date for the first day of the fourth fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q4 begin date is set to April 1 in the Chronoman.ini file and the base date was June 3, FIND_FISCAL_Q4_END would set the date to June 30 of the current fiscal year.|
+|FIND_FISCAL_YEAR_BEGIN|The date is set to the first day of the first fiscal quarter for the computed date from all previous steps. The date for the first day of the first fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q1 begin date is set to July 1 in the Chronoman.ini file and the base date was February 3, FIND_FISCAL_YEAR_BEGIN would set the date to July 1 of the current fiscal year.|
+|FIND_FISCAL_YEAR_END|The date is set to the last day of the fourth fiscal quarter for the computed date from all previous steps. The date for the first day of the fourth fiscal quarter must be defined in the Chronoman.ini file. Refer to Configuration File Settings. For example, if the Fiscal Q4 begin date is set to April 1 in the Chronoman.ini file and the base date was August 3, FIND_FISCAL_YEAR_END would set the date to June 30 of the current fiscal year.|
 |FIND_MONTH_BEGIN|The date is set to the first day of the month for the computed date from all previous steps. For example, if the base date was June 3 and previous directives moved the date to May 25, FIND_MONTH_BEGIN would set the date to May 1.|
 |FIND_MONTH_END|The date is set to the last day of the month for the computed date from all previous steps. For example, if the base date was June 29 and previous directives moved the date to July 3, FIND_MONTH_END would set the date to July 31.|
 |FIND_WORKING_DAY_BACKWARD|Finds the date of the first working day before the computed date if it is not a working day. If the computed date from all previous steps is a working date, processing stops and the date is used in future steps (or returned). If the computed date is not a working date, the date is decremented and tested until a working date is found.|
@@ -203,10 +204,10 @@ This next table shows the command line/command file equivalency. In the table, t
 |=f|SET_FORMAT_STRING|R|Command file overrides command line.|
 |=j|N/A|O|Current date in Julian format.|
 |=n|SET_NEGATIVE_ANNUAL_PLAN_NAME|O|None|
-|=o|<offset\>|O|Entered after <units of offset\> in the command file. Do not specify =o parameter if <offset\> is in the command file.|
+|=o|&lt;offset&gt;|O|Entered after &lt;units of offset&gt; in the command file. Do not specify =o parameter if &lt;offset&gt; is in the command file.|
 |=s|SET_SCHEDULE_NAME|O|Command file overrides command line.|
 |=t|SET_TOKEN_NAME|R|Command file overrides command line.|
-|=u|<units of offset\>|O|Entered before <offset\> in the command file. Do not specify =u parameter if <units of offset\> is in the command file.|
+|=u|&lt;units of offset&gt;|O|Entered before &lt;offset&gt; in the command file. Do not specify =u parameter if &lt;units of offset&gt; is in the command file.|
 |=z|ZERO_FILL_DIRECTIVE|O|Command file overrides command line.|
 |N/A|COMPUTE_ELAPSED_DAYS|O|Must be the last directive in the command file.|
 |N/A|FILL_DIRECTIVE|O|None|
@@ -252,9 +253,9 @@ FIND_WORKING_DAY_FORWARD
 
 **Summary**: The base date of today is assumed because it is not specified on the command line or in the command file. The property to be updated is called WK.Day. The schedule to be used for determining working days is called "TestSchedule".
 
-- The WK.Day property is surrounded with escaped quotes in the =t parameter on the command line because the name contains a period
-- SET_FORMAT_STRING specifies the format for output to the property as a date format using numbers only
-- FIND_WORKING_DAY_FORWARD uses the value of the computed date if it is a workday, otherwise the next workday is found to arrive at the final value for the property
+- The WK.Day property is surrounded with escaped quotes in the =t parameter on the command line because the name contains a period.
+- SET_FORMAT_STRING specifies the format for output to the property as a date format using numbers only.
+- FIND_WORKING_DAY_FORWARD uses the value of the computed date if it is a workday, otherwise the next workday is found to arrive at the final value for the property.
 
 :::
 
@@ -278,8 +279,8 @@ d,1
 
 **Summary**: The base date of today is assumed because it is not specified on the command line or in the command file. The property to be updated is called NextDay. The schedule to be used for determining working days is called TestSchedule.
 
-- SET_FORMAT_STRING specifies the format for output to the property as a standard date format. d,1 adds one day to the computed date
-- FIND_WORKING_DAY_FORWARD uses the value of the computed date if it is a working day; otherwise, the next workday is found. d,1 adds one more day to the computed date to arrive at the final value for the property
+- SET_FORMAT_STRING specifies the format for output to the property as a standard date format. d,1 adds one day to the computed date.
+- FIND_WORKING_DAY_FORWARD uses the value of the computed date if it is a working day; otherwise, the next workday is found. d,1 adds one more day to the computed date to arrive at the final value for the property.
 
 :::
 
@@ -301,7 +302,7 @@ d,1
 
 **Summary**: The base date of today is assumed because it is not specified on the command line or in the command file. The property to be updated is called Tomorrow. The schedule to be used for determining working days is called TestSchedule.
 
-- SET_FORMAT_STRING specifies the format for output to the property as a standard date format. d,1 adds one day to the computed date to arrive at the final value for the property
+- SET_FORMAT_STRING specifies the format for output to the property as a standard date format. d,1 adds one day to the computed date to arrive at the final value for the property.
 
 :::
 
@@ -310,10 +311,10 @@ Set the property to the first working day of the month in the format of a seven-
 
 For this example, a user-defined System property was created in Enterprise Manager. The property was given a Name of $SCHEDULE DATE JUL and a value of YYYYj.
 
-- The property can be passed to a command file from the OpCon command line
-- This property cannot be used in the command file because only the SAM can resolve system
-- The command file must contain a variable that can be replaced by an entry on the OpCon command line
-- The command file for this is called JulianFirst.cmd. The contents of the command file should all be on one line
+- The property can be passed to a command file from the OpCon command line.
+- This property cannot be used in the command file because only the SAM can resolve system properties.
+- The command file must contain a variable that can be replaced by an entry on the OpCon command line.
+- The command file for this is called JulianFirst.cmd. The contents of the command file should all be on one line.
 
 **OpCon Command Line**:
 
@@ -339,11 +340,11 @@ ZERO_FILL_DIRECTIVE,5,7
 
 **Summary**: The base date is set to the Schedule Date in a Julian format (i.e., 2008025). The schedule to be used for determining working days is called TestSchedule.
 
-- SET_FORMAT_STRING specifies the format for output to the property as a Julian date beginning with the four-digit year
-- SET_TOKEN_NAME defines the property to be updated as Julian.First. The name is surrounded in quotes as "Julian.First" because there is a period in the name
-- FIND_MONTH_BEGIN finds the first day of the month of the computed date
-- FIND_WORKING_DAY_FORWARD uses the value of the computed date if it is a working day, otherwise the next workday is found
-- ZERO_FILL_DIRECTIVE inserts zeros into the computed date at the fifth character and continuing until the final string is seven characters. The result of this directive is output to the property. If the base date were 2008025, the value of the property would be updated with 2008001
+- SET_FORMAT_STRING specifies the format for output to the property as a Julian date beginning with the four-digit year.
+- SET_TOKEN_NAME defines the property to be updated as Julian.First. The name is surrounded in quotes as "Julian.First" because there is a period in the name.
+- FIND_MONTH_BEGIN finds the first day of the month of the computed date.
+- FIND_WORKING_DAY_FORWARD uses the value of the computed date if it is a working day, otherwise the next workday is found.
+- ZERO_FILL_DIRECTIVE inserts zeros into the computed date at the fifth character and continuing until the final string is seven characters. The result of this directive is output to the property. If the base date were 2008025, the value of the property would be updated with 2008001.
 
 :::
 
@@ -367,9 +368,9 @@ COMPUTE_ELAPSED_DAYS
 
 **Summary**: The base date of March 1, 2017 is used for the computation. The property to be updated is called Days. The schedule to be used for determining working days is called TestSchedule.
 
-- SET_FORMAT_STRING specifies the format for output to the property as an integer. W,1 adds one week to the computed date
-- FIND_DAY_OF_WEEK_FORWARD,5 uses the value of the computed date if it is Thursday, otherwise the next Thursday are found
-- COMPUTE_ELAPSED_DAYS calculate the number of days between the base date and the computed date. The number of elapsed days are output to the property
+- SET_FORMAT_STRING specifies the format for output to the property as an integer. W,1 adds one week to the computed date.
+- FIND_DAY_OF_WEEK_FORWARD,5 uses the value of the computed date if it is Thursday, otherwise the next Thursday are found.
+- COMPUTE_ELAPSED_DAYS calculates the number of days between the base date and the computed date. The number of elapsed days are output to the property.
 
 :::
 
@@ -381,11 +382,11 @@ The Output Directory was configured during installation. For more information, r
 
 The Chronoman log file provides detailed information regarding the Chronoman processing.
 
-- The log file resides in the <Output Directory\>\\MSLSAM\\Log\\ directory
-- Each time the Chronoman.exe runs, it creates a log file name with the following syntax: Chronoman_CCYYMMDD_HHmmssss.log. The "ssss" in syntax represents seconds and tenths of seconds (e.g., Chronoman_20110513_15263142.log)
-- Upon startup, Chronoman.exe checks the MSLSAM\\Log folder for log files older than today and moves them to the appropriate archive subfolder
-- All archived log files reside in the <Output Directory\>\\MSLSAM\\Log\\Archive\\<Day\> folder
-- If the Chronoman log files in the MSLSAM\\Log are older than the oldest Archive folder, the old logs are simply deleted
+- The log file resides in the &lt;Output Directory&gt;\\MSLSAM\\Log\\ directory.
+- Each time the Chronoman.exe runs, it creates a log file name with the following syntax: Chronoman_CCYYMMDD_HHmmssss.log. The "ssss" in syntax represents seconds and tenths of seconds (e.g., Chronoman_20110513_15263142.log).
+- Upon startup, Chronoman.exe checks the MSLSAM\\Log folder for log files older than today and moves them to the appropriate archive subfolder.
+- All archived log files reside in the &lt;Output Directory&gt;\\MSLSAM\\Log\\Archive\\&lt;Day&gt; folder.
+- If the Chronoman log files in the MSLSAM\\Log are older than the oldest Archive folder, the old logs are simply deleted.
 
 ## Error Codes
 
@@ -395,7 +396,7 @@ Chronoman exits with a value of 0 if it succeeds and an error code if errors are
 
 |Error Number|Error Description|
 |--- |--- |
-|-1|One or more of the following issues will cause this error: Database connection made, but unable to read the table to resolve the token. Critical system error - GetModuleFileName () failed. Error reading Database Configuration file - it appears to be damaged. The Property Name exceeded 64 characters|
+|-1|One or more of the following issues will cause this error: Database connection made, but unable to read the table to resolve the token. Critical system error - GetModuleFileName () failed. Error reading Database Configuration file - it appears to be damaged. The Property Name exceeded 64 characters.|
 |1|Database connection made, but unable to read the table to resolve the property.|
 |3|Zero Fill Directives incorrectly specified.|
 |4|Zero Fill Directives insertion point not numeric.|
@@ -414,11 +415,11 @@ Chronoman exits with a value of 0 if it succeeds and an error code if errors are
 |20|The Specified Command File does not exist or cannot be found. A possible cause for this problem can be from copying and pasting a working directory from an email or PDF file as opposed to manually typing the correct information. Hidden characters in the Working Directory are a known cause for this problem.|
 |21|Offset (=o) not specified or offset set to zero.|
 |23|Working days are needed, but the Schedule Name (=s) is missing.|
-|24|The SMAODBCConfig.dat file is missing. Please use the SMAODBCConfig.exe program to configure the database connection.|
+|24|The SMAODBCConfig.dat file is missing. Use the SMAODBCConfig.exe program to configure the database connection.|
 |26|Property Name parameter not defined or invalid. Specify the =t parameter on the command line or the SET_TOKEN_NAME special directive in the command file. The Property Name cannot contain the following characters:' ( ) \ , = ; ||
 |27|Time format not specified.|
 |30|Unable to create a valid start date/time from specified value.|
-|31|One or more of the following issues will cause this error: Unable to format date/time combination using specified format. Unable to format value using specified format. Error occurred trying to convert Julian date|
+|31|One or more of the following issues will cause this error: Unable to format date/time combination using specified format. Unable to format value using specified format. Error occurred trying to convert Julian date.|
 |34|Computed date value not specified.|
 |35|Computed date (Julian) value not specified.|
 |36|Format value not specified.|
@@ -441,14 +442,14 @@ Chronoman exits with a value of 0 if it succeeds and an error code if errors are
 
 ## Running on OpCon in Docker
 
-To run the utility successfully in a Docker container, using the Linux agent embedded in it, keep the following things in mind, complete the following steps:
+To run the utility successfully in a Docker container, using the Linux agent embedded in it, keep the following things in mind and complete the following steps:
 
-1. When running in Docker, the Linux job needs to be set up similar to a Windows job with the same parameters
-2. The start image for the Linux job should be: *dotnet /app/Chronoman.dll <arguments\>*
-3. The Chronoman.ini file will be located in the **/app/config** directory in the container, mapped to any folder on the host machine just like all other INI files
-4. The Chronoman command file can use the same location as the INI file (or any location on the host machine with a mapping to a directory in the container)
-5. Use the default **OpConOnLinux** agent machine (available in the container) to run the utility jobs
-6. Logs are found in **/app/log/Utilities** in the container
+1. When running in Docker, the Linux job needs to be set up similar to a Windows job with the same parameters.
+2. The start image for the Linux job should be: *dotnet /app/Chronoman.dll &lt;arguments&gt;*
+3. The Chronoman.ini file will be located in the **/app/config** directory in the container, mapped to any folder on the host machine just like all other INI files.
+4. The Chronoman command file can use the same location as the INI file (or any location on the host machine with a mapping to a directory in the container).
+5. Use the default **OpConOnLinux** agent machine (available in the container) to run the utility jobs.
+6. Logs are found in **/app/log/Utilities** in the container.
 
 ## Operations
 
@@ -489,7 +490,7 @@ Define the Q1 through Q4 dates in the `[Fiscal Quarter Begin Dates]` section of 
 
 **DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
 
-**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
+**SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job run timing, and processes OpCon events.
 
 **Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 

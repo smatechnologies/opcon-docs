@@ -1,4 +1,4 @@
-﻿---
+---
 lang: en-us
 viewport: width=device-width, initial-scale=1.0
 title: Role Resources
@@ -44,17 +44,17 @@ For conceptual help, see:
 
 ## FAQs
 
-**Q: Where can you find Role Resources in OpCon?**
+**Q: Where can I find the Role Resources tab in OpCon?**
 
-Access Role Resources in Solution Manager or Enterprise Manager.
+Go to **Library > Access Management > Roles** in Solution Manager, select a role, and select the **Resources** tab.
+
+**Q: What does "Inherit all" mean on the Resources tab?**
+
+When **Inherit all** is selected for a resource category (such as Machines or Schedules), the role automatically receives privileges for all current and future resources of that type. Individual grant or revoke controls are disabled while **Inherit all** is active.
 
 ## Glossary
 
-**Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
-
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
-
-**Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 
 **Role**: A named security profile in OpCon that groups privileges together. Roles are assigned to user accounts to control which features, schedules, jobs, machines, and administrative functions a user can access.
 
@@ -64,4 +64,4 @@ Access Role Resources in Solution Manager or Enterprise Manager.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

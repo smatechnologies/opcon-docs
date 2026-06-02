@@ -15,34 +15,36 @@ last_updated: 2026-03-18
 doc_type: procedural
 ---
 
-#  Deleting Script Versions
+# Deleting Script Versions
 
 **Theme:** Configure  
 **Who Is It For?** System Administrator, Automation Engineer
 
 ## What Is It?
 
-Use this procedure to delete Script Versions in Enterprise Manager.
+Use this procedure to delete a script version in Enterprise Manager. Deleting a version removes it permanently from the Script Repository; the version cannot be recovered after deletion.
 
 To delete a script version, complete the following steps:
 
-1.  Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays
-2.  Select a **script** in the list
-3.  Select the **Show/Create Versions** button on the toolbar. The **Versions** dialog displays
-4.  Select the **script version** to delete
-5.  Select **Remove**
-6.  Select **Yes** to confirm
-7.  Select **Close ☒** to close the **Script Repository** screen
+1. Select **Repository** under the **Scripts** topic. The **Script Repository** screen displays.
+2. Select a script in the list.
+3. Select the **Show/Create Versions** button on the toolbar. The **Versions** dialog displays.
+4. Select the script version to delete.
+5. Select **Remove**.
+6. Select **Yes** to confirm.
+7. Select **Close ☒** to close the **Script Repository** screen.
+
+**Result:** The selected script version is permanently removed from the OpCon database.
 
 ## FAQs
 
-**Q: Can a script versions record be recovered after deletion?**
+**Q: Can a deleted script version be recovered?**
 
-No. Deleting a script versions record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting a script version permanently removes it from OpCon. Verify the version is no longer needed before deleting it.
 
-**Q: How many script versions records can you delete at once?**
+**Q: Can I delete all versions of a script at once?**
 
-Select the specific script versions record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+You must delete versions individually. Select the specific version you want to delete, then select **Remove**. Confirm the deletion when prompted.
 
 ## Glossary
 

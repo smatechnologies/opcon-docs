@@ -26,3 +26,5 @@ To view schedules and jobs using a frequency name, complete the following steps:
 3. Select the frequency name in the **Frequencies** list. The **Master Schedules/Jobs using this Frequency** panel populates with the schedules and jobs that reference the selected frequency.
 4. Review the **Schedule** and **Job** columns in the **Master Schedules/Jobs using this Frequency** panel to identify which schedules and jobs use the frequency.
 5. Select **Close ☒** (to the right of the **Frequency Manager** tab) to close the **Frequency Manager** screen.
+
+**Result:** You can identify all schedules and jobs that reference the selected frequency name, which is useful before renaming or deleting a frequency.
