@@ -39,4 +39,4 @@ To remove a tag from a job, complete the following steps:
 ## Related topics
 
 - [Adding Tags](Adding-Tags.md)
-- [Tag Manager](Tag-Manager.md)
+- [Tag Manager](Using-Tag-Manager.md)
