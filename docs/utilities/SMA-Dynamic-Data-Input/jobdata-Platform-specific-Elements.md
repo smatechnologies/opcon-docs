@@ -1128,7 +1128,7 @@ Needed to define a single variable definition for an IBM i job.
 
 #### <ibmi_agent_var\></ibmi_agent_var\>
 
-Defines the name of the IBM i LSAM
+Defines the name of the IBM i Agent
 Dynamic Variable that stores the value.
 
 - **Requirements**: Required for <ibmi_agent_var_info\>
@@ -1139,7 +1139,7 @@ Dynamic Variable that stores the value.
 #### <ibmi_agent_var_val\></ibmi_agent_var_val\>
 
 Defines the character string to use
-As the value to be stored in the IBM i LSAM Dynamic Variables table.
+As the value to be stored in the IBM i Agent Dynamic Variables table.
 
 - **Requirements**: Required for <ibmi_agent_var_info\>
 - **EM field label**: Value
@@ -5213,7 +5213,7 @@ Started task (e.g., TYPE=WARM).
 
 Specifies the SMF System ID (Machine ID) on
 Which to run the prerun, if other than the Primary Machine ID. This ID
-Must be a member of the z/OS Sysplex, have a z/OS LSAM installed and
+Must be a member of the z/OS Sysplex, have a z/OS Agent installed and
 Running. Enter a value of ANY to allow preruns on any machine in the
 Sysplex. Defines the data relating to the "Pre-run
 System" field in the EM.
@@ -5291,7 +5291,7 @@ Data Group (GDG) base generations.
 - The JCL parameter symbol or OpCon token, separated by double backslashes. Each
  override (@) or symbolic (&) definition is separated by two
  backslashes (\\\\).
-- When the z/OS LSAM encounters an "&name=" symbolic, it scans each
+- When the z/OS Agent encounters an "&name=" symbolic, it scans each
  JCL statement for an operand match. Only operands are changed by an
  "&" symbolic override.
 - To qualify for replacement, an operand must be preceded by a comma

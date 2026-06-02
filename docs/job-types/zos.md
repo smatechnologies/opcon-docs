@@ -21,7 +21,7 @@ doc_type: procedural
 
 The information in this section applies to defining the z/OS Job Type
 information. Refer to [Customization Process](https://help.smatechnologies.com/opcon/agents/zos/latest/Files/Agents/zOS/Customization-Process.md)
- in the **z/OS LSAM** online help for special features to enhance
+ in the **z/OS Agent** online help for special features to enhance
 the automation capabilities of OpCon on this
 platform.
 
@@ -95,7 +95,7 @@ submitted. The following information applies to defining Batch jobs:
         saved JCL (Override DD). Defaults to TEMPJCL.
   - **View JCL**: This button fetches the JCL from the member
         identified by the View JCL DD and member name and loads it in a
-        text editor. Clicking **OK** in the editor loads the edit buffer
+        text editor. Selecting **OK** in the editor loads the edit buffer
         in storage and enables the **Save JCL** button.
   - **Save JCL**: This button uploads the JCL from the edit buffer
         to the host and saves it in the member identified by the Save
@@ -183,7 +183,7 @@ information applies to defining the Command Control.
 The *REXX Control Fields* are required when *REXX Event (Dynamic)* is
 defined for the Event Type. REXX procedures require no JCL and can be
 use for a variety of automation interfaces. The REXX Event functions
-much like a Console Command. The z/OS LSAM dynamically allocates a print
+much like a Console Command. The z/OS Agent dynamically allocates a print
 file, and runs the program from the designated DD. The following
 information applies to defining REXX Control:
 
@@ -224,7 +224,7 @@ information applies to defining REXX Control:
         saved JCL (Override DD). Defaults to TEMPJCL.
   - **View JCL**: This button fetches the JCL from the member
         identified by the View JCL DD and member name and loads it in a
-        text editor. Clicking **OK** in the editor loads the edit buffer
+        text editor. Selecting **OK** in the editor loads the edit buffer
         in storage and enables the **Save JCL** button.
   - **Save JCL**: This button uploads the JCL from the edit buffer
         to the host and saves it in the member identified by the Save
@@ -360,7 +360,7 @@ The following information applies to defining Step Control:
     - Message **$S=jobstep\[.procstep\]** will set the job's
             restart step to *jobstep\[.procstep*\].
   - Refer to [Using the XPSCOMM Interface         Routine](https://help.smatechnologies.com/opcon/agents/zos/latest/Files/Agents/zOS/Advanced-Features.md#Using)
-         in the **z/OS LSAM** online help for information on
+         in the **z/OS Agent** online help for information on
         defining entries to the Event Table.
 
   - Starting with OpCon 5.1, the agent Feedback codes can also be
@@ -409,7 +409,7 @@ The following information applies to defining Step Control:
 
 ## z/OS Pre-run Definitions
 
-The z/OS LSAM (z/OS) allows for five different types of Pre-runs to be processed: File Resource, Message Trigger, Job/Task
+The z/OS Agent (z/OS) allows for five different types of Pre-runs to be processed: File Resource, Message Trigger, Job/Task
 Resource, Tape Devices, and REXX Procedure.
 
 ### File Resource
@@ -517,7 +517,7 @@ value to scan for in the remainder of the message text.
         must be separated from the fixed text by a space to avoid
         ambiguity.
 
-    - In z/OS LSAM releases before 20.01.00, a space is always
+    - In z/OS Agent releases before 20.01.00, a space is always
             required between the fixed key and the opening bracket or
             hyphen.
 - **Generations**: Defines the number of messages matching the key
@@ -872,7 +872,7 @@ could respond to an "After" dependency.
 
 ### Tracking Externally Submitted Batch Job Events in OpCon
 
-Within the z/OS LSAM, it is possible to trap and track events submitted outside of OpCon. There are
+Within the z/OS Agent, it is possible to trap and track events submitted outside of OpCon. There are
 three possible approaches to Non-Schedule Event Tracking.
 
 1. Define a single job name "mask" that is always trapped by the z/OS
@@ -1139,12 +1139,12 @@ passive monitored event:
 5. Creating Job: Any
 6. Created on SysID: ANY
 7. Type: As Scheduled only When the associated job is ready to START
-    (all other SAM dependencies are met), the z/OS LSAM adds the DSN
+    (all other SAM dependencies are met), the z/OS Agent adds the DSN
     trigger criteria to the internal DSN Trigger Table on all agents in
     the SYSPLEX.
 8. SAM sets the job to "Waiting Start Time -- DSN(s) Not Available"
     on the SAM schedule.
-9. At a user-defined interval, SAM checks the z/OS LSAM for any trigger
+9. At a user-defined interval, SAM checks the z/OS Agent for any trigger
     hits on the pre-run DSN(s). If none is found, the "Waiting Start
     Time" message persists. For information on this Prerun setting,
     refer to [Time Settings](../administration/server-options.md#time-settings).

@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Enterprise Manager Overview
+
 **Theme:** Overview | **Who is it for?** Users who need to use the legacy Enterprise Manager desktop client
 
 ## What Is It?
