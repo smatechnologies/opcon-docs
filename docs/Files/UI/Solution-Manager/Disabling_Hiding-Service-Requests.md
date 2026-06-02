@@ -56,9 +56,9 @@ To define a hide rule, complete the following steps:
 
 ## FAQs
 
-**Q: What does Disabling or Hiding Service Requests cover?**
+**Q: What is the difference between disabling and hiding a Service Request?**
 
-This page covers Disabling Service Requests, Hiding Service Requests.
+A disabled Service Request button is visible but cannot be selected. A hidden Service Request button does not appear at all. Both states are controlled by rules (OpCon expressions) that you define on the Service Request.
 
 ## Glossary
 
@@ -66,4 +66,4 @@ This page covers Disabling Service Requests, Hiding Service Requests.
 
 **Service Request**: A Solution Manager feature that lets operators trigger predefined automation workflows using a simple form. Service Requests encapsulate schedule builds, job submissions, or events without requiring direct access to schedule definitions.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

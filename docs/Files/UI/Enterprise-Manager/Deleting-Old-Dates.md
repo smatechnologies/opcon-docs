@@ -35,16 +35,16 @@ To delete old dates, complete the following steps:
 
 ## FAQs
 
-**Q: Can a old dates record be recovered after deletion?**
+**Q: Can deleted dates be recovered?**
 
-No. Deleting a old dates record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting old dates permanently removes them from OpCon. Verify the records are no longer needed before deleting them.
 
-**Q: How many old dates records can you delete at once?**
+**Q: How do you delete old dates from a single calendar versus all calendars?**
 
-Select the specific old dates record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+In step 4, select **No** to delete dates from the selected calendar only, or select **Yes** to delete dates from all calendars. Confirm the deletion when prompted.
 
 ## Glossary
 
 **Calendar**: A named collection of dates in OpCon used by schedules and frequencies to determine when automation runs or is excluded. Calendars can represent holidays, working days, or any custom date set.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

@@ -67,13 +67,13 @@ To revoke an Access Code, complete the following steps:
 
 ## FAQs
 
-**Q: Can a access codes record be recovered after deletion?**
+**Q: Can an access code record be recovered after deletion?**
 
-No. Deleting a access codes record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
+No. Deleting an access code record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
 
-**Q: What should you check before deleting access codes?**
+**Q: What should you check before deleting an access code?**
 
-Verify the access codes is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
+Verify the access code is not currently in use or assigned to other records before deleting it, as deletion may affect dependent objects.
 
 ## Glossary
 
