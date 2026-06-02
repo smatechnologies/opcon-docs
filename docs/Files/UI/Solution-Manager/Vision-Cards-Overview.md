@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Vision Cards Overview
+
 **Theme:** Overview | **Who is it for?** Administrators who create and manage Vision cards and categories
 
 ## What Is It?

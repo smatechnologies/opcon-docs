@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: reference
 ---
 
+# Notifications Section Overview
+
 **Theme:** Overview | **Who is it for?** Administrators and automation engineers who configure OpCon notification delivery
 
 ## What Is It?

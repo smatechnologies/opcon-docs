@@ -13,6 +13,8 @@ tags:
 last_updated: 2026-03-18
 doc_type: conceptual
 ---
+# Job and Schedule Statuses Overview
+
 
 Every job and schedule in the daily queue has a status reflecting its current state. Understanding status values helps you interpret the daily queue and take corrective action when something fails, stalls, or must be held.
 

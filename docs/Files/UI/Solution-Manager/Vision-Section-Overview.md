@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Vision Overview
+
 **Theme:** Overview | **Who is it for?** Administrators and operations staff who monitor job status and SLA performance using Vision cards
 
 ## What Is It?

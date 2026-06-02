@@ -15,7 +15,7 @@ doc_type: conceptual
 
 # Operations Overview
 
-**Theme:** Overview | **Who is it for?** Operations staff and administrators who monitor and manage daily job and schedule execution
+**Theme:** Overview | **Who is it for?** Operations staff and administrators who monitor and manage daily job and schedule running
 
 ## What Is It?
 

@@ -3,7 +3,7 @@ title: Master Job Information Report
 description: "The Master Job Information Report provides a comprehensive view of master job configurations in OpCon, including job details, schedules, machines, departments, frequencies, access codes, tags, timing, and documentation notes."
 product_area: Solution Manager
 audience: System Administrator, Automation Engineer
-<!-- GAP: version_introduced value unverified against release notes -->
+version_introduced: "[see release notes]"
 tags:
   - Conceptual
   - System Administrator

@@ -12,6 +12,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Administration Overview
+
 **Theme:** Overview | **Who is it for?** System administrators responsible for installing, configuring, and maintaining the OpCon environment
 
 ## What Is It?

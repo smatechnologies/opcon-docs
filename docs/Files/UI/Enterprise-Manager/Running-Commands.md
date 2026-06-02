@@ -22,7 +22,7 @@ The **Run Command** tab in Notification Manager configures a command that OpCon 
 | Field | Required | Description | Limit |
 |---|---|---|---|
 | **Command** | Yes | Full path and file name of the program to run on the OpCon server. | 4,000 characters |
-| **Working Directory** | No | Working directory used by the program during execution. | 255 characters |
+| **Working Directory** | No | Working directory used by the program during running. | 255 characters |
 | **Batch User** | Yes | Windows batch user with permission to run the program. The list is filtered to Windows batch users defined in OpCon. | — |
 
 ## Configure a Run Command notification

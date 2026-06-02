@@ -15,7 +15,7 @@ doc_type: procedural
 
 # Viewing and Updating Frequencies
 
-The **Frequencies** panel in **Master Job Definition** displays the frequencies associated with a job and lets you assign, remove, and configure per-frequency job-execution settings.
+The **Frequencies** panel in **Master Job Definition** displays the frequencies associated with a job and lets you assign, remove, and configure per-frequency job-running settings.
 
 :::note
 Only users with the appropriate edit privileges can access the **Lock** button and modify job properties. For details, refer to [Required Privileges](Accessing-Master-Jobs.md#Required) in the **Accessing Master Job Definition** topic.

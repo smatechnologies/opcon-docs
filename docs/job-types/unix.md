@@ -20,8 +20,8 @@ doc_type: reference
 ## What Is It?
 
 The information in this section applies to defining a UNIX job. For
-additional information about this platform, refer to [UNIX LSAM Configuration](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Configuration.md)
- in the **UNIX LSAM** online help.
+additional information about this platform, refer to [UNIX Agent Configuration](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/Configuration.md)
+ in the **UNIX Agent** online help.
 
 For Episys jobs, OpCon provides additional
 details to support easy job definition. For additional information,
@@ -67,7 +67,7 @@ agent machine to run immediately before the job specified in the Start Image.
 **Start Image**: Defines the full path to the executable file on the
 agent machine. If the job requires a user's environment variables, refer to [agent Environment
 Variables](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/agent-Environment-Variables.md)
- in the **UNIX LSAM** online help.
+ in the **UNIX Agent** online help.
 
 - With the Non-XML data structure, the maximum length of the start
     image is 77 characters.
@@ -82,7 +82,7 @@ Variables](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agent
     characters.
 
 :::note
-OpCon concatenates the Start image and Parameters and inserts a space between them before sending the job to the UNIX LSAM.
+OpCon concatenates the Start image and Parameters and inserts a space between them before sending the job to the UNIX Agent.
 :::
 
 **Job Output Parsing**: Provides fields to define the search criteria

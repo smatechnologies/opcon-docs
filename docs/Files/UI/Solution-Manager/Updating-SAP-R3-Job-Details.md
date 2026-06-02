@@ -363,7 +363,7 @@ Select the **Print Specifications** button to open the dialog.
 - **Active trace**: Activates trace.
   ![External Program Details](../../../Resources/Images/SM/Operations/SapR3/External-Program-Details.png "External Program Details")
 
-### Select Execution Target
+### Select running Target
 
 Select the search button next to **Exec. Target** to open the SAP Query dialog.
 ![Search Button](../../../Resources/Images/SM/Operations/SapR3/Search-Exec-Sap-Button.png "Search Button")
@@ -377,7 +377,7 @@ Select the search button next to **Exec. Target** to open the SAP Query dialog.
 
 ![SAP Query Dialog](../../../Resources/Images/SM/Operations/SapR3/SAP-Exec-Query-Dialog.png "SAP Query Dialog")
 
-Enter SAP credentials and select the search button to retrieve all execution targets.
+Enter SAP credentials and select the search button to retrieve all running targets.
 ![Query SAP Button](../../../Resources/Images/SM/Operations/SapR3/Query-SAP-Button.png "Query SAP Button")
 
 Select a target from the list and select **OK** to assign it to **Exec. Target** in the SAP R3 Daily Job Definition.
@@ -386,9 +386,9 @@ Select a target from the list and select **OK** to assign it to **Exec. Target**
 
 ![Exec. Target](../../../Resources/Images/SM/Operations/SapR3/Sap-Exec-Target-Update.png "Exec. Target")
 
-### Remove Execution Target
+### Remove running Target
 
-To remove the **Execution Target**, select the delete button.
+To remove the **running Target**, select the delete button.
 ![Remove Target](../../../Resources/Images/SM/Operations/SapR3/Sap-Exec-Target-Remove.png "Remove Target")
 
 :::note

@@ -33,15 +33,15 @@ To run a Service Request, complete the following steps:
 
 3. Proceed based on how the Service Request is configured:
 
-   - If the Service Request has no user inputs and no confirmation prompt configured, it runs immediately and you are taken to the execution status page. No further action is required.
+   - If the Service Request has no user inputs and no confirmation prompt configured, it runs immediately and you are taken to the running status page. No further action is required.
    - If a confirmation prompt is configured with no user inputs, a confirmation page appears with no input fields. Select **Submit** to proceed or **Cancel** to discard the run request.
    - If user inputs are configured, a form appears. Complete the required input fields, then select **Submit** to run the request or **Cancel** to discard it.
 
-**Result:** After you select **Submit**, a confirmation message displays the request name, submission time, and submission date. The execution status panel shows the progress of the request.
+**Result:** After you select **Submit**, a confirmation message displays the request name, submission time, and submission date. The running status panel shows the progress of the request.
 
-## Execution Status
+## running Status
 
-After submission, the execution status panel tracks the request through the following states:
+After submission, the running status panel tracks the request through the following states:
 
 | Status | Description |
 |---|---|
@@ -52,7 +52,7 @@ After submission, the execution status panel tracks the request through the foll
 | Completed (With error) | The request finished but one or more actions encountered an error. |
 | Zombified | The request entered an unrecoverable state and did not complete normally. |
 | Submit Rejected | The request could not be submitted due to an error. |
-| Unknown | The execution status cannot be determined. |
+| Unknown | The running status cannot be determined. |
 
 Select **OK** to return to the Self Service page when you are finished reviewing the status.
 

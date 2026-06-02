@@ -622,7 +622,7 @@ Will be rescheduled at a user-defined interval. The Prerun job will
 Continue to run at the user-defined interval until it succeeds,
 Allowing the job within the Job Information elements to process. The
 Purpose of a Prerun is to test any required preconditions to job
-Execution.
+running.
 
 - **Requirements**: Optional
 - **EM field label**: Prerun
@@ -1226,7 +1226,7 @@ Executable will run as.
 #### <java_operation\></java_operation\>
 
 Defines the type of operation that will
-Be performed (i.e., execution of a Java class or a command line).
+Be performed (i.e., running of a Java class or a command line).
 
 - **Requirements**: Required
 - **EM field label**: Operation
@@ -1266,7 +1266,7 @@ Run.
 - **EM field label**: Method Name
 - **Valid Values**: Alpha and numeric characters, - (hyphen) and \_
  (underscore) characters, and period. If a value is not specified,
- this will default to "main", which is the default execution method
+ this will default to "main", which is the default running method
  of a Java object.
  - Characters: 1-4000
 
@@ -1615,7 +1615,7 @@ On each field for this job type, refer to [MCP Job Details](../../job-types/mcp.
 #### <user_code\></user_code\>
 
 Defines the MCP user to be impersonated when
-Launching the job.
+opening the job.
 
 - **Requirements**: Required for MCP <jobdata\>
 - **EM field label**: User Code
@@ -1634,7 +1634,7 @@ Uses.
 #### <job_init\></job_init\>
 
 Defines the job initiation command to be used
-When launching the job.
+When opening the job.
 
 - **Requirements**: Required for MCP <jobdata\>
 - **Valid Values**: START, RUN,
@@ -1935,7 +1935,7 @@ Describe a prerun job for the primary job.
 #### <pre_job_int\></pre_job_int\>
 
 Defines the job initiation command to be
-Used when launching the prerun job.
+Used when opening the prerun job.
 
 - **Requirements**: Required for <mcpprerun\>
 - **Valid Values**: START and RUN
@@ -1954,7 +1954,7 @@ Prerun job.
 #### <pre_args\></pre_args\>
 
 Defines the job initiation command to be
-Used when launching the prerun job.
+Used when opening the prerun job.
 
 - **Requirements**: Required for <mcpprerun\>
 - **EM field label**: Arguments
@@ -2993,7 +2993,7 @@ SAP R/3 job in the SAP R/3 environment.
 
 #### <sap_exec_target\></sap_exec_target\>
 
-Defines the target SAP R/3 execution
+Defines the target SAP R/3 running
 Environment.
 
 - **Requirements**: Optional
@@ -3002,7 +3002,7 @@ Environment.
 #### <sap_start_immediately\></sap_start_immediately\>
 
 Indicates if the SAP R/3 job
-Should start immediately when submitted to the target execution
+Should start immediately when submitted to the target running
 Environment, or if it should start as soon as possible.
 
 - **Requirements**: Optional
@@ -4599,7 +4599,7 @@ The **Concepts** online help.
 #### <wuid\></wuid\>
 
 Defines the Windows user to be impersonated when
-Launching the job.
+opening the job.
 
 - **Requirements**: Required for Windows <jobdata\>
 - **EM field label**: User ID
@@ -4800,7 +4800,7 @@ Describe a prerun job for the primary job.
 #### <pre_cmd_line\></pre_cmd_line\>
 
 Defines the command line to be used when
-Launching the prerun job.
+opening the prerun job.
 
 - **Requirements**: Required for <wprerun\>
 - **Valid Values**: The Command Line must not exceed 4000 characters
@@ -5042,13 +5042,13 @@ Each field for this job type, refer to [z/OS Job Details](../../job-types/zos.md
 
 Defines the z/OS Job sub-type. The default is
 A standard Batch Job (submitted from a standard JCL library and run
-In a JES initiator). Each job type has a different execution profile and
+In a JES initiator). Each job type has a different running profile and
 Method of resolving security and access permissions.
 
 - **Requirements**: Required for z/OS <jobdata\>
 - **EM field label**: z/OS Job Type
 - **Valid Values**: The options are Batch Job, Started Task, Console
- Command Execution, REXX Event (Dynamic), Tracked Job, and Queued
+ Command running, REXX Event (Dynamic), Tracked Job, and Queued
  Job.
 
 #### <event_name\></event_name\>
@@ -5186,7 +5186,7 @@ System where the pre-runs were satisfied.
 
 - **Requirements**: Optional for all event types: 'Batch Job',
  'Started Task', 'REXX Event' (Dynamic), 'Tracked Job',
- 'Queued Job' and 'Console Command Execution'.
+ 'Queued Job' and 'Console Command running'.
 - **EM field label**: Submit on any System
 - **Valid Values**: **From Any agent** or
  **Primary agent Only**. Set to **Primary agent Only** to force submission on the primary agent, or **From Any agent** to submit from the first agent that qualifies the pre-run requirements.
@@ -5200,10 +5200,10 @@ Primary agent refers to the agent/PSAM on which the job is scheduled. It should 
 Defines the complete start parameter for the
 Started task (e.g., TYPE=WARM).
 
-- **Requirements**: Optional for 'Console Command Execution',
+- **Requirements**: Optional for 'Console Command running',
  'Started Task', or 'REXX Event' (Dynamic), event type.
 - **EM field label (Command)**: Operator Command
-- **EM field label (Rexx or Started Task)**: Execution Parms
+- **EM field label (Rexx or Started Task)**: running Parms
 - **Valid Values**: It may contain any properties allowed in a Stared
  Task EXEC parameter, a console command or the parameter string for
  the REXX program, depending on the event type. There has to be
@@ -5220,7 +5220,7 @@ System" field in the EM.
 
 - **Requirements**: Optional for all event types: 'Batch Job',
  'Started Task', 'REXX Event' (Dynamic), 'Tracked Job',
- 'Queued Job' and 'Console Command Execution'.
+ 'Queued Job' and 'Console Command running'.
 - **EM field label**: Pre-run System
 - **Valid Values**: The value may be *a one- to four-character string
  defining a Machine*, *ANY*, or *blank* (to run the prerun on the
@@ -5237,7 +5237,7 @@ Cleans up duplicate dataset(s).
 
 - **Requirements**: Optional for all event types: 'Batch Job',
  'Started Task', 'REXX Event' (Dynamic), 'Tracked Job',
- 'Queued Job' and 'Console Command Execution'.
+ 'Queued Job' and 'Console Command running'.
 - **EM field label**: Duplicate Dataset Action - Restart
 - **Valid Values**:
  - <blank\>: The agent defaults are used
@@ -5252,7 +5252,7 @@ Duplicate dataset(s).
 
 - **Requirements**: Optional for all event types: 'Batch Job',
  'Started Task', 'REXX Event' (Dynamic), 'Tracked Job',
- 'Queued Job' and 'Console Command Execution'.
+ 'Queued Job' and 'Console Command running'.
 - **EM field label**: Duplicate Dataset Action - Normal
 - **Valid Values**:
  - <blank\>: The agent defaults are used
@@ -5271,7 +5271,7 @@ Data Group (GDG) base generations.
 
 - **Requirements**: Optional for all event types: 'Batch Job',
  'Started Task', 'REXX Event' (Dynamic), 'Tracked Job',
- 'Queued Job' and 'Console Command Execution'.
+ 'Queued Job' and 'Console Command running'.
 - **EM field label**: GDG Regression
 - **Valid Values**:
  - <blank\>: The agent defaults are used
@@ -5695,7 +5695,7 @@ Should be Running or Not Running for the associated event to submit.
 - **EM field label**: Job/Task Must Be
 - **Valid Values**: Validation Event types are Batch Job, Started
  Task, REXX Event (Dynamic), Tracked Job, Queued Job, or Console
- Command Execution.
+ Command running.
  - Running or agent will respond with Prerun Error
  - Not Running or agent will respond with Prerun Error
 
@@ -5720,7 +5720,7 @@ As defined by IBM unit standards.
  current supported device types are 3420, 3423, 3480, 3490, and 3590.
  The value may contain up to eight alphanumeric characters.
  - Event types are Batch Job, Started Task, REXX Event (Dynamic),
- Tracked Job, Queued Job, or Console Command Execution.
+ Tracked Job, Queued Job, or Console Command running.
  - Characters: 1-8
  - Valid Characters: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ @ \# $
  / -
@@ -5739,7 +5739,7 @@ Available for the associated job to be submitted.
  current supported device types are 3420, 3423, 3480, 3490, and 3590.
  The value may contain up to eight alphanumeric characters.
  - Event types are Batch Job, Started Task, REXX Event (Dynamic),
- Tracked Job, Queued Job, or Console Command Execution.
+ Tracked Job, Queued Job, or Console Command running.
  - Range: 0-99
 
 ### Rexx Prerun Element Definitions
@@ -5795,7 +5795,7 @@ REXX procedure.
 | EM field label (Batch) | DDNAME | — | — |
 | EM field label (Rexx) | Submit DDNAME | — | — |
 | EM field label (Command) | Operator Command | — | — |
-| EM field label (Rexx or Started Task) | Execution Parms | — | — |
+| EM field label (Rexx or Started Task) | running Parms | — | — |
 ## FAQs
 
 **Q: What job platforms does the `<jobdata>` element support?**

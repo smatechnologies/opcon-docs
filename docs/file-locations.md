@@ -91,10 +91,7 @@ Programs at default path; output files at custom path E:\Logs\OpConxps\.
 |---|---|---|---|
 | System drive | Output files default to `:\ProgramData\OpConxps` | `<systemdrive>:\ProgramData\OpConxps` | — |
 | Non-system drive | Output files default to the same folder as the programs | — | — |
-| Custom path | The `SMACommon.ini` file indicates the output file path | Path  :::info Example **Progra | — |
-| Programs | C:\Program Files\OpConxps\\*program folder* | — | — |
-| Configuration files | C:\ProgramData\OpConxps\\*program folder* | — | — |
-| Output files | C:\ProgramData\OpConxps\\*program folder* | — | — |
+| Custom path | The `SMACommon.ini` file indicates the output file path | — | — |
 ## FAQs
 
 **Q: Where are OpCon configuration files stored when installed on the system drive?**
@@ -113,4 +110,4 @@ Check the `SMACommon.ini` file in the configuration folder. This file contains t
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

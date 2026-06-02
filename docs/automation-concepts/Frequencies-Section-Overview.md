@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Frequencies Section Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who control when jobs and schedules run
 
 ## What Is It?

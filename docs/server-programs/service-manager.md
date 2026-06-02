@@ -126,7 +126,7 @@ Each application in the Application List has a corresponding section in the conf
 
 ### Application Hung Scripts
 
-Continuous supplies command files for default application hung scripts. These scripts must be configured for proper execution when an application hangs. They are installed to the <Configuration Directory\>\\SAM folder. By default, SMAServMan.ini contains paths to the SQL Authentication script names.
+Continuous supplies command files for default application hung scripts. These scripts must be configured for proper running when an application hangs. They are installed to the <Configuration Directory\>\\SAM folder. By default, SMAServMan.ini contains paths to the SQL Authentication script names.
 
 :::note
 The Configuration Directory location depends on your installation path. For more information, refer to [File Locations](../file-locations.md) in the **Concepts** online help.
@@ -227,7 +227,7 @@ To stop the SMA Service Manager, complete the following steps:
 ### Monitoring
 
 - SMAServMan writes all management information to `SMAServMan.log` in `<Output Directory>\SAM\Log\`. After starting, verify the SAM and SMANetCom connected to the database by reviewing `SMAServMan.log`, `SAM.log`, `Critical.log`, `SMANetCom.log`, and `SMANetComTrace.log`.
-- In failover configurations, the secondary SMAServMan pings the primary every `SecondsBetweenPings` seconds (default: 15). A failure to respond within `PingTimeOutInMilliseconds` (default: 1000 ms) increments `PingRetryCount`; when the count is reached, the `SyncLostScript` executes.
+- In failover configurations, the secondary SMAServMan pings the primary every `SecondsBetweenPings` seconds (default: 15). A failure to respond within `PingTimeOutInMilliseconds` (default: 1000 ms) increments `PingRetryCount`; when the count is reached, the `SyncLostScript` runs.
 - If `CriticalApplication=TRUE` for SAM or SMANetCom and the application cannot be restarted within `RestartApplicationLimit` attempts, all applications shut down and SMAServMan stops. On primary machines, failover is triggered.
 
 ### Common Tasks
@@ -248,9 +248,9 @@ To stop the SMA Service Manager, complete the following steps:
 
 **Application hangs and cannot be restarted triggers full shutdown and failover** — When a critical application such as SAM or SMANetCom exceeds the configured `InitialTimeOutInSeconds` or `ApplicationTimeOutInSeconds` and cannot be restarted within the `RestartApplicationLimit`, all applications shut down, the SMAServMan service stops, and on the primary machine failover is triggered — Review and increase timeout and restart-limit settings in SMAServMan.ini if the application has heavy startup or processing load; configure `ApplicationHungScript` and `RestartFailedScript` to notify operations when this occurs.
 
-**Initial synchronization with Secondary SMAServMan fails** — If the primary and secondary SMAServMan cannot synchronize within the `TimeOutInSecondsForSync` limit, the `SyncInitFailureScript` is executed — Verify the `FailOverSocketNumber` matches in both configuration files and that network connectivity between the primary and secondary machines is available.
+**Initial synchronization with Secondary SMAServMan fails** — If the primary and secondary SMAServMan cannot synchronize within the `TimeOutInSecondsForSync` limit, the `SyncInitFailureScript` is ran — Verify the `FailOverSocketNumber` matches in both configuration files and that network connectivity between the primary and secondary machines is available.
 
-**Secondary SMAServMan loses communication with Primary** — If the secondary fails to contact the primary after initial synchronization (based on `PingRetryCount` and `PingTimeOutInMilliseconds`), the `SyncLostScript` is executed and, if `SyncLostFailover=Y`, the secondary application group starts — Check network connectivity between the machines; if the intent is not to fail over on network interruptions, set `SyncLostFailover=N`.
+**Secondary SMAServMan loses communication with Primary** — If the secondary fails to contact the primary after initial synchronization (based on `PingRetryCount` and `PingTimeOutInMilliseconds`), the `SyncLostScript` is ran and, if `SyncLostFailover=Y`, the secondary application group starts — Check network connectivity between the machines; if the intent is not to fail over on network interruptions, set `SyncLostFailover=N`.
 
 ## FAQs
 

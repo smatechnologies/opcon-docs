@@ -107,7 +107,7 @@ The Configuration Directory location depends on your installation path. For more
 |--- |--- |--- |--- |
 |RefreshInterval|5|Y|Interval (in seconds) at which the service checks for unprocessed requests in the OPCONREQ table. Valid values: 1–300|
 |MaximumParallelReqHandlers|50|Y|Maximum number of concurrent request handlers. Lower for smaller environments; raise for larger environments with multiple processors. Valid values: 10–1024|
-|IntervalBetReqHandlers|50|Y|Milliseconds to sleep between launching concurrent handlers. Raise for smaller environments; lower for larger environments. Valid values: 10–3000|
+|IntervalBetReqHandlers|50|Y|Milliseconds to sleep between opening concurrent handlers. Raise for smaller environments; lower for larger environments. Valid values: 10–3000|
 |ReqHandlerLaunchPriority|NORMAL|Y|Base priority on Windows for each handler. SMA recommends BELOWNORMAL for large environments to increase throughput while allowing SAM and SMANetCom to process jobs. Valid values: NORMAL, ABOVENORMAL, BELOWNORMAL, REALTIME, HIGH, IDLE|
 
 #### Debug Options

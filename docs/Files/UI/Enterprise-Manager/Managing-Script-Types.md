@@ -17,7 +17,7 @@ doc_type: reference
 
 # Managing Script Types
 
-The **Script Types** editor in Enterprise Manager creates and manages script types. A script type determines which [script runners](Managing-Script-Runners.md) can run a given script, establishing the relationship between a script and its execution environment. For more information, refer to [Embedded Scripts](../../../automation-concepts/embedded-scripts.md).
+The **Script Types** editor in Enterprise Manager creates and manages script types. A script type determines which [script runners](Managing-Script-Runners.md) can run a given script, establishing the relationship between a script and its running environment. For more information, refer to [Embedded Scripts](../../../automation-concepts/embedded-scripts.md).
 
 ## Required privilege
 

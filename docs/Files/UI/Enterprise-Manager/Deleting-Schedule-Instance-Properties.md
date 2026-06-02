@@ -37,9 +37,9 @@ To delete a property, complete the following steps:
 
 No. Deleting a schedule instance properties record permanently removes it from OpCon. Verify the record is no longer needed before deleting it.
 
-**Q: How many schedule instance properties records can you delete at once?**
+**Q: How do you delete a schedule instance property?**
 
-Select the specific schedule instance properties record you want to delete, then select the **Delete** button on the toolbar. Confirm the deletion when prompted.
+Select the property in the **Instance Definition** tab, select **Remove**, then save the schedule using the **Save** button on the toolbar.
 
 ## Glossary
 
@@ -47,4 +47,4 @@ Select the specific schedule instance properties record you want to delete, then
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

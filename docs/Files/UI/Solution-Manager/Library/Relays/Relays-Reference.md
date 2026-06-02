@@ -5,6 +5,7 @@ tags:
   - Reference
   - System Administrator
   - Automation Engineer
+doc_type: reference
   - Solution Manager
 ---
 

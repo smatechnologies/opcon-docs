@@ -151,7 +151,7 @@ To configure the script, runner, failure criteria, and environment variables, co
 4. Select the specific **version (or revision) of the script** to run. The **Comments** field populates with any notes provided about the script
 5. Select the **runner** (interpreter) to use. The **Run Command Template** field populates to show the syntax for the runner
 6. Enter any *argument(s)* to pass to the script at runtime (up to 4000 characters)
-7. Enter the *working directory* for the script execution (up to 255 characters)
+7. Enter the *working directory* for the script running (up to 255 characters)
 8. Select an **operator** and enter or select the **exit code integer**
 9. Specify whether the defined criteria determine if the job Failed or Finished OK
 10. Select the green **Add** button (**+**) to define environment variables

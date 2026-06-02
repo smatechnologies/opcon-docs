@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Frequencies Dev Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who create and manage frequency definitions in Solution Manager
 
 ## What Is It?

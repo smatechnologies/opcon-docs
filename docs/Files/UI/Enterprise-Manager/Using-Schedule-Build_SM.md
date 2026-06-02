@@ -17,7 +17,7 @@ doc_type: procedural
 
 # Using Schedule Build
 
-The **Schedule Build** link in the Enterprise Manager **Solution Manager** navigation panel opens the **Schedule Build** page in Solution Manager, where you can build daily schedules for one or more dates.
+The **Schedule Build** link in Enterprise Manager **Solution Manager** navigation panel opens the **Schedule Build** page in Solution Manager, where you can build daily schedules for one or more dates.
 
 :::note
 You must have the **Build Daily Schedules** departmental function privilege and the appropriate Schedule Privileges to use this feature. For more information, refer to [Departmental Function Privileges](../../../administration/privileges.md#build-daily-schedules).

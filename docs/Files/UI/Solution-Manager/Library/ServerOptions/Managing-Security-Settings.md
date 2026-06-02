@@ -35,7 +35,7 @@ To configure the **Security** setting, you must have one of the following:
 
 ## Configuring Security
 
-To configure Security Settings, go to **Library** > **Server Options** > select on the **SECURITY** tab.
+To configure Security Settings, go to **Library** > **Server Options** > Select the **SECURITY** tab.
 
 ![A screen showing logging settings under server options](../../../../../Resources/Images/SM/Library/ServerOptions/Security-Settings.png "Configuring Logging Settings")
 

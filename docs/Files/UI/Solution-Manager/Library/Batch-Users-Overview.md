@@ -63,6 +63,6 @@ The Windows batch user **Use Service Account** is a system-reserved record that 
 |------|------------|
 | Batch User | An operating system account (login name and, where applicable, a password) that OpCon uses to run jobs on a target machine. Batch users are scoped to a specific platform type. |
 | Job | A unit of work defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Machine | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Solution Manager | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |

@@ -72,8 +72,7 @@ Add a job to the SMAUtility schedule to run SMAGetServiceStatus at regular inter
 
 ### Job Details
 
-- The Command Line is:
-- The Working Directory is:
+<!-- GAP: The Command Line and Working Directory values for the SMAUtility schedule job template are not confirmed in source. Populate from the actual SMAUtility schedule definition. -->
 
 ## Exit Values
 
@@ -150,4 +149,4 @@ It returns exit code -2 when the monitored service is stopped. You can configure
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

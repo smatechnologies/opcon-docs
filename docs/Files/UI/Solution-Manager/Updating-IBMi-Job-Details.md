@@ -448,7 +448,7 @@ This job type does not have access to **Messages** or **Spool Files**.
 
 **In the Check File Authority sub-frame:**
 
-- **Read/Write/Execute**: Object authority type to verify for the named User ID.
+- **Read/Write/run**: Object authority type to verify for the named User ID.
 - **Check Lock on DB2 File**: Whether to verify that no in-use locks exist on any DB2 database files.
 - **Failure Condition** (Required): Action to take based on job failure or success status.
 

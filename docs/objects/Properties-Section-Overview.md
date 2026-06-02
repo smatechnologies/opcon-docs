@@ -13,6 +13,8 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
+# Properties Section Overview
+
 **Theme:** Overview | **Who is it for?** Automation engineers who use properties and tokens to build flexible, reusable automation
 
 ## What Is It?
@@ -39,7 +41,7 @@ Properties are named variables referenced anywhere a token is accepted in OpCon 
 | Event (OpCon Event) | A command string that OpCon runs when a defined condition is met, such as a job finishing, a threshold being updated, or a schedule completing. |
 | Global Property | A property defined at the OpCon system level, accessible by any job or schedule. Used to store reusable values such as paths, server names, or credentials. |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| Machine (Agent) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
+| Machine (Agent) | An running target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Property | A name-value pair stored in OpCon. Properties can be referenced in job definitions using token syntax to pass dynamic values at runtime. |
 | Role | A named collection of privileges assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Schedule | A named group of jobs in OpCon representing a business process. Schedules are built each day based on their defined frequencies and calendars. |
