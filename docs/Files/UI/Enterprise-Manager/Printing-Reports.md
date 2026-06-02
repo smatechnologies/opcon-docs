@@ -20,17 +20,17 @@ doc_type: procedural
 
 ## What Is It?
 
-Use this procedure to print Reports in Enterprise Manager.
+Use this procedure to print reports in Enterprise Manager.
 
 To print a report, complete the following steps:
 
-1. Select **Reports** under the **Information** topic. The **Reports** screen displays
-2. Select the **report** in the **Reports** list
-3. *(Optional)* Follow the steps to [run a report](Running-Reports.md) if necessary
-4. Select **Export report** on the toolbar
-5. Select **PDF** in the **Export Format** list
-6. *(Optional)* Select the preferred page range
-7. Select **OK**
+1. Select **Reports** under the **Information** topic. The **Reports** screen displays.
+2. Select the **report** in the **Reports** list.
+3. *(Optional)* Follow the steps to [run a report](Running-Reports.md) if necessary.
+4. Select **Export report** on the toolbar.
+5. Select **PDF** in the **Export Format** list.
+6. *(Optional)* Select the preferred page range.
+7. Select **OK**.
 8. Select **Open** to print immediately:
    a. Go to the **File** menu in the **Adobe Acrobat** window.
    b. Select **Print**.

@@ -40,22 +40,22 @@ The **Pie Chart** view has a toolbar for performing actions in the view. Select 
 
 The **Pie Chart** view has the following right-click menu options:
 
-- **Jobs list:** Opens the **Jobs <job status name\>** dialog, displaying jobs that match the selected pie segment. Provides **Edit Master** and **Edit Daily** buttons
+- **Jobs list:** Opens the **Jobs &lt;job status name&gt;** dialog, displaying jobs that match the selected pie segment. Provides **Edit Master** and **Edit Daily** buttons
 - **Refresh Chart:** Refreshes the displayed items in the pie chart
 
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")Related
 Topics
 
-- [Creating and Saving Custom     Diagrams](Creating-Custom-Diagrams-Pie.md)
-- [Viewing Job Lists for     Schedules](Viewing-Job-Lists-for-Schedules-Pie.md)
-- [Viewing Jobs in     SubSchedules](Viewing-Job-Lists-for-Schedules-Pie.md#View_Jobs_in_a_SubSchedule)
-- [Setting Preferences for Status     Colors](Preferences-for-Status-Colors.md)
+- [Creating and Saving Custom Diagrams](Creating-Custom-Diagrams-Pie.md)
+- [Viewing Job Lists for Schedules](Viewing-Job-Lists-for-Schedules-Pie.md)
+- [Viewing Jobs in SubSchedules](Viewing-Job-Lists-for-Schedules-Pie.md#View_Jobs_in_a_SubSchedule)
+- [Setting Preferences for Status Colors](Preferences-for-Status-Colors.md)
 
 ## FAQs
 
 **Q: What can you do with Pie Chart View?**
 
-Pie Chart View allows you to pie chart toolbar, pie chart right-click menu.
+Pie Chart View allows you to view job status distributions for a schedule or day, refresh the chart, and open job lists for specific statuses using the right-click menu.
 
 **Q: Who has access to Pie Chart View?**
 
@@ -75,4 +75,4 @@ Access to Pie Chart View is controlled by the privileges assigned to your OpCon 
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

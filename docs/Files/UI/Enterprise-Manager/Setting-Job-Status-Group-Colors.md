@@ -28,15 +28,14 @@ Select the **Restore Defaults** button in Color Preferences to restore default c
 
 To set the preferences, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Go to **EnterpriseManager > Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Colors**. The **Colors** settings display to the right
-5. Select the **Color** button next to the specific Job Status in the **Status Group Colors** frame
-6. Select the color in the **Color** dialog and select **OK**
-7. Repeat steps 5 and 6 for each additional Job Status color to change
-8. Select **Apply** to save the changes
-9. Select **OK** to save and close the **Preferences** dialog
+1. Go to **EnterpriseManager &gt; Preferences**. The **Preferences** dialog displays.
+2. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Colors**. The **Colors** settings display to the right.
+4. Select the **Color** button next to the specific Job Status in the **Status Group Colors** frame.
+5. Select the color in the **Color** dialog and select **OK**.
+6. Repeat steps 4 and 5 for each additional Job Status color to change.
+7. Select **Apply** to save the changes.
+8. Select **OK** to save and close the **Preferences** dialog.
 
 ## Glossary
 

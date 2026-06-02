@@ -15,7 +15,7 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-#  Using Tag Manager
+# Using Tag Manager
 
 **Theme:** Configure  
 **Who Is It For?** System Administrator, Automation Engineer
@@ -35,19 +35,19 @@ The toolbar resides at the top-right corner of the screen.
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics
 
--   [Finding Tags](Managing-Tags.md#Finding)
--   [Adding Tags](Managing-Tags.md#Adding)
--   [Renaming Tags](Managing-Tags.md#Renaming)
--   [Deleting Tags](Managing-Tags.md#Deleting)
--   [Editing Master Jobs](Managing-Tags.md#Editing)
--   [Associating Master Jobs](Managing-Tags.md#Associat)
--   [Deleting Job Associations](Managing-Tags.md#Deleting2)
+- [Finding Tags](Managing-Tags.md#Finding)
+- [Adding Tags](Managing-Tags.md#Adding)
+- [Renaming Tags](Managing-Tags.md#Renaming)
+- [Deleting Tags](Managing-Tags.md#Deleting)
+- [Editing Master Jobs](Managing-Tags.md#Editing)
+- [Associating Master Jobs](Managing-Tags.md#Associat)
+- [Deleting Job Associations](Managing-Tags.md#Deleting2)
 
 ## FAQs
 
 **Q: What can you do with Tag Manager?**
 
-Tag Manager allows you to tag manager toolbar.
+Tag Manager allows you to create, find, rename, and delete tags, and associate or disassociate master jobs with tags.
 
 **Q: Who has access to Tag Manager?**
 
@@ -65,4 +65,4 @@ Access to Tag Manager is controlled by the privileges assigned to your OpCon rol
 
 **Job**: The fundamental unit of work in OpCon. A job defines what to run, on which machine, when to start, and what conditions must be met. Job results are tracked and can trigger events and notifications.
 
-**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. agents installed on target platforms run jobs and report results.
+**OpCon**: Continuous' workflow automation platform. The OpCon server includes the database, SAM and Supporting Services (SAM-SS), and graphical user interfaces. Agents installed on target platforms run jobs and report results.

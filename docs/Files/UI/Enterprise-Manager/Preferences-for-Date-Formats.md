@@ -20,28 +20,27 @@ doc_type: conceptual
 
 ## What Is It?
 
-Configure the Date and Time formats to control how the EM displays dates and times.
+The **Date Formats** preferences in Enterprise Manager control how dates and times are displayed throughout the interface.
 
 To set the preferences, complete the following steps:
 
-1. Open Enterprise Manager application
-2. Use menu path: **EnterpriseManager \> Preferences**. The **Preferences** dialog displays
-3. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow ")) next to **Enterprise Manager** in the Preferences tree to expand the list
-4. Select **Date Formats**. The **Date Formats** settings display to the right
-5. *(Optional)* Modify any of the following format fields:
+1. Go to **EnterpriseManager &gt; Preferences**. The **Preferences** dialog displays.
+2. Select the arrow (![Expand Arrow](../../../Resources/Images/EM/EMarrowtoexpand.png "Expand Arrow")) next to **Enterprise Manager** in the Preferences tree to expand the list.
+3. Select **Date Formats**. The **Date Formats** settings display to the right.
+4. *(Optional)* Modify any of the following format fields:
    - **Full date format** – date and time (default: **M/d/yy h:mm a**)
    - **Long date format** – date only (default: **MMMM d, yyyy**)
    - **Short date format** – numeric short date (default: **M/d/yy**)
    - **Long time format** – hours, minutes, and seconds (default: **h:mm:ss a**)
    - **Short time format** – hours and minutes (default: **h:mm a**)
-6. *(Optional)* Select **Restore Defaults** to restore the original formats
-7. Select **Apply** to apply the changes
-8. Select **OK** to save and close the **Preferences** dialog
-9. Close and restart Enterprise Manager to load the new formats
+5. *(Optional)* Select **Restore Defaults** to restore the original formats.
+6. Select **Apply** to apply the changes.
+7. Select **OK** to save and close the **Preferences** dialog.
+8. Close and restart Enterprise Manager to load the new formats.
 
 The format letters and examples below refer to this Long Date example: `Monday, August 8, 2011`
 
-The example date would be created in the EM with the following string for the Long Date Format: `EEEE, MMMM d, yyyy`
+The example date would be created in Enterprise Manager with the following string for the Long Date Format: `EEEE, MMMM d, yyyy`
 
 |Letter|Date or Time Component|Presentation|Results/Examples|
 |--- |--- |--- |--- |
