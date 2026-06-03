@@ -9,8 +9,9 @@ tags:
   - Procedural
   - Business Analyst
   - Operations Staff
+  - System Administrator
   - Reports
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
@@ -118,6 +119,84 @@ The service writes logs to:
 - Use the `configure-connection` command to encrypt and set connection strings
 - Ensure the service runs under the same user account that encrypted the passwords (DPAPI is user-specific)
 - For Windows Authentication, verify the service account has database access
+
+## Reporting Settings
+
+:::note
+This section applies to OpCon Cloud. On-premises customers configure the Reporting Service using `appsettings.json` and the `configure-connection` tool described under [Configuration](#configuration).
+:::
+
+In OpCon Cloud, you configure the Reporting Service from Solution Manager at **Library > Administration > Server Options > Reporting** tab. The settings on this tab control the processing schedule, timezone, logging behavior, and download limits for the service.
+
+To update Reporting Settings, complete the following steps:
+
+1. Select **Library** in the Solution Manager navigation bar.
+2. Select **Administration**, then **Server Options**.
+3. Select the **Reporting** tab.
+4. Update the fields described below and select **Save**.
+
+### Reporting Settings Fields
+
+| Field | Type | Description |
+|---|---|---|
+| **Schedule Time 1** | String | First daily processing time in 24-hour format (for example, `02:00`). The service runs its ETL process at this time each day. |
+| **Schedule Time 2** | String | Second daily processing time in 24-hour format (for example, `14:00`). Leave blank to process once per day. |
+| **Time Zone** | String | Timezone used by the reporting service when interpreting schedule times (for example, `America/Chicago`). |
+| **Default Command Timeout** | Integer (seconds) | Maximum time in seconds the service waits for a reporting command to complete before timing out. |
+| **Log Level** | String | Verbosity of log output written by the service (for example, `Information`, `Warning`, `Error`). |
+| **Max Log Size** | Integer (MB) | Maximum size in megabytes a single log file may reach before the service rolls it over. |
+| **Max Log Days** | Integer (days) | Number of days log files are retained before the service deletes them. |
+| **Max Download Records** | Integer | Maximum number of records the service allows in a single CSV download (for example, `100000`). Requests that exceed this limit return an error. |
+
+---
+
+## Filtering and Sorting Reports
+
+Every report in **Operations > Reporting** includes a filter and sort panel. You can narrow results using one or more filters, combine them with AND/OR logic, and sort by multiple columns simultaneously.
+
+### Logical Operator (AND / OR)
+
+The **Logical Operator** toggle controls how the service combines all active filters when it retrieves results:
+
+- **And** — a record must match every filter to appear in the results.
+- **Or** — a record that matches any one filter appears in the results.
+
+### Filter Structure
+
+Each filter entry has three parts:
+
+| Part | Description |
+|---|---|
+| **Name** | The field to filter on (for example, `jobName`, `status`, `startDate`). |
+| **Comparer** | The comparison operator to apply. |
+| **Value** | The value to compare against. |
+
+Supported comparer operators:
+
+| Operator | Meaning |
+|---|---|
+| `=` | Exact match |
+| `!=` | Does not match |
+| `>` | Greater than |
+| `>=` | Greater than or equal to |
+| `<` | Less than |
+| `<=` | Less than or equal to |
+| `like` | Contains the value (partial match) |
+
+### Multi-Column Sort
+
+The **Order By** setting accepts multiple sort columns. Each entry specifies a column name and a direction (`asc` or `desc`). The service applies the sort columns in the order you define them.
+
+**Example — sort by department ascending, then by job name ascending:**
+
+| Column | Direction |
+|---|---|
+| `department` | `asc` |
+| `jobName` | `asc` |
+
+This returns all records sorted first by department in alphabetical order, and within each department by job name in alphabetical order.
+
+---
 
 ## FAQs
 

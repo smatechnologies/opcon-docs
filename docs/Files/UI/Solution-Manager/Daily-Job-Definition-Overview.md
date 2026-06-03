@@ -38,6 +38,7 @@ The Daily Job Definition is the runtime instance of a master job. You can view a
 | View and Update Frequencies | The frequency assigned to the daily job instance |
 | View and Update Instance Properties | Instance property values for this specific run |
 | View and Update Expression Dependencies | Expression dependency conditions for the daily job |
+| Events | OpCon events defined for the daily job instance. See [Daily Job Events](Daily-Job-Events.md). |
 | View and Update Resource Dependencies | Resource requirements for the daily job |
 | View and Update Threshold Dependencies | Threshold conditions for the daily job |
 | View and Update Resource Updates | Resource counter changes on job completion |

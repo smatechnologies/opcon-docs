@@ -9,7 +9,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
@@ -45,6 +45,38 @@ A dialog opens to define a new **Schedule Name** with options to **Copy Master J
 
 1. Enter a new **Schedule Name**
 1. Select **Save** to copy the schedule or **Cancel** to cancel
+
+## Copying a Schedule Using the Copy Dialog
+
+The Copy dialog creates an in-place duplicate of a master schedule directly in the database. No export file is produced. This is distinct from the full ImpEx export/import workflow, which generates a portable file for moving schedules between OpCon environments. Use the Copy dialog when you want to create a new schedule that starts with the same structure as an existing one in the same environment.
+
+### Copy Dialog Fields
+
+| Field | Type | Default | Description |
+| --- | --- | --- | --- |
+| Schedule Name | String | *(required)* | The name for the new copied schedule. The name must be unique across all master schedules. |
+| Copy Master Jobs | Boolean | False | When set to **True**, all jobs defined in the source schedule are included in the copy. When set to **False**, the new schedule is created with no jobs. |
+| Copy Schedule Privileges | Boolean | False | When set to **True**, the role-based access privileges from the source schedule are copied to the new schedule. When set to **False**, only users with OCADM or the All Function Privileges role privilege are granted access to the new schedule. |
+
+### Privilege Inheritance Behavior
+
+When **Copy Schedule Privileges** is set to **False**, OpCon does not carry forward the access control list from the source schedule. After the copy completes, only the following users can access the new schedule:
+
+- Users assigned to a role with the **OCADM** privilege
+- Users assigned to a role with the **All Function Privileges** privilege
+
+All other role-based schedule privileges must be added manually after the copy is complete if broader access is required.
+
+### Procedure
+
+To copy a schedule using the Copy dialog, complete the following steps:
+
+1. In **Studio**, select the schedule you want to copy.
+1. Select **Copy**. The Copy dialog opens.
+1. In the **Schedule Name** field, enter a unique name for the new schedule.
+1. To include all jobs from the source schedule, set **Copy Master Jobs** to **True**.
+1. To carry forward role-based access privileges from the source schedule, set **Copy Schedule Privileges** to **True**.
+1. Select **Save**. OpCon creates the new schedule and returns its ID. If you do not have access to the new schedule (for example, because **Copy Schedule Privileges** was set to **False** and you are not OCADM), the schedule is created but does not appear in your schedule list until an administrator grants your role the appropriate privilege.
 
 ## FAQs
 

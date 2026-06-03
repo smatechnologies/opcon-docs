@@ -9,8 +9,9 @@ tags:
   - Procedural
   - Business Analyst
   - Operations Staff
+  - System Administrator
   - Reports
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: procedural
 ---
 
@@ -119,10 +120,54 @@ The service writes logs to:
 - Ensure the service runs under the same user account that encrypted the passwords (DPAPI is user-specific)
 - For Windows Authentication, verify the service account has database access
 
-## Configuration Options
+## Filtering and Sorting Reports
 
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
+Every report in **Operations > Reporting** includes a filter and sort panel. You can narrow results using one or more filters, combine them with AND/OR logic, and sort by multiple columns simultaneously.
+
+### Logical Operator (AND / OR)
+
+The **Logical Operator** toggle controls how the service combines all active filters when it retrieves results:
+
+- **And** — a record must match every filter to appear in the results.
+- **Or** — a record that matches any one filter appears in the results.
+
+### Filter Structure
+
+Each filter entry has three parts:
+
+| Part | Description |
+|---|---|
+| **Name** | The field to filter on (for example, `jobName`, `status`, `startDate`). |
+| **Comparer** | The comparison operator to apply. |
+| **Value** | The value to compare against. |
+
+Supported comparer operators:
+
+| Operator | Meaning |
+|---|---|
+| `=` | Exact match |
+| `!=` | Does not match |
+| `>` | Greater than |
+| `>=` | Greater than or equal to |
+| `<` | Less than |
+| `<=` | Less than or equal to |
+| `like` | Contains the value (partial match) |
+
+### Multi-Column Sort
+
+The **Order By** setting accepts multiple sort columns. Each entry specifies a column name and a direction (`asc` or `desc`). The service applies the sort columns in the order you define them.
+
+**Example — sort by department ascending, then by job name ascending:**
+
+| Column | Direction |
+|---|---|
+| `department` | `asc` |
+| `jobName` | `asc` |
+
+This returns all records sorted first by department in alphabetical order, and within each department by job name in alphabetical order.
+
+---
+
 ## FAQs
 
 **Q: What does the Reporting Service do?**
