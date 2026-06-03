@@ -5,8 +5,9 @@ tags:
   - Conceptual
   - System Administrator
   - Automation Engineer
-doc_type: conceptual
   - Solution Manager
+doc_type: conceptual
+last_updated: 2026-06-02
 ---
 
 # Relays overview

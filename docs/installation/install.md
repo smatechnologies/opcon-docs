@@ -65,6 +65,10 @@ The SMA OpCon Database Scripts, SMA OpCon SAM, and SMA OpCon Solution Manager ar
 
 For server configuration, refer to [OpCon Server Configuration](./configuration.md).
 
+:::note
+Solution Manager automatically detects the OpCon API server hostname when setting up the MFT webhook registration. This hostname is determined by checking the `CertificateHostName` setting in the OpCon API appsettings configuration, the certificate subject name (on Windows), or the system hostname. If the auto-detected hostname is incorrect, you can override it by setting `CertificateHostName` in the OpCon API appsettings.
+:::
+
 ## FAQs
 
 **Q: What should be completed before beginning a new OpCon server installation?**

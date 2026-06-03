@@ -9,7 +9,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: conceptual
 ---
 
@@ -44,6 +44,7 @@ Self Service is a licensed Solution Manager module that lets non-technical staff
 | Work in Admin Mode | Manage service requests and categories in admin mode |
 | Work in User Mode | Run and interact with service requests as an end user |
 | User Inputs | Configure text, number, date, choice, and other input types |
+| Executions History | Review the audit trail of submitted service requests, including who submitted each request and what inputs were provided |
 
 ## Glossary
 
@@ -53,6 +54,26 @@ Self Service is a licensed Solution Manager module that lets non-technical staff
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Self Service | A Solution Manager module that allows non-technical users to trigger OpCon jobs and workflows through a simplified, button-based interface. |
 | Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |
+
+## Viewing Execution History
+
+The **Executions History** screen, located at **Self-Service > Executions History**, provides a complete audit trail of every service request that has been submitted. Use this screen to review who submitted a request, what parameters were supplied, and what OpCon actions resulted.
+
+### What the screen shows
+
+Each entry in Executions History displays the following audit trail fields:
+
+| Field | Description |
+|-------|-------------|
+| User | The OpCon user account that submitted the service request. |
+| Service Request | The name of the service request that was submitted. |
+| Variables | The input values provided by the user at submission time. |
+| Submitted as OCADM | Indicates the request ran as the built-in OCADM administrative account (which has full privileges). |
+| OpCon Requests | The resulting OpCon actions (for example, job adds or property updates) that were triggered by the submission. |
+
+### Retention setting
+
+OpCon automatically removes execution history records older than a configured threshold. You control this threshold with the **Number of Days to Keep Service Request Executions** setting in **Server Options**. The default retention period is 7 days.
 
 ## FAQs
 

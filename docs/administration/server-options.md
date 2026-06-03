@@ -8,7 +8,7 @@ tags:
   - Reference
   - System Administrator
   - System Configuration
-last_updated: 2026-03-18
+last_updated: 2026-06-02
 doc_type: reference
 ---
 
@@ -40,6 +40,7 @@ The General category contains default behavior settings for the SAM.
 | Failed jobs should keep the Schedule "In Process" | False | Y | This parameter configures the SAM to keep schedules In Process that contain Failed jobs and Marked Failed jobs.<br /><br />By default, the SAM closes a schedule when all jobs are in one of the following job status categories: Cancelled, Skipped, Finished OK, or Failed. Refer to Jobs Status Change Commands.<br /><br />Valid values are True and False. |
 | Number of Days to Keep a Service Request running | 7 | Y | This parameter defines the number of days to retain service request running history. |
 | Solution Manager URL | *blank* | N | This parameter defines the Solution Manager URL to allow opening Solution Manager within Enterprise Manager. If a value is specified, a Solution Manager option will appear in the Navigation frame.<br /><br />*Note: After defining a URL and saving the value, you must log out then log in to Enterprise Manager for the Solution Manager option to appear in the Navigation frame.* |
+| Enable Otto | False | Y | This parameter enables or disables the Otto automation assistant feature in OpCon.<br /><br />Valid values are True and False. |
 ## Logging Options
 
 The Logging category contains log and trace settings for the SAM.

@@ -1,12 +1,13 @@
 ---
 title: Relays reference
-description: "Field definitions, status values, failover transition steps, and permission requirements for the Relays / NetComs page in Solution Manager."
+description: "Field definitions, status values, failover transition steps, permission requirements, and API reference for the Relays / NetComs page in Solution Manager."
 tags:
   - Reference
   - System Administrator
   - Automation Engineer
-doc_type: reference
   - Solution Manager
+doc_type: reference
+last_updated: 2026-06-02
 ---
 
 # Relays reference
@@ -117,6 +118,53 @@ The Relay Logs dialog displays three log files, each on a separate tab.
 |---|---|
 | Failover | Polls for progress every 5 seconds. The operation times out after several minutes if the transition does not complete |
 | Restart | Polls for the relay to return to Communicating status. Times out after 2 minutes |
+
+## Relay API reference
+
+This section documents the REST API endpoints used by Solution Manager to manage relays. These endpoints are useful when automating relay management or integrating relay status into external tooling.
+
+### Relay list endpoints
+
+Two endpoints return relay information. Use the one that matches your data source requirement.
+
+| Endpoint | Description |
+|---|---|
+| `GET /api/relay/list` | Returns relays from the static data manager (`StaticDataManager.NetcomRelays`). Use this endpoint when you need the configured relay definitions. |
+| `GET /api/relay/registrations` | Returns relays from the `NetComRegistrations` database table. Use this endpoint when you need live registration data, including current connection state. |
+
+The two endpoints return different response shapes. `GET /api/relay/list` wraps the results in an object:
+
+```json
+{
+  "relays": [ ... ],
+  "count": number
+}
+```
+
+`GET /api/relay/registrations` returns a JSON array of registration objects directly, without the `relays`/`count` wrapper.
+
+### Relay response fields
+
+The two endpoints do not return the same set of fields. `GET /api/relay/list` returns the 7 base fields below. `GET /api/relay/registrations` returns those 7 fields plus `id`, `upgradeDate`, `priority`, and four capability flags (`canRestart`, `canUpgrade`, `canGetLogs`, `canFailover`) that indicate which actions each relay supports.
+
+The following table lists every field and indicates which endpoints include it.
+
+| Field | Type | `/list` | `/registrations` | Description |
+|---|---|---|---|---|
+| `relayName` | string | Yes | Yes | The name of the relay |
+| `clientName` | string | Yes | Yes | The name of the client associated with the relay |
+| `machineId` | string | Yes | Yes | The identifier of the machine where the relay runs |
+| `version` | string | Yes | Yes | The installed version of the relay software |
+| `connectionStatus` | string | Yes | Yes | The current connection status of the relay |
+| `isRelay` | boolean | Yes | Yes | Indicates whether the entry is a relay (`true`) or a NetCom (`false`) |
+| `active` | boolean | Yes | Yes | Indicates whether the relay is currently active |
+| `id` | integer | No | Yes | The registration identifier. Returned only by `/registrations` |
+| `upgradeDate` | string | No | Yes | The date and time the relay was last upgraded. Returned only by `/registrations` |
+| `priority` | integer | No | Yes | The relay's failover priority (0 = Primary). Returned only by `/registrations` |
+| `canRestart` | boolean | No | Yes | Indicates whether the relay supports the restart action. Returned only by `/registrations` |
+| `canUpgrade` | boolean | No | Yes | Indicates whether the relay supports the upgrade action. Returned only by `/registrations` |
+| `canGetLogs` | boolean | No | Yes | Indicates whether the relay supports retrieving logs. Returned only by `/registrations` |
+| `canFailover` | boolean | No | Yes | Indicates whether the relay supports failover. Returned only by `/registrations` |
 
 ## Related topics
 
