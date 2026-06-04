@@ -35,7 +35,7 @@ Fields are hidden if data is unavailable or if the user lacks the appropriate pr
 - **Documentation**: User-defined information associated with the selected job
 - **Department**: The department under which the selected job runs
 - **Access Code**: The access code name assigned to the selected job
-- **Incident Ticket**: The incident ticket ID associated with the selected job
+- **Incident Ticket**: The incident ticket ID associated with the selected job. If a ticket URL is set, the ID links to the record in your external ticketing system. The reference is informational and does not require a specific ticketing integration. The name of your incident management system is configured through the **Incident Management System** server option (see [Managing General Settings](Library/ServerOptions/Managing-General-Settings.md)).
 - **Type**: The job type of the selected job
 - **Priority**: The priority of the selected job as defined in the frequency
 - **Start Agent**: The Agent machine that runs the selected job
