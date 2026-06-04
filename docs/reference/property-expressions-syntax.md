@@ -64,7 +64,7 @@ For mathematical operations, the result will never exceed 15 digits.
 8. **<=** — **Less than or equals**. Returns `true` if the first operand is less than or equal to the second. Lowercase letters are considered lesser than uppercase when all else is equal. Example: `435 <= 435` returns `true`
 9. **>** — **Greater than**. Operates on two numeric or string operands. Returns `true` if the first operand is greater than the second. For strings, a letter that comes later in the alphabet is considered greater. Uppercase letters are considered greater than lowercase when all else is equal. Examples: `435 > 2345` returns `false` and `"ABCD" > "abcd"` returns `true`
 10. **<** — **Less than**. Operates on two numeric or string operands. Returns `true` if the first operand is less than the second. For strings, a letter that comes earlier in the alphabet is considered lesser. Lowercase letters are considered lesser than uppercase when all else is equal. Examples: `435 < 2345` returns `true` and `"ABCD" < "abcd"` returns `false`
-11. **!=** — **Not equals**. Returns `true` if the two operands are not equal or have different types. Otherwise returns `false`. Examples: `"cats" != "dogs"` returns `true` and `"a" != 1` returns `true`
+11. **!=** (or **`<>`**) — **Not equals**. Returns `true` if the two operands are not equal or have different types. Otherwise returns `false`. Both `!=` and `<>` are recognized as the not-equals operator. Examples: `"cats" != "dogs"` returns `true`, `"a" != 1` returns `true`, and `8 <> 4` returns `true`
 12. **==** — **Equals**. Returns `true` if the two operands are the same type and the same value. For floating point numbers, returns `true` if the difference between the numbers is less than 0.001% (to prevent false negatives from rounding errors). Examples: `25 == 25` returns `true` and `"abc" == "def"` returns `false`
 13. **&&** — **And**. Operates on two boolean operands. Returns `true` if both operands are `true`. Returns `false` if either operand is `false`. Examples: `true && true` returns `true` and `1 == 1 && 1 > 2` returns `false`
 14. **||** — **Or**. Operates on two boolean operands. Returns `false` if both operands are `false`. Returns `true` if either operand is `true`. Examples: `true || true` returns `true` and `1 == 1 || 1 > 2` returns `true`
@@ -176,7 +176,7 @@ Subtracts `time2` from `time1` and returns the difference in the specified forma
 - `unsigned_percent` — percentage difference between `time1` and `time2`, without the sign (e.g., `10`)
 - `signed_secs` — difference in seconds, including the sign (e.g., `-60`)
 - `unsigned_secs` — difference in seconds, without the sign (e.g., `60`)
-- `signed_string` — difference in `hh:mm:ss` format, including the sign (e.g., `+02:36:20`)
+- `signed_string` — difference in `hh:mm:ss` format. A leading `-` is shown for negative differences; positive differences have no sign (e.g., `-02:36:20` or `02:36:20`)
 - `unsigned_string` — difference in `hh:mm:ss` format, without the sign (e.g., `02:36:20`)
 
 Returns an error if the time difference cannot be calculated.

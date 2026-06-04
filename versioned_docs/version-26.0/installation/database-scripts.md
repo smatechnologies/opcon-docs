@@ -36,15 +36,15 @@ The Output Directory was configured during installation. For more information, r
 
 Script name: `DB_Create.sql`
 
-- Creates a database called OPCONXPS in the SQL Server Data directory
-- Allocates an initial 200 MB for the database
-- Allocates an initial 1 GB for the transaction log
+- Creates the OpCon database in the SQL Server Data directory (the database name comes from a configured variable; the default is OPCONXPS)
+- Allocates the initial database size from a configured variable (default: 200 MB)
+- Allocates the initial transaction log size from a configured variable (default: 1 GB)
 - Sets the database options
 - Generates output to DB_Setup.log (creation) or DB_Update.log (update)
 
 ## Logins and Roles Creation Script
 
-Script name: `CreateDefaultOpConxpsloginsAndRoles.sql`
+Script name: `CreateDefaultOpConxpsLoginsAndRoles.sql`
 
 - Creates the opconsam and opconui login IDs
 - Creates opconxps, opconreader, and opconspuser database roles
@@ -121,7 +121,7 @@ Database scripts are located in the `<Configuration Directory>\Utilities\Databas
 
 **Q: What does the Database Creation Script (DB_Create.sql) do?**
 
-It creates the OPCONXPS database in SQL Server, allocating an initial 200 MB for the database and 1 GB for the transaction log.
+It creates the OpCon database in SQL Server. The database name and the initial database and transaction log sizes come from configured install variables; by default the script creates the OPCONXPS database with an initial 200 MB for the database and 1 GB for the transaction log.
 
 **Q: Where can you find the scripts after an upgrade if they are no longer distributed as files?**
 

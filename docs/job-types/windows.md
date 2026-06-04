@@ -90,7 +90,7 @@ needing input (e.g., .ini files) or creating output (e.g., log files).
 **Command Line**: Defines the full path to the executable file on the
 agent machine.
 
-- The maximum length of the command line is 255 characters (or the
+- The maximum length of the command line is 4000 characters (or the
     current Windows command-line maximum).
 - The command line supports the Universal Naming Convention (UNC)
     standards (e.g., \\\\server\\bin\\wintst.exe).

@@ -132,7 +132,7 @@ If anything other than Binary is defined as the Source Data Type, the integrity 
   - **Default text**: Indicates that the SMA File Transfer Agent and Server should use the default text data type for the platform when working with the file. Set this option when the file is a known text file, but it is unknown if the file is ASCII or EBCDIC and must be readable on the Destination Machine
   - **EBCDIC**: Indicates the file should be written to the Destination Machine as a text file that uses the Extended Binary Coded Decimal Interchange Code format (e.g., the MCP and IBM i platforms use this text type). Set this option when the file should explicitly be written as an EBCDIC file
 - **If File Exists**: Determines how the SMAFT Agent behaves when a target file exists. The following are valid options:
-  - **Do Not Overwrite**: Indicates the SMAFT Agent checks for the existence of the file on the destination machine before starting the transfer. The job fails if the file exists; otherwise, the job proceeds
+  - **Do not Overwrite**: Indicates the SMAFT Agent checks for the existence of the file on the destination machine before starting the transfer. The job fails if the file exists; otherwise, the job proceeds
   - **Overwrite**: Indicates the SMAFT Agent transfers the file while overwriting any existing file on the destination machine
   - **Backup then Overwrite**: Indicates the SMAFT Agent checks for the existence of the file on the destination machine before starting transfer. If it exists, the file is copied as <filename\>.bak (in the same directory) and the original file is then overwritten. If the file does not exist on the destination machine, a new file is created
   - **Append**: Indicates the SMAFT Agent will append the source file to the destination file. If the destination file does not exist, a new file is created with destination filename
@@ -146,14 +146,14 @@ If anything other than Binary is defined as the Source Data Type, the integrity 
   :::
 - **Maximum Transfer Rate (kbits/second)**: Defines the transfer rate for the job. Valid values include 64, 128, 256, 512, 1024, 2048, and \>2048 kbits/second
 - **Compression**: Determines if compression is disabled, required, or preferred. Supported compression types are tar, gzip, and zip. The following are valid options:
-  - **<None\>**: Indicates the transfer does not use compression
+  - **None**: Indicates the transfer does not use compression
   - **Required**: Indicates the transfer job fails if compression does not occur
   - **Preferred**: Indicates compression is attempted during the transfer. The result of the compression attempt does not affect the final status of the job
   :::caution
   Both the agent and the server must both support the same compression type for compression to succeed.
   :::
 - **Encryption**: Determines if encryption is disabled, required, or preferred. Supported encryption types are 3DES, AES, and DES. The following are valid options:
-  - **<None\>**: Indicates the transfer does not use encryption
+  - **None**: Indicates the transfer does not use encryption
   - **Required**: Indicates the job fails if encryption does not occur
   - **Preferred**: Indicates encryption is attempted during the transfer. The result of the encryption attempt does not affect the final status of the job
   :::caution
@@ -169,7 +169,7 @@ If anything other than Binary is defined as the Source Data Type, the integrity 
     - **Source Machine**: Choose this option to start the job on the Source machine
     - **Destination Machine** (Default selection): Choose this option to start the job on the Destination machine
 - **TLS Security Override**: Determines if TLS Security for file transfers is disabled, required, or preferred. The following are valid options:
-  - **<None\>**: Indicates that TLS Security should not be used by the SMAFT Agent when connecting to the SMAFT Server
+  - **None**: Indicates that TLS Security should not be used by the SMAFT Agent when connecting to the SMAFT Server
   - **Required**: Indicates that the SMAFT Agent must use TLS Security; otherwise, the job will be failed
   - **Preferred** (Default): Indicates that the OpCon job request assembly routine uses the SMAFT Server Port numbers and the SMAFT Server/Agent TLS Capability flags to decide what value to send in the TLS Security Mode field
 

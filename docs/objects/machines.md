@@ -19,10 +19,10 @@ All systems with agents installed must be defined as a machine in the OpCon data
 
 The following fields apply when defining a machine:
 
-- **Name**: Defines the official host name or alias of the machine where the agent is installed. The machine name must be resolvable to a TCP/IP address. For additional information, refer to [Machine Name Resolution](#machine-name-resolution).
+- **Name**: Defines the official host name or alias of the machine where the agent is installed. The machine name must be resolvable to a TCP/IP address. The name has a maximum length of 24 characters and may not contain the characters `(` `)` `=` `|` `;` `'` `,` (open parenthesis, close parenthesis, equals sign, pipe, semicolon, single-quote, and comma). For additional information, refer to [Machine Name Resolution](#machine-name-resolution).
 - **Documentation**: Provides an area for descriptions, explanations, and notes for the defined machine.
 - **Machine Type**: Defines the type of agent being defined.
-- **Socket Number**: Defines the socket (port number) for communication with the agent. The socket number must match the one configured on the machine where the agent was installed.
+- **Socket Number**: Defines the socket (port number) for communication with the agent. The socket number must match the one configured on the machine where the agent was installed. The Socket value has a minimum of 1024.
 - **Max Concurrent Jobs (Server)**: Shows the maximum number of jobs allowed by the OpCon server.
   - If this value is smaller than the Max Concurrent Jobs (Agent), the SAM uses this value to determine the maximum.
   - A value of zero (0) indicates that Max Concurrent Jobs is controlled by the agent.
@@ -155,7 +155,7 @@ The administrative options are organized in the following categories:
     - UNIX
     - Windows (MSLSAM only)
     - z/OS
-  - Valid values range from 1024 to 32767.
+  - Valid values range from 1024 to 65535.
   - Default value: `0` (a value of zero disables the feature).
 
 - **Requires XML Escape Sequences**: Determines if the SAM converts reserved characters (for example, `<`, `>`, `&`) before sending messages to an agent.
@@ -167,12 +167,13 @@ The administrative options are organized in the following categories:
 
 ### Logging
 
-- **TraceAllMessages**: Determines if all agent-SMANetCom messages are traced. With the default value of `False`, messages are not traced. Set the value to `True` to enable tracing. When enabled, tracing suppresses both the outbound poll messages (TX9s) and the "No messages waiting" (-) messages.
+- **TraceAllMessages**: Determines if all agent-SMANetCom messages are traced. With the default value of `True`, messages are traced. Set the value to `False` to reduce logging by suppressing both the outbound poll messages (TX9s) and the "No messages waiting" (-) messages.
 
 ### Time Settings
 
 - **Time Zone Name**: Defines the local time zone name on the agent system where the machine physically exists. This value appears only if the agent supports sending the information. Example: `CST`
 - **Time Offset from UTC (hours)**: Defines the local time zone offset from UTC in hours, formatted as `HH.MM` in decimal format to provide half (`.5`) and quarter-hour (`.25`) offsets. Example: `06.00`
+  - Valid values range from −12.0 to 13.0 hours.
 - **Connection Attempt Timeout (ms)**: Defines in milliseconds how long SMANetCom attempts to connect to an agent. If an agent does not respond during this time, SMANetCom stops connection attempts and the graphical interfaces report the machine as down.
   - Valid values range from 1000 (default) to 60000 milliseconds.
 - **Time Offset from SAM (hours)**: A read-only setting that shows the calculated difference between the machine's time and SAM's time. This field appears only if the machine has **Time Zone Name** and **Time Offset from UTC (hours)** configured, and the SAM has stored its time zone name and offset from UTC in the database.
@@ -191,7 +192,7 @@ The administrative options are organized in the following categories:
 
 - **MaxConsecutiveSend Messages**: Defines the maximum number of outbound messages (a block) to a single agent that SMANetCom sends before waiting. The maximum and wait time (refer to **Consecutive Send Sleep Time (ms)**) allow the operating system to efficiently manage the outbound TCP/IP stack.
   - Valid values range from 0 to 500 messages.
-  - Default value: `300`
+  - Default value: `100`
 - **Send BufferCount**: Defines the number of outbound TCP/IP buffers to allocate for the agent connection. The size of one TCP/IP buffer is 8192 bytes.
   - Valid values range from 10 to 100 buffers.
   - Default value: `25`
@@ -214,11 +215,11 @@ The **File Transport Port Number (TLS)**, **Support TLS for SMAFT Server Communi
   - `Both`
 - **File Transfer Port Number (Non-TLS)**: Defines the port for unsecured file transfer communications.
   - The port number must match the one configured on the machine where the File Transfer Server was installed. For additional information, refer to the agent online help for the desired platform.
-  - Valid values range from 1024 to 32767. Default value: `0`
+  - Valid values range from 1024 to 65535. Default value: `0`
 - **File Transfer Port Number (TLS)**: Defines the port for secured file transfer communications.
   - A blank value or `0` indicates the agent does not support TLS security for SMAFT.
   - The port number must match the one configured on the machine where the File Transfer Server was installed.
-  - Valid values range from 1024 to 32767. Default value: `0`
+  - Valid values range from 1024 to 65535. Default value: `0`
 - **Support non-TLS for SMAFT Server Communications**: Determines if the SMAFT Server allows SMAFT connections using an unsecured data link with the remote SMAFT agent. Valid values: `True` or `False`.
 - **Support non-TLS for SMAFT Agent Communications**: Determines if the SMAFT agent allows SMAFT jobs to be requested using an unsecured data link with the remote SMAFT Server. Valid values: `True` or `False`.
 - **Support TLS for SMAFT Agent Communications**: Determines if the SMAFT agent supports SMAFT jobs requested using a TLS-secured data link with the remote SMAFT Server. Valid values: `True` or `False`.
@@ -231,7 +232,7 @@ If you are configuring Advanced Machine Parameters for an SAP BW machine, the SA
 - **Customer ID**: Defines the SAP BW Customer ID for the SAPQueryProcessor to connect to the SAP system.
   - Valid values are three-digit numbers ranging from 000 to 999.
   - A valid number must be in this field to create SAP jobs in OpCon.
-  - Default value: `850`
+  - Default value: `0`
 
 - **Gateway**: Defines the full connection string for the SAPQueryProcessor to connect to the SAP system.
   - If connecting to an SAP machine within the network, enter the TCP/IP address.
@@ -268,7 +269,7 @@ If you are configuring Advanced Machine Parameters for an SAP R/3 and CRM machin
 - **Customer ID**: Defines the SAP R/3 and CRM Customer ID for the SAPQueryProcessor to connect to the SAP system.
   - Valid values are three-digit numbers ranging from 000 to 999.
   - A valid number must be in this field to create SAP jobs in OpCon.
-  - Default value: `850`
+  - Default value: `0`
 
 - **Gateway**: Defines the full connection string for the SAPQueryProcessor to connect to the SAP system.
   - If connecting to an SAP machine within the network, enter the TCP/IP address.

@@ -42,7 +42,7 @@ General Settings define the service registration with Windows.
 
 |General Settings|Default|Dynamic (Y/N)|Description|
 |--- |--- |--- |--- |
-|ShortServiceName|SMA_Servman|N|Internal service name stored in the registry. Must be unique.|
+|ShortServiceName|SMA_ServMan|N|Internal service name stored in the registry. Must be unique.|
 |DisplayServiceName|SMA Service Manager|N|Service name shown in the Services Applet.|
 |Mode|StandAlone|N|Sets the SMAServMan role. Valid values: Primary, Secondary, or StandAlone. StandAlone = no failover. Primary = manages the primary application group in failover. Secondary = manages the secondary application group in failover.|
 |InitializationScript|<Blank\>|Y|Path and filename of the script run at startup.|
@@ -100,7 +100,7 @@ The Application List names each application managed by SMAServMan.
 |Application3|SMANotifyHandler|N|Lists SMANotifyHandler as a managed application.|
 |Application4|SMARequestRouter|N|Lists SMARequestRouter as a managed application.|
 |Application5|SMAStartTimeCalculator|N|Lists SMAStartTimeCalculator as a managed application.|
-|Application9|SMALDAPMon|N|Lists SMALDAPMon as a managed application.|
+|Application6|SMALDAPMon|N|Lists SMALDAPMon as a managed application. Shipped commented out (disabled) by default.|
 |Application10-Application50|None|N|Reserved for Continuous use only.|
 |Application51+|None|N|Available for user customization. Maximum total applications: 100.|
 
