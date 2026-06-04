@@ -28,15 +28,17 @@ The SMA Request Router reads the OpCon database to process requests from the SAM
 
 The following Request Handlers run OpCon requests:
 
-- [SMASchedMan](#SMASched)
+- [SKDBLD](#SKDBLD)
 - [LSAMDATARETRIEVER](#LSAMDATA)
-- [BIRTPROCESSOR](#BIRTPROC)
 - [SAPQUERYPROCESSOR](#SAPQUERY)
 - [SAPBWQUERYPROCESSOR](#SAPBWQUE)
+- [HPNONSTOPQUERYPROCESSOR](#HPNONSTOP)
+- [BIRTPROCESSOR](#BIRTPROC)
+- [SMAPROCESSOR](#SMAPROC)
 
-### SMASchedMan
+### SKDBLD
 
-SMASchedMan builds, checks, and deletes schedules. For configuration details, refer to [Request Handler 01](#Request2).
+The SKDBLD handler runs the SMASchedMan.exe executable, which builds, checks, and deletes schedules. For configuration details, refer to [Request Handler 01](#Request2).
 
 #### Processing Schedule Builds
 
@@ -90,6 +92,14 @@ SAPQUERYPROCESSOR retrieves information from SAP systems for the graphical inter
 ### SAPBWQUERYPROCESSOR
 
 SAPBWQUERYPROCESSOR retrieves information from SAP BW systems for the graphical interfaces and is required for creating SAP BW jobs. For configuration details, refer to [Request Handler 04](#Request6).
+
+### HPNONSTOPQUERYPROCESSOR
+
+The HPNONSTOPQUERYPROCESSOR handler runs the HPNonStopQueryProcessor.exe executable, which retrieves information from HP NonStop systems for the graphical interfaces.
+
+### SMAPROCESSOR
+
+The SMAPROCESSOR handler runs the SMAProcessor.exe executable, which processes general OpCon requests.
 
 ## Configuration
 

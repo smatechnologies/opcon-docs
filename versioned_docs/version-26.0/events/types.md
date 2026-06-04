@@ -46,7 +46,7 @@ $CALENDAR:ADD,<calendar name>,<calendar dates>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Calendars
 
 **XML Syntax**:
 
@@ -86,7 +86,7 @@ $CALENDAR:DEL,<calendar name>,<calendar dates>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Calendars
 
 **XML Syntax**:
 
@@ -122,7 +122,7 @@ $JOB:MACHGRP,<schedule date>,<schedule name>,<job name>,<machine group name>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on a Schedule
 
 **XML Syntax**:
 
@@ -158,7 +158,7 @@ $JOB:MAXRUNTIME,<schedule date>,<schedule name>,<job name>,<minutes>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on a Schedule
 
 **XML Syntax**:
 
@@ -194,7 +194,7 @@ $JOB:PRIORITY,<schedule date>,<schedule name>,<job name>,<SAM priority>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on a Schedule
 
 **XML Syntax**:
 
@@ -230,7 +230,7 @@ $JOB:TAGADD,<schedule date>,<schedule name>,<job name>,<tags>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on a Schedule
 
 **XML Syntax**:
 
@@ -268,7 +268,7 @@ $JOB:TAGDEL,<schedule date>,<schedule name>,<job name>,<tags>
 
 **Required Privileges**:
 
-- All Adminstrative Functions
+- Modify Jobs on a Schedule
 
 **XML Syntax**:
 
@@ -306,7 +306,7 @@ $JOB:USER,<schedule date\>,<schedule name\>,<job name\>,<batch user\>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Only the OCADM role can change the Batch User via an event.
 
 **XML Syntax**:
 
@@ -347,7 +347,7 @@ $JOBMASTER:BUILDSTATE,<schedule name>,<job name>,<frequency name>,<build state>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on Job Tables
 
 **XML Syntax**:
 
@@ -383,7 +383,7 @@ $JOBMASTER:TAGADD,<schedule name>,<job name>,<frequency name>,<tags>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on Job Tables
 
 **XML Syntax**:
 
@@ -421,7 +421,7 @@ $JOBMASTER:TAGDEL,<schedule name>,<job name>,<frequency name>,<tags>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Modify Jobs on Job Tables
 
 **XML Syntax**:
 
@@ -462,7 +462,7 @@ $RESOURCE:DEL,<resource name>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Thresholds
 
 **XML Syntax**:
 
@@ -499,7 +499,7 @@ $RESOURCE:RENAME,<old resource name>, <new resource name>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Thresholds
 
 **XML Syntax**:
 
@@ -536,7 +536,7 @@ $THRESHOLD:DEL,<threshold name>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Thresholds
 
 **XML Syntax**:
 
@@ -573,7 +573,7 @@ $THRESHOLD:RENAME,<old threshold name>,<new threshold name>
 
 **Required Privileges**:
 
-- All Administrative Functions
+- Maintain Thresholds
 
 **XML Syntax**:
 
@@ -956,6 +956,16 @@ $JOB:KILL,<schedule date>,<schedule name>,<job name>
 ```
 
 ### $JOB:QUESTATE
+
+The $JOB:QUESTATE event reports the queue state of a tracked job. This event is only passed between the agent and the SAM to update the queue status and queue information for a job.
+
+**Syntax**:
+
+```shell
+$JOB:QUESTATE, schedule-date, schedule-name, job-name, job-status, job-que-info|mach|job-que-display
+```
+
+**Required Privileges**: None
 
 **XML Syntax**:
 
@@ -1465,7 +1475,7 @@ $NOTIFY:COMMAND,<path and command to run>,\[workingdir\],<batch user>
 
 **Required Privileges**:
 
-- ?
+- The submitting user must have access to the specified Batch User. No function privilege is required.
 
 **XML Syntax**:
 
@@ -2255,6 +2265,38 @@ $SCHEDULE:CANCEL,<schedule date>,<schedule name>
    <SKDNAME></SKDNAME>
    <USERNAME></USERNAME>
    <USERPWD></USERPWD>
+</EVENT>
+```
+
+### $SCHEDULE:CLOSE
+
+The $SCHEDULE:CLOSE event closes the schedule, marking it as Completed.
+
+**Syntax**:
+
+```shell
+$SCHEDULE:CLOSE, schedule-date, schedule-name
+```
+
+**Parameters**:
+
+- **<schedule date\>**: A date entered in the same date format as the syntax recognized by the regional settings of the user running SMA Service Manager
+- **<schedule name\>**: An OpCon Schedule Name
+
+**Required Privileges**:
+
+- Cancel Jobs
+
+**XML Syntax**:
+
+```xml
+<EVENT>
+   <TYPE>SCHEDULE</TYPE>
+   <ACTION>CLOSE</ACTION>
+   <SKDDATE></SKDDATE>
+   <SKDNAME></SKDNAME>
+   <USERNAME></USERNAME>
+   <USERPWD></USERPWD>
 </EVENT>
 ```
 

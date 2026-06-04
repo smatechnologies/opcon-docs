@@ -28,7 +28,7 @@ The Reporting Service is a Windows Service that extracts data from the OpCon dat
 
 The reporting service is a Windows Service that processes OpCon reporting data viewable and downloadable through Solution Manager. It extracts data from the OpCon database, transforms it, and loads it into a dedicated Reporting database, isolating reporting queries from the operational database for better performance.
 
-The service processes data immediately on startup and daily at 2:00AM.
+The service processes data immediately on startup and then by default at 02:00 (configurable via Schedule Time 1, with an optional Schedule Time 2).
 
 :::note
 This document covers the reporting service for on-premises Windows customers. Cloud users can configure the reporting service within Solution Manager. For details, see [Reporting Service Cloud Configuration](../Files/UI/Solution-Manager/Library/Reporting/List-Reports.md).
@@ -65,6 +65,12 @@ Example `appsettings.json`:
   "ConnectionStrings": {
     "OpConDb": "Server=localhost,1433;Database=OpConxps;User Id=sa;Password=<encrypted>;TrustServerCertificate=True",
     "ReportingDb": "Server=localhost,1433;Database=Reporting;User Id=sa;Password=<encrypted>;TrustServerCertificate=True"
+  },
+  "Database": {
+    "DefaultCommandTimeout": 300
+  },
+  "HealthCheck": {
+    "Port": 8080
   },
   "Logging": {
     "LogLevel": {
@@ -176,7 +182,7 @@ The Reporting Service extracts data from the OpCon database, transforms it, and 
 
 **Q: When does the Reporting Service process data?**
 
-The service processes data immediately on startup and then daily at 2:00 AM.
+The service processes data immediately on startup and then by default at 02:00 (configurable via Schedule Time 1, with an optional Schedule Time 2).
 
 **Q: Why might the Reporting Service fail to start after a password change?**
 

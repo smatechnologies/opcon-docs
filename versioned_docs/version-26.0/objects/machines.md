@@ -29,14 +29,18 @@ The following information applies to defining machines:
 
 - **Name**: Defines the official host name or alias of the machine
     where the agent is installed. The machine name must be resolvable to
-    a TCP/IP address. For additional information, refer to [Machine Name Resolution](#Machine).
+    a TCP/IP address. The name has a maximum length of 24 characters and
+    may not contain the characters `(` `)` `=` `|` `;` `'` `,` (open
+    parenthesis, close parenthesis, equals sign, pipe, semicolon,
+    single-quote, and comma). For additional information, refer to [Machine Name Resolution](#Machine).
 - **Documentation**: Provides an area for descriptions, explanations,
     and notes that can be updated for the defined machine.
      in the **Enterprise Manager** online help.
 - **Machine Type**: Defines the type of agent (Agent) being defined
 - **Socket Number**: Defines the socket (port number) for
     communication with the agent. The socket number must match the one
-    configured on the machine where the agent was installed.
+    configured on the machine where the agent was installed. The Socket
+    value has a minimum of 1024.
 - **Max Concurrent Jobs (Server)**: This field shows the number of
     maximum jobs allowed by the OpCon server.
   - If this value is smaller than the Max Concurrent Jobs (Agent),
@@ -350,7 +354,7 @@ and viewing job output, refer to [Viewing a Job Output File](../operations/job-o
   - UNIX
   - Windows (MSLSAM only)
   - z/OS
-- Valid values range from 1024 to 32767
+- Valid values range from 1024 to 65535
 - Default value is '0' (a value of zero disables the feature)
 
 **Requires XML Escape Sequences**: Determines if the SAM converts
@@ -391,6 +395,7 @@ messages to an agent.
     half (.5) and quarter hour (.25) offsets. This value will only
     appear if the agent supports the ability to send the information.
   - Value example: 06.00
+  - Valid values range from −12.0 to 13.0 hours.
 - **Connection Attempt Timeout (ms)**: Defines in milliseconds how
     long SMANetCom attempts to connect to an agent. If an agent does not
     respond during this time, SMANetCom discontinues connection attempts
@@ -462,7 +467,7 @@ The File Transport Port Number (TLS), Support TLS for SMAFT Server Communication
         where the File Transfer Server was installed. For additional
         information, refer to the agent online help for the desired
         platform.
-  - Valid values range from 1024 to 32767. The Default value is 0
+  - Valid values range from 1024 to 65535. The Default value is 0
 - **File Transfer Port Number (TLS)**: Defines the port for
     \[secured\] File Transfer communications.     -   If this field is blank or has a value of 0, it will indicate
         that the agent does not support TLS Security for SMAFT.
@@ -472,7 +477,7 @@ The File Transport Port Number (TLS), Support TLS for SMAFT Server Communication
         information, refer to the agent online help for the desired
         platform.
 
-  - Valid values range from 1024 to 32767. The Default value is 0
+  - Valid values range from 1024 to 65535. The Default value is 0
 - **Support non-TLS for SMAFT Server Communications**: Determines if
     the SMAFT Server currently allows SMAFT connections to be accepted
     using an unsecured data link with the remote SMAFT Agent. Valid
@@ -502,7 +507,7 @@ connect to the SAP System.
 - Valid values are three-digit numbers ranging from 000 to 999
 - A valid number must be in this field to create jobs in the
     Enterprise Manager.
-- Default value: 850
+- Default value: 0
 
 **Gateway**: Defines the full connection string for the
 SAPQueryProcessor to connect to the SAP system.
@@ -560,7 +565,7 @@ SAPQueryProcessor to connect to the SAP System.
 - Valid values are three-digit numbers ranging from 000 to 999
 - A valid number must be in this field to create jobs in the
     Enterprise Manager.
-- Default Value: 850
+- Default Value: 0
 
 **Gateway**: Defines the full connection string for the
 SAPQueryProcessor to connect to the SAP system.

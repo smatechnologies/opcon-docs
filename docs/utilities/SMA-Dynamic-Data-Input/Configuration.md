@@ -222,7 +222,7 @@ settings.
 
   General Settings     Default                  Description
   -------------------- ------------------------ ------------------------------------------------------------
-  ShortServiceName     SMA_DDI                  The hidden internal service name Windows refers to.
+  ShortServiceName     SMADDI                   The hidden internal service name Windows refers to.
   DisplayServiceName   SMA Dynamic Data Input   The service name displayed in the Service Control Manager.
 
   : SMADDI Configuration: General Settings

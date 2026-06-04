@@ -69,17 +69,11 @@ agent machine. If the job requires a user's environment variables, refer to [age
 Variables](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/agent-Environment-Variables.md)
  in the **UNIX LSAM** online help.
 
-- With the Non-XML data structure, the maximum length of the start
-    image is 77 characters.
-- With the XML data structure, the maximum length of the start image
-    is 512 characters.
+- The maximum length of the start image is 2000 characters.
 
 **Parameters**: Defines any required command-line parameters.
 
-- With the Non-XML data structure, the maximum length of Parameters is
-    77 characters.
-- With the XML data structure, the maximum length of Parameters is 512
-    characters.
+- The maximum length of Parameters is 2000 characters.
 
 :::note
 OpCon concatenates the Start image and Parameters and inserts a space between them before sending the job to the UNIX LSAM.

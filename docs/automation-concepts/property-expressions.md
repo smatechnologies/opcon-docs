@@ -85,7 +85,7 @@ Use the `$PROPERTY:SET` event with an expression to compute a new property value
 
 OpCon exposes a REST API endpoint that evaluates a property expression and returns the result without saving it to the database. Use this endpoint to test expressions during development or to retrieve computed values from an external system.
 
-**Endpoint:** `POST /api/propertyexpression`
+**Endpoint:** `POST /api/propertyExpression`
 
 **Request body:**
 
@@ -102,7 +102,7 @@ OpCon exposes a REST API endpoint that evaluates a property expression and retur
 | `status` | string | `Success` or `Failed` |
 | `message` | string | `Evaluated` on success; the exception message on failure |
 
-If the `expression` field is null or missing, the API returns `400 Bad Request`.
+On success, the API returns `200 OK`. If the `expression` field is null or missing, the API returns `400 Bad Request`.
 
 ## Related topics
 

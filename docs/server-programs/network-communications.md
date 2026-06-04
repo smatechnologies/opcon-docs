@@ -162,9 +162,9 @@ General Settings provide InitializationScript path and TerminationScript path.
 
 |General Settings|Default|Dynamic (Y/N)|Description|
 |--- |--- |--- |--- |
-|Mode|StandAlone|N|Determines SMANetCom's role in the failover process. Valid values are Primary, Secondary, or StandAlone. StandAlone indicates SMANetCom is not configured for failover. Note: When SMAServMan manages SMANetCom, the mode must be set to StandAlone. The Primary and Secondary settings are reserved for future use.|
 |InitializationScript|<Blank\>|N|Provides the path and filename of the script SMANetCom runs upon startup. Always enclose the path and file name in two sets of double quotes (""<Path\>"").|
 |TerminationScript|<Blank\>|N|Provides the path and filename of the script SMANetCom runs upon shutdown. Always enclose the path and file name in two sets of double quotes (""<Path\>"").|
+|AllowUntrustedIntegrations|OFF|N|Determines whether SMANetCom permits untrusted integration connections. Valid values are ON or OFF.|
 
 #### SAM Database Communication Parameters
 
@@ -173,14 +173,6 @@ General Settings provide InitializationScript path and TerminationScript path.
 |SAMDBLoginTimeoutInSeconds|5|N|Determines the length of time in seconds to allow for a login. If this time is exceeded, SMANetCom signals an error condition.|
 |SAMCheckMsgsFromSAMInMilliseconds|500|N|Determines how often SMANetCom polls the database for SAM messages. The frequency is in milliseconds.|
 |SAMCheckLSAMConfigurationInMilliseconds|1000|N|Determines how often SMANetCom checks each agent's configuration parameters for an update. The frequency is in milliseconds.|
-
-#### Primary Mode Settings
-
-The Primary Mode Settings are reserved for future use.
-
-#### Secondary Mode Settings
-
-The Secondary Mode Settings are reserved for future use.
 
 #### Debug Options
 

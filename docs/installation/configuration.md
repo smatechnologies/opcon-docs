@@ -85,6 +85,22 @@ To configure the database connection for the OpCon server, complete the followin
 
 **Result:** The OpCon server database connection is configured and the SAM-SS components can connect to the specified database.
 
+##### Command-line parameters
+
+On installations without the graphical version, run **SMAConnectionConfig.exe** from the command line using the following switches:
+
+| Switch | Description |
+| --- | --- |
+| `-s`, `--Server` | (Required) Database server name. |
+| `-d`, `--Database` | (Required) Database name. |
+| `-u`, `--UserId` | SQL login user id. |
+| `-p`, `--Password` | SQL login password. |
+| `-w`, `--IsWinAuth` | Use Windows authentication (default: false). |
+| `-c`, `--Configuration` | High-availability mode: `AlwaysOn` or `Mirroring`. |
+| `-v`, `--Verify` | Verify the connection after writing. |
+| `-o`, `--OnlyVerify` | Verify only (do not write). |
+| `-l`, `--List` | List the current configuration. |
+
 #### Advanced Database Connection Parameters (OpCon REST API)
 
 The OpCon REST API uses the connection string in `SMAODBCConfiguration.DAT`. Add optional parameters such as `MaxPoolSize` by editing the file manually.

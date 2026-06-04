@@ -47,6 +47,22 @@ To configure the Database Connection Information, complete the following steps:
 
 7. Select **OK** to confirm the connection, then **OK** to close
 
+### Command-line parameters
+
+On installations without the graphical version, run **SMAConnectionConfig.exe** from the command line using the following switches:
+
+| Switch | Description |
+| --- | --- |
+| `-s`, `--Server` | (Required) Database server name. |
+| `-d`, `--Database` | (Required) Database name. |
+| `-u`, `--UserId` | SQL login user id. |
+| `-p`, `--Password` | SQL login password. |
+| `-w`, `--IsWinAuth` | Use Windows authentication (default: false). |
+| `-c`, `--Configuration` | High-availability mode: `AlwaysOn` or `Mirroring`. |
+| `-v`, `--Verify` | Verify the connection after writing. |
+| `-o`, `--OnlyVerify` | Verify only (do not write). |
+| `-l`, `--List` | List the current configuration. |
+
 ## Syntax
 
 ```SMAEvalExp.exe "expression"```
