@@ -28,14 +28,18 @@ OpCon supports jobs across a wide range of platforms. Each job type has platform
 
 | Job Type | Description |
 |----------|-------------|
+| ACS | Runs ACS jobs from a versioned task configuration against a selected integration |
 | BIS | Unisys BPS/BIS job submission |
 | Container | Runs a sub-schedule as a single unit within a parent schedule |
 | File Transfer | Moves files between agents using the OpCon file transfer protocol |
+| Guidewire | Runs Guidewire batch processes, with arguments and configurable failure criteria |
 | IBM i | Submits batch jobs on IBM i (AS/400) systems |
 | Java | Runs Java-based programs via the Java Agent |
 | MCP | Submits jobs on Unisys MCP systems |
 | Null | Placeholder job used for dependency chaining without running a process |
+| OpConMFT | OpCon Managed File Transfer: transfers files between a source and destination endpoint, with optional compression and encryption |
 | OS 2200 | Submits jobs on Unisys OS 2200 systems |
+| RPA | Robotic Process Automation: runs an RPA task from a versioned task configuration against a selected integration |
 | SAP BW | Triggers and monitors SAP Business Warehouse process chains |
 | SAP R3/CRM | Runs SAP R3 and CRM background jobs |
 | SQL | Runs SQL scripts and stored procedures on database servers |

@@ -60,7 +60,7 @@ The following requirements apply to all Windows-based installations:
 | Component | Requirement |
 | - | - |
 | Operating system | Microsoft-supported Windows Server versions* |
-| .NET Core Runtime | .NET Core & ASP .NET Core 3.0 Runtime or greater |
+| .NET Core Runtime | .NET 10 Runtime and ASP.NET Core 10 Runtime |
 | .NET Framework Runtime |  .NET Framework 4.5 or greater |
 
 *New releases are fully tested once open to the general public for 6 months or more. Installing before the 6-month mark is at your own risk.
