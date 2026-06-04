@@ -41,6 +41,9 @@ The General category contains default behavior settings for the SAM.
 | Number of Days to Keep a Service Request running | 7 | Y | This parameter defines the number of days to retain service request running history. |
 | Solution Manager URL | *blank* | N | This parameter defines the Solution Manager URL to allow opening Solution Manager within Enterprise Manager. If a value is specified, a Solution Manager option will appear in the Navigation frame.<br /><br />*Note: After defining a URL and saving the value, you must log out then log in to Enterprise Manager for the Solution Manager option to appear in the Navigation frame.* |
 | Enable Otto | True | Y | This parameter enables or disables the Otto automation assistant feature in OpCon.<br /><br />Valid values are True and False. |
+| Enable Windows Authentication | False | N | This parameter allows users to authenticate to OpCon using Windows Authentication.<br /><br />Valid values are True and False. |
+| Ask User to Enter a Recovery Email Address Upon Login | False | N | When enabled, users must have a recovery email address on their account. If the account has no email address, OpCon prompts the user to enter one upon login.<br /><br />Valid values are True and False. |
+| Uncheck Jobs After Status Update | False | N | When enabled, Operations deselects jobs after a status-change action is applied to them.<br /><br />Valid values are True and False. |
 ## Logging Options
 
 The Logging category contains log and trace settings for the SAM.
