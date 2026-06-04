@@ -122,7 +122,7 @@ $JOB:MACHGRP,<schedule date>,<schedule name>,<job name>,<machine group name>
 
 **Required Privileges**:
 
-- Modify Jobs on a Schedule
+- Modify Jobs in Daily Schedules
 
 **XML Syntax**:
 
@@ -158,7 +158,7 @@ $JOB:MAXRUNTIME,<schedule date>,<schedule name>,<job name>,<minutes>
 
 **Required Privileges**:
 
-- Modify Jobs on a Schedule
+- Modify Jobs in Daily Schedules
 
 **XML Syntax**:
 
@@ -194,7 +194,7 @@ $JOB:PRIORITY,<schedule date>,<schedule name>,<job name>,<SAM priority>
 
 **Required Privileges**:
 
-- Modify Jobs on a Schedule
+- Modify Jobs in Daily Schedules
 
 **XML Syntax**:
 
@@ -230,7 +230,7 @@ $JOB:TAGADD,<schedule date>,<schedule name>,<job name>,<tags>
 
 **Required Privileges**:
 
-- Modify Jobs on a Schedule
+- Modify Jobs in Daily Schedules
 
 **XML Syntax**:
 
@@ -268,7 +268,7 @@ $JOB:TAGDEL,<schedule date>,<schedule name>,<job name>,<tags>
 
 **Required Privileges**:
 
-- Modify Jobs on a Schedule
+- Modify Jobs in Daily Schedules
 
 **XML Syntax**:
 
@@ -347,7 +347,7 @@ $JOBMASTER:BUILDSTATE,<schedule name>,<job name>,<frequency name>,<build state>
 
 **Required Privileges**:
 
-- Modify Jobs on Job Tables
+- Modify Jobs in Master Schedules
 
 **XML Syntax**:
 
@@ -383,7 +383,7 @@ $JOBMASTER:TAGADD,<schedule name>,<job name>,<frequency name>,<tags>
 
 **Required Privileges**:
 
-- Modify Jobs on Job Tables
+- Modify Jobs in Master Schedules
 
 **XML Syntax**:
 
@@ -421,7 +421,7 @@ $JOBMASTER:TAGDEL,<schedule name>,<job name>,<frequency name>,<tags>
 
 **Required Privileges**:
 
-- Modify Jobs on Job Tables
+- Modify Jobs in Master Schedules
 
 **XML Syntax**:
 
@@ -462,7 +462,7 @@ $RESOURCE:DEL,<resource name>
 
 **Required Privileges**:
 
-- Maintain Thresholds
+- Maintain Thresholds/Resources
 
 **XML Syntax**:
 
@@ -499,7 +499,7 @@ $RESOURCE:RENAME,<old resource name>,<new resource name>
 
 **Required Privileges**:
 
-- Maintain Thresholds
+- Maintain Thresholds/Resources
 
 **XML Syntax**:
 
@@ -536,7 +536,7 @@ $THRESHOLD:DEL,<threshold name>
 
 **Required Privileges**:
 
-- Maintain Thresholds
+- Maintain Thresholds/Resources
 
 **XML Syntax**:
 
@@ -573,7 +573,7 @@ $THRESHOLD:RENAME,<old threshold name>,<new threshold name>
 
 **Required Privileges**:
 
-- Maintain Thresholds
+- Maintain Thresholds/Resources
 
 **XML Syntax**:
 
