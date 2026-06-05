@@ -235,7 +235,7 @@ Plan the shutdown during a period of low processing.
 
 IBM i Procedures to shut down a Machine
 
-On the IBM i LSAM machine, check for running jobs using one of these methods:
+On the IBM i Agent machine, check for running jobs using one of these methods:
 
 Using an OpCon job, specify the following command in the CALL field:
 
@@ -260,7 +260,7 @@ From an IBM i workstation, enter the agent main menu:
 i. Select option 6: agent Management menu.
 ii. Select option 2: End agent.
 
-To restart the IBM i LSAM machine:
+To restart the IBM i Agent machine:
 
 From an IBM i command entry line or IBM System i Navigator, start agent server jobs with: `SMAGPL/STRSMASYS ENV(env_name)`
 
@@ -269,19 +269,19 @@ From an IBM i workstation, enter the agent main menu:
 i. Select option 6: agent Management menu.
 ii. Select option 1: Start agent.
 
-Check the IBM i LSAM status using the same procedures as the check steps above.
+Check the IBM i Agent status using the same procedures as the check steps above.
 
 ##### Procedures to Check agent Status on Windows
 
-Use this procedure for SAP BW, SAP R/3 and CRM, and Windows LSAMs:
+Use this procedure for SAP BW, SAP R/3 and CRM, and Windows Agents:
 
 1. Go to **Start > Control Panel**
 2. Select **Administrative Tools**
 3. Select **Server Manager**
 4. Expand **Configuration**
 5. Select **Services**
-6. Scroll to the SMA **LSAM service** in the **Services** list
-7. Confirm the **LSAM Status** is **Started**
+6. Scroll to the Agent service in the **Services** list
+7. Confirm the Agent service status is **Started**
 
 ## Use Threshold Dependencies for Late to Start Notifications on a Job-dependent External Event
 
@@ -310,10 +310,6 @@ A "Flag Job As Late to Start" value causes ENS to send a notification if the fil
 5. Set up a notification event on the job for the Late to Start status trigger, or configure an ENS group to send notifications for the Late to Start status. Refer to [Job Automation Components](../job-components/events.md) or [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md)
 6. Configure a threshold update to reset the threshold to zero (0) when the job finishes. Refer to [Adding Threshold/Resource Updates](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Updates.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How should you handle jobs that need to avoid being affected by path changes?**
@@ -338,7 +334,7 @@ A job in On Hold status is not in a Qualifying status, so the "Flag Job As Late"
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

@@ -25,10 +25,6 @@ doc_type: procedural
 The **Schedule Build** link opens the **Schedule Build** page in Solution Manager. For more information, refer to [Managing Schedules](../Solution-Manager/Managing-Schedules.md) in the **Solution Manager** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Schedule Build?**

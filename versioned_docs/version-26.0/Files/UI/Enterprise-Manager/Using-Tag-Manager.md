@@ -43,10 +43,6 @@ Related Topics
 -   [Associating Master Jobs](Managing-Tags.md#Associat)
 -   [Deleting Job Associations](Managing-Tags.md#Deleting2)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Tag Manager?**

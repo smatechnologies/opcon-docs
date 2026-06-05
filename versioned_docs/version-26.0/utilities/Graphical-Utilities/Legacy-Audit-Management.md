@@ -458,7 +458,7 @@ The legacy audit tables (AUDITHIST and AUDITARCH) record all SQL operations perf
 ### Alerts and Log Files
 - The command-line interface writes a log file named `Audit_<date-time stamp>.log` to the same directory as `legacyaudit.exe` unless a path is provided with the `-l` parameter.
 - Exit code `35001` (program aborted) and `35002` (invalid DSN, User ID, or password) indicate issues that must be resolved before the next automated run.
-- Use the `-e` parameter to specify an Exit Code Override File (E.C.O.F.) path; without it, the job is always treated as a success by the Microsoft LSAM regardless of actual outcome.
+- Use the `-e` parameter to specify an Exit Code Override File (E.C.O.F.) path; without it, the job is always treated as a success by the Microsoft Agent regardless of actual outcome.
 
 ## FAQs
 
@@ -482,7 +482,7 @@ You must log in with a User Account that has the privilege to Maintain Audit His
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

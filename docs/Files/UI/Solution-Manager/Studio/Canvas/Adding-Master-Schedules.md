@@ -26,8 +26,6 @@ Use this procedure to add Master Schedules in Solution Manager.
 
 ### Required Privileges
 
-<!-- GAP: Required privileges for adding a master schedule are not specified in current documentation. Confirm with development. -->
-
 ## Adding a Schedule
 
 To add a Master Schedule, go to **Studio** and select **Add**. The Create Master Schedule page displays:

@@ -39,10 +39,6 @@ To generate external tokens, complete the following steps:
 
 5. Select **Generate**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Generating External Tokens procedure involve?**

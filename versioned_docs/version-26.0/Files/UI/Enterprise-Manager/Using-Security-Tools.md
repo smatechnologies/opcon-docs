@@ -35,10 +35,6 @@ The Security tools perform the following functions depending on the current scre
 ||Maximize: Opens the editor to its maximum size. The Maximize button changes to a Restore button when maximized.|
 ||Restore: Returns the editor view to its original location and size.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Security Tools?**

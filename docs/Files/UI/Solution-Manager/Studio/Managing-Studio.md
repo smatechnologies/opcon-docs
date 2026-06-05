@@ -35,10 +35,6 @@ Use the **Navigation menu** on the left side of the page to move between the ava
 
 Within Studio, you build and manage Master Schedule definitions on a visual canvas. For the canvas-based actions that add, copy, edit, and delete Master Schedules, see [Canvas Overview](Canvas/Canvas-Overview.md).
 
-<!-- GAP: A Managing-Studio screenshot is referenced by the original page but the image file (Resources/Images/SM/Studio/Managing-Studio.png) does not exist in the repository. Add the screenshot or confirm the correct asset with an SME before linking it. -->
-
-<!-- GAP: Required privileges for accessing and using Studio are not confirmed in the source or existing page. Confirm the relevant Function/Schedule privileges with an SME. -->
-
 ## Glossary
 
 | Term | Definition |

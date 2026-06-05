@@ -92,8 +92,6 @@ To open the SubSchedule Information dialog, complete the following steps:
 
 **Result:** Enterprise Manager displays the SubSchedule Information dialog for the selected subschedule.
 
-<!-- GAP: The original page referenced an \"Adding Job Configuration Parameters\" procedure (anchor #Adding) for the Configuration tab, but that procedure does not exist on this page. The detailed steps for configuring platform-specific parameters need an SME or a link to the correct source page. -->
-
 ## Glossary
 
 **Subschedule**: A schedule that runs as a child of a Container job, allowing hierarchical, nested automation where a parent schedule can start and monitor an entire child schedule.

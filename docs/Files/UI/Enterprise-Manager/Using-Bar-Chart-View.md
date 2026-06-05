@@ -43,7 +43,7 @@ The **Bar Chart** toolbar provides the following buttons.
 | **Show/Hide legend** | Shows or hides the chart legend. |
 | **Render chart with depth** | Toggles the 3D depth effect on bars. |
 | **Render chart translucent** | Toggles transparency on bar series. |
-| **Transpose the chart** | Rotates the chart orientation. <!-- GAP: exact axis-swap direction (job statuses on horizontal vs vertical) unverified from source — source only exposes setTransposed(boolean) with no axis-label documentation --> |
+| **Transpose the chart** | Rotates the chart orientation.|
 
 ![Bar Chart toolbar](../../../Resources/Images/EM/EMbarcharttoolbar.png "Bar Chart toolbar")
 

@@ -26,10 +26,6 @@ Select any **Management** function item in the graphic to learn more.
 
 ![Management Topic](../../../Resources/Images/EM/EMmgmntmenu.png "Management Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Management?**

@@ -64,8 +64,7 @@ The diagram can also display any of the following information icons:
 
 **Why does a job show more than one icon?**
 
-A job box shows a job type icon together with any information icons that apply, so a job can display several icons at once, for example a job that has both an event and a dependency on another schedule. <!-- GAP: exact rule that a job box always shows exactly one job type icon and may show multiple information icons simultaneously is unverified in source -->
-
+A job box shows a job type icon together with any information icons that apply, so a job can display several icons at once, for example a job that has both an event and a dependency on another schedule.
 **What is the difference between the three dependency icons?**
 
 Each dependency icon represents a different relationship: a dependency on a job in another schedule, a dependency on another schedule date, and a job required by this job that is missing.

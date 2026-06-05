@@ -56,10 +56,6 @@ h. Select the **Message** tab and enter the problem description.
 i. *(Optional)* Select the **Attachments** tab. Log files are already attached. Select **Attach File** to add more, locate the file, and select **Open**.
 j. Select **Next** to send the email, then select **Finish** to close the dialog.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: Where is Reporting Problems located in the Enterprise Manager?**
@@ -74,7 +70,7 @@ The Reporting Problems procedure involves 3 steps. Complete all steps in order a
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

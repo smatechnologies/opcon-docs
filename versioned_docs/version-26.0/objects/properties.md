@@ -79,7 +79,7 @@ Dollar-sign ($) system properties are:
 | SI.$SKD STATUS | Status of the schedule from the Daily tables (schedule context). |
 | JI.$SKD STATUS CATEGORY | Status category of the schedule from the Daily tables (job context). |
 | SI.$SKD STATUS CATEGORY | Status category of the schedule from the Daily tables (schedule context). |
-| JI.$START COMMAND | Start command the agent attempted when the job was submitted. Only populated after the job starts, and only if the agent version supports it.<br /><br />Supported platforms:<ul><li>Microsoft LSAM - Version 16.01.00</li><li>z/OS LSAM - Version 15.07.01 (refer to Start Command for more information)</li><li>MCP LSAM - Version 16.0</li><li>UNIX LSAM - Version 17.1.0</li></ul> |
+| JI.$START COMMAND | Start command the agent attempted when the job was submitted. Only populated after the job starts, and only if the agent version supports it.<br /><br />Supported platforms:<ul><li>Microsoft Agent - Version 16.01.00</li><li>z/OS Agent - Version 15.07.01 (refer to Start Command for more information)</li><li>MCP Agent - Version 16.0</li><li>UNIX Agent - Version 17.1.0</li></ul> |
 | TH.ThresholdName | Current value of the named threshold. Always returns as an integer. |
 
 ### Managed System Properties
@@ -224,10 +224,6 @@ A User-defined Property is a variable with any name and any character value, res
 
 For more information, refer to [Using Properties for Automation](./using-properties.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What are the three types of properties in OpCon?**
@@ -248,7 +244,7 @@ Yes. Use the syntax `[[$XXXX(+nf)]]` or `[[$XXXX(-nf)]]`, where `n` is a numeric
 
 **SMA Notify Handler**: Processes notifications triggered by Machine, Schedule, and Job status changes. Can send emails, text messages, Windows Event Log entries, SNMP traps, and SPO notifications.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 

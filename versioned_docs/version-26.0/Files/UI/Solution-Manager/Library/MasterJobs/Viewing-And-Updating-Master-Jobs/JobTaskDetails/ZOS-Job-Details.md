@@ -106,12 +106,12 @@ Console Commands can be scheduled to run on the machine defined in the Primary M
 - **Operator Command:** Text of the command to be run
 
 :::note
-The z/OS LSAM has no method for verifying whether a command is correct or achieved the desired result. The command is always run as defined, and a Finished OK status is always returned to the SAM.
+The z/OS Agent has no method for verifying whether a command is correct or achieved the desired result. The command is always run as defined, and a Finished OK status is always returned to the SAM.
 :::
 
 ### Rexx
 
-REXX procedures require no JCL and can be used for a variety of automation interfaces. The REXX Event functions like a Console Command. The z/OS LSAM dynamically allocates a print file and runs the program from the designated DD.
+REXX procedures require no JCL and can be used for a variety of automation interfaces. The REXX Event functions like a Console Command. The z/OS Agent dynamically allocates a print file and runs the program from the designated DD.
 
 - **Exec Name:** Taken from the job name
 - **Execution Parms:** Input parameters required for the REXX procedure
@@ -191,7 +191,7 @@ Step Control allows up to 80 step condition codes or ranges. Special schedule or
 
 ### z/OS Pre-run Definitions
 
-The z/OS LSAM supports five pre-run types: File Resource, Message Trigger, Job/Task Resource, Tape Devices, and REXX Procedure.
+The z/OS Agent supports five pre-run types: File Resource, Message Trigger, Job/Task Resource, Tape Devices, and REXX Procedure.
 
 #### File Resource
 
@@ -287,7 +287,7 @@ Defines the JCL parameter symbol or OpCon token, separated by double backslashes
 
 - Use carriage returns to separate lines for readability. Maximum total characters: 3400
 - Each override (`@`) or symbolic (`&`) definition is separated by two backslashes (`\\`)
-- When the z/OS LSAM encounters an `&name=` symbolic, it scans each JCL statement for an operand match
+- When the z/OS Agent encounters an `&name=` symbolic, it scans each JCL statement for an operand match
 - `&` symbolics change operands only. To qualify, an operand must be preceded by a comma or blank and include an `=` sign (e.g., all instances of `UNIT=xxxxx` are substituted using `&UNIT=SYSDA`)
 - `@` overrides are placeholders for data; `&` symbolics replace specific operand data. Symbolics reference operands only
 - Overrides can be embedded anywhere in JCL or SYSIN data and can define an entire 80-byte JCL record. They have no restrictions on content or delimiters except they cannot contain double backslashes (e.g., `@TODAY=October 12, 2005`)
@@ -382,9 +382,9 @@ The Dynamic REXX task is initiated by the agent with no JCL or Procs. A separate
 A Dynamic REXX routine can be defined to run before a Batch Job or other event. It runs the same as a standalone Dynamic REXX, but the return code immediately triggers (or withholds) a subsequent event in the agent rather than returning to SAM. This enables faster response than SAM dependency processing when immediate action is required.
 
 **Tracking Externally Submitted Batch Job Events in OpCon**
-Within the z/OS LSAM, externally submitted events can be trapped and tracked using three approaches:
+Within the z/OS Agent, externally submitted events can be trapped and tracked using three approaches:
 
-1. Define a single job name "mask" always trapped by the z/OS LSAM
+1. Define a single job name "mask" always trapped by the z/OS Agent
 2. Define one to eight single-character JES execution classes to monitor and trap for tracking
 3. Insert a tracking indicator (`T` or `Q`) as the continuation character of the first Job card
 
@@ -392,13 +392,11 @@ Within the z/OS LSAM, externally submitted events can be trapped and tracked usi
 A `C` continuation character bypasses the TRACLASS and TRACMASK runtime tracking options.
 :::
 
-
 4. Add a job step running XPSTRACK
 
 All approaches can be combined. Define a job mask or JES tracking classes in the XPSPRMxx member of the OpCon Parmlib (XPSPARMS DD in the agent task). The following job illustrates all three setup methods:
 
 ![Dynamic job request](../../../../../../../Resources/Images/SM/Operations/ZOs/Dynamic-Job-Request.png "Dynamic job request")
-
 
 1. Job Name mask as defined in XPSPRMxx (e.g., TRACMASK=TRAC****)
 2. A special held class or class list as defined in XPSPRMxx (e.g., TRACLASS=TQA)
@@ -491,7 +489,7 @@ Life cycle of a passive monitored event:
    - Created on SysID: ANY
    - Type: As Scheduled Only
 
-2. When the associated job is ready to start (all other SAM dependencies met), the z/OS LSAM adds the DSN trigger criteria to the internal DSN Trigger Table on all LSAMs in the SYSPLEX
+2. When the associated job is ready to start (all other SAM dependencies met), the z/OS Agent adds the DSN trigger criteria to the internal DSN Trigger Table on all Agents in the SYSPLEX
 3. SAM sets the job to "Waiting Start Time — DSN(s) Not Available."
 4. At a user-defined interval, SAM checks for trigger hits. If none, the "Waiting Start Time" message persists
 5. On each z/OS machine, File Tracking components check every File Close event against the DSN Table. In this example, three GDG creations are required for a trigger
@@ -653,21 +651,20 @@ In the example, only STEP1 and STEP2 are examined. `+2` is the highest positive 
 
 OpCon JCL Symbolic replacement can reduce or eliminate manual JCL setup. Define each override or symbolic in the Batch Control Section of the Job Master Detail display, separated by two backslashes (`\\`).
 
-When the z/OS LSAM encounters an `&name=` symbolic, it scans each JCL statement for an operand match. For example, changing a GDG reference from `(-0)` to `(-1)`: if the EXEC statement has `GDG=(-0)` and `&GDG=(-1)` is defined in the SAM schedule record, the GDG symbolic changes for that run only.
+When the z/OS Agent encounters an `&name=` symbolic, it scans each JCL statement for an operand match. For example, changing a GDG reference from `(-0)` to `(-1)`: if the EXEC statement has `GDG=(-0)` and `&GDG=(-1)` is defined in the SAM schedule record, the GDG symbolic changes for that run only.
 
 Only operands are changed by `&` substitution. An operand must be preceded by a comma or blank and followed by `=`. In the following example, JCL #1 is changed but JCL #2 is not when `&PARM=(YES)` is coded:
 
 1. `//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(NO),MBR=TEMPNAME`
 2. `//MYDD DD DSN=SYS1.PARMLIB,DISP=SHR`
 
-The z/OS LSAM runs exactly what is specified. If `&PARM=(YES` (missing closing parenthesis) is coded, the result is:
+The z/OS Agent runs exactly what is specified. If `&PARM=(YES` (missing closing parenthesis) is coded, the result is:
 
 `//STEP1 EXEC LIB=SYS1.OKLIB,PARM=(YES,MBR=TEMPNAME`
 
 This likely results in a JCL Error.
 
 If the JCL syntax qualifies as an operand, replacement is forced. For example, `&UNIT=3420` matches both of these:
-
 
 1. `//STEP1 EXEC LIB=SYS1.OKLIB,UNIT=3380,MBR=TEMPNAME`
 2. `//MYDD DD DSN=SYS1.PARMLIB,DISP=SHR,UNIT=SYSDA`
@@ -725,10 +722,6 @@ The `$START COMMAND` property resolves to the start command the agent attempted 
 | Queued | `Q:jobname JobID\|machineID#programmer name` |
 | Tracked | `T:jobname JobID\|machineID#programmer name` |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Viewing, Adding, and Editing z/OS Job Details procedure involve?**
@@ -745,7 +738,7 @@ This page covers Viewing z/OS Job Details, Adding z/OS Job Details, Editing z/OS
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

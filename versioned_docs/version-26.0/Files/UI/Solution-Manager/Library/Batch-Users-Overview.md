@@ -38,7 +38,7 @@ Batch users are operating system credentials that OpCon uses to authenticate job
 | Term | Definition |
 | --- | --- |
 | Job | A task or activity defined in OpCon, such as running a program on a remote machine, transferring files, or running a sub-schedule. |
-| LSAM (Local Schedule Activity Monitor) | An agent that resides on the platform where jobs run. LSAMs communicate with SMANetCom for job processing and to send OpCon events. |
+| Agent | An agent that resides on the platform where jobs run. Agents communicate with SMANetCom for job processing and to send OpCon events. |
 | Machine (Machine (Agent)) | An execution target for OpCon jobs. Each machine runs an agent that communicates with the OpCon server and runs submitted jobs. |
 | Role | A named collection of privileges that can be assigned to one or more user accounts. Users in a role inherit all of that role's privileges. |
 | Solution Manager (SM) | The browser-based web interface for OpCon. Provides access to operations, self-service, vision dashboards, and configuration. |

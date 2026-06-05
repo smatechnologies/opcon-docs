@@ -44,8 +44,6 @@ The **Name** field must be unique. If you enter a name that is already in use, S
 
 After editing a category, select **Save** to apply your changes or **Reset** to discard them. To remove a category, select it in the grid and select **Delete**.
 
-<!-- GAP: Required privileges for adding, editing, or deleting notification categories are not exposed as a named role in the source reviewed; needs SME confirmation. -->
-
 ## Glossary
 
 **Notification Category**: A uniquely named label that groups related notification groups, used to organize and filter notification triggers in Solution Manager.

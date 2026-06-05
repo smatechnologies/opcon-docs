@@ -25,10 +25,6 @@ doc_type: procedural
 The **Home** link opens the **Home** page in Solution Manager. For more information, refer to [Understanding the User Interface Layout](../Solution-Manager/SM-UI-Layout.md) in the **Solution Manager** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Home?**

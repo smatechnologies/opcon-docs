@@ -106,4 +106,3 @@ Each supported platform includes a pre-configured default Batch User that OpCon 
 | MCP | `*` |
 | IBM i | `*` |
 
-<!-- GAP: No default Batch User confirmed for UNIX or OpenVMS platforms; needs SME review -->

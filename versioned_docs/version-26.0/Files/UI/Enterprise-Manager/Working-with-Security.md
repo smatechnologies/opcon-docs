@@ -26,10 +26,6 @@ Select on any **Administration** function item in the graphic to learn more abou
 
 ![Security Topic](../../../Resources/Images/EM/EMsecuritymenu.png "Security Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Security?**

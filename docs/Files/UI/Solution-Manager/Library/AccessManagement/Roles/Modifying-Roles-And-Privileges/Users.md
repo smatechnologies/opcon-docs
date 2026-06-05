@@ -26,8 +26,6 @@ The **Users** tab (_Library > Access Management > Roles_) lists every user accou
 
 Use the **Users** tab to confirm which user accounts inherit the privileges granted by a role before you change those privileges. Because a role groups privileges together and is then assigned to user accounts, reviewing the **Users** tab shows you the full set of accounts affected by any change you make to the role.
 
-<!-- GAP: The Solution Manager source in this codebase snapshot (RoleView.java, PermissionsForm.java) defines the role edit form with a Name field, three inherit-all switches, and a PermissionsForm containing only Access Codes and Batch Users tabs. A Users tab with Full Name / Login Name / Email Address columns and a clickable email link was not found in this source. Confirm with an SME or current SM build which version introduced this tab, the exact column labels, and whether assignments are editable from this tab or read-only. -->
-
 ![Role Users](../../../../../../../Resources/Images/SM/Library/AccessManagement/roles-users-tab.png 'Role Users')
 
 ---

@@ -200,7 +200,6 @@ The values from this App Registration that you need for Notify Handler's configu
   - Directory (tenant) ID
   - Customer Secret Value
 
-
 1. Go to [Azure Portal](https://portal.azure.com) 
 2. Define an Application Registration
     1. Name the app registration "SMANotifyHandler" 
@@ -259,10 +258,6 @@ OAuth (via Microsoft's MSAL SMTP authentication) is supported as an alternative 
 
 The app-registration-details.json file produced during OAuth setup contains the Client Secret in plain text. This file must be securely stored or deleted once all configuration steps are complete. The Application ID, Customer Secret, and Tenant ID entered in Solution Manager's SMTP Server Options are the live credentials used by SMA Notify Handler to authenticate to Exchange Online.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks

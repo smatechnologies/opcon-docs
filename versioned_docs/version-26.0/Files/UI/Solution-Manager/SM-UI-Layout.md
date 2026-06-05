@@ -69,10 +69,6 @@ To activate this mode, complete the following steps:
 For all buttons in the Solution Manager, you only have to select once to trigger the action.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Understanding the User Interface Layout procedure involve?**

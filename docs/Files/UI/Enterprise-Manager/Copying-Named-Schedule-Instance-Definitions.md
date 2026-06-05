@@ -3,7 +3,6 @@ title: Copying Named Schedule Instance Definitions
 description: "Use the Copy Instance option in Enterprise Manager to replicate properties, exceptions, or both from a source named schedule instance to one or more target instances."
 product_area: Enterprise Manager
 audience: System Administrator, Automation Engineer
-<!-- GAP: version_introduced unverified — placeholder "[see release notes]" not in original page and cannot be confirmed from source -->
 tags:
   - Procedural
   - System Administrator
@@ -31,7 +30,7 @@ To copy named schedule instance definitions, complete the following steps:
 1. Select **Schedule Master** under the **Administration** topic. The **Schedule Master** screen displays.
 2. Select the schedule in the **Schedule Selection** list.
 3. Select the **Instance Definition** tab in the **Schedule Details** frame.
-4. In the **Instances** frame, right-select the instance name that is the source of the definitions to copy. A context menu displays.
+4. In the **Instances** frame, right-click the instance name that is the source of the definitions to copy. A context menu displays.
 5. Select **Copy Instance**. The **Copy Instance** dialog displays.
 6. In the **Instance(s) To Replace** list, select the target named instance or instances.
 7. Select the **Replace Properties** option, the **Replace Exceptions** option, or both to specify which data to replicate.

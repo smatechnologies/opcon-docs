@@ -49,7 +49,7 @@ To add or update expression dependencies for a job, complete the following steps
 6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
 
    :::note
-   Alternatively, right-select the job in the list to open the **Selection** panel.
+   Alternatively, right-click the job in the list to open the **Selection** panel.
    :::
 
    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")

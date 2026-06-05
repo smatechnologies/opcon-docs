@@ -52,10 +52,6 @@ Select the **OK** button to open **Schedule Import/Export**.
 For conceptual information about the Schedule Import/Export, refer to [Schedule Import/Export](../../../utilities/Graphical-Utilities/Schedule-Import_Export.md) in the **Utilities** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How do you open Import Export?**

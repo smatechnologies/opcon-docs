@@ -31,10 +31,6 @@ To set the preferences, complete the following steps:
 5. Define the number of records to return (the default value is 100,000)
 6. Select **OK** to save the changes and close the **Preferences** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Audit and History Management Records procedure involve?**

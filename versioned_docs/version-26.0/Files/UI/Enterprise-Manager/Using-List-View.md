@@ -42,10 +42,6 @@ Related Topics
 -   [Performing Job Procedures](Performing-Job-Procedures-List.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with List View?**

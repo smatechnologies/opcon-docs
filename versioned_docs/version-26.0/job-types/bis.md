@@ -19,7 +19,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-Use this section to define a BIS job in OpCon. Text fields support OpCon token replacement; [tokens](../objects/using-properties.md#okens) are resolved as the SAM prepares to send the job to the LSAM. For platform details, refer to [OS 2200 LSAM and BIS LMAM Configuration](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Configuration.md) in the **OS 2200 LSAM** online help.
+Use this section to define a BIS job in OpCon. Text fields support OpCon token replacement; [tokens](../objects/using-properties.md#okens) are resolved as the SAM prepares to send the job to the Agent. For platform details, refer to [OS 2200 Agent and BIS LMAM Configuration](https://help.smatechnologies.com/opcon/agents/os2200/latest/Files/Agents/OS-2200/Configuration.md) in the **OS 2200 Agent** online help.
 
 ## Job Information
 
@@ -82,7 +82,7 @@ Place # before or after the Qualifier to direct the agent to search the SHARED F
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Department**: An organizational grouping in OpCon used to assign jobs to logical divisions. User roles can be scoped to specific departments, controlling which jobs a user can manage.
 

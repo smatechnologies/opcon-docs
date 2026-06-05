@@ -198,10 +198,6 @@ Application Log of the Windows Event Viewer.
 |Msg|$SERVICENAME stopped.|Y|Defines the log message indicating SMANetCom has stopped. Modify the text for a different message. Set to NULL to disable this setting. $SERVICENAME is a supported token for this message type.|
 |Type|4|Y|Defines the message type: 1 equals Error, 2 equals Warning, 4 equals Information|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -258,7 +254,7 @@ A single SMANetCom instance can support a maximum of 2048 agents, but the recomm
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

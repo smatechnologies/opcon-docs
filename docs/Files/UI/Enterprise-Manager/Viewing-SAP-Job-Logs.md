@@ -25,8 +25,6 @@ The **Job Log** button becomes available only when the selected SAP job has a st
 
 ## Required Privileges
 
-<!-- GAP: Specific Enterprise Manager privilege or role required to open the View SAP Jobs dialog and retrieve a job log is not confirmed in the available source; needs SME/source. -->
-
 ## View a SAP job log
 
 To view the job log for a SAP job, complete the following steps:
@@ -53,8 +51,6 @@ The **Job Log** button is enabled only for jobs with a status of **Finished** or
 **Search SAP** is enabled only when you have entered a value in the **Job Name Criteria** field and selected at least one status option in the **Filter by Job Status** group.
 
 ## Related Topics
-
-<!-- GAP: Related Topics links (for example, SAP Agent setup or other SAP job actions such as SAP Job Spools) are not confirmed from the available source; needs SME/source. -->
 
 ## Glossary
 

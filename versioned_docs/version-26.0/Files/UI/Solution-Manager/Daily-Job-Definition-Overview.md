@@ -19,8 +19,6 @@ doc_type: reference
 
 The Daily Job Definition is the runtime instance of a master job. You can view all configured settings for a job running in the daily queue and, in some cases, make temporary changes that apply only to today's instance without affecting the master definition.
 
-## Configuration Options
-
 ## When would you use this section?
 
 - You need to see exactly how a job is configured for today's run

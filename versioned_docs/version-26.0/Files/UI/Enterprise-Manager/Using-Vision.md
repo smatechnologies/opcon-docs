@@ -29,10 +29,6 @@ For information on **Vision** functions, refer to:
 -   [Using Health](Using-Health.md)
 -   [Using Settings](Using-Settings.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Vision?**

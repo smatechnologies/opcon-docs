@@ -60,10 +60,6 @@ Related Topics
 - [Deleting Schedules and Jobs](Deleting-Schedules-and-Jobs.md)
 - [Adding Jobs to Daily Schedules](Adding-Jobs-to-Daily-Schedules.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Performing Schedule Checks procedure involve?**

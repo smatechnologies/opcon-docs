@@ -34,10 +34,6 @@ To define a schedule instance, complete the following steps:
 8. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 9. Select **Close ☒** to close the **Schedule Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining schedule instances for machines in machine groups?**

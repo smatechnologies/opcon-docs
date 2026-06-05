@@ -22,8 +22,6 @@ doc_type: procedural
 
 Configure the OpCon Server after a new installation. After an upgrade, review these items to confirm the server is still configured correctly.
 
-## Configuration Options
-
 ## Implement Temporary License
 
 The temporary license lets you run OpCon immediately while waiting for a permanent license.
@@ -163,7 +161,6 @@ OpCon installation details can also be set in Profiles or Preferences. Refer to 
 #### Set Privileges for Utilities
 
 Configure utilities for compatibility with Windows before setting up database connections.
-
 
 1. Locate **LegacyAudit.exe** in **<Target Directory\>\\OpConxps\\Utilities\\**
 2. Right-click **LegacyAudit.exe** and select **Properties**
@@ -339,7 +336,6 @@ If SMA Service Manager runs as NT AUTHORITY\\SYSTEM and uses Windows Authenticat
 
 In SQL Server Management Studio:
 
-
 1. Expand the **Database Engine containing the OpCon Database**
 2. Expand **Security**
 3. If the SAM and database are on different machines:
@@ -484,7 +480,6 @@ To configure OpCon, complete the following steps:
 
 Create a machine record for the SMA OpCon Agent for Windows installed on the Server.
 
-
 1. Select **Machines**
 2. Select the **Add** ![Add Button](../Resources/Images/Installation/EMadd.png) button on the **Machines** toolbar
 3. Enter the *official host name* or *alias* of the OpCon Server machine in the **Name** text box
@@ -521,7 +516,6 @@ Back up the OpCon database and transaction log regularly. If the transaction log
 :::
 
 #### Create DSNs for the Transport Databases
-
 
 1. Use menu path: **Start \> All Programs \> OpConxps \> Utilities \> Schedule Import Export**
 2. Select the **ODBC** button
@@ -591,7 +585,6 @@ Complete this procedure to automate OpCon reports.
 
 #### Validate Property Definitions
 
-
 1. Under Administration in the EM Navigation Panel, select **Global Properties**
 2. Select **SMADBCredentials** in the **Select Global Property** list
 3. In the **Global Property Value** text box, verify the *User Name* and *Password*:
@@ -602,7 +595,7 @@ Complete this procedure to automate OpCon reports.
 5. Select **SMAOpConOutputPath** and verify the path to <Output Directory\> on the SAM server. Modify if different from the default. Select **Save**
 6. Select **SMAOpConPath** and verify the path to the Utilities folder on the SAM server. Modify if different from the default (C:\\Program Files\\OpConxps\\). Select **Save**
 7. Select **SMAAdminEmail** and enter an *email address* (or multiple addresses separated by semicolons) for the OpCon administrator. Select **Save**
-8. If **UNIX LSAMs** exist:
+8. If **UNIX Agents** exist:
    - Select **UNIXLSAMPath** and verify the path to the "bin" directory on the UNIX machine
 9. Select **DB_SERVER_NAME** and verify the OpCon database server name. Modify if different from the default. Select **Save**
 10. Select **SqlMaintUser** and verify the SQL maintenance user name. Modify if different from the default. Select **Save**

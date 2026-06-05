@@ -30,8 +30,6 @@ The skill acts on the daily (date-specific) instance of the job, so the removal 
 
 To use the Delete Daily Job skill, you must have the **Chatbot Privileges** function privilege, or one of the equivalent administrator privileges that grants it.
 
-<!-- GAP: The exact customer-facing label for the Chatbot Privileges function privilege as displayed in the Solution Manager UI has not been confirmed in source. Needs SME/UI confirmation. -->
-
 If the job is not found or you do not have permission to act on it, Otto returns an error and no change is made.
 
 ## Skill Details
@@ -61,8 +59,6 @@ No. The Delete Daily Job skill removes only the daily (date-specific) instance o
 If the job does not exist for the specified schedule and date, or you do not have permission to act on it, Otto returns an error and no change is made.
 
 **Q: Can I delete multiple jobs at once?**
-
-<!-- GAP: Whether the skill supports deleting multiple jobs in a single request has not been confirmed in source. Needs SME confirmation. -->
 
 ## Glossary
 

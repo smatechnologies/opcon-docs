@@ -23,10 +23,6 @@ Events are strings that run commands within OpCon. Events can be defined to run 
 
 Any number of events may be defined for each job. Events can be defined at the job or at the frequency level. All events can be passed to the SAM externally through [MSGIN](./defining.md#MSGIN).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What are OpCon events?**
@@ -47,7 +43,7 @@ Any event can be passed to the SAM externally through the MSGIN directory. Exter
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

@@ -32,10 +32,6 @@ Depending on the **Operations** view, the following secondary dialogs can displa
 -   [Machine Information](Machine-Information.md)
 -   [Managing SAP R/3 and CRM Background Functions](Managing-SAP-R3-and-CRM-Background-Functions.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Secondary Windows?**

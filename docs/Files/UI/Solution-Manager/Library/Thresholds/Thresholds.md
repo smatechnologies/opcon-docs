@@ -55,8 +55,6 @@ To see which jobs reference a threshold, select the **Cross References** button.
 
 ![Threshold cross references](../../../../../Resources/Images/SM/Library/Thresholds/Threshold-CrossReference.png "Threshold cross references")
 
-<!-- GAP: The exact contents and column labels of the Cross References list (for example, how dependent jobs are distinguished from jobs that update the threshold) are not confirmed in the available source; needs SME or UI confirmation. -->
-
 ## Thresholds Compared With Resources
 
 Thresholds and resources are both numeric variables in the OpCon database, and they share the same name space, but they serve different purposes:

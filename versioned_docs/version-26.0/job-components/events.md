@@ -41,8 +41,8 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
     - **Missed Latest Start Time**: Job missed its latest start time
     - **Skipped**: Job was skipped
     - **Start Attempted**: Occurs just before job start info is sent to the agent. If the event is not processed, SAM places the job On Hold
-  - **LSAM Feedback**: Evaluation string based on a specific LSAM feedback value. Fields:
-    - **LSAM Feedback**: Platform-specific LSAM feedback values (e.g., SAP R/3 includes Child Process). Values vary by job type. Supported job types:
+  - **Agent Feedback**: Evaluation string based on a specific Agent feedback value. Fields:
+    - **Agent Feedback**: Platform-specific Agent feedback values (e.g., SAP R/3 includes Child Process). Values vary by job type. Supported job types:
       - File Transfer
       - IBM i
       - MCP
@@ -106,7 +106,7 @@ Yes. All System Properties can be referenced with tokens in event strings, allow
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

@@ -20,9 +20,9 @@ doc_type: conceptual
 ## What Is It?
 
 The information in this section applies to defining an SAP R/3 and CRM
-job. For additional information about this platform, refer to [SAP LSAM Configuration and
+job. For additional information about this platform, refer to [SAP Agent Configuration and
 Operation](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Configuration-and-Operation.md)
- in the **SAP LSAM** online help for special features to enhance
+ in the **SAP Agent** online help for special features to enhance
 the automation capabilities of OpCon on this
 platform.
 
@@ -273,7 +273,7 @@ modification of the following information for External Programs:
 
 **Q: What login information is required for an SAP R/3 and CRM job?**
 
-An SAP R/3 and CRM job requires a Machine name (the SAP LSAM), a valid SAP User ID and Password, and a two-character Language abbreviation (e.g., EN for English).
+An SAP R/3 and CRM job requires a Machine name (the SAP Agent), a valid SAP User ID and Password, and a two-character Language abbreviation (e.g., EN for English).
 
 **Q: What does the "Activate trace" option do for an SAP job?**
 
@@ -285,7 +285,7 @@ This option instructs SAP to wait for the termination of the external command be
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

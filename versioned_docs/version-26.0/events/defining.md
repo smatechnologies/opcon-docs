@@ -159,10 +159,6 @@ $SCHEDULE:CANCEL,CURRENT,TestSched
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Exception Handling
 
 **Invalid event syntax or invalid field data causes the SAM to log an error and not process the event** — If the syntax of an OpCon event is not followed exactly, or if any field contains invalid data, the SAM cannot process the event and places an error message in the Critical.log — Review the event syntax in the Event Types reference, correct the text file, and resubmit the event through the MSGIN directory.
@@ -193,7 +189,7 @@ The SAM continuously monitors the MSGIN directory. When a valid ASCII text file 
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 

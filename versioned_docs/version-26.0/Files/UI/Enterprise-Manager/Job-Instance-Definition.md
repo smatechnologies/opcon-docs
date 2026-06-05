@@ -29,10 +29,6 @@ The **Instance Definition** tab in the [**Job Master**](Using-Job-Master.md) edi
 
 For conceptual information, refer to [Instance Definition](../../../job-components/instances.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Job Instance Definition do?**

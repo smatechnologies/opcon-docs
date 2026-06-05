@@ -100,7 +100,7 @@ application server:
 4. Select an **ASCII text editor** (e.g., Notepad) in the **Choose the
     program you want use** list.
 5. Insert *a new line* below the last line containing a TCP/IP address
-6. Type the *TCP/IP address* for the **MCP LSAM** machine
+6. Type the *TCP/IP address* for the **MCP Agent** machine
 
 7. Select the key
 8. Type the *Hostname alias* as it is entered in the Enterprise
@@ -609,7 +609,7 @@ for the Gateway setting.
 **Group**: Defines the name of the SAP server group for a load balancing
 connection when an MSHOST is defined for the Gateway setting.
 
-**Query Listener Port**: Defines the port on which the SAP LSAM listens
+**Query Listener Port**: Defines the port on which the SAP Agent listens
 for proxy requests.
 
 ## Configuration Options
@@ -673,7 +673,7 @@ Communication Status controls whether SMANetCom is communicating with the agent.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

@@ -34,8 +34,6 @@ For full documentation of the Vision module, refer to [Working with Vision](../S
 
 Access to Vision is controlled by the privileges assigned to your OpCon role. Contact your system administrator if Vision nodes are not visible or if the Vision Home page does not load.
 
-<!-- GAP: The specific privilege or role required to access Vision nodes in Enterprise Manager is not confirmed in source. Needs SME/source. -->
-
 ## Glossary
 
 **Enterprise Manager**: OpCon's Windows desktop application for managing automation data, performing operational actions, and administering the system.

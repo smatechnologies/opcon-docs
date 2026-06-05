@@ -28,10 +28,6 @@ The **Dependencies** tab in the **[Job Master](Using-Job-Master.md)** editor has
 -   [Threshold/Resource Dependency](Threshold-and-Resource-Dependency.md)
 -   [Expression Dependency](Expression-Dependency.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Dependencies do?**

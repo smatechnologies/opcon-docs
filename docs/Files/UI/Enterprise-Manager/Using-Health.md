@@ -34,8 +34,6 @@ For full documentation of the Vision Health page, including the Vision Diagnosti
 
 Access to the Health node is controlled by the privileges assigned to your OpCon role. Contact your system administrator if the **Health** node is not visible or if the Vision Health page does not load.
 
-<!-- GAP: The specific privilege or role required to access the Health node in Enterprise Manager is not confirmed in source. Needs SME/source. -->
-
 ## Glossary
 
 **Enterprise Manager**: OpCon's Windows desktop application for managing automation data, performing operational actions, and administering the system.

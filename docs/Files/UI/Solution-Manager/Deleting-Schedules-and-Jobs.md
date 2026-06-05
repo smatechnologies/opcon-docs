@@ -26,8 +26,6 @@ Use this procedure to delete Schedules and Jobs in Solution Manager. Deleting re
 
 To view Jobs in a Schedule and act on them in Operations, your user must have the **View Jobs in Schedule Operations** privilege.
 
-<!-- GAP: A specific delete-Schedule / delete-Job privilege was not confirmed in the source. The View Jobs in Schedule Operations privilege (FunctionPrivilege.VIEW_JOBS_IN_SCHEDULE_OPERATIONS) gates the Operations Processes view; confirm with an SME whether an additional privilege is required to delete. -->
-
 ## Delete Schedule(s)
 
 To delete one or more Schedules, complete the following steps:

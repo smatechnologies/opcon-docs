@@ -51,10 +51,6 @@ Topics
 - [Viewing Jobs in     SubSchedules](Viewing-Job-Lists-for-Schedules-Pie.md#View_Jobs_in_a_SubSchedule)
 - [Setting Preferences for Status     Colors](Preferences-for-Status-Colors.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Pie Chart View?**

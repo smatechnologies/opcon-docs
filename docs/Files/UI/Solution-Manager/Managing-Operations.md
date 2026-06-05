@@ -47,13 +47,9 @@ To build daily schedules from the **Operations Summary** page, complete the foll
 
 **Result:** Solution Manager submits the build request and creates the daily schedules for the selected dates. Built schedules appear in the **Build** step with their progress, and you can open the build log for any request from this step.
 
-<!-- GAP: The Instance(s) Definition step (named instances, machines, instance properties) is not documented in detail here; confirm field-level behavior with SME/source before expanding step 7. -->
-
 ## Schedule Build Queue
 
 The **Schedule Build** page toolbar includes a **Queue** button that opens the **Schedule Build Queue** page, where you can review build requests. Use the **Back** button to return to the page you came from.
-
-<!-- GAP: Detailed Schedule Build Queue page behavior (columns, actions, retention) is not confirmed from the reviewed source; needs SME/source to expand. -->
 
 ## FAQs
 
@@ -83,4 +79,3 @@ Users whose role includes the **Build Daily Schedules** privilege can build sche
 
 ## Related Topics
 
-<!-- GAP: Related topic page links (Schedule Build Queue, Operations/Processes, Agents) not verified in this repository; add internal links once target page paths are confirmed. -->

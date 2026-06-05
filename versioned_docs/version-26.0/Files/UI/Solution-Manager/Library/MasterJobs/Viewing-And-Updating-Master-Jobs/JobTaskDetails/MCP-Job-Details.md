@@ -114,7 +114,7 @@ To edit MCP Job Details, complete the following steps:
 - **From** (Required): Location of the source file — a Family Disk name or tape name. Maximum 40 characters; tokens supported
 
 :::note
-Effective with MCP LSAM 16.02, the `\*SMA/WFL/REMOVEJOB` WFL can be modified so the WFL completes OK even when no files are deleted. Security errors and locked files still cause failure. To implement this alternate behavior, comment out sequence #26600 and uncomment sequence 26650 in a working copy of the WFL. This modification must be re-applied after each MCP LSAM upgrade if the alternate behavior is desired.
+Effective with MCP Agent 16.02, the `\*SMA/WFL/REMOVEJOB` WFL can be modified so the WFL completes OK even when no files are deleted. Security errors and locked files still cause failure. To implement this alternate behavior, comment out sequence #26600 and uncomment sequence 26650 in a working copy of the WFL. This modification must be re-applied after each MCP Agent upgrade if the alternate behavior is desired.
 :::
 
 ## Pre-Run Information
@@ -148,7 +148,7 @@ This page covers Viewing MCP Job Details, Adding MCP Job Details, Editing MCP Jo
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Access Code**: A security label applied to jobs and schedules in OpCon. Users must have the matching access code privilege to view or manage items with that label.
 

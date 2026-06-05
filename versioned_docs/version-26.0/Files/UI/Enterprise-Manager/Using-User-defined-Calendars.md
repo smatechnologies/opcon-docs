@@ -64,10 +64,6 @@ To use as Additional Holiday Calendars, complete the following steps:
 10. Select **Finish**
 11. Select the **x** to the right of the **Schedule Master** tab to close the screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with User-defined Calendars?**

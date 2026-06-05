@@ -19,7 +19,7 @@ doc_type: reference
 
 ## What Is It?
 
-The information in this section applies to defining an IBM i job. The text fields in the graphical interfaces support OpCon token replacement. For additional information about this platform, refer to [IBM i LSAM Configuration](https://help.smatechnologies.com/opcon/agents/ibmi/latest/Files/Agents/IBM-i/Configuration.md) in the **IBM i LSAM** online help.
+The information in this section applies to defining an IBM i job. The text fields in the graphical interfaces support OpCon token replacement. For additional information about this platform, refer to [IBM i Agent Configuration](https://help.smatechnologies.com/opcon/agents/ibmi/latest/Files/Agents/IBM-i/Configuration.md) in the **IBM i Agent** online help.
 
 - Unless otherwise specified, name validation must conform to this set of IBM i Name rules:
   - Names must be 10 characters or less
@@ -222,15 +222,15 @@ The Spool Files information can be defined for all Job Types, except Restricted 
 
 ## Variables
 
-The Variables tab is available for you to define values for the IBM i LSAM that will be assigned to LSAM Dynamic Variable names. Adding one or more entries in this table of values may be more convenient than configuring separate IBM i batch jobs that would each run the IBM i LSAM SETDYNVAR command, setting one value per job. Up to 99 token definitions may be added to this table in a single job.
+The Variables tab is available for you to define values for the IBM i Agent that will be assigned to Agent Dynamic Variable names. Adding one or more entries in this table of values may be more convenient than configuring separate IBM i batch jobs that would each run the IBM i Agent SETDYNVAR command, setting one value per job. Up to 99 token definitions may be added to this table in a single job.
 
 The agent assigns the Dynamic Variable values before the job start request is assembled within the agent job scheduler so that the assigned values can be used within the job's Call information or used by the job itself after it starts execution. Once the values are stored in the agent table, they are available to any feature of the agent wherever Dynamic Variables are supported. Refer to field definitions below:
 
-- **Variable Name**: Defines the name of the IBM i LSAM Dynamic Variable that stores the value
+- **Variable Name**: Defines the name of the IBM i Agent Dynamic Variable that stores the value
   - Maximum Characters: 12
   - Valid Characters: A - Z, 0 - 9, and special characters
   - Invalid Characters: blanks and spaces
-- **Value**: Defines the character string to use as the value to be stored in the IBM i LSAM Dynamic Variables table. You may use an OpCon token in this field so that the value of the associated OpCon property will be assigned to the LSAM Dynamic Variable. Use CTRL + T to select from a list of existing OpCon Global Properties, or manually type the token referencing any Global or Instance property desired
+- **Value**: Defines the character string to use as the value to be stored in the IBM i Agent Dynamic Variables table. You may use an OpCon token in this field so that the value of the associated OpCon property will be assigned to the Agent Dynamic Variable. Use CTRL + T to select from a list of existing OpCon Global Properties, or manually type the token referencing any Global or Instance property desired
   - The value should be no more than a 128-character string or an OpCon token that resolves to a value of no more than 128 characters
   - Valid Characters: Any
 
@@ -349,7 +349,7 @@ The File Arrival job will continue to run repeated checks of the file size until
 - Files (tables) in the DB2 database are measured by the number of records in the file. An empty file (table) is represented as having zero records (zero rows)
 - Files outside of the DB2 database, such as stream files in the IFS root '/' file system, are measured by the number of data bytes contained within the stream file. The number of bytes of data does not include the size of the file structure itself (where IBM stores meta data that describes the attributes of the stream file). An empty stream file is represented as having zero data bytes
 
-The number of records or data byes will be stored in the IBM i LSAM
+The number of records or data byes will be stored in the IBM i Agent
 Dynamic Variable, if specified for the "Record Count Dynamic Variable."
 
 - Stream files are not evaluated by the File Arrival job for any possible record separators that could be contained within the data stream. Only the number of data bytes reported by the IBM i IFS file system are considered, and this count would include any embedded record separators
@@ -500,8 +500,8 @@ Other kinds of exceptional processing may be desired, depending on the other job
 | Reply | Defines the response the agent sends as the reply when the *Action* is set to *'Reply'* or *'Both'* and when the message meets the search criteria. | — | — |
 | Event | Defines the OpCon event to send to the SAM-SS when the message meets the search criteria | — | Valid values include **\*ALL** or a user-defined value. User-defined values must not exceed 10 characters. - **Us |
 | OutQ Library | Defines the library that contains the Outq | Blank | Valid values range from 1 through 255. - **Hold** (Optional): Determines whether to print the spool file.   - Def |
-| Variable Name | Defines the name of the IBM i LSAM Dynamic Variable that stores the value | — | — |
-| Value | Defines the character string to use as the value to be stored in the IBM i LSAM Dynamic Variables table. | — | — |
+| Variable Name | Defines the name of the IBM i Agent Dynamic Variable that stores the value | — | — |
+| Value | Defines the character string to use as the value to be stored in the IBM i Agent Dynamic Variables table. | — | — |
 | User | Defines the FTP users for connecting to the remote system. | value | valid values are:   - BIN (default value)   - ASCII   - EBCDIC  ### Remote Information |
 | Check Lock on DB2 File | Defines whether to request verification that there are no in-use locks on any DB2 database files. | — | must be specified if the file is actually named with an extension. |
 | File Name | Defines the file path and name of the file to detect. | — | must be specified if the file is actually named with an extension. - DB2 files (tables) |
@@ -544,7 +544,7 @@ Yes. Using the Variables tab to register the Agent command parameter `$@FAILIFZE
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

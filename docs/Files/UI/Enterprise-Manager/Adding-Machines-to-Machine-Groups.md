@@ -25,8 +25,6 @@ All Machines in a group must use the same machine type and the same data type. T
 
 Your role must have the privileges needed to open the **Machine Groups** editor and update Machine Group membership. Machine Group access is controlled per role through Machine Group privileges, including the **Can Update** permission for the group.
 
-<!-- GAP: Exact named privilege required to open the Machine Groups editor and save membership changes is enforced through role/Machine Group privileges in code (RoleMachineGroup, Can Update); the specific customer-facing privilege label is not confirmed in source. Needs SME/source. -->
-
 ## Assign Machines to a Machine Group
 
 To assign Machines to a Machine Group, complete the following steps:

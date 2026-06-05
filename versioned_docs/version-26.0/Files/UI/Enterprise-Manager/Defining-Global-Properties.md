@@ -46,10 +46,6 @@ Related Topics
 -   [Viewing Additional Schedule Information](Viewing-Additional-Schedule-Info.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining global properties?**

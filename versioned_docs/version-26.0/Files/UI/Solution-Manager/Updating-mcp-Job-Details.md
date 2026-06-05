@@ -117,7 +117,7 @@ To perform this procedure, complete the following steps:
 
 - **Report Name:** Name of the EAE/AB Suite report to run (max 256 characters). Tokens are supported
 - **Acceptfile:** Filename the agent creates with the arguments from the Parameters field for the EAE/AB Suite command (max 256 characters). Tokens are supported
-  - After job completion or failure, the Acceptfile is saved permanently in `*SMA/LINC17/FILES/=`. Clean up this directory regularly using the `SMA/WFL/CLEANUP/LINC17/FILES` utility included in the MCP LSAM release container, which can be scheduled via OpCon
+  - After job completion or failure, the Acceptfile is saved permanently in `*SMA/LINC17/FILES/=`. Clean up this directory regularly using the `SMA/WFL/CLEANUP/LINC17/FILES` utility included in the MCP Agent release container, which can be scheduled via OpCon
 - **Parameters:** All parameters to run the EAE/AB Suite report (max 256 characters). Tokens are supported
 - **Template Display File:** File used in lieu of a job-specific displays file. Allows a single set of definitions for multiple OpCon jobs. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
 - **EOT Notice Message:** When enabled, treats each end-of-task notification as a display message, allowing an Automated Response to trigger on task completion without waiting for the job to fully complete. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
@@ -151,9 +151,9 @@ To perform this procedure, complete the following steps:
 - **From** (Required): Family Disk name or tape name where the source file resides (max 40 characters). Tokens are supported
 
 :::note
-Effective with MCP LSAM 16.02, `*SMA/WFL/REMOVEJOB` can be modified to complete OK even when no files are deleted. Security errors and locked files still cause the REMOVEJOB WFL to fail.
+Effective with MCP Agent 16.02, `*SMA/WFL/REMOVEJOB` can be modified to complete OK even when no files are deleted. Security errors and locked files still cause the REMOVEJOB WFL to fail.
 
-To enable the alternate behavior, modify a working copy of `*SMA/WFL/REMOVEJOB`: comment out sequence #26600 and uncomment sequence 26650. Re-apply this modification after each MCP LSAM upgrade if the alternate behavior is desired.
+To enable the alternate behavior, modify a working copy of `*SMA/WFL/REMOVEJOB`: comment out sequence #26600 and uncomment sequence 26650. Re-apply this modification after each MCP Agent upgrade if the alternate behavior is desired.
 :::
 
 ![REMOVE Job: job information](../../../Resources/Images/SM/mcp-remove.png "REMOVE Job: job information")
@@ -187,7 +187,7 @@ This page covers Updating MCP Job Task Details, Pre-Run Information, Failure Cri
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Notification**: A message sent by the SMA Notify Handler when a Machine, Schedule, or Job changes to a specific status. Notifications can be delivered as emails, text messages, Windows Event Log entries, SNMP traps, or other formats.
 

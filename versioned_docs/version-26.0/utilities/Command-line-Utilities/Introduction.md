@@ -41,10 +41,6 @@ OpCon includes the following command-line utilities:
 - [SMASetRMFileName](SMASetRMFileName.md)
 - [Synch SAP](Synch-SAP.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What types of tasks can command-line utilities perform?**
@@ -59,7 +55,7 @@ Most command-line utilities are installed to the `<Target Directory>\OpConxps\Ut
 
 **BIRT (Business Intelligence and Reporting Tools)**: The open-source reporting engine used by OpCon to generate predefined and custom reports. Reports are run using the BIRTRptgen.exe utility.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 

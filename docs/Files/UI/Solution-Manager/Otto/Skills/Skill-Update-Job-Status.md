@@ -36,8 +36,6 @@ The skill acts on the daily (date-specific) instance of the job, so the change a
 
 To use the Update Job Status skill, you must have the Otto chatbot function privilege, or one of the equivalent administrator privileges that grants it.
 
-<!-- GAP: The exact customer-facing label for the chatbot/Otto function privilege as shown in the Solution Manager UI is not confirmed in source (the code constant is DepartmentFunction.ChatbotPrivileges with internal Description "Chatbot Privileges"). Needs SME/UI confirmation. -->
-
 In addition, you can only update jobs that you have permission to act on. If the job is not found or you do not have permission, Otto returns an error.
 
 ## Skill Details

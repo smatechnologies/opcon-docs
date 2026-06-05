@@ -34,10 +34,6 @@ To enter notification definition information, complete the following steps:
 8. Enter the notification information
 9. Select **Save**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Entering Notification Definition Information procedure involve?**

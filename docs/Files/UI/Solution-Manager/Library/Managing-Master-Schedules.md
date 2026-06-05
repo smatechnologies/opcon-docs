@@ -47,8 +47,6 @@ You can sort the list by **Name** and filter it using the following criteria:
 | --- | --- |
 | [Adding Master Schedules](../Studio/Canvas/Adding-Master-Schedules.md) | Create a new master schedule definition, including its name, settings, start time, work days, holiday calendar, and build settings. |
 
-<!-- GAP: Additional management tasks for master schedules (for example, editing, copying, or deleting a master schedule) are not confirmed as Solution Manager pages in the available source. Needs SME/source. -->
-
 ## Related Topics
 
 - [Adding Master Schedules](../Studio/Canvas/Adding-Master-Schedules.md)

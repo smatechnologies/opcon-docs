@@ -28,8 +28,6 @@ OpCon user-defined properties can be updated with calculated dates using an exec
 
 Chronoman.exe is installed in the <Target Directory\>\\OpConxps\\MSLSAM\\ directory. Chronoman should be scheduled using a Windows OpCon job. Any jobs requiring the property value should be dependent on the associated Chronoman job. For information on setting up job dependencies, refer to [Adding Job Dependencies](../../Files/UI/Enterprise-Manager/Adding-Job-Dependencies.md).
 
-## Configuration Options
-
 ## Configuration
 
 To configure Chronoman, update the Chronoman configuration file (Chronoman.ini) and set up the DSN information.
@@ -493,7 +491,7 @@ Define the Q1 through Q4 dates in the `[Fiscal Quarter Begin Dates]` section of 
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

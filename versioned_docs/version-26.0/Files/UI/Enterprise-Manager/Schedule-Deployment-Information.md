@@ -26,10 +26,6 @@ The **Deploy Info** tab in the [**Schedule Master**](Using-Schedule-Master.md) e
 
 For conceptual information, refer to [Job and Schedule Frequencies](../../../automation-concepts/frequencies.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Schedule Deployment Information do?**

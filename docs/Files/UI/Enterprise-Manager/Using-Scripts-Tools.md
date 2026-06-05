@@ -35,8 +35,6 @@ The following table lists the Scripts toolbar buttons and the action each one pe
 | **Maximize** | Opens the editor or view to its maximum size. The **Maximize** button changes to a **Restore** button when the view is maximized. |
 | **Restore** | Returns the editor or view to its original location and size. |
 
-<!-- GAP: The Minimize, Maximize, and Restore behaviors are standard Eclipse view/editor controls and are not defined in the com.sma.ui.scripts message resources; confirm exact button labels and behavior with an SME or screenshots. -->
-
 ## FAQs
 
 **Q: Which buttons appear on the Scripts toolbar?**
@@ -52,8 +50,6 @@ The **Cross References** dialog lists the jobs and schedules that use the select
 Access to Script Tools is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
 
 ## Related Topics
-
-<!-- GAP: No related topic pages were confirmed from source. Add links to the Scripts Repository, Versions, and Script Types documentation when those page paths are confirmed. -->
 
 ## Glossary
 

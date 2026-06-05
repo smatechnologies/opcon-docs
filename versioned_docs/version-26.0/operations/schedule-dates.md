@@ -24,10 +24,6 @@ When schedules are built for a schedule date, all schedule and job information i
 
 ![Definition of a Day's Automation](../Resources/Images/Concepts/portraitdaysautomation.png "Definition of a Day's Automation")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What happens when a schedule is built for a schedule date?**

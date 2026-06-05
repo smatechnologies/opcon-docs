@@ -389,10 +389,6 @@ If no properties are defined for the schedule, OpCon will still request the buil
 13. Select the **Close** button to close the **Add Jobs to \<Schedule Name\>** dialog
 14. Select the **x** to the right of the **Daily list** tab to close the screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Performing Schedule Procedures when Working in List View procedure involve?**

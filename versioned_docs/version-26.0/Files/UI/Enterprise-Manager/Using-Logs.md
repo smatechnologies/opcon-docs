@@ -28,10 +28,6 @@ The **Logs** have a standard toolbar for managing logs. Select any icon to learn
 
 ![Logs toolbar](../../../Resources/Images/EM/EMlogstoolbar.png)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Logs?**

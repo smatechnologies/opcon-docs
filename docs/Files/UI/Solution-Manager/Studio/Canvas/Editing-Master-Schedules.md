@@ -17,8 +17,6 @@ doc_type: procedural
 
 ## Required Privileges
 
-<!-- GAP: The existing page lists "n/a" for required privileges. The Copying Master Schedules sibling page requires "All Function Privileges" or "Maintain Schedules". Confirm whether editing a master schedule requires the same privileges or is unrestricted — needs SME/source verification. -->
-
 ## Editing a Schedule
 
 To edit a Master Schedule, complete the following steps:
@@ -39,4 +37,3 @@ Changes saved to master schedules in the Job Master take effect the next time th
 
 **Q: Can I edit a schedule that is currently running?**
 
-<!-- GAP: Behavior when editing a master schedule that has an active Daily instance is unconfirmed — needs SME/source verification. -->

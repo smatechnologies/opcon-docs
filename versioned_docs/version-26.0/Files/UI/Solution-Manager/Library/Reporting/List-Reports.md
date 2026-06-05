@@ -47,10 +47,6 @@ The **SETTINGS** tab displays configuration settings related to standard report 
 Users must have the [Maintain Reports](../../../../../administration/privileges.md) privilege or be in the ocadm role to view the SETTINGS tab.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Reports cover?**

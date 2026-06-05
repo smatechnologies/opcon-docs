@@ -38,10 +38,6 @@ Related Topics
 - [Updating the Repository for Update Sites](Updating-the-Repository-for-Update-Sites.md)
 - [Managing Update Sites](Managing-Update-Sites.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does setting preferences for update sites configure?**

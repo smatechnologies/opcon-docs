@@ -79,10 +79,6 @@ To configure workload chart display settings and save all preferences, complete 
 7. Select **Apply** to save the changes in this dialog
 8. Select **OK** to save the changes and close the **Preferences** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Charts procedure involve?**

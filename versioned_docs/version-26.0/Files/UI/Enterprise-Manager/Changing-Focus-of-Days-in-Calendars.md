@@ -32,10 +32,6 @@ To change the focus of a day, complete the following steps:
 3. Select a **date** with a green background
 4. Select the **schedule** to view its information in the Daily tables
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Changing Focus of Days in Calendars procedure involve?**

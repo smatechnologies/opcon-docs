@@ -97,7 +97,7 @@ If SQL Server is installed on a separate machine, install the Microsoft SQL Admi
 
 Job volume, OpCon events, and active users directly affect hardware requirements. Consider increased processor and memory depending on performance needs. Disk space requirements depend on the number and size of log files, database backups, and retained history.
 
-For best performance and easiest support, Continuous recommends dedicating a machine as the OpCon server. Required components include the Schedule Activity Monitor (SAM), supporting services, Enterprise Manager (EM), Database, and Windows LSAM (MSLSAM).
+For best performance and easiest support, Continuous recommends dedicating a machine as the OpCon server. Required components include the Schedule Activity Monitor (SAM), supporting services, Enterprise Manager (EM), Database, and Windows Agent (MSLSAM).
 
 :::warning
 Installing additional applications on the OpCon server directly affects processing speed for data center automation.
@@ -247,7 +247,7 @@ If the SAM and SQL database are on different machines, the Distributed Transacti
 
 **MSDTC mismatch between SAM and SQL machines causes performance issues and large error log** — If the SAM and SQL database are on different machines and the Distributed Transaction Coordinator (MSDTC) service runs on only one of the two, performance degrades and the SQL Server error log grows very large — Either enable MSDTC on both machines or disable it on both; the service must run consistently on both or neither.
 
-**Additional applications installed on the OpCon server reduce automation processing speed** — Installing non-OpCon applications on the dedicated OpCon server directly affects processing speed for data center automation — Dedicate the OpCon server exclusively to OpCon components (SAM, supporting services, Enterprise Manager, database, and Windows LSAM) and avoid installing other software.
+**Additional applications installed on the OpCon server reduce automation processing speed** — Installing non-OpCon applications on the dedicated OpCon server directly affects processing speed for data center automation — Dedicate the OpCon server exclusively to OpCon components (SAM, supporting services, Enterprise Manager, database, and Windows Agent) and avoid installing other software.
 
 **Heavy event or ad-hoc schedule build usage requires increased hardware** — Keeping several dates' schedules open, heavy OpCon event usage, heavy ad-hoc schedule builds, and heavy expression dependencies each negatively impact performance — Increase processor and memory beyond the baseline requirements when any of these usage patterns apply.
 
@@ -271,7 +271,7 @@ Underscores in the dedicated OpCon server name directly affect OpCon license val
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

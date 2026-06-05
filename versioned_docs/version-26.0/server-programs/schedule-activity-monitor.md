@@ -106,10 +106,6 @@ SQL connection configuration for the SMA Connection Configuration program can on
 
 The license file must not be encrypted after receipt. Saving the license file to a Windows folder with "Encrypt contents to secure data" enabled prevents SAM from reading the file. The license file must be saved to the SAM directory without file-system encryption applied.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -152,7 +148,7 @@ The SAM-SS must be stopped and restarted to detect new SQL connection configurat
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

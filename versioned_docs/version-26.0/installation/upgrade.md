@@ -324,10 +324,6 @@ Continuous strongly recommends backing up the OpCon database before upgrading to
 
 Before the OpCon database can be upgraded, database replication and mirroring must be disabled. Replication scripts (StopRepl.cmd and supporting SQL files) in use in the environment must be backed up before the upgrade, as the upgrade replaces the files in the Database directory. The backed-up copies serve as a reference for reconfiguring replication after the upgrade completes.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks
@@ -374,7 +370,7 @@ Place user scripts in `<Configuration Directory>\Scripts\` and custom programs i
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 

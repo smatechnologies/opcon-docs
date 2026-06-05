@@ -106,7 +106,7 @@ Enter the *full path and file name of the program to run in the UNIX Start Image
 Enter any required *command-line parameters*. This field permits up to 4000 characters.
 
 :::note
-OpCon concatenates the Start Image and Parameters and inserts a space between them before sending the job to the UNIX LSAM.
+OpCon concatenates the Start Image and Parameters and inserts a space between them before sending the job to the UNIX Agent.
 :::
 
 Enter the *NICE Value* to increase/decrease the priority of the job and prerun (if present). Valid values range from -20 to 20 with a default of zero (0).
@@ -364,7 +364,7 @@ This page covers Updating Job Action: Run Program Job Details, Updating Job Acti
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts can be assigned to Windows jobs and run at runtime without requiring the script file to exist on the target machine.
 

@@ -791,10 +791,6 @@ After properly configuring the SMA Service Manager on the primary server, comple
 7. Use menu path: **Start \> Programs \> OpConxps \> Log Monitors \>Log File Name**
 8. View the SMAServMan, SAM, Critical, SMANetCom, and SMANetComTrace logs to verify that the SAM and SMANetCom connected successfully to the database
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -833,6 +829,6 @@ This page covers Prerequisites, Considerations, Configuration.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.

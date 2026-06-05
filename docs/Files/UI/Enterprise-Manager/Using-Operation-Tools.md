@@ -60,7 +60,7 @@ The following buttons are available in most Operation views.
 | **Group by Schedules** | Groups job boxes by schedule and displays a border around each group. Select again to show all jobs together. Most effective when more than one schedule is in the layout. |
 | **Open mini map** | Displays a miniature view of the entire PERT map. Use the small window to move the selected section to the main designer area. |
 | **Find (Ctrl+F)** | Opens the Find window to locate a job, threshold, or resource in the display. |
-| **Show Dependencies** | Shows dependency lines between jobs. <!-- GAP: blue lines indicate After dependencies; red lines indicate Conflict dependencies — color mapping unverified in source --> Select again to clear the lines. |
+| **Show Dependencies** | Shows dependency lines between jobs.Select again to clear the lines. |
 | **Show Cross Schedule Dependencies** | Displays dependencies from a job in one schedule to a job in another. Select again to revert to the original schedule view. |
 | **Show/Hide Thresholds and Resources** | Toggles threshold and resource display on or off in the Workflow Designer. |
 | **Take Screenshot** | Captures a screenshot of the visible area of the current view. |

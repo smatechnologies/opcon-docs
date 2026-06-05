@@ -662,7 +662,7 @@ The $JOB:ADDHLD event adds the job from the Master tables to the Daily tables wi
 **Syntax**:
 
 ```shell
-$JOB:ADDHLD,<schedule date>,<schedule name>,<job name>,<frequency name>,\[job instance property definitions,\[reopen schedule: Y/N\]
+$JOB:ADDHLD,<schedule date>,<schedule name>,<job name>,<frequency name>,\[job instance property definitions\],\[reopen schedule: Y/N\]
 ```
 
 **Parameters**:
@@ -2538,33 +2538,36 @@ $RESOURCE:SET,<resource name>,<value>
 
 ## Configuration Options
 
+The following table consolidates the parameters used by the events on this page. For the parameters that apply to a specific event, refer to that event's **Parameters** list above.
+
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| <calendar name\> | The calendar name to which to add the dates | — | must be defined using a date syntax recognized by the regional settings of the user runn |
-| <calendar dates\> | A semicolon (;) separated list of dates to add to the calendar. | — | must be defined using a date syntax recognized by the regional settings of the user runn |
+| <calendar name\> | The calendar name to which to add the dates | — | — |
+| <calendar dates\> | A semicolon (;) separated list of dates to add to the calendar | — | Dates must use a date syntax recognized by the regional settings of the user running SMA Service Manager |
 | <schedule date\> | The date of the Daily schedule containing the job | — | — |
 | <schedule name\> | The name of the schedule containing the job | — | — |
 | <job name\> | The name of the job to affect on in the Daily schedule | — | — |
 | <machine group name\> | The new Machine Group name for the job to use in the Daily schedule | — | — |
-| <minutes\> | The number of minutes to set the Max Run Time for the job to use in the Daily schedule | — | — |
-| <SAM priority\> | The new SAM priority value for the job to use in the Daily schedule | — | — |
+| <minutes\> | The number of minutes to set the Max Run Time for the job to use in the Daily schedule | — | Valid range: 1–32767 |
+| <SAM priority\> | The new SAM priority value for the job to use in the Daily schedule | — | Valid range: 0 (lowest) to 32767 (highest) |
 | <tags\> | A semicolon (;) separated list of tags to add to the Daily job | — | — |
 | <batch user\> | The name of the new Batch User account for the job to use in the Daily schedule | — | — |
-| <frequency name\> | The frequency name of the job to associate the Build Status with in the Master schedule | — | Valid values include:   - **D**, **Disable Frequency**, or **Disabled**   - **R**, or **Released**   - **S**, **T |
-| <build state\> | The build status to set for the frequency on the job in the Master. | — | Valid values include:   - **D**, **Disable Frequency**, or **Disabled**   - **R**, or **Released**   - **S**, **T |
+| <frequency name\> | The frequency name of the job to associate the Build Status with in the Master schedule | — | — |
+| <build state\> | The build status to set for the frequency on the job in the Master | — | Valid values: D (Disable Frequency / Disabled), R (Released), S (To Be Skipped / Skipped), N (Do Not Schedule / Not Scheduled), H (On Hold / Held) |
 | <resource name\> | The name of the resource to delete | — | — |
-| <old resource name\> | An OpCon Resource Name | — | — |
-| <new resource name\> | An update value for the resource | — | — |
+| <old resource name\> | The current name of the resource to rename | — | — |
+| <new resource name\> | The new name for the resource | — | Maximum 20 characters; cannot contain single quotes |
 | <threshold name\> | The name of the threshold to delete | — | — |
-| <old threshold name\> | An OpCon Threshold Name | — | — |
-| <new threshold name\> | An update value for the threshold | — | — |
-| \[job instance property definitions\] | Defines properties and values for the job being added. | — | — |
-| \[reopen schedule: Y/N\] | Indicates whether a completed parent schedule is reopened. | value will be set to **N** | Valid values are:   - **Y**: Reopen a parent schedule that is closed (has run and is completed) so that any new j |
-| \[apply exceptions: Y/N\] | Indicates whether exceptions will be applied to the job when the job is added. | value will be set to **N** | Valid values are:   - **Y**: Apply exceptions to the job.   - **N**: Do not apply exceptions to the job.   - If t |
-| \[Restart Step (optional)\] | Specifies whether to restart the job on a pre-configured step setting. | — | Valid values are dependent on the host system:   - SAP: For more on the valid values for the SAP system, refer to |
+| <old threshold name\> | The current name of the threshold to rename | — | — |
+| <new threshold name\> | The new name for the threshold | — | Maximum 20 characters; cannot contain single quotes |
+| \[job instance property definitions\] | Defines properties and values for the job being added | — | — |
+| \[reopen schedule: Y/N\] | Indicates whether a completed parent schedule is reopened | value will be set to **N** | Y: reopen a closed parent schedule so newly added jobs run (overrides the "Allow Job Events to Restart Schedules" Server Option); N: do not reopen — newly added jobs remain in a Qualifying state |
+| \[apply exceptions: Y/N\] | Indicates whether exceptions are applied to the job when it is added | value will be set to **N** | Y: apply exceptions to the job; N: do not apply exceptions. If not specified, defaults to N |
+| \[Restart Step (optional)\] | Specifies whether to restart the job on a pre-configured step setting | — | Optional; supported for SAP R/3 and CRM, SAP BW, UNIX, and z/OS. Valid values depend on the host system (see the $JOB:RESTART parameters above) |
 | <machine name\> | An OpCon Machine Name | — | — |
 | <U/D/L\> | The requested machine state | — | — |
-| <path and command to run\> | Full path and name of the program to run as well as any arguments to be passed to it | — | — |
+| <path and command to run\> | Full path and name of the program to run, plus any arguments to be passed to it | — | — |
+
 ## FAQs
 
 **Q: What categories of events does OpCon support?**

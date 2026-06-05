@@ -50,8 +50,6 @@ The following fields are available when you select the **CO** option:
 
 ## Related Topics
 
-<!-- GAP: No verified related-topic page paths available from source or the existing page; needs SME/site navigation review. -->
-
 ## Glossary
 
 **Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.

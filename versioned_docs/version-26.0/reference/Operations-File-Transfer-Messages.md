@@ -242,10 +242,6 @@ The UNIXLSAM.log file contains these errors.
 | 14014 | FTAgent<br />FTServer | During a Windows to Windows file transfer where the transfer Starts on the Destination machine, this error will occur if the user specified for the Source Machine doesn't have the required privileges on that machine. |
 | 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In the Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click on the job and select Job Information > Configuration > Job Information. |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the Origination column in file transfer error messages indicate?**
@@ -266,7 +262,7 @@ Error 14014 occurs during a Windows-to-Windows file transfer where the transfer 
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

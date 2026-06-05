@@ -30,10 +30,6 @@ SMA support resources including the website, release notes, and community portal
 
 License status details including relevant IDs, expiration date, machine usage, and enabled UI features. For more information, refer to [Licensing Documentation](../../../../../server-programs/licensing.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does License & Support do?**

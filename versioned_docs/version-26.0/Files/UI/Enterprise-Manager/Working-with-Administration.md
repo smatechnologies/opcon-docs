@@ -30,10 +30,6 @@ Select any **Administration** function item in the graphic to learn more.
 
 ![Administration Topic](../../../Resources/Images/EM/EMadminmenu.png "Administration Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Administration?**

@@ -131,10 +131,6 @@ If you do not have the Script Privilege for the script, you will not be able to 
 
 For conceptual information, refer to [Windows Jobs](../../../../../../../job-types/windows.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Viewing, Adding, and Editing Windows Job Details procedure involve?**
@@ -151,7 +147,7 @@ Windows jobs in Solution Manager support three job actions: Run Program (execute
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts can be assigned to Windows jobs and run at runtime without requiring the script file to exist on the target machine.
 

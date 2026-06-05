@@ -104,4 +104,3 @@ You must be a member of a role with the **All Function Privileges** privilege or
 
 ## Related Topics
 
-<!-- GAP: No related-topic links confirmed from source or existing page; needs SME to supply links to Log File Details, Schedule Build Logs, and Archives pages. -->

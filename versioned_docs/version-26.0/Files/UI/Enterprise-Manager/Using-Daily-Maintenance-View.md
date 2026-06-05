@@ -51,10 +51,6 @@ The following procedures apply to Daily Maintenance functionality for schedules 
 - [Deleting Old Schedules](Deleting-Old-Schedules.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Daily Maintenance View?**

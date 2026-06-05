@@ -69,10 +69,6 @@ To open an external file, complete the following steps:
 
 6. Select the **Open** button to open the file, or **Cancel** to cancel
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Types of Logs procedure involve?**
@@ -93,7 +89,7 @@ This page covers SAM Log, Critical Log, Netcom Log.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **TCP/IP**: The network communication protocol used for all data exchange between SMANetCom on the OpCon server and agents on target machines.
 

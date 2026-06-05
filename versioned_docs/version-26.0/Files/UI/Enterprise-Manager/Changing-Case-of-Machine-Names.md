@@ -49,10 +49,6 @@ To change the case of a machine name:
 11. Select **Close ☒** (to the right of the **Machines** tab) to close
     the **Machines** screen.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Changing Case of Machine Names procedure involve?**
@@ -61,7 +57,7 @@ The Changing Case of Machine Names procedure involves 11 steps. Complete all ste
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Resource**: A numeric variable in OpCon representing a finite pool. Jobs can be configured to require a set number of resource units to run, limiting concurrent executions and preventing resource contention.
 

@@ -27,10 +27,6 @@ The **Events** tab in the [**Schedule Master**](Using-Schedule-Master.md) editor
 - [Copy Schedule Completion Events](Copying-Schedule-Completion-Events.md)
 - [Delete Schedule Completion Events](Deleting-Schedule-Completion-Events.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Schedule Completion Events do?**

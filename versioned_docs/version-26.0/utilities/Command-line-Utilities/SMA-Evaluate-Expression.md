@@ -192,7 +192,7 @@ If "Source1" is 85 and "Source2" is 21, SMAEvalExp.exe returns exit code 0 and s
 
 ## Logging
 
-SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows LSAM to capture job output to use the View Job Output feature from the Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List#viewing-job-output) for details.
+SMAEvalExp writes logging to the standard Job Output. Continuous recommends configuring the Windows Agent to capture job output to use the View Job Output feature from the Enterprise Manager. See [Job Output Retrieval](https://help.smatechnologies.com/opcon/agents/windows/latest/Files/Agents/Microsoft/Job-Output-Retrieval.md) and [Viewing Job Output](../../Files/UI/Enterprise-Manager/Performing-Job-Procedures-List#viewing-job-output) for details.
 
 ## Exit Codes
 
@@ -227,7 +227,7 @@ The full expression must always be enclosed in double quotes for the Windows com
 
 **SMA Connection Configuration**: A utility that generates the database connection file (.dat) used by OpCon server programs and utilities to connect to the OpCon SQL Server database.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as Machines in OpCon.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 
@@ -237,6 +237,6 @@ The full expression must always be enclosed in double quotes for the Windows com
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 
-**Machine**: A platform defined in the OpCon database that has an LSAM installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
+**Machine**: A platform defined in the OpCon database that has an agent installed. OpCon routes job execution requests to machines via SMANetCom, and machines report job completion status back to SAM.
 
 **Schedule**: A named container for jobs in OpCon, built for a specific date to create that day's automation. Schedules define build settings, frequencies, and the jobs that run within them.

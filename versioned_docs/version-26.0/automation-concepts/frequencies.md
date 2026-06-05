@@ -32,8 +32,6 @@ While a job frequency applies to an individual job, a schedule frequency applies
 You cannot add a schedule frequency to a schedule if any jobs on the schedule already have other frequencies.
 :::
 
-## Configuration Options
-
 ## Multiple Frequencies and Frequency Priority
 
 OpCon supports multiple frequency definitions on jobs and schedules for two reasons:

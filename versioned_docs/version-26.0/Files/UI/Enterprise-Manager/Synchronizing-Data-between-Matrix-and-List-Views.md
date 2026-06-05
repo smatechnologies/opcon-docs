@@ -39,10 +39,6 @@ To synchronize the data between views, complete the following steps:
 
  
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Synchronizing Data between Matrix and List Views procedure involve?**

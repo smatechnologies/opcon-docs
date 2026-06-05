@@ -29,8 +29,6 @@ Based on user criteria and filters, the utility can:
 - Move files (for full recursive directories)
 - Recover files (for full recursive directories)
 
-## Configuration Options
-
 ## Backwards Compatibility
 
 This utility is compatible with SMADeleteOldFiles and ClearDir. Customers who wish to convert should contact Continuous.
@@ -170,7 +168,7 @@ Yes. SMADirectory is compatible with SMADeleteOldFiles and ClearDir. Customers w
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 

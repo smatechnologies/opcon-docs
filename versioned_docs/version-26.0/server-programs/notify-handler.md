@@ -72,10 +72,6 @@ For OpCon Events submitted by SMA Notify Handler, the handler automatically supp
 
 SMA Notify Handler inserts a Notification ID as the first few characters of every notification message. This ID allows users to look up the source notification in OpCon for troubleshooting and audit purposes.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

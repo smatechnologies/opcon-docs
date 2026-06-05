@@ -43,10 +43,6 @@ To view Schedule History, complete the following steps:
 6. Select the **Refresh** button to display the details
 7. Select the **Close** button to close the dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Schedule History procedure involve?**

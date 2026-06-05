@@ -37,10 +37,6 @@ To define a group, complete the following steps:
 5. Repeat Step 4 until all desired users are added
 6. Select **Save**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining escalation groups?**

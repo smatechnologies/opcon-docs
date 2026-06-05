@@ -119,12 +119,12 @@ Editing Event details in the **Daily** editor allows changes to the job events s
 5. Select the **Edit Daily** button in the **Maintenance** frame. The **Job Daily** screen displays
 6. Select the **Events** tab
 7. Select the **Add** button in the **Events** frame. The **Event Definition Wizard** displays
-8. Select the **Job Status**, **LSAM Feedback**, **Exit Description**, or **Job Completion Complex Expression** radio button on the **Event Trigger** screen
+8. Select the **Job Status**, **Agent Feedback**, **Exit Description**, or **Job Completion Complex Expression** radio button on the **Event Trigger** screen
 
 9. Select the **Next** button to proceed to the **Trigger Details** screen
 10. Do one of the following depending on your selection in step 8:
     - **(Job Status)** Select the **job status** in the **Job Status** list and proceed to step 11
-    - **(LSAM Feedback)** Select the **Feedback name** in the **LSAM Feedback** list. Enter a *string to match* in the **String to match** field, then proceed to step 11
+    - **(Agent Feedback)** Select the **Feedback name** in the **Agent Feedback** list. Enter a *string to match* in the **String to match** field, then proceed to step 11
     - **(Exit Description)** Select the **Operator** in the **Comparison Operator** list. Enter the **Value** and **End Value** fields, then proceed to step 11
     - **(Job Completion Complex Expression)** Enter the *expression* in the **Expression** text box and proceed to step 11. For more information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md) in the **Concepts** online help
 11. Select the **Next** button to advance to the **Event Definition** screen
@@ -358,7 +358,7 @@ You can update fields such as **String to match**, **Expression** and other avai
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Daily Tables**: The OpCon database tables that hold the active, date-specific instances of schedules and jobs built for execution. Changes to daily tables affect only the current day's automation.
 

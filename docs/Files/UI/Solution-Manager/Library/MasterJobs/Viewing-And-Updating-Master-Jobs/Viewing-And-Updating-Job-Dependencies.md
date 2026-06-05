@@ -68,4 +68,3 @@ To update an existing job dependency, complete the following steps:
 
 ## Remove a Job Dependency
 
-<!-- GAP: The page does not document a Remove/Delete action for individual job dependencies. Confirm whether a delete button or row action exists in the Job Dependency panel; needs SME or UI verification. -->

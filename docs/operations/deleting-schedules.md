@@ -35,8 +35,6 @@ If an automatic delete fails, SAM processes events on the `SMA_SKD_DELETE` job o
 
 To delete a daily schedule in Solution Manager, complete the following steps:
 
-<!-- GAP: Exact Solution Manager navigation path and interaction model for deleting a daily schedule (Operations > Processes > Schedules context menu or equivalent) needs SME/source verification. Solution Manager is a browser-based UI — right-click steps below are unverified. -->
-
 1. In Solution Manager, go to **Operations**.
 2. Select the date containing the schedule you want to delete.
 3. In the Schedules list, select the schedule.

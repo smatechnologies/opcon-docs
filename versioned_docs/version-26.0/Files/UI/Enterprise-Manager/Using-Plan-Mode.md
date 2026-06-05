@@ -33,10 +33,6 @@ To use plan mode, complete the following steps:
 5.  *(Optional)* Hover over the **end of the job box** until the bi-directional arrow appears
 6.  Hold the left mouse button and drag the end of the **job box** to the new estimated end time
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Plan Mode?**

@@ -115,10 +115,6 @@ Because "Backup" was selected in the Notification Manager Group, if any Daily jo
 |Job Under Review|A job was placed in an Under Review status by an OpCon event or a user.|
 |Job Fixed|A job was placed in a Fixed status by an OpCon event or a user.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring
@@ -153,7 +149,7 @@ Machine and Job triggers can be placed on Machine groups. Schedule and Job trigg
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Subschedule**: A schedule that runs as a child process within a Container job, allowing hierarchical, nested workflow automation where a parent schedule can trigger and monitor an entire child schedule.
 

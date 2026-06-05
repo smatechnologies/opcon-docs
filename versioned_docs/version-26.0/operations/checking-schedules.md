@@ -43,10 +43,6 @@ Schedule checks can be managed by:
   - The DoBatch utility (refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md))
 - Request through the graphical interfaces
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks

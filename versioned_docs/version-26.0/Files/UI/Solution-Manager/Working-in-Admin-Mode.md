@@ -41,10 +41,6 @@ For more on Function Privileges including those pertaining to the Maintaining Se
 - [Set up User Inputs](Setting-up-User-Inputs.md)
 - [View Service Request     Processes](Viewing-Service-Request-Process-Indicators.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Admin Mode?**

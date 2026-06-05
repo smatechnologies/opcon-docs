@@ -21,7 +21,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services. Desktop clients on user workstations connect to the database, while web-based interfaces connect to web services to manage automation data. Agents that run jobs are called Local Schedule Activity Monitors (LSAMs).
+OpCon Server components include the database, Schedule Activity Monitor (SAM), and supporting services. Desktop clients on user workstations connect to the database, while web-based interfaces connect to web services to manage automation data. Agents that run jobs are called Local Schedule Activity Monitors (Agents).
 
 ## OpCon Architecture Overview
 
@@ -89,7 +89,7 @@ SMA Request Router sends requests to designated Request Handlers and writes comp
 
 SMA Start Time Calculator periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database. For more information, refer to [SMA Start Time Calculator](./server-programs/start-time-calculator.md).
 
-### Local Schedule Activity Monitors (LSAMs)
+### Local Schedule Activity Monitors (Agents)
 
 agents are agents installed on the platforms where jobs run. Written in the native language of their platforms, they communicate with SMANetCom via TCP/IP. OpCon supports the following job types:
 
@@ -112,7 +112,7 @@ agents are agents installed on the platforms where jobs run. Written in the nati
 
 **Q: What are the core components of OpCon?**
 
-OpCon consists of the database (Microsoft SQL Server), the SAM and Supporting Services (SAM-SS), graphical user interfaces (Enterprise Manager and Solution Manager), and Local Schedule Activity Monitors (LSAMs) installed on each platform where jobs run.
+OpCon consists of the database (Microsoft SQL Server), the SAM and Supporting Services (SAM-SS), graphical user interfaces (Enterprise Manager and Solution Manager), and Local Schedule Activity Monitors (Agents) installed on each platform where jobs run.
 
 **Q: What is the difference between SAM and SMANetCom?**
 

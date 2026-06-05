@@ -23,15 +23,11 @@ In Enterprise Manager, the **Home** node under **Vision** opens the **Vision Hom
 
 When you select **Home** under **Vision**, Enterprise Manager opens Solution Manager in a browser view. Enterprise Manager builds the address from the configured Solution Manager URL and the Vision page path, so the **Vision Home** page opens directly.
 
-<!-- GAP: The configured Solution Manager URL is read from the SM_URL setting; where an administrator sets SM_URL in the UI is not confirmed in source. Needs SME/source. -->
-
 ## FAQs
 
 **Q: Who has access to Home?**
 
 Access to Home is controlled by the privileges assigned to your OpCon role. Contact your system administrator if you need access.
-
-<!-- GAP: The specific privilege required to open the Vision Home page is not confirmed in source. Needs SME/source. -->
 
 ## Related Topics
 

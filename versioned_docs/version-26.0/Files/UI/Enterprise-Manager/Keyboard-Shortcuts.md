@@ -315,10 +315,6 @@ The following **Alt +** and **Ctrl +** shortcuts access required fields in *Sche
 |Alt+U|Go to Allow Job Updates field|
 |Enter Key|Move a selected item between Revoked and Granted|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Keyboard Shortcuts cover?**

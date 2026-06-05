@@ -89,7 +89,7 @@ To run Program, complete the following steps:
 2. Enter any required command-line parameters. This field permits up to 4000 characters
 
 :::note
-OpCon concatenates the Start Image and Parameters and inserts a space between them before sending the job to the UNIX LSAM.
+OpCon concatenates the Start Image and Parameters and inserts a space between them before sending the job to the UNIX Agent.
 :::
 
 3. Enter the _NICE Value_ to adjust job priority. Valid values range from -20 to 20, defaulting to 0. Lower values mean higher priority; negative numbers raise priority and positive numbers lower it
@@ -104,7 +104,6 @@ OpCon concatenates the Start Image and Parameters and inserts a space between th
 :::note
 Remove parsing criteria by selecting the **Delete** button at the end of the row.
 :::
-
 
 5. Enter the **Custom Application Log Path**. Wildcard characters are supported for specifying multiple logs
 
@@ -223,10 +222,6 @@ Select the **Undo** button to discard your changes.
 
 For conceptual information, refer to [Unix Jobs](../../../../../../../job-types/unix.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Viewing, Adding, and Editing Unix Job Details procedure involve?**
@@ -243,7 +238,7 @@ The NICE Value adjusts the job's execution priority on the UNIX system. Valid va
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Embedded Script**: A script stored and versioned directly within the OpCon database. Embedded scripts can be assigned to Windows jobs and run at runtime without requiring the script file to exist on the target machine.
 

@@ -64,10 +64,6 @@ To set up a new profile, complete the following steps:
 13. Select **Finish** to save and close the dialog, then select **Finish** again once the database connection is established
 14. Select **Apply** to save additional changes, or **OK** to save and close the **Preferences** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Setting up New Profiles procedure involve?**

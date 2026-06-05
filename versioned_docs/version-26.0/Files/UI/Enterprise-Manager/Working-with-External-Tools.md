@@ -31,10 +31,6 @@ Select on any **External Tools** function item in the graphic to learn more abou
 - [Configuring the Installation Directory](Configuring-the-Installation-Directory.md)
 - [Adding External Tools](Adding-External-Tools.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in External Tools?**

@@ -31,10 +31,6 @@ To forecast Frequencies in Solution Manager, complete the following steps:
 
 ![Frequency Forecast](../../../../../Resources/Images/SM/Library/Frequencies/Frequency-Forecast.png "Frequency Forecast")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Forecasting Frequencies procedure involve?**

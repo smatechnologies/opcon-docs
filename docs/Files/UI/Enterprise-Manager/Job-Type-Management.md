@@ -231,8 +231,6 @@ To define MCP job details, complete the following steps:
 
 ## Defining OpenVMS Job Details
 
-<!-- GAP: No procedure content exists on this page for Defining OpenVMS Job Details, though it is listed in the table of contents. A complete procedure covering the OpenVMS Definition frame fields needs to be added. Source: OpenVMS job details plugin exists in Core-EnterpriseManager (com.sma.ui.core.jobdetails.vms). Needs SME/source review. -->
-
 ## Defining OS 2200 Job Details
 
 For conceptual information, refer to [OS 2200 Job Details](../../../job-types/os-2200.md) in the **Concepts** online help.

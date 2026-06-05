@@ -129,7 +129,7 @@ All required fields are designated by a red asterisk.
 
 **In the Job Information frame:**
 
-- **Job Type**: The type of job to schedule on the IBM i LSAM
+- **Job Type**: The type of job to schedule on the IBM i Agent
 
 **In the Job Log Retention sub-frame:**
 
@@ -520,8 +520,8 @@ To edit a value, select the cell to edit. To add a value, select the **green plu
 
 ![Variables Grid: Variables Grid Information](../../../../../../../Resources/Images/SM/IBMi_VariablesGrid.png "Variables Grid: Variables Grid Information")
 
-- **Variable Name**: The name of the IBM i LSAM Dynamic Variable that stores the value
-- **Value**: The character string to store in the IBM i LSAM Dynamic Variables table
+- **Variable Name**: The name of the IBM i Agent Dynamic Variable that stores the value
+- **Value**: The character string to store in the IBM i Agent Dynamic Variables table
 
 :::note
 Select the **Undo** button to discard your changes.
@@ -550,7 +550,7 @@ Select the **Save** button to save changes.
 | Inquiry Message Reply | How predefined messages are answered when sent during the job | — | — |
 | Number of Occurrences | The number of occurrences to save when the same job name runs more than once | — | — |
 | Number of Days | The number of days to retain job logs | — | — |
-| Job Type | The type of job to schedule on the IBM i LSAM | — | — |
+| Job Type | The type of job to schedule on the IBM i Agent | — | — |
 | Script Name | For an Operator Replay Job or Restricted Mode Job, enter the script name. | — | — |
 | User | The FTP user for connecting to the remote system | — | — |
 | Remote System | The name of the remote system | — | — |
@@ -575,7 +575,7 @@ This page covers Viewing IBMi Job Details, Adding IBMi Job Details, Editing IBMi
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

@@ -33,10 +33,6 @@ To view Job Event Notification Triggers, complete the following steps:
 5. Select the ![Expand](../../../Resources/Images/EM/EMarrowtoexpand.png) **arrow** to expand the **Job Group**, **Machine Group**, and/or **Schedules Group** information
 6. View the **Trigger and Job Event** information
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Notification Triggers procedure involve?**

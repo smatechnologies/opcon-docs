@@ -31,10 +31,6 @@ To use the filter text, complete the following steps:
 3.  Select the **Clear** button (to the right of the filter text box) to clear results and return to the full list
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Filter Text?**

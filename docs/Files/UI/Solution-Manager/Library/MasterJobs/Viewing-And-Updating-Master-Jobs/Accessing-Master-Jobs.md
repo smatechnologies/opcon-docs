@@ -93,4 +93,3 @@ The following panels are available:
 
 The menu on the left side of the **Master Job Definition** page provides quick access to any panel. You can collapse the menu to show icons and tooltips only. Selecting a menu item scrolls the view to that panel and expands it.
 
-<!-- GAP: "Right-clicking a menu item toggles Full Screen mode" — unverified; no matching onContextMenu or fullScreen implementation found in MasterJobDetailsPage.tsx or its menu components. -->

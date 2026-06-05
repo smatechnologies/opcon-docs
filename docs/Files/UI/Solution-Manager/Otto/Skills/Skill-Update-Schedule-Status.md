@@ -43,8 +43,6 @@ To use this skill, you must have Chatbot privileges.
 
 The status you can apply also depends on your schedule operation privileges. A user with administrator privileges can apply any status. A non-administrator must have access to the target schedule, and the applicable schedule operation privilege for the requested status (for example, release, force start, or hold).
 
-<!-- GAP: Exact display names of the per-status schedule operation privileges (release / force start / hold) as shown in the Solution Manager UI are not confirmed in source; needs SME/source. -->
-
 ## Skill Details
 
 ### Parameters

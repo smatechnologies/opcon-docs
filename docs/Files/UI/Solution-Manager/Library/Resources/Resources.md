@@ -36,8 +36,6 @@ Each Resource defines a maximum number of available units. As jobs that require 
 
 To add or edit a Resource, complete the following steps:
 
-<!-- GAP: menu path to the Resources grid unverified for Solution Manager. Solution Manager source places the Resources view under the Administration summary view, not "Library". Original page documented "Library -> Resources" (possibly the Enterprise Manager path); confirm the correct Solution Manager location with an SME. -->
-
 1. Open the Resources grid.
 2. Select **Add** to create a Resource, or select a row and then select **Edit** to change an existing one.
 3. In **Name**, enter a unique name for the Resource.
@@ -67,8 +65,7 @@ You can access Resources in Solution Manager or Enterprise Manager.
 
 **Q: What is the difference between a Resource and a Threshold?**
 
-Both limit when jobs run, and their names share the same uniqueness rule. A Resource represents a finite pool of units that jobs consume and release. <!-- GAP: precise functional distinction between Resource and Threshold not confirmed in source; needs SME -->
-
+Both limit when jobs run, and their names share the same uniqueness rule. A Resource represents a finite pool of units that jobs consume and release.
 ## Glossary
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.

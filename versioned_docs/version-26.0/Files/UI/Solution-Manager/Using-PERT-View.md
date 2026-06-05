@@ -209,10 +209,6 @@ Right-click to display the **Selection** panel, then select the **Bulk Job Statu
 - [Accessing Job Executions History](Accessing-Job-Executions-History.md)
 - [Managing Daily Processes](Managing-Daily-Processes.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with PERT View?**
