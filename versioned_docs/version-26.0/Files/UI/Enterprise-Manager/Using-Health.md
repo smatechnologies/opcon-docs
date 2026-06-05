@@ -22,10 +22,6 @@ doc_type: procedural
 
 The **Health** link opens the **Vision Health** page in Solution Manager. For more information, refer to [Viewing Vision Health](../Solution-Manager/Viewing-Vision-Health.md) in the **Solution Manager** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Health?**

@@ -35,10 +35,6 @@ Within the tab, you will be able to:
 
  
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Tags do?**

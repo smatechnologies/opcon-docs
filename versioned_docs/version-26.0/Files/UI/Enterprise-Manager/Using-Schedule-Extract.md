@@ -37,10 +37,6 @@ To extract a schedule, complete the following steps:
 9. Select a **schedule** in the **Extracted Schedules** list to view the generated XML information
 10. Select the appropriate **schedule to extract** within the **Dependent Schedules Discovered** list
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Schedule Extract?**

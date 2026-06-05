@@ -28,10 +28,6 @@ The **Run Command** dialog provides the following fields for defining a command 
 - **Working Directory** (Optional): Defines the working directory used by the program. The maximum for this field is 255 characters
 - **Batch User** (Required): Defines the user with permissions to run the program
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Run Command do?**

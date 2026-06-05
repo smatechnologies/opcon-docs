@@ -791,10 +791,6 @@ After properly configuring the SMA Service Manager on the primary server, comple
 7. Use menu path: **Start \> Programs \> OpConxps \> Log Monitors \>Log File Name**
 8. View the SMAServMan, SAM, Critical, SMANetCom, and SMANetComTrace logs to verify that the SAM and SMANetCom connected successfully to the database
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

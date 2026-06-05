@@ -51,10 +51,6 @@ From this page, you can do any of the following:
 - [Manage Vision Remote     Instances](Managing-Vision-Remote-Instances.md)
 - [View Cards in Vision     Live](Viewing-Cards-in-Vision-Live.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Admin Mode?**

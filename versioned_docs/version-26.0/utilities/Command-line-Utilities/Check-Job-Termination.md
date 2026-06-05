@@ -53,10 +53,6 @@ The Output Directory was configured during installation. For more information, r
 |33003|Database connection information, Usercode, or Password is incorrect, or SMAODBCConfiguration.dat file is missing.|
 |33004|Unknown.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Common Tasks

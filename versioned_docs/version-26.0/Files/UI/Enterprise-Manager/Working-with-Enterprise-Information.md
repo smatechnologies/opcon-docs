@@ -26,10 +26,6 @@ Select any **Information** function item in the graphic to learn more.
 
 ![Information Topic](../../../Resources/Images/EM/EMinformationmenu.png "Information Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Enterprise Information?**

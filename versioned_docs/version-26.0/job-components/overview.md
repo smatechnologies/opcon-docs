@@ -42,10 +42,6 @@ The end-of-month frequency must be prioritized at the top. If Friday and end of 
 - [Documentation](./documentation.md)
 - [Tags](./tags.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What are job automation components?**

@@ -197,10 +197,6 @@ On the OpCon Database Server, connect to SQL Server Management Studio (as above)
 
 If replication was in use, refer to [Manual Setup for Microsoft SQL Replication](Manual-Setup-for-Microsoft-SQL-Replication.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

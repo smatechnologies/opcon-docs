@@ -19,8 +19,6 @@ doc_type: reference
 
 Reference material for OpCon events, notification configuration, reports, command-line and graphical utilities, error message codes, property expression syntax, best practices, and licensing.
 
-## Configuration Options
-
 ## When would you use this section?
 
 - You need the full list of OpCon events and their parameters

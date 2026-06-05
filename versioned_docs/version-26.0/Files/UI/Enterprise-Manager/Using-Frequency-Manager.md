@@ -46,10 +46,6 @@ Related Topics
 -   [Showing Schedule Frequencies Only](Showing-Schedule-Frequencies.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Frequency Manager?**

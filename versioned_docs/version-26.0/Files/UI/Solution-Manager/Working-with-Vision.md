@@ -131,10 +131,6 @@ To save the license file, complete the following steps:
 - [Managing Vision Actions](Managing-Vision-Actions.md)
 - [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Working with Vision procedure involve?**

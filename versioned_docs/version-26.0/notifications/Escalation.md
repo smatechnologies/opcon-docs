@@ -47,10 +47,6 @@ As a result:
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is escalation in OpCon?**

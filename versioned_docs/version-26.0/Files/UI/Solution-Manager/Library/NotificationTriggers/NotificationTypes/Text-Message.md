@@ -35,10 +35,6 @@ The **Text Message** dialog provides the following fields for defining a notific
 The SMA Notify Handler inserts a Notification ID in the format `ID=nnn` before any other message content. For more information, refer to [Looking up Notification Sources](Look-up-Notification-Sources).
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Text Message do?**

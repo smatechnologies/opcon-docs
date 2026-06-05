@@ -42,10 +42,6 @@ To change the order of the User Inputs, use the up/down arrows in the User Input
 - [Configuring Master Job User Inputs](Configuring-Master-Job-User-Inputs.md)
 - [Configuring Choice User Inputs](Configuring-Choice-User-Inputs.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does setting up user inputs configure?**

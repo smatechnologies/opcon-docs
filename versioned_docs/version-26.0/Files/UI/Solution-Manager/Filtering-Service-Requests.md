@@ -48,10 +48,6 @@ Example dataset: "toto", "atotob", "titi", "tata", "atotobtata", "atotobbtata", 
 |=*toto*|"toto", "atotob", "atotobtata", "atotobbtata", "tototiti"|
 |=*titi|"titi", "tototiti"|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Filtering Service Requests cover?**

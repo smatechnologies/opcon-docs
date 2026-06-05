@@ -37,10 +37,6 @@ To define a rule, complete the following steps:
 9. Repeat Steps 4–8 until all desired rule sequences are added
 10. Select **Save** in the **Escalation Rule Add/Edit** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining escalation rules?**

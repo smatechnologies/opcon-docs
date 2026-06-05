@@ -26,10 +26,6 @@ Select on any **Administration** function item in the graphic to learn more abou
 
 ![Scripts Topic](../../../Resources/Images/EM/EMscriptsmenu.png "Scripts Topic")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Scripts?**

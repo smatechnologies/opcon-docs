@@ -242,10 +242,6 @@ The UNIXLSAM.log file contains these errors.
 | 14014 | FTAgent<br />FTServer | During a Windows to Windows file transfer where the transfer Starts on the Destination machine, this error will occur if the user specified for the Source Machine doesn't have the required privileges on that machine. |
 | 14099 | FTAgent<br />FTServer | - View the SMAFT log on the machine where the transfer was started.<br />- In the Enterprise Manager, (in Operations - List, Matrix or PERT views) right-click on the job and select Job Information > Configuration > Job Information. |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the Origination column in file transfer error messages indicate?**

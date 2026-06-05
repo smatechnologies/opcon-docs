@@ -35,10 +35,6 @@ See also:
 - [Managing Escalation Rules](Managing-Escalation-Rules.md)
 - [Managing Escalation Groups](Managing-Escalation-Groups.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Overview do?**

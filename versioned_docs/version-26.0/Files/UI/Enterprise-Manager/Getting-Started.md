@@ -30,10 +30,6 @@ After logging into Enterprise Manager, you can customize the application using t
 -   [Receiving Installation Details](Receiving-Installation-Details.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Getting Started do?**

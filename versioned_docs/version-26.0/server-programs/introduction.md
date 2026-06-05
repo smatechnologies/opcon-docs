@@ -35,10 +35,6 @@ OpCon SAM and Supporting Services
 | SMA Start Time Calculator | A background process responsible for periodically recalculating start times for jobs in the OpCon Daily tables. |
 | Optional Components | Additional optional components installed with the SAM that may be configured at any time. |
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the SAM-SS?**

@@ -36,10 +36,6 @@ To define a property, complete the following steps:
 10. Select ![Green circle with white checkmark inside](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar to save the property definitions
 11. Select **Close ☒** to close the **Schedule Master** screen
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining properties for multi-instance schedules?**

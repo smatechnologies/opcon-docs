@@ -310,10 +310,6 @@ A "Flag Job As Late to Start" value causes ENS to send a notification if the fil
 5. Set up a notification event on the job for the Late to Start status trigger, or configure an ENS group to send notifications for the Late to Start status. Refer to [Job Automation Components](../job-components/events.md) or [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md)
 6. Configure a threshold update to reset the threshold to zero (0) when the job finishes. Refer to [Adding Threshold/Resource Updates](../Files/UI/Enterprise-Manager/Adding-Threshold-and-Resource-Updates.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How should you handle jobs that need to avoid being affected by path changes?**

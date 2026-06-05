@@ -49,10 +49,6 @@ To change the case of a machine name:
 11. Select **Close ☒** (to the right of the **Machines** tab) to close
     the **Machines** screen.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Changing Case of Machine Names procedure involve?**

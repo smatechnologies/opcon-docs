@@ -30,10 +30,6 @@ For detailed information and procedures on using the Enterprise Manager applicat
 - [Working with Enterprise Information](Working-with-Enterprise-Information.md)
 - [Working with Enterprise Support](Working-with-Enterprise-Support.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with the Application?**

@@ -58,10 +58,6 @@ Before configuring mirroring in [Setup for Automatic Microsoft SQL Mirroring](Se
 |SQLScriptOutputDirectory||
 |DBMirroringMonitorUpdatePeriod||
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Database Mirroring Checklist cover?**

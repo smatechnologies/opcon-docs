@@ -34,10 +34,6 @@ In the History Management screen, type **\*Build** to find the SMA_SKD_BUILD job
 - [Exporting History Records](Viewing-and-Exporting-History-Records.md#Exportin)
 - [Resetting the View](Viewing-and-Exporting-History-Records.md#Resettin)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with History Management?**

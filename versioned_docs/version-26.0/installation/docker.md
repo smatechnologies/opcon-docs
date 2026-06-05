@@ -51,10 +51,6 @@ The following Global Properties must be set for the schedule to run:
 - SQLMaintUser
 - SQLMaintPassword
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

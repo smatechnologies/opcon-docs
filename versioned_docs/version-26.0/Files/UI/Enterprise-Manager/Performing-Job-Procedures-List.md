@@ -357,10 +357,6 @@ This action marks the selected job as Fixed.
 9. *(Optional)* Select **Copy To Clipboard** or **Open external editor** to open in an external editor (e.g., Notepad)
 10. Select **Close** to close the **SAP Spool Details** dialog, then **Close** again to close the **View SAP Job's Spools** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Performing Job Procedures when Working in List View procedure involve?**

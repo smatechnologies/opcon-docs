@@ -174,10 +174,6 @@ The General table contains basic information for SMA Resource Monitor processing
 | MaximumLogFileSize | 15000 | Defines the maximum size in bytes for each log file. Determines when the current log file is closed and a new file is started. When the file reaches this maximum size, it is "rolled over". This setting creates small manageable log files. SMAResourceMonitor.log resides in the ```<Output Directory\>\SMAResourceMonitor\Log``` directory.  Once per day the SMA Resource Monitor deletes old archive folders. | Y | N | 
 | TraceLevel | 0 | Determines the detail of debug trace logs. Valid Values:<ul><li>0 = None</li><li>1 = Basic (non-detailed trace)</li><li>2 = Detailed</li><li>3 = Very Detailed (Traces all the possible debug information in the application.)</li></ul> | Y | N | 
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

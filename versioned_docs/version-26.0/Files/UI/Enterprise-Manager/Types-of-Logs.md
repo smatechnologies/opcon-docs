@@ -69,10 +69,6 @@ To open an external file, complete the following steps:
 
 6. Select the **Open** button to open the file, or **Cancel** to cancel
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Types of Logs procedure involve?**

@@ -42,10 +42,6 @@ For conceptual help, see:
 
 - [Users](../../../../../../../administration/user-accounts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does User General do?**

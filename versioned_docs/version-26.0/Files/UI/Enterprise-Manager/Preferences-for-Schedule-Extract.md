@@ -35,10 +35,6 @@ To set the preferences, complete the following steps:
    - **Argument Delimiter in -F File** – delimiter separating extract arguments in a schedule input file (default: **;**)
 6. Select **Apply**, then **OK**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Schedule Extract procedure involve?**

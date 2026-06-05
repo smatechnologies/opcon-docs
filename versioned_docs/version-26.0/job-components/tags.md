@@ -31,10 +31,6 @@ doc_type: conceptual
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the difference between a tag and a department?**

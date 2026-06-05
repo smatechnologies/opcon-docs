@@ -77,10 +77,6 @@ A configurable security message can be displayed to users after login. Users mus
 
 After successful database authentication, OpCon Role privileges are checked to determine which functions the user can access. Users with no role assigned cannot log in.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Logging In/Out procedure involve?**

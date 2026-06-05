@@ -19,8 +19,6 @@ doc_type: conceptual
 
 The Library in Solution Manager provides the tools for designing and building OpCon automation — schedules, jobs, scripts, frequencies, global properties, and supporting objects. Use these tools when creating new automation workflows or updating existing master definitions.
 
-## Configuration Options
-
 ## When would you use this section?
 
 - Building a new automated workflow from scratch

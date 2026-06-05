@@ -123,10 +123,6 @@ schedule was not set up to run on each machine, the administrator would
 have had to manually create a copy of the schedule for each desired
 machine.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What are the main uses for Machine Groups in OpCon?**

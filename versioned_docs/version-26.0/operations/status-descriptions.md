@@ -83,10 +83,6 @@ Remember that even though Kill is listed for all Running statuses, Kill is only 
 |Under Review|Under Review|A user placed the job in an Under Review status to indicate that the job is being reviewed.|Mark Failed, Failed, Initialization Error|
 |Fixed|Fixed|A user placed the job in a Fixed state to indicate that the job is considered fixed.|Mark Failed, Failed, Initialization Error, Under Review|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the On Hold schedule status mean?**

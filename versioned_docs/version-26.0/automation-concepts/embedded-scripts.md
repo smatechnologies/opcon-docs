@@ -48,10 +48,6 @@ Embedded Scripts reduces administration and increases security in the automation
   - Assigning a specific version ensures the job always uses that approved version
   - Selecting LATEST ties the job to the highest script version, useful for test jobs to verify new versions before assigning them to production
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the main benefit of using Embedded Scripts instead of storing scripts on agent machines?**

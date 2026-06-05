@@ -107,10 +107,6 @@ Related Topics
 - [Using Schedule Build](Managing-Schedules.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Working with Operations cover?**

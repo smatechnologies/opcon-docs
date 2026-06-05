@@ -44,10 +44,6 @@ To create and Saving Custom Diagrams, complete the following steps:
 8.  Select **Take Screenshot**. The **Image Preview** dialog displays
 9.  Select **Save** to save the image, or **OK** to close the dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Workload Chart View?**

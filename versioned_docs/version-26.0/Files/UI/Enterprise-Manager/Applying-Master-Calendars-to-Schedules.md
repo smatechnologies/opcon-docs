@@ -32,10 +32,6 @@ To apply a master calendar to a schedule, complete the following steps:
 4.  Select ![Save icon](../../../Resources/Images/EM/EMsave.png "Save icon") **Save** on the **Schedule Master** toolbar
 5.  Select the **x** to the right of the **Schedule Master** tab to close
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Applying Master Calendars to Schedules procedure involve?**

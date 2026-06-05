@@ -27,10 +27,6 @@ The SMA Resource Monitor for Windows monitors files and Windows counters. When t
 
 Both the GUI and the Service use the INI file for configuration. The GUI reads and updates the Rules and Action files. The Service uses those files to monitor entities and send OpCon events through an MSGIN directory.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the SMA Resource Monitor for Windows monitor?**

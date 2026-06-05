@@ -69,10 +69,6 @@ For server configuration, refer to [OpCon Server Configuration](./configuration.
 Solution Manager automatically detects the OpCon API server hostname when setting up the MFT webhook registration. This hostname is determined by checking the `CertificateHostName` setting in the OpCon API appsettings configuration, the certificate subject name (on Windows), or the system hostname. If the auto-detected hostname is incorrect, you can override it by setting `CertificateHostName` in the OpCon API appsettings.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What should be completed before beginning a new OpCon server installation?**

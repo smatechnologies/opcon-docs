@@ -115,10 +115,6 @@ Because "Backup" was selected in the Notification Manager Group, if any Daily jo
 |Job Under Review|A job was placed in an Under Review status by an OpCon event or a user.|
 |Job Fixed|A job was placed in a Fixed status by an OpCon event or a user.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

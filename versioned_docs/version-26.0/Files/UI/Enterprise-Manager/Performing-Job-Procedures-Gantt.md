@@ -296,10 +296,6 @@ Marks the selected job as Fixed.
 8. *(Optional)* Select **Copy To Clipboard** or **Open external editor**
 9. Select **Close** to close the **SAP Spool Details** dialog, then **Close** again to close the **View SAP Job's Spools** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Performing Job Procedures when Working in Gantt View procedure involve?**

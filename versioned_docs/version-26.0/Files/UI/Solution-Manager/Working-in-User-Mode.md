@@ -32,10 +32,6 @@ Users not in the «ocadm» role or a role with the «Maintain Service Request» 
 - [Filter Service Requests](Filtering-Service-Requests.md)
 - [View Service Request Processes](Viewing-Service-Request-Process-Indicators.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in User Mode?**

@@ -31,10 +31,6 @@ The Enterprise Manager screen layout includes:
 - [Information Bar](Information-Bar.md)
 - [Keyboard Shortcuts](Keyboard-Shortcuts.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Understanding the User Interface Layout do?**

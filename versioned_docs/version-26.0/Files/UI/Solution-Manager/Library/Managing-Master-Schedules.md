@@ -30,10 +30,6 @@ See-https://help.smatechnologies.com/opcon/core/v22.10/Files/UI/Solution-Manager
 
 Please check back for more content.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Overview do?**

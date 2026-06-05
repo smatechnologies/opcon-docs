@@ -56,10 +56,6 @@ h. Select the **Message** tab and enter the problem description.
 i. *(Optional)* Select the **Attachments** tab. Log files are already attached. Select **Attach File** to add more, locate the file, and select **Open**.
 j. Select **Next** to send the email, then select **Finish** to close the dialog.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: Where is Reporting Problems located in the Enterprise Manager?**

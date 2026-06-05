@@ -55,10 +55,6 @@ Related Topics
 - [Viewing Additional Schedule     Information](Viewing-Additional-Schedule-Info.md)
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Schedule Master?**

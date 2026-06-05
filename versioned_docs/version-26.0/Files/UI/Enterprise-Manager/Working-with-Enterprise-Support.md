@@ -26,10 +26,6 @@ Select any **Support** function item in the graphic to learn more.
 
 ![Support Topic ](../../../Resources/Images/EM/EMsupportmenu.png "Support Topic ")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do in Enterprise Support?**

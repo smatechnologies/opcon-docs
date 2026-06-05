@@ -30,8 +30,6 @@ This topic contains instructions for installing the Enterprise Manager and Optio
 - [SMA Resource Monitor](#SMA10)
 - [Silent Mode](#Silent)
 
-## Configuration Options
-
 ## Enterprise Manager
 
 The Enterprise Manager (EM) is a rich client application for OpCon. To install the Enterprise Manager, use the following procedures:

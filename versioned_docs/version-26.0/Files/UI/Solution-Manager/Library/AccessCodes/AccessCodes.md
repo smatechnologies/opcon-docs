@@ -46,10 +46,6 @@ Select the **Cross References** button to view master and daily jobs that use a 
 
 ![Access Code Daily Job Cross References](../../../../../Resources/Images/SM/Library/AccessCodes/AccessCode_SecureDailyJobs.png "Access Codes Daily Job Cross References Dialog")
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Access Codes do?**

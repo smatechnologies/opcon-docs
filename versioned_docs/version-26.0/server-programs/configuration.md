@@ -65,10 +65,6 @@ The following process flows indicate SMAServMan's expected behavior.
 |4|StandAlone SMAServMan runs the TerminationScript. In this example, the script writes an event to the Windows Event Log notifying the administrator that the SAM-SS is shutting down.|
 |5|StandAlone SMAServMan shuts itself down.|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

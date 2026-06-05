@@ -37,10 +37,6 @@ To define a property, complete the following steps:
 9.  Select **Close ☒** to close the **Schedule Master** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What is the purpose of defining properties for single instance schedules?**

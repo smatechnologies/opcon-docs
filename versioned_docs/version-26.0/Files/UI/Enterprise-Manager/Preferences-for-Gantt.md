@@ -42,10 +42,6 @@ To set the preferences, complete the following steps:
 12. Select **Apply** to save the changes
 13. Select **OK** to save and close the **Preferences** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Setting Preferences for Gantt procedure involve?**

@@ -36,10 +36,6 @@ To apply a rule to a trigger, complete the following steps:
 10. *(Optional)* Select the **Attachments** tab and add *attachments*
 11. Select **Save**
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Applying Escalation Rules to Triggers procedure involve?**

@@ -70,10 +70,6 @@ If the SMAStartTimeCalculator takes longer than the refresh interval to process 
 |MaximumLogFileSize|150000 (bytes)|Y|The maximum size in bytes for each log file. When the file reaches this size, it is rolled over and archived. SMAStartTimeCalculator.log resides in the *Output Directory*\SAM\Log directory. The SAM maintains the archive folders. Minimum: 4096 bytes, Maximum: 65536 bytes|
 |TraceLevel|0|Y|The level of logging detail. Valid values: 0 = Standard logging, 1 = Basic trace, 2 = Detailed trace, 3 = Very detailed trace|
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does the SMA Start Time Calculator do?**

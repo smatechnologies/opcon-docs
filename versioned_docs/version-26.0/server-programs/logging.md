@@ -195,10 +195,6 @@ The SMAStartTime Calculator writes all job start time calculation processing inf
 
 The SMARequestRouter writes all request routing processing information to SMARequestRouter.log.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

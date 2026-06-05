@@ -105,7 +105,6 @@ OpCon concatenates the Start Image and Parameters and inserts a space between th
 Remove parsing criteria by selecting the **Delete** button at the end of the row.
 :::
 
-
 5. Enter the **Custom Application Log Path**. Wildcard characters are supported for specifying multiple logs
 
 **In the Failure Criteria frame:**
@@ -223,10 +222,6 @@ Select the **Undo** button to discard your changes.
 
 For conceptual information, refer to [Unix Jobs](../../../../../../../job-types/unix.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Viewing, Adding, and Editing Unix Job Details procedure involve?**

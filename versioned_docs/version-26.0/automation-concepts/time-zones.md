@@ -30,10 +30,6 @@ OpCon supports cross-time-zone communication through the following:
 - The SAM maintains its Time Zone Name and Offset from UTC, displayed with the Last SAM Pulse in Operations Views
 - If machine definitions include time zone information, it combines with the SAM's time zone data to show an agent's time offset from the SAM
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What time reference does OpCon use for all scheduling?**

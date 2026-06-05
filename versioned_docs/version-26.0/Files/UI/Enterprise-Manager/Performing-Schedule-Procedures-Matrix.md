@@ -176,10 +176,6 @@ If no properties are defined for the schedule, OpCon will still submit the build
 13. Select the **x** to the right of the **Matrix** tab to close the **Matrix** screen
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Performing Schedule Procedures when Working in Matrix View procedure involve?**

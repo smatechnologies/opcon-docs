@@ -198,10 +198,6 @@ SMALDAPMon.exe --credentials --user=admin --password=adminpassword --defaultpass
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

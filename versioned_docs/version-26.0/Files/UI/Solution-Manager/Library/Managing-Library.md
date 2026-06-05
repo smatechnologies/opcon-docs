@@ -32,10 +32,6 @@ Use the bar on the left side of the screen
 
 Please check back for more content.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Overview do?**

@@ -43,10 +43,6 @@ Use Preferences to customize the Enterprise Manager's look and feel. The EM save
 - [Setting Preferences for Workflow Designer and PERT](Preferences-for-Workflow-Designer.md)
 - [Setting Preferences for Schedule Extract](Preferences-for-Schedule-Extract.md)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does setting preferences configure?**

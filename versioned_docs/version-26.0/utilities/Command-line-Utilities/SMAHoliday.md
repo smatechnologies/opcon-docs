@@ -30,8 +30,6 @@ to the <Target Directory\>\\OpConxps\\ MSLSAM\\ directory with the
 Microsoft agent package. The SMAHoliday utility can be run as a job if
 desired.
 
-## Configuration Options
-
 ## Backwards Compatibility
 
 This utility is compatible with Holiday.exe. Customers who wish to

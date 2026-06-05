@@ -33,10 +33,6 @@ Proceed based on one of two prompts:
 - If a confirmation message was configured with no user inputs, the Service Request stops and prompts you to select **Submit** to continue or **Cancel** to discard the run request
 - If user inputs were configured, the Service Request stops so that you can configure the User Input field(s)
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does running service requests do?**

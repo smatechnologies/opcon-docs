@@ -386,10 +386,6 @@ To perform this procedure, complete the following steps:
 12. Select **Close** to close the **SAP Spool Details** dialog
 13. Select **Close** to close the **View SAP Job's Spools** dialog
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: How many steps does the Performing Job Procedures when Working in Matrix View procedure involve?**

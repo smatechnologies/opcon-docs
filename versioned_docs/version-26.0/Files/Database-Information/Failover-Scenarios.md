@@ -453,10 +453,6 @@ After remedying the problem that caused the failover, complete the following pro
 
 After remedying the problem that caused the failover, complete the procedures in the Failover and Recovery with Replication chapters. Refer to [Failover and Recovery with Replication](Failover-and-Recovery-with-Replication.md).
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## Operations
 
 ### Monitoring

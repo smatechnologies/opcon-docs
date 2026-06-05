@@ -32,10 +32,6 @@ Search for text using the browser's Find feature. Press `Ctrl+F`, enter the sear
 
 Select the download ![Download button](../../../../../Resources/Images/SM/Library/Logs/Download-Button.png "Download") button to download a copy of the log file.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Log File Details do?**

@@ -28,10 +28,6 @@ Web-based help is available directly within the application, covering the entire
 You may need to disable your browser pop-up blocker to open help in the browser window.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Application Help do?**

@@ -29,10 +29,6 @@ The **Events** tab in the [**Job Master**](Using-Job-Master.md) editor allows yo
 
 For conceptual information, refer to [Events](../../../job-components/events.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Job Events do?**

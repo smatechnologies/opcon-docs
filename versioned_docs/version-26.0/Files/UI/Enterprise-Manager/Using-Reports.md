@@ -56,10 +56,6 @@ right-clicking on a generated report provides the following menu options:
 
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What can you do with Reports?**

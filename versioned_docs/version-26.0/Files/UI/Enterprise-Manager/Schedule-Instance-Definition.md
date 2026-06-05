@@ -36,10 +36,6 @@ The **Instance Definition** tab in the [**Schedule Master**](Using-Schedule-Mast
 
 For conceptual information, refer to [Instance Definition](../../../job-components/instances.md) in the **Concepts** online help.
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does Schedule Instance Definition do?**

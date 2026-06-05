@@ -35,10 +35,6 @@ Select **Save** to save the changes to the database and return to the main Self 
 For more on roles and granting roles privileges, refer to [Roles](../../../administration/roles.md) in the **Concepts** online help.
 :::
 
-## Configuration Options
-
-| Setting | What It Does | Default | Notes |
-|---|---|---|---|
 ## FAQs
 
 **Q: What does setting up privileges configure?**
