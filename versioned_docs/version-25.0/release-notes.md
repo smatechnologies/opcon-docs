@@ -8,6 +8,116 @@ sidebar_label: "Release Notes"
 
 Release 25 focused heavily on **stability, scheduling reliability, API improvements, and deployment enhancements**. These updates improve day-to-day operations, reduce troubleshooting time, and strengthen integration reliability across OpCon environments.
 
+## OpCon 25.0.7
+
+> **NOTE:** Verify/Upgrade these components if applicable:
+> - Enterprise Manager - 25.0
+> - ServiceNow Connector - 21.4 or higher
+> - WebServices Connector - 21.2 or higher
+> - Deploy - 25.2.0 or higher
+
+**2026 June**
+
+## Platform Reliability & Security (Server)
+
+### What's New
+
+✅ **OC-47: Cloud Events API Error Handling Corrected** Resolved an issue where posting to the Cloud Events API with an unprocessable entity incorrectly returned a 500 Internal Server Error instead of a 422.
+
+✅ **OC-2606: ServiceNow Connector Internal Server Error Resolved** Fixed an issue where the ServiceNow Connector POST to `443/api/jobinstanceactions` was returning a 500 Internal Server Error.
+
+✅ **OC-6266: Deprecated SQL Stored Procedure Replaced** Resolved an issue where `SMA_REMAPSQLUSERSTOLOGINS.sql` used a deprecated stored procedure, causing errors during execution.
+
+✅ **OC-6788: SAP DataReader Handling Corrected** Fixed an issue in the SAP `SAPQueryProcessor` where an open DataReader was not closed before a subsequent operation, causing failures.
+
+✅ **OC-6854: AutoMapper Security Vulnerability Addressed** Updated AutoMapper to resolve a known security vulnerability.
+
+✅ **OC-7125: ag-grid CVE-2024-38996 Remediated** Resolved CVE-2024-38996 in `ag-grid-community@24.1.0`.
+
+✅ **OC-7127: ag-grid CVE-2024-39001 Remediated** Resolved CVE-2024-39001 in `ag-grid-community@24.1.0`.
+
+✅ **OC-7171: OpCon API Memory Leak Resolved** Fixed a memory leak in the OpCon API that continued to occur in 25.0.5.
+
+✅ **OC-7249: ACS JSON Escape Sequence Error Fixed** Resolved an issue where SAM inserted path information into JSON when resolving ACS properties, producing an invalid JSON escape sequence.
+
+### Why This Matters
+These updates harden the platform against known security vulnerabilities, improve API error accuracy, and resolve backend failures affecting SAP, ServiceNow, and ACS integrations.
+
+---
+
+## Solution Manager Improvements
+
+### What's New
+
+✅ **OC-7: Named Instance Stability Improved** Fixed an issue in Schedule Build where deleting an additional property of a named instance incorrectly removed the entire instance.
+
+✅ **OC-2787: SAP Daily Job Request Details Corrected** Resolved an issue where modifying a daily SAP job caused `skdname` and `jobname` to be missing from the request details.
+
+✅ **OC-4677: ACS Job Editing Streamlined** Fixed an issue where users were unable to save edits to ACS jobs, which required unnecessary extra steps to complete.
+
+✅ **OC-5424: Self Service REGEX Validation Fixed** Resolved an issue preventing users from saving a Self Service button when the user input field contained a valid REGEX statement.
+
+✅ **OC-5760: Schedule Instance Property Resolution Corrected** Fixed an issue where two schedules sharing the same name on the same date caused SI properties to resolve from the first schedule instead of the correct one.
+
+✅ **OC-5864: MFT Authentication Failure Resolved** Fixed an issue where MFT was unable to authenticate, preventing job processing.
+
+✅ **OC-5913: Notification Group Autocomplete Restored** Resolved an issue where Notification Groups in Notification Triggers did not autocomplete.
+
+✅ **OC-6037: ACS Batch User Password Update Fixed** Resolved an issue preventing users from updating an ACS Batch User password.
+
+✅ **OC-6050: ImpEx Schedule Export Restored** Fixed an issue where ImpEx was unable to export a schedule in 26.0.1.
+
+✅ **OC-6067: ACS SDK Duplicate Batch User Names Supported** Resolved an issue in the ACS SDK where it was impossible to add two batch users with the same name for two different integrations.
+
+✅ **OC-6096: Master Jobs Refactored** Refactored master jobs to improve performance and long-term maintainability.
+
+✅ **OC-6103: Vision Remote Instance Connection Restored** Fixed an issue where Vision failed to establish a Remote Instance Connection.
+
+✅ **OC-6113: Studio Auto-Positioning Stability Improved** Resolved an issue in Studio where auto-positioning became chaotic when multiple dependency types were present on the canvas.
+
+✅ **OC-6119: Job Details Load Performance Improved** Resolved a performance issue causing slowness when loading Job Details.
+
+✅ **OC-6124: Studio Threshold/Resource Update Cancellation Fixed** Fixed an issue where users were unable to cancel a Threshold/Resource Update when triggered from the Job Details sidebar in Studio.
+
+✅ **OC-6125: Operations View Column Layout Persistence Restored** Fixed an issue where column layout changes in the Operations view were lost when navigating away.
+
+✅ **OC-6283: SNMP Trap Notification Testing Restored** Resolved an issue preventing users from testing SNMP Trap notifications.
+
+✅ **OC-6727: Audit History Timestamp Accuracy Corrected** Fixed an issue where Audit History displayed incorrect timestamps for OpCon Cloud clients.
+
+✅ **OC-6795: Daily Job Editing with Certain Batch Users Restored** Resolved an issue in OpCon 26 where daily jobs built with certain batch users could not be edited.
+
+✅ **OC-6845: Machine Group Deletion from Schedule Fixed** Fixed an issue where deleting a machine group from a schedule did not complete correctly.
+
+✅ **OC-6911: Instance Name Deletion from Master Schedule Fixed** Resolved an issue where deleting an instance name from a master schedule did not complete correctly.
+
+✅ **OC-6916: Job Output Parsing Formatting Preserved** Fixed an issue where adding additional lines to Job Output Parsing in OpCon 25 broke the formatting.
+
+✅ **OC-6986: Audit History Date & Time Filter Fixed** Resolved a filtering issue on the Date & Time column in the Audit History Report.
+
+✅ **OC-7172: Job History Locale Date Format Corrected** Fixed an issue where Job History date pickers ignored the French locale, displaying MM/DD/YYYY instead of DD/MM/YYYY.
+
+✅ **OC-7188: Script Editor Tab Key Behavior Fixed** Resolved an issue in the Script Editor where pressing the Tab key removed focus from the editor.
+
+✅ **OC-7211: SQL Job 500 Error in Operations Resolved** Fixed an issue where SQL-type jobs threw a 500 error in Operations after passing the Started status.
+
+✅ **OC-7227: Profile Filter Character Limit Issue Fixed** Resolved an issue where creating a new filter on a profile failed due to the 255-character limit being exceeded.
+
+✅ **OC-7273: Self Service Date Variable Format Display Fixed** Fixed an issue where the Date variable in Self Service did not display in the user-selected format.
+
+✅ **OC-7275: Self Service Display Issue Resolved** Fixed a Self Service display issue caused by missing HTML in the rendered output.
+
+✅ **OC-7280: Job History Notes Date Format Corrected** Resolved an issue where job history notes displayed dates in an incorrect format.
+
+✅ **OC-7304: Schedule Build Queue Error After Rename Fixed** Fixed an issue where renaming a schedule caused a schedule build queue error.
+
+✅ **OC-7326: Schedule and Job History Duration in Seconds Restored** Resolved an issue where the Schedule and Job History report did not display duration in seconds.
+
+✅ **OC-7331: PERT View on Multi-Level Schedules Restored** Fixed an issue in OpCon 26.0.4 where users were unable to use the PERT view on multi-level schedules.
+
+### Why This Matters
+These updates improve day-to-day operational stability across scheduling, job configuration, reporting, and the Studio canvas — reducing friction for operators and administrators while resolving a broad set of edge cases surfaced by customers.
+
 ## OpCon 25.0.6
 
 **NOTE**: Verify/Upgrade these components if applicable:
