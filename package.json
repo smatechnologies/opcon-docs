@@ -11,7 +11,9 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "lint:docs": "node scripts/lint-docs.js",
+    "lint:docs:all": "node scripts/lint-docs.js --all"
   },
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^1.2.0",
@@ -26,6 +28,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
   },
   "browserslist": {
     "production": [
