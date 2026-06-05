@@ -39,7 +39,7 @@ packaged with to keep the software up to date.
 
 The applications **Chronoman** and **SMAHoliday** are now included in
 the SAM folder. Moving forward these applications should be run from the
-SAM folder instead of from an installed Windows LSAM. The applications
+SAM folder instead of from an installed Windows Agent. The applications
 are distributed with both installers.
 
 ### SMA OpCon ImpEx2 - New Installer
@@ -91,13 +91,13 @@ No. Beginning with the current release, SAM, the REST API, and supporting applic
 
 **Q: Where should Chronoman and SMAHoliday be run from?**
 
-Beginning with the current release, Chronoman and SMAHoliday are included in the SAM folder. They should now be run from the SAM folder rather than from an installed Windows LSAM.
+Beginning with the current release, Chronoman and SMAHoliday are included in the SAM folder. They should now be run from the SAM folder rather than from an installed Windows Agent.
 
 ## Glossary
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Solution Manager**: OpCon's browser-based graphical user interface for managing automation data, performing operational actions, and administering the system.
 

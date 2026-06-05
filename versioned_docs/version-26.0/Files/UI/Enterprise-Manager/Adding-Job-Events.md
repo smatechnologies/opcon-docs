@@ -33,10 +33,10 @@ To add a new job event:
 5. Select the **Job Related** radio button
 
 6. Select the **Add** button. The **Event Definition Wizard** displays
-7. On the **Event Trigger** screen, select one of the following radio buttons: **Job Status**, **LSAM Feedback**, **Exit Description**, or **Job Completion Complex Expression**
+7. On the **Event Trigger** screen, select one of the following radio buttons: **Job Status**, **Agent Feedback**, **Exit Description**, or **Job Completion Complex Expression**
 8. Select **Next** to proceed to the **Trigger Details** screen. Complete the fields based on your selection in step 7:
    - **Job Status**: Select the **job status** in the **Job Status** list
-   - **LSAM Feedback**: Select the **Feedback name**, then enter a *string to match* in the **String to match** field
+   - **Agent Feedback**: Select the **Feedback name**, then enter a *string to match* in the **String to match** field
    - **Exit Description**: Select the **Operator** in the **Comparison Operator** list, enter a value in the **Value** field, and enter the range end in the **End Value** field
    - **Job Completion Complex Expression**: Enter the *expression* in the **Expression** text box. For more information, refer to [Property Expressions API Syntax](../../../reference/property-expressions-syntax.md)
 9. Select **Next** to advance to the **Event Definition** screen
@@ -120,7 +120,7 @@ Yes. This page covers job events for multiple platforms or contexts: Setting Job
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An application installed on a target platform that runs jobs in the native language of that platform and reports results back to OpCon. Agents are defined as machines in OpCon.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

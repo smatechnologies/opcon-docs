@@ -218,7 +218,7 @@ There are no spaces after the variables for impex.exe.
     - Any number of schedules may be specified, each separated by a comma
     - When no schedule is specified all schedules are exported
     - If the database has a binary sort order, schedule names are case-sensitive
-- **-e**: The full file path (including drive letter) and filename where the Exit Code Override File (E.C.O.F.) is written. If not specified, a file called ImpEx.dat will be placed in the same directory as the ImpEx.exe file. The Exit Code Override File is used by the Microsoft LSAM to determine the success or failure of the job. The Microsoft LSAM will compare the failure criteria to the E.C.O.F. file instead of the standard exit condition of the job. For *Schedule Import Export exit codes*, refer to the [Exit Codes](#Exit) table. When the job is defined in the Enterprise Manager, make sure to specify the E.C.O.F. path and file name as specified by -e parameter, or the job will always be considered a success
+- **-e**: The full file path (including drive letter) and filename where the Exit Code Override File (E.C.O.F.) is written. If not specified, a file called ImpEx.dat will be placed in the same directory as the ImpEx.exe file. The Exit Code Override File is used by the Microsoft Agent to determine the success or failure of the job. The Microsoft Agent will compare the failure criteria to the E.C.O.F. file instead of the standard exit condition of the job. For *Schedule Import Export exit codes*, refer to the [Exit Codes](#Exit) table. When the job is defined in the Enterprise Manager, make sure to specify the E.C.O.F. path and file name as specified by -e parameter, or the job will always be considered a success
 - **-f**: (Optional) The full file path (including drive letter) and filename containing a list of schedules for the program to extract
     - In the file, separate schedule names with commas or carriage returns
     - If you use the -f option, it will override any schedules you have specified in the Schedule Name(s) parameter
@@ -414,7 +414,7 @@ The ImpEx.exe program writes exit codes (refer to next table) to the E.C.O.F. if
 ### Alerts and Log Files
 - The command-line interface writes a log file named `ImpEx_<date-time stamp>.log` to the ImpEx.exe directory unless a path is provided with the `-l` parameter; the log contains details for both OpCon and SAP data transfers.
 - When processing SAP R/3 and CRM jobs interactively, a separate `ImpEx_SAP.log` is written; this file is overwritten on each import.
-- Use the `-e` parameter to specify an Exit Code Override File (E.C.O.F.) path; without it, the job is always treated as a success by the Microsoft LSAM regardless of actual outcome.
+- Use the `-e` parameter to specify an Exit Code Override File (E.C.O.F.) path; without it, the job is always treated as a success by the Microsoft Agent regardless of actual outcome.
 - Exit code `37002` (database connectivity problem) and `37003` (invalid parameters, locked/disabled account, or mapping errors) require resolution before retrying.
 
 ## Exception Handling
@@ -449,7 +449,7 @@ The utility requires appropriate ODBC drivers for the SQL database (not provided
 
 **DSN (Data Source Name)**: An ODBC connection identifier that stores database connection parameters. OpCon utilities use system DSNs to connect to the OpCon SQL Server database.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

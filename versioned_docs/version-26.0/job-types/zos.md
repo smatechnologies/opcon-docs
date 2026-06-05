@@ -21,7 +21,7 @@ doc_type: procedural
 
 The information in this section applies to defining the z/OS Job Type
 information. Refer to [Customization Process](https://help.smatechnologies.com/opcon/agents/zos/latest/Files/Agents/zOS/Customization-Process.md)
- in the **z/OS LSAM** online help for special features to enhance
+ in the **z/OS Agent** online help for special features to enhance
 the automation capabilities of OpCon on this
 platform.
 
@@ -183,7 +183,7 @@ information applies to defining the Command Control.
 The *REXX Control Fields* are required when *REXX Event (Dynamic)* is
 defined for the Event Type. REXX procedures require no JCL and can be
 use for a variety of automation interfaces. The REXX Event functions
-much like a Console Command. The z/OS LSAM dynamically allocates a print
+much like a Console Command. The z/OS Agent dynamically allocates a print
 file, and runs the program from the designated DD. The following
 information applies to defining REXX Control:
 
@@ -362,7 +362,7 @@ The following information applies to defining Step Control:
     - Message **$S=jobstep\[.procstep\]** will set the job's
             restart step to *jobstep\[.procstep*\].
   - Refer to [Using the XPSCOMM Interface         Routine](https://help.smatechnologies.com/opcon/agents/zos/latest/Files/Agents/zOS/Advanced-Features.md#Using)
-         in the **z/OS LSAM** online help for information on
+         in the **z/OS Agent** online help for information on
         defining entries to the Event Table.
 
   - Starting with OpCon 5.1, the agent Feedback codes can also be
@@ -411,7 +411,7 @@ The following information applies to defining Step Control:
 
 ## z/OS Pre-run Definitions
 
-The z/OS LSAM (z/OS) allows for five different types of Pre-runs to be processed: File Resource, Message Trigger, Job/Task
+The z/OS Agent (z/OS) allows for five different types of Pre-runs to be processed: File Resource, Message Trigger, Job/Task
 Resource, Tape Devices, and REXX Procedure.
 
 ### File Resource
@@ -519,7 +519,7 @@ value to scan for in the remainder of the message text.
         must be separated from the fixed text by a space to avoid
         ambiguity.
 
-    - In z/OS LSAM releases before 20.01.00, a space is always
+    - In z/OS Agent releases before 20.01.00, a space is always
             required between the fixed key and the opening bracket or
             hyphen.
 - **Generations**: Defines the number of messages matching the key
@@ -652,7 +652,7 @@ to be used in this run.
     characters.
 - Each override (@) or symbolic (&) definition is separated by two
     backslashes (\\\\).
-- When the z/OS LSAM encounters an "&name="     symbolic, it scans each JCL statement for an operand match
+- When the z/OS Agent encounters an "&name="     symbolic, it scans each JCL statement for an operand match
 - Only operands are changed by an "&" symbolic override. To qualify
     for replacement, an operand must be preceded by a comma or a blank
     and include an "=" sign (e.g., all instances of UNIT=xxxxx is
@@ -805,7 +805,7 @@ could respond to an "After" dependency.
 
 ### Tracking Externally Submitted Batch Job Events in OpCon
 
-Within the z/OS LSAM, it is possible to trap and track events submitted outside of OpCon. There are
+Within the z/OS Agent, it is possible to trap and track events submitted outside of OpCon. There are
 three possible approaches to Non-Schedule Event Tracking.
 
 1. Define a single job name "mask" that is always trapped by the z/OS
@@ -1072,12 +1072,12 @@ passive monitored event:
 5. Creating Job: Any
 6. Created on SysID: ANY
 7. Type: As Scheduled only When the associated job is ready to START
-    (all other SAM dependencies are met), the z/OS LSAM adds the DSN
+    (all other SAM dependencies are met), the z/OS Agent adds the DSN
     trigger criteria to the internal DSN Trigger Table on all agents in
     the SYSPLEX.
 8. SAM sets the job to "Waiting Start Time -- DSN(s) Not Available"
     on the SAM schedule.
-9. At a user-defined interval, SAM checks the z/OS LSAM for any trigger
+9. At a user-defined interval, SAM checks the z/OS Agent for any trigger
     hits on the pre-run DSN(s). If none is found, the "Waiting Start
     Time" message persists. For information on this Prerun setting,
     refer to [Time Settings](../administration/server-options.md#time-settings).
@@ -1471,7 +1471,7 @@ symbolic substitutions are defined in the Batch Control Section of the
 Job Master Detail display. Each override or symbolic definition must be
 separated by two backslashes (\\\\).
 
-When the z/OS LSAM encounters an "&name=" symbolic it scans each JCL
+When the z/OS Agent encounters an "&name=" symbolic it scans each JCL
 for an operand match. For instance, changing a Generation Data Group
 (GDG) reference from the last DSN created, to its predecessor. If the
 EXEC statement has a "GDG=(-0)" operand, a "&GDG=(-1)" symbolic
@@ -1487,7 +1487,7 @@ the Enterprise Manager:
 1. //STEP1 EXEC LIB=SYS1.OKLIB**,PARM=**(NO),MBR=TEMPNAME
 2. //MYDD DD DSN=SYS1.**PARM**LIB,DISP=SHR
 
-Also, the z/OS LSAM does EXACTLY what is said, so if an error is coded
+Also, the z/OS Agent does EXACTLY what is said, so if an error is coded
 in the symbolic override, the error is passed to the job JCL. If
 "&PARM=**(YES"** was coded in the previous example, the result would
 be:
@@ -1667,7 +1667,7 @@ Yes. Text fields in the graphical interfaces support OpCon token replacement, wi
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

@@ -90,7 +90,7 @@ Select a **User Id** for running the job. Use the default value of "0/0" or assi
 
 Select the **machine** where the agent is installed from the **Machines or Machine Group** list. To specify a machine group instead, toggle **Machines** to _Machine Group_ and select from the list. The toggle appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when enabled.
 
-Select a **Job Type** to define the type of job to schedule on the IBM i LSAM:
+Select a **Job Type** to define the type of job to schedule on the IBM i Agent:
 
 - Batch Job (default)
 - Tracked Job
@@ -160,7 +160,7 @@ Select a **Job Type** to define the type of job to schedule on the IBM i LSAM:
 
 **In the Job Information frame:**
 
-- **Job Type**: Type of job to schedule on the IBM i LSAM
+- **Job Type**: Type of job to schedule on the IBM i Agent
 
 **In the Job Log Retention sub-frame:**
 
@@ -575,8 +575,8 @@ To edit a value, select inside the cell to edit. To add a value, select the **gr
 
 ![Variables Grid: Variables Grid Information](../../../Resources/Images/SM/IBMi_VariablesGrid.png "Variables Grid: Variables Grid Information")
 
-- **Variable Name**: Name of the IBM i LSAM Dynamic Variable that stores the value
-- **Value**: Character string to store in the IBM i LSAM Dynamic Variables table
+- **Variable Name**: Name of the IBM i Agent Dynamic Variable that stores the value
+- **Value**: Character string to store in the IBM i Agent Dynamic Variables table
 
 :::note
 Select the **Undo** button to revert any unsaved changes.
@@ -605,7 +605,7 @@ Select the **Save** button to save changes.
 | Inquiry Message Reply | How predefined messages are answered when sent during the job | — | — |
 | Number of Occurrences | Number of occurrences to save when the same job name runs more than once | — | — |
 | Number of Days | Number of days to retain job logs | — | — |
-| Job Type | Type of job to schedule on the IBM i LSAM | — | — |
+| Job Type | Type of job to schedule on the IBM i Agent | — | — |
 | Script Name | Script name for an Operator Replay Job or Restricted Mode Job. | — | — |
 | User | FTP user for connecting to the remote system | — | — |
 | Remote System | Name of the remote system | — | — |
@@ -626,7 +626,7 @@ This page covers Updating IBM i Job Task Details.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Frequency**: A set of rules that defines when a job or schedule is eligible to run, based on calendar rules, day-of-week settings, period offsets, and other timing criteria.
 

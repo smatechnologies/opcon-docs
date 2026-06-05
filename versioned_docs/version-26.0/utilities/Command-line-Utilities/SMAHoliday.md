@@ -422,7 +422,7 @@ The legacy forward-slash parameters are `/C:` (calendar name), `/Y:` (year to pr
 
 ## Glossary
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **OpConxps**: The standard installation directory name for OpCon program files, configuration files, and output data on Windows machines.
 

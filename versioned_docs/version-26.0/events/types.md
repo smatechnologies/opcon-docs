@@ -1019,7 +1019,7 @@ None
 
 :::info More Info
 
-For IBM i, visit the following section in the **IBM i LSAM** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
+For IBM i, visit the following section in the **IBM i Agent** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#Tracking)
 
@@ -1188,7 +1188,7 @@ $JOB:RESTART,<schedule date>,<schedule name>,<job name>,\[Force Restart (optiona
   - **N**: Do not force start the job
   - If the parameter is not set or specified, the default value will be set to **N**
 - **\[Restart Step (optional)\]**: Specifies whether to restart the job on a pre-configured step setting. This parameter is optional and is only supported for the SAP R/3 and CRM, SAP BW, UNIX, and z/OS platforms. Valid values are dependent on the host system:
-  - SAP: For more on the valid values for the SAP system, refer to the [SAP LSAM Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
+  - SAP: For more on the valid values for the SAP system, refer to the [SAP Agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
   - SAP BW: For more on the valid values for the SAP BW system, refer to the [SAP BW agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Advanced-Features.md)in the SAP BW agent documentation
   - UNIX: For more on the valid values for the UNIX system, refer to [sma_job_step](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_job_step.md#UNIX/Operations-and-Component/Operating-the-agent/Utilities/sma_job_step) in the UNIX agent documentation
   - z/OS: The start and end steps can be specified in the 'JCL' format (jobstep or jobstep.procstep), separated by a pipe character. If there is no pipe, or it is not followed by a step name, the job will run to the end. If there is no starting step (i.e., the restart step starts with a pipe), then the job will be restarted without using the step restart feature
@@ -1231,7 +1231,7 @@ $JOB:RESTARTHLD,<schedule date>,<schedule name>,<job name>,\[Force Restart (opti
   - **N**: Do not force start the job
   - If the parameter is not set or specified, the default value will be set to **N**
 - **\[Restart Step (optional)\]**: Specifies whether to restart the job on a pre-configured step setting. This parameter is optional and is only supported for the SAP R/3 and CRM, SAP BW, UNIX, and z/OS platforms. Valid values are dependent on the host system:
-  - SAP: For more on the valid values for the SAP system, refer to the [SAP LSAM Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
+  - SAP: For more on the valid values for the SAP system, refer to the [SAP Agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sap/latest/Files/Agents/SAP/Advanced-Features.md) in the SAP agent documentation
   - SAP BW: For more on the valid values for the SAP BW system, refer to the [SAP BW agent Advanced Features](https://help.smatechnologies.com/opcon/agents/sapbw/latest/Files/Agents/SAP-BW/Advanced-Features.md)in the SAP BW agent documentation
   - UNIX: For more on the valid values for the UNIX system, refer to [sma_job_step](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/sma_job_step.md#UNIX/Operations-and-Component/Operating-the-agent/Utilities/sma_job_step) in the UNIX agent documentation
   - z/OS: The start and end steps can be specified in the 'JCL' format (jobstep or jobstep.procstep), separated by a pipe character. If there is no pipe, or it is not followed by a step name, the job will run to the end. If there is no starting step (i.e., the restart step starts with a pipe), then the job will be restarted without using the step restart feature
@@ -1347,9 +1347,9 @@ Pre-defined tracked jobs can be controlled by the multi-instance box to prevent 
 
 Provided here are references for implementing the Job Tracking concept.
 
-For IBM i, visit the following section in the **IBM i LSAM** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
+For IBM i, visit the following section in the **IBM i Agent** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
 
-For MCP, visit the following section in the **MCP LSAM** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
+For MCP, visit the following section in the **MCP Agent** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
 
 For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#tracking)
 
@@ -2552,7 +2552,7 @@ External events are passed by creating an ASCII file with the event string, User
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

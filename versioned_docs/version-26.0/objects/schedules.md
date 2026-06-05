@@ -386,7 +386,7 @@ command lines of the jobs.
     OpCon folder.
   - Default Value: **C:\\Program Files\\OpConxps**
 - **UNIXLSAMPath**: This property defines the path to the
-    LSAM binary directory for UNIX LSAMs.     -   Default Value: **/usr/local/lsam/bin/**
+    Agent binary directory for UNIX Agents.     -   Default Value: **/usr/local/lsam/bin/**
 - **DB_SERVER_NAME**: This property defines the
     OpCon database server name as used by the
     SMAUtility schedule jobs.
@@ -852,7 +852,7 @@ Yes, if the schedule has been On Hold and has never been released. If a schedule
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine job execution timing, and processes OpCon events.
 
-**LSAM (Local Schedule Activity Monitor)**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
+**Agent**: An agent installed on a target platform that runs jobs in the native language of that platform and communicates results back to SAM via SMANetCom over TCP/IP.
 
 **Enterprise Manager (EM)**: OpCon's rich client graphical user interface for Windows and Linux, used to define schedules and jobs, manage automation data, and perform operational tasks.
 

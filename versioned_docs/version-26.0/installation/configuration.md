@@ -595,7 +595,7 @@ Complete this procedure to automate OpCon reports.
 5. Select **SMAOpConOutputPath** and verify the path to <Output Directory\> on the SAM server. Modify if different from the default. Select **Save**
 6. Select **SMAOpConPath** and verify the path to the Utilities folder on the SAM server. Modify if different from the default (C:\\Program Files\\OpConxps\\). Select **Save**
 7. Select **SMAAdminEmail** and enter an *email address* (or multiple addresses separated by semicolons) for the OpCon administrator. Select **Save**
-8. If **UNIX LSAMs** exist:
+8. If **UNIX Agents** exist:
    - Select **UNIXLSAMPath** and verify the path to the "bin" directory on the UNIX machine
 9. Select **DB_SERVER_NAME** and verify the OpCon database server name. Modify if different from the default. Select **Save**
 10. Select **SqlMaintUser** and verify the SQL maintenance user name. Modify if different from the default. Select **Save**
