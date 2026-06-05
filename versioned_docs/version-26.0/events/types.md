@@ -2507,7 +2507,7 @@ The following table consolidates the parameters used by the events on this page.
 | <calendar dates\> | A semicolon (;) separated list of dates to add to the calendar | — | Dates must use a date syntax recognized by the regional settings of the user running SMA Service Manager |
 | <schedule date\> | The date of the Daily schedule containing the job | — | — |
 | <schedule name\> | The name of the schedule containing the job | — | — |
-| <job name\> | The name of the job to affect in the Daily schedule | — | — |
+| <job name\> | The name of the job to affect on in the Daily schedule | — | — |
 | <machine group name\> | The new Machine Group name for the job to use in the Daily schedule | — | — |
 | <minutes\> | The number of minutes to set the Max Run Time for the job to use in the Daily schedule | — | Valid range: 1–32767 |
 | <SAM priority\> | The new SAM priority value for the job to use in the Daily schedule | — | Valid range: 0 (lowest) to 32767 (highest) |
