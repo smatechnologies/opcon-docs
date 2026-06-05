@@ -25,8 +25,6 @@ On Windows, the default path resembles:
 `C:\Users\<username>\.enterpriseManager\.metadata\.log`
 :::
 
-<!-- GAP: The log rotation size threshold (1,002 KB) and maximum retained file count (10) stated in the original page are not confirmed in source code; needs SME or Eclipse platform documentation to verify -->
-
 ## Opening the Application Log
 
 To open the Enterprise Manager application log, complete the following steps:

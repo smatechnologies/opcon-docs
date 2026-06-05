@@ -39,8 +39,6 @@ The following buttons are available, depending on the current editor:
 | **Maximize** | — | Opens the editor to its maximum size. The **Maximize** button changes to a **Restore** button when the editor is maximized. |
 | **Restore** | — | Returns the editor to its original location and size. |
 
-<!-- GAP: Keyboard shortcuts (Ctrl+N, Ctrl+D, Ctrl+S, Ctrl+R) carried over from the prior page; not located in Enterprise Manager source message bundles or command-binding files. Needs SME/source confirmation. -->
-
 ## FAQs
 
 **Q: What can you do with the Security tools?**

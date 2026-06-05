@@ -82,13 +82,11 @@ When an Agent-started job terminates, the run condition word is evaluated for co
 | **End Value** | The upper bound when **Condition** is `Range`. | — |
 | **Fin Status** | The completion status assigned when the test is met. | `GOOD FIN`, `BAD FIN` |
 
-<!-- GAP: meaning of the LAND condition (\"logical AND between the value and the run's condition word\") unverified — only the enum value name 'LAND' is confirmed in source. -->
-
 ### Default Fin Status
 
 | Field | Description | Values |
 |---|---|---|
-| **Default Fin Status** | The completion status assigned when no completion-status test is met. <!-- GAP: \"assigned when no completion-status test is met\" unverified; source confirms the field and its values only. --> | `GOOD FIN`, `BAD FIN` |
+| **Default Fin Status** | The completion status assigned when no completion-status test is met.| `GOOD FIN`, `BAD FIN` |
 
 ### Tokens
 

@@ -322,8 +322,6 @@ Release 26.0.1 focuses on better visibility, stronger reliability, and a more un
 
 :eight_spoked_asterisk: **OC-5902: Enhanced Logging Alignment** ReportingService logging now aligns with standard OpCon conventions, improving consistency and simplifying diagnostics.
 
-<!-- GAP: Three ticket-free enhancement bullets ("Visibility Improvements Across Reports", "Standardized Layouts & Interactions", column ordering/filter/download behavior) lack ticket IDs and cannot be verified against source. SME should confirm whether these belong to an existing ticket or can be removed. -->
-
 #### Studio & Workflow Builder Usability Fixes
 
 :eight_spoked_asterisk: **OC-5902: Improved Job Editing Experience** Editing existing jobs no longer resets node positions, preserving workflow layouts.
@@ -359,8 +357,6 @@ Release 26.0.1 focuses on better visibility, stronger reliability, and a more un
 #### Unified Branding & Modernized Experience
 
 :eight_spoked_asterisk: **OC-2515: Consistent OpCon Branding** Solution Manager has been visually updated to align with the broader OpCon and Continuous brand guidelines.
-
-<!-- GAP: One ticket-free bullet ("Standardized Layouts & Interactions") lacks a ticket ID and cannot be verified. SME should confirm whether this belongs to an existing ticket or can be removed. -->
 
 ## Fall 25 — Fix
 

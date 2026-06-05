@@ -46,8 +46,6 @@ Selecting **Add**, **Copy**, or **Edit** opens the corresponding dialog:
 
 A Department is identified by its **Name**.
 
-<!-- GAP: Full list of fields in the Add/Copy/Edit Department dialogs (beyond Name) is not confirmed in the OpCon source snapshot; the Department entity exposes only id and name. Needs SME/UI confirmation. -->
-
 ### Viewing where a Department is used
 
 Select the **Cross References** button to view the master and daily jobs that use a particular Department.
@@ -80,4 +78,3 @@ Only users whose role includes the **Maintain Departments** function privilege c
 
 ## Related Topics
 
-<!-- GAP: Related Topics links (Roles, Schedules) not confirmed against repository paths; needs verification of target page paths. -->

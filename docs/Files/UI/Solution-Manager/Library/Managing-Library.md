@@ -42,8 +42,6 @@ The Library groups related OpCon objects into areas. Each area has its own page 
 | Logs | Review log files, archive files, schedule builds, and audit history. |
 | Reporting | Generate OpCon reports. |
 
-<!-- GAP: The exact top-level grouping and order of items on the Library selection bar in the live UI is not confirmed in the available source. The areas listed above are derived from the existing documentation structure for this section; an SME or UI source should confirm the in-product labels and grouping. -->
-
 ## How It Works
 
 Objects defined in the Library are master definitions. Changes you make in the Library apply to future schedule builds and to schedules that are subsequently added to the daily queue. Changes to master definitions do not affect jobs that are already running in the daily queue. To apply changes to a schedule that is already in the queue, rebuild or re-add the affected schedule.

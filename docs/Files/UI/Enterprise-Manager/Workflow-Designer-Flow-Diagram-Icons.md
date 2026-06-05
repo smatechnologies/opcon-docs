@@ -56,4 +56,3 @@ The diagram also displays the following indicators when special conditions apply
 | ![Expression Dependency icon](../../../Resources/Images/EM/expr_dep.png "Expression Dependency icon") | The job has an expression dependency. |
 | ![Threshold Update icon](../../../Resources/Images/EM/EMinsertthreshold.png "Threshold Update icon") | The job has a threshold or resource update. |
 
-<!-- GAP: The source code (JobStatusBarFigure.java) also renders indicators for cross-day dependencies, missing a dependency (warning), and missing a required dependency. Confirm the image paths for these indicators (ICO_XDAY_DEPENDENCY, ICO_MISSING_DEPENDENCY, ICO_DEPENDENCY_MISSING, ICO_DEPENDENCY_BREAK) and add rows for them if images are available in docs/Resources/Images/EM/. -->

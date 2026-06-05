@@ -41,4 +41,3 @@ If `Msg.exe` fails and the operating system version is earlier than Windows Serv
 
 If **Authentication User (UNC Access)** is not configured and SMA Notify Handler runs as SYSTEM, the handler falls back to `net send` without impersonation.
 
-<!-- GAP: Confirmation needed on whether Network Message notifications are supported on non-Windows OpCon server installations. Source code logs "Invalid Notification type for Non-Windows platform : Network Message" but product support scope needs SME confirmation. -->

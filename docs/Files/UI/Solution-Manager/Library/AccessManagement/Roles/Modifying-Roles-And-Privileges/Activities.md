@@ -31,8 +31,8 @@ The following activities are available, grouped by category.
 
 | Activity | Description |
 |---|---|
-| **Maintain Cloud Events Associations** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **View Cloud Events Associations** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Cloud Events Associations** ||
+| **View Cloud Events Associations** ||
 
 ### Elevated Rights
 
@@ -41,7 +41,7 @@ The following activities are available, grouped by category.
 | **All Function Privileges** | Grants the role every non-departmental function privilege in OpCon. |
 | **All Administrative Functions** | Grants the role all administrative function privileges. |
 | **All Notification Manager Functions** | Grants the role all Notification Manager function privileges. |
-| **Chatbot Privileges** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Chatbot Privileges** ||
 
 ### Embedded Script
 
@@ -61,7 +61,7 @@ The following activities are available, grouped by category.
 | Activity | Description |
 |---|---|
 | **View Schedule Build Log** | Allows the role to view the Schedule Build log. |
-| **View Application Logs** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **View Application Logs** ||
 
 ### Machine
 
@@ -94,8 +94,8 @@ The following activities are available, grouped by category.
 
 | Activity | Description |
 |---|---|
-| **Maintain Server Options** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
-| **View Server Options** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Server Options** ||
+| **View Server Options** ||
 
 ### Service Requests
 
@@ -122,7 +122,7 @@ The following activities are available, grouped by category.
 | **Maintain Calendars** | Allows the role to add, modify, and delete calendars. |
 | **Maintain Thresholds/Resources** | Allows the role to add, modify, and delete thresholds and resources. |
 | **Maintain Global Properties** | Allows the role to add, modify, and delete global properties. |
-| **Maintain Tags** | <!-- GAP: per-activity description not defined in source; needs SME/source --> |
+| **Maintain Tags** ||
 
 ## Frequently Asked Questions
 

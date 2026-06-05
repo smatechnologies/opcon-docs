@@ -25,8 +25,6 @@ Use this procedure when you need to investigate a job's past behavior, confirm t
 
 ## Required Privileges
 
-<!-- GAP: The specific role privilege required to open Job Execution History / Job History Detail / View Job Output is not stated on the existing page and was not confirmed in source. Needs SME or privilege-enum confirmation. -->
-
 ## View job history information
 
 To view job history information, complete the following steps:

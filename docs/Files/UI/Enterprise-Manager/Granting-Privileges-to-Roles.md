@@ -52,8 +52,6 @@ To grant privileges to a role, complete the following steps:
 Privileges granted to the `ocadm` role cannot be revoked.
 :::
 
-<!-- GAP: Some editors (Schedule, Machine, Machine Group) disable revoking when the role has an "Inherit Privileges for All ..." option enabled. Whether and how that option affects granting is not confirmed in source for this overview page; confirm with SME before documenting here. -->
-
 ## FAQs
 
 **Q: Where do I grant privileges to a role?**

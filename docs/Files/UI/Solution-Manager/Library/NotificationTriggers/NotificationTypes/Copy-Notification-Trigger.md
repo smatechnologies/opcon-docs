@@ -46,8 +46,6 @@ To copy a notification trigger to other groups, complete the following steps:
 
 **Result:** Solution Manager copies the trigger definition and its messages to each selected group and displays `Copy request was successful`. If any copy does not complete, the message `Copy request failed` is shown.
 
-<!-- GAP: Required Privileges — no privilege check was found in the Notification Triggers copy source (NotificationTriggerGrid.tsx / TriggersCopyDialog.tsx). Confirm with SME whether a specific role privilege gates the Copy Notification Trigger action. -->
-
 ## FAQs
 
 **Q: What does Copy Notification Trigger do?**
@@ -63,8 +61,6 @@ The **Groups** list shows only groups that are the same **Group Type** as the so
 **OK** stays unavailable until you select at least one group in the **Groups** list.
 
 ## Related Topics
-
-<!-- GAP: Related Topics links — confirm correct relative paths to the Notification Triggers overview and Notification Groups pages before adding links. -->
 
 ## Glossary
 

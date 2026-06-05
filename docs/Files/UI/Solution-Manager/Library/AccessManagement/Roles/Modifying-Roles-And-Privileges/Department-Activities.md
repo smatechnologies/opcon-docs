@@ -58,8 +58,6 @@ The `<General>` department is the default department for all jobs. Departmental 
 
 Departmental function privileges are managed in the **Departmental Function Privileges** editor in Enterprise Manager under **Security > Privileges > Departmental Function Privileges**.
 
-<!-- GAP: The exact Solution Manager UI surface where per-department function privileges are assigned to a role (if any) could not be confirmed in Core-SolutionManager source. The Solution Manager Roles editor (Administration > Security > Roles) exposes Name, Inherit Privileges for All Schedules, Inherit Privileges for All Machines, Inherit Privileges for All Machines Groups, Access Codes, and Batch Users — no Departments tab was found. Confirm with SME whether departmental function privileges can be managed in Solution Manager or only in Enterprise Manager. -->
-
 ## Role Inheritance Options
 
 In Solution Manager under **Administration > Security > Roles**, the role editor provides the following options that affect how object-level privileges are inherited. These apply to schedules, machines, and machine groups — not to departments.

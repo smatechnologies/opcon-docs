@@ -221,8 +221,6 @@ Use this procedure for SAP BW, SAP R/3 and CRM, and Windows Agents:
 5. Select **Services**.
 6. Scroll to the Agent service in the **Services** list.
 
-<!-- GAP: The exact Windows service display name for the Windows, SAP BW, and SAP R/3 Agents needs SME confirmation — the original page referenced "SMA LSAM service" which is a banned term. -->
-
 7. Confirm the Agent service status is **Started**.
 
 ## Use Threshold Dependencies for Late to Start Notifications on a Job-dependent External Event

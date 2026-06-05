@@ -39,4 +39,3 @@ Select **Isolate Dependency Chain** to display the full dependency chain for the
 
 ![Isolate - Full Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-full-deps.png "Isolate - Full Dependencies")
 
-<!-- GAP: The existing page describes a "Shortest Path" option that shows the shortest terminal predecessor path to the selected job. This option is not confirmed in the codebase button definitions (ButtonId.java) or i18n property files. Needs SME/source verification before re-adding. -->

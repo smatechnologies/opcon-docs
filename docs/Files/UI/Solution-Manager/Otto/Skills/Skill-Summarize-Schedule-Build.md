@@ -64,8 +64,6 @@ The status is either **Build on hold** or **Build released**, indicating whether
 
 ## Related Topics
 
-<!-- GAP: Related Topics links to sibling Otto skill pages and the schedule build log reference page are not confirmed from source; needs SME to supply correct page paths. -->
-
 ## Glossary
 
 **SMAUtility Schedule**: A pre-built OpCon schedule installed during setup that contains standard maintenance jobs for audit history cleanup, job history cleanup, and BIRT report generation.

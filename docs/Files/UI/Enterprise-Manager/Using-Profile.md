@@ -35,7 +35,7 @@ To open the Profile page from Enterprise Manager, complete the following steps:
    |---|---|
    | **Login** | Read-only. Your OpCon login name. |
    | **Full User Name** | Your display name. Required. |
-   | **E-mail** | Read-only. <!-- GAP: "Contact your administrator to change this value" unverified --> |
+   | **E-mail** | Read-only.|
    | **Notes** | Optional notes associated with your account. |
    | **Comments** | Optional comments associated with your account. |
    | **User Password** | Your OpCon login password. |

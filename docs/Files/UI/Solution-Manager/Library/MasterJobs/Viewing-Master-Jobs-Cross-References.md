@@ -31,4 +31,3 @@ To view cross references for a master job, complete the following steps:
 
 **Result:** The **Cross References** panel opens and lists the schedules and jobs that reference the selected master job.
 
-<!-- GAP: The specific categories shown in the Master Jobs Cross References panel (e.g., "Job Dependencies," "Schedule Dependencies," or similar groupings) are not confirmed in the available source. Confirm the exact panel sections with an SME or UI review. -->

@@ -71,8 +71,6 @@ The button bar at the bottom of the **Server Options** page provides the followi
 | **Reset Current Tab to Default** | Stages system default values for the options on the current tab. |
 | **Cancel** | Discards unsaved changes made in the current session. |
 
-<!-- GAP: The existing page referenced a vertical ellipsis menu and screenshots (server-option-reset-settings.png, server-option-save-undo.png). The current Solution Manager source exposes these actions as buttons in a button bar rather than a vertical ellipsis menu; confirm the current UI presentation and update the screenshots with an SME before republishing. -->
-
 ## FAQs
 
 **Does resetting take effect immediately?**
@@ -81,8 +79,5 @@ No. Resetting stages the default values in the form. The defaults are stored onl
 
 **Can I reset a single field instead of a whole tab?**
 
-<!-- GAP: Source does not confirm a per-field reset control on the Server Options page; the available actions reset the current tab or all tabs. Confirm with an SME whether field-level reset exists. -->
-
 ## Related Topics
 
-<!-- GAP: Add links to the Server Options overview and related Solution Manager Library pages once their paths are confirmed. -->

@@ -30,11 +30,7 @@ The **SNMP** tab provides three fields: **Event ID**, **Severity**, and **Messag
 SNMP trap notifications are processed on Windows only. On non-Windows platforms, the SMA Notify Handler does not send the trap and the notification fails.
 :::
 
-<!-- GAP: The existing page stated \"Notifications defined before Release 20.0.0 will be disabled.\" This version-specific behavior was not confirmed in the source; needs SME/release-notes confirmation before restating. -->
-
 ## Required Privileges
-
-<!-- GAP: The privilege required to create or edit a notification definition was not confirmed in the reviewed source (Core-EnterpriseManager notification plugin / Core-SolutionManager). Needs SME or source confirmation. -->
 
 ## Define an SNMP Trap Notification
 
@@ -71,8 +67,6 @@ OpCon sends the trap when a Job, Schedule, or Machine changes to the status defi
 SNMP trap notifications are processed on Windows only. On a non-Windows platform, the SMA Notify Handler does not send the trap and the notification fails.
 
 ## Related Topics
-
-<!-- GAP: Links to related notification topics (for example, the SMA Notify Handler and other notification types such as email, Windows Event Log, and short text message) should be added once the corresponding pages are confirmed. -->
 
 ## Glossary
 

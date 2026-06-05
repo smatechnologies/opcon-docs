@@ -34,8 +34,6 @@ This notification type is disabled on Linux. Notifications defined before Releas
 
 ## Required Privileges
 
-<!-- GAP: No notification-specific privilege name was found in the Solution Manager or Enterprise Manager source. The caution above states the SAM service account must be an Administrator on the SAM application server and on each receiving machine; confirm the exact OpCon privilege required to define notifications with an SME. -->
-
 ## Before You Begin
 
 The SMA Notify Handler sends network messages only on Windows. Confirm the following before you define the notification:

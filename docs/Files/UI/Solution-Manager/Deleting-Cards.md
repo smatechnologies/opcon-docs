@@ -41,8 +41,6 @@ To delete a card using the **Vision Settings** page, complete the following step
 3. Select the card you want to delete from the list.
 4. Select the **Delete** button.
 
-   <!-- GAP: The exact label of the panel or window that contains the Delete button in Vision Settings could not be confirmed in source. Source shows a form panel with a Delete button (ButtonId.DELETE) in the edit button layout of MasterVisionCardItemPanel.java. -->
-
 5. Select **Save**.
 
 **Result:** The card and any child cards are permanently removed from OpCon.

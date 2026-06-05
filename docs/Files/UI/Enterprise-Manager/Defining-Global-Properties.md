@@ -41,8 +41,6 @@ The editor exposes the following fields for the selected property:
 
 When you select the **Encrypted** option, the **Value** field masks the value. Use the **Reveal Value** button to display the value you have entered, and **Hide Value** to mask it again.
 
-<!-- GAP: Confirm whether OpCon requires a specific privilege to open or edit the Global Properties editor; not verified in Core-EnterpriseManager source. Needs SME/source. -->
-
 ## Global Properties Toolbar
 
 The **Global Properties** editor has a toolbar for managing properties. The toolbar provides actions to add a new property, save changes, copy the selected property, and view its audit history.

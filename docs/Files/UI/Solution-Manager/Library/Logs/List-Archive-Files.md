@@ -56,8 +56,6 @@ Go to **Library** in Solution Manager, select **Logs**, then select the **Archiv
 
 **Q: Why can't I see the Archives tab?**
 
-<!-- GAP: Required privilege for the Archives tab is not confirmed in source code; the sibling Application Logs tab requires "All Function Privileges" or "View Application Logs" — needs SME to confirm whether the same privilege applies to Archives. -->
-
 ## Related Topics
 
 - [List Application Logs](./List-Log-Files.md)

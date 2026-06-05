@@ -72,8 +72,6 @@ Add a job to the SMAUtility schedule to run SMAGetServiceStatus at regular inter
 
 ### Job Details
 
-<!-- GAP: The Command Line and Working Directory values for the SMAUtility schedule job template are not confirmed in source. Populate from the actual SMAUtility schedule definition. -->
-
 ## Exit Values
 
 The SMAGetServiceStatus.exe program uses the following exit values:

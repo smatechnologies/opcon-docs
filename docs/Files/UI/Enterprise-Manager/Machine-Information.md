@@ -72,4 +72,3 @@ The dialog presents machine details in a set of read-only fields, followed by th
 
 ## Related Topics
 
-<!-- GAP: Related Topics links (Machine Status view, Machines editor) not verified against the docs site navigation; needs SME/source confirmation of page paths. -->

@@ -68,5 +68,4 @@ Begin with the overview pages in the sidebar. Each page covers a distinct featur
 
 **Q: Who can access reference material?**
 
-<!-- GAP: "Most reference pages are read-only and accessible to any authenticated user" unverified — access control details not confirmed in source -->
 Contact your OpCon system administrator to confirm your access level before making configuration changes such as creating notification triggers or modifying escalation rules.

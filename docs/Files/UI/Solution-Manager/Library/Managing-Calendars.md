@@ -89,8 +89,6 @@ To delete a calendar, complete the following steps:
 
 **Result:** The calendar is removed from the **Calendars** list.
 
-<!-- GAP: Delete confirmation behavior (e.g. whether a calendar in use by a schedule or frequency can be deleted, and any warning shown) is not confirmed in the source; needs SME/source. -->
-
 ## FAQs
 
 **Q: Where do I manage calendars in Solution Manager?**

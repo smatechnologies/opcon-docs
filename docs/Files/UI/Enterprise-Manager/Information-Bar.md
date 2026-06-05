@@ -50,6 +50,3 @@ Enterprise Manager checks the SAM pulse in the database every 60 seconds. Hover 
 
 The **Connection Information** area shows the currently logged-in user and database in the format `username@server/database`. When no user is logged in, this area displays a disconnected state.
 
-<!-- GAP: "Status Line" component (shows date/schedule/job name when a job is selected in List view) was present in the original page but omitted from this draft — source evidence exists (DailyTreeViewStatusLineInfoProvider.java) but its inclusion in the status line was not independently confirmed by this rewrite. Restore from original if needed. -->
-
-<!-- GAP: "Activity Information" component (flashes brief status messages) was present in the original page but omitted from this draft — no distinct named contribution was found in source to confirm or deny. Restore from original if needed. -->
