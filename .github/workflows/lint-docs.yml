@@ -1,0 +1,23 @@
+name: lint-docs
+
+on:
+  pull_request:
+    branches:
+      - "main"
+      - "develop"
+      - "release/*"
+
+jobs:
+  lint-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # full history so we can diff the PR head against its base branch
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+      - run: yarn install --frozen-lockfile
+      - name: Lint changed docs (banned terms + front matter)
+        run: node scripts/lint-docs.js --base "origin/${{ github.base_ref }}"
