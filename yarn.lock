@@ -4955,9 +4955,9 @@ jiti@^1.20.0:
   integrity sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==
 
 joi@^17.6.0:
-  version "17.13.3"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-17.13.3.tgz#0f5cc1169c999b30d344366d384b12d92558bcec"
-  integrity sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==
+  version "17.13.4"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-17.13.4.tgz#ad6153d97ce558eb3a3b593e0d43eab51df1c474"
+  integrity sha512-1RuuER6kmt8K8I3nIWvPZKi5RQCb568ZPyY4Pwjlua+yo+63ZTmIwxLZH0heBmiKN4uxjvCiarDrjaeH84xicQ==
   dependencies:
     "@hapi/hoek" "^9.3.0"
     "@hapi/topo" "^5.1.0"
@@ -5533,7 +5533,7 @@ onetime@^5.1.2:
     "@svgr/webpack" "^6.5.1"
     clsx "^1.1.1"
     file-loader "^6.2.0"
-    opcon-docs "file:../../../../AppData/Local/Yarn/Cache/v6/npm-opcon-docs-21.0.0-553fc5b9-dab4-4513-be51-e35da9607c22-1757352291038/node_modules/opcon-docs"
+    opcon-docs "file:."
     react "^17.0.1"
     react-dom "^17.0.1"
     url-loader "^4.1.1"
