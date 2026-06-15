@@ -17,8 +17,7 @@ A technical writer skill and its resource files are bundled in this repository a
     ├── opcon-glossary.md                  # Controlled vocabulary — customer-facing terms and banned terms
     ├── opcon-learner-roles.md             # Audience profiles and tone guidance per role
     ├── opcon-golden-examples.md           # Reference examples for each documentation type
-    ├── opcon-api-reference.md             # API endpoint documentation templates
-    └── opcon-primary-analysis.md          # 13-section template for page completeness scoring
+    └── opcon-api-reference.md             # API endpoint documentation templates
 ```
 
 ### Using the Skill
@@ -51,6 +50,40 @@ Do not report a documentation task as complete until the skill has run and all v
 - **Voice**: Second person ("you") for instructions. No first person ("we," "our"). Present tense for descriptions, imperative for steps.
 - **Structure**: Numbered steps for procedures, one action per step. Lead-in sentence required: "To [goal], complete the following steps:"
 - **Front matter**: Every page requires `title:`, `description:`, and `tags:` (Type + Role + Feature area)
+
+## OpCon Documentation Analyzer Skill
+
+A second skill is bundled at `.claude/skills/opcon-doc-analyzer/`. It compares documentation against the OpCon codebase to identify gaps, inaccuracies, and outdated content. It is **read-only** — it reports findings and never modifies files.
+
+### Skill Location
+
+```
+.claude/skills/opcon-doc-analyzer/
+├── SKILL.md                          # Skill definition and analysis workflow
+└── references/
+    ├── code-surface-patterns.md      # Grep patterns for extracting the public-facing code surface
+    └── impact-rubric.md              # How to rate findings as High / Medium / Low impact
+```
+
+### Using the Skill
+
+| Trigger phrases | Behavior |
+|---|---|
+| "Check my docs," "Audit the docs," "Find gaps" | Run a full cross-reference analysis and produce a structured report |
+| "Is this still accurate," "Compare docs to code" | Targeted accuracy check against the codebase |
+| "What's missing," "What's undocumented" | Surface features in code with no matching documentation |
+
+### What it produces
+
+A structured report with six sections: Missing Documentation, Unclear/Incomplete Documentation, Outdated/Incorrect Documentation, Structural and Cross-Reference Issues, a Summary Table, and Unverifiable Findings. Every finding includes a source citation (doc path and/or code file + line range).
+
+### What it does NOT do
+
+- It never modifies, creates, or deletes files
+- It never invents feature descriptions or fills in missing content
+- To fix findings, use the **technical-writer skill** or ask Claude to switch modes
+
+---
 
 ## Repository Structure
 
