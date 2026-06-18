@@ -25,11 +25,15 @@ Notification Triggers are available in Solution Manager under **Library > Notifi
 
 The **Notification Triggers** page displays all configured triggers in a grid.
 
+<!--
 ![Notification Triggers Grid](../../../../../Resources/Images/SM/Library/NotificationTriggers/NotificationTriggers-Grid.png "Notification Triggers Grid")
+-->
 
 Selecting **Add** or selecting a row in the grid opens the edit panel below the grid.
 
+<!--
 ![Notification Trigger Add and Edit](../../../../../Resources/Images/SM/Library/NotificationTriggers/NotificationTriggers-AddEdit.png "Editable panel for Notification Triggers")
+-->
 
 :::note
 The **Group Name** and **Trigger Name** combination must be unique. You cannot save a trigger that duplicates an existing name within the same group.
@@ -53,9 +57,9 @@ Selecting **Save** is required for any modifications to take effect.
 
 Each trigger supports one or more of the following notification types. Select a notification type to add or edit its configuration.
 
-- Select **Add** (![Add Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/add.png "Add Notification")) to add a notification for the selected trigger.
-- Select **Edit** (![Edit Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/edit.png "Edit Notification")) to edit an existing notification.
-- Select **Delete** (![Delete Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/delete.png "Delete Notification")) to remove a notification.
+- Select **Add** to add a notification for the selected trigger.
+- Select **Edit** to edit an existing notification.
+- Select **Delete** to remove a notification.
 
 The toggle to the left of each notification type indicates its active status. An active notification (![Active Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/active.png "Active")) is sent when the trigger fires. An inactive notification (![Inactive Notification](../../../../../Resources/Images/SM/Library/NotificationTriggers/inactive.png "Inactive")) is retained but not sent. Select the toggle to switch between states.
 
@@ -74,13 +78,13 @@ Select a notification type for configuration details:
 
 To reverse-look up the source of a notification event, you need the Notification ID. This ID is available in the notification message or in `SMANotifyHandler.log`.
 
-Select the Lookup button (![Lookup Notification Source](../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup.png "Lookup Notification Source")) to open the Lookup dialog.
+Select the Lookup button to open the Lookup dialog.
 
 - [Lookup Dialog](./NotificationTypes/Look-up-Notification-Sources)
 
 ## Copy dialog
 
-Select the Copy button (![Copy Dialog](../../../../../Resources/Images/SM/Library/NotificationTriggers/copy.png "Copy Dialog")) to open the Copy dialog and duplicate an existing trigger.
+Select the Copy button to open the Copy dialog and duplicate an existing trigger.
 
 - [Copy Dialog](./NotificationTypes/Copy-Notification-Trigger)
 
@@ -98,7 +102,9 @@ Use **Advanced Filters** (top-right of the screen) to narrow the triggers displa
 
 ![Filter By Notification Type](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-notification-type.png "Filter By Notification Type")
 
+<!--
 ![Filter By Categories](../../../../../Resources/Images/SM/Library/NotificationTriggers/filter-by-categories.png "Filter By Categories")
+-->
 
 :::note
 For customers who migrated from versions prior to 21.6: Enterprise Manager organized notifications through a parent group tree in Notification Manager. In Solution Manager, use the **Categories** filter and select categories that correspond to the former parent group names. This migration is backward compatible — Notification Manager in Enterprise Manager remains available.

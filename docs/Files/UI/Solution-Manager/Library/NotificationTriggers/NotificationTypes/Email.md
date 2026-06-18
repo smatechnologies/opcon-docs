@@ -20,7 +20,9 @@ doc_type: conceptual
 
 ## What Is It?
 
+<!--
 ![Email Notification](../../../../../../Resources/Images/SM/Library/NotificationTriggers/email-dialog.png "Email Notification")
+-->
 
 The **Email** dialog provides the following fields for defining an SMTP email notification:
 

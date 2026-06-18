@@ -30,38 +30,31 @@ To perform schedule status changes, complete the following steps:
 
    The **Processes** page displays.
 
-2. Ensure that both the **Date** and **Schedule** toggle switches are enabled. Each switch appears green when enabled.
+2. Select the desired date(s) and schedule(s). Your selections display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+:::note
+You may wish to filter or sort the schedule list:
 
-3. Select the desired date(s) and schedule(s). Your selections display in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
+- **Filter**: Use the **Filter Bar** above the list. Type a keyword in the appropriate field and press **Enter**
+- **Sort**: Select a column heading to sort ascending (arrow pointing down); select again to sort descending (arrow pointing up)
+:::
 
-   ![Schedule Processes](../../../Resources/Images/SM/Schedule-Processes.png "Schedule Processes")
+3. Select the schedule record (e.g., **3 schedule(s)**) in the status bar to display the **Selection** panel with the **Schedule Status Update** tab in focus.
 
-   :::note
-   You may wish to filter or sort the schedule list:
 
-   - **Filter**: Use the **Filter Bar** above the list. Type a keyword in the appropriate field and press **Enter**
-   - **Sort**: Select a column heading to sort ascending (arrow pointing down); select again to sort descending (arrow pointing up)
-   :::
+:::note
+As an alternative, right-click any selected schedule in the list to display the **Selection** panel.
+:::
 
-4. Select the schedule record (e.g., **3 schedule(s)**) in the status bar to display the **Selection** panel with the **Schedule Status Update** tab in focus.
+4. *(Optional)* Select **Refresh available actions** to verify which status update actions are available for the current selection. This is helpful when multiple schedules are selected, since all status update buttons are enabled by default.
 
-   ![Schedule Status Update Panel](../../../Resources/Images/SM/Schedule-Status-Update-Panel.png "Schedule Status Update Panel")
-
-   :::note
-   As an alternative, right-click any selected schedule in the list to display the **Selection** panel.
-   :::
-
-5. *(Optional)* Select **Refresh available actions** to verify which status update actions are available for the current selection. This is helpful when multiple schedules are selected, since all status update buttons are enabled by default.
-
-6. *(Optional)* Enter or select a change status reason.
+5. *(Optional)* Enter or select a change status reason.
 
    :::note
    Depending on application configuration, the **Change Status Reason** list may store previous reasons entered for job or schedule status updates.
    :::
 
-7. Select one of the following status updates to apply to the selected schedule(s):
+6. Select one of the following status updates to apply to the selected schedule(s):
 
    :::note
    Status updates applied to selected Schedule Names affect ALL jobs scheduled to run on that date, not only those visible in the current scope.
@@ -76,7 +69,7 @@ To perform schedule status changes, complete the following steps:
    For more on schedule status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
    :::
 
-8. Close the **Selection** panel when done.
+7. Close the **Selection** panel when done.
 
 **Result:** The selected status update is applied to the schedule(s). The Operations Summary page reflects the updated status.
 

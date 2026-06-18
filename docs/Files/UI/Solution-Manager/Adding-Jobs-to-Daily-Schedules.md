@@ -29,27 +29,33 @@ To add jobs to a daily schedule, complete the following steps:
 
 2. In the Schedules grid, right-click the Schedule record for the target date and select **+** to open the **Add Job(s)** dialog.
 
-   ![Opening Add Job(s) dialog](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule1.png "Opening Add Job(s) dialog")
+![Opening Add Job(s) dialog](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule1.png "Opening Add Job(s) dialog")
 
 3. Search for the jobs you want to add, or browse the available jobs, then select the jobs to add.
 
-   ![Searching and Selecting Jobs](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule2.png "Searching and Selecting Jobs")
+![Searching and Selecting Jobs](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule2.png "Searching and Selecting Jobs")
 
 4. Configure the selected jobs as required.
 
-   ![Configuring Jobs to add](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule3.png "Configuring Jobs to add")
+![Configuring Jobs to add](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule3.png "Configuring Jobs to add")
 
 5. Review the configured jobs, then select **Submit**.
 
-   ![Reviewing Jobs and configurations](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule4.png "Reviewing Jobs and configurations")
+<!--
+![Reviewing Jobs and configurations](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule4.png "Reviewing Jobs and configurations")
+-->
 
 6. Wait for the operation to complete.
 
-   ![Waiting for the Add Job results](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule5.png "Waiting for the Add Job results")
+<!--
+![Waiting for the Add Job results](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule5.png "Waiting for the Add Job results")
+-->
 
 7. Review the results to confirm that all jobs were added successfully.
 
-   ![Reviewing Add Job results](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule6.png "Reviewing Add Job results")
+<!--
+![Reviewing Add Job results](../../../Resources/Images/SM/Adding-Jobs-to-Daily-Schedule6.png "Reviewing Add Job results")
+-->
 
 **Result:** The selected jobs appear in the daily schedule for the target date and are available for processing.
 

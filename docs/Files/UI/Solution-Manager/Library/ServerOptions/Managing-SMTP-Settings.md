@@ -36,9 +36,9 @@ To configure the **SMTP** setting, you must have one of the following:
 ## Configuring SMTP Settings
 
 To configure SMTP Settings, go to **Library** > **Server Options** > Select the **SMTP** tab.
-
+<!--
 ![A screen showing SMTP settings under server options](../../../../../Resources/Images/SM/Library/ServerOptions/SMTP-Settings.png "Configuring SMTP Settings")
-
+-->
 \*_The table below shows default values for each settings. If user changes the default value of a setting, ![An user icon representing value changed by user](../../../../../Resources/Images/SM/Library/ServerOptions/Logging-User-Defined.png "User defined icon") icon will show next to the field._
 
 ### Configuration Options

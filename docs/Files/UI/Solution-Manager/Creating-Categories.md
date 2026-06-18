@@ -32,11 +32,15 @@ To create and associate a category, complete the following steps:
 4. *(Optional)* Select one or more Service Requests to assign to the category. Each Service Request can belong to only one category at a time.
 5. Select **Save**. The new category displays.
 
-    ![New Category Created](../../../Resources/Images/SM/Creating-Categories_4.png "New Category Created")
+<!--
+![New Category Created](../../../Resources/Images/SM/Creating-Categories_4.png "New Category Created")
+-->
 
-You can also edit a Service Request directly to change or set its category:
+You can also edit a Service Request directly to change or set its category.
 
+<!--
 ![Editing Service Request Category](../../../Resources/Images/SM/Creating-Categories_5.png "Editing Service Request Category")
+-->
 
 ## Glossary
 

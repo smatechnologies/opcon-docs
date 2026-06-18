@@ -31,7 +31,10 @@ To configure application settings, complete the following steps:
 1. Log into the Solution Manager
 2. Select the **user profile** button in the **Navigation** menu
 
+<!--
+
    ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
+-->
 
 3. Select the **Application Settings** tab on the **Profile** page
 
@@ -50,9 +53,11 @@ To configure application settings, complete the following steps:
 
 Environment names label your OpCon environments for easy identification. Once defined, the name appears at the top of the [Navigation menu](SM-UI-Layout.md#Navigati) and on the [login screen](Logging-In.md#Solution_Manager_Login_Screen).
 
+<!--
 ![Define Environment Name](../../../Resources/Images/SM/Defined-Env-Name.png "Defined Enviroment Name")
 
 ![Define Environment Name](../../../Resources/Images/SM/Defined-Env-Name2.png "Defined Enviroment Name")
+-->
 
 ## Windows Pass-Through Authentication
 

@@ -29,7 +29,9 @@ To create an escalation group, complete the following steps:
 1. Select the **Add** button above the list. The **Escalation Group** form displays.
 2. Complete the **Escalation Group** form.
 
+<!--
 ![A screen showing add escalation group form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Add.png "Add Escalation Group Form")
+-->
 
 :::note
 An escalation group must have at least one user or token user.
@@ -45,7 +47,9 @@ To edit an escalation group, complete the following steps:
 2. Select the **Edit** button above the list. The **Escalation Group** form displays.
 3. Update the form as needed.
 
+<!--
 ![A screen showing edit escalation group form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Edit.png "Edit Escalation Manager Form")
+-->
 
 **Result:** The escalation group changes are saved.
 
@@ -56,7 +60,9 @@ To delete an escalation group, complete the following steps:
 1. Select an escalation group from the list.
 2. Select the **Delete** button above the list.
 
+<!--
 ![A screen asking for confirmation to delete escalation group](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Delete.png "Delete Escalation Group")
+-->
 
 :::note
 Delete is not allowed if the escalation group has any cross-references.
@@ -71,7 +77,9 @@ To check cross-references for an escalation group, complete the following steps:
 1. Select an escalation group from the list.
 2. Select the **Cross References** button above the list.
 
+<!--
 ![A screen showing cross references for an escalation group](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Group-Cross-References.png "Escalation Group Cross References")
+-->
 
 **Result:** All cross-references for the selected escalation group are displayed.
 

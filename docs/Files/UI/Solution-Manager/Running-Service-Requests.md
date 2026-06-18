@@ -29,7 +29,9 @@ To run a Service Request, complete the following steps:
 
 2. Select the button for the Service Request you want to run.
 
-   ![Sample Service Request buttons](../../../Resources/Images/SM/Running-Service-Requests.png "Sample Service Request buttons")
+<!--
+![Sample Service Request buttons](../../../Resources/Images/SM/Running-Service-Requests.png "Sample Service Request buttons")
+-->
 
 3. Proceed based on how the Service Request is configured:
 

@@ -328,7 +328,7 @@ module.exports = {
               collapsed: true,
               items: [
                 "objects/departments",
-                "Files/UI/Solution-Manager/Library/Departments/Departments",
+                //"Files/UI/Solution-Manager/Library/Departments/Departments",
               ],
             },
             {
@@ -337,7 +337,7 @@ module.exports = {
               collapsed: true,
               items: [
                 "objects/access-codes",
-                "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
+               // "Files/UI/Solution-Manager/Library/AccessCodes/AccessCodes",
               ],
             },
             {

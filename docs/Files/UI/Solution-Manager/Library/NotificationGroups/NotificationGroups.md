@@ -24,11 +24,15 @@ doc_type: conceptual
 
 Available Notification Groups in OpCon are shown in the grid under **Library** > **Triggers** > **Manage Notification Groups**.
 
+<!--
 ![Notification Groups Grid](../../../../../Resources/Images/SM/Library/NotificationGroups/NotificationGroups-Grid.png "Notification Groups Grid")
+-->
 
 Selecting **Add** or selecting a record in the grid enables the bottom panel:
 
+<!--
 ![Notification Group Add and Edit](../../../../../Resources/Images/SM/Library/NotificationGroups/NotificationGroups-AddEdit.png "Editable panel for Notification Groups")
+-->
 
 :::note
 The **Name** field must be unique when adding a notification group.
@@ -36,27 +40,39 @@ The **Name** field must be unique when adding a notification group.
 
 When **Included** is selected, all items selected in the list — plus all new Jobs, Machines, and Schedules (depending on the group type) — are included in the notification.
 
+<!--
 ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/Included.png "Notification Group Jobs/Machines")
+-->
 
 When **Excluded** is selected, all items selected in the list are included, but all new Jobs, Machines, and Schedules (depending on the group type) are excluded from the notification.
 
+<!--
 ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/Excluded.png "Notification Group Jobs/Machines")
+-->
 
 - If the group type is **Job** or **Machine**, a tree view shows all available items
 
-  ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/TreeView.png "Notification Group Jobs/Machines")
+<!--
+![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/TreeView.png "Notification Group Jobs/Machines")
+-->
 
 - If the group type is **Schedule**, a checklist shows all available schedules
 
-  ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/SchedulesCheckList.png "Notification Group Jobs/Machines")
+<!--
+![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/SchedulesCheckList.png "Notification Group Jobs/Machines")
+-->
 
 The **Categories** checklist shows all categories available for the Notification Group.
 
+<!--
 ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/CategoriesList.png "Notification Group Jobs/Machines")
+-->
 
 Select the **Add** button to quickly add a new category to the list.
 
+<!--
 ![Notification Group Jobs/Machines](../../../../../Resources/Images/SM/Library/NotificationGroups/AddCategory.png "Notification Group Jobs/Machines")
+-->
 
 ## FAQs
 

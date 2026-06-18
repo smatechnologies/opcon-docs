@@ -47,8 +47,8 @@ To open the **Daily Job Definition** page and switch to **Admin** mode, complete
 4. Select one or more schedules in the list.
 5. Select one job in the list. Your selection appears as a breadcrumb trail in the [status bar](SM-UI-Layout.md#Status).
 6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default.
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to switch to **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
+7. Select the **Daily Job Definition** button at the top-left of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button at the top-right to switch to **Admin** mode. The button changes to a white unlocked lock on a green background.
 
 **Result:** The **Daily Job Definition** page is now in **Admin** mode and the **Department**, **Access Code**, and **Tags** fields are editable.
 
@@ -59,7 +59,7 @@ For conceptual information, refer to [Departments](../../../objects/departments.
 To update the department assigned to a job, complete the following steps:
 
 1. Complete all steps in [Opening the Daily Job Definition Page](#opening-the-daily-job-definition-page).
-2. Select a department from the **Department** field. If needed, select the **Search** button ![Daily Job Definition Search Button](../../../Resources/Images/SM/Daily-Job-Definition-Search-Button.png "Daily Job Definition Search Button"), enter search criteria to filter the list, make your selection, then select **OK**.
+2. Select a department from the **Department** field. If needed, select the **Search** button, enter search criteria to filter the list, make your selection, then select **OK**.
 3. Select **Save**.
 
 **Result:** The department assignment is updated for the daily job.
@@ -71,7 +71,7 @@ For conceptual information, refer to [Access Codes](../../../objects/access-code
 To update the access code assigned to a job, complete the following steps:
 
 1. Complete all steps in [Opening the Daily Job Definition Page](#opening-the-daily-job-definition-page).
-2. Select an access code from the **Access Code** field. If needed, select the **Search** button ![Daily Job Definition Search Button](../../../Resources/Images/SM/Daily-Job-Definition-Search-Button.png "Daily Job Definition Search Button"), enter search criteria to filter the list, make your selection, then select **OK**.
+2. Select an access code from the **Access Code** field. If needed, select the **Search** button, enter search criteria to filter the list, make your selection, then select **OK**.
 3. Select **Save**.
 
 **Result:** The access code assignment is updated for the daily job.

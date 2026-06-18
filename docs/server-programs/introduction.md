@@ -21,9 +21,13 @@ doc_type: conceptual
 
 The SAM and supporting services (SAM-SS) are the central components of OpCon.
 
-OpCon SAM and Supporting Services
+### OpCon SAM and Supporting Services - Cloud
 
-![SAM and Supporting Services](../Resources/Images/Server-Programs/sam&supportingsrvs.png "SAM and Supporting Services")
+![SAM and Supporting Services - Cloud](../Resources/Images/Server-Programs/sam&supportingsrvscloud.png "SAM and Supporting Services - Cloud")
+
+### OpCon SAM and Supporting Services - On Premises
+
+![SAM and Supporting Services - On Prem](../Resources/Images/Server-Programs/sam&supportingsrvsonprem.png "SAM and Supporting Services - On Prem")
 
 | Component Name | Description |
 |--- |--- |

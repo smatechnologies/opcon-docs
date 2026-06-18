@@ -33,7 +33,9 @@ To open the Profile page, complete the following steps:
 1. Log in to Solution Manager.
 2. Select the user profile button in the navigation menu.
 
+<!--
    ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
+-->
 
 **Result:** The **Profile** page opens, displaying the **Account** tab by default.
 

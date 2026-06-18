@@ -23,6 +23,7 @@ Solution Manager uses a responsive design that detects the width of the browser 
 
 On wider viewports, the full desktop layout is displayed with the side navigation visible by default.
 
+<!--
 ## Mobile Display Examples
 
 The following screenshots show how Solution Manager appears on a smartphone.
@@ -34,3 +35,4 @@ The following screenshots show how Solution Manager appears on a smartphone.
 ![Mobile Display Submit Service Request Screen](../../../Resources/Images/SM/Mobile-Tablet_3.png "Mobile Display Submit Service Request Screen")
 
 ![Mobile Display Self Service Screen](../../../Resources/Images/SM/Mobile-Tablet_4.png "Mobile Display Self Service Screen")
+-->

@@ -21,7 +21,9 @@ An SPO Event Report notification sends a message to an SPO (System Product Offer
 
 The **AL** mode sends an alarm report to the SPO system.
 
+<!--
 ![SPO AL dialog](../../../../../../Resources/Images/SM/Library/NotificationTriggers/spoal-dialog.png "SPO AL dialog")
+-->
 
 | Field | Required | Description |
 |---|---|---|
@@ -35,7 +37,9 @@ The **AL** mode sends an alarm report to the SPO system.
 
 The **CO** mode sends a command report to the SPO system.
 
+<!--
 ![SPO CO dialog](../../../../../../Resources/Images/SM/Library/NotificationTriggers/spoco-dialog.png "SPO CO dialog")
+-->
 
 | Field | Required | Description |
 |---|---|---|

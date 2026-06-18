@@ -28,9 +28,11 @@ To view Null job details in Daily Job Definition, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page.
 
-2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled.
+2. Enable both the **Date** and **Schedule** toggle switches.
 
+<!--
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired **date(s)** to display the associated schedules.
 
@@ -38,17 +40,21 @@ To view Null job details in Daily Job Definition, complete the following steps:
 
 5. Select one **Null job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
+<!--
    ![Job Processes](../../../Resources/Images/SM/Job-ProcessesNull.png "Job Processes")
+-->
 
 6. Select the job record (e.g., **1 job(s)**) in the status bar to display the **Selection** panel.
 
-   :::note
-   As an alternative, right-click the job in the list to display the **Selection** panel.
-   :::
+:::note
+As an alternative, right-click the job in the list to display the **Selection** panel.
+:::
 
+<!--
    ![Job Summary Tab for Null Jobs](../../../Resources/Images/SM/Job-Summary-Tab-(Null).png "Job Summary Tab for Null Jobs")
+-->
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default.
+7. Select the **Daily Job Definition** button at the top-left of the panel. The page opens in **Read-only** mode by default.
 
 8. Expand the **Task Details** panel. The following read-only field is displayed for Null jobs:
 

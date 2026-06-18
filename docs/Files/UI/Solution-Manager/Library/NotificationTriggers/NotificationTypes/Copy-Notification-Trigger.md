@@ -20,7 +20,9 @@ doc_type: procedural
 
 ## What Is It?
 
+<!--
 ![Copy Notification Trigger](../../../../../../Resources/Images/SM/Library/NotificationTriggers/Copy-Trigger.png "Copy Notification Trigger")
+-->
 
 The **Notification Copy** dialog copies a notification trigger definition — including all of its notification messages — to other notification groups of the same group type. This lets you reuse an existing trigger configuration across multiple groups without recreating each message by hand.
 

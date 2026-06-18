@@ -41,34 +41,41 @@ To update file transfer job details, complete the following steps:
 1. Select the **Processes** button at the top-right of the **Operations Summary** page.
 2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+<!--
+![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
+
 
 3. Select the desired date(s) to display associated schedules.
 4. Select one or more schedules in the list.
 5. Select one job in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
-   ![Job Processes](../../../Resources/Images/SM/Job-ProcessesFile-Transfer.png "Job Processes")
+<!--
+![Job Processes](../../../Resources/Images/SM/Job-ProcessesFile-Transfer.png "Job Processes")
+-->
 
 6. Select the job record (e.g., **1 job(s)**) in the status bar to display the **Selection** panel.
 
-   :::note
-   Alternatively, right-click the job in the list to display the **Selection** panel.
-   :::
+:::note
+Alternatively, right-click the job in the list to display the **Selection** panel.
+:::
 
-   ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(File-Transfer).png "Job Summary Tab in Operations")
+<!--
+![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(File-Transfer).png "Job Summary Tab in Operations")
+-->
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default.
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button displays a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled.
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button at the top-right corner to enter **Admin** mode. 
 
-   :::note
-   The **Lock** button is not visible to users without appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users without appropriate permissions.
+:::
 
 9. Expand the **Task Details** panel.
 
-   :::note
-   All required fields are marked with a red asterisk.
-   :::
+:::note
+All required fields are marked with a red asterisk.
+:::
 
 **In the Source frame:**
 
@@ -79,9 +86,9 @@ Define the source file information:
 - Enter the *full path and file name* for the **file** to transfer
 - Select the **data type**:
 
-  :::note
-  If anything other than Binary is selected, file integrity is maintained but the file structure may be altered to suit the target platform.
-  :::
+:::note
+If anything other than Binary is selected, file integrity is maintained but the file structure may be altered to suit the target platform.
+:::
 
   - **Text**: Uses the platform's default text data type
   - **ASCII**: Treats the file as a simple ASCII text file

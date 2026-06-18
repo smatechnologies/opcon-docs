@@ -26,11 +26,13 @@ To perform job status changes, complete the following steps:
 
 1. Select one of the six operation dials (**Failed**, **Blocked**, **Waiting**, **Running**, **Completed**, or **Ignored**) or use the **Quick Search** field in the **Jobs** section on the **Operations Summary** page.
 
+<!--
    ![Jobs Operation Dials](../../../Resources/Images/SM/Job-Operation-Dials.png "Jobs Operation Dials")
+-->
 
-   :::note
-   The "Ignored" operation dial groups any job with a job status of Cancelled or Skipped.
-   :::
+:::note
+The "Ignored" operation dial groups any job with a job status of Cancelled or Skipped.
+:::
 
    The **Processes** page displays.
 
@@ -48,13 +50,15 @@ To perform job status changes, complete the following steps:
 
 3. Select one or more jobs in the list. Your selections appear in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
+<!--
    ![Job Processes](../../../Resources/Images/SM/Job-Processes.png "Job Processes")
+-->
 
 4. Select the job record (e.g., **1 job(s)**) in the status bar to display the **Selection** panel.
 
-   :::note
-   As an alternative, right-click any selected job to display the **Selection** panel.
-   :::
+:::note
+As an alternative, right-click any selected job to display the **Selection** panel.
+:::
 
 5. Select the **Job Status Update** accordion-style tab in the panel.
 

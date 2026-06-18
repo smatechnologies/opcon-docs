@@ -24,15 +24,19 @@ Use this procedure to enable Admin Mode Editing in Solution Manager.
 
 To enable creating or editing Vision cards, frequencies, actions, or remote instances, select the **Admin Mode** button at the top-right corner:
 
+<!--
 Admin Mode Editing Toggle Switch
 
 ![Admin Mode Editing Toggle Switch](../../../Resources/Images/SM/Admin-Mode-Editing.png "Admin Mode Editing Toggle Switch")
+-->
 
 The **Lock** button switches to unlocked and the Vision Live page displays with editing privileges.
 
+<!--
 Admin Mode Editing Enabled
 
 ![Vision Admin Mode Editing Enabled](../../../Resources/Images/SM/Vision-Live-Page-Admin-Editing.png "Vision Admin Mode Editing Enabled")
+-->
 
 The **Admin Mode** button is only visible to users in the «ocadm» role or a role with the «Maintain Vision Workspaces» privilege.
 

@@ -22,10 +22,9 @@ doc_type: reference
 
 The basic OpCon Server configuration includes a single machine, a single database, and a StandAlone SMAServMan.
 
-Basic SMA Service Manager Configuration
-
+<!--
 ![Basic SMA Service Manager Configuration](../Resources/Images/Server-Programs/basicservmanconfig.png "Basic SMA Service Manager Configuration")
-
+-->
 ## Configuration
 
 The StandAlone SMAServMan manages the SAM and all supporting services. This configuration uses scripts invoking the SMALogEvent utility for notification. Refer to [SMALogEvent](../utilities/Command-line-Utilities/SMALogEvent.md) in the **Utilities** online help.

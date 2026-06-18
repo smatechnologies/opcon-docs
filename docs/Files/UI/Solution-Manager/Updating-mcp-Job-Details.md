@@ -48,30 +48,34 @@ To access the MCP job daily job definition, complete the following steps:
 1. Select the **Processes** button at the top-right of the **Operations Summary** page.
 2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/mcp-process.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+<!--
+![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/mcp-process.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired date(s) to display the associated schedule(s).
 4. Select one or more schedules in the list.
 5. Select one job in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 6. Right-click the job to display the **Selection** panel.
 
-   ![Job Summary Tab in Operations](../../../Resources/Images/SM/mcp-right-panel.png "Job Summary Tab in Operations")
+<!--
+![Job Summary Tab in Operations](../../../Resources/Images/SM/mcp-right-panel.png "Job Summary Tab in Operations")
+-->
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default.
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled.
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button at the top-right corner to enter **Admin** mode.
 
-   :::note
-   The **Lock** button is not visible to users without the appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users without the appropriate permissions.
+:::
 
 9. Expand the **Task Details** panel.
 
-   :::note
-   All required fields are designated by a red asterisk.
-   :::
+:::note
+All required fields are designated by a red asterisk.
+:::
 
 10. Select a **User Id** for running the job. Use the default value of "0/0" or assign an available batch user. User information must be defined as a Batch User ID in OpCon Administration.
-11. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To specify a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group. The button appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when toggled to Machine Group.
+11. From the **Machines or Machine Group** list, select the **machine** where the agent is installed. To specify a machine group instead, toggle the **Machines** switch to _Machine Group_ and select the group.
 
 ## Updating MCP Job Task Details
 
@@ -89,8 +93,10 @@ To access the MCP job daily job definition, complete the following steps:
   - Each attribute must fit on a single line; continuation across lines is not supported
   - Up to 10 task attributes allowed. To define more, append additional ones to an existing attribute using a semicolon. For example: `SW1=TRUE;SW2=TRUE`
 
+<!--
 ![START Job: job information](../../../Resources/Images/SM/mcp-copy.png "START Job: job information")
 ![START Job: task attributes](../../../Resources/Images/SM/mcp-task.png "START Job: task attributes")
+-->
 
 ### Updating Job Type RUN
 
@@ -109,9 +115,11 @@ To access the MCP job daily job definition, complete the following steps:
   - Each attribute must fit on a single line
   - Up to 10 file attributes allowed. Append additional ones using a semicolon. For example: `SW1=TRUE;SW2=TRUE`
 
+<!--
 ![RUN Job: job information](../../../Resources/Images/SM/mcp-copy.png "RUN Job: job information")
 ![RUN Job: task attributes](../../../Resources/Images/SM/mcp-task.png "RUN Job: task attributes")
 ![RUN Job: file attributes](../../../Resources/Images/SM/mcp-file.png "RUN Job: file attributes")
+-->
 
 ### Updating Job Type EAE/AB Suite
 
@@ -122,7 +130,9 @@ To access the MCP job daily job definition, complete the following steps:
 - **Template Display File:** File used in lieu of a job-specific displays file. Allows a single set of definitions for multiple OpCon jobs. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
 - **EOT Notice Message:** When enabled, treats each end-of-task notification as a display message, allowing an Automated Response to trigger on task completion without waiting for the job to fully complete. For more information, refer to [Automated Response](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Automated-Response.md#Automate).
 
+<!--
 ![EAE/AB Suite job information](../../../Resources/Images/SM/mcp-eaeab.png "EAE/AB Suite job information")
+-->
 
 ### Updating Job Type COPY
 
@@ -135,7 +145,9 @@ To access the MCP job daily job definition, complete the following steps:
 - **Hostname (if BNA Transfer)** (Optional): Unisys MCP hostname to copy the file to (max 256 characters). If blank, the application assumes this is not a BNA Transfer copy. Tokens are supported
 - **Copy &amp; Compare** (Optional): When selected, uses the "COPY & COMPARE" feature when copying the file
 
+<!--
 ![COPY Job: job information](../../../Resources/Images/SM/mcp-copy.png "COPY Job: job information")
+-->
 
 ### Updating Job Type CHANGE
 
@@ -143,7 +155,9 @@ To access the MCP job daily job definition, complete the following steps:
 - **New File or Directory** (Required): New filename (e.g., `*(UC)MYUSER/SAVED/FILES`) or directory (e.g., `*(UC)MYUSER/SAVED/=`) (max 256 characters). Tokens are supported
 - **From** (Required): Family Disk name or tape name where the source file resides (max 40 characters). Tokens are supported
 
+<!--
 ![CHANGE Job: job information](../../../Resources/Images/SM/mcp-change.png "CHANGE Job: job information")
+-->
 
 ### Updating Job Type REMOVE
 
@@ -156,13 +170,17 @@ Effective with MCP Agent 16.02, `*SMA/WFL/REMOVEJOB` can be modified to complete
 To enable the alternate behavior, modify a working copy of `*SMA/WFL/REMOVEJOB`: comment out sequence #26600 and uncomment sequence 26650. Re-apply this modification after each MCP Agent upgrade if the alternate behavior is desired.
 :::
 
+<!--
 ![REMOVE Job: job information](../../../Resources/Images/SM/mcp-remove.png "REMOVE Job: job information")
+-->
 
 ## Pre-Run Information
 
 A Prerun tests required preconditions before job execution. If the Prerun fails, it is rescheduled at a user-defined interval and retried until it succeeds. Once the Prerun completes successfully, the job defined in the Job Description is allowed to process.
 
+<!--
 ![PreRun information](../../../Resources/Images/SM/mcp-prerun.png "PreRun information")
+-->
 
 ## Failure Criteria
 
@@ -172,7 +190,9 @@ A Prerun tests required preconditions before job execution. If the Prerun fails,
   - Fail Codes are an alternative to programming a WFL to ABORT if a program `ISNT COMPLETEDOK`. Fail Codes apply to WFL jobs only — not programs
 - **Fail Reset:** Words to compare against the MCP console display. If they match, the agent follows the configured failure logic
 
+<!--
 ![Failure Criteria Job: job information](../../../Resources/Images/SM/mcp-failure-criteria.png "Failure Criteria Job: job information")
+-->
 
 ## FAQs
 

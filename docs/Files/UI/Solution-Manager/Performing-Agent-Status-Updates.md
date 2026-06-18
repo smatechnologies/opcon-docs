@@ -29,8 +29,6 @@ To update Agent communication status, complete the following steps:
 
 2. (Optional) Use the **Filter Bar** to narrow the list by status, name, platform, group, socket, version, or TLS setting.
 
-   ![Agent Filter Bar](../../../Resources/Images/SM/Agent-Filter-Bar.png "Agent Filter Bar")
-
    :::note
    You can also select a segment on the color-coded **Statistics Bar** above the list to filter by status. For more information, see [Managing Daily Processes](Managing-Daily-Processes.md#Interactive).
    :::
@@ -39,9 +37,7 @@ To update Agent communication status, complete the following steps:
    Select a column heading to sort the list in ascending or descending order.
    :::
 
-3. Select one or more Agents from the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb.
-
-   ![Agent Processes](../../../Resources/Images/SM/Agent-Processes.png "Agent Processes")
+3. Select one or more Agents from the list.
 
 4. Select the Agent entry in the status bar to open the **Action** panel.
 

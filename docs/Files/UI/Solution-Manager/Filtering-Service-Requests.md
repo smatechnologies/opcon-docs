@@ -22,7 +22,9 @@ doc_type: procedural
 
 Use the Filter bar to filter Service Requests by «Category», «OpCon Role», and/or «Service Request name».
 
+<!--
 ![Self Service Filtering Options](../../../Resources/Images/SM/Filtering-Service-Requests_new.png "Self Service Filtering Options")
+-->
 
 ## Querying with Wildcards
 

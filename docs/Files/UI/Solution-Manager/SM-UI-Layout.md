@@ -37,10 +37,11 @@ The **Solution(s)** are located to the right of the Navigation menu. Solutions a
 
 The **Status Bar** is located at the footer of the page and contains icons and indicators described in the following sections.
 
-### Heartbeat Indicator
 
-The **Heartbeat indicator** identifies the status of the SAM and/or Agents:
+### Agent Status Indicator
 
+The **Agent Status indicator** ![Agent Status Icon](../../../Resources/Images/SM/agent-status-indicator.png "Agent Status Icon")identifies the status of the SAM and/or Agents.
+<!--
 - ![Heatbeat Indicator 1](../../../Resources/Images/SM/HeartbeatIndicator1.png "Heatbeat Indicator 1") - Communication between Solution Manager and OpCon Rest API is broken
 - ![Heatbeat Indicator 2](../../../Resources/Images/SM/HeartbeatIndicator2.png "Heatbeat Indicator 2") - SAM is DOWN
 - ![Heatbeat Indicator 7](../../../Resources/Images/SM/HeartbeatIndicator7.png "Heatbeat Indicator 7") - SAM is DOWN and at least one Agent is waiting on communication
@@ -48,6 +49,7 @@ The **Heartbeat indicator** identifies the status of the SAM and/or Agents:
 - ![Heatbeat Indicator 4](../../../Resources/Images/SM/HeartbeatIndicator4.png "Heatbeat Indicator 4") - SAM is UP, but at least one Agent is waiting on communication (and none is in error)
 - ![Heatbeat Indicator 5](../../../Resources/Images/SM/HeartbeatIndicator5.png "Heatbeat Indicator 5") - SAM is UP, but at least one started Agent does not respond (and at least one is started or waiting)
 - ![Heatbeat Indicator 6](../../../Resources/Images/SM/HeartbeatIndicator6.png "Heatbeat Indicator 6") - SAM is UP, but all started Agents do not respond (in error)
+-->
 
 ### Notification Indicator
 

@@ -55,9 +55,11 @@ An administrator can set critical and tolerable threshold levels on cards for bo
 
 The Vision Diagnostic page identifies the root cause(s) of health anomalies. It uses the date range from the Vision Health page combined with the cards selected in the Detected Anomalies (Tags) section to find what caused a low QoS percentage or an SLA failure.
 
+<!--
 Vision Diagnostic Page
 
 ![Vision Diagnostic Page](../../../Resources/Images/SM/Vision-Diagnostic-Page.png "Vision Diagnostic Page")
+-->
 
 - **From \[Date\] to \[Date\] on \[Tag\]**: The date range from the Vision Health page for the listed card pattern (tag)
 

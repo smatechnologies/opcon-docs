@@ -20,14 +20,16 @@ doc_type: conceptual
 
 ## What Is It?
 
-Users in the «ocadm» role will see a Vision Live page that is similar to
+<!--
+Users in the `ocadm` role will see a Vision Live page that is similar to
 the example graphic here.
 
 Admin Mode Vision Live Page Display
 
 ![Vision Live Page Admin](../../../Resources/Images/SM/Vision-Live-Page-Admin.png "Vision Live Page Admin")
+-->
 
-Users in the «ocadm» role will have access to the Vision Frequencies,
+Users in the `ocadm` role will have access to the Vision Frequencies,
 Vision Actions, and Vision Remote Instances pages. Only users in the
 «ocadm» role will have access to Vision Remote Instances.
 

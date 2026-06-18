@@ -37,8 +37,7 @@ To configure the **General** setting, you must have one of the following:
 
 To configure General Settings, go to **Library** > **Server Options** > Select the **GENERAL** tab.
 
-![Server Options - General Settings](../../../../../Resources/Images/SM/Library/ServerOptions/General-Settings-Textboxes.png "General Settings")
-![Server Options - General Settings](../../../../../Resources/Images/SM/Library/ServerOptions/General-Settings-Switches.png "General Settings Continued")
+![Server Options - General Settings](../../../../../Resources/Images/SM/Library/ServerOptions/general-settings.png "General Settings")
 
 ### Configuration Options
 

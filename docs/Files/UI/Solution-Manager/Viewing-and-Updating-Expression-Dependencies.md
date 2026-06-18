@@ -36,15 +36,19 @@ Changes made in **Daily Job Definition** take effect immediately. If the job has
 To add or update expression dependencies for a job, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page.
-2. Ensure both the **Date** and **Schedule** toggle switches are enabled (green).
+2. Ensure both the **Date** and **Schedule** toggle switches are enabled.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+<!--
+![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired **date(s)** to display the associated schedules.
 4. Select one or more **schedule(s)** in the list.
 5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail.
 
-   ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+<!--
+![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+-->
 
 6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
 
@@ -52,14 +56,16 @@ To add or update expression dependencies for a job, complete the following steps
    Alternatively, right-click the job in the list to open the **Selection** panel.
    :::
 
-   ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+<!--
+![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+-->
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default.
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to enter **Admin** mode. The button switches to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
+7. Select the **Daily Job Definition** button at the top-left of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button at the top-right to enter **Admin** mode. 
 
-   :::note
-   The **Lock** button is not visible to users without the appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users without the appropriate permissions.
+:::
 
 9. Expand the **Expression Dependency** panel.
 

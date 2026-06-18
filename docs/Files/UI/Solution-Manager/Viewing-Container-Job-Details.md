@@ -26,9 +26,11 @@ To view job details, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page
 
-2. Enable both the **Date** and **Schedule** toggle switches. Each switch appears green when enabled
+2. Enable both the **Date** and **Schedule** toggle switches.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+<!--
+![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired **date(s)** to display the associated schedules
 
@@ -36,15 +38,19 @@ To view job details, complete the following steps:
 
 5. Select one **Container job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
 
-   ![Job Processes](../../../Resources/Images/SM/Job-ProcessesContainer.png "Job Processes")
+<!--
+![Job Processes](../../../Resources/Images/SM/Job-ProcessesContainer.png "Job Processes")
+-->
 
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
 
-   :::note
-   As an alternative, right-click the job in the list to display the **Selection** panel.
-   :::
+:::note
+As an alternative, right-click the job in the list to display the **Selection** panel.
+:::
 
-   ![Job Summary Tab for Container Jobs](../../../Resources/Images/SM/Job-Summary-Tab-(Container).png "Job Summary Tab for Container Jobs")
+<!--
+![Job Summary Tab for Container Jobs](../../../Resources/Images/SM/Job-Summary-Tab-(Container).png "Job Summary Tab for Container Jobs")
+-->
 
 7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel. The page opens in **Read-only** mode by default
 

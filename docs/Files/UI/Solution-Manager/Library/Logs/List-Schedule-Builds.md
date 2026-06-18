@@ -25,9 +25,9 @@ To view this tab, you must be a member of a role with at least one of the follow
 
 - All Function Privileges
 - View Schedule Build Log
-
+<!--
 ![A screen showing list of schedule build files](../../../../../Resources/Images/SM/Library/Logs/ScheduleBuildLog.png "List of schedule build logs")
-
+-->
 ## How It Works
 
 The **Schedule Build Logs** tab lists log files in a grid with the following columns:

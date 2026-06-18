@@ -22,7 +22,7 @@ doc_type: procedural
 
 ## What Is It?
 
-Global Properties in OpCon are listed in the grid under **Library** > **Global Properties**. Select **Add**, **Edit**, or **Copy** to open the Global Property Editor.
+Global Properties in OpCon are listed in the grid under **Library** > **Global Properties**. Select **New**, **Edit**, or **Copy** to open the Global Property Editor.
 
 ![Managing Library](../../../../Resources/Images/SM/Library/ManagingLibrary/ManagingGlobalProperties.png "Managing Library")
 

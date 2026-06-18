@@ -23,9 +23,9 @@ doc_type: conceptual
 The **Archives** tab displays archived OpCon log files. Use it to review older log activity, open an archived file to see its details and contents, or download a file for offline analysis and support cases.
 
 The **Archives** tab is one of three tabs on the **Logs** page in Solution Manager, alongside **Application Logs** and **Schedule Build Logs**.
-
+<!--
 ![A screen showing list of log files](../../../../../Resources/Images/SM/Library/Logs/ArchiveLog.png "List of Archived Log Files")
-
+-->
 ## How It Works
 
 The **Archives** tab lists archived log files in a grid with the following columns:

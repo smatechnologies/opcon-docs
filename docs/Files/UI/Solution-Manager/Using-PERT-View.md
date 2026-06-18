@@ -73,13 +73,19 @@ For extremely complex diagrams with many jobs, nodes, or dependencies, the diagr
 To access PERT View, complete the following steps:
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page.
+
 2. Enable both the **Date** and **Schedule** toggle switches. Each switch shows a green checkmark when enabled.
 
+<!--
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired **date(s)** to display the associated schedules.
+
 4. Select one or more **schedules** or **jobs** in the perspective list.
+
 5. Right-click the selection to display the **Selection** panel.
+
 6. Select the **Diagram** accordion-style tab in the panel.
 
    ![Diagram Tab for PERT View](../../../Resources/Images/SM/Diagram-Tab.png "Diagram Tab for PERT View")
@@ -152,9 +158,12 @@ Wildcards are supported. Use an asterisk (\*) for any characters and a question 
 
 Job status updates can be performed within PERT View. Select a single job or press **Ctrl** and select multiple jobs. A solid royal blue border appears around selected jobs.
 
-Right-click to display the **Selection** panel with the **Job Status Update** tab in focus. Follow Steps 6–9 of the [Performing Job Status Changes](Performing-Job-Status-Changes.md) topic to change the status of the selected jobs.
+Right-click to display the **Selection** panel with the **Job Status Update** tab in focus. Follow Steps 6–9 of the 
+[Performing Job Status Changes](Performing-Job-Status-Changes.md) topic to change the status of the selected jobs.
 
+<!--
 ![Job Status Update in PERT View](../../../Resources/Images/SM/JobStatusUpdateinPERT.png "Job Status Update in PERT View")
+-->
 
 ## PERT View Job Output Requests
 
@@ -162,25 +171,33 @@ Job output files can be retrieved in PERT View for a job that is completed or ha
 
 Select a single job in the diagram, then right-click to display the **Selection** panel. Select the **Job Output** accordion-style tab, then follow Steps 5–9 of the [Viewing Job Output](Viewing-Job-Output.md) topic.
 
+<!--
 ![Job Output in PERT View](../../../Resources/Images/SM/JobOutputinPERT.png "Job Output in PERT View")
+-->
 
 ## PERT View Job Summary Access
 
 The Daily job summary can be viewed in PERT View. Select a single job, then right-click to display the **Selection** panel. Select the **Job Summary** accordion-style tab. For details on job summary fields and options, refer to the [Accessing Job Summary](Accessing-Job-Summary.md) topic.
 
+<!--
 ![Job Summary in PERT View](../../../Resources/Images/SM/JobSummaryinPERT.png "Job Summary in PERT View")
+-->
 
 ## PERT View Daily Job Definition Access
 
 Job configuration can be accessed in PERT View. Select a single job, then right-click to display the **Selection** panel. Select the **Daily Job Definition** button at the top-left of the panel. For details on reconfiguring job properties, refer to the [Accessing Daily Job Definition](Accessing-Daily-Job-Definition.md) topic.
 
+<!--
 ![Daily Job Definition in PERT View](../../../Resources/Images/SM/DailyJobDefinitioninPERT.png "Daily Job Definition in PERT View")
+-->
 
 ## PERT View Job Executions History Access
 
 Job executions history can be accessed in PERT View. Select a single job, then right-click to display the **Selection** panel. Select the **Job Executions History** button at the top-left of the panel. Refer to the [Accessing Job Executions History](Accessing-Job-Executions-History.md) topic for details on the available options.
 
+<!--
 ![Job Executions History in PERT View](../../../Resources/Images/SM/JobExecutionsHistoryinPERT.png "Job Executions History in PERT View")
+-->
 
 ## PERT View Schedule Status Updates
 
@@ -188,7 +205,9 @@ Schedule status updates can be performed within PERT View. Select a single sched
 
 Right-click to display the **Selection** panel with the **Schedule Status Update** tab in focus. Follow Steps 6–9 of the [Performing Schedule Status Changes](Performing-Schedule-Status-Changes.md) topic to change the status of the selected schedules.
 
+<!--
 ![Schedule Status Update in PERT View](../../../Resources/Images/SM/ScheduleStatusUpdateinPERT.png "Schedule Status Update in PERT View")
+-->
 
 ## PERT View Bulk Job Status Updates (Schedule Level)
 
@@ -196,7 +215,9 @@ Bulk job status updates at the schedule level can be performed within PERT View.
 
 Right-click to display the **Selection** panel, then select the **Bulk Job Status Update** accordion-style tab. Follow Steps 6–9 of the [Performing Bulk Job Status Updates (Schedule Level)](Performing-Bulk-Job-Status-Updates-Schedule-Level.md) topic.
 
+<!--
 ![Bulk Job Status Update (Schedule Level) in PERT View](../../../Resources/Images/SM/BulkJobUpdate(ScheduleLevel)inPERT.png "Bulk Job Status Update (Schedule Level) in PERT View")
+-->
 
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon") Related Topics
 

@@ -21,7 +21,9 @@ The **Schedule Build Queue** page displays all schedule build requests that are 
 
 To access the Schedule Build Queue, select the **Queue** button from the Schedule Build page toolbar.
 
+<!--
 ![Schedule Build Queue](../../../Resources/Images/SM/Schedule-Build-Queue.png "Schedule Build Queue")
+-->
 
 ## Required Privileges
 

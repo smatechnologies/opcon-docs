@@ -20,7 +20,9 @@ doc_type: conceptual
 
 ## What Is It?
 
+<!--
 ![Run Command](../../../../../../Resources/Images/SM/Library/NotificationTriggers/run-command-dialog.png "Run Command")
+-->
 
 The **Run Command** dialog provides the following fields for defining a command to run for the selected trigger:
 

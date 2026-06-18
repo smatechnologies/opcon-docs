@@ -43,9 +43,9 @@ To delete a master job, complete the following steps:
 1. Go to **Library** > **Master Jobs**.
 2. Select one or more jobs in the list.
 3. Select **Delete**. A confirmation dialog opens:
-
+<!--
    ![Master Job Delete](../../../../../Resources/Images/SM/Library/MasterJobs/master-job-delete.png "Confirm Delete")
-
+-->
 4. Select **Yes** to confirm the deletion or **No** to cancel.
 
 **Result:** The selected master job records are permanently removed from OpCon.

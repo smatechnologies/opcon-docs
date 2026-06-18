@@ -24,7 +24,7 @@ Use this procedure to create Service Requests in Solution Manager.
 
 To create a new service request, complete the following steps:
 
-1. Select the **Create** button
+1. Select the **New Service Request** button
 
 ![Create button](../../../Resources/Images/SM/Creating-Service-Requests.png "Create button")
 

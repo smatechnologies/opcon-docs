@@ -45,7 +45,9 @@ To open the **Vision Actions** page, complete the following steps:
 
 **Result:** The **Vision Actions** page opens, listing all existing actions with their name and event details.
 
+<!--
 ![Vision Actions Admin Page](../../../Resources/Images/SM/Vision-Actions-Admin-Page.png "Vision Actions Admin Page")
+-->
 
 ## Add a Vision Action
 

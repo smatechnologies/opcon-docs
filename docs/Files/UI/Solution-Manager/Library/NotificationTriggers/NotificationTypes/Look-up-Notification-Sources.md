@@ -22,7 +22,9 @@ doc_type: procedural
 
 The **Look up Notification Sources** dialog in Solution Manager performs a reverse lookup — given a Notification ID, it identifies the trigger, group type, group name, and notification type that generated the notification.
 
+<!--
 ![Lookup Notification Source](../../../../../../Resources/Images/SM/Library/NotificationTriggers/lookup-dialog.png "Lookup Notification Source")
+-->
 
 ## Looking up a Notification Source
 

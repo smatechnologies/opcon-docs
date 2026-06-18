@@ -25,11 +25,13 @@ To access the Self Service page at all, your role must also include the **View S
 
 For details on function privileges, see [Function Privileges](../../../administration/privileges.md#function-privileges).
 
+<!--
 ## Admin Mode Self Service page
 
 The following screenshot shows the Self Service page as it appears with Admin Mode enabled.
 
 ![Admin Mode Self Service Screen Display](../../../Resources/Images/SM/Service-Request-View-Admin.png "Admin Mode Self Service Screen Display")
+-->
 
 ## Enabling Admin Mode
 

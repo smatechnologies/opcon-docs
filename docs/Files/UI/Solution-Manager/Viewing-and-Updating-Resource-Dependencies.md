@@ -19,7 +19,7 @@ doc_type: procedural
 
 The **Resource Dependency** panel in **Daily Job Definition** displays any defined resource dependencies for the selected job. When the panel contains defined dependencies, a blue circular indicator showing a count appears to the right of the panel name.
 
-You can expand the panel to full-screen by selecting the full-screen button (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far-right of the panel bar. Select it again to exit full-screen.
+You can expand the panel to full-screen by selecting the full-screen button at the far-right of the panel bar. Select it again to exit full-screen.
 
 For conceptual background on resource dependencies, refer to [Threshold/Resource Dependencies](../../../job-components/threshold-resource-dependencies.md).
 
@@ -35,7 +35,7 @@ To add or update resource dependencies, complete the following steps:
 
 1. Open **Daily Job Definition** for the target job in **Admin** mode. For navigation steps, refer to [Accessing Daily Job Definition](Accessing-Daily-Job-Definition.md).
 
-2. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to switch to **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when Admin mode is active.
+2. Select the **Lock** button at the top-right corner to switch to **Admin** mode. 
 
    :::note
    The **Lock** button is not visible to users without the appropriate permissions.
@@ -66,8 +66,6 @@ To add or update resource dependencies, complete the following steps:
 ## Dependency Status Indicators
 
 After saving, each resource dependency in the panel displays a status indicator that shows whether the dependency condition is currently met.
-
-![Resource Dependency Indicator](../../../Resources/Images/SM/Resource-Green-Indicator.png "Resource Dependency Indicator")
 
 | Indicator | Meaning | Example condition |
 |---|---|---|

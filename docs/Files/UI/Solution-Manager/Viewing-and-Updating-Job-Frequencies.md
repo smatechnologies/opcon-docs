@@ -39,7 +39,9 @@ To update the frequency settings for a daily job, complete the following steps:
 
 2. Enable the **Date** and **Schedule** toggle switches so that you can make your date and schedule selections. Each switch appears green when enabled.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+<!--
+![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired date(s) to display the associated schedules.
 
@@ -47,39 +49,43 @@ To update the frequency settings for a daily job, complete the following steps:
 
 5. Select one job in the list. A breadcrumb record of your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page.
 
-   ![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+<!--
+![Job Processes](../../../Resources/Images/SM/Job-ProcessesUNIX.png "Job Processes")
+-->
 
 6. Select the job record (for example, **1 job(s)**) in the status bar to open the **Selection** panel.
 
-   :::note
-   Alternatively, right-click the job in the list to open the **Selection** panel.
-   :::
+:::note
+Alternatively, right-click the job in the list to open the **Selection** panel.
+:::
 
-   ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+<!--
+![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(UNIX).png "Job Summary Tab in Operations")
+-->
 
-7. Select the **Daily Job Definition** button (![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button")) at the top-left corner of the panel.
+7. Select the **Daily Job Definition** button at the top-left corner of the panel.
 
    The **Daily Job Definition** page opens in **Read-only** mode.
 
-8. Select the **Lock** button (![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")) at the top-right corner to switch the page to **Admin** mode.
+8. Select the **Lock** button at the top-right corner to switch the page to **Admin** mode.
 
-   The button changes to a white unlocked lock on a green background (![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch")).
-
-   :::note
-   The **Lock** button is not visible to users who do not have the appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users who do not have the appropriate permissions.
+:::
 
 9. Expand the **Frequency** panel to expose its content.
 
-   ![Daily Job Definition Frequency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Frequency-Panel.png "Daily Job Definition Frequency Panel")
+<!--
+![Daily Job Definition Frequency Panel](../../../Resources/Images/SM/Daily-Job-Definition-Frequency-Panel.png "Daily Job Definition Frequency Panel")
+-->
 
 10. Review or update the fields described in [Frequency panel fields](#frequency-panel-fields) below.
 
 11. Select the **Save** button.
 
-    :::note
-    Select the **Undo** button to discard any unsaved changes.
-    :::
+:::note
+Select the **Undo** button to discard any unsaved changes.
+:::
 
 **Result:** The frequency settings for the daily job are saved and take effect immediately or at the next job run.
 

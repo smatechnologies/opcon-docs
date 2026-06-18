@@ -23,9 +23,9 @@ doc_type: conceptual
 ## What Is It?
 
 A Department is an organizational grouping in OpCon that you use to assign jobs to logical divisions. A Department has a name that identifies it. You can scope user roles to specific Departments, which controls the jobs and schedules a user can view and manage.
-
+<!--
 ![Departments Grid](../../../../../Resources/Images/SM/Library/Departments/Departments.png "Departments Grid")
-
+-->
 Departments are available in both Solution Manager and Enterprise Manager.
 
 ## How It Works

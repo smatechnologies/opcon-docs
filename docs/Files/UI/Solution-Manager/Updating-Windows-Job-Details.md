@@ -52,8 +52,8 @@ To go to the daily job definition for the Run Program job, complete the followin
 4. Select one or more **schedule(s)** in the list
 5. Select one **job** in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button switches to a white lock unlocked on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. The page opens in **Read-only** mode by default
+8. Select the **Lock** button at the top-right corner to place the page in **Admin** mode. The button switches to unlocked when enabled
 9. Expand the **Task Details** panel
 
 ### Configure Run Program Job Settings
@@ -61,8 +61,8 @@ To go to the daily job definition for the Run Program job, complete the followin
 To configure the user, machine, prerun, and primary run settings, complete the following steps:
 
 1. Select a **User Id** assigned to the job for Windows security authentication
-2. Select the **machine** where the agent is installed from the **Machines or Machine Group** list. To specify a machine group instead, toggle the **Machines** switch to *Machine Group* and select the group. The switch appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when enabled
-3. Enable the **Prerun** switch ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch")
+2. Select the **machine** where the agent is installed from the **Machines or Machine Group** list. To specify a machine group instead, toggle the **Machines** switch to *Machine Group* and select the group. 
+3. Enable the **Prerun** switch 
 4. Enter the *command line detail* for the prerun process (up to 4000 characters)
 5. Enter the *working directory* for the prerun job (up to 255 characters)
 6. Specify the failure criteria for the prerun job by selecting an **operator** and entering or selecting an **exit code integer**
@@ -101,8 +101,8 @@ To go to the daily job definition for the File Arrival job, complete the followi
 4. Select one or more **schedule(s)** in the list
 5. Select one **job** in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button switches to a white lock unlocked on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. The page opens in **Read-only** mode by default
+8. Select the **Lock** button at the top-right corner to place the page in **Admin** mode. The button switches to unlocked when enabled
 9. Expand the **Task Details** panel
 
 ### Configure File Arrival Job Settings
@@ -137,8 +137,8 @@ To go to the daily job definition for the Embedded Script job, complete the foll
 4. Select one or more **schedule(s)** in the list
 5. Select one **job** in the list. Your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button switches to a white lock unlocked on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. The page opens in **Read-only** mode by default
+8. Select the **Lock** button at the top-right corner to place the page in **Admin** mode. The button switches to unlocked when enabled
 9. Expand the **Task Details** panel
 
 ### Configure Embedded Script Job Settings
