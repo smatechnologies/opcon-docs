@@ -82,9 +82,9 @@ Enable to allow users to use the password recovery function.
 :::note
 Users with an email or SSO role will be excluded.
 :::
-
+<!--
 ![A dialog to enter email for the logged in user](../../../../../Resources/Images/SM/Library/ServerOptions/email-contact-dialog.png "How can we contact you?").
-
+-->
 ## Security Considerations
 
 ### Authentication

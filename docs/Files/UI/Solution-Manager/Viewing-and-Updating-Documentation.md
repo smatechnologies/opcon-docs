@@ -45,8 +45,8 @@ To add or update documentation for a daily job, complete the following steps:
 4. Select one or more **schedule(s)** in the list.
 5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) as a breadcrumb trail.
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. The page opens in **Read-only** mode by default.
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to enter **Admin** mode. The button changes to a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch").
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. The page opens in **Read-only** mode by default.
+8. Select the **Lock** button at the top-right corner to enter **Admin** mode. The button changes to a white unlocked lock on a green background.
 9. Expand the **Documentation** panel.
 10. Enter changes in the **Job** and/or **Frequency** frames. Hyperlinks may be included.
 11. Select the **Save** button.

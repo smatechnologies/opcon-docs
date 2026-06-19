@@ -25,7 +25,9 @@ For background on how tags work, see [Tags](../../../../job-components/tags.md).
 
 The Tags page displays all existing tags in a grid. Select any tag in the grid to view its associations — the schedules, jobs, and frequencies linked to that tag — in the associations panel.
 
+<!--
 ![Tags Grid](../../../../Resources/Images/SM/Library/Tags/tags-manager.png "Tags Grid")
+-->
 
 ## Adding a Tag
 

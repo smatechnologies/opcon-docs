@@ -32,29 +32,22 @@ To perform bulk job status updates at the schedule level, complete the following
 
    The **Processes** page displays.
 
-2. Ensure that both the **Date** and **Schedule** toggle switches are enabled so you can make date and schedule selections. Each switch appears green when enabled.
+2. Select the desired **date(s)** and **schedule(s)** in each respective list. Your selections appear in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
 
-3. Select the desired **date(s)** and **schedule(s)** in each respective list. Your selections appear in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
+:::note
+Use the **Filter Bar** above the schedule list to filter by keyword. Select a column heading to sort ascending; select it again to sort descending.
+:::
 
-   ![Schedule Processes](../../../Resources/Images/SM/Schedule-Processes.png "Schedule Processes")
+3. Select the schedule record (e.g., 3 schedule(s)) in the status bar to display the **Selection** panel.
 
-   :::note
-   Use the **Filter Bar** above the schedule list to filter by keyword. Select a column heading to sort ascending; select it again to sort descending.
-   :::
+:::note
+As an alternative, right-click any selected schedule to display the **Selection** panel.
+:::
 
-4. Select the schedule record (e.g., 3 schedule(s)) in the status bar to display the **Selection** panel.
+4. Select the **Bulk Job Status Update** accordion-style tab in the panel.
 
-   :::note
-   As an alternative, right-click any selected schedule to display the **Selection** panel.
-   :::
-
-5. Select the **Bulk Job Status Update** accordion-style tab in the panel.
-
-   ![Bulk Job Status Update at Schedule Level](../../../Resources/Images/SM/BulkUpdateOnSchedule.png "Bulk Job Status Update at Schedule Level")
-
-6. Select one of the following options in the **Change all Job Statuses to** list:
+5. Select one of the following options in the **Change all Job Statuses to** list:
 
    - **Cancel**: Cancels all jobs for the selected schedule(s) based on a filter. Dependent jobs do not have those dependencies met
    - **Hold**: Suspends processing of all jobs for the selected schedule(s) based on a filter
@@ -67,24 +60,24 @@ To perform bulk job status updates at the schedule level, complete the following
    - **Restart on Hold**: Places all jobs on the selected schedule(s) in an On Hold state on restart, based on a filter
    - **Skip**: Places all jobs on the selected schedule(s) in a Job to be Skipped state until they qualify to start. When jobs qualify, they are skipped and dependencies of subsequent jobs are met
 
-   :::note
-   For more on job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
-   :::
+:::note
+For more on job status changes, refer to [Schedule and Job Status Change Commands](../../../operations/status-change-commands.md) in the **Concepts** online help.
+:::
 
-7. Select the option(s) for the current job status(es) that will undergo the status change. Any selection in the **Jobs To Update** frame serves as a status filter.
+6. Select the option(s) for the current job status(es) that will undergo the status change. Any selection in the **Jobs To Update** frame serves as a status filter.
 
    :::note
    For more on job statuses and allowed changes, refer to [Schedule and Job Status Descriptions and Allowed Status Changes](../../../operations/status-descriptions.md) in the **Concepts** online help.
    :::
 
-8. *(Optional)* Enter or select a change status reason.
+7. *(Optional)* Enter or select a change status reason.
 
    :::note
    Depending on application configuration, the **Change Status Reason** list may store previous reasons entered for job or schedule status updates.
    :::
 
-9. Select **Apply** to apply the job status change.
-10. Select **Close** to close the **Selection** panel when done.
+8. Select **Apply** to apply the job status change.
+9. Select **Close** to close the **Selection** panel when done.
 
 ![White "person reading" icon on blue circular background](../../../Resources/Images/moreinfo-icon(48x48).png "More Info icon")
 Related Topics

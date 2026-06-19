@@ -131,9 +131,9 @@ Available actions:
 Left-clicking a node selects it. The right panel updates to show details for the selected node.
 
 ##### Selecting a Job Node:
-
+<!--
 ![Studio View Selected Job Node](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-selected-job-node.png "Studio View Selected Job Node")
-
+-->
 When a job node is selected, the right panel provides the following actions.
 
 In the upper header container:
@@ -157,9 +157,9 @@ In the lower footer container:
 ##### Selecting a Threshold/Resource Node:
 
 Selecting a threshold or resource node updates the right panel to list all jobs with threshold/resource connections (dependencies or updates), since a threshold or resource can be designated as either.
-
+<!--
 ![Studio View Selected Threshold/Resource Node](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-selected-threshold-resource-node.png "Studio View Selected Threshold/Resource Node")
-
+-->
 ##### Selecting an Expression Node:
 
 Selecting an expression node updates the right panel. Expression dependencies are unique to specific master jobs, so expression nodes are unique to their corresponding job nodes in the canvas.
@@ -173,9 +173,9 @@ Left-clicking an edge selects it. The right panel updates to show details for th
 #### Selecting an Edge with Disambiguator
 
 Selecting an edge with a numerical indicator opens the right panel with a list of associated dependencies. Select a specific dependency from the list to load its details in the right panel.
-
+<!--
 ![Studio View Dependency Disambiguator](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-dependency-disambiguator.png "Studio View Dependency Disambiguator")
-
+-->
 #### Search
 
 The search feature is a text input field that locates specific nodes or edges on the canvas. Results appear in the right panel. Selecting a result centers the canvas on the selection and actively selects it.
@@ -210,9 +210,9 @@ Parent schedules in the breadcrumbs are selectable (the selected schedule itself
 #### Selecting a Subschedule from a Container Job
 
 Right-clicking a container job in the canvas opens the right panel with its contained subschedule. Selecting the subschedule redirects to that subschedule's view.
-
+<!--
 ![Studio View Container Job Subschedule](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-container-job-subschedule.png "Studio View Container Job Subschedule")
-
+-->
 ### Controls
 
 The controls are in the lower-left corner of the canvas. Use them to zoom in, zoom out, center to the root node, fit to screen, or download the canvas image.
@@ -226,8 +226,6 @@ When working with large schedules, use the zoom-in control to keep the viewport 
 ### Legend
 
 Select the info button in the controls to open or close the legend, which shows details for each dependency line. The legend appears in the lower-left corner next to the controls.
-
-![Studio Open/Close Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-open-close-legend-button.png "Studio Open/Close Legend")
 
 ![Studio Legend](../../../../../../Resources/Images/SM/Studio/Canvas/studio-view-legend.png "Studio Legend")
 

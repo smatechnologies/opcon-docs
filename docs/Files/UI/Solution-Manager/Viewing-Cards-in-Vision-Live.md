@@ -17,7 +17,9 @@ doc_type: reference
 
 The Vision Live page displays cards that represent groups of jobs organized by tag patterns. Use the date filter to view cards for a specific day. Cards refresh automatically at the configured processing interval.
 
+<!--
 ![Vision Live Page](../../../Resources/Images/SM/Vision-Live-Page-User.png "Vision Live Page")
+-->
 
 ## Card Types
 
@@ -75,27 +77,35 @@ If Card2 has Pattern "tag1" and Card3 has Pattern "tag2", a job tagged with both
 
 Selecting a group card displays its child cards on a new page. Use the name links in the breadcrumb trail to return to a parent level.
 
+<!--
 ![Vision Navigation](../../../Resources/Images/SM/Vision-Navigation.png "Vision Navigation")
+-->
 
 The **Edit** button appears in the breadcrumb trail only for users with the **Maintain Vision Workspaces** function privilege.
 
 Selecting **Edit** next to the breadcrumb trail opens the Vision Settings page and displays the card hierarchy for the current branch. Edits made from a specific branch apply only to that branch. Selecting **Edit** from the Vision Home page gives a view of the entire hierarchy; edits apply to the entire tree.
 
+<!--
 ![Vision Breadcrumb Trail Edit Button](../../../Resources/Images/SM/Vision-Breadcumb-Trail-Edit-Button.png "Vision Breadcrumb Trail Edit Button")
 
 ![Vision Breadcrumb Trail Home Edit Button](../../../Resources/Images/SM/Vision-Breadcumb-Trail-Home-Edit-Button.png "Vision Breadcrumb Trail Home Edit Button")
+-->
 
 :::note
 You must have the appropriate privileges to view Vision Settings. For more information, refer to [Working in Admin Mode](Working-in-Admin-Mode_Vision.md).
 :::
 
+<!--
 ![Vision Settings Hierarchy](../../../Resources/Images/SM/Vision-Settings-Hierarchy.png "Vision Settings Hierarchy")
+-->
 
 ## Card Links
 
 Selecting a tag card defined to the current instance opens the Daily Processes page in the Operations module. For more information, refer to [Managing Daily Processes](Managing-Daily-Processes.md).
 
+<!--
 ![Vision Daily Processes Page](../../../Resources/Images/SM/Vision-Daily-Processes.png "Vision Daily Processes Page")
+-->
 
 Selecting a tag card defined to a remote instance opens a separate Solution Manager page using the URL and settings defined for that remote instance and displays the Daily Processes page for the remote instance. For more on Vision remote instances, refer to [Managing Vision Remote Instances](Managing-Vision-Remote-Instances.md).
 

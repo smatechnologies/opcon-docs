@@ -17,7 +17,9 @@ doc_type: reference
 
 The **Windows Event Log** notification type writes an entry to the Windows Application event log when a Machine, Schedule, or Job status change triggers a notification. Any third-party monitoring product that reads the Windows Application log can then send its own alerts based on these entries.
 
+<!--
 ![Windows Event Log dialog](../../../../../../Resources/Images/SM/Library/NotificationTriggers/windows-event-log-dialog.png "Windows Event Log")
+-->
 
 ## Fields
 

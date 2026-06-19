@@ -13,18 +13,6 @@ last_updated: 2026-03-18
 doc_type: conceptual
 ---
 
-# Working in User Mode
-
-User mode is the default view of the **Self Service** page for any user who does not hold the **Maintain Service Request** function privilege. In user mode, the page displays only the Service Request buttons that the user's assigned roles are granted access to. The admin mode toggle does not appear in the toolbar.
-
-Users who do hold the **Maintain Service Request** privilege see an admin mode toggle in the toolbar, which lets them switch between managing Service Requests and running them. See [Self Service](../../../Resources/Images/SM/Service-Request-View-User.png) for the admin view.
-
-## User Mode Self Service Page
-
-The following screenshot shows the Self Service page as it appears in user mode.
-
-![User Mode Self Service Screen Display](../../../Resources/Images/SM/Service-Request-View-User.png "User Mode Self Service Screen Display")
-
 ## Access Requirements
 
 To open the **Self Service** page (in any mode), a user must have:
@@ -32,6 +20,20 @@ To open the **Self Service** page (in any mode), a user must have:
 - The **View Service Requests** function privilege assigned through their role.
 
 Users with only **View Service Requests** always see the page in user mode. The admin mode toggle is visible only to users who also hold the **Maintain Service Request** privilege.
+
+## User Mode
+
+User mode is the default view of the **Self Service** page for any user who does not hold the **Maintain Service Request** function privilege. In user mode, the page displays only the Service Request buttons that the user's assigned roles are granted access to. The admin mode toggle does not appear in the toolbar.
+
+Users who do hold the **Maintain Service Request** privilege see an admin mode toggle in the toolbar, which lets them switch between managing Service Requests and running them. See [Self Service](../../../Resources/Images/SM/Service-Request-View-User.png) for the admin view.
+
+<!--
+## User Mode Self Service Page
+
+The following screenshot shows the Self Service page as it appears in user mode.
+
+![User Mode Self Service Screen Display](../../../Resources/Images/SM/Service-Request-View-User.png "User Mode Self Service Screen Display")
+-->
 
 ## Filtering Service Requests
 

@@ -21,7 +21,9 @@ A Machine Group is a named collection of Agents of the same type. You can assign
 
 Machine Groups are managed under **Library > Machine Groups** in Solution Manager.
 
+<!--
 ![Machine Groups Grid](../../../../../Resources/Images/SM/Library/MachineGroups/MachineGroups-Grid.png "Machine Groups Grid")
+-->
 
 ## Required privilege
 

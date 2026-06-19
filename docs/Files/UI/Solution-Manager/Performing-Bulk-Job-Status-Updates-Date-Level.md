@@ -23,23 +23,15 @@ To perform a bulk job status update at the date level, complete the following st
 
 1. Select the **Processes** button at the top-right of the **Operations Summary** page.
 
-2. Enable the **Date** toggle switch so it appears green to allow date selection.
+2. Select the desired date or dates in the list. Your selections appear in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
-   ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_DateToggle.png "Schedule Status Updates Date Toggle Switch Enabled")
+3. Select the date record in the status bar to open the **Selection** panel with the **Bulk Job Status Update** tab in focus.
 
-3. Select the desired date or dates in the list. Your selections appear in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
+:::note
+As an alternative, you can right-click any selected date to open the **Selection** panel.
+:::
 
-   ![Date Processes](../../../Resources/Images/SM/Date-Processes.png "Date Processes")
-
-4. Select the date record in the status bar to open the **Selection** panel with the **Bulk Job Status Update** tab in focus.
-
-   :::note
-   As an alternative, you can right-click any selected date to open the **Selection** panel.
-   :::
-
-   ![Bulk Job Status Update at Date Level](../../../Resources/Images/SM/BulkUpdateOnDate.png "Bulk Job Status Update at Date Level")
-
-5. Select one of the following options from the **Change all Job Statuses to** list:
+4. Select one of the following options from the **Change all Job Statuses to** list:
 
    | Option | Behavior |
    |---|---|
@@ -54,7 +46,7 @@ To perform a bulk job status update at the date level, complete the following st
    | **Restart on Hold** | Places all jobs in an On Hold state on restart. |
    | **Skip** | Places all jobs in a Job to be Skipped state until they qualify to start. When jobs qualify, they are skipped and dependencies of subsequent jobs are met. |
 
-6. If the selected action is **Restart** or **Restart on Hold** and the date selection contains Container jobs, the **Job Containers Action** frame appears. Select the action to apply to Container jobs:
+5. If the selected action is **Restart** or **Restart on Hold** and the date selection contains Container jobs, the **Job Containers Action** frame appears. Select the action to apply to Container jobs:
 
    | Action | Behavior |
    |---|---|
@@ -65,25 +57,25 @@ To perform a bulk job status update at the date level, complete the following st
 
    When multiple Container jobs are present, a global **Job Containers Action** selector appears above the individual job list. Selecting **Restart**, **Rebuild**, or **None** applies that action to all Container jobs. Selecting **Custom** expands the list so you can assign an action to each Container job separately. When multiple dates are selected, the **Custom** view groups Container jobs by date.
 
-   :::note
-   To collapse the individual Container job list, select any option other than **Custom** in the **Job Containers Action** selector.
-   :::
+:::note
+To collapse the individual Container job list, select any option other than **Custom** in the **Job Containers Action** selector.
+:::
 
-7. Select the options in the **Job To Update** frame for the job statuses to include in the update. Selections act as a status filter — only jobs currently in the selected statuses are affected.
+6. Select the options in the **Job To Update** frame for the job statuses to include in the update. Selections act as a status filter — only jobs currently in the selected statuses are affected.
 
    :::note
    For more on job statuses and allowed changes, refer to [Schedule and Job Status Descriptions and Allowed Status Changes](../../../operations/status-descriptions.md).
    :::
 
-8. *(Optional)* Enter or select a change status reason.
+7. *(Optional)* Enter or select a change status reason.
 
-   :::note
-   The **Change Status Reason** field may display previously entered reasons depending on application configuration.
-   :::
+:::note
+The **Change Status Reason** field may display previously entered reasons depending on application configuration.
+:::
 
-9. Select **Apply** to apply the job status change.
+8. Select **Apply** to apply the job status change.
 
-10. Close the **Selection** panel when done.
+9. Close the **Selection** panel when done.
 
 **Result:** The status change is applied to all jobs matching the selected statuses on the selected dates.
 

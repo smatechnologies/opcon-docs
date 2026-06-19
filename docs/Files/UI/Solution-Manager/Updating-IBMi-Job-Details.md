@@ -50,9 +50,11 @@ To update IBM i job task details, complete the following steps:
 
    The **Processes** page displays.
 
-2. Ensure the **Date** and **Schedule** toggle switches are enabled (green) to make date and schedule selections.
+2. Ensure the **Date** and **Schedule** toggle switches are enabled to make date and schedule selections.
 
+<!--
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles_IBMi.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired **date(s)** to display the associated schedule(s).
 
@@ -60,37 +62,41 @@ To update IBM i job task details, complete the following steps:
 
 5. Select one **job** in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
+<!--
    ![Job Processes](../../../Resources/Images/SM/Job-ProcessesIBMi.png "Job Processes")
+-->
 
 6. Select the job record (e.g., **1 job(s)**) in the status bar to display the **Selection** panel.
 
-   :::note
-   As an alternative, right-click the job in the list to display the **Selection** panel.
-   :::
+:::note
+As an alternative, right-click the job in the list to display the **Selection** panel.
+:::
 
+<!--
    ![Job Summary Tab in Operations](<../../../Resources/Images/SM/Job-Summary-Tab-(IBMi).png> "Job Summary Tab in Operations")
+-->
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left of the panel.
+7. Select the **Daily Job Definition** button at the top-left of the panel.
 
    The page opens in **Read-only** mode by default.
 
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right to switch to **Admin** mode.
+8. Select the **Lock** button at the top-right to switch to **Admin** mode.
 
-   The button displays a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled.
+   The button displays as unlocked when enabled.
 
-   :::note
-   The **Lock** button is not visible to users without the appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users without the appropriate permissions.
+:::
 
 9. Expand the **Task Details** panel to expose its content.
 
-   :::note
-   All required fields are marked with a red asterisk.
-   :::
+:::note
+All required fields are marked with a red asterisk.
+:::
 
 10. Select a **User Id** for running the job. Use the default value of `0/0` or assign an available batch user. User information must be defined as a Batch User ID in OpCon Administration.
 
-11. Select the machine where the Agent is installed from the **Machines or Machine Group** list. To specify a machine group instead, toggle **Machines** to _Machine Group_ and select from the list. The toggle appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch") when enabled.
+11. Select the machine where the Agent is installed from the **Machines or Machine Group** list. To specify a machine group instead, toggle **Machines** to _Machine Group_ and select from the list.
 
 12. Select a **Job Type** to define the type of job to schedule on the IBM i Agent:
 
@@ -136,7 +142,9 @@ To update IBM i job task details, complete the following steps:
 - **Prerun**: IBM i job to run immediately before the job specified in Call/Script Name.
 - **Call**: Program name using the CALL command, or a command name.
 
+<!--
 ![Batch Job: job information](../../../Resources/Images/SM/IBMi_BatchJob_JobInformation.png "Batch Job: job information")
+-->
 
 **In the Additional Information frame:**
 
@@ -164,7 +172,9 @@ To update IBM i job task details, complete the following steps:
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![Batch Job: additional information](../../../Resources/Images/SM/IBMi_BatchJob_AdditionalInformation.png "Batch Job: additional information")
+-->
 
 ---
 
@@ -179,7 +189,9 @@ To update IBM i job task details, complete the following steps:
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![Tracked Job: Additional information](../../../Resources/Images/SM/IBMi_TrackedJob_AdditionalInformation.png "Tracked Job: Additional information")
+-->
 
 ---
 
@@ -208,7 +220,9 @@ To update IBM i job task details, complete the following steps:
 
 - **Prerun**: IBM i job to run immediately before the job specified in Call/Script Name.
 
+<!--
 ![Queued Job: Job Information](../../../Resources/Images/SM/IBMi_QueuedJob_JobInformation.png "Queued Job: Job Information")
+-->
 
 **In the Additional Information frame:**
 
@@ -236,7 +250,9 @@ To update IBM i job task details, complete the following steps:
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![Queued Job: additional information](../../../Resources/Images/SM/IBMi_BatchJob_AdditionalInformation.png "Queued Job: additional information")
+-->
 
 ---
 
@@ -266,7 +282,9 @@ To update IBM i job task details, complete the following steps:
 - **Prerun**: IBM i job to run immediately before the job specified in Call/Script Name.
 - **Script Name**: Script name for an Operator Replay Job. Must not exceed 2000 characters.
 
+<!--
 ![Operator Replay Job: job information](../../../Resources/Images/SM/IBMi_OperatorReplayJob_JobInformation.png "Operator Replay Job: job information")
+-->
 
 **In the Additional Information frame:**
 
@@ -294,7 +312,9 @@ To update IBM i job task details, complete the following steps:
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![Operator Replay Job: additional information](../../../Resources/Images/SM/IBMi_BatchJob_AdditionalInformation.png "Operator Replay Job: additional information")
+-->
 
 ---
 
@@ -324,7 +344,9 @@ To update IBM i job task details, complete the following steps:
 - **Prerun**: IBM i job to run immediately before the job specified in Call/Script Name.
 - **Script Name**: Script name for a Restricted Mode Job. Must not exceed 2000 characters.
 
+<!--
 ![Restricted Mode: job information](../../../Resources/Images/SM/IBMi_RestrictedMode_JobInformation.png "Restricted Mode: job information")
+-->
 
 **In the Additional Information frame:**
 
@@ -352,7 +374,9 @@ To update IBM i job task details, complete the following steps:
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![Restricted Mode: additional information](../../../Resources/Images/SM/IBMi_BatchJob_AdditionalInformation.png "Restricted Mode: additional information")
+-->
 
 :::note
 This job type does not have access to **Messages** or **Spool Files**.
@@ -402,7 +426,9 @@ This job type does not have access to **Messages** or **Spool Files**.
 - **Local File Name**: File name on the IBM i machine to transfer.
 - **Local Library or Directory**: Library or directory containing the file on the IBM i machine.
 
+<!--
 ![FTP: job information](../../../Resources/Images/SM/IBMi_FTP_JobInformation.png "FTP: job information")
+-->
 
 **In the Additional Information frame:**
 
@@ -430,7 +456,9 @@ This job type does not have access to **Messages** or **Spool Files**.
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![FTP: additional information](../../../Resources/Images/SM/IBMi_BatchJob_AdditionalInformation.png "FTP: additional information")
+-->
 
 ---
 
@@ -503,9 +531,11 @@ The following fields (Failure Code to Agent Dynamic Variable and OpCon Propertie
 - **File Size to Property**: Sends the number of records (DB2 tables) or total bytes (IBM i file systems outside DB2) to OpCon for storage in an OpCon property. Defaults to zero for file not found or empty file.
 - **Failure Code to Property**: Sends a failure code to OpCon for File Arrival job failures — either an expected exception condition or unexpected program failure. The code can be stored in an OpCon property for end-of-job Event processing. See [Job Completion Codes](https://help.smatechnologies.com/opcon/agents/ibm-i/commands-utilities/file-arrival#command-feedback-methods) for a summary of failure codes.
 
+<!--
 ![File Arrival: job information](../../../Resources/Images/SM/IBMi_FileArrival_JobInformation.png "File Arrival: job information")
 
 ![File Arrival: job information additional fields](../../../Resources/Images/SM/IBMi_FileArrival_JobInformation_Continued.png "File Arrival: job information additional fields")
+-->
 
 **In the Additional Information frame:**
 
@@ -533,7 +563,9 @@ The following fields (Failure Code to Agent Dynamic Variable and OpCon Propertie
 - **Number of Occurrences**: Number of occurrences to save when the same job name runs more than once. Valid range: 0–999.
 - **Number of Days**: Number of days to retain job logs. Valid range: 0–999.
 
+<!--
 ![File Arrival: additional information](../../../Resources/Images/SM/IBMi_BatchJob_AdditionalInformation.png "File Arrival: additional information")
+-->
 
 ---
 
@@ -555,7 +587,9 @@ To add, edit, or remove a message, complete the following steps:
 - To add a message, select the **green plus** button at the bottom of the grid.
 - To delete a message, select the **red trash** button next to the row.
 
+<!--
 ![Message Grid: Message Grid Information](../../../Resources/Images/SM/IBMi_MessageGrid.png "Message Grid: Message Grid Information")
+-->
 
 **Inside the Message dialog:**
 
@@ -568,7 +602,9 @@ To add, edit, or remove a message, complete the following steps:
 - **End Job**: Whether to end the OpCon job after the message meets the criteria or allow it to continue running.
 - **Event**: OpCon event to send to SAM-SS when the message meets the search criteria.
 
+<!--
 ![Message Grid Dialog: Message Grid Dialog fields.](../../../Resources/Images/SM/IBMi_MessageGrid_Dialog.png "Message Grid Dialog fields.")
+-->
 
 :::note
 Messages can be defined for all job types except Restricted Mode.
@@ -582,7 +618,9 @@ To add, edit, or remove a spool file, complete the following steps:
 - To add a spool file, select the **green plus** button at the bottom of the grid.
 - To delete a spool file, select the **red trash** button next to the row.
 
+<!--
 ![Spool File Grid: Spool File Grid Information](../../../Resources/Images/SM/IBMi_SpoolFilesGrid.png "Spool File Grid: Spool File Grid Information")
+-->
 
 - **File Name**: Name of the file containing the job output.
 - **User**: User name.
@@ -592,7 +630,9 @@ To add, edit, or remove a spool file, complete the following steps:
 - **Hold**: Whether to print the spool file.
 - **Save**: Whether to save the spool file after printing.
 
+<!--
 ![Spool File Dialog: Spool File Dialog Information](../../../Resources/Images/SM/IBMi_SpoolFiles_Dialog.png "Spool File Dialog: Spool File Dialog Information")
+-->
 
 :::note
 Spool Files can be defined for all job types except Restricted Mode and File Arrival.
@@ -606,7 +646,9 @@ To add, edit, or remove a variable, complete the following steps:
 - To add a variable, select the **green plus** button at the bottom of the grid.
 - To delete a variable, select the **red trash** button next to the row.
 
+<!--
 ![Variables Grid: Variables Grid Information](../../../Resources/Images/SM/IBMi_VariablesGrid.png "Variables Grid: Variables Grid Information")
+-->
 
 - **Variable Name**: Name of the IBM i Agent Dynamic Variable that stores the value. Maximum length: 500 characters. Valid characters: `$`, `@`, `#`, digits 0–9, uppercase letters A–Z.
 - **Value**: Character string to store in the IBM i Agent Dynamic Variables table. Maximum length: 4000 characters.

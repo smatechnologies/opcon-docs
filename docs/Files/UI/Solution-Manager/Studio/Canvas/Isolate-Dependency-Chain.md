@@ -19,23 +19,21 @@ The Isolate Dependency Chain feature in Studio lets you narrow the canvas view t
 
 ![Node Options in Studio View](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-view.png "Node Options in Studio View")
 
-![Node Options Panel](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-node-options-panel.png "Node Options Panel")
-
 ## Isolate Predecessors
 
 Select **Isolate Predecessors** to display only the jobs that the selected job depends on — that is, all preceding jobs in the dependency chain that must complete before the selected job can run.
-
+<!--
 ![Isolate - Previous Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-previous-deps.png "Isolate - Previous Dependencies")
-
+-->
 ## Isolate Successors
 
 Select **Isolate Successors** to display only the jobs that depend on the selected job — that is, all subsequent jobs in the dependency chain that cannot run until the selected job completes.
-
+<!--
 ![Isolate - Subsequent Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-subsequent-deps.png "Isolate - Subsequent Dependencies")
-
+-->
 ## Isolate Dependency Chain
 
 Select **Isolate Dependency Chain** to display the full dependency chain for the selected job, including all preceding and subsequent jobs.
-
+<!--
 ![Isolate - Full Dependencies](../../../../../Resources/Images/SM/Studio/Canvas/studio-view-isolate-dependency-full-deps.png "Isolate - Full Dependencies")
-
+-->

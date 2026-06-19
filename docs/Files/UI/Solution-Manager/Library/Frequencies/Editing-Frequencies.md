@@ -42,9 +42,11 @@ To edit a Frequency, complete the following steps:
 6. To discard your changes and restore the original settings, select **Reset**.
 7. Select **Save** to apply the changes, or **Cancel** to close the dialog without saving.
 
+<!--
 **Result**: The frequency is updated. Changes to a frequency in the Job Master take effect the next time the record is built or referenced.
 
 ![Frequency Manager Wizard](../../../../../Resources/Images/SM/Library/Frequencies/Frequency-Manager-Wizard.png "Frequency Manager Wizard")
+-->
 
 ## FAQs
 

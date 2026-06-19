@@ -21,9 +21,9 @@ To view this page, you must be a member of a role with at least one of the follo
 
 - All Function Privileges
 - View Application Logs
-
+<!--
 ![A screen showing log file details](../../../../../Resources/Images/SM/Library/Logs/LogDetails.png "Log File Details")
-
+-->
 ## Page contents
 
 The **Log File Details** page displays the following sections:

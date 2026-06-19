@@ -43,38 +43,46 @@ To update SAP BW Job Task Details, complete the following steps:
 1. Select the **Processes** button at the top-right of the **Operations Summary** page. The **Processes** page displays.
 2. Ensure that both the **Date** and **Schedule** toggle switches are enabled. Each switch appears green when enabled.
 
+<!--
    ![Schedule Status Updates Date & Schedule Toggle Switches Enabled](../../../Resources/Images/SM/Schedule-Status-Update_Date&ScheduleToggles_IBMi.png "Schedule Status Updates Date & Schedule Toggle Switches Enabled")
+-->
 
 3. Select the desired **date(s)** to display the associated schedule(s).
 4. Select one or more **schedule(s)** in the list.
 5. Select one **job** in the list. A record of your selection displays in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 
+<!--
    ![Job Processes](../../../Resources/Images/SM/Job-ProcessesIBMi.png "Job Processes")
+-->
 
 6. Select the job record (e.g., 1 job(s)) in the status bar to display the **Selection** panel.
 
-   :::note
-   As an alternative, right-click the job selected in the list to display the **Selection** panel.
-   :::
+:::note
+As an alternative, right-click the job selected in the list to display the **Selection** panel.
+:::
 
+<!--
    ![Job Summary Tab in Operations](../../../Resources/Images/SM/Job-Summary-Tab-(IBMi).png "Job Summary Tab in Operations")
+-->
 
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel. By default, this page opens in **Read-only** mode.
-8. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to place the page in **Admin** mode. The button switches to a white lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when enabled.
+7. Select the **Daily Job Definition** button at the top-left corner of the panel. By default, this page opens in **Read-only** mode.
+8. Select the **Lock** button at the top-right corner to place the page in **Admin** mode. 
 
-   :::note
-   The **Lock** button is not visible to users who do not have the appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users who do not have the appropriate permissions.
+:::
 
 9. Expand the **Task Details** panel to expose its content.
-10. From the **Machines or Machine Group** list, select the **machine** where the Agent is installed. To specify a machine group instead, toggle the **Machines** switch to **Machine Group** and select the **machine group** from the list. When toggled to Machine Group, the button appears green ![Green Enabled Switch](../../../Resources/Images/SM/Enabled-Switch.png "Green Enabled Switch").
+10. From the **Machines or Machine Group** list, select the **machine** where the Agent is installed. To specify a machine group instead, toggle the **Machines** switch to **Machine Group** and select the **machine group** from the list.
 
 **In the SAP BW Definition frame:**
 
 - **Process Chain Name**: The name of the Business Warehouse job as defined in the SAP Business Warehouse system
-- Select the search button ![Search Button](../../../Resources/Images/SM/Search_Sap_Button.png "Search Button") to open the SAP Query dialog
+- Select the search button to open the SAP Query dialog
 
+<!--
 ![SAP BW Definition](../../../Resources/Images/SM/SAP-BW-Job-Definition.png "SAP BW Definition")
+-->
 
 **In the SAP Query dialog:**
 
@@ -83,14 +91,18 @@ To update SAP BW Job Task Details, complete the following steps:
 - **Chain**: Text matching the name of the desired Process Chain. Use wildcards (\*) if the full process chain name is unknown
 - **Description**: Text matching the description of the desired Process Chain. Use wildcards (\*) if the full description is unknown
 
+<!--
 ![SAP Query Dialog](../../../Resources/Images/SM/SAP-Query-Dialog.png "SAP Query Dialog")
+-->
 
-11. Select the search button ![Query SAP Button](../../../Resources/Images/SM/Query-SAP-Button.png "Query SAP Button") to retrieve all Process Chain names matching the search criteria from the SAP BW system.
+11. Select the search button to retrieve all Process Chain names matching the search criteria from the SAP BW system.
 12. Select a process chain from the list and select **Ok** to assign it to the process chain name in the SAP BW Daily Job Definition.
 
+<!--
 ![Process Chain List](../../../Resources/Images/SM/Proccess-Chain-List.png "Process Chain List")
 
 ![Process Chain Name](../../../Resources/Images/SM/Process_Chain_Name.png "Process Chain Name")
+-->
 
 :::note
 Select the **Undo** button to undo any changes.

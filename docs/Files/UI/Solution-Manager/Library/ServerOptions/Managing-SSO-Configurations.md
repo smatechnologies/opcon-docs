@@ -38,9 +38,9 @@ To configure the **Single Sign-On** setting, you must have one of the following:
 To configure SSO Settings, go to **Library** > **Server Options** > Select the **SSO** tab.
 
 #### SSO Configuration Fields
-
+<!--
 ![Server Options - SSO Settings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-settings-overall.png "SSO Tab")
-
+-->
 1. Select the **Switch** to enable the SSO login button
 
 1. Enter a **Provider**. Select the identity provider (IdP) from the **Provider** list. Options include **Okta**, **Azure AD**, and **Other**
@@ -56,15 +56,15 @@ To configure SSO Settings, go to **Library** > **Server Options** > Select the *
 \* OpenID Connect (OIDC) is an open authentication protocol that works on top of the OAuth 2.0 (OAuth2) framework.
 
 #### Test Connection Button
-
+<!--
 ![Server Options - Authority Test Connection](../../../../../Resources/Images/SM/Library/ServerOptions/sso-test-connection.png "Authority Test Connection Button")
-
+-->
 The **test connection button** retrieves metadata from the IdP using the value in the **Authority** field. The **Authority** field is required to establish a proper configuration with the IdP and enable communication with the OpenID Connect application.
 
 #### Group Mappings
-
+<!--
 ![Server Options - SSO Group Mappings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-group-mappings.png "SSO Group Mappings")
-
+-->
 1. Enter a **Group Name** matching the group name used in your IdP
 
 1. Enter a **Role** representing a valid **OpCon** role
@@ -107,7 +107,7 @@ The following table describes actions taken when a user logs in through Single S
 - Roles can be linked to many group names
 
 :::
-
+<!--
 :::tip Example
 The following is an example of filling out the required fields:
 
@@ -119,7 +119,7 @@ To configure SSO, complete the following steps:
    ![Server Options - SSO Group Mapping Sample](../../../../../Resources/Images/SM/Library/ServerOptions/sso-group-mappings.png "SSO Group Mapping Sample")
 
 :::
-
+-->
 ---
 
 ### Creating Applications That Are OpenID Connect Compatible

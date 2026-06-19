@@ -21,9 +21,9 @@ doc_type: procedural
 ## What Is It?
 
 SMAServMan manages the SAM-SS application group, handling startup, shutdown, and failover. In failover scenarios, two SMAServMans communicate to coordinate a smooth transition from the primary to the secondary machine (and optionally to the secondary database).
-
+<!--
 ![SMA Service Manager](../Resources/Images/Server-Programs/servmanconfig.png "SMA Service Manager")
-
+-->
 ## Configuration
 
 SMAServMan configuration controls basic service settings, logging behavior, the application group, and failure actions. The SMAServMan.ini file resides in the <Configuration Directory\>\\SAM\\ folder. Parameters marked Dynamic (Y) take effect immediately upon saving; all others require a service restart.

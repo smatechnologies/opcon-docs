@@ -21,7 +21,9 @@ The **SNMP Trap** notification type sends an outbound SNMP trap to a third-party
 SNMP trap notifications are supported on Windows only. SMA Notify Handler does not process SNMP traps on non-Windows platforms.
 :::
 
+<!--
 ![SNMP Trap](../../../../../../Resources/Images/SM/Library/NotificationTriggers/snmp-dialog.png "SNMP Trap")
+-->
 
 ## Field reference
 

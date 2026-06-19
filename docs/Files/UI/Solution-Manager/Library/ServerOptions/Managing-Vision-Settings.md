@@ -43,5 +43,6 @@ To configure Vision Settings, complete the following steps:
 4. Select **Save**.
 
 **Result:** OpCon applies the updated Vision Settings. A confirmation message confirms the save was successful.
-
+<!--
 ![A screen showing Vision Settings under Server Options](../../../../../Resources/Images/SM/Library/ServerOptions/Vision-Settings.png "Configuring Vision Settings")
+-->

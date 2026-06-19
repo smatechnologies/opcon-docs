@@ -16,7 +16,9 @@ doc_type: reference
 
 The **OpCon Events** notification type sends one or more OpCon events when a notification trigger fires. You configure the events using the **OpCon Events** dialog, which lists existing events for the trigger and provides options to add, edit, or delete them.
 
+<!--
 ![OpCon Events](../../../../../../Resources/Images/SM/Library/NotificationTriggers/opcon-events-dialog.png "OpCon Events")
+-->
 
 ## OpCon Events dialog
 
@@ -31,7 +33,9 @@ The **OpCon Events** dialog displays the events currently associated with the no
 
 Selecting **Add** or editing an existing event opens the **OpCon Event** dialog.
 
+<!--
 ![OpCon Event](../../../../../../Resources/Images/SM/Library/NotificationTriggers/opcon-event-dialog.png "OpCon Event")
+-->
 
 ### Event Template
 

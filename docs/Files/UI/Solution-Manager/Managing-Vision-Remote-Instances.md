@@ -25,7 +25,9 @@ You must be in the **ocadm** role to add, edit, or delete remote instances. For 
 
 The **Vision Remote Instances** page is the central location for viewing, adding, editing, and deleting remote instances.
 
+<!--
 ![Vision Remote Instances Admin Page](../../../Resources/Images/SM/Vision-Remote-Instances-Admin-Page.png "Vision Remote Instances Admin Page")
+-->
 
 From this page you can:
 

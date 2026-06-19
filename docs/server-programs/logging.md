@@ -20,9 +20,9 @@ doc_type: procedural
 ## What Is It?
 
 The SAM and supporting services (SAM-SS) have several important logs. All logs are located in the <Output Directory\>\\SAM\\Log\\ directory.
-
+<!--
 ![SAM and Supporting Services Log Files](../Resources/Images/Server-Programs/sam_sslogfiles.png "SAM and Supporting Services Log Files")
-
+-->
 The log files have the names:
 
 - Sam.log

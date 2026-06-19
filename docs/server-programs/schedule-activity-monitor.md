@@ -21,9 +21,9 @@ doc_type: procedural
 ## What Is It?
 
 The Schedule Activity Monitor (SAM) determines when jobs in the Daily tables qualify for submission to an agent and processes OpCon events. SAM places messages for agents in the database, monitors for responses, updates job statuses, and re-qualifies jobs for processing. It also processes events from the database and external sources. Refer to [OpCon Events](../events/introduction.md) for more information.
-
+<!--
 ![Schedule Activity Monitor](../Resources/Images/Server-Programs/samconfig.png "Schedule Activity Monitor")
-
+-->
 ## Job Qualification Process
 
 SAM analyzes database information to determine when to submit jobs.

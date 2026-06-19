@@ -27,7 +27,9 @@ To configure user settings, complete the following steps:
 1. Log into the Solution Manager
 2. Select the **user profile** button in the **Navigation** menu
 
+<!--
 ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
+-->
 
 3. Select the **Settings** tab on the **Profile** page
 

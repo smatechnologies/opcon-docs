@@ -42,7 +42,9 @@ To push daily job changes to the master job from the daily job configuration pag
 3. Make any required changes to the daily job definition.
 4. Select the arrow on the split button in the bottom-left of the screen to expand the options.
 
+<!--
    ![Split button](../../../Resources/Images/SM/Daily-Job-Split-Button.png "Split button")
+-->
 
 5. Select the option that appears:
    - **Push changes to Master Job** — appears when there are no unsaved changes. Copies the current daily job definitions to the master job.

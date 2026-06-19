@@ -28,9 +28,9 @@ To view this tab, you must be a member of a role with at least one of the follow
 
 - All Function Privileges
 - View Application Logs
-
+<!--
 ![A screen showing list of log files](../../../../../Resources/Images/SM/Library/Logs/ApplicationLogs.png "List of Log Files")
-
+-->
 ## How It Works
 
 The **Application Logs** tab lists log files in a grid with the following columns:

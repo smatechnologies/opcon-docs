@@ -29,9 +29,9 @@ If a user forgot their password, they can reset it by selecting the **Forgot Pas
 :::note
 The **Forgot Password** flow requires an active email (SMTP) server configuration. If the email server is not configured, contact the OpCon administrator to reset the password.
 :::
-
+<!--
 ![Solution Manager Login Screen with Forgot Password Link](../../../Resources/Images/SM/Forgot-Password-Login-Page.png "Solution Manager Login Screen with Forgot Password Link")
-
+-->
 ## Forgot Password Flow
 
 To reset your password, complete the following steps:
@@ -41,21 +41,21 @@ To reset your password, complete the following steps:
 :::note
 This requires an active email (SMTP) server configuration. If you do not receive the email, check your spam folder. If you still do not receive it, contact your OpCon administrator.
 :::
-
+<!--
 ![Solution Manager Forgot Password Credentials Page](../../../Resources/Images/SM/Forgot-Password-Credentials-Page.png "Solution Manager Forgot Password Credentials Page")
-
+-->
 2. Enter the 6-digit code in the **Verification Code** field and select **Submit**
-
+<!--
 ![Solution Manager Forgot Password Code Page](../../../Resources/Images/SM/Forgot-Password-Code-Page.png "Solution Manager Forgot Password Code Page")
-
+-->
 To resend the code, select **Resend**.
-
+<!--
 ![Solution Manager Forgot Password Resend Code Page](../../../Resources/Images/SM/Forgot-Password-Resend-Code.png "Solution Manager Forgot Password Resend Code Page")
-
+-->
 3. Enter and re-confirm your new password, then select **Submit**. The application verifies the password and logs you in
-
+<!--
 ![Solution Manager Forgot Password New Password Page](../../../Resources/Images/SM/Forgot-Password-New-Password.png "Solution Manager Forgot Password New Password Page")
-
+-->
 ## FAQs
 
 **Q: What does Forgot / Reset Password cover?**

@@ -28,9 +28,9 @@ To delete one or more Master Schedules, complete the following steps:
 1. Go to **Studio**.
 2. Select one or more schedules from the list.
 3. Select **Delete**. A confirmation dialog appears.
-
+<!--
    ![Master Schedule Delete](../../../../../Resources/Images/SM/Studio/MasterSchedules/master-schedule-delete.png "Master Schedule Delete")
-
+-->
 4. Select **Yes** to confirm the deletion, or **No** to cancel.
 
 **Result:** The selected schedule or schedules are permanently removed from OpCon.

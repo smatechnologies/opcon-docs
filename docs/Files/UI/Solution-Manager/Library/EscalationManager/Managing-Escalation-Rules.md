@@ -32,15 +32,19 @@ To create an escalation rule, complete the following steps:
 
 1. Select the **Add** button above the list and fill out the Escalation Rule form.
 
-   ![A screen showing add escalation rule form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Add-1.png "Add Escalation Rule Form")
+<!--
+![A screen showing add escalation rule form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Add-1.png "Add Escalation Rule Form")
+-->
 
 2. Select the **Add Sequence** button inside the **Rule Sequences** section and fill out the Sequence form.
 
-   ![A screen showing add escalation rule sequence form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Add-2.png "Add Escalation Rule Sequence Form")
+<!--
+![A screen showing add escalation rule sequence form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Add-2.png "Add Escalation Rule Sequence Form")
+-->
 
-   :::note
-   Repeat this step to add more than one sequence.
-   :::
+:::note
+Repeat this step to add more than one sequence.
+:::
 
 **Result:** The new escalation rule is saved and appears in the Escalation Rules list.
 
@@ -51,7 +55,9 @@ To edit an escalation rule, complete the following steps:
 1. Select an Escalation Rule in the list.
 2. Select the **Edit** button above the list and fill out the Escalation Rule form.
 
-   ![A screen showing edit escalation rule form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Edit.png "Edit Escalation Manager Form")
+<!--
+![A screen showing edit escalation rule form](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Edit.png "Edit Escalation Manager Form")
+-->
 
 **Result:** The escalation rule is updated with the new values.
 
@@ -66,7 +72,9 @@ To delete an escalation rule, complete the following steps:
 1. Select an Escalation Rule in the list.
 2. Select the **Delete** button above the list.
 
-   ![A screen asking for confirmation to delete escalation rule](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Delete.png "Delete Escalation Rule")
+<!--
+![A screen asking for confirmation to delete escalation rule](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Delete.png "Delete Escalation Rule")
+-->
 
 3. Confirm the deletion when prompted.
 
@@ -79,7 +87,9 @@ To check cross-references for an escalation rule, complete the following steps:
 1. Select an Escalation Rule in the list.
 2. Select the **Cross References** button above the list.
 
-   ![A screen showing cross references for an escalation rule](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Cross-References.png "Escalation Rule Cross References")
+<!--
+![A screen showing cross references for an escalation rule](../../../../../Resources/Images/SM/Library/EscalationManager/Escalation-Rule-Cross-References.png "Escalation Rule Cross References")
+-->
 
 **Result:** The cross-references panel displays all notification triggers that use the selected escalation rule.
 

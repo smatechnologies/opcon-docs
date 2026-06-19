@@ -23,7 +23,9 @@ SMA Notify Handler always attempts to use `Msg.exe` first. When SMA Notify Handl
 
 ## Fields
 
+<!--
 ![Network Message dialog](../../../../../../Resources/Images/SM/Library/NotificationTriggers/network-message-dialog.png "Network Message dialog")
+-->
 
 | Field | Required | Description |
 |---|---|---|

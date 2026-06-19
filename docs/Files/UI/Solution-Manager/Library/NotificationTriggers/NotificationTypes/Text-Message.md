@@ -20,7 +20,9 @@ doc_type: conceptual
 
 ## What Is It?
 
+<!--
 ![Text Message](../../../../../../Resources/Images/SM/Library/NotificationTriggers/text-dialog.png "Text Message")
+-->
 
 The **Text Message** dialog provides the following fields for defining a notification to a pager, phone, or other SMS-capable device.
 

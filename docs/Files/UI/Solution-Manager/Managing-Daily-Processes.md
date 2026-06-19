@@ -37,7 +37,9 @@ The **Date** and **Schedule** toggle switches enable or disable date and schedul
 
 Filter profiles are user-defined filters in the Operations **Processes** view that can be saved persistently and shared with others.
 
+<!--
 ![Filter Profile Bar](../../../Resources/Images/SM/FilterProfileBar.png "Filter Profile Bar")
+-->
 
 :::note
 Changes that affect column state (for example, hiding columns) are not stored by a filter profile.
@@ -48,14 +50,14 @@ Changes that affect column state (for example, hiding columns) are not stored by
 To create a filter profile, complete the following steps:
 
 1. Set the desired filters in the Operations **Processes** view.
-2. Select the **Advanced** button (![Filter Profile Advanced Button](../../../Resources/Images/SM/FilterProfileAdvancedButton.png "Filter Profile Advanced Button")) to expose the action buttons.
-3. Select the **Add** button (![Filter Profile Add Button](../../../Resources/Images/SM/FilterProfileAddButton.png "Filter Profile Add Button")).
+2. Select the **Advanced** button to expose the action buttons.
+3. Select the **Add** button.
 4. Enter a name for the filter set.
 5. Use the **Share with** list to set the share status. The share detail appears in parentheses next to the name (for example, `Test Filter (Private)` or `Test Filter (Role_ocadm)`):
    - Select a specific role to grant anyone in that role access and the ability to update the profile.
    - Select **Public** to grant everyone access. Only users in the `ocadm` role (or an equivalent role) can update a public profile.
    - Select **Private** to restrict access to the current user only.
-6. Select the **Save** button (![Filter Profile Save Button](../../../Resources/Images/SM/FilterProfileSaveButton.png "Filter Profile Save Button")).
+6. Select the **Save** button.
 
 **Result:** The filter profile is saved and appears in the **Filter Profile** list on the filter profile bar. Private, public, and shared profiles are all accessible from this list.
 
@@ -65,8 +67,8 @@ To modify a filter profile, complete the following steps:
 
 1. Select an existing filter profile from the **Filter Profile** list.
 2. Modify the existing set of filters.
-3. Select the **Advanced** button (![Filter Profile Advanced Button](../../../Resources/Images/SM/FilterProfileAdvancedButton.png "Filter Profile Advanced Button")).
-4. Select the **Save** button (![Filter Profile Save Button](../../../Resources/Images/SM/FilterProfileSaveButton.png "Filter Profile Save Button")).
+3. Select the **Advanced** button.
+4. Select the **Save** button.
 
 :::note
 To save a modified profile as a new profile, select the existing profile, modify the filters, select **Add**, enter a new name, configure sharing, and save.
@@ -77,16 +79,16 @@ To save a modified profile as a new profile, select the existing profile, modify
 To delete a filter profile, complete the following steps:
 
 1. Select an existing filter profile from the **Filter Profile** list.
-2. Select the **Advanced** button (![Filter Profile Advanced Button](../../../Resources/Images/SM/FilterProfileAdvancedButton.png "Filter Profile Advanced Button")).
-3. Select the **Delete** button (![Filter Profile Delete Button](../../../Resources/Images/SM/FilterProfileDeleteButton.png "Filter Profile Delete Button")).
+2. Select the **Advanced** button.
+3. Select the **Delete** button.
 
 ### Get a Direct URL for a Filter Profile
 
 To get a direct URL for a filter profile, complete the following steps:
 
 1. Select an existing filter profile from the **Filter Profile** list.
-2. Select the **Advanced** button (![Filter Profile Advanced Button](../../../Resources/Images/SM/FilterProfileAdvancedButton.png "Filter Profile Advanced Button")).
-3. Select the **Link** button (![Filter Profile Link Button](../../../Resources/Images/SM/FilterProfileLinkButton.png "Filter Profile Link Button")).
+2. Select the **Advanced** button.
+3. Select the **Link** button.
 
 **Result:** A **Filter Profile Link** dialog displays the direct URL for the selected profile.
 
@@ -96,22 +98,21 @@ Filtering is available for the **Schedules**, **Jobs**, and **Agents** grids, ma
 
 When filtering is applied, the following visual indicators appear:
 
-- Dark yellow is applied to field borders, buttons, controls, and tags to indicate an active filter.
-- The menu button in the top-right corner of grids (![Yellow Triple Bar Button](../../../Resources/Images/SM/Yellow-Triple-Bar-Button.png "Yellow Triple Bar Button")) turns dark yellow when a hidden column has filter criteria.
-- A filter tag box showing the filtered field name appears on the tag bar above the grid. Select the **x** on the tag box to remove that filter.
-
 ![Visual Filter Indicators](../../../Resources/Images/SM/OperationsProcessGrid-FilterIndicators.png "Visual Filter Indicators")
 
 ### Quick Filtering
 
 Use the **Filter Bar** above the grid to filter by keyword. Enter a keyword in the appropriate field and press **Enter**. Quick filtering is available for the **Schedules**, **Jobs**, and **Agents** grids.
 
+<!--
 ![Quick Filtering](../../../Resources/Images/SM/Quick-Filtering.png "Quick Filtering")
+-->
 
 :::note
 The **Schedules** filter bar includes a **Status** list with the following options: **Waiting**, **Held**, **In Progress**, **Completed**, and **Completed with Error(s)**.
 :::
 
+<!--
 ### In-Depth Filtering
 
 For more detailed filtering in the **Jobs** grid, select the ![Operations Filter Button](../../../Resources/Images/SM/Operations-Filter-Icon.png "Operations Filter Button") button to open a **Filter** panel. You can filter by job status, tag, department, or access code. Use the ![Select All Filters](../../../Resources/Images/SM/SelectAllFilters.png "Select All Filters") button to select all options or the ![Deselect All Filters](../../../Resources/Images/SM/DeselectAllFilters.png "Deselect All Filters") button to deselect all options. The panel displays the number of active filters per tab.
@@ -127,13 +128,14 @@ Use the color-coded **Statistics Bar** above the grid to filter by current statu
 ![Interactive Filtering](../../../Resources/Images/SM/InteractiveStatisticsBar.png "Interactive Filtering")
 
 A filter tag box (![Yellow Filter Button](../../../Resources/Images/SM/YellowStatusButton.png "Yellow Filter Button")) appears on the tag bar above the grid, and the **Status** field border changes to dark yellow to show the active status filter.
+-->
 
 ## Column Sorting and Display
 
 Column sorting and display are available for the **Schedules**, **Jobs**, and **Agents** grids.
 
 - **Sorting**: Select a column heading to sort ascending (arrow pointing down). Select the heading again to sort descending (arrow pointing up).
-- **Display**: Use the menu button (![Column Display Button](../../../Resources/Images/SM/Menu-Display-Button.png "Column Display Button")) to select which columns are displayed.
+- **Display**: Use the menu button to select which columns are displayed.
 
 ## Right-Click Actions
 
@@ -143,7 +145,9 @@ Right-click any item in the **Schedules**, **Jobs**, or **Agents** grids to disp
 
 When you select an item in the **Date**, **Schedule**, **Job**, or **Agents** list, it appears in the **Status Bar** at the bottom of the page as a breadcrumb trail. Select the record (not available for date records) to display a **Status Update** panel where you can perform actions on the current selection.
 
+<!--
 ![Breadcrumbs](../../../Resources/Images/SM/Schedule-Processes.png "Breadcrumbs")
+-->
 
 ## Related Topics
 

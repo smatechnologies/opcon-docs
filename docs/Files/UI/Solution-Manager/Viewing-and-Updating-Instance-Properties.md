@@ -17,7 +17,7 @@ doc_type: procedural
 
 The **Instance Properties** panel in **Daily Job Definition** displays the defined properties for each instance of the job. When at least one property is defined, a blue circular indicator (![Job Properties Indicator](../../../Resources/Images/SM/Daily-Job-Definition-Properties-Indicator.png "Job Properties Indicator")) appears to the right of the panel name showing the count of defined properties.
 
-Select the full-screen button (![Full Screen Panel Icon](../../../Resources/Images/SM/Full-Screen-Mode-Icon.png "Full Screen Panel Icon")) at the far right of the panel bar to expand the panel to full-screen mode. Select it again to return to the standard view.
+Select the full-screen button at the far right of the panel bar to expand the panel to full-screen mode. Select it again to return to the standard view.
 
 For conceptual background, refer to [Instance Definition](../../../job-components/instances.md).
 
@@ -35,15 +35,15 @@ To update instance properties for a daily job, complete the following steps:
 
 1. Open **Daily Job Definition** for the target job. For navigation steps, refer to [Daily Job Definition Access](Accessing-Daily-Job-Definition.md#Daily).
 
-2. Select the **Lock** button ![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button") at the top-right corner to switch to **Admin** mode. The button displays a white unlocked lock on a green background ![Daily Job Definition Admin Switch](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Daily Job Definition Admin Switch") when Admin mode is active.
+2. Select the **Lock** button at the top-right corner to switch to **Admin** mode.
 
-   :::note
-   The **Lock** button is not visible to users without appropriate permissions.
-   :::
+:::note
+The **Lock** button is not visible to users without appropriate permissions.
+:::
 
 3. Expand the **Instance Properties** panel.
 
-   ![Daily Job Definition Instance Properties Panel](../../../Resources/Images/SM/Daily-Job-Definition-Instance-Props-Panel.png "Daily Job Definition Instance Properties Panel")
+![Daily Job Definition Instance Properties Panel](../../../Resources/Images/SM/Daily-Job-Definition-Instance-Props-Panel.png "Daily Job Definition Instance Properties Panel")
 
 4. Make one or more of the following changes:
 

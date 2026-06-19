@@ -25,7 +25,9 @@ To access Vision Live at all, a user must hold the **View Vision Workspaces** pr
 
 In User Mode, users can view Vision cards but cannot create, edit, or delete them.
 
+<!--
 ![User Mode Vision Page Display](../../../Resources/Images/SM/Vision-Live-Page-User.png "User Mode Vision Page Display")
+-->
 
 ## What you can do in User Mode
 

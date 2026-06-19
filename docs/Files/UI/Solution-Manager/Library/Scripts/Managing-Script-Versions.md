@@ -26,17 +26,21 @@ The **Script Versions** module allows you to add, edit, delete, deploy, and chec
 
 To create a script version, complete the following steps:
 
-1. Select a script, then select the **Add** button above the Script Version list.
+1. Select a script, then select the **New Script Version** button above the Script Version list.
 
+<!--
    ![A screen showing script versions module with location of add button](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Add-Version-01.png "Add Script Version Button")
+-->
 
 2. Fill out the Script Version form.
 
+<!--
    ![A screen showing add script version form](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Add-Version-02.png "Add Script Version Form")
+-->
 
-   :::note
-   Editor Language is only for formatting the syntax highlighter. It has no effect on the script itself.
-   :::
+:::note
+Editor Language is only for formatting the syntax highlighter. It has no effect on the script itself.
+:::
 
 **Result:** The new script version is saved and appears in the Script Version list.
 
@@ -48,11 +52,19 @@ To copy a script version, complete the following steps:
 
 1. Select a script, select a script version, then select the **Copy** button above the Script Version list.
 
+<!--
+
    ![A screen showing script versions module with location of copy button](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Copy-Version-01.png "Copy Script Version Button")
+
+-->
 
 2. Fill out the Script Version form.
 
+<!--
+
    ![A screen showing pre-filled edit script version form](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Copy-Version-02.png "Copy Script Version Form")
+
+-->
 
 **Result:** A new script version is created based on the selected version.
 
@@ -62,23 +74,32 @@ To delete a script version, complete the following steps:
 
 1. Select a script, select a script version, then select the **Delete** button above the Script Version list.
 
+<!--
    ![A screen showing script versions module with location of delete button](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Delete-Version-01.png "Delete Script Version Button")
+
+-->
 
 2. Select **Yes** to confirm the deletion.
 
+<!--
    ![A screen asking for confirmation to delete a script version](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Delete-Version-02.png "Delete Script Version Confirmation")
+-->
 
-   :::note
-   The delete operation is not allowed if:
-   - The script version has cross-references
-   - The script version is the only version for the script
-   :::
 
-   :::note
-   If you are deleting the Latest Version of a deployed script, the previous version becomes the new Latest version.
+:::note
+The delete operation is not allowed if:
+- The script version has cross-references
+- The script version is the only version for the script
+:::
 
+:::note
+If you are deleting the Latest Version of a deployed script, the previous version becomes the new Latest version.
+
+<!--
    ![A screen asking for confirmation to delete a script version with additional information](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Delete-Version-02-Will-Set-Latest.png "Delete Deployed Latest Script Version Confirmation")
-   :::
+-->
+
+:::
 
 **Result:** The script version is deleted from the system.
 
@@ -97,11 +118,17 @@ To check cross-references for a script version, complete the following steps:
 
 1. Select a script, select a script version, then select the **Cross References** button above the Script Version list.
 
+<!--
    ![A screen showing script versions module with location of cross references button](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Cross-References-Version-01.png "Script Version Cross References Button")
+-->
+
 
 2. Review the cross-references displayed in the dialog.
 
+<!--
    ![A screen showing cross references of a script version](../../../../../Resources/Images/SM/Library/Scripts/Scripts-Cross-References-Version-02.png "Script Version Cross References Dialog")
+-->
+
 
 **Result:** The dialog displays all jobs and schedules that reference the selected script version.
 

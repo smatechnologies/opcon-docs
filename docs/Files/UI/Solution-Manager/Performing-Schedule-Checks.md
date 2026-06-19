@@ -39,8 +39,6 @@ To run a schedule check, complete the following steps:
 
 3. Select **Check** to open the Schedule Check dialog.
 
-   ![Schedule Check button](../../../Resources/Images/SM/Performing-Schedule-Checks2.png "Schedule Check button")
-
 4. Select a check type.
 
    ![Schedule Check dialog](../../../Resources/Images/SM/Performing-Schedule-Checks3.png "Schedule Check dialog")

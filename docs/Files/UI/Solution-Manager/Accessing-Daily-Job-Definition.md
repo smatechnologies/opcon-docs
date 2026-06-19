@@ -44,7 +44,7 @@ To access the daily job definition, complete the following steps:
 4. Select one or more schedules in the list.
 5. Select one job in the list. Your selection appears in the [status bar](SM-UI-Layout.md#Status) at the bottom of the page as a breadcrumb trail.
 6. Select the job record (for example, **1 job(s)**) in the status bar to display the **Selection** panel.
-7. Select the **Daily Job Definition** button ![Daily Job Definition Button](../../../Resources/Images/SM/Daily-Job-Definition-Button.png "Daily Job Definition Button") at the top-left corner of the panel.
+7. Select the **Daily Job Definition** button at the top-left corner of the panel.
 
 The **Daily Job Definition** page opens in **Read-only** mode by default.
 
@@ -54,7 +54,7 @@ Daily Job Definition can also be accessed while in PERT View. For more informati
 
 ## Daily Job Definition Properties
 
-**Daily Job Definition** contains general job information and expandable panels that expose defined properties. Users with appropriate privileges see a **Lock** button at the top-right corner to switch between modes. The button appears gray and locked (![Daily Job Definition Read-only Button](../../../Resources/Images/SM/Daily-Job-Definition-Read-only-Button.png "Daily Job Definition Read-only Button")) in **Read-only** mode and green and unlocked (![Job Definition Admin Button](../../../Resources/Images/SM/Daily-Job-Definition-Admin-Button.png "Job Definition Admin Button")) in **Admin** mode. A [menu](#daily-job-definition-menu) provides quick access to all panels.
+**Daily Job Definition** contains general job information and expandable panels that expose defined properties. Users with appropriate privileges see a **Lock** button at the top-right corner to switch between modes. The button appears gray and locked in **Read-only** mode and green and unlocked in **Admin** mode. A [menu](#daily-job-definition-menu) provides quick access to all panels.
 
 ![Daily Job Definition in Solution Manager](../../../Resources/Images/SM/Daily-Job-Definition.png "Daily Job Definition in Solution Manager")
 

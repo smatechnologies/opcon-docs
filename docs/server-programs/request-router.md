@@ -21,9 +21,9 @@ doc_type: reference
 ## What Is It?
 
 The SMA Request Router reads the OpCon database to process requests from the SAM, Enterprise Manager, and Solution Manager. It retrieves records, sends them to the designated handler, and writes completion information back to the OpCon database.
-
+<!--
 ![SMA Request Router](../Resources/Images/Server-Programs/smarequestrouter.png "SMA Request Router")
-
+-->
 ## Request Handlers
 
 The following Request Handlers run OpCon requests:

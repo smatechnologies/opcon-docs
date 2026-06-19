@@ -39,7 +39,7 @@ To manage notification triggers for a job, complete the following steps:
 
 1. Follow the steps in [Accessing Master Job Definition](Accessing-Master-Jobs.md) to open the **Master Job Definition** page.
 2. Expand the **Notification Triggers** panel to view its content.
-3. Select the **Manage Notification Triggers** button (![Manage Notification Triggers](../../../../../../Resources/Images/SM/Library/MasterJobs/manage-notification-triggers.png "Manage Notification Triggers Button")) to go to the **Notification Triggers** page.
+3. Select the **Manage Notification Triggers** button to go to the **Notification Triggers** page.
 
 **Result:** The **Notification Triggers** page opens, where you can add, edit, or remove notification triggers for the job. For instructions, refer to [Notification Triggers](../../../../../UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers.md).
 

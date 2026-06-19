@@ -27,9 +27,9 @@ To view NetComs in Solution Manager, see [Relays overview](../Files/UI/Solution-
 The SMANetCom component is responsible for all communication between the SAM and all agents. In OpCon, SMANetCom is the communication bridge between Central Components and agents. SMANetCom is a multi-threaded application, allowing the dedication of one thread per agent.
 
 SMANetCom sends job start information to each agent and then requests job status updates, writing the feedback from the agents into the database. When a job completes, the agents respond with the completion status. Continually reading SMANetCom messages in the database, the SAM uses this information to report statuses and resolve dependencies.
-
+<!--
 ![SMA Network Communications Module](../Resources/Images/Server-Programs/smanetcom.png "SMA Network Communications Module")
-
+-->
 ## TLS Security
 
 The OpCon server supports TLS 1.2 for securing communication between itself and any agents that are upgraded and configured to use TLS. Before communication starts, the OpCon server verifies the identity of the agent by exchanging digital certificates with it. Certificates may be either from a Certificate Authority or they may be self-signed certificates.

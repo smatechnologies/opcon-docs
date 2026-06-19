@@ -19,7 +19,7 @@ doc_type: reference
 
 After you submit a Service Request and form validation succeeds, Solution Manager displays an running status page. The page shows a progress bar and a status label that update automatically as the Service Request runs.
 
-## running Status Page
+## Running Status Page
 
 The running status page appears immediately after a successful Service Request submission. It contains:
 
@@ -29,11 +29,13 @@ The running status page appears immediately after a successful Service Request s
 
 The page refreshes on a periodic schedule until the running reaches a terminal state.
 
+<!--
 ![Service Request running Status Waiting](../../../Resources/Images/SM/Service-Request-Process-Indicators.png "Service Request running Status Waiting")
 
 ![Service Request running Status In Process](../../../Resources/Images/SM/Service-Request-Process-Indicators_1.png "Service Request running Status In Process")
+-->
 
-### running States
+### Running States
 
 The status label and progress bar reflect the current running state. The following states are possible:
 
@@ -54,12 +56,16 @@ Select **OK** to return to the Service Request list.
 
 After a Service Request has been submitted at least once, an **running** indicator appears in the top-left corner of its button on the Service Request list.
 
+<!--
 ![running Indicator on Service Request Button](../../../Resources/Images/SM/Service-Request-Indicator.png "running Indicator on Service Request Button")
+-->
 
 The indicator has two forms:
 
+<!--
 - ![running Indicator Concurrent](../../../Resources/Images/SM/Service-Request-Indicator_1.png "running Indicator Concurrent") — A number badge showing how many concurrent executions of this Service Request are still in progress (not yet in a terminal state).
 - ![running Indicator Previous History](../../../Resources/Images/SM/Service-Request-Indicator_2.png "running Indicator Previous History") — A history marker indicating that the Service Request has at least one completed running record.
+-->
 
 Select the **running** indicator to open the running history for that Service Request.
 
@@ -77,6 +83,8 @@ The running history displays all processing and processed instances for the sele
 
 The table defaults to sort by **Date** in descending order.
 
+<!--
 ![Service Request running History Record](../../../Resources/Images/SM/Service-Request-Indicator_3.png "Service Request running History Record")
+-->
 
 Select **OK** to return to the Service Request list.

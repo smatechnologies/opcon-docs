@@ -26,13 +26,13 @@ To generate external tokens, complete the following steps:
 
 1. Log into Solution Manager
 2. Select the **user profile** button in the **Navigation** menu
-
+<!--
 ![User Profile Button](../../../Resources/Images/SM/User-Profile-Button.png "User Profile Button")
-
+-->
 3. Select the **External Token** tab on the **Profile** page
-
+<!--
 ![Profile External Token Tab](../../../Resources/Images/SM/Profile-External-Token-Tab.png "Profile External Token Tab")
-
+-->
 4. Select a token type:
    - **API Token**: Generates a token that can also be used for API authentication
    - **Custom Length**: Sets the token length (8–35 characters). This token cannot be used for API authentication

@@ -29,13 +29,13 @@ Embedded Scripts in OpCon lets users centrally manage scripts for distribution t
 
 Embedded Scripts Overview
 
-![Embedded Scripts Overview](../Resources/Images/Concepts/EmbeddedScriptsOverview.jpg "Embedded Scripts Overview")
+![Embedded Scripts Overview](../Resources/Images/Concepts/EmbeddedScriptsOverview.png "Embedded Scripts Overview")
 
 ## Understanding the Process Flow
 
 Scripts are defined in the database and associated with a script type. The script type is associated with one or more runners. The runner is the local program configuration responsible for running a script of a specific type on remote machines. At runtime, the runner, type, and script information are passed to the Agent for running.
 
-![Diagram of Process Flow](../Resources/Images/Concepts/EmbeddedScriptsProcessFlow.jpg "Diagram of Process Flow")
+![Diagram of Process Flow](../Resources/Images/Concepts/EmbeddedScriptsProcessFlow.png "Diagram of Process Flow")
 
 ## Reasons to Use Embedded Scripts
 

@@ -25,7 +25,8 @@ OpCon Server components include the database, Schedule Activity Monitor (SAM), a
 
 ## OpCon Architecture Overview
 
-![OpCon Architecture Overview](./Resources/Images/Concepts/opconarchitecture.png "OpCon Architecture Overview")
+![OpCon Architecture Overview](./Resources/Images/Concepts/sam&supportingsrvscloud.png "OpCon Architecture Overview")
+![OpCon Architecture Overview](./Resources/Images/Concepts/sam&supportingsrvsonprem.png "OpCon Architecture Overview")
 
 ## OpCon Components
 
@@ -38,7 +39,9 @@ OpCon provides two primary graphical user interfaces:
 
 Both interfaces access the OpCon database to manage automation data and operations. For more information, refer to the **Enterprise Manager** and **Solution Manager** online help.
 
+<!--
 ![Graphical User Interfaces](./Resources/Images/Concepts/GUIs.png "Graphical User Interfaces")
+-->
 
 ### Database
 

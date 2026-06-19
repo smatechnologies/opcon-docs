@@ -27,6 +27,7 @@ This module is used exclusively to manage triggering Events in OpCon when certai
 ### CloudEvents Trigger Format
 A CloudEvents Trigger definition has two components: `Trigger Filters` and `Trigger Events`.
 
+
 ![Sample CloudEvents Trigger Definition](../../../../../Resources/Images/SM/Library/CloudEvents/Sample-CloudEventsTriggerDefinition.png)
 
 #### Trigger Filters
@@ -90,7 +91,10 @@ Filters are not guaranteed to evaluate in sequential order, and OpCon Events are
 ### Examples
 
 #### User Logon Alert
+
+<!--
 ![User Logon Attempt Event](../../../../../Resources/Images/SM/Library/CloudEvents/Sample-UserLogonTrigger.png)
+-->
 
 This CloudEvents Trigger displays a console message whenever an OpCon MFT Server user logs on. The `source` and `time` fields use `.*` (accept any input) as Filter Values and do not affect whether the trigger activates. The `$EXTERNAL` property identifiers provide contextual information to the display message.
 
@@ -123,7 +127,10 @@ Note: The `type` filter value `com.sma.MFT.Server.Logon` and the list label `MFT
 ```
 
 #### Display Message When Text File Upload from Server Fails
+
+<!--
 ![User Logon Attempt Event](../../../../../Resources/Images/SM/Library/CloudEvents/Sample-MessageOnTextUploadFailure.png)
+-->
 
 This CloudEvents Trigger displays a console message and sends a notification email whenever the Server component of MFT Agent 1 fails to upload a `.txt` file.
 

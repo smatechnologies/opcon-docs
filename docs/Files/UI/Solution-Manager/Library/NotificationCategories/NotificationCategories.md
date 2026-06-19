@@ -23,11 +23,15 @@ A notification category is a label you assign to notification groups so you can 
 
 You manage notification categories on the **Manage Categories** page. To open it, go to **Library > Notification Triggers** and select **Manage Categories**.
 
+<!--
 ![Notification Categories Grid](../../../../../Resources/Images/SM/Library/NotificationCategories/NotificationCategories-Grid.png "Notification Categories Grid")
+-->
 
 The grid lists existing categories by **Name**. Select a category in the grid, or select **New Category**, to open the edit panel below the grid.
 
+<!--
 ![Notification Categories Add and Edit](../../../../../Resources/Images/SM/Library/NotificationCategories/NotificationCategories-EditPanel.png "Editable panel for notification categories")
+-->
 
 ## How It Works
 

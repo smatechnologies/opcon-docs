@@ -33,15 +33,19 @@ To delete one or more Schedules, complete the following steps:
 1. Select one or more dates or schedules from the grid, then right-click.
 2. On the right-side panel, select the ![Delete Icon](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs-Icon.png "Delete button") **Delete** button.
 
-   ![Delete Schedule(s) Right Panel](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs1.png "Delete Schedule(s) Right Panel")
+<!--
+![Delete Schedule(s) Right Panel](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs1.png "Delete Schedule(s) Right Panel")
+-->
 
-   :::note
-   The **Delete** button is <ins>disabled</ins> if the Schedule has a running Job.
-   :::
+:::note
+The **Delete** button is <ins>disabled</ins> if the Schedule has a running Job.
+:::
 
 3. Select **Yes** to confirm the deletion.
 
-   ![Delete Schedule(s) Confirmation Dialog](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs2.png "Delete Schedule(s) Confirmation Dialog")
+<!--
+![Delete Schedule(s) Confirmation Dialog](../../../Resources/Images/SM/Deleting-Schedule-and-Jobs2.png "Delete Schedule(s) Confirmation Dialog")
+-->
 
 **Result:** The selected Schedules are removed from the grid.
 
@@ -52,9 +56,9 @@ To delete one or more Jobs, complete the following steps:
 1. Select one or more Jobs from the grid, then right-click.
 2. On the right-side panel, select the **Delete** button.
 
-   :::note
-   The **Delete** button is <ins>disabled</ins> if the Job is in the **Running** state.
-   :::
+:::note
+The **Delete** button is <ins>disabled</ins> if the Job is in the **Running** state.
+:::
 
 3. Select **Yes** to confirm the deletion.
 

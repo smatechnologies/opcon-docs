@@ -27,7 +27,9 @@ The **Password** field accepts a maximum of 12 characters.
 If data migration is required, your login may be rejected. A member of the `ocadm` role must perform [data migration](Migrating-Data.md) before you can access the application.
 :::
 
+<!--
 ![Solution Manager Login Screen](../../../Resources/Images/SM/Login2.png "Solution Manager Login Screen")
+-->
 
 :::note
 Some users may see a security message after each manual or automatic login attempt. You must select **Accept** or **Decline**. If you select **Accept**, you proceed normally. If you select **Decline**, Solution Manager returns you to the login screen or displays the security message again.
@@ -80,9 +82,9 @@ If automatic login fails, the login screen displays so you can provide your OpCo
 ### Windows Authentication Login
 
 The **Login with Windows** button lets you log in using Windows Authentication without entering OpCon credentials. When you select it, Solution Manager sends your Windows credentials to the server for authentication.
-
+<!--
 ![Solution Manager Login with Windows Button](../../../Resources/Images/SM/Login-with-Windows.png "Solution Manager Login with Windows Button")
-
+-->
 For the **Login with Windows** button to appear on the login screen, both of the following settings must be configured:
 
 - **Enable Windows Authentication** — enabled via the API.
@@ -91,9 +93,9 @@ For the **Login with Windows** button to appear on the login screen, both of the
 ### Single Sign-On Login
 
 The **Single Sign On (SSO)** button lets you log in using an identity provider (IdP) without entering OpCon credentials. Solution Manager authenticates your IdP credentials to grant access.
-
+<!--
 ![Solution Manager Login with SSO Button](../../../Resources/Images/SM/Login-with-SSO.png "Solution Manager Login with SSO Button")
-
+-->
 For the **Single Sign On (SSO)** button to appear on the login screen, configure **Enable SSO Authentication** and other required settings on the [Server Options](../Solution-Manager/Library/ServerOptions/Managing-SSO-Configurations.md) page in Solution Manager.
 
 #### Okta
@@ -103,9 +105,9 @@ When configuring SSO with Okta, users must have purchased both the **Single Sign
 ### Session Expiration
 
 If your browser session expires, a pop-up displays so you can log back in without returning to the login screen. The pop-up prompts for your credentials or displays the **Login with Windows** button, depending on how you originally logged in.
-
+<!--
 ![Session Expiration: Login Pop-up Window](../../../Resources/Images/SM/Login-Pop-up.png "Session Expiration: Login Pop-up Window")
-
+-->
 ## Logging Out
 
 To log out of Solution Manager, complete the following steps:
