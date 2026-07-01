@@ -1079,6 +1079,7 @@ module.exports = {
         "reference/Operations-Machine-Messages",
         "reference/Operations-File-Transfer-Messages",
         "reference/Windows-System-Errors",
+        "reference/zos-agent-feedback",
         "Files/UI/Solution-Manager/Library/LicenseSupport/License-Support",
         "Files/UI/Solution-Manager/Library/CloudEventsTriggers/CloudEventsTriggers",
         "file-locations",

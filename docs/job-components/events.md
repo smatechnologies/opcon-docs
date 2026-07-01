@@ -50,7 +50,7 @@ If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and 
       - SAP R/3 and CRM
       - UNIX
       - Windows
-      - z/OS
+      - z/OS — for the full list of feedback types and value formats, refer to [z/OS Agent Feedback](../reference/zos-agent-feedback.md)
     - **String to match**: String to compare against the agent feedback value using SQL pattern matching
       - Use `%` (not `*`) as a wildcard
       - Use `_` (not `?`) for a single-character wildcard
