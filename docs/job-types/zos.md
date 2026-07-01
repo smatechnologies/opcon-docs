@@ -372,18 +372,7 @@ The following information applies to defining Step Control:
     - The status of each step is written to the **Step
             Completion** agent Feedback table, so it provides an
             alternate way to define triggers, which does not require a
-            step control definition. These messages have a fixed format,
-            making it easy to match on all or part of the result:
-      - A five character status code:
-        - **Cnnnn**, where **nnnn** is the decimal condition
-                    code
-        - **FLUSH**, if the step did not run
-        - **Unnnn**, where **nnnn** is the decimal abend code
-        - **S-xxx**, where **xxx** is the hexadecimal abend
-                    code.
-      - A space
-      - The step name, in *execstep* or *jobstep.execstep*
-                format
+            step control definition. For the value format and a full list of z/OS Agent Feedback types, refer to [z/OS Agent Feedback](../reference/zos-agent-feedback.md)
 
   - Automatic restart step selection at the job or step level can be
         enabled or disabled. This will be controlled through prefixing

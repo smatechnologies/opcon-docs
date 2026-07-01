@@ -42,6 +42,7 @@ The Reference section provides lookup material for OpCon events, notification co
 | Operations Machine Messages | Status and error messages returned by agents while a job runs or completes |
 | Operations File Transfer Messages | Error codes for file transfer jobs |
 | Windows System Errors | Windows error code reference (codes 0–499) |
+| z/OS Agent Feedback | Reference for the feedback types the z/OS Agent sends to OpCon, what each one represents, and the format of its value |
 | License & Support | License information, Solution Manager version, and SMA support resources |
 | CloudEvents Triggers | Reference for cloud-based event trigger configuration |
 | File Locations | Default installation directories and file paths |
