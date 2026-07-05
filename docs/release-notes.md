@@ -17,6 +17,8 @@ Compatibility notes at the start of each version identify companion components t
 
 ## Summer 26
 
+### 26.1.3
+
 **NOTE**: Verify/Upgrade these components if applicable:
 
 * **ACS AzureWebservices** - 25.0.2
@@ -27,8 +29,6 @@ Compatibility notes at the start of each version identify companion components t
 * **Relay** - 26.1.2 or higher
 * **ServiceNow Connector** – 25.0 or higher
 * **WebServices Connector** – 21.6 or higher
-
-### 26.1.3
 
 #### Core Engine & Infrastructure
 
