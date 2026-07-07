@@ -111,6 +111,8 @@ doc_type: conceptual
 
 :white_check_mark: **OC-6795**: Fixed an issue on case-sensitive SQL Server collations where a Windows batch user's login name stored with different casing would cause SAM to report "Windows Password not found" and the batch user to appear blank when editing master and daily jobs. The fix applies case-insensitive matching across the SAM password lookup, master job batch user retrieval, and daily job batch user display.
 
+:white_check_mark: **OC-7710**: Fixed a memory leak issue with recyclable memory stream manager.
+
 ## OpCon 26.0.4
 
 **NOTE**: Verify/Upgrade these components if applicable:
