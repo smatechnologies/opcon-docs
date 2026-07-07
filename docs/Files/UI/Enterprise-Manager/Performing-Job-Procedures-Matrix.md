@@ -59,7 +59,7 @@ To perform this procedure, complete the following steps:
 
 ## Opening Window to Host
 
-:::
+:::note
 This action requires the configuration emulator for the connection to the machine. For information on configuring an emulator, refer to [Preferences for Window To Host](Preferences-for-Windows-To-Host.md).
 :::
 
