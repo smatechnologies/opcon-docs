@@ -5,25 +5,113 @@ doc_type: conceptual
 
 # OpCon Release Notes
 
-## ResourceMonitor
+## OpCon 26.0.5
 
-#### 21.1.0
+**NOTE**: Verify/Upgrade these components if applicable:
 
-**Bug Fix**
+* **Enterprise Manager** - 26.0
+* **ServiceNow** Connector – 21.4 or higher
+* **WebServices** Connector – 21.2 or higher
+* **Deploy** – 26.0.0 or higher
+* **Relay** - 25.1.1 or higher
 
-:white_check_mark: **Log-archive retention now respects the INI file**: The ArchiveDaysToKeep setting configured in the INI file is now applied correctly at service startup. In prior releases this value was ignored and the default retention was used instead.
+2026 July
 
-#### 21.0.0
+#### Server
 
-**FIPS Compliance & .NET Framework 4.8.1**
+:white_check_mark: **OC-5760**: Fixed an issue where [[SI.PROPERTY]] expressions resolved against the wrong schedule instance when multiple schedules shared the same name and date.
 
-:eight_spoked_asterisk: ResourceMonitor has been updated to be FIPS-compliant and now runs on .NET Framework 4.8.1. Both the service and the UI have been rebuilt against the latest FIPS-compliant SMA libraries, and the installer automatically deploys the .NET Framework 4.8.1 runtime as a prerequisite where it is not already present.
+:white_check_mark: **OC-6266**: Fixed a deprecated syntax issue to allow Switch Mirror operations to complete successfully on modern SQL Server versions.
 
-**Other Improvements**
+:white_check_mark: **OC-6746**: Improved the reporting service's performance significantly by managing data storage to keep it to a minimum, resulting in fixing the timeout issues during the ETL process.
 
-:eight_spoked_asterisk: Service startup and logging-initialization errors are now written to the Windows Event Log, making installation and configuration issues easier to diagnose.
+:white_check_mark: **OC-7249**: Fixed an issue with ACS getting bad escape sequences.
 
-:eight_spoked_asterisk: Improved service responsiveness and a cleaner, faster service shutdown.
+#### Solution Manager
+
+:white_check_mark: **OC-2787**: Fixed an issue where creating a new SAP job from the Daily Job Definition page failed with a constraint violation. The OpCon schedule name and job name were missing from the JobCreate request, causing the SAP LSAM to return incomplete data that resulted in a null schedule ID on insert.
+
+:white_check_mark: **OC-4366**: Fixed some display issues related to sub-schedule in Studio Canvas.
+
+:white_check_mark: **OC-4677**: Fixed an issue where the ACS machine dropdown became empty when navigating back to the page.
+
+:white_check_mark: **OC-5424**: Fixed an issue where a Self Service with a certain regular expression pattern could not be saved.
+
+:white_check_mark: **OC-5429**: Fixed an issue where the Daily Job Definition panel was not showing agent-defined instance properties (such as JOBID and JNAME on z/OS jobs).
+
+:white_check_mark: **OC-5467**: Fixed an issue with the help button not linking out to the correct documentation.
+
+:white_check_mark: **OC-5849**: Fixed an issue with restart offset limitation for Daily jobs.
+
+:white_check_mark: **OC-5908**: Fixed an issue where the browser back button was not behaving correctly when navigating in Studio and tab-based pages.
+
+:white_check_mark: **OC-6037**: Fixed an issue where updating an ACS or RPA batch user password would fail with a 500 error due to null field codes in the batch user data.
+
+:white_check_mark: **OC-6348**: Fixed an issue where filters on the Operations page were not functioning correctly.
+
+:white_check_mark: **OC-6727**: Fixed an issue where Audit History displayed incorrect times for cloud (US Central) deployments times were shown 5 hours ahead of the actual change time. Audit timestamps are now converted to UTC before being sent to the browser so times display correctly in the user's local timezone, and date filters continue to match correctly against the database's local time.
+
+:white_check_mark: **OC-6845**: Fixed an issue where the user could not switch from a multi-instance schedule with a machine group to one with an empty list of properties.
+
+:white_check_mark: **OC-6911**: Fixed an issue where instance names could not be deleted from a multi-instance schedule.
+
+:white_check_mark: **OC-6986**: Fixed an issue with date and time filtering on the Audit History Report page.
+
+:white_check_mark: **OC-7108**: Fixed an issue with certain filters on the Schedule and Job History Report page breaking results.
+
+:white_check_mark: **OC-7131**: Fixed an issue where the Dates pane on the Processes page was limited to 50 items.
+
+:white_check_mark: **OC-7188**: Fixed an issue with tabbing removing focus from the editor on the Scripts page.
+
+:white_check_mark: **OC-7221**: Fixed an issue that prevented schedules from being properly hidden or unhidden in the Operations view and the Processes view.
+
+:white_check_mark: **OC-7227**: Increased maximum allowable length for operations filter profiles.
+
+:white_check_mark: **OC-7247**: Fixed a hang when opening the Daily Jobs grid from email links by switching to a paginated server-side POST query.
+
+:white_check_mark: **OC-7249**: Fixed an issue with ACS getting bad escape sequences.
+
+:white_check_mark: **OC-7263**: Fixed an issue with reordering the checkbox column header on the processes page.
+
+:white_check_mark: **OC-7275**: Fixed an issue with FontAwesome icons being unavailable to reference in the Self-Service page.
+
+:white_check_mark: **OC-7276**: Fixed an Apache reverse proxy issue that caused forward slashes to be parsed incorrectly during schedule checks.
+
+:white_check_mark: **OC-7280**: Fixed an issue with the dates in a job's history notes not using the user's selected date format.
+
+:white_check_mark: **OC-7298**: Fixed an issue with incorrect duration formatting in the Schedule and Job History Report page.
+
+:white_check_mark: **OC-7304**: Fixed an error that occurred when visiting the schedule queue after renaming a schedule in that queue.
+
+:white_check_mark: **OC-7309**: Fixed an issue with saving the caption of a user input on a self service request.
+
+:white_check_mark: **OC-7326**: Fixed an issue with the Duration column in the Schedule and Job History Report page not showing time in HH:MM:SS format.
+
+:white_check_mark: **OC-7331**: Fixed an issue when browsing multiple levels of subschedules in PERT view.
+
+:white_check_mark: **OC-7353**: Fixed an issue with displaying the correct agents when clicking on an agent status donut in French language view.
+
+:white_check_mark: **OC-7372**: Fixed an issue with schedule deletion being affected by regional settings.
+
+:white_check_mark: **OC-7380**: Fixed an issue with the editing unlocked button being unavailable after renaming a job.
+
+:white_check_mark: **OC-7397**: Fixed an issue with edges disappearing from Studio Canvas when scrolling after a dependency change.
+
+:white_check_mark: **OC-7410**: Fixed an issue with the SSO badge not populating for some users.
+
+:white_check_mark: **OC-7479**: Fixed an issue with Solution Manager erroring on schedules with a null sub-schedule reference.
+
+:white_check_mark: **OC-7604**: Fixed issue with disabling Latest Run Time (Offset) that would cause an error and block saving.
+
+#### REST API
+
+:white_check_mark: **OC-47**: Fixed an issue where posting a malformed or unreadable body to the CloudEvents API returned 500 (Internal Server Error) instead of 422 (Unprocessable Entity), causing MFT agents to retry the request indefinitely.
+
+:white_check_mark: **OC-6119**: Fixed slow master job loading under concurrent load. Each database query was opening a new connection and triggering a sign-in event, so a single page load could generate ~12 sign-in events causing contention when multiple users loaded jobs simultaneously. The fix reuses a single database connection per HTTP request, reducing sign-in events to one per request.
+
+:white_check_mark: **OC-6795**: Fixed an issue on case-sensitive SQL Server collations where a Windows batch user's login name stored with different casing would cause SAM to report "Windows Password not found" and the batch user to appear blank when editing master and daily jobs. The fix applies case-insensitive matching across the SAM password lookup, master job batch user retrieval, and daily job batch user display.
+
+:white_check_mark: **OC-7710**: Fixed a memory leak issue with recyclable memory stream manager.
 
 ## OpCon 26.0.4
 
