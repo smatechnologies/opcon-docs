@@ -1536,7 +1536,6 @@ Sub-Type.
 | Tracked      | T:jobname JobID\|machineID\#programmer name          |
 
 : z/OS Start Commands
-:::
 
 ## Configuration Options
 

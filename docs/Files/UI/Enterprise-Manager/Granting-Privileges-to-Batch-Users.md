@@ -33,7 +33,6 @@ To grant privileges, complete the following steps:
 5.  Select the **batch user(s)** in the **Revoked** list box
 6.  Select the **right arrow** to move the batch user(s) to the **Granted** list box
 7.  Select **Close ☒** to the right of the **Batch User Privileges** tab to close the screen
-:::
 
 ## Glossary
 

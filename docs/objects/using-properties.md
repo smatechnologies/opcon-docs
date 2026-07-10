@@ -366,7 +366,7 @@ C:\Progra~1\CoolProgram\crunch.exe [[SI.Numbers..GetData]]
 
 :::
 
-::tip Example
+:::tip Example
 The command line below is defined for a job named CrunchNumbers on a schedule named MainProcessing. CrunchNumbers has a parameter that needs the value of the "Numbers" property from the MainProcessing schedule on another date.
 
 ```shell

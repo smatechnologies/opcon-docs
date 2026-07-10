@@ -47,7 +47,6 @@ To revoke a privilege, complete the following steps:
 4. Select the **batch user(s)** in the **Granted** list box
 5. Select the **left arrow** to move them to the **Revoked** list box
 6. Select **Close ☒** to close the **Batch User Privileges** screen
-:::
 
 ## Security Considerations
 
