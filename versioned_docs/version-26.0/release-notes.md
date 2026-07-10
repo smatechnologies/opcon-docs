@@ -89,6 +89,8 @@ doc_type: conceptual
 
 :white_check_mark: **OC-7331**: Fixed an issue when browsing multiple levels of subschedules in PERT view.
 
+:white_check_mark: **OC-7352**: Fixed an issue where clicking the X button on the date/schedule count tag did not actually clear the selected dates and schedules.
+
 :white_check_mark: **OC-7353**: Fixed an issue with displaying the correct agents when clicking on an agent status donut in French language view.
 
 :white_check_mark: **OC-7372**: Fixed an issue with schedule deletion being affected by regional settings.
@@ -100,6 +102,8 @@ doc_type: conceptual
 :white_check_mark: **OC-7410**: Fixed an issue with the SSO badge not populating for some users.
 
 :white_check_mark: **OC-7479**: Fixed an issue with Solution Manager erroring on schedules with a null sub-schedule reference.
+
+:white_check_mark: **OC-7480**: Fixed AOBN guard to skip doubly-excluded dates.
 
 :white_check_mark: **OC-7604**: Fixed issue with disabling Latest Run Time (Offset) that would cause an error and block saving.
 
