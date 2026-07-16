@@ -177,10 +177,7 @@ Step Control allows up to 80 step condition codes or ranges. Special schedule or
     - `$JOB:BAD` — sets the job to Failed immediately.
     - `$S=jobstep[.procstep]` — sets the job's restart step.
   - Agent Feedback codes can trigger job events and are the preferred method for defining step triggers, because all event types are supported and events can contain instance properties. Multiple trigger events can be defined for the same message.
-  - Step completion status is written to the Step Completion agent Feedback table in a fixed format:
-    - A five-character status code: **Cnnnn** (condition code), **FLUSH** (step did not run), **Unnnn** (decimal abend code), or **S-xxx** (hexadecimal abend code).
-    - A space.
-    - The step name in `execstep` or `jobstep.execstep` format.
+  - Step completion status is written to the Step Completion agent Feedback table. For the value format and a full list of z/OS Agent Feedback types, refer to [z/OS Agent Feedback](../../../../../../../reference/zos-agent-feedback.md).
   - Automatic restart step selection can be enabled or disabled by prefixing the restart step name:
     - `+` — enables auto step flag, then sets restart step from the remainder of the message.
     - `-` — disables auto step flag, then sets restart step from the remainder of the message.

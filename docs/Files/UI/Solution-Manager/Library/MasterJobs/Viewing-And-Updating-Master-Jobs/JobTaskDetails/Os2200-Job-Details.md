@@ -75,7 +75,7 @@ When an Agent-started job terminates, the run condition word is evaluated for co
 
 | Field | Description | Values |
 |---|---|---|
-| **And/Or** | Determines the association between multiple tests. | `AND`, `OR` |
+| **And/Or** | Determines the association between multiple tests. Available on the second through fourth tests; the first test has no preceding test to combine. | `None`, `AND`, `OR` |
 | **Word Part** | The portion of the word to analyze. | `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `T1`, `T2`, `T3` |
 | **Condition** | How the word part is tested. | `LAND`, `LT`, `LE`, `EQ`, `NE`, `GE`, `GT`, `Range` |
 | **Value** | The value compared against the selected word part. | — |
