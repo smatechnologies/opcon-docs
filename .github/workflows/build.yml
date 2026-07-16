@@ -10,11 +10,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: "--max-old-space-size=8192"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: "18"
-      - run: export NODE_OPTIONS="--max-old-space-size=8192"
+          node-version: "20"
       - run: yarn install
       - run: yarn build
