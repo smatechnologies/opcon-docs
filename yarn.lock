@@ -5165,9 +5165,9 @@ fast-json-stable-stringify@^2.0.0:
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
 fast-uri@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.0.1.tgz#cddd2eecfc83a71c1be2cc2ef2061331be8a7134"
-  integrity sha512-MWipKbbYiYI0UC7cl8m/i/IWTqfC8YXsqjzybjddLsFjStroQzsHXkc73JutMvBiXmOvapk+axIl79ig5t55Bw==
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.1.3.tgz#f695a40f006aba505631573a0021ddb21194ad11"
+  integrity sha512-i70LwGWUduXqzicKXWshooq+sWL1K3WUU5rKZNG/0i3a1OSoX3HqhH5WbWwTmqWfor4urUakGPiRQcleRZTwOg==
 
 fastq@^1.6.0:
   version "1.17.1"
@@ -7352,7 +7352,7 @@ onetime@^5.1.2:
     "@svgr/webpack" "^8.1.0"
     clsx "^2.0.0"
     file-loader "^6.2.0"
-    opcon-docs "file:../../../AppData/Local/Yarn/Cache/v6/npm-opcon-docs-21.0.0-33014bfd-2466-413a-9785-14ecca84ad8c-1784216793248/node_modules/opcon-docs"
+    opcon-docs "file:."
     react "^18.0.0"
     react-dom "^18.0.0"
     url-loader "^4.1.1"
