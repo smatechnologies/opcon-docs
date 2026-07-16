@@ -7,6 +7,9 @@ module.exports = {
   baseUrl: "/opcon/core/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  markdown: {
+    format: "md",
+  },
   favicon: "img/favicon.ico",
   organizationName: "smatechnologies",
   projectName: "opcon-docs",
