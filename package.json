@@ -16,17 +16,17 @@
     "lint:docs:all": "node scripts/lint-docs.js --all"
   },
   "dependencies": {
-    "@cmfcmf/docusaurus-search-local": "^1.2.0",
-    "@docusaurus/core": "^2.0.0-beta.20",
-    "@docusaurus/plugin-google-gtag": "^2.0.0-beta.20",
-    "@docusaurus/preset-classic": "^2.0.0-beta.20",
-    "@mdx-js/react": "^1.6.21",
-    "@svgr/webpack": "^6.5.1",
-    "clsx": "^1.1.1",
+    "@cmfcmf/docusaurus-search-local": "^2.0.1",
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/plugin-google-gtag": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
+    "@mdx-js/react": "^3.0.0",
+    "@svgr/webpack": "^8.1.0",
+    "clsx": "^2.0.0",
     "file-loader": "^6.2.0",
     "opcon-docs": "file:",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

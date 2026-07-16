@@ -47,7 +47,7 @@ To view job configuration, complete the following steps:
 
    ![Job Configuration Tab in Operations](../../../Resources/Images/SM/Job-Configuration-Tab.png "Job Configuration Tab in Operations")
 
-   The Configuration tab displays an overarching view of your daily job details, including operations details, manual status changes, job time details, retry and recurrence information, and additional information based on the job type. Fields without a value display \<None\>. User-defined fields display this icon: !["User defined" icon](../../../Resources/Images/user-defined-icon.png "User defined icon"){ width=25 }
+   The Configuration tab displays an overarching view of your daily job details, including operations details, manual status changes, job time details, retry and recurrence information, and additional information based on the job type. Fields without a value display \<None\>. User-defined fields display this icon: <img src="../../../Resources/Images/user-defined-icon.png" alt="User defined icon" title="User defined icon" width="25" />
 
    ![Job Configuration Panel in Operations](../../../Resources/Images/SM/Job-Configuration-Panel.png "Job Configuration Panel in Operations")
 

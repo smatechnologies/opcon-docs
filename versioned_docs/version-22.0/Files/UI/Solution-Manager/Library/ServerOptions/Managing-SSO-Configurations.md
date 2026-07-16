@@ -24,7 +24,7 @@ To configure SSO Settings, go to **Library** > **Server Options** > click on the
 
 1. Enter a **Client ID**. This is your client application's identifier as registered with the OIDC/OAuth2.
 
-1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL. Make sure to include the scheme, which can be **HTTP** or **HTTPS**, and the **port number**, if applicable. For example, **https://host:80443**.
+1. Enter a **Hostname**. The **hostname** property of the URL interface is a string containing the domain name of the URL. Make sure to include the scheme, which can be **HTTP** or **HTTPS**, and the **port number**, if applicable. For example, **`https://host:80443`**.
 
 1. Enter an **Audience**. The **Audience** identifies the recipients that the JWT is intended for.
 

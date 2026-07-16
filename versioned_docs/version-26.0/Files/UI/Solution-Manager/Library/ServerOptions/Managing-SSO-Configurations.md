@@ -53,7 +53,7 @@ To configure SSO Settings, go to **Library** > **Server Options** > select on th
 
 1. Enter a **Client ID**. Your client application's identifier as registered with the OIDC/OAuth2 provider
 
-1. Enter a **Redirect URI**. The location where the authorization server sends the user after successful authorization. Adding **/login/callback** is **required** for SSO to function. For example, **https://host:80443/login/callback**.
+1. Enter a **Redirect URI**. The location where the authorization server sends the user after successful authorization. Adding **/login/callback** is **required** for SSO to function. For example, **`https://host:80443/login/callback`**.
 
 1. Enter a **Scope**. The scopes requested from the OIDC/OAuth2 provider (default: **openid**). Separate multiple scopes with a space
 
