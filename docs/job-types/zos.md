@@ -1349,25 +1349,16 @@ referenced by explicit absolute generation.
     cataloged generation with a particular relative generation in the
     JCL.
 
-| JCL                       | First run\        | Restart in Step 3\ |
-|                           | Base generation 7 | Base generation 10 |
-|---|---|
-| //STEP1 \...              |                   |                    |
-| //DD DD                   | G0008V00          | n/a                |
-| DSN=A                     |                   |                    |
-| .B.C(+1),DISP=(NEW,CATLG) |                   |                    |
-| //STEP2 \...              |                   |                    |
-| //DD DD                   | G0009V00          | n/a                |
-| DSN=A                     |                   |                    |
-| .B.C(+2),DISP=(NEW,CATLG) |                   |                    |
-| //STEP3 \...              |                   |                    |
-| //DD DD                   | G0010V00          | G0013V00           |
-| DSN=A                     |                   |                    |
-| .B.C(+3),DISP=(NEW,CATLG) |                   |                    |
-| //STEP4 \...              |                   |                    |
-| //DD DD                   | G0011V00          | G0014V00           |
-| DSN=A                     |                   |                    |
-| .B.C(+4),DISP=(NEW,CATLG) |                   |                    |
+| JCL | First run<br/>Base generation 7 | Restart in Step 3<br/>Base generation 10 |
+|---|---|---|
+| `//STEP1 ...` | | |
+| `//DD DD DSN=A.B.C(+1),DISP=(NEW,CATLG)` | G0008V00 | n/a |
+| `//STEP2 ...` | | |
+| `//DD DD DSN=A.B.C(+2),DISP=(NEW,CATLG)` | G0009V00 | n/a |
+| `//STEP3 ...` | | |
+| `//DD DD DSN=A.B.C(+3),DISP=(NEW,CATLG)` | G0010V00 | G0013V00 |
+| `//STEP4 ...` | | |
+| `//DD DD DSN=A.B.C(+4),DISP=(NEW,CATLG)` | G0011V00 | G0014V00 |
 
 : Sample JCL: Undesirable GDG Resolution
 
@@ -1377,35 +1368,20 @@ new datasets (e.g., If the current generation is 10, a restart in STEP3
 creates generation 13 and 14). There are no datasets corresponding to
 generations 11 and 12. While this is not an error, it is not desirable.
 
-| JCL                       | First run\  Base generation 7      | Restart in Step 3\  Base generation 10|
+| JCL | First run<br/>Base generation 7 | Restart in Step 3<br/>Base generation 10 |
 |---|---|---|
-| //STEP1 \...              |                   |                    |
-| //DDI DD                  | G0007V00          | n/a                |
-| DSN=A.B.C(0),DISP=SHR     |                   |                    |
-| //DDO DD                  | G0008V00          | n/a                |
-| DSN=A                     |                   |                    |
-| .B.C(+1),DISP=(NEW,CATLG) |                   |                    |
-| | | |
-| //STEP2 \...              |                   |                    |
-| //DDI DD                  | G0008V00          | n/a                |
-| DSN=A.B.C(+1),DISP=SHR    |                   |                    |
-| //DDO DD                  | G0009V00          | n/a                |
-| DSN=A                     |                   |                    |
-| .B.C(+2),DISP=(NEW,CATLG) |                   |                    |
-| | | |
-| //STEP3 \...              |                   |                    |
-| //DDI DD                  | G0009V00          | G0012V00           |
-| DSN=A.B.C(+2),DISP=SHR    |                   |                    |
-| //DDO DD                  | G0010V00          | G0013V00           |
-| DSN=A                     |                   |                    |
-| .B.C(+3),DISP=(NEW,CATLG) |                   |                    |
-| | | |
-| //STEP4 \...              |                   |                    |
-| //DDI DD                  | G0010V00          | G0013V00           |
-| DSN=A.B.C(+3),DISP=SHR    |                   |                    |
-| //DDO DD                  | G0011V00          | G0014V00           |
-| DSN=A                     |                   |                    |
-| .B.C(+4),DISP=(NEW,CATLG) |                   |                    |
+| `//STEP1 ...` | | |
+| `//DDI DD DSN=A.B.C(0),DISP=SHR` | G0007V00 | n/a |
+| `//DDO DD DSN=A.B.C(+1),DISP=(NEW,CATLG)` | G0008V00 | n/a |
+| `//STEP2 ...` | | |
+| `//DDI DD DSN=A.B.C(+1),DISP=SHR` | G0008V00 | n/a |
+| `//DDO DD DSN=A.B.C(+2),DISP=(NEW,CATLG)` | G0009V00 | n/a |
+| `//STEP3 ...` | | |
+| `//DDI DD DSN=A.B.C(+2),DISP=SHR` | G0009V00 | G0012V00 |
+| `//DDO DD DSN=A.B.C(+3),DISP=(NEW,CATLG)` | G0010V00 | G0013V00 |
+| `//STEP4 ...` | | |
+| `//DDI DD DSN=A.B.C(+3),DISP=SHR` | G0010V00 | G0013V00 |
+| `//DDO DD DSN=A.B.C(+4),DISP=(NEW,CATLG)` | G0011V00 | G0014V00 |
 
 : Sample JCL: Undesirable GDG Resolution
 
@@ -1430,43 +1406,20 @@ In the example, only STEP3 and STEP4 are examined, with the result that
 associated with the current catalog generation. If the current
 generation is 10, the base is set to '8' (10-2).
 
-| JCL          | Positive | Positive\ NEW| Restart\  in Step 3\ generation\ used | Equivalent\ Generation\ relative to\ current|
+| JCL | Positive | Positive<br/>NEW | Restart in Step 3<br/>generation used | Equivalent Generation<br/>relative to current |
 |---|---|---|---|---|
-| //STEP1 \... |          |           |             |              |
-| //DDI DD     |          |           | n/a         |              |
-| DSN=A.B.C    |          |           |             |              |
-| (0),DISP=SHR |          |           |             |              |
-| //DDO DD     |          |           | n/a         |              |
-| DSN=A.       |          |           |             |              |
-| B.C(+1),DISP |          |           |             |              |
-| =(NEW,CATLG) |          |           |             |              |
-| | | | | |
-| //STEP2 \... |          |           |             |              |
-| //DDI DD     |          |           | n/a         |              |
-| DSN=A.B.C(   |          |           |             |              |
-| +1),DISP=SHR |          |           |             |              |
-| //DDO DD     |          |           | n/a         |              |
-| DSN=A.       |          |           |             |              |
-| B.C(+2),DISP |          |           |             |              |
-| =(NEW,CATLG) |          |           |             |              |
-| | | | | |
-| //STEP3 \... |          |           |             |              |
-| //DDI DD     | +2       |           | G0010V00    | +0           |
-| DSN=A.B.C(   |          |           |             |              |
-| +2),DISP=SHR |          |           |             |              |
-| //DDO DD     | +3       | +3        | G0011V00    | +1           |
-| DSN=A.       |          |           |             |              |
-| B.C(+3),DISP |          |           |             |              |
-| =(NEW,CATLG) |          |           |             |              |
-| | | | | |
-| //STEP4 \... |          |           |             |              |
-| //DDI DD     | +3       |           | G0011V00    | +1           |
-| DSN=A.B.C(   |          |           |             |              |
-| +3),DISP=SHR |          |           |             |              |
-| //DDO DD     | +4       | +4        | G0012V00    | +2           |
-| DSN=A.       |          |           |             |              |
-| B.C(+4),DISP |          |           |             |              |
-| =(NEW,CATLG) |          |           |             |              |
+| `//STEP1 ...` | | | | |
+| `//DDI DD DSN=A.B.C(0),DISP=SHR` | | | n/a | |
+| `//DDO DD DSN=A.B.C(+1),DISP=(NEW,CATLG)` | | | n/a | |
+| `//STEP2 ...` | | | | |
+| `//DDI DD DSN=A.B.C(+1),DISP=SHR` | | | n/a | |
+| `//DDO DD DSN=A.B.C(+2),DISP=(NEW,CATLG)` | | | n/a | |
+| `//STEP3 ...` | | | | |
+| `//DDI DD DSN=A.B.C(+2),DISP=SHR` | +2 | | G0010V00 | +0 |
+| `//DDO DD DSN=A.B.C(+3),DISP=(NEW,CATLG)` | +3 | +3 | G0011V00 | +1 |
+| `//STEP4 ...` | | | | |
+| `//DDI DD DSN=A.B.C(+3),DISP=SHR` | +3 | | G0011V00 | +1 |
+| `//DDO DD DSN=A.B.C(+4),DISP=(NEW,CATLG)` | +4 | +4 | G0012V00 | +2 |
 
 : Sample JCL: GDG Relative Option
 
@@ -1483,39 +1436,20 @@ highest positive reference, which is associated with the current catalog
 generation. Again, if the current generation is 10, the base is set to
 '8' (10-2).
 
-| JCL              | Positive | Restart in Step 3\ generation used | Equivalent generation\ relative to current  |
+| JCL | Positive | Restart in Step 3<br/>generation used | Equivalent generation<br/>relative to current |
 |---|---|---|---|
-| //STEP1 \...     |          |                  |                  |
-| //DDI DD         |          | n/a              |                  |
-| DSN=A            |          |                  |                  |
-| .B.C(0),DISP=SHR |          |                  |                  |
-| //DDO DD         | +1       | n/a              |                  |
-| DSN=A.B.C(+1),   |          |                  |                  |
-| DISP=(NEW,CATLG) |          |                  |                  |
-| | | | |
-| //STEP2 \...     |          |                  |                  |
-| //DDI DD         | +1       | n/a              |                  |
-| DSN=A.           |          |                  |                  |
-| B.C(+1),DISP=SHR |          |                  |                  |
-| //DDO DD         | +2       | n/a              |                  |
-| DSN=A.B.C(+2),   |          |                  |                  |
-| DISP=(NEW,CATLG) |          |                  |                  |
-| | | | |
-| //STEP3 \...     |          |                  |                  |
-| //DDI DD         | n/a      | G0010V00         | +0               |
-| DSN=A.           |          |                  |                  |
-| B.C(+2),DISP=SHR |          |                  |                  |
-| //DDO DD         | n/a      | G0011V00         | +1               |
-| DSN=A.B.C(+3),   |          |                  |                  |
-| DISP=(NEW,CATLG) |          |                  |                  |
-| | | | |
-| //STEP4 \...     |          |                  |                  |
-| //DDI DD         | n/a      | G0011V00         | +1               |
-| DSN=A.           |          |                  |                  |
-| B.C(+3),DISP=SHR |          |                  |                  |
-| //DDO DD         | n/a      | G0012V00         | +2               |
-| DSN=A.B.C(+4),   |          |                  |                  |
-| DISP=(NEW,CATLG) |          |                  |                  |
+| `//STEP1 ...` | | | |
+| `//DDI DD DSN=A.B.C(0),DISP=SHR` | | n/a | |
+| `//DDO DD DSN=A.B.C(+1),DISP=(NEW,CATLG)` | +1 | n/a | |
+| `//STEP2 ...` | | | |
+| `//DDI DD DSN=A.B.C(+1),DISP=SHR` | +1 | n/a | |
+| `//DDO DD DSN=A.B.C(+2),DISP=(NEW,CATLG)` | +2 | n/a | |
+| `//STEP3 ...` | | | |
+| `//DDI DD DSN=A.B.C(+2),DISP=SHR` | n/a | G0010V00 | +0 |
+| `//DDO DD DSN=A.B.C(+3),DISP=(NEW,CATLG)` | n/a | G0011V00 | +1 |
+| `//STEP4 ...` | | | |
+| `//DDI DD DSN=A.B.C(+3),DISP=SHR` | n/a | G0011V00 | +1 |
+| `//DDO DD DSN=A.B.C(+4),DISP=(NEW,CATLG)` | n/a | G0012V00 | +2 |
 
 : Sample JCL: GDG Catalog Resync Option
 
