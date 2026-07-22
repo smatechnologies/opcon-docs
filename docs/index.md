@@ -108,6 +108,7 @@ OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heter
   - [New Install](./installation/install.md)
   - [Upgrade](./installation/upgrade.md)
   - [Component Install](./installation/components.md)
+  - [Reporting Service](https://help.smatechnologies.com/opcon/core/reports/reporting-service)
 
 </div>
 
