@@ -225,21 +225,21 @@ These are non-negotiable. Every endpoint file must comply.
 4. **Table/JSON parity.** Every field in a Sample Response/Request must have a corresponding row in its Attributes/Body table, and vice versa. The table and the JSON must be a 1:1 match.
 5. **Nesting notation:** `field` for top-level, `parent.child` for nested objects, `items[].field` for array items, `items[].parent.child` for nested fields inside arrays.
 6. **Type column values:** `string`, `integer`, `boolean`, `number`, `string (GUID)`, `string (ISO 8601)`, `array[string]`, `array[object]`, `object`. Be specific — prefer `string (GUID)` over `string` when the value is a GUID.
-7. **Realistic sample data.** Use names, dates, and IDs plausible for a US financial institution workload automation environment. No "foo", "bar", "test", or "example.com".
+7. **Realistic sample data.** Use names, dates, and IDs plausible for a US financial institution workload automation environment. No "foo", "bar", "test", or "example.com". Use **First Bank of Valkyrie** as the sample bank name and **firstbankofvalkyrie.com** as the sample email domain.
 8. **No cross-references between files.** Each file is self-contained.
 9. **camelCase JSON keys** matching `[JsonProperty]` attributes in DTOs.
 10. **No commentary, design notes, or explanatory prose.** These are strict reference documents.
 
-## mkdocs.yml Nav Registration
+## Sidebar Registration
 
-After creating an endpoint file, add it to the `nav` section of `mkdocs.yml` in **both** locations:
+After creating an endpoint file, register it in the Docusaurus sidebar configuration (`sidebars.js`) in **both** navigation locations:
 
-1. Under `API > API Reference > {Resource Group}`
-2. Under `Reference > API Reference > {Resource Group}`
+1. Under `API` > `API Reference` > `{Resource Group}`
+2. Under `Reference` > `API Reference` > `{Resource Group}`
 
 If the resource group doesn't exist yet, create it in both locations. Group name = plural resource noun (e.g., "Jobs", "Schedules", "Agents"). Place the new group alphabetically among existing groups.
 
-Nav entry format: `{Display Name}: api/reference/{filename}.md`
+Sidebar entry format: reference the doc by its ID, `api/reference/{filename}` (no `.md` extension).
 
 ## Requirements
 

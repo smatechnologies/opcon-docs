@@ -4,6 +4,8 @@ Guidelines for understanding the roles within OpCon. Use these guidelines to pro
 
 ## Section Reference
 
+Each role description includes the following sections:
+
 | Section | Purpose |
 |---------|---------|
 | Who they are | Understand the audience and correctly describe the role in documentation |
@@ -209,3 +211,28 @@ When writing documentation, identify the primary audience by role. Use that role
 **Tone adjustment:** Evidence-focused audience. They care about what the system can prove, not how it works. Connect every report or log to what it demonstrates from a compliance standpoint. Use plain language and avoid internal OpCon jargon. Precision matters — document exactly what each report contains and what it does and does not show.
 
 **Assume they understand:** The regulatory landscape for financial institutions (FFIEC, FDICIA, NCUA, SOX), what an audit trail is and why it matters, and the general concepts of operational risk and control frameworks. Do not assume they understand OpCon configuration, job type specifics, or automation design principles.
+
+---
+
+## Universal (All Roles)
+
+This is not a separate role — readers don't self-identify as "Universal." It is an **audience designation** the writer chooses when no single role applies.
+
+**When to use:**
+- Content is conceptual, introductory, or provides an overview — the reader's specific OpCon role doesn't change what they need to know
+- Source material is a product overview, feature introduction, or foundational explainer intended for any OpCon user
+- The institution has combined roles and the reader's specific role is unknown (e.g., one person configures jobs, monitors schedules, and resolves failures)
+- The page is first-contact or getting-started content — the reader may not yet know which OpCon role applies to them
+
+**When NOT to use:**
+- Any procedural content where workflow steps, UI access, or available actions depend on the reader's OpCon role
+- Content that requires domain knowledge specific to a single role (e.g., how to build a job, how to configure a frequency, how to set up an agent)
+- Any content where the operational or compliance stakes differ by role — use the role with the highest stakes instead
+
+**Assumed knowledge:** None beyond basic financial institution operations. No OpCon terminology, no automation concepts, and no prior product exposure assumed. If a reader has never opened OpCon, they should be able to follow Universal content without stopping to ask what a word means.
+
+**Tone:** Patient, foundational, welcoming. Lead with a business need the reader already recognizes — something that happens at their institution regardless of which software they use. Follow with how OpCon addresses it. Define every OpCon term the first time it appears. No jargon without explanation.
+
+**Pitch level:** Use Business Analyst as the floor. If a Business Analyst — one of the least technical OpCon audiences — would follow it without confusion, all roles will.
+
+**Note on combined roles:** In smaller financial institutions, one person often holds multiple OpCon roles simultaneously — configuring the system, monitoring schedules, and resolving job failures. Universal content serves this reader without requiring them to identify which hat they are wearing at any given moment. The content should be relevant and meaningful regardless of where they sit in the workflow.

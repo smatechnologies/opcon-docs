@@ -131,8 +131,9 @@ not built for that day.
 
 [1–2 sentences: what this procedure accomplishes and when to use it.]
 
-!!! note "Prerequisite"
-    [What must be completed before starting.]
+:::note[Prerequisite]
+[What must be completed before starting.]
+:::
 
 To [accomplish goal], complete the following steps:
 
@@ -153,8 +154,9 @@ To [accomplish goal], complete the following steps:
 Use this procedure to add a new automated job to an existing schedule.
 Repeat this procedure for each job that needs to be added.
 
-!!! note "Prerequisite"
-    The schedule must exist before adding jobs. See [Create a Schedule].
+:::note[Prerequisite]
+The schedule must exist before adding jobs. See [Create a Schedule].
+:::
 
 To add a job, complete the following steps:
 
@@ -174,6 +176,13 @@ To add a job, complete the following steps:
 ---
 
 ## 3. Reference Documentation
+
+> For plugin parameter descriptions specifically, consult
+> [opcon-parameter-descriptions.md](opcon-parameter-descriptions.md) which provides
+> patterns tailored to the OpCon UI rendering format.
+> For API endpoint documentation, do NOT use the reference template
+> below. Instead follow the strict per-endpoint templates in
+> [opcon-api-reference.md](opcon-api-reference.md).
 
 **Purpose:** Provide factual information that readers need to look up quickly. Organized for scanning, not reading start to finish.
 
