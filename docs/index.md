@@ -50,7 +50,7 @@ OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heter
   - [Triggers](./notifications/Notification-Triggers.md)
   - [Actions](./notifications/Notification-Configuration.md)
 - [Reports](./reports/overview.md)
-- [REST API](https://help.smatechnologies.com/opcon/core/api/26-2.html)
+- [REST API](https://help.smatechnologies.com/opcon/core/api/26-1.html)
 
 </div>
 
