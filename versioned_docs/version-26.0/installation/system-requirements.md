@@ -8,7 +8,7 @@ tags:
   - Procedural
   - System Administrator
   - Installation
-last_updated: 2026-03-18
+last_updated: 2026-08-19
 doc_type: procedural
 ---
 
@@ -60,13 +60,13 @@ The following requirements apply to all Windows-based installations:
 | Component | Requirement |
 | - | - |
 | Operating system | Microsoft-supported Windows Server versions* |
-| .NET Core Runtime | .NET 10 Runtime and ASP.NET Core 10 Runtime |
-| .NET Framework Runtime |  .NET Framework 4.5 or greater |
+| .NET Core Runtime | .NET 10 Runtime and ASP.NET Core 10 Runtime, packaged with OpCon as self-contained assemblies. No separate installation on the OpCon server is required |
+| .NET Framework Runtime | .NET Framework 4.5 or greater, packaged with OpCon as self-contained assemblies |
 
 *New releases are fully tested once open to the general public for 6 months or more. Installing before the 6-month mark is at your own risk.
 
 :::note
-**SMA OpCon Install** is packaged with the .NET Core and .NET Framework requirements and will prompt to install them if not found on the server.
+SAM, the REST API, and supporting applications included in the **SMA OpCon** install are self-contained assemblies that include the .NET Core and .NET Framework runtimes they require. .NET Core is no longer required to be installed on the OpCon server. Maintenance releases apply patches to the .NET Core version the programs are packaged with to keep the software up to date.
 :::
 
 ## Database Requirements

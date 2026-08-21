@@ -39,11 +39,11 @@ The following requirements apply to all Windows-based installations:
 | Component | Requirement |
 | - | - |
 | Operating system | Windows Server 2012 R2 or greater |
-| .NET Core Runtime | .NET Core & ASP .NET Core 3.0 Runtime or greater |
-| .NET Framework Runtime |  .NET Framework 4.5 or greater |
+| .NET Core Runtime | .NET Core & ASP .NET Core 3.0 Runtime or greater, packaged with OpCon as self-contained assemblies. No separate installation on the OpCon server is required |
+| .NET Framework Runtime | .NET Framework 4.5 or greater, packaged with OpCon as self-contained assemblies |
 
 :::note
-The **SMA OpCon Install** comes packaged with the .NET Core and .NET Framework requirements and will prompt to install them if they are not found on the server.
+SAM, the REST API, and supporting applications included in the **SMA OpCon** install are self-contained assemblies that include the .NET Core and .NET Framework runtimes they require. .NET Core is no longer required to be installed on the OpCon server. Maintenance releases apply patches to the .NET Core version the programs are packaged with to keep the software up to date.
 :::
 
 ## Database Requirements
