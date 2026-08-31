@@ -163,6 +163,12 @@ completion or exit codes available. Each command scheduled is run
 as-is without verification as to the desired result. The following
 information applies to defining the Command Control.
 
+:::note Command output is not returned
+A Command job reports only whether the command was issued: the job completes as *Command Issued* or *Command Failed*. The command's own response is not captured and is not available in OpCon, so a command that is accepted but then fails, or a `DISPLAY` command whose returned value you need, cannot be assessed from the job status.
+
+Where the response matters, schedule the command as a REXX job that runs the `CMDLIST` sample exec instead. `CMDLIST` activates an extended console, issues the command, and writes the captured response to the job's output, where it is retrievable through JORS. It ships as a sample rather than an installed module, so it must first be copied into a library concatenated to the agent's `SYSEXEC` DD. Refer to [Capturing Operator Command Output with CMDLIST](https://help.smatechnologies.com/opcon/agents/zos/advanced-features/cmdlist) in the z/OS Agent help.
+:::
+
 - **Host Job Name**: The command is issued from a dynamic started
     task, with the name taken from the job name.
 - **Operator Command**: Defines the text of the command to be
