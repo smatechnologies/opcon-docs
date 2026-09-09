@@ -32,6 +32,12 @@ This topic contains instructions for installing the Enterprise Manager and Optio
 
 ## Enterprise Manager
 
+:::caution
+Enterprise Manager is supported on Windows only. Continuous provides Linux and macOS distributions of Enterprise Manager, but these distributions are not tested or certified, and they have never been officially released for these platforms.
+
+Continuous does not provide support for issues specific to running Enterprise Manager on Linux or macOS. Install and run Enterprise Manager on Windows. If you choose to install a Linux or macOS distribution, you do so at your own risk. Continuous recommends Solution Manager for users on non-Windows operating systems.
+:::
+
 The Enterprise Manager (EM) is a rich client application for OpCon. To install the Enterprise Manager, use the following procedures:
 
 - [New Installation on Windows](#new-installation-on-windows)
