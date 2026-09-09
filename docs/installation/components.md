@@ -8,7 +8,7 @@ tags:
   - Procedural
   - System Administrator
   - Installation
-last_updated: 2026-03-18
+last_updated: 2026-09-09
 doc_type: procedural
 ---
 
@@ -902,7 +902,7 @@ The following parameters can be defined as a space-separated string in the forma
 |OPCON_USERNAME|Defines the OpCon user for submitting external events. Required.|
 |PATH_MSGIN|Defines the path to the MSGIN directory for SAM where external events are submitted.|
 |PATH_OPCONXPS|Specifies the physical path to the location of the configuration files to be migrated to PROGRAMDATA if different from the installation folder.|
-|SECURITY_PROTOCOL|Defines the preferred encryption type when connecting to the mail server. Options: `SSL`, `TLS_1_1`, `TLS_1_2`.|
+|SECURITY_PROTOCOL|Defines the preferred encryption type when connecting to the mail server. Options: `SSL`, `TLS_1_1`, `TLS_1_2`, `TLS_1_3`.|
 |SERVER_NAME|Defines the name or IP address of the mail server.|
 |SERVER_PORT|Defines the port number used by the server for email protocol communication.|
 

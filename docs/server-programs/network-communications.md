@@ -9,7 +9,7 @@ tags:
   - Procedural
   - System Administrator
   - System Configuration
-last_updated: 2026-03-18
+last_updated: 2026-09-09
 doc_type: procedural
 ---
 
@@ -32,7 +32,7 @@ SMANetCom sends job start information to each agent and then requests job status
 -->
 ## TLS Security
 
-The OpCon server supports TLS 1.2 for securing communication between itself and any agents that are upgraded and configured to use TLS. Before communication starts, the OpCon server verifies the identity of the agent by exchanging digital certificates with it. Certificates may be either from a Certificate Authority or they may be self-signed certificates.
+The OpCon server supports TLS 1.2 and TLS 1.3 for securing communication between itself and any agents that are upgraded and configured to use TLS. Before communication starts, the OpCon server verifies the identity of the agent by exchanging digital certificates with it. Certificates may be either from a Certificate Authority or they may be self-signed certificates.
 
 There must always be a TLS Server Certificate representing the agent's server role in the communications connection (that is, the OpCon central application server acts as a customer when requesting a connection with each agent). There may optionally also be a TLS Customer Certificate that represents the OpCon application server (where the OpCon application server always takes the role of a Customer in TCP/IP communications and in TLS certificate exchanges).
 
@@ -85,7 +85,7 @@ TLS Security activation can be controlled separately for the SMA File Transfer f
 
 ### Authentication
 
-The OpCon server supports TLS 1.2 for securing communication between itself and any agents configured to use TLS. Before communication starts, the OpCon server verifies the identity of the agent by exchanging digital certificates. Certificates may be from a Certificate Authority or self-signed. The certificates for authenticating each agent must be installed in the standard certificate store of the local Windows machine. If TLS customer authentication is used, the agent must similarly be able to authenticate the SMANetCom certificate.
+The OpCon server supports TLS 1.2 and TLS 1.3 for securing communication between itself and any agents configured to use TLS. Before communication starts, the OpCon server verifies the identity of the agent by exchanging digital certificates. Certificates may be from a Certificate Authority or self-signed. The certificates for authenticating each agent must be installed in the standard certificate store of the local Windows machine. If TLS customer authentication is used, the agent must similarly be able to authenticate the SMANetCom certificate.
 
 ### Data Security
 
@@ -240,7 +240,7 @@ SMANetCom is the communication bridge between the SAM and all agents. It sends j
 
 **Q: How does SMANetCom support TLS security?**
 
-SMANetCom supports TLS 1.2 for securing communication with agents. Before communication starts, the OpCon server verifies agent identity by exchanging digital certificates. Certificates may be from a Certificate Authority or self-signed.
+SMANetCom supports TLS 1.2 and TLS 1.3 for securing communication with agents. Before communication starts, the OpCon server verifies agent identity by exchanging digital certificates. Certificates may be from a Certificate Authority or self-signed.
 
 **Q: How many agents can a single SMANetCom instance support?**
 
