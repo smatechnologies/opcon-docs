@@ -7,7 +7,6 @@ module.exports = {
       collapsed: false,
       items: [
         "Files/UI/Solution-Manager/Getting-Started",
-        "installation/whats-new",
         "release-notes",
       ],
     },
