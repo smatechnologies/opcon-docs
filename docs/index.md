@@ -25,7 +25,6 @@ OpCon (Operations Console Cross-Platform Scheduler) is an enterprise-wide, heter
 
 ### Overview
 
-- [What's New](./installation/whats-new.md)
 - [Support Lifecycles](https://help.smatechnologies.com)
 - [Release Notes](./release-notes.md)
 
