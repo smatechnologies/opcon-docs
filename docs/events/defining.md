@@ -82,13 +82,17 @@ $EVENT:COMMAND,field-1,field-2,\...,field-n,username,external password
 #### XML-formatted Command Syntax
 
 ```xml
-<Event>
-     <Event Elements>
-</Event>
-<Event>
-     <Event Elements>
-</Event>
+<EVENT>
+     <event elements>
+</EVENT>
+<EVENT>
+     <event elements>
+</EVENT>
 ```
+
+:::caution
+The `EVENT` element name is case-sensitive and must be uppercase. The SAM identifies an XML-formatted event by the literal text `<EVENT`. An event that uses any other capitalization is processed as a comma-separated event and fails.
+:::
 
 :::note
 For XML formatting examples, refer to [Event Types](./types.md) in the **Reference Information** section.
@@ -96,7 +100,7 @@ For XML formatting examples, refer to [Event Types](./types.md) in the **Referen
 
 - Maximum characters in the event string:
   - Internal Events: 738
-  - External Events: 2000
+  - External Events: No fixed limit
 - Commas can only be used as separators, not in text
 - Asterisks (\*) and question marks (?) cannot be used in Schedule, Job, or Machine names; they are reserved as wild cards (if the Server Option for wild cards is enabled)
 - In graphical interface event templates, the `<>` symbols define fields only. A finished event definition should not contain them
