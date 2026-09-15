@@ -8,7 +8,7 @@ tags:
   - Reference
   - Automation Engineer
   - Agents
-last_updated: 2026-04-29
+last_updated: 2026-09-15
 doc_type: reference
 ---
 
@@ -25,9 +25,32 @@ The z/OS Agent reports activity to OpCon as Agent Feedback messages. Each feedba
 
 | Name | Description | Format |
 | --- | --- | --- |
-| User Message | Trigger message sent from a step control definition or from a `--MSG` directive in JCL. Posted to Schedule Operations and available as event criteria. | Free text up to 20 characters. Supports the special tokens listed in [User Message tokens](#user-message-tokens). |
+| Job Status Description | The job's exit description. OpCon derives this value automatically for every agent, and the z/OS Agent supplies it directly when a user message is too long for the exit description. | Free text. See [User Message sources and lengths](#user-message-sources-and-lengths). |
+| User Message | Message text sent from a step control definition, from a `--MSG` directive in JCL, or from the XPSCOMM utility. Posted to Schedule Operations and available as event criteria. | Free text. The maximum length depends on the source — see [User Message sources and lengths](#user-message-sources-and-lengths). |
 | Step Completion | Reported at the end of each job step. Carries the step status code and step name. Not sent for tracked jobs. | A five-character status code, a space, and the step name. See [Step Completion format](#step-completion-format). |
 | Trigger Messages | Console message text that satisfied a `$JOBTRIG` WTO trigger, or dataset event text that satisfied a DSN trigger. Sent when a message-trigger pre-run condition fires. | Variable-length string. See [Trigger Messages format](#trigger-messages-format). |
+
+## User Message sources and lengths
+
+Three z/OS Agent features send a user message. Each supports a different maximum length, and the length determines whether the full text reaches **Job Status Description** as well as **User Message**.
+
+| Source | Maximum length | User Message | Job Status Description |
+| --- | --- | --- | --- |
+| Step control definition **Trigger Message** field | 20 characters | Full text | Full text |
+| `--MSG` directive in JCL | 64 characters | Full text | First 20 characters only |
+| XPSCOMM utility | 4000 characters | Full text | Full text |
+
+**User Message** always carries the complete text. **Job Status Description** carries the complete text except for a `--MSG` directive longer than 20 characters, because the agent does not supply the field directly on that path and OpCon derives it from the 20-character exit description instead.
+
+:::note
+Match against **User Message** when the value comes from a `--MSG` directive and can exceed 20 characters. For the other two sources, either value works.
+:::
+
+The z/OS Agent writes **User Message** on every path so that event definitions created before **Job Status Description** became available continue to work without change.
+
+A user message sent from a step control definition or a `--MSG` directive can also carry one of the tokens listed in [User Message tokens](#user-message-tokens) instead of plain text.
+
+For details on sending a user message from XPSCOMM, including the difference between OpCon jobs and external jobs, refer to **Using the XPSCOMM interface routine** in the **z/OS Agent** online help.
 
 ## Step Completion format
 
@@ -56,6 +79,10 @@ Examples:
 ## User Message tokens
 
 A User Message can contain plain text or one of the following tokens. Tokens are interpreted by the z/OS Agent and trigger an immediate action.
+
+:::note
+Tokens apply to a step control definition and to a `--MSG` directive only. XPSCOMM treats any input beginning with `$` as a MSGIN event request rather than as a user message, so a token coded as an XPSCOMM parm is not interpreted as a token.
+:::
 
 | Token | Action |
 | --- | --- |
