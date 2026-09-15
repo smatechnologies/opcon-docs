@@ -143,7 +143,6 @@
       "label": "Installation",
       "collapsed": true,
       "items": [
-        "installation/whats-new",
         "installation/breaking-changes",
         "installation/system-requirements",
         "installation/install",

@@ -12,7 +12,7 @@ The following sections contain more information:
 
 - [Release Notes](./release-notes.md)
 - [Concepts](./components.md)
-- [Installation](./installation/whats-new.md)
+- [Installation](./installation/system-requirements.md)
 - [Database Information](./Files/Database-Information/Failover-Scenarios.md)
 - [Events](./events/introduction.md)
 - [Server Programs](./server-programs/introduction.md)
