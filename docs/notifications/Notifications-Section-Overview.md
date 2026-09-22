@@ -35,6 +35,7 @@ OpCon notifications fire when jobs or schedules reach specific status conditions
 | Notification Components | Components involved in notification delivery |
 | Escalation | Escalation rules and groups for unacknowledged notifications |
 | Manage Notification Triggers (SM) | Solution Manager interface for notification trigger management |
+| Notification History (SM) | Solution Manager interface for browsing and filtering the history of recorded notifications |
 | Notification Categories | Organizing triggers into named categories |
 | Notification Groups | Defining recipient groups for notification delivery |
 | Notification Types | Delivery channel configuration — email, text, events, SNMP, and more |
