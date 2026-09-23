@@ -32,6 +32,7 @@ The Agents administration section lets you monitor all registered agents, start 
 |------|-------------|
 | Manage Agents | Agent list — view status, filter, and select agents for actions |
 | Perform Agent Status Updates | Change the communication status for one or more selected agents |
+| Remote Agent Upgrades | Check for and apply Agent software upgrades directly from Solution Manager |
 
 ## Glossary
 
