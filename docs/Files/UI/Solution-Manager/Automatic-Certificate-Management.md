@@ -24,17 +24,17 @@ This page describes Automatic Certificate Management using the Windows Agent as 
 
 ## Turning it on
 
-Automatic Certificate Management is configured in Solution Manager under **Library** > **Server Options**, on the **Agents** tab.
+Automatic Certificate Management is configured in Solution Manager under **Library** > **Server Options**, on the **Agent Management** tab.
 
 :::note
-Configuring the **Agents** tab requires the **Maintain Server Options** function privilege, the same privilege required for every other Server Options tab.
+Configuring the **Agent Management** tab requires the **Maintain Server Options** function privilege, the same privilege required for every other Server Options tab.
 :::
 
 <!--
-![Agents tab in Server Options](../../../Resources/Images/SM/Library/ServerOptions/Agents-Tab.png "Agents tab in Server Options")
+![Agent Management tab in Server Options](../../../Resources/Images/SM/Library/ServerOptions/AgentManagement-Tab.png "Agent Management tab in Server Options")
 -->
 
-The **Agents** tab includes the following settings.
+The **Agent Management** tab includes the following settings.
 
 | Setting | Default | Description |
 |---|---|---|
