@@ -22,7 +22,7 @@ This page covers what is specific to the SQL Agent for [Automatic Certificate Ma
 
 ## Provisioning and renewal
 
-The SQL Agent supports the same automatic certificate provisioning and renewal described in the main guide. There is no separate opt-in for the SQL Agent — the same **Automatically Provision TLS Certificates** and **Automatically Renew Agent Certificates** settings on the **Agents** tab in Server Options apply to it.
+The SQL Agent supports the same automatic certificate provisioning and renewal described in the main guide. There is no separate opt-in for the SQL Agent — the same **Automatically Provision TLS Certificates** and **Automatically Renew Agent Certificates** settings on the **Agent Management** tab in Server Options apply to it.
 
 ## Certificate apply with no interruption
 
