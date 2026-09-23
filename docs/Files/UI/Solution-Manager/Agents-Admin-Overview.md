@@ -32,6 +32,7 @@ The Agents administration section lets you monitor all registered agents, start 
 |------|-------------|
 | Manage Agents | Agent list — view status, filter, and select agents for actions |
 | Perform Agent Status Updates | Change the communication status for one or more selected agents |
+| Remote Agent Upgrades for SAP Agents | What's the same and what's different when upgrading an SAP Agent remotely |
 
 ## Glossary
 
