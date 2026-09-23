@@ -72,7 +72,7 @@ To upgrade one or more Agents from the **Agents** page, complete the following s
 3. Select the **Upgrade** button.
 4. Confirm the upgrade when prompted.
 
-**Result:** OpCon upgrades each selected Agent that has an available upgrade and is not running active jobs. Agents that are skipped — because no upgrade is available or because active jobs are running — are reported separately; see [What happens during an upgrade](#what-happens-during-an-upgrade) and [Bulk upgrades](#bulk-upgrades) below.
+**Result:** If every selected Agent is idle, OpCon upgrades all of them once you confirm. If any selected Agent has active jobs running, Solution Manager does not skip it silently — it offers to schedule that Agent's upgrade instead; see [Active jobs warning](#active-jobs-warning) below. Agents with no upgrade available are skipped and reported separately.
 
 <!--
 ![Upgrade confirmation for a bulk Agent selection](../../../Resources/Images/SM/Agents/AgentsPage-BulkUpgradeConfirm.png "Upgrade confirmation for a bulk Agent selection")
@@ -80,11 +80,17 @@ To upgrade one or more Agents from the **Agents** page, complete the following s
 
 ### Active jobs warning
 
-If the selected Agent (or Agents) currently has active jobs running, Solution Manager displays a warning before you can upgrade immediately:
+Selecting **Upgrade** does not require Agents to already be idle — Solution Manager checks for active jobs at the moment you select it:
 
-> This agent has *N* active job(s) running. Put this Agent in Limited mode and wait until there are no active jobs before upgrading.
+- If every selected Agent is idle, OpCon upgrades all of them after you confirm.
+- If you selected a single Agent and it has active jobs running, Solution Manager asks whether to schedule its upgrade instead, naming the Agent and how many active jobs are running. Selecting **Yes** [schedules the upgrade](#scheduling-an-agent-upgrade) to start automatically once its active jobs clear.
+- If you selected multiple Agents, the idle ones in that selection are upgraded regardless of what you decide about the busy ones. If every selected Agent has active jobs, Solution Manager offers to schedule all of them. If the selection is mixed, it upgrades the idle ones and separately offers to schedule the busy ones, naming them.
 
-With a single Agent selected, the **Upgrade** button stays disabled until active jobs clear, and the warning appears as soon as you select that Agent. With multiple Agents selected, the warning does not block the action — instead, any Agent with active jobs is skipped when the bulk upgrade runs, and Solution Manager reports it separately (by name) rather than blocking the Agents that are ready. In either case, [scheduling the upgrade](#scheduling-an-agent-upgrade) instead lets OpCon wait for the jobs to clear automatically. This warning is specific to Agents — Relays and Integrations do not run jobs, so selecting them for a bulk upgrade never shows an active jobs warning.
+This warning is specific to Agents — Relays and Integrations do not run jobs, so selecting them for a bulk upgrade never shows an active jobs warning.
+
+<!--
+![Schedule-instead prompt for an Agent with active jobs](../../../Resources/Images/SM/Agents/AgentsPage-ScheduleInsteadPrompt.png "Schedule-instead prompt for an Agent with active jobs")
+-->
 
 ## The Agent Upgrade section on the Agent Details page
 
@@ -95,7 +101,7 @@ Each Agent's Details page has its own **Agent Upgrade** section, separate from t
 - A status message: an upgrade is available, the Agent is up to date, or the Agent has not reported support for remote upgrade
 - Its own **Upgrade Now** and **Schedule Upgrade** buttons, scoped to that one Agent
 
-This section only appears when remote upgrades are turned on for the instance and the machine type supports it. It does not keep its own record of past upgrades — for a durable record of completed upgrades, see [Notification History](Library/NotificationHistory/NotificationHistory.md), which records every Agent, Relay, and Integration upgrade completion under its own category.
+This section only appears when remote upgrades are turned on for the instance and the machine type supports it. It does not keep its own record of past upgrades — for a durable record of completed upgrades, see [Notification History](Library/NotificationHistory/NotificationHistory.md), which records every Agent and Relay upgrade completion under its own category.
 
 ## What happens during an upgrade
 
@@ -136,11 +142,10 @@ To upgrade multiple Relays or Integrations at once, complete the following steps
 
 ## Scheduling an Agent upgrade
 
-If an Agent has active jobs running, you do not have to wait and retry manually. **Schedule Upgrade** hands the whole sequence to OpCon:
+If an Agent has active jobs running, you do not have to wait and retry manually — OpCon can wait for you. How you get there depends on where you start:
 
-1. On the **Agents** page or an Agent's Details page, select the Agent.
-2. Select the **Schedule Upgrade** button.
-3. Confirm when prompted.
+- **From the Agents page:** Select **Upgrade**. If the selection includes an Agent with active jobs, Solution Manager offers to schedule that Agent instead of upgrading it immediately (see [Active jobs warning](#active-jobs-warning) above). Confirm the offer.
+- **From an Agent's Details page:** In the [Agent Upgrade section](#the-agent-upgrade-section-on-the-agent-details-page), select the **Schedule Upgrade** button, then confirm when prompted.
 
 **Result:** OpCon waits until the Agent's active job count reaches zero. Once it does, OpCon automatically:
 
