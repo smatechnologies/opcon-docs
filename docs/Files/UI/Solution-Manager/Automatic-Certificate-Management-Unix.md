@@ -22,7 +22,7 @@ This page covers what is specific to the Unix Agent for [Automatic Certificate M
 
 ## Provisioning and renewal
 
-The Unix Agent supports the same automatic certificate provisioning and renewal described in the main guide, including renewing a certificate automatically ahead of its expiration date — the Unix Agent has full parity with the Windows, SAP, SAP BW, and SQL Agents for this feature. There is no separate opt-in for the Unix Agent — the same **Automatically Provision TLS Certificates** and **Automatically Renew Agent Certificates** settings on the **Agents** tab in Server Options apply to it.
+The Unix Agent supports the same automatic certificate provisioning and renewal described in the main guide, including renewing a certificate automatically ahead of its expiration date — the Unix Agent has full parity with the Windows, SAP, SAP BW, and SQL Agents for this feature. There is no separate opt-in for the Unix Agent — the same **Automatically Provision TLS Certificates** and **Automatically Renew Agent Certificates** settings on the **Agent Management** tab in Server Options apply to it.
 
 ## Certificate apply with no restart
 
