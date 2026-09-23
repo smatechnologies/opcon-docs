@@ -22,7 +22,7 @@ This page covers what is specific to the SAP Agent for [Automatic Certificate Ma
 
 ## Provisioning and renewal
 
-The SAP Agent supports the same automatic certificate provisioning and renewal described in the main guide. There is no separate opt-in for the SAP Agent — the same **Automatically Provision TLS Certificates** and **Automatically Renew Agent Certificates** settings on the **Agents** tab in Server Options apply to it.
+The SAP Agent supports the same automatic certificate provisioning and renewal described in the main guide. There is no separate opt-in for the SAP Agent — the same **Automatically Provision TLS Certificates** and **Automatically Renew Agent Certificates** settings on the **Agent Management** tab in Server Options apply to it.
 
 ## Certificate pickup and the JORS process
 
