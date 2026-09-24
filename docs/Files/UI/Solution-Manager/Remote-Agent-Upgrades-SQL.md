@@ -19,11 +19,11 @@ doc_type: conceptual
 
 # Remote Agent Upgrades for SQL Agents
 
-This page covers what's specific to the SQL Agent when using Remote Agent Upgrades. For the full explanation of the feature — turning it on, checking availability, upgrading, scheduling, and troubleshooting — see [Remote Agent Upgrades](Remote-Agent-Upgrades.md).
+This page covers what's specific to the SQL Agent when using Remote Agent Upgrades. For the full explanation of the feature — turning it on, checking availability, upgrading, scheduling, and troubleshooting — see **Remote Agent Upgrades** *(publishing alongside this page — not yet linkable)*.
 
 ## Same upgrade flow as other Agents
 
-The SQL Agent supports the same **Upgrade** and **Schedule Upgrade** actions described in [Remote Agent Upgrades](Remote-Agent-Upgrades.md), from the Agents page, the Agent Details page, and bulk selection. There is no separate procedure for SQL Agents — everything in the main guide applies as written.
+The SQL Agent supports the same **Upgrade** and **Schedule Upgrade** actions described in **Remote Agent Upgrades** *(publishing alongside this page — not yet linkable)*, from the Agents page, the Agent Details page, and bulk selection. There is no separate procedure for SQL Agents — everything in the main guide applies as written.
 
 In Solution Manager, a SQL Agent's **Platform** column shows as **SQL**.
 
@@ -33,9 +33,9 @@ A SQL Agent upgrade uses a single package per version, the same as a Windows Age
 
 ## Troubleshooting
 
-If a SQL Agent doesn't report a completed upgrade, follow the same steps as any other Agent — see [Basic troubleshooting](Remote-Agent-Upgrades.md#basic-troubleshooting) in the main guide. There is no SQL-specific troubleshooting step beyond what's described there.
+If a SQL Agent doesn't report a completed upgrade, follow the same steps as any other Agent — see **Basic troubleshooting** *(publishing alongside this page — not yet linkable)* in the main guide. There is no SQL-specific troubleshooting step beyond what's described there.
 
 ## Related topics
 
-- [Remote Agent Upgrades](Remote-Agent-Upgrades.md)
+- **Remote Agent Upgrades** *(publishing alongside this page — not yet linkable)*
 - [Managing Agents](Managing-Agents.md)
