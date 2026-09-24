@@ -1,7 +1,7 @@
 ---
 sidebar_label: 'SMANotifyHandler'
 title: SMA Notify Handler
-description: "The SMA Notify Handler component is responsible for reading the NOTIFY table in the OpCon database and writing the message to the appropriate location."
+description: "The SMA Notify Handler component polls the OpCon database for pending notifications and writes each message to the appropriate location."
 product_area: Server Programs
 audience: System Administrator
 version_introduced: "[see release notes]"
@@ -20,11 +20,11 @@ doc_type: conceptual
 
 ## What Is It?
 
-The SMA Notify Handler component is responsible for reading the NOTIFY table in the OpCon database and writing the message to the appropriate location. For more information, refer to [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md) in the **Enterprise Manager** online help.
+The SMA Notify Handler component polls the OpCon database for pending notifications and writes each message to the appropriate location. For more information, refer to [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md) in the **Enterprise Manager** online help.
 
 ![SMA Notify Handler](../Resources/Images/Server-Programs/smanotifyhandler.png "SMA Notify Handler")
 
-The SMA Notify Handler can send the following basic notifications after reading the NOTIFY table:
+The SMA Notify Handler can send the following basic notifications:
 
 - Windows Event Log
 - Email (SMTP Basic and OAuth) (For more on configuring notifications for SMTP, refer to [Configuring SMTP Notifications](../notifications/Notification-Configuration.md#Configur3) in the **Concepts** online help.)
@@ -38,7 +38,7 @@ The SMA Notify Handler can send the following basic notifications after reading 
 
 SMA Notify Handler configuration determines basic application and logging behavior.
 
-All of the SMA Notify Handler's configuration settings exist in the Solution Manager's SMTP Options. For more information, refer to [Managing SMTP Options](../Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings.md) in the **Solution Manager** online help.
+The SMTP servers and notification definitions used by the SMA Notify Handler are configured in the Solution Manager's SMTP Options. Operational settings for the component itself, including the polling interval, remain in the `SMANotifyHandler.ini` file in the SAM data directory. For more information, refer to [Managing SMTP Options](../Files/UI/Solution-Manager/Library/ServerOptions/Managing-SMTP-Settings.md) in the **Solution Manager** online help.
 
 ### Processing
 
@@ -72,11 +72,23 @@ For OpCon Events submitted by SMA Notify Handler, the handler automatically supp
 
 SMA Notify Handler inserts a Notification ID as the first few characters of every notification message. This ID allows users to look up the source notification in OpCon for troubleshooting and audit purposes.
 
+## Polling interval
+
+The SMA Notify Handler checks the database for pending notifications on a timer. The interval is set by `RefreshInterval` in `SMANotifyHandler.ini` and is expressed in seconds.
+
+| Setting | Default | What it does |
+|---|---|---|
+| `RefreshInterval` | `20` | Seconds to wait between checks for pending notifications. Lower it to reduce notification latency, at the cost of more frequent database queries. |
+
+:::note SNMP traps need a separate process
+SNMP trap notifications are not sent by the SMA Notify Handler directly. It passes them over a named pipe to a separate SNMP agent process, which must be running for SNMP notifications to be delivered. This is also why SNMP traps are unavailable on Linux and container deployments.
+:::
+
 ## Operations
 
 ### Monitoring
 
-- SMA Notify Handler reads the NOTIFY table in the OpCon database and routes notifications to the appropriate delivery channel (Windows Event Log, Email, SNMP Trap, SPO, SMS, OpCon Events, or Command).
+- SMA Notify Handler polls the OpCon database on a timer and routes each pending notification to the appropriate delivery channel (Windows Event Log, Email, SNMP Trap, SPO, SMS, OpCon Events, or Command).
 - All notifications include a Notification ID as the first few characters of the message. Use this ID to look up the source notification in OpCon for troubleshooting.
 - If a notification fails on the primary SMTP server (SMTPSERVER), the Notify Handler automatically retries using the secondary server (SMTPSERVER2) if configured. SMTPSERVER3/SMTPSERVER4 are used exclusively for SMS if configured.
 
