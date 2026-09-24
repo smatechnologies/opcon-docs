@@ -88,4 +88,4 @@ If an Integration still shows its previous version after you apply an upgrade, c
 ## Related topics
 
 - [Managing relays](../Relays/Managing-Relays.md)
-- [Notification History](../NotificationHistory/NotificationHistory.md)
+- **Notification History** *(publishing separately — not yet linkable)*
