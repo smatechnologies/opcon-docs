@@ -37,6 +37,8 @@ The SAM and supporting services (SAM-SS) are the central components of OpCon.
 | SMA Notify Handler | A background process communicating with the database to send notifications from OpCon Events or from the ENS Manager. |
 | SMA Request Router | A background process responsible for routing requests between the OpCon database and the various Request Handlers. |
 | SMA Start Time Calculator | A background process responsible for periodically recalculating start times for jobs in the OpCon Daily tables. |
+| OpCon REST API | The web service that Solution Manager, the connectors, and any customer integration use to read and change OpCon data. |
+| Reporting Service | A service that copies OpCon data into a reporting database for use by reporting tools. |
 | Optional Components | Additional optional components installed with the SAM that may be configured at any time. |
 
 ## FAQs

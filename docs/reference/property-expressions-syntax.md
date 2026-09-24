@@ -1,6 +1,6 @@
 ---
 title: Property Expressions API Syntax
-description: "The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, and Machine Instance properties)."
+description: "The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, Machine Instance, OpCon Instance, Remote Instance, Source Schedule Instance, Source Job Instance, Threshold, and Resource properties)."
 product_area: Reference
 audience: Automation Engineer, Business Analyst
 version_introduced: "[see release notes]"
@@ -15,7 +15,7 @@ doc_type: conceptual
 
 # Property Expressions API Syntax
 
-The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, and Machine Instance properties). For more information, refer to [Properties](../objects/properties.md).
+The Property Expressions API syntax may contain strings, numbers, operators, functions, and OpCon properties (e.g., Global, Schedule Instance, Job Instance, Machine Instance, OpCon Instance, Remote Instance, Source Schedule Instance, Source Job Instance, Threshold, and Resource properties). For more information, refer to [Properties](../objects/properties.md).
 
 ## Rules
 

@@ -33,6 +33,7 @@ The log files have the names:
 - SMANotifyHandler.log
 - SMAStartTimeCalculator.log
 - SMARequestRouter.log
+- SMAOpConRestApi.log
 
 :::note
 The Output Directory was configured during installation. For more information, refer to [File Locations](../file-locations.md) in the **Concepts** online help.
@@ -42,9 +43,8 @@ The Output Directory was configured during installation. For more information, r
 
 To view a Log File, complete the following steps:
 
-1. Use menu path: **Start \> Programs \> Log Monitors \> *<Log Name\>***
-2. View the log information with FileMon
-3. Close FileMon by using menu path: **File \> Exit** 
+1. Open the log directory: `<Output Directory>\SAM\Log\` on Windows, or `/app/log` in a container deployment.
+2. Open the log file in any text editor. Log files are plain text, and a component keeps its current log file open while it runs.
 
 ## Log Archiving
 
@@ -60,9 +60,9 @@ yyyy_mm_dd (Weekday). The logging mechanism generates the weekday name
 according to the Regional Settings of the user running the component.
 
 :::tip Example
-If the Regional Settings are set to English, an archive folder would have the following name: 2008_01_11 (Friday).
+If the Regional Settings are set to English, an archive folder would have the following name: 2026_01_09 (Friday).
 
-If the Regional Settings are set to French, an archive folder would have the following name: 2008_01_11 (Vendredi).
+If the Regional Settings are set to French, an archive folder would have the following name: 2026_01_09 (Vendredi).
 :::
 
 As a log file fills up, each component moves it to the current archive
@@ -205,8 +205,8 @@ The SMARequestRouter writes all request routing processing information to SMAReq
 
 ### Common Tasks
 
-- View any log file via **Start > Programs > Log Monitors > *Log Name*** using FileMon.
-- Archived log files are stored in `<Output Directory>\SAM\Log\Archive\` in date-named folders (e.g., `2008_01_11 (Friday)`). Each component archives when the log reaches its configured maximum size or at end of day.
+- View any log file by opening it from `<Output Directory>\SAM\Log\` on Windows, or `/app/log` in a container deployment, in any text editor.
+- Archived log files are stored in `<Output Directory>\SAM\Log\Archive\` in date-named folders (e.g., `2026_01_09 (Friday)`). Each component archives when the log reaches its configured maximum size or at end of day.
 - The SAM retains 10 days of archived logs by default; adjust the "Maximum number of days archived SAM logs should be kept" setting in Server Options to change the retention period.
 
 ### Alerts and Log Files
@@ -223,7 +223,7 @@ All SAM-SS log files are located in the `<Output Directory>\SAM\Log\` directory.
 
 **Q: When are log files archived?**
 
-Each component archives log files at the end of the day or when they reach the maximum log file size configured in the component's .ini file. Archived files are stored in the `<Output Directory>\SAM\Log\Archive` folder, organized by date (e.g., `2008_01_11 (Friday)`).
+Each component archives log files at the end of the day or when they reach the maximum log file size configured in the component's .ini file. Archived files are stored in the `<Output Directory>\SAM\Log\Archive` folder, organized by date (e.g., `2026_01_09 (Friday)`).
 
 **Q: What is the Critical.log used for?**
 
