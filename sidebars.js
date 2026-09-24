@@ -404,6 +404,7 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Relays/Managing-Relays",
                 "Files/UI/Solution-Manager/Library/Relays/Relays-Reference",
                 "server-programs/network-communications",
+                "installation/relay-deployment",
               ],
             },
           ],
