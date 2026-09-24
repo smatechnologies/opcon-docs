@@ -18,7 +18,7 @@ doc_type: conceptual
 
 # Automatic Certificate Management: SQL Agent
 
-This page covers what is specific to the SQL Agent for [Automatic Certificate Management](Automatic-Certificate-Management.md). Read that page first for the concepts, Server Options settings, Agent Configuration view, Enrollment Secret, and troubleshooting steps shared across all agent platforms — this page only covers what differs for the SQL Agent.
+This page covers what is specific to the SQL Agent for **Automatic Certificate Management**. Read that page first for the concepts, Server Options settings, Agent Configuration view, Enrollment Secret, and troubleshooting steps shared across all agent platforms — this page only covers what differs for the SQL Agent.
 
 ## Provisioning and renewal
 
@@ -47,9 +47,9 @@ No additional installation steps are required — the components Automatic Certi
 
 ## Agent Configuration view and troubleshooting
 
-Use the shared [Agent Configuration view](Automatic-Certificate-Management.md#agent-configuration-view) and [troubleshooting steps](Automatic-Certificate-Management.md#troubleshooting-a-failed-certificate-request) in the main guide — they apply to the SQL Agent without any platform-specific differences.
+Use the shared **Agent Configuration view** and **troubleshooting steps** in the main guide — they apply to the SQL Agent without any platform-specific differences.
 
 ## Related topics
 
-- [Automatic Certificate Management for Agents](Automatic-Certificate-Management.md)
-- [Automatic Certificate Management: Unix Agent](Automatic-Certificate-Management-Unix.md)
+- **Automatic Certificate Management for Agents** *(publishing alongside this page — not yet linkable)*
+- **Automatic Certificate Management: Unix Agent** *(publishing alongside this page — not yet linkable)*
