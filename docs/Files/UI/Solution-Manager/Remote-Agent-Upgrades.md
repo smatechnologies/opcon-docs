@@ -99,7 +99,7 @@ Each Agent's Details page has its own **Agent Upgrade** section, separate from t
 - A status message: an upgrade is available, the Agent is up to date, or the Agent has not reported support for remote upgrade
 - Its own **Upgrade Now** and **Schedule Upgrade** buttons, scoped to that one Agent
 
-This section only appears when remote upgrades are turned on for the instance and the machine type supports it. It does not keep its own record of past upgrades — for a durable record of completed upgrades, see [Notification History](Library/NotificationHistory/NotificationHistory.md), which records every Agent, Relay, and Integration upgrade completion under its own category.
+This section only appears when remote upgrades are turned on for the instance and the machine type supports it. It does not keep its own record of past upgrades — for a durable record of completed upgrades, see **Notification History** *(publishing separately — not yet linkable)*, which records every Agent and Relay upgrade completion under its own category.
 
 ## What happens during an upgrade
 
@@ -108,7 +108,7 @@ From your point of view, an Agent upgrade looks like this:
 1. You select **Upgrade** (or **Upgrade Now**) and confirm.
 2. The Agent's status briefly shows as unavailable while its services stop, the new version installs, and the services restart.
 3. Once the Agent reconnects, OpCon automatically verifies the new version came up correctly.
-4. A success notification appears, naming the Agent and the version it upgraded to. If you were not watching Solution Manager at the time, the same information is available afterward in [Notification History](Library/NotificationHistory/NotificationHistory.md).
+4. A success notification appears, naming the Agent and the version it upgraded to. If you were not watching Solution Manager at the time, the same information is available afterward in **Notification History** *(publishing separately — not yet linkable)*.
 
 Scheduling is briefly unavailable on that machine while the upgrade is in progress.
 
@@ -156,7 +156,7 @@ For more on Limited and Full communication, see [Performing Agent Status Updates
 If an Agent does not report a completed upgrade:
 
 - Check the Agent's status on the **Agents** page. If it still shows as unavailable well after the upgrade started, the restart may still be in progress.
-- Check [Notification History](Library/NotificationHistory/NotificationHistory.md) for a success or failure entry for that Agent.
+- Check **Notification History** *(publishing separately — not yet linkable)* for a success or failure entry for that Agent.
 - If the entry reports failure and rollback also failed, the Agent was left stopped. Sign in to the Agent's machine directly and restart the Agent software, or reinstall it using its standard installer.
 - If the Agent shows `-` in the **Available Upgrade** column when you expected a version number, confirm the Agent is running a build that supports remote upgrade and that its machine type is one that OpCon supports for this feature.
 
@@ -164,4 +164,4 @@ If an Agent does not report a completed upgrade:
 
 - [Managing Agents](Managing-Agents.md)
 - [Performing Agent Status Updates](Performing-Agent-Status-Updates.md)
-- [Notification History](Library/NotificationHistory/NotificationHistory.md)
+- **Notification History** *(publishing separately — not yet linkable)*
