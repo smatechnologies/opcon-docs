@@ -32,6 +32,6 @@ Existing ini settings and job behavior are unaffected by this update. You don't 
 
 ## Related topics
 
-- [Windows Agent .NET update](./windows-agent-dotnet-update.md)
-- [SAP Agent .NET update](./sap-agent-dotnet-update.md)
-- [SAP BW Agent .NET update](./sapbw-agent-dotnet-update.md)
+- **Windows Agent .NET update** *(publishing alongside this page — not yet linkable)*
+- **SAP Agent .NET update** *(publishing alongside this page — not yet linkable)*
+- **SAP BW Agent .NET update** *(publishing alongside this page — not yet linkable)*
