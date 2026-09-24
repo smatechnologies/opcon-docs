@@ -76,7 +76,7 @@ An SMANetCom archive file for the time range of 12:58:16 to 13:58:00 would be na
 Once per day the SAM deletes old archive folders. The SAM retains 10
 days of archived logs by default. For additional information, refer to
 the "Maximum number of days archived SAM logs should be kept" logging
-setting. Refer to [Logging](../administration/server-options.md#logging) in
+setting. Refer to [Logging](../administration/server-options.md#logging-options) in
 the **Concepts** online help.
 
 ## SAM Logging

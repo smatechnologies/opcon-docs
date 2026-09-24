@@ -37,9 +37,9 @@ The menu on the left is a panel of buttons:
 | --- | --- | --- |
 | ![](../../Resources/Images/Utilities/ResMonAdd.jpg) | **Add** | Add a new monitor or action group. Refer to [Start an Add Wizard](Wizards.md#Start_an_Add_Wizard). |
 | ![](../../Resources/Images/Utilities/ResMonEdit.jpg) | **Edit** | Edit a selected monitor or action group. Refer to [Start an Edit Wizard](Wizards.md#Start_an_Edit_Wizard). |
-| ![](../../Resources/Images/Utilities/ResMonCopy.jpg) | **Copy** | Copy a selected monitor or action group. Refer to [Copy](Tools.md#Copy). |
-| ![](../../Resources/Images/Utilities/ResMonDelete.jpg) | **Delete** | Delete a selected monitor or action group. Refer to [Delete](Tools.md#Delete). |
-| ![](../../Resources/Images/Utilities/ResMonFind.jpg) | **Find** | Find a monitor. Refer to [Find](Tools.md#Find). |
+| ![](../../Resources/Images/Utilities/ResMonCopy.jpg) | **Copy** | Copy a selected monitor or action group. Refer to [Copy](Tools.md#copy). |
+| ![](../../Resources/Images/Utilities/ResMonDelete.jpg) | **Delete** | Delete a selected monitor or action group. Refer to [Delete](Tools.md#delete). |
+| ![](../../Resources/Images/Utilities/ResMonFind.jpg) | **Find** | Find a monitor. Refer to [Find](Tools.md#find). |
 | ![](../../Resources/Images/Utilities/ResMonFilter.jpg) | **Filter** | Filter records to a subset of monitors. Refer to [Filter](Tools.md#Filter6). |
 | ![](../../Resources/Images/Utilities/ResMonActivateAll.jpg) | **Activate All** | Activate all monitors on the selected Monitor tab. |
 | ![](../../Resources/Images/Utilities/ResMonDeactivateAll.jpg) | **DeActivate All** | Deactivate all monitors on the selected Monitor tab. |

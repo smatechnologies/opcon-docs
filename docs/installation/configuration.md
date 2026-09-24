@@ -53,7 +53,7 @@ OpCon uses a single database for all system data. Configure all components to co
 Confirm Enterprise Manager is configured to communicate with the OpCon database.
 
 :::note
-The OpCon Server component database connection is automatically configured during SMA OpCon SAM installation. Refer to the [SMA Connection Configuration Tool](../server-programs/schedule-activity-monitor.md#SMA) in the **Server Programs** online help.
+The OpCon Server component database connection is automatically configured during SMA OpCon SAM installation. Refer to the [SMA Connection Configuration Tool](../server-programs/schedule-activity-monitor.md#sma-connection-configuration-tool) in the **Server Programs** online help.
 :::
 
 #### Configure the Database Connection Information for the OpCon Server

@@ -24,7 +24,7 @@ Named Schedule Instances reduce the maintenance burden on repeatable workflows b
 
 ## Property Association
 
-Predefined properties can be associated with a named instance of a schedule. Refer to [Using Properties for Automation](../objects/using-properties.md) and [Schedule Instance Property Name Syntax](../objects/using-properties.md#schedule).
+Predefined properties can be associated with a named instance of a schedule. Refer to [Using Properties for Automation](../objects/using-properties.md) and [Schedule Instance Property Name Syntax](../objects/using-properties.md#schedule-instance-property-name-syntax).
 
 ## Exception Management
 

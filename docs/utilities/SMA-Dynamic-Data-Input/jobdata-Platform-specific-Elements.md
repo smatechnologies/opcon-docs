@@ -113,7 +113,7 @@ Information on each field for this job type, refer to [File Transfer Job Details
 
 Defines the Source Machine for the transfer.
 To qualify as a machine for this field, a machine must be enabled for
-File transfer in the [File Transfer Settings](../../objects/machines.md#File) category in
+File transfer in the [File Transfer Settings](../../objects/machines.md#file-transfer-settings) category in
 The Machine's advanced settings.
 
 - **Requirements**: Required
@@ -243,7 +243,7 @@ Allows the user to "throttle back" bandwidth usage.
 
 Defines the name of the destination machine
 For the file transfer. In order to qualify as a machine for this field,
-A machine must be enabled for file transfer in the [File Transfer Settings](../../objects/machines.md#File) category in
+A machine must be enabled for file transfer in the [File Transfer Settings](../../objects/machines.md#file-transfer-settings) category in
 The Machine's advanced settings.
 
 - **Requirements**: Required

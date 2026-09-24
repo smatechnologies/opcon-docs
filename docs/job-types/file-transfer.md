@@ -23,7 +23,7 @@ The information in this section applies to defining a File Transfer job. The tex
 OpCon token replacement. [Properties](../objects/properties.md#tokens) are resolved as the SAM prepares to send the job to the agent. For additional information about the SMA File Transfer process, refer to [File Transfer Jobs](../automation-concepts/file-transfer-jobs.md).
 
 :::warning
-If the agents and the machines involved in the file transfer are not properly configured, the file transfer job fails. For more information, refer to [File Transfer Settings](../objects/machines.md#File). These settings are commingled with the agent's Job Output Retrieval System (JORS) parameters. For additional information, refer to the agent online help for the desired platform. For more on the JORS Port Number and viewing job output, refer to [Viewing a Job Output File](../operations/job-output.md).
+If the agents and the machines involved in the file transfer are not properly configured, the file transfer job fails. For more information, refer to [File Transfer Settings](../objects/machines.md#file-transfer-settings). These settings are commingled with the agent's Job Output Retrieval System (JORS) parameters. For additional information, refer to the agent online help for the desired platform. For more on the JORS Port Number and viewing job output, refer to [Viewing a Job Output File](../operations/job-output.md).
 :::
 
 :::note
@@ -32,7 +32,7 @@ Machine definition for Primary and Alternate machines and Machine Groups is not 
 
 ## File Information
 
-- **Machine (Source)**: Defines the machine with the source file to transfer. Only the machines enabled for file transfer can be defined for this value. Refer to [File Transfer Settings](../objects/machines.md#File)
+- **Machine (Source)**: Defines the machine with the source file to transfer. Only the machines enabled for file transfer can be defined for this value. Refer to [File Transfer Settings](../objects/machines.md#file-transfer-settings)
 - **User (Source)**: Defines the Batch User ID with access to the file on the Source machine. Define "N/A" if the platform does not require a user. OpCon Users can only specify Batch User IDs they have privileges to that are defined in [Batch User Privileges](../administration/privileges.md#batch-user-privileges)
 - **Source File**: Defines the full path and file name to transfer
   :::note
@@ -58,7 +58,7 @@ Machine definition for Primary and Alternate machines and Machine Groups is not 
       :::note
       The multiple file transfer feature does not include transferring subdirectories. It only transfers the matching individual files names in the directory specified.
       :::
-- **Machine (Destination)**: Defines the machine that will receive the file. Only the machines enabled for file transfer can be defined for this value. Refer to [File Transfer Settings](../objects/machines.md#File)
+- **Machine (Destination)**: Defines the machine that will receive the file. Only the machines enabled for file transfer can be defined for this value. Refer to [File Transfer Settings](../objects/machines.md#file-transfer-settings)
 - **User (Destination)**: Defines the Batch User ID with access to the location on the Destination machine that will receive the file. Define "N/A" if the platform does not require a user. OpCon Users can only specify Batch User IDs they have privileges to that are defined in [Batch User Privileges](../administration/privileges.md#batch-user-privileges)
 - **Destination File**: Defines the full path and file name for the destination
   :::note
