@@ -138,7 +138,7 @@ If **Certificate Renewal Status** shows **Failed**, or an agent never receives a
 ## Related topics
 
 - [Managing Agents](Managing-Agents.md)
-- [Automatic Certificate Management: SAP Agent](Automatic-Certificate-Management-SAP.md)
-- [Automatic Certificate Management: SAP BW Agent](Automatic-Certificate-Management-SAPBW.md)
-- [Automatic Certificate Management: SQL Agent](Automatic-Certificate-Management-SQL.md)
-- [Automatic Certificate Management: Unix Agent](Automatic-Certificate-Management-Unix.md)
+- **Automatic Certificate Management: SAP Agent** *(publishing alongside this page — not yet linkable)*
+- **Automatic Certificate Management: SAP BW Agent** *(publishing alongside this page — not yet linkable)*
+- **Automatic Certificate Management: SQL Agent** *(publishing alongside this page — not yet linkable)*
+- **Automatic Certificate Management: Unix Agent** *(publishing alongside this page — not yet linkable)*
