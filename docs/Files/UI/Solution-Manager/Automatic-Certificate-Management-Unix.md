@@ -18,7 +18,7 @@ doc_type: conceptual
 
 # Automatic Certificate Management: Unix Agent
 
-This page covers what is specific to the Unix Agent for [Automatic Certificate Management](Automatic-Certificate-Management.md). Read that page first for the concepts, Server Options settings, Agent Configuration view, Enrollment Secret, and troubleshooting steps shared across all agent platforms — this page only covers what differs for the Unix Agent.
+This page covers what is specific to the Unix Agent for **Automatic Certificate Management**. Read that page first for the concepts, Server Options settings, Agent Configuration view, Enrollment Secret, and troubleshooting steps shared across all agent platforms — this page only covers what differs for the Unix Agent.
 
 ## Provisioning and renewal
 
@@ -46,9 +46,9 @@ The Unix Agent requires OpenSSL to build and run — this is already a standard 
 
 ## Agent Configuration view and troubleshooting
 
-Use the shared [Agent Configuration view](Automatic-Certificate-Management.md#agent-configuration-view) and [troubleshooting steps](Automatic-Certificate-Management.md#troubleshooting-a-failed-certificate-request) in the main guide — they apply to the Unix Agent without any platform-specific differences.
+Use the shared **Agent Configuration view** and **troubleshooting steps** in the main guide — they apply to the Unix Agent without any platform-specific differences.
 
 ## Related topics
 
-- [Automatic Certificate Management for Agents](Automatic-Certificate-Management.md)
-- [Automatic Certificate Management: SQL Agent](Automatic-Certificate-Management-SQL.md)
+- **Automatic Certificate Management for Agents** *(publishing alongside this page — not yet linkable)*
+- **Automatic Certificate Management: SQL Agent** *(publishing alongside this page — not yet linkable)*
