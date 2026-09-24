@@ -19,11 +19,11 @@ doc_type: conceptual
 
 # Remote Agent Upgrades for Unix Agents
 
-This page covers what's specific to the Unix Agent when using Remote Agent Upgrades. For the full explanation of the feature — turning it on, checking availability, upgrading, scheduling, and troubleshooting — see [Remote Agent Upgrades](Remote-Agent-Upgrades.md).
+This page covers what's specific to the Unix Agent when using Remote Agent Upgrades. For the full explanation of the feature — turning it on, checking availability, upgrading, scheduling, and troubleshooting — see **Remote Agent Upgrades** *(publishing alongside this page — not yet linkable)*.
 
 ## Same upgrade flow as other Agents
 
-The Unix Agent supports the same **Upgrade** and **Schedule Upgrade** actions described in [Remote Agent Upgrades](Remote-Agent-Upgrades.md), from the Agents page, the Agent Details page, and bulk selection. There is no separate procedure for Unix Agents — everything in the main guide applies as written.
+The Unix Agent supports the same **Upgrade** and **Schedule Upgrade** actions described in **Remote Agent Upgrades** *(publishing alongside this page — not yet linkable)*, from the Agents page, the Agent Details page, and bulk selection. There is no separate procedure for Unix Agents — everything in the main guide applies as written.
 
 In Solution Manager, a Unix Agent's **Platform** column shows as **UNIX**.
 
@@ -40,9 +40,9 @@ This is expected behavior, not a defect — treat a platform-matched result as n
 
 ## Troubleshooting
 
-If a Unix Agent doesn't report a completed upgrade, follow the same steps as any other Agent — see [Basic troubleshooting](Remote-Agent-Upgrades.md#basic-troubleshooting) in the main guide. If the **Available Upgrade** column shows `-` for a Unix Agent, first confirm whether a package has been made available for that Agent's specific distribution and OS version before assuming something is wrong.
+If a Unix Agent doesn't report a completed upgrade, follow the same steps as any other Agent — see **Basic troubleshooting** *(publishing alongside this page — not yet linkable)* in the main guide. If the **Available Upgrade** column shows `-` for a Unix Agent, first confirm whether a package has been made available for that Agent's specific distribution and OS version before assuming something is wrong.
 
 ## Related topics
 
-- [Remote Agent Upgrades](Remote-Agent-Upgrades.md)
+- **Remote Agent Upgrades** *(publishing alongside this page — not yet linkable)*
 - [Managing Agents](Managing-Agents.md)
