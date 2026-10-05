@@ -31,7 +31,7 @@ The SMADDI service monitors up to 20 input directories for files containing OpCo
 
 Network directories may be defined using drive letters or UNC path names. The following rules apply:
 
-- The service must run as a Domain User with the correct privileges. See [First Option: Running the Service as a Windows Domain User](Configuration.md#First)
+- The service must run as a Domain User with the correct privileges. See [First Option: Running the Service as a Windows Domain User](Configuration.md#first-option-running-the-service-as-a-windows-domain-user)
 - If the network connection is lost, the service continues monitoring other accessible directories. The lost directory is not monitored again until the service is restarted
 - If a network directory is unavailable when the service starts, SMADDI does not monitor it until the service is restarted
 

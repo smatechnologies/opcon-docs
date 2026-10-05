@@ -17,7 +17,7 @@ doc_type: conceptual
 
 A Container job runs a subschedule as its "program." Understanding the relationship between the two is essential for designing, operating, and troubleshooting nested schedule workflows.
 
-For information on defining a Container job, refer to [Container Job Type](../job-types/container.md). For subschedule naming conventions, refer to [SubSchedules](./schedule-names.md#SubSched).
+For information on defining a Container job, refer to [Container Job Type](../job-types/container.md). For subschedule naming conventions, refer to [SubSchedules](./schedule-names.md#subschedules).
 
 ## How a Container Job and Its SubSchedule Interact
 

@@ -98,7 +98,7 @@ OpCon Job Master (Details)
 
 ## Check Job Dependencies That Cannot Be Resolved
 
-Circular dependencies or missing required jobs can cause resolution failures. Run the DoBatch function with the `CHECK` parameter to identify these dependency types, limiting checks to 5 schedules per job at a time. Refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md#DoBatch) and [Checking](../utilities/Command-line-Utilities/DoBatch.md#Checking) in the Utilities online help.
+Circular dependencies or missing required jobs can cause resolution failures. Run the DoBatch function with the `CHECK` parameter to identify these dependency types, limiting checks to 5 schedules per job at a time. Refer to [DoBatch](../utilities/Command-line-Utilities/DoBatch.md#dobatch) and [Checking](../utilities/Command-line-Utilities/DoBatch.md#checking) in the Utilities online help.
 
 ## Receive an Alert When Machines Stop Working
 

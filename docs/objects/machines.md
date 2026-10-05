@@ -81,7 +81,7 @@ The administrative options are organized in the following categories:
 
 - **Allow "Kill Job"**: Determines if the kill function is allowed on the machine. The default value of `False` disables the feature. Set the value to `True` to enable the feature.
   - This parameter applies only to the MCP, SAP BW, SAP R/3 and CRM, SQL, UNIX, Windows (MSLSAM only), and z/OS platforms.
-- **Available Property** (Optional): Each Available Property defines a user-defined property for the machine. There is no limit to the number of properties that can be associated with a machine. To use machine properties, use tokens with the jobs to reference the machine properties (for example, `[[MI.PropertyName]]`). For more information, refer to [Using Properties for Automation](./using-properties.md) and [Machine Instance Property Name Syntax](./using-properties.md#machine).
+- **Available Property** (Optional): Each Available Property defines a user-defined property for the machine. There is no limit to the number of properties that can be associated with a machine. To use machine properties, use tokens with the jobs to reference the machine properties (for example, `[[MI.PropertyName]]`). For more information, refer to [Using Properties for Automation](./using-properties.md) and [Machine Instance Property Name Syntax](./using-properties.md#machine-instance-property-name-syntax).
   - Define a property with the following syntax: `Property Name=Property Value`. For information on defining properties, refer to [Defining Properties](./defining-properties.md).
 - **System Information Sent from the Agent**: The following fields appear with values from the agent if the agent is communicating with the server and supports sending the information.
   - **Time Sent**: The time the message was sent, in long time format `CCYY-MM-DD HH:MM:SS` (24-hour clock). Example: `Monday 2011-08-08 14:28:59`
@@ -125,7 +125,7 @@ The administrative options are organized in the following categories:
   - `Contemporary, Non-XML`
   - `Contemporary, XML`
 - **Use TLS for Scheduling Communications**: The default for this parameter is `FALSE`. Set to `TRUE` when this machine should use TLS security.
-- **TLS Certificate Distinguished Name**: If specified, this name must match the server name on the certificate installed on the machine where the agent resides. If this field is left blank, the name on the certificate is assumed to be either the Fully Qualified Domain Name (FQDN) of the agent machine (if specified in the machine settings) or the OpCon machine name for the agent (if the FQDN is not specified). For more information, refer to [Validation of the Digital Certificate Distinguished Name](../server-programs/network-communications.md#validati) in the Server Programs online help.
+- **TLS Certificate Distinguished Name**: If specified, this name must match the server name on the certificate installed on the machine where the agent resides. If this field is left blank, the name on the certificate is assumed to be either the Fully Qualified Domain Name (FQDN) of the agent machine (if specified in the machine settings) or the OpCon machine name for the agent (if the FQDN is not specified). For more information, refer to [Validation of the Digital Certificate Distinguished Name](../server-programs/network-communications.md#validation-of-the-digital-certificate-distinguished-name) in the Server Programs online help.
 - **TLS Certificate Serial Number**: An identifier for the agent certificate, required only when the agent uses a self-signed certificate to identify itself to OpCon. This number can be found in the certificate store of the operating system where the agent software is installed. When the TLS Certificate Serial Number is used, the self-signed certificate must be installed into the Microsoft Windows certificate store of the OpCon server because OpCon cannot use a locally stored Certificate Authority certificate to validate the self-signed certificate. The serial number provides the key that OpCon uses to read the local copy of the self-signed certificate.
 
   This field is optional if any of the following is true:
@@ -142,7 +142,7 @@ The administrative options are organized in the following categories:
   Unless requested by Continuous, do not change this value.
   :::
 
-- **JORS Port Number** (Optional): Defines the port that the Job Output Retrieval System (JORS) service monitors for job output. This port number must match the JORS port number configured on the agent. For additional information, refer to the agent online help for the desired platform. For more on the JORS Port Number and viewing job output, refer to [Viewing a Job Output File](../operations/job-output.md#Viewing).
+- **JORS Port Number** (Optional): Defines the port that the Job Output Retrieval System (JORS) service monitors for job output. This port number must match the JORS port number configured on the agent. For additional information, refer to the agent online help for the desired platform. For more on the JORS Port Number and viewing job output, refer to [Viewing a Job Output File](../operations/job-output.md#viewing-a-job-output-file).
   - This parameter applies to the following platforms:
     - IBM i
     - Java

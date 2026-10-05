@@ -31,7 +31,7 @@ Output file location defaults are also drive-dependent, but can be set to any lo
 
 - **System drive**: Output files default to `<systemdrive>:\ProgramData\OpConxps`
 - **Non-system drive**: Output files default to the same folder as the programs
-- **Custom path**: The `SMACommon.ini` file indicates the output file path
+- **Custom path**: The `RootPathForOutputFiles` key in the `[Output Settings]` section of `SMACommon.ini` gives the output file path
 
 ## Installed to System Drive using Default Path
 
@@ -80,7 +80,7 @@ Programs at default path; output files at custom path E:\Logs\OpConxps\.
 
 **Configuration files**: C:\ProgramData\OpConxps\\*program folder*
 
-**Note**: SMACommon.ini in this folder contains the output file path.
+**Note**: `SMACommon.ini` in this folder contains the output file path, as `RootPathForOutputFiles` in the `[Output Settings]` section.
 
 **Output files**: E:\Logs\OpConxps\\*program folder*
 :::
@@ -91,7 +91,16 @@ Programs at default path; output files at custom path E:\Logs\OpConxps\.
 |---|---|---|---|
 | System drive | Output files default to `:\ProgramData\OpConxps` | `<systemdrive>:\ProgramData\OpConxps` | — |
 | Non-system drive | Output files default to the same folder as the programs | — | — |
-| Custom path | The `SMACommon.ini` file indicates the output file path | — | — |
+| Custom path | The `RootPathForOutputFiles` key in the `[Output Settings]` section of `SMACommon.ini` gives the output file path | — | — |
+## Linux and container deployments
+
+The paths above apply to Windows installations. A container deployment uses fixed paths instead, and they are not configurable through `SMACommon.ini`:
+
+| Location | Path |
+|---|---|
+| Configuration files | `/app/config` |
+| Output and log files | `/app/log` |
+
 ## FAQs
 
 **Q: Where are OpCon configuration files stored when installed on the system drive?**
@@ -104,7 +113,7 @@ When installed on a non-system drive (e.g., D:\), configuration files are stored
 
 **Q: How do you find the output file path when a custom path is configured?**
 
-Check the `SMACommon.ini` file in the configuration folder. This file contains the custom output file path when one is set during installation.
+Check the `RootPathForOutputFiles` key in the `[Output Settings]` section of `SMACommon.ini`, in the configuration folder. This key holds the custom output file path when one is set during installation.
 
 ## Glossary
 

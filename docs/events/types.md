@@ -590,7 +590,7 @@ $THRESHOLD:RENAME,<old threshold name>,<new threshold name>
 
 ## Job-Related Events
 
-For all job-related events, only valid job status changes are allowed. For more information, refer to [Job Statuses](../operations/status-descriptions.md#Job) in the **Concepts** online help.
+For all job-related events, only valid job status changes are allowed. For more information, refer to [Job Statuses](../operations/status-descriptions.md#job-statuses) in the **Concepts** online help.
 
 ### $JOB:ADD
 
@@ -1021,7 +1021,7 @@ None
 
 For IBM i, visit the following section in the **IBM i Agent** online help: [Overview of Job Tracking](https://help.smatechnologies.com/opcon/agents/ibm-i/job-tracking/overview#overview-of-job-tracking)
 
-For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#Tracking)
+For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#tracking-externally-submitted-batch-job-events-in-opcon)
 
 :::
 
@@ -1355,7 +1355,7 @@ For IBM i, visit the following section in the **IBM i Agent** online help: [Over
 
 For MCP, visit the following section in the **MCP Agent** online help: [Using SMA/Announce](https://help.smatechnologies.com/opcon/agents/mcp/latest/Files/Agents/MCP/Using-SMA_ANNOUNCE.md)
 
-For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#tracking)
+For z/OS, visit the following section in the **Concepts** online help: [Tracking Externally Submitted Batch Job Events in OpCon](../job-types/zos.md#tracking-externally-submitted-batch-job-events-in-opcon)
 
 :::
 
@@ -1857,7 +1857,7 @@ $NOTIFY:TEXTMSG,<to>,<message>,\[exclude notification id from header: Y/N\]
 
 ## Property-Related Events
 
-For each of the property events, the specified Property Name must completely identify the property. The syntax for identifying a property depends on whether the property is an OpCon Instance, Machine Instance, Schedule Instance, or Job Instance property. Machine, Schedule, and Job Instance properties have optional qualifiers to specifically identify an instance. For additional information, refer to [Fully Qualified Property Name Syntax](../objects/using-properties.md#Fully) in the **Concepts** online help. For more on creating valid property definitions, refer to [Defining Properties](../objects/defining-properties.md) in the **Concepts** online help.
+For each of the property events, the specified Property Name must completely identify the property. The syntax for identifying a property depends on whether the property is an OpCon Instance, Machine Instance, Schedule Instance, or Job Instance property. Machine, Schedule, and Job Instance properties have optional qualifiers to specifically identify an instance. For additional information, refer to [Fully Qualified Property Name Syntax](../objects/using-properties.md#fully-qualified-property-name-syntax) in the **Concepts** online help. For more on creating valid property definitions, refer to [Defining Properties](../objects/defining-properties.md) in the **Concepts** online help.
 
 :::note
 

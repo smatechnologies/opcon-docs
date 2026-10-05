@@ -111,7 +111,7 @@ The license file must not be encrypted after receipt. Saving the license file to
 
 - After modifying SQL connection configuration using the SMA Connection Configuration tool, the SAM-SS must be stopped and restarted for the changes to take effect.
 - To request a new license: log in to Solution Manager, go to **Library** > **License & Support** > **Licensing**, copy the System ID, and submit a request through the Continuous Support Portal with your company name, environment type, and System ID.
-- Save the license file to the SAM directory (e.g., `C:\Program Files\OpConxps\SAM\`) without file-system encryption enabled.
+- Save the license file to the SAM data directory (e.g., `C:\ProgramData\OpConxps\SAM\`) without file-system encryption enabled. This is the same directory given in the configuration steps above; SAM does not read the license from the program directory.
 
 ### Alerts and Log Files
 

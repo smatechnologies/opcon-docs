@@ -53,7 +53,7 @@ OpCon uses a single database for all system data. Configure all components to co
 Confirm Enterprise Manager is configured to communicate with the OpCon database.
 
 :::note
-The OpCon Server component database connection is automatically configured during SMA OpCon SAM installation. Refer to the [SMA Connection Configuration Tool](../server-programs/schedule-activity-monitor.md#SMA) in the **Server Programs** online help.
+The OpCon Server component database connection is automatically configured during SMA OpCon SAM installation. Refer to the [SMA Connection Configuration Tool](../server-programs/schedule-activity-monitor.md#sma-connection-configuration-tool) in the **Server Programs** online help.
 :::
 
 #### Configure the Database Connection Information for the OpCon Server
@@ -220,7 +220,7 @@ To create a system DSN, complete the following steps:
 21. Enter a *data source name* in the **Data Source Name** text box.
 22. *(Optional)* Enter a *description*.
 23. Select the **Select** button.
-24. Browse to the **Utilities** directory (e.g., C:\\Program Files (x86)\\OpConxps\\Utilities\\).
+24. Browse to the **Utilities** directory (e.g., C:\\Program Files\\OpConxps\\Utilities\\).
 25. Select **IMPEX.mdb** and select **OK**.
 26. Select **OK**.
 27. Select **OK** on the System DSN tab.
@@ -595,8 +595,8 @@ To validate property definitions, complete the following steps:
 10. Select **SqlMaintUser** and verify the SQL maintenance user name. Modify if different from the default. Select **Save**.
 11. Select **SqlMaintPassword** and verify the SQL maintenance password. Modify if different from the default. Select **Save**.
 12. Select **DatabaseName** and verify the OpCon database name. Modify if different from the default. Select **Save**.
-13. Select **PathToFullBackupFile** and verify the path to the full backup file. Modify if different from the default (C:\\Program Files\\Microsoft SQL Server\\MSSQL14.MSSQLSERVER\\MSSQL\\Backup\\SMADB_Backup.bak). Select **Save**.
-14. Select **PathToTranLogBackupFile** and verify the path to the transaction log backup file. Modify if different from the default (C:\\Program Files\\Microsoft SQL Server\\MSSQL14.MSSQLSERVER\\MSSQL\\Backup\\SMATLog_Backup.bak). Select **Save**.
+13. Select **PathToFullBackupFile** and verify the path to the full backup file. Modify if different from the default (C:\\Program Files\\Microsoft SQL Server\\MSSQL<version>.MSSQLSERVER\\MSSQL\\Backup\\SMADB_Backup.bak). Select **Save**.
+14. Select **PathToTranLogBackupFile** and verify the path to the transaction log backup file. Modify if different from the default (C:\\Program Files\\Microsoft SQL Server\\MSSQL<version>.MSSQLSERVER\\MSSQL\\Backup\\SMATLog_Backup.bak). Select **Save**.
 
 **Result:** All required global properties are verified and saved with the correct values for the installation environment, and maintenance jobs will use the updated credentials and paths.
 
