@@ -32,6 +32,7 @@ The Agents administration section lets you monitor all registered agents, start 
 |------|-------------|
 | Manage Agents | Agent list — view status, filter, and select agents for actions |
 | Perform Agent Status Updates | Change the communication status for one or more selected agents |
+| Automatic Certificate Management for Agents | How agents automatically request, receive, and renew their own TLS certificates |
 
 ## Glossary
 
