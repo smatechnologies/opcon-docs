@@ -377,6 +377,7 @@ module.exports = {
         "Files/UI/Solution-Manager/Managing-Agents",
                 "Files/UI/Solution-Manager/Adding-Agents",
                 "Files/UI/Solution-Manager/Performing-Agent-Status-Updates",
+                "Files/UI/Solution-Manager/Remote-Agent-Upgrades-SAP",
               ],
             },
             {
