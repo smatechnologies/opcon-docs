@@ -43,7 +43,7 @@ To configure SSO Settings, go to **Library** > **Server Options** > Select the *
 -->
 1. Select the **Switch** to enable the SSO login button
 
-1. Enter a **Provider**. Select the identity provider (IdP) from the **Provider** list. Options include **Okta**, **Azure AD**, and **Other**
+1. Enter a **Provider**. Select the identity provider (IdP) from the **Provider** list. Options include **Okta**, **Azure AD**, **Google**, and **Other**
 
 1. Enter an **Authority**. The URL of the OIDC/OAuth2 provider
 
@@ -54,6 +54,27 @@ To configure SSO Settings, go to **Library** > **Server Options** > Select the *
 1. Enter a **Scope**. The scopes requested from the OIDC/OAuth2 provider (default: **openid**). Separate multiple scopes with a space
 
 \* OpenID Connect (OIDC) is an open authentication protocol that works on top of the OAuth 2.0 (OAuth2) framework.
+
+#### Google-Only Fields
+<!--
+![Server Options - Google SSO Settings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-google-settings.png "Google SSO Fields")
+-->
+Selecting **Google** as the Provider adds two additional required fields, shown only for that provider:
+
+1. Enter one or more **Permitted Workspace Domains**. Each entry is a Google Workspace domain (for example, `acme.com`); press **Enter** after typing a domain to add it as a chip. Only Google accounts belonging to one of these domains can sign in — this is the only setting that stops any Google account, including a personal Gmail account, from signing in. Domains are not case-sensitive and duplicates are ignored
+
+1. Enter a **Client Secret**. The client secret from your Google OAuth client. This value is never displayed again once saved — leaving the field blank on a later save keeps the previously stored secret
+
+:::note
+
+Google requires the **`https://www.googleapis.com/auth/cloud-identity.groups.readonly`** scope, in addition to **openid** and **email**, so OpCon can look up the groups a signed-in user belongs to. Enter all three scopes, space-separated, in the **Scope** field — the value must start with **`openid email`**, followed by the Cloud Identity scope, for example: `openid email https://www.googleapis.com/auth/cloud-identity.groups.readonly`
+
+:::
+
+<!--
+![Server Options - Google Scope and Group Mappings](../../../../../Resources/Images/SM/Library/ServerOptions/sso-google-settings-scope-groups.png "Google Redirect URI, Scope, and Group Mappings")
+-->
+
 
 #### Test Connection Button
 <!--
@@ -76,7 +97,8 @@ The **test connection button** retrieves metadata from the IdP using the value i
 - If the switch is **On**, values are required in all fields, including **Group Mappings**
 - SSO can be implemented with any IdP that follows the OpenID Connect authentication protocol
 - The IdP must return a token with a **groups** claim containing the user's group memberships and an **opconid** claim composed of the user's email
-- See examples below for [**Okta**](#okta-application) and [**Azure AD**](#azure-ad-application)
+- For **Google**, group names are matched to **Group Mappings** without regard to letter case, since Google Workspace always returns group email addresses in lowercase. For every other provider, group names must match exactly
+- See examples below for [**Okta**](#okta-application), [**Azure AD**](#azure-ad-application), and [**Google Workspace**](#google-workspace-application)
 
 :::
 
@@ -228,12 +250,53 @@ These steps create a custom Azure AD application that grants SMAOpConRestApi acc
 
 :::
 
+#### Google Workspace Application
+
+These steps create a Google Cloud OAuth client that grants SMAOpConRestApi access to a Google Workspace user's identity and group memberships. The user performing these steps must be able to create a Google Cloud project and, separately, must ask a Google Workspace administrator to enable an API and add users and groups.
+
+1. Sign in to the [Google Cloud console](https://console.cloud.google.com) and create a new project (or select an existing one)
+1. Go to **APIs & Services** > **Library**, search for **Cloud Identity API**, and select **Enable**
+
+   ![Google-Application](../../../../../Resources/Images/SM/Library/ServerOptions/google-enable-cloud-identity-api.png "Google - Enable Cloud Identity API")
+
+   :::caution
+
+   Skipping this step causes group lookups to fail with a permission error after a user otherwise signs in successfully
+
+   :::
+
+1. Go to **Google Auth Platform** (formerly named "OAuth consent screen")
+   1. On the **Audience** tab, set the user type to **Internal** (recommended, restricts sign-in to your Workspace domain) or **External**
+   1. On the **Data Access** tab, select **Add or remove scopes**, add the three required scopes — **openid**, **`.../auth/userinfo.email`**, and **`.../auth/cloud-identity.groups.readonly`** (search "Cloud Identity API" to find it; do not select the similarly named **`cloud-identity.devices.lookup`** scope) — then select **Update** followed by **Save**
+
+      ![Google-Application](../../../../../Resources/Images/SM/Library/ServerOptions/google-oauth-consent-screen.png "Google - Data Access Scopes")
+1. On the **Clients** tab, select **Create Client**
+   1. Set Application type to **Web application**
+   1. Under **Authorized redirect URIs**, add your Solution Manager redirect URI — must include **/login/callback**, for example `https://<yourhostname>/login/callback`
+
+      ![Google-Application](../../../../../Resources/Images/SM/Library/ServerOptions/google-create-oauth-client.png "Google - Create OAuth Client")
+   1. Select **Save**. Note the **Client ID** and **Client Secret** shown — used in the SSO configuration tab. The Client Secret is only shown once and cannot be viewed again; if it is lost, add a new secret to the same client rather than recreating it
+1. In the [Google Admin console](https://admin.google.com), ask your Workspace administrator to:
+   - Create or identify the groups to map to OpCon roles, and add the relevant users to each group
+   - Confirm each group's **Who can view members** setting includes group members — OpCon's group lookup runs as the signed-in user, so a user who cannot see their own group memberships in `groups.google.com` cannot sign in to OpCon either
+
+:::note
+
+- Enter **openid email `https://www.googleapis.com/auth/cloud-identity.groups.readonly`** in the Scope field in the SSO configuration tab in Solution Manager
+- Enter **`https://accounts.google.com`** in the **Authority** field. Unlike Okta or Azure AD, this value is the same for every Google Workspace domain — it is not specific to your organization
+- The user's Google email address is used as the OpCon identifier
+- The token exchange happens on the OpCon server, not in the browser — this is why a **Client Secret** field exists for Google but not for Okta or Azure AD
+
+:::
+
 :::note
 Common errors when connecting to your IdP OIDC application:
 
 - **Invalid Redirect URI**: The redirect URI in the SSO configuration must match the one configured in your IdP. Mismatches prevent successful authentication
 - **Incorrect Authority**: The authority (OIDC provider URL) must match exactly. Any mismatch causes connection and authentication failures
 - **Invalid Customer ID**: The customer ID in the SSO configuration must match the one expected by your IdP. An incorrect customer ID prevents successful authentication
+- **Google: "have not been mapped to any roles"**: The signed-in Google account belongs to no group listed in **Group Mappings**. Add the group, or add the user to a mapped group in Google Admin
+- **Google: sign-in fails immediately after entering an email address**: The account's domain is not in **Permitted Workspace Domains**, or the account is a personal Gmail account rather than a Workspace account
 
 :::
 
@@ -243,37 +306,53 @@ Common errors when connecting to your IdP OIDC application:
 
 ### Authentication
 
-SSO in OpCon uses OpenID Connect (OIDC), which operates on top of the OAuth 2.0 framework. Supported identity providers include Okta, Azure AD, and any IdP that follows the OIDC authentication protocol. The IdP must return a token with a groups claim containing the user's group memberships and an opconid claim containing the user's email.
+SSO in OpCon uses OpenID Connect (OIDC), which operates on top of the OAuth 2.0 framework. Supported identity providers include Okta, Azure AD, Google Workspace, and any IdP that follows the OIDC authentication protocol. The IdP must return a token with a groups claim containing the user's group memberships and an opconid claim containing the user's email.
 
 Once a user accesses Solution Manager through SSO, their OpCon password is automatically changed to a random value, ensuring SSO becomes the only means of authentication for that account.
 
 The Redirect URI in the SSO configuration must include `/login/callback` and must exactly match the redirect URI configured in the IdP. Mismatches in the Redirect URI, Authority URL, or Client ID prevent successful authentication.
 
-For Okta, the Authorization Code grant type is used with the openid scope. For Azure AD, the application requires Delegated permissions for GroupMember.Read.All and User.Read from Microsoft Graph API, and admin consent must be granted.
+For Okta, the Authorization Code grant type is used with the openid scope. For Azure AD, the application requires Delegated permissions for GroupMember.Read.All and User.Read from Microsoft Graph API, and admin consent must be granted. For Google, the browser performs the sign-in and hands an authorization code to the OpCon server, which exchanges it for the user's identity and group memberships directly with Google — the Client Secret is required for this exchange and never leaves the server.
 
 ### Authorization
 
 Configuring SSO requires the Role_ocadm role or the Maintain Server Options function privilege. Group Mappings link IdP group names to OpCon roles. When a user logs in via SSO, OpCon automatically creates the user account if it does not exist and adds it to the mapped role. Users removed from an IdP group are not automatically disabled in OpCon.
 
+For Google, a signed-in user's account must belong to a domain listed in **Permitted Workspace Domains**. A Google account outside every listed domain — including a personal Gmail account — is refused before OpCon checks group membership.
+
 ### Sensitive Data
 
-The Client ID, Authority URL, and Redirect URI are registered with the IdP and must match the values configured in Solution Manager. For Okta, the Customer ID from the app registration is a sensitive identifier. For Azure AD, the Application ID, Tenant ID, and access token version (set to 2 in the manifest) are required for the integration.
+The Client ID, Authority URL, and Redirect URI are registered with the IdP and must match the values configured in Solution Manager. For Okta, the Customer ID from the app registration is a sensitive identifier. For Azure AD, the Application ID, Tenant ID, and access token version (set to 2 in the manifest) are required for the integration. For Google, the Client Secret is stored encrypted and is never displayed again after it is saved; the SSO configuration screen only shows whether a secret is currently stored.
 
 ## Configuration Options
 
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
-| Provider | Identity provider (IdP) used for SSO | — | Options: Okta, Azure AD, Other |
+| Provider | Identity provider (IdP) used for SSO | — | Options: Okta, Azure AD, Google, Other |
 | Authority | URL of the OIDC/OAuth2 provider | — | Required; the Test Connection button uses this value to retrieve IdP metadata |
 | Client ID | Client application identifier registered with the OIDC/OAuth2 provider | — | — |
 | Redirect URI | Location the authorization server sends the user after successful authorization | — | Must include `/login/callback` |
-| Scope | Scopes requested from the OIDC/OAuth2 provider | openid | Separate multiple scopes with a space |
+| Scope | Scopes requested from the OIDC/OAuth2 provider | openid | Separate multiple scopes with a space. For Google, must also include `email` and `https://www.googleapis.com/auth/cloud-identity.groups.readonly` |
+| Permitted Workspace Domains | Google Workspace domains allowed to sign in | — | Google only; required when Provider is Google |
+| Client Secret | Client secret from the OAuth client | — | Google only; required when Provider is Google. Write-only — never displayed after saving |
 
 ## FAQs
 
 **Q: Which identity providers does OpCon SSO support?**
 
-OpCon SSO uses OpenID Connect (OIDC) on top of the OAuth 2.0 framework. It supports Okta, Azure AD, and any identity provider that follows the OIDC authentication protocol.
+OpCon SSO uses OpenID Connect (OIDC) on top of the OAuth 2.0 framework. It supports Okta, Azure AD, Google Workspace, and any identity provider that follows the OIDC authentication protocol.
+
+**Q: Why does Google need a Client Secret when Okta and Azure AD don't?**
+
+Google requires a client secret to exchange a sign-in code for a user's identity, even when the sign-in itself uses PKCE (a security measure that protects the sign-in code). OpCon performs that exchange on the server so the secret never reaches the browser.
+
+**Q: Can I restrict Google sign-in to my company's Workspace domains?**
+
+Yes. Enter one or more domains in **Permitted Workspace Domains**. Only Google accounts belonging to a listed domain can sign in; this includes blocking personal Gmail accounts.
+
+**Q: Does a Google group name need to match Group Mappings exactly?**
+
+No, letter case is ignored for Google. Google Workspace always returns group email addresses in lowercase, so a mapping entered as `OpCon-Admins@acme.com` still matches the group returned by Google. For every other provider, the match is exact.
 
 **Q: Which privilege is required to configure SSO?**
 
