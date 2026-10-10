@@ -406,6 +406,7 @@ module.exports = {
                 "server-programs/network-communications",
               ],
             },
+            "Files/UI/Solution-Manager/Library/Integrations/Managing-Integrations",
           ],
         },
         "installation/system-requirements",

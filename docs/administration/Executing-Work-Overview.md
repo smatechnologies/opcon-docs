@@ -24,6 +24,7 @@ Before OpCon can submit jobs to an agent, the agent must be connected and config
 - Creating or updating batch user credentials for job submission
 - Setting up a relay server for network communication
 - Diagnosing agent connectivity issues
+- Applying a live upgrade to an Integration running on a Relay or NetCom
 
 ## What is in this section?
 
@@ -32,6 +33,7 @@ Before OpCon can submit jobs to an agent, the agent must be connected and config
 | Agents | View agent status, start and stop communication, and perform status updates |
 | Batch Users | Configure the OS-level user credentials used to run jobs on agents |
 | Relay | Network relay communication configuration for distributed environments |
+| Integrations | View available Integration upgrades and apply them, most often as a live upgrade with no restart |
 
 ## Glossary
 
