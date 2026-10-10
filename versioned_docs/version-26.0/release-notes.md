@@ -197,6 +197,8 @@ doc_type: conceptual
 
 :white_check_mark: **OC-6062**: Fixed an issue where if a script version was copied and those changes where cancelled, the script would be deselected.
 
+:white_check_mark: **OC-6064**: Fixed an issue with blank schedule name on the master jobs details page.
+
 :white_check_mark: **OC-6081**: Fixed an issue where cross-schedule dependencies were not visible in the PERT progressive discovery view.
 
 :white_check_mark: **OC-6086**: Fixed SSO badge contrast issue for users on access management page.
