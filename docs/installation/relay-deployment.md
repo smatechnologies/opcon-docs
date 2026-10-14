@@ -9,7 +9,7 @@ tags:
   - Procedural
   - System Administrator
   - Installation
-last_updated: 2026-09-22
+last_updated: 2026-10-14
 doc_type: procedural
 ---
 
@@ -79,13 +79,21 @@ To install the relay binary, complete the following steps:
    sudo mkdir -p /app/config /app/log
    sudo useradd -r opcon
    sudo chown -R opcon:opcon /app/config /app/log /opt/opcon/relay
+   sudo chmod 750 /app/config /app/log
+   sudo chmod -R a+rX /opt/opcon/relay
    ```
+
+   :::caution
+   Create `/app/log` yourself. The `/app` directory is normally owned by `root`, so the `opcon` service account cannot create `/app/log` on its own, and the relay does not create it during registration. Do not use `chmod 777`: `SMANetComRelay.ini` holds the relay's encrypted connection token, so the directory should be readable only by the service account and its group.
+   :::
 
 **Result:** The relay binary is installed, and the fixed configuration and log directories exist and are owned by the service account.
 
 ### Register the relay
 
 Registration links the relay to your OpCon environment and stores the resulting connection token in `SMANetComRelay.ini`. Registration only needs to run once — running it again is safe and has no effect once the relay is already registered.
+
+Run registration as the service account (`sudo -u opcon`), not with plain `sudo`. Registration creates `SMANetComRelay.ini`, and a file created by `root` is not writable by the `opcon` service account, so the relay then fails at startup.
 
 To register the relay, complete the following steps:
 
@@ -128,6 +136,10 @@ To install the systemd unit and start the relay as a service, complete the follo
    sudo cp smanetcomrelay.service /etc/systemd/system/
    ```
 
+   :::caution
+   The unit file assumes the relay is installed in `/opt/opcon/relay` and runs as the `opcon` user. If you installed the binary somewhere else, edit `ExecStart` and `WorkingDirectory` in `/etc/systemd/system/smanetcomrelay.service` to match before you continue. The service account must also be able to read and run everything in that directory. If the path is wrong, the service fails immediately and `systemctl status` shows `status=203/EXEC` or `status=200/CHDIR`.
+   :::
+
 2. Reload the systemd unit files and enable and start the relay:
 
    ```sh
@@ -144,6 +156,10 @@ To install the systemd unit and start the relay as a service, complete the follo
    The status shows `active (running)`.
 
 **Result:** The relay starts automatically on boot and runs under systemd, which restarts it automatically if it fails.
+
+:::note
+Before it starts, the relay checks that the `opcon` account can write to `/app/config` and `/app/log` (and to any `SMANetComRelay.ini` or log files already in them). If it cannot, the relay prints the directory or file at fault and the command to fix it, then exits with code `78`. systemd does not restart the relay after exit code `78`, because a permissions problem does not fix itself, so the service stays in a `failed` state. Read the message with `journalctl -u smanetcomrelay`, correct the ownership, then run `sudo systemctl restart smanetcomrelay`. No log file exists yet at that point, so the message is only in the journal.
+:::
 
 :::note
 The unit file gives the relay 60 seconds to shut down gracefully (`TimeoutStopSec=60`) before systemd force-stops it. A graceful shutdown drains in-flight communication and normally completes in a few seconds.
@@ -317,6 +333,10 @@ The relay writes to the same three log files on every platform, all under `/app/
 ## Exception Handling
 
 **Startup fails immediately with a `RunMode` error** — On Linux or in Docker, the relay exits immediately at startup with an error stating that `RunMode=Managed` is not supported on non-Windows platforms — Open `SMANetComRelay.ini` and set `RunMode=Service` under `[Service Settings]`, then start the relay again.
+
+**The relay exits immediately with code 78 and a "Cannot create or write to" message** — At startup the relay reports that it cannot create or write to `/app/config`, `/app/log`, or a file such as `SMANetComRelay.ini` as the user running it, and prints a `Fix with:` command — Run the printed command (it creates the directory and gives the service account ownership with mode `750`), or correct the ownership of the named file, and start the relay again. A file created by running registration with plain `sudo` is the usual cause of the file-level message: change its owner with `sudo chown opcon:opcon /app/config/SMANetComRelay.ini`. Under systemd, the message is in `journalctl -u smanetcomrelay`, and the service stays `failed` until you restart it.
+
+**The systemd service fails immediately with `status=203/EXEC` or `status=200/CHDIR`** — `systemctl status smanetcomrelay` shows the service never started, and no log file is created — The unit file points at a path that does not exist or that the service account cannot read. Set `ExecStart` and `WorkingDirectory` in `/etc/systemd/system/smanetcomrelay.service` to the directory you installed the binary in, confirm the file is named `SMANetcomRelay` (not `.exe`; the Windows build cannot run on Linux), make sure the service account can read and run it (`sudo chmod -R a+rX <install directory>`), then run `sudo systemctl daemon-reload` and restart the service.
 
 **Docker container exits immediately with a persistent-volume error** — The container refuses to start and reports that `/app/config` does not appear to be a mounted volume — Mount a named volume or bind mount at `/app/config` and restart the container, or set `RELAY_ALLOW_EPHEMERAL_CONFIG=true` if the container is intentionally temporary.
 
