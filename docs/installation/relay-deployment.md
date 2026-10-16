@@ -296,6 +296,23 @@ Type=4
 On Linux and in Docker, `RunMode` under `[Service Settings]` must be set to `Service`. `RunMode=Managed` assumes a Solution Manager process on the same machine supervising the relay, which only applies to the Windows Service deployment. Registration sets `RunMode=Service` automatically; you would only see `Managed` here if the file was hand-edited or copied from a Windows installation. See [Exception Handling](#exception-handling) below if the relay exits immediately at startup with a `RunMode` error.
 :::
 
+## Agent TLS certificates and client validation
+
+When the relay connects to an agent over TLS, it looks up the certificates it needs by serial number. On Windows this is the LocalMachine certificate store. On Linux and in Docker the relay also scans the `/app/certs` folder, in addition to the operating system trust store. Set the `RELAY_CERTS_DIR` environment variable to scan a different folder.
+
+| Folder (path inside the relay) | What to put there | Used for |
+|---|---|---|
+| `/app/certs` | The relay's client certificate as a `.pfx` or `.p12` file with an **empty password**. Server certificates can be `.crt`, `.cer`, or `.pem` files. | Finding the server and client certificates by serial number |
+| `/usr/local/share/ca-certificates` (Docker) | Public `.crt` files only: the certificate authority chain that issued the agent's certificate. | Trusting the agent's server certificate |
+
+In Docker, mount the folders into the container, for example `-v /opt/relay/certs:/app/certs:ro -v /opt/relay/trust:/usr/local/share/ca-certificates:ro`.
+
+When the agent has client validation turned on (`TLSClientValidation=TRUE` in the agent's configuration), the relay must present a client certificate during the TLS handshake, and the certificate can only be presented if the relay has its **private key**. A certificate supplied as a public-only `.crt`, `.cer`, or `.pem` file is found by serial number but is never sent to the agent.
+
+:::note
+The relay's client certificate is identified by the client certificate serial number configured for the relay. It is a different certificate from the agent's own server certificate.
+:::
+
 ## Behavior differences from the Windows Service deployment
 
 | Area | Windows Service | Linux (systemd) and Docker |
@@ -339,6 +356,8 @@ The relay writes to the same three log files on every platform, all under `/app/
 **The systemd service fails immediately with `status=203/EXEC` or `status=200/CHDIR`** — `systemctl status smanetcomrelay` shows the service never started, and no log file is created — The unit file points at a path that does not exist or that the service account cannot read. Set `ExecStart` and `WorkingDirectory` in `/etc/systemd/system/smanetcomrelay.service` to the directory you installed the binary in, confirm the file is named `SMANetcomRelay` (not `.exe`; the Windows build cannot run on Linux), make sure the service account can read and run it (`sudo chmod -R a+rX <install directory>`), then run `sudo systemctl daemon-reload` and restart the service.
 
 **Docker container exits immediately with a persistent-volume error** — The container refuses to start and reports that `/app/config` does not appear to be a mounted volume — Mount a named volume or bind mount at `/app/config` and restart the container, or set `RELAY_ALLOW_EPHEMERAL_CONFIG=true` if the container is intentionally temporary.
+
+**Agent closes the TLS connection right after the handshake when client validation is on** — The relay log shows `Client Certificate with Serial Number ... was found but has NO private key` and later `Local certificate is null`, and the agent log shows `Client's certificate not available. End communication ...` — The client certificate was supplied without its private key (for example as a `.crt` or `.pem` file), or the `.pfx` could not be loaded (the relay log shows `RelayCertStore: skipping '<file>'`; this usually means the file has a password). Export the certificate with its private key and an empty password, for example `openssl pkcs12 -export -inkey client.key -in client.crt -passout pass: -out client.pfx`, place the `.pfx` in `/app/certs`, and restart the relay.
 
 **Registration fails with a missing-parameters message** — The `register` command reports missing required parameters instead of attempting registration — Confirm the Client Name, relay Name, NetCommApi URI, and External Token are all supplied (via CLI flags on Linux, or the corresponding environment variables in Docker), and that the External Token has not expired.
 
