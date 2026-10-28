@@ -9,7 +9,7 @@ tags:
   - Procedural
   - System Administrator
   - Installation
-last_updated: 2026-10-16
+last_updated: 2026-10-28
 doc_type: procedural
 ---
 
@@ -354,6 +354,8 @@ The relay writes to the same three log files on every platform, all under `/app/
 **The relay exits immediately with code 78 and a "Cannot create or write to" message** — At startup the relay reports that it cannot create or write to `/app/config`, `/app/log`, or a file such as `SMANetComRelay.ini` as the user running it, and prints a `Fix with:` command — Run the printed command (it creates the directory and gives the service account ownership with mode `750`), or correct the ownership of the named file, and start the relay again. A file created by running registration with plain `sudo` is the usual cause of the file-level message: change its owner with `sudo chown opcon:opcon /app/config/SMANetComRelay.ini`. Under systemd, the message is in `journalctl -u smanetcomrelay`, and the service stays `failed` until you restart it.
 
 **The systemd service fails immediately with `status=203/EXEC` or `status=200/CHDIR`** — `systemctl status smanetcomrelay` shows the service never started, and no log file is created — The unit file points at a path that does not exist or that the service account cannot read. Set `ExecStart` and `WorkingDirectory` in `/etc/systemd/system/smanetcomrelay.service` to the directory you installed the binary in, confirm the file is named `SMANetcomRelay` (not `.exe`; the Windows build cannot run on Linux), make sure the service account can read and run it (`sudo chmod -R a+rX <install directory>`), then run `sudo systemctl daemon-reload` and restart the service.
+
+**The relay does not start after the server reboots** — `systemctl status smanetcomrelay` shows `disabled` and `inactive (dead)`, and the log shows no errors — The service was started but never enabled, so systemd does not start it at boot. `systemctl start` runs the relay only until the next shutdown. Run `sudo systemctl enable smanetcomrelay`, confirm that `systemctl is-enabled smanetcomrelay` prints `enabled`, then reboot the server to verify that the relay starts.
 
 **Docker container exits immediately with a persistent-volume error** — The container refuses to start and reports that `/app/config` does not appear to be a mounted volume — Mount a named volume or bind mount at `/app/config` and restart the container, or set `RELAY_ALLOW_EPHEMERAL_CONFIG=true` if the container is intentionally temporary.
 
