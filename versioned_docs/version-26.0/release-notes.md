@@ -93,7 +93,7 @@ doc_type: conceptual
 
 :white_check_mark: **OC-7353**: Fixed an issue with displaying the correct agents when clicking on an agent status donut in French language view.
 
-:white_check_mark: **OC-7366**: Fixed an issue in Self-Service where selecting a date on which a daylight saving time (DST) change occurs could cause the submitted date to resolve to the previous day.
+:white_check_mark: **OC-7366**: Fixed an issue where daylight saving time (DST) change dates were resolved to the previous day.
 
 :white_check_mark: **OC-7372**: Fixed an issue with schedule deletion being affected by regional settings.
 
