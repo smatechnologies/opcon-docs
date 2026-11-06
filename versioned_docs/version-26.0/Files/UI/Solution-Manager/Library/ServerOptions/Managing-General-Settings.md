@@ -9,7 +9,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-10-08
 doc_type: procedural
 ---
 
@@ -59,6 +59,7 @@ The General category contains default behavior settings for the SAM.
 |Failed jobs should keep the Schedule "In Process"|False|Y|When True, schedules containing Failed or Marked Failed jobs remain In Process. By default, the SAM closes a schedule when all jobs are Cancelled, Skipped, Finished OK, or Failed. Valid values: True, False.|
 |Number of Days to Keep a Service Request Execution|7|Y|Defines the number of days to retain service request execution history.|
 |Solution Manager URL|*blank*|N|Defines the Solution Manager URL for opening Solution Manager within the Enterprise Manager. When specified, a Solution Manager option appears in the Navigation frame. Note: Log out and back in to the Enterprise Manager after saving this value for the option to appear.|
+|Enable Windows Authentication|False|N|Allows users to authenticate to OpCon using Windows Authentication. Valid values: True, False.|
 
 ## FAQs
 

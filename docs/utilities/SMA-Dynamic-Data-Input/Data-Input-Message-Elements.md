@@ -1259,7 +1259,7 @@ Contains child elements to define platform-specific job information.
 
 ## <afc\> Advanced Failure Criteria Element Structure
 
-For Windows and UNIX jobs, SMADDI supports Advanced Failure Criteria. For more information, refer to [Advanced Failure Criteria](../../objects/jobs.md#Advanced).
+For Windows and UNIX jobs, SMADDI supports Advanced Failure Criteria. For more information, refer to [Advanced Failure Criteria](../../objects/jobs.md#advanced-failure-criteria).
 
 <afc\>
 

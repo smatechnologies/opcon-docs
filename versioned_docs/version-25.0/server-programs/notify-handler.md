@@ -4,11 +4,11 @@ sidebar_label: 'SMANotifyHandler'
 
 # SMA Notify Handler
 
-The SMA Notify Handler component is responsible for reading the NOTIFY table in the OpCon database and writing the message to the appropriate location. For more information, refer to [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md) in the **Enterprise Manager** online help.
+The SMA Notify Handler component polls the OpCon database for pending notifications and writes each message to the appropriate location. For more information, refer to [Using Notification Manager](../Files/UI/Enterprise-Manager/Using-Notification-Manager.md) in the **Enterprise Manager** online help.
 
 ![SMA Notify Handler](../Resources/Images/Server-Programs/smanotifyhandler.png "SMA Notify Handler")
 
-The SMA Notify Handler can send the following basic notifications after reading the NOTIFY table:
+The SMA Notify Handler can send the following basic notifications:
 
 - Windows Event Log
 - Email (SMTP) (For more information on configuring notifications for SMTP, refer to [Configuring SMTP Notifications](../notifications/Notification-Configuration.md#Configur3) in the **Concepts** online help.)
