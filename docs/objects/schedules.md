@@ -64,7 +64,7 @@ schedules:
     default name is <None\> (HC: Only).
 - **Use Master Holiday**: Determines if Master Holiday Calendar dates
     will be applied to the schedule's Holiday Calendar. For additional
-    information, refer to [Master Holiday Calendar](./calendars.md#master).
+    information, refer to [Master Holiday Calendar](./calendars.md#master-holiday-calendar).
   - When turning this setting off, the graphical interface will
         present the option to add the master holiday dates to the
         schedule's holiday calendar before disassociating the calendar
@@ -143,7 +143,7 @@ exceptions for one or more named instances of the schedule. Instance
 Definitions is enabled for all schedules except the AdHoc schedule. The
 following options are provided:
 
-**Build an instance for each machine in Machine Group**: For Multi-Instance schedules, defines the Machine Group containing the machines the schedule should build for. One instance of the schedule will build for each machine in the group. To use the schedule instance machine, configure the jobs in the schedule to "Use Schedule Instance Machine". For more information, refer to [Using the Same Schedule Across Multiple Machines](../automation-concepts/machine-groups.md#using-the-same-schedule-across-multiple-machine).
+**Build an instance for each machine in Machine Group**: For Multi-Instance schedules, defines the Machine Group containing the machines the schedule should build for. One instance of the schedule will build for each machine in the group. To use the schedule instance machine, configure the jobs in the schedule to "Use Schedule Instance Machine". For more information, refer to [Using the Same Schedule Across Multiple Machines](../automation-concepts/machine-groups.md#using-the-same-schedule-across-multiple-machines).
 
 **Build an instance for each set of Properties**: Defines the predefined
 properties for each instance of the schedule. To use the

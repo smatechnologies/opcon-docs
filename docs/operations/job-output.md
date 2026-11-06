@@ -20,7 +20,7 @@ When OpCon runs a job, the Agent on the target machine captures the output and s
 Job output is not available for Null Jobs, Container jobs, or jobs with an Unknown job type. The job must have run at least once — its status must be Running, Held, or a completed (Ended) state — before output is accessible.
 
 :::note
-Configuring TLS Security for job scheduling also secures JORS communications using the same digital certificate configuration. For details, refer to [TLS Security](../server-programs/network-communications.md#tls) in the **Server Programs** documentation.
+Configuring TLS Security for job scheduling also secures JORS communications using the same digital certificate configuration. For details, refer to [TLS Security](../server-programs/network-communications.md#tls-security) in the **Server Programs** documentation.
 :::
 
 ## Prerequisites

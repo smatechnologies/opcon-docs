@@ -26,7 +26,7 @@ SMAFT for Windows requires a .NET version to be installed.
 After receiving instructions from the resident agent, the SMAFT component negotiates transfer settings with the SMAFT component on the destination machine, then transfers the file.
 
 :::note
-The file transfer port for the initiating machine must be open on the firewall. For more information, refer to [File Transfer Settings](../objects/machines.md#file).
+The file transfer port for the initiating machine must be open on the firewall. For more information, refer to [File Transfer Settings](../objects/machines.md#file-transfer-settings).
 :::
 
 ## Prerequisites
@@ -71,7 +71,7 @@ Each agent machine has a **File Transfer Settings** section in Solution Manager 
 The TLS port number and TLS communication settings are only available for agents that support TLS Security for SMA File Transfer jobs.
 :::
 
-For additional information, refer to [File Transfer Settings](../objects/machines.md#file).
+For additional information, refer to [File Transfer Settings](../objects/machines.md#file-transfer-settings).
 
 ## Job Definition
 

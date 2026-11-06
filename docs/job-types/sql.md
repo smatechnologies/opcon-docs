@@ -308,18 +308,18 @@ Running an Other DB job through ODBC/OLE DB connections requires the appropriate
 | Setting | What It Does | Default | Notes |
 |---|---|---|---|
 | Job Action | Defines the run process the job uses. | — | — |
-| Advanced Failure Criteria | _(Optional)_ SQL jobs | — | — |
+| Advanced Failure Criteria | _(Optional)_ Refer to [Advanced Failure Criteria](../objects/jobs.md#advanced-failure-criteria). | — | — |
 | Package File Path | Loads a package that is stored in SQL server. | — | — |
-| Other Options | _(Optional)_ Defines any additional | — | — |
+| Other Options | _(Optional)_ Defines additional command-line options supported by the database's own command-line utility. | — | — |
 | Server Name\\Instance | Defines the name or IP address of the SQL | — | must be pre-configured on the SQL server connection |
-| Windows Authentication | _(Optional)_ Defines | — | must be pre-configured on the SQL server connection   manager to use this option. - **Re |
-| User Id | Defines the SQL or Windows Authentication user name | — | must be pre-configured on the SQL server connection   manager to use this option. - **Re |
+| Windows Authentication | _(Optional)_ Defines whether to use Windows Authentication. | — | must be pre-configured on the SQL server connection   manager to use this option. - **Re |
+| User Id | Defines the SQL or Windows Authentication user name. | — | must be pre-configured on the SQL server connection   manager to use this option. - **Re |
 | Encrypt | _(Optional)_ Defines whether to use an encrypted connection to the database. | — | must be pre-configured on the SQL server connection   manager to use this option. - **Re |
-| Retry Attempts | _(Optional)_ Defines the number | — | — |
+| Retry Attempts | _(Optional)_ Defines the number of connection retry attempts if the initial connection to the SQL Server fails. | — | — |
 | Job Name | Defines the name of the job defined in the SQL Server | — | — |
 | Monitor Only | _(Optional)_ Defines that the job | — | — |
 | Monitoring End Time | _(Optional)_ Defines the time end time for monitoring a SQL Server Agent job. | — | — |
-| Database Name | Defines the SQL database name | — | must be pre-configured on the SQL server connection   manager to use this option. - **Ad |
+| Database Name | Defines the SQL database name. | — | must be pre-configured on the SQL server connection   manager to use this option. - **Ad |
 | Script File (radio button) | Select to define a script file | — | — |
 | Script File Path | Defines the path to the SQL script file to be run against the selected SQL server/database. | — | — |
 | In Line Script (radio button) | Select to define an in line script | — | — |
@@ -331,7 +331,7 @@ Running an Other DB job through ODBC/OLE DB connections requires the appropriate
 | Server Name | Defines the name or IP address of the MySQL server | — | — |
 | Port | Defines the TCP/IP port number for the connection | — | — |
 | Connection Id | Defines the listening port on the database | — | — |
-| Parameters (positional) | _(Optional)_ Defines | — | — |
+| Parameters (positional) | _(Optional)_ Defines parameter values to pass to the script. | — | — |
 ## Operations
 
 ### Monitoring

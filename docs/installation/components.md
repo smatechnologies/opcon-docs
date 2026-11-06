@@ -541,7 +541,7 @@ To modify the SMAResourceMonitor.ini configuration file, complete the following 
 3. Find the **SMAResourceMonitor.ini** file.
 4. Right-click the file and select **Open With**.
 5. Select an ASCII text editor such as Notepad from the **Choose the program you want to use** list.
-6. Make any necessary modifications to the `.ini` file. For complete information on the SMAResourceMonitor.ini settings, refer to [SMAResourceMonitor.ini](../utilities/SMA-Resource-Monitor/Service.md#SMAResou).
+6. Make any necessary modifications to the `.ini` file. For complete information on the SMAResourceMonitor.ini settings, refer to [SMAResourceMonitor.ini](../utilities/SMA-Resource-Monitor/Service.md#smaresourcemonitorini).
 7. Go to **File > Save**.
 8. Close the text editor.
 
