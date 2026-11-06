@@ -270,7 +270,7 @@ The following information applies to the Episys: Run JobFile sub-type:
 - **Group ID/User ID**: Defines the UNIX Group ID and User ID. The
     group and user information must be defined as a Batch User ID in
     OpCon Administration. Refer to [Adding a     Batch User for
-    UNIX](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md#Adding)
+    UNIX](../Files/UI/Enterprise-Manager/Adding-Batch-Users.md#adding-batch-users)
      in the **Enterprise Manager** online help. The UNIX
     agent configuration determines how the agent will     interpret the Group ID/User ID. For more information, refer to
     [path_to_su](https://help.smatechnologies.com/opcon/agents/unix/latest/Files/Agents/UNIX/agent-Configuration-Parameters.md#path_to_su)
