@@ -20,7 +20,7 @@ doc_type: conceptual
 
 # Remote Agent Upgrades
 
-Keeping Agent software current used to mean signing in to every target machine and running an installer by hand. With Remote Agent Upgrades, Solution Manager can check whether a newer Agent version is available and upgrade the Agent in place, without a site visit or manual install. The same action is available for Relays and Integrations from their own grids.
+Keeping Agent software current used to mean signing in to every target machine and running an installer by hand. With Remote Agent Upgrades, Solution Manager can check whether a newer Agent version is available and upgrade the Agent in place, without a site visit or manual install. The same action is available for Relays and Integrations from their own grids, and can be applied to several selected rows at once.
 
 This page uses the Windows Agent as its reference example. For platform-specific package naming and prerequisites, see the related topics for SAP, SAP BW, SQL, and Unix Agents at the bottom of this page.
 
@@ -86,6 +86,8 @@ Selecting **Upgrade** does not require Agents to already be idle — Solution Ma
 - If you selected a single Agent and it has active jobs running, Solution Manager asks whether to schedule its upgrade instead, naming the Agent and how many active jobs are running. Selecting **Yes** [schedules the upgrade](#scheduling-an-agent-upgrade) to start automatically once its active jobs clear.
 - If you selected multiple Agents, the idle ones in that selection are upgraded regardless of what you decide about the busy ones. If every selected Agent has active jobs, Solution Manager offers to schedule all of them. If the selection is mixed, it upgrades the idle ones and separately offers to schedule the busy ones, naming them.
 
+This warning is specific to Agents — Relays and Integrations do not run jobs, so selecting them for a bulk upgrade never shows an active jobs warning.
+
 <!--
 ![Schedule-instead prompt for an Agent with active jobs](../../../Resources/Images/SM/Agents/AgentsPage-ScheduleInsteadPrompt.png "Schedule-instead prompt for an Agent with active jobs")
 -->
@@ -118,15 +120,21 @@ If the new version does not come up healthy after installing, OpCon automaticall
 
 In the rare case where restoring the previous version also fails, the Agent is left stopped rather than left in an uncertain state, and the notification calls this out so you know manual attention is needed. See [Basic troubleshooting](#basic-troubleshooting) below.
 
+### Faster reconnection after upgrades and certificate changes
+
+Agents and Relays now reconnect to Solution Manager noticeably faster after they restart for an upgrade, and after a TLS certificate change. If you see a brief **Down** status right after either action, it should clear on its own within a short time — you do not need to take any action for it to recover.
+
 ## Bulk upgrades
 
-The **Upgrade** button also supports multi-select on the **Relays** and **Integrations** pages, the same way it does on the **Agents** page:
+The **Upgrade** button also supports multi-select on the **Relays** and **Integrations** pages, the same way it does on the **Agents** page. Both pages already let you select more than one row using their standard multi-select controls; the **Upgrade** button stays available across that whole selection.
+
+To upgrade multiple Relays or Integrations at once, complete the following steps:
 
 1. On the **Relays** or **Integrations** page, select one or more rows.
 2. Select the **Upgrade** button.
 3. Confirm the upgrade when prompted.
 
-**Result:** OpCon upgrades each selected row that has an available upgrade. Rows without an available upgrade are skipped and reported separately. Relays and Integrations do not run jobs the way Agents do, so the active jobs warning described above applies only to Agents.
+**Result:** OpCon upgrades each selected row that has an available upgrade. Rows without an available upgrade are skipped and reported separately, by name, rather than blocking the rest of the selection. As with Agents, selecting a single Relay or Integration opens a version-selection window instead; the bulk confirmation only appears for two or more selected rows.
 
 <!--
 ![Bulk upgrade confirmation for selected Relays](../../../Resources/Images/SM/Library/Relays/RelaysPage-BulkUpgradeConfirm.png "Bulk upgrade confirmation for selected Relays")
@@ -139,7 +147,13 @@ If an Agent has active jobs running, you do not have to wait and retry manually 
 - **From the Agents page:** Select **Upgrade**. If the selection includes an Agent with active jobs, Solution Manager offers to schedule that Agent instead of upgrading it immediately (see [Active jobs warning](#active-jobs-warning) above). Confirm the offer.
 - **From an Agent's Details page:** In the [Agent Upgrade section](#the-agent-upgrade-section-on-the-agent-details-page), select the **Schedule Upgrade** button, then confirm when prompted.
 
-**Result:** OpCon waits until the Agent's active job count reaches zero, then automatically puts the Agent in Limited communication, performs the upgrade, and restores Full communication once the upgrade finishes — whether it succeeds or fails. You can select **Cancel** while the scheduled upgrade is still waiting for active jobs to clear.
+**Result:** OpCon waits until the Agent's active job count reaches zero. Once it does, OpCon automatically:
+
+1. Puts the Agent in Limited communication, so no new jobs start on it.
+2. Performs the upgrade.
+3. Restores Full communication once the upgrade finishes, whether it succeeded or failed.
+
+You can select **Cancel** while the scheduled upgrade is still waiting for active jobs to clear.
 
 <!--
 ![Schedule Agent Upgrade confirmation](../../../Resources/Images/SM/Agents/AgentDetails-ScheduleUpgradeConfirm.png "Schedule Agent Upgrade confirmation")
