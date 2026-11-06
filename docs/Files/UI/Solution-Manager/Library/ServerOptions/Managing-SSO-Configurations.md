@@ -49,9 +49,9 @@ To configure SSO Settings, go to **Library** > **Server Options** > Select the *
 
 1. Enter a **Client ID**. Your client application's identifier as registered with the OIDC/OAuth2 provider
 
-1. Enter a **Redirect URI**. The location where the authorization server sends the user after successful authorization. Adding **/login/callback** is **required** for SSO to function. For example, **`https://host:80443/login/callback`**.
+1. Enter a **Redirect URI**. The location where the authorization server sends the user after successful authorization. Adding **/login/callback** is **required** for SSO to function. For example, **`https://host:8443/login/callback`**.
 
-1. Enter a **Scope**. The scopes requested from the OIDC/OAuth2 provider (default: **openid**). Separate multiple scopes with a space
+1. Enter a **Scope**. The scopes requested from the OIDC/OAuth2 provider (blank by default). Separate multiple scopes with a space
 
 \* OpenID Connect (OIDC) is an open authentication protocol that works on top of the OAuth 2.0 (OAuth2) framework.
 
@@ -67,7 +67,7 @@ Selecting **Google** as the Provider adds two additional required fields, shown 
 
 :::note
 
-Google requires the **`https://www.googleapis.com/auth/cloud-identity.groups.readonly`** scope, in addition to **openid** and **email**, so OpCon can look up the groups a signed-in user belongs to. Enter all three scopes, space-separated, in the **Scope** field — the value must start with **`openid email`**, followed by the Cloud Identity scope, for example: `openid email https://www.googleapis.com/auth/cloud-identity.groups.readonly`
+Google requires the **`https://www.googleapis.com/auth/cloud-identity.groups.readonly`** scope, in addition to **openid** and **email**, so OpCon can look up the groups a signed-in user belongs to. Enter all three scopes, space-separated, in the **Scope** field, for example: `openid email https://www.googleapis.com/auth/cloud-identity.groups.readonly`
 
 :::
 
@@ -98,6 +98,7 @@ The **test connection button** retrieves metadata from the IdP using the value i
 - SSO can be implemented with any IdP that follows the OpenID Connect authentication protocol
 - The IdP must return a token with a **groups** claim containing the user's group memberships and an **opconid** claim composed of the user's email
 - For **Google**, group names are matched to **Group Mappings** without regard to letter case, since Google Workspace always returns group email addresses in lowercase. For every other provider, group names must match exactly
+- For **Google**, OpCon reads only the groups the user belongs to directly. Membership that comes through a group nested inside another group is not included
 - See examples below for [**Okta**](#okta-application), [**Azure AD**](#azure-ad-application), and [**Google Workspace**](#google-workspace-application)
 
 :::
@@ -115,7 +116,7 @@ The following table describes actions taken when a user logs in through Single S
 | Y                   | Y               | Y                    | Y                             | Y                | No action user is already in sync                         |
 | Y                   | N               | N/A                  | Y                             | N/A              | User created and added to role                            |
 | Y                   | Y               | N                    | Y                             | Y                | User added to role                                        |
-| Y                   | Y               | Y                    | Y                             | N                | User enabled in OpCon                                     |
+| Y                   | Y               | Y                    | Y                             | N                | User refused. The account is disabled in OpCon and stays disabled |
 | Y                   | Y               | Y                    | N                             | Y                | No action since user cannot access the application        |
 | Y                   | Y               | Y                    | N                             | N                | No action since user cannot access the application        |
 | N                   | Y               | Y                    | N/A                           | Y                | No action since user does not belong to an existing group |
@@ -296,7 +297,7 @@ Common errors when connecting to your IdP OIDC application:
 - **Incorrect Authority**: The authority (OIDC provider URL) must match exactly. Any mismatch causes connection and authentication failures
 - **Invalid Customer ID**: The customer ID in the SSO configuration must match the one expected by your IdP. An incorrect customer ID prevents successful authentication
 - **Google: "have not been mapped to any roles"**: The signed-in Google account belongs to no group listed in **Group Mappings**. Add the group, or add the user to a mapped group in Google Admin
-- **Google: sign-in fails immediately after entering an email address**: The account's domain is not in **Permitted Workspace Domains**, or the account is a personal Gmail account rather than a Workspace account
+- **Google: "User's Workspace domain '...' does not match the configured permitted domain" or "User account does not belong to a Google Workspace domain"**: These appear after the Google sign-in completes. The account's domain is not in **Permitted Workspace Domains**, or the account is a personal Gmail account rather than a Workspace account
 
 :::
 
@@ -332,7 +333,7 @@ The Client ID, Authority URL, and Redirect URI are registered with the IdP and m
 | Authority | URL of the OIDC/OAuth2 provider | — | Required; the Test Connection button uses this value to retrieve IdP metadata |
 | Client ID | Client application identifier registered with the OIDC/OAuth2 provider | — | — |
 | Redirect URI | Location the authorization server sends the user after successful authorization | — | Must include `/login/callback` |
-| Scope | Scopes requested from the OIDC/OAuth2 provider | openid | Separate multiple scopes with a space. For Google, must also include `email` and `https://www.googleapis.com/auth/cloud-identity.groups.readonly` |
+| Scope | Scopes requested from the OIDC/OAuth2 provider | — | Separate multiple scopes with a space. For Google, must also include `email` and `https://www.googleapis.com/auth/cloud-identity.groups.readonly` |
 | Permitted Workspace Domains | Google Workspace domains allowed to sign in | — | Google only; required when Provider is Google |
 | Client Secret | Client secret from the OAuth client | — | Google only; required when Provider is Google. Write-only — never displayed after saving |
 
