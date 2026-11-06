@@ -104,12 +104,12 @@ For XML formatting examples, refer to [Event Types](./types.md) in the **Referen
 - Commas can only be used as separators, not in text
 - Asterisks (\*) and question marks (?) cannot be used in Schedule, Job, or Machine names; they are reserved as wild cards (if the Server Option for wild cards is enabled)
 - In graphical interface event templates, the `<>` symbols define fields only. A finished event definition should not contain them
-- Tokens can be used in any field if the token value is compatible with the field. For details, refer to [Tokens](../objects/using-properties.md#Tokens) in the **Concepts** online help
+- Tokens can be used in any field if the token value is compatible with the field. For details, refer to [Tokens](../objects/using-properties.md#tokens) in the **Concepts** online help
   - Internal OpCon events can include tokens for any property type
   - External OpCon events can include tokens for user-defined properties and the $TIME, $DATE, and $NOW Managed System Properties only
 - Valid entries for the schedule date parameter:
   - A specific date in the format recognized by the regional settings of the user running SMA Service Manager (e.g., `1/9/2012` for US English)
-  - Tokens for date-related Managed System Properties (e.g., `[[$DATE]]`). For details, refer to [System Properties](../objects/properties.md#System) in the **Concepts** online help
+  - Tokens for date-related Managed System Properties (e.g., `[[$DATE]]`). For details, refer to [System Properties](../objects/properties.md#system-properties) in the **Concepts** online help
   - [Event Keywords](#Event)
   - Blank — commas must remain in place to delimit the parameter. For example:
 

@@ -19,7 +19,7 @@ doc_type: conceptual
 
 ## What Is It?
 
-**Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression. Refer to [OpCon Events](../events/introduction.md). All [System Properties](../objects/properties.md#system) can be referenced with tokens in events, which are stored in the database after definition.
+**Events** are OpCon events the SAM processes based on triggers: job status, agent feedback string match, Exit Description evaluation, or Evaluation Expression. Refer to [OpCon Events](../events/introduction.md). All [System Properties](../objects/properties.md#system-properties) can be referenced with tokens in events, which are stored in the database after definition.
 
 :::note
 If the Server Option "Allow Wild Cards in Events" is enabled, \* (asterisk) and ? (question mark) are treated as wild cards in Schedule, Job, and Machine Names in Event strings.
