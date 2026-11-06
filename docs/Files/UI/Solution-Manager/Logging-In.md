@@ -9,7 +9,7 @@ tags:
   - System Administrator
   - Automation Engineer
   - Solution Manager
-last_updated: 2026-03-18
+last_updated: 2026-10-08
 doc_type: procedural
 ---
 
@@ -87,8 +87,8 @@ The **Login with Windows** button lets you log in using Windows Authentication w
 -->
 For the **Login with Windows** button to appear on the login screen, both of the following settings must be configured:
 
-- **Enable Windows Authentication** — enabled via the API.
-- **Windows Pass-Through Authentication** — enabled in [Application Settings](Configuring-Application-Settings.md) in Solution Manager.
+- **Enable Windows Authentication** — set to **True** on the **General** tab of Server Options in either [Solution Manager](Library/ServerOptions/Managing-General-Settings.md) or [Enterprise Manager](../Enterprise-Manager/Managing-Server-Options.md), or enabled via the API
+- **Windows Pass-Through Authentication** — enabled in [Application Settings](Configuring-Application-Settings.md) in Solution Manager
 
 ### Single Sign-On Login
 

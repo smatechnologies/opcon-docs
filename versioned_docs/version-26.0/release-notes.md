@@ -93,6 +93,8 @@ doc_type: conceptual
 
 :white_check_mark: **OC-7353**: Fixed an issue with displaying the correct agents when clicking on an agent status donut in French language view.
 
+:white_check_mark: **OC-7366**: Fixed an issue where daylight saving time (DST) change dates were resolved to the previous day.
+
 :white_check_mark: **OC-7372**: Fixed an issue with schedule deletion being affected by regional settings.
 
 :white_check_mark: **OC-7380**: Fixed an issue with the editing unlocked button being unavailable after renaming a job.

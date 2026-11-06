@@ -92,6 +92,14 @@ SMA Request Router sends requests to designated Request Handlers and writes comp
 
 SMA Start Time Calculator periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database. For more information, refer to [SMA Start Time Calculator](./server-programs/start-time-calculator.md).
 
+#### OpCon REST API
+
+The OpCon REST API is the web service through which Solution Manager, the connectors, and customer integrations read and change OpCon data. It is the interface every integration uses.
+
+#### Reporting Service
+
+The Reporting Service copies OpCon data into a separate reporting database, so reporting tools can query it without loading the operational database. For more information, refer to [Reporting Service](./reports/reporting-service.md).
+
 ### Agents
 
 Agents are installed on the platforms where jobs run. Written in the native language of their platforms, they communicate with SMANetCom via TCP/IP. OpCon supports the following job types:
@@ -135,7 +143,7 @@ Yes. All changes to OpCon objects are automatically audited, recording the times
 
 **SMA Start Time Calculator**: Periodically recalculates estimated start times for all jobs in the OpCon daily tables and updates the database to keep start time estimates current.
 
-**SAM-SS (SAM and Supporting Services)**: The collective term for the OpCon server-side processing programs: SAM, SMANetCom, SMA Notify Handler, SMA Request Router, and SMA Start Time Calculator.
+**SAM-SS (SAM and Supporting Services)**: The collective term for the OpCon server-side processing programs: the OpCon REST API, the Reporting Service, SAM, SMANetCom, SMA Notify Handler, SMA Request Router, and SMA Start Time Calculator.
 
 **SAM (Schedule Activity Monitor)**: The logical processor for OpCon workflow automation. SAM monitors schedule and job start times, dependencies, and user commands to determine when jobs run, and processes OpCon events.
 

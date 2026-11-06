@@ -272,7 +272,7 @@ The ODBC System DSN used by SMADDI must not share its name with the SQL Server i
 
 ### Alerts and Log Files
 - SMADDI logs processing details to `SMADDI.log`; the `MaximumLogFileSize` (default: 150,000 bytes) controls when logs roll over.
-- The `ArchiveDaysToKeep` setting (default: 7 days) controls how long archived log files are retained; SMADDI only cleans archive files when active.
+- The `ArchiveDaysToKeep` setting (default: 7 days) controls how long archived log files are retained; SMADDI only cleans archive files when active. Change the value rather than deleting the line: with the key absent, SMADDI falls back to 20 days rather than 7.
 - Set `CreateOutputFile=Yes` to generate an output file (named `<InputFile>-Out.txt`) for each file processed, written to the Output subdirectory of the monitored directory.
 - Set `Trace=ON` to write stored procedure input strings to `SMADDI.log` for debugging.
 
