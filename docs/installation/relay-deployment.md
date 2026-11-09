@@ -9,7 +9,7 @@ tags:
   - Procedural
   - System Administrator
   - Installation
-last_updated: 2026-09-22
+last_updated: 2026-10-28
 doc_type: procedural
 ---
 
@@ -79,13 +79,21 @@ To install the relay binary, complete the following steps:
    sudo mkdir -p /app/config /app/log
    sudo useradd -r opcon
    sudo chown -R opcon:opcon /app/config /app/log /opt/opcon/relay
+   sudo chmod 750 /app/config /app/log
+   sudo chmod -R a+rX /opt/opcon/relay
    ```
+
+   :::caution
+   Create `/app/log` yourself. The `/app` directory is normally owned by `root`, so the `opcon` service account cannot create `/app/log` on its own, and the relay does not create it during registration. Do not use `chmod 777`: `SMANetComRelay.ini` holds the relay's encrypted connection token, so the directory should be readable only by the service account and its group.
+   :::
 
 **Result:** The relay binary is installed, and the fixed configuration and log directories exist and are owned by the service account.
 
 ### Register the relay
 
 Registration links the relay to your OpCon environment and stores the resulting connection token in `SMANetComRelay.ini`. Registration only needs to run once — running it again is safe and has no effect once the relay is already registered.
+
+Run registration as the service account (`sudo -u opcon`), not with plain `sudo`. Registration creates `SMANetComRelay.ini`, and a file created by `root` is not writable by the `opcon` service account, so the relay then fails at startup.
 
 To register the relay, complete the following steps:
 
@@ -128,6 +136,10 @@ To install the systemd unit and start the relay as a service, complete the follo
    sudo cp smanetcomrelay.service /etc/systemd/system/
    ```
 
+   :::caution
+   The unit file assumes the relay is installed in `/opt/opcon/relay` and runs as the `opcon` user. If you installed the binary somewhere else, edit `ExecStart` and `WorkingDirectory` in `/etc/systemd/system/smanetcomrelay.service` to match before you continue. The service account must also be able to read and run everything in that directory. If the path is wrong, the service fails immediately and `systemctl status` shows `status=203/EXEC` or `status=200/CHDIR`.
+   :::
+
 2. Reload the systemd unit files and enable and start the relay:
 
    ```sh
@@ -144,6 +156,10 @@ To install the systemd unit and start the relay as a service, complete the follo
    The status shows `active (running)`.
 
 **Result:** The relay starts automatically on boot and runs under systemd, which restarts it automatically if it fails.
+
+:::note
+Before it starts, the relay checks that the `opcon` account can write to `/app/config` and `/app/log` (and to any `SMANetComRelay.ini` or log files already in them). If it cannot, the relay prints the directory or file at fault and the command to fix it, then exits with code `78`. systemd does not restart the relay after exit code `78`, because a permissions problem does not fix itself, so the service stays in a `failed` state. Read the message with `journalctl -u smanetcomrelay`, correct the ownership, then run `sudo systemctl restart smanetcomrelay`. No log file exists yet at that point, so the message is only in the journal.
+:::
 
 :::note
 The unit file gives the relay 60 seconds to shut down gracefully (`TimeoutStopSec=60`) before systemd force-stops it. A graceful shutdown drains in-flight communication and normally completes in a few seconds.
@@ -280,6 +296,23 @@ Type=4
 On Linux and in Docker, `RunMode` under `[Service Settings]` must be set to `Service`. `RunMode=Managed` assumes a Solution Manager process on the same machine supervising the relay, which only applies to the Windows Service deployment. Registration sets `RunMode=Service` automatically; you would only see `Managed` here if the file was hand-edited or copied from a Windows installation. See [Exception Handling](#exception-handling) below if the relay exits immediately at startup with a `RunMode` error.
 :::
 
+## Agent TLS certificates and client validation
+
+When the relay connects to an agent over TLS, it looks up the certificates it needs by serial number. On Windows this is the LocalMachine certificate store. On Linux and in Docker the relay also scans the `/app/certs` folder, in addition to the operating system trust store. Set the `RELAY_CERTS_DIR` environment variable to scan a different folder.
+
+| Folder (path inside the relay) | What to put there | Used for |
+|---|---|---|
+| `/app/certs` | The relay's client certificate as a `.pfx` or `.p12` file with an **empty password**. Server certificates can be `.crt`, `.cer`, or `.pem` files. | Finding the server and client certificates by serial number |
+| `/usr/local/share/ca-certificates` (Docker) | Public `.crt` files only: the certificate authority chain that issued the agent's certificate. | Trusting the agent's server certificate |
+
+In Docker, mount the folders into the container, for example `-v /opt/relay/certs:/app/certs:ro -v /opt/relay/trust:/usr/local/share/ca-certificates:ro`.
+
+When the agent has client validation turned on (`TLSClientValidation=TRUE` in the agent's configuration), the relay must present a client certificate during the TLS handshake, and the certificate can only be presented if the relay has its **private key**. A certificate supplied as a public-only `.crt`, `.cer`, or `.pem` file is found by serial number but is never sent to the agent.
+
+:::note
+The relay's client certificate is identified by the client certificate serial number configured for the relay. It is a different certificate from the agent's own server certificate.
+:::
+
 ## Behavior differences from the Windows Service deployment
 
 | Area | Windows Service | Linux (systemd) and Docker |
@@ -318,7 +351,15 @@ The relay writes to the same three log files on every platform, all under `/app/
 
 **Startup fails immediately with a `RunMode` error** — On Linux or in Docker, the relay exits immediately at startup with an error stating that `RunMode=Managed` is not supported on non-Windows platforms — Open `SMANetComRelay.ini` and set `RunMode=Service` under `[Service Settings]`, then start the relay again.
 
+**The relay exits immediately with code 78 and a "Cannot create or write to" message** — At startup the relay reports that it cannot create or write to `/app/config`, `/app/log`, or a file such as `SMANetComRelay.ini` as the user running it, and prints a `Fix with:` command — Run the printed command (it creates the directory and gives the service account ownership with mode `750`), or correct the ownership of the named file, and start the relay again. A file created by running registration with plain `sudo` is the usual cause of the file-level message: change its owner with `sudo chown opcon:opcon /app/config/SMANetComRelay.ini`. Under systemd, the message is in `journalctl -u smanetcomrelay`, and the service stays `failed` until you restart it.
+
+**The systemd service fails immediately with `status=203/EXEC` or `status=200/CHDIR`** — `systemctl status smanetcomrelay` shows the service never started, and no log file is created — The unit file points at a path that does not exist or that the service account cannot read. Set `ExecStart` and `WorkingDirectory` in `/etc/systemd/system/smanetcomrelay.service` to the directory you installed the binary in, confirm the file is named `SMANetcomRelay` (not `.exe`; the Windows build cannot run on Linux), make sure the service account can read and run it (`sudo chmod -R a+rX <install directory>`), then run `sudo systemctl daemon-reload` and restart the service.
+
+**The relay does not start after the server reboots** — `systemctl status smanetcomrelay` shows `disabled` and `inactive (dead)`, and the log shows no errors — The service was started but never enabled, so systemd does not start it at boot. `systemctl start` runs the relay only until the next shutdown. Run `sudo systemctl enable smanetcomrelay`, confirm that `systemctl is-enabled smanetcomrelay` prints `enabled`, then reboot the server to verify that the relay starts.
+
 **Docker container exits immediately with a persistent-volume error** — The container refuses to start and reports that `/app/config` does not appear to be a mounted volume — Mount a named volume or bind mount at `/app/config` and restart the container, or set `RELAY_ALLOW_EPHEMERAL_CONFIG=true` if the container is intentionally temporary.
+
+**Agent closes the TLS connection right after the handshake when client validation is on** — The relay log shows `Client Certificate with Serial Number ... was found but has NO private key` and later `Local certificate is null`, and the agent log shows `Client's certificate not available. End communication ...` — The client certificate was supplied without its private key (for example as a `.crt` or `.pem` file), or the `.pfx` could not be loaded (the relay log shows `RelayCertStore: skipping '<file>'`; this usually means the file has a password). Export the certificate with its private key and an empty password, for example `openssl pkcs12 -export -inkey client.key -in client.crt -passout pass: -out client.pfx`, place the `.pfx` in `/app/certs`, and restart the relay.
 
 **Registration fails with a missing-parameters message** — The `register` command reports missing required parameters instead of attempting registration — Confirm the Client Name, relay Name, NetCommApi URI, and External Token are all supplied (via CLI flags on Linux, or the corresponding environment variables in Docker), and that the External Token has not expired.
 
