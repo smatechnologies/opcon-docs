@@ -939,6 +939,7 @@ module.exports = {
             "notifications/Components",
             "notifications/Escalation",
             "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers",
+            "Files/UI/Solution-Manager/Library/NotificationHistory/NotificationHistory",
             "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
             "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",
             {
