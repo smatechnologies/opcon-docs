@@ -377,6 +377,7 @@ module.exports = {
         "Files/UI/Solution-Manager/Managing-Agents",
                 "Files/UI/Solution-Manager/Adding-Agents",
                 "Files/UI/Solution-Manager/Performing-Agent-Status-Updates",
+                "Files/UI/Solution-Manager/Automatic-Certificate-Management-Unix",
               ],
             },
             {
@@ -404,8 +405,10 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Relays/Managing-Relays",
                 "Files/UI/Solution-Manager/Library/Relays/Relays-Reference",
                 "server-programs/network-communications",
+                "installation/relay-deployment",
               ],
             },
+            "Files/UI/Solution-Manager/Library/Integrations/Managing-Integrations",
           ],
         },
         "installation/system-requirements",
@@ -938,6 +941,7 @@ module.exports = {
             "notifications/Components",
             "notifications/Escalation",
             "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers",
+            "Files/UI/Solution-Manager/Library/NotificationHistory/NotificationHistory",
             "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
             "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",
             {
@@ -1268,7 +1272,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/26-2.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/26-3.html",
     },
   ],
 };

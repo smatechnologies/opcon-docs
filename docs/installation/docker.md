@@ -29,11 +29,20 @@ The **opcon-server** Docker image includes:
 - SMA OpCon Service Manager
 - SMA OpCon Solution Manager
 
+## File Locations
+
+A container deployment uses fixed paths rather than the Windows output directory:
+
+| Location | Path |
+|---|---|
+| Configuration files | `/app/config` |
+| Output and log files | `/app/log` |
+
 ## Known Limitations
 
 - SQL Server must have SQL authentication enabled
 - SMA OpCon Solution Manager does not support Windows Authentication
-- The following notifications are not supported:
+- The following notifications are not supported, because each depends on a Windows facility that the Linux container does not provide:
   - Windows Event Log
   - Network Message
   - SNMP Trap
