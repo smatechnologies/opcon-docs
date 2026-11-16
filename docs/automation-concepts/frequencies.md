@@ -366,7 +366,7 @@ necessarily coincide with the ordinal number of the week in that period.
 
 Determines when a date on a frequency should qualify if it happens to fall on a Non-Working day. Non-Working days include Saturdays and Sundays for a 5-day workweek, Sundays for a 6-day workweek, all user-defined holidays, and can include Negative Annual Plan days.
 
-- For additional information, refer to [Negative Annual Plan Calendars](../objects/calendars.md#Negative). Special calculation is necessary with a Negative Annual Plan Calendar:
+- For additional information, refer to [Negative Annual Plan Calendars](../objects/calendars.md#negative-annual-plan-calendars). Special calculation is necessary with a Negative Annual Plan Calendar:
 - The A/O/B/N option is not applied to Negative Annual Plan dates that exist on a qualifying date since, by definition, no scheduling occurs on these dates
 - Valid options for the A/O/B/N setting include:
   - **After Date (A)**: Moves the job to the first working day following the scheduled day

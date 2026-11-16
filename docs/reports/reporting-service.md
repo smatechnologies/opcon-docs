@@ -358,7 +358,7 @@ This returns all records sorted first by department in alphabetical order, and w
 ### Connection string issues
 
 - Use the `configure-connection` command to encrypt and set connection strings
-- Run the service under the same account that encrypted the passwords, because DPAPI encryption is specific to the machine
+- The service account does not need to match the account that ran `configure-connection`, because the encryption is scoped to the machine rather than to a user
 - For Windows Authentication, verify the service account has access to both databases
 
 ---
@@ -379,7 +379,7 @@ Every run replaces all report data with the current contents of the OpCon databa
 
 **Q: Why might the Reporting Service fail to start after a password change?**
 
-Passwords are encrypted using Windows DPAPI, which is specific to the machine. If the service account changes or the passwords are re-encrypted under a different account, run the `configure-connection` command again under the account that runs the service.
+Passwords are encrypted using Windows DPAPI scoped to the machine, so a change of service account does not invalidate them and does not require re-running `configure-connection`. The usual cause is that `appsettings.json` was copied from another machine: the encryption is machine-specific, so a file encrypted elsewhere cannot be decrypted here. Run `configure-connection` on this machine to re-encrypt the passwords.
 
 **Q: Why is report data not refreshing after an OpCon upgrade?**
 

@@ -41,7 +41,7 @@ The Output Directory was configured during installation. For more information, r
 
 - Log file: `SMACheckTerm_<date-time stamp>.log` in `<Output Directory>\SAM\Log\`
 - Archived logs reside in `<Output Directory>\SAM\Log\Archive\`. Folder names use the format `yyyy_mm_dd (Weekday)`, where the weekday reflects the regional settings of the user running the utility
-- The SAM retains 10 days of archived logs by default and does not purge folders that contain non-archived files. To change the retention period, refer to [Maximum number of days archived SAM logs should be kept](../../administration/server-options.md#logging)
+- The SAM retains 10 days of archived logs by default and does not purge folders that contain non-archived files. To change the retention period, refer to [Maximum number of days archived SAM logs should be kept](../../administration/server-options.md#logging-options)
 
 ## Exit Codes
 
