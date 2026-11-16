@@ -35,6 +35,8 @@ Use this section to:
 | [SMA Notify Handler](notify-handler.md) | Reads the OpCon database notification queue and routes notifications via email, text message, Windows Event Log, SNMP trap, and other channels. |
 | [SMA Request Router](request-router.md) | Routes requests between the OpCon database and designated request handlers, including schedule maintenance and job output retrieval. |
 | [SMA Start Time Calculator](start-time-calculator.md) | Periodically recalculates estimated start times for jobs in the OpCon Daily tables and updates the database. |
+| OpCon REST API | The web service that Solution Manager, the connectors, and any customer integration use to read and change OpCon data. |
+| [Reporting Service](../reports/reporting-service.md) | Copies OpCon data into a reporting database for use by reporting tools. |
 | [Optional Components](optional.md) | Additional server modules available for specific deployments. |
 | [Configuration](configuration.md) | Server-level configuration file reference. |
 | [Logging](logging.md) | Log file locations, log levels, and log rotation settings. |

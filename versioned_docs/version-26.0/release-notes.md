@@ -93,6 +93,8 @@ doc_type: conceptual
 
 :white_check_mark: **OC-7353**: Fixed an issue with displaying the correct agents when clicking on an agent status donut in French language view.
 
+:white_check_mark: **OC-7366**: Fixed an issue where daylight saving time (DST) change dates were resolved to the previous day.
+
 :white_check_mark: **OC-7372**: Fixed an issue with schedule deletion being affected by regional settings.
 
 :white_check_mark: **OC-7380**: Fixed an issue with the editing unlocked button being unavailable after renaming a job.
@@ -196,6 +198,8 @@ doc_type: conceptual
 :white_check_mark: **OC-6026**: Fixed an issue with automatically updating schedules and date grids on processes page when deleting a standalone schedule for any given date.
 
 :white_check_mark: **OC-6062**: Fixed an issue where if a script version was copied and those changes where cancelled, the script would be deselected.
+
+:white_check_mark: **OC-6064**: Fixed an issue with blank schedule name on the master jobs details page.
 
 :white_check_mark: **OC-6081**: Fixed an issue where cross-schedule dependencies were not visible in the PERT progressive discovery view.
 
