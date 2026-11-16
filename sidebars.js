@@ -408,6 +408,7 @@ module.exports = {
                 "installation/relay-deployment",
               ],
             },
+            "Files/UI/Solution-Manager/Library/Integrations/Managing-Integrations",
           ],
         },
         "installation/system-requirements",
@@ -435,6 +436,7 @@ module.exports = {
             "installation/install",
             "installation/upgrade",
             "installation/breaking-changes",
+            "installation/sql-agent-dotnet-update",
             "installation/components",
             "installation/docker",
             "installation/database-scripts",
@@ -1270,7 +1272,7 @@ module.exports = {
     {
       type: "link",
       label: "REST API Docs",
-      href: "https://help.smatechnologies.com/opcon/core/api/26-2.html",
+      href: "https://help.smatechnologies.com/opcon/core/api/26-3.html",
     },
   ],
 };
