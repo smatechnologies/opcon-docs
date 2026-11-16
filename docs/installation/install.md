@@ -42,7 +42,7 @@ The SAM installation configures the SMA Service Manager as a stand-alone service
 :::
 
 :::note
-When high numbers of agents are in the database, multiple SMANetCom instances can improve performance. To set up multiple SMANetComs, add another section for SMAServMan and give it a unique name. Refer to [TLS Security](../server-programs/network-communications.md#tls) in the **Server Programs** online help.
+When high numbers of agents are in the database, multiple SMANetCom instances can improve performance. To set up multiple SMANetComs, add another section for SMAServMan and give it a unique name. Refer to [TLS Security](../server-programs/network-communications.md#tls-security) in the **Server Programs** online help.
 :::
 
 On the OpCon Server:

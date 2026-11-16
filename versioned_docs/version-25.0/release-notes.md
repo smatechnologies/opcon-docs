@@ -115,6 +115,8 @@ These updates harden the platform against known security vulnerabilities, improv
 
 ✅ **OC-7331: PERT View on Multi-Level Schedules Restored** Fixed an issue in OpCon 26.0.4 where users were unable to use the PERT view on multi-level schedules.
 
+✅ **OC-7366: Corrected Date Resolution on DST Change Dates** Fixed an issue where daylight saving time (DST) change dates were resolved to the previous day.
+
 ### Why This Matters
 These updates improve day-to-day operational stability across scheduling, job configuration, reporting, and the Studio canvas — reducing friction for operators and administrators while resolving a broad set of edge cases surfaced by customers.
 

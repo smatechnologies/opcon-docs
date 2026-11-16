@@ -346,7 +346,7 @@ The following information applies to defining Step Control:
             override.
     - In the Trigger Message field, enter the desired restart step
             name.
-- **Trigger Message**: Required only with the Send Trigger Message to
+- **Trigger Message**: Required for the Send Trigger Message to SAM step action, and usable with any step action.
     SAM action, but can be used with any *Step Action* defined.
   - This message may be up to 20 characters, and is posted to
         Schedule Operations and recorded in the User Messages agent
@@ -1494,12 +1494,12 @@ Sub-Type.
 | Execution Parms | The parms will be appended to the started task | — | — |
 | Host Job Name | The command is issued from a dynamic started | — | — |
 | Operator Command | Defines the text of the command to be run | — | — |
-| Exec Name | The Exec name is taken from the job name | SYSEXEC | — |
+| Exec Name | The Exec name is taken from the job name. | SYSEXEC | — |
 | Submit DDName | Defines the DD Name in the OPCONxx PROC that points to the library containing the REXX program. | SYSEXEC | — |
 | Step Name | Defines the fully qualified step name in the format: | — | — |
 | Min CC and Max CC | Defines the minimum to maximum range of return codes this step control definition checks. | — | — |
 | Step Action | Defines the action to be taken when the defined | — | — |
-| Trigger Message | Required only with the Send Trigger Message to | — | up to 20 characters, and is posted to         Schedule Ope |
+| Trigger Message | Required for the Send Trigger Message to SAM step action, and usable with any step action. | — | up to 20 characters, and is posted to         Schedule Ope |
 | Dataset | Defines up to 44 characters of DSN trigger information | — | up to 44 characters of DSN trigger information.     Wild c |
 | Generations | Defines the number of times the condition must be met before releasing the job. | — | — |
 | Condition | Defines the type of data access condition to cause a trigger: Available options are *Exists, Created, Updated, Deleted | — | — |
