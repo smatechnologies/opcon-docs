@@ -66,6 +66,12 @@ When processing a DELETE command:
 - If the Schedule Name matches a Schedule Instance Name in the Daily tables, only that instance is deleted
 - If the Schedule Name is found in Administration, SMASchedMan deletes all instances for the specified date(s)
 
+#### Processing Schedule Forecasts
+
+A FORECAST command is processed like a BUILD, except that nothing is committed. SMASchedMan works out which jobs the schedule would contain and when they would run, then writes the result to a CSV file for each schedule instead of adding anything to the Daily tables.
+
+Use it to see the effect of a schedule definition before building it for real.
+
 #### Logging
 
 - Log files are written to `<Output Directory>\SAM\Log\SMASchedMan`. SMASchedMan creates the folder if it does not exist

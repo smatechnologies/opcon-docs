@@ -405,6 +405,7 @@ module.exports = {
                 "Files/UI/Solution-Manager/Library/Relays/Managing-Relays",
                 "Files/UI/Solution-Manager/Library/Relays/Relays-Reference",
                 "server-programs/network-communications",
+                "installation/relay-deployment",
               ],
             },
           ],
@@ -938,6 +939,7 @@ module.exports = {
             "notifications/Components",
             "notifications/Escalation",
             "Files/UI/Solution-Manager/Library/NotificationTriggers/NotificationTriggers",
+            "Files/UI/Solution-Manager/Library/NotificationHistory/NotificationHistory",
             "Files/UI/Solution-Manager/Library/NotificationCategories/NotificationCategories",
             "Files/UI/Solution-Manager/Library/NotificationGroups/NotificationGroups",
             {
