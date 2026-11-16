@@ -35,7 +35,7 @@ System configuration covers all server-level settings — from initial installat
 | Installation | Installing OpCon server components |
 | Upgrade | Upgrading from a previous OpCon version |
 | Breaking Changes | Changes in this version that may require action before upgrading |
-| SQL Agent .NET Update | What changed for customers after the SQL Agent's .NET runtime update |
+| SAP BW Agent .NET Update | What changed for customers after the SAP BW Agent's .NET runtime and service update |
 | Components | Installed components and their versions |
 | Docker | Running OpCon in a Docker container |
 | Database Scripts | Maintenance and setup SQL scripts |

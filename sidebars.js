@@ -436,7 +436,7 @@ module.exports = {
             "installation/install",
             "installation/upgrade",
             "installation/breaking-changes",
-            "installation/sql-agent-dotnet-update",
+            "installation/sapbw-agent-dotnet-update",
             "installation/components",
             "installation/docker",
             "installation/database-scripts",
