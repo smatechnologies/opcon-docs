@@ -408,6 +408,7 @@ module.exports = {
                 "installation/relay-deployment",
               ],
             },
+            "Files/UI/Solution-Manager/Library/Integrations/Managing-Integrations",
           ],
         },
         "installation/system-requirements",
