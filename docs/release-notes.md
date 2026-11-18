@@ -17,6 +17,33 @@ Compatibility notes at the start of each version identify companion components t
 
 ## Fall 26
 
+### Relay 26.3.1
+
+This is a Relay-only release. No other OpCon components change. It is available for Windows, Linux, and Docker.
+
+**NOTE:** Verify/Upgrade these components if applicable:
+* **OpCon** - 26.3.0 or higher
+
+*2026 November*
+
+---
+
+#### Relay
+
+:eight_spoked_asterisk: **Relay container image on Docker Hub** The Relay container image is published on Docker Hub as `smatechnologies/opcon-relay`, with a tag for each release (for example, `26.3.1`) and a `26.3-latest` tag for the most recent 26.3 release. See [Relay Deployment on Docker and Linux](installation/relay-deployment.md#relay-container-image).
+
+:white_check_mark: **OC-8931: Jobs start when an agent name contains a space** Fixed an issue in Relay 26.3.0 where, if an agent connected through the Relay had a machine name that contains a space, jobs for every agent on that Relay stayed in Start Attempted.
+
+:white_check_mark: **OC-8931: One rejected message no longer blocks other agents** Fixed an issue where a message that OpCon rejected was retried indefinitely and held up messages from all other agents on the same Relay. The Relay now retries a rejected message for a limited time, then records it in a dead-letter log in its Tracking folder and continues with the next message.
+
+:white_check_mark: **OC-8931: The Relay removes expired log archives** Fixed an issue in Relay 26.3.0 where expired log archives and their dated folders were not removed from the Relay's Log folder, so the folder kept growing.
+
+#### WHY THIS MATTERS
+
+These fixes keep job processing running for every agent on a Relay when a single agent has a space in its machine name or sends a message that OpCon cannot accept. They also keep the Relay's log folder from growing without limit. Docker deployments can now pull the Relay image directly from Docker Hub.
+
+---
+
 ### OpCon 26.3.0
 
 **NOTE:** Verify/Upgrade these components if applicable:

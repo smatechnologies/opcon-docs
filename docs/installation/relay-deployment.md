@@ -9,7 +9,7 @@ tags:
   - Procedural
   - System Administrator
   - Installation
-last_updated: 2026-10-28
+last_updated: 2026-11-18
 doc_type: procedural
 ---
 
@@ -30,7 +30,7 @@ In addition to the Windows Service deployment, the Relay can run:
 Both deployment types run the same relay software and read the same settings from a `SMANetComRelay.ini` configuration file as the Windows Service deployment. The file location and how you edit it are different — see [Configuration file](#configuration-file). For other differences, see [Behavior differences from the Windows Service deployment](#behavior-differences-from-the-windows-service-deployment).
 
 :::note
-Contact Continuous for the Relay container image reference and registry access appropriate for your environment before beginning a Docker deployment.
+The Relay container image is published on Docker Hub as [`smatechnologies/opcon-relay`](https://hub.docker.com/r/smatechnologies/opcon-relay). The image is public, so you do not need registry credentials to pull it. See [Relay container image](#relay-container-image).
 :::
 
 ## Prerequisites
@@ -177,6 +177,25 @@ Stop the relay with `Ctrl+C`. This sends a termination signal that the relay han
 
 ## Deploying the relay in Docker
 
+### Relay container image
+
+The Relay container image is available on Docker Hub as `smatechnologies/opcon-relay`. Each Relay release publishes the following tags:
+
+| Tag | Example | Description |
+|---|---|---|
+| `<version>` | `26.3.1` | A specific Relay release. The tag always refers to the same image. Use a version tag in production so that the relay changes only when you choose to upgrade. |
+| `<major>.<minor>-latest` | `26.3-latest` | The most recent patch release for that version line. The tag moves to each new patch release, for example from `26.3.0` to `26.3.1`. |
+
+To download the image, run the following command:
+
+```sh
+docker pull smatechnologies/opcon-relay:26.3.1
+```
+
+To upgrade a relay container to a newer release, pull the new tag, then remove and recreate the container with the same `/app/config` volume and environment variables. The relay keeps its registration because the registration is stored on the persistent configuration volume. See [Persistent configuration volume is required](#persistent-configuration-volume-is-required).
+
+For the Relay version to use with your OpCon release, see [Release notes](../release-notes.md).
+
 ### Persistent configuration volume is required
 
 The relay's registration (its connection token, Name, and machine ID) is written to `/app/config/SMANetComRelay.ini` inside the container. If `/app/config` is not backed by a persistent volume, that registration is lost every time the container is recreated, and the relay silently registers as a new relay identity each time.
@@ -214,8 +233,10 @@ To run the relay container against an existing OpCon environment, complete the f
      -e RELAY_NAME=<RelayName> \
      -e OPCON_API_URI=<NetCommApiUri> \
      -e OPCON_EXTERNAL_TOKEN=<ExternalToken> \
-     <relay-image-reference>
+     smatechnologies/opcon-relay:26.3.1
    ```
+
+   Replace `26.3.1` with the Relay version you want to deploy. See [Relay container image](#relay-container-image).
 
 2. Confirm registration succeeded:
 
@@ -229,12 +250,12 @@ To run the relay container against an existing OpCon environment, complete the f
 
 ### Docker Compose example
 
-The following minimal Docker Compose service definition deploys the relay against an existing NetCommApi endpoint. Replace `<relay-image-reference>` with the image reference provided by Continuous for your environment, and set the environment variables shown for your OpCon environment (for example, in a `.env` file or your shell environment).
+The following minimal Docker Compose service definition deploys the relay against an existing NetCommApi endpoint. Replace `26.3.1` in the `image` value with the Relay version you want to deploy, and set the environment variables shown for your OpCon environment (for example, in a `.env` file or your shell environment).
 
 ```yaml
 services:
   relay:
-    image: <relay-image-reference>
+    image: smatechnologies/opcon-relay:26.3.1
     volumes:
       - relay_config:/app/config
       - ./log:/app/log
