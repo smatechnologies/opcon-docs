@@ -36,13 +36,11 @@ This is a Relay-only release. No other OpCon components change. It is available 
 
 :white_check_mark: **OC-8931: One rejected message no longer blocks other agents** Fixed an issue where a message that OpCon rejected was retried indefinitely and held up messages from all other agents on the same Relay. The Relay now retries a rejected message for a limited time, then records it in a dead-letter log in its Tracking folder and continues with the next message.
 
-:white_check_mark: **OC-8931: Agents with special characters in their names come online through the Relay** Fixed an issue where an agent whose machine name contains special characters, such as `/`, `\`, or `#`, did not come online when it connected through a Relay.
-
 :white_check_mark: **OC-8931: The Relay removes expired log archives** Fixed an issue in Relay 26.3.0 where expired log archives and their dated folders were not removed from the Relay's Log folder, so the folder kept growing.
 
 #### WHY THIS MATTERS
 
-These fixes keep job processing running for every agent on a Relay when a single agent has an unusual machine name or sends a message that OpCon cannot accept. They also keep the Relay's log folder from growing without limit. Docker deployments can now pull the Relay image directly from Docker Hub.
+These fixes keep job processing running for every agent on a Relay when a single agent has a space in its machine name or sends a message that OpCon cannot accept. They also keep the Relay's log folder from growing without limit. Docker deployments can now pull the Relay image directly from Docker Hub.
 
 ---
 
